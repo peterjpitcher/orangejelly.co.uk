@@ -111,6 +111,11 @@ export const blogCategories: Category[] = [
     name: 'Events & Promotions',
     description: 'Events and promotions that actually bring customers in',
   },
+  {
+    slug: 'toolkits',
+    name: 'Toolkits & Templates',
+    description: 'Ready-to-use playbooks, guides, and assets for busy licensees',
+  },
 ];
 
 // Get category by slug

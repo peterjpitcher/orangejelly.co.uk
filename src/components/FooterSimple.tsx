@@ -65,15 +65,15 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             <Heading level={3} color="orange" align="center" className="mb-2">
               Orange Jelly
             </Heading>
-            <Text align="center" className="text-cream/80">
+            <Text align="center" color="white" className="text-cream/80">
               AI Solutions That Save 5+ Hours Weekly
             </Text>
           </div>
 
           {/* Quick Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-cream/90">
             <div>
-              <Heading level={5} color="orange" className="mb-3">
+              <Heading level={5} color="orange" className="mb-3 text-cream">
                 Services
               </Heading>
               <ul className="space-y-2 text-sm">
@@ -88,7 +88,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3">
+              <Heading level={5} color="orange" className="mb-3 text-cream">
                 Company
               </Heading>
               <ul className="space-y-2 text-sm">
@@ -107,7 +107,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3">
+              <Heading level={5} color="orange" className="mb-3 text-cream">
                 Resources
               </Heading>
               <ul className="space-y-2 text-sm">
@@ -122,10 +122,10 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3">
+              <Heading level={5} color="orange" className="mb-3 text-cream">
                 Get in Touch
               </Heading>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-sm text-cream/90">
                 <Link
                   href={URLS.whatsapp()}
                   className="block hover:text-orange transition-colors"
@@ -150,10 +150,10 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-cream/20 pt-8">
+          <div className="border-t border-cream/20 pt-8 text-cream/80">
             {/* Bottom Info */}
             <div className="text-center">
-              <Text size="sm" align="center" className="mb-4">
+              <Text size="sm" align="center" color="white" className="mb-4">
                 {footerContent?.bottomBar?.copyrightText?.replace(
                   '{year}',
                   currentYear.toString()
@@ -176,8 +176,12 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 Get Marketing Help
               </Button>
 
-              <Text size="xs" align="center" className="opacity-60">
+              <Text size="xs" align="center" color="white" className="opacity-60 mb-2">
                 I personally reply to every message. During service? I'll get back to you after.
+              </Text>
+              <Text size="xs" align="center" color="white" className="opacity-60 max-w-3xl mx-auto">
+                Information on this site is general guidance only. Always consult the relevant
+                legal, licensing, and regulatory bodies before acting on any advice.
               </Text>
             </div>
           </div>

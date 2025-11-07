@@ -109,6 +109,11 @@ function getCategoryDisplayInfo(categorySlug: string) {
       slug: 'operations',
       description: 'Day-to-day pub management and systems',
     },
+    toolkits: {
+      name: 'Toolkits & Templates',
+      slug: 'toolkits',
+      description: 'Licensee playbooks, checklists, and downloadable assets',
+    },
   };
 
   return categoryMap[categorySlug] || { name: categorySlug, slug: categorySlug, description: '' };

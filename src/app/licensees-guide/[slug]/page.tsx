@@ -212,8 +212,9 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
       })
     );
 
-    // Extract FAQs from content if they exist
+    // Extract FAQs from content if they exist and strip from body copy
     let faqs: Array<{ question: string; answer: string }> = [];
+    let contentWithoutFaqs = typeof post.content === 'string' ? post.content : '';
 
     // Use FAQs from frontmatter if available, otherwise extract from markdown
     if (post.faqs && post.faqs.length > 0) {
@@ -223,7 +224,9 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
       const faqMatch = post.rawContent.match(faqPattern);
 
       if (faqMatch) {
-        const faqContent = faqMatch[1];
+        const faqContent = faqMatch[1].trim();
+
+        // Try markdown ### headings first
         const faqItemPattern = /###\s*(.+?)\n([\s\S]*?)(?=\n###|$)/g;
         let match;
         while ((match = faqItemPattern.exec(faqContent)) !== null) {
@@ -232,8 +235,53 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
             answer: match[2].trim(),
           });
         }
+
+        if (faqs.length === 0) {
+          // Fallback for bold-question inline format (**Question?** Answer)
+          const lines = faqContent
+            .split('\n')
+            .map((line) => line.trim())
+            .filter(Boolean);
+          let currentQuestion: string | null = null;
+          let currentAnswer: string[] = [];
+
+          const flush = () => {
+            if (currentQuestion) {
+              faqs.push({
+                question: currentQuestion,
+                answer: currentAnswer.join(' ').trim(),
+              });
+            }
+            currentQuestion = null;
+            currentAnswer = [];
+          };
+
+          lines.forEach((line) => {
+            const boldMatch = line.match(/^\*\*(.+?)\*\*\s*(.*)$/);
+            if (boldMatch) {
+              // finish previous
+              flush();
+              currentQuestion = boldMatch[1].trim();
+              const initialAnswer = boldMatch[2]?.trim();
+              if (initialAnswer) currentAnswer.push(initialAnswer);
+            } else if (currentQuestion) {
+              currentAnswer.push(line);
+            }
+          });
+          flush();
+        }
+
+        if (typeof post.content === 'string') {
+          contentWithoutFaqs = post.content.replace(faqMatch[0], '').trim();
+        }
       }
     }
+
+    const postWithFaqs = {
+      ...post,
+      content: contentWithoutFaqs || post.content,
+      faqs,
+    };
 
     const baseUrl = getBaseUrl();
 
@@ -241,7 +289,7 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
       <>
         <EnhancedBlogSchema
           post={{
-            ...post,
+            ...postWithFaqs,
             faqs,
             quickAnswer: post.quickAnswer,
             voiceSearchQueries: post.voiceSearchQueries,
@@ -285,7 +333,7 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
         />
         <Section background="white">
           <div className="max-w-6xl mx-auto">
-            <BlogPostClient post={post} relatedPosts={relatedPosts} />
+            <BlogPostClient post={postWithFaqs} relatedPosts={relatedPosts} />
           </div>
         </Section>
       </>

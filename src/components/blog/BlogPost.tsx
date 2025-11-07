@@ -19,6 +19,7 @@ import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
 // MarkdownContent is now only used for PortableText (if needed)
 import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
+import { FAQListAdapter } from '@/components/adapters/FAQAdapter';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -165,20 +166,15 @@ export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
             <Heading level={2} className="mb-6 flex items-center gap-2">
               <span>❓</span> Frequently Asked Questions
             </Heading>
-            <div className="space-y-4">
-              {post.faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="border-b border-charcoal/10 last:border-0 pb-4 last:pb-0"
-                >
-                  <Heading level={3} className="mb-2 flex items-start gap-2">
-                    {faq.isVoiceOptimized && <span className="text-orange">🎙️</span>}
-                    {faq.question}
-                  </Heading>
-                  <Text className="text-charcoal/80">{faq.answer}</Text>
-                </div>
-              ))}
-            </div>
+            <FAQListAdapter
+              useAccordion
+              defaultOpen="faq-0"
+              items={post.faqs.map((faq) => ({
+                question: faq.question,
+                answer: faq.answer,
+                icon: faq.isVoiceOptimized ? '🎙️' : undefined,
+              }))}
+            />
           </Card>
         )}
 
