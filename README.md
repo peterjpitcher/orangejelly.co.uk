@@ -131,6 +131,7 @@ For production deployment, ensure:
 1. Environment variables are set correctly
 2. Build completes without errors
 3. All TypeScript checks pass
+4. Trigger a fresh deploy whenever new markdown content is added so the static bundle includes the latest posts.
 
 ## Contact
 
