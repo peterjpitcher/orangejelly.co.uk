@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from '@/components/StructuredData';
 export const metadata: Metadata = {
   title: 'About Demo - Shadcn Components | Orange Jelly',
   description:
-    'Demo version of the about page using shadcn/ui components showcasing modern UI patterns with Peter Pitcher, founder of Orange Jelly who helps UK pubs save 5+ hours weekly with AI tools.',
+    'Demo version of the about page using shadcn/ui components showcasing modern UI patterns with Peter Pitcher, founder of Orange Jelly who helps UK pubs save up to 25 hours weekly with AI tools.',
   keywords: [
     'shadcn demo',
     'Peter Pitcher',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Orange Jelly Demo - Modern UI Components',
     description:
-      'See how modern UI components can enhance the Orange Jelly website. Peter Pitcher helps UK licensees save time with AI.',
+      'See how modern UI components can enhance the Orange Jelly website. Peter Pitcher helps UK licensees save up to 25 hours with AI.',
     type: 'website',
     url: 'https://www.orangejelly.co.uk/about-demo',
     images: [

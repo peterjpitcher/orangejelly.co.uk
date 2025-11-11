@@ -50,7 +50,7 @@ export default function OGImage() {
               Pub marketing that works
             </div>
             <div style={{ fontSize: 28, color: '#2D2D2D' }}>
-              Fill empty pub tables. Save 5+ hours weekly.
+              Fill empty pub tables. Save up to 25 hours weekly.
             </div>
           </div>
         </div>

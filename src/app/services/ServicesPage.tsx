@@ -100,6 +100,11 @@ export default function ServicesPage() {
       {/* Services Grid - 2 columns max on desktop, 1 on mobile */}
       <Section background="cream" padding="large">
         <Container maxWidth="4xl">
+          <Text size="sm" color="muted" align="center" className="mb-8">
+            These aren&apos;t fixed packages—just proven ways we can help. You still pay £75 per
+            hour plus VAT and we tailor the time to whatever your pub needs over the 30-day
+            turnaround.
+          </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {servicePackages.map((service) => (
               <ServiceCard key={service.id} {...service} />

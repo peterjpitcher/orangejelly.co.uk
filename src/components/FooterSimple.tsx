@@ -65,7 +65,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
               Orange Jelly
             </Heading>
             <Text align="center" color="white" className="text-cream/80">
-              AI Solutions That Save 5+ Hours Weekly
+              AI solutions that save up to 25 hours every week
             </Text>
           </div>
 

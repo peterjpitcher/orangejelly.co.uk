@@ -16,7 +16,7 @@
       "Full-time job + pub + Orange Jelly",
       "Featured in BII magazine",
       "Greene King tenants",
-      "£75/hour - no packages",
+      "£75/hour - no fixed packages",
       "30-day action plan with weekly check-ins"
     ]
   },
@@ -42,7 +42,7 @@
     {
       "date": "Today",
       "title": "Helping Others",
-      "description": "Helping licensees save 5+ hours weekly with proven tools.",
+      "description": "Helping licensees save up to 25 hours every week with proven tools.",
       "highlight": true
     }
   ],
@@ -153,7 +153,7 @@
     },
     {
       "question": "What's your promise to pub owners?",
-      "answer": "To save you at least 5 hours per week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it."
+      "answer": "To help you claw back up to 25 hours every week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it."
     }
   ]
 }

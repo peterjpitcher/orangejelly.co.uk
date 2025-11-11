@@ -200,7 +200,7 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                       date: 'Today',
                       icon: <Target className="h-5 w-5" />,
                       title: 'Helping Others',
-                      desc: 'Helping licensees save 5+ hours weekly with proven tools.',
+                      desc: 'Helping licensees save up to 25 hours weekly with proven tools.',
                     },
                   ].map((item, i) => (
                     <Card key={i}>

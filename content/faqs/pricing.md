@@ -6,7 +6,7 @@ We charge £75 per hour plus VAT as a flat rate. I'll work with you to implement
 
 ## What exactly do you do for £75 per hour?
 
-Everything from writing your social media posts to designing menus that sell. I can create quiz nights that pack your pub, write emails that get opened, fix your Google listing so locals find you, or teach you AI tools that save 5 hours a week. You tell me what's hurting your business most - I'll fix it using methods proven at The Anchor.
+Everything from writing your social media posts to designing menus that sell. I can create quiz nights that pack your pub, write emails that get opened, fix your Google listing so locals find you, or teach you AI tools that save up to 25 hours a week. You tell me what's hurting your business most - I'll fix it using methods proven at The Anchor.
 
 ## Why £75 per hour? Why not packages?
 
@@ -16,9 +16,9 @@ Because your pub doesn't need what every other pub needs. Maybe you just need 3 
 
 We stay hands-on through the first 30 days with weekly check-ins, rapid adjustments, and direct WhatsApp support. In 6 years at The Anchor, these strategies have never failed when properly implemented.
 
-## How much does the empty pub recovery package cost?
+## How much does the empty pub recovery plan cost?
 
-£75 per hour plus VAT. I'll work with you to implement the AI strategies that transformed The Anchor, with support tailored to your pace and goals.
+£75 per hour plus VAT. It's the same hourly support, just organised into a focused 30-day plan so you only pay for what your pub actually needs.
 
 ## How much revenue am I losing on quiet nights?
 

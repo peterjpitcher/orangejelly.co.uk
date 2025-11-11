@@ -31,7 +31,7 @@ const fallbackFAQs = [
   {
     question: "I'm losing money every day - how quickly can you help?",
     answer:
-      "I understand the urgency - every day matters when you're bleeding money. WhatsApp me right now and I'll respond within hours (or after service if I'm behind the bar). We can often implement quick wins within days that start stemming losses immediately. Our Empty Pub Recovery Package shows results within 7-14 days.",
+      "I understand the urgency - every day matters when you're bleeding money. WhatsApp me right now and I'll respond within hours (or after service if I'm behind the bar). We focus on immediate quick wins, but the full turnaround happens inside 30 days so you can actually breathe again.",
   },
   {
     question: 'My pub is in crisis - can we talk today?',

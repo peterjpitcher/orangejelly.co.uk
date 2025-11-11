@@ -197,9 +197,9 @@ export default function PubRescue() {
               <div>
                 <div className="text-3xl mb-2">🛡️</div>
                 <Heading level={4} className="mb-1">
-                  30-Day Guarantee
+                  30-Day Partnership
                 </Heading>
-                <Text size="sm">See results or get your money back</Text>
+                <Text size="sm">We stay involved until the turnaround sticks</Text>
               </div>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function PubRescue() {
                 </Text>
                 <FeatureList
                   items={[
-                    'Automate marketing (save 5+ hours/week)',
+                    'Automate marketing (save up to 25 hours/week)',
                     'Build customer database for repeat visits',
                     'Train your team on upselling techniques',
                     'Create systems so it runs without you',
@@ -518,8 +518,8 @@ export default function PubRescue() {
                     AI Marketing Assistant
                   </Heading>
                   <Text size="sm">
-                    Creates all your social media, emails, and promotions. Saves 5+ hours every
-                    week.
+                    Creates all your social media, emails, and promotions. Saves up to 25 hours
+                    every week.
                   </Text>
                 </div>
                 <div className="text-center">
@@ -581,12 +581,12 @@ export default function PubRescue() {
       <Section background="cream">
         <div className="max-w-4xl mx-auto">
           <RelatedLinks
-            title="Choose Your Rescue Package"
-            subtitle="Pick the solution that matches your biggest crisis"
+            title="Choose Your Rescue Plan"
+            subtitle="Pick the idea that matches your biggest crisis and we'll tailor the hours"
             links={[
               {
                 title: 'Empty Pub Recovery',
-                description: 'Fill your quiet nights in 30 days or your money back',
+                description: 'Fill your quiet nights in 30 days with hands-on support',
                 href: '/services#empty-pub-recovery',
                 emoji: '🏚️',
                 highlight: true,

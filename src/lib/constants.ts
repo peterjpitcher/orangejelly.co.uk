@@ -52,12 +52,12 @@ export const MESSAGES = {
   // Trust Messages
   trust: {
     timeSaved: 'Time saved promise',
-    atLeastFiveHours: 'At Least 5 Hours',
+    atLeastFiveHours: 'Save up to 25 Hours',
     thirtyDays: '30 Days',
     noContracts: 'No hidden fees, no long contracts, no surprises',
     noAgencyFees: 'No Agency Fees',
     fromlicensees: 'From Real licensees',
-    resultsIn14Days: 'Results in 14 Days',
+    resultsIn14Days: 'Results in 30 Days',
     costEffective: 'Costs less than a part-time employee',
     coversIncrease: '25-35 Quiz Regulars',
     coversIncreaseLabel: 'Up from 20 people',

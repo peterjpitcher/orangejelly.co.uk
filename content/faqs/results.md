@@ -4,7 +4,7 @@
 
 We've improved food GP from 58% to 71%, grown quiz nights to 25-35 regulars, achieve 60,000-70,000 social media views monthly, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.
 
-## How quickly will I see more customers from the recovery package?
+## How quickly will I see more customers from the recovery plan?
 
 Results vary by pub, but at The Anchor we've seen quiz nights grow from 20 to 25-35 regulars, tasting nights with 85% retention, and 60,000-70,000 social media views monthly. Most improvements show within 30 days.
 
@@ -14,7 +14,7 @@ Most pubs see 25-40% increase in covers within 30 days. Our proven system starts
 
 ## How long until free marketing shows results?
 
-Immediate to 30 days. Fixing your Google listing can bring customers tomorrow. Social media posts work within days. Email campaigns see instant results. Community partnerships take 2-4 weeks to build momentum.
+Everything we do is built around a 30-day turnaround. Some actions, like fixing your Google listing, can spark enquiries within hours, while social posts and email campaigns build momentum over the first couple of weeks. The compounding effect becomes obvious by the end of the month.
 
 ## What's your success rate with pub turnarounds?
 
@@ -22,7 +22,7 @@ We've helped transform pubs from empty to thriving. Our own pub, The Anchor, wen
 
 ## How quickly will I see midweek improvements?
 
-Most pubs see 30-50% increase in midweek covers within 2 weeks. By week 4, you should be at 60-70% capacity on previously dead nights. The Anchor went from 20 to 85 people for Tuesday quiz in 6 weeks.
+Inside 30 days. Expect to feel the first lift in bookings during week two, then hit 60-70% capacity on the nights that used to be empty by the end of the month. The Anchor went from 20 to 85 people for Tuesday quiz in 6 weeks by sticking with this cadence.
 
 ## What if your solutions don't work for my pub?
 
@@ -42,7 +42,7 @@ Yes! By analyzing local demographics, past event performance, and social media e
 
 ## How quickly will I see results?
 
-At The Anchor, our first AI-powered quiz night brought in 35 people instead of the usual 20 - that was week one. Most pubs see their first wins within 14 days because I focus on quick-impact strategies first. You won't wait months wondering if it's working.
+At The Anchor, our first AI-powered quiz night brought in 35 people instead of the usual 20 during the first week. Clients feel similar early wins, but the commitment we make is a full turnaround inside 30 days. You won't wait months wondering if it's working.
 
 ## Can I see examples of your work?
 

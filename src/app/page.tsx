@@ -85,8 +85,8 @@ const getLocalHomeData = () => {
     },
     {
       icon: '📅',
-      title: 'Results in 14 Days',
-      description: 'Proven quick wins we use ourselves',
+      title: 'Results in 30 Days',
+      description: 'Proven quick wins with a 30-day turnaround',
     },
     {
       icon: '🛡️',
@@ -105,8 +105,8 @@ const getLocalHomeData = () => {
     },
     {
       icon: '⭐',
-      title: 'Save 5+ Hours',
-      description: 'Every single week',
+      title: 'Save up to 25 Hours',
+      description: 'Every single week reclaimed',
     },
   ];
 
@@ -171,7 +171,7 @@ const getLocalHomeData = () => {
   const trustBarItems = [
     { value: '15-20%', label: 'Covers', subtext: 'Average increase in 6 weeks' },
     { value: '£75/hour', label: 'AI-powered marketing solutions' },
-    { value: '14 Days', label: 'Guaranteed quick results' },
+    { value: '30 Days', label: 'Guaranteed turnaround' },
   ];
 
   const sectionHeadings = {

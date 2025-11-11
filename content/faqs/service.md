@@ -10,7 +10,7 @@ Every pub is different, but the challenges are similar. That's why we offer a fr
 
 ## What's your promise to pub owners?
 
-To save you at least 5 hours per week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it.
+To help you claw back up to 25 hours every week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it.
 
 ## Can AI really manage my pub's social media?
 
@@ -24,9 +24,9 @@ Very detailed but easy to understand. You'll get insights on customer behavior, 
 
 Real experience combined with AI efficiency. I've run successful quiz nights, tasting events, and seasonal promotions. I'll share what works and train you to use AI for promotion and management.
 
-## How does the Empty Pub Recovery Package work?
+## How does the Empty Pub Recovery Plan work?
 
-We work with you to implement AI-powered marketing strategies that have been proven at The Anchor. This includes training on social media automation, event promotion, and customer engagement. We charge £75 per hour plus VAT and tailor the support to what your pub needs most.
+We work with you to implement AI-powered marketing strategies that have been proven at The Anchor. Think of it as a playbook we customise for your pub, not a pre-set package. We charge £75 per hour plus VAT, tailoring the time to exactly what your business needs.
 
 ## How do you promote a pub quiz effectively?
 

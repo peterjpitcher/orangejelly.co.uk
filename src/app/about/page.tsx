@@ -5,7 +5,7 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: 'About Orange Jelly - From One licensee to Another',
     description:
-      'Who is Peter Pitcher? How can AI help my pub? Meet the pub owner behind Orange Jelly who helps UK licensees save 5+ hours weekly with practical AI tools. Real experience from running The Anchor pub.',
+      'Who is Peter Pitcher? How can AI help my pub? Meet the pub owner behind Orange Jelly who helps UK licensees save up to 25 hours weekly with practical AI tools. Real experience from running The Anchor pub.',
     path: '/about',
     keywords: [
       'Peter Pitcher',
@@ -33,7 +33,7 @@ function AboutPageData() {
         '@type': 'AboutPage',
         name: 'About Orange Jelly - From One licensee to Another',
         description:
-          'Learn about Peter Pitcher and Billy Summers, who run The Anchor pub and help other licensees save time with AI tools.',
+          'Learn about Peter Pitcher and Billy Summers, who run The Anchor pub and help other licensees reclaim up to 25 hours each week with AI tools.',
         url: 'https://www.orangejelly.co.uk/about',
         mainEntity: {
           '@id': 'https://www.orangejelly.co.uk/#organization',
@@ -45,7 +45,7 @@ function AboutPageData() {
         name: 'Peter Pitcher',
         jobTitle: 'Founder & AI Consultant',
         description:
-          'Pub owner who discovered how AI can Save At Least 5 Hours a Week on boring admin tasks. Co-owner of The Anchor in Stanwell Moor with wife Billy Summers.',
+          'Pub owner who discovered how AI can save up to 25 hours a week on boring admin tasks. Co-owner of The Anchor in Stanwell Moor with wife Billy Summers.',
         spouse: {
           '@type': 'Person',
           name: 'Billy Summers',
@@ -104,7 +104,7 @@ function AboutPageData() {
           'Menu Design',
           'Customer Retention',
         ],
-        slogan: 'Save At Least 5 Hours a Week with AI',
+        slogan: 'Save up to 25 hours a week with AI',
         priceRange: '££',
         award: [
           'Featured in BII Autumn 2025 magazine for AI innovation',

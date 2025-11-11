@@ -6,7 +6,7 @@ I'm Peter Pitcher, and I've run The Anchor pub in Stanwell Moor with my husband 
 
 ## What makes Orange Jelly different from other consultants?
 
-We're not consultants who've never pulled a pint. We run an actual pub and test every strategy in our own business first. No corporate nonsense, no jargon - just one licensee helping another with tools that actually work. Plus, we guarantee results or your money back.
+We're not consultants who've never pulled a pint. We run an actual pub and test every strategy in our own business first. No corporate nonsense, no jargon - just one licensee helping another with tools that actually work. We don't do refunds—we stay involved until the work delivers real-world results.
 
 ## Is Orange Jelly a big company?
 

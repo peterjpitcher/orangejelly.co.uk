@@ -6,7 +6,7 @@ Of course! Many pubs start with a single consultation to tackle their biggest pr
 
 ## What services does Orange Jelly offer for pubs?
 
-We offer pub recovery packages, menu optimization, social media management, website development, AI training, and business analysis. Everything is charged at £75 per hour plus VAT. We focus on practical solutions that fill your pub.
+We offer pub recovery plans, menu optimisation, social media management, website development, AI training, and business analysis. Everything is charged at £75 per hour plus VAT. Think of these as starting ideas we customise for your pub.
 
 ## How do I know if Orange Jelly's strategies will work for my pub?
 
@@ -26,7 +26,7 @@ We charge £75 per hour plus VAT as a flat rate. I'm always happy to have a free
 
 ## How long does it take to see ROI from pub marketing?
 
-Most pubs see positive ROI within 30 days. Our menu makeovers typically pay for themselves in one weekend. Marketing campaigns start showing results within 7-14 days, with full ROI usually achieved by day 30.
+Most pubs see positive ROI within 30 days. Our menu makeovers typically pay for themselves in one weekend. Marketing campaigns start showing momentum within the first couple of weeks, and that compounds into clear ROI by day 30.
 
 ## Do I need to understand technology to work with Orange Jelly?
 

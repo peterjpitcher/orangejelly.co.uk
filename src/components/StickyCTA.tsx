@@ -42,18 +42,15 @@ export default function StickyCTA() {
                 Get More Customers Without Agency Fees
               </Text>
               <Text size="xs" className="text-charcoal/60 hidden sm:block">
-                Costs less than a part-time employee - Results in 14 days
+                Costs less than a part-time employee – Meaningful results inside 30 days
               </Text>
             </div>
           </div>
-          
+
           {/* Right side - CTA */}
           <div className="flex items-center gap-3">
-            <WhatsAppButton
-              text="Get Marketing Help"
-              size="small"
-            />
-            
+            <WhatsAppButton text="Get Marketing Help" size="small" />
+
             {/* Close button */}
             <Button
               onClick={() => setIsVisible(false)}
@@ -63,7 +60,12 @@ export default function StickyCTA() {
               aria-label="Close"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </Button>
           </div>

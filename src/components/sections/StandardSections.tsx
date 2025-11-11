@@ -192,7 +192,7 @@ export function MetricsBar({
   metrics = [
     { value: '£400+', label: 'Extra Weekly Revenue', highlight: true },
     { value: '25-35', label: 'Quiz Night Regulars' },
-    { value: '14 Days', label: 'To See Results' },
+    { value: '30 Days', label: 'To lock in results' },
   ],
   background = 'orange',
   textColor = 'white',

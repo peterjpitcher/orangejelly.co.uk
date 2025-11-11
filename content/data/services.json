@@ -3,7 +3,7 @@
     "title": "From Empty Tables to Full Tills",
     "subtitle": "Every service below has been tested at The Anchor. If it didn't work for us, it's not here.",
     "ctaText": "WhatsApp: 07990 587315",
-    "bottomText": "All services £75/hour • No packages • Pay for what you need"
+    "bottomText": "All services £75/hour • No fixed packages • Pay for the help you need"
   },
   "realSolutionsSection": {
     "heading": "Real Solutions, Not Theory",
@@ -33,7 +33,7 @@
     {
       "id": "empty-pub-recovery",
       "emoji": "🚨",
-      "title": "Empty Pub Recovery Package",
+      "title": "Empty Pub Recovery Plan",
       "problem": "Problem: Staring at empty tables on quiet nights?",
       "deliverable": "Deliverable: Effective marketing strategies delivered quickly",
       "description": "Turn those soul-crushing empty nights into profitable ones. This is our emergency response for pubs bleeding money on quiet nights. I've been there - watching the clock, calculating losses, wondering if tomorrow will be better. It doesn't have to be this way.",
@@ -78,27 +78,27 @@
     },
     {
       "id": "social-media",
-    "emoji": "📱",
-    "title": "Social Media That Actually Works",
-    "problem": "Problem: Posting into the void while competitors steal your customers?",
-    "deliverable": "Deliverable: Strategy playbook + AI-assisted workflows your team can run",
-    "description": "Stop wasting hours on posts nobody sees. We reach 60,000-70,000 people monthly spending just 2 hours per week. I'll coach you through the exact planning frameworks, AI tools, and review rhythms we use so your team can execute confidently.",
-    "features": [
-      "30-day content calendar mapped to your events",
-      "AI-assisted batching workflow (2 hours per week)",
-      "Local engagement and community group playbook",
-      "Event promotion and recap templates",
-      "Crisis communication and review response guide",
-      "Weekly metrics scorecard you can update in minutes"
-    ],
-    "example": {
-      "before": "No social media presence, relying on walk-ins",
-      "after": "70,000 monthly views across platforms",
-      "result": "Quiz night sells out, Sunday lunch bookings up 40%"
+      "emoji": "📱",
+      "title": "Social Media That Actually Works",
+      "problem": "Problem: Posting into the void while competitors steal your customers?",
+      "deliverable": "Deliverable: Strategy playbook + AI-assisted workflows your team can run",
+      "description": "Stop wasting hours on posts nobody sees. We reach 60,000-70,000 people monthly spending just 2 hours per week. I'll coach you through the exact planning frameworks, AI tools, and review rhythms we use so your team can execute confidently.",
+      "features": [
+        "30-day content calendar mapped to your events",
+        "AI-assisted batching workflow (2 hours per week)",
+        "Local engagement and community group playbook",
+        "Event promotion and recap templates",
+        "Crisis communication and review response guide",
+        "Weekly metrics scorecard you can update in minutes"
+      ],
+      "example": {
+        "before": "No social media presence, relying on walk-ins",
+        "after": "70,000 monthly views across platforms",
+        "result": "Quiz night sells out, Sunday lunch bookings up 40%"
+      },
+      "ctaText": "Plan my strategy",
+      "highlight": false
     },
-    "ctaText": "Plan my strategy",
-    "highlight": false
-  },
     {
       "id": "quiz-night",
       "emoji": "🎯",
@@ -275,16 +275,16 @@
   },
   "faqs": [
     {
-      "question": "How does the Empty Pub Recovery Package work?",
-      "answer": "We start with a free consultation to understand your specific challenges. Then I create a custom 30-day action plan using strategies that worked at The Anchor. You get weekly check-ins, AI tools access, and my personal WhatsApp for questions. Most pubs see increased footfall within 2 weeks."
+      "question": "How does the Empty Pub Recovery Plan work?",
+      "answer": "We start with a free consultation to understand your specific challenges. Then I create a custom 30-day action plan using strategies that worked at The Anchor. You get weekly check-ins, AI tools access, and my personal WhatsApp for questions. Most pubs see increased footfall inside that first month."
     },
     {
       "question": "How does your hourly consulting work?",
       "answer": "Simple - you only pay for the time you need. No packages, no minimum contracts. We agree on what needs doing, I track my time, and invoice you monthly. Most pubs need 15-25 hours for transformation, but you can start with just 2 hours."
     },
     {
-      "question": "How quickly will I see more customers from the recovery package?",
-      "answer": "Most pubs see improvements within 2 weeks. Social media campaigns start working immediately, events take 2-3 weeks to build momentum, and quiz nights typically fill up within 4-6 weeks. The Anchor went from 20 to 35 quiz regulars in 8 weeks."
+      "question": "How quickly will I see more customers from the recovery plan?",
+      "answer": "Most pubs see improvements within the first month. Social media campaigns start working immediately, events take a couple of weeks to build momentum, and quiz nights typically fill up within 4-6 weeks. The Anchor went from 20 to 35 quiz regulars in 8 weeks."
     },
     {
       "question": "How can menu descriptions increase my food sales?",

@@ -100,7 +100,7 @@ export default function EmptyPubSolutions() {
         },
         {
           '@type': 'Question',
-          name: 'How much does the empty pub recovery package cost?',
+          name: 'How much does the empty pub recovery plan cost?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: "£75 per hour plus VAT. I'll work with you to implement the AI strategies that transformed The Anchor with flexible support based on your goals.",

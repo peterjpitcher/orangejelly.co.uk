@@ -6,21 +6,19 @@ This document provides a comprehensive audit of all claims made on the Orange Je
 ## 1. Time-Saving Claims
 
 ### Primary Claims
-- **"25 hours of value per week"** - Current main claim about AI value addition
-- **"Save At Least 5 Hours a Week"** - Footer/tagline claim
-    Change this to save at least 15 hours a week
-- **"120-150 hours equivalent work per week in spare time"** - Proposed update
-    Adjust this to 120-150 hours equivalent work per week by using AI to get great work done faster
+- **"25 hours of value per week"** - Keep as the lead proof point for AI leverage
+- **"Save up to 25 hours a week"** - Preferred footer/tagline phrasing (retire the old “5+ hours” wording)
+- **"120-150 hours equivalent work per week in spare time"** - Clarify that this comes from using AI to get great work done faster, not working more hours
 
 ### Specific Time Claims
 - **2 hours per week** on social media (down from previous time)
-    If this is for Social only, it needst o be 10 hours a week.
+    Accurate when positioned as “2 hours to schedule 30 days of social content with AI workflows”
 - **2 hours earlier home** every night (Billy's testimonial)
-    No, the pub's still busy, AI just means that we can get great work done faster.
+    Reword to emphasise that AI helps work get done faster rather than guaranteeing earlier finishes
 - **Response within 2-4 hours** during pub hours
-    Change it to 'I'll always respond as quickly as I can, but bear with me'.
+    Use: “I'll respond as quickly as I can, but bear with me”
 - **10 minutes of advice** welcome (quick questions)
-    Always happy to talk to someone on the phone, no charges, no restrictions. I understand that sometimes people just have questions and want to talk.
+    Reinforce that short chats are free—people can call just to ask questions
 - **Various training durations**: 2, 4, or 8 hours
     They're all fair, just make sure prices are always consistent at £75 per hour plus VAT.
 
@@ -37,22 +35,18 @@ All seem fair without me seeing the context, where is the content being used?
 ## 2. Timeline & Results Claims
 
 ### Core Timeline Promises
-- **"Results in 14 Days"** - Major trust badge across site
-    Can we make this 28 days and caveat it that you also have to trust the process.
-- **"Within 30 days"** - Most common timeline for results/ROI
-    I prefer this to a 14 day claim. SEO needs time to work.
-- **"7-14 days"** - Marketing campaign results start showing
-    I prefer to stick with the 'Within 30 days' claim.
+- **"Within 30 days"** - Primary promise for meaningful results/ROI; use this everywhere and retire the “14 days” trust-badge copy
+- **Early wins copy** - OK to mention “quick wins” or “momentum in the first couple of weeks,” but the headline commitment must still be 30 days
 
 ### Progressive Timeline Claims
 - **Week 1**: Initial uptick, more bookings
-    Change this to more traffic to your website and more phone calls.
+    Reword to “more traffic to your website and more phone calls”
 - **Week 2**: Busier nights, noticeable impact
-    You won't see this for 4-6 weeks
+    Reserve “busier nights” claims for week 4+; week 2 should focus on momentum building
 - **Week 4**: 60-70% capacity on previously dead nights
-    I don't feel comfortable with such a significant claim, ease it off, I want to be realistic.
+    Tone down to “noticeably fuller evenings” rather than precise percentages
 - **Week 6-8**: Significant changes
-    Too vague and non-descript. Also don't over-promise and leave me to under-deliver.
+    Add concrete but modest examples (quiz attendance stabilised, bookings back) without big percentages
 - **6 months**: Full transformation
     Fair to claim this after 6 months.
 
@@ -122,7 +116,7 @@ All seem fair without me seeing the context, where is the content being used?
 - **£250/week** waste savings
     True
 - **£2,000/month** identified cost savings
-    More than than, we've saved probably £4000 on vendor reviews and switching, energy reduction, rota optimisation, etc. since we stated.
+    Update this to “£4,000+” based on vendor reviews, supplier switches, energy reduction, and rota optimisation since we started.
 - **£4.50** menu spend increase per customer
     Fair but not reflective because we're wet-led.
 
@@ -137,11 +131,10 @@ All seem fair without me seeing the context, where is the content being used?
 ## 5. Guarantees & Promises
 
 ### Core Guarantees
-- **30-day action plan with weekly support**
-- **"Results in 14 Days or your money back"**
-    Results in 30 days depending on what we're working on and also how quickly you can turn around the changes necessary.
+- **30-day action plan with weekly support** – keep this as the promise
+- **No refunds; partnership guarantee** – message that we stay hands-on until the plan delivers real-world results instead of offering money back
 - **"Save time or make more money within 30 days"**
-    Fair.
+    Fair, provided it is paired with the partnership framing above.
 
 ### Service Promises
 - Reply within 4 hours
@@ -172,8 +165,8 @@ All seem fair without me seeing the context, where is the content being used?
 
 ## Recommendations for Review
 
-1. **Consistency Check**: Ensure all time-saving claims align (5 hours vs 25 hours)
-2. **Timeline Verification**: Confirm all "within X days" claims are achievable
+1. **Consistency Check**: Ensure every time-saving reference now says “save up to 25 hours a week”
+2. **Timeline Verification**: Confirm every “within X days” claim points to the 30-day turnaround (early wins can be mentioned, but 30 days is the promise)
 3. **Metric Validation**: Verify all percentage increases and financial figures
 4. **Sanity Migration**: Move remaining hardcoded claims to CMS for easier updates
 5. **Documentation Update**: Keep CLAUDE.md synchronized with any changes

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: 'How to Fill Empty Pub Tables | Pub Marketing That Works | Orange Jelly',
   description:
-    'How can I fill my empty pub tables? Orange Jelly provides AI-powered marketing tools that help UK licensees attract more customers. Save 5+ hours weekly with proven strategies from The Anchor pub owner. Menu optimization, social media automation, and more.',
+    'How can I fill my empty pub tables? Orange Jelly provides AI-powered marketing tools that help UK licensees attract more customers. Save up to 25 hours weekly with proven strategies from The Anchor pub owner. Menu optimisation, social media automation, and more.',
   keywords:
     'pub AI tools, save time running pub, pub marketing help, menu writing service, Orange Jelly, Peter Pitcher, how to fill empty pub tables, pub marketing UK, automate pub social media',
   openGraph: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How to Fill Empty Pub Tables | Pub Marketing That Works | Orange Jelly',
     description:
-      'Struggling with empty pub tables? AI-powered marketing tools for UK pubs. Save 5+ hours weekly.',
+      'Struggling with empty pub tables? AI-powered marketing tools for UK pubs. Save up to 25 hours weekly.',
     images: [`${baseUrl}/opengraph-image`],
   },
   robots: {
