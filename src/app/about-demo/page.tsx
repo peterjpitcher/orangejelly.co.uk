@@ -45,13 +45,10 @@ export default function AboutDemo() {
     { name: 'About Demo', url: 'https://www.orangejelly.co.uk/about-demo' },
   ];
 
-  // Demo page with fallback data
-  const aboutContent = null;
-
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
-      <AboutDemoPage aboutContent={aboutContent} />
+      <AboutDemoPage />
     </>
   );
 }

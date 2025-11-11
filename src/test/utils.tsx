@@ -1,11 +1,11 @@
-import { render as rtlRender } from '@testing-library/react';
+import { render as rtlRender, type RenderOptions } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { type ReactElement } from 'react';
+import { type ReactElement, type ReactNode } from 'react';
 import { vi } from 'vitest';
 
 // Setup Next.js mocks
 vi.mock('next/image', () => ({
-  default: ({ src, alt, ...props }: { src: string; alt: string; [key: string]: any }) => {
+  default: ({ src, alt, ...props }: { src: string; alt: string; [key: string]: unknown }) => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={src} alt={alt} {...props} />;
   },
@@ -17,9 +17,9 @@ vi.mock('next/link', () => ({
     href,
     ...props
   }: {
-    children: React.ReactNode;
+    children: ReactNode;
     href: string;
-    [key: string]: any;
+    [key: string]: unknown;
   }) => {
     return (
       <a href={href} {...props}>
@@ -30,7 +30,7 @@ vi.mock('next/link', () => ({
 }));
 
 // Custom render function
-export function render(ui: ReactElement, options = {}) {
+export function render(ui: ReactElement, options: RenderOptions = {}) {
   return rtlRender(ui, {
     // Add providers here if needed
     wrapper: ({ children }) => children,

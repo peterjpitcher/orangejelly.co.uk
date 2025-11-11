@@ -8,6 +8,8 @@ import type { RelatedLink } from '@/components/RelatedLinks';
 // Import related links data
 import relatedLinksData from '../../../content/data/related-links.json';
 
+type RelatedLinkCluster = Record<string, { links: RelatedLink[] }>;
+
 interface SectionWrapperProps {
   background?: 'white' | 'cream' | 'teal' | 'orange-light' | 'charcoal';
   padding?: 'small' | 'medium' | 'large';
@@ -89,7 +91,8 @@ export function HelpSection({
 
   // Otherwise, use local data by cluster ID
   const clusterId = linkCluster || 'quickStart';
-  const clusterData = (relatedLinksData as any)[clusterId];
+  const clusterMap = relatedLinksData as RelatedLinkCluster;
+  const clusterData = clusterMap[clusterId];
 
   if (!clusterData) {
     return null; // Don't render anything if cluster not found
@@ -116,7 +119,6 @@ interface StandardCTASectionProps {
   whatsappMessage?: string;
   bottomText?: string;
   variant?: 'orange' | 'teal' | 'charcoal';
-  background?: 'orange' | 'teal' | 'white';
 }
 
 export function StandardCTASection({
@@ -126,7 +128,6 @@ export function StandardCTASection({
   whatsappMessage,
   bottomText,
   variant,
-  background,
 }: StandardCTASectionProps) {
   return (
     <CTASection

@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Link from '@/components/Link';
 import AnimatedItem from '@/components/AnimatedItem';
+import OptimizedImage from '@/components/OptimizedImage';
 
 // Import partnerships data
 import partnersData from '../../content/data/partnerships.json';
@@ -53,9 +53,11 @@ export default function Partnerships({
             >
               <div className="w-16 h-16 mx-auto mb-2 bg-white rounded-lg p-2 border border-gray-200">
                 {partner.logoUrl ? (
-                  <img
+                  <OptimizedImage
                     src={partner.logoUrl}
                     alt={partner.name}
+                    width={64}
+                    height={64}
                     className="w-full h-full object-contain"
                   />
                 ) : (
@@ -95,9 +97,11 @@ export default function Partnerships({
               >
                 <div className="w-32 h-32 mx-auto mb-4 bg-white rounded-xl p-4 border-2 border-gray-200 group-hover:border-orange group-hover:shadow-md transition-all">
                   {partner.logoUrl ? (
-                    <img
+                    <OptimizedImage
                       src={partner.logoUrl}
                       alt={partner.name}
+                      width={128}
+                      height={128}
                       className="w-full h-full object-contain"
                     />
                   ) : (
@@ -146,9 +150,11 @@ export default function Partnerships({
               <Link href={partner.url || '#'} external className="block group">
                 <div className="w-40 h-40 mx-auto mb-5 bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-orange group-hover:shadow-lg transition-all">
                   {partner.logoUrl ? (
-                    <img
+                    <OptimizedImage
                       src={partner.logoUrl}
                       alt={partner.name}
+                      width={160}
+                      height={160}
                       className="w-full h-full object-contain"
                     />
                   ) : (

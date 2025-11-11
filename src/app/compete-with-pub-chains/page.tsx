@@ -29,8 +29,6 @@ export default function CompeteWithPubChains() {
   // Use local data
   const heroSection = competeData.heroSection;
   const problemSection = competeData.problemSection;
-  const advantagesSection = competeData.advantagesSection;
-  const actionPlan = competeData.actionPlan;
   const strategies = competeData.strategies;
   const successMetrics = competeData.successMetrics;
   const faqs = competeData.faqs;

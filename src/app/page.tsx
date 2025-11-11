@@ -1,7 +1,5 @@
-import { Suspense } from 'react';
 import HomePage from './HomePage';
 import { AsyncErrorBoundary } from '@/components/ErrorBoundary';
-import { PageLoading } from '@/components/Loading';
 import { generateStaticMetadata } from '@/lib/metadata';
 
 export async function generateMetadata() {

@@ -14,7 +14,6 @@ import {
   type CaseStudy,
   type Service,
   type FAQ,
-  MarkdownFile,
   type ParsedMarkdown,
   type FrontMatter,
   type MarkdownParseOptions,

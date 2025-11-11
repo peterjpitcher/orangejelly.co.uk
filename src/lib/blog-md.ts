@@ -1,13 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import {
-  type Category,
-  calculateReadingTime,
-  defaultAuthor,
-  getCategoryBySlug,
-  blogCategories,
-} from './blog';
+import { type Category, calculateReadingTime, getCategoryBySlug, blogCategories } from './blog';
 
 export interface BlogPost {
   slug: string;

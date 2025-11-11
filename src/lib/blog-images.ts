@@ -50,7 +50,18 @@ export function getDefaultBlogImage(slug: string): string {
   return imageMap[slug] || '/images/blog/default.svg';
 }
 
-export function getBlogImageSrc(featuredImage: any, slug: string): string {
+type FeaturedImage =
+  | string
+  | {
+      alt?: string;
+      asset?: {
+        url?: string;
+      };
+    }
+  | null
+  | undefined;
+
+export function getBlogImageSrc(featuredImage: FeaturedImage, slug: string): string {
   // If featuredImage is a string path or URL, use it directly
   if (typeof featuredImage === 'string' && featuredImage) {
     return featuredImage;
@@ -65,7 +76,7 @@ export function getBlogImageSrc(featuredImage: any, slug: string): string {
   return getDefaultBlogImage(slug);
 }
 
-export function getBlogImageAlt(featuredImage: any, title: string): string {
+export function getBlogImageAlt(featuredImage: FeaturedImage, title: string): string {
   // If featuredImage has alt text, use it
   if (featuredImage && typeof featuredImage === 'object' && featuredImage.alt) {
     return featuredImage.alt;

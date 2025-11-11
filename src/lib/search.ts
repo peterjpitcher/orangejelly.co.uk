@@ -1,7 +1,7 @@
 import Fuse, { type FuseResult, type IFuseOptions } from 'fuse.js';
 import fs from 'fs';
 import path from 'path';
-import { getAllPosts, BlogPost } from './blog-md';
+import { getAllPosts } from './blog-md';
 
 export interface SearchableItem {
   id: string;
@@ -29,10 +29,10 @@ const SEARCH_INDEX_PATH = path.join(process.cwd(), 'public', 'search-index.json'
  */
 export function buildSearchIndex(): SearchableItem[] {
   const posts = getAllPosts();
-  
+
   const searchableItems: SearchableItem[] = posts
-    .filter(post => post && post.slug && post.title) // Filter out invalid posts
-    .map(post => ({
+    .filter((post) => post && post.slug && post.title) // Filter out invalid posts
+    .map((post) => ({
       id: post.slug,
       title: post.title || 'Untitled',
       excerpt: post.excerpt || '',
@@ -41,7 +41,7 @@ export function buildSearchIndex(): SearchableItem[] {
       tags: post.tags || [],
       slug: post.slug,
       publishedDate: post.publishedDate || new Date().toISOString(),
-      url: `/licensees-guide/${post.slug}`
+      url: `/licensees-guide/${post.slug}`,
     }));
 
   // Save index to public directory for client-side access
@@ -50,7 +50,7 @@ export function buildSearchIndex(): SearchableItem[] {
     if (!fs.existsSync(publicDir)) {
       fs.mkdirSync(publicDir, { recursive: true });
     }
-    
+
     fs.writeFileSync(SEARCH_INDEX_PATH, JSON.stringify(searchableItems, null, 2));
     console.log(`Search index built successfully with ${searchableItems.length} items`);
   } catch (error) {
@@ -69,7 +69,7 @@ export function searchContent(query: string, items?: SearchableItem[]): SearchRe
   }
 
   let searchItems = items;
-  
+
   // If no items provided, try to load from file or build new index
   if (!searchItems) {
     if (fs.existsSync(SEARCH_INDEX_PATH)) {
@@ -94,23 +94,23 @@ export function searchContent(query: string, items?: SearchableItem[]): SearchRe
       { name: 'title', weight: 0.4 },
       { name: 'excerpt', weight: 0.3 },
       { name: 'content', weight: 0.2 },
-      { name: 'tags', weight: 0.1 }
+      { name: 'tags', weight: 0.1 },
     ],
     threshold: 0.4, // Lower = more strict matching
     distance: 100,
     minMatchCharLength: 2,
     includeScore: true,
     includeMatches: true,
-    findAllMatches: true
+    findAllMatches: true,
   };
 
   const fuse = new Fuse(searchItems, fuseOptions);
   const results = fuse.search(query, { limit: 20 });
 
-  return results.map(result => ({
+  return results.map((result) => ({
     item: result.item,
     score: result.score || 0,
-    matches: result.matches
+    matches: result.matches,
   }));
 }
 
@@ -128,7 +128,7 @@ export function getSearchSuggestions(query: string, items?: SearchableItem[]): s
       try {
         const indexData = fs.readFileSync(SEARCH_INDEX_PATH, 'utf8');
         searchItems = JSON.parse(indexData);
-      } catch (error) {
+      } catch {
         searchItems = buildSearchIndex();
       }
     } else {
@@ -144,13 +144,13 @@ export function getSearchSuggestions(query: string, items?: SearchableItem[]): s
   const queryLower = query.toLowerCase();
 
   // Add title matches
-  searchItems.forEach(item => {
+  searchItems.forEach((item) => {
     if (item.title && item.title.toLowerCase().includes(queryLower)) {
       suggestions.add(item.title);
     }
-    
+
     // Add tag matches
-    (item.tags || []).forEach(tag => {
+    (item.tags || []).forEach((tag) => {
       if (tag && tag.toLowerCase().includes(queryLower)) {
         suggestions.add(tag);
       }
@@ -167,9 +167,9 @@ export function getPopularSearchTerms(): string[] {
   const posts = getAllPosts();
   const termFrequency: Record<string, number> = {};
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     // Extract terms from tags
-    (post.tags || []).forEach(tag => {
+    (post.tags || []).forEach((tag) => {
       if (tag) {
         const normalized = tag.toLowerCase().trim();
         termFrequency[normalized] = (termFrequency[normalized] || 0) + 1;
@@ -181,9 +181,9 @@ export function getPopularSearchTerms(): string[] {
       const titleWords = post.title
         .toLowerCase()
         .split(/\s+/)
-        .filter(word => word.length > 3 && !isStopWord(word));
-      
-      titleWords.forEach(word => {
+        .filter((word) => word.length > 3 && !isStopWord(word));
+
+      titleWords.forEach((word) => {
         termFrequency[word] = (termFrequency[word] || 0) + 1;
       });
     }
@@ -217,13 +217,57 @@ function stripMarkdown(content: string): string {
  */
 function isStopWord(word: string): boolean {
   const stopWords = new Set([
-    'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with',
-    'by', 'from', 'as', 'is', 'was', 'are', 'were', 'be', 'been', 'have',
-    'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should',
-    'may', 'might', 'must', 'can', 'shall', 'this', 'that', 'these', 'those',
-    'a', 'an', 'my', 'your', 'how', 'what', 'when', 'where', 'why', 'who'
+    'the',
+    'and',
+    'or',
+    'but',
+    'in',
+    'on',
+    'at',
+    'to',
+    'for',
+    'of',
+    'with',
+    'by',
+    'from',
+    'as',
+    'is',
+    'was',
+    'are',
+    'were',
+    'be',
+    'been',
+    'have',
+    'has',
+    'had',
+    'do',
+    'does',
+    'did',
+    'will',
+    'would',
+    'could',
+    'should',
+    'may',
+    'might',
+    'must',
+    'can',
+    'shall',
+    'this',
+    'that',
+    'these',
+    'those',
+    'a',
+    'an',
+    'my',
+    'your',
+    'how',
+    'what',
+    'when',
+    'where',
+    'why',
+    'who',
   ]);
-  
+
   return stopWords.has(word.toLowerCase());
 }
 

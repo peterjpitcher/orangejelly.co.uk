@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useId } from 'react';
 import { Search } from 'lucide-react';
 import { type SearchableItem, type SearchResult } from '@/lib/search';
 import Fuse from 'fuse.js';
@@ -25,6 +25,9 @@ export default function SearchComponent({
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isIndexLoaded, setIsIndexLoaded] = useState(false);
+  const [announcement, setAnnouncement] = useState('');
+  const resultsListId = useId();
+  const statusMessageId = useId();
 
   // Load search index on mount
   useEffect(() => {
@@ -89,17 +92,41 @@ export default function SearchComponent({
     return () => clearTimeout(timeoutId);
   }, [query, searchIndex, isIndexLoaded, maxResults, onResults]);
 
+  useEffect(() => {
+    if (!query.trim()) {
+      setAnnouncement('');
+      return;
+    }
+
+    if (isLoading) {
+      setAnnouncement('Searching articles…');
+      return;
+    }
+
+    setAnnouncement(
+      results.length
+        ? `${results.length} article${results.length > 1 ? 's' : ''} found`
+        : 'No matching articles'
+    );
+  }, [isLoading, results.length, query]);
+
   return (
     <div className={`relative ${className}`}>
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
         <input
+          role="combobox"
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
           className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           disabled={!isIndexLoaded}
+          aria-autocomplete="list"
+          aria-controls={resultsListId}
+          aria-expanded={results.length > 0}
+          aria-describedby={statusMessageId}
+          aria-haspopup="listbox"
         />
         {isLoading && (
           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -108,8 +135,18 @@ export default function SearchComponent({
         )}
       </div>
 
+      <div aria-live="polite" id={statusMessageId} className="sr-only">
+        {announcement}
+      </div>
+
       {results.length > 0 && (
-        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-96 overflow-y-auto">
+        <ul
+          id={resultsListId}
+          role="listbox"
+          aria-label="Search results"
+          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-96 overflow-y-auto"
+          aria-busy={isLoading}
+        >
           {results.map((result, index) => (
             <SearchResultItem
               key={result.item.id}
@@ -117,11 +154,15 @@ export default function SearchComponent({
               isLast={index === results.length - 1}
             />
           ))}
-        </div>
+        </ul>
       )}
 
       {query.trim() && results.length === 0 && !isLoading && isIndexLoaded && (
-        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-4 text-center text-gray-500">
+        <div
+          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-4 text-center text-gray-500"
+          role="status"
+          aria-live="polite"
+        >
           No articles found for "{query}"
         </div>
       )}
@@ -137,44 +178,42 @@ interface SearchResultItemProps {
 function SearchResultItem({ result, isLast }: SearchResultItemProps) {
   const { item } = result;
 
-  const handleClick = () => {
-    window.location.href = item.url;
-  };
-
   return (
-    <div
-      className={`p-4 hover:bg-gray-50 cursor-pointer transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
-      onClick={handleClick}
+    <li
+      role="option"
+      aria-selected="false"
+      className={`p-4 transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
     >
-      <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
-          <Heading level={3} className="text-sm truncate">
-            {item.title}
-          </Heading>
-          <Text size="sm" color="muted" className="mt-1 line-clamp-2">
-            {item.excerpt}
+      <a
+        href={item.url}
+        className="flex flex-col gap-2 hover:bg-gray-50 focus:bg-gray-100 rounded-md transition-colors p-2 -m-2"
+      >
+        <Heading level={3} className="text-sm truncate">
+          {item.title}
+        </Heading>
+        <Text size="sm" color="muted" className="line-clamp-2">
+          {item.excerpt}
+        </Text>
+        <div className="mt-1 flex items-center flex-wrap gap-2">
+          <Text
+            size="xs"
+            weight="medium"
+            className="inline-flex items-center px-2 py-0.5 rounded bg-orange-100 text-orange-800"
+          >
+            {item.category}
           </Text>
-          <div className="mt-2 flex items-center space-x-2">
+          {item.tags.slice(0, 2).map((tag, index) => (
             <Text
+              key={index}
               size="xs"
               weight="medium"
-              className="inline-flex items-center px-2 py-0.5 rounded bg-orange-100 text-orange-800"
+              className="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-600"
             >
-              {item.category}
+              {tag}
             </Text>
-            {item.tags.slice(0, 2).map((tag, index) => (
-              <Text
-                key={index}
-                size="xs"
-                weight="medium"
-                className="inline-flex items-center px-2 py-0.5 rounded bg-gray-100 text-gray-600"
-              >
-                {tag}
-              </Text>
-            ))}
-          </div>
+          ))}
         </div>
-      </div>
-    </div>
+      </a>
+    </li>
   );
 }

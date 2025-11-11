@@ -1,7 +1,5 @@
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
-import TrustBadges from '@/components/TrustBadges';
-import ProblemCard from '@/components/ProblemCard';
 import CTASection from '@/components/CTASection';
 import FAQItem from '@/components/FAQItem';
 import Section from '@/components/Section';
@@ -12,8 +10,7 @@ import Card from '@/components/Card';
 import Button from '@/components/Button';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
-import Link from '@/components/Link';
-import { URLS, MESSAGES, CONTACT } from '@/lib/constants';
+import { URLS, CONTACT } from '@/lib/constants';
 import Text from '@/components/Text';
 import Container from '@/components/Container';
 import Box from '@/components/Box';
@@ -23,7 +20,6 @@ import FeaturesGrid from '@/components/FeaturesGrid';
 import PartnershipsSection from '@/components/PartnershipsSection';
 import ProblemCardsSection from '@/components/ProblemCardsSection';
 import ResultsSection from '@/components/ResultsSection';
-import AboutSection from '@/components/AboutSection';
 // Type definitions
 interface FAQ {
   question: string;
@@ -51,11 +47,18 @@ interface Problem {
   linkHref?: string; // Add linkHref to Problem interface
 }
 
-interface Feature {
+interface HomeFeature {
   icon?: string;
   title: string;
   description?: string;
   highlight?: boolean;
+}
+
+interface Partnership {
+  name: string;
+  description?: string;
+  logoUrl?: string;
+  url?: string;
 }
 
 interface Metrics {
@@ -67,7 +70,7 @@ interface Metrics {
   socialViewsContext?: string;
   hoursSaved?: string;
   hoursSavedContext?: string;
-  [key: string]: any; // Allow additional properties
+  [key: string]: string | undefined; // Allow additional properties
 }
 
 interface SectionHeadings {
@@ -96,11 +99,11 @@ interface SectionHeadings {
 interface HomePageProps {
   faqs?: FAQ[];
   problems?: Problem[];
-  features?: Feature[];
+  features?: HomeFeature[];
   metrics?: Metrics;
   trustBadges?: TrustBadge[];
   siteSettings?: SiteSettings | null;
-  partnerships?: any[];
+  partnerships?: Partnership[];
   hero?: {
     title: string;
     subtitle: string;
@@ -115,36 +118,31 @@ export default function HomePage({
   faqs,
   problems,
   features,
-  metrics,
-  trustBadges,
-  siteSettings,
+  metrics: _metrics,
+  trustBadges: _trustBadges,
+  siteSettings: _siteSettings,
   partnerships,
   hero,
   sectionHeadings,
   trustBarItems,
 }: HomePageProps) {
   // Process FAQs if available
-  const displayFAQs = faqs || [];
+  const displayFAQs = faqs ?? [];
 
-  // Ensure all problems have required fields for ProblemCardsSection
-  const displayProblems = (problems || []).map((p: any) => ({
-    emoji: p.emoji || p.icon || '🍺',
-    title: p.title || p.problem || '',
-    description: p.description || p.solution || 'We have the solution to help your pub thrive.',
-    linkHref: p.linkHref || '/services',
+  const displayProblems = (problems ?? []).map((problem) => ({
+    emoji: problem.emoji || problem.icon || '🍺',
+    title: problem.title || problem.problem || '',
+    description:
+      problem.description || problem.solution || 'We have the solution to help your pub thrive.',
+    linkHref: problem.linkHref || '/services',
   }));
 
-  // Ensure all features have required fields for FeaturesGrid
-  const displayFeatures = (features || []).map((f) => ({
-    icon: f.icon || '🎯',
-    title: f.title,
-    description: f.description || '',
-    highlight: f.highlight,
+  const displayFeatures = (features ?? []).map((feature) => ({
+    icon: feature.icon || '🎯',
+    title: feature.title,
+    description: feature.description || '',
+    highlight: feature.highlight,
   }));
-  const displayMetrics = metrics || {};
-
-  // Transform problems data for ProblemCard component
-  const problemCards = displayProblems.slice(0, 3); // Only show first 3 problems
 
   return (
     <>
@@ -177,7 +175,14 @@ export default function HomePage({
 
       <FeaturesGrid features={displayFeatures} />
 
-      <PartnershipsSection partners={partnerships || []} />
+      <PartnershipsSection
+        partners={(partnerships || []).map((partner) => ({
+          name: partner.name,
+          description: partner.description || '',
+          logoUrl: partner.logoUrl || '/logo.png',
+          url: partner.url || 'https://www.orangejelly.co.uk',
+        }))}
+      />
 
       <ProblemCardsSection problems={displayProblems} title={sectionHeadings?.problemsHeading} />
 

@@ -16,7 +16,10 @@ export function useFormValidation<T>({ schema, onSubmit }: UseFormValidationOpti
   const validateField = useCallback(
     (name: string, value: unknown) => {
       try {
-        const fieldSchema = schema instanceof z.ZodObject ? schema.shape[name as keyof typeof schema.shape] : undefined;
+        const fieldSchema =
+          schema instanceof z.ZodObject
+            ? schema.shape[name as keyof typeof schema.shape]
+            : undefined;
         if (fieldSchema) {
           fieldSchema.parse(value);
           setErrors((prev) => {
@@ -47,7 +50,7 @@ export function useFormValidation<T>({ schema, onSubmit }: UseFormValidationOpti
       if (validation.success) {
         try {
           await onSubmit(validation.data);
-        } catch (error) {
+        } catch {
           setErrors({ form: 'Something went wrong. Please try again.' });
         }
       } else {

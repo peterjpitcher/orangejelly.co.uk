@@ -1,119 +1,114 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Heading from '@/components/Heading';
+import { useEffect, useState, type MouseEvent } from 'react';
+import clsx from 'clsx';
 
-interface TOCItem {
+export interface TocHeading {
   id: string;
-  text: string;
-  level: number;
+  title: string;
+  level: 2 | 3;
 }
 
 interface TableOfContentsProps {
-  selector?: string;
-  className?: string;
+  headings: TocHeading[];
 }
 
-export default function TableOfContents({ 
-  selector = 'article', 
-  className = '' 
-}: TableOfContentsProps) {
-  const [headings, setHeadings] = useState<TOCItem[]>([]);
-  const [activeId, setActiveId] = useState<string>('');
-  const pathname = usePathname();
+export default function TableOfContents({ headings }: TableOfContentsProps) {
+  const [activeId, setActiveId] = useState<string | null>(headings[0]?.id ?? null);
 
   useEffect(() => {
-    const article = document.querySelector(selector);
-    if (!article) return;
+    if (headings.length === 0 || typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
 
-    const headingElements = article.querySelectorAll('h2, h3');
-    const items: TOCItem[] = [];
+    if (typeof IntersectionObserver === 'undefined') {
+      return;
+    }
 
-    headingElements.forEach((heading) => {
-      const id = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-') || '';
-      if (!heading.id) {
-        heading.id = id;
-      }
-
-      items.push({
-        id,
-        text: heading.textContent || '',
-        level: parseInt(heading.tagName[1])
-      });
-    });
-
-    setHeadings(items);
-  }, [selector, pathname]);
-
-  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target?.id) {
+          setActiveId(visibleEntry.target.id);
+        }
       },
       {
-        rootMargin: '-80px 0% -80% 0%',
-        threshold: 1.0
+        rootMargin: '0px 0px -70% 0px',
+        threshold: [0, 0.25, 0.5, 1],
       }
     );
 
-    headings.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) {
-        observer.observe(element);
-      }
-    });
+    const headingElements = headings
+      .map((heading) => document.getElementById(heading.id))
+      .filter((el): el is HTMLElement => Boolean(el));
 
-    return () => {
-      headings.forEach(({ id }) => {
-        const element = document.getElementById(id);
-        if (element) {
-          observer.unobserve(element);
-        }
-      });
-    };
+    headingElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
   }, [headings]);
 
-  if (headings.length === 0) return null;
+  if (headings.length === 0) {
+    return null;
+  }
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveId(id);
+      target.focus?.();
+    }
+  };
+
+  const scrollToTop = () => {
+    const article = document.getElementById('blog-article');
+    article?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
-    <nav className={`table-of-contents ${className}`}>
-      <Heading level={6} className="uppercase tracking-wider text-charcoal/60 mb-4">
-        On this page
-      </Heading>
-      <ul className="space-y-2">
+    <nav aria-label="Table of contents" className="space-y-4">
+      <div>
+        <p className="text-xs font-semibold tracking-wide text-charcoal/70 uppercase">
+          On this page
+        </p>
+        <p className="text-sm text-charcoal/70">
+          Jump to the sections licensees ask about most and find what you need faster.
+        </p>
+      </div>
+      <ul className="space-y-2 text-sm">
         {headings.map((heading) => (
           <li
             key={heading.id}
-            className={heading.level === 3 ? 'pl-4' : ''}
+            className={clsx(
+              'transition-all',
+              heading.level === 3 ? 'pl-4 border-l border-cream' : ''
+            )}
           >
             <a
               href={`#${heading.id}`}
-              className={`
-                block text-sm py-1 transition-colors duration-200
-                ${activeId === heading.id 
-                  ? 'text-orange font-medium' 
-                  : 'text-charcoal/60 hover:text-charcoal'
-                }
-              `}
-              onClick={(e) => {
-                e.preventDefault();
-                const element = document.getElementById(heading.id);
-                if (element) {
-                  const y = element.getBoundingClientRect().top + window.scrollY - 80;
-                  window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-              }}
+              onClick={(event) => handleClick(event, heading.id)}
+              className={clsx(
+                'inline-flex items-center gap-2 rounded px-2 py-1 text-left leading-snug text-charcoal/80 hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
+                activeId === heading.id ? 'bg-cream text-charcoal font-semibold' : ''
+              )}
             >
-              {heading.text}
+              {heading.level === 3 && <span className="text-xs text-orange">•</span>}
+              <span>{heading.title}</span>
             </a>
           </li>
         ))}
       </ul>
+      <button
+        type="button"
+        onClick={scrollToTop}
+        className="text-sm font-semibold text-orange hover:text-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+      >
+        Back to top ↑
+      </button>
     </nav>
   );
 }

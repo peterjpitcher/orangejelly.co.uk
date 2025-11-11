@@ -59,10 +59,6 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
     const [isLoading, setIsLoading] = React.useState(!isSvg);
     const [hasError, setHasError] = React.useState(false);
 
-    const isExternal =
-      typeof props.src === 'string' &&
-      (props.src.startsWith('http://') || props.src.startsWith('https://'));
-
     // For local SVGs, we'll use img tag to avoid Next.js Image optimization issues
     const useImgTag = isSvg;
 
@@ -117,8 +113,9 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
 
     // For SVGs (local or external), use a regular img tag instead of Next.js Image
     const imageElement = useImgTag ? (
+      /* eslint-disable-next-line @next/next/no-img-element */
       <img
-        ref={ref as any}
+        ref={ref as React.Ref<HTMLImageElement>}
         src={props.src as string}
         alt={alt}
         loading={loadingAttr}
@@ -228,6 +225,7 @@ export const AspectRatioImage = React.forwardRef<HTMLDivElement, AspectRatioImag
           ...style,
         }}
       >
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image {...props} fill className="absolute inset-0" style={{ objectFit }} />
       </div>
     );
@@ -255,6 +253,7 @@ export const GalleryImage = React.forwardRef<HTMLImageElement, GalleryImageProps
         )}
         aria-label={`Expand image: ${props.alt}`}
       >
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image
           {...props}
           ref={ref}

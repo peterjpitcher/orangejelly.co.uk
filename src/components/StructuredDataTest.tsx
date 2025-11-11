@@ -1,10 +1,23 @@
 'use client';
 
 import { useEffect } from 'react';
-import { validateStructuredData, logStructuredDataValidation } from '@/lib/structured-data-validator';
+import {
+  validateStructuredData,
+  logStructuredDataValidation,
+} from '@/lib/structured-data-validator';
+
+declare global {
+  interface Window {
+    structuredDataTests?: Array<{
+      name: string;
+      data: unknown;
+      validation: ReturnType<typeof validateStructuredData>;
+    }>;
+  }
+}
 
 interface StructuredDataTestProps {
-  data: any;
+  data: unknown;
   name: string;
 }
 
@@ -13,13 +26,14 @@ export default function StructuredDataTest({ data, name }: StructuredDataTestPro
     // Only run in development
     if (process.env.NODE_ENV === 'development') {
       logStructuredDataValidation(data, name);
-      
+
       // Also test with Google's structured data testing tool format
-      if (typeof window !== 'undefined' && (window as any).structuredDataTests) {
-        (window as any).structuredDataTests.push({
+      if (typeof window !== 'undefined') {
+        window.structuredDataTests = window.structuredDataTests || [];
+        window.structuredDataTests.push({
           name,
           data,
-          validation: validateStructuredData(data)
+          validation: validateStructuredData(data),
         });
       }
     }

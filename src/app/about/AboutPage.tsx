@@ -24,6 +24,20 @@ import Link from 'next/link';
 // Local data imports
 import aboutData from '../../../content/data/about.json';
 
+type AboutPartner = {
+  name: string;
+  relationship?: string;
+  logo?: string;
+};
+
+type RelatedLinkGroup = {
+  links: Array<{
+    title: string;
+    href: string;
+    description?: string;
+  }>;
+};
+
 interface FAQ {
   question: string;
   answer: string;
@@ -36,6 +50,13 @@ interface AboutPageProps {
 export default function AboutPage({ faqs }: AboutPageProps) {
   // Load FAQs from data file
   const aboutFAQs = faqs || aboutData.faqs || [];
+  const partners = (aboutData.partnerships as AboutPartner[]) || [];
+  const aboutLinks = ((relatedLinksData as { about?: RelatedLinkGroup }).about?.links || []).map(
+    (link) => ({
+      ...link,
+      description: link.description || '',
+    })
+  );
 
   return (
     <>
@@ -226,11 +247,14 @@ export default function AboutPage({ faqs }: AboutPageProps) {
 
       {/* Partners */}
       <PartnershipsSection
-        partners={aboutData.partnerships.map((p: any) => ({
-          name: p.name,
-          description: p.relationship,
-          logoUrl: p.logo,
-          url: p.name === 'Greene King' ? 'https://www.greeneking.co.uk/' : 'https://www.bii.org/',
+        partners={partners.map((partner) => ({
+          name: partner.name,
+          description: partner.relationship || '',
+          logoUrl: partner.logo || '/logo.png',
+          url:
+            partner.name === 'Greene King'
+              ? 'https://www.greeneking.co.uk/'
+              : 'https://www.bii.org/',
         }))}
         title="Working With Industry Leaders"
       />
@@ -276,7 +300,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
         <RelatedLinks
           title="See How We Can Help"
           subtitle="Choose where to start based on your biggest challenge"
-          links={(relatedLinksData as any).about.links}
+          links={aboutLinks}
           variant="card"
           columns={{ default: 1, md: 3 }}
         />

@@ -21,9 +21,19 @@ interface ResultsPageProps {
   // No props needed - using local data
 }
 
+interface QuickWinLink {
+  title: string;
+  href: string;
+  description: string;
+  emoji?: string;
+  highlight?: boolean;
+}
+
 export default function ResultsPage({}: ResultsPageProps) {
   // Use local case study data
   const transformedCaseStudies = resultsData.caseStudies;
+  const quickWinLinks =
+    (relatedLinksData as { quickWins?: { links: QuickWinLink[] } }).quickWins?.links || [];
 
   return (
     <>
@@ -109,7 +119,7 @@ export default function ResultsPage({}: ResultsPageProps) {
         <RelatedLinks
           title="Ready to Get Similar Results?"
           subtitle="Choose where to start based on your biggest challenge"
-          links={(relatedLinksData as any).quickWins.links}
+          links={quickWinLinks}
           variant="card"
           columns={{ default: 1, md: 2, lg: 3 }}
         />

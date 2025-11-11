@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import OptimizedImage from '@/components/OptimizedImage';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -8,7 +8,6 @@ import Card from '@/components/Card';
 import Button from '@/components/Button';
 import ShareButtons from './ShareButtons';
 import AuthorInfo from './AuthorInfo';
-import TableOfContents from './TableOfContents';
 import RelatedPosts from './RelatedPosts';
 import StickyCTA from './StickyCTA';
 import QuickAnswer from './QuickAnswer';
@@ -20,6 +19,9 @@ import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
 import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
 import { FAQListAdapter } from '@/components/adapters/FAQAdapter';
+import TableOfContents, { type TocHeading } from './TableOfContents';
+import AdjacentPostNav from './AdjacentPostNav';
+import { type AdjacentPostNavItem } from './BlogPostServer';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -28,15 +30,28 @@ interface BlogPostProps {
     quickAnswer?: string;
     quickStats?: Array<{ label: string; value: string; description?: string }>;
     voiceSearchQueries?: string[];
-    localSEO?: any;
+    localSEO?: {
+      title?: string;
+      description?: string;
+      keywords?: string[];
+    };
     faqs?: Array<{ question: string; answer: string; isVoiceOptimized?: boolean }>;
     isPortableText?: boolean;
-    ctaSettings?: any;
+    ctaSettings?: {
+      title?: string;
+      subtitle?: string;
+      buttonText?: string;
+      whatsappMessage?: string;
+    };
   };
   relatedPosts?: BlogPostType[];
+  adjacentPosts?: {
+    previous?: AdjacentPostNavItem;
+    next?: AdjacentPostNavItem;
+  };
 }
 
-export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
+export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
   // Track reading progress
   useEffect(() => {
     const updateProgress = () => {
@@ -59,6 +74,16 @@ export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
 
     return () => window.removeEventListener('scroll', updateProgress);
   }, []);
+
+  const tocHeadings = useMemo<TocHeading[]>(() => {
+    if (!post.contentHtml) {
+      return [];
+    }
+    return extractHeadings(post.contentHtml);
+  }, [post.contentHtml]);
+
+  const hasTableOfContents = tocHeadings.length > 1;
+  const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
 
   return (
     <>
@@ -139,6 +164,12 @@ export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
           <QuickStats stats={post.quickStats} className="mb-8" />
         )}
 
+        {hasTableOfContents && (
+          <Card variant="bordered" className="mb-10">
+            <TableOfContents headings={tocHeadings} />
+          </Card>
+        )}
+
         {/* Main content - removed empty sidebar */}
         <div className="mb-12">
           {post.isPortableText ? (
@@ -215,6 +246,8 @@ export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
           />
         )}
 
+        {hasAdjacentPosts && adjacentPosts && <AdjacentPostNav adjacentPosts={adjacentPosts} />}
+
         {/* Tags */}
         {post.tags.length > 0 && (
           <div className="mt-8 pt-8 border-t border-charcoal/10">
@@ -263,4 +296,48 @@ export default function BlogPost({ post, relatedPosts = [] }: BlogPostProps) {
       )}
     </>
   );
+}
+
+const HEADING_REGEX = /<h(2|3)([^>]*)>(.*?)<\/h\1>/gis;
+const ID_REGEX = /id="([^"]+)"/i;
+
+function extractHeadings(html: string): TocHeading[] {
+  if (!html) return [];
+
+  const headings: TocHeading[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = HEADING_REGEX.exec(html)) !== null) {
+    const level = match[1] === '3' ? 3 : 2;
+    const attributes = match[2] || '';
+    const idMatch = attributes.match(ID_REGEX);
+    if (!idMatch) continue;
+
+    const id = idMatch[1];
+    const rawText = stripHtmlTags(match[3]);
+    const title = decodeEntities(rawText).trim();
+
+    if (title.length === 0) continue;
+
+    headings.push({
+      id,
+      level: level as 2 | 3,
+      title,
+    });
+  }
+
+  return headings;
+}
+
+function stripHtmlTags(input: string): string {
+  return input.replace(/<[^>]*>/g, ' ');
+}
+
+function decodeEntities(input: string): string {
+  return input
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
 }

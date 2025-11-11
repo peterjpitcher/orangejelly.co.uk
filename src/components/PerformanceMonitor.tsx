@@ -10,28 +10,39 @@ export default function PerformanceMonitor() {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    // Dynamically import web-vitals to reduce bundle size
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-      // Log metrics to console or send to analytics
-      const logMetric = (metric: { name: string; value: number; id: string; delta: number }) => {
-        // In a real app, you'd send this to your analytics service
-        // Example: sendToAnalytics(metric);
-        
-        // For now, just log it
-        if (window.location.hostname === 'localhost') {
-          console.log(`[Web Vitals] ${metric.name}:`, metric.value, metric);
-        }
+    const dispatchMetric = (metric: { name: string; value: number; id: string; delta: number }) => {
+      const payload = {
+        event: 'web_vitals',
+        metric_id: metric.id,
+        metric_name: metric.name,
+        metric_value: metric.value,
+        metric_delta: metric.delta,
       };
 
-      // Core Web Vitals
-      onCLS(logMetric);  // Cumulative Layout Shift
-      onFID(logMetric);  // First Input Delay
-      onLCP(logMetric);  // Largest Contentful Paint
-      
-      // Additional metrics
-      onFCP(logMetric);  // First Contentful Paint
-      onTTFB(logMetric); // Time to First Byte
-    });
+      const dataLayerWindow = window as typeof window & { dataLayer?: Record<string, unknown>[] };
+      if (Array.isArray(dataLayerWindow.dataLayer)) {
+        dataLayerWindow.dataLayer!.push(payload);
+      } else {
+        // Fall back to console so we still see metrics during verification
+        console.debug(`[Web Vitals] ${metric.name}:`, metric.value, metric);
+      }
+    };
+
+    // Dynamically import web-vitals to reduce bundle size
+    import('web-vitals')
+      .then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        // Core Web Vitals
+        onCLS(dispatchMetric); // Cumulative Layout Shift
+        onFID(dispatchMetric); // First Input Delay
+        onLCP(dispatchMetric); // Largest Contentful Paint
+
+        // Additional metrics
+        onFCP(dispatchMetric); // First Contentful Paint
+        onTTFB(dispatchMetric); // Time to First Byte
+      })
+      .catch((error) => {
+        console.error('[Web Vitals] Failed to load metrics library', error);
+      });
   }, []);
 
   return null;
@@ -42,15 +53,10 @@ export function PreloadResources() {
   return (
     <>
       {/* Google Fonts are automatically optimized by Next.js, no need to preload */}
-      
+
       {/* Preload logo */}
-      <link
-        rel="preload"
-        href="/logo.png"
-        as="image"
-        type="image/png"
-      />
-      
+      <link rel="preload" href="/logo.png" as="image" type="image/png" />
+
       {/* DNS prefetch / preconnect for external resources used by analytics */}
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +74,7 @@ export function useLazyLoad() {
   useEffect(() => {
     if ('IntersectionObserver' in window) {
       const images = document.querySelectorAll('img[data-lazy]');
-      
+
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {

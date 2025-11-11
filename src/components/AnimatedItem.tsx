@@ -15,20 +15,25 @@ export default function AnimatedItem({
   children,
   animation = 'fade-in',
   delay = 0,
-  duration = 500,
+  duration: _duration = 500,
   className = '',
-  once = true
+  once = true,
 }: AnimatedItemProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const node = ref.current;
+    if (!node) {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (once && ref.current) {
-            observer.unobserve(ref.current);
+          if (once) {
+            observer.unobserve(entry.target);
           }
         } else if (!once) {
           setIsVisible(false);
@@ -37,22 +42,18 @@ export default function AnimatedItem({
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(node);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(node);
     };
   }, [once]);
 
   const animations = {
     'fade-in': 'opacity-0 animate-fade-in',
     'slide-up': 'translate-y-10 opacity-0 animate-slide-up',
-    'scale': 'scale-95 opacity-0 animate-scale',
-    'rotate': 'rotate-12 opacity-0 animate-rotate'
+    scale: 'scale-95 opacity-0 animate-scale',
+    rotate: 'rotate-12 opacity-0 animate-rotate',
   };
 
   // Create delay classes based on delay prop

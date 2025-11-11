@@ -9,7 +9,11 @@ interface Service {
   deliverable?: string;
   description: string;
   features?: string[];
-  example?: any;
+  example?: {
+    before?: string;
+    after?: string;
+    result?: string;
+  };
   ctaText?: string;
   highlight?: boolean;
 }

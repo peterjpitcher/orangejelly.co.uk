@@ -19,27 +19,25 @@ import {
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  ArrowRight,
-  Calendar,
-  CheckCircle2,
-  MapPin,
-  Users,
-  Zap,
-  Trophy,
-  Target,
-  Heart,
-} from 'lucide-react';
+import { ArrowRight, Calendar, CheckCircle2, MapPin, Zap, Trophy, Target } from 'lucide-react';
 import { FAQSchema } from '@/components/StructuredData';
 // Demo page imports
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Section from '@/components/Section';
 
+interface AboutDemoFounder {
+  name?: string;
+  role?: string;
+}
+
+interface AboutDemoContent {
+  founderSection?: AboutDemoFounder;
+}
+
 interface AboutDemoPageProps {
-  aboutContent?: any;
+  aboutContent?: AboutDemoContent;
 }
 
 export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
@@ -236,10 +234,10 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                       title: 'Honest Pricing',
                       desc: '£75 per hour plus VAT. No packages, no surprises.',
                     },
-                  {
-                    icon: '🛡️',
-                    title: 'Results Backed by Experience',
-                    desc: 'Everything we teach runs daily inside The Anchor.',
+                    {
+                      icon: '🛡️',
+                      title: 'Results Backed by Experience',
+                      desc: 'Everything we teach runs daily inside The Anchor.',
                     },
                     {
                       icon: '🤝',

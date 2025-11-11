@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import Link from 'next/link';
 import OptimizedImage from './OptimizedImage';
 import Heading from './Heading';
 import Text from './Text';

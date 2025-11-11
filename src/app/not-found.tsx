@@ -13,6 +13,14 @@ import relatedLinksData from '../../content/data/related-links.json';
 import { CONTACT } from '@/lib/constants';
 import { generateStaticMetadata } from '@/lib/metadata';
 
+interface QuickStartLink {
+  title: string;
+  href: string;
+  description: string;
+  emoji?: string;
+  highlight?: boolean;
+}
+
 export const metadata = generateStaticMetadata({
   title: 'Page Not Found',
   description:
@@ -22,6 +30,9 @@ export const metadata = generateStaticMetadata({
 });
 
 export default function NotFound() {
+  const quickStartLinks =
+    (relatedLinksData as { quickStart?: { links: QuickStartLink[] } }).quickStart?.links || [];
+
   return (
     <>
       <Hero
@@ -153,7 +164,7 @@ export default function NotFound() {
           <RelatedLinks
             title="Popular Pages"
             subtitle="Here's what most pub owners are looking for"
-            links={(relatedLinksData as any).quickStart.links}
+            links={quickStartLinks}
             variant="card"
             columns={{ default: 1, md: 3 }}
           />

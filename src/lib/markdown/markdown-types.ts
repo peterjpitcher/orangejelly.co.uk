@@ -7,17 +7,34 @@ export interface FrontMatter {
   slug: string;
   description?: string;
   publishedAt?: string;
+  publishedDate?: string;
   updatedAt?: string;
+  updatedDate?: string;
   author?: string;
   tags?: string[];
   categories?: string[];
+  category?: string;
   featured?: boolean;
   draft?: boolean;
   seoTitle?: string;
   seoDescription?: string;
+  metaTitle?: string;
+  metaDescription?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  [key: string]: any; // Allow additional custom fields
+  featuredImage?: string;
+  keywords?: string[];
+  client?: string;
+  id?: string;
+  question?: string;
+  quickAnswer?: string;
+  voiceSearchQueries?: string[];
+  quickStats?: Array<{ label: string; value: string; description?: string }>;
+  faqs?: Array<{ question: string; answer: string; isVoiceOptimized?: boolean }>;
+  localSEO?: Record<string, unknown>;
+  ctaSettings?: Record<string, unknown>;
+  order?: number;
+  [key: string]: unknown; // Allow additional custom fields
 }
 
 export interface BlogPost {

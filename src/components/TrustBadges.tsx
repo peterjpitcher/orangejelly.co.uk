@@ -20,11 +20,11 @@ interface TrustBadgesProps {
   isLoading?: boolean;
 }
 
-export default function TrustBadges({ 
+export default function TrustBadges({
   variant = 'horizontal',
   showAll = true,
   trustBadges,
-  isLoading = false
+  isLoading = false,
 }: TrustBadgesProps) {
   // Map icon names to emojis
   const iconMap: Record<string, string> = {
@@ -35,11 +35,17 @@ export default function TrustBadges({
     check: '✅',
     heart: '❤️',
   };
-  
+
   // Show loading state
   if (isLoading) {
     return (
-      <div className={variant === 'horizontal' ? 'grid grid-cols-2 md:grid-cols-4 gap-4' : 'grid grid-cols-1 gap-4'}>
+      <div
+        className={
+          variant === 'horizontal'
+            ? 'grid grid-cols-2 md:grid-cols-4 gap-4'
+            : 'grid grid-cols-1 gap-4'
+        }
+      >
         {[1, 2, 3, 4].map((i) => (
           <Card key={i} variant="shadowed" padding="small" className="animate-pulse">
             <div className="h-12 w-12 bg-gray-200 rounded-full mx-auto mb-2"></div>
@@ -50,7 +56,7 @@ export default function TrustBadges({
       </div>
     );
   }
-  
+
   // Show error state if no badges
   if (!trustBadges || trustBadges.length === 0) {
     return (
@@ -59,15 +65,15 @@ export default function TrustBadges({
       </Card>
     );
   }
-  
+
   // Transform local data
   const badges = trustBadges
-    .filter(badge => badge.isActive)
+    .filter((badge) => badge.isActive)
     .sort((a, b) => a.order - b.order)
-    .map(badge => ({
+    .map((badge) => ({
       icon: iconMap[badge.icon] || '📌',
       title: badge.title,
-      subtitle: badge.subtitle
+      subtitle: badge.subtitle,
     }));
 
   const displayBadges = showAll ? badges : badges.slice(0, 3);
@@ -90,9 +96,8 @@ export default function TrustBadges({
     );
   }
 
-  const gridClass = variant === 'horizontal' 
-    ? 'grid grid-cols-2 md:grid-cols-4 gap-4' 
-    : 'grid grid-cols-1 gap-4';
+  const gridClass =
+    variant === 'horizontal' ? 'grid grid-cols-2 md:grid-cols-4 gap-4' : 'grid grid-cols-1 gap-4';
 
   return (
     <div className={gridClass}>
@@ -104,15 +109,26 @@ export default function TrustBadges({
           className="text-center bg-gradient-to-br from-white to-cream hover:shadow-lg transition-normal hover:-translate-y-1"
         >
           <div className="text-4xl mb-2">{badge.icon}</div>
-          <Heading level={4} align="center" className="text-charcoal">{badge.title}</Heading>
-          <Text size="xs" align="center" className="text-charcoal/60 mt-1">{badge.subtitle}</Text>
+          <Heading level={4} align="center" className="text-charcoal">
+            {badge.title}
+          </Heading>
+          <Text size="xs" align="center" className="text-charcoal/60 mt-1">
+            {badge.subtitle}
+          </Text>
         </Card>
       ))}
     </div>
   );
 }
 
-export function FloatingTrustBadge({ claims }: { claims?: Record<string, any> }) {
+interface TrustBadgeClaims {
+  noAgencyFees?: {
+    claim?: string;
+    context?: string;
+  };
+}
+
+export function FloatingTrustBadge({ claims }: { claims?: TrustBadgeClaims }) {
   // Show loading state
   if (!claims) {
     return (
@@ -123,20 +139,26 @@ export function FloatingTrustBadge({ claims }: { claims?: Record<string, any> })
       </div>
     );
   }
-  
+
   return (
     <div className="fixed bottom-4 left-4 z-30 hidden lg:block">
-      <Card variant="bordered" padding="small" className="shadow-lg max-w-xs animate-fade-in border-2">
+      <Card
+        variant="bordered"
+        padding="small"
+        className="shadow-lg max-w-xs animate-fade-in border-2"
+      >
         <div className="flex items-center gap-3">
           <div className="text-3xl">💰</div>
           <div>
-            <Text size="sm" weight="bold">{claims.noAgencyFees?.claim || 'No Agency Fees'}</Text>
+            <Text size="sm" weight="bold">
+              {claims.noAgencyFees?.claim || 'No Agency Fees'}
+            </Text>
             <Text size="xs" className="text-charcoal/60">
               {claims.noAgencyFees?.context || 'Honest hourly pricing'}
             </Text>
           </div>
         </div>
-        
+
         {/* Verified by Orange Jelly */}
         <div className="mt-3 pt-3 border-t flex items-center justify-between">
           <OptimizedImage

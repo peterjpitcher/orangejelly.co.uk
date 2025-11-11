@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import Link from 'next/link';
 import Heading from './Heading';
 import Text from './Text';
 import Button from './Button';

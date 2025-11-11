@@ -19,7 +19,6 @@ import Text from '@/components/Text';
 import { CONTACT } from '@/lib/constants';
 import { FAQSchema } from '@/components/StructuredData';
 import { HandshakeIcon, IdeaIcon, SupportIcon } from '@/components/icons/JourneyIcons';
-import Link from 'next/link';
 // Local FAQ data
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -94,6 +93,16 @@ const fallbackFAQs = [
 export default function ContactPage({}: ContactPageProps) {
   // Use local FAQ data
   const displayFAQs = fallbackFAQs;
+  const contactLinks = (
+    (
+      relatedLinksData as {
+        contact?: { links: Array<{ title: string; href: string; description?: string }> };
+      }
+    ).contact?.links || []
+  ).map((link) => ({
+    ...link,
+    description: link.description || '',
+  }));
   // Generate comprehensive schema for Contact page
   const contactSchema = (() => {
     const contactPageSchema = {
@@ -539,11 +548,7 @@ export default function ContactPage({}: ContactPageProps) {
 
       {/* Related links */}
       <Section background="cream" padding="medium">
-        <RelatedLinks
-          title="Next Steps"
-          links={(relatedLinksData as any).contact.links}
-          variant="card"
-        />
+        <RelatedLinks title="Next Steps" links={contactLinks} variant="card" />
       </Section>
     </>
   );

@@ -29,7 +29,6 @@ export default function PubRescue() {
   // Use local data
   const heroSection = pubRescueData.heroSection;
   const emergencyCategories = pubRescueData.emergencyCategories;
-  const recoveryMetrics = pubRescueData.recoveryMetrics;
   const faqs = pubRescueData.faqs;
 
   return (

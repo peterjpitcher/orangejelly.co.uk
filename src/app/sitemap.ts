@@ -51,6 +51,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const marketingRoutes: Array<{
+    slug: string;
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+    priority: number;
+  }> = [
+    { slug: 'quiet-midweek-solutions', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'empty-pub-solutions', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'pub-marketing-no-budget', changeFrequency: 'monthly', priority: 0.7 },
+    { slug: 'compete-with-pub-chains', changeFrequency: 'monthly', priority: 0.7 },
+    { slug: 'about-demo', changeFrequency: 'yearly', priority: 0.4 },
+  ];
+
+  const marketingPages = marketingRoutes.map((route) => ({
+    url: `${baseUrl}/${route.slug}`,
+    lastModified: currentDate,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
+
   // Dynamically get all blog posts
   const allPosts = getAllPosts();
   const blogPages = allPosts.map((post) => ({
@@ -68,5 +88,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...blogPages, ...categoryPages];
+  return [...staticPages, ...marketingPages, ...blogPages, ...categoryPages];
 }

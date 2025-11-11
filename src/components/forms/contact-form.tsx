@@ -1,29 +1,27 @@
-
 'use client';
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 // Fallback: no toast hook available in ui; use window alert for now
 const toast = ({ title, description }: { title: string; description?: string }) => {
   if (typeof window !== 'undefined') {
     alert(`${title}${description ? `\n\n${description}` : ''}`);
   }
 };
-import { VALIDATION_MESSAGES, PLACEHOLDERS } from "@/lib/validation-messages";
+import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -44,11 +42,11 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const defaultValues: Partial<ContactFormValues> = {
-  name: "",
-  email: "",
-  phone: "",
-  pubName: "",
-  message: "",
+  name: '',
+  email: '',
+  phone: '',
+  pubName: '',
+  message: '',
 };
 
 export function ContactForm() {
@@ -59,7 +57,7 @@ export function ContactForm() {
 
   function onSubmit(data: ContactFormValues) {
     toast({
-      title: "Form submitted",
+      title: 'Form submitted',
       description: JSON.stringify(data, null, 2),
     });
   }

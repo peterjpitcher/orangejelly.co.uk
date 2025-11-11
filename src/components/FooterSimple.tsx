@@ -1,6 +1,5 @@
-import NextLink from 'next/link';
 import Link from '@/components/Link';
-import { CONTACT, URLS, formatPhoneDisplay } from '@/lib/constants';
+import { CONTACT, URLS } from '@/lib/constants';
 import Button from '@/components/Button';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';

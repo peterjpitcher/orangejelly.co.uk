@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
-import Button from '@/components/Button';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CTASection from '@/components/CTASection';
@@ -17,6 +16,25 @@ import { FAQSchema } from '@/components/StructuredData';
 import midweekData from '../../../content/data/quiet-midweek.json';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
+type MidweekStrategy = {
+  _key: string;
+  title: string;
+  description?: string;
+  points?: string[];
+};
+
+type MidweekMetric = {
+  _key: string;
+  value: string;
+  label: string;
+  description?: string;
+};
+
+const extendedMidweekData = midweekData as typeof midweekData & {
+  midweekStrategies?: MidweekStrategy[];
+  successMetrics?: { title?: string; metrics?: MidweekMetric[] };
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Fix Dead Tuesday & Wednesday Nights - Proven Midweek Solutions',
@@ -28,13 +46,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function QuietMidweekSolutions() {
   // Use local data
-  const heroSection = midweekData.heroSection;
-  const problemSection = midweekData.problemSection;
-  const solutionsSection = midweekData.solutionsSection;
-  const timeline = midweekData.transformationTimeline;
-  const implementationGuide = midweekData.implementationGuide;
-  const investmentReturn = midweekData.investmentReturn;
-  const faqs = midweekData.faqs;
+  const heroSection = extendedMidweekData.heroSection;
+  const problemSection = extendedMidweekData.problemSection;
+  const timeline = extendedMidweekData.transformationTimeline;
+  const faqs = extendedMidweekData.faqs;
+  const midweekStrategies: MidweekStrategy[] = extendedMidweekData.midweekStrategies || [];
+  const successMetrics = extendedMidweekData.successMetrics;
 
   return (
     <>
@@ -170,8 +187,7 @@ export default function QuietMidweekSolutions() {
               </Text>
 
               <div className="space-y-8">
-                {/* Strategies data not available - temporarily using empty array */}
-                {[].map((strategy: any, index) => (
+                {midweekStrategies.map((strategy, index) => (
                   <Card
                     key={strategy._key}
                     padding="large"
@@ -263,19 +279,16 @@ export default function QuietMidweekSolutions() {
         </Section>
       )}
 
-      {/* Success Metrics - successMetrics data not available */}
-      {false && (
+      {successMetrics?.metrics && successMetrics.metrics.length > 0 && (
         <Section background="white">
           <AnimatedItem animation="fade-in">
             <div className="max-w-4xl mx-auto text-center">
               <Heading level={2} className="mb-12">
-                {/* {successMetrics.title || 'Average Results After 30 Days'} */}
-                Average Results After 30 Days
+                {successMetrics.title || 'Average Results After 30 Days'}
               </Heading>
 
               <div className="grid md:grid-cols-4 gap-6 mb-12">
-                {/* successMetrics.metrics not available - using empty array */}
-                {[].map((metric: any) => (
+                {successMetrics.metrics.map((metric) => (
                   <Card key={metric._key} background="cream" padding="large">
                     <Text size="2xl" weight="bold" className="text-orange mb-2">
                       {metric.value}
@@ -472,7 +485,8 @@ export default function QuietMidweekSolutions() {
               </div>
 
               <Text weight="semibold" className="mb-6">
-                30-Day Intensive Support: Weekly check-ins and adjustments until your midweek is busy again
+                30-Day Intensive Support: Weekly check-ins and adjustments until your midweek is
+                busy again
               </Text>
 
               <WhatsAppButton text="Fix my quiet midweek nights" size="large" />

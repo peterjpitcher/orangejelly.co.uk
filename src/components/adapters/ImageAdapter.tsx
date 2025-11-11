@@ -1,6 +1,7 @@
-import * as React from "react";
-import { Image as ShadcnImage, AspectRatioImage } from "@/components/ui/image";
-import type { ImageProps as ShadcnImageProps } from "@/components/ui/image";
+import * as React from 'react';
+import { Image as ShadcnImage } from '@/components/ui/image';
+import type { ImageProps as ShadcnImageProps } from '@/components/ui/image';
+import { cn } from '@/lib/utils';
 
 // Legacy OptimizedImage props
 interface LegacyImageProps {
@@ -76,8 +77,6 @@ interface ResponsiveImageProps {
   sources: Array<{
     media: string;
     src: string;
-    width: number;
-    height: number;
   }>;
   fallback: {
     src: string;
@@ -87,17 +86,36 @@ interface ResponsiveImageProps {
   };
   className?: string;
   priority?: boolean;
+  sizes?: string;
 }
 
-export function ResponsiveImage({ sources, fallback, className, priority }: ResponsiveImageProps) {
-  // For now, just use the fallback image
-  // TODO: Implement proper picture element support
+export function ResponsiveImage({
+  sources,
+  fallback,
+  className = '',
+  priority = false,
+  sizes,
+}: ResponsiveImageProps) {
+  const loadingAttr = priority ? 'eager' : 'lazy';
+  const imageClass = cn('w-full h-auto', className);
+
   return (
-    <ShadcnImage
-      {...fallback}
-      priority={priority}
-      className={className}
-    />
+    <picture>
+      {sources.map((source) => (
+        <source key={`${source.media}-${source.src}`} media={source.media} srcSet={source.src} />
+      ))}
+      <img
+        src={fallback.src}
+        alt={fallback.alt}
+        width={fallback.width}
+        height={fallback.height}
+        loading={loadingAttr}
+        fetchPriority={priority ? 'high' : 'auto'}
+        decoding="async"
+        className={imageClass}
+        sizes={sizes}
+      />
+    </picture>
   );
 }
 
@@ -111,13 +129,13 @@ interface OptimizedBackgroundProps {
   overlayOpacity?: number;
 }
 
-export function OptimizedBackground({ 
-  src, 
-  alt = '', 
-  className = '', 
-  children, 
+export function OptimizedBackground({
+  src,
+  alt = '',
+  className = '',
+  children,
   overlay = false,
-  overlayOpacity = 0.5 
+  overlayOpacity = 0.5,
 }: OptimizedBackgroundProps) {
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -132,17 +150,13 @@ export function OptimizedBackground({
         style={{ zIndex: -1 }}
       />
       {overlay && (
-        <div 
-          className="absolute inset-0 bg-black" 
+        <div
+          className="absolute inset-0 bg-black"
           style={{ opacity: overlayOpacity, zIndex: 0 }}
           aria-hidden="true"
         />
       )}
-      {children && (
-        <div className="relative z-10">
-          {children}
-        </div>
-      )}
+      {children && <div className="relative z-10">{children}</div>}
     </div>
   );
 }

@@ -1,16 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { FAQAccordion, FAQList, type FAQItem as ShadcnFAQItem } from "@/components/ui/faq-accordion";
+import * as React from 'react';
+import { FAQAccordion, type FAQItem as ShadcnFAQItem } from '@/components/ui/faq-accordion';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import Card from "../Card";
-import Heading from "../Heading";
-import Text from "../Text";
+} from '@/components/ui/accordion';
+import Text from '../Text';
 
 // Legacy FAQItem props
 interface LegacyFAQItemProps {

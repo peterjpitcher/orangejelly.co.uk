@@ -1,4 +1,4 @@
-import { type BlogPost as BlogPostType } from '@/lib/blog';
+import { type BlogPost as BlogPostType, type Category } from '@/lib/blog';
 import BlogPost from './BlogPost';
 import { preprocessMarkdown } from '@/lib/markdown/preprocess';
 import { renderMarkdownToHtml } from '@/lib/markdown/render';
@@ -6,13 +6,29 @@ import { renderMarkdownToHtml } from '@/lib/markdown/render';
 interface BlogPostServerProps {
   post: BlogPostType & { isPortableText?: boolean };
   relatedPosts?: BlogPostType[];
+  adjacentPosts?: {
+    previous?: AdjacentPostNavItem;
+    next?: AdjacentPostNavItem;
+  };
+}
+
+export interface AdjacentPostNavItem {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedDate?: string;
+  category: Category;
 }
 
 /**
  * Server component wrapper for BlogPost
  * Processes markdown content server-side for better performance
  */
-export default async function BlogPostServer({ post, relatedPosts = [] }: BlogPostServerProps) {
+export default async function BlogPostServer({
+  post,
+  relatedPosts = [],
+  adjacentPosts,
+}: BlogPostServerProps) {
   let processedPost = { ...post };
 
   if (!post.isPortableText && typeof post.content === 'string') {
@@ -27,5 +43,7 @@ export default async function BlogPostServer({ post, relatedPosts = [] }: BlogPo
     } as BlogPostType & { contentHtml: string; isPreProcessed: boolean };
   }
 
-  return <BlogPost post={processedPost} relatedPosts={relatedPosts} />;
+  return (
+    <BlogPost post={processedPost} relatedPosts={relatedPosts} adjacentPosts={adjacentPosts} />
+  );
 }

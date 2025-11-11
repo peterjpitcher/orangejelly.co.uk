@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import ServiceCard from '@/components/ServiceCard';
-import CTASection from '@/components/CTASection';
 import FAQItem from '@/components/FAQItem';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import Text from '@/components/Text';
@@ -17,12 +16,36 @@ import { URLS } from '@/lib/constants';
 // Local data imports
 import servicesData from '../../../content/data/services.json';
 
+type ServiceMetric = {
+  number: string;
+  title: string;
+  value: string;
+  description?: string;
+};
+
+type ProcessStep = {
+  number: string;
+  title: string;
+  description?: string;
+  result?: string;
+};
+
+type ServicePartner = {
+  name: string;
+  description?: string;
+  logo?: string;
+  url?: string;
+};
+
 export default function ServicesPage() {
   const faqsForDisplay = servicesData.faqs;
   const servicePackages = servicesData.servicePackages;
   const realSolutions = servicesData.realSolutionsSection;
   const process = servicesData.processSection;
   const partnerships = servicesData.partnershipsSection;
+  const realSolutionMetrics = (realSolutions.metrics || []) as ServiceMetric[];
+  const processSteps = (process.steps || []) as ProcessStep[];
+  const partnerList = (partnerships.partners || []) as ServicePartner[];
 
   return (
     <>
@@ -54,7 +77,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {realSolutions.metrics.map((metric: any) => (
+            {realSolutionMetrics.map((metric) => (
               <Card key={metric.number} variant="bordered" padding="medium" className="text-center">
                 <div className="w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
                   {metric.number}
@@ -93,7 +116,7 @@ export default function ServicesPage() {
           </Heading>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.steps.map((step: any) => (
+            {processSteps.map((step) => (
               <div key={step.number} className="text-center">
                 <div className="w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                   {step.number}
@@ -158,16 +181,17 @@ export default function ServicesPage() {
       </Section>
 
       {/* Partnership Section */}
-      {partnerships && partnerships.partners && (
+      {partnerList.length > 0 && (
         <PartnershipsSection
-          partners={partnerships.partners.map((partner: any) => ({
+          partners={partnerList.map((partner) => ({
             name: partner.name,
-            description: partner.description,
-            logoUrl: partner.logo,
+            description: partner.description || 'Trusted hospitality partner',
+            logoUrl: partner.logo || '/logo.png',
             url:
-              partner.name === 'Greene King'
+              partner.url ||
+              (partner.name === 'Greene King'
                 ? 'https://www.greeneking.co.uk/'
-                : 'https://www.bii.org/',
+                : 'https://www.bii.org/'),
           }))}
           title={partnerships.heading}
         />

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Heading as ShadcnHeading, HeadingProps as ShadcnHeadingProps } from "@/components/ui/typography";
+import * as React from 'react';
+import { Heading as ShadcnHeading } from '@/components/ui/typography';
 
 // The existing Heading component interface
 interface LegacyHeadingProps {
@@ -25,7 +25,7 @@ export default function HeadingAdapter({
     charcoal: 'charcoal',
     orange: 'orange',
     teal: 'teal',
-    white: 'white'
+    white: 'white',
   } as const;
 
   return (

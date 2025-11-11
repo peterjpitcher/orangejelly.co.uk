@@ -10,6 +10,26 @@ import path from 'path';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { generateStaticMetadata } from '@/lib/metadata';
 
+type GuidePost = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedDate: string;
+  category: string;
+  author: { name: string };
+  featuredImage: string;
+  readingTime: number;
+};
+
+type GuideCategory = ReturnType<typeof getCategoryDisplayInfo> & { count: number };
+
+const toStringValue = (value: unknown): string | undefined => {
+  if (typeof value === 'string' && value.trim().length > 0) {
+    return value;
+  }
+  return undefined;
+};
+
 // Enable ISR (Incremental Static Regeneration) - pages revalidate every 60 seconds
 export const revalidate = 60;
 
@@ -120,8 +140,8 @@ function getCategoryDisplayInfo(categorySlug: string) {
 }
 
 export default async function LicenseesGuidePage() {
-  let posts: any[] = [];
-  let categories: any[] = [];
+  let posts: GuidePost[] = [];
+  let categories: GuideCategory[] = [];
 
   try {
     const blogDirectory = path.join(process.cwd(), 'content/blog');
@@ -132,23 +152,48 @@ export default async function LicenseesGuidePage() {
     });
 
     // Transform posts to match the expected structure
-    posts = allPosts.map((post) => ({
-      slug: post.slug,
-      title: post.title,
-      excerpt: post.excerpt || '',
-      // Use publishedAt which now correctly maps from publishedDate
-      publishedDate: post.publishedAt || post.frontMatter?.publishedDate,
-      category: post.categories?.[0] || post.frontMatter?.category || 'empty-pub-solutions',
-      author: {
-        name:
-          typeof post.frontMatter?.author === 'string'
-            ? post.frontMatter.author
-            : (post.frontMatter?.author as any)?.name || 'Peter Pitcher',
-      },
-      // Use featuredImage directly since it's spread from frontMatter
-      featuredImage: post.frontMatter?.featuredImage || `/images/blog/${post.slug}.svg`,
-      readingTime: Math.round(post.readingTime?.minutes || 5),
-    }));
+    posts = allPosts.map((post) => {
+      const frontMatterRecord = post.frontMatter as Record<string, unknown>;
+      type FrontMatterAuthor = string | { name?: string } | undefined;
+      const frontMatterAuthor = frontMatterRecord.author as FrontMatterAuthor;
+
+      const authorName =
+        typeof frontMatterAuthor === 'string' && frontMatterAuthor.trim().length > 0
+          ? frontMatterAuthor
+          : typeof frontMatterAuthor === 'object' && frontMatterAuthor
+            ? toStringValue(frontMatterAuthor.name) || 'Peter Pitcher'
+            : 'Peter Pitcher';
+
+      const publishedDate =
+        toStringValue(post.publishedAt) ||
+        toStringValue(frontMatterRecord.publishedAt) ||
+        toStringValue(frontMatterRecord.publishedDate);
+      const safePublishedDate = publishedDate || new Date().toISOString();
+
+      const categorySlug =
+        toStringValue(post.categories?.[0]) ||
+        toStringValue(frontMatterRecord.category) ||
+        'empty-pub-solutions';
+
+      const featuredImage =
+        toStringValue(frontMatterRecord.featuredImage) || `/images/blog/${post.slug}.svg`;
+
+      const excerpt =
+        toStringValue(post.excerpt) || toStringValue(frontMatterRecord.description) || '';
+
+      return {
+        slug: post.slug,
+        title: post.title,
+        excerpt,
+        publishedDate: safePublishedDate,
+        category: categorySlug,
+        author: {
+          name: authorName,
+        },
+        featuredImage,
+        readingTime: Math.round(post.readingTime?.minutes || 5),
+      };
+    });
 
     // Get unique categories from posts and create category list
     const categorySet = new Set<string>();

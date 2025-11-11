@@ -7,11 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import OptimizedImage from './OptimizedImage';
@@ -78,7 +76,6 @@ export default function Navigation({ navigation }: NavigationProps) {
             width={40}
             height={40}
             className="rounded-lg"
-            priority
             style={{ width: '40px', height: '40px' }}
           />
           <span className="font-bold text-sm">Orange Jelly</span>
@@ -125,6 +122,8 @@ export default function Navigation({ navigation }: NavigationProps) {
               text={whatsappCta.text}
               phoneNumber={whatsappCta.phoneNumber}
               size="small"
+              label="Chat on WhatsApp"
+              showPhone={false}
             />
           )}
 
@@ -175,7 +174,6 @@ export default function Navigation({ navigation }: NavigationProps) {
                   width={48}
                   height={48}
                   className="rounded-lg"
-                  priority
                 />
                 <span className="ml-2 font-bold">Orange Jelly</span>
               </Link>
@@ -200,6 +198,8 @@ export default function Navigation({ navigation }: NavigationProps) {
                     text={whatsappCta.text}
                     phoneNumber={whatsappCta.phoneNumber}
                     fullWidth
+                    label="Chat on WhatsApp"
+                    showPhone={false}
                   />
                 </div>
               )}
@@ -214,6 +214,8 @@ export default function Navigation({ navigation }: NavigationProps) {
               text={whatsappCta.text}
               phoneNumber={whatsappCta.phoneNumber}
               size="small"
+              label="Chat on WhatsApp"
+              showPhone={false}
             />
           )}
         </div>

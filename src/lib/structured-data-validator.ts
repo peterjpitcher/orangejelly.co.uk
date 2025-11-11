@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Structured Data Validation Utility
 // Validates JSON-LD structured data for SEO best practices
 
@@ -25,7 +26,7 @@ export class StructuredDataValidator {
     try {
       // Parse if string
       const parsed = typeof data === 'string' ? JSON.parse(data) : data;
-      
+
       // Check if it's a graph or single item
       if (parsed['@graph']) {
         this.validateGraph(parsed);
@@ -41,7 +42,7 @@ export class StructuredDataValidator {
     return {
       valid: this.errors.length === 0,
       errors: this.errors,
-      warnings: this.warnings
+      warnings: this.warnings,
     };
   }
 
@@ -71,7 +72,7 @@ export class StructuredDataValidator {
     if (typeof type === 'string') {
       this.validateByType(item, type, context);
     } else if (Array.isArray(type)) {
-      type.forEach(t => this.validateByType(item, t, context));
+      type.forEach((t) => this.validateByType(item, t, context));
     }
 
     // Check for common issues
@@ -110,13 +111,13 @@ export class StructuredDataValidator {
     const required = ['name', 'url'];
     const recommended = ['logo', 'description', 'contactPoint', 'sameAs'];
 
-    required.forEach(field => {
+    required.forEach((field) => {
       if (!item[field]) {
         this.errors.push(`${context}: Organization missing required field: ${field}`);
       }
     });
 
-    recommended.forEach(field => {
+    recommended.forEach((field) => {
       if (!item[field]) {
         this.warnings.push(`${context}: Organization missing recommended field: ${field}`);
       }
@@ -149,8 +150,8 @@ export class StructuredDataValidator {
 
   private validateWebSite(item: any, context: string): void {
     const required = ['url', 'name'];
-    
-    required.forEach(field => {
+
+    required.forEach((field) => {
       if (!item[field]) {
         this.errors.push(`${context}: WebSite missing required field: ${field}`);
       }
@@ -193,8 +194,8 @@ export class StructuredDataValidator {
 
   private validateService(item: any, context: string): void {
     const required = ['name', 'provider'];
-    
-    required.forEach(field => {
+
+    required.forEach((field) => {
       if (!item[field]) {
         this.errors.push(`${context}: Service missing required field: ${field}`);
       }
@@ -226,8 +227,8 @@ export class StructuredDataValidator {
 
   private validateHowTo(item: any, context: string): void {
     const required = ['name', 'step'];
-    
-    required.forEach(field => {
+
+    required.forEach((field) => {
       if (!item[field]) {
         this.errors.push(`${context}: HowTo missing required field: ${field}`);
       }
@@ -255,7 +256,7 @@ export class StructuredDataValidator {
   private checkCommonIssues(item: any, context: string): void {
     // Check for trailing slashes in URLs
     const urlFields = ['url', 'image', 'logo', 'sameAs'];
-    urlFields.forEach(field => {
+    urlFields.forEach((field) => {
       if (item[field]) {
         const urls = Array.isArray(item[field]) ? item[field] : [item[field]];
         urls.forEach((url: any) => {
@@ -269,13 +270,13 @@ export class StructuredDataValidator {
 
     // Check for common typos
     const typos: Record<string, string> = {
-      'decription': 'description',
-      'adress': 'address',
-      'emial': 'email',
-      'telephoen': 'telephone'
+      decription: 'description',
+      adress: 'address',
+      emial: 'email',
+      telephoen: 'telephone',
     };
 
-    Object.keys(item).forEach(key => {
+    Object.keys(item).forEach((key) => {
       if (typos[key]) {
         this.errors.push(`${context}: Typo detected - "${key}" should be "${typos[key]}"`);
       }
@@ -309,19 +310,21 @@ export function validateStructuredData(data: any): ValidationResult {
 export function logStructuredDataValidation(data: any, componentName: string): void {
   if (process.env.NODE_ENV === 'development') {
     const result = validateStructuredData(data);
-    
+
     if (!result.valid || result.warnings.length > 0) {
       console.group(`📋 Structured Data Validation: ${componentName}`);
-      
+
       if (result.errors.length > 0) {
         console.error('❌ Errors:', result.errors);
       }
-      
+
       if (result.warnings.length > 0) {
         console.warn('⚠️ Warnings:', result.warnings);
       }
-      
+
       console.groupEnd();
     }
   }
 }
+
+/* eslint-enable @typescript-eslint/no-explicit-any */

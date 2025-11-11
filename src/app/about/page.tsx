@@ -1,7 +1,5 @@
 import { generateStaticMetadata } from '@/lib/metadata';
 import AboutPage from './AboutPage';
-import { readMarkdownFile } from '@/lib/markdown';
-import path from 'path';
 
 export async function generateMetadata() {
   return generateStaticMetadata({

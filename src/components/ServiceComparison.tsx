@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import WhatsAppButton from './WhatsAppButton';
 import Card from './Card';
-import { PRICING, MESSAGES, COMPANY } from '@/lib/constants';
+import { PRICING, COMPANY } from '@/lib/constants';
 import Text from './Text';
 import Heading from './Heading';
 import {
