@@ -22,7 +22,7 @@ describe('Heading Component', () => {
       </Heading>
     );
     const heading = container.querySelector('h1');
-    expect(heading).toHaveClass('text-orange');
+    expect(heading).toHaveClass('text-primary');
   });
 
   it('applies correct alignment', () => {
@@ -47,11 +47,9 @@ describe('Heading Component', () => {
 
   it('renders all heading levels correctly', () => {
     const levels = [1, 2, 3, 4, 5, 6] as const;
-    
-    levels.forEach(level => {
-      const { container } = render(
-        <Heading level={level}>Level {level}</Heading>
-      );
+
+    levels.forEach((level) => {
+      const { container } = render(<Heading level={level}>Level {level}</Heading>);
       const heading = container.querySelector(`h${level}`);
       expect(heading).toBeInTheDocument();
       expect(heading?.textContent).toBe(`Level ${level}`);
@@ -61,10 +59,10 @@ describe('Heading Component', () => {
   it('applies SEO-friendly font sizes', () => {
     const { container: h1Container } = render(<Heading level={1}>H1</Heading>);
     const { container: h2Container } = render(<Heading level={2}>H2</Heading>);
-    
+
     const h1 = h1Container.querySelector('h1');
     const h2 = h2Container.querySelector('h2');
-    
+
     // H1 should have larger text classes
     expect(h1?.className).toMatch(/text-(3xl|4xl|5xl)/);
     // H2 should have smaller text classes than H1

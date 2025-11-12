@@ -1,0 +1,135 @@
+./src/app/HomePage.tsx :: 3:8  Warning: 'TrustBadges' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 4:8  Warning: 'ProblemCard' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 15:8  Warning: 'Link' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 16:16  Warning: 'MESSAGES' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 26:8  Warning: 'AboutSection' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 70:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/HomePage.tsx :: 103:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/HomePage.tsx :: 119:3  Warning: 'trustBadges' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 120:3  Warning: 'siteSettings' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 130:52  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/HomePage.tsx :: 144:9  Warning: 'displayMetrics' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/HomePage.tsx :: 147:9  Warning: 'problemCards' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about/AboutPage.tsx :: 229:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/about/AboutPage.tsx :: 279:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/about/page.tsx :: 3:10  Warning: 'readMarkdownFile' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about/page.tsx :: 4:8  Warning: 'path' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about-demo/AboutDemoPage.tsx :: 22:10  Warning: 'Separator' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about-demo/AboutDemoPage.tsx :: 29:3  Warning: 'Users' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about-demo/AboutDemoPage.tsx :: 33:3  Warning: 'Heart' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/about-demo/AboutDemoPage.tsx :: 42:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/compete-with-pub-chains/page.tsx :: 32:9  Warning: 'advantagesSection' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/compete-with-pub-chains/page.tsx :: 33:9  Warning: 'actionPlan' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/contact/ContactPage.tsx :: 22:8  Warning: 'Link' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/contact/ContactPage.tsx :: 544:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/empty-pub-solutions/page.tsx :: 10:8  Warning: 'ProblemCard' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/empty-pub-solutions/page.tsx :: 14:16  Warning: 'CONTACT' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/empty-pub-solutions/page.tsx :: 17:10  Warning: 'breadcrumbPaths' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/layout.tsx :: 4:8  Warning: 'OptimizedImage' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/layout.tsx :: 7:8  Warning: 'WhatsAppButton' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/layout.tsx :: 12:19  Warning: 'URLS' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/layout.tsx :: 12:25  Warning: 'MESSAGES' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/layout.tsx :: 13:8  Warning: 'Button' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/licensees-guide/[slug]/BlogPostClient.tsx :: 8:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/[slug]/BlogPostClient.tsx :: 10:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/[slug]/BlogPostClient.tsx :: 11:12  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/[slug]/BlogPostClient.tsx :: 12:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/[slug]/page.tsx :: 86:47  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/[slug]/page.tsx :: 90:47  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/page.tsx :: 123:14  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/page.tsx :: 124:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/licensees-guide/page.tsx :: 146:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/not-found.tsx :: 156:41  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/page.tsx :: 1:10  Warning: 'Suspense' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/page.tsx :: 4:10  Warning: 'PageLoading' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/pub-marketing-no-budget/page.tsx :: 13:10  Warning: 'breadcrumbPaths' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/pub-marketing-no-budget/page.tsx :: 14:16  Warning: 'CONTACT' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/pub-rescue/page.tsx :: 32:9  Warning: 'recoveryMetrics' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/quiet-midweek-solutions/page.tsx :: 6:8  Warning: 'Button' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/quiet-midweek-solutions/page.tsx :: 33:9  Warning: 'solutionsSection' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/quiet-midweek-solutions/page.tsx :: 35:9  Warning: 'implementationGuide' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/quiet-midweek-solutions/page.tsx :: 36:9  Warning: 'investmentReturn' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/quiet-midweek-solutions/page.tsx :: 174:36  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/quiet-midweek-solutions/page.tsx :: 278:34  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/results/ResultsPage.tsx :: 112:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/services/ServicesPage.tsx :: 4:8  Warning: 'CTASection' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/app/services/ServicesPage.tsx :: 57:49  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/services/ServicesPage.tsx :: 96:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/app/services/ServicesPage.tsx :: 163:57  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/AboutSection.tsx :: 2:8  Warning: 'Link' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/AnimatedItem.tsx :: 18:3  Warning: 'duration' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/AnimatedItem.tsx :: 46:32  Warning: The ref value 'ref.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'ref.current' to a variable inside the effect, and use that variable in the cleanup function.  react-hooks/exhaustive-deps
+./src/components/CTASection.tsx :: 6:10  Warning: 'CONTACT' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/FooterSimple.tsx :: 1:8  Warning: 'NextLink' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/FooterSimple.tsx :: 3:25  Warning: 'formatPhoneDisplay' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/Navigation.tsx :: 10:3  Warning: 'NavigationMenuContent' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/Navigation.tsx :: 14:3  Warning: 'NavigationMenuTrigger' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/Partnerships.tsx :: 1:8  Warning: 'Image' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/Partnerships.tsx :: 56:19  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/Partnerships.tsx :: 98:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/Partnerships.tsx :: 149:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/ResultsSection.tsx :: 2:8  Warning: 'Link' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/SearchComponent.tsx :: 117:9  Warning: The attribute aria-expanded is not supported by the role textbox. This role is implicit on the element input.  jsx-a11y/role-supports-aria-props
+./src/components/SearchComponent.tsx :: 181:7  Warning: Elements with the ARIA role "option" must have the following attributes defined: aria-selected  jsx-a11y/role-has-required-aria-props
+./src/components/ServiceComparison.tsx :: 6:19  Warning: 'MESSAGES' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/ServiceGrid.tsx :: 12:13  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/StructuredDataTest.tsx :: 7:9  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/StructuredDataTest.tsx :: 18:55  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/StructuredDataTest.tsx :: 19:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/TrustBadges.tsx :: 115:74  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/VideoTestimonial.tsx :: 23:3  Warning: 'videoUrl' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/VideoTestimonial.tsx :: 24:3  Warning: 'thumbnailUrl' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/BadgeAdapter.tsx :: 3:19  Warning: 'ShadcnBadge' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/DialogAdapter.tsx :: 40:3  Warning: 'closeButton' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/DialogAdapter.tsx :: 164:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/adapters/FAQAdapter.tsx :: 4:24  Warning: 'FAQList' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/FAQAdapter.tsx :: 11:8  Warning: 'Card' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/FAQAdapter.tsx :: 12:8  Warning: 'Heading' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/HeadingAdapter.tsx :: 2:52  Warning: 'ShadcnHeadingProps' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/ImageAdapter.tsx :: 2:32  Warning: 'AspectRatioImage' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/adapters/TextAdapter.tsx :: 2:43  Warning: 'ShadcnTextProps' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/blog/BlogPost.tsx :: 11:8  Warning: 'TableOfContents' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/blog/BlogPost.tsx :: 31:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/blog/BlogPost.tsx :: 34:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/blog/StickyCTA.tsx :: 6:10  Warning: 'MESSAGES' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/forms/contact-form.tsx :: 12:3  Warning: 'FormDescription' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/sections/StandardSections.tsx :: 92:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/sections/StandardSections.tsx :: 129:3  Warning: 'background' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/ui/faq-accordion.tsx :: 81:32  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/ui/faq-accordion.tsx :: 140:3  Warning: 'defaultOpenCategories' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/ui/faq-accordion.tsx :: 171:36  Warning: 'index' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/ui/image.tsx :: 62:11  Warning: 'isExternal' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/components/ui/image.tsx :: 120:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+./src/components/ui/image.tsx :: 121:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/components/ui/image.tsx :: 231:9  Warning: Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+./src/components/ui/image.tsx :: 258:9  Warning: Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+./src/components/ui/typography.tsx :: 150:21  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/hooks/useFormValidation.ts :: 50:18  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+./src/lib/blog-images.ts :: 53:48  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/blog-images.ts :: 68:48  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/blog-md.ts :: 7:3  Warning: 'defaultAuthor' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/lib/markdown/markdown-types.ts :: 20:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/markdown/markdown.ts :: 17:3  Warning: 'MarkdownFile' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/lib/search.ts :: 4:23  Warning: 'BlogPost' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/lib/search.ts :: 131:16  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+./src/lib/structured-data-validator.ts :: 14:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 21:18  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 48:31  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 58:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 109:38  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 150:33  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 164:33  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 174:34  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 194:33  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 208:36  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 214:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 227:31  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 241:32  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 249:32  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 255:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 261:28  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 303:46  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/lib/structured-data-validator.ts :: 309:51  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/middleware.ts :: 4:28  Warning: 'request' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+./src/test/utils.tsx :: 8:80  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+./src/test/utils.tsx :: 22:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any

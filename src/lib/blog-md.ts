@@ -50,6 +50,12 @@ export function getAllPostSlugs() {
 
 // Category mapping for legacy posts
 const categoryMapping: Record<string, string> = {
+  turnaround: 'turnaround',
+  community: 'community',
+  communications: 'communications',
+  analytics: 'analytics',
+  sales: 'sales',
+  people: 'people',
   marketing: 'social-media',
   'pub-management': 'empty-pub-solutions',
   'pub-promotions': 'events-promotions',

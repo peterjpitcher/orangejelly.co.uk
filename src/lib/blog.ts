@@ -116,6 +116,36 @@ export const blogCategories: Category[] = [
     name: 'Toolkits & Templates',
     description: 'Ready-to-use playbooks, guides, and assets for busy licensees',
   },
+  {
+    slug: 'turnaround',
+    name: 'Turnaround Playbooks',
+    description: 'Rapid response plans to stabilise struggling venues',
+  },
+  {
+    slug: 'community',
+    name: 'Community & Outreach',
+    description: 'Grassroots ideas to reconnect with locals and partners',
+  },
+  {
+    slug: 'communications',
+    name: 'Communications & PR',
+    description: 'Protect your reputation and keep stakeholders informed',
+  },
+  {
+    slug: 'analytics',
+    name: 'Data & Analytics',
+    description: 'Use numbers and systems to focus your next move',
+  },
+  {
+    slug: 'sales',
+    name: 'Sales & Revenue',
+    description: 'Upsell scripts, offers, and packages that lift takings',
+  },
+  {
+    slug: 'people',
+    name: 'People & Leadership',
+    description: 'Motivate teams and keep everyone aligned under pressure',
+  },
 ];
 
 // Get category by slug
