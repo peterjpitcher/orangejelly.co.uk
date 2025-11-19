@@ -20,6 +20,15 @@ keywords:
   - "power hour ideas"
   - "spin to win promotion"
   - "saturday pre peak pub"
+faqs:
+  - question: "Do I need extra security for Theme Hour?"
+    answer: "Not usually, but brief any SIA team on the exact schedule so they are ready for sing-along surges or prize celebrations and can step in if a crowd gets too lively."
+  - question: "How loud should the activation run?"
+    answer: "Keep volume below the point where conversations struggle. Theme Hour is about energy, not a rave, so run wireless mics with compression and lean on crowd participation rather than deafening music."
+  - question: "What if guests show up halfway through?"
+    answer: "Introduce a wildcard pass at the midpoint so late arrivals can jump into a challenge instantly without needing earlier context."
+  - question: "Can I host Theme Hour outdoors?"
+    answer: "Yes, just use battery-powered speakers, waterproof wheel covers, and a rain move-in plan with folding tables or a canopy so you can relocate in under five minutes."
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: false

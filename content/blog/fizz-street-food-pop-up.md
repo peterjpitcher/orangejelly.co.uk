@@ -20,6 +20,15 @@ keywords:
   - "friday fizz night"
   - "spritz bundle offer"
   - "local trader takeover"
+faqs:
+  - question: "Do I need a TEN for a Friday pop-up?"
+    answer: "If the trader serves similar food within your licensed hours you are covered. Apply for a Temporary Event Notice only when you extend hours or trade outside your licensed footprint, such as spilling into a car park."
+  - question: "What happens if the trader cancels?"
+    answer: "Keep a house-led Plan B like cheese-and-charcuterie boards or grazing platters ready. You can still honour bookings, keep the fizz bundle live, and switch the promo copy to a “house menu takeover” in minutes."
+  - question: "How do I stop chaos between the pop-up and main kitchen?"
+    answer: "Route every order through a single host who releases 10-minute collection windows. That way, chefs see consolidated tickets and the trader never floods the pass."
+  - question: "Can suppliers contribute to the night?"
+    answer: "Yes—ask prosecco or mixer reps for POS, glassware, or an opening case in exchange for tagging them in reels and calling out their brand within the bundle description."
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: true
