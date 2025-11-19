@@ -1,7 +1,7 @@
 ---
 title: "Content Marketing for Pubs: Stories That Fill Seats and Build Loyalty"
 slug: "content-marketing-ideas-pubs"
-publishedDate: 2025-04-04
+publishedDate: 2025-10-03
 updatedDate: "2025-05-19T00:00:00.000Z"
 excerpt: "Transform your pub into a content powerhouse. Learn how to create stories, videos, and experiences that attract customers, build community, and drive"
 quickAnswer: "Share behind-the-scenes kitchen videos, customer stories, and local history. Post consistently across Facebook, Instagram, and local community groups. Focus on storytelling that builds emotional connection rather than just promoting opening hours and menu items."

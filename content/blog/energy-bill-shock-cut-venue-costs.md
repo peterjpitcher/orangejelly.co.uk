@@ -1,7 +1,7 @@
 ---
 title: "Energy Bill Shock? Immediate Ways to Cut Venue Costs"
 slug: "energy-bill-shock-cut-venue-costs"
-publishedDate: 2026-03-09
+publishedDate: 2025-11-07
 updatedDate: "2026-03-09T00:00:00.000Z"
 excerpt: "Slash utility bills within 30 days by tightening maintenance, behaviour, and supplier contracts."
 quickAnswer: "Audit high-draw equipment, set smart schedules, renegotiate tariffs, and engage the team so usage drops 15% without harming comfort."

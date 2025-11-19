@@ -1,7 +1,7 @@
 ---
 title: "Harnessing Delivery and Click & Collect Without Killing Service"
 slug: "delivery-click-collect-without-harm"
-publishedDate: 2026-03-02
+publishedDate: 2025-10-17
 updatedDate: "2026-03-02T00:00:00.000Z"
 excerpt: "Layer takeaway revenue on top of pub trade without wrecking the guest experience on-site."
 quickAnswer: "Ringfence kitchen capacity, streamline menus for travel, and staff a dispatcher so on-site guests still feel like priority number one."

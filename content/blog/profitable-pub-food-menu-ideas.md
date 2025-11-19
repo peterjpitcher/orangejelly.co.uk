@@ -1,7 +1,7 @@
 ---
 title: "Profitable Pub Food Menu Ideas: High-Margin Dishes That Actually Sell"
 slug: "profitable-pub-food-menu-ideas"
-publishedDate: 2025-04-11
+publishedDate: 2026-03-13
 updatedDate: "2025-05-26T00:00:00.000Z"
 excerpt: "Discover proven pub food menu ideas that balance customer appeal with profitability. From gastropub classics to street food trends, learn what works and"
 quickAnswer: "Focus on high-margin dishes like loaded fries (70% GP), sharing platters, and comfort classics. Use pre-prep ingredients, control portion sizes, and price based on 65-70% gross profit targets. Test new dishes as specials before adding to the main menu."

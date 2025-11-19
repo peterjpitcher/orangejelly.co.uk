@@ -1,7 +1,7 @@
 ---
 title: "Crisis PR for Landlords: Turning Bad Reviews into Bookings"
 slug: "crisis-pr-landlords-bad-reviews"
-publishedDate: 2026-02-09
+publishedDate: 2025-10-10
 updatedDate: "2026-02-09T00:00:00.000Z"
 excerpt: "A practical protocol for handling brutal reviews, correcting the issue, and showing the public how you fixed it."
 quickAnswer: "Respond within 12 hours, take the conversation offline, fix the root cause, and publish the comeback story so onlookers regain trust."

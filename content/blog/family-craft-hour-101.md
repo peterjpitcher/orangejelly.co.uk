@@ -1,7 +1,7 @@
 ---
 title: "Family Craft Hour 101: Licensee Guide"
 slug: "family-craft-hour-101"
-publishedDate: 2025-11-06
+publishedDate: 2026-10-16
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "A safeguarded Sunday playbook for running craft tables, card bars, and seasonal trails that fill the dining room."
 quickAnswer: "Pre-book tables, brief staff on safeguarding, and offer craft-plus-roast bundles so families lock in every Sunday."

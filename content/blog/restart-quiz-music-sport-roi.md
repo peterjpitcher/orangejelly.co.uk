@@ -1,7 +1,7 @@
 ---
 title: "Restarting Your Quiz, Live Music, and Sport Nights for Maximum ROI"
 slug: "restart-quiz-music-sport-roi"
-publishedDate: 2026-03-30
+publishedDate: 2026-06-05
 updatedDate: "2026-03-30T00:00:00.000Z"
 excerpt: "Bring back entertainment nights with better planning, booking systems, and upsells so they drive profit instead of chaos."
 quickAnswer: "Plan 8 weeks ahead, pre-book tables with deposits, tier the experience, and stack bar bundles so every entertainment night pays for itself."

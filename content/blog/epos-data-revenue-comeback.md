@@ -1,7 +1,7 @@
 ---
 title: "Why Your EPOS Data Is the Key to a Revenue Comeback"
 slug: "epos-data-revenue-comeback"
-publishedDate: 2026-04-06
+publishedDate: 2025-11-14
 updatedDate: "2026-04-06T00:00:00.000Z"
 excerpt: "Transform EPOS reports into weekly action plans that boost covers, spend per head, and labour productivity."
 quickAnswer: "Track four metrics (covers, average spend, product mix, labour %) and run one experiment per week based on what the data reveals."

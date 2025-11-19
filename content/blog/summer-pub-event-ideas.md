@@ -1,7 +1,7 @@
 ---
 title: "Summer Pub Event Ideas: 35 Profitable Outdoor Promotions That Pack Your Garden"
 slug: "summer-pub-event-ideas"
-publishedDate: 2025-06-06
+publishedDate: 2026-07-17
 updatedDate: "2025-07-21T00:00:00.000Z"
 excerpt: "Make the most of summer with these proven pub garden events and outdoor promotions. From festivals to family days, discover profitable ideas with costs,"
 quickAnswer: "Host beer garden BBQs (£200 setup, 300% ROI), outdoor quiz nights with prizes, family fun days with bouncy castles, live acoustic music sessions, and themed festivals. Focus on events that utilize your outdoor space and encourage longer stays."

@@ -27,6 +27,12 @@ const toStringValue = (value: unknown): string | undefined => {
   if (typeof value === 'string' && value.trim().length > 0) {
     return value;
   }
+  if (value instanceof Date && !isNaN(value.getTime())) {
+    return value.toISOString().split('T')[0];
+  }
+  if (typeof value === 'number' && !Number.isNaN(value)) {
+    return new Date(value).toISOString().split('T')[0];
+  }
   return undefined;
 };
 

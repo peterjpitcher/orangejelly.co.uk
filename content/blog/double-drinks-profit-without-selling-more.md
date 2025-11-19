@@ -2,7 +2,7 @@
 title: "Your Drinks Are Making Half The Profit They Should - Here's The Fix"
 slug: double-drinks-profit-without-selling-more
 excerpt: "Most pubs leave £30K on the table annually by focusing on volume instead of margin. Learn the premium shift that transforms your profits."
-publishedDate: 2025-08-22
+publishedDate: 2025-10-24
 status: published
 author:
   name: Peter Pitcher

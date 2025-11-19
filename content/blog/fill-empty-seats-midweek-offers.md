@@ -1,7 +1,7 @@
 ---
 title: "Fill Empty Seats: Proven Midweek Offers That Actually Convert"
 slug: "fill-empty-seats-midweek-offers"
-publishedDate: 2025-12-01
+publishedDate: 2025-12-05
 updatedDate: "2025-12-01T00:00:00.000Z"
 excerpt: "Design midweek offers that protect gross profit, excite locals, and keep the brigade busy instead of staring at empty tables."
 quickAnswer: "Pair data-backed bundles with pre-booking hooks, limited seating, and stacked upsells so Tuesday and Wednesday become revenue drivers instead of dead weight."

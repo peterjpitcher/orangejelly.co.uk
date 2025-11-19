@@ -1,7 +1,7 @@
 ---
 title: "Survive the Off-Season: Packages That Keep Revenue Coming"
 slug: "survive-off-season-revenue-packages"
-publishedDate: 2026-01-26
+publishedDate: 2026-07-24
 updatedDate: "2026-01-26T00:00:00.000Z"
 excerpt: "Build shoulder-season packages that convert corporate, community, and staycation guests when tourist footfall disappears."
 quickAnswer: "Bundle space hire, F&B, and hosted experiences into ready-to-buy packages aimed at three segments: local businesses, family celebrations, and hobby groups."

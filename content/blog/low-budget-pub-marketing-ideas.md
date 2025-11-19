@@ -1,7 +1,7 @@
 ---
 title: "25 Low Budget Pub Marketing Ideas That Actually Work"
 slug: "low-budget-pub-marketing-ideas"
-publishedDate: 2025-05-23
+publishedDate: 2026-01-23
 updatedDate: "2025-07-07T00:00:00.000Z"
 excerpt: "Discover proven low-cost marketing strategies for pubs. From free social media tactics to DIY promotions, learn how to market your pub on a shoestring"
 quickAnswer: "Focus on free social media tactics like user-generated content campaigns, local Facebook group engagement, and Instagram story polls. Use community partnerships, email marketing, and loyalty schemes. Most effective strategies cost under £50 and rely on creativity rather than budget."

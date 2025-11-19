@@ -1,7 +1,7 @@
 ---
 title: "How to Run Successful Pub Events: A Complete Guide to Profitable Functions"
 slug: "how-to-run-successful-pub-events"
-publishedDate: 2025-04-18
+publishedDate: 2025-12-19
 updatedDate: "2025-06-02T00:00:00.000Z"
 excerpt: "Transform your quiet nights into packed events. From planning to promotion, learn the proven formula for running profitable pub events that create loyal"
 quickAnswer: "Start with quiz nights or themed events, promote 3 weeks ahead using social media and local groups, price entry low but focus on increased drink sales. Partner with local suppliers for prizes. Track attendance and revenue to optimize future events."

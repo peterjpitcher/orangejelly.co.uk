@@ -1,7 +1,7 @@
 ---
 title: "Recession-Proof Pub Strategies: How to Thrive When Customers Tighten Their Belts"
 slug: "recession-proof-pub-strategies"
-publishedDate: 2025-06-13
+publishedDate: 2026-05-15
 updatedDate: "2025-08-08T10:49:26.912Z"
 excerpt: "Proven strategies to maintain and grow your pub business during economic downturns. Learn cost-cutting measures, revenue optimization tactics, and"
 quickAnswer: "Focus on value-driven offers like 2-for-1 meals on quiet days, reduce wastage through better stock management, create affordable comfort experiences, and build customer loyalty through personal service. Emphasize community connection over premium pricing."

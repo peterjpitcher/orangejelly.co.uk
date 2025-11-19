@@ -1,7 +1,7 @@
 ---
 title: "Kitchen Nightmares: When Your Chef Quits on a Saturday Night"
 slug: "kitchen-nightmares-chef-quits"
-publishedDate: 2025-08-15
+publishedDate: 2026-01-02
 excerpt: "Your chef just walked out during service. Here's the emergency protocol that saved our Saturday and the prevention system that means it never happened again."
 quickAnswer: "First 10 minutes: Don't chase them, assess what's cooking, recruit any available help, simplify the menu to basics only. Focus on damage control, honest customer communication, and delivering simple dishes perfectly. Most importantly, have an emergency chef contact list ready."
 author: "Peter Pitcher"

@@ -1,7 +1,7 @@
 ---
 title: "Premium Pub Positioning: How to Go Upmarket and Increase Profits"
 slug: "premium-pub-positioning"
-publishedDate: 2025-02-28
+publishedDate: 2026-03-06
 updatedDate: "2025-04-14T00:00:00.000Z"
 excerpt: "Learn how to position your pub as a premium destination. From craft cocktails to chef partnerships, discover strategies that justify higher prices and"
 quickAnswer: "Focus on quality over quantity with curated drinks selection, elevate food presentation and ingredients, create unique experiences like tasting events, improve atmosphere with better lighting and decor, and train staff to provide knowledgeable service that justifies premium pricing."

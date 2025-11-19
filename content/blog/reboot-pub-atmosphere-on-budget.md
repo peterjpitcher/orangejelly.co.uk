@@ -1,7 +1,7 @@
 ---
 title: "From Quiet to Buzzing: Rebooting Your Pub's Atmosphere on a Budget"
 slug: "reboot-pub-atmosphere-on-budget"
-publishedDate: 2025-12-08
+publishedDate: 2026-05-08
 updatedDate: "2025-12-08T00:00:00.000Z"
 excerpt: "Atmosphere is a controllable asset. Use music, lighting, scent, pacing, and host energy to make the room feel alive without ripping out the bar."
 quickAnswer: "Audit every sensory cue, script the host experience, and layer micro-moments (soundtracks, rituals, pop-up tastings) so guests feel they have walked into the busiest place in town, even on a slow spend."

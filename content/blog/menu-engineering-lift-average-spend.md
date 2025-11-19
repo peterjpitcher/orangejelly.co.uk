@@ -1,7 +1,7 @@
 ---
 title: "Menu Engineering Tricks to Lift Average Spend Fast"
 slug: "menu-engineering-lift-average-spend"
-publishedDate: 2026-02-02
+publishedDate: 2026-02-06
 updatedDate: "2026-02-02T00:00:00.000Z"
 excerpt: "Use behavioural design to push guests toward profitable dishes and drinks without feeling pushy."
 quickAnswer: "Highlight stars, reframe decoys, and guide eyes with layout so guests instinctively choose high-contribution items."

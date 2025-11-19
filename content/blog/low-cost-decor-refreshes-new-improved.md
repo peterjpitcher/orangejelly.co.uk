@@ -1,7 +1,7 @@
 ---
 title: "Low-Cost Decor Refreshes that Signal 'New and Improved'"
 slug: "low-cost-decor-refreshes-new-improved"
-publishedDate: 2026-04-27
+publishedDate: 2026-01-30
 updatedDate: "2026-04-27T00:00:00.000Z"
 excerpt: "Give guests visible proof of change with affordable decor moves that scream fresh energy without touching structural work."
 quickAnswer: "Focus on first impressions: repaint focal walls, update signage, refresh seating fabrics, and layer plants plus lighting so regulars instantly feel the upgrade."

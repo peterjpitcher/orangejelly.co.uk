@@ -1,7 +1,7 @@
 ---
 title: "Cashflow Fixes: Immediate Steps When Trade Drops Off a Cliff"
 slug: "cashflow-fixes-when-trade-drops"
-publishedDate: 2025-12-15
+publishedDate: 2025-09-05
 updatedDate: "2025-12-15T00:00:00.000Z"
 excerpt: "A practical triage checklist for publicans who need to protect cash this week without destroying the guest experience."
 quickAnswer: "Model 13-week cash daily, negotiate breathing room with suppliers, convert stock to cash fast, and double down on high-margin activities so the business stabilises before panic sets in."

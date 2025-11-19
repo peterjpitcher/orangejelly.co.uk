@@ -121,6 +121,12 @@ const toStringValue = (value: unknown): string | undefined => {
   if (typeof value === 'string' && value.trim().length > 0) {
     return value;
   }
+  if (value instanceof Date && !isNaN(value.getTime())) {
+    return value.toISOString().split('T')[0];
+  }
+  if (typeof value === 'number' && !Number.isNaN(value)) {
+    return new Date(value).toISOString().split('T')[0];
+  }
   return undefined;
 };
 
@@ -222,6 +228,12 @@ const toCategory = (slugCandidate?: string | null): Category => {
 const safeDate = (value: unknown): string => {
   if (typeof value === 'string' && value.trim().length > 0) {
     return value;
+  }
+  if (value instanceof Date && !isNaN(value.getTime())) {
+    return value.toISOString();
+  }
+  if (typeof value === 'number' && !Number.isNaN(value)) {
+    return new Date(value).toISOString();
   }
   return new Date().toISOString();
 };

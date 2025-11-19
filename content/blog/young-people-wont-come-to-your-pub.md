@@ -1,7 +1,7 @@
 ---
 title: "Young People Won't Come to Your Pub? Here's How to Change That"
 slug: "young-people-wont-come-to-your-pub"
-publishedDate: 2025-06-27
+publishedDate: 2026-09-18
 excerpt: "Transform your pub into a magnet for 18-30s with proven strategies that actually work. No gimmicks, just real techniques from a licensee who cracked the code."
 quickAnswer: "Create Instagram-worthy moments with good lighting and photogenic corners, host events they actually want (quiz nights with prizes they care about), offer value without compromising quality, and focus on building a welcoming atmosphere where they feel comfortable bringing friends."
 author: "Peter Pitcher"

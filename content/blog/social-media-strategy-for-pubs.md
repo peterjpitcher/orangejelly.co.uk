@@ -1,7 +1,7 @@
 ---
 title: "The Complete Social Media Strategy Guide for Pubs in 2025"
 slug: "social-media-strategy-for-pubs"
-publishedDate: 2025-03-07
+publishedDate: 2026-06-26
 updatedDate: "2025-04-21T00:00:00.000Z"
 excerpt: "Master social media marketing for your pub with this comprehensive guide. Learn platform-specific strategies, content calendars, and engagement tactics"
 quickAnswer: "Map a repeatable social media plan with content pillars, weekly scheduling, and review rituals. Focus on telling your pub's story, highlighting events, and responding quickly to keep relationships strong."

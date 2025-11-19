@@ -1,7 +1,7 @@
 ---
 title: "Cash Flow Crisis Every Month? Breaking the Feast-or-Famine Cycle"
 slug: "cash-flow-crisis-breaking-cycle"
-publishedDate: 2025-08-01
+publishedDate: 2025-08-29
 excerpt: "Stop the monthly panic of making rent. Build predictable income, manage seasonal swings, and create the cash buffer that lets you sleep at night."
 quickAnswer: "Break the cycle by creating recurring revenue streams: regular events, monthly quiz nights, function bookings, and loyalty schemes. Build a 3-month cash buffer by saving £100 weekly from improved margins. Track daily cash position and extend supplier payment terms where possible."
 author: "Peter Pitcher"

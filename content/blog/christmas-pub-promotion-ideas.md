@@ -1,7 +1,7 @@
 ---
 title: "Start Planning Christmas Now: 30 Festive Ideas to Secure December Bookings Early"
 slug: "christmas-pub-promotion-ideas"
-publishedDate: 2025-05-16
+publishedDate: 2025-09-12
 updatedDate: "2025-06-30T00:00:00.000Z"
 excerpt: "Smart licensees start Christmas planning in summer. Lock in corporate bookings, plan your festive menu, and get ahead of the competition with these 30"
 quickAnswer: "Start Christmas planning in June to secure corporate bookings before competitors. Create tiered party packages (£19.95-£39.95), offer weekday discounts, plan festive menus early, and book entertainment by September. Early planning captures the most profitable month and beats competition."

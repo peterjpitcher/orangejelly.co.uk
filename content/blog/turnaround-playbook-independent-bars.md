@@ -1,7 +1,7 @@
 ---
 title: "The Turnaround Playbook: How Independent Bars Bounce Back Fast"
 slug: "turnaround-playbook-independent-bars"
-publishedDate: 2025-11-24
+publishedDate: 2026-08-14
 updatedDate: "2025-11-24T00:00:00.000Z"
 excerpt: "A four-phase turnaround plan for publicans who need to stop the bleed, regain confidence, and relaunch a stronger, leaner business."
 quickAnswer: "Stabilise cash, reset the offer, relaunch with proof, then scale the winning habits. Work in four-week sprints so the team sees progress and creditors see intent."

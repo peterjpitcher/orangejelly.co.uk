@@ -1,7 +1,7 @@
 ---
 title: "Why Is My Pub Empty? 12 Brutal Truths and How to Fix Them"
 slug: "why-is-my-pub-empty"
-publishedDate: 2024-12-27
+publishedDate: 2026-09-04
 updatedDate: "2025-02-10T01:00:00.000Z"
 excerpt: "Discover the real reasons your pub is struggling with footfall and learn practical, proven solutions that actually work. From a landlord who's been there."
 quickAnswer: "Most empty pubs suffer from poor first impressions, inconsistent opening hours, or pricing that doesn't match their positioning. Start with 100% reliable opening times, clean windows, and friendly greetings. Focus on one core strength rather than trying to be everything to everyone."

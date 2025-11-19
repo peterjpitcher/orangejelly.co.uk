@@ -1,7 +1,7 @@
 ---
 title: "Checklist: 30-Day Action Plan to Stabilise a Struggling Hospitality Business"
 slug: "30-day-action-plan-stabilise-hospitality"
-publishedDate: 2026-05-04
+publishedDate: 2025-08-01
 updatedDate: "2026-05-04T00:00:00.000Z"
 excerpt: "A day-by-day checklist that gets your pub back on track within a month by pairing cash discipline with bold marketing."
 quickAnswer: "Use week-long sprints: cash triage, offer reset, sales push, and scale-up. Tick every task and you stabilise cash, team morale, and guest demand."

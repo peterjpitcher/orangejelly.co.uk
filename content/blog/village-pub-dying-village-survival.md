@@ -1,7 +1,7 @@
 ---
 title: "Village Pub in a Dying Village? Survival Strategies That Actually Work"
 slug: "village-pub-dying-village-survival"
-publishedDate: 2025-07-11
+publishedDate: 2026-08-28
 excerpt: "When your village is shrinking but your bills aren't, here's how to transform from local boozer to destination venue without losing your soul."
 quickAnswer: "Transform into a destination by focusing on exceptional food, unique experiences, and strong online presence. Diversify with private dining, wedding receptions, corporate events, and daytime coffee trade. Maintain local character while attracting visitors from surrounding areas who'll travel for quality."
 author: "Peter Pitcher"

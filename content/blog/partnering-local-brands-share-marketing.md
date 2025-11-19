@@ -1,7 +1,7 @@
 ---
 title: "Partnering with Local Brands to Share Marketing Costs"
 slug: "partnering-local-brands-share-marketing"
-publishedDate: 2026-03-23
+publishedDate: 2026-02-27
 updatedDate: "2026-03-23T00:00:00.000Z"
 excerpt: "Reduce marketing spend by teaming up with local makers, gyms, and creatives for co-branded campaigns that fill both calendars."
 quickAnswer: "Pick partners with matching audiences, co-create a hook, split costs in writing, and share distribution lists so everyone wins."

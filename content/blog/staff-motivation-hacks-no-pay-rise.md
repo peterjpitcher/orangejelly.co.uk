@@ -1,7 +1,7 @@
 ---
 title: "Staff Motivation Hacks When You Can't Afford Pay Rises"
 slug: "staff-motivation-hacks-no-pay-rise"
-publishedDate: 2026-01-19
+publishedDate: 2026-07-10
 updatedDate: "2026-01-19T00:00:00.000Z"
 excerpt: "Keep your best team members engaged with recognition, flexibility, and development even when the wage pot is frozen."
 quickAnswer: "Swap cash you do not have for status, growth, and autonomy you can give freely. Structured praise, skill swaps, and micro-incentives outperform across-the-board rises you cannot sustain."

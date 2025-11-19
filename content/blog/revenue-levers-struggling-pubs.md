@@ -1,7 +1,7 @@
 ---
 title: "9 Revenue Levers Every Struggling Pub Should Pull Today"
 slug: "revenue-levers-struggling-pubs"
-publishedDate: 2025-11-17
+publishedDate: 2026-06-12
 updatedDate: "2025-11-17T00:00:00.000Z"
 excerpt: "Nine practical levers any publican can pull this week to bring in cash, stabilise margin, and remind the neighbourhood your venue is still fighting."
 quickAnswer: "Focus on fast ROI levers: relaunch two proven events, bundle food and drink, upsell premium pours, monetise underused space, and tighten waste controls so every pint poured this week adds to cash on hand."

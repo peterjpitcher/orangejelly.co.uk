@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Loyalty Scheme That Fills the Pub Every Friday"
 slug: "build-loyalty-scheme-fill-pub"
-publishedDate: 2026-02-16
+publishedDate: 2025-08-22
 updatedDate: "2026-02-16T00:00:00.000Z"
 excerpt: "Design a simple, trackable loyalty scheme that rewards frequency, drives referrals, and keeps Fridays standing-room only."
 quickAnswer: "Reward visits, not spend; add surprise upgrades; and use WhatsApp or email to drop exclusive invites every week."

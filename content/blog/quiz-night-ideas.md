@@ -1,7 +1,7 @@
 ---
 title: "Quiz Night Ideas: 25 Formats That Pack Your Pub Every Week"
 slug: "quiz-night-ideas"
-publishedDate: 2025-05-02
+publishedDate: 2026-05-01
 updatedDate: "2025-06-16T00:00:00.000Z"
 excerpt: "Transform your quiz night from predictable to unmissable. Discover creative formats, round ideas, and hosting tips that create loyal quiz teams and boost"
 quickAnswer: "Run 6-8 varied quiz rounds over 2.5 hours with maximum 6 people per team. Mix formats: themed rounds, interactive challenges, music rounds, and picture rounds. Include 15-minute halftime break for bar sales. Entry £2-3 per person covers prizes and transforms Tuesday turnover."

@@ -1,7 +1,7 @@
 ---
 title: "Nobody Books Tables Anymore? Master the Art of Walk-ins vs Reservations"
 slug: "nobody-books-tables-anymore"
-publishedDate: 2025-07-18
+publishedDate: 2026-02-20
 excerpt: "Find the perfect balance between guaranteed bookings and spontaneous trade. Learn the system that increased our covers by 40% without turning anyone away."
 quickAnswer: "Reserve 60% of tables for bookings, 40% for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after 15 minutes. Create a waiting list system and always overbook by 10% on peak nights to account for cancellations."
 author: "Peter Pitcher"
