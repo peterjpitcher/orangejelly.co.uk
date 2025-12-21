@@ -29,39 +29,39 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
   // Transform local data to notification format
   const notifications = socialProofItems
     ? socialProofItems
-        .filter(item => item.isActive)
+        .filter((item) => item.isActive)
         .sort((a, b) => a.order - b.order)
-        .map(item => ({
-          pub: item.location || "The Anchor",
-          location: "Stanwell Moor",
+        .map((item) => ({
+          pub: item.location || 'The Anchor',
+          location: 'Stanwell Moor',
           message: item.displayText,
-          time: item.timeframe || "Ongoing"
+          time: item.timeframe || 'Ongoing',
         }))
     : [
         {
-          pub: "The Anchor",
-          location: "Stanwell Moor",
-          message: "Sunday roast sales up £400+ per week",
-          time: "Ongoing"
+          pub: 'The Anchor',
+          location: 'Stanwell Moor',
+          message: 'Cut £250/week in Sunday food waste',
+          time: 'Ongoing',
         },
         {
-          pub: "The Anchor",
-          location: "Stanwell Moor",
-          message: "Wednesday nights from 20 to 60+ covers",
-          time: "Since implementing AI"
+          pub: 'The Anchor',
+          location: 'Stanwell Moor',
+          message: '25-30 quiz teams every month',
+          time: 'Monthly',
         },
         {
-          pub: "The Anchor",
-          location: "Stanwell Moor",
-          message: "Quiz night attendance up 80%",
-          time: "Monthly"
+          pub: 'The Anchor',
+          location: 'Stanwell Moor',
+          message: '60,000-70,000 people reached on social media',
+          time: 'Monthly',
         },
         {
-          pub: "The Anchor",
-          location: "Stanwell Moor",
-          message: "22% overall revenue growth",
-          time: "Year to date"
-        }
+          pub: 'The Anchor',
+          location: 'Stanwell Moor',
+          message: '£4,000+ monthly savings across supplier, rota, and energy',
+          time: 'Monthly',
+        },
       ];
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
     // Cycle through notifications every 8 seconds
     const interval = setInterval(() => {
       setIsVisible(false);
-      
+
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % notifications.length);
         setIsVisible(true);
@@ -89,7 +89,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
   const currentNotification = notifications[currentIndex];
 
   return (
-    <div 
+    <div
       className={`fixed top-20 left-4 z-40 max-w-sm transition-slow transform ${
         isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
       }`}
@@ -102,7 +102,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
               <span className="text-xl">🍺</span>
             </div>
           </div>
-          
+
           {/* Content */}
           <div className="flex-1">
             <Text size="sm" weight="semibold">
@@ -118,7 +118,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
               {currentNotification.time}
             </Text>
           </div>
-          
+
           {/* Close button */}
           <Button
             onClick={() => setIsVisible(false)}
@@ -127,11 +127,16 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
             aria-label="Close notification"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </Button>
         </div>
-        
+
         {/* Orange Jelly branding */}
         <div className="mt-3 pt-3 border-t flex items-center justify-between">
           <span className="text-xs text-charcoal/50">Powered by</span>

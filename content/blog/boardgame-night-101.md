@@ -1,7 +1,7 @@
 ---
 title: "Boardgame & Team Night 101: Licensee Guide"
 slug: "boardgame-night-101"
-publishedDate: 2026-10-02
+publishedDate: 2025-10-02
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Blueprint for relaxed Monday/Tuesday socials built around cribbage, Shut the Box, and modern party games."
 quickAnswer: "Create clear game zones, track bragging rights on a leaderboard, and bundle table platters so boardgame nights drive dwell time and spend."

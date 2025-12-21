@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Fix Dead Tuesday & Wednesday Nights - Proven Midweek Solutions',
     description:
-      'Transform your dead midweek nights into profit. From 5 tables to fully booked - proven strategies that work for UK pubs. Get the exact system we use at The Anchor.',
+      'Transform your dead midweek nights into profit. From empty tables to fully booked - proven strategies that work for UK pubs. Get the exact system we use at The Anchor.',
     path: '/quiet-midweek-solutions',
   });
 }
@@ -117,14 +117,14 @@ export default function QuietMidweekSolutions() {
                     <Text size="sm" className="text-charcoal/60">
                       Before:
                     </Text>
-                    <Text weight="semibold">20-25 people, losing money</Text>
+                    <Text weight="semibold">Sparse attendance, losing money</Text>
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
                       After 30 days:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      25-35 regulars, £800+ takings
+                      25-30 regular teams monthly, stronger takings
                     </Text>
                   </div>
                   <div>
@@ -152,22 +152,22 @@ export default function QuietMidweekSolutions() {
                       After 30 days:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      30-40 covers, fully booked by Monday
+                      Consistent midweek bookings, filled early in the week
                     </Text>
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
                       Secret:
                     </Text>
-                    <Text>£19.95 deal + social media countdown</Text>
+                    <Text>Simple set-price deal + social media countdown</Text>
                   </div>
                 </div>
               </Card>
             </div>
 
             <Text size="lg" color="white" className="mb-6">
-              We went from losing £2,400/month on quiet nights to making £3,200+ profit. Here's the
-              exact system we used...
+              We went from losing money on quiet nights to making meaningful midweek profit. Here's
+              the exact system we used...
             </Text>
           </div>
         </AnimatedItem>
@@ -480,7 +480,7 @@ export default function QuietMidweekSolutions() {
                   Investment: £75/hour + VAT
                 </Text>
                 <Text className="text-charcoal/70">
-                  Most pubs recover this in their first successful midweek event
+                  Most pubs see meaningful progress inside 30 days
                 </Text>
               </div>
 
@@ -499,20 +499,20 @@ export default function QuietMidweekSolutions() {
       <Section background="cream">
         <div className="max-w-4xl mx-auto text-center">
           <Heading level={2} className="mb-6 text-red-700">
-            ⚠️ Every Dead Tuesday Costs You £400. Every Dead Wednesday Another £400.
+            ⚠️ Every Dead Tuesday Costs You Money. Every Dead Wednesday Does Too.
           </Heading>
           <Text size="lg" className="mb-8">
-            That's £6,400 per month vanishing while your competition gets busier. In 3 months,
-            you've lost £19,200. In 6 months... you might not have a pub.
+            Money vanishes while your competition gets busier. The longer you wait, the harder it is
+            to recover.
           </Text>
           <Card background="white" padding="large">
             <Heading level={3} className="mb-4">
               Stop The Bleeding Today
             </Heading>
             <Text className="mb-6">
-              Next Tuesday could have 40 people instead of 5. Next Wednesday could be fully booked.
-              But only if you act now. Limited spots available - I can only properly support 5 pubs
-              at once.
+              Next Tuesday could be busy instead of quiet. Next Wednesday could be fully booked. But
+              only if you act now. Limited spots available - I can only properly support a small
+              number of pubs at once.
             </Text>
             <WhatsAppButton
               text="URGENT: Save my midweek nights"
@@ -526,7 +526,7 @@ export default function QuietMidweekSolutions() {
       {/* Final CTA */}
       <CTASection
         title="Your Midweek Nights Are 30 Days From Packed"
-        subtitle="Join the smart pub owners who turned their quietest nights into their most profitable. Get the exact system, templates, and support that transformed The Anchor's dead midweek into £3,200+ monthly profit."
+        subtitle="Join the smart pub owners who turned their quietest nights into their most profitable. Get the exact system, templates, and support that transformed The Anchor's dead midweek into meaningful monthly profit."
         buttonText="Transform My Midweek Nights Now"
         whatsappMessage="Peter, my Tuesday and Wednesday nights are dead. I need the Midweek Momentum System."
       />

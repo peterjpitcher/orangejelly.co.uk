@@ -4,7 +4,7 @@
 
 ### Subject Line Options
 - "From One Greene King Tenant to Another: Filling Empty Tables"
-- "How We Achieved 71% Food GP at Our Greene King Pub"
+- "How We Cut £250/Week in Sunday Waste at Our Greene King Pub"
 - "Greene King Success Story: The Anchor's Transformation"
 
 ### Email Structure
@@ -55,7 +55,7 @@
 
 Hi [Name],
 
-I'm Peter Pitcher, licensee of The Anchor in Stanwell Moor - a Greene King tenancy we've run since March 2019. Last month we hit 71% food GP whilst maintaining strong wet sales, and I wanted to share how we did it with fellow Greene King pubs.
+I'm Peter Pitcher, licensee of The Anchor in Stanwell Moor - a Greene King tenancy we've run since March 2019. We've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs using AI-driven systems, and I wanted to share how we did it with fellow Greene King pubs.
 
 **I know the challenges you're facing:**
 - Empty tables on Tuesday and Wednesday nights
@@ -64,7 +64,7 @@ I'm Peter Pitcher, licensee of The Anchor in Stanwell Moor - a Greene King tenan
 - Finding time for marketing while running service
 
 **Our journey at The Anchor:**
-When we took over, we had 20 people at quiz night and were struggling with 58% food GP. Now we consistently see 25-35 quiz attendees, maintain 71% food GP, and have added £75k to our business value. Most importantly, we've automated our marketing to save 25+ hours per week.
+When we took over, quiz nights were empty. Now we consistently see 25-30 regular teams each month, reach 60,000-70,000 people on social media, and have added £75,000-£100,000 to our business value. Most importantly, we've automated our marketing to save up to 25 hours every week.
 
 **Specific ways we help Greene King pubs:**
 
@@ -76,7 +76,7 @@ When we took over, we had 20 people at quiz night and were struggling with 58% f
 
 4. **Food Promotion Timing**: We've learned exactly when Greene King customers make dining decisions. Our targeted promotion schedule increases covers without discounting.
 
-5. **Community Engagement**: Build a database of regular customers (we have 300+) who actually come back, not just grab offers and disappear.
+5. **Community Engagement**: Build a database of regular customers (we have 250 opted-in SMS contacts) who actually come back, not just grab offers and disappear.
 
 6. **Waste Reduction**: Our Sunday lunch prediction model saves us £250 weekly in waste - crucial for hitting those GP targets.
 
@@ -96,7 +96,7 @@ Stanwell Moor, Staines TW19 6AQ
 BII Member | Featured in Autumn 2025 issue
 Orange Jelly Limited - Helping pubs thrive
 
-P.S. We're training our first pub chain in September 2025, but I always have time for individual Greene King pubs. We charge £75/hour plus VAT, but even a few hours can transform your marketing approach.
+P.S. Short chats and quick questions are always free. We charge £75/hour plus VAT, but even a few hours can transform your marketing approach.
 
 ---
 
@@ -108,7 +108,7 @@ P.S. We're training our first pub chain in September 2025, but I always have tim
 - Understanding of Greene King specific challenges
 - Practical, tested solutions
 - Time-saving benefits
-- GP improvement strategies
+- Waste reduction and margin clarity
 
 ### DON'T Mention:
 - Any criticism of Greene King
@@ -127,12 +127,12 @@ P.S. We're training our first pub chain in September 2025, but I always have tim
 - Time constraints with no area manager support
 
 ### Proof Points That Resonate:
-- 71% food GP (above typical requirements)
-- £75k added business value
-- 300 customer database
-- 25-35 quiz attendees
+- £75,000-£100,000 added business value
+- 250 opted-in SMS contacts
+- 25-30 quiz teams every month
 - £250/week waste reduction
-- 25 hours/week time saved
+- £4,000+ monthly cost savings
+- Up to 25 hours saved each week
 
 ---
 

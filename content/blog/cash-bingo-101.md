@@ -1,7 +1,7 @@
 ---
 title: "Cash Bingo 101: Licensee Guide"
 slug: "cash-bingo-101"
-publishedDate: 2026-10-09
+publishedDate: 2025-10-09
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Keep Thursday nights lively with a compliant bingo format that respects Gambling Act rules, protects your float, and delights locals."
 quickAnswer: "Cap stakes at £5, log every prize, and script a 75-minute format with bundled books so bingo builds steady spend without risking your licence."

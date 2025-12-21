@@ -131,8 +131,9 @@ export default function NotFound() {
             </Heading>
 
             <Text size="lg" className="mb-8">
-              No problem! I'm Peter, and I run The Anchor pub. Let's have a chat about what's
-              keeping you up at night - I've probably been there too.
+              No problem! I'm Peter. Billy runs The Anchor day-to-day, and I handle marketing and
+              business development. Let's have a chat about what's keeping you up at night - I've
+              probably been there too.
             </Text>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

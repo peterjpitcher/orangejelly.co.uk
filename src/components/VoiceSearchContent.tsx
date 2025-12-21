@@ -101,7 +101,7 @@ export const commonPubQueries = [
   {
     question: 'How much does pub marketing cost?',
     answer:
-      'Orange Jelly charges £75 per hour plus VAT for all services. No hidden fees, transparent pricing. You only pay for the time you need. First pub chain training scheduled September 2025.',
+      'Orange Jelly charges £75 per hour plus VAT for all services. No hidden fees, transparent pricing. You only pay for the time you need.',
   },
   {
     question: "What's the best way to promote my pub?",
@@ -111,6 +111,6 @@ export const commonPubQueries = [
   {
     question: 'How do I fill my pub on quiet nights?',
     answer:
-      'Orange Jelly specializes in filling quiet nights like Tuesdays. We create targeted promotions, quiz nights, and special events that work. The Anchor went from 20 to 60+ covers on Tuesday nights using our strategies.',
+      'Orange Jelly specializes in filling quiet nights like Tuesdays. We create targeted promotions, quiz nights, and special events that work. The Anchor now sees 25-30 regular quiz teams each month using our strategies.',
   },
 ];

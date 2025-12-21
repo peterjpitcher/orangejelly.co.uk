@@ -1,7 +1,7 @@
 ---
 title: "Premium Pub Positioning: How to Go Upmarket and Increase Profits"
 slug: "premium-pub-positioning"
-publishedDate: 2026-03-06
+publishedDate: 2025-03-06
 updatedDate: "2025-04-14T00:00:00.000Z"
 excerpt: "Learn how to position your pub as a premium destination. From craft cocktails to chef partnerships, discover strategies that justify higher prices and"
 quickAnswer: "Focus on quality over quantity with curated drinks selection, elevate food presentation and ingredients, create unique experiences like tasting events, improve atmosphere with better lighting and decor, and train staff to provide knowledgeable service that justifies premium pricing."
@@ -87,7 +87,7 @@ You cannot fake quality. Every element must deliver:
 
 - **Education elements**: Tasting notes, pairing suggestions
 
-**Real Example**: The Anchor in Ripley stocks just 12 gins but offers 30-minute "gin journey" experiences at £25, where customers learn about botanicals, distillation, and create their perfect serve.
+**Real Example**: The Anchor in Ripley stocks a focused gin list but offers short "gin journey" experiences at a set price, where customers learn about botanicals, distillation, and create their perfect serve.
 
 **Food Excellence**:
 
@@ -543,7 +543,7 @@ The only question is: are you ready to stop competing on price and start competi
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 
@@ -560,4 +560,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

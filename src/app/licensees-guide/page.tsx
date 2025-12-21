@@ -43,11 +43,13 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: "The Licensee's Guide - Expert Pub Management Advice",
     description:
-      'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice to increase revenue and build thriving local pubs.',
+      'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice that also applies to restaurants and bars.',
     path: '/licensees-guide',
     keywords: [
       'pub management',
       'pub marketing',
+      'restaurant marketing',
+      'bar marketing',
       'licensee guide',
       'pub business advice',
       'pub owner tips',
@@ -264,7 +266,7 @@ export default async function LicenseesGuidePage() {
 
       <Hero
         title="The Licensee's Guide"
-        subtitle="Proven strategies that increase revenue and build thriving pubs"
+        subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
         showCTA={false}
         breadcrumbs={breadcrumbPaths.licenseesGuide}
       />
@@ -273,26 +275,27 @@ export default async function LicenseesGuidePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
           {/* Lead paragraph */}
           <Text size="lg" align="center" className="max-w-3xl mx-auto mb-8 text-charcoal/70">
-            Essential guides for modern pub management. From filling empty pubs to competing with
-            chains, discover practical advice that actually works.
+            Essential guides for modern pub management, with ideas you can adapt for restaurants and
+            bars. From filling empty venues to competing with chains, discover practical advice that
+            actually works.
           </Text>
 
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">25+</div>
+              <div className="text-3xl font-bold text-orange mb-2">25-30</div>
               <Text size="sm" className="text-charcoal/70">
-                Proven strategies from The Anchor
+                Quiz teams each month
               </Text>
             </div>
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">71%</div>
+              <div className="text-3xl font-bold text-orange mb-2">£250/week</div>
               <Text size="sm" className="text-charcoal/70">
-                Food GP achieved using these methods
+                Sunday waste cut
               </Text>
             </div>
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">£75k+</div>
+              <div className="text-3xl font-bold text-orange mb-2">£75k-£100k</div>
               <Text size="sm" className="text-charcoal/70">
                 Added to business value
               </Text>
@@ -309,7 +312,7 @@ export default async function LicenseesGuidePage() {
             <Text className="mb-4">
               Whether you're struggling with empty Tuesday nights, competing with Wetherspoons, or
               trying to build a profitable food offering, you'll find honest, practical advice that
-              works.
+              works for pubs, restaurants, and bars.
             </Text>
             <Text className="mb-8">
               No theory. No fluff. Just proven methods that have transformed our pub from struggling

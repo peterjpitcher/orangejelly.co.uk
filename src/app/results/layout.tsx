@@ -4,9 +4,9 @@ import { getAbsoluteUrl } from '@/lib/site-config';
 const canonicalUrl = getAbsoluteUrl('/results');
 
 export const metadata: Metadata = {
-  title: 'Results - Real Success Stories from The Anchor',
+  title: 'Results - Hospitality Marketing Success Stories',
   description:
-    'See how we use AI at The Anchor to save time and increase revenue. Real examples, real numbers, no fluff.',
+    'See how we use AI at The Anchor to save time and increase revenue, then apply it to pubs, restaurants, and bars. Real examples, real numbers, no fluff.',
   alternates: {
     canonical: canonicalUrl,
   },

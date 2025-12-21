@@ -1,7 +1,7 @@
 ---
 title: "Quiz Night Ideas: 25 Formats That Pack Your Pub Every Week"
 slug: "quiz-night-ideas"
-publishedDate: 2026-05-01
+publishedDate: 2025-05-01
 updatedDate: "2025-06-16T00:00:00.000Z"
 excerpt: "Transform your quiz night from predictable to unmissable. Discover creative formats, round ideas, and hosting tips that create loyal quiz teams and boost"
 quickAnswer: "Run 6-8 varied quiz rounds over 2.5 hours with maximum 6 people per team. Mix formats: themed rounds, interactive challenges, music rounds, and picture rounds. Include 15-minute halftime break for bar sales. Entry £2-3 per person covers prizes and transforms Tuesday turnover."
@@ -757,7 +757,7 @@ Start next Tuesday. Your future regulars are waiting.
 
 ### What night is best for a pub quiz?
 
-Tuesday or Wednesday typically work best as they boost quiet midweek trade. Avoid Fridays and Saturdays when you're already busy. The Anchor runs successful Tuesday quizzes with 25-35 regular attendees.
+Tuesday or Wednesday typically work best as they boost quiet midweek trade. Avoid Fridays and Saturdays when you're already busy. The Anchor runs successful Tuesday quizzes with 25-30 regular teams each month.
 
 ### How much should quiz prizes cost?
 
@@ -765,7 +765,7 @@ Budget £30-50 for prizes. First prize £20-30, second £10-15, third £5-10. Th
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 
@@ -774,4 +774,3 @@ Implementation costs vary by strategy. Many improvements like social media optim
 ### Can this work for my type of pub?
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
-

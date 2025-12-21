@@ -17,7 +17,7 @@ import { HowToSchema } from '@/components/StructuredData';
 export const metadata = generateMetadata({
   title: '30 Days to Fuller Tables - Transform Your Empty Pub',
   description:
-    'Empty pub killing your profits? Proven 30-day system fills tables fast. From 25% empty to 85% full - real results from UK pubs.',
+    'Empty pub killing your profits? Proven 30-day system fills tables fast. Real results from UK pubs.',
   path: '/empty-pub-solutions',
 });
 
@@ -32,7 +32,7 @@ export default function EmptyPubSolutions() {
     },
     {
       name: 'Fix Your Google Listing',
-      text: 'Update business hours, add photos, respond to reviews, and ensure all information is accurate. 80% of pubs have errors that cost them customers.',
+      text: 'Update business hours, add photos, respond to reviews, and ensure all information is accurate. Many pubs have errors that cost them customers.',
       url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-1',
     },
     {
@@ -87,7 +87,7 @@ export default function EmptyPubSolutions() {
           name: 'How quickly can I see results for my empty pub?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Most pubs see 25-40% increase in covers within 30 days. Our proven system starts working immediately - you'll notice more bookings in week one, busier nights by week two, and significantly fuller tables by day 30.",
+            text: 'See meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries.',
           },
         },
         {
@@ -137,7 +137,7 @@ export default function EmptyPubSolutions() {
       title: 'Immediate Impact',
       actions: [
         'Audit your current customer touchpoints',
-        'Fix your Google listing (80% have errors)',
+        'Fix your Google listing (errors are common)',
         'Create irresistible midweek offers',
         'Launch targeted social media campaigns',
       ],
@@ -190,7 +190,7 @@ export default function EmptyPubSolutions() {
     {
       pub: 'The Anchor, Stanwell Moor',
       before: 'Dead Monday-Wednesday',
-      after: 'Quiz night: 25-35 regulars, Tasting nights: 85% retention',
+      after: 'Quiz night: 25-30 regular teams monthly, Tasting nights: strong repeat attendance',
       timeframe: '8 weeks',
     },
   ];
@@ -203,7 +203,7 @@ export default function EmptyPubSolutions() {
       />
       <HowToSchema
         name="30-Day Empty Pub Recovery Plan"
-        description="Transform your empty pub into a thriving business with our proven 30-day system. Step-by-step guide to increase covers by 25% or more."
+        description="Transform your empty pub into a thriving business with our proven 30-day system. Step-by-step guide to increase covers and bookings inside 30 days."
         image="https://www.orangejelly.co.uk/images/empty-pub-recovery.svg"
         estimatedCost={{
           currency: 'GBP',

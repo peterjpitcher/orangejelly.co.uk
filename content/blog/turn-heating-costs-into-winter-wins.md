@@ -2,7 +2,7 @@
 title: "Winter's Coming: Your Simple Guide to Turning Cold Weather Into Cash"
 slug: turn-heating-costs-into-winter-wins
 excerpt: "When my heating bill jumped to £800, I panicked. Then I discovered this ridiculously simple strategy that turned winter into my most profitable season"
-publishedDate: 2026-08-07
+publishedDate: 2025-08-07
 status: published
 author:
   name: Peter Pitcher

@@ -1,7 +1,7 @@
 {
   "heroSection": {
     "title": "Tuesday & Wednesday Nights Killing Your Profits?",
-    "subtitle": "Transform dead midweek nights into your most profitable days. From 5 empty tables to fully booked using our proven system."
+    "subtitle": "Transform dead midweek nights into your most profitable days. From empty tables to fully booked using our proven system."
   },
   "problemSection": {
     "heading": "Tuesday & Wednesday Nights Killing Your Profits?",
@@ -9,14 +9,14 @@
       {
         "emoji": "💀",
         "title": "Ghost Town Tuesdays",
-        "description": "5 tables out of 30 occupied. Staff standing around. Losing £300+ per night.",
+        "description": "A handful of tables occupied. Staff standing around. Losing money each night.",
         "linkText": "Fix Tuesdays",
         "linkHref": "#solutions"
       },
       {
         "emoji": "📉",
         "title": "Wednesday Wasteland",
-        "description": "Kitchen prepped for 50, serving 12. Food waste mounting. Morale dropping.",
+        "description": "Kitchen prepped for a full room, serving only a handful. Food waste mounting. Morale dropping.",
         "linkText": "Fix Wednesdays",
         "linkHref": "#solutions"
       },
@@ -29,8 +29,8 @@
       }
     ],
     "brutalMath": {
-      "heading": "The Brutal Math: Every Dead Midweek Night Costs You £400-600",
-      "description": "That's £3,200-4,800 per month bleeding from your business. Meanwhile, your competition is packed because they cracked the midweek code. Time to steal it back.",
+      "heading": "The Brutal Math: Every Dead Midweek Night Costs You Money",
+      "description": "Money bleeds from your business while your competition gets busier because they cracked the midweek code. Time to steal it back.",
       "ctaText": "Fix my midweek crisis NOW"
     }
   },
@@ -48,7 +48,7 @@
           "Team leagues create loyalty",
           "Food deals boost spend"
         ],
-        "result": "25-35 regulars every week, £420 average revenue"
+        "result": "25-30 regular teams each month, stronger midweek revenue"
       },
       {
         "_key": "taco-tuesday",
@@ -60,7 +60,7 @@
           "Build-your-own options",
           "Sharing platters for groups"
         ],
-        "result": "Turns deadest night into 60+ covers"
+        "result": "Turns the deadest night into a busy one"
       },
       {
         "_key": "open-mic",
@@ -72,7 +72,7 @@
           "Builds artistic community",
           "Regular weekly audience"
         ],
-        "result": "40-50 people, mostly new faces"
+        "result": "Packed room with new faces"
       }
     ],
     "wednesdayWinners": [
@@ -121,13 +121,13 @@
         "week": "Week 1-2",
         "title": "Launch & Learn",
         "description": "First event launches. Gathering data. Initial promotion push.",
-        "result": "15-20 curious customers"
+        "result": "Early interest and initial bookings"
       },
       {
         "week": "Week 3-4",
         "title": "Building Momentum",
         "description": "Word spreading. Regulars forming. Social proof building.",
-        "result": "25-35 regular attendees"
+        "result": "Regular teams forming"
       },
       {
         "week": "Month 2+",
@@ -137,17 +137,17 @@
       }
     ],
     "metrics": {
-      "revenueIncrease": "£8,000+ monthly",
-      "utilization": "From 20% to 75% capacity",
-      "staffMorale": "Massively improved",
-      "foodWaste": "Reduced by 60%"
+      "revenueIncrease": "Meaningful monthly lift",
+      "utilization": "Noticeably higher capacity",
+      "staffMorale": "Improved",
+      "foodWaste": "Reduced"
     }
   },
   "implementationGuide": {
-    "heading": "Your 14-Day Midweek Rescue Plan",
+    "heading": "Your 30-Day Midweek Rescue Plan",
     "steps": [
       {
-        "day": "Day 1-3",
+        "day": "Week 1",
         "title": "Choose Your Weapon",
         "tasks": [
           "Pick ONE Tuesday event to start",
@@ -157,7 +157,7 @@
         ]
       },
       {
-        "day": "Day 4-7",
+        "day": "Week 2",
         "title": "Build the Machine",
         "tasks": [
           "Create social media templates",
@@ -167,7 +167,7 @@
         ]
       },
       {
-        "day": "Day 8-10",
+        "day": "Week 3",
         "title": "Create the Buzz",
         "tasks": [
           "Launch social media campaign",
@@ -177,7 +177,7 @@
         ]
       },
       {
-        "day": "Day 11-14",
+        "day": "Week 4",
         "title": "Launch Week",
         "tasks": [
           "Run first events",
@@ -191,8 +191,8 @@
   "investmentReturn": {
     "heading": "The Investment vs The Return",
     "investment": {
-      "setup": "£75/hour for 8-10 hours setup",
-      "total": "£500-625 + VAT",
+      "setup": "£75/hour + VAT for focused setup",
+      "total": "Hourly support tailored to your pub",
       "includes": [
         "Complete event planning",
         "Marketing templates",
@@ -201,10 +201,10 @@
       ]
     },
     "return": {
-      "week1": "£400-600 additional revenue",
-      "month1": "£1,600-2,400 additional revenue",
-      "month3": "£4,800-7,200 additional revenue",
-      "breakeven": "Investment recovered in first week"
+      "week1": "Initial lift from quick wins",
+      "month1": "Momentum and regulars forming",
+      "month3": "Consistent midweek performance",
+      "breakeven": "Measured in weeks, not months"
     }
   },
   "socialProof": {
@@ -225,8 +225,8 @@
     ]
   },
   "urgencySection": {
-    "heading": "Every Empty Tuesday Costs You £400. Every Empty Wednesday Another £400.",
-    "calculation": "That's £57,600 per year. Going straight to your competition.",
+    "heading": "Every Empty Tuesday Costs You Money. Every Empty Wednesday Does Too.",
+    "calculation": "That loss goes straight to your competition.",
     "question": "How many more empty midweek nights can you afford?",
     "ctaText": "Fix My Midweek Problem Now",
     "guarantee": "30-day action plan with weekly support to keep the turnaround on track"
@@ -234,9 +234,9 @@
   "ctaSection": {
     "title": "Ready to Pack Your Midweek Nights?",
     "subtitle": "Let's turn your quietest nights into your most profitable",
-    "offerText": "Get your complete midweek transformation plan in 48 hours",
+    "offerText": "Get your complete midweek transformation plan quickly",
     "pricing": "Investment: £75/hour + VAT",
-    "note": "Limited to 5 pubs at once to ensure quality support",
+    "note": "Limited availability to ensure quality support",
     "ctaText": "Start My Midweek Transformation",
     "whatsappMessage": "Hi Peter, my Tuesday and Wednesday nights are dead. Can you help?"
   },

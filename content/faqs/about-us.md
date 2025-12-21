@@ -2,7 +2,7 @@
 
 ## Who is Peter Pitcher and why should I trust Orange Jelly?
 
-I'm Peter Pitcher, and I've run The Anchor pub in Stanwell Moor with my husband Billy since March 2019. I also work full-time as an AI Marketing Capabilities Lead for a global food manufacturer. I've been an early AI adopter since 2021 and discovered how AI can add 25 hours of value per week. Orange Jelly exists to share these proven strategies with fellow licensees.
+I'm Peter Pitcher. Billy runs The Anchor pub in Stanwell Moor day-to-day, and I handle marketing and business development around my full-time role as an AI Marketing Capabilities Lead for a global food manufacturer. I've been an early AI adopter since 2021 and discovered how AI can add 25 hours of value per week. Orange Jelly exists to share these proven strategies with fellow licensees.
 
 ## What makes Orange Jelly different from other consultants?
 
@@ -10,7 +10,7 @@ We're not consultants who've never pulled a pint. We run an actual pub and test 
 
 ## Is Orange Jelly a big company?
 
-No, Orange Jelly started in 2016 with Laura Willis as a digital agency, then pivoted in 2019. Now it's just me (Peter) working around my full-time job, running The Anchor, and family life. No big office, no sales team. This means you get personal service, honest advice, and someone who genuinely understands your challenges because I face them too.
+No, Orange Jelly started in 2016 with Laura Willis as a digital agency, then pivoted in 2019. Now it's just me (Peter) working around my full-time job while Billy runs The Anchor day-to-day. No big office, no sales team. This means you get personal service, honest advice, and someone who genuinely understands your challenges because I face them too.
 
 ## Why is it called Orange Jelly?
 
@@ -22,7 +22,7 @@ Absolutely! We'd love to show you around. Pop in for a pint and see how we use A
 
 ## How did you discover AI could help pubs?
 
-Through my curiosity for technology and being an early adopter. I started with ChatGPT in 2021 when it first launched. The early results were terrible, but as the models evolved, they became business-ready. Now AI helps me deliver 120-150 hours worth of equivalent work per week in my spare time.
+Through my curiosity for technology and being an early adopter. I started with ChatGPT in 2021 when it first launched. The early results were terrible, but as the models evolved, they became business-ready. Now AI helps us unlock 25 hours of value per week in the pub.
 
 ## Do you understand the challenges of running a small pub?
 

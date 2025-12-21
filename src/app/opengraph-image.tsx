@@ -47,10 +47,10 @@ export default function OGImage() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ fontSize: 56, color: '#2D2D2D', fontWeight: 800 }}>Orange Jelly</div>
             <div style={{ fontSize: 36, color: '#2C5F5F', fontWeight: 600 }}>
-              Pub marketing that works
+              Hospitality marketing that works
             </div>
             <div style={{ fontSize: 28, color: '#2D2D2D' }}>
-              Fill empty pub tables. Save up to 25 hours weekly.
+              Fill tables for pubs, restaurants, and bars. Save up to 25 hours weekly.
             </div>
           </div>
         </div>

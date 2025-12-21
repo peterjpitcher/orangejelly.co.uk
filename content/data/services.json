@@ -1,31 +1,31 @@
 {
   "hero": {
-    "title": "From Empty Tables to Full Tills",
-    "subtitle": "Every service below has been tested at The Anchor. If it didn't work for us, it's not here.",
+    "title": "Hospitality Marketing for Pubs, Restaurants & Bars",
+    "subtitle": "AI-powered strategy and creative execution proven at The Anchor and adapted for pubs, restaurants, and bars. If it didn't work for us, it's not here.",
     "ctaText": "WhatsApp: 07990 587315",
     "bottomText": "All services £75/hour • No fixed packages • Pay for the help you need"
   },
   "realSolutionsSection": {
     "heading": "Real Solutions, Not Theory",
-    "description": "I'm not selling you strategies I read in a book. Every service below is something I use daily at The Anchor. You're learning from real experience, not corporate theory.",
+    "description": "I'm not selling you strategies I read in a book. Every service below is something I use daily at The Anchor and adapt for pubs, restaurants, and bars. You're learning from real experience, not corporate theory.",
     "metrics": [
       {
         "number": "1",
         "title": "Quiz Night",
-        "value": "From 20 to 35",
-        "description": "Regular quiz teams in 8 weeks"
+        "value": "25-30",
+        "description": "Regular quiz teams every month"
       },
       {
         "number": "2",
-        "title": "Food GP",
-        "value": "58% to 71%",
-        "description": "Gross profit improvement"
+        "title": "Sunday Waste",
+        "value": "£250/week",
+        "description": "Cut in Sunday lunch waste"
       },
       {
         "number": "3",
         "title": "Value Added",
-        "value": "£75,000+",
-        "description": "To our business in 3 years"
+        "value": "£75,000-£100,000",
+        "description": "Added to our business using AI"
       }
     ]
   },
@@ -47,7 +47,7 @@
       ],
       "example": {
         "before": "Deadly Tuesday nights with empty tables",
-        "after": "Quiz nights with 25-35 regulars every week",
+        "after": "Quiz nights with 25-30 regular teams every month",
         "result": "Tuesday now one of our busiest nights"
       },
       "ctaText": "Save my pub",
@@ -65,13 +65,13 @@
         "Strategic pricing for maximum profit",
         "Dietary labels and allergen management",
         "Seasonal menu planning with AI",
-        "Waste reduction strategies (we save £250/week)",
+        "Waste reduction strategies (we cut £250/week in Sunday waste)",
         "Supplier negotiation tactics"
       ],
       "example": {
-        "before": "Food GP at 58%, struggling to make profit",
-        "after": "Food GP at 71% with same suppliers",
-        "result": "£250/week extra profit from food alone"
+        "before": "Low-margin menu, struggling to make profit",
+        "after": "Clearer pricing with higher-margin items",
+        "result": "£250/week cut in Sunday waste"
       },
       "ctaText": "Boost food profits",
       "highlight": false
@@ -82,10 +82,10 @@
       "title": "Social Media That Actually Works",
       "problem": "Problem: Posting into the void while competitors steal your customers?",
       "deliverable": "Deliverable: Strategy playbook + AI-assisted workflows your team can run",
-      "description": "Stop wasting hours on posts nobody sees. We reach 60,000-70,000 people monthly spending just 2 hours per week. I'll coach you through the exact planning frameworks, AI tools, and review rhythms we use so your team can execute confidently.",
+      "description": "Stop wasting hours on posts nobody sees. We reach 60,000-70,000 people every month and plan and schedule 30 days of social content in 2 hours. I'll coach you through the exact planning frameworks, AI tools, and review rhythms we use so your team can execute confidently.",
       "features": [
         "30-day content calendar mapped to your events",
-        "AI-assisted batching workflow (2 hours per week)",
+        "AI-assisted batching workflow (30 days in 2 hours)",
         "Local engagement and community group playbook",
         "Event promotion and recap templates",
         "Crisis communication and review response guide",
@@ -93,8 +93,8 @@
       ],
       "example": {
         "before": "No social media presence, relying on walk-ins",
-        "after": "70,000 monthly views across platforms",
-        "result": "Quiz night sells out, Sunday lunch bookings up 40%"
+        "after": "60,000-70,000 people reached monthly across platforms",
+        "result": "Quiz night consistently full, noticeably stronger bookings"
       },
       "ctaText": "Plan my strategy",
       "highlight": false
@@ -104,8 +104,8 @@
       "emoji": "🎯",
       "title": "Quiz Night Success System",
       "problem": "Problem: Running quizzes for empty chairs and family members?",
-      "deliverable": "Deliverable: 25-35 weekly regulars within 2 months",
-      "description": "Transform your quiet Tuesday into your busiest weeknight. Our quiz went from 20 people to 35 regulars who book tables, buy food, and bring friends. I'll share every trick, template, and AI tool that made it happen.",
+      "deliverable": "Deliverable: 25-30 regular teams every month",
+      "description": "Transform your quiet Tuesday into your busiest weeknight. Our quiz now attracts 25-30 regular teams every month who book tables, buy food, and bring friends. I'll share every trick, template, and AI tool that made it happen.",
       "features": [
         "Question sources and AI generation tools",
         "Promotional templates that fill tables",
@@ -116,7 +116,7 @@
       ],
       "example": {
         "before": "Tuesday was our quietest night",
-        "after": "Regular quiz with 25-35 attendees",
+        "after": "Regular quiz with 25-30 teams each month",
         "result": "Tuesday now our 3rd busiest night"
       },
       "ctaText": "Pack my quiz nights",
@@ -128,7 +128,7 @@
       "title": "AI Business Analysis & Insights",
       "problem": "Problem: Making decisions on gut feel while money disappears?",
       "deliverable": "Deliverable: Know exactly where to focus for maximum profit",
-      "description": "Stop guessing, start knowing. AI reveals hidden profit opportunities in your data. I found £75,000 of annual value in ours - imagine what's hiding in yours.",
+      "description": "Stop guessing, start knowing. AI reveals hidden profit opportunities in your data. Estimated business value added since adopting AI: £75,000-£100,000.",
       "features": [
         "Sales pattern analysis and predictions",
         "Customer behavior insights",
@@ -151,7 +151,7 @@
       "title": "Events That Fill Your Pub",
       "problem": "Problem: Organizing events that nobody attends?",
       "deliverable": "Deliverable: Events people mark in their diary",
-      "description": "Stop throwing parties for empty rooms. Our events consistently draw crowds because we use AI to understand what people actually want, then promote effectively. 85% of our tasting night attendees become regulars.",
+      "description": "Stop throwing parties for empty rooms. Our events consistently draw crowds because we use AI to understand what people actually want, then promote effectively. Many tasting night attendees become regulars.",
       "features": [
         "Event ideas matched to your community",
         "AI-powered promotional campaigns",
@@ -163,7 +163,7 @@
       "example": {
         "before": "Same old events, declining attendance",
         "after": "Gin tasting nights, food pairings, themed events",
-        "result": "40 tickets sold in 48 hours, 85% became regulars"
+        "result": "Events sell out fast and build regulars"
       },
       "ctaText": "Create buzzing events",
       "highlight": false
@@ -186,7 +186,7 @@
       "example": {
         "before": "Using Word docs and manual calculations",
         "after": "AI-powered tools for everything",
-        "result": "Save 25 hours/week on admin tasks"
+        "result": "Save up to 25 hours every week on admin tasks"
       },
       "ctaText": "Book consultation",
       "highlight": false
@@ -209,7 +209,7 @@
       "example": {
         "before": "Invisible on Google, no website",
         "after": "Professional website, optimized Google listing",
-        "result": "Top 3 for \"pubs near Heathrow\" - free customers daily"
+        "result": "Improved local search visibility and steady daily enquiries"
       },
       "ctaText": "Get found online",
       "highlight": false
@@ -245,7 +245,7 @@
     "heading": "30-Day Partnership Support",
     "description": "We stay hands-on throughout the first month with weekly check-ins, rapid adjustments, and direct WhatsApp access so momentum never drops.",
     "checkmarkText": "Hands-on partnership",
-    "checkmarkSubtext": "You always have a working licensee in your corner"
+    "checkmarkSubtext": "You always have a working operator in your corner"
   },
   "faqSection": {
     "heading": "Everything You Need to Know"
@@ -267,10 +267,10 @@
     "footer": "We're proud to work with these industry leaders, sharing our AI innovations to help transform the wider pub industry."
   },
   "ctaSection": {
-    "title": "Stop Watching Money Walk Past Your Pub",
+    "title": "Stop Watching Money Walk Past Your Pub, Restaurant, or Bar",
     "subtitle": "Every empty table is lost revenue. Every quiet night is bills unpaid. Let's change that - starting today.",
     "buttonText": "WhatsApp me now",
-    "whatsappMessage": "Hi Peter, I need help with my pub",
+    "whatsappMessage": "Hi Peter, I need help with my pub, restaurant, or bar",
     "bottomText": "07990 587315 • Available 7 days a week"
   },
   "faqs": [
@@ -280,15 +280,15 @@
     },
     {
       "question": "How does your hourly consulting work?",
-      "answer": "Simple - you only pay for the time you need. No packages, no minimum contracts. We agree on what needs doing, I track my time, and invoice you monthly. Most pubs need 15-25 hours for transformation, but you can start with just 2 hours."
+      "answer": "Simple - you only pay for the time you need. No packages, no minimum contracts. We agree on what needs doing, I track my time, and invoice you monthly. Most pubs start with a small block of time and scale as needed."
     },
     {
       "question": "How quickly will I see more customers from the recovery plan?",
-      "answer": "Most pubs see improvements within the first month. Social media campaigns start working immediately, events take a couple of weeks to build momentum, and quiz nights typically fill up within 4-6 weeks. The Anchor went from 20 to 35 quiz regulars in 8 weeks."
+      "answer": "Most pubs see meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries. The Anchor now sees 25-30 regular quiz teams each month when we stick to the system."
     },
     {
       "question": "How can menu descriptions increase my food sales?",
-      "answer": "Psychology-based descriptions trigger hunger and justify higher prices. 'Fish & chips' becomes 'Beer-battered Atlantic cod with triple-cooked chips and mushy peas'. Same dish, £3 more, customers happier. Our food sales increased 40% with no recipe changes."
+      "answer": "Psychology-based descriptions trigger hunger and justify higher prices. 'Fish & chips' becomes 'Beer-battered Atlantic cod with triple-cooked chips and mushy peas'. Same dish, stronger margins, customers happier."
     },
     {
       "question": "What exactly do you do with menu AI?",
@@ -300,7 +300,7 @@
     },
     {
       "question": "How do you promote a pub quiz effectively?",
-      "answer": "Multi-channel approach: AI-generated social posts 3x weekly, WhatsApp broadcasts to regulars, table talkers, and strategic partnerships with local businesses. We track what works and double down. Our quiz went from 20 to 35 regulars using this system."
+      "answer": "Multi-channel approach: AI-generated social posts 3x weekly, WhatsApp broadcasts to regulars, table talkers, and strategic partnerships with local businesses. We track what works and double down. Our quiz now attracts 25-30 regular teams every month using this system."
     },
     {
       "question": "What's the secret to quiz night success?",
@@ -308,15 +308,15 @@
     },
     {
       "question": "Can AI really help with quiz nights?",
-      "answer": "Absolutely. AI generates themed rounds in seconds, creates promotional content, analyzes which questions work best, and even suggests food pairings. I spend 30 minutes preparing what used to take 3 hours."
+      "answer": "Absolutely. AI generates themed rounds in seconds, creates promotional content, analyzes which questions work best, and even suggests food pairings. Preparation drops from hours to minutes."
     },
     {
       "question": "Can AI really manage my pub's social media?",
-      "answer": "AI doesn't manage it - you do, with AI doing the heavy lifting. I teach you to create a month's content in 2 hours, schedule it automatically, and track what works. You stay in control but save 20+ hours monthly."
+      "answer": "AI doesn't manage it - you do, with AI doing the heavy lifting. I teach you to plan and schedule 30 days of content in 2 hours, schedule it automatically, and track what works. You stay in control while saving up to 25 hours every week on admin tasks."
     },
     {
       "question": "Will my social media posts look automated?",
-      "answer": "No - they'll look better than before. AI helps create engaging content that sounds like you on your most creative day. Mix in real photos from your pub, and nobody knows the difference. We reach 70,000 people monthly this way."
+      "answer": "No - they'll look better than before. AI helps create engaging content that sounds like you on your most creative day. Mix in real photos from your pub, and nobody knows the difference. We reach 60,000-70,000 people every month this way."
     },
     {
       "question": "What if I'm not tech-savvy?",
@@ -324,7 +324,7 @@
     },
     {
       "question": "What kind of business insights can AI provide?",
-      "answer": "AI reveals patterns humans miss: optimal pricing, quiet period opportunities, menu performance, staff scheduling efficiency, and customer behavior trends. We found £75,000 of value hiding in our data - imagine what's in yours."
+      "answer": "AI reveals patterns humans miss: optimal pricing, quiet period opportunities, menu performance, staff scheduling efficiency, and customer behavior trends. Estimated business value added since adopting AI: £75,000-£100,000."
     },
     {
       "question": "How detailed are your AI business reports?",
@@ -332,7 +332,7 @@
     },
     {
       "question": "Can AI help with supplier negotiations?",
-      "answer": "Yes! AI analyzes your purchasing history, compares supplier prices, identifies over-ordering, and suggests negotiation points. We saved £250/week on supplies using AI insights. Same quality, better prices."
+      "answer": "Yes! AI analyzes your purchasing history, compares supplier prices, identifies over-ordering, and suggests negotiation points. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs using AI insights."
     },
     {
       "question": "How do you create pub events that actually work?",
@@ -340,19 +340,19 @@
     },
     {
       "question": "What makes your event planning different?",
-      "answer": "I've run events that flopped and events that sold out in hours. I'll share both lessons. Plus, AI tools for promotion, booking management, and follow-up that turn one-time attendees into regulars. 85% of our tasting night guests come back."
+      "answer": "I've run events that flopped and events that sold out fast. I'll share both lessons. Plus, AI tools for promotion, booking management, and follow-up that turn one-time attendees into regulars."
     },
     {
       "question": "Can AI predict which events will be successful?",
-      "answer": "AI analyzes local trends, competitor events, weather patterns, and your customer data to predict success. Not 100% accurate, but much better than guessing. We haven't had a failed event since using AI planning."
+      "answer": "AI analyzes local trends, competitor events, weather patterns, and your customer data to predict success. Not 100% accurate, but much better than guessing. Planning with AI reduces failed events."
     },
     {
       "question": "Why don't you offer fixed-price packages?",
-      "answer": "Every pub is different. You might need 5 hours of menu help or 30 hours of complete transformation. Hourly billing means you only pay for what you need, and can stop anytime. It's honest and fair."
+      "answer": "Every pub is different. You might need a few hours of menu help or more time for a full transformation. Hourly billing means you only pay for what you need, and can stop anytime. It's honest and fair."
     },
     {
       "question": "Can I see examples of your work?",
-      "answer": "Visit The Anchor any Tuesday for quiz night, check our social media @TheAnchorStanwell, or look at our food GP improvement from 58% to 71%. Better yet, WhatsApp me for a video walkthrough of everything."
+      "answer": "Visit The Anchor any Tuesday for quiz night, check our social media @TheAnchorStanwell, or look at our Sunday waste reduction. Better yet, WhatsApp me for a video walkthrough of everything."
     },
     {
       "question": "Do you offer remote support?",

@@ -190,9 +190,9 @@ interface MetricsBarProps {
 
 export function MetricsBar({
   metrics = [
-    { value: '£400+', label: 'Extra Weekly Revenue', highlight: true },
-    { value: '25-35', label: 'Quiz Night Regulars' },
-    { value: '30 Days', label: 'To lock in results' },
+    { value: '£250/week', label: 'Sunday Waste Cut', highlight: true },
+    { value: '25-30', label: 'Quiz Teams Each Month' },
+    { value: '30 Days', label: 'To lock in progress' },
   ],
   background = 'orange',
   textColor = 'white',

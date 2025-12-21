@@ -61,7 +61,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'pub-marketing-no-budget', changeFrequency: 'monthly', priority: 0.7 },
     { slug: 'compete-with-pub-chains', changeFrequency: 'monthly', priority: 0.7 },
-    { slug: 'about-demo', changeFrequency: 'yearly', priority: 0.4 },
   ];
 
   const marketingPages = marketingRoutes.map((route) => ({

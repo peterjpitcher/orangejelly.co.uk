@@ -1,7 +1,7 @@
 ---
 title: "The Pub Health Check: Essential Fundamentals for Licensee Success"
 slug: "pub-health-check-essential-fundamentals-licensee-success"
-publishedDate: 2026-04-10
+publishedDate: 2025-04-10
 updatedDate: "2025-08-11T12:27:19.060Z"
 excerpt: "Essential pub health check guide: 7 P's of marketing, financial metrics, cellar management, and community strategies every licensee needs."
 quickAnswer: "Track your gross profit percentage (aim for 65%+), monitor wastage weekly, clean beer lines every 7 days, review your 7 P's of marketing monthly, and engage your community through events and partnerships. These fundamentals will save £14,000+ annually."
@@ -254,7 +254,7 @@ Your pub's role in the community determines long-term success. Building strong l
 
 Consistency builds anticipation and habit:
 
-- Quiz nights: Weekly fixture for 25-35 regulars
+- Quiz nights: Monthly fixture for 25-30 regular teams
 
 - Live music: Monthly or fortnightly depending on your market
 
@@ -479,4 +479,3 @@ There's no universal "best" ratio - it depends on your location and customer bas
 ### How do I know if my prices are right?
 
 Right pricing balances competitiveness with profitability. Survey local competition, calculate your costs accurately, and ensure you're achieving target GP%. If customers complain about price but still buy, you're probably about right. If they stop coming, you've gone too far.
-

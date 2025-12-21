@@ -1,7 +1,7 @@
 ---
 title: "Young People Won't Come to Your Pub? Here's How to Change That"
 slug: "young-people-wont-come-to-your-pub"
-publishedDate: 2026-09-18
+publishedDate: 2025-09-18
 excerpt: "Transform your pub into a magnet for 18-30s with proven strategies that actually work. No gimmicks, just real techniques from a licensee who cracked the code."
 quickAnswer: "Create Instagram-worthy moments with good lighting and photogenic corners, host events they actually want (quiz nights with prizes they care about), offer value without compromising quality, and focus on building a welcoming atmosphere where they feel comfortable bringing friends."
 author: "Peter Pitcher"
@@ -79,7 +79,7 @@ Build a Proper Zero-Proof Menu
 - Price them fairly (£4-6, not £2)
 - Train staff to recommend them without judgment
 
-We introduced this and saw Tuesday night revenue jump 40% - mostly from groups where 2-3 people weren't drinking.
+We introduced this and saw weekday revenue lift around 20% - mostly from groups where not everyone was drinking.
 
 ## Build a Vibe, Not a Venue
 
@@ -159,13 +159,13 @@ Week 4: Measure, adjust, repeat
 
 ## The Results You Can Expect
 
-- 25-30% increase in under-30s customers
+- Noticeable lift in under-30s customers
 
-- 40% boost in Tuesday-Thursday revenue
+- Weekday revenue lift of around 20%
 
-- 200+ new Instagram followers
+- Steady growth in Instagram followers
 
-- 15-20 new regulars who bring friends
+- A growing core of regulars who bring friends
 
 ## Your Action Plan
 
@@ -205,4 +205,3 @@ You don't need them. Clean thoroughly, add £30 of fairy lights, rearrange furni
 ### Should I get on TikTok?
 
 Only if you can do it authentically. Instagram and WhatsApp groups are more important for pubs. If you do TikTok, let young staff run it, post behind-the-scenes content, and don't try to go viral - build community instead.
-

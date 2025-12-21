@@ -45,7 +45,7 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
     {
       question: 'Who is Peter Pitcher and why should I trust Orange Jelly?',
       answer:
-        "I'm Peter Pitcher, and I've run The Anchor pub in Stanwell Moor with my husband Billy since March 2019. I also work full-time as an AI Marketing Capabilities Lead for a global food manufacturer. I've been an early AI adopter since 2021 and discovered how AI can add 25 hours of value per week. Orange Jelly exists to share these proven strategies with fellow licensees.",
+        "I'm Peter Pitcher. Billy runs The Anchor pub in Stanwell Moor day-to-day, and I handle marketing and business development around my full-time role as an AI Marketing Capabilities Lead for a global food manufacturer. I've been an early AI adopter since 2021 and discovered how AI can add 25 hours of value per week. Orange Jelly exists to share these proven strategies with fellow licensees.",
     },
     {
       question: 'What makes Orange Jelly different from other consultants?',
@@ -60,7 +60,7 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
     {
       question: 'What results have you achieved at The Anchor?',
       answer:
-        "We've improved food GP from 58% to 71%, grown quiz nights to 25-35 regulars, achieve 60,000-70,000 social media views monthly, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.",
+        "We reach 60,000-70,000 people every month on social media, our quiz nights now attract 25-30 regular teams each month, we've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.",
     },
     {
       question: 'How can I be sure Orange Jelly will work for my pub?',
@@ -84,8 +84,8 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                 From One Licensee to Another
               </Heading>
               <Text className="text-xl text-charcoal/80 max-w-3xl mx-auto">
-                We run The Anchor in Stanwell Moor. We discovered how AI saves 25 hours a week. Now
-                we help other licensees do the same.
+                We run The Anchor in Stanwell Moor. We unlocked 25 hours of value per week by
+                applying AI across our pub. Now we help other licensees do the same.
               </Text>
               <div className="flex gap-4 justify-center pt-4">
                 <Button size="lg" asChild>
@@ -107,25 +107,25 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <Card className="text-center">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-3xl font-bold text-orange">71%</CardTitle>
-                  <CardDescription>Food GP (up from 58%)</CardDescription>
+                  <CardTitle className="text-3xl font-bold text-orange">£250/week</CardTitle>
+                  <CardDescription>Sunday Waste Cut</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="text-center">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-3xl font-bold text-orange">25-35</CardTitle>
-                  <CardDescription>Quiz Night Regulars</CardDescription>
+                  <CardTitle className="text-3xl font-bold text-orange">25-30</CardTitle>
+                  <CardDescription>Quiz Teams Each Month</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="text-center">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-3xl font-bold text-orange">70K</CardTitle>
-                  <CardDescription>Monthly Social Views</CardDescription>
+                  <CardTitle className="text-3xl font-bold text-orange">60-70k</CardTitle>
+                  <CardDescription>Monthly Social Reach</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="text-center">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-3xl font-bold text-orange">£100K</CardTitle>
+                  <CardTitle className="text-3xl font-bold text-orange">£75k-£100k</CardTitle>
                   <CardDescription>Value Added</CardDescription>
                 </CardHeader>
               </Card>
@@ -154,10 +154,10 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <Text className="text-lg">
-                      I'm Peter. My husband Billy and I have run{' '}
-                      <strong>The Anchor in Stanwell Moor</strong> since March 2019. Like you, we've
-                      faced empty tables, rising costs, and 70-hour weeks wondering if it's all
-                      worth it.
+                      I'm Peter. Billy runs <strong>The Anchor in Stanwell Moor</strong> day-to-day,
+                      and I handle marketing and business development around a full-time role. Like
+                      you, we've faced empty tables, rising costs, and 70-hour weeks wondering if
+                      it's all worth it.
                     </Text>
                     <Text className="text-lg">
                       Everything changed when I discovered how{' '}
@@ -166,10 +166,11 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                       successes showed me what to share.
                     </Text>
                     <Text className="text-lg">
-                      Today, our quiz nights attract <strong>25-35 regulars</strong>, our food GP
-                      improved from
-                      <strong> 58% to 71%</strong>, and we actually have evenings off. Orange Jelly
-                      exists to help you achieve the same transformation.
+                      Today, our quiz nights attract <strong>25-30 regular teams each month</strong>
+                      , we cut <strong>£250/week in Sunday waste</strong> and{' '}
+                      <strong>£4,000+ a month</strong> in supplier, rota, and energy costs, and we
+                      actually have evenings off. Orange Jelly exists to help you achieve the same
+                      transformation.
                     </Text>
                   </CardContent>
                 </Card>
@@ -194,7 +195,7 @@ export default function AboutDemoPage({ aboutContent }: AboutDemoPageProps) {
                       date: 'Jan-Feb 2024',
                       icon: <Trophy className="h-5 w-5" />,
                       title: 'Transformation',
-                      desc: 'Six brutal weeks forced full AI adoption. GP hit 71%.',
+                      desc: 'Six brutal weeks forced full AI adoption. We focused on cutting waste and simplifying operations.',
                     },
                     {
                       date: 'Today',

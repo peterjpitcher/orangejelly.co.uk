@@ -5,10 +5,10 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: 'Contact Orange Jelly | Get in Touch with Peter',
     description:
-      'How do I contact Orange Jelly? Speak directly with Peter Pitcher about AI tools for your pub. WhatsApp preferred, or call 07990 587315. Visit us at The Anchor pub in Stanwell. No contact forms, just real conversation.',
+      'Speak directly with Peter Pitcher, a hospitality marketing specialist leveraging AI for pubs, restaurants, and bars. WhatsApp preferred, or call 07990 587315. Visit us at The Anchor in Stanwell.',
     path: '/contact',
     keywords:
-      'contact Orange Jelly, pub marketing help, Peter Pitcher contact, pub consultation, WhatsApp pub help',
+      'contact Orange Jelly, hospitality marketing help, pub marketing help, restaurant marketing help, bar marketing help, Peter Pitcher contact',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

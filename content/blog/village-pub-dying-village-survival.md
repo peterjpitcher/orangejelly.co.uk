@@ -1,7 +1,7 @@
 ---
 title: "Village Pub in a Dying Village? Survival Strategies That Actually Work"
 slug: "village-pub-dying-village-survival"
-publishedDate: 2026-08-28
+publishedDate: 2025-08-28
 excerpt: "When your village is shrinking but your bills aren't, here's how to transform from local boozer to destination venue without losing your soul."
 quickAnswer: "Transform into a destination by focusing on exceptional food, unique experiences, and strong online presence. Diversify with private dining, wedding receptions, corporate events, and daytime coffee trade. Maintain local character while attracting visitors from surrounding areas who'll travel for quality."
 author: "Peter Pitcher"
@@ -78,8 +78,8 @@ We tried everything until we found ours: Pie Night Wednesdays. Sounds simple?
 - 12 different pies, all homemade
 - One celebrity guest pie monthly
 - Pie of the Month club (subscription model)
-- Now pulling people from 15 miles away
-- Wednesday revenue up 380%
+- Now pulling people from miles around
+- Wednesday revenue up sharply
 
 ## The Multi-Purpose Model
 
@@ -92,7 +92,7 @@ Morning: Village Office
 - Print/scan services (50p per page)
 - Parcel drop-off point
 
-Result: £40-60 daily revenue that didn't exist before
+Result: Steady daily revenue that didn't exist before
 
 Afternoon: Community Hub
 - Post Office counter (2-4pm twice weekly)
@@ -189,7 +189,7 @@ Google My Business Mastery
 - Correct all information
 - Respond to all reviews
 
-Result: Show up for "pub near me" within 10 miles
+Result: Show up for "pub near me" searches locally
 
 ## The Community Balance
 
@@ -306,4 +306,3 @@ Start with what's free: clean thoroughly, rearrange furniture, improve service, 
 ### Should I focus on food or stay wet-led?
 
 Unless you have unique circumstances, food is essential for village pub survival. But start small - three dishes done brilliantly beats twenty done average. Build reputation gradually. Even simple soup and sandwiches beat nothing.
-

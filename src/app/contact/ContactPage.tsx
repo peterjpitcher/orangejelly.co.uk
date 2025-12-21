@@ -41,22 +41,22 @@ const fallbackFAQs = [
   {
     question: "I messaged but haven't heard back - did you get it?",
     answer:
-      "I personally read every message! If I haven't replied within 4 hours, I'm likely in service. I always respond by end of day. If it's been longer, please message again - technology sometimes fails. Never worry about 'bothering' me - helping pubs is what I do.",
+      "I personally read every message! I'll get back as quickly as I can, but bear with me if I'm in service. If it's been a while, please message again - technology sometimes fails. Never worry about 'bothering' me - helping pubs is what I do.",
   },
   {
     question: "What's the best way to contact Orange Jelly for urgent help?",
     answer:
-      "WhatsApp is fastest - 07990 587315. I see messages immediately even during service. For urgent situations, start your message with URGENT. Phone calls work too, but if I'm serving, WhatsApp ensures I see your message and can respond as soon as I'm free.",
+      "WhatsApp is fastest - 07990 587315. For urgent situations, start your message with URGENT. Phone calls work too, but if I'm serving, WhatsApp ensures I see your message and can respond as soon as I'm free.",
   },
   {
     question: 'Can I speak to someone who actually understands pub problems?',
     answer:
-      "That's exactly what you get! I'm Peter, I run The Anchor pub. When you message, you're talking to someone who's dealt with staff walking out mid-shift, empty Tuesday nights, and supplier nightmares. No call centre, no junior staff - just one licensee helping another.",
+      "That's exactly what you get! I'm Peter. Billy runs The Anchor day-to-day, and I handle marketing and business development. When you message, you're talking to someone who's dealt with staff walking out mid-shift, empty Tuesday nights, and supplier nightmares. No call centre, no junior staff - just one licensee helping another.",
   },
   {
     question: 'I work crazy hours - when can I actually reach you?',
     answer:
-      "That's pub life! Message me anytime - 3am stocktake, 6am delivery, Sunday afternoon crisis. I get it. WhatsApp me whenever suits you. I might be serving too, but I always respond within hours. We'll find a time to talk properly that works for both of us.",
+      "That's pub life! Message me anytime - 3am stocktake, 6am delivery, Sunday afternoon crisis. I get it. WhatsApp me whenever suits you. I might be serving too, but I'll respond as quickly as I can. We'll find a time to talk properly that works for both of us.",
   },
   {
     question: 'I hate pushy sales calls - will you pressure me?',
@@ -71,7 +71,7 @@ const fallbackFAQs = [
   {
     question: 'What if I need help outside normal hours?',
     answer:
-      "'Normal hours' don't exist in hospitality! Message me whenever you need help. Having a 3am panic about tomorrow's event? Send that message. Sunday staff crisis? I'm here. I run a pub too - I know problems don't wait for business hours.",
+      "'Normal hours' don't exist in hospitality! Message me whenever you need help. Having a 3am panic about tomorrow's event? Send that message. Sunday staff crisis? I'm here. Billy runs The Anchor day-to-day and I handle marketing, so I know problems don't wait for business hours.",
   },
   {
     question: "I'm not in your area - can you still help?",
@@ -109,7 +109,7 @@ export default function ContactPage({}: ContactPageProps) {
       '@type': 'ContactPage',
       name: 'Contact Orange Jelly',
       description:
-        'Get in touch with Peter Pitcher at Orange Jelly. WhatsApp, phone, or visit The Anchor pub.',
+        'Get in touch with Peter Pitcher, hospitality marketing specialist serving pubs, restaurants, and bars. WhatsApp, phone, or visit The Anchor pub.',
       url: 'https://www.orangejelly.co.uk/contact',
       mainEntity: {
         '@id': 'https://www.orangejelly.co.uk/#organization',
@@ -125,7 +125,7 @@ export default function ContactPage({}: ContactPageProps) {
       founder: {
         '@type': 'Person',
         name: 'Peter Pitcher',
-        jobTitle: 'Founder & AI Marketing Specialist',
+        jobTitle: 'Founder & Hospitality Marketing Specialist',
       },
       address: {
         '@type': 'PostalAddress',
@@ -192,7 +192,7 @@ export default function ContactPage({}: ContactPageProps) {
 
       <Hero
         title="Talk to Someone Who Gets It"
-        subtitle="I'm Peter. I run a pub. I've been where you are - let's fix your empty tables together."
+        subtitle="I'm Peter. I run a pub and help pubs, restaurants, and bars fill tables with hospitality marketing that works."
         showCTA={true}
         bottomText="Available 7 days a week - pub hours understood"
         breadcrumbs={breadcrumbPaths.contact}
@@ -493,8 +493,9 @@ export default function ContactPage({}: ContactPageProps) {
             <Text size="lg">I'm not a marketing agency. I'm not a consultant with theories.</Text>
 
             <Text size="lg">
-              I'm Peter Pitcher. I run The Anchor pub with my husband Billy. Every day I face the
-              same challenges you do.
+              I'm Peter Pitcher. Billy runs The Anchor pub day-to-day, and I handle marketing and
+              business development around a full-time role. Every day I face the same challenges you
+              do.
             </Text>
 
             <Text size="lg">

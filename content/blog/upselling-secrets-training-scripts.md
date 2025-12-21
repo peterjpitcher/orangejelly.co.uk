@@ -1,7 +1,7 @@
 ---
 title: "Upselling Secrets: Training Scripts That Don't Sound Pushy"
 slug: "upselling-secrets-training-scripts"
-publishedDate: 2026-08-21
+publishedDate: 2025-08-21
 updatedDate: "2026-03-16T00:00:00.000Z"
 excerpt: "Teach the team to recommend higher-value items with confidence and warmth so guests feel guided, not hustled."
 quickAnswer: "Use needs-based questions, offer two options, and script conversational bridges that make upgrades feel natural."

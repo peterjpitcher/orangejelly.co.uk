@@ -3,7 +3,7 @@ title: "Social Media Automation"
 client: "The Anchor"
 id: "case-study-social-media"
 type: "case-study"
-timeInvestment: "2 hours weekly for all platforms"
+timeInvestment: "30 days of content in a 2-hour batching session"
 ---
 
 # Social Media Automation - The Anchor
@@ -18,11 +18,11 @@ Developed custom AI prompts to generate social media content in bulk - creating 
 
 ## Results
 
-- **Monthly Views**: 60,000-70,000 (from under 1,000)
-- **Time Investment**: 2 hours/week (down from 10+)
-- **Posting Frequency**: Daily (from sporadic)
-- **Event Attendance**: Consistently full (social drives bookings)
+- **Monthly Reach**: 60,000-70,000 people
+- **Content Batching**: 30 days in 2 hours
+- **Live Video Engagement**: 300% more than static posts
+- **UGC Engagement**: 79% higher than standard posts
 
 ## Time Investment
 
-2 hours weekly for all platforms
+30 days of content in a 2-hour batching session

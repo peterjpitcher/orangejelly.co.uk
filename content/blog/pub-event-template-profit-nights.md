@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Pub Event Template for Guaranteed Profit Nights"
 slug: "pub-event-template-profit-nights"
-publishedDate: 2026-04-03
+publishedDate: 2025-04-03
 updatedDate: "2026-02-23T00:00:00.000Z"
 excerpt: "Reusable event blueprint covering planning, promotion, pricing, and post-event upsells so every activation hits profit targets."
 quickAnswer: "Use a six-week timeline, pre-sell 70% of tickets, lock in sponsors, and gather content plus rebookings on the night."

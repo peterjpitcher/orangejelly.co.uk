@@ -1,7 +1,7 @@
 ---
 title: "Profitable Pub Food Menu Ideas: High-Margin Dishes That Actually Sell"
 slug: "profitable-pub-food-menu-ideas"
-publishedDate: 2026-03-13
+publishedDate: 2025-03-13
 updatedDate: "2025-05-26T00:00:00.000Z"
 excerpt: "Discover proven pub food menu ideas that balance customer appeal with profitability. From gastropub classics to street food trends, learn what works and"
 quickAnswer: "Focus on high-margin dishes like loaded fries (70% GP), sharing platters, and comfort classics. Use pre-prep ingredients, control portion sizes, and price based on 65-70% gross profit targets. Test new dishes as specials before adding to the main menu."
@@ -309,7 +309,7 @@ Place a very expensive dish next to your target dish. The £24.95 steak makes th
 
 **Added**: Korean section to traditional menu
 
-**Result**: 25% increase at The Anchor in food sales, younger demographic attracted
+**Result**: Noticeable lift at The Anchor in food sales, younger demographic attracted
 
 **Success factor**: Same fryers, new flavours, premium pricing
 
@@ -429,7 +429,7 @@ Start with one category. Perfect it. Then move on. Before you know it, you'll ha
 
 ### What food GP should a pub aim for?
 
-Target 45-55% gross profit on food. The Anchor improved from 58% to 71% through portion control, menu engineering, and waste reduction. This improvement added £15,000 annual profit.
+Target 45-55% gross profit on food. At The Anchor, portion control, menu engineering, and waste reduction cut £250/week in Sunday waste and reduced food waste by 90%.
 
 ### How can I reduce food waste?
 
@@ -437,7 +437,7 @@ Implement portion control, improve stock rotation, use prep lists, and monitor w
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Quiz nights attract regular teams quickly, social media engagement grows within days, and operational improvements show impact in the first month. Full transformation comes when you stick with the playbook.
 
 ### How much will this cost to implement?
 
@@ -446,4 +446,3 @@ Implementation costs vary by strategy. Many improvements like social media optim
 ### Can this work for my type of pub?
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
-

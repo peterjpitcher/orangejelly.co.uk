@@ -2,7 +2,7 @@
 
 ## What's the ROI on menu optimization?
 
-At The Anchor, we improved food GP from 58% to 71%. Menu psychology can increase average spend significantly. We charge £75 per hour for consultation, and most menu reviews take 2-3 hours.
+At The Anchor, we cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts. Menu psychology can lift ordering confidence and margins. We charge £75 per hour plus VAT, and most menu reviews are completed in a short focused session.
 
 ## How long does a menu makeover take?
 

@@ -86,7 +86,7 @@ Strategy: Build weekday strength so weekends are bonus, not survival.
 Supplier Negotiations
 What we changed:
 - Beer: 7 days to 30 days (asked, got 21)
-- Food: COD to 14 days (showed payment history)
+- Food: COD to short-term credit terms (showed payment history)
 - Spirits: 30 to 45 days (volume commitment)
 - Impact: £3,000 better cash position
 
@@ -219,7 +219,7 @@ When money's owed:
 - Day 14: Final notice
 - Day 21: Small claims (rare but necessary)
 
-Success rate: 94% collected within 14 days
+Success rate: Most collected quickly
 
 ## The Data-Driven Decisions
 
@@ -262,7 +262,7 @@ Immediate actions:
 The Communication Template
 "Hi \[Supplier\], I need to discuss our account. We've hit a temporary cash flow issue. I can pay \[amount\] now and the balance by \[date\]. We value our relationship and want to be transparent."
 
-Result: 90% accept payment plans
+Result: Most suppliers accept payment plans
 
 The Recovery Plan
 Week 1: Stabilize (stop bleeding)
@@ -333,4 +333,3 @@ Overdrafts are emergency tools, not operational funding. The interest kills prof
 ### What's the first thing to fix?
 
 Daily cash position tracking. You can't fix what you don't measure. Takes 5 minutes each morning, transforms decision-making. Second priority: one predictable weekly income stream. Build from there.
-

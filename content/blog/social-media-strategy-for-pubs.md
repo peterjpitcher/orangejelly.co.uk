@@ -1,8 +1,8 @@
 ---
 title: "The Complete Social Media Strategy Guide for Pubs in 2025"
 slug: "social-media-strategy-for-pubs"
-publishedDate: 2026-06-26
-updatedDate: "2025-04-21T00:00:00.000Z"
+publishedDate: 2025-06-26
+updatedDate: "2025-06-26T00:00:00.000Z"
 excerpt: "Master social media marketing for your pub with this comprehensive guide. Learn platform-specific strategies, content calendars, and engagement tactics"
 quickAnswer: "Map a repeatable social media plan with content pillars, weekly scheduling, and review rituals. Focus on telling your pub's story, highlighting events, and responding quickly to keep relationships strong."
 author: "Peter Pitcher"
@@ -35,7 +35,7 @@ voiceSearchQueries:
   - "Does social media work for pubs"
 ---
 
-# The Complete Social Media Strategy Guide for Pubs in 2024
+# The Complete Social Media Strategy Guide for Pubs in 2025
 
 Your competitor down the street just posted a blurry photo of fish and chips with the caption "Food available." It got 3 likes – two from staff and one from his mum. Meanwhile, The Crafty Fox across town turned a simple quiz night announcement into 200 shares and a fully booked Tuesday. The difference? A proper social media strategy.
 
@@ -365,7 +365,7 @@ Perfect for announcements and banter with locals.
 
 **Create Exclusive Groups:**
 
-The Queen's Head created a "Queen's VIP" Facebook group for regulars. Members get first dibs on event tickets and special offers. Result: 85% increase at The Anchor in midweek visits from group members.
+The Queen's Head created a "Queen's VIP" Facebook group for regulars. Members get first dibs on event tickets and special offers. Result: noticeable midweek lift at The Anchor from group members.
 
 **User-Generated Content Campaigns:**
 
@@ -565,9 +565,9 @@ The biggest challenge isn't starting – it's maintaining momentum. Here's how t
 
 Everything in this guide comes from daily practice at The Anchor:
 
-- **Quiz night turnaround:** from 20 to 25–35 regulars every week using Instagram teasers, WhatsApp reminders, and consistent event templates.
-- **Instagram reach:** 60,000–70,000 monthly views created in two hours per week through AI-assisted planning and batched content days.
-- **Operational wins:** Social-led menu promotion contributed to food GP improving from 58% to 71% alongside tighter operations.
+- **Quiz night turnaround:** 25-30 regular teams each month using Instagram teasers, WhatsApp reminders, and consistent event templates.
+- **Instagram reach:** 60,000-70,000 people reached monthly by planning and scheduling 30 days of content in 2 hours.
+- **Operational wins:** Social-led menu promotion supported a £250/week Sunday waste cut and 90% reduction in food waste alongside tighter operations.
 
 ## Your Social Media Success Starts Now
 
@@ -599,7 +599,7 @@ Ready to transform your pub's social media presence? Let's build your playbook t
 
 ### How often should pubs post on social media?
 
-Post daily on Facebook and Instagram. Share opening times, daily specials, events, and customer photos. The Anchor achieves 60,000-70,000 monthly views with consistent daily posting.
+Post daily on Facebook and Instagram. Share opening times, daily specials, events, and customer photos. The Anchor reaches 60,000-70,000 people monthly with consistent daily posting.
 
 ### Which social media platform is best for pubs?
 
@@ -607,7 +607,7 @@ Facebook remains most effective for pubs, especially for the 35+ demographic. In
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Quiz nights attract regular teams quickly, social media engagement grows within days, and operational improvements show impact in the first month. Full transformation comes when you stick with the playbook.
 
 ### How much will this cost to implement?
 

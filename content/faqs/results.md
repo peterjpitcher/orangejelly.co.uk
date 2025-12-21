@@ -2,15 +2,15 @@
 
 ## What results have you achieved at The Anchor?
 
-We've improved food GP from 58% to 71%, grown quiz nights to 25-35 regulars, achieve 60,000-70,000 social media views monthly, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.
+We reach 60,000-70,000 people every month on social media, our quiz nights now attract 25-30 regular teams each month, we've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.
 
 ## How quickly will I see more customers from the recovery plan?
 
-Results vary by pub, but at The Anchor we've seen quiz nights grow from 20 to 25-35 regulars, tasting nights with 85% retention, and 60,000-70,000 social media views monthly. Most improvements show within 30 days.
+Results vary by pub, but at The Anchor we've seen quiz nights reach 25-30 regular teams each month, weekday revenue lift ~20%, and social reach hit 60,000-70,000 people monthly. Most improvements show inside 30 days.
 
 ## How quickly can I see results for my empty pub?
 
-Most pubs see 25-40% increase in covers within 30 days. Our proven system starts working immediately - you'll notice more bookings in week one, busier nights by week two, and significantly fuller tables by day 30.
+See meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries.
 
 ## How long until free marketing shows results?
 
@@ -18,11 +18,11 @@ Everything we do is built around a 30-day turnaround. Some actions, like fixing 
 
 ## What's your success rate with pub turnarounds?
 
-We've helped transform pubs from empty to thriving. Our own pub, The Anchor, went from 45 to 65 Sunday covers and doubled Tuesday night revenue. Every strategy we recommend has been tested in real pub conditions.
+We've helped transform pubs from empty to thriving. At The Anchor, weekday revenue lifted ~20% after implementing the first AI-led changes. Every strategy we recommend has been tested in real pub conditions.
 
 ## How quickly will I see midweek improvements?
 
-Inside 30 days. Expect to feel the first lift in bookings during week two, then hit 60-70% capacity on the nights that used to be empty by the end of the month. The Anchor went from 20 to 85 people for Tuesday quiz in 6 weeks by sticking with this cadence.
+Inside 30 days. Expect to feel the first lift in bookings during week two, then notice fuller evenings and consistent enquiries by the end of the month. Full transformation comes when you stick with the playbook.
 
 ## What if your solutions don't work for my pub?
 
@@ -30,11 +30,11 @@ Every pub is different, which is why we stay closely involved during the first m
 
 ## How can menu descriptions increase my food sales?
 
-Psychology-based menu descriptions guide customers to order more profitable dishes and increase average spend by £7 per table. We use proven techniques like sensory language, storytelling, and strategic positioning that have increased food GP by up to 15% for our clients.
+Psychology-based menu descriptions guide customers to choose higher-margin dishes. We use proven techniques like sensory language, storytelling, and strategic positioning that lift ordering confidence and reduce waste.
 
 ## Can AI help with supplier negotiations?
 
-Yes! AI analyzes your purchasing patterns, compares supplier prices, and identifies savings opportunities. I've saved £250/week on food waste alone by optimizing our ordering based on AI predictions.
+Yes! AI analyzes your purchasing patterns, compares supplier prices, and identifies savings opportunities. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs by optimizing ordering and operations.
 
 ## Can AI predict which events will be successful?
 
@@ -42,8 +42,8 @@ Yes! By analyzing local demographics, past event performance, and social media e
 
 ## How quickly will I see results?
 
-At The Anchor, our first AI-powered quiz night brought in 35 people instead of the usual 20 during the first week. Clients feel similar early wins, but the commitment we make is a full turnaround inside 30 days. You won't wait months wondering if it's working.
+Clients feel early wins, but the commitment we make is meaningful, bankable progress inside 30 days. You won't wait months wondering if it's working.
 
 ## Can I see examples of your work?
 
-Visit The Anchor's social media pages - everything you see there, I created using the same tools I'll teach you. 60,000+ views monthly, quiz nights up 40%, food GP improved from 58% to 71%. That's not theory - that's our actual pub.
+Visit The Anchor's social media pages - everything you see there, I created using the same tools I'll teach you. 60,000-70,000 people reached monthly and quiz nights with 25-30 regular teams each month. That's not theory - that's our actual pub.

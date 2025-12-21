@@ -1,7 +1,7 @@
 ---
 title: "Seasonal Pub Events Calendar: Year-Round Ideas That Drive Revenue"
 slug: "seasonal-pub-events-calendar"
-publishedDate: 2026-06-19
+publishedDate: 2025-06-19
 updatedDate: "2025-06-23T00:00:00.000Z"
 excerpt: "Never face a quiet period again. Discover month-by-month seasonal event ideas that tap into holidays, trends, and local culture to keep your pub buzzing"
 quickAnswer: "Plan seasonal events for every month to eliminate quiet periods. January: Burns Night and Dry January events. February: Valentine's packages. Spring: Mother's Day and Easter. Summer: outdoor festivals and BBQs. Strategic seasonal planning turns traditional down months into profit opportunities."
@@ -917,7 +917,7 @@ Your year-round success story starts with your next event. Which season will you
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 

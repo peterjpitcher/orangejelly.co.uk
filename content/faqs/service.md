@@ -14,7 +14,7 @@ To help you claw back up to 25 hours every week on admin tasks, be honest about 
 
 ## Can AI really manage my pub's social media?
 
-Yes - I post 5 times weekly reaching 60,000-70,000 views monthly, spending just 2 hours per week. I'll train you on the exact AI tools and prompts I use, so you can achieve similar results without the time drain.
+Yes - we reach 60,000-70,000 people every month and plan and schedule 30 days of social content in 2 hours. I'll train you on the exact AI tools and prompts I use, so you can achieve similar results without the time drain.
 
 ## How detailed are your AI business reports?
 
@@ -30,11 +30,11 @@ We work with you to implement AI-powered marketing strategies that have been pro
 
 ## How do you promote a pub quiz effectively?
 
-Through AI-powered social media campaigns, automated reminders, and community engagement. Our quiz attendance has grown from 20 to 25-35 regulars using these exact methods - I'll show you how to replicate this success.
+Through AI-powered social media campaigns, automated reminders, and community engagement. Our quiz attendance now sits at 25-30 regular teams every month using these exact methods - I'll show you how to replicate this success.
 
 ## What's the secret to quiz night success?
 
-AI automation for consistent promotion, WhatsApp groups for regular attendees, and prize structures that encourage teams. We've grown from 20 to 25-35 regulars with these methods.
+AI automation for consistent promotion, WhatsApp groups for regular attendees, and prize structures that encourage teams. We now see 25-30 regular teams every month with these methods.
 
 ## Can AI really help with quiz nights?
 
@@ -46,11 +46,11 @@ Not at all! I'll teach you to guide AI to create posts that sound like you, show
 
 ## What kind of business insights can AI provide?
 
-AI helps analyze your sales patterns, identify your most profitable customers, optimize staff scheduling, and predict busy periods. I've discovered profit opportunities worth £75,000-£100,000 annually using these tools.
+AI helps analyze your sales patterns, identify your most profitable customers, optimize staff scheduling, and predict busy periods. Estimated business value added since adopting AI: £75,000-£100,000.
 
 ## What exactly do you do with menu AI?
 
-I'll teach you to use AI for menu analysis, pricing optimization, and seasonal updates. I've helped improve food GP from 58% to 71%, saving £250/week on waste.
+I'll teach you to use AI for menu analysis, pricing optimization, and seasonal updates. We've cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts.
 
 ## Will AI-written menus sound fake or robotic?
 
@@ -58,11 +58,11 @@ Not at all! I guide the AI to write in your pub's authentic voice. The descripti
 
 ## How do you create pub events that actually work?
 
-By using AI to analyze what your community wants, automate promotion, and track results. Our tasting nights achieve 85% customer retention because we use data to plan events people actually want to attend.
+By using AI to analyze what your community wants, automate promotion, and track results. Our tasting nights build strong repeat attendance because we use data to plan events people actually want to attend.
 
 ## Do you work with chains or just independents?
 
-Both. I'm training a pub chain team in September 2025. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and save hours weekly, I can help.
+Both. We support independent pubs and pub chain teams. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and save up to 25 hours every week, I can help.
 
 ## What areas do you cover?
 
@@ -70,7 +70,7 @@ Everywhere. Most work is done remotely via video calls and screen sharing. I can
 
 ## What events actually work for midweek?
 
-Quiz nights (done right) can pull 60-100 people. Steak nights, curry clubs, and wine tastings work brilliantly. The key is consistency, proper promotion, and making it unmissable. We'll show you exactly how.
+Quiz nights (done right) can pull strong midweek turnout. Steak nights, curry clubs, and wine tastings work brilliantly. The key is consistency, proper promotion, and making it unmissable. We'll show you exactly how.
 
 ## How do I stop losing customers to cheaper chain pubs?
 

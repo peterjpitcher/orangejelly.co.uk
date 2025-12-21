@@ -78,10 +78,10 @@ export default function ResultsPage({}: ResultsPageProps) {
               <Grid columns={{ default: 2 }} gap="medium">
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.foodGP}
+                    {resultsData.stats.valueAdded}
                   </Text>
                   <Text size="sm" color="muted">
-                    Food GP
+                    Value Added
                   </Text>
                 </div>
                 <div className="text-center">
@@ -89,7 +89,7 @@ export default function ResultsPage({}: ResultsPageProps) {
                     {resultsData.stats.quizRegulars}
                   </Text>
                   <Text size="sm" color="muted">
-                    Quiz Regulars
+                    Quiz Teams
                   </Text>
                 </div>
                 <div className="text-center">
@@ -97,15 +97,15 @@ export default function ResultsPage({}: ResultsPageProps) {
                     {resultsData.stats.weeklySavings}
                   </Text>
                   <Text size="sm" color="muted">
-                    Weekly Savings
+                    Sunday Waste Cut
                   </Text>
                 </div>
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.monthlyViews}
+                    {resultsData.stats.monthlyReach}
                   </Text>
                   <Text size="sm" color="muted">
-                    Monthly Views
+                    Monthly Reach
                   </Text>
                 </div>
               </Grid>

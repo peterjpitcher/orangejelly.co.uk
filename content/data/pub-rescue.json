@@ -15,15 +15,15 @@
       "icon": "🏚️",
       "title": "Empty Pub Emergency",
       "description": "Monday to Thursday looking like a ghost town. Weekend barely covering costs.",
-      "impact": "Losing £65 per empty table per night",
-      "solution": "7-day rapid response plan to fill seats"
+      "impact": "An empty wet-led table costs less than the £30-£50 figure you see online - context matters.",
+      "solution": "Rapid response plan to fill seats"
     },
     {
       "_key": "no-bookings",
       "icon": "📉",
       "title": "No Bookings Crisis",
       "description": "Phone not ringing. Online bookings non-existent. Walk-ins only.",
-      "impact": "Missing £450/week in lost food profit",
+      "impact": "Missing reliable weekly food profit",
       "solution": "Booking system that actually works"
     },
     {
@@ -31,7 +31,7 @@
       "icon": "🍽️",
       "title": "Food Sales Disaster",
       "description": "Kitchen prepped but plates not leaving. Food waste mounting daily.",
-      "impact": "Below 60% GP means you're losing money",
+      "impact": "Low GP means you're losing money",
       "solution": "Menu psychology that sells"
     },
     {
@@ -47,7 +47,7 @@
       "icon": "💸",
       "title": "Cost Crisis",
       "description": "Bills mounting. Suppliers increasing prices. Margins disappearing.",
-      "impact": "Every 1% GP loss = £2,400/year gone",
+      "impact": "Small GP losses compound fast",
       "solution": "Immediate cost reduction strategies"
     },
     {
@@ -56,7 +56,7 @@
       "title": "Marketing Chaos",
       "description": "Social media not working. No time to post. Money wasted on ads.",
       "impact": "Invisible pub = empty pub",
-      "solution": "2-hour weekly marketing system"
+      "solution": "30-day content batching system"
     },
     {
       "_key": "competition",
@@ -79,16 +79,16 @@
       "icon": "👻",
       "title": "Online Invisibility",
       "description": "Can't be found on Google. Bad reviews prominent. Website outdated.",
-      "impact": "70% of customers check online first",
+      "impact": "Most customers check online first",
       "solution": "Dominate local search results"
     },
     {
       "_key": "owner-burnout",
       "icon": "🔥",
       "title": "Owner Burnout Crisis",
-      "description": "Working 80+ hours. No holidays. Relationship stress. Want to give up.",
-      "impact": "Burnout is the #1 reason pubs fail",
-      "solution": "Get your life back in 30 days"
+      "description": "Working long hours. No holidays. Relationship stress. Want to give up.",
+      "impact": "Burnout is a top reason pubs fail",
+      "solution": "Start getting your life back inside 30 days"
     }
   ],
   "recoveryMetrics": {
@@ -117,15 +117,15 @@
         "label": "To lock in measurable results"
       },
       {
-        "value": "£2,000+",
-        "label": "Average monthly savings"
+        "value": "£4,000+",
+        "label": "Monthly cost savings identified"
       },
       {
-        "value": "25-35%",
-        "label": "Revenue increase within 90 days"
+        "value": "~20%",
+        "label": "Weekday revenue lift"
       },
       {
-        "value": "25 hours",
+        "value": "Up to 25 hours",
         "label": "Saved per week through automation"
       }
     ]
@@ -133,13 +133,13 @@
   "ctaSection": {
     "title": "Every Day You Wait Costs You Money",
     "subtitle": "While you're reading this, tables sit empty and money bleeds away.",
-    "urgencyText": "Message me now. I'll respond within 2 hours with immediate actions you can take tonight.",
+    "urgencyText": "Message me anytime. I'll get back as quickly as I can, but bear with me if I'm in service.",
     "ctaText": "Get Emergency Help Now",
     "guarantee": "30-day action plan with weekly support • No contracts • Pay only for the time you need"
   },
   "pricing": {
     "rate": "£75/hour + VAT",
-    "note": "Most pubs recover investment within first weekend"
+    "note": "Most pubs see meaningful progress inside 30 days"
   },
   "founderNote": {
     "title": "From Peter Pitcher",
@@ -148,11 +148,11 @@
   "faqs": [
     {
       "question": "How quickly can you help me?",
-      "answer": "I can usually respond within 2 hours during the day. We'll have an initial chat, and I can often provide immediate actions you can implement that same day. Full transformation plans typically start within 48 hours of our first conversation."
+      "answer": "Message me anytime. I'll get back as quickly as I can, but bear with me if I'm in service. We'll have an initial chat and map your 30-day action plan."
     },
     {
       "question": "What if I can't afford help right now?",
-      "answer": "I understand - cash flow is tight. That's why I charge hourly (£75) rather than huge upfront fees. Start with just 2-3 hours of help for quick wins. Most pubs make back their investment within the first weekend through increased sales."
+      "answer": "I understand - cash flow is tight. That's why I charge hourly (£75) rather than huge upfront fees. Start small for quick wins and scale as the results land."
     },
     {
       "question": "Do you work with all types of pubs?",
@@ -160,11 +160,11 @@
     },
     {
       "question": "What makes you different from other consultants?",
-      "answer": "I actually run a pub. Every strategy I recommend has been tested at The Anchor first. I'm not a consultant who's never pulled a pint - I'm dealing with the same challenges you are, every single day."
+      "answer": "Billy runs The Anchor day-to-day and I handle marketing and business development. Every strategy I recommend has been tested at The Anchor first. I'm not a consultant who's never pulled a pint - I'm dealing with the same challenges you are."
     },
     {
       "question": "What if your strategies don't work for my pub?",
-      "answer": "That's why I stay closely involved during the first month. We review progress every week, adjust fast, and keep at it until the numbers move. These strategies transformed The Anchor and dozens of other pubs, and I'll stick with you to make sure they do the same for yours."
+      "answer": "That's why I stay closely involved during the first month. We review progress every week, adjust fast, and keep at it until the numbers move. I'll stick with you to make sure the plan delivers measurable results."
     }
   ]
 }

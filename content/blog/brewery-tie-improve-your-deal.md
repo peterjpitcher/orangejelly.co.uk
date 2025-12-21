@@ -91,7 +91,7 @@ What works:
 
 - Treating them as enemy
 
-My BDM became my biggest advocate. Result: £5,000 annual discount I didn't know existed.
+My BDM became my biggest advocate. Result: a meaningful annual discount I didn't know existed.
 
 ## The Negotiation Framework
 
@@ -359,4 +359,3 @@ No. Calculate total cost including rent, lost support, capital requirements, and
 ### Can I buy some products outside the tie?
 
 Check your specific agreement. Guest ales, wines, spirits, soft drinks may have flexibility. Never breach your tie - it's grounds for forfeiture. But maximize every legal opportunity for untied products.
-

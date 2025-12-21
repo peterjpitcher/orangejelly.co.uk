@@ -28,15 +28,15 @@ const baseUrl = getBaseUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'How to Fill Empty Pub Tables | Pub Marketing That Works | Orange Jelly',
+  title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
   description:
-    'How can I fill my empty pub tables? Orange Jelly provides AI-powered marketing tools that help UK licensees attract more customers. Save up to 25 hours weekly with proven strategies from The Anchor pub owner. Menu optimisation, social media automation, and more.',
+    'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. We combine technology and creativity to fill tables, save time, and drive growth.',
   keywords:
-    'pub AI tools, save time running pub, pub marketing help, menu writing service, Orange Jelly, Peter Pitcher, how to fill empty pub tables, pub marketing UK, automate pub social media',
+    'hospitality marketing specialist, AI hospitality marketing, pub marketing, restaurant marketing, bar marketing, fill tables, Peter Pitcher, Orange Jelly',
   openGraph: {
-    title: 'How to Fill Empty Pub Tables | Pub Marketing That Works | Orange Jelly',
+    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
     description:
-      'Struggling with empty pub tables? We use AI-powered marketing strategies that transformed The Anchor. First pub chain training September 2025.',
+      'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Proven strategies that combine technology and creativity.',
     type: 'website',
     url: baseUrl,
     locale: 'en_GB',
@@ -46,15 +46,15 @@ export const metadata: Metadata = {
         url: `${baseUrl}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: 'Orange Jelly — Pub marketing that works',
+        alt: 'Orange Jelly — Hospitality marketing that works',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Fill Empty Pub Tables | Pub Marketing That Works | Orange Jelly',
+    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
     description:
-      'Struggling with empty pub tables? AI-powered marketing tools for UK pubs. Save up to 25 hours weekly.',
+      'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Proven strategies that combine technology and creativity.',
     images: [`${baseUrl}/opengraph-image`],
   },
   robots: {
@@ -102,14 +102,14 @@ export default function RootLayout({
     },
     image: `${baseUrl}/logo.png`,
     description:
-      'Struggling with empty pub tables? We use AI-powered marketing strategies that transformed The Anchor from struggling to thriving. From one licensee to another.',
+      'Specialist hospitality marketing services leveraging AI for pubs, restaurants, and bars. We combine technology and creativity to accelerate business success, using The Anchor as a live innovation lab.',
     founder: {
       '@type': 'Person',
       '@id': `${baseUrl}/#peter-pitcher`,
       name: 'Peter Pitcher',
-      jobTitle: 'Founder & AI Consultant',
+      jobTitle: 'Hospitality Marketing Specialist',
       description:
-        'Former struggling pub owner who discovered how AI could transform pub marketing. Now helps other licensees save time and fill empty tables.',
+        'Hospitality Marketing Specialist who leverages AI to solve real business problems for pubs, restaurants, and bars. Owner of The Anchor and founder of Orange Jelly.',
     },
     foundingDate: '2019',
     areaServed: 'GB',
@@ -131,9 +131,9 @@ export default function RootLayout({
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     url: baseUrl,
-    name: 'Orange Jelly - Pub Marketing That Works',
+    name: 'Orange Jelly - Hospitality Marketing That Works',
     description:
-      'Struggling with empty pub tables? We use AI-powered marketing strategies that transformed The Anchor from struggling to thriving. From one licensee to another.',
+      'Orange Jelly - Hospitality Marketing Specialist leveraging AI to deliver great results. The home of AI-powered marketing for pubs, restaurants, and bars.',
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },

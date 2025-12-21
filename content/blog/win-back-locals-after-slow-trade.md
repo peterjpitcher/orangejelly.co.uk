@@ -1,7 +1,7 @@
 ---
 title: "How to Win Back Locals After Months of Slow Trade"
 slug: "win-back-locals-after-slow-trade"
-publishedDate: 2026-09-11
+publishedDate: 2025-09-11
 updatedDate: "2025-12-29T00:00:00.000Z"
 excerpt: "A reconnection plan for publicans who lost momentum and need to bring the neighbourhood back through the door."
 quickAnswer: "Own the narrative, invite lapsed regulars personally, and create a 30-day sequence of reasons to return so trust rebuilds faster than rumours spread."

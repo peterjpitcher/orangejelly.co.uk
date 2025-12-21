@@ -39,7 +39,7 @@ voiceSearchQueries:
 
 Picture this: Sarah, 28, is scrolling Instagram on a Thursday evening. She stops at a video of golden beer being poured in slow motion, foam cascading perfectly. She taps the location, sees mouth-watering food photos, checks the Stories for tonight's specials, and twenty minutes later, she's walking through your door with three friends.
 
-That's the power of Instagram done right. It's not just a photo app anymore – it's where 71% of millennials decide where to eat and drink. If your pub isn't killing it on Instagram, you're invisible to an entire generation of customers.
+That's the power of Instagram done right. It's not just a photo app anymore – it's where many millennials decide where to eat and drink. If your pub isn't killing it on Instagram, you're invisible to an entire generation of customers.
 
 > **Need a roadmap, not another agency?**
 >
@@ -127,7 +127,7 @@ Your signature dishes deserve celebrity treatment:
 
 - Show portion size honestly
 
-**Example:** a typical market town pub & Bear posts their famous burger with steam rising, cheese melting, and a hand reaching for a chip. Result: 3,400 likes, 47 "Where is this?!" comments, sold out that evening.
+**Example:** a typical market town pub & Bear posts their famous burger with steam rising, cheese melting, and a hand reaching for a chip. Result: a surge of likes and comments, sold out that evening.
 
 **2. The Perfect Pour**
 
@@ -715,7 +715,7 @@ Ready to transform your pub's Instagram? Let's map your 30-day action plan toget
 
 ### What food GP should a pub aim for?
 
-Target 45-55% gross profit on food. The Anchor improved from 58% to 71% through portion control, menu engineering, and waste reduction. This improvement added £15,000 annual profit.
+Target 45-55% gross profit on food. At The Anchor, portion control, menu engineering, and waste reduction cut £250/week in Sunday waste and reduced food waste by 90%.
 
 ### How can I reduce food waste?
 
@@ -723,7 +723,7 @@ Implement portion control, improve stock rotation, use prep lists, and monitor w
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Quiz nights attract regular teams quickly, social media engagement grows within days, and operational improvements show impact in the first month. Full transformation comes when you stick with the playbook.
 
 ### How much will this cost to implement?
 

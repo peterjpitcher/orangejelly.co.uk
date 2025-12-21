@@ -31,7 +31,7 @@ export default function FooterWrapper() {
     },
     bottomBar: {
       copyrightText: footerData.copyright,
-      additionalText: 'Run by licensees, for licensees',
+      additionalText: 'Run by operators, for pubs, restaurants, and bars',
     },
   };
 

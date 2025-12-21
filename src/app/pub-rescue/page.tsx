@@ -127,8 +127,8 @@ export default function PubRescue() {
               We've Been Where You Are Now
             </Heading>
             <Text size="lg" align="center" className="mb-6 text-cream/90 max-w-3xl mx-auto">
-              When we took over The Anchor, it was failing. TripAdvisor rating of 2.8. Empty most
-              nights. Losing money every month. Sound familiar?
+              When we took over The Anchor, it was failing. Empty most nights. Losing money every
+              month. Sound familiar?
             </Text>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -136,10 +136,10 @@ export default function PubRescue() {
                   Our Tuesday Nights
                 </Heading>
                 <Text size="sm" className="mb-2">
-                  Were: 20-25 people, losing money
+                  Were: sparse attendance, losing money
                 </Text>
                 <Text size="sm" className="font-semibold">
-                  Now: 25-35 for quiz night, good atmosphere
+                  Now: 25-30 regular teams monthly, good atmosphere
                 </Text>
               </div>
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -147,10 +147,10 @@ export default function PubRescue() {
                   Our Sunday Roasts
                 </Heading>
                 <Text size="sm" className="mb-2">
-                  Were: 45 covers out of 80 seats
+                  Were: half-full room
                 </Text>
                 <Text size="sm" className="font-semibold">
-                  Now: Working towards 60 target, zero waste
+                  Now: £250/week waste cut with pre-orders
                 </Text>
               </div>
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -158,7 +158,7 @@ export default function PubRescue() {
                   Our Time
                 </Heading>
                 <Text size="sm" className="mb-2">
-                  Were: 70+ hour weeks, no family time
+                  Were: long weeks, no family time
                 </Text>
                 <Text size="sm" className="font-semibold">
                   Now: Evenings off, AI handles admin
@@ -178,7 +178,7 @@ export default function PubRescue() {
                 <Heading level={4} className="mb-1">
                   Fast Response
                 </Heading>
-                <Text size="sm">Contact within 2 hours during pub hours</Text>
+                <Text size="sm">Message anytime - I'll reply as quickly as I can</Text>
               </div>
               <div>
                 <div className="text-3xl mb-2">🎯</div>
@@ -218,20 +218,20 @@ export default function PubRescue() {
             </Text>
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div>
-                <Text className="text-3xl font-bold text-red-600">£65</Text>
-                <Text size="sm">Per empty table per night</Text>
+                <Text className="text-3xl font-bold text-red-600">£30-£50</Text>
+                <Text size="sm">Typical online estimate per empty table</Text>
               </div>
               <div>
-                <Text className="text-3xl font-bold text-red-600">£450</Text>
-                <Text size="sm">Per week in lost food profit</Text>
+                <Text className="text-3xl font-bold text-red-600">Context</Text>
+                <Text size="sm">Wet-led tables cost less than headline figures</Text>
               </div>
               <div>
-                <Text className="text-3xl font-bold text-red-600">£2,400</Text>
-                <Text size="sm">Per month doing nothing</Text>
+                <Text className="text-3xl font-bold text-red-600">Act Now</Text>
+                <Text size="sm">Every empty night compounds the problem</Text>
               </div>
             </div>
             <Text size="sm" className="text-charcoal/70 mb-4">
-              Most pubs recover their investment in our help within 30 days
+              Most pubs see meaningful progress inside 30 days
             </Text>
             <WhatsAppButton text="Calculate my exact losses" size="medium" />
           </div>
@@ -263,10 +263,10 @@ export default function PubRescue() {
                 </Text>
                 <FeatureList
                   items={[
-                    'Analyze your numbers (takes 2 hours)',
+                    'Analyze your numbers quickly',
                     'Identify top 3 profit killers',
                     'Implement quick wins immediately',
-                    'Usually saves £500+ in first week',
+                    'Early savings from waste and cost fixes',
                   ]}
                   icon="check"
                   iconColor="green"
@@ -287,7 +287,7 @@ export default function PubRescue() {
                   items={[
                     'Launch "must-attend" midweek events',
                     'Fix your Google presence (huge impact)',
-                    'Rewrite menu for £7+ higher spend',
+                    'Rewrite menu for stronger margins',
                     'Start social media that actually works',
                   ]}
                   icon="check"
@@ -451,8 +451,8 @@ export default function PubRescue() {
                 Your Pub Doesn't Have to Be Another Statistic
               </Heading>
               <Text size="lg" className="mb-8 text-charcoal/70 max-w-2xl mx-auto">
-                25 pubs close every week in the UK. But with the right help, the right strategies,
-                and action taken TODAY, yours won't be one of them.
+                Pubs close every week in the UK. But with the right help, the right strategies, and
+                action taken TODAY, yours won't be one of them.
               </Text>
               <WhatsAppButton text="I refuse to let my pub fail - help me" size="large" />
             </div>
@@ -477,7 +477,7 @@ export default function PubRescue() {
                   items={[
                     'Quick response when possible',
                     'Emergency triage call same day',
-                    '3 quick wins to implement NOW',
+                    'Quick wins to implement NOW',
                     'Direct WhatsApp access to Peter',
                     'No corporate call centres',
                   ]}
@@ -495,7 +495,7 @@ export default function PubRescue() {
                   <FeatureList
                     items={[
                       'Complete marketing system setup',
-                      'Menu rewrite for higher spend',
+                      'Menu rewrite for stronger margins',
                       'Event calendar that fills seats',
                       'Social media on autopilot',
                       'Staff training resources',
@@ -528,7 +528,8 @@ export default function PubRescue() {
                     Profit Analysis Tools
                   </Heading>
                   <Text size="sm">
-                    Find where you're losing money. Most pubs discover £2,000+ in monthly savings.
+                    Find where you're losing money. Identify £4,000+ in monthly savings
+                    opportunities.
                   </Text>
                 </div>
                 <div className="text-center">
@@ -551,7 +552,7 @@ export default function PubRescue() {
                 £75/hour + VAT
               </Text>
               <Text size="sm" color="muted" className="mb-8">
-                Most pubs make this back in their first weekend
+                Most pubs see meaningful progress inside 30 days
               </Text>
             </div>
           </div>
@@ -593,7 +594,7 @@ export default function PubRescue() {
               },
               {
                 title: 'Menu Makeover',
-                description: 'Psychology-based menus that increase spend by £7/table',
+                description: 'Psychology-based menus that lift spend and margins',
                 href: '/services#boost-food-sales',
                 emoji: '🍽️',
               },
@@ -613,7 +614,7 @@ export default function PubRescue() {
       {/* Final CTA */}
       <CTASection
         title="Don't Let Your Pub Become Another Statistic"
-        subtitle="25 pubs close every week in the UK. With the right help, yours doesn't have to be one of them. Message me now - let's fix your biggest problem first."
+        subtitle="Pubs close every week in the UK. With the right help, yours doesn't have to be one of them. Message me now - let's fix your biggest problem first."
         whatsappMessage="Peter, my pub needs urgent help with [describe your crisis]"
         buttonText="Get Emergency Pub Help Now"
       />

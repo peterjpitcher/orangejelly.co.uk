@@ -1,7 +1,7 @@
 ---
 title: "Nobody Books Tables Anymore? Master the Art of Walk-ins vs Reservations"
 slug: "nobody-books-tables-anymore"
-publishedDate: 2026-02-20
+publishedDate: 2025-02-20
 excerpt: "Find the perfect balance between guaranteed bookings and spontaneous trade. Learn the system that increased our covers by 40% without turning anyone away."
 quickAnswer: "Reserve 60% of tables for bookings, 40% for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after 15 minutes. Create a waiting list system and always overbook by 10% on peak nights to account for cancellations."
 author: "Peter Pitcher"
@@ -63,7 +63,7 @@ Instead of "table all evening," use slots:
 - 7:45-9:45pm (main dinner)
 - 10:00pm+ (late drinks/snacks)
 
-Result: Triple your capacity without more tables
+Result: Increase your capacity without more tables
 
 ## The No-Show Solution
 
@@ -72,7 +72,7 @@ Booking taken → Confirmation text same day → Reminder 24hrs before → Final
 
 Template: "Hi \[Name\], looking forward to seeing you tomorrow at 7:30pm for 4 people. Reply YES to confirm or call to change. The Anchor"
 
-Result: 90% response rate, 50% reduction in no-shows
+Result: Higher response rate and fewer no-shows
 
 The Deposit Debate
 When to take deposits:
@@ -346,4 +346,3 @@ This is why confirmations matter. Text confirmation catches double-bookers. For 
 ### Should I charge for no-shows?
 
 Only for groups of 8+ or special events. Small table no-show charges create more problems than they solve. Better to track repeat offenders and require deposits from them specifically. Focus on prevention, not punishment.
-

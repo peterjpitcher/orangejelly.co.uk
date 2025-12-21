@@ -102,8 +102,8 @@ export default function ServicesPage() {
         <Container maxWidth="4xl">
           <Text size="sm" color="muted" align="center" className="mb-8">
             These aren&apos;t fixed packages—just proven ways we can help. You still pay £75 per
-            hour plus VAT and we tailor the time to whatever your pub needs over the 30-day
-            turnaround.
+            hour plus VAT and we tailor the time to whatever your pub, restaurant, or bar needs over
+            the 30-day turnaround.
           </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {servicePackages.map((service) => (

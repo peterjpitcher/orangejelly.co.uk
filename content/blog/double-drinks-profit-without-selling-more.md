@@ -35,7 +35,7 @@ faqs:
   - question: "Do I need expensive equipment for premium drinks?"
     answer: "No. Start with a £300 bean-to-cup coffee machine (pays back in 3 weeks). For cocktails, master 5 classics with existing spirits. Premium soft drinks need just fridge space. Total investment under £500."
   - question: "Will regular customers resist premium drinks?"
-    answer: "Not if positioned correctly. Don't remove favorites - add options. Offer tasting nights (85% retention rate), samples with meals, and educate staff on flavor profiles. Most resistance is fear of the unknown."
+    answer: "Not if positioned correctly. Don't remove favorites - add options. Offer tasting nights with strong repeat attendance, samples with meals, and educate staff on flavor profiles. Most resistance is fear of the unknown."
   - question: "How do I train staff to sell premium drinks?"
     answer: "Replace 'What would you like to drink?' with specific suggestions: 'Our new IPA pairs perfectly with that burger' or 'Can I tempt you with our salted caramel espresso martini?' Role-play for 10 minutes before each shift."
 localSEO:
@@ -198,26 +198,26 @@ This isn't upselling. It's offering experiences. The couple having a meal and tw
 ## Results You Can Expect
 
 ### Immediate (Week 1)
-- £200-300 additional profit from coffee sales
-- 20% increase in spend per head
+- Early profit from coffee sales
+- Noticeable lift in spend per head
 - Surprised reactions: "You do coffee? Brilliant!"
 
 ### Month 1
-- £1,500+ additional profit
+- Meaningful additional profit
 - New customer segments (morning coffee crowd)
 - Staff excitement about selling something different
 
 ### Month 3
-- £5,000+ additional profit
-- Coffee/cocktails become 15% of wet sales
+- Strong additional profit
+- Coffee/cocktails become a clear share of wet sales
 - Reputation shift: "That pub with great coffee"
 
 ### Month 6
-- £15,000+ additional profit
+- Significant additional profit
 - Premium drinks embedded in culture
 - Customers choosing you FOR premium drinks
 
-At The Anchor, our wet sales profit increased 40% without serving a single extra customer. Same footfall, transformed margins. The coffee machine paid for itself in three weeks. The cocktail training took one afternoon. The premium spirits were already on our shelf - we just started talking about them.
+At The Anchor, our wet sales profit improved without serving a single extra customer. Same footfall, transformed margins. The coffee machine paid for itself quickly. The cocktail training took one afternoon. The premium spirits were already on our shelf - we just started talking about them.
 
 ## Common Objections Solved
 

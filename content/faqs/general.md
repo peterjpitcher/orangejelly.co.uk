@@ -14,7 +14,7 @@ Every strategy has been proven at The Anchor where we've been implementing AI so
 
 ## Can Orange Jelly help if my pub is losing money?
 
-Absolutely. We've added £75,000-£100,000 worth of value to our own business using AI. Our food GP went from 58% to 71%. We'll stay hands-on through the first month to make sure the plan is working for you.
+Absolutely. We've added £75,000-£100,000 worth of value to our own business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. We'll stay hands-on through the first month to make sure the plan is working for you.
 
 ## How quickly can Orange Jelly help fill my empty pub?
 
@@ -26,7 +26,7 @@ We charge £75 per hour plus VAT as a flat rate. I'm always happy to have a free
 
 ## How long does it take to see ROI from pub marketing?
 
-Most pubs see positive ROI within 30 days. Our menu makeovers typically pay for themselves in one weekend. Marketing campaigns start showing momentum within the first couple of weeks, and that compounds into clear ROI by day 30.
+Most pubs see positive ROI inside 30 days. Marketing campaigns start showing momentum within the first couple of weeks, and that compounds into clear ROI by day 30.
 
 ## Do I need to understand technology to work with Orange Jelly?
 
@@ -34,7 +34,7 @@ Not at all! We handle all the technical bits. You just serve the extra customers
 
 ## How does Orange Jelly use AI for pub marketing?
 
-We use AI to create months of social media content in hours, write menu descriptions that sell, analyze competitor strategies, automate booking responses, and optimize pricing. It's about working smarter, not harder.
+We use AI to plan and schedule 30 days of social media content in 2 hours, write menu descriptions that sell, analyze competitor strategies, automate booking responses, and optimize pricing. It's about working smarter, not harder.
 
 ## What if I'm not happy with the results?
 
@@ -42,7 +42,7 @@ We stay closely involved during the first month with weekly check-ins, fast adju
 
 ## Do you offer payment plans?
 
-Yes, we offer flexible payment plans to spread the cost. We understand cash flow challenges in hospitality. Let's discuss what works for your budget - most packages can be split into 2-3 monthly payments.
+Yes, we offer flexible payment plans to spread the cost. We understand cash flow challenges in hospitality. Let's discuss what works for your budget - most invoices can be split into two or three monthly payments.
 
 ## Can I pick and mix services?
 
@@ -50,11 +50,11 @@ Of course! Every pub has different needs. Start with your biggest pain point, se
 
 ## How is Orange Jelly different from other marketing agencies?
 
-We actually run a pub - The Anchor in Stanwell Moor. We're not marketers who've never pulled a pint. Every strategy we recommend has been tested in our own business first.
+We actually run a pub - The Anchor in Stanwell Moor. Billy handles day-to-day operations while I handle marketing and business development. Every strategy we recommend has been tested in our own business first.
 
 ## What makes Orange Jelly different from other pub marketing agencies?
 
-We actually run a pub - The Anchor in Stanwell Moor. Every strategy we recommend has been tested in our own business first. We're not an agency; I'm a licensee who understands your challenges because I face them too. Plus I still work full-time, so I know about juggling everything.
+We actually run a pub - The Anchor in Stanwell Moor. Billy handles day-to-day operations while I handle marketing and business development. Every strategy we recommend has been tested in our own business first. We're not an agency; I'm a licensee who understands your challenges because I face them too. Plus I still work full-time, so I know about juggling everything.
 
 ## What advantages do independent pubs have over chains?
 
@@ -82,7 +82,7 @@ Absolutely. The Anchor was in terrible physical state when we took over in March
 
 ## How is Orange Jelly different from other consultants?
 
-I'm not a consultant - I'm a licensee who runs a pub every day. No suits, no PowerPoints, no corporate jargon. Just practical help from someone who understands because I'm dealing with the same challenges. Plus, we use AI to save time on the boring bits.
+I'm not a consultant - I'm a licensee working alongside a real pub operator. Billy runs The Anchor day-to-day and I handle marketing and business development. No suits, no PowerPoints, no corporate jargon. Just practical help from someone who understands because I'm dealing with the same challenges. Plus, we use AI to save time on the boring bits.
 
 ## Will this work for my type of pub?
 

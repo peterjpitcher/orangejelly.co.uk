@@ -6,18 +6,18 @@ import { BreadcrumbSchema } from '@/components/StructuredData';
 export const metadata: Metadata = {
   title: 'About Demo - Shadcn Components | Orange Jelly',
   description:
-    'Demo version of the about page using shadcn/ui components showcasing modern UI patterns with Peter Pitcher, founder of Orange Jelly who helps UK pubs save up to 25 hours weekly with AI tools.',
+    'Demo version of the about page using shadcn/ui components showcasing modern UI patterns with Peter Pitcher, hospitality marketing specialist leveraging AI to deliver great results.',
   keywords: [
     'shadcn demo',
     'Peter Pitcher',
     'Orange Jelly',
-    'pub AI tools',
+    'hospitality marketing',
     'The Anchor Stanwell Moor',
   ],
   openGraph: {
     title: 'About Orange Jelly Demo - Modern UI Components',
     description:
-      'See how modern UI components can enhance the Orange Jelly website. Peter Pitcher helps UK licensees save up to 25 hours with AI.',
+      'See how modern UI components can enhance the Orange Jelly website. Peter Pitcher is a hospitality marketing specialist leveraging AI to deliver great results.',
     type: 'website',
     url: 'https://www.orangejelly.co.uk/about-demo',
     images: [
@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.orangejelly.co.uk/about-demo',
+  },
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 

@@ -5,8 +5,8 @@ import CaseStudySelector from './CaseStudySelector';
 const mockResults = [
   {
     id: 'food-gp-improvement',
-    title: 'Food GP Improvement',
-    subtitle: 'From 58% to 71% food GP in 6 months',
+    title: 'Food Waste Reduction',
+    subtitle: '£250/week cut in Sunday waste',
     problem: ['Problem A'],
     failed: ['Failed A'],
     solution: ['Solution A'],
@@ -29,62 +29,35 @@ const mockResults = [
 
 describe('CaseStudySelector', () => {
   it('honours a matching default study', () => {
-    render(
-      <CaseStudySelector
-        results={mockResults}
-        defaultStudy="quiz-night-transformation"
-      />
-    );
+    render(<CaseStudySelector results={mockResults} defaultStudy="quiz-night-transformation" />);
 
-    expect(
-      screen.getByRole('heading', { name: 'Quiz Night Transformation' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Quiz Night Transformation' })).toBeInTheDocument();
   });
 
   it('falls back to the first study when default is unknown', () => {
-    render(
-      <CaseStudySelector results={mockResults} defaultStudy="unknown-id" />
-    );
+    render(<CaseStudySelector results={mockResults} defaultStudy="unknown-id" />);
 
-    expect(
-      screen.getByRole('heading', { name: 'Food GP Improvement' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Food Waste Reduction' })).toBeInTheDocument();
   });
 
   it('updates selection when the default study prop changes', async () => {
     const { rerender } = render(
-      <CaseStudySelector
-        results={mockResults}
-        defaultStudy="food-gp-improvement"
-      />
+      <CaseStudySelector results={mockResults} defaultStudy="food-gp-improvement" />
     );
 
-    expect(
-      screen.getByRole('heading', { name: 'Food GP Improvement' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Food Waste Reduction' })).toBeInTheDocument();
 
-    rerender(
-      <CaseStudySelector
-        results={mockResults}
-        defaultStudy="quiz-night-transformation"
-      />
-    );
+    rerender(<CaseStudySelector results={mockResults} defaultStudy="quiz-night-transformation" />);
 
-    expect(
-      screen.getByRole('heading', { name: 'Quiz Night Transformation' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Quiz Night Transformation' })).toBeInTheDocument();
   });
 
   it('allows manual selection regardless of default study', async () => {
-    render(
-      <CaseStudySelector results={mockResults} defaultStudy="food-gp-improvement" />
-    );
+    render(<CaseStudySelector results={mockResults} defaultStudy="food-gp-improvement" />);
 
     const user = userEvent.setup();
     await user.click(screen.getByRole('button', { name: 'Quiz Night Transformation' }));
 
-    expect(
-      screen.getByRole('heading', { name: 'Quiz Night Transformation' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Quiz Night Transformation' })).toBeInTheDocument();
   });
 });

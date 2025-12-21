@@ -1,7 +1,7 @@
 ---
 title: "Zero-Waste Stock Management for Pubs in Survival Mode"
 slug: "zero-waste-stock-management-pubs"
-publishedDate: 2026-09-25
+publishedDate: 2025-09-25
 updatedDate: "2026-01-05T00:00:00.000Z"
 excerpt: "Use disciplined stock processes to protect every pound of GP when cash is tight and bins are overflowing."
 quickAnswer: "Count little and often, engineer menus around shared ingredients, and give chefs as well as bartenders clear waste KPIs so shrinkage drops below 1%."

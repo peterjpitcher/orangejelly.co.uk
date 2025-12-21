@@ -654,15 +654,15 @@ Designing for desktop only. Solution: Mobile-first design always.
 
 **a typical traditional pub, Brighton:**
 
-Built 4,000-subscriber list using WiFi sign-ups. Tuesday email drives 70% of midweek bookings. ROI: 4,200%.
+Built a sizeable subscriber list using WiFi sign-ups. Tuesday emails drive a large share of midweek bookings. ROI: strong.
 
 **The Brewery Tap, Leeds:**
 
-Birthday automation generates £15,000 annually. 68% of birthday vouchers redeemed with average spend of £85.
+Birthday automation generates meaningful annual revenue. High redemption with strong average spend.
 
 **The Village Inn, Cotswolds:**
 
-Weather-triggered emails fill quiet rainy days. Automated "cozy comfort food" emails when rain forecast. 40% open rate, 15% conversion.
+Weather-triggered emails fill quiet rainy days. Automated "cozy comfort food" emails when rain is forecast. Strong open and conversion rates.
 
 ## Email Templates That Convert
 
@@ -752,7 +752,7 @@ The only question is: what are you waiting for?
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 
@@ -769,4 +769,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

@@ -1,18 +1,18 @@
 [
   {
     "title": "Quiz Regulars",
-    "displayText": "25-35 quiz regulars every week (up from 20)",
-    "value": "25-35",
+    "displayText": "25-30 regular quiz teams every month",
+    "value": "25-30",
     "category": "attendance",
-    "timeframe": "weekly",
+    "timeframe": "monthly",
     "location": "The Anchor",
     "order": 1,
     "isActive": true
   },
   {
-    "title": "Food GP Improvement",
-    "displayText": "Food GP improved from 58% to 71%",
-    "value": "71%",
+    "title": "Food Waste Reduction",
+    "displayText": "90% reduction in food waste using AI-driven prep forecasts",
+    "value": "90%",
     "category": "efficiency",
     "timeframe": "current",
     "location": "The Anchor",
@@ -21,7 +21,7 @@
   },
   {
     "title": "Social Media Views",
-    "displayText": "60,000-70,000 monthly social media views",
+    "displayText": "60,000-70,000 people reached monthly on social media",
     "value": "60-70k",
     "category": "engagement",
     "timeframe": "monthly",
@@ -31,8 +31,8 @@
   },
   {
     "title": "Customer Database",
-    "displayText": "300 opted-in contacts (quality over quantity)",
-    "value": "300",
+    "displayText": "250 opted-in SMS contacts ready to activate",
+    "value": "250",
     "category": "database",
     "timeframe": "current",
     "location": "The Anchor",
@@ -51,7 +51,7 @@
   },
   {
     "title": "Sunday Lunch Waste",
-    "displayText": "£250 weekly savings on Sunday lunch waste",
+    "displayText": "£250/week cut in Sunday lunch waste",
     "value": "£250",
     "category": "savings",
     "timeframe": "weekly",
@@ -60,10 +60,10 @@
     "isActive": true
   },
   {
-    "title": "Tasting Night Retention",
-    "displayText": "85% retention rate at tasting nights",
-    "value": "85%",
-    "category": "retention",
+    "title": "Weekday Revenue Lift",
+    "displayText": "Weekday revenue lifted ~20% after AI-led changes",
+    "value": "20%",
+    "category": "revenue",
     "timeframe": "current",
     "location": "The Anchor",
     "order": 7,
@@ -71,7 +71,7 @@
   },
   {
     "title": "Time Saved Weekly",
-    "displayText": "25 hours saved weekly using AI systems",
+    "displayText": "Up to 25 hours saved weekly using AI systems",
     "value": "25 hours",
     "category": "efficiency",
     "timeframe": "weekly",

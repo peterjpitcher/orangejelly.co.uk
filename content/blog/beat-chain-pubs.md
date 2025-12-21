@@ -339,7 +339,7 @@ Stop trying to be a better chain pub. Start being the best independent pub you c
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 

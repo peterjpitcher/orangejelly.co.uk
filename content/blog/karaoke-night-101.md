@@ -1,7 +1,7 @@
 ---
 title: "Karaoke Night 101: Licensee Guide"
 slug: "karaoke-night-101"
-publishedDate: 2026-10-23
+publishedDate: 2025-10-23
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Turn Thursdays into high-energy karaoke shows with the right kit, rotation rules, and compliance guardrails."
 quickAnswer: "Set clear 3-minute song limits, track the rotation on-screen, and use TheMusicLicence plus consent signage so karaoke stays fun and compliant."

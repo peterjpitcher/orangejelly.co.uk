@@ -1,7 +1,7 @@
 ---
 title: "Social Media Tactics That Drive Footfall in Seven Days"
 slug: "social-media-tactics-footfall-seven-days"
-publishedDate: 2026-07-03
+publishedDate: 2025-07-03
 updatedDate: "2026-01-12T00:00:00.000Z"
 excerpt: "A one-week sprint plan to turn Instagram, Facebook, and TikTok into actual bookings instead of vanity metrics."
 quickAnswer: "Run a themed content sprint, collect ten pieces of proof daily, retarget warm audiences with £5 ads, and layer direct invites so phones start ringing within the week."

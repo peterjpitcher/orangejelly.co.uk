@@ -259,7 +259,7 @@ export default function HomePage({
               </Heading>
               <Text size="lg" color="muted" className="mb-4">
                 {sectionHeadings?.aboutText1 ||
-                  "I'm Peter. My husband Billy and I have run The Anchor in Stanwell Moor since March 2019. We faced the same struggles - empty tables, rising costs, fierce competition."}
+                  "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I handle marketing and business development around a full-time role. We faced the same struggles - empty tables, rising costs, fierce competition."}
               </Text>
               <Text size="lg" color="muted" className="mb-6">
                 {sectionHeadings?.aboutText2 ||

@@ -96,7 +96,7 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
   const defaults: GenerateMetadataProps = {
     title: 'Orange Jelly',
     description:
-      'AI-powered marketing solutions for UK pubs from real licensees who understand your challenges.',
+      'AI-powered hospitality marketing for UK pubs, restaurants, and bars from real operators who understand your challenges.',
     path: '/',
     ogType: 'website',
     ogImage: '/images/og-default.jpg', // Standard OG image for non-article pages
@@ -108,37 +108,38 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
 // Helper for page-specific metadata
 export const pageMetadata = {
   home: {
-    title: 'How to Fill Empty Pub Tables | Pub Marketing That Works',
+    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
     description:
-      'Struggling with empty pub tables? We use AI-powered marketing strategies that transformed The Anchor from struggling to thriving. From one licensee to another.',
+      'Hospitality marketing specialist leveraging AI to deliver great results for pubs, restaurants, and bars. Proven at The Anchor.',
     keywords:
-      'pub marketing UK, fill empty pub tables, pub marketing strategies, increase pub customers, pub social media marketing, pub turnaround',
+      'hospitality marketing specialist, pub marketing UK, restaurant marketing, bar marketing, fill tables, increase bookings',
   },
   services: {
-    title: 'Pub Marketing Services | Fill Tables & Boost Revenue',
+    title: 'Hospitality Marketing Services | Fill Tables & Boost Revenue',
     description:
-      'Proven pub marketing services that fill empty tables. Menu optimization, social media automation, website design. All from real licensees who understand your challenges.',
+      'Proven hospitality marketing services that fill empty tables. Menu optimization, social media automation, website design. From real operators who understand your challenges.',
     keywords:
-      'pub marketing services, pub social media management, pub menu design, pub website design, pub marketing packages',
+      'hospitality marketing services, pub marketing, restaurant marketing, bar marketing, social media management',
   },
   results: {
-    title: 'Pub Marketing Success Stories | Real Results from Real Pubs',
+    title: 'Hospitality Marketing Success Stories | Real Results',
     description:
-      'See how we helped UK pubs increase covers by 40%+ with proven marketing strategies. Real results, real testimonials, real revenue growth.',
+      'See how we helped pubs, restaurants, and bars increase covers with proven marketing strategies. Real results, real testimonials, real revenue growth.',
     keywords:
-      'pub marketing results, pub success stories, pub turnaround stories, pub marketing case studies',
+      'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results',
   },
   about: {
-    title: 'About Orange Jelly | From licensees, For licensees',
+    title: 'About Orange Jelly | Hospitality Marketing Specialist',
     description:
-      'Meet Peter Pitcher, owner of The Anchor pub and founder of Orange Jelly. Learn how we use AI-powered marketing to help UK pubs thrive.',
+      'Meet Peter Pitcher, owner of The Anchor pub and founder of Orange Jelly. Learn how AI-powered marketing helps pubs, restaurants, and bars thrive.',
     keywords:
-      'Orange Jelly pub marketing, Peter Pitcher, The Anchor Stanwell Moor, pub marketing agency UK',
+      'Orange Jelly, hospitality marketing specialist, Peter Pitcher, The Anchor Stanwell Moor, pub marketing, restaurant marketing',
   },
   contact: {
-    title: 'Contact Orange Jelly | Get Help Filling Your Pub',
+    title: 'Contact Orange Jelly | Hospitality Marketing Help',
     description:
-      'Ready to fill your empty pub tables? Contact Orange Jelly for a free chat about your challenges. Real advice from real licensees.',
-    keywords: 'contact pub marketing, pub marketing consultation, pub marketing help UK',
+      'Ready to fill your tables? Contact Orange Jelly for a free chat about your hospitality marketing challenges. Real advice from a real operator.',
+    keywords:
+      'contact hospitality marketing, pub marketing consultation, restaurant marketing help, bar marketing help UK',
   },
 };

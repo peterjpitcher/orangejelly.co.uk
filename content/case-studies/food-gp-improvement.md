@@ -1,12 +1,12 @@
 ---
-title: "Food GP Improvement"
+title: "Food Waste Reduction"
 client: "The Anchor"
 id: "case-study-food-gp"
 type: "case-study"
-timeInvestment: "8 hours initial setup + 2 hours monthly updates"
+timeInvestment: "Initial setup plus monthly reviews"
 ---
 
-# Food GP Improvement - The Anchor
+# Food Waste Reduction - The Anchor
 
 ## The Problem
 
@@ -18,11 +18,11 @@ Partnered with commercial suppliers (Barrel And Stone, Brakes, Bidfood) for cons
 
 ## Results
 
-- **Food GP**: 71% (up from 58%)
-- **Average Spend**: Increased £4.50 (+31%)
-- **Pizza Sales**: Top seller (highest margin item)
-- **Customer Satisfaction**: Higher (better quality, consistency)
+- **Sunday Waste**: £250/week cut
+- **Food Waste**: 90% reduction
+- **Monthly Savings**: £4,000+ a month
+- **Value Added**: £75,000-£100,000
 
 ## Time Investment
 
-8 hours initial setup + 2 hours monthly updates
+Initial setup plus monthly reviews

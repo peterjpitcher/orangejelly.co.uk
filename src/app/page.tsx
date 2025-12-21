@@ -4,19 +4,19 @@ import { generateStaticMetadata } from '@/lib/metadata';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Fill Your Pub with AI-Powered Marketing',
+    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
     description:
-      'Transform your pub with AI-powered marketing strategies that work. From empty tables to thriving business - proven at The Anchor. Real licensee experience. £75 per hour plus VAT.',
+      'Hospitality marketing specialist leveraging AI to deliver great results for pubs, restaurants, and bars. Proven at The Anchor. Real operator experience. £75 per hour plus VAT.',
     path: '/',
     keywords: [
-      'pub marketing UK',
-      'AI pub marketing',
-      'fill empty pub tables',
-      'pub marketing strategies',
-      'increase pub customers',
-      'pub social media marketing',
-      'pub turnaround',
-      'AI marketing for pubs',
+      'hospitality marketing specialist',
+      'AI hospitality marketing',
+      'pub marketing',
+      'restaurant marketing',
+      'bar marketing',
+      'fill tables',
+      'increase bookings',
+      'hospitality marketing UK',
     ].join(', '),
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
@@ -26,31 +26,31 @@ export async function generateMetadata() {
 // Local data for homepage
 const getLocalHomeData = () => {
   const hero = {
-    title: 'Fill Your Pub with AI-Powered Marketing',
+    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
     subtitle:
-      'Stop struggling with empty tables. We turned The Anchor from failing to thriving using AI marketing strategies that actually work. From one licensee to another - let me show you how.',
+      'Leveraging AI to deliver great results for pubs, restaurants, and bars. We combine technology and creativity to drive growth, fill tables, and save time.',
     ctaText: 'Get Marketing Help',
-    bottomText: '£75 per hour plus VAT • No packages • Real results from real licensees',
+    bottomText: '£75 per hour plus VAT • No packages • Proven hospitality results',
   };
 
   const faqs = [
     {
       question: 'Can I just get a one-off consultation?',
       answer:
-        "Of course! Many pubs start with a single consultation to tackle their biggest problem. We charge £75 per hour plus VAT, and there's no minimum commitment. Often, that first session provides enough value to transform your business.",
+        "Of course! Many pubs, restaurants, and bars start with a single consultation to tackle their biggest problem. We charge £75 per hour plus VAT, and there's no minimum commitment. Often, that first session provides enough value to transform your business.",
     },
     {
-      question: 'How quickly can Orange Jelly help fill my empty pub?',
+      question: 'How quickly can Orange Jelly help fill my pub, restaurant, or bar?',
       answer:
-        "We typically see results within 30 days. Our strategies have been proven at The Anchor where we've turned quiet nights into profitable ones. We use AI-powered marketing that brings customers through the door.",
+        'We typically see results within 30 days. Our strategies have been proven at The Anchor and adapted for pubs, restaurants, and bars. We use AI-powered marketing that brings customers through the door.',
     },
     {
-      question: 'What makes Orange Jelly different from other pub marketing agencies?',
+      question: 'What makes Orange Jelly different from other hospitality marketing agencies?',
       answer:
-        "We actually run a pub - The Anchor in Stanwell Moor. Every strategy we recommend has been tested in our own business first. We're not an agency; I'm a licensee who understands your challenges because I face them too.",
+        "We actually run a pub - The Anchor in Stanwell Moor. Billy handles day-to-day operations while I handle marketing and business development. Every strategy we recommend has been tested in our own business first. We're not an agency; I'm an operator who understands hospitality challenges because I face them too.",
     },
     {
-      question: 'What does pub marketing cost with Orange Jelly?',
+      question: 'What does hospitality marketing cost with Orange Jelly?',
       answer:
         "We charge £75 per hour plus VAT as a flat rate. I'm always happy to have a free chat first to understand your challenges. All pricing is transparent with no hidden fees, and you only invest in the time you need.",
     },
@@ -95,7 +95,7 @@ const getLocalHomeData = () => {
     },
     {
       icon: '❤️',
-      title: 'Real Licensee',
+      title: 'Real Hospitality Operator',
       description: 'Not just another agency',
     },
     {
@@ -111,14 +111,14 @@ const getLocalHomeData = () => {
   ];
 
   const metrics = {
-    quizNight: '25-35 people',
-    quizNightContext: 'per quiz night (up from 20)',
-    foodGP: '71%',
-    foodGPContext: 'food GP (up from 58%)',
+    quizNight: '25-30 teams',
+    quizNightContext: 'regular teams each month',
+    foodGP: '£250/week',
+    foodGPContext: 'Sunday waste cut',
     socialViews: '60,000-70,000',
-    socialViewsContext: 'monthly social media views',
-    hoursSaved: '25 hours',
-    hoursSavedContext: 'of admin time saved weekly',
+    socialViewsContext: 'people reached monthly',
+    hoursSaved: 'Up to 25 hours',
+    hoursSavedContext: 'saved every week with AI',
   };
 
   const trustBadges = [
@@ -128,8 +128,8 @@ const getLocalHomeData = () => {
       icon: '🏆',
     },
     {
-      name: 'Real Licensees',
-      description: 'Active pub operators since 2019',
+      name: 'Real Operators',
+      description: 'Active hospitality operators since 2019',
       icon: '🍺',
     },
     {
@@ -146,7 +146,7 @@ const getLocalHomeData = () => {
 
   const siteSettings = {
     title: 'Orange Jelly',
-    description: 'Pub marketing that works',
+    description: 'Hospitality marketing that works',
   };
 
   // Use partnerships from JSON file - import at top level moved inside function to avoid build issues
@@ -169,9 +169,9 @@ const getLocalHomeData = () => {
   const partnerships = partnershipsData;
 
   const trustBarItems = [
-    { value: '15-20%', label: 'Covers', subtext: 'Average increase in 6 weeks' },
-    { value: '£75/hour', label: 'AI-powered marketing solutions' },
-    { value: '30 Days', label: 'Guaranteed turnaround' },
+    { value: '25 hours/week', label: 'Time saved with AI' },
+    { value: '60-70k', label: 'Monthly social reach' },
+    { value: '£75/hour', label: 'Hourly support' },
   ];
 
   const sectionHeadings = {
@@ -179,18 +179,18 @@ const getLocalHomeData = () => {
     solutionsHeading: 'Explore Solutions to Your Biggest Problems',
     resultsHeading: 'Real Results from The Anchor',
     resultsTestimonial:
-      "We've added £75,000-£100,000 of value to our business using AI. Our food GP improved from 58% to 71%. Every strategy we share has been proven in our own pub.",
+      "We've added £75,000-£100,000 of value to our business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. Every strategy we share has been proven in our own pub.",
     resultsSubtext:
       "Featured in BII's Autumn 2025 magazine for AI innovation. From quiz nights to tasting events - see how we turned our pub around.",
-    resultsButtonText: 'See More Pub Turnarounds',
+    resultsButtonText: 'See More Hospitality Turnarounds',
     calculatorHeading: 'Calculate Your Potential Revenue',
     calculatorSubtext:
       'Every pub is different. See exactly how much more revenue you could generate with proven strategies.',
-    aboutHeading: "We're licensees, Just Like You",
+    aboutHeading: 'Innovating at The Anchor',
     aboutText1:
-      "I'm Peter. My husband Billy and I have run The Anchor in Stanwell Moor since March 2019. We faced the same struggles - empty tables, rising costs, fierce competition.",
+      "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I handle marketing and business development around a full-time role. This is my lab – where I combine technology and creativity to solve real hospitality problems.",
     aboutText2:
-      "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and now I help other pubs implement the same strategies that transformed our business.",
+      "Orange Jelly is the result of that innovation. I'm a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. I help businesses accelerate success by implementing the same data-driven strategies that transformed our pub.",
     aboutButtonText: 'Read Our Full Story →',
     aboutCardText: 'Real pub experience + proven strategies = Orange Jelly',
     aboutCardLabel: 'Proven Daily At',
@@ -199,7 +199,7 @@ const getLocalHomeData = () => {
       "Tell me what's killing your business. I'll share exactly how we fixed the same problems at The Anchor. Real solutions, no fluff.",
     ctaBannerButton: 'Get Marketing Help',
     faqHeading: 'Frequently Asked Questions',
-    finalCtaTitle: 'Ready to Turn Your Pub Around?',
+    finalCtaTitle: 'Ready to Turn Your Pub, Restaurant, or Bar Around?',
     finalCtaSubtitle:
       "Let's talk about what's really hurting your business. I'll share the exact strategies that saved ours.",
   };

@@ -212,7 +212,7 @@ Weekly competitions building to grand final:
 
 **Cost:** Minimal
 
-**Revenue Boost:** 30% increase at The Anchor in afternoon trade
+**Revenue Boost:** Noticeable lift at The Anchor in afternoon trade
 
 **Duration:** 2 pm - 5 pm daily
 
@@ -696,9 +696,9 @@ During Christmas events, promote NYE:
 
 Track these KPIs throughout the season:
 
-- **Average spend per head** (target: 40% increase at The Anchor)
+- **Average spend per head** (target: noticeable lift at The Anchor)
 
-- **Covers served** (target: 60% increase at The Anchor)
+- **Covers served** (target: noticeable lift at The Anchor)
 
 - **Pre-bookings** vs walk-ins
 
@@ -766,7 +766,7 @@ For year-round event ideas, explore our \[seasonal events calendar\](/blog/seaso
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 
@@ -783,4 +783,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

@@ -36,7 +36,7 @@ export default function PubMarketingNoBudget() {
     {
       question: 'How long until free marketing shows results?',
       answer:
-        'Immediate to 30 days. Fixing your Google listing can bring customers tomorrow. Social media posts work within days. Email campaigns see instant results. Community partnerships take 2-4 weeks to build momentum.',
+        'Inside 30 days. Fixing your Google listing can bring customers quickly. Social media posts start working within days. Email campaigns show momentum fast. Community partnerships take a few weeks to build.',
     },
     {
       question: 'Do I need to be good at social media?',
@@ -46,7 +46,7 @@ export default function PubMarketingNoBudget() {
     {
       question: "What if I don't have time for marketing?",
       answer:
-        "15 minutes daily is enough with the right systems. Batch content creation, automation tools, and simple templates mean you can market effectively in less time than counting the till. We'll set up systems that run themselves.",
+        "Short daily sessions are enough with the right systems. Batch content creation, automation tools, and simple templates mean you can market effectively without it taking over your day. We'll set up systems that run themselves.",
     },
   ];
 
@@ -73,8 +73,8 @@ export default function PubMarketingNoBudget() {
   const freeStrategies = [
     {
       strategy: 'Google My Business',
-      effort: '1 hour setup',
-      impact: '50% more calls',
+      effort: 'Quick setup',
+      impact: 'Noticeable call lift',
       tactics: [
         'Complete every section',
         'Add photos weekly',
@@ -84,8 +84,8 @@ export default function PubMarketingNoBudget() {
     },
     {
       strategy: 'Local Facebook Groups',
-      effort: '15 mins daily',
-      impact: '20+ new customers/week',
+      effort: 'Short daily touchpoint',
+      impact: 'New customers each week',
       tactics: [
         'Join all local groups',
         'Share genuinely helpful content',
@@ -95,8 +95,8 @@ export default function PubMarketingNoBudget() {
     },
     {
       strategy: 'Email Marketing',
-      effort: '1 hour weekly',
-      impact: '£500+ per campaign',
+      effort: 'Short weekly send',
+      impact: 'Steady bookings per campaign',
       tactics: [
         'Collect emails at point of sale',
         "Weekly 'what's on' emails",
@@ -106,8 +106,8 @@ export default function PubMarketingNoBudget() {
     },
     {
       strategy: 'Community Partnerships',
-      effort: '2 hours monthly',
-      impact: '30+ covers per event',
+      effort: 'Monthly outreach',
+      impact: 'Consistent event turnout',
       tactics: [
         'Host local groups free',
         'Cross-promote with shops',
@@ -122,19 +122,19 @@ export default function PubMarketingNoBudget() {
       type: 'The Tuesday Post',
       template:
         'Quiet night? Not here! [Photo of your busiest corner] Join us for [offer] tonight. See you at 7pm!',
-      result: '15-20 extra covers',
+      result: 'Extra covers on quiet nights',
     },
     {
       type: 'The Friday Hype',
       template:
         'Weekend starts HERE! 🍻 [Photo of drinks being poured] Kitchen open till 9pm, live music from 8pm. Tag your crew!',
-      result: 'Fully booked by 6pm',
+      result: 'Booked early',
     },
     {
       type: 'The Sunday Roast',
       template:
         'Only [number] roasts left for today! [Photo of roast] Book now: [phone]. Walk-ins welcome but booking essential.',
-      result: 'Sells out every week',
+      result: 'Regular sell-outs',
     },
     {
       type: 'The Local Hero',
@@ -148,43 +148,43 @@ export default function PubMarketingNoBudget() {
     {
       day: 'Monday',
       task: "Post week's events on Facebook",
-      time: '10 mins',
+      time: 'Quick update',
       result: 'Sets tone for busy week',
     },
     {
       day: 'Tuesday',
       task: 'Email newsletter to database',
-      time: '20 mins',
-      result: '£300-500 in bookings',
+      time: 'Short send',
+      result: 'Consistent bookings',
     },
     {
       day: 'Wednesday',
       task: 'Update Google My Business',
-      time: '5 mins',
+      time: 'Quick update',
       result: 'Stay top of search',
     },
     {
       day: 'Thursday',
       task: 'Weekend hype on socials',
-      time: '10 mins',
+      time: 'Quick update',
       result: 'Build anticipation',
     },
     {
       day: 'Friday',
       task: 'Share customer photos/stories',
-      time: '5 mins',
+      time: 'Quick post',
       result: 'Social proof working',
     },
     {
       day: 'Saturday',
       task: 'Capture content for next week',
-      time: 'Throughout shift',
+      time: 'During service',
       result: 'Authentic content bank',
     },
     {
       day: 'Sunday',
       task: "Plan next week's content",
-      time: '15 mins',
+      time: 'Short planning session',
       result: 'Stay organized',
     },
   ];
@@ -205,7 +205,7 @@ export default function PubMarketingNoBudget() {
           </>
         }
         subtitle="Free strategies that filled our pub (and will fill yours too)"
-        bottomText="💪 From empty Tuesday nights to turning people away - all with £0 spend"
+        bottomText="💪 From empty Tuesday nights to turning people away - all with no spend"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing No Budget' }]}
       />
 
@@ -219,27 +219,27 @@ export default function PubMarketingNoBudget() {
               The Best Pub Marketing Costs Nothing
             </Heading>
             <Text size="xl" color="muted" className="mb-8">
-              We spent £5,000 on various marketing agencies before discovering the truth: the
+              We spent money on various marketing agencies before discovering the truth: the
               strategies that actually filled our pub were completely free.
             </Text>
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-orange text-3xl mb-2">
-                  85%
+                  60-70k
                 </Text>
-                <Text size="sm">of new customers came from free marketing</Text>
+                <Text size="sm">monthly reach from consistent free marketing</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-teal text-3xl mb-2">
-                  £0
+                  25 hrs
                 </Text>
-                <Text size="sm">spent to double our Tuesday trade</Text>
+                <Text size="sm">saved each week with AI systems</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-green-600 text-3xl mb-2">
-                  4x
+                  25-30
                 </Text>
-                <Text size="sm">ROI vs paid advertising</Text>
+                <Text size="sm">quiz teams each month</Text>
               </Card>
             </Grid>
           </div>
@@ -366,7 +366,7 @@ export default function PubMarketingNoBudget() {
                   spacing="normal"
                 />
                 <Text className="text-green-600 mt-4" weight="semibold">
-                  Worth £1000s in content
+                  Worth a library of reusable content
                 </Text>
               </Card>
               <Card background="white" padding="large">
@@ -384,7 +384,7 @@ export default function PubMarketingNoBudget() {
                   spacing="normal"
                 />
                 <Text className="text-green-600 mt-4" weight="semibold">
-                  30+ guaranteed customers
+                  Consistent local turnout
                 </Text>
               </Card>
               <Card background="white" padding="large">

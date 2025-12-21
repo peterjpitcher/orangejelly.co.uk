@@ -112,62 +112,74 @@ export function generatePageMeta(
 ): Metadata {
   const pageMeta: Record<string, MetaProps> = {
     home: {
-      title: 'Orange Jelly - AI-Powered Marketing That Fills Empty Pubs',
+      title: 'Orange Jelly - Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
       description:
-        'Struggling with empty tables? Orange Jelly uses proven AI tools to fill your pub. Real licensee experience, honest pricing at £75/hour. No packages, just results.',
+        'Hospitality marketing specialist leveraging AI to deliver great results for pubs, restaurants, and bars. Real operator experience, honest pricing at £75/hour. No packages, just results.',
       keywords: [
+        'hospitality marketing specialist',
         'pub marketing',
-        'empty pub solutions',
-        'AI pub marketing',
-        'fill pub tables',
-        'pub social media',
+        'restaurant marketing',
+        'bar marketing',
+        'AI hospitality marketing',
+        'fill tables',
       ],
       canonical: '/',
     },
     services: {
-      title: 'Pub Marketing Services - Fill Tables & Boost Revenue | Orange Jelly',
+      title: 'Hospitality Marketing Services - Fill Tables & Boost Revenue | Orange Jelly',
       description:
-        'Proven pub marketing services from a real licensee. Social media, events, menu design, business analysis. £75/hour plus VAT. No packages, pay for what you need.',
+        'Proven hospitality marketing services from a real operator. Social media, events, menu design, business analysis. £75/hour plus VAT. No packages, pay for what you need.',
       keywords: [
-        'pub marketing services',
-        'pub social media management',
-        'pub event planning',
+        'hospitality marketing services',
+        'pub marketing',
+        'restaurant marketing',
+        'bar marketing',
+        'social media management',
+        'event planning',
         'menu design',
       ],
       canonical: '/services',
     },
     about: {
-      title: 'About Orange Jelly - Real Licensee, Real Results',
+      title: 'About Orange Jelly - Hospitality Marketing Specialist',
       description:
-        'Meet Peter Pitcher, licensee of The Anchor pub. Learn how we increased quiz attendance to 25-35 regulars and improved food GP from 58% to 71% using AI tools.',
-      keywords: ['Peter Pitcher', 'The Anchor pub', 'Orange Jelly story', 'pub success story'],
+        'Meet Peter Pitcher, operator of The Anchor pub. Learn how AI-powered hospitality marketing drives results for pubs, restaurants, and bars.',
+      keywords: [
+        'Peter Pitcher',
+        'The Anchor pub',
+        'Orange Jelly story',
+        'hospitality marketing specialist',
+      ],
       canonical: '/about',
     },
     contact: {
-      title: 'Contact Orange Jelly - Get Help for Your Pub Today',
+      title: 'Contact Orange Jelly - Hospitality Marketing Help',
       description:
-        'Contact Peter Pitcher directly. WhatsApp 07941 266538 or visit The Anchor pub. No call centres, just one licensee helping another. Available 7 days.',
-      keywords: ['contact Orange Jelly', 'Peter Pitcher contact', 'pub marketing help'],
+        'Contact Peter Pitcher directly. WhatsApp 07990 587315 or visit The Anchor pub. No call centres, just one operator helping another. Available 7 days.',
+      keywords: ['contact Orange Jelly', 'Peter Pitcher contact', 'hospitality marketing help'],
       canonical: '/contact',
     },
     results: {
-      title: 'Success Stories - How We Saved The Anchor Pub | Orange Jelly',
+      title: 'Success Stories - Hospitality Marketing Results | Orange Jelly',
       description:
-        'Real results from The Anchor: 25-35 quiz regulars, 71% food GP, £250/week waste savings. See exactly how we turned around a struggling pub.',
+        'Real results from The Anchor and hospitality clients: 25-30 quiz teams each month, £250/week waste cut, £4,000+ monthly savings. See exactly how we drive growth.',
       keywords: [
+        'hospitality marketing results',
         'pub success stories',
-        'pub turnaround',
-        'increase pub revenue',
-        'pub marketing results',
+        'restaurant marketing results',
+        'bar marketing results',
+        'increase revenue',
       ],
       canonical: '/results',
     },
     blog: {
-      title: "Licensee's Guide - Practical Pub Marketing Tips | Orange Jelly",
+      title: "Licensee's Guide - Practical Hospitality Marketing Tips | Orange Jelly",
       description:
-        'Free pub marketing guides from a working licensee. Learn how to fill empty tables, compete with chains, and boost revenue. No theory, just what works.',
+        'Free pub marketing guides from a working licensee, with ideas you can adapt for restaurants and bars. Learn how to fill empty tables, compete with chains, and boost revenue.',
       keywords: [
         'pub marketing guide',
+        'restaurant marketing',
+        'bar marketing',
         'licensee tips',
         'pub business advice',
         'free pub marketing',

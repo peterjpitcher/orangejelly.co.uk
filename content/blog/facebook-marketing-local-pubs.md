@@ -37,19 +37,19 @@ voiceSearchQueries:
 
 Here's the truth: Facebook isn't dying – it's evolved into the most powerful local business tool ever created. While Instagram attracts the foodies and TikTok entertains the masses, Facebook is where your actual customers plan their lives, share recommendations, and decide where to spend their money.
 
-With 2.9 billion active users and unmatched local targeting capabilities, Facebook remains the king of pub marketing. This guide shows you exactly how to harness its power.
+With massive reach and unmatched local targeting capabilities, Facebook remains the king of pub marketing. This guide shows you exactly how to harness its power.
 
 ## Why Facebook Still Dominates Local Pub Marketing
 
-The numbers don't lie:
+Here's the signal:
 
-- 69% of UK adults use Facebook regularly
+- Millions of UK adults use Facebook regularly
 
-- 85% of people trust recommendations from local Facebook groups
+- Local Facebook group recommendations carry real weight
 
-- Facebook Events drive 3x more attendance than any other platform
+- Facebook Events can outperform other platforms for attendance
 
-- Local Facebook groups have grown 80% since 2020
+- Local Facebook groups have grown rapidly in recent years
 
 But here's the real secret: Facebook users aren't just browsing – they're actively looking for places to go, things to do, and experiences to share.
 
@@ -731,7 +731,7 @@ Start today. Be helpful. Build relationships. Watch your pub become the communit
 
 ### How often should pubs post on social media?
 
-Post daily on Facebook and Instagram. Share opening times, daily specials, events, and customer photos. The Anchor achieves 60,000-70,000 monthly views with consistent daily posting.
+Post daily on Facebook and Instagram. Share opening times, daily specials, events, and customer photos. The Anchor reaches 60,000-70,000 people monthly with consistent daily posting.
 
 ### Which social media platform is best for pubs?
 
@@ -739,7 +739,7 @@ Facebook remains most effective for pubs, especially for the 35+ demographic. In
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Quiz nights attract regular teams quickly, social media engagement grows within days, and operational improvements show impact in the first month. Full transformation comes when you stick with the playbook.
 
 ### How much will this cost to implement?
 
@@ -748,4 +748,3 @@ Implementation costs vary by strategy. Many improvements like social media optim
 ### Can this work for my type of pub?
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
-

@@ -3,14 +3,17 @@ import AboutPage from './AboutPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'About Orange Jelly - From One licensee to Another',
+    title: 'About Orange Jelly - Hospitality Marketing Specialist',
     description:
-      'Who is Peter Pitcher? How can AI help my pub? Meet the pub owner behind Orange Jelly who helps UK licensees save up to 25 hours weekly with practical AI tools. Real experience from running The Anchor pub.',
+      'Meet Peter Pitcher, a hospitality marketing specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Real experience from The Anchor, where Billy runs day-to-day and Peter handles marketing.',
     path: '/about',
     keywords: [
       'Peter Pitcher',
       'Orange Jelly',
-      'pub AI tools',
+      'hospitality marketing specialist',
+      'pub marketing',
+      'restaurant marketing',
+      'bar marketing',
       'The Anchor Stanwell Moor',
       'pub marketing consultant',
       'licensee helping licensees',
@@ -31,9 +34,9 @@ function AboutPageData() {
     '@graph': [
       {
         '@type': 'AboutPage',
-        name: 'About Orange Jelly - From One licensee to Another',
+        name: 'About Orange Jelly - Hospitality Marketing Specialist',
         description:
-          'Learn about Peter Pitcher and Billy Summers, who run The Anchor pub and help other licensees reclaim up to 25 hours each week with AI tools.',
+          'Learn about Peter Pitcher and Billy Summers. Billy runs The Anchor pub day-to-day while Peter handles marketing and business development, helping pubs, restaurants, and bars reclaim up to 25 hours each week with AI tools.',
         url: 'https://www.orangejelly.co.uk/about',
         mainEntity: {
           '@id': 'https://www.orangejelly.co.uk/#organization',
@@ -43,9 +46,9 @@ function AboutPageData() {
         '@type': 'Person',
         '@id': 'https://www.orangejelly.co.uk/#peter-pitcher',
         name: 'Peter Pitcher',
-        jobTitle: 'Founder & AI Consultant',
+        jobTitle: 'Founder & Hospitality Marketing Specialist',
         description:
-          'Pub owner who discovered how AI can save up to 25 hours a week on boring admin tasks. Co-owner of The Anchor in Stanwell Moor with wife Billy Summers.',
+          'Pub owner and hospitality marketing specialist who discovered how AI can save up to 25 hours a week on boring admin tasks. Co-owner of The Anchor in Stanwell Moor, where Billy runs day-to-day and Peter handles marketing.',
         spouse: {
           '@type': 'Person',
           name: 'Billy Summers',
@@ -92,19 +95,21 @@ function AboutPageData() {
         },
         foundingDate: '2019',
         description:
-          'AI-powered marketing solutions for UK pubs and restaurants from real licensees who understand the challenges.',
+          'AI-powered hospitality marketing for UK pubs, restaurants, and bars from real operators who understand the challenges.',
         areaServed: {
           '@type': 'Country',
           name: 'United Kingdom',
         },
         knowsAbout: [
           'Pub Marketing',
+          'Restaurant Marketing',
+          'Bar Marketing',
           'AI Tools',
           'Social Media Automation',
           'Menu Design',
           'Customer Retention',
         ],
-        slogan: 'Save up to 25 hours a week with AI',
+        slogan: 'Hospitality marketing that delivers great results with AI',
         priceRange: '££',
         award: [
           'Featured in BII Autumn 2025 magazine for AI innovation',

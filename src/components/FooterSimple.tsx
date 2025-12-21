@@ -65,7 +65,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
               Orange Jelly
             </Heading>
             <Text align="center" color="white" className="text-cream/80">
-              AI solutions that save up to 25 hours every week
+              AI-powered hospitality marketing that saves up to 25 hours every week
             </Text>
           </div>
 
@@ -161,7 +161,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 {footerContent?.bottomBar?.additionalText?.replace(
                   ' | Made with ❤️ in Stanwell Moor',
                   ''
-                ) || 'Run by licensees, for licensees'}
+                ) || 'Run by operators, for pubs, restaurants, and bars'}
               </Text>
 
               {/* CTA Button */}

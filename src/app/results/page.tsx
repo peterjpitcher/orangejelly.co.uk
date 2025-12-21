@@ -4,12 +4,12 @@ import { getBaseUrl } from '@/lib/site-config';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: "Pubs That Were Empty. Now They're Not",
+    title: 'Hospitality Marketing Results for Pubs, Restaurants & Bars',
     description:
-      'How did The Anchor transform Sunday lunches and reduce waste by £250/week? How we grew quiz nights from zero to 25-35 regulars? Real success stories from The Anchor using AI tools. See the actual numbers and proven strategies.',
+      'See hospitality marketing results proven at The Anchor, then adapted for pubs, restaurants, and bars. Real numbers, real strategies, and measurable growth.',
     path: '/results',
     keywords:
-      'pub success stories, pub turnaround case studies, increase pub revenue, pub marketing results, The Anchor success, pub transformation',
+      'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results, increase revenue, The Anchor success',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });
@@ -39,8 +39,8 @@ export default function Results() {
           },
           {
             '@type': 'HowToStep',
-            name: 'Implement £5 deposit system',
-            text: 'Small deposit prevents no-shows without scaring customers',
+            name: 'Implement a small deposit system',
+            text: 'A small deposit prevents no-shows without scaring customers',
           },
           {
             '@type': 'HowToStep',
@@ -53,13 +53,6 @@ export default function Results() {
             text: 'Pre-orders mean exact prep with no waste',
           },
         ],
-        totalTime: 'PT4H',
-        estimatedCost: {
-          '@type': 'MonetaryAmount',
-          currency: 'GBP',
-          value: '99',
-        },
-        performTime: 'PT20M',
         yield: '£250 weekly savings, 90% reduction in food waste',
       },
       {
@@ -67,7 +60,7 @@ export default function Results() {
         '@id': `${baseUrl}/results#social-media`,
         headline: 'How AI Transformed Our Social Media from Chore to Customer Magnet',
         description:
-          'Case study showing how The Anchor uses AI to create daily content across 3 platforms in just 30 minutes monthly',
+          'Case study showing how The Anchor plans and schedules 30 days of social content in 2 hours',
         author: {
           '@id': `${baseUrl}/#peter-pitcher`,
         },
@@ -78,9 +71,9 @@ export default function Results() {
       {
         '@type': 'Article',
         '@id': `${baseUrl}/results#quiz-night`,
-        headline: 'Tuesday Quiz Night: From 20 to 25-35 Regulars Using AI',
+        headline: 'Tuesday Quiz Night: 25-30 Regular Teams Every Month Using AI',
         description:
-          'How we ditched expensive quiz subscriptions and created better quizzes with AI in 20 minutes',
+          'How we ditched expensive quiz subscriptions and created better quizzes with AI in minutes',
         author: {
           '@id': `${baseUrl}/#peter-pitcher`,
         },
@@ -92,7 +85,7 @@ export default function Results() {
         '@type': 'HowTo',
         '@id': `${baseUrl}/results#quiet-weeks`,
         name: 'Transform Quiet Weeks into Premium Events',
-        description: 'How The Anchor created sold-out tasting events charging £25+ per ticket',
+        description: 'How The Anchor created sold-out tasting events with premium pricing',
         step: [
           {
             '@type': 'HowToStep',
@@ -107,7 +100,7 @@ export default function Results() {
           {
             '@type': 'HowToStep',
             name: 'Price for value not volume',
-            text: '£25 tickets with proper experience beats cheap offers',
+            text: 'Premium pricing with a proper experience beats cheap offers',
           },
           {
             '@type': 'HowToStep',
@@ -115,14 +108,7 @@ export default function Results() {
             text: 'Direct communication with interested customers',
           },
         ],
-        totalTime: 'PT3H',
-        estimatedCost: {
-          '@type': 'MonetaryAmount',
-          currency: 'GBP',
-          value: '199',
-        },
-        performTime: 'PT2H',
-        yield: 'Sold out tasting nights at 25 tickets, 85% retention rate',
+        yield: 'Sold-out tasting nights with strong repeat attendance',
       },
       {
         '@type': 'Review',
@@ -134,7 +120,7 @@ export default function Results() {
           },
         },
         reviewBody:
-          "Peter's AI strategies transformed our pub. Quiz nights now 25-35 regulars, food GP from 58% to 71%, and we actually have evenings off now. Best investment we've made.",
+          "Peter's AI strategies transformed our pub. Quiz nights now attract 25-30 regular teams each month, Sunday waste is down £250/week, and we actually have evenings off now. Best investment we've made.",
         author: {
           '@type': 'Restaurant',
           name: 'The Anchor',

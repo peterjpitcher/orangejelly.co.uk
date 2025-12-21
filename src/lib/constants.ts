@@ -12,7 +12,7 @@ export const CONTACT = {
 // Company Information
 export const COMPANY = {
   name: 'Orange Jelly',
-  tagline: 'Marketing that actually works for busy licensees',
+  tagline: 'Hospitality marketing that delivers great results',
   website: 'https://www.orangejelly.co.uk',
   vatStatus: 'All prices exclude VAT',
 } as const;
@@ -31,11 +31,11 @@ export const PRICING = {
 export const MESSAGES = {
   // WhatsApp Messages
   whatsapp: {
-    default: 'Hi Peter, got time for a quick chat about my pub?',
+    default: 'Hi Peter, got time for a quick chat about my pub, restaurant, or bar?',
     services: "Hi Peter, I'd like to chat about your services",
-    training: "Hi Peter, I'm interested in AI training for my pub",
-    recovery: 'Hi Peter, I need help with my struggling pub',
-    blog: 'Hi Peter, I just read your blog post and need help with my pub',
+    training: "Hi Peter, I'm interested in AI training for my pub, restaurant, or bar",
+    recovery: 'Hi Peter, I need help with my struggling pub, restaurant, or bar',
+    blog: 'Hi Peter, I just read your blog post and need help with my venue',
     notListed: 'Hi Peter, I need help with something not on your services list...',
     caseStudies: 'Hi Peter, just read your case studies. Can we chat?',
     lostPage: "Hi Peter, I got lost on your site. Can you help me find what I'm looking for?",
@@ -44,32 +44,32 @@ export const MESSAGES = {
   // Response Times
   response: {
     whatsapp:
-      "I personally reply to every message. During service? I'll get back to you after. Otherwise, expect a reply within a few hours",
+      "Message me anytime - I'll get back as quickly as I can, but bear with me if I'm in service.",
     email:
-      "I personally reply to every message. During service? I'll get back to you after. Otherwise, expect a reply within a few hours",
+      "Message me anytime - I'll get back as quickly as I can, but bear with me if I'm in service.",
   },
 
   // Trust Messages
   trust: {
     timeSaved: 'Time saved promise',
-    atLeastFiveHours: 'Save up to 25 Hours',
+    atLeastFiveHours: 'Save up to 25 hours',
     thirtyDays: '30 Days',
     noContracts: 'No hidden fees, no long contracts, no surprises',
     noAgencyFees: 'No Agency Fees',
-    fromlicensees: 'From Real licensees',
+    fromlicensees: 'From Real Operators',
     resultsIn14Days: 'Results in 30 Days',
-    costEffective: 'Costs less than a part-time employee',
-    coversIncrease: '25-35 Quiz Regulars',
-    coversIncreaseLabel: 'Up from 20 people',
-    foodGPIncrease: '+8% Food GP',
-    foodGPIncreaseLabel: 'Improved profit margins',
-    sundayRoastRevenue: '£400+ Weekly',
-    sundayRoastRevenueLabel: 'Extra Sunday roast revenue',
+    costEffective: '£75/hour plus VAT',
+    coversIncrease: '25-30 Quiz Teams',
+    coversIncreaseLabel: 'Regular teams each month',
+    foodGPIncrease: '£250/week waste cut',
+    foodGPIncreaseLabel: '90% reduction in food waste',
+    sundayRoastRevenue: '£4,000+ monthly savings',
+    sundayRoastRevenueLabel: 'Supplier, rota, energy savings',
   },
 
   // CTA Messages
   cta: {
-    primary: 'Fill Your Pub',
+    primary: 'Fill Your Tables',
     secondary: 'Get More Customers',
     bookCall: 'Get Help Now',
     tryRiskFree: 'Start Your Turnaround',
@@ -81,20 +81,21 @@ export const MESSAGES = {
 
 // Success Metrics (from case studies)
 export const SUCCESS_METRICS = {
-  theAnchor: {
-    revenueIncrease: '£400+',
-    averageSpendBefore: '£14.50',
-    averageSpendAfter: '£18.50',
-    percentageIncrease: '28%',
-    description: 'Sunday roast sales up £400+ per week',
+  timeSaved: {
+    value: 'Up to 25 hours',
+    description: 'Weekly time saved using AI systems',
   },
-  costSavings: {
-    identified: '£2,000/month',
-    description: 'Identified cost savings through efficiency',
+  wasteSavings: {
+    value: '£250/week',
+    description: 'Sunday food waste reduction',
   },
-  menuOptimization: {
-    spendIncrease: '£4.50',
-    description: 'Menu rewrite increased spend per head by £4.50',
+  monthlySavings: {
+    value: '£4,000+/month',
+    description: 'Supplier, rota, and energy savings',
+  },
+  valueAdded: {
+    value: '£75k-£100k',
+    description: 'Estimated business value added with AI',
   },
 } as const;
 
@@ -102,8 +103,8 @@ export const SUCCESS_METRICS = {
 export const FEATURES = {
   support: [
     'WhatsApp preferred for quick responses',
-    'Based in Stanwell Moor, serving pubs across the UK',
-    'Run by actual licensees who understand your challenges',
+    'Based in Stanwell Moor, serving pubs, restaurants, and bars across the UK',
+    'Run by actual operators who understand your challenges',
   ],
 } as const;
 

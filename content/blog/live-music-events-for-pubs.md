@@ -1,7 +1,7 @@
 ---
 title: "Live Music Events for Pubs: The Complete Guide to Booking, Hosting & Profiting"
 slug: "live-music-events-for-pubs"
-publishedDate: 2026-01-09
+publishedDate: 2025-01-09
 updatedDate: "2025-06-09T00:00:00.000Z"
 excerpt: "Turn your pub into a thriving music venue. From open mics to ticketed shows, learn how to book acts, manage sound, and create profitable live music events."
 quickAnswer: "Start with open mic nights (£200-500 PA investment) to build reputation, then book acoustic acts. Successful music nights can triple Friday revenue from £320 to £1,800. Focus on sound quality, artist payments (£200-500), and creating the right atmosphere for your audience."
@@ -811,7 +811,7 @@ The answer starts with your first booking. Make it today.
 
 ### How quickly will I see results?
 
-Most strategies show initial results within 2-4 weeks. Quiz nights attract regulars immediately, social media engagement grows within days, and operational improvements like GP optimization show impact in the first month. Full transformation typically takes 3-6 months of consistent implementation.
+Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and phone calls, week 2 builds momentum and tuning, week 4 delivers noticeably fuller evenings and consistent enquiries. Full transformation typically takes six months of consistent implementation.
 
 ### How much will this cost to implement?
 
