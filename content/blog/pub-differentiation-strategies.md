@@ -57,7 +57,7 @@ Before diving into strategies, understand why customers choose one pub over anot
 
 **Concept**: Become the ultimate celebration of your immediate area.
 
-**The Kentish Gardener in Bromley** sources 90% of ingredients from within 10 miles. Their walls feature local artists, beers come from neighbourhood breweries, and even their playlist spotlights local musicians.
+**The Kentish Gardener in Bromley** sources most ingredients locally. Their walls feature local artists, beers come from neighbourhood breweries, and even their playlist spotlights local musicians.
 
 **Implementation**:
 
@@ -510,4 +510,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

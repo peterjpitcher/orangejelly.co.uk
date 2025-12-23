@@ -74,7 +74,7 @@ Encourage customers to share photos at your pub with a unique hashtag. Repost th
 
 **Time Investment:** 15 minutes/day
 
-**Potential ROI:** 10-15 new customers/week
+**Potential ROI:** New customers each week
 
 Join local Facebook groups and become a valuable community member, not just a promoter.
 
@@ -158,7 +158,7 @@ Create eye-catching window displays that change monthly.
 
 **Time Investment:** 2 hours initial setup
 
-**Potential ROI:** 15-20% new customer acquisition
+**Potential ROI:** Noticeable new customer acquisition
 
 Partner with non-competing local businesses for mutual promotion.
 
@@ -200,7 +200,7 @@ Leverage relationships with breweries and suppliers.
 
 **Time Investment:** 1 hour/week
 
-**Potential ROI:** 20% of recipients visit within a week
+**Potential ROI:** A solid share of recipients visit within a week
 
 Build and maintain an email list for direct customer communication.
 
@@ -222,7 +222,7 @@ Build and maintain an email list for direct customer communication.
 
 **Time Investment:** Initial setup only
 
-**Potential ROI:** 80% redemption rate
+**Potential ROI:** High redemption rate
 
 Automate birthday offers to guarantee monthly visits.
 
@@ -244,7 +244,7 @@ Automate birthday offers to guarantee monthly visits.
 
 **Time Investment:** 2 hours/week
 
-**Potential ROI:** 40-60 additional covers on quiet nights
+**Potential ROI:** Additional covers on quiet nights
 
 Transform slow evenings with engaging quiz nights. \[Learn more about running successful quiz nights\](/blog/quiz-night-ideas/).
 
@@ -610,7 +610,7 @@ Track these metrics for each initiative:
 
 - Weekly profit impact: £550
 
-- Monthly ROI: 1,100%
+- Monthly ROI: Strong
 
 ## Implementation Schedule
 

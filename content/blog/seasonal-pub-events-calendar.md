@@ -45,23 +45,23 @@ This is your complete guide to turning every month into a revenue opportunity, e
 
 **Traditional pub revenue pattern**:
 
-- January: -40% (post-Christmas crash)
+- January: big dip (post-Christmas crash)
 
-- February: -30% (weather dependent)
+- February: dip (weather dependent)
 
-- August: -25% (holiday exodus)
+- August: summer dip (holiday exodus)
 
-- November: -20% (pre-Christmas saving)
+- November: pre-Christmas dip (saving season)
 
 **Event-driven pub pattern**:
 
-- January: +10% (New Year initiatives)
+- January: lift (New Year initiatives)
 
-- February: +15% (Valentine's/comfort events)
+- February: lift (Valentine's/comfort events)
 
-- August: +20% (summer programme)
+- August: lift (summer programme)
 
-- November: +25% (pre-Christmas bookings)
+- November: lift (pre-Christmas bookings)
 
 The difference? Strategic seasonal planning.
 
@@ -83,7 +83,7 @@ Post-Christmas fatigue, Dry January, money worries, weather
 
 - Wellness workshops
 
-- 0% profit = 100% loyalty building
+- Low profit, high loyalty building
 
 **Burns Night (25th)**:
 
@@ -833,11 +833,11 @@ Competition intense, organisation crucial, staff pressure
 
 ### The 70-20-10 Rule
 
-**70% Proven Winners**: Repeat successful previous events
+**Mostly Proven Winners**: Repeat successful previous events
 
-**20% Variations**: Twist on proven concepts
+**Some Variations**: Twist on proven concepts
 
-**10% Innovation**: Completely new ideas
+**A Small Slice of Innovation**: Completely new ideas
 
 ### Monthly Framework
 
@@ -934,4 +934,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

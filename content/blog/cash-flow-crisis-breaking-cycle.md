@@ -30,7 +30,7 @@ voiceSearchQueries:
   - "Help with cash flow crisis breaking cycle"
 ---
 
-Tuesday, 3am. Can't sleep. Rent due Friday. Takings down 30%. Staff wages Thursday. VAT return next week. Brain doing arithmetic gymnastics trying to make £8,000 from £5,000.
+Tuesday, 3am. Can't sleep. Rent due Friday. Takings down sharply. Staff wages Thursday. VAT return next week. Brain doing arithmetic gymnastics trying to make £8,000 from £5,000.
 
 Sound familiar? I lived this nightmare monthly for two years. Here's how we broke free from the feast-or-famine cycle and built genuine financial stability.
 
@@ -118,7 +118,7 @@ Why 6 weeks:
 - Reduces stress dramatically
 - Enables strategic decisions
 
-- 10% of weekly take goes to buffer account
+- A small share of weekly take goes to buffer account
 
 - All deposits held separately
 
@@ -151,7 +151,7 @@ December truth:
 - January will be dead
 - February worse
 
-- Bank 40% of December excess
+- Bank a portion of December excess
 
 - Pre-buy January stock in December
 
@@ -187,17 +187,17 @@ The Morning Money
 
 The Retail Revenue
 Products to sell:
-- Ready meals (your food, their home): 70% margin
-- Local products (commission): 30% margin
-- Gift vouchers: 100% cash advance
-- Merchandise: 200% markup
+- Ready meals (your food, their home): healthy margin
+- Local products (commission): healthy margin
+- Gift vouchers: full cash advance
+- Merchandise: strong markup
 - Monthly addition: £1,000+
 
 The Space Income
 Monetize every corner:
 - Function room: £100-500 per event
 - Car park (if not needed): £200 monthly
-- Wall space (local artists): 20% commission
+- Wall space (local artists): commission
 - Garden parties: £500+ per booking
 - Monthly potential: £1,500+
 

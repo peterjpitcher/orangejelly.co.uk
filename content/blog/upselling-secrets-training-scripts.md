@@ -34,7 +34,7 @@ voiceSearchQueries:
 
 # Upselling Secrets: Training Scripts That Don't Sound Pushy
 
-Upselling is service, not sleaze. Guests appreciate guidance when it is rooted in their preferences. Use these scripts and drills to increase spend per head by 10% while keeping reviews glowing.
+Upselling is service, not sleaze. Guests appreciate guidance when it is rooted in their preferences. Use these scripts and drills to lift spend per head while keeping reviews glowing.
 
 ## Step 1: Start With Questions
 Teach staff to ask one discovery question per interaction:

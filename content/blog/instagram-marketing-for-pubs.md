@@ -49,17 +49,17 @@ Ready to build your own plan? [Book a strategy session](https://www.orangejelly.
 
 ## Why Instagram Is Non-Negotiable for Modern Pubs
 
-The statistics are staggering:
+The signal is clear:
 
-- 30% of millennials avoid restaurants with weak Instagram presence
+- Many millennials avoid restaurants with weak Instagram presence
 
-- Food photos are shared 2x more than any other content type
+- Food photos are shared widely
 
-- 50% of Instagram users have visited a restaurant based on posts they've seen
+- Many Instagram users have visited a restaurant based on posts they've seen
 
-- Location-tagged posts get 79% more engagement
+- User-generated content campaigns average 79% higher engagement
 
-But here's the real kicker: Instagram users spend 53 minutes per day on the platform. That's 53 daily opportunities to get in front of potential customers.
+But here's the real kicker: Instagram users spend a lot of time on the platform. That's daily opportunities to get in front of potential customers.
 
 ## The Instagram Success Formula for Pubs
 
@@ -291,7 +291,7 @@ Stories disappear after 24 hours, making them perfect for:
 
 ### Reels: The Growth Accelerator
 
-Instagram Reels get 22% more engagement than regular videos:
+Instagram Reels often outperform regular videos for engagement:
 
 **Reel Ideas That Work:**
 
@@ -621,15 +621,15 @@ Managing Instagram from computer only. The app has features desktop doesn't.
 
 **The Copper Kettle, Leeds:**
 
-Focused on Reels showing cocktail making. Grew from 800 to 12K followers in 4 months. Friday night cocktail sales up 65%.
+Focused on Reels showing cocktail making. Grew followers quickly and lifted Friday night cocktail sales.
 
 **The Fox & Hound, Bristol:**
 
-Created "Dogstagram" featuring customer pets. Became the go-to dog-friendly pub, weekend lunches up 40%.
+Created "Dogstagram" featuring customer pets. Became the go-to dog-friendly pub, weekend lunches lifted.
 
 **The Garden Gate, Manchester:**
 
-Used Stories for daily specials exclusively. Story views average 1,200 daily, midweek covers increased 35%.
+Used Stories for daily specials exclusively. Story views stayed strong and midweek covers lifted.
 
 ## Tools to Make Instagram Easier
 
@@ -715,7 +715,7 @@ Ready to transform your pub's Instagram? Let's map your 30-day action plan toget
 
 ### What food GP should a pub aim for?
 
-Target 45-55% gross profit on food. At The Anchor, portion control, menu engineering, and waste reduction cut £250/week in Sunday waste and reduced food waste by 90%.
+Target healthy gross profit on food. At The Anchor, portion control, menu engineering, and waste reduction cut £250/week in Sunday waste and reduced food waste by 90%.
 
 ### How can I reduce food waste?
 

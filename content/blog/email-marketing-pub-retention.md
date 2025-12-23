@@ -34,23 +34,23 @@ voiceSearchQueries:
 
 # Email Marketing for Pubs: Build a Database That Drives Repeat Business
 
-A customer walks into your pub, has a great meal, leaves happy... and you never see them again. Sound familiar? Here's the painful truth: the average pub loses 60% of first-time customers simply because they have no way to invite them back.
+A customer walks into your pub, has a great meal, leaves happy... and you never see them again. Sound familiar? Here's the painful truth: many pubs lose a big chunk of first-time customers simply because they have no way to invite them back.
 
-Meanwhile, a typical village pub in Cambridge sends a simple Tuesday email to their 3,000-strong list and fills every midweek table. Their secret? They turned email marketing from an afterthought into their most profitable marketing channel.
+Meanwhile, a typical village pub in Cambridge sends a simple Tuesday email to their sizeable list and fills every midweek table. Their secret? They turned email marketing from an afterthought into their most profitable marketing channel.
 
-Email marketing returns £42 for every £1 spent – the highest ROI of any marketing channel. Yet most pubs either ignore it completely or blast out desperate "please visit us" messages that nobody reads. This guide shows you how to build an email system that turns occasional visitors into profitable regulars.
+Email marketing often delivers the strongest ROI of any marketing channel. Yet most pubs either ignore it completely or blast out desperate "please visit us" messages that nobody reads. This guide shows you how to build an email system that turns occasional visitors into profitable regulars.
 
 ## Why Email Marketing Is Your Pub's Secret Weapon
 
-The numbers tell the story:
+The signal is clear:
 
-- Email is 40x more effective than social media for customer acquisition
+- Email can outperform social media for customer acquisition
 
-- 72% of consumers prefer email for business communication
+- Many consumers prefer email for business communication
 
-- Repeat customers spend 67% more than new ones
+- Repeat customers spend more than new ones
 
-- Email subscribers visit 2x more frequently than non-subscribers
+- Email subscribers visit more often than non-subscribers
 
 But here's the real power: you own your email list. While social media algorithms change and paid ads get expensive, your email database remains your direct line to customers' inboxes.
 
@@ -168,7 +168,7 @@ Stay legal without complexity:
 
 ### 1. The Welcome Series
 
-Your most important emails – 74% open rate:
+Your most important emails - strong open rates:
 
 **Email 1: Instant Welcome (Immediate)**
 
@@ -226,13 +226,13 @@ Subject: "This week at The \[Pub Name\]"
 
 **Content Mix:**
 
-- 40% upcoming events
+- Mostly upcoming events
 
-- 30% food/drink features
+- Regular food/drink features
 
-- 20% community content
+- Community content
 
-- 10% special offers
+- Occasional special offers
 
 ### 3. Targeted Campaigns
 
@@ -542,11 +542,11 @@ Goal: Retention
 
 **List Health:**
 
-- Growth rate (aim for 5-10% monthly)
+- Growth rate (aim for steady monthly growth)
 
-- Unsubscribe rate (keep under 1%)
+- Unsubscribe rate (keep low)
 
-- Engagement rate (20%+ is good)
+- Engagement rate (strong is good)
 
 - List hygiene (clean quarterly)
 
@@ -602,7 +602,7 @@ Nothing for months, then daily emails. Solution: Consistent weekly rhythm.
 
 ### The "Me, Me, Me" Content
 
-Only talking about your pub. Solution: 80% value, 20% promotion.
+Only talking about your pub. Solution: Mostly value, some promotion.
 
 ### The "Set and Forget" Automation
 

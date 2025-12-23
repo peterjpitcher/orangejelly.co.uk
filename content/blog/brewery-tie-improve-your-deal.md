@@ -2,7 +2,7 @@
 title: "Brewery Tie Strangling Your Profits? Legal Ways to Improve Your Deal"
 slug: "brewery-tie-improve-your-deal"
 publishedDate: 2025-08-15
-excerpt: "Work within your tie to boost profits without breaking contracts. Real strategies from a tied tenant who increased GP by 15% without going free of tie."
+excerpt: "Work within your tie to boost profits without breaking contracts. Real strategies from a tied tenant who improved GP without going free of tie."
 quickAnswer: "Improve your deal by demonstrating success first: increase volumes, reduce wastage, maintain quality standards. Then negotiate better terms using your track record. Explore MRO options for guest ales, maximize free-of-tie categories, and build strong relationships with your Business Development Manager."
 author: "Peter Pitcher"
 category: "supplier-relations"
@@ -14,7 +14,7 @@ tags:
   - "pub tenancy"
   - "supplier negotiation"
 status: "draft"
-metaDescription: "Improve your tied pub deal without breaking contracts. Legal strategies to increase GP by 15% while maintaining pubco relationships."
+metaDescription: "Improve your tied pub deal without breaking contracts. Legal strategies to increase GP while maintaining pubco relationships."
 keywords:
   - "brewery tie"
   - "tied pub advice"
@@ -31,13 +31,13 @@ voiceSearchQueries:
   - "Help with brewery tie improve your deal"
 ---
 
-"The tie is killing us," said every tied tenant ever. And yes, paying £120 for a keg that free houses get for £70 hurts. But here's what nobody tells you: I increased our GP by 15% while staying tied, kept my relationship with Greene King intact, and actually got MORE support than before.
+"The tie is killing us," said every tied tenant ever. And yes, paying £120 for a keg that free houses get for £70 hurts. But here's what nobody tells you: we improved our GP while staying tied, kept our relationship with Greene King intact, and actually got MORE support than before.
 
 No legal battles. No going free of tie. Just smart negotiation and knowing the system.
 
 ## Understanding Your Real Position
 
-- Yes, you pay more for beer (30-40% typical)
+- Yes, you pay more for beer (often higher)
 
 - No, you can't just break the tie
 
@@ -130,7 +130,7 @@ Focus on products outside the tie:
 - Coffee (usually)
 - Food (always)
 
-We shifted focus to cocktails (untied spirits), wine promotions, and premium coffee. Untied GP went from 15% to 35% of total.
+We shifted focus to cocktails (untied spirits), wine promotions, and premium coffee. Untied GP became a much larger share of total.
 
 The Machine Income Gold
 Gaming machines, jukeboxes, pool tables:
@@ -329,10 +329,10 @@ We explored, decided against (yet).
 
 ## Success Stories
 
-Tom (Yorkshire): Stayed tied, negotiated 20% discount, got £10k refurb support
+Tom (Yorkshire): Stayed tied, negotiated a meaningful discount, got refurb support
 Sarah (Devon): Used MRO threat, got partial tie release, kept support
 Mike (London): Maximized untied, increased rooms, tie now irrelevant
-Us: Stayed tied, increased GP 15%, better relationship than ever
+Us: Stayed tied, improved GP, better relationship than ever
 
 ## The Bottom Line
 

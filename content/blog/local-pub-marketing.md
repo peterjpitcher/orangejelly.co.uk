@@ -87,7 +87,7 @@ You can't outspend chains on Google Ads, but you can dominate the places your co
 
 ### 2. Community Problem Solving (Be Useful, Not Just Available)
 
-**The Package Point**: The Horse & Groom in Reading became an Amazon pickup point. Now hundreds pass through weekly, and 30% buy something.
+**The Package Point**: The Horse & Groom in Reading became an Amazon pickup point. Now hundreds pass through weekly, and many buy something.
 
 **The Meeting Space**: a typical traditional pub offers free meeting room use before 5 PM. Local businesses book it, buy lunch, and often stay for drinks.
 
@@ -181,7 +181,7 @@ Parents are goldmine customers – regular routines, local focus, and social net
 
 - **Parents' escape**: "First Friday" adult-only events
 
-**Measurement**: a typical market town pub in Wandsworth tracks 65% of their Sunday revenue to school-connected families.
+**Measurement**: a typical market town pub in Wandsworth tracks a large share of their Sunday revenue to school-connected families.
 
 ### 2. a typical neighborhood pub Business Ecosystem
 
@@ -323,7 +323,7 @@ Traditional metrics miss the point. Track what matters:
 
 ### Relationship Metrics
 
-- **Regular ratio**: % customers visiting 2+ times monthly
+- **Regular ratio**: customers visiting 2+ times monthly
 
 - **Introduction rate**: New customers brought by existing
 
@@ -415,7 +415,7 @@ Traditional metrics miss the point. Track what matters:
 
 ### How much should I budget for local marketing?
 
-Start with 3-5% of revenue, but focus on time investment over money. Community marketing is more about consistency than cash.
+Start with a small share of revenue, but focus on time investment over money. Community marketing is more about consistency than cash.
 
 ### Which social media platform is most important?
 

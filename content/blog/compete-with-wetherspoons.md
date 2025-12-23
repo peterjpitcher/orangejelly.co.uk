@@ -117,7 +117,7 @@ Instead of competing on price, position yourself as everything Wetherspoons isn'
 
 ### Premium Experience Strategy
 
-Price yourself 20-30% above Wetherspoons but deliver 200% more value through:
+Price yourself above Wetherspoons but deliver far more value through:
 
 - Table service with a smile
 
@@ -277,7 +277,7 @@ No. You'll go bankrupt trying to beat their buying power. Instead, justify highe
 
 ### How much market share will I lose to Wetherspoons?
 
-Typically 10-20% initially, but this often includes customers you don't want. Focus on keeping your profitable regulars.
+Typically a modest dip initially, but this often includes customers you don't want. Focus on keeping your profitable regulars.
 
 ### What if my regulars start going to Wetherspoons?
 
@@ -324,4 +324,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

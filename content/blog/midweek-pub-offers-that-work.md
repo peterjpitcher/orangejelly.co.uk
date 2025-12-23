@@ -40,15 +40,15 @@ voiceSearchQueries:
 
 Let me share a painful lesson. In desperation, we once ran "50% off all food Wednesday." Results:
 
-- **Customers**: Up 210% (amazing!)
+- **Customers**: Way up (amazing!)
 
-- **Revenue**: Up 45% (decent)
+- **Revenue**: Up modestly (decent)
 
-- **Profit**: Down 67% (disaster)
+- **Profit**: Down sharply (disaster)
 
 - **Kitchen**: Overwhelmed and chaotic
 
-- **Weekend trade**: Dropped 15% (customers waited for discounts)
+- **Weekend trade**: Dropped (customers waited for discounts)
 
 The real kicker? Regular customers told us the pub felt "cheap" and started dining elsewhere on weekends.
 
@@ -178,7 +178,7 @@ Every successful midweek offer balances these elements.
 
 **Clever Bit**: Uses Sunday prep, reduces waste, maintains quality perception.
 
-**Numbers**: 78% GP, average 35 covers per night.
+**Numbers**: Healthy GP with steady midweek covers.
 
 ### 8. "Speedy Supper Guarantee"
 
@@ -224,7 +224,7 @@ Every successful midweek offer balances these elements.
 
 **Psychology**: Makes midweek visits feel exclusive, not desperate.
 
-**Data**: Members visit 3.2x more often, spend 24% more per visit.
+**Data**: Members visit more often and spend more per visit.
 
 ### 11. "Cook With the Chef"
 
@@ -242,7 +242,7 @@ Every successful midweek offer balances these elements.
 
 - Wine included
 
-**Margins**: 82% GP (ingredients cost under £6)
+**Margins**: Healthy GP driven by low ingredient costs
 
 ### 12. "The Progressive Pint"
 
@@ -348,13 +348,13 @@ Every successful midweek offer balances these elements.
 
 ### Our 6-Month Midweek Transformation:
 
-- **Tuesday GP**: From £89 to £412
+- **Tuesday GP**: Noticeable lift
 
-- **Wednesday GP**: From £124 to £498
+- **Wednesday GP**: Noticeable lift
 
-- **Thursday GP**: From £156 to £534
+- **Thursday GP**: Noticeable lift
 
-- **Weekend impact**: +12% (halo effect)
+- **Weekend impact**: Halo effect
 
 - **Staff morale**: "Love busy midweeks now"
 

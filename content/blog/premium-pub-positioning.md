@@ -117,7 +117,7 @@ Premium service isn't stiff formality – it's intuitive excellence:
 
 - **Recovery**: Turning problems into memorable solutions
 
-**Training Investment**: The Pig hotels spend £2,000 per staff member annually on training. Their average spend per customer? 300% above sector average.
+**Training Investment**: Premium groups invest heavily in training and see higher spend per customer.
 
 ### 3. Atmosphere Architecture: Designing Premium Feelings
 
@@ -391,9 +391,9 @@ Align with other premium brands:
 
 ### Financial Metrics
 
-- Average transaction value (target: +40-60%)
+- Average transaction value (target: noticeable lift)
 
-- Gross profit percentage (target: 70%+ on drinks)
+- Gross profit percentage (target: healthy on drinks)
 
 - Customer lifetime value (should triple)
 
@@ -401,13 +401,13 @@ Align with other premium brands:
 
 ### Quality Metrics
 
-- Review scores (target: 4.7+ average)
+- Review scores (target: consistently high)
 
-- Return visit rate (target: 60%+ monthly)
+- Return visit rate (target: strong)
 
-- Recommendation rate (Net Promoter Score 70+)
+- Recommendation rate (Net Promoter Score strong)
 
-- Premium product mix (target: 40%+ of sales)
+- Premium product mix (target: meaningful share of sales)
 
 ### Brand Metrics
 
@@ -429,7 +429,7 @@ Align with other premium brands:
 
 **Key Changes**: Kept pub feel, added exceptional food
 
-**Result**: 400% revenue increase, two-month wait for weekend tables
+**Result**: Revenue lifted sharply, weekend tables developed a waitlist
 
 ### The Pipe and Glass, Yorkshire
 
@@ -455,7 +455,7 @@ Not if managed properly. Keep some accessible options, communicate changes clear
 
 ### How much investment is required?
 
-Initial investment can be £20-50k, but phased approach works. Often, improved margins fund ongoing improvements.
+Initial investment can be significant, but a phased approach works. Often, improved margins fund ongoing improvements.
 
 ### What if there's no premium market locally?
 
@@ -463,7 +463,7 @@ Create it. The Sportsman is in Seasalter (population: 500). Excellence creates i
 
 ### How quickly can I increase prices?
 
-15-20% immediately with visible improvements, then 5-10% quarterly as quality demonstrates value.
+Raise prices modestly with visible improvements, then adjust as quality demonstrates value.
 
 ### Should I change my pub's name?
 
@@ -481,7 +481,7 @@ Pretension. Premium means excellent quality delivered warmly, not snobbery.
 
 - Analyse their pricing, experience, and customers
 
-- Survey your top 20% customers about premium appetite
+- Survey your most valuable customers about premium appetite
 
 - Calculate current margins and improvement potential
 

@@ -37,11 +37,11 @@ voiceSearchQueries:
 Goodwill does not pay invoices. If your back bar is full of passion projects that rarely sell, you are strangling your own cashflow. Re-engineering the range takes a weekend workshop and pays back for months.
 
 ## Map the Current Mix
-Export three months of EPOS data and group drinks by category. Highlight the top 20% of lines that deliver 60% of revenue and flag the slow movers. Attach poured gross profit to each line so you know which items are subsidising the rest.
+Export three months of EPOS data and group drinks by category. Highlight the small portion of lines that deliver most of the revenue and flag the slow movers. Attach poured gross profit to each line so you know which items are subsidising the rest.
 
 ## Build the Three-Tier Ladder
 1. **Comfort Tier**: dependable pints, house wines, familiar spirits – price keenly to keep rounds flowing.
-2. **Hero Tier**: local craft, premium G&Ts, frozen cocktails – your storytelling lines with 70%+ GP.
+2. **Hero Tier**: local craft, premium G&Ts, frozen cocktails – your storytelling lines with healthy GP.
 3. **Show-Off Tier**: limited barrels, single cask whisky, sharing cocktails – low volume but social-media-bait and high cachet.
 
 Give every category at least one option in each tier so the team can build balanced rounds without thinking.

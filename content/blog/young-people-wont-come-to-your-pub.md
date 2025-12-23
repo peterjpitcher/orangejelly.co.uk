@@ -71,7 +71,7 @@ What Actually Works
 
 ## The Non-Alcoholic Revolution
 
-This isn't about designated drivers anymore. 30% of under-30s are reducing alcohol consumption. If your non-alcoholic offering is J2O and Coke, you're already losing.
+This isn't about designated drivers anymore. Many under-30s are reducing alcohol consumption. If your non-alcoholic offering is J2O and Coke, you're already losing.
 
 Build a Proper Zero-Proof Menu
 - Stock at least 5 craft alcohol-free beers

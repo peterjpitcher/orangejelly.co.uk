@@ -52,7 +52,7 @@ If a side room sits empty Monday to Thursday, package it for chess clubs, yoga t
 Wednesday is the make-or-break day for Sunday trade. Post the roast menu with exact booking slots, take £5 deposits, and text anyone who booked in the past three months. Even ten extra covers stabilise the week.
 
 ## 6. Partner on Deliveroo But Stay in Control
-Switch the menu to dishes that travel well and carry a 70% margin after platform fees. Cap the number of tickets per hour so the kitchen never compromises the pub floor.
+Switch the menu to dishes that travel well and carry healthy margins after platform fees. Cap the number of tickets per hour so the kitchen never compromises the pub floor.
 
 ## 7. Launch a Locals Card
 Print simple stamp cards that reward the fifth visit with sharers or dessert rather than discounts. The perceived progress keeps people coming back even when pockets are tight.

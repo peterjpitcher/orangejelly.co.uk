@@ -175,7 +175,7 @@ Before planning any event, answer these critical questions:
 
 - **Running cost**: Minimal (performers play free)
 
-- **Revenue boost**: 40-60% on quiet nights
+- **Revenue boost**: Noticeable lift on quiet nights
 
 - **Success tip**: Good host who encourages newcomers
 
@@ -379,9 +379,9 @@ Before planning any event, answer these critical questions:
 
 **Order extra**:
 
-- 40% more of promoted drinks
+- More of promoted drinks
 
-- 60% more of event-specific food
+- More of event-specific food
 
 - Double normal ice requirements
 
@@ -391,7 +391,7 @@ Before planning any event, answer these critical questions:
 
 - Pre-batch cocktail mixes
 
-- Prep food to 80% done
+- Prep food most of the way
 
 - Set up additional service points
 
@@ -658,4 +658,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

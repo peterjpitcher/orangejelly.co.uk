@@ -49,7 +49,7 @@ Use guest interviews, review data, and competitor walks to remap why people shou
 Plan three flagship moments: an event, an offer, and a cause. For example, a sold-out collaboration supper with the butcher, a locals-only tasting flight, and a fundraiser for the rugby minis. Capture social proof at each: photos, testimonials, pre-booking data. Push them across Meta, WhatsApp, in-venue screens, and table-talkers. The goal is to show the neighbourhood that the pub is charging forward, not clinging on.
 
 ## Phase 4: Scale the Habits (Weeks 9-12)
-Turn every win into a playbook entry. Document open/close standards, upsell scripts, booking follow-up cadences, and event critical paths. Review numbers every Monday: sales mix, labour %, GP, and guest feedback. Add only one new initiative per fortnight so the team can breathe.
+Turn every win into a playbook entry. Document open/close standards, upsell scripts, booking follow-up cadences, and event critical paths. Review numbers every Monday: sales mix, labour cost, GP, and guest feedback. Add only one new initiative per fortnight so the team can breathe.
 
 ## Leadership Behaviours That Make It Stick
 - Hold daily stand-ups: 10 minutes, celebrate wins, set targets.

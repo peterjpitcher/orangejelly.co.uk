@@ -309,11 +309,11 @@ Search for:
 
 ### Group Engagement Strategy
 
-**The 90-10 Rule:**
+**Value-First Rule:**
 
-- 90% helpful community member
+- Mostly helpful community member
 
-- 10% subtle business promotion
+- Occasional subtle business promotion
 
 **Value-First Posting:**
 
@@ -625,15 +625,15 @@ Creating events without promotion or updates.
 
 **The Plough Inn, Surrey:**
 
-Used Facebook Events for Tuesday quiz nights. Grew from 15 to 65 regular teams in 3 months. Tuesday takings up 250%.
+Used Facebook Events for Tuesday quiz nights. Grew regular teams significantly. Tuesday takings lifted sharply.
 
 **a typical high street pub & Garter, Birmingham:**
 
-Focused on local Facebook groups. Became the recommended Sunday lunch spot. Weekend bookings up 80%, added second sitting.
+Focused on local Facebook groups. Became the recommended Sunday lunch spot. Weekend bookings lifted, added a second sitting.
 
 **The Navigation, Manchester:**
 
-Created "Dogs of The Nav" Facebook album. Became the go-to dog-friendly pub. Weekday afternoon traffic up 120%.
+Created "Dogs of The Nav" Facebook album. Became the go-to dog-friendly pub. Weekday afternoon traffic lifted sharply.
 
 ## Advanced Facebook Strategies
 

@@ -4,7 +4,7 @@ slug: "epos-data-revenue-comeback"
 publishedDate: 2025-11-14
 updatedDate: "2026-04-06T00:00:00.000Z"
 excerpt: "Transform EPOS reports into weekly action plans that boost covers, spend per head, and labour productivity."
-quickAnswer: "Track four metrics (covers, average spend, product mix, labour %) and run one experiment per week based on what the data reveals."
+quickAnswer: "Track four metrics (covers, average spend, product mix, labour cost) and run one experiment per week based on what the data reveals."
 author: "Peter Pitcher"
 category: "analytics"
 tags:
@@ -40,7 +40,7 @@ Your EPOS already knows who spends what, when, and on which products. Most landl
 1. **Covers**: number of transactions, split by daypart. Shows demand trends.
 2. **Average Spend**: gross sales divided by covers. Highlights upsell success or failure.
 3. **Product Mix**: reveals which items deserve promotion or retirement.
-4. **Labour %**: wages divided by net sales. Keeps staffing honest.
+4. **Labour cost**: wages divided by net sales. Keeps staffing honest.
 
 Pull these weekly and plot against targets on a single-page dashboard.
 
@@ -48,7 +48,7 @@ Pull these weekly and plot against targets on a single-page dashboard.
 Use the data to set one focus per week:
 - If lunch covers drop, test a new bundle and track conversion.
 - If average spend stalls, push dessert sampling and measure uplift.
-- If labour % spikes, adjust shift patterns and watch the next report.
+- If labour cost spikes, adjust shift patterns and watch the next report.
 
 Document hypotheses and results in a simple log so learning compounds.
 

@@ -170,10 +170,10 @@ Track these four numbers weekly:
 
 | Metric | Target | Notes |
 | --- | --- | --- |
-| Headcount / teams | +10–15 covers vs baseline | Log new vs repeat teams. |
-| Average spend per head | £18–£22 | Compare bundle vs à-la-carte. |
-| Dwell time | 90+ minutes | Longer suggests bundles working. |
-| Next-week pre-book | 50% of teams committed | Use QR or quick show of hands. |
+| Headcount / teams | Noticeable lift vs baseline | Log new vs repeat teams. |
+| Average spend per head | Healthy | Compare bundle vs à-la-carte. |
+| Dwell time | Long enough to drive bundles | Longer suggests bundles working. |
+| Next-week pre-book | Strong | Use QR or quick show of hands. |
 
 Debrief with staff within 12 hours: Which rounds landed? Any tech wobbles? Did we capture content? Who’s on hosting duty next week?
 

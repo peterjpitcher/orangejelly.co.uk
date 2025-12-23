@@ -149,8 +149,8 @@ Board game nights rarely trigger licensing requirements, but you should still:
 | --- | --- | --- |
 | Tables booked vs walk-ins | 70/30 split | Encourages advance planning without deterring spontaneous players. |
 | Average dwell time | 2+ hours | Use booking logs or QR checkout form. |
-| Food attachment rate | 50% of tables order platters | Add to till prompts. |
-| Repeat attendance (6 weeks) | 60% | Monitor punch-card redemptions. |
+| Food attachment rate | Strong | Add to till prompts. |
+| Repeat attendance (6 weeks) | Strong | Monitor punch-card redemptions. |
 
 Post-event, ask: Did we run out of specific games? Which teaches were requested? Should we rotate the spotlight title?
 

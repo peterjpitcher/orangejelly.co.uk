@@ -2,8 +2,8 @@
 title: "Nobody Books Tables Anymore? Master the Art of Walk-ins vs Reservations"
 slug: "nobody-books-tables-anymore"
 publishedDate: 2025-02-20
-excerpt: "Find the perfect balance between guaranteed bookings and spontaneous trade. Learn the system that increased our covers by 40% without turning anyone away."
-quickAnswer: "Reserve 60% of tables for bookings, 40% for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after 15 minutes. Create a waiting list system and always overbook by 10% on peak nights to account for cancellations."
+excerpt: "Find the perfect balance between guaranteed bookings and spontaneous trade. Learn the system that increased our covers without turning anyone away."
+quickAnswer: "Reserve a majority of tables for bookings and keep a healthy share for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after a short grace period. Create a waiting list system and overbook slightly on peak nights to account for cancellations."
 author: "Peter Pitcher"
 category: "operations"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "restaurant management"
   - "operations"
 status: "draft"
-metaDescription: "Master the perfect balance of bookings and walk-ins. Increase covers by 40% with this proven table management system."
+metaDescription: "Master the perfect balance of bookings and walk-ins. Increase covers with this proven table management system."
 keywords:
   - "pub bookings"
   - "table management"
@@ -32,7 +32,7 @@ voiceSearchQueries:
 
 "We're fully booked," I said to the couple at the door. The pub was half empty. They looked confused, frustrated, and left. Twenty minutes later, three bookings no-showed. We served twelve covers in a sixty-seat pub on a Saturday night.
 
-Sound familiar? Here's how we fixed our booking chaos and increased covers by 40% without any expensive booking systems.
+Sound familiar? Here's how we fixed our booking chaos and increased covers without any expensive booking systems.
 
 ## The Booking Paradox
 
@@ -50,11 +50,11 @@ The solution isn't choosing one or the other - it's mastering both.
 
 After testing every combination, here's what works:
 
-The 60/40 Rule
-- 60% bookable tables
-- 40% walk-in only
-- Adjust by day (Tuesday 80/20, Saturday 50/50)
-- Never book 100% (kills atmosphere)
+The Balanced Split Rule
+- Majority bookable tables
+- Remainder walk-in only
+- Adjust by day (quieter days more bookable, busier days more walk-ins)
+- Never book out completely (kills atmosphere)
 
 Time Slot Strategy
 Instead of "table all evening," use slots:
@@ -111,10 +111,10 @@ Text when ready: "Hi \[Name\], your table's ready at The Anchor! See you in 5 mi
 
 The Bar-to-Table Pipeline
 Waiting customers are goldmines:
-- Average bar spend while waiting: £15
-- Conversion to dining: 80%
-- Likelihood to book next time: 90%
-- Reviews mentioning great service: 60%
+- Average bar spend while waiting: healthy
+- Conversion to dining: strong
+- Likelihood to book next time: high
+- Reviews mentioning great service: frequent
 
 Make waiting pleasant = profitable queue
 
@@ -159,22 +159,22 @@ Still use a physical diary because:
 ## Day-by-Day Strategy
 
 Monday-Tuesday: Flexible
-- 80% walk-ins
+- Mostly walk-ins
 - Book only for groups 6+
 - Focus on spontaneous trade
 
 Wednesday-Thursday: Structured
-- 70% bookings
+- Mostly bookings
 - Target food-focused customers
 - Push online booking
 
 Friday-Saturday: Balanced
-- 50/50 split
+- Even split
 - Two sittings system
 - Deposits for large groups
 
 Sunday: Traditional
-- 90% bookings for lunch
+- Mostly bookings for lunch
 - Walk-ins for evening
 - Family-friendly timing
 
@@ -226,11 +226,11 @@ Disaster waiting to happen:
 - Terrible reviews
 - Lost regulars
 
-Better: Book to 80% capacity, walk-ins fill gaps
+Better: Book to a safe capacity, walk-ins fill gaps
 
 Holding Tables Too Long
-15-minute rule:
-- Hold for 15 minutes maximum
+Short grace period:
+- Hold for a short window
 - Then release to walk-ins
 - Text late party: "Table released, still welcome for next available"
 
@@ -255,28 +255,28 @@ Better: Same rules, better service
 
 - Table turnover rate
 
-- Covers up 40%
+- Covers up
 
-- No-shows down 60%
+- No-shows down
 
-- Walk-in satisfaction up 80%
+- Walk-in satisfaction up
 
-- Revenue up 35%
+- Revenue up
 
 ## The Seasonal Adjustment
 
 Summer Strategy
-- More walk-ins (60%)
+- More walk-ins
 - Garden stays flexible
 - Bookings for inside only
 
 Winter Approach
-- More bookings (70%)
+- More bookings
 - Cozy inside guaranteed
 - Deposits protect revenue
 
 December Madness
-- 90% pre-booked
+- Mostly pre-booked
 - Deposits essential
 - Fixed menus only
 - Three sittings daily
@@ -309,15 +309,15 @@ December Madness
 
 ## The Results You'll See
 
-- 20% reduction in no-shows
+- Noticeable reduction in no-shows
 
-- 15% increase in covers
+- Lift in covers
 
 - Happier walk-in customers
 
 - Less stressed staff
 
-- 40% more covers
+- More covers on busy days
 
 - Optimal booking mix found
 

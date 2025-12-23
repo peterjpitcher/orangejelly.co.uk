@@ -127,7 +127,7 @@ Adjusted expectations:
 Customers became cheerleaders, not critics.
 
 The Financial Decision
-Everything at 50% off? No.
+Deep discounting on everything? No.
 Free drinks while waiting? Yes.
 Result: Higher spend per head than normal
 Why: People felt part of something special
@@ -193,7 +193,7 @@ Pre-registered with agencies:
 - References checked
 - One week notice ideally
 
-Cost: 40% more than regular
+Cost: higher than regular
 Value: Staying open
 
 Plan C: The Simplified Service
@@ -290,7 +290,7 @@ Sustainable pace prevents crises.
 
 The Anchor: Chef quit Saturday, found permanent replacement Monday, no days closed
 The Bull: Used customer chef network, now has chef-share with three pubs
-The Crown: Simplified menu permanently, profits up 20%
+The Crown: Simplified menu permanently, profits up noticeably
 The Swan: Sous stepped up, now head chef, original chef wants job back
 
 ## The Silver Lining
@@ -328,4 +328,3 @@ You should be able to cook five dishes from your menu competently. Know basic fo
 ### Should I hire agency chefs as backup?
 
 Agency chefs are expensive but valuable for true emergencies. Better to build a network of local freelance chefs first. Agencies should be your third option after internal coverage and freelance network. Keep agency details ready but use sparingly.
-

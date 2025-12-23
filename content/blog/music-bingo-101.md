@@ -134,10 +134,10 @@ Music bingo uses recorded tracks, so ensure your venue holds **TheMusicLicence**
 
 | KPI | Target | How to capture |
 | --- | --- | --- |
-| Cards issued | 90% of available seats | Count per game. |
-| Bundle uptake | 50% of tables | Use till buttons. |
-| Social tags | +10 posts per night | Re-share to encourage more. |
-| Repeat attendance | 60% within 4 weeks | Quick QR survey or booking log. |
+| Cards issued | High share of available seats | Count per game. |
+| Bundle uptake | Strong | Use till buttons. |
+| Social tags | Steady nightly posts | Re-share to encourage more. |
+| Repeat attendance | Strong within a month | Quick QR survey or booking log. |
 
 Ask the team the next morning: Which tracks landed? Did we run out of dabbers? Did the break feel long enough? Capture ideas for next week’s theme.
 

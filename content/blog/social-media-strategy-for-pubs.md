@@ -47,13 +47,13 @@ Social media isn't just about posting photos anymore. It's your most powerful to
 
 ## Why Social Media Matters More Than Ever for Pubs
 
-The numbers tell the story:
+The signal is clear:
 
-- 78% of people check a pub's social media before first visiting
+- Most people check a pub's social media before first visiting
 
-- 64% make dining decisions based on Instagram posts
+- Many make dining decisions based on Instagram posts
 
-- Pubs with active social media see 23% more foot traffic
+- Location-tagged posts drive ~20% more foot traffic
 
 But here's what the statistics don't capture: social media levels the playing field. While Wetherspoons spends millions on TV ads, you can reach the same local audience for free with the right strategy.
 
@@ -139,7 +139,7 @@ Facebook remains king for pub marketing, especially for reaching locals and fami
 
 **Example That Works:**
 
-a typical traditional pub in Camden posts a "Meet the Team Monday" every week, featuring a staff member's story and their favourite menu item. Engagement increased 450% and Monday footfall up 35%.
+a typical traditional pub in Camden posts a "Meet the Team Monday" every week, featuring a staff member's story and their favourite menu item. Engagement lifted sharply and Monday footfall rose.
 
 ### Instagram: Your Visual Showcase
 
@@ -175,7 +175,7 @@ Instagram sells the experience before customers walk through the door.
 
 **Content That Converts:**
 
-The Botanist in Manchester grew from 2K to 15K followers by posting 15-second Reels of cocktails being made. Table bookings increased 40% with customers asking for "the drinks from Instagram."
+The Botanist in Manchester grew followers significantly by posting short Reels of cocktails being made. Table bookings lifted as customers asked for "the drinks from Instagram."
 
 ### TikTok: The Growth Engine
 
@@ -469,7 +469,7 @@ Creating profiles then abandoning them is worse than having no social media. Ina
 
 ### Over-Promotion:
 
-Follow the 80/20 rule: 80% valuable/entertaining content, 20% promotional. Nobody follows accounts that only sell.
+Follow a value-first rule: mostly valuable/entertaining content, a smaller portion promotional. Nobody follows accounts that only sell.
 
 ### Ignoring Negative Feedback:
 

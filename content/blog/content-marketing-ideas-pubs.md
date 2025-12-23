@@ -38,7 +38,7 @@ Every pub has stories. The regular who's sat in the same spot for 20 years. The 
 
 Here's the truth: people don't choose pubs based on opening hours and WiFi passwords. They choose pubs that feel like somewhere they belong. Content marketing is how you build that feeling before customers even walk through your door.
 
-The Blackfriar in London shares daily historical facts and now runs sold-out history tours. The Eagle in Cambridge posts cocktail-making videos and sees 40% of orders from drinks featured online. These pubs understand that content isn't just marketing – it's community building that happens to drive revenue.
+The Blackfriar in London shares daily historical facts and now runs sold-out history tours. The Eagle in Cambridge posts cocktail-making videos and sees a noticeable share of orders from drinks featured online. These pubs understand that content isn't just marketing - it's community building that happens to drive revenue.
 
 ## Why Content Marketing Works for Pubs
 
@@ -54,7 +54,7 @@ Traditional advertising interrupts. Content marketing attracts. Here's why it's 
 
 - **Drives action** with subtle selling
 
-industry research shows content marketing costs 62% less than traditional marketing while generating 3x more leads. For pubs, it turns your biggest asset – your character – into your most powerful marketing tool.
+industry research shows content marketing costs less than traditional marketing while generating more leads. For pubs, it turns your biggest asset - your character - into your most powerful marketing tool.
 
 ## The Content Marketing Mindset Shift
 
@@ -90,7 +90,7 @@ Every pub started somewhere. Share yours:
 
 - Community connections
 
-*Example: a typical riverside pub created a mini-documentary about finding a 200-year-old love letter during renovation. 500K views, featured in local news, bookings up 30%.*
+*Example: a typical riverside pub created a mini-documentary about finding a 200-year-old love letter during renovation. It went viral locally, featured in local news, bookings lifted.*
 
 **Customer Stories**
 
@@ -534,7 +534,7 @@ Waiting for perfect content. Solution: Done beats perfect.
 
 ### The "Me, Me, Me" Syndrome
 
-Only talking about yourself. Solution: 70% value, 30% promotion.
+Only talking about yourself. Solution: mostly value, some promotion.
 
 ### The "One and Done" Approach
 
@@ -678,7 +678,7 @@ Examples:
 
 **The Cricketers, Surrey:**
 
-Created "Pub Dog of the Month" series. User submissions up 400%, Sunday afternoon traffic increased 45%, featured in national press.
+Created "Pub Dog of the Month" series. User submissions surged, Sunday afternoon traffic lifted, featured in national press.
 
 **The Anchor, Bristol:**
 
@@ -686,7 +686,7 @@ Launched "Kitchen Confidential" YouTube series. 100K subscribers, cookbook deal,
 
 **a typical village pub Inn, Cotswolds:**
 
-Started local history blog. Becomes go-to resource, Google traffic up 300%, heritage tour bookings generate £30K annually.
+Started local history blog. Becomes a go-to resource, Google traffic surged, heritage tour bookings became a steady revenue stream.
 
 ## Content Tools & Resources
 
@@ -771,4 +771,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

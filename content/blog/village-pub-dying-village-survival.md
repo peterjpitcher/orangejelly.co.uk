@@ -115,8 +115,8 @@ This is where you make real money:
 Wet-led village pubs are dying. Food is survival. But not just any food:
 
 The 80/20 Rule
-- 80% solid pub classics done perfectly
-- 20% signature dishes they can't get anywhere else
+- Mostly solid pub classics done perfectly
+- A smaller slice of signature dishes they can't get anywhere else
 
 - The Anchor Burger (wagyu beef, secret sauce) - £18, food cost £5
 
@@ -131,7 +131,7 @@ Village location = direct supplier relationships:
 - Meat from village butcher
 - Story with every dish
 
-Marketing cost: zero. Premium charged: 20-30%.
+Marketing cost: minimal. Premium charged: modest.
 
 ## Build Your Visitor Economy
 

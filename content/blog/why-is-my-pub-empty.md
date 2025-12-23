@@ -4,7 +4,7 @@ slug: "why-is-my-pub-empty"
 publishedDate: 2025-09-04
 updatedDate: "2025-02-10T01:00:00.000Z"
 excerpt: "Discover the real reasons your pub is struggling with footfall and learn practical, proven solutions that actually work. From a landlord who's been there."
-quickAnswer: "Most empty pubs suffer from poor first impressions, inconsistent opening hours, or pricing that doesn't match their positioning. Start with 100% reliable opening times, clean windows, and friendly greetings. Focus on one core strength rather than trying to be everything to everyone."
+quickAnswer: "Most empty pubs suffer from poor first impressions, inconsistent opening hours, or pricing that doesn't match their positioning. Start with rock-solid opening times, clean windows, and friendly greetings. Focus on one core strength rather than trying to be everything to everyone."
 author: "Peter Pitcher"
 category: "empty-pub-solutions"
 tags:
@@ -72,7 +72,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Become the community noticeboard
 
-**What Worked for Us**: We started featuring a "Local Hero of the Week" with their photo on our Facebook page. Engagement shot up 400%.
+**What Worked for Us**: We started featuring a "Local Hero of the Week" with their photo on our Facebook page. Engagement surged.
 
 ### 2. Your Pub Lacks a Clear Identity
 
@@ -104,7 +104,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Train staff to recommend and upsell
 
-**Result**: Our wet sales increased 32% after expanding our craft range.
+**Result**: Our wet sales lifted after expanding our craft range.
 
 ### 4. Your Food Offering Is an Afterthought
 
@@ -184,7 +184,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Create "can't miss" weekly fixtures
 
-**Winner**: "Pie and Pint Wednesdays" now account for 20% of our weekly revenue.
+**Winner**: "Pie and Pint Wednesdays" now account for a meaningful share of our weekly revenue.
 
 ### 9. Your Prices Are Wrong (Too High OR Too Low)
 
@@ -200,7 +200,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Don't compete on price alone
 
-**Insight**: Raising prices 10% but improving quality lost us 2 customers but increased profit by 18%.
+**Insight**: A modest price increase paired with quality improvements lost a couple of customers but lifted profit.
 
 ### 10. You've Ignored the Digital Age
 
@@ -364,7 +364,7 @@ Remember: Every thriving pub was once empty. The only difference between failure
 
 ### What is the main reason pubs are empty?
 
-The primary cause is usually poor visibility and communication. Customers don't know what's happening at your pub. Secondary factors include atmosphere, value perception, and competition. Fixing visibility through social media and events typically increases footfall by 30-40%.
+The primary cause is usually poor visibility and communication. Customers don't know what's happening at your pub. Secondary factors include atmosphere, value perception, and competition. Fixing visibility through social media and events typically lifts footfall.
 
 ### Which day of the week is usually quietest?
 

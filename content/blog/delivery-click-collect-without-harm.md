@@ -37,7 +37,7 @@ voiceSearchQueries:
 Delivery saved many pubs in lockdown but wrecked plenty of guest experiences once doors reopened. The answer is not to ditch the channel but to control it. Here is the system.
 
 ## Step 1: Separate Menus
-Design a tight delivery menu with dishes that travel well and maintain >65% GP after fees. Remove items that need last-minute garnish or rely on crisp textures. Keep dine-in favourites exclusive so regulars still visit in person.
+Design a tight delivery menu with dishes that travel well and maintain healthy GP after fees. Remove items that need last-minute garnish or rely on crisp textures. Keep dine-in favourites exclusive so regulars still visit in person.
 
 ## Step 2: Ringfence Capacity
 Use kitchen display systems or manual whiteboards to cap the number of delivery tickets per 15-minute block. Switch the platform off when the restaurant is slammed. A dispatcher (or the manager) owns the toggle.

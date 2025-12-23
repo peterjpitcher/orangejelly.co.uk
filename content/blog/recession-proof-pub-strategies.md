@@ -56,7 +56,7 @@ Before implementing strategies, understand how customer behavior changes:
 
 **Investment:** Minimal
 
-**Return:** 25-30% maintained revenue
+**Return:** Revenue maintained
 
 Transform perception without raising prices:
 
@@ -74,7 +74,7 @@ Transform perception without raising prices:
 
 **Technology Cost:** £50-200/month
 
-**Revenue Impact:** 15-20% optimization
+**Revenue Impact:** Noticeable optimization
 
 **Customer Reception:** Positive when transparent
 
@@ -132,7 +132,7 @@ Recession-friendly membership tiers:
 
 ### 4. Smart Inventory Management
 
-**Savings Potential:** 20-30% reduction in waste
+**Savings Potential:** Noticeable reduction in waste
 
 **Investment:** Time and training
 
@@ -186,7 +186,7 @@ High-ROI improvements:
 
 **Morale Impact:** Positive with transparency
 
-**Productivity Gain:** 30-40%
+**Productivity Gain:** Noticeable
 
 Smart scheduling strategies:
 
@@ -204,11 +204,11 @@ Smart scheduling strategies:
 
 ### 7. The "Comfort Food Renaissance"
 
-**Menu Cost:** Reduced by 25%
+**Menu Cost:** Reduced
 
 **Customer Satisfaction:** Increased
 
-**Profit Margins:** Improved by 15%
+**Profit Margins:** Improved
 
 Recession-proof menu items:
 
@@ -228,7 +228,7 @@ Recession-proof menu items:
 
 **Customer Draw:** New demographics
 
-**Upsell Rate:** 60% add drinks/sides
+**Upsell Rate:** More add drinks/sides
 
 Daily £5 specials:
 
@@ -268,7 +268,7 @@ Package examples:
 
 **Cost:** Time investment mainly
 
-**Return:** 20-30% new customers
+**Return:** New customers gained
 
 **Community Value:** Immeasurable
 
@@ -288,7 +288,7 @@ Partnership ideas:
 
 **Cost:** Absorbed in margins
 
-**New Customer Rate:** 40% from referrals
+**New Customer Rate:** Strong referrals
 
 **Lifetime Value:** 2x regular customers
 
@@ -352,7 +352,7 @@ Creating belonging:
 
 **Digital Options:** £20-50/month
 
-**Retention Improvement:** 60%
+**Retention Improvement:** Strong
 
 Recession-appropriate rewards:
 
@@ -410,7 +410,7 @@ Opportunities:
 
 ### 17. Retail Opportunities
 
-**Margin:** 100-200% markup possible
+**Margin:** Strong markup potential
 
 **Investment:** £200-500 initial stock
 
@@ -432,7 +432,7 @@ Recession retail wins:
 
 **Price Point:** £15-50 per person
 
-**Margin:** 70-80%
+**Margin:** Healthy
 
 **Booking Rate:** High for gifts
 
@@ -478,7 +478,7 @@ Budget-conscious experiences:
 
 ### 20. Supplier Relationships
 
-**Negotiation Potential:** 10-20% savings
+**Negotiation Potential:** Meaningful savings
 
 **Payment Terms:** Extended possible
 
@@ -500,7 +500,7 @@ Strategies:
 
 **Target:** 3 months operating costs
 
-**Building Method:** 5% of weekly revenue
+**Building Method:** Set aside a small share of weekly revenue
 
 **Usage:** True emergencies only
 
@@ -522,7 +522,7 @@ Protection strategies:
 
 **Frequency:** Weekly team meetings
 
-**Impact:** 90% staff retention
+**Impact:** Staff retention improved
 
 **Cost:** Time investment
 
@@ -606,7 +606,7 @@ Value propositions:
 
 **Reach:** Combined audiences
 
-**Impact:** 40% new customer acquisition
+**Impact:** New customer acquisition improved
 
 Win-win collaborations:
 

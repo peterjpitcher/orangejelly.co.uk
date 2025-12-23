@@ -52,7 +52,7 @@ The most successful Christmas campaigns begin months before the first decoration
 
 **Setup Cost:** £100-200 for menu design and printing
 
-**Profit Margin:** 65-70% on food
+**Profit Margin:** Healthy on food
 
 **Booking Target:** 20-30 parties of 10+
 
@@ -92,7 +92,7 @@ Create three menu tiers to capture different budgets:
 
 **Setup Cost:** Minimal
 
-**Profit Increase:** 200% on typical weekday
+**Profit Increase:** Noticeable lift on a typical weekday
 
 **Target:** 5-10 bookings per week
 
@@ -152,7 +152,7 @@ Enhance your regular quiz with festive rounds. \[See our quiz night guide\](/blo
 
 **Cost:** £150 for karaoke hire (or use existing)
 
-**Revenue Increase:** 40% on typical night
+**Revenue Increase:** Noticeable lift on a typical night
 
 **Best Days:** Sunday evenings
 
@@ -250,9 +250,9 @@ Weekend mornings only:
 
 **Cost:** Staff training time
 
-**Profit Margin:** 70-80% on cocktails
+**Profit Margin:** Healthy on cocktails
 
-**Sales Increase:** 45% on cocktail revenue
+**Sales Increase:** Noticeable lift on cocktail revenue
 
 Feature different festive cocktails throughout December:
 
@@ -288,7 +288,7 @@ Self-service or staffed station:
 
 **Cost:** Negotiable with suppliers
 
-**Revenue Increase:** 60% on beer sales
+**Revenue Increase:** Noticeable lift on beer sales
 
 **Duration:** First two weeks of December
 
@@ -542,9 +542,9 @@ Let customers vote on music:
 
 ### 25. Christmas Incentive Schemes
 
-**Cost:** 5% of additional revenue
+**Cost:** A small share of additional revenue
 
-**Revenue Increase:** 20-30% from upselling
+**Revenue Increase:** Noticeable lift from upselling
 
 **Morale Boost:** Significant
 
@@ -582,7 +582,7 @@ Provide branded festive jumpers:
 
 **Cost:** £200 initial stock
 
-**Markup:** 100-150%
+**Markup:** Strong
 
 **Target:** Desperate shoppers
 
@@ -718,11 +718,11 @@ Track these KPIs throughout the season:
 
 **Extra Profit:** £27,000
 
-**ROI:** 337%
+**ROI:** Strong
 
 ## Common Christmas Pitfalls to Avoid
 
-1. **Underestimating demand** - Plan for 50% more than expected
+1. **Underestimating demand** - Plan for more than expected
 
 1. **Complex menus** - Simplicity ensures quality
 
@@ -752,7 +752,7 @@ Don't let momentum die on January 1st:
 
 1. **Create a detailed timeline** working backwards from December
 
-1. **Calculate realistic targets** based on last year +30%
+1. **Calculate realistic targets** based on last year with a sensible buffer
 
 1. **Brief all staff thoroughly** on every promotion
 

@@ -46,7 +46,7 @@ Saturday pre-peak (4–6pm) is prime for a punchy activation that fills the bar 
 ## Why Theme Hour Works
 - **Short and sharp:** Guests commit to one hour, then stay for dinner or rebook for next week.
 - **Low lift:** Reuse existing playlists, handheld mics, and prize stock.
-- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers 70%+ GP and anchors the promo.
+- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers healthy GP and anchors the promo.
 - **Content factory:** Every spin, winner, and crowd sing-along becomes a reel for the following week.
 
 ## Choose Your Theme
@@ -96,10 +96,10 @@ Keep the MC script in 5-minute increments so covering staff can run it if the le
 ## Measuring Success
 | KPI | Goal | How |
 | --- | --- | --- |
-| Bar revenue 4–6pm | +20% vs baseline | Compare POS by week |
-| Bundle attachment | 65%+ | Dedicated PLU |
-| Dinner rollover bookings | 15 tables per hour | QR/res list |
-| Content captured | 5 usable clips per event | Shot list tracking |
+| Bar revenue 4–6pm | Lift vs baseline | Compare POS by week |
+| Bundle attachment | Strong | Dedicated PLU |
+| Dinner rollover bookings | Steady per hour | QR/res list |
+| Content captured | A handful per event | Shot list tracking |
 
 ## Copy Snippets
 - **Caption:** “Theme Hour • Saturdays 4–5pm • 80s vs 90s + spin wheel prizes + Power-Hour Spritz. Limited booths — DM to grab yours.”

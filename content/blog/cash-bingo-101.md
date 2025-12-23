@@ -129,10 +129,10 @@ Always log conversations with licensing officers and keep a folder containing: h
 
 | KPI | Target |
 | --- | --- |
-| Books sold | 80% of capacity |
-| Night pass uptake | 35%+ |
-| Average spend per head | £16–£20 |
-| Repeat attendance (4 weeks) | 50% |
+| Books sold | High share of capacity |
+| Night pass uptake | Strong |
+| Average spend per head | Healthy |
+| Repeat attendance (4 weeks) | Strong |
 
 Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we need more dabbers? Capture feedback before the next session.
 

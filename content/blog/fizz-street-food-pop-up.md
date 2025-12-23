@@ -46,7 +46,7 @@ Friday is where the week either drifts into nothing or becomes the start of a hu
 ## Quick Win Snapshot
 - **Prep time:** 3–4 hours total (menu sign-off, layout sketch, staff brief)
 - **Target headcount:** 60–90 covers in two waves (after-work + early evening)
-- **Margin maths:** £15–£18 bundle (small plate + spritz/AF serve) with 68–72% GP when shared with a trader on a 60/40 split
+- **Margin maths:** £15–£18 bundle (small plate + spritz/AF serve) with healthy GP when shared with a trader on a 60/40 split
 - **Ops focus:** Station near the pass or consider an outdoor gazebo; one team member on host, another floating drinks QR orders
 
 ## Pick a Format (Choose One and Stick for a Month)
@@ -73,7 +73,7 @@ Rotate formats quarterly, not weekly. Consistency wins.
 - **Retail tie-in:** Sell bottled cocktails or premix spritz kits to-go at £20 so guests take the vibe home.
 
 ### Simple GP Formula
-`(Plate Cost + Spritz Cost + Labour Uplift) ÷ Desired GP% = Bundle Price`. Keep labour uplift at £1.20–£1.50 per plate to cover the extra host.
+`(Plate Cost + Spritz Cost + Labour Uplift) ÷ Desired Gross Profit = Bundle Price`. Keep labour uplift at a level that covers the extra host.
 
 ## 90-Minute Run-Sheet (Per Wave)
 | Time | Action |
@@ -102,10 +102,10 @@ Rotate formats quarterly, not weekly. Consistency wins.
 ## Metrics to Track
 | KPI | Target | Tool |
 | --- | --- | --- |
-| Bundle uptake | 70% of orders | Till mix report |
-| Incremental spend/head | +£6 vs standard Friday 5–8pm | Compare POS vs last four Fridays |
-| New faces vs regulars | 40% new | Booking form tag |
-| Social reach | 3× usual Friday story views | Instagram insights |
+| Bundle uptake | Majority of orders | Till mix report |
+| Incremental spend/head | Lift vs standard Friday 5–8pm | Compare POS vs last four Fridays |
+| New faces vs regulars | Healthy share of new faces | Booking form tag |
+| Social reach | Noticeable lift in Friday story views | Instagram insights |
 
 ## Mini FAQ
 **Do I need a TEN?** If the trader cooks similar food and you’re within normal hours, no. Need a TEN only if trading outside licensed hours or using outdoor space beyond your plan.

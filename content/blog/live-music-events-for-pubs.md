@@ -53,7 +53,7 @@ Let's make sure you get it right.
 
 - Revenue: £320
 
-- Profit margin: 25%
+- Profit margin: Healthy
 
 **With successful live music**:
 
@@ -65,11 +65,11 @@ Let's make sure you get it right.
 
 - Minus band fee (£300)
 
-- Profit margin: 35%+
+- Profit margin: Healthy
 
 **The hidden benefits**:
 
-- Increased food sales (300% during music nights)
+- Increased food sales (strong lift during music nights)
 
 - Higher margin drinks (cocktails, premium spirits)
 
@@ -403,7 +403,7 @@ Let's make sure you get it right.
 
 **Payment terms**:
 
-- 50% deposit (protects both parties)
+- Substantial deposit (protects both parties)
 
 - Balance on night
 
@@ -569,7 +569,7 @@ Let's make sure you get it right.
 
 **Stock management**:
 
-- 50% extra of popular lines
+- Extra stock of popular lines
 
 - Pre-batch cocktails
 
@@ -828,4 +828,3 @@ Yes, payment plans are available to help with cash flow. Services are charged at
 ### Do you offer payment plans?
 
 Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT. Contact us to discuss a payment arrangement that works for your business.
-

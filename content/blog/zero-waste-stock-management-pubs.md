@@ -4,7 +4,7 @@ slug: "zero-waste-stock-management-pubs"
 publishedDate: 2025-09-25
 updatedDate: "2026-01-05T00:00:00.000Z"
 excerpt: "Use disciplined stock processes to protect every pound of GP when cash is tight and bins are overflowing."
-quickAnswer: "Count little and often, engineer menus around shared ingredients, and give chefs as well as bartenders clear waste KPIs so shrinkage drops below 1%."
+quickAnswer: "Count little and often, engineer menus around shared ingredients, and give chefs as well as bartenders clear waste KPIs so shrinkage drops fast."
 author: "Peter Pitcher"
 category: "operations"
 tags:
@@ -54,7 +54,7 @@ Date-label everything, build a colour system (red = use today), and store high-r
 - Cocktail riffs that highlight surplus fruit or syrups.
 
 ## 6. Share Waste KPIs Publicly
-Pin a whiteboard in the kitchen and cellar showing waste % versus target (aim for under 1% of net sales). Update after every count. When the number creeps up, investigate immediately rather than shrugging at month end.
+Pin a whiteboard in the kitchen and cellar showing waste versus target (aim for as low as possible). Update after every count. When the number creeps up, investigate immediately rather than shrugging at month end.
 
 ## 7. Invest in Training Before Tech
 Fancy sensors are useless if the team does not care. Spend time explaining the why: waste equals missed pay rises, tired equipment, and fewer marketing pounds. Ownership follows understanding.
@@ -66,4 +66,4 @@ Not to start. Google Sheets plus disciplined people beat expensive platforms poo
 **How do I handle staff meals without skewing data?**
 Log them. Allocate a daily allowance, ring them through at £0, and track the cost in your P&L under staff welfare so GP stays honest.
 
-Scrappy counting and proud culture can cut wastage by half in a month, freeing cash for the comeback.
+Scrappy counting and proud culture can cut wastage fast, freeing cash for the comeback.

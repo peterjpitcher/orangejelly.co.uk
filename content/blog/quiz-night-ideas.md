@@ -61,11 +61,11 @@ First, let's talk numbers:
 
 **Well-run quiz night**:
 
-- 80-120 participants
+- Healthy attendance
 
-- £800-1,500 revenue
+- Strong revenue
 
-- 60-70% profit margin
+- Healthy profit margin
 
 **But here's the real magic**: Those quiz teams become your most loyal customers. They book tables for birthdays, bring colleagues for lunch, and champion your pub on social media.
 

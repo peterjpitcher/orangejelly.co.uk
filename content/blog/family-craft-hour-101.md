@@ -113,10 +113,10 @@ Package craft hour with dining offers: “Craft & Roast” (£14.95 kids roast +
 
 | KPI | Target |
 | --- | --- |
-| Families per session | 10 tables |
-| Average spend | £55–£70 per table (craft + food) |
-| Dessert add-on | 60% of families |
-| Next-event pre-book | 50% before leaving |
+| Families per session | Healthy turnout |
+| Average spend | Healthy per table (craft + food) |
+| Dessert add-on | Strong |
+| Next-event pre-book | Strong |
 
 Use a QR survey asking what themes families want next (Mother’s Day, World Book Day, etc.) and collect email opt-ins for future marketing.
 
