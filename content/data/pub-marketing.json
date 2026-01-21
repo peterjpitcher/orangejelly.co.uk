@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "title": "Pub Marketing That Fills Tables",
+    "subtitle": "Practical marketing for UK pubs from a working licensee. No packages. No fluff. Just what works.",
+    "ctaText": "Hi Peter, I need help marketing my pub",
+    "bottomText": "£75/hour + VAT • Start with a quick WhatsApp chat"
+  },
+  "intro": {
+    "heading": "Real pub marketing, tested at The Anchor",
+    "paragraphs": [
+      "Most pubs don't have a marketing problem. They have a time problem. You're running a venue, covering shifts, dealing with suppliers, and still expected to post on social, reply to reviews, and dream up events.",
+      "I run The Anchor and built simple systems (powered by AI) that save time and drive footfall. If a tactic doesn't work in a real pub, it doesn't go on this website.",
+      "If you want a big agency, I'm not it. If you want a licensee who will show you exactly what to do next, you're in the right place."
+    ]
+  },
+  "focusAreas": {
+    "heading": "What we fix first",
+    "items": [
+      {
+        "title": "Get you found locally",
+        "description": "Tidy up your Google Business Profile, photos, reviews, and the basics that stop people choosing you."
+      },
+      {
+        "title": "Give people a reason to visit",
+        "description": "A clear midweek hook beats random posts. We build offers and events that are easy to promote and repeat."
+      },
+      {
+        "title": "Make marketing take less time",
+        "description": "Simple AI workflows so you can create content in batches and stop thinking about it daily."
+      },
+      {
+        "title": "Increase spend and profit",
+        "description": "Menus, upsells, and positioning that lift average spend without discounting your pub to death."
+      }
+    ]
+  },
+  "solutions": {
+    "heading": "Start with your biggest problem",
+    "cards": [
+      {
+        "title": "Dead Tuesday and Wednesday nights",
+        "description": "Proven midweek systems that turn quiet nights into regulars and repeat bookings.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix my midweek"
+      },
+      {
+        "title": "Empty pub and falling trade",
+        "description": "A 30-day recovery plan to stop the slide and get momentum back quickly.",
+        "href": "/empty-pub-solutions",
+        "ctaText": "Start the recovery"
+      },
+      {
+        "title": "Competing with chains like Wetherspoons",
+        "description": "Positioning and tactics that chains can't copy, so you win without racing to the bottom.",
+        "href": "/compete-with-pub-chains",
+        "ctaText": "Beat the chains"
+      },
+      {
+        "title": "No marketing budget",
+        "description": "Free strategies that work: local visibility, community, repeat visits, and simple habits.",
+        "href": "/pub-marketing-no-budget",
+        "ctaText": "See free strategies"
+      },
+      {
+        "title": "Want the full menu of help?",
+        "description": "Social media, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "locations": {
+    "heading": "Where we help",
+    "description": "Based near Heathrow and built for busy operators. We prioritise pubs across London and the wider South East, and we can work remotely across the UK.",
+    "areas": [
+      "London",
+      "Surrey",
+      "Berkshire",
+      "Buckinghamshire",
+      "Hertfordshire",
+      "Kent",
+      "Hampshire",
+      "Oxfordshire"
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Quick chat",
+        "description": "Tell me what's hurting: empty tables, weak spend, no time, or chaos."
+      },
+      {
+        "number": "2",
+        "title": "Pick the fastest win",
+        "description": "We choose the one thing that will make the biggest difference in the next 30 days."
+      },
+      {
+        "number": "3",
+        "title": "Implement with templates",
+        "description": "You get ready-to-use messages, content, and checklists so it actually gets done."
+      },
+      {
+        "number": "4",
+        "title": "Measure and iterate",
+        "description": "We double down on what's working and cut what isn't."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you do it for me or show me how to do it?",
+      "answer": "Either. Some pubs want a simple plan and templates so their team can run it. Others want hands-on support. We decide what fits your time and budget."
+    },
+    {
+      "question": "How quickly can pub marketing work?",
+      "answer": "You can usually see early movement in days (more calls, messages, and interest). Proper, bankable results tend to build over 30 days as consistency and word-of-mouth kick in."
+    },
+    {
+      "question": "Can you help with Google Business Profile and reviews?",
+      "answer": "Yes. It's often the quickest win for local footfall. We focus on the basics: accuracy, photos, review responses, and posts that get you seen."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "£75 per hour plus VAT. No packages. Start small if you want and scale support when you see results."
+    },
+    {
+      "question": "Will this work for tied pubs and managed houses?",
+      "answer": "Yes. Most of the wins are operational and messaging, not supplier-dependent: events, positioning, local visibility, and repeat visits."
+    }
+  ],
+  "cta": {
+    "title": "Want more bums on seats?",
+    "subtitle": "Message me what’s going wrong and I’ll tell you the fastest thing to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with marketing. Can we have a quick chat?"
+  }
+}

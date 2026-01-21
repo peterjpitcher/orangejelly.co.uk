@@ -114,7 +114,7 @@ export default function NotFound() {
                   Success Stories?
                 </Heading>
                 <Text className="mb-4">
-                  See how we've helped other pubs go from empty to packed with real results.
+                  See what we've achieved at The Anchor and the systems we teach.
                 </Text>
                 <Button href="/results" variant="ghost" size="small">
                   View Results →

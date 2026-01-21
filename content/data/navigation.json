@@ -11,24 +11,29 @@
       "order": 2
     },
     {
+      "label": "Pub Marketing",
+      "href": "/pub-marketing",
+      "order": 3
+    },
+    {
       "label": "Licensee's Guide",
       "href": "/licensees-guide",
-      "order": 3
+      "order": 4
     },
     {
       "label": "Success Stories",
       "href": "/results",
-      "order": 4
+      "order": 5
     },
     {
       "label": "About",
       "href": "/about",
-      "order": 5
+      "order": 6
     },
     {
       "label": "Contact",
       "href": "/contact",
-      "order": 6
+      "order": 7
     }
   ],
   "mobileMenu": [
@@ -43,24 +48,29 @@
       "order": 2
     },
     {
+      "label": "Pub Marketing",
+      "href": "/pub-marketing",
+      "order": 3
+    },
+    {
       "label": "Licensee's Guide",
       "href": "/licensees-guide",
-      "order": 3
+      "order": 4
     },
     {
       "label": "Success Stories",
       "href": "/results",
-      "order": 4
+      "order": 5
     },
     {
       "label": "About",
       "href": "/about",
-      "order": 5
+      "order": 6
     },
     {
       "label": "Contact",
       "href": "/contact",
-      "order": 6
+      "order": 7
     }
   ],
   "whatsappCta": {

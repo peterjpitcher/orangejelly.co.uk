@@ -9,6 +9,12 @@
         "emoji": "🚀"
       },
       {
+        "title": "Pub Marketing",
+        "description": "Practical pub marketing that fills tables",
+        "href": "/pub-marketing",
+        "emoji": "🍺"
+      },
+      {
         "title": "Success Stories",
         "description": "See real results from The Anchor",
         "href": "/results",

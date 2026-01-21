@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Hertfordshire Pubs",
+    "subtitle": "Hertfordshire has strong pubs and tough competition. We'll fix local discovery, build repeatable events, and drive footfall with a simple plan.",
+    "ctaText": "Hi Peter, I run a pub in Hertfordshire and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Hertfordshire (and what doesn't)",
+    "paragraphs": [
+      "In Hertfordshire you have commuter towns, strong local competition, and customers who decide fast. If your pub is invisible on Google, you lose before they even consider you.",
+      "We tighten up your Google presence: categories, photos, reviews, and posts that match real searches like Sunday lunch, quiz night, live sport, and private hire.",
+      "Then we build a repeatable weekly rhythm (one or two hooks) plus a content plan you can run in batches."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Hertfordshire pubs",
+    "items": [
+      {
+        "title": "Local map visibility",
+        "description": "Get more calls and clicks by fixing the basics and adding proof (photos, reviews, and the right keywords)."
+      },
+      {
+        "title": "Regulars on quiet nights",
+        "description": "Weekly hooks that build habit: quiz, games, food nights, or local partnerships."
+      },
+      {
+        "title": "Reviews and reputation",
+        "description": "A simple review-request system and replies that make people trust you."
+      },
+      {
+        "title": "Content that converts",
+        "description": "Posts that sell a night and drive bookings, not just a nice photo."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Can you help with Google Business Profile optimisation?",
+      "answer": "Yes. For most pubs, it's the fastest route to more calls and bookings. We focus on accuracy, photos, reviews, and posts."
+    },
+    {
+      "question": "What if we have a small team and no time?",
+      "answer": "That's exactly who this is for. We use templates and batching so marketing stops being a daily job."
+    },
+    {
+      "question": "Do you only work with pubs?",
+      "answer": "Yes for now. Everything here is built around pub trade and what actually works on the floor."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Hertfordshire?",
+    "subtitle": "Message me your pub type and the one thing hurting trade. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub in Hertfordshire and I need help with marketing. Can we have a quick chat?"
+  }
+}

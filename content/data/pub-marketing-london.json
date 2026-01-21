@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for London Pubs",
+    "subtitle": "London is competitive. Your pub needs to be found fast and give people a clear reason to visit. Here's how we do it without agency fluff.",
+    "ctaText": "Hi Peter, I run a London pub and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in London (and what doesn't)",
+    "paragraphs": [
+      "In London you're fighting for attention against thousands of venues, endless choice, and customers who decide where to go in minutes.",
+      "The pubs that win usually do the basics brilliantly: strong Google presence, clear midweek hooks, repeatable events, and social content that drives footfall instead of vanity likes.",
+      "I'll help you build a simple system your team can actually run while the pub stays busy."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for London pubs",
+    "items": [
+      {
+        "title": "Local discovery",
+        "description": "Google Business Profile, photos, reviews, and keywords that match what people actually search."
+      },
+      {
+        "title": "Repeatable events",
+        "description": "Quiz nights, tastings, theme nights, and weekly hooks that compound over time."
+      },
+      {
+        "title": "Community channels",
+        "description": "Neighbourhood groups, WhatsApp lists, and partnerships that send real customers through the door."
+      },
+      {
+        "title": "Content that sells",
+        "description": "Simple templates so you can post consistently without living on Instagram."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you travel into London?",
+      "answer": "Yes when it makes sense, but most work can be done remotely with your team: messaging, templates, content planning, offers, and training."
+    },
+    {
+      "question": "Can you help us get found on Google in London?",
+      "answer": "Yes. For London pubs, local discovery is critical. We focus on accuracy, photos, review replies, posts, and getting your key searches aligned to your offer."
+    },
+    {
+      "question": "Will this work without a big ad budget?",
+      "answer": "Yes. We prioritise organic wins first: local discovery, repeatable events, and community channels. Paid ads can amplify later, but they're not the foundation."
+    }
+  ],
+  "cta": {
+    "title": "Want more London customers through the door?",
+    "subtitle": "Message me your pub type and your biggest problem. I'll tell you what to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub in London and I need help with marketing. Can we have a quick chat?"
+  }
+}

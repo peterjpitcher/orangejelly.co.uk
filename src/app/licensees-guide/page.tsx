@@ -9,6 +9,7 @@ import { getAllBlogPosts } from '@/lib/markdown/markdown';
 import path from 'path';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { generateStaticMetadata } from '@/lib/metadata';
+import SearchComponent from '@/components/SearchComponent';
 
 type GuidePost = {
   slug: string;
@@ -351,6 +352,17 @@ export default async function LicenseesGuidePage() {
                 <Text size="sm">Budget-friendly marketing that delivers results</Text>
               </div>
             </div>
+          </div>
+
+          {/* Search */}
+          <div className="mb-12 max-w-2xl mx-auto">
+            <Heading level={2} align="center" className="mb-6">
+              Search the Guides
+            </Heading>
+            <SearchComponent
+              placeholder="Search guides by topic, problem, or event..."
+              maxResults={8}
+            />
           </div>
 
           {/* Category Navigation */}

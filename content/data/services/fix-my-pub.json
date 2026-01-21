@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Fix my pub",
+    "description": "Practical pub marketing and recovery help from a working licensee. Fast diagnosis, a simple plan, and templates that get implemented.",
+    "url": "/fix-my-pub",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Fix My Pub",
+    "subtitle": "Tell me what's broken. I'll tell you the fastest thing to fix first - and give you the templates to implement it.",
+    "ctaText": "Hi Peter, please help me fix my pub",
+    "bottomText": "£75/hour + VAT • No packages • Start with a quick WhatsApp chat"
+  },
+  "intro": {
+    "heading": "Start with the fastest win",
+    "paragraphs": [
+      "Most pubs don't need more ideas. They need one clear priority and a simple system that gets done while the pub stays busy.",
+      "I run The Anchor and built practical marketing systems that save time and drive footfall. If it doesn't work in a real pub, it doesn't go in the plan.",
+      "Message me what is hurting trade and I'll point you at the fastest win: local discovery, a midweek hook, better offers, or a tighter social system."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "Fast diagnosis",
+        "description": "We pinpoint what is actually causing the drop: visibility, offer, messaging, or execution."
+      },
+      {
+        "title": "30-day action plan",
+        "description": "A simple plan to stabilise trade and build momentum with weekly focus."
+      },
+      {
+        "title": "Templates and scripts",
+        "description": "Ready-to-use messages, posts, and checklists so your team can implement quickly."
+      },
+      {
+        "title": "Google and local visibility",
+        "description": "Fix the basics that stop customers choosing you: photos, reviews, categories, and posts."
+      },
+      {
+        "title": "Midweek systems",
+        "description": "Repeatable hooks that turn dead nights into regulars."
+      },
+      {
+        "title": "Ongoing support (optional)",
+        "description": "Stay hands-on or just get the plan - we decide what fits your time and budget."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Message me",
+        "description": "Tell me the pub type and the one thing hurting trade."
+      },
+      {
+        "number": "2",
+        "title": "Pick the win",
+        "description": "We choose the fastest improvement to make in the next 7 to 30 days."
+      },
+      {
+        "number": "3",
+        "title": "Implement fast",
+        "description": "You get templates, checklists, and clear next actions so it actually gets done."
+      },
+      {
+        "number": "4",
+        "title": "Measure and adjust",
+        "description": "We double down on what works and stop wasting time on what doesn't."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Is this for pubs only?",
+      "answer": "Yes for now. Everything here is built around pub trade and what works on the floor."
+    },
+    {
+      "question": "How quickly can you help?",
+      "answer": "We can usually start with a quick chat straight away. The first wins can happen in days, with proper momentum building over 30 days."
+    },
+    {
+      "question": "Do you do it for me or show me how?",
+      "answer": "Either. Some pubs want a simple plan and templates. Others want hands-on help. We'll choose what fits your time and budget."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "£75 per hour plus VAT. No packages and no long contracts."
+    },
+    {
+      "question": "Can you work remotely?",
+      "answer": "Yes. Most work can be done remotely with your team: messaging, templates, content planning, offers, and training."
+    }
+  ],
+  "cta": {
+    "title": "Want me to help fix your pub?",
+    "subtitle": "Message me what is going wrong and I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, please help me fix my pub. Can we have a quick chat?"
+  }
+}

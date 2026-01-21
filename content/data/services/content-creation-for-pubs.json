@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Content creation for pubs",
+    "description": "Content creation for pubs: phone-first photos and short videos, captions, templates, and a batching system so you stay consistent without stress.",
+    "url": "/services/content-creation-for-pubs",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Content Creation for Pubs",
+    "subtitle": "Phone-first photos and short videos that make people want to visit - plus templates so you can keep it up without daily effort.",
+    "ctaText": "Hi Peter, I need help creating content for my pub",
+    "bottomText": "£75/hour + VAT • No packages • Designed for real pub life"
+  },
+  "intro": {
+    "heading": "Better content, less time",
+    "paragraphs": [
+      "Most pubs do not need a content team. They need a repeatable way to capture what already happens in the pub and turn it into posts that sell a night.",
+      "I'll help you build a simple system: what to film, how to film it, what to say, and how to batch it so you stay consistent.",
+      "This is the same approach we use at The Anchor: authentic, simple, and focused on getting people through the door."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "Shot list and filming prompts",
+        "description": "Exactly what to capture for food, drinks, events, sport, staff, and atmosphere - all phone-first."
+      },
+      {
+        "title": "Caption bank",
+        "description": "Ready-to-use captions and hooks for your best nights so you are never stuck."
+      },
+      {
+        "title": "Template pack",
+        "description": "Reusable Canva templates and simple layouts that look consistent without designer time."
+      },
+      {
+        "title": "Reels scripts and structure",
+        "description": "Simple storylines that work for pubs and do not feel cringey."
+      },
+      {
+        "title": "Batching workflow",
+        "description": "How to create a month of content in one or two sessions using AI assistance."
+      },
+      {
+        "title": "Repurposing plan",
+        "description": "Turn one good piece of content into multiple posts across Instagram, Facebook, and stories."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Pick your focus",
+        "description": "We choose the nights and offers you want to sell first."
+      },
+      {
+        "number": "2",
+        "title": "Capture content",
+        "description": "You get a shot list so staff can grab usable content during service."
+      },
+      {
+        "number": "3",
+        "title": "Batch and schedule",
+        "description": "We turn it into posts with templates and schedule it in advance."
+      },
+      {
+        "number": "4",
+        "title": "Repeat what wins",
+        "description": "We keep the formats that drive bookings and drop the rest."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do we need professional photos?",
+      "answer": "No. For pubs, authentic phone content often performs better. I will show you how to capture it well."
+    },
+    {
+      "question": "Can staff do this without being on camera?",
+      "answer": "Yes. You can film food, drinks, atmosphere, events, and behind-the-scenes without turning it into a performance."
+    },
+    {
+      "question": "How long does it take?",
+      "answer": "Once the system is set up, you can batch a month of content in a short session instead of thinking about it daily."
+    },
+    {
+      "question": "Will the content look consistent?",
+      "answer": "Yes. Templates and a simple style guide keep everything looking like the same pub, even when different people post."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "£75 per hour plus VAT. Start with a short session to build the system, then add support if you want."
+    }
+  ],
+  "cta": {
+    "title": "Want a month of pub content ready to go?",
+    "subtitle": "Message me your pub type and what you want to promote. I'll tell you the simplest content plan to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with content creation. Can we have a quick chat?"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Social media marketing for pubs",
+    "description": "A practical social media marketing system for pubs across Instagram, Facebook, and local channels to drive footfall and bookings.",
+    "url": "/services/social-media-marketing-for-pubs",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Social Media Marketing for Pubs",
+    "subtitle": "A simple system across Instagram, Facebook, and local channels that drives footfall - without daily stress.",
+    "ctaText": "Hi Peter, I need help with social media for my pub",
+    "bottomText": "£75/hour + VAT • No contracts • Strategy and templates you can actually run"
+  },
+  "intro": {
+    "heading": "Stop winging it. Build a repeatable system.",
+    "paragraphs": [
+      "Most pub social media is inconsistent because it relies on willpower. You post when you remember, then nothing for weeks.",
+      "The fix is a simple routine: one clear hook, a calendar that sells key nights, templates for posts, and a short engagement routine to stay visible locally.",
+      "I'll help you build that system and train your team to run it."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "Channel plan",
+        "description": "What to do on Instagram vs Facebook (and what to ignore) based on your pub type."
+      },
+      {
+        "title": "30-day content calendar",
+        "description": "A plan mapped to the nights you want to fill and the offers you want to sell."
+      },
+      {
+        "title": "Template library",
+        "description": "Reusable posts for events, food, sport, promotions, and review responses."
+      },
+      {
+        "title": "Local engagement routine",
+        "description": "A small daily habit that improves local reach and brings in real customers."
+      },
+      {
+        "title": "Batching workflow",
+        "description": "Plan and create content in batches using AI assistance so marketing takes less time."
+      },
+      {
+        "title": "Simple scorecard",
+        "description": "Track the numbers that matter: enquiries, bookings, and covers on key nights."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Audit and focus",
+        "description": "We choose the biggest win: midweek, food, events, sport, or bookings."
+      },
+      {
+        "number": "2",
+        "title": "Build the calendar",
+        "description": "We map out a month of posts around your hook and trading reality."
+      },
+      {
+        "number": "3",
+        "title": "Create assets",
+        "description": "Templates, captions, and prompts so you can batch content quickly."
+      },
+      {
+        "number": "4",
+        "title": "Measure and iterate",
+        "description": "We improve the posts that drive action and cut the rest."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Which platform matters most for pubs?",
+      "answer": "It depends on your crowd, but most pubs do best with Facebook for local discovery and events, and Instagram for awareness and vibe. We'll pick the right mix."
+    },
+    {
+      "question": "Do I need to hire someone to run it?",
+      "answer": "Not necessarily. With templates and batching, your team can run it in short sessions. Hands-on support is optional."
+    },
+    {
+      "question": "Will this work without paid ads?",
+      "answer": "Yes. We focus on organic wins first: local engagement, clear offers, and consistency. Paid can amplify later."
+    },
+    {
+      "question": "How quickly will I see results?",
+      "answer": "Early movement often shows in days (more messages and enquiries). Results become bankable over 30 days with consistency."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "£75 per hour plus VAT. Start with a quick setup, then add support if you want."
+    }
+  ],
+  "cta": {
+    "title": "Want social media that fills tables?",
+    "subtitle": "Message me your pub type and what is hurting trade. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with social media marketing. Can we have a quick chat?"
+  }
+}

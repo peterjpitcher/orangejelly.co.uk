@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Surrey Pubs",
+    "subtitle": "Surrey pubs win when they are easy to find on Google and give people a clear reason to visit. Here's a simple system that works without agency fluff.",
+    "ctaText": "Hi Peter, I run a pub in Surrey and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Surrey (and what doesn't)",
+    "paragraphs": [
+      "Surrey pubs often rely on a mix of locals, commuters, and weekend visitors. The winner is usually the pub that is easiest to find and easiest to choose.",
+      "We fix the basics first: your Google Business Profile, photos, reviews, and the wording that matches what people actually search for.",
+      "Then we build one repeatable hook (quiz, food night, sport, live music) and a simple content plan your team can run without stress."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Surrey pubs",
+    "items": [
+      {
+        "title": "Get found locally",
+        "description": "Tighten your Google profile so you show up for real searches like Sunday lunch, quiz night, beer garden, and live sport."
+      },
+      {
+        "title": "Turn weekends into repeats",
+        "description": "Simple systems (WhatsApp list, events, offers) that bring weekend visitors back midweek."
+      },
+      {
+        "title": "Sell your best nights",
+        "description": "Clear messaging so people know why to choose you this week, not just that you exist."
+      },
+      {
+        "title": "Make social consistent",
+        "description": "Batch content with templates so you stop going quiet for weeks at a time."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Stop falling trade",
+        "description": "A focused 30-day plan to get momentum back quickly.",
+        "href": "/empty-pub-solutions",
+        "ctaText": "Start the recovery"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you work with pubs across Surrey?",
+      "answer": "Yes. Most work can be done remotely with your team (messaging, templates, content planning, offers, and training). On-site help is possible when needed."
+    },
+    {
+      "question": "Can you help with Google Business Profile and reviews?",
+      "answer": "Yes. For most pubs, local discovery is the fastest win. We focus on accuracy, photos, review replies, posts, and getting your key searches aligned to your offer."
+    },
+    {
+      "question": "Do I need paid ads?",
+      "answer": "Not to start. We prioritise organic wins first: local discovery, repeatable events, and simple content that sells a night. Paid ads can amplify later."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Surrey?",
+    "subtitle": "Message me your pub type and the one thing hurting trade. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub in Surrey and I need help with marketing. Can we have a quick chat?"
+  }
+}

@@ -56,6 +56,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
     priority: number;
   }> = [
+    { slug: 'services/social-media-marketing-for-pubs', changeFrequency: 'monthly', priority: 0.8 },
+    { slug: 'services/instagram-services-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'services/facebook-services-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'services/paid-social-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'services/content-creation-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'fix-my-pub', changeFrequency: 'monthly', priority: 0.75 },
+    { slug: 'pub-marketing', changeFrequency: 'weekly', priority: 0.85 },
+    { slug: 'pub-marketing-london', changeFrequency: 'monthly', priority: 0.65 },
+    { slug: 'pub-marketing-surrey', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-berkshire', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-buckinghamshire', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-hertfordshire', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-kent', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-hampshire', changeFrequency: 'monthly', priority: 0.6 },
+    { slug: 'pub-marketing-oxfordshire', changeFrequency: 'monthly', priority: 0.6 },
     { slug: 'quiet-midweek-solutions', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'empty-pub-solutions', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },

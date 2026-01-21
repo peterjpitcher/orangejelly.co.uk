@@ -3,12 +3,12 @@ import ServicesPage from './ServicesPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Hospitality Marketing Services for Pubs, Restaurants & Bars',
+    title: 'Pub Marketing Services - Instagram, Facebook, Ads & Content',
     description:
-      'How do I fill empty tables and grow revenue? Orange Jelly delivers hospitality marketing services for pubs, restaurants, and bars with results inside 30 days. £75 per hour plus VAT. AI training and consulting from a real operator.',
+      'Pub marketing services from a working licensee: Instagram, Facebook, paid social ads, and content creation that drive footfall. £75 per hour plus VAT.',
     path: '/services',
     keywords:
-      'hospitality marketing services, pub marketing, restaurant marketing, bar marketing, AI training, hospitality consultancy UK',
+      'pub marketing services, instagram services for pubs, facebook services for pubs, paid social for pubs, content creation for pubs, social media marketing for pubs',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

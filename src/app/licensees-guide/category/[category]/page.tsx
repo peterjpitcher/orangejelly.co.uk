@@ -8,6 +8,8 @@ import { getAllPosts, getCategories } from '@/lib/blog-md';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
+import { getCategoryBySlug } from '@/lib/blog';
+import { generateMetadata as generateMeta } from '@/lib/metadata';
 
 interface CategoryPageProps {
   params: {
@@ -15,21 +17,13 @@ interface CategoryPageProps {
   };
 }
 
-const categoryTitles: Record<string, string> = {
-  'empty-pub-solutions': 'Empty Pub Solutions',
-  'social-media': 'Social Media',
-  competition: 'Competition',
-  'food-drink': 'Food & Drink',
-  'events-promotions': 'Events & Promotions',
-};
-
-const categoryDescriptions: Record<string, string> = {
-  'empty-pub-solutions': 'Proven strategies to fill empty tables and boost footfall',
-  'social-media': 'Make social media work for your pub without wasting hours',
-  competition: 'Stand out from chains and nearby pubs',
-  'food-drink': 'Menu strategies that increase sales and profits',
-  'events-promotions': 'Events and promotions that actually bring customers in',
-};
+function humanizeCategorySlug(slug: string): string {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
 
 // Enable ISR (Incremental Static Regeneration) - pages revalidate every 60 seconds
 export const revalidate = 60;
@@ -42,17 +36,18 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const title = categoryTitles[params.category] || params.category;
-  const description = categoryDescriptions[params.category] || `Browse all ${title} articles`;
+  const category = getCategoryBySlug(params.category);
+  const title = category?.name || humanizeCategorySlug(params.category);
+  const description =
+    category?.description ||
+    `Browse all ${title} articles from The Licensee's Guide. Practical, proven ideas you can use.`;
 
-  return {
-    title: `${title} - The Licensee's Guide | Orange Jelly`,
+  return generateMeta({
+    title: `${title} - The Licensee's Guide`,
     description,
-    openGraph: {
-      title: `${title} - The Licensee's Guide`,
-      description,
-    },
-  };
+    path: `/licensees-guide/category/${params.category}`,
+    ogType: 'website',
+  });
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
@@ -65,8 +60,9 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const categoryTitle = categoryTitles[params.category] || params.category;
-  const categoryDescription = categoryDescriptions[params.category];
+  const category = getCategoryBySlug(params.category);
+  const categoryTitle = category?.name || humanizeCategorySlug(params.category);
+  const categoryDescription = category?.description;
 
   return (
     <>

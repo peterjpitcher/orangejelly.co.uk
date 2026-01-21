@@ -18,7 +18,7 @@ Everything we do is built around a 30-day turnaround. Some actions, like fixing 
 
 ## What's your success rate with pub turnarounds?
 
-We've helped transform pubs from empty to thriving. At The Anchor, weekday revenue lifted ~20% after implementing the first AI-led changes. Every strategy we recommend has been tested in real pub conditions.
+Everything we teach is tested at The Anchor first. We don't have public case studies from other pubs yet, but we will publish them as we build them. For now, you can judge the approach on what we've achieved in our own pub.
 
 ## How quickly will I see midweek improvements?
 

@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Kent Pubs",
+    "subtitle": "Kent pubs often face seasonality and heavy competition. We'll help you win local search and build repeatable trade all year.",
+    "ctaText": "Hi Peter, I run a pub in Kent and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Kent (and what doesn't)",
+    "paragraphs": [
+      "Kent pubs can feel seasonal: busy weekends and summer spikes, then quiet stretches where you need reliable reasons for people to visit.",
+      "We start with local discovery so you show up for the searches that matter: food pubs, beer gardens, dog-friendly, live sport, quiz night, Sunday lunch, and events.",
+      "Then we build a simple calendar of repeatable hooks and content that keeps you visible without stealing your time."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Kent pubs",
+    "items": [
+      {
+        "title": "Season-proof your calendar",
+        "description": "A monthly plan of events and offers that keeps trade steady outside peak weeks."
+      },
+      {
+        "title": "Tourism and day-trip traffic",
+        "description": "Better messaging for visitors: what makes you worth the drive and how to book."
+      },
+      {
+        "title": "Reviews that sell",
+        "description": "Get more (and better) reviews and reply in a way that builds trust."
+      },
+      {
+        "title": "Simple social systems",
+        "description": "Batch content and reuse winning posts so you stay consistent."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Stop falling trade",
+        "description": "A focused 30-day plan to get momentum back quickly.",
+        "href": "/empty-pub-solutions",
+        "ctaText": "Start the recovery"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Can you help with marketing for destination pubs?",
+      "answer": "Yes. We position you clearly, make you easy to find, and build proof so people are happy to travel."
+    },
+    {
+      "question": "Will this help in the off-season?",
+      "answer": "Yes. We focus on repeatable hooks and local discovery, not one-off spikes."
+    },
+    {
+      "question": "Do I need a big content plan?",
+      "answer": "No. You need a simple repeatable rhythm. We'll build a calendar that fits real pub life."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Kent?",
+    "subtitle": "Message me your pub type and where trade is dropping. I'll tell you what to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub in Kent and I need help with marketing. Can we have a quick chat?"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "hero": {
-    "title": "Hospitality Marketing for Pubs, Restaurants & Bars",
-    "subtitle": "AI-powered strategy and creative execution proven at The Anchor and adapted for pubs, restaurants, and bars. If it didn't work for us, it's not here.",
+    "title": "Pub Marketing Services That Fill Tables",
+    "subtitle": "AI-powered strategy and practical execution proven at The Anchor. If it didn't work in a real pub, it's not here.",
     "ctaText": "WhatsApp: 07990 587315",
     "bottomText": "All services £75/hour • No fixed packages • Pay for the help you need"
   },
   "realSolutionsSection": {
     "heading": "Real Solutions, Not Theory",
-    "description": "I'm not selling you strategies I read in a book. Every service below is something I use daily at The Anchor and adapt for pubs, restaurants, and bars. You're learning from real experience, not corporate theory.",
+    "description": "I'm not selling you strategies I read in a book. Every service below is something I use daily at The Anchor and adapt for pubs. You're learning from real experience, not corporate theory.",
     "metrics": [
       {
         "number": "1",
@@ -26,6 +26,48 @@
         "title": "Value Added",
         "value": "£75,000-£100,000",
         "description": "Added to our business using AI"
+      }
+    ]
+  },
+  "serviceLandingSection": {
+    "heading": "Popular pub social media services",
+    "description": "If you're here because you searched for one of these, start with the matching page. Each one is designed to be clear, practical, and easy to implement in a busy pub.",
+    "cards": [
+      {
+        "title": "Instagram services for pubs",
+        "description": "A simple plan, Reels workflow, local engagement routine, and templates that sell specific nights.",
+        "href": "/services/instagram-services-for-pubs",
+        "ctaText": "Instagram help"
+      },
+      {
+        "title": "Facebook services for pubs",
+        "description": "Events, local groups, reviews, and a weekly rhythm that drives local footfall.",
+        "href": "/services/facebook-services-for-pubs",
+        "ctaText": "Facebook help"
+      },
+      {
+        "title": "Paid social for pubs",
+        "description": "Simple Meta ads that fill one night at a time: quiz, Sunday lunch, tastings, and events.",
+        "href": "/services/paid-social-for-pubs",
+        "ctaText": "Meta ads help"
+      },
+      {
+        "title": "Content creation for pubs",
+        "description": "Phone-first photos and short videos, captions, templates, and batching so you stay consistent.",
+        "href": "/services/content-creation-for-pubs",
+        "ctaText": "Content help"
+      },
+      {
+        "title": "Social media marketing for pubs",
+        "description": "The full system across Instagram, Facebook, and local channels - without daily stress.",
+        "href": "/services/social-media-marketing-for-pubs",
+        "ctaText": "See the system"
+      },
+      {
+        "title": "Fix my pub",
+        "description": "Tell me what's broken and I'll tell you the fastest win to start with (plus templates to implement).",
+        "href": "/fix-my-pub",
+        "ctaText": "Help me fix it"
       }
     ]
   },
@@ -267,10 +309,10 @@
     "footer": "We're proud to work with these industry leaders, sharing our AI innovations to help transform the wider pub industry."
   },
   "ctaSection": {
-    "title": "Stop Watching Money Walk Past Your Pub, Restaurant, or Bar",
+    "title": "Stop Watching Money Walk Past Your Pub",
     "subtitle": "Every empty table is lost revenue. Every quiet night is bills unpaid. Let's change that - starting today.",
     "buttonText": "WhatsApp me now",
-    "whatsappMessage": "Hi Peter, I need help with my pub, restaurant, or bar",
+    "whatsappMessage": "Hi Peter, I need help with my pub",
     "bottomText": "07990 587315 • Available 7 days a week"
   },
   "faqs": [

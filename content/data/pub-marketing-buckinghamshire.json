@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Buckinghamshire Pubs",
+    "subtitle": "From market towns to destination country pubs, Buckinghamshire is competitive. We'll get you found locally and give people a clear reason to visit.",
+    "ctaText": "Hi Peter, I run a pub in Buckinghamshire and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Buckinghamshire (and what doesn't)",
+    "paragraphs": [
+      "Buckinghamshire pubs often compete on food, gardens, and weekends, but midweek can be brutal if you rely on passing trade.",
+      "The fastest wins usually come from local discovery: your Google profile, photos, reviews, and the words that match what people actually want.",
+      "Then we build one repeatable hook (quiz, steak night, live sport, tastings) and a simple marketing routine your team can run."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Buckinghamshire pubs",
+    "items": [
+      {
+        "title": "Destination positioning",
+        "description": "Make your pub the obvious choice for the occasion: dates, families, Sunday, sport, or bigger bookings."
+      },
+      {
+        "title": "Beer garden and family searches",
+        "description": "Show up when people search for what you actually have: garden, parking, dog-friendly, kids menu, and food."
+      },
+      {
+        "title": "Midweek hooks",
+        "description": "Simple weekly events that turn quiet nights into regulars."
+      },
+      {
+        "title": "Templates that save time",
+        "description": "Messages and posts you can reuse without sounding like every other pub."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Can you help a food-led pub or gastropub?",
+      "answer": "Yes. We align your menus, photos, reviews, and messaging so you show up for the searches that match your best sellers."
+    },
+    {
+      "question": "What if we are great on weekends but dead midweek?",
+      "answer": "That's common. We build one repeatable midweek hook and a simple plan to promote it consistently."
+    },
+    {
+      "question": "Do we need to post every day?",
+      "answer": "No. You need consistency, not daily stress. We'll batch content and focus on posts that sell specific nights."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Buckinghamshire?",
+    "subtitle": "Message me what your pub is known for and where trade is dropping. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub in Buckinghamshire and I need help with marketing. Can we have a quick chat?"
+  }
+}

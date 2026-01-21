@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Berkshire Pubs",
+    "subtitle": "Berkshire pubs compete for commuter, corporate, and weekend trade. We'll get you found locally and build a repeatable offer that people actually choose.",
+    "ctaText": "Hi Peter, I run a pub in Berkshire and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Berkshire (and what doesn't)",
+    "paragraphs": [
+      "Berkshire has busy towns, business parks, and a lot of choice within a short drive. If your pub is hard to find on Google, you lose to whoever shows up first.",
+      "We start by making you easy to choose: correct categories, great photos, review replies, and clear keywords for what you sell (Sunday lunch, beer garden, quiz, live sport, private hire).",
+      "Then we build a repeatable plan for the crowd you want: after-work pints, families, food-led trade, or function bookings. No fluff, just a system you can run weekly."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Berkshire pubs",
+    "items": [
+      {
+        "title": "Commuter and office trade",
+        "description": "Messaging and promotions that pull in after-work footfall without turning into discount chaos."
+      },
+      {
+        "title": "Private hire and parties",
+        "description": "Fix what stops enquiries: what you offer, how to book, and how you appear for searches like function room near me."
+      },
+      {
+        "title": "Sunday lunch that books out",
+        "description": "Better menu descriptions, photos, and social proof so Sunday becomes reliable."
+      },
+      {
+        "title": "One-hour content batching",
+        "description": "Create a month's posts in one session with simple AI templates and a content calendar."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you help pubs that rely on after-work trade?",
+      "answer": "Yes. We'll build a clear reason to visit (and return) and make sure you show up for the searches that match your offer."
+    },
+    {
+      "question": "Can you improve enquiries for parties and functions?",
+      "answer": "Yes. We tighten up the messaging, booking route, and local discovery so people can find you and take the next step quickly."
+    },
+    {
+      "question": "How do we measure if it's working?",
+      "answer": "We track the simple stuff that matters: calls, messages, bookings, covers on key nights, and how often you show up in local searches."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Berkshire?",
+    "subtitle": "Message me your pub type and your biggest problem. I'll tell you what to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub in Berkshire and I need help with marketing. Can we have a quick chat?"
+  }
+}

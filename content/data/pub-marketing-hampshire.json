@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Hampshire Pubs",
+    "subtitle": "Hampshire pubs serve a mix of locals, students, tourists, and event crowds. We'll build a simple system that drives footfall and repeat visits.",
+    "ctaText": "Hi Peter, I run a pub in Hampshire and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Hampshire (and what doesn't)",
+    "paragraphs": [
+      "Hampshire has everything from busy city trade to destination pubs. The pubs that win make it easy to find them and easy to choose them.",
+      "We fix the basics first: Google profile, photos, reviews, and clear messaging for what you are known for.",
+      "Then we build one or two repeatable hooks and a content plan your team can run without living on social."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Hampshire pubs",
+    "items": [
+      {
+        "title": "Win your local searches",
+        "description": "Show up for the right keywords and back it up with photos and reviews."
+      },
+      {
+        "title": "Repeatable events",
+        "description": "Quiz nights, tasting nights, live sport, and simple weekly hooks that compound."
+      },
+      {
+        "title": "Capture group bookings",
+        "description": "Private hire, parties, and bigger tables with clear offers and booking routes."
+      },
+      {
+        "title": "Make marketing lighter",
+        "description": "AI-assisted batching so marketing stops being a daily job."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Will this help if we get tourist spikes?",
+      "answer": "Yes. We build systems to turn spikes into repeats and make sure you show up for the searches visitors use."
+    },
+    {
+      "question": "Can you help with menus and upsells?",
+      "answer": "Yes. Small menu and positioning changes can lift average spend without discounting."
+    },
+    {
+      "question": "How quickly can this work?",
+      "answer": "You can usually see early movement in days (more calls, messages, and interest). Proper results build over 30 days with consistency."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Hampshire?",
+    "subtitle": "Message me your pub type and your biggest problem. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub in Hampshire and I need help with marketing. Can we have a quick chat?"
+  }
+}

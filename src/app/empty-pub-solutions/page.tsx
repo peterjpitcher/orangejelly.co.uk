@@ -119,7 +119,7 @@ export default function EmptyPubSolutions() {
           name: 'Will this work for my type of pub?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Yes. We've helped gastropubs, community locals, sports bars, and country inns. The principles work because they're based on human psychology and proven hospitality strategies, not gimmicks.",
+            text: "Yes. The principles work for gastropubs, community locals, sports bars, and country inns because they're based on human psychology and proven hospitality fundamentals. We'll tailor the plan to your pub and your catchment.",
           },
         },
       ],
@@ -175,18 +175,6 @@ export default function EmptyPubSolutions() {
   ];
 
   const realResults = [
-    {
-      pub: 'The White Horse, Surrey',
-      before: 'Tuesday nights: 15-20 covers',
-      after: 'Tuesday nights: 65-80 covers',
-      timeframe: '6 weeks',
-    },
-    {
-      pub: 'The Crown, Berkshire',
-      before: 'Midweek: 30% capacity',
-      after: 'Midweek: 75% capacity',
-      timeframe: '30 days',
-    },
     {
       pub: 'The Anchor, Stanwell Moor',
       before: 'Dead Monday-Wednesday',
@@ -295,7 +283,7 @@ export default function EmptyPubSolutions() {
       <Section>
         <AnimatedItem animation="fade-in">
           <Heading level={2} align="center" className="mb-12">
-            Real Pubs, Real Results
+            Proof from The Anchor
           </Heading>
           <div className="space-y-6 max-w-4xl mx-auto">
             {realResults.map((result, index) => (

@@ -86,7 +86,7 @@ I'm not a consultant - I'm a licensee working alongside a real pub operator. Bil
 
 ## Will this work for my type of pub?
 
-Yes. We've helped gastropubs, community locals, sports bars, and country inns. The principles work because they're based on human psychology and proven hospitality strategies, not gimmicks.
+Yes. The principles work for gastropubs, community locals, sports bars, and country inns because they're based on human psychology and proven hospitality fundamentals. We'll tailor the plan to your pub and your catchment.
 
 ## Can I see examples of your work?
 

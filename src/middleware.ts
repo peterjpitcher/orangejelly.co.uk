@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(_request: NextRequest) {
-  const response = NextResponse.next();
-
+function applySecurityHeaders(response: NextResponse) {
   // Security headers
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
   response.headers.set('X-Content-Type-Options', 'nosniff');
@@ -41,6 +39,28 @@ export function middleware(_request: NextRequest) {
   );
 
   return response;
+}
+
+export function middleware(request: NextRequest) {
+  const canonicalHostname = 'www.orangejelly.co.uk';
+  const url = request.nextUrl.clone();
+
+  const hostname = url.hostname;
+  const forwardedProto = request.headers.get('x-forwarded-proto');
+  const isProductionHost = hostname === 'orangejelly.co.uk' || hostname === canonicalHostname;
+  const isGetOrHead = request.method === 'GET' || request.method === 'HEAD';
+
+  if (
+    isGetOrHead &&
+    isProductionHost &&
+    (hostname !== canonicalHostname || forwardedProto === 'http')
+  ) {
+    url.hostname = canonicalHostname;
+    url.protocol = 'https:';
+    return applySecurityHeaders(NextResponse.redirect(url, 301));
+  }
+
+  return applySecurityHeaders(NextResponse.next());
 }
 
 export const config = {

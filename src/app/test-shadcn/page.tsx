@@ -10,24 +10,33 @@ import { FAQAccordion } from '@/components/ui/faq-accordion';
 import Input from '@/components/forms/Input';
 import Grid from '@/components/Grid';
 import { PLACEHOLDERS, VALIDATION_MESSAGES } from '@/lib/validation-messages';
+import { generateStaticMetadata } from '@/lib/metadata';
+
+export const metadata = generateStaticMetadata({
+  title: 'Component Test (Internal)',
+  description: 'Internal UI component testing page. Not intended for search results.',
+  path: '/test-shadcn',
+  noIndex: true,
+});
 
 export default function TestShadcnPage() {
   const faqs = [
     {
       id: '1',
       question: 'Do the shadcn components work?',
-      answer: 'Yes! This accordion is using the new shadcn FAQ component with SEO schema markup.'
+      answer: 'Yes! This accordion is using the new shadcn FAQ component with SEO schema markup.',
     },
     {
-      id: '2', 
+      id: '2',
       question: 'Are the adapters working properly?',
-      answer: 'The adapters ensure backward compatibility while we migrate to shadcn components.'
+      answer: 'The adapters ensure backward compatibility while we migrate to shadcn components.',
     },
     {
       id: '3',
       question: 'Is this SEO optimized?',
-      answer: 'Absolutely! Every component includes proper schema.org markup and accessibility features.'
-    }
+      answer:
+        'Absolutely! Every component includes proper schema.org markup and accessibility features.',
+    },
   ];
 
   return (
@@ -35,10 +44,7 @@ export default function TestShadcnPage() {
       <Hero
         title="shadcn Component Test"
         subtitle="Testing all new components and adapters"
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Test shadcn' }
-        ]}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Test shadcn' }]}
       />
 
       <Section>
@@ -55,8 +61,12 @@ export default function TestShadcnPage() {
           <Text size="lg">Large text</Text>
           <Text size="xl">Extra large text</Text>
           <Text size="2xl">2XL text</Text>
-          <Text weight="bold" className="text-orange">Bold orange text</Text>
-          <Text weight="semibold" className="text-teal">Semibold teal text</Text>
+          <Text weight="bold" className="text-orange">
+            Bold orange text
+          </Text>
+          <Text weight="semibold" className="text-teal">
+            Semibold teal text
+          </Text>
         </div>
       </Section>
 
@@ -72,7 +82,9 @@ export default function TestShadcnPage() {
           <Button loading>Loading Button</Button>
           <Button disabled>Disabled Button</Button>
           <Button whatsapp>WhatsApp Button</Button>
-          <Button href="/" external>External Link</Button>
+          <Button href="/" external>
+            External Link
+          </Button>
         </div>
       </Section>
 
@@ -98,7 +110,9 @@ export default function TestShadcnPage() {
             <Text>This card has a colored background.</Text>
           </Card>
           <Card variant="colored" background="teal-dark">
-            <Heading level={3} color="white">Dark Card</Heading>
+            <Heading level={3} color="white">
+              Dark Card
+            </Heading>
             <Text color="white">This card has a dark background.</Text>
           </Card>
           <Card variant="shadowed" className="hover:shadow-xl transition-shadow">
@@ -134,11 +148,7 @@ export default function TestShadcnPage() {
           Form Components
         </Heading>
         <div className="max-w-md mx-auto space-y-4">
-          <Input
-            label="Name"
-            placeholder={PLACEHOLDERS.name.default}
-            required
-          />
+          <Input label="Name" placeholder={PLACEHOLDERS.name.default} required />
           <Input
             label="Email"
             type="email"
@@ -151,11 +161,7 @@ export default function TestShadcnPage() {
             placeholder={PLACEHOLDERS.phone.default}
             error={VALIDATION_MESSAGES.phone.invalid}
           />
-          <Input
-            label="Message"
-            placeholder={PLACEHOLDERS.message.general}
-            variant="filled"
-          />
+          <Input label="Message" placeholder={PLACEHOLDERS.message.general} variant="filled" />
         </div>
       </Section>
 
@@ -168,13 +174,13 @@ export default function TestShadcnPage() {
             Traditional card-based FAQ items:
           </Text>
           <div className="space-y-4 mb-12">
-            <FAQItem 
+            <FAQItem
               question="Is this the old FAQ style?"
               answer="Yes, this uses the card-based FAQ component."
               icon="❓"
             />
           </div>
-          
+
           <Text align="center" className="mb-8">
             New accordion-based FAQ with SEO schema:
           </Text>

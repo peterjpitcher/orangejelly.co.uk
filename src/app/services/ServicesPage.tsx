@@ -37,8 +37,17 @@ type ServicePartner = {
   url?: string;
 };
 
+type ServiceLandingCard = {
+  title: string;
+  description: string;
+  href: string;
+  ctaText: string;
+};
+
 export default function ServicesPage() {
   const faqsForDisplay = servicesData.faqs;
+  const serviceLandingSection = servicesData.serviceLandingSection;
+  const serviceLandingCards = (serviceLandingSection?.cards || []) as ServiceLandingCard[];
   const servicePackages = servicesData.servicePackages;
   const realSolutions = servicesData.realSolutionsSection;
   const process = servicesData.processSection;
@@ -63,6 +72,48 @@ export default function ServicesPage() {
         bottomText={servicesData.hero.bottomText}
         breadcrumbs={breadcrumbPaths.services}
       />
+
+      {/* Service landing pages (Search Console intent pages) */}
+      {serviceLandingSection && serviceLandingCards.length > 0 && (
+        <Section background="cream" padding="large">
+          <Container maxWidth="6xl">
+            <div className="text-center mb-10">
+              <Heading level={2} className="mb-3">
+                {serviceLandingSection.heading}
+              </Heading>
+              <Text size="lg" color="muted" className="max-w-4xl mx-auto">
+                {serviceLandingSection.description}
+              </Text>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {serviceLandingCards.map((card) => (
+                <Card
+                  key={card.href}
+                  variant="bordered"
+                  padding="large"
+                  background="white"
+                  className="flex flex-col"
+                >
+                  <div className="flex-1">
+                    <Heading level={3} className="mb-3">
+                      {card.title}
+                    </Heading>
+                    <Text color="muted" className="mb-6">
+                      {card.description}
+                    </Text>
+                  </div>
+                  <div>
+                    <Button href={card.href} variant="primary" size="medium">
+                      {card.ctaText}
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
 
       {/* Real Solutions, Not Theory Section */}
       <Section background="white" padding="medium">
@@ -102,8 +153,8 @@ export default function ServicesPage() {
         <Container maxWidth="4xl">
           <Text size="sm" color="muted" align="center" className="mb-8">
             These aren&apos;t fixed packages—just proven ways we can help. You still pay £75 per
-            hour plus VAT and we tailor the time to whatever your pub, restaurant, or bar needs over
-            the 30-day turnaround.
+            hour plus VAT and we tailor the time to whatever your pub needs over the 30-day
+            turnaround.
           </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {servicePackages.map((service) => (

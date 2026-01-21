@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "title": "Pub Marketing for Oxfordshire Pubs",
+    "subtitle": "Oxfordshire pubs compete for locals, tourists, and student trade. We'll improve local visibility and build repeatable nights that keep the place busy.",
+    "ctaText": "Hi Peter, I run a pub in Oxfordshire and need help",
+    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "What works in Oxfordshire (and what doesn't)",
+    "paragraphs": [
+      "Oxfordshire can swing between term time and holidays, tourists and locals, and heavy competition for good food and good atmosphere.",
+      "We tighten up your local presence: Google profile, photos, reviews, and the words that match what people search for.",
+      "Then we build a simple repeatable plan: one midweek hook, one weekend focus, and content that you can batch in advance."
+    ]
+  },
+  "wins": {
+    "heading": "Fast wins for Oxfordshire pubs",
+    "items": [
+      {
+        "title": "Be the obvious choice",
+        "description": "Clarify what you are best at and reflect it across Google, your menu, and socials."
+      },
+      {
+        "title": "Term-time and tourist trade",
+        "description": "Messaging for the right crowd at the right time, not generic posting."
+      },
+      {
+        "title": "Midweek rhythm",
+        "description": "A weekly hook that builds regulars and bookings."
+      },
+      {
+        "title": "Better spend",
+        "description": "Menu and upsell tweaks that lift average spend without discounting."
+      }
+    ]
+  },
+  "nextSteps": {
+    "heading": "Where to start",
+    "links": [
+      {
+        "title": "Start with pub marketing fundamentals",
+        "description": "A practical overview and the best next page based on your biggest problem.",
+        "href": "/pub-marketing",
+        "ctaText": "Pub marketing overview"
+      },
+      {
+        "title": "Fix dead midweek nights",
+        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "href": "/quiet-midweek-solutions",
+        "ctaText": "Fix midweek"
+      },
+      {
+        "title": "Full services",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "href": "/services",
+        "ctaText": "View services"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you help pubs that rely on food?",
+      "answer": "Yes. We align your menus, photos, reviews, and messaging so you show up for searches that match your best sellers."
+    },
+    {
+      "question": "Can this work without a big team?",
+      "answer": "Yes. It's built for busy pubs. We use templates and batching so you can stay consistent with less time."
+    },
+    {
+      "question": "Do you only work with pubs?",
+      "answer": "Yes for now. Everything here is based on pub trade and what works in a real venue."
+    }
+  ],
+  "cta": {
+    "title": "Want more customers through the door in Oxfordshire?",
+    "subtitle": "Message me your pub type and the one thing hurting trade. I'll tell you the fastest win to start with.",
+    "whatsappMessage": "Hi Peter, I run a pub in Oxfordshire and I need help with marketing. Can we have a quick chat?"
+  }
+}

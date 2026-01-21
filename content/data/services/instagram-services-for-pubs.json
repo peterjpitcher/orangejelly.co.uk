@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Instagram services for pubs",
+    "description": "Practical Instagram support for pubs: a content plan, Reels workflow, local engagement routine, and simple reporting that drives footfall.",
+    "url": "/services/instagram-services-for-pubs",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Instagram Services for Pubs",
+    "subtitle": "Stop posting into the void. Get a simple plan, a Reels workflow, and local engagement that drives real footfall.",
+    "ctaText": "Hi Peter, I need Instagram help for my pub",
+    "bottomText": "£75/hour + VAT • No contracts • Built for busy licensees"
+  },
+  "intro": {
+    "heading": "Instagram that sells a night (not just likes)",
+    "paragraphs": [
+      "Most pub Instagram accounts fail for one reason: they post random stuff with no plan, then give up when it doesn't move the needle.",
+      "I'll help you build a repeatable system: what to post, how to film it on a phone, how to batch it in one session, and how to get it seen by local people who actually visit pubs.",
+      "Everything is designed for real pub life and tested at The Anchor: quick to create, easy to run, and focused on getting bums on seats."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "30-day content plan",
+        "description": "A calendar that matches your trading patterns: quiet nights, key offers, and the nights you want to sell."
+      },
+      {
+        "title": "Reels and Stories workflow",
+        "description": "Simple filming prompts, scripts, and templates so you can create short-form content without overthinking."
+      },
+      {
+        "title": "Caption and hook templates",
+        "description": "Ready-to-use copy that sells specific nights: quiz, Sunday lunch, sport, live music, and specials."
+      },
+      {
+        "title": "Local engagement routine",
+        "description": "What to do for 10 minutes a day to get in front of local customers without spam or cringe."
+      },
+      {
+        "title": "AI batching system",
+        "description": "How to plan and create content in batches so marketing stops being a daily job."
+      },
+      {
+        "title": "Simple weekly scorecard",
+        "description": "A quick way to track what matters: enquiries, bookings, and which posts drove action."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Quick audit",
+        "description": "Fix the basics that stop people following or booking: profile, highlights, and what you sell."
+      },
+      {
+        "number": "2",
+        "title": "Build your plan",
+        "description": "We choose one focus (midweek, food, sport, events) and map 30 days of posts around it."
+      },
+      {
+        "number": "3",
+        "title": "Create in batches",
+        "description": "You get templates and prompts so you can film and write content in one session."
+      },
+      {
+        "number": "4",
+        "title": "Improve what works",
+        "description": "We double down on the posts that drive enquiries and cut the rest."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you create the posts for us?",
+      "answer": "Either. Some pubs want templates and a batching session so their team can run it. Others want hands-on support. We decide what fits your time and budget."
+    },
+    {
+      "question": "How quickly can Instagram bring customers in?",
+      "answer": "You can usually see early movement in days (more messages and replies). Bankable results build over 30 days as consistency and word-of-mouth compound."
+    },
+    {
+      "question": "Do we need to post every day?",
+      "answer": "No. You need consistency and posts that sell a night. We'll build a realistic schedule your pub can stick to."
+    },
+    {
+      "question": "Will it work if we don't have great photos?",
+      "answer": "Yes. Phone-first content wins for pubs because it's real. I'll give you a shot list and prompts to make it easy."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "£75 per hour plus VAT. No packages. Start small, prove it works, then scale support if you want."
+    }
+  ],
+  "cta": {
+    "title": "Want Instagram that drives footfall?",
+    "subtitle": "Message me your pub type and the night you want to sell. I'll tell you the fastest thing to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with Instagram. Can we have a quick chat?"
+  }
+}

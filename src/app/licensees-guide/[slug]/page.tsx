@@ -15,6 +15,7 @@ import { PageLoading } from '@/components/Loading';
 import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
+import { seoOverrides } from '@/lib/seo-overrides';
 
 interface BlogPostPageProps {
   params: {
@@ -375,6 +376,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const baseUrl = getBaseUrl();
+  const canonicalPath = `/licensees-guide/${params.slug}`;
+  const override = seoOverrides[canonicalPath];
 
   // Use the article's featured image for OpenGraph
   const ogImage =
@@ -387,6 +390,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const metaDescription =
     typeof post.metaDescription === 'string' ? post.metaDescription : undefined;
 
+  const resolvedTitle = override?.title || metaTitle || post.title;
+  const resolvedDescription = override?.description || metaDescription || post.excerpt;
+
   const keywords =
     Array.isArray(post.keywords) && post.keywords.length > 0
       ? post.keywords
@@ -394,20 +400,24 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         ? post.tags
         : undefined;
 
+  const resolvedKeywords =
+    override?.keywords && override.keywords.length > 0 ? override.keywords : keywords;
+  const canonicalUrl = override?.canonical || `${baseUrl}${canonicalPath}`;
+
   return {
-    title: metaTitle || post.title,
-    description: metaDescription || post.excerpt,
-    keywords,
+    title: resolvedTitle,
+    description: resolvedDescription,
+    keywords: resolvedKeywords,
     openGraph: {
-      title: metaTitle || post.title,
-      description: metaDescription || post.excerpt,
+      title: resolvedTitle,
+      description: resolvedDescription,
       type: 'article',
       publishedTime: typeof post.publishedDate === 'string' ? post.publishedDate : undefined,
       modifiedTime: typeof post.updatedDate === 'string' ? post.updatedDate : undefined,
       authors: [post.author?.name || 'Peter Pitcher'],
       siteName: 'Orange Jelly',
       locale: 'en_GB',
-      url: `${baseUrl}/licensees-guide/${params.slug}`,
+      url: canonicalUrl,
       images: [
         {
           url: absoluteImageUrl,
@@ -420,14 +430,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     twitter: {
       card: 'summary_large_image',
-      title: metaTitle || post.title,
-      description: metaDescription || post.excerpt,
+      title: resolvedTitle,
+      description: resolvedDescription,
       images: [absoluteImageUrl],
       creator: '@orangejelly_uk',
       site: '@orangejelly_uk',
     },
     alternates: {
-      canonical: `${baseUrl}/licensees-guide/${params.slug}`,
+      canonical: canonicalUrl,
     },
   };
 }

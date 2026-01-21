@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Facebook services for pubs",
+    "description": "Facebook support for pubs: events, local groups, posts, offers, review replies, and simple reporting to drive local footfall.",
+    "url": "/services/facebook-services-for-pubs",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Facebook Services for Pubs",
+    "subtitle": "Facebook still drives local footfall when you use it properly: events, groups, reviews, and clear offers.",
+    "ctaText": "Hi Peter, I need Facebook help for my pub",
+    "bottomText": "£75/hour + VAT • No contracts • Practical help from a working licensee"
+  },
+  "intro": {
+    "heading": "Facebook is still a pub marketing weapon",
+    "paragraphs": [
+      "For pubs, Facebook is often more valuable than Instagram because it reaches locals, families, and community groups that actually decide where to go.",
+      "Most pubs waste it by posting boring updates or boosting randomly. The wins come from events, groups, reviews, and a repeatable weekly rhythm.",
+      "I'll help you set it up properly and run it in a way that fits pub life."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "Local group playbook",
+        "description": "What to post, where to post it, and how to avoid getting ignored or banned."
+      },
+      {
+        "title": "Event promotion templates",
+        "description": "Copy and images you can reuse for quiz night, live sport, food nights, tastings, and seasonal events."
+      },
+      {
+        "title": "Weekly posting rhythm",
+        "description": "A realistic plan that sells specific nights, not random pub photos."
+      },
+      {
+        "title": "Reviews and reputation",
+        "description": "A simple system for getting more reviews and replying in a way that builds trust."
+      },
+      {
+        "title": "Page tidy-up",
+        "description": "Fix the basics that stop people visiting: info, photos, menus, booking links, and pinned posts."
+      },
+      {
+        "title": "Simple reporting",
+        "description": "A quick scorecard so you know what drove enquiries, bookings, and covers."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Audit and tidy",
+        "description": "We fix the page so it is easy to choose you: photos, info, menus, and pinned posts."
+      },
+      {
+        "number": "2",
+        "title": "Pick your hook",
+        "description": "One clear reason to visit this week: quiz, sport, food, or an event."
+      },
+      {
+        "number": "3",
+        "title": "Build templates",
+        "description": "You get posts you can reuse and a simple weekly rhythm your team can follow."
+      },
+      {
+        "number": "4",
+        "title": "Measure and improve",
+        "description": "We focus on what drives bookings and enquiries, not vanity reach."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do you run our Facebook page for us?",
+      "answer": "I can, but most pubs prefer a system they can run. I provide the plan, templates, and training so it stays consistent."
+    },
+    {
+      "question": "Is Facebook still worth it in 2026?",
+      "answer": "For pubs, yes. It is one of the best channels for local discovery, community groups, and event promotion."
+    },
+    {
+      "question": "Do we need to boost posts?",
+      "answer": "Not always. We start with organic wins (groups, events, reviews). Boosting can help when used with a clear goal and small budget."
+    },
+    {
+      "question": "Can this work if we are in a competitive area?",
+      "answer": "Yes. The difference is clarity: what you offer, why to visit, and proof through reviews and photos."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "£75 per hour plus VAT. No packages. Start with the biggest win and build from there."
+    }
+  ],
+  "cta": {
+    "title": "Want Facebook to bring locals in?",
+    "subtitle": "Message me your pub type and your biggest problem. I'll tell you what to fix first.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with Facebook marketing. Can we have a quick chat?"
+  }
+}

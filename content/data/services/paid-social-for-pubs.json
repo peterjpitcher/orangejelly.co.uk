@@ -1,0 +1,104 @@
+{
+  "service": {
+    "name": "Paid social for pubs",
+    "description": "Meta (Facebook and Instagram) ads for pubs: simple campaigns that sell specific nights, build enquiries, and bring locals through the door.",
+    "url": "/services/paid-social-for-pubs",
+    "price": "75",
+    "currency": "GBP"
+  },
+  "hero": {
+    "title": "Paid Social for Pubs",
+    "subtitle": "Run simple Meta ads that fill specific nights: quizzes, Sunday lunch, tasting nights, private hire and events.",
+    "ctaText": "Hi Peter, I need paid social help for my pub",
+    "bottomText": "£75/hour + VAT • No long contracts • Start small and scale winners"
+  },
+  "intro": {
+    "heading": "Paid social works when you sell one thing",
+    "paragraphs": [
+      "Most pub ads fail because they try to promote everything at once: food, drinks, sport, events, and a vibe. People scroll past.",
+      "We pick one outcome (sell Tuesday quiz, book Sunday lunch, fill a tasting night) and run a simple campaign with clear creative, tight targeting, and a short booking path.",
+      "If you want ads that drive real bookings, we keep it focused and measurable."
+    ]
+  },
+  "deliverables": {
+    "heading": "What you get",
+    "items": [
+      {
+        "title": "Offer and messaging",
+        "description": "A clear reason to visit and copy that matches how real customers decide."
+      },
+      {
+        "title": "Targeting and geo radius",
+        "description": "Local targeting that matches your catchment, not vanity audience size."
+      },
+      {
+        "title": "Ad creatives and variations",
+        "description": "Simple images and short videos that sell the night, plus variations for testing."
+      },
+      {
+        "title": "Budget guardrails",
+        "description": "A sensible way to start small and avoid wasting money."
+      },
+      {
+        "title": "Tracking plan",
+        "description": "What to track (calls, messages, bookings) so you can tell if it worked."
+      },
+      {
+        "title": "Weekly improvements",
+        "description": "Small tweaks that compound: better creative, better targeting, better offer."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Pick the goal",
+        "description": "We choose the one night or outcome to improve first."
+      },
+      {
+        "number": "2",
+        "title": "Build the campaign",
+        "description": "Offer, creative, targeting, and a simple booking path (messages or bookings)."
+      },
+      {
+        "number": "3",
+        "title": "Launch and learn",
+        "description": "Test variations, watch the data, and improve quickly."
+      },
+      {
+        "number": "4",
+        "title": "Scale winners",
+        "description": "Increase what is working and stop what is wasting money."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Do I need a big ad budget?",
+      "answer": "No. Start small. The key is a clear offer and good creative, not huge spend."
+    },
+    {
+      "question": "Can paid social work without a website?",
+      "answer": "Yes. Many pubs do best with ads that drive WhatsApp messages, calls, or Facebook messages. We pick the fastest booking route."
+    },
+    {
+      "question": "Will ads work if our pub is struggling?",
+      "answer": "Ads amplify what you already have. We make sure the offer and basics (Google profile, photos, reviews) are strong, then ads can accelerate."
+    },
+    {
+      "question": "Do you help with the creative too?",
+      "answer": "Yes. We'll use phone-first images and short videos that look real and sell the night."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "£75 per hour plus VAT. No packages. You can run ads with a small amount of support once the system is set up."
+    }
+  ],
+  "cta": {
+    "title": "Want ads that actually fill a night?",
+    "subtitle": "Message me which night is dead and what you currently offer. I'll tell you the simplest campaign to run first.",
+    "whatsappMessage": "Hi Peter, I run a pub and I need help with paid social ads. Can we have a quick chat?"
+  }
+}
