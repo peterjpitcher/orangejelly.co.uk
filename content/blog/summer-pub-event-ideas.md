@@ -1022,7 +1022,7 @@ Track these metrics:
 
 1. **Launch early marketing** to build anticipation
 
-For year-round event planning, check our \[complete events guide\](/blog/how-to-run-successful-pub-events/) and \[seasonal calendar\](/blog/seasonal-pub-events-calendar/).
+For year-round event planning, check our \[complete events guide\](/licensees-guide/how-to-run-successful-pub-events/) and \[seasonal calendar\](/licensees-guide/seasonal-pub-events-calendar/).
 
 *What summer events work best in your pub garden? Share your success stories and pictures below!*
 

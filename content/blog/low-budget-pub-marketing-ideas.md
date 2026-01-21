@@ -32,7 +32,7 @@ voiceSearchQueries:
 
 # 25 Low Budget Pub Marketing Ideas That Actually Work
 
-Running a successful pub doesn't require a massive marketing budget. In fact, some of the most effective promotional strategies cost little to nothing – they just require creativity, consistency, and a bit of elbow grease. After helping our experience at The Anchor and industry research improve their marketing, we've compiled the most effective low-budget strategies that deliver real results.
+Running a successful pub doesn't require a massive marketing budget. In fact, some of the most effective promotional strategies cost little to nothing – they just require creativity, consistency, and a bit of elbow grease. After improving our own marketing at The Anchor (and testing what actually works), we've compiled the most effective low-budget strategies that deliver real results in a real pub.
 
 ## Why Low-Budget Marketing Can Outperform Big Spending
 
@@ -246,7 +246,7 @@ Automate birthday offers to guarantee monthly visits.
 
 **Potential ROI:** Additional covers on quiet nights
 
-Transform slow evenings with engaging quiz nights. \[Learn more about running successful quiz nights\](/blog/quiz-night-ideas/).
+Transform slow evenings with engaging quiz nights. \[Learn more about running successful quiz nights\](/licensees-guide/quiz-night-ideas/).
 
 **Budget tips:**
 
@@ -332,7 +332,7 @@ Take your pub to the people with strategic pop-ups.
 
 **Potential ROI:** Noticeable lift at The Anchor in discovery searches
 
-Maximize your free Google listing. \[Read our local marketing guide\](/blog/local-pub-marketing/) for detailed steps.
+Maximize your free Google listing. \[Read our local marketing guide\](/licensees-guide/local-pub-marketing/) for detailed steps.
 
 **Key actions:**
 
@@ -484,7 +484,7 @@ Transform bathrooms into talking points.
 
 **Potential ROI:** Loyal dog-owner customer base
 
-Become the go-to pub for dog owners. \[See our guide on attracting different customer segments\](/blog/pub-differentiation-strategies/).
+Become the go-to pub for dog owners. \[See our guide on attracting different customer segments\](/licensees-guide/pub-differentiation-strategies/).
 
 **Setup:**
 
@@ -652,7 +652,7 @@ Track these metrics for each initiative:
 
 Remember, successful pub marketing isn't about spending the most money – it's about connecting authentically with your community and providing experiences worth talking about. Start small, measure everything, and scale what works.
 
-For more strategies on competing with larger establishments, check out our guides on \[beating chain pubs\](/blog/beat-chain-pubs/) and \[filling empty tables\](/blog/fill-empty-pub-tables/).
+For more strategies on competing with larger establishments, check out our guides on \[beating chain pubs\](/licensees-guide/beat-chain-pubs/) and \[filling empty tables\](/licensees-guide/fill-empty-pub-tables/).
 
 *What low-budget marketing tactics have worked for your pub? Share your experiences in the comments below!*
 

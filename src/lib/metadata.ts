@@ -96,7 +96,7 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
   const defaults: GenerateMetadataProps = {
     title: 'Orange Jelly',
     description:
-      'AI-powered hospitality marketing for UK pubs, restaurants, and bars from real operators who understand your challenges.',
+      'AI-powered pub marketing tested daily at The Anchor in Stanwell Moor. Practical systems that save time and help fill tables.',
     path: '/',
     ogType: 'website',
     ogImage: '/images/og-default.jpg', // Standard OG image for non-article pages
@@ -124,7 +124,7 @@ export const pageMetadata = {
   results: {
     title: 'Hospitality Marketing Success Stories | Real Results',
     description:
-      'See how we helped pubs, restaurants, and bars increase covers with proven marketing strategies. Real results, real testimonials, real revenue growth.',
+      "See real numbers and lessons from The Anchor. No theory - just what we've tested in our own pub.",
     keywords:
       'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results',
   },

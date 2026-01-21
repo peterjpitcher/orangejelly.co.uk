@@ -419,7 +419,7 @@ Align with other premium brands:
 
 - Waiting list/booking lead times
 
-## Case Studies: Premium Transformation Success
+## Examples from the Trade: Premium Positioning
 
 ### The Marksman, London
 

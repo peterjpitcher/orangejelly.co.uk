@@ -31,13 +31,13 @@ export const PRICING = {
 export const MESSAGES = {
   // WhatsApp Messages
   whatsapp: {
-    default: 'Hi Peter, got time for a quick chat about my pub, restaurant, or bar?',
+    default: 'Hi Peter, got time for a quick chat about my pub?',
     services: "Hi Peter, I'd like to chat about your services",
-    training: "Hi Peter, I'm interested in AI training for my pub, restaurant, or bar",
-    recovery: 'Hi Peter, I need help with my struggling pub, restaurant, or bar',
+    training: "Hi Peter, I'm interested in AI training for my pub",
+    recovery: 'Hi Peter, I need help with my struggling pub',
     blog: 'Hi Peter, I just read your blog post and need help with my venue',
     notListed: 'Hi Peter, I need help with something not on your services list...',
-    caseStudies: 'Hi Peter, just read your case studies. Can we chat?',
+    caseStudies: 'Hi Peter, just read your results from The Anchor. Can we chat?',
     lostPage: "Hi Peter, I got lost on your site. Can you help me find what I'm looking for?",
   },
 

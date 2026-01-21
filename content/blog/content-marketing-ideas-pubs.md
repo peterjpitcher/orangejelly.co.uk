@@ -740,15 +740,15 @@ Download our comprehensive toolkit:
 
 ## Related Resources
 
-- \[The Complete Social Media Strategy Guide for Pubs\](/blog/social-media-strategy-for-pubs)
+- \[The Complete Social Media Strategy Guide for Pubs\](/licensees-guide/social-media-strategy-for-pubs)
 
-- \[Instagram Marketing for Pubs\](/blog/instagram-marketing-for-pubs)
+- \[Instagram Marketing for Pubs\](/licensees-guide/instagram-marketing-for-pubs)
 
-- \[Facebook Marketing for Local Pubs\](/blog/facebook-marketing-local-pubs)
+- \[Facebook Marketing for Local Pubs\](/licensees-guide/facebook-marketing-local-pubs)
 
-- \[Email Marketing for Pub Customer Retention\](/blog/email-marketing-pub-retention)
+- \[Email Marketing for Pub Customer Retention\](/licensees-guide/email-marketing-pub-retention)
 
-*Join our free community "Content Creators for Pubs" where publicans share what's working, get feedback on ideas, and collaborate on content that drives real results.*
+Want templates and a repeatable system? Start with our [content creation for pubs](/services/content-creation-for-pubs).
 
 ## Frequently Asked Questions
 

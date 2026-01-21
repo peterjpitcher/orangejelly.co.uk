@@ -668,7 +668,7 @@ With full budget, add these game-changers:
 
 - Payback: Within a few months
 
-For more ways to improve your pub on a budget, explore our \[low-budget marketing ideas\](/blog/low-budget-pub-marketing-ideas/) and \[filling empty tables strategies\](/blog/fill-empty-pub-tables/).
+For more ways to improve your pub on a budget, explore our \[low-budget marketing ideas\](/licensees-guide/low-budget-pub-marketing-ideas/) and \[filling empty tables strategies\](/licensees-guide/fill-empty-pub-tables/).
 
 *Have you transformed your pub on a budget? Share your before and after photos and tips in the comments!*
 

@@ -72,7 +72,7 @@ function AuthorInfo({ author, variant = 'full' }: AuthorInfoProps) {
 export const defaultAuthor = {
   name: 'Peter Pitcher',
   role: 'Licensee & Founder',
-  bio: 'I run The Anchor in Stanwell Moor with my husband Billy. After struggling with empty tables and overwhelming marketing tasks, I discovered how AI could transform pub marketing. Now I help other licensees implement the same strategies that saved our pub.',
+  bio: 'I run The Anchor in Stanwell Moor with my husband Billy. After struggling with empty tables and overwhelming marketing tasks, I started using AI to make pub marketing faster and more effective. Everything I share is tested at The Anchor first.',
   image: '/images/peter-pitcher.jpg',
 };
 

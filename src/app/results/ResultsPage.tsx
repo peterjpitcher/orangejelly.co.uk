@@ -56,7 +56,7 @@ export default function ResultsPage({}: ResultsPageProps) {
           <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
             <div>
               <Heading level={2} className="mb-4">
-                These Aren't Just Case Studies
+                This Isn't Theory
               </Heading>
               <Text size="lg" className="mb-6">
                 Every strategy, every number, every result comes from our own pub. We've tested it

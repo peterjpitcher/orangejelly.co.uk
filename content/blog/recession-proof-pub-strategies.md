@@ -738,7 +738,7 @@ While managing the downturn, prepare for recovery:
 
 Remember: Recessions end. The pubs that survive and adapt emerge stronger, with loyal customers and efficient operations. Your role as a community hub becomes even more vital during tough times.
 
-For more strategies, explore our guides on \[low-budget marketing\](/blog/low-budget-pub-marketing-ideas/) and \[midweek promotions\](/blog/midweek-pub-offers-that-work/).
+For more strategies, explore our guides on \[low-budget marketing\](/licensees-guide/low-budget-pub-marketing-ideas/) and \[midweek promotions\](/licensees-guide/midweek-pub-offers-that-work/).
 
 *How is your pub preparing for economic challenges? Share your strategies and concerns in the comments below.*
 

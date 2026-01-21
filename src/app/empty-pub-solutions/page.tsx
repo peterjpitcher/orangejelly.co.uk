@@ -17,7 +17,7 @@ import { HowToSchema } from '@/components/StructuredData';
 export const metadata = generateMetadata({
   title: '30 Days to Fuller Tables - Transform Your Empty Pub',
   description:
-    'Empty pub killing your profits? Proven 30-day system fills tables fast. Real results from UK pubs.',
+    'Empty pub killing your profits? A practical 30-day plan to fill tables fast, tested at The Anchor.',
   path: '/empty-pub-solutions',
 });
 

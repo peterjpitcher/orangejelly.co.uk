@@ -216,9 +216,8 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
               Need Help Implementing These Ideas?
             </Heading>
             <Text align="center" color="white" className="mb-6 max-w-2xl mx-auto">
-              I've proven these strategies work at The Anchor and will start training other pubs
-              from September 2025. Let's chat about your specific situation - no sales pitch, just
-              licensee to licensee.
+              I've proven these strategies work at The Anchor. If you want help turning them into a
+              simple plan for your pub, let's chat - no sales pitch, just licensee to licensee.
             </Text>
             <Button
               href={URLS.whatsapp(post.ctaSettings?.whatsappMessage || MESSAGES.whatsapp.blog)}

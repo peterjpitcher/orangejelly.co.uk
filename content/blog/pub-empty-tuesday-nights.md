@@ -3,7 +3,7 @@ title: "Why Your Pub is Empty on Tuesday Nights (And How to Fix It)"
 slug: "pub-empty-tuesday-nights"
 publishedDate: 2025-03-27
 updatedDate: "2025-02-24T01:00:00.000Z"
-excerpt: "Discover proven strategies to transform dead Tuesday nights into profitable evenings. Real solutions from a pub landlord who's been there."
+excerpt: "Discover practical strategies to transform dead Tuesday nights into profitable evenings. Real solutions from a licensee who's been there."
 quickAnswer: "Combat Tuesday's post-weekend fatigue with comfort-focused offers: hearty meal deals, wine and cheese nights, or cosy atmosphere events. Partner with local businesses for after-work meetups. Create Tuesday traditions that make it the night people look forward to rather than endure."
 author: "Peter Pitcher"
 category: "empty-pub-solutions"
@@ -13,7 +13,7 @@ tags:
   - "midweek pub ideas"
   - "increase pub footfall"
 status: "published"
-metaDescription: "Learn why pubs are empty on weeknights and discover practical strategies to boost Tuesday night trade. Real results from UK pub landlords."
+metaDescription: "Learn why pubs are empty on weeknights and discover practical strategies to boost Tuesday night trade. Tested at The Anchor."
 keywords:
   - "pub empty weeknights"
   - "tuesday night dead pub"

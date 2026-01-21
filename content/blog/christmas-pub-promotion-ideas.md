@@ -136,7 +136,7 @@ Two-hour sittings with unlimited prosecco/beer and brunch menu:
 
 **Frequency:** Weekly through December
 
-Enhance your regular quiz with festive rounds. \[See our quiz night guide\](/blog/quiz-night-ideas/) for setup tips.
+Enhance your regular quiz with festive rounds. \[See our quiz night guide\](/licensees-guide/quiz-night-ideas/) for setup tips.
 
 **Special themes:**
 
@@ -758,7 +758,7 @@ Don't let momentum die on January 1st:
 
 1. **Monitor daily and adjust** based on response
 
-For year-round event ideas, explore our \[seasonal events calendar\](/blog/seasonal-pub-events-calendar/) and \[successful events guide\](/blog/how-to-run-successful-pub-events/).
+For year-round event ideas, explore our \[seasonal events calendar\](/licensees-guide/seasonal-pub-events-calendar/) and \[successful events guide\](/licensees-guide/how-to-run-successful-pub-events/).
 
 *What Christmas promotions work best for your pub? Share your festive success stories below!*
 

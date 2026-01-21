@@ -5,7 +5,7 @@
   },
   "emergencyBanner": {
     "heading": "Is Your Pub in Crisis?",
-    "description": "Empty tables, rising costs, staff nightmares - we know the feeling. The Anchor was failing too until we figured out how to fix it. Now we help other licensees escape the same traps.",
+    "description": "Empty tables, rising costs, staff nightmares - we know the feeling. The Anchor was failing too until we figured out how to fix it. Everything we share is tested in our own pub first.",
     "ctaText": "URGENT: I need help with my pub NOW",
     "supportText": "I'll do my best to respond quickly"
   },
@@ -93,7 +93,7 @@
   ],
   "recoveryMetrics": {
     "title": "Your Recovery Timeline",
-    "subtitle": "Based on The Anchor's transformation and other pubs we've helped",
+    "subtitle": "Based on The Anchor's transformation",
     "metrics": [
       {
         "timeframe": "Days 1-7",

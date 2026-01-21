@@ -617,19 +617,9 @@ Managing Instagram from computer only. The app has features desktop doesn't.
 
 - Plan next month
 
-## Real Results from Real Pubs
+## Real Results from The Anchor
 
-**The Copper Kettle, Leeds:**
-
-Focused on Reels showing cocktail making. Grew followers quickly and lifted Friday night cocktail sales.
-
-**The Fox & Hound, Bristol:**
-
-Created "Dogstagram" featuring customer pets. Became the go-to dog-friendly pub, weekend lunches lifted.
-
-**The Garden Gate, Manchester:**
-
-Used Stories for daily specials exclusively. Story views stayed strong and midweek covers lifted.
+At The Anchor, a simple Instagram workflow (Reels + Stories + local engagement) is part of how we reach 60,000-70,000 people per month across social when we stay consistent.
 
 ## Tools to Make Instagram Easier
 
@@ -675,7 +665,7 @@ Start today. Post imperfectly. Engage genuinely. Watch what happens.
 
 If you'd like help turning this guide into a tailored roadmap, we can work together in £75/hour strategy sessions. We'll audit your current Instagram presence, build a 30-day calendar, set up AI-assisted workflows, and agree weekly review rituals so your team can run everything in-house.
 
-[Book an Instagram strategy session](https://www.orangejelly.co.uk/services#social-media) →
+[Book an Instagram strategy session](/services/instagram-services-for-pubs) →
 
 ## Your Instagram Action Checklist
 
@@ -701,13 +691,13 @@ If you'd like help turning this guide into a tailored roadmap, we can work toget
 
 ## Related Resources
 
-- \[The Complete Social Media Strategy Guide for Pubs\](/blog/social-media-strategy-for-pubs)
+- \[The Complete Social Media Strategy Guide for Pubs\](/licensees-guide/social-media-strategy-for-pubs)
 
-- \[Local Pub Marketing: The Complete Guide\](/blog/local-pub-marketing)
+- \[Local Pub Marketing: The Complete Guide\](/licensees-guide/local-pub-marketing)
 
-- \[Fill Empty Tables: Strategic Capacity Management\](/blog/fill-empty-pub-tables)
+- \[Fill Empty Tables: Strategic Capacity Management\](/licensees-guide/fill-empty-pub-tables)
 
-- \[Why Is My Pub Empty? A Diagnostic Guide\](/blog/why-is-my-pub-empty)
+- \[Why Is My Pub Empty? A Diagnostic Guide\](/licensees-guide/why-is-my-pub-empty)
 
 Ready to transform your pub's Instagram? Let's map your 30-day action plan together and keep it running with weekly check-ins.
 

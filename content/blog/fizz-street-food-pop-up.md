@@ -41,7 +41,7 @@ voiceSearchQueries:
 
 # Friday Fizz or Street-Food Pop-Up Playbook
 
-Friday is where the week either drifts into nothing or becomes the start of a huge weekend. A single trader partnership plus a fizz-led bundle keeps tills ringing while the kitchen preps for Saturday. Here’s the plug-and-play format we roll out for clients who need a lift without a full refit.
+Friday is where the week either drifts into nothing or becomes the start of a huge weekend. A single trader partnership plus a fizz-led bundle keeps tills ringing while the kitchen preps for Saturday. Here’s the plug-and-play format we use at The Anchor when we want a lift without a full refit.
 
 ## Quick Win Snapshot
 - **Prep time:** 3–4 hours total (menu sign-off, layout sketch, staff brief)

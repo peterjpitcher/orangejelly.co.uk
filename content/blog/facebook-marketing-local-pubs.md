@@ -717,15 +717,15 @@ Start today. Be helpful. Build relationships. Watch your pub become the communit
 
 ## Related Resources
 
-- \[The Complete Social Media Strategy Guide for Pubs\](/blog/social-media-strategy-for-pubs)
+- \[The Complete Social Media Strategy Guide for Pubs\](/licensees-guide/social-media-strategy-for-pubs)
 
-- \[Instagram Marketing for Pubs\](/blog/instagram-marketing-for-pubs)
+- \[Instagram Marketing for Pubs\](/licensees-guide/instagram-marketing-for-pubs)
 
-- \[Local Pub Marketing: The Complete Guide\](/blog/local-pub-marketing)
+- \[Local Pub Marketing: The Complete Guide\](/licensees-guide/local-pub-marketing)
 
-- \[Why Is My Pub Empty? A Diagnostic Guide\](/blog/why-is-my-pub-empty)
+- \[Why Is My Pub Empty? A Diagnostic Guide\](/licensees-guide/why-is-my-pub-empty)
 
-*Join our free Facebook group "Pub Marketing Masters" where 5,000+ publicans share what's working in their local markets. Real strategies from real pubs getting real results.*
+Want hands-on help? Start with our [Facebook services for pubs](/services/facebook-services-for-pubs).
 
 ## Frequently Asked Questions
 

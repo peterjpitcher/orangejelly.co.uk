@@ -162,7 +162,7 @@ export function generatePageMeta(
     results: {
       title: 'Success Stories - Hospitality Marketing Results | Orange Jelly',
       description:
-        'Real results from The Anchor and hospitality clients: 25-30 quiz teams each month, £250/week waste cut, £4,000+ monthly savings. See exactly how we drive growth.',
+        'Real numbers from The Anchor: 25-30 quiz teams each month, £250/week waste cut, £4,000+ monthly savings. See what we changed and why it worked.',
       keywords: [
         'hospitality marketing results',
         'pub success stories',

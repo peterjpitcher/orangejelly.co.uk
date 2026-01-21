@@ -263,7 +263,7 @@ export default function HomePage({
               </Text>
               <Text size="lg" color="muted" className="mb-6">
                 {sectionHeadings?.aboutText2 ||
-                  "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and now I help other pubs implement the same strategies that transformed our business."}
+                  "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and everything I recommend is tested at The Anchor first."}
               </Text>
               <Button href="/about" variant="ghost" className="text-lg">
                 {sectionHeadings?.aboutButtonText || 'Read Our Full Story →'}

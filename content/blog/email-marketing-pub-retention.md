@@ -650,19 +650,14 @@ Designing for desktop only. Solution: Mobile-first design always.
 
 - Scale winning tactics
 
-## Real Results from Real Pubs
+## How to Measure Results
 
-**a typical traditional pub, Brighton:**
+Track these three numbers for each email:
+- Opens (subject line)
+- Clicks (offer/message)
+- Bookings/revenue (what it actually did)
 
-Built a sizeable subscriber list using WiFi sign-ups. Tuesday emails drive a large share of midweek bookings. ROI: strong.
-
-**The Brewery Tap, Leeds:**
-
-Birthday automation generates meaningful annual revenue. High redemption with strong average spend.
-
-**The Village Inn, Cotswolds:**
-
-Weather-triggered emails fill quiet rainy days. Automated "cozy comfort food" emails when rain is forecast. Strong open and conversion rates.
+Start simple: one weekly email + one automated birthday offer.
 
 ## Email Templates That Convert
 
@@ -738,13 +733,13 @@ The only question is: what are you waiting for?
 
 ## Related Resources
 
-- \[The Complete Social Media Strategy Guide for Pubs\](/blog/social-media-strategy-for-pubs)
+- \[The Complete Social Media Strategy Guide for Pubs\](/licensees-guide/social-media-strategy-for-pubs)
 
-- \[Local Pub Marketing: The Complete Guide\](/blog/local-pub-marketing)
+- \[Local Pub Marketing: The Complete Guide\](/licensees-guide/local-pub-marketing)
 
-- \[Fill Empty Tables: Strategic Capacity Management\](/blog/fill-empty-pub-tables)
+- \[Fill Empty Tables: Strategic Capacity Management\](/licensees-guide/fill-empty-pub-tables)
 
-- \[Why Is My Pub Empty? A Diagnostic Guide\](/blog/why-is-my-pub-empty)
+- \[Why Is My Pub Empty? A Diagnostic Guide\](/licensees-guide/why-is-my-pub-empty)
 
 *Want our complete email marketing toolkit? Download "52 Weeks of Pub Email Templates" – a full year of proven emails you can customize and send. Never stare at a blank screen again.*
 

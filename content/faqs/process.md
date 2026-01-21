@@ -26,7 +26,7 @@ I work around pub life. Early mornings before deliveries, quiet afternoons, or l
 
 ## What if I'm not tech-savvy?
 
-Perfect - neither was I! If you can send a WhatsApp message, you can use these AI tools. I provide step-by-step training designed for busy licensees, not tech experts. Most clients are posting confidently within days.
+Perfect - neither was I! If you can send a WhatsApp message, you can use these AI tools. I provide step-by-step training designed for busy licensees, not tech experts. Most people are posting confidently within days.
 
 ## Do you offer remote support?
 

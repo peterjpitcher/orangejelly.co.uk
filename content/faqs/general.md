@@ -2,7 +2,7 @@
 
 ## Can I just get a one-off consultation?
 
-Of course! Many pubs start with a single consultation to tackle their biggest problem. We charge £75 per hour plus VAT, and there's no minimum commitment. Often, that first session provides enough value to transform your business.
+Of course. A good way to start is a single consultation to tackle your biggest problem. We charge £75 per hour plus VAT, and there's no minimum commitment. You leave with a clear plan and quick wins you can implement immediately.
 
 ## What services does Orange Jelly offer for pubs?
 
@@ -18,7 +18,7 @@ Absolutely. We've added £75,000-£100,000 worth of value to our own business us
 
 ## How quickly can Orange Jelly help fill my empty pub?
 
-We typically see results within 30 days. Our strategies have been proven at The Anchor where we've turned quiet nights into profitable ones. We use AI-powered marketing that brings customers through the door.
+The plan is designed to create meaningful progress inside 30 days. Everything we share is proven at The Anchor, and we'll adapt the same approach to your pub.
 
 ## What does pub marketing cost with Orange Jelly?
 
@@ -26,7 +26,7 @@ We charge £75 per hour plus VAT as a flat rate. I'm always happy to have a free
 
 ## How long does it take to see ROI from pub marketing?
 
-Most pubs see positive ROI inside 30 days. Marketing campaigns start showing momentum within the first couple of weeks, and that compounds into clear ROI by day 30.
+At The Anchor, most improvements showed inside 30 days once we got consistent. Your timeline depends on your starting point, offer, catchment, and how quickly you can implement.
 
 ## Do I need to understand technology to work with Orange Jelly?
 
@@ -46,7 +46,7 @@ Yes, we offer flexible payment plans to spread the cost. We understand cash flow
 
 ## Can I pick and mix services?
 
-Of course! Every pub has different needs. Start with your biggest pain point, see the results, then add more services as needed. Many pubs start with a menu makeover then add marketing once they see the impact.
+Of course. Every pub has different needs. Start with your biggest pain point, then add more services as needed once you've built momentum.
 
 ## How is Orange Jelly different from other marketing agencies?
 

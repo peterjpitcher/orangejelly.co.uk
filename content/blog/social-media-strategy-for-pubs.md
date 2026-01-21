@@ -585,13 +585,13 @@ We offer £75/hour strategy sessions where we audit your current channels, build
 
 ## Related Resources
 
-- \[Local Pub Marketing: The Complete Guide\](/blog/local-pub-marketing)
+- \[Local Pub Marketing: The Complete Guide\](/licensees-guide/local-pub-marketing)
 
-- \[Why Is My Pub Empty? A Diagnostic Guide\](/blog/why-is-my-pub-empty)
+- \[Why Is My Pub Empty? A Diagnostic Guide\](/licensees-guide/why-is-my-pub-empty)
 
-- \[Fill Empty Tables: Strategic Capacity Management\](/blog/fill-empty-pub-tables)
+- \[Fill Empty Tables: Strategic Capacity Management\](/licensees-guide/fill-empty-pub-tables)
 
-- \[Compete with Wetherspoons: David vs Goliath Strategies\](/blog/compete-with-wetherspoons)
+- \[Compete with Wetherspoons: David vs Goliath Strategies\](/licensees-guide/compete-with-wetherspoons)
 
 Ready to transform your pub's social media presence? Let's build your playbook together so you can run it with confidence.
 

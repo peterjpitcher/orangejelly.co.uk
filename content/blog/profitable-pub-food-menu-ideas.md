@@ -295,25 +295,25 @@ Place a very expensive dish next to your target dish. The £24.95 steak makes th
 
 - 1 × Trendy option (freakshakes, etc.)
 
-## Case Studies: Menu Transformations That Worked
+## Illustrative Examples: Menu Changes That Work
 
-### a typical traditional pub, Manchester
+### Example: Cut menu size to reduce waste
 
 **Before**: 32-item menu, high waste
 
 **After**: 18-item menu, waste down significantly
 
-**Key change**: Focused on five base proteins, created variations
+**Key change**: Focus on five base proteins, create variations
 
-### a typical riverside pub, Bristol
+### Example: Add one "modern" section without changing your kitchen
 
-**Added**: Korean section to traditional menu
+**Added**: A small Korean-style section alongside the classics
 
-**Result**: Noticeable lift at The Anchor in food sales, younger demographic attracted
+**Result**: Noticeable lift in food sales and younger demographic interest
 
 **Success factor**: Same fryers, new flavours, premium pricing
 
-### a typical town center pub, Leeds
+### Example: Small plates in the early evening
 
 **Innovation**: "Small plates" menu 5-8 PM
 

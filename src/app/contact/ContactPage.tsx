@@ -76,7 +76,7 @@ const fallbackFAQs = [
   {
     question: "I'm not in your area - can you still help?",
     answer:
-      "Absolutely! We help pubs across the UK. Marketing, menu design, business analysis, and AI training all work remotely. We use video calls, screen sharing, and good old phone calls. Distance isn't a barrier - I'm helping pubs from Cornwall to Scotland.",
+      "Absolutely. Marketing, menu design, business analysis, and AI training all work remotely over video calls and screen sharing. If you're outside Surrey/Berkshire/West London, we can still work together without travel.",
   },
   {
     question: 'What if I just need 10 minutes of advice?',
@@ -505,8 +505,8 @@ export default function ContactPage({}: ContactPageProps) {
             </Text>
 
             <Text size="lg" weight="semibold">
-              I've been where you are. I found solutions that work. Now I help other licensees
-              implement them.
+              I've been where you are. I found solutions that work at The Anchor. If you want, I can
+              help you implement the same approach.
             </Text>
           </div>
 

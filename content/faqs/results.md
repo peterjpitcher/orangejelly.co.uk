@@ -42,7 +42,7 @@ Yes! By analyzing local demographics, past event performance, and social media e
 
 ## How quickly will I see results?
 
-Clients feel early wins, but the commitment we make is meaningful, bankable progress inside 30 days. You won't wait months wondering if it's working.
+You should feel early wins, but the commitment we make is meaningful, bankable progress inside 30 days. You won't wait months wondering if it's working.
 
 ## Can I see examples of your work?
 

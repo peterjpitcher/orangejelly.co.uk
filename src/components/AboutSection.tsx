@@ -18,7 +18,7 @@ function AboutSection({
   title = "We're licensees, Just Like You",
   content = [
     "I'm Peter. My husband Billy and I have run The Anchor in Stanwell Moor since March 2019. We faced the same struggles - empty tables, rising costs, fierce competition.",
-    "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and now I help other pubs implement the same strategies that transformed our business.",
+    "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and everything I recommend is tested at The Anchor first.",
   ],
   buttonText = 'Read Our Full Story',
   buttonHref = '/about',

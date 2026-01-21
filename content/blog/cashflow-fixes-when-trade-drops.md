@@ -34,7 +34,7 @@ voiceSearchQueries:
 
 # Cashflow Fixes: Immediate Steps When Trade Drops Off a Cliff
 
-When takings fall sharply overnight, survival depends on speed and clarity. Here is the exact response plan I use with coaching clients so rent, payroll, and HMRC still get paid.
+When takings fall sharply overnight, survival depends on speed and clarity. Here is the exact response plan we use at The Anchor so rent, payroll, and HMRC still get paid.
 
 ## 1. Build the Daily Cash War Room
 Create a simple spreadsheet with columns for opening cash, expected income, committed outgoings, and closing cash for the next 13 weeks. Update it every morning. Colour-code red days where the pot goes negative and focus every action on removing that red.

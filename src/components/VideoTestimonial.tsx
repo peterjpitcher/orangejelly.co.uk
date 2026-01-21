@@ -127,7 +127,7 @@ export function VideoTestimonialGrid() {
       title: 'Wednesday Night Transformation',
       subtitle: 'From empty to buzzing',
       testimonialText:
-        'AI analyzed what worked at other pubs. We started steak night with smart pricing. Now Wednesdays are as busy as Fridays.',
+        'AI helped us plan a steak night with smart pricing. Now Wednesdays are one of our strongest nights.',
       author: 'The Anchor Team',
       result: 'From 20 to 60+ covers',
     },
