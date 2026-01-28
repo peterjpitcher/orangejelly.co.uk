@@ -148,6 +148,17 @@ export function parseMarkdownFile(
       data.slug = path.basename(filePath, '.md');
     }
 
+    const statusValue = typeof data.status === 'string' ? data.status.toLowerCase().trim() : null;
+    if (statusValue === 'draft') {
+      data.draft = true;
+    } else if (statusValue === 'published' && data.draft === undefined) {
+      data.draft = false;
+    }
+
+    if (!data.publishedAt && data.publishedDate) {
+      data.publishedAt = data.publishedDate;
+    }
+
     const frontMatter: FrontMatter = {
       ...data,
       title: data.title,

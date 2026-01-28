@@ -14,7 +14,7 @@ tags:
   - "pub management"
   - "performance"
 status: "published"
-featuredImage: "/images/blog/epos-data-revenue-comeback.svg"
+featuredImage: "/images/blog/epos-data-revenue-comeback.png"
 metaDescription: "Guide to using EPOS data for a revenue comeback, including dashboards, KPIs, and decision rhythms for pubs."
 keywords:
   - "use epos data"
@@ -34,40 +34,71 @@ voiceSearchQueries:
 
 # Why Your EPOS Data Is the Key to a Revenue Comeback
 
-Your EPOS already knows who spends what, when, and on which products. Most landlords just never look beyond the daily Z report. Here is how to turn that data into action.
+Your EPOS already knows what sells, when it sells, and what actually makes money. The problem is most pubs stop at the Z report. A simple weekly routine turns data into action and action into revenue.
 
-## The Four Core Metrics
-1. **Covers**: number of transactions, split by daypart. Shows demand trends.
-2. **Average Spend**: gross sales divided by covers. Highlights upsell success or failure.
-3. **Product Mix**: reveals which items deserve promotion or retirement.
-4. **Labour cost**: wages divided by net sales. Keeps staffing honest.
+This is the minimum dashboard and experiment loop that works.
 
-Pull these weekly and plot against targets on a single-page dashboard.
+## The four core metrics that matter
 
-## Run Weekly Experiments
-Use the data to set one focus per week:
-- If lunch covers drop, test a new bundle and track conversion.
-- If average spend stalls, push dessert sampling and measure uplift.
-- If labour cost spikes, adjust shift patterns and watch the next report.
+Track these every week:
+- **Covers** by day and time.
+- **Average spend per head**.
+- **Gross profit** by category.
+- **Labour percentage** by shift.
 
-Document hypotheses and results in a simple log so learning compounds.
+If you can see these four numbers, you can make better decisions immediately.
 
-## Segment Your Guests
-Tag transactions by channel (walk-in, bookings, delivery) or segment (locals club, hotel guests). Compare spend patterns and design targeted offers based on actual behaviour rather than guesswork.
+## Build a one-page weekly dashboard
 
-## Spot Hidden Gold
-- Identify the top ten products by GP contribution and give them prime menu placement.
-- Find the most profitable hour of the week and throw staff, marketing, and events behind it.
-- Highlight staff members with the highest average ticket to turn them into trainers.
+Keep it simple. One page, same format, every week. Post it where the team can see it.
 
-## Share Insights With the Team
-Print the dashboard and review it at Monday stand-up. Assign ownership: "Sarah, you own average spend." Accountability beats mystery.
+Example sections:
+- Best and worst day by covers.
+- Top five items by margin.
+- Slow movers to remove.
+- One action for next week.
+
+## Run weekly experiments
+
+Treat each week as a small test. Change one thing and measure the result.
+
+Examples:
+- Move a high-margin item to the top of the menu.
+- Bundle a drink with a midweek dish.
+- Change a price point by one pound and track units.
+
+Small tests beat big, random changes.
+
+## Segment your guests
+
+Split data by time and occasion. A Friday night crowd is not the same as a Tuesday lunch. Build offers for each segment instead of averaging them together.
+
+## Spot hidden profit
+
+Many pubs have a quiet goldmine in one category. It could be premium soft drinks, desserts, or a specific spirit. Identify the top profit items and train the team to recommend them.
+
+## Share insights with the team
+
+Numbers are useless if only one person sees them. Share the weekly dashboard and agree one focus for the next seven days.
+
+## Common mistakes
+
+- Tracking too many metrics.
+- Making changes without measuring.
+- Ignoring labour cost by shift.
+- Leaving slow movers on the menu for months.
+
+## Quick checklist
+
+- One-page dashboard built.
+- Four core metrics tracked weekly.
+- One experiment run per week.
+- Top profit items promoted by staff.
 
 ## Mini FAQ
-**Do I need fancy BI tools?**
-No. Most EPOS export CSVs you can drop into Google Sheets. Once the process sticks, explore tools like Tenzo or Forth.
 
-**How do I keep data clean?**
-Insist staff use correct buttons, close tabs nightly, and audit discounts weekly. Garbage in equals garbage out.
+**Do I need complex software?**
+No. A spreadsheet and your EPOS exports are enough.
 
-EPOS data is your free consultant. Check it weekly, act on it daily, and the comeback accelerates.
+**How fast can data improve revenue?**
+Often within two weeks if you focus on one lever at a time.

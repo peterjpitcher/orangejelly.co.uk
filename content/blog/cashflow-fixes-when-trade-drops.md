@@ -14,7 +14,7 @@ tags:
   - "cost control"
   - "turnaround"
 status: "published"
-featuredImage: "/images/blog/cashflow-fixes-when-trade-drops.svg"
+featuredImage: "/images/blog/cashflow-fixes-when-trade-drops.png"
 metaDescription: "Immediate cashflow fixes for UK pubs when trade slumps, covering forecasting, supplier talks, upsells, and emergency sales drives."
 keywords:
   - "pub cashflow help"
@@ -34,39 +34,83 @@ voiceSearchQueries:
 
 # Cashflow Fixes: Immediate Steps When Trade Drops Off a Cliff
 
-When takings fall sharply overnight, survival depends on speed and clarity. Here is the exact response plan we use at The Anchor so rent, payroll, and HMRC still get paid.
+A sudden drop in takings does not mean the pub is broken. It means you need speed, clarity, and a plan that protects cash this week. The goal is to buy time without damaging the guest experience.
 
-## 1. Build the Daily Cash War Room
-Create a simple spreadsheet with columns for opening cash, expected income, committed outgoings, and closing cash for the next 13 weeks. Update it every morning. Colour-code red days where the pot goes negative and focus every action on removing that red.
+Here is the exact triage sequence we use when trade falls sharply.
 
-## 2. Triage Costs by Impact
-- **Must Pay**: wages, rent, HMRC, licensing.
-- **Re-Negotiable**: drinks suppliers, food wholesalers, entertainment contracts.
-- **Pause**: subscriptions, marketing retainers, linen upgrades, agency staff.
-Call each supplier in order of spend, share the plan, and propose payment plans. Most will accept weekly transfers if you show discipline.
+## Step 1: Build the daily cash war room
 
-## 3. Convert Stock to Cash
-- Highlight high-value spirits for feature pours and tasting flights.
-- Bundle slow-moving wine into limited-price carafes.
-- Promote cellar clear-outs via email and social to turn dormant inventory into bank balance.
+Create a one-page cash board for the next 14 days. List every payment and every expected inflow. This is not a monthly forecast. It is a daily reality check.
 
-## 4. Sell Future Value Today
-Offer gift cards with 20% added value, Sunday roast pre-orders, or membership bundles that include quarterly events. Make sure the cash received is ring-fenced for the bills threatening you now.
+Make it visible to the management team. Decisions should be made with the same numbers in front of everyone.
 
-## 5. Focus the Team on Contribution
-Share the numbers with supervisors. Challenge them to find £200 extra GP per shift through upsells, tighter pours, and reducing comps. Reward success publicly with vouchers, time off, or bar tabs.
+## Step 2: Triage costs by impact
 
-## 6. Protect Marketing That Works
-Do not go dark – double down on the channels that reliably bring bookings (usually email and WhatsApp for locals). Shift paid ads to retargeting existing audiences instead of fishing cold.
+Split costs into three buckets:
+- **Must pay now**: wages, critical suppliers, tax deadlines.
+- **Can delay with a plan**: non-essential suppliers, subscriptions, small contracts.
+- **Can stop immediately**: unused tools, duplicate services, vanity spend.
 
-## 7. Talk to the Landlord Early
-Bring your cash plan, proof of marketing pushes, and projected recovery timelines. Ask for a short-term rent concession or switch to monthly payments. Silence breeds distrust; transparency earns breathing room.
+This is where you create breathing room without gutting the offer.
+
+## Step 3: Convert stock into cash
+
+Identify stock that can be turned quickly into revenue.
+
+- Run a focused special (not a blanket discount).
+- Create a bundle using slow movers and a popular item.
+- Promote it for seven days, then move on.
+
+The rule: convert stock to cash without teaching customers to wait for discounts.
+
+## Step 4: Sell future value today
+
+Bring future cash forward with deposits and prepaid offers.
+
+Options that work:
+- Event deposits with a drink included.
+- Gift cards with a modest bonus (for example, 30 pounds gets 35).
+- A pre-paid Sunday roast slot with priority seating.
+
+These create immediate cash without slashing margin.
+
+## Step 5: Focus the team on contribution
+
+Train the team to push the one or two items that actually move margin. Script it, practice it, and track it for a week.
+
+A two percent shift in drink mix can stabilise a tight week.
+
+## Step 6: Protect the marketing that works
+
+The fastest mistake is turning off the only channel that drives bookings. If a specific post type or local group drives covers, keep it alive even when cash is tight.
+
+Cut noise, not traction.
+
+## Step 7: Talk to the landlord early
+
+This is hard but important. Share the plan, not the panic. Explain the actions you are taking, and propose a clear, time-bound adjustment if needed.
+
+The worst outcome is silence.
+
+## Common mistakes
+
+- Cutting marketing completely.
+- Discounting the entire menu.
+- Delaying supplier communication.
+- Trying to fix everything in one week.
+
+## Quick checklist
+
+- 14-day cash board built.
+- Costs triaged into three buckets.
+- One cash-forward offer launched.
+- Team briefed on two margin movers.
+- Landlord or key suppliers updated.
 
 ## Mini FAQ
-**Should I take a high-interest loan?**
-Not until you have exhausted operational fixes. Expensive debt without a turnaround plan simply postpones the pain.
 
-**What about staff hours?**
-Trim from the edges – shorter shifts, multi-tasking, and voluntary unpaid leave before redundancies. Keep service standards intact or you will accelerate the revenue drop you are trying to cure.
+**Should I discount to drive traffic?**
+Only if you can protect margins with bundles or upsells. Discounts alone create busy losses.
 
-Cash discipline buys you time; smart sales pushes bring the money back.
+**How quickly should I act?**
+Within 48 hours. Waiting for trade to bounce back is how shortfalls become crises.

@@ -14,7 +14,7 @@ tags:
   - "cashflow"
   - "finance"
 status: "published"
-featuredImage: "/images/blog/rent-supplier-negotiations-cash-tight.svg"
+featuredImage: "/images/blog/rent-supplier-negotiations-cash-tight.png"
 metaDescription: "Negotiation tactics for pubs facing rent and supplier pressure, including scripts, repayment plans, and relationship management."
 keywords:
   - "negotiate pub rent"
@@ -34,35 +34,62 @@ voiceSearchQueries:
 
 # Handling Rent and Supplier Negotiations When Cash Is Tight
 
-Ignoring calls never works. Suppliers escalate to solicitors, landlords change locks, and the stress multiplies. Instead, use structure and empathy to win time.
+Ignoring the phone does not fix cash pressure. The best outcome comes from early, honest negotiation backed by data and a clear plan.
 
-## Step 1: Know Your Numbers
-Prepare a one-page pack including:
-- 13-week cashflow forecast.
-- Sales pipeline (events, bookings, partnerships).
-- Cost-cutting measures already actioned.
-- Amount owed and proposed timeline to clear it.
+This is the structure that keeps relationships intact while you buy time.
 
-## Step 2: Book the Conversation
-Request a formal meeting or video call. Agenda: current position, turnaround plan, proposed repayment schedule, next check-in date. Formality shows respect.
+## Step 1: Know your numbers
 
-## Step 3: Lead With Transparency
-Explain why the arrears occurred (trade drop, equipment failure). Own mistakes, avoid blaming the other party, and emphasise what you have already fixed.
+Prepare a short data pack:
+- Last 8 weeks of takings.
+- Forecast for the next 8 weeks.
+- A clear repayment plan.
 
-## Step 4: Propose, Do Not Beg
-Example script: "I owe £6,000. I can pay £1,500 today, then £1,500 every fortnight funded by the attached campaign. If I miss a payment, you have permission to switch me back to pro-forma." Give them control without surrendering hope.
+This turns a difficult conversation into a professional one.
 
-## Step 5: Put It in Writing
-Send minutes within 24 hours summarising commitments from both sides. Use DocuSign or even an email trail, but capture signatures if the landlord adjusts lease terms.
+## Step 2: Book the conversation
 
-## Step 6: Communicate Weekly
-Even if there is no change, send a Friday update covering sales, payments made, and next milestones. Consistency rebuilds trust faster than sporadic windfalls.
+Ask for a short call rather than sending a long email. It is easier to build trust when you speak directly.
+
+## Step 3: Lead with transparency
+
+Explain what happened and what you are doing about it. Avoid excuses. Focus on actions already taken.
+
+## Step 4: Propose, do not beg
+
+Suggest a temporary adjustment:
+- Split payments over two months.
+- A short payment holiday with a clear restart date.
+- A smaller weekly payment plus a catch-up plan.
+
+People respond better to clear proposals than open-ended requests.
+
+## Step 5: Put it in writing
+
+Summarise the agreement in an email the same day. It protects both sides and avoids confusion later.
+
+## Step 6: Communicate weekly
+
+A short weekly update keeps trust high and prevents surprises.
+
+## Common mistakes
+
+- Waiting until the payment is overdue.
+- Asking for help without a plan.
+- Overpromising and missing the new schedule.
+
+## Quick checklist
+
+- Data pack prepared.
+- Call booked.
+- Clear proposal ready.
+- Agreement confirmed in writing.
+- Weekly update scheduled.
 
 ## Mini FAQ
-**What if they say no?**
-Ask what evidence would change their mind. Offer collateral (equipment, personal guarantee) only if you can honour it. If talks stall entirely, seek mediation via trade bodies or legal advice.
 
-**Should I involve other tenants or suppliers?**
-Do not gossip, but compare terms discreetly to ensure you are not accepting unfair treatment. Collective bargaining sometimes yields better energy or beer contracts.
+**Should I negotiate with suppliers or landlord first?**
+Start with the most urgent payment and the partner most likely to work with you.
 
-Professional, proactive negotiation keeps doors open long enough for the turnaround to land.
+**How long should a payment plan last?**
+Keep it short and realistic. Six to twelve weeks is usually workable.

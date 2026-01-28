@@ -14,7 +14,7 @@ tags:
   - "design"
   - "upsell"
 status: "published"
-featuredImage: "/images/blog/menu-engineering-lift-average-spend.svg"
+featuredImage: "/images/blog/menu-engineering-lift-average-spend.png"
 metaDescription: "Menu engineering tactics for pubs to lift average spend, including layout, language, pricing ladders, and training tips."
 keywords:
   - "menu engineering pub"
@@ -34,37 +34,68 @@ voiceSearchQueries:
 
 # Menu Engineering Tricks to Lift Average Spend Fast
 
-The difference between a £19 and £24 average spend sits in typography, psychology, and scripting. Apply these quick wins and track the upswing within a fortnight.
+The difference between a 19 pound spend and a 24 pound spend is rarely the kitchen. It is layout, choice architecture, and the way the team presents options. Menu engineering is about guiding guests to the items that make you money without making them feel sold to.
 
-## 1. Categorise Using the STAR System
-Run contribution analysis and label dishes as Stars (high popularity, high profit), Plow Horses, Puzzles, or Dogs. Place stars in the sweet spots (upper-right for food, centre for drinks) and remove or reformulate Dogs immediately.
+## Step 1: Categorise the menu by profit and popularity
 
-## 2. Use Decoys Wisely
-Add a premium anchor dish at the top of each category so the hero dish feels great value. Example: a £38 tomahawk makes the £25 flat-iron look like a steal.
+Use a simple matrix:
+- **Stars**: high profit, high popularity.
+- **Plowhorses**: low profit, high popularity.
+- **Puzzles**: high profit, low popularity.
+- **Dogs**: low profit, low popularity.
 
-## 3. Design for Flow
-- Drop currency symbols and keep prices aligned to reduce sticker shock.
-- Use descriptive copy focusing on provenance and preparation.
-- Highlight two "landlord picks" with shaded boxes or icons.
-- Keep menus short: 6 mains, 4 starters, 4 desserts sell better than encyclopaedias.
+The goal is to push stars, fix puzzles, and remove dogs.
 
-## 4. Pair Food and Drink
-Add suggested pairings directly beneath dishes ("Pair with Moorland Best, +£5"), or bundle as set menus. Train servers to mention the pairing before leaving the table.
+## Step 2: Put your stars where eyes land
 
-## 5. Introduce Add-On Lines
-Offer sauces, sides, and upgrades for every hero dish. A £3 bone marrow butter or £4 truffle chips stack GP without extra labour.
+Guests read menus in predictable patterns. Place star items at the top right, or at the start of sections. Avoid burying your best margin items in the middle.
 
-## 6. Update Digital Touchpoints
-Sync the website, QR menus, and delivery listings so pricing and descriptions match. Outdated menus kill trust and conversions.
+## Step 3: Use decoys and anchors
 
-## 7. Train the Team
-Host a tasting session so everyone can describe textures, suppliers, and cooking methods with confidence. Provide a cheat sheet with three suggested upsell lines per dish.
+A slightly higher priced item can make the next one feel better value. Use this to steer choices upward without discounting.
+
+Example:
+- Burger at 15.95 (anchor)
+- Burger at 13.95 (target)
+
+## Step 4: Build add-on lines
+
+Add simple upsells under key dishes: "Add a side for 3" or "Upgrade to a premium pour." It is low effort and high return.
+
+## Step 5: Pair food and drink on the menu
+
+If a dish pairs with a specific drink, name it. Guests are far more likely to add a drink if the suggestion is visible.
+
+## Step 6: Train the team on three scripts
+
+- "Most people add the rosemary fries with that."
+- "That dish pairs perfectly with the house red."
+- "If you are hungry, the sharing board is great to start."
+
+Scripted lines remove hesitation and lift spend.
+
+## Step 7: Run a two-week test
+
+Change only one thing, then track the result. If average spend lifts, keep the change. If not, revert and test another.
+
+## Common mistakes
+
+- Editing the menu monthly without measuring.
+- Leaving low-margin items in prime positions.
+- Adding too many options.
+
+## Quick checklist
+
+- Menu items mapped to the star matrix.
+- Stars placed in visual hotspots.
+- Add-ons listed under key dishes.
+- Team trained on three scripts.
+- Two-week test scheduled.
 
 ## Mini FAQ
-**How often should I redesign menus?**
-Quarterly for layout tweaks, seasonally for dish rotation. Keep the engineering sheet updated monthly.
 
-**Do printed menus still matter if I use QR codes?**
-Yes. Tangible menus let you guide the eye more effectively. Use both and ensure the design language matches.
+**Do I need a designer?**
+Not always. Small layout changes and consistent spacing can do most of the work.
 
-Menu engineering is silent salesmanship; done well, it boosts spend without a single extra cover.
+**How fast can average spend lift?**
+Often within two weeks if the menu layout and scripts are applied consistently.

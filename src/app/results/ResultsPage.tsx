@@ -41,6 +41,7 @@ export default function ResultsPage({}: ResultsPageProps) {
         title={resultsData.hero.title}
         subtitle={resultsData.hero.subtitle}
         breadcrumbs={breadcrumbPaths.results}
+        backgroundImage={resultsData.hero.backgroundImage}
       />
 
       {/* Case Study Selector */}

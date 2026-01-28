@@ -14,7 +14,7 @@ tags:
   - "pub management"
   - "sustainability"
 status: "published"
-featuredImage: "/images/blog/zero-waste-stock-management-pubs.svg"
+featuredImage: "/images/blog/zero-waste-stock-management-pubs.png"
 metaDescription: "Zero-waste stock management tactics for struggling pubs, covering counts, prep, menu engineering, and staff accountability."
 keywords:
   - "pub stock control"
@@ -34,36 +34,53 @@ voiceSearchQueries:
 
 # Zero-Waste Stock Management for Pubs in Survival Mode
 
-Every kilo wasted is lost runway. When the overdraft is maxed, you cannot afford lazy prep, mystery kegs, or bins stuffed with half-prepped veg. Follow this zero-waste framework to keep cash in the till and morale high.
+Every kilo wasted is lost runway. When cash is tight, stock control becomes a survival skill. The goal is not perfection, it is a disciplined rhythm that stops money going in the bin.
 
-## 1. Count More Often, Not Just Deeper
-Swap monthly mega counts for twice-weekly micro counts on the top 40 lines. Use shelf sheets or software like BevSpot, but the key is accountability: the same person counts a category every time so variances are easier to trace.
+## Step 1: Count more often, not deeper
 
-## 2. Engineer Menus Around Shared Ingredients
-Limit SKUs by designing dishes that use the same base prep three ways. Example: roasted cauliflower becomes a vegan main, bar snack topping, and Sunday roast side. Track contributions, not just romance around new dishes.
+Weekly counts beat monthly deep dives. Short, regular checks surface problems early and keep the team accountable.
 
-## 3. Portion Control Is Culture
-Equip the kitchen with pre-labelled deli tubs, digital scales, and ladles that match the spec. On the bar, mandate jiggers and automatic wine pourers. Celebrate the team when wastage logs hit targets; coach immediately when they do not.
+## Step 2: Engineer menus around shared ingredients
 
-## 4. FIFO Isn’t Optional
-Date-label everything, build a colour system (red = use today), and store high-risk items at eye level. Run daily fridge clear-downs where the chef on duty lists what must sell that shift. Bar managers should do the same with partial kegs and open wine.
+Build a menu where one ingredient appears in at least three dishes. Cross-use reduces waste and makes prep easier.
 
-## 5. Turn Waste Into Revenue
-- Soup or curry of the day built from trim.
-- Brewery board that sells the last pint of each keg at a premium because it funds the staff beer kitty.
-- Cocktail riffs that highlight surplus fruit or syrups.
+## Step 3: Portion control is culture
 
-## 6. Share Waste KPIs Publicly
-Pin a whiteboard in the kitchen and cellar showing waste versus target (aim for as low as possible). Update after every count. When the number creeps up, investigate immediately rather than shrugging at month end.
+If portions vary, margins vanish. Use scoops, scales, and standard builds so every plate costs the same.
 
-## 7. Invest in Training Before Tech
-Fancy sensors are useless if the team does not care. Spend time explaining the why: waste equals missed pay rises, tired equipment, and fewer marketing pounds. Ownership follows understanding.
+## Step 4: FIFO is not optional
+
+First in, first out should be visible and enforced. Label everything with dates and train the team to follow it.
+
+## Step 5: Turn waste into revenue
+
+Create a weekly "rescue" special from surplus stock. If done consistently, guests see it as creativity, not desperation.
+
+## Step 6: Share waste KPIs publicly
+
+Track waste weight or value each week and share it with the team. Visibility creates care.
+
+## Step 7: Train before you buy tech
+
+Systems fail when people do not follow them. Fix habits first, then add tools if needed.
+
+## Common mistakes
+
+- Counting only when money is already tight.
+- Over-ordering to avoid stockouts.
+- Ignoring waste logs after the first week.
+
+## Quick checklist
+
+- Weekly count scheduled.
+- Cross-use ingredients identified.
+- Portion tools in place.
+- Waste log visible.
 
 ## Mini FAQ
-**Do I need software?**
-Not to start. Google Sheets plus disciplined people beat expensive platforms poorly used. Upgrade only when the basics are second nature.
 
-**How do I handle staff meals without skewing data?**
-Log them. Allocate a daily allowance, ring them through at £0, and track the cost in your P&L under staff welfare so GP stays honest.
+**Does zero waste mean no waste?**
+No. It means disciplined reduction. The goal is consistent improvement, not perfection.
 
-Scrappy counting and proud culture can cut wastage fast, freeing cash for the comeback.
+**What is the fastest win?**
+Portion control and stricter ordering. Both show results within a week.

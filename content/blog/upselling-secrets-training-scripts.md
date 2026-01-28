@@ -14,7 +14,7 @@ tags:
   - "service"
   - "average spend"
 status: "published"
-featuredImage: "/images/blog/upselling-secrets-training-scripts.svg"
+featuredImage: "/images/blog/upselling-secrets-training-scripts.png"
 metaDescription: "Upselling techniques for UK pubs, including training drills, sample scripts, and metrics to track conversions without pushiness."
 keywords:
   - "pub upselling tips"
@@ -32,38 +32,69 @@ voiceSearchQueries:
   - "How to train pub team to sell"
 ---
 
-# Upselling Secrets: Training Scripts That Don't Sound Pushy
+# Upselling Secrets: Training Scripts That Do Not Sound Pushy
 
-Upselling is service, not sleaze. Guests appreciate guidance when it is rooted in their preferences. Use these scripts and drills to lift spend per head while keeping reviews glowing.
+Upselling is not about pressure. It is about guiding guests to something better. The right scripts feel helpful, not salesy, and they lift spend per head immediately.
 
-## Step 1: Start With Questions
-Teach staff to ask one discovery question per interaction:
-- "Are you in the mood for something refreshing or cosy tonight?"
-- "Celebrating anything or just a chilled catch-up?"
-Their answer dictates the upsell lane.
+Use this structure to train your team in short, repeatable sessions.
 
-## Step 2: Offer Two Curated Options
-People freeze when given six choices. Script two contrasting upgrades:
-- "If you fancy local, our Wye Valley pale is flying. If you want silky, the milk stout just landed."
-- "Chef can add smoked bone marrow to that steak or we can swap to the dry-aged cut for £4 extra."
+## Step 1: Start with questions
 
-## Step 3: Use Bridge Phrases
-Provide connective tissue so the upsell feels like a favour:
-- "Most regulars pair that with..."
-- "Because it is chilly, guests are loving..."
-- "To make it a bit special, we can..."
+Ask one simple preference question before recommending.
 
-## Step 4: Drill Daily
-Run 5-minute role plays at lineup. One person plays a guest archetype (first date, rugby team, solo diner) and the other must ask, recommend, and close with confidence. Rotate pairs so everyone practices.
+Examples:
+- "Do you like crisp or hoppy beers?"
+- "Are you in the mood for something sweet or dry?"
 
-## Step 5: Track and Celebrate
-Add an upsell KPI to the whiteboard: desserts attached, premium pours sold, large wine upgrades. Celebrate streaks with instant rewards and share exact phrasing that worked.
+## Step 2: Offer two curated options
+
+Give a clear choice. It feels supportive and speeds decisions.
+
+Example:
+"You could go for the house gin, or our local small-batch gin. The local one is a little smoother."
+
+## Step 3: Use bridge phrases
+
+Bridge phrases connect the upsell to the guest's goal.
+
+- "If you want something lighter..."
+- "If you are eating, this pairs well with..."
+- "If you want to treat yourself..."
+
+## Step 4: Drill daily
+
+Run a two-minute role play before service. Focus on one category at a time: beer, wine, spirits, or food add-ons.
+
+## Step 5: Track and celebrate
+
+Pick one upsell focus each week and celebrate wins publicly. Recognition makes the habit stick.
+
+## Scripts by category
+
+**Beer**: "We have the house lager, or the local IPA that is fresher and a bit more aromatic."
+
+**Wine**: "Would you like a glass or a carafe for the table? The carafe works out better per glass."
+
+**Spirits**: "Would you like the standard pour or the premium that is aged longer?"
+
+**Food add-on**: "Most people add the rosemary fries or the slaw with that."
+
+## Common mistakes
+
+- Asking "anything else?" without a suggestion.
+- Training once and never repeating.
+- Incentivising volume instead of margin.
+
+## Quick checklist
+
+- One question script per category.
+- Two-minute pre-shift drill scheduled.
+- Weekly upsell target chosen.
 
 ## Mini FAQ
-**What if guests say no?**
-Thank them and move on. A polite refusal still shows you care. The goal is relevance, not pressure.
 
-**Should I script entire conversations?**
-Provide frameworks, not word-for-word lines. Authenticity matters; the team should adapt scripts to their voice once they grasp the structure.
+**Will guests feel pressured?**
+Not if you ask a preference question first and present the upsell as a helpful option.
 
-Great upselling feels like matchmaking. Nail the approach and guests will thank you for spending more.
+**How long before it works?**
+Most teams see a lift within a week when the scripts are used consistently.

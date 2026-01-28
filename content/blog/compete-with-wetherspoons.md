@@ -7,6 +7,7 @@ excerpt: "Wetherspoons opened nearby? Don't panic. Learn proven strategies that 
 quickAnswer: "Focus on what Wetherspoons can't offer: personal service, local community events, fresh food, unique atmosphere, and flexibility. Create loyalty through relationships, not just price. Offer premium experiences they can't match at scale while maintaining competitive pricing on key items."
 author: "Peter Pitcher"
 category: "competition"
+featuredImage: "/images/blog/compete-with-wetherspoons.png"
 tags:
   - "competition"
   - "wetherspoons"

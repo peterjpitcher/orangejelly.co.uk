@@ -1,12 +1,12 @@
-import * as React from "react";
-import { Button as ShadcnButton } from "@/components/ui/button";
-import Link from "next/link";
-import { Loader2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import * as React from 'react';
+import { Button as ShadcnButton } from '@/components/ui/button';
+import Link from 'next/link';
+import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 // Map old props to new shadcn props
 interface LegacyButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'custom';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'custom' | 'outline-white';
   size?: 'small' | 'medium' | 'large';
   loading?: boolean;
   disabled?: boolean;
@@ -27,14 +27,15 @@ const variantMap = {
   secondary: 'secondary',
   outline: 'outline',
   ghost: 'ghost',
-  custom: 'default'
+  custom: 'default',
+  'outline-white': 'outline',
 } as const;
 
 // Map old sizes to shadcn sizes
 const sizeMap = {
   small: 'sm',
   medium: 'default',
-  large: 'lg'
+  large: 'lg',
 } as const;
 
 const legacyVariantClasses: Record<NonNullable<LegacyButtonProps['variant']>, string> = {
@@ -43,6 +44,7 @@ const legacyVariantClasses: Record<NonNullable<LegacyButtonProps['variant']>, st
   outline: 'border-2 border-orange text-orange hover:bg-orange hover:text-white',
   ghost: 'text-orange hover:bg-orange/10',
   custom: '',
+  'outline-white': 'border-2 border-white text-white hover:bg-white hover:text-charcoal',
 };
 
 const legacySizeClasses: Record<NonNullable<LegacyButtonProps['size']>, string> = {
@@ -67,12 +69,12 @@ export default function ButtonAdapter({
   'aria-label': ariaLabel,
   ...props
 }: LegacyButtonProps) {
-  const shadcnVariant = loading ? 'loading' : (variantMap[variant] || 'default');
+  const shadcnVariant = loading ? 'loading' : variantMap[variant] || 'default';
   const shadcnSize = sizeMap[size] || 'default';
-  
+
   const buttonClasses = cn(
-    fullWidth && "w-full block",
-    whatsapp && "!bg-[var(--color-whatsapp)] hover:!bg-[var(--color-whatsapp-hover)] text-white",
+    fullWidth && 'w-full block',
+    whatsapp && '!bg-[var(--color-whatsapp)] hover:!bg-[var(--color-whatsapp-hover)] text-white',
     legacyVariantClasses[variant],
     legacySizeClasses[size],
     className
@@ -97,12 +99,7 @@ export default function ButtonAdapter({
   if (whatsapp && href) {
     return (
       <ShadcnButton {...sharedButtonProps} asChild>
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={ariaLabel}
-        >
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
           {buttonContent}
         </a>
       </ShadcnButton>
@@ -113,12 +110,7 @@ export default function ButtonAdapter({
   if (href && external) {
     return (
       <ShadcnButton {...sharedButtonProps} asChild>
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={ariaLabel}
-        >
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
           {buttonContent}
         </a>
       </ShadcnButton>

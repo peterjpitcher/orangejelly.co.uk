@@ -196,6 +196,7 @@ export default function ContactPage({}: ContactPageProps) {
         showCTA={true}
         bottomText="Available 7 days a week - pub hours understood"
         breadcrumbs={breadcrumbPaths.contact}
+        backgroundImage="/images/headers/contact.png"
       />
 
       {/* Three ways to connect */}

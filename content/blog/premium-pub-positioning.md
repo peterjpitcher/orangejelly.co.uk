@@ -7,6 +7,7 @@ excerpt: "Learn how to position your pub as a premium destination. From craft co
 quickAnswer: "Focus on quality over quantity with curated drinks selection, elevate food presentation and ingredients, create unique experiences like tasting events, improve atmosphere with better lighting and decor, and train staff to provide knowledgeable service that justifies premium pricing."
 author: "Peter Pitcher"
 category: "competition"
+featuredImage: "/images/blog/premium-pub-positioning.png"
 tags:
   - "premium strategy"
   - "upmarket pubs"

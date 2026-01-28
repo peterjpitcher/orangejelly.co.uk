@@ -1,4 +1,4 @@
-import { type BlogPost as BlogPostType, type Category } from '@/lib/blog';
+import { type BlogPost as BlogPostType, type AdjacentPostNavItem } from '@/lib/blog';
 import BlogPost from './BlogPost';
 import { preprocessMarkdown } from '@/lib/markdown/preprocess';
 import { renderMarkdownToHtml } from '@/lib/markdown/render';
@@ -10,14 +10,6 @@ interface BlogPostServerProps {
     previous?: AdjacentPostNavItem;
     next?: AdjacentPostNavItem;
   };
-}
-
-export interface AdjacentPostNavItem {
-  slug: string;
-  title: string;
-  excerpt: string;
-  publishedDate?: string;
-  category: Category;
 }
 
 /**

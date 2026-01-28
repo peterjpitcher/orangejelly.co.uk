@@ -71,6 +71,7 @@ export default function ServicesPage() {
         ctaText={servicesData.hero.ctaText}
         bottomText={servicesData.hero.bottomText}
         breadcrumbs={breadcrumbPaths.services}
+        backgroundImage={servicesData.hero.backgroundImage}
       />
 
       {/* Service landing pages (Search Console intent pages) */}

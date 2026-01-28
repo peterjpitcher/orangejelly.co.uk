@@ -14,7 +14,7 @@ tags:
   - "pub promo"
   - "content"
 status: "published"
-featuredImage: "/images/blog/social-media-tactics-footfall-seven-days.svg"
+featuredImage: "/images/blog/social-media-tactics-footfall-seven-days.png"
 metaDescription: "Seven-day social media plan for UK pubs, including content ideas, ad tactics, and conversion workflows that drive immediate visits."
 keywords:
   - "pub social media plan"
@@ -34,38 +34,70 @@ voiceSearchQueries:
 
 # Social Media Tactics That Drive Footfall in Seven Days
 
-Posting pretty cocktails once a week will not save a struggling venue. What works is a tightly choreographed sprint where every post, story, and message points to a specific seat, date, or package. Here is the playbook.
+A single pretty post rarely changes trade. A short, tight sprint can. The goal is to fill specific seats on specific nights, not to chase likes.
+
+This seven-day plan gives you a repeatable burst that turns social posts into bookings.
 
 ## Day 0: Prep
-- Choose one hook (Burns Night warm-up, quiz relaunch, or a locals tasting).
-- Build a simple landing page or Google Form that captures name, phone, party size, and preferred time.
-- Collect last month's best photos plus a list of superfans willing to feature on camera.
 
-## Days 1-2: Proof First
-Film raw reels of chef prep, cellar setup, staff tastings, and menu teases. Post morning and evening, tagging local partners. Use captions that spell out availability: "12 tables left for Wednesday".
+- Pick one event or offer.
+- Set a booking link and a clear cap.
+- Capture 10 photos and 5 short clips in one hour.
 
-## Days 3-4: Spotlight Guests
-Share testimonials, stitch TikTok duets with regulars, and run polls in stories that let followers vote on cocktails or playlists. Message anyone who interacts with a poll and offer them first refusal on bookings.
+This prep day makes the rest easy.
 
-## Day 5: Paid Push
-Take the best-performing organic post and put £5-£10 behind it targeting a 5km radius plus lookalikes of your email list. Optimise for messages or conversions, not reach. Reply to every DM within five minutes even if it is just "Got it, back in touch at 9am".
+## Days 1-2: Proof first
 
-## Day 6: Influencer Swap
-Invite two micro-creators (under 10k followers) for a complimentary experience in exchange for same-day stories. Brief them on the narrative: value, warmth, comeback. Share their content immediately.
+Post photos of the offer or the room. Use a clear CTA and availability.
 
-## Day 7: Countdown and Close
-Post a final availability update, run a live video touring the venue, and share a behind-the-bar toast thanking everyone who booked. Close the loop by messaging non-bookers with next week's theme.
+Example: "Thursday steak night, 12 tables left. Book now."
 
-## Conversion Rules
-- Every caption ends with a CTA: "Book via link", "Comment TABLE and we will DM", or "WhatsApp 07900 123456".
-- Track leads in a simple sheet with columns for platform, party size, status. Follow up twice before giving up.
-- Segment email list by engagement and send a final reminder with urgency.
+## Days 3-4: Spotlight guests and staff
+
+People show up for people. Share a short story, a regular quote, or a behind-the-scenes clip. Keep the CTA consistent.
+
+## Day 5: Paid push
+
+Spend a small amount on a targeted local ad. Even 20 pounds can move bookings if the offer is clear.
+
+## Day 6: Partner or swap
+
+Ask a local business to share your post. Swap posts or co-host. This adds reach without extra spend.
+
+## Day 7: Countdown and close
+
+Post remaining availability and a final call. Scarcity drives action.
+
+## Asset checklist
+
+- 10 photos (food, drinks, room, crowd).
+- 5 short clips (10 to 15 seconds).
+- One simple availability graphic.
+- A booking link that works on mobile.
+
+## What to track
+
+- Booking link clicks.
+- Messages about availability.
+- Actual covers on the night.
+
+## Common mistakes
+
+- Changing the message every day.
+- Posting without a booking link.
+- Waiting until the day of the event.
+
+## Quick checklist
+
+- One offer chosen.
+- Assets captured in one session.
+- Seven-day schedule planned.
+- Paid boost set for day 5.
 
 ## Mini FAQ
-**Do I need professional photography?**
-No. Authentic, well-lit phone footage outperforms glossy ads because it feels real. Just stabilise shots and use subtitles.
 
-**What if I cannot respond instantly?**
-Use saved replies and autoresponders stating when you will reply. Speed wins, but clarity prevents ghosting.
+**Do I need TikTok for this?**
+No. One platform done well beats three done badly.
 
-One focused social sprint beats months of half-hearted posting and gives the team the morale boost they deserve.
+**How long should the sprint run?**
+Seven days is enough to build urgency without fatigue.

@@ -14,7 +14,7 @@ tags:
   - "csr"
   - "events"
 status: "published"
-featuredImage: "/images/blog/community-outreach-reintroduce-pub.svg"
+featuredImage: "/images/blog/community-outreach-reintroduce-pub.png"
 metaDescription: "Community outreach ideas for pubs, including partnerships with schools, charities, and local groups to drive goodwill and revenue."
 keywords:
   - "pub community ideas"
@@ -34,31 +34,73 @@ voiceSearchQueries:
 
 # Community Outreach Ideas That Reintroduce Your Pub to the Neighbourhood
 
-When locals forget you exist, no amount of Instagram ads will fix it. You need to show up in the places they care about. Here are outreach ideas that create genuine goodwill and, yes, new trade.
+When locals forget you exist, no amount of ads will fix it. The solution is consistent, visible community value. Outreach works when it is intentional, local, and repeated often enough to rebuild trust.
 
-## 1. Adopt a Local Cause
-Pick one school, hospice, or youth club and commit for 12 months. Provide meeting space, donate a portion of quiz takings, and let them take over your socials once a month to share updates.
+Use this as a simple, three-layer plan: show up, collaborate, then become essential.
 
-## 2. Run Useful Workshops
-Offer free or pay-what-you-can sessions: CV clinics for school leavers, "how to start a side hustle" chats, or cooking demos for parents. Partner with local experts to deliver value while showcasing your hospitality.
+## Layer 1: Show up where locals already are
 
-## 3. Host Neighbourhood Forums
-Quarterly open evenings where residents can meet councillors, police liaison officers, or business groups. Provide tea, biscuits, and a structured agenda. Being the venue for civic conversation builds trust fast.
+Start with low-effort presence. The goal is to make your pub feel present in daily community life.
 
-## 4. Offer Mini Grants
-Set aside £500 per quarter for micro-grants (£50-£150) to community projects. Ask applicants to pitch in person at a "Community Dragons" night hosted at the pub. The audience votes, the energy is electric, and projects shout you out for months.
+- Post a weekly update in local Facebook groups.
+- Offer your space as a meeting room for one local group.
+- Put a community noticeboard near the bar and keep it updated.
 
-## 5. Support Local Creators
-Rotate wall space for artists, hold book launches for local authors, or host vinyl swaps. Take only a small commission and encourage creators to invite their followers.
+This layer is visibility. It is not glamorous, but it is powerful.
 
-## 6. Celebrate Volunteers
-Throw an annual party for the town's volunteers. Provide drinks deals, certificates, and public thank-yous. Invite the local paper – they love this stuff.
+## Layer 2: Collaborate with local partners
+
+Pick two partners and build a simple shared offer. Look for groups with real reach: schools, sports clubs, charities, or local makers.
+
+Example collaborations:
+- A school fundraiser with a fixed percentage of takings.
+- A local maker market on a quiet Sunday afternoon.
+- A community fitness group that meets at your pub after sessions.
+
+The goal is not charity for its own sake. It is consistent reasons to visit.
+
+## Layer 3: Become essential to the community
+
+This is where loyalty is created. Make the pub the default place for specific local needs.
+
+- Monthly community forums or councillor Q and A evenings.
+- A yearly volunteer celebration night.
+- A local history night with photos and stories from regulars.
+
+These events become rituals. Rituals create repeat trade.
+
+## How to choose the right outreach idea
+
+Use three filters:
+- **Audience fit**: will this bring the people you want more often?
+- **Capacity fit**: can you run it without breaking the team?
+- **Repeatability**: can you do it again next month?
+
+If it fails any of these, skip it.
+
+## Example 90-day outreach plan
+
+**Month 1**: Launch a community noticeboard and host one free meeting.
+**Month 2**: Partner with one local group for a co-branded event.
+**Month 3**: Create a repeating monthly ritual and promote it as a local tradition.
+
+## Common mistakes
+
+- One-off charity nights with no follow-up.
+- Partnering with groups that have no audience.
+- Trying to do five outreach ideas at once.
+
+## Quick checklist
+
+- One visibility action live this week.
+- Two local partners shortlisted.
+- One monthly ritual chosen and scheduled.
+- Team briefed on the outreach story.
 
 ## Mini FAQ
+
 **Is outreach just charity?**
-No. It is strategic relationship-building. Track enquiries, bookings, and press mentions tied to each initiative to prove ROI.
+It is strategic relationship building. You should measure bookings and repeat visits tied to each initiative.
 
-**How do I staff these extras?**
-Leverage quieter dayparts, recruit volunteers, and collaborate with partners who can bring their own marshals. You provide the stage; they bring the act.
-
-Community work done right fills the diary because people book venues they emotionally invest in.
+**How do I staff outreach without extra hours?**
+Use quieter dayparts and partner with groups that bring their own helpers.

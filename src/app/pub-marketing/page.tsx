@@ -51,6 +51,7 @@ export default function PubMarketingPage() {
         ctaText={pubMarketingData.hero.ctaText}
         bottomText={pubMarketingData.hero.bottomText}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing' }]}
+        backgroundImage="/images/headers/services.png"
       />
 
       {/* Intro */}

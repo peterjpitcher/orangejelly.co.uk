@@ -9,7 +9,7 @@ Allow: /results/
 Allow: /about/
 
 # Sitemaps
-Sitemap: https://orangejelly.co.uk/sitemap.xml
+Sitemap: https://www.orangejelly.co.uk/sitemap.xml
 
 # Crawl-delay for politeness
 Crawl-delay: 1

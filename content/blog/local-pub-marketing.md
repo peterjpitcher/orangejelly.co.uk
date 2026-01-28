@@ -7,6 +7,7 @@ excerpt: "Forget expensive advertising. Learn how successful local pubs use comm
 quickAnswer: "Become genuinely useful to your community by offering services like package collection, meeting spaces, or local business partnerships. Focus on building relationships in local Facebook groups, supporting community events, and solving neighbourhood problems rather than traditional advertising."
 author: "Peter Pitcher"
 category: "competition"
+featuredImage: "/images/blog/local-pub-marketing.png"
 tags:
   - "marketing"
   - "local marketing"

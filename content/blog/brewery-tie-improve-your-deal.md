@@ -6,6 +6,7 @@ excerpt: "Work within your tie to boost profits without breaking contracts. Real
 quickAnswer: "Improve your deal by demonstrating success first: increase volumes, reduce wastage, maintain quality standards. Then negotiate better terms using your track record. Explore MRO options for guest ales, maximize free-of-tie categories, and build strong relationships with your Business Development Manager."
 author: "Peter Pitcher"
 category: "supplier-relations"
+featuredImage: "/images/blog/brewery-tie-improve-your-deal.png"
 tags:
   - "brewery tie"
   - "pubco"
@@ -31,331 +32,89 @@ voiceSearchQueries:
   - "Help with brewery tie improve your deal"
 ---
 
-"The tie is killing us," said every tied tenant ever. And yes, paying £120 for a keg that free houses get for £70 hurts. But here's what nobody tells you: we improved our GP while staying tied, kept our relationship with Greene King intact, and actually got MORE support than before.
+# Brewery Tie Strangling Your Profits? Legal Ways to Improve Your Deal
 
-No legal battles. No going free of tie. Just smart negotiation and knowing the system.
+Being tied can feel like running uphill with a weight vest. Higher keg prices and restricted buying power squeeze margin and create frustration. But you still have levers. The key is to work the tie, not just complain about it.
 
-## Understanding Your Real Position
+This guide is practical and experience-based, not legal advice. If you are unsure, speak to a qualified advisor.
 
-- Yes, you pay more for beer (often higher)
+## Start with the reality check
 
-- No, you can't just break the tie
+Before you negotiate, get clear on three facts:
+- Your true gross profit across wet and dry.
+- The exact products and categories where the tie hurts most.
+- The support you are already entitled to but not using.
 
-- Yes, there are legal protections
+Most tied tenants improve margin simply by understanding their contract and using the help already available.
 
-- No, threatening legal action rarely helps
+## Improve margin inside the tie
 
-- Yes, you can significantly improve your deal
+You are not powerless. These are the levers that usually work.
 
-The key? Work the system, don't fight it.
+**1) Fix the drinks mix**
+A tied beer list does not mean a low-margin bar. Build a ladder that includes premium spirits, wines, and soft drinks that are not tied, or are less impacted by the tie.
 
-## The Pubs Code Reality Check
+**2) Price with confidence**
+If your tied core products are underpriced, you are subsidising demand. Reset pricing in small steps and use bundles to protect value perception.
 
-- Request MRO (Market Rent Only) option
+**3) Push high margin add-ons**
+Coffee, desserts, premium mixers, and low-AB serves often carry healthy margins. Train the team to recommend them consistently.
 
-- Transparency in pricing
+**4) Use supplier support**
+Many tied agreements include marketing support, training, or equipment assistance. Ask directly for what you need rather than waiting to be offered.
 
-- No worse off principle
+## Work the BDM relationship
 
-- Right to dispute resolution
+Your Business Development Manager is a lever. The best outcomes come from prepared conversations and evidence.
 
-- MRO means lose all support
+Bring:
+- A simple P and L snapshot.
+- A list of specific requests (discounts, marketing support, repairs, training).
+- A clear plan of how you will grow revenue if supported.
 
-- Rent often increases significantly
+This turns the conversation from complaint to partnership.
 
-- Capex disappears
+## Decide: stay tied or explore MRO
 
-- Relationship becomes purely transactional
+The Market Rent Only (MRO) route can be right for some operators and wrong for others. Treat it as a decision path, not a default.
 
-Sometimes the tie, negotiated properly, is actually better.
+**Stay tied if:**
+- You rely on support and it is working.
+- Your GP is improving with mix and pricing changes.
+- You want stability and less admin overhead.
 
-## The BDM Relationship Game
+**Explore MRO if:**
+- Your tie cost is materially higher than local free houses.
+- You can access better supply deals independently.
+- You have the operational capacity to manage suppliers.
 
-Your Business Development Manager is either your enemy or your asset. Choose wisely.
+If you are considering MRO, document the case and get proper advice before acting.
 
-Making Them Your Ally
-What works:
-- Regular contact (monthly minimum)
-- Share your challenges openly
-- Ask for help, not confrontation
-- Show them your efforts
-- Invite them for lunch (on you)
+## A simple 90-day improvement plan
 
-- Aggressive emails
+- Week 1 to 2: audit GP by category and reset pricing.
+- Week 3 to 6: rebuild the drinks mix and train staff.
+- Week 7 to 10: request supplier support and run one activation.
+- Week 11 to 12: assess whether the tie is working for you.
 
-- Threatening legal action
+## Common mistakes
 
-- Comparing to free trade prices
+- Assuming the tie is the only problem.
+- Negotiating without data.
+- Ignoring the mix and pricing you can control.
+- Starting MRO without a clear plan.
 
-- Going over their head immediately
+## Quick checklist
 
-- Treating them as enemy
+- GP by category calculated.
+- Pricing reviewed on top sellers.
+- Supplier support requested.
+- Decision path for MRO written down.
 
-My BDM became my biggest advocate. Result: a meaningful annual discount I didn't know existed.
+## Mini FAQ
 
-## The Negotiation Framework
+**Can I renegotiate while tied?**
+Yes, but you need a specific request and a business case.
 
-Preparation is Everything
-Before any negotiation:
-1. Know your numbers cold
-2. Document your investments
-3. List your improvements
-4. Calculate your alternatives
-5. Understand their position
-
-The Ask Strategy
-Never: "Your prices are killing me"
-Instead: "I need help hitting targets. What support is available?"
-
-Never: "Free houses pay half"
-Instead: "My GP is below sustainable levels. How can we improve this together?"
-
-The Evidence File
-Document everything:
-- Every penny invested
-- Community initiatives
-- Sales growth achieved
-- Events hosted
-- Problems overcome
-
-Present professionally: "Here's what we've achieved together. Here's what we need to achieve more."
-
-## Maximizing Untied Income
-
-What You Can Control
-Focus on products outside the tie:
-- Wines (often untied)
-- Spirits (check your agreement)
-- Soft drinks (sometimes)
-- Coffee (usually)
-- Food (always)
-
-We shifted focus to cocktails (untied spirits), wine promotions, and premium coffee. Untied GP became a much larger share of total.
-
-The Machine Income Gold
-Gaming machines, jukeboxes, pool tables:
-- Negotiate better splits
-- Add more machines if profitable
-- Consider B3 machines (£500 limit)
-- Quiz machines for different demographic
-
-- Renegotiated from 50/50 to 60/40 split
-
-- Added second machine
-
-- Extra £400 monthly income
-
-The Accommodation Option
-If you have rooms:
-- Usually completely untied
-- Higher margins than wet sales
-- Pubco often supports refurbishment
-- Can transform economics
-
-Even one Airbnb room can add £1,000+ monthly.
-
-## Hidden Support Most Tenants Miss
-
-Marketing Support
-Pubcos have budgets. Access them:
-- Launch events funding
-- Seasonal promotion support
-- Social media training
-- Design services
-- Local advertising contributions
-
-- £2,000 for summer garden launch
-
-- Free social media photography
-
-- £500 quarterly marketing contribution
-
-- Professional menu design
-
-Training and Development
-Free training often available:
-- Cellar management
-- Business development
-- Social media marketing
-- Food safety
-- Personal licenses
-
-Value: £3,000+ annually if used
-
-Capex and Maintenance
-Know what they should cover:
-- External repairs (usually)
-- Major equipment (sometimes)
-- Refurbishment contributions
-- Emergency repairs
-- Compliance updates
-
-- New cellar cooling (£8,000)
-
-- Garden furniture (£3,000)
-
-- Kitchen equipment (£5,000)
-
-- All by asking properly
-
-## The Discount Detective Work
-
-Volume Discounts
-Hit targets, get rewards:
-- Barrelage discounts (5-15%)
-- Seasonal incentives
-- New product launch bonuses
-- Loyalty schemes
-
-Track everything. Claim everything.
-
-Retrospective Claims
-Check you're getting:
-- Correct sediment allowance
-- Proper ullage credits
-- Quality complaint credits
-- Temperature loss allowances
-
-We found £2,000 in unclaimed credits over 18 months.
-
-The Small Print Wins
-Read your agreement for:
-- Rent review caps
-- Break clauses
-- Assignment rights
-- Improvement rent disregards
-
-Knowledge is leverage.
-
-## The Nuclear Option: MRO
-
-When to Consider
-Only if:
-- Truly unsustainable currently
-- Have capital for investments
-- Can manage without support
-- Prepared for relationship change
-- Numbers genuinely work better
-
-The MRO Reality
-What you gain:
-- Free trade purchasing
-- Complete control
-- Higher GP potential
-
-- All support
-
-- Marketing budgets
-
-- Maintenance help
-
-- Training access
-
-- BDM relationship
-
-- Often pay higher rent
-
-The Middle Ground
-Some pubcos offer:
-- Partial tie release
-- Reduced tie agreements
-- Stocking requirements only
-- Hybrid arrangements
-
-Worth exploring before MRO.
-
-## Alternative Strategies
-
-The Franchise Model
-Some operators offer:
-- Fixed fee structure
-- Support included
-- Marketing provided
-- Systems included
-
-Research: Ei Group's Craft Union, Greene King's Hive
-
-The Management Agreement
-Run pubco's pub for them:
-- Salary plus bonus
-- No rent/tie worries
-- Less risk
-- Less reward
-
-Good for: Reducing stress, guaranteed income
-
-The Purchase Option
-Some tenants can buy:
-- Pubco occasionally sells
-- Finance available
-- Freehold transforms everything
-- But big commitment
-
-We explored, decided against (yet).
-
-## Your Tied Improvement Plan
-
-- Calculate exact tie cost
-
-- List all untied opportunities
-
-- Schedule BDM meeting
-
-- Document all investments
-
-- Renegotiate machine splits
-
-- Apply for marketing support
-
-- Focus on untied sales
-
-- Build evidence file
-
-- Present improvement case
-
-- Request specific support
-
-- Explore discount options
-
-- Consider alternatives
-
-- Review progress
-
-- Decide on future
-
-- Either optimize tie or explore MRO
-
-- But decide from strength
-
-## Success Stories
-
-Tom (Yorkshire): Stayed tied, negotiated a meaningful discount, got refurb support
-Sarah (Devon): Used MRO threat, got partial tie release, kept support
-Mike (London): Maximized untied, increased rooms, tie now irrelevant
-Us: Stayed tied, improved GP, better relationship than ever
-
-## The Bottom Line
-
-The tie isn't automatically evil. Handled badly, it's devastating. Handled well, it's workable. The key is knowledge, relationship, and focusing on what you control.
-
-Most importantly: Stop fighting battles you can't win. Start winning the war through smart tactics.
-
-Your pubco needs successful tenants. Show them how helping you helps them. Then watch support appear.
-
-## Frequently Asked Questions
-
-### Should I threaten to go MRO to get better terms?
-
-Only if you're genuinely prepared to follow through. Empty threats destroy relationships. Better to present a business case showing how helping you succeed helps them. Most pubcos will negotiate rather than lose a good tenant to MRO.
-
-### What if my BDM won't help?
-
-Document everything, then escalate professionally. Email their manager with specific requests and evidence. But first, ensure you're approaching correctly - many BDMs want to help but need business justification to get approval.
-
-### Is going free of tie always better?
-
-No. Calculate total cost including rent, lost support, capital requirements, and relationship value. Many successful pubs thrive within ties. Free of tie means free of support too. Do the maths honestly before deciding.
-
-### Can I buy some products outside the tie?
-
-Check your specific agreement. Guest ales, wines, spirits, soft drinks may have flexibility. Never breach your tie - it's grounds for forfeiture. But maximize every legal opportunity for untied products.
+**Is MRO always better?**
+No. It depends on your purchasing power, costs, and ability to manage supply.

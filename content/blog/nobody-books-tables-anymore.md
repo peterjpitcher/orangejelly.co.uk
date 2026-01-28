@@ -6,6 +6,7 @@ excerpt: "Find the perfect balance between guaranteed bookings and spontaneous t
 quickAnswer: "Reserve a majority of tables for bookings and keep a healthy share for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after a short grace period. Create a waiting list system and overbook slightly on peak nights to account for cancellations."
 author: "Peter Pitcher"
 category: "operations"
+featuredImage: "/images/blog/nobody-books-tables-anymore.png"
 tags:
   - "table management"
   - "bookings"

@@ -13,7 +13,7 @@ tags:
   - "licensee toolkit"
   - "rhythm of the week"
 status: "published"
-featuredImage: "/images/blog/quiz-night-101.svg"
+featuredImage: "/images/blog/quiz-night-101.png"
 metaDescription: "Licensee 101 guide for hosting successful pub quiz nights: prep timeline, round formats, pricing, marketing, compliance, and downloadable templates."
 keywords:
   - "quiz night toolkit"

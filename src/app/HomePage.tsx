@@ -109,6 +109,7 @@ interface HomePageProps {
     subtitle: string;
     ctaText: string;
     bottomText: string;
+    backgroundImage?: string;
   };
   sectionHeadings?: SectionHeadings;
   trustBarItems?: Array<{ value: string; label: string }> | null;
@@ -168,6 +169,7 @@ export default function HomePage({
             href: '/services',
           }}
           bottomText={hero.bottomText}
+          backgroundImage={hero.backgroundImage}
         />
       )}
 

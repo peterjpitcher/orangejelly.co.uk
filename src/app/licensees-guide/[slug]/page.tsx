@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { type Metadata } from 'next';
+import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
 import path from 'path';
 import Hero from '@/components/Hero';
@@ -28,7 +29,7 @@ export const revalidate = 60;
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content/blog');
-  const posts = getAllBlogPosts(contentDir);
+  const posts = getAllBlogPosts(contentDir, { draft: false, dateTo: new Date() });
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -239,6 +240,26 @@ const safeDate = (value: unknown): string => {
   return new Date().toISOString();
 };
 
+const isPublishable = (frontMatter: Record<string, unknown>): boolean => {
+  const statusValue =
+    typeof frontMatter.status === 'string' ? frontMatter.status.toLowerCase().trim() : null;
+  const isDraft = frontMatter.draft === true || statusValue === 'draft';
+  if (isDraft) {
+    return false;
+  }
+
+  const publishedAt =
+    toStringValue(frontMatter.publishedAt) || toStringValue(frontMatter.publishedDate);
+  if (publishedAt) {
+    const publishedDate = new Date(publishedAt);
+    if (!Number.isNaN(publishedDate.getTime()) && publishedDate.getTime() > Date.now()) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
 const getPostTimestamp = (entry: MarkdownBlogPost): number => {
   const dateValue =
     toStringValue(entry.publishedAt) ||
@@ -248,7 +269,10 @@ const getPostTimestamp = (entry: MarkdownBlogPost): number => {
 };
 
 // Helper function to get blog post by slug from markdown
-async function getMarkdownPost(slug: string): Promise<ExtendedBlogPost | null> {
+async function getMarkdownPost(
+  slug: string,
+  options?: { includeDrafts?: boolean }
+): Promise<ExtendedBlogPost | null> {
   const contentDir = path.join(process.cwd(), 'content/blog');
   const filePath = getMarkdownBySlug(contentDir, slug);
 
@@ -258,6 +282,10 @@ async function getMarkdownPost(slug: string): Promise<ExtendedBlogPost | null> {
 
   const parsedPost = parseMarkdownFile(filePath);
   const frontMatterRecord = parsedPost.frontMatter as Record<string, unknown>;
+
+  if (!options?.includeDrafts && !isPublishable(frontMatterRecord)) {
+    return null;
+  }
 
   // Convert to format expected by the existing components
   type FrontMatterAuthor = string | { name?: string; bio?: string } | null | undefined;
@@ -367,7 +395,8 @@ async function getMarkdownPost(slug: string): Promise<ExtendedBlogPost | null> {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = await getMarkdownPost(params.slug);
+  const { isEnabled } = draftMode();
+  const post = await getMarkdownPost(params.slug, { includeDrafts: isEnabled });
 
   if (!post) {
     return {
@@ -445,7 +474,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 // Async component that fetches data
 async function BlogPostPageData({ params }: { params: { slug: string } }) {
   try {
-    const post = await getMarkdownPost(params.slug);
+    const { isEnabled } = draftMode();
+    const post = await getMarkdownPost(params.slug, { includeDrafts: isEnabled });
 
     if (!post) {
       notFound();
@@ -453,7 +483,10 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
 
     // Get related posts (same category, different post)
     const contentDir = path.join(process.cwd(), 'content/blog');
-    const allPosts = getAllBlogPosts(contentDir) as MarkdownBlogPost[];
+    const allPosts = getAllBlogPosts(
+      contentDir,
+      isEnabled ? undefined : { draft: false, dateTo: new Date() }
+    ) as MarkdownBlogPost[];
     const categorySlug = post.category?.slug;
 
     const relatedPostsData = allPosts
@@ -632,6 +665,11 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
           subtitle={post.excerpt}
           showCTA={false}
           breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+          backgroundImage={
+            typeof post.featuredImage === 'string' && post.featuredImage
+              ? post.featuredImage
+              : '/images/licensee-guide-hero.png'
+          }
         />
         <Section background="white">
           <div className="max-w-6xl mx-auto">

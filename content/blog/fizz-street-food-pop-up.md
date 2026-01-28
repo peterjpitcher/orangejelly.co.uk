@@ -13,7 +13,7 @@ tags:
   - "spritz bundles"
   - "pub events"
 status: "published"
-featuredImage: "/images/blog/fizz-street-food-pop-up.svg"
+featuredImage: "/images/blog/fizz-street-food-pop-up.png"
 metaDescription: "Friday Fizz or Street-Food Pop-Up template for pubs: partner checklist, pricing, bundles, run-sheet, marketing copy, and safeguarding notes."
 keywords:
   - "pub street food pop up"

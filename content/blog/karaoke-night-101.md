@@ -13,7 +13,7 @@ tags:
   - "licensee toolkit"
   - "music compliance"
 status: "published"
-featuredImage: "/images/blog/karaoke-night-101.svg"
+featuredImage: "/images/blog/karaoke-night-101.png"
 metaDescription: "Karaoke Night 101 for UK pubs: tech checklist, 2-hour run-sheet, promo ideas, upsells, and TheMusicLicence reminders."
 keywords:
   - "run a karaoke night"

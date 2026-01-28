@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type MouseEvent } from 'react';
+import { useEffect, useMemo, useState, type MouseEvent } from 'react';
 import clsx from 'clsx';
 
 export interface TocHeading {
@@ -14,10 +14,16 @@ interface TableOfContentsProps {
 }
 
 export default function TableOfContents({ headings }: TableOfContentsProps) {
-  const [activeId, setActiveId] = useState<string | null>(headings[0]?.id ?? null);
+  // Filter to show only H2s (level 2) to keep the list concise
+  const displayHeadings = useMemo(() => headings.filter((h) => h.level === 2), [headings]);
+  const [activeId, setActiveId] = useState<string | null>(displayHeadings[0]?.id ?? null);
 
   useEffect(() => {
-    if (headings.length === 0 || typeof window === 'undefined' || typeof document === 'undefined') {
+    if (
+      displayHeadings.length === 0 ||
+      typeof window === 'undefined' ||
+      typeof document === 'undefined'
+    ) {
       return;
     }
 
@@ -41,16 +47,16 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       }
     );
 
-    const headingElements = headings
+    const headingElements = displayHeadings
       .map((heading) => document.getElementById(heading.id))
       .filter((el): el is HTMLElement => Boolean(el));
 
     headingElements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, [headings]);
+  }, [displayHeadings]);
 
-  if (headings.length === 0) {
+  if (displayHeadings.length === 0) {
     return null;
   }
 
@@ -80,7 +86,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
         </p>
       </div>
       <ul className="space-y-2 text-sm">
-        {headings.map((heading) => (
+        {displayHeadings.map((heading) => (
           <li
             key={heading.id}
             className={clsx(

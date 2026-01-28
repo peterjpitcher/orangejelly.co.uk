@@ -28,31 +28,52 @@ export default function Hero({
   bottomText,
   headingLevel = 1,
   breadcrumbs,
-}: HeroProps) {
+  backgroundImage,
+}: HeroProps & { backgroundImage?: string }) {
+  const isImageBackground = !!backgroundImage;
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-cream to-cream-light">
-      {/* Watermark Logo */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <OptimizedImage
-          src="/logo.png"
-          alt=""
-          width={400}
-          height={400}
-          className="opacity-5 blur-sm"
-          style={{ width: 'auto', height: 'auto' }}
-          priority
-        />
-      </div>
+    <section
+      className={`relative overflow-hidden ${
+        isImageBackground ? 'bg-charcoal' : 'bg-gradient-to-b from-cream to-cream-light'
+      }`}
+    >
+      {/* Background Image with Overlay */}
+      {isImageBackground && (
+        <div className="absolute inset-0 z-0">
+          <OptimizedImage src={backgroundImage} alt="" fill className="object-cover" priority />
+          <div className="absolute inset-0 bg-charcoal/80" />
+        </div>
+      )}
 
-      {/* Decorative orange circles */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-orange/5 rounded-full -translate-y-32 translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange/5 rounded-full translate-y-48 -translate-x-48"></div>
+      {/* Watermark Logo - only show if no background image */}
+      {!isImageBackground && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <OptimizedImage
+            src="/logo.png"
+            alt=""
+            width={400}
+            height={400}
+            className="opacity-5 blur-sm"
+            style={{ width: 'auto', height: 'auto' }}
+            priority
+          />
+        </div>
+      )}
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      {/* Decorative orange circles - only show if no background image */}
+      {!isImageBackground && (
+        <>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-orange/5 rounded-full -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange/5 rounded-full translate-y-48 -translate-x-48"></div>
+        </>
+      )}
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Breadcrumbs at top of hero */}
         {breadcrumbs && (
           <div className="pt-4 pb-2">
-            <Breadcrumb items={breadcrumbs} />
+            <Breadcrumb items={breadcrumbs} variant={isImageBackground ? 'light' : 'dark'} />
           </div>
         )}
 
@@ -60,6 +81,7 @@ export default function Hero({
           <Heading
             level={headingLevel}
             align="center"
+            color={isImageBackground ? 'white' : 'charcoal'}
             className="text-4xl md:text-6xl mb-6 animate-fade-in"
           >
             {title}
@@ -68,9 +90,11 @@ export default function Hero({
           {subtitle && (
             <Text
               size="lg"
-              color="muted"
+              color={isImageBackground ? 'white' : 'muted'}
               align="center"
-              className="md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-delay"
+              className={`md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-delay ${
+                isImageBackground ? 'text-white/90' : ''
+              }`}
             >
               {subtitle}
             </Text>
@@ -81,7 +105,11 @@ export default function Hero({
               <WhatsAppButton text={ctaText} size="large" />
 
               {secondaryAction && (
-                <Button href={secondaryAction.href} variant="outline" size="large">
+                <Button
+                  href={secondaryAction.href}
+                  variant={isImageBackground ? 'outline-white' : 'outline'}
+                  size="large"
+                >
                   {secondaryAction.text}
                 </Button>
               )}
@@ -89,7 +117,12 @@ export default function Hero({
           )}
 
           {bottomText && (
-            <Text size="sm" className="text-charcoal/60 animate-fade-in-delay-3 text-center">
+            <Text
+              size="sm"
+              className={`${
+                isImageBackground ? 'text-white/70' : 'text-charcoal/60'
+              } animate-fade-in-delay-3 text-center`}
+            >
               {bottomText}
             </Text>
           )}

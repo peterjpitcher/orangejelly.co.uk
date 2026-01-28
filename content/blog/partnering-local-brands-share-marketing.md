@@ -14,7 +14,7 @@ tags:
   - "co-branding"
   - "events"
 status: "published"
-featuredImage: "/images/blog/partnering-local-brands-share-marketing.svg"
+featuredImage: "/images/blog/partnering-local-brands-share-marketing.png"
 metaDescription: "How to partner with local brands for shared marketing, covering partner selection, offer design, contracts, and promotion."
 keywords:
   - "pub brand partnerships"
@@ -34,42 +34,66 @@ voiceSearchQueries:
 
 # Partnering with Local Brands to Share Marketing Costs
 
-Marketing budgets stretch further when you pool creativity and spend. The trick is picking partners that bring real reach, not just a logo on a poster. Follow this framework to collaborate without headaches.
+Good partnerships stretch your budget and make your pub feel more connected. The key is to choose partners with real audience overlap and to build a clear, shared offer.
 
-## Step 1: Define Your Audience Gap
-List the customer types you want more of (cyclists, remote workers, parents). Identify local brands already trusted by those people. Aim for complementary, not competing, offers.
+Use this framework to collaborate without headaches.
 
-## Step 2: Shortlist and Pitch
-Approach 3-5 prospects with a clear ask:
-- The concept (e.g. "Sunday Sourdough Sessions" with a bakery).
-- What you provide (venue, drinks, staffing).
-- What you need (email list share, product sampling, influencer reach).
-- Proposed cost split.
+## Step 1: Define the audience gap
 
-Keep the pitch to one page.
+Who do you want more of? Families, remote workers, young professionals, or foodies? Choose a partner that already has that audience.
 
-## Step 3: Co-Create the Offer
-Design something Instagrammable and genuinely useful, such as:
-- Brunch club with yoga studio and coffee roaster.
-- Local distillery takeover night.
-- Makers market pop-up where each vendor brings their own crowd.
+## Step 2: Shortlist and pitch
 
-Agree on ticket price, capacity, and upsell opportunities.
+Look for local businesses with active communities: gyms, bakers, florists, breweries, or clubs. Send a short, specific pitch.
 
-## Step 4: Put Agreements in Writing
-Even with friends, create a simple MOU covering dates, responsibilities, revenue split, insurance, and cancellation terms. It prevents awkwardness later.
+Example pitch:
+"We want to run a Friday local makers night. Your customers match our target. Would you like to co-host and split promotion?"
 
-## Step 5: Share Marketing Assets
-Build a shared folder with copy, imagery, and tracking links. Schedule joint posts, newsletter swaps, and paid ads targeting both customer bases. Encourage partners to tag each other to amplify reach.
+## Step 3: Co-create the offer
 
-## Step 6: Measure and Debrief
-After the activation, review KPIs: tickets sold, spend per head, new followers, email signups. Decide whether to repeat, scale, or pivot. Send thank-you gifts and testimonials so partners feel valued.
+Build a simple offer both sides can promote.
+
+Examples:
+- A set menu plus a local dessert.
+- A gym recovery brunch with a fixed price.
+- A local brewery tap takeover with merch.
+
+Keep the offer simple and time-bound.
+
+## Step 4: Put agreements in writing
+
+Even a one-page agreement avoids confusion. Include:
+- Who pays for what.
+- Revenue split.
+- Who owns the guest list.
+- Promotion responsibilities.
+
+## Step 5: Share marketing assets
+
+Create one shared asset pack: photo, caption, and a booking link. If you make it easy, partners will actually post.
+
+## Step 6: Measure and debrief
+
+Track bookings, spend per head, and new customers. Share results and decide whether to repeat.
+
+## Common mistakes
+
+- Partnering with businesses that do not share your audience.
+- Letting the offer become too complicated.
+- Failing to agree the split upfront.
+
+## Quick checklist
+
+- Target audience defined.
+- Two partners shortlisted.
+- One offer built and costed.
+- One-page agreement signed.
+- Results reviewed within a week of the event.
 
 ## Mini FAQ
-**How do I avoid brand mismatch?**
-Create a partner checklist: quality standards, sustainability values, customer service reputation. Stick to it even if someone offers cash but not credibility.
 
-**Can I run multiple partnerships at once?**
-Yes, but stagger them to avoid audience fatigue. Rotate segments monthly so each campaign feels special.
+**Should I split revenue or costs?**
+Either can work. What matters is clarity before launch.
 
-Shared marketing doubles reach while halving cost, provided you treat partners like co-founders, not sponsors.
+**How many partners should I run at once?**
+Start with one. Build a repeatable format before scaling.

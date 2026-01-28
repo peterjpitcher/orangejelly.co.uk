@@ -13,7 +13,7 @@ tags:
   - "licensee guide"
   - "sunday trade"
 status: "published"
-featuredImage: "/images/blog/family-craft-hour-101.svg"
+featuredImage: "/images/blog/family-craft-hour-101.png"
 metaDescription: "Family Craft Hour 101 guide: seasonal themes, safeguarding steps, table layouts, upsells, and downloadable consent/allergen templates."
 keywords:
   - "family craft pub event"

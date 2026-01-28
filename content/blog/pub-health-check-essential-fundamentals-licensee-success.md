@@ -24,7 +24,7 @@ keywords:
   - "beer wastage"
   - "pub marketing"
   - "7 Ps marketing"
-featuredImage: "/images/blog/pub-health-check.svg"
+featuredImage: "/images/blog/pub-health-check-essential-fundamentals.png"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local pub","in my area","nearby"],"nearbyLandmarks":["Local high street","Town centre","Village pub"],"targetLocation":"United Kingdom"}

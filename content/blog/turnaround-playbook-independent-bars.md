@@ -14,7 +14,7 @@ tags:
   - "leadership"
   - "cash flow"
 status: "published"
-featuredImage: "/images/blog/turnaround-playbook-independent-bars.svg"
+featuredImage: "/images/blog/turnaround-playbook-independent-bars.png"
 metaDescription: "Step-by-step turnaround playbook for independent pubs, covering cash triage, offer redesign, relaunch tactics, and scaling habits."
 keywords:
   - "pub turnaround plan"
@@ -34,34 +34,75 @@ voiceSearchQueries:
 
 # The Turnaround Playbook: How Independent Bars Bounce Back Fast
 
-There is a predictable rhythm to every successful turnaround. When I mentor landlords who feel overwhelmed, I remind them that the job is not to do everything at once – it is to move through four disciplined phases with ruthless focus.
+Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then scale the habits. The mistake is trying to do everything at once. This playbook focuses the team on the right moves at the right time.
 
-## Phase 1: Stabilise in 7 Days
-- **Cash clarity**: produce a 13-week rolling cashflow with daily bank checks.
-- **Cost freeze**: pause discretionary spend, renegotiate utility direct debits, and shift supplier payments to weekly rather than COD.
-- **Menu triage**: strip back to the 12 lines that actually sell; everything else leaves the building.
-- **Communication**: tell staff, landlords, and key suppliers the plan so rumours do not derail morale.
+## Phase 1: Stabilise in 7 days
 
-## Phase 2: Reset the Offer (Weeks 2-4)
-Use guest interviews, review data, and competitor walks to remap why people should choose you. Refresh the hero drinks list, rebuild a compact food menu around profitable crowd-pleasers, and redesign the shift pattern so superstars lead every peak session. Invest sweat equity, not capex: new chalkboards, playlist refresh, deep clean, and lighting tweaks go a long way.
+**Goal**: stop the bleed and create cash visibility.
 
-## Phase 3: Relaunch With Proof (Weeks 5-8)
-Plan three flagship moments: an event, an offer, and a cause. For example, a sold-out collaboration supper with the butcher, a locals-only tasting flight, and a fundraiser for the rugby minis. Capture social proof at each: photos, testimonials, pre-booking data. Push them across Meta, WhatsApp, in-venue screens, and table-talkers. The goal is to show the neighbourhood that the pub is charging forward, not clinging on.
+- Build a 13-week cashflow.
+- Triage costs into must pay, delay, and stop.
+- Launch one cash-forward offer (deposits or gift cards).
+- Set daily sales targets with the team.
 
-## Phase 4: Scale the Habits (Weeks 9-12)
-Turn every win into a playbook entry. Document open/close standards, upsell scripts, booking follow-up cadences, and event critical paths. Review numbers every Monday: sales mix, labour cost, GP, and guest feedback. Add only one new initiative per fortnight so the team can breathe.
+**Key KPI**: daily cash position and covers per day.
 
-## Leadership Behaviours That Make It Stick
-- Hold daily stand-ups: 10 minutes, celebrate wins, set targets.
-- Walk the floor with curiosity, not blame. Ask guests what felt different.
-- Share the scoreboard visibly – a whiteboard behind the bar works just fine.
-- Thank people publicly and coach privately.
+## Phase 2: Reset the offer (Weeks 2 to 4)
+
+**Goal**: simplify and make the offer clear.
+
+- Choose one hero food offer and one drinks focus.
+- Cost and price properly.
+- Refresh the room for atmosphere.
+- Train the team on scripts and upsells.
+
+**Key KPI**: average spend per head and gross profit by category.
+
+## Phase 3: Relaunch with proof (Weeks 5 to 8)
+
+**Goal**: rebuild momentum and reputation.
+
+- Launch one strong event.
+- Capture reviews and social proof.
+- Build a simple loyalty loop.
+- Increase local outreach and partnerships.
+
+**Key KPI**: bookings and repeat visits.
+
+## Phase 4: Scale the habits (Weeks 9 to 12)
+
+**Goal**: make the improvements repeatable.
+
+- Document key processes.
+- Create a weekly KPI dashboard.
+- Lock the next 8-week calendar.
+- Cross-train the team.
+
+**Key KPI**: consistency week to week.
+
+## Leadership behaviors that make it stick
+
+- Share the numbers weekly.
+- Celebrate small wins publicly.
+- Keep the plan visible to the team.
+
+## Common mistakes
+
+- Jumping to marketing before fixing the offer.
+- Cutting costs without a sales plan.
+- Changing direction every week.
+
+## Quick checklist
+
+- Phase 1 actions completed.
+- Offer reset live.
+- One strong event launched.
+- KPI board visible.
 
 ## Mini FAQ
-**Do I need outside investment first?**
-Most independents do not; they need tighter focus and proof of demand. Investment comes once the scoreboard trends upwards.
 
-**What if my landlord refuses to negotiate?**
-Put the plan in writing, include sales projections, and show how stability protects their asset. Even stubborn landlords prefer a tenant with a plan over an empty unit.
+**How long does a turnaround take?**
+Expect meaningful stability in 8 to 12 weeks if the plan is followed.
 
-Execute the phases in order, keep communication brutally honest, and the pub stops feeling like a runaway train.
+**Should I rebrand during a turnaround?**
+Only after the offer and cashflow are stable. Rebrands are expensive distractions.

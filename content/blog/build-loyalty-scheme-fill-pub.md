@@ -14,7 +14,7 @@ tags:
   - "pub marketing"
   - "guest experience"
 status: "published"
-featuredImage: "/images/blog/build-loyalty-scheme-fill-pub.svg"
+featuredImage: "/images/blog/build-loyalty-scheme-fill-pub.png"
 metaDescription: "Guide to creating a loyalty scheme for pubs that fills Fridays, covering mechanics, tech, incentives, and promotion."
 keywords:
   - "pub loyalty scheme"
@@ -34,42 +34,97 @@ voiceSearchQueries:
 
 # How to Build a Loyalty Scheme That Fills the Pub Every Friday
 
-Punch cards are nostalgic but rarely move the needle. Modern loyalty is about VIP access, shortcuts to treats, and data you can act on. Follow these steps to create a programme guests brag about.
+Punch cards are nostalgic but they rarely change behavior. Real loyalty is about giving people a reason to choose you more often, and a clear reward for doing it. A good scheme creates progress, identity, and a small win every time someone returns.
 
-## Step 1: Define the Behaviour You Want
-Aim for repeat visits and referrals, not one-off splurges. Reward every third visit with a perk and give extra credit when members bring new friends.
+This guide shows you how to build a simple, trackable loyalty scheme that drives frequency without heavy discounts.
 
-## Step 2: Choose Lightweight Tech
+## Step 1: Define the behavior you want
+
+Start with one clear goal. Do you want midweek visits, higher spend per head, or more group bookings? Pick the single behavior that moves cash fastest and build the scheme around it.
+
+Example goals:
+- Two visits per week from locals.
+- Bookings for quieter nights.
+- Add-on purchases like desserts or premium pours.
+
+## Step 2: Keep the mechanics simple
+
+If guests cannot understand it in 10 seconds, it fails. Use one of these simple mechanics:
+- **Stamp card**: 5th visit earns a reward.
+- **Spend ladder**: every 50 pounds unlocks a small perk.
+- **Event streak**: attend three events, unlock a priority booking slot.
+
+Choose one mechanic and stick to it for at least eight weeks.
+
+## Step 3: Build a reward ladder
+
+Rewards should feel personal and progress based. Avoid deep discounts and focus on perks that make people feel special.
+
+Example ladder:
+- Visit 2: free soft drink or coffee.
+- Visit 3: early access to next event booking.
+- Visit 5: free sharer or dessert.
+- Visit 8: name on a VIP board and a small merch gift.
+
+This ladder costs less than you think, but it feels meaningful to guests.
+
+## Step 4: Choose lightweight tracking
+
+You do not need a complex app. Use what your team can run.
+
 Options:
-- **Paper + POS**: numbered stamp cards tied to guest profiles in your EPOS.
-- **WhatsApp Broadcast**: collect opt-ins, log visits manually, and send surprise upgrades.
-- **Email CRM**: use Mailchimp tags or Airship to track tiers.
+- Paper stamp cards kept behind the bar.
+- Simple digital stamps using a QR form and a shared spreadsheet.
+- A booking system tag that tracks repeat visits.
 
-Pick the tool your team will actually update.
+Whatever you choose, train the team to mention it every time.
 
-## Step 3: Design the Reward Ladder
-Example:
-- Visit 3: upgrade to premium pint or dessert on us.
-- Visit 6: priority booking for Friday tables plus sharing board.
-- Visit 9: invite to member-only tasting.
-- Refer a friend: both get welcome cocktail.
+## Step 5: Launch loudly and locally
 
-Keep rewards experiential rather than discount-heavy.
+A loyalty scheme only works if people know it exists. Announce it for two weeks in every channel.
 
-## Step 4: Launch Loudly
-Host a "Founders Friday" where the first 100 members get enamel badges and a Polaroid on the loyalty wall. Capture emails/phone numbers, explain how points work, and start logging immediately.
+- Pin it on Instagram and Facebook.
+- Put a small sign on every table.
+- Ask staff to mention it at the first round.
 
-## Step 5: Communicate Weekly
-Every Monday, send members availability updates, secret menu items, or playlist previews. On Thursday afternoon, remind them how close they are to the next perk. Scarcity converts.
+Keep the message simple: join, collect, unlock.
 
-## Step 6: Measure and Optimise
-Track number of members, visits per member, and incremental spend. Survey top members quarterly to learn what they value most.
+## Step 6: Measure and refine weekly
+
+Track three numbers each week:
+- New sign-ups.
+- Returning visits.
+- Redemptions.
+
+If redemptions are too high, adjust the reward. If sign-ups are low, adjust the script or signage.
+
+## Example: A Friday focus scheme
+
+Goal: drive Friday bookings without discounting the menu.
+
+- Reward: book Friday twice in a month and unlock a reserved table plus a sharer board.
+- Tracking: booking form tag and a simple spreadsheet.
+- Result: Fridays feel special, and regulars plan ahead.
+
+## Common mistakes
+
+- Offering discounts that cut margin.
+- Using a complicated points system.
+- Forgetting to train the team on the script.
+- Changing the scheme too quickly.
+
+## Quick checklist
+
+- One clear goal chosen.
+- One simple mechanic selected.
+- Reward ladder written and costed.
+- Staff script trained and repeated.
+- Weekly metrics tracked.
 
 ## Mini FAQ
-**What if staff forget to log visits?**
-Integrate the loyalty check into bill presentation: "Are you on our Locals List?" Add a till prompt so no bill closes without the question being asked.
 
-**Can I charge for membership?**
-Yes, once the scheme proves itself. Offer a paid "Founders Plus" tier with guaranteed seating, concierge bookings, and exclusive tastings.
+**Should I use an app?**
+Only if the team will actually use it. Paper can outperform tech if it is consistent.
 
-Done right, loyalty becomes your cheapest marketing channel and ensures Fridays feel like a celebration, not a gamble.
+**What if customers forget their card?**
+Keep the cards behind the bar or let staff log visits with a phone number.

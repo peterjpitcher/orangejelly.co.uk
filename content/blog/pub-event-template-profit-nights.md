@@ -14,7 +14,7 @@ tags:
   - "activations"
   - "pub marketing"
 status: "published"
-featuredImage: "/images/blog/pub-event-template-profit-nights.svg"
+featuredImage: "/images/blog/pub-event-template-profit-nights.png"
 metaDescription: "Plug-and-play pub event template ensuring profitable nights, including timeline, budgets, staffing, and marketing checklist."
 keywords:
   - "pub event template"
@@ -34,46 +34,79 @@ voiceSearchQueries:
 
 # The Ultimate Pub Event Template for Guaranteed Profit Nights
 
-Events either make the till sing or drain staff for nothing. Use this repeatable template to ensure every quiz, tasting, or takeover generates cash and momentum.
+Events only work when they are structured. This template turns any activation into a repeatable profit night by locking in pricing, staffing, marketing, and post-event follow up.
 
-## Six-Week Timeline
-- **Week 6**: pick the concept, secure host/partners, set profit target (ticket GP + incremental spend).
-- **Week 5**: shoot promo assets, design ticket page, confirm supplier contributions.
-- **Week 4**: announce to loyalty list, launch early-bird tickets covering baseline costs.
-- **Week 3**: widen to social ads, local press, and community boards.
-- **Week 2**: share behind-the-scenes content, release seating map, and upsell add-ons.
-- **Week 1**: final countdown posts, staff briefing, prep checklists.
+Use this as your standard run sheet for any event.
 
-## Pricing Formula
-(Total Costs + Desired Profit) / Minimum Tickets = Ticket Price. Costs include entertainment, extra labour, ingredients, marketing, and contingency. Sell premium add-ons (welcome cocktail, merch, reserved booth) to boost margin without raising general admission.
+## Six-week timeline
 
-## Staffing & Ops
-- Assign an event lead who owns the run sheet.
-- Draft a minute-by-minute schedule covering sound checks, food pass, competitions, and last orders.
-- Prepare a "What if" list (power loss, weather, no-shows) with assigned responses.
+**Week 6-4: Confirm the concept**
+- Choose one clear theme.
+- Set capacity and price.
+- Build the offer and the run time.
 
-## Promotion Stack
-1. Email list with personal note from landlord.
-2. Printed flyers for the bar and partner venues.
-3. Paid ads targeting interest groups (board games, craft beer, etc.).
-4. WhatsApp broadcast to loyalty members with first dibs.
-5. Short-form video teasers and live countdowns.
+**Week 4-2: Launch and book**
+- Open bookings with a deposit.
+- Announce the event across all channels.
+- Confirm suppliers and staff roles.
 
-## On-the-Night Playbook
-- Greet every guest personally, scan tickets, and hand them a schedule.
-- Capture content: dedicated team member filming reactions, testimonials, and B-roll.
-- Drop subtle CTAs for the next event and offer pre-sale discounts before people leave.
+**Week 2-0: Execute and sell**
+- Run a content push.
+- Brief the team with scripts.
+- Lock the final headcount.
 
-## Post-Event
-- Send thank-you emails within 12 hours including photo gallery and feedback link.
-- Publish a recap reel tagging partners and guests.
-- Debrief with the team: what worked, what to tweak, profit achieved vs target.
+## Pricing formula
+
+Use a simple formula to protect margin:
+
+`(cost of goods + labor uplift + overhead buffer) / target GP = ticket price`
+
+Add a small buffer for no-shows or late changes.
+
+## Staffing and ops
+
+- Assign a host, a bar lead, and a floor lead.
+- Create a short run sheet with times and cues.
+- Pre-batch anything that can be prepped.
+
+## Promotion stack
+
+- One main social post per week.
+- Two stories per week with availability.
+- One direct message or email to past guests.
+- A sign on the bar and a table tent on every table.
+
+## On-the-night playbook
+
+- Welcome and explain the flow.
+- Collect content early.
+- Upsell one add-on (dessert, premium pour, or merch).
+- Close with a clear next-event teaser.
+
+## Post-event
+
+- Send a thank you message within 24 hours.
+- Ask for reviews.
+- Offer priority access to the next event.
+
+## Common mistakes
+
+- No capacity cap.
+- Pricing without margin math.
+- Forgetting to promote after the first announcement.
+
+## Quick checklist
+
+- Capacity and price set.
+- Roles assigned.
+- Booking link live with deposit.
+- Run sheet printed.
+- Post-event follow up scheduled.
 
 ## Mini FAQ
-**What if tickets are slow?**
-Bundle with a friend offer, partner with a local club, or add a charity component. Increase urgency by showing real-time seat counts.
 
-**How do I keep staffing costs down?**
-Cross-train team members to handle multiple stations, use volunteer ambassadors (offer future perks), and close non-essential areas of the pub during the event.
+**Do I need a big event every month?**
+No. One strong, repeatable event can outperform a busy calendar.
 
-Follow the template religiously and events become a predictable profit pillar rather than a gamble.
+**Should I ticket or take walk-ins?**
+Ticketing gives you predictability and cash. Walk-ins can be a bonus if you keep space.

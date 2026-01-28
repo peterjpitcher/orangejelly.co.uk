@@ -6,6 +6,7 @@ excerpt: "Transform your pub into a magnet for 18-30s with proven strategies tha
 quickAnswer: "Create Instagram-worthy moments with good lighting and photogenic corners, host events they actually want (quiz nights with prizes they care about), offer value without compromising quality, and focus on building a welcoming atmosphere where they feel comfortable bringing friends."
 author: "Peter Pitcher"
 category: "customer-acquisition"
+featuredImage: "/images/blog/young-people-wont-come-to-your-pub.png"
 tags:
   - "young customers"
   - "millennials"

@@ -14,7 +14,7 @@ tags:
   - "marketing"
   - "events"
 status: "published"
-featuredImage: "/images/blog/revenue-levers-struggling-pubs.svg"
+featuredImage: "/images/blog/revenue-levers-struggling-pubs.png"
 metaDescription: "Step-by-step guide to nine immediate revenue levers for UK pubs under pressure, from events and bundles to upsells and space hire."
 keywords:
   - "pub revenue ideas"

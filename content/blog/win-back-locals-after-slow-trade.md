@@ -14,7 +14,7 @@ tags:
   - "pub relaunch"
   - "loyalty"
 status: "published"
-featuredImage: "/images/blog/win-back-locals-after-slow-trade.svg"
+featuredImage: "/images/blog/win-back-locals-after-slow-trade.png"
 metaDescription: "Step-by-step playbook to win back local pub regulars after a slump, covering messaging, offers, and follow-up cadences."
 keywords:
   - "win back pub customers"
@@ -34,36 +34,61 @@ voiceSearchQueries:
 
 # How to Win Back Locals After Months of Slow Trade
 
-When regulars drift away, the silence can feel personal. In reality, people move on because they forget why they loved you or assume the venue has lost its sparkle. The fix is proactive, honest communication coupled with a run of irresistible experiences.
+When regulars drift away, it feels personal. In reality, people forget why they loved you or assume the pub lost its spark. The fix is a clear story, direct invitations, and a 30-day run of reasons to return.
 
-## Step 1: Own the Story
-Post a heartfelt update on social, email, and in-venue posters acknowledging the slow patch and explaining what is changing. People respect transparency. Invite feedback via a short survey and act on the top three suggestions publicly.
+## Step 1: Own the story
 
-## Step 2: Build a Lapsed Regulars List
-Export customers who have not booked or used their loyalty card in 90 days. Add locals who commented on old posts but have gone silent. This becomes your VIP reconnection list.
+Share a short, honest update about what has changed. People support progress when you invite them in.
 
-## Step 3: Send Personal Invitations
-Split the list across managers and senior staff. Each person sends 10 personalised messages per day via WhatsApp, text, or handwritten cards. Include a specific date, the reason to visit, and a small loyalty perk (welcome cocktail, house dessert, reserved booth).
+Example:
+"We are back on track with a tighter menu and a new Thursday night rhythm. We would love you to see it."
 
-## Step 4: Create a 30-Day Drumbeat
-Week 1: locals-only tasting night and a community forum in the snug.
-Week 2: charity pub quiz supporting a nearby cause.
-Week 3: collab menu with the bakery, featuring limited pastries before noon.
-Week 4: Sunday roast takeover with live acoustic sets.
+## Step 2: Build a lapsed regulars list
 
-Announce all four dates upfront so people plan ahead.
+Use booking notes, old email lists, and staff memory. Keep it simple and personal.
 
-## Step 5: Celebrate Their Return
-When lapsed guests walk in, greet them by name, thank them publicly, and capture a quick testimonial or photo (with permission). Share these stories on social to show momentum.
+## Step 3: Send personal invitations
 
-## Step 6: Keep the Loop Alive
-Follow up 24 hours after their visit asking for feedback and a quick Google review. Invite them to a private locals group (Facebook or WhatsApp) where they get first dibs on future events.
+Do not blast a generic post. Send a short, friendly invitation to return.
+
+Example:
+"Hi Sam, we have missed you. We are running a locals night next Thursday and would love to reserve your table."
+
+## Step 4: Create a 30-day drumbeat
+
+Plan four weeks of visible activity:
+- One locals night.
+- One community collaboration.
+- One new menu highlight.
+- One small event.
+
+This creates momentum and gives people reasons to return.
+
+## Step 5: Celebrate their return
+
+Make returning locals feel seen. A simple welcome, a reserved table, or a small thank you can reset loyalty fast.
+
+## Step 6: Keep the loop alive
+
+After they return, invite them again. Consistency is the real win-back strategy.
+
+## Common mistakes
+
+- Waiting for locals to return without outreach.
+- Announcing big changes with no follow through.
+- Running one event and stopping.
+
+## Quick checklist
+
+- Story update written.
+- Lapsed list built.
+- Personal invites sent.
+- 30-day calendar set.
 
 ## Mini FAQ
-**Should I discount heavily to tempt them back?**
-No. Offer added value (exclusive menu, surprise course, personal thank-you) instead of slashing prices. Locals want to feel appreciated, not bargain hunted.
 
-**What if some locals are negative online?**
-Respond with empathy, outline what is changing, and invite them for a coffee to talk it through. Onlookers judge your professionalism, not the complaint itself.
+**Should I offer discounts to win locals back?**
+Small gestures are fine, but focus on recognition and experience, not price.
 
-Trust returns when you show up consistently and treat every guest like a VIP.
+**How many times should I invite them?**
+Two to three direct touch points over a month is enough.

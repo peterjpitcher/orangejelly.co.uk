@@ -31,6 +31,7 @@ const getLocalHomeData = () => {
       'Leveraging AI to deliver great results for pubs, restaurants, and bars. We combine technology and creativity to drive growth, fill tables, and save time.',
     ctaText: 'Get Marketing Help',
     bottomText: '£75 per hour plus VAT • No packages • Proven hospitality results',
+    backgroundImage: '/images/headers/homepage.png',
   };
 
   const faqs = [

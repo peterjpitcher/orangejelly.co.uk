@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import OptimizedImage from '@/components/OptimizedImage';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -8,20 +8,15 @@ import Card from '@/components/Card';
 import Button from '@/components/Button';
 import ShareButtons from './ShareButtons';
 import AuthorInfo from './AuthorInfo';
-import RelatedPosts from './RelatedPosts';
 import StickyCTA from './StickyCTA';
 import QuickAnswer from './QuickAnswer';
-import QuickStats from './QuickStats';
 import { formatDate } from '@/lib/utils';
-import { type BlogPost as BlogPostType } from '@/lib/blog';
+import { type BlogPost as BlogPostType, type AdjacentPostNavItem, defaultAuthor } from '@/lib/blog';
 import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
 // MarkdownContent is now only used for PortableText (if needed)
 import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
-import { FAQListAdapter } from '@/components/adapters/FAQAdapter';
-import TableOfContents, { type TocHeading } from './TableOfContents';
 import AdjacentPostNav from './AdjacentPostNav';
-import { type AdjacentPostNavItem } from './BlogPostServer';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -51,7 +46,11 @@ interface BlogPostProps {
   };
 }
 
-export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
+export default function BlogPost({
+  post,
+  relatedPosts: _relatedPosts = [],
+  adjacentPosts,
+}: BlogPostProps) {
   // Track reading progress
   useEffect(() => {
     const updateProgress = () => {
@@ -75,15 +74,14 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
     return () => window.removeEventListener('scroll', updateProgress);
   }, []);
 
-  const tocHeadings = useMemo<TocHeading[]>(() => {
-    if (!post.contentHtml) {
-      return [];
-    }
-    return extractHeadings(post.contentHtml);
-  }, [post.contentHtml]);
-
-  const hasTableOfContents = tocHeadings.length > 1;
   const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
+  const quickAnswerText = (
+    post.quickAnswer ||
+    post.excerpt ||
+    post.seo?.metaDescription ||
+    ''
+  ).trim();
+  const author = post.author || defaultAuthor;
 
   return (
     <>
@@ -98,9 +96,9 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       {/* Sticky CTA */}
       <StickyCTA />
 
-      <article id="blog-article">
+      <article id="blog-article" className="max-w-3xl mx-auto">
         {/* Post metadata */}
-        <header className="mb-8">
+        <header className="mb-8 max-w-3xl mx-auto">
           <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 mb-6">
             <Button
               href={`/licensees-guide/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
@@ -111,19 +109,15 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
               {typeof post.category === 'string' ? post.category : post.category.name}
             </Button>
             <span>•</span>
-            {post.author && (
-              <AuthorInfo
-                author={{
-                  name: post.author.name,
-                  role: 'Founder & Licensee',
-                  bio:
-                    post.author.bio ||
-                    'Founder of Orange Jelly Limited and licensee of The Anchor pub',
-                  image: post.author.image || '/images/peter-pitcher.jpg',
-                }}
-                variant="compact"
-              />
-            )}
+            <AuthorInfo
+              author={{
+                name: author.name,
+                role: 'Founder & Licensee',
+                bio: author.bio || 'Founder of Orange Jelly Limited and licensee of The Anchor pub',
+                image: author.image || '/images/peter-pitcher.jpg',
+              }}
+              variant="compact"
+            />
             <span>•</span>
             <time dateTime={post.publishedDate}>{formatDate(post.publishedDate)}</time>
             {post.readingTime && (
@@ -157,18 +151,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         </div>
 
         {/* Quick Answer for featured snippets */}
-        {post.quickAnswer && <QuickAnswer answer={post.quickAnswer} className="mb-8" />}
-
-        {/* Quick Stats for AI Overview extraction */}
-        {post.quickStats && post.quickStats.length > 0 && (
-          <QuickStats stats={post.quickStats} className="mb-8" />
-        )}
-
-        {hasTableOfContents && (
-          <Card variant="bordered" className="mb-10">
-            <TableOfContents headings={tocHeadings} />
-          </Card>
-        )}
+        <QuickAnswer answer={quickAnswerText} className="mb-8" />
 
         {/* Main content - removed empty sidebar */}
         <div className="mb-12">
@@ -190,24 +173,6 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
             />
           )}
         </div>
-
-        {/* FAQs Section for Voice Search */}
-        {post.faqs && post.faqs.length > 0 && (
-          <Card variant="bordered" className="mb-12">
-            <Heading level={2} className="mb-6 flex items-center gap-2">
-              <span>❓</span> Frequently Asked Questions
-            </Heading>
-            <FAQListAdapter
-              useAccordion
-              defaultOpen="faq-0"
-              items={post.faqs.map((faq) => ({
-                question: faq.question,
-                answer: faq.answer,
-                icon: faq.isVoiceOptimized ? '🎙️' : undefined,
-              }))}
-            />
-          </Card>
-        )}
 
         {/* Call to action */}
         <Card variant="bordered" className="bg-orange mb-12">
@@ -265,18 +230,15 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         </Card>
 
         {/* Author bio */}
-        {post.author && (
-          <AuthorInfo
-            author={{
-              name: post.author.name,
-              role: 'Founder & Licensee',
-              bio:
-                post.author.bio || 'Founder of Orange Jelly Limited and licensee of The Anchor pub',
-              image: post.author.image || '/images/peter-pitcher.jpg',
-            }}
-            variant="full"
-          />
-        )}
+        <AuthorInfo
+          author={{
+            name: author.name,
+            role: 'Founder & Licensee',
+            bio: author.bio || 'Founder of Orange Jelly Limited and licensee of The Anchor pub',
+            image: author.image || '/images/peter-pitcher.jpg',
+          }}
+          variant="full"
+        />
 
         {hasAdjacentPosts && adjacentPosts && <AdjacentPostNav adjacentPosts={adjacentPosts} />}
 
@@ -294,82 +256,6 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           </div>
         )}
       </article>
-
-      {/* Related posts */}
-      {relatedPosts.length > 0 && (
-        <div className="mt-12">
-          <RelatedPosts
-            posts={relatedPosts.map((post) => ({
-              slug: post.slug,
-              title: post.title,
-              excerpt: post.excerpt,
-              publishedDate: post.publishedDate,
-              category: {
-                name: typeof post.category === 'string' ? post.category : post.category.name,
-                slug:
-                  typeof post.category === 'string'
-                    ? (post.category as string).toLowerCase().replace(/\s+/g, '-')
-                    : post.category.slug,
-              },
-              featuredImage: {
-                src:
-                  typeof post.featuredImage === 'string'
-                    ? post.featuredImage
-                    : '/images/blog/default.jpg',
-                alt: post.title,
-              },
-              author: {
-                name: post.author?.name || 'Peter Pitcher',
-              },
-              readingTime: post.readingTime || 5,
-            }))}
-          />
-        </div>
-      )}
     </>
   );
-}
-
-const HEADING_REGEX = /<h(2|3)([^>]*)>(.*?)<\/h\1>/gis;
-const ID_REGEX = /id="([^"]+)"/i;
-
-function extractHeadings(html: string): TocHeading[] {
-  if (!html) return [];
-
-  const headings: TocHeading[] = [];
-  let match: RegExpExecArray | null;
-
-  while ((match = HEADING_REGEX.exec(html)) !== null) {
-    const level = match[1] === '3' ? 3 : 2;
-    const attributes = match[2] || '';
-    const idMatch = attributes.match(ID_REGEX);
-    if (!idMatch) continue;
-
-    const id = idMatch[1];
-    const rawText = stripHtmlTags(match[3]);
-    const title = decodeEntities(rawText).trim();
-
-    if (title.length === 0) continue;
-
-    headings.push({
-      id,
-      level: level as 2 | 3,
-      title,
-    });
-  }
-
-  return headings;
-}
-
-function stripHtmlTags(input: string): string {
-  return input.replace(/<[^>]*>/g, ' ');
-}
-
-function decodeEntities(input: string): string {
-  return input
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
 }

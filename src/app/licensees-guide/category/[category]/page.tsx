@@ -1,4 +1,5 @@
 import { type Metadata } from 'next';
+import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
@@ -51,8 +52,27 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
-  const posts = getAllPosts();
-  const categories = getCategories();
+  const { isEnabled } = draftMode();
+  const publishOptions = isEnabled ? { includeDrafts: true, includeFuture: true } : undefined;
+  const posts = getAllPosts(publishOptions);
+  const categories = getCategories(publishOptions);
+
+  const categoryCounts = posts.reduce<Record<string, number>>((acc, post) => {
+    acc[post.category] = (acc[post.category] || 0) + 1;
+    return acc;
+  }, {});
+
+  const categoriesWithCounts = categories
+    .map((category) => ({
+      ...category,
+      postCount: categoryCounts[category.slug] || 0,
+    }))
+    .sort((a, b) => {
+      if (b.postCount !== a.postCount) {
+        return b.postCount - a.postCount;
+      }
+      return a.name.localeCompare(b.name);
+    });
 
   const categoryPosts = posts.filter((post) => post.category === params.category);
 
@@ -106,9 +126,10 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           {/* Category Navigation */}
           <div className="mb-12">
             <CategoryList
-              categories={categories}
+              categories={categoriesWithCounts}
               currentCategory={params.category}
               variant="grid"
+              maxVisible={6}
             />
           </div>
 

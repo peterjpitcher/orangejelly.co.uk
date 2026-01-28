@@ -14,7 +14,7 @@ tags:
   - "guest experience"
   - "systems"
 status: "published"
-featuredImage: "/images/blog/delivery-click-collect-without-harm.svg"
+featuredImage: "/images/blog/delivery-click-collect-without-harm.png"
 metaDescription: "Guide to running delivery and click & collect from a pub while protecting dine-in service, covering menus, staffing, and tech."
 keywords:
   - "pub delivery tips"
@@ -34,31 +34,70 @@ voiceSearchQueries:
 
 # Harnessing Delivery and Click & Collect Without Killing Service
 
-Delivery saved many pubs in lockdown but wrecked plenty of guest experiences once doors reopened. The answer is not to ditch the channel but to control it. Here is the system.
+Delivery can add revenue, but it can also crush the in-house experience if you let it run unchecked. The answer is not to drop the channel, it is to control it with a menu split, capacity cap, and clean handoff.
 
-## Step 1: Separate Menus
-Design a tight delivery menu with dishes that travel well and maintain healthy GP after fees. Remove items that need last-minute garnish or rely on crisp textures. Keep dine-in favourites exclusive so regulars still visit in person.
+This is a practical system you can implement in a week.
 
-## Step 2: Ringfence Capacity
-Use kitchen display systems or manual whiteboards to cap the number of delivery tickets per 15-minute block. Switch the platform off when the restaurant is slammed. A dispatcher (or the manager) owns the toggle.
+## Step 1: Separate menus by channel
 
-## Step 3: Create a Dispatch Station
-Set up a heated pass, dedicated packaging shelves, labels, and tamper seals near the back door. Train one team member per shift as dispatcher responsible for quality control, rider liaison, and guest communication.
+Your dine-in menu and delivery menu are not the same. Delivery needs:
+- Dishes that travel well.
+- Short prep time.
+- Strong margins after fees.
 
-## Step 4: Optimise Collection Flow
-For click & collect, offer numbered bays or a separate hatch so regulars are in and out within two minutes. Use SMS updates to tell guests when their order is ready rather than letting them hover at the bar.
+Create a short delivery menu and keep it stable for four weeks. It will lift consistency and ratings.
 
-## Step 5: Track Profit Per Channel
-Review platform fees, driver tips, and packaging costs monthly. If a channel underperforms, negotiate rates, introduce minimum order values, or pause it midweek.
+## Step 2: Ringfence capacity
 
-## Step 6: Cross-Pollinate Marketing
-Include flyers in every delivery bag promoting upcoming events, loyalty schemes, or dine-in exclusives. Offer delivery customers a code for priority booking on-site to convert them into regulars.
+Decide how many delivery orders you can handle per hour without hurting tables. Then cap it. Most platforms let you pause or throttle.
+
+If you do not cap, the kitchen gets crushed, and everyone loses.
+
+## Step 3: Create a dispatch station
+
+Build a clean, labeled area for packing, checks, and pickup. The person on dispatch is responsible for accuracy, extras, and timing.
+
+A single missed sauce can undo a good meal.
+
+## Step 4: Optimize collection flow
+
+Click and collect should be fast. Clear signage, a dedicated pick-up point, and a one-minute handover keeps it smooth.
+
+If guests have to queue at the bar, you are creating friction.
+
+## Step 5: Track profit per channel
+
+Compare delivery margin to dine-in margin. If delivery is below your threshold, raise prices or reduce items. You are not here to sell at a loss.
+
+## Step 6: Cross-pollinate marketing
+
+Use delivery customers to build dine-in visits. Add a card in every bag: "Show this and get priority booking." It is a simple bridge from takeout to table.
+
+## Example setup
+
+- Delivery menu: 10 items, all under 15 minutes prep.
+- Cap: 8 delivery orders per hour.
+- Dispatch: one staff member during peak hours.
+- Promotion: weekly post plus a dine-in invitation in every bag.
+
+## Common mistakes
+
+- Running the full menu on delivery.
+- Accepting unlimited orders at peak.
+- Letting delivery drivers crowd the bar.
+- Ignoring margin impact.
+
+## Quick checklist
+
+- Delivery menu shortened and costed.
+- Hourly order cap set.
+- Dispatch station in place.
+- Profit per channel reviewed weekly.
 
 ## Mini FAQ
-**Do I need separate insurance?**
-Most pub policies now include takeaway cover but confirm with your broker, especially for alcohol delivery.
 
-**How do I handle rider delays?**
-Build a 5-minute holding tolerance into cook times and communicate with the rider via the platform. If delays persist, escalate to the account manager and request rider quality audits.
+**Should I offer discounts on delivery?**
+Not unless you can protect margin through pricing or bundling. Discounts rarely build loyalty on platforms.
 
-Delivery should feel like a bonus revenue stream, not a burden. Control the inputs and the channel will support, not sabotage, the core business.
+**How do I handle slow nights?**
+Lift the cap slightly on quiet days, but keep the shorter menu and margin rules.

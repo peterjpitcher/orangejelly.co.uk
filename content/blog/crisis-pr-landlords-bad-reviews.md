@@ -14,7 +14,7 @@ tags:
   - "customer service"
   - "communications"
 status: "published"
-featuredImage: "/images/blog/crisis-pr-landlords-bad-reviews.svg"
+featuredImage: "/images/blog/crisis-pr-landlords-bad-reviews.png"
 metaDescription: "Crisis PR guide for UK pub landlords responding to bad reviews, including response templates, recovery steps, and proactive storytelling."
 keywords:
   - "respond to bad pub review"
@@ -34,36 +34,68 @@ voiceSearchQueries:
 
 # Crisis PR for Landlords: Turning Bad Reviews into Bookings
 
-A one-star rant can tank bookings faster than a warm fridge. The solution is not defensiveness but speed, facts, and a public comeback. Follow this protocol whenever a review goes nuclear.
+A brutal review can kill bookings in hours. The fix is not defensiveness, it is speed, transparency, and a public recovery plan. The response is part of the marketing now, because future guests read how you handle mistakes.
 
-## Step 1: Screenshot and Share Internally
-Capture the review before it changes, post it in your management chat, and assign an owner to respond. Emotion stays offline; analysis happens internally.
+This is a practical protocol you can follow every time a review goes nuclear.
 
-## Step 2: Respond Within 12 Hours
-Structure your reply:
-1. Thank them for flagging the issue.
-2. Apologise sincerely for the specific failure.
-3. Explain the fix (or when it will happen).
-4. Invite them to continue the conversation privately (email or phone).
-5. Sign off with a name and title – faceless replies breed distrust.
+## Step 1: Capture and calm
 
-## Step 3: Investigate Ruthlessly
-Interview the shift team, pull CCTV if needed, and check temp logs or ticket histories. Identify whether it was a process failure, training gap, or genuine guest mismatch. Document the fix and add it to SOPs.
+Screenshot the review and share it internally. Do not reply in anger. Give yourself a short pause so you can respond with control, not ego.
 
-## Step 4: Close the Loop With the Reviewer
-Call them. Listen fully, offer to host them again, and outline what has changed. Most angry guests simply wanted to be heard; give them that respect.
+## Step 2: Respond within 12 hours
 
-## Step 5: Publish the Comeback
-Once the fix is live, share it: "You asked for hotter plates – we invested in new lamps" or "After feedback, we've added a gluten-safe prep station". Use stories, reels, email newsletters, and in-venue signage. Show, do not just tell.
+Speed matters. A clear, calm response reduces damage and signals accountability.
 
-## Step 6: Flood the Feed With Fresh Love
-Within the next two weeks, ask 20 happy guests for Google reviews, run a "Meet the Team" series, and collect testimonials from community partners. Positive content outruns the negative when you feed the algorithm.
+Example response:
+"Hi Jamie, thanks for sharing this. I am genuinely sorry your visit fell short. I have spoken to the team and we are fixing the issues you raised. If you are open to it, please email me directly so I can make this right. Peter."
+
+Keep it short. Own the issue. Offer a path to resolution.
+
+## Step 3: Investigate fast and publicly
+
+Find the root cause. Was it a staffing gap, a supplier issue, or a process failure? Once you know, explain the fix in public language.
+
+Example:
+"We were short in the kitchen that night and let orders stack up. We have now added a second cook on Saturdays and shortened the menu during peak service."
+
+## Step 4: Close the loop with the reviewer
+
+If they respond, make it right. A corrected mistake can become a loyal regular. Use a clear offer and a friendly tone.
+
+- Invite them back with a specific time.
+- Give a small but meaningful gesture (a round, a dessert, a table reservation).
+
+## Step 5: Flood the feed with fresh proof
+
+The fastest way to bury a bad review is to earn ten good ones. Ask happy guests for reviews for two weeks. Make it part of the service routine.
+
+Simple script: "If you had a good time tonight, a quick review helps local pubs like ours more than you would believe."
+
+## Step 6: Publish the comeback
+
+Share a short update on socials or your website about the fix. Not defensive, just transparent.
+
+Example:
+"We heard your feedback about slow service last weekend. We have added another team member on Saturdays and tightened the menu for faster delivery. Thank you for pushing us to improve."
+
+## Common mistakes
+
+- Arguing with the reviewer.
+- Writing a long essay response.
+- Ignoring reviews for days.
+- Promising fixes you do not implement.
+
+## Quick checklist
+
+- Respond in under 12 hours.
+- Confirm the root cause within 24 hours.
+- Publish the fix publicly.
+- Request reviews from happy guests for two weeks.
 
 ## Mini FAQ
-**Should I offer refunds in public?**
-No. Move to private channels before discussing compensation. Public refunds encourage opportunists.
+
+**Should I offer a refund publicly?**
+Offer a private resolution. Public refunds can encourage repeat complaints.
 
 **What if the review is fake?**
-Flag it with the platform, but still post a calm response explaining you cannot find the booking and inviting the writer to contact you. Onlookers see your professionalism.
-
-Handled well, a bad review becomes proof that you listen, improve, and care more than the average chain.
+Respond politely, state you cannot find a record, and invite them to contact you directly.

@@ -1,7 +1,8 @@
 {
   "hero": {
     "title": "The Anchor Was Empty. Now It's Not.",
-    "subtitle": "Real results from The Anchor. No fluff, just numbers and strategies that actually work."
+    "subtitle": "Real results from The Anchor. No fluff, just numbers and strategies that actually work.",
+    "backgroundImage": "/images/headers/results.png"
   },
   "caseStudies": [
     {
@@ -27,12 +28,30 @@
         "Regular AI-powered menu updates based on seasonal ingredients and costs"
       ],
       "results": [
-        { "metric": "Sunday Waste", "value": "£250/week cut" },
-        { "metric": "Food Waste", "value": "90% reduction" },
-        { "metric": "Monthly Savings", "value": "£4,000+ a month" },
-        { "metric": "Value Added", "value": "£75,000-£100,000" },
-        { "metric": "Pizza Sales", "value": "Top seller (highest margin item)" },
-        { "metric": "Customer Satisfaction", "value": "Higher (better quality, consistency)" }
+        {
+          "metric": "Sunday Waste",
+          "value": "£250/week cut"
+        },
+        {
+          "metric": "Food Waste",
+          "value": "90% reduction"
+        },
+        {
+          "metric": "Monthly Savings",
+          "value": "£4,000+ a month"
+        },
+        {
+          "metric": "Value Added",
+          "value": "£75,000-£100,000"
+        },
+        {
+          "metric": "Pizza Sales",
+          "value": "Top seller (highest margin item)"
+        },
+        {
+          "metric": "Customer Satisfaction",
+          "value": "Higher (better quality, consistency)"
+        }
       ],
       "timeInvestment": ["Initial setup plus monthly reviews"],
       "learnings": [
@@ -66,10 +85,22 @@
         "Optimized timing and format based on customer feedback"
       ],
       "results": [
-        { "metric": "Regular Teams", "value": "25-30 each month" },
-        { "metric": "Weekday Revenue", "value": "~20% lift" },
-        { "metric": "SMS Contacts", "value": "250 opted-in" },
-        { "metric": "Social Reach", "value": "60,000-70,000 monthly" }
+        {
+          "metric": "Regular Teams",
+          "value": "25-30 each month"
+        },
+        {
+          "metric": "Weekday Revenue",
+          "value": "~20% lift"
+        },
+        {
+          "metric": "SMS Contacts",
+          "value": "250 opted-in"
+        },
+        {
+          "metric": "Social Reach",
+          "value": "60,000-70,000 monthly"
+        }
       ],
       "timeInvestment": ["Initial setup plus weekly prep"],
       "learnings": [
@@ -103,10 +134,22 @@
         "Custom templates maintaining brand voice and personality"
       ],
       "results": [
-        { "metric": "Monthly Reach", "value": "60-70k people" },
-        { "metric": "Content Batching", "value": "30 days in 2 hours" },
-        { "metric": "Live Video Engagement", "value": "300% more" },
-        { "metric": "UGC Engagement", "value": "79% higher" }
+        {
+          "metric": "Monthly Reach",
+          "value": "60-70k people"
+        },
+        {
+          "metric": "Content Batching",
+          "value": "30 days in 2 hours"
+        },
+        {
+          "metric": "Live Video Engagement",
+          "value": "300% more"
+        },
+        {
+          "metric": "UGC Engagement",
+          "value": "79% higher"
+        }
       ],
       "timeInvestment": ["Initial setup plus ongoing batching"],
       "learnings": [
@@ -140,10 +183,22 @@
         "Integration with kitchen prep schedules"
       ],
       "results": [
-        { "metric": "Sunday Waste", "value": "£250/week cut" },
-        { "metric": "Food Waste", "value": "90% reduction" },
-        { "metric": "Monthly Savings", "value": "£4,000+ a month" },
-        { "metric": "Staff Stress", "value": "Significantly reduced" }
+        {
+          "metric": "Sunday Waste",
+          "value": "£250/week cut"
+        },
+        {
+          "metric": "Food Waste",
+          "value": "90% reduction"
+        },
+        {
+          "metric": "Monthly Savings",
+          "value": "£4,000+ a month"
+        },
+        {
+          "metric": "Staff Stress",
+          "value": "Significantly reduced"
+        }
       ],
       "timeInvestment": ["Initial setup plus weekly checks"],
       "learnings": [
@@ -177,10 +232,22 @@
         "Limited spaces creating exclusivity and demand"
       ],
       "results": [
-        { "metric": "Attendance", "value": "Sold-out events" },
-        { "metric": "Repeat Visits", "value": "Regulars return" },
-        { "metric": "Midweek Momentum", "value": "Noticeably busier nights" },
-        { "metric": "Brand Perception", "value": "Premium destination status" }
+        {
+          "metric": "Attendance",
+          "value": "Sold-out events"
+        },
+        {
+          "metric": "Repeat Visits",
+          "value": "Regulars return"
+        },
+        {
+          "metric": "Midweek Momentum",
+          "value": "Noticeably busier nights"
+        },
+        {
+          "metric": "Brand Perception",
+          "value": "Premium destination status"
+        }
       ],
       "timeInvestment": ["Monthly planning and event delivery"],
       "learnings": [

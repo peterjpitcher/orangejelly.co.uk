@@ -17,6 +17,7 @@ description: "SEO-friendly description"
 publishedAt: "2024-01-01"
 author: "Author Name"
 category: "Category Name"
+featuredImage: "/images/blog/marketing-theme.png"
 featured: true/false
 image: "/images/blog/filename.svg"
 ---

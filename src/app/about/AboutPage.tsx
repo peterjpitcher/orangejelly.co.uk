@@ -66,6 +66,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
         title={aboutData.heroSection.title}
         subtitle={aboutData.heroSection.subtitle}
         breadcrumbs={breadcrumbPaths.about}
+        backgroundImage={aboutData.heroSection.backgroundImage}
       />
 
       {/* The Story */}

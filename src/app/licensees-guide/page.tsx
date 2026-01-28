@@ -7,6 +7,7 @@ import Text from '@/components/Text';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { getAllBlogPosts } from '@/lib/markdown/markdown';
 import path from 'path';
+import { draftMode } from 'next/headers';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { generateStaticMetadata } from '@/lib/metadata';
 import SearchComponent from '@/components/SearchComponent';
@@ -22,7 +23,7 @@ type GuidePost = {
   readingTime: number;
 };
 
-type GuideCategory = ReturnType<typeof getCategoryDisplayInfo> & { count: number };
+type GuideCategory = ReturnType<typeof getCategoryDisplayInfo> & { postCount: number };
 
 const toStringValue = (value: unknown): string | undefined => {
   if (typeof value === 'string' && value.trim().length > 0) {
@@ -149,16 +150,21 @@ function getCategoryDisplayInfo(categorySlug: string) {
 }
 
 export default async function LicenseesGuidePage() {
+  const { isEnabled } = draftMode();
   let posts: GuidePost[] = [];
   let categories: GuideCategory[] = [];
 
   try {
     const blogDirectory = path.join(process.cwd(), 'content/blog');
     // Get all blog posts, sorted by date (newest first)
-    const allPosts = getAllBlogPosts(blogDirectory, undefined, {
-      field: 'publishedAt',
-      direction: 'desc',
-    });
+    const allPosts = getAllBlogPosts(
+      blogDirectory,
+      isEnabled ? undefined : { draft: false, dateTo: new Date() },
+      {
+        field: 'publishedAt',
+        direction: 'desc',
+      }
+    );
 
     // Transform posts to match the expected structure
     posts = allPosts.map((post) => {
@@ -215,8 +221,15 @@ export default async function LicenseesGuidePage() {
       const postCount = posts.filter((post) => post.category === categorySlug).length;
       return {
         ...categoryInfo,
-        count: postCount,
+        postCount,
       };
+    });
+
+    categories.sort((a, b) => {
+      if (b.postCount !== a.postCount) {
+        return b.postCount - a.postCount;
+      }
+      return a.name.localeCompare(b.name);
     });
 
     console.log(
@@ -270,6 +283,7 @@ export default async function LicenseesGuidePage() {
         subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
         showCTA={false}
         breadcrumbs={breadcrumbPaths.licenseesGuide}
+        backgroundImage="/images/headers/licensees-guide.png"
       />
 
       <Section background="white">
@@ -368,9 +382,9 @@ export default async function LicenseesGuidePage() {
           {/* Category Navigation */}
           <div className="mb-12">
             <Heading level={2} align="center" className="mb-6">
-              Browse by Topic
+              Top Topics
             </Heading>
-            <CategoryList categories={categories} variant="grid" />
+            <CategoryList categories={categories} variant="grid" maxVisible={6} />
           </div>
 
           {/* Blog Posts Grid */}

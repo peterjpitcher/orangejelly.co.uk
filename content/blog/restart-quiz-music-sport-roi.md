@@ -14,7 +14,7 @@ tags:
   - "events"
   - "ROI"
 status: "published"
-featuredImage: "/images/blog/restart-quiz-music-sport-roi.svg"
+featuredImage: "/images/blog/restart-quiz-music-sport-roi.png"
 metaDescription: "Guide to relaunching quiz, music, and sport nights in pubs with profit-focused planning, marketing, and upselling."
 keywords:
   - "pub quiz relaunch"
@@ -34,34 +34,73 @@ voiceSearchQueries:
 
 # Restarting Your Quiz, Live Music, and Sport Nights for Maximum ROI
 
-Entertainment nights can either cement loyalty or drain margin. Relaunch them with intention and they become a weekly anchor for revenue.
+Entertainment nights can either anchor your week or drain your margins. The difference is structure. A relaunch works when it has a calendar, a booking system, and a clear path to profit.
 
-## Step 1: Build an 8-Week Calendar
-Map quizzes, music, and sport fixtures so you never cannibalise your own nights. Alternate formats (general knowledge, pop culture, picture rounds) and genres (acoustic, covers, DJs) to keep things fresh.
+Use this framework to bring back quiz, music, and sport nights with confidence.
 
-## Step 2: Pre-Book Everything
-Require free but refundable deposits via online booking. Allocate premium tables with minimum spends. Share table maps so guests know what they are buying.
+## Step 1: Build an 8-week calendar
 
-## Step 3: Tier the Experience
-Offer three levels:
-- **Standard**: entry, table service.
-- **Plus**: prime seating, sharer board, welcome drink.
-- **VIP**: booth, host greeting, bespoke drinks tree.
+Map quiz, music, and sport nights across eight weeks so they do not cannibalise each other. Alternate formats and themes to keep regulars interested.
 
-## Step 4: Script Hosts and MCs
-Give quizmasters and musicians a run sheet with upsell cues (interval snack specials, halftime shots). Pay them a flat fee plus bonus if sales targets are hit.
+Example rotation:
+- Week 1: quiz
+- Week 2: live music
+- Week 3: sport screening
+- Week 4: quiz with a twist
 
-## Step 5: Maximise F&B
-Create limited-time menus for each night (e.g. "Quiz Fuel" platters, "Matchday Towers"). Offer table-kegs or cocktail trees pre-ordered at booking. Use QR codes for easy round reorders.
+Consistency builds habit.
 
-## Step 6: Capture Data
-Collect emails and phone numbers at booking. Post-event, send thank-you notes, request reviews, and promote next week's theme. Reward teams that return three times with merch or trophies.
+## Step 2: Pre-book and pre-pay
+
+Require a small deposit for premium tables. It increases commitment and smooths cashflow. Use a simple booking page or a phone list if needed.
+
+## Step 3: Tier the experience
+
+Create three levels so guests can choose their spend.
+
+- Standard: entry and a basic seat.
+- Plus: better seats and a shared board.
+- VIP: best tables, a welcome drink, and a host check-in.
+
+## Step 4: Script the hosts
+
+Give quizmasters and MCs clear cues for upsells and announcements. A scripted host drives revenue more consistently than a casual one.
+
+## Step 5: Maximise food and drink
+
+Build a simple menu for each night. Use bundles, not discounts.
+
+Examples:
+- Quiz fuel platter.
+- Matchday pitcher bundle.
+- Live music tasting board.
+
+## Step 6: Capture data and follow up
+
+Collect emails or phone numbers at booking. Send a thank you message and promote the next night within 48 hours.
+
+## Step 7: Measure the ROI
+
+Track covers, spend per head, and margin for each format. Drop the weakest and double down on the strongest.
+
+## Common mistakes
+
+- Running too many formats at once.
+- Letting guests walk in without a booking plan.
+- Forgetting to promote the next night during the current one.
+
+## Quick checklist
+
+- 8-week calendar set.
+- Booking system live.
+- Tiered experience priced.
+- Host script printed.
+- Follow-up message prepared.
 
 ## Mini FAQ
-**What about licensing for music and sport?**
-Ensure PRS/PPL fees are current and sports broadcasting rights are secured. Fines cost more than licences.
 
-**How do I handle no-shows?**
-Keep deposits for tables that do not arrive within 15 minutes unless they call ahead. Communicate this policy clearly when booking.
+**Should I run all three formats every week?**
+No. Rotate them so each feels special and has space to grow.
 
-Well-structured entertainment nights keep tills ringing, bartenders busy, and locals bragging about their second home.
+**Do deposits scare people off?**
+Small deposits usually increase commitment without reducing demand.

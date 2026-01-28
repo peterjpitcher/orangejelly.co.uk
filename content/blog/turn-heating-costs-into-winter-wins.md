@@ -8,7 +8,8 @@ author:
   name: Peter Pitcher
   bio: Founder of Orange Jelly, helping UK pubs increase revenue through proven strategies
 featured: true
-category: Revenue Growth
+category: "Revenue Growth"
+featuredImage: "/images/blog/turn-heating-costs-into-winter-wins.png"
 tags:
   - Energy Costs
   - Winter Strategy

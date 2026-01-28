@@ -3,7 +3,7 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
 import { formatDate } from '@/lib/utils';
-import { type AdjacentPostNavItem } from './BlogPostServer';
+import { type AdjacentPostNavItem } from '@/lib/blog';
 import clsx from 'clsx';
 
 interface AdjacentPostNavProps {

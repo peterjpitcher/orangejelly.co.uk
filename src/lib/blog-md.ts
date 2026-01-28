@@ -29,11 +29,20 @@ export interface BlogPostMeta {
   category: string;
   tags: string[];
   featuredImage?: string;
+  publishedAt?: string;
+  draft?: boolean;
+  status?: string;
   seo?: {
     title?: string;
     description?: string;
     keywords?: string[];
   };
+}
+
+export interface PublishOptions {
+  includeDrafts?: boolean;
+  includeFuture?: boolean;
+  now?: Date;
 }
 
 // Get all post slugs
@@ -77,14 +86,43 @@ const categoryMapping: Record<string, string> = {
   'Revenue Growth': 'empty-pub-solutions',
 };
 
+const isPublishable = (meta: BlogPostMeta, options: PublishOptions = {}): boolean => {
+  const now = options.now ?? new Date();
+  const includeDrafts = options.includeDrafts === true;
+  const includeFuture = options.includeFuture === true;
+  const statusValue = typeof meta.status === 'string' ? meta.status.toLowerCase().trim() : null;
+  const isDraft = meta.draft === true || statusValue === 'draft';
+  if (!includeDrafts && isDraft) {
+    return false;
+  }
+
+  const publishedAt = meta.publishedAt || meta.publishedDate;
+  if (publishedAt) {
+    const publishedDate = new Date(publishedAt);
+    if (
+      !includeFuture &&
+      !Number.isNaN(publishedDate.getTime()) &&
+      publishedDate.getTime() > now.getTime()
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
 // Get post by slug
-export function getPostBySlug(slug: string): BlogPost | null {
+export function getPostBySlug(slug: string, options: PublishOptions = {}): BlogPost | null {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
     const meta = data as BlogPostMeta;
+
+    if (!isPublishable(meta, options)) {
+      return null;
+    }
 
     // Map category if needed
     const mappedCategory = categoryMapping[meta.category] || meta.category;
@@ -106,7 +144,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       title: meta.title,
       excerpt: meta.excerpt,
       content,
-      publishedDate: meta.publishedDate,
+      publishedDate: meta.publishedDate || meta.publishedAt || new Date().toISOString(),
       updatedDate: meta.updatedDate,
       category: finalCategory.slug,
       tags: meta.tags,
@@ -125,10 +163,10 @@ export function getPostBySlug(slug: string): BlogPost | null {
 }
 
 // Get all posts
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts(options: PublishOptions = {}): BlogPost[] {
   const slugs = getAllPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug))
+    .map((slug) => getPostBySlug(slug, options))
     .filter((post): post is BlogPost => post !== null)
     .sort((a, b) => {
       return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
@@ -138,20 +176,20 @@ export function getAllPosts(): BlogPost[] {
 }
 
 // Get posts by category
-export function getPostsByCategory(categorySlug: string): BlogPost[] {
-  const allPosts = getAllPosts();
+export function getPostsByCategory(categorySlug: string, options: PublishOptions = {}): BlogPost[] {
+  const allPosts = getAllPosts(options);
   return allPosts.filter((post) => post.category === categorySlug);
 }
 
 // Get recent posts
-export function getRecentPosts(limit: number = 5): BlogPost[] {
-  const allPosts = getAllPosts();
+export function getRecentPosts(limit: number = 5, options: PublishOptions = {}): BlogPost[] {
+  const allPosts = getAllPosts(options);
   return allPosts.slice(0, limit);
 }
 
 // Get featured posts (most recent from each category)
-export function getFeaturedPosts(): BlogPost[] {
-  const allPosts = getAllPosts();
+export function getFeaturedPosts(options: PublishOptions = {}): BlogPost[] {
+  const allPosts = getAllPosts(options);
   const featured: BlogPost[] = [];
   const categories = new Set<string>();
 
@@ -167,8 +205,8 @@ export function getFeaturedPosts(): BlogPost[] {
 }
 
 // Search posts
-export function searchPosts(query: string): BlogPost[] {
-  const allPosts = getAllPosts();
+export function searchPosts(query: string, options: PublishOptions = {}): BlogPost[] {
+  const allPosts = getAllPosts(options);
   const searchTerm = query.toLowerCase();
 
   return allPosts.filter((post) => {
@@ -184,8 +222,8 @@ export function searchPosts(query: string): BlogPost[] {
 }
 
 // Get all categories with post counts
-export function getCategories(): Category[] {
-  const allPosts = getAllPosts();
+export function getCategories(options: PublishOptions = {}): Category[] {
+  const allPosts = getAllPosts(options);
   const categoryMap = new Map<string, number>();
 
   // Count posts per category

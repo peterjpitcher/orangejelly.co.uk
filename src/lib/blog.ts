@@ -14,6 +14,14 @@ export interface Category {
   description: string;
 }
 
+export interface AdjacentPostNavItem {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedDate?: string;
+  category: Category;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;

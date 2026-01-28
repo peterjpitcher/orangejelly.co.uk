@@ -14,7 +14,7 @@ tags:
   - "footfall"
   - "promotions"
 status: "published"
-featuredImage: "/images/blog/fill-empty-seats-midweek-offers.svg"
+featuredImage: "/images/blog/fill-empty-seats-midweek-offers.png"
 metaDescription: "Blueprint for midweek pub offers that convert, including bundles, booking tactics, price points, and upsells."
 keywords:
   - "midweek pub ideas"
@@ -34,40 +34,71 @@ voiceSearchQueries:
 
 # Fill Empty Seats: Proven Midweek Offers That Actually Convert
 
-Quiet nights are rarely a mystery – they are a sign that the offer is confusing, invisible, or built around discounts that gut profit. Here is how to design midweek activity that sells out in advance and builds a waiting list instead of a shrug.
+Quiet nights are rarely a mystery. The offer is usually invisible, too vague, or too discount heavy. The fix is a clear promise, limited capacity, and a reason to book now rather than later.
 
-## Step 1: Start With Data, Not Guesswork
-Pull six months of EPOS data and rank dishes and drinks by contribution per minute (high GP, quick to produce). Those become the building blocks of your offer. Avoid labour-heavy dishes that need the full brigade when you are trying to stay lean midweek.
+This is the framework we use to turn slow midweek nights into planned visits.
 
-## Step 2: Pick One Promise Per Night
-- **Tuesday Sharer Club**: any three small plates plus bottle of Portuguese red for £30.
-- **Wednesday Theme Night**: curry club, steak night, vegan takeover – but switch monthly so locals do not get bored.
-- **Industry Wednesday After-Work**: half-price snacks for anyone showing hospitality ID before 7pm.
+## Step 1: Start with data, not guesses
 
-## Step 3: Pre-Book and Pre-Pay
-Cap capacity (e.g. 40 covers) and sell time slots. Use simple tools: Eventbrite, Square appointments, or even Google Forms with bank transfer. Offer a £5 credit on the night for anyone paying in advance to reduce no-shows.
+Identify your two quietest sessions and the average spend per head. You need to know what you are trying to lift.
 
-## Step 4: Stack Upsells
-Train the team to upsell sharer boards to larger tables, add dessert tasters, or upgrade house beer to limited keg releases. Create a mini menu of add-ons printed on the booking confirmation so guests arrive already primed.
+If Tuesday lunch is your weakest, design an offer for Tuesday lunch. Do not build a generic offer and hope it lands.
 
-## Step 5: Promote in Tight Bursts
-Seven-day campaign works best:
-1. **Day 1** email the database with a bold subject line.
-2. **Day 2** drop reels or raw TikTok of prep with chef commentary.
-3. **Day 3** task staff to text their ten favourite guests.
-4. **Day 4** run a £25 boosted geo ad, 3km radius, targeting foodies.
-5. **Day 5** share behind-the-scenes marinade, tasting, or playlist builds.
-6. **Day 6** publish the sold-out warning.
-7. **Day 7** capture testimonials and put next week on sale immediately.
+## Step 2: Pick one promise per night
 
-## Step 6: Measure Ruthlessly
-Track covers, spend per head, GP per head, labour percentage, and booking lead time. If an offer misses targets twice, iterate – tweak the bundle, partner with a local brand, or move the night.
+Each night should have a single reason to visit.
+
+Examples:
+- "Steak and red wine set menu."
+- "Local supplier night with a tasting board."
+- "Midweek club with a fixed price bundle."
+
+One promise is easier to sell and easier to deliver.
+
+## Step 3: Pre-book and pre-pay
+
+Even a small deposit increases commitment. Use a simple booking form and cap the number of covers. Scarcity makes it feel intentional.
+
+## Step 4: Stack upsells that protect margin
+
+The offer gets them in the door. The upsell protects the profit.
+
+- Add a premium side option.
+- Offer a set drink pairing.
+- Create a dessert or coffee add-on.
+
+## Step 5: Promote in tight bursts
+
+Run a three-day promo burst each week. Same message, same CTA, repeated across channels.
+
+Example rhythm:
+- Monday: announce the offer.
+- Tuesday: post proof and availability.
+- Wednesday: final call.
+
+## Step 6: Measure ruthlessly
+
+Track covers, spend per head, and margin for that night only. If it does not move the needle after four weeks, change the promise.
+
+## Common mistakes
+
+- Discounting without an upsell plan.
+- Changing the offer every week.
+- Leaving booking open-ended.
+- Promoting once and stopping.
+
+## Quick checklist
+
+- One quiet session selected.
+- One clear promise written.
+- Booking cap set with a deposit.
+- Upsells attached.
+- Weekly results tracked.
 
 ## Mini FAQ
-**Do I always need a discount?**
-No. Bundle perceived value (welcome drink, chef table chat, live acoustic set) instead of slashing price. Guests buy the experience, not pence off.
 
-**What if I cannot take prepayments?**
-Use deposit jars at the bar or take card-not-present payments over the phone. Even a £5 commitment halves the no-show rate.
+**Should I run different offers every week?**
+No. Repetition builds habit. Change after four to six weeks if it is not working.
 
-Curated bundles plus disciplined marketing mean midweek becomes predictable instead of painful.
+**What if people only come for the deal?**
+That is the point. Once they are in, you sell the experience and the add-ons.
