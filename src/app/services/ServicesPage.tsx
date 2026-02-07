@@ -7,11 +7,11 @@ import Text from '@/components/Text';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Container from '@/components/Container';
 import { FAQSchema } from '@/components/StructuredData';
 import { SpeakableContent } from '@/components/SpeakableContent';
 import PartnershipsSection from '@/components/PartnershipsSection';
-import { URLS } from '@/lib/constants';
 
 // Local data imports
 import servicesData from '../../../content/data/services.json';
@@ -69,6 +69,7 @@ export default function ServicesPage() {
         subtitle={servicesData.hero.subtitle}
         showCTA={true}
         ctaText={servicesData.hero.ctaText}
+        ctaLabel={servicesData.hero.ctaLabel}
         bottomText={servicesData.hero.bottomText}
         breadcrumbs={breadcrumbPaths.services}
         backgroundImage={servicesData.hero.backgroundImage}
@@ -153,9 +154,8 @@ export default function ServicesPage() {
       <Section background="cream" padding="large">
         <Container maxWidth="4xl">
           <Text size="sm" color="muted" align="center" className="mb-8">
-            These aren&apos;t fixed packages—just proven ways we can help. You still pay £75 per
-            hour plus VAT and we tailor the time to whatever your pub needs over the 30-day
-            turnaround.
+            These are proven ways we can help, not fixed retainers. You still pay £75 per hour plus
+            VAT and we tailor support to whatever your hospitality business needs right now.
           </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {servicePackages.map((service) => (
@@ -189,9 +189,11 @@ export default function ServicesPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button href={URLS.whatsapp()} variant="primary" size="large" external>
-              {process.ctaText}
-            </Button>
+            <WhatsAppButton
+              text="Hi Peter, I'd like help building momentum for my venue."
+              label={process.ctaText}
+              size="large"
+            />
           </div>
         </Container>
       </Section>
@@ -264,15 +266,12 @@ export default function ServicesPage() {
             <Text size="lg" className="mb-8 max-w-2xl mx-auto">
               {servicesData.ctaSection.subtitle}
             </Text>
-            <Button
-              href={URLS.whatsapp(servicesData.ctaSection.whatsappMessage)}
-              variant="primary"
+            <WhatsAppButton
+              text={servicesData.ctaSection.whatsappMessage}
+              label={servicesData.ctaSection.buttonText}
               size="large"
-              external
               className="mb-4"
-            >
-              {servicesData.ctaSection.buttonText}
-            </Button>
+            />
             <Text size="sm" color="muted">
               {servicesData.ctaSection.bottomText}
             </Text>

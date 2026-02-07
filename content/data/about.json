@@ -1,161 +1,137 @@
 {
   "heroSection": {
-    "title": "From One Licensee to Another",
-    "subtitle": "We run The Anchor in Stanwell Moor. We unlocked 25 hours of value per week by applying AI across our pub. Now we share what we've learned with other pub licensees.",
+    "title": "Small Team. Big Momentum.",
+    "subtitle": "Orange Jelly is a hands-on hospitality growth partner built for action. You work directly with us, not layers of agency people.",
     "backgroundImage": "/images/headers/about.png"
   },
   "story": [
-    "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I handle marketing and business development around a full-time role. Like you, we've faced empty tables, rising costs, and 70-hour weeks wondering if it's all worth it.",
-    "Everything changed when I discovered how AI could transform pub operations. As an early adopter since 2021, I've tested everything - the failures taught me what to avoid, the successes showed me what to share.",
-    "Today, our quiz nights attract 25-30 regular teams every month, we've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs, and we actually have evenings off. Orange Jelly exists so other pub licensees can achieve the same transformation without the guesswork."
+    "We are small on purpose. Your money goes into the work, not overhead-heavy offices, management layers, or marketing theatre.",
+    "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I lead marketing and growth. We see the same trading pressure hospitality operators face every week.",
+    "Orange Jelly exists to bring practical, transformative support to other hospitality partners: clear priorities, quick wins, and weekly momentum that shows up in bookings, footfall, and repeat visits."
   ],
   "quickFacts": {
     "title": "Quick Facts",
     "facts": [
-      "Pub owners since March 2019",
-      "AI early adopter since 2021",
-      "Pub marketing specialist",
-      "Full-time job + pub + Orange Jelly",
-      "Featured in BII magazine",
-      "Greene King tenants",
-      "£75/hour - no fixed packages",
-      "30-day action plan with weekly check-ins"
+      "Small team, direct support",
+      "Hands-on hospitality experience",
+      "£75 per hour plus VAT, transparent pricing",
+      "Pay for progress, not overheads",
+      "Featured in BII magazine for AI innovation",
+      "Calm, friendly, straight-talking approach",
+      "Action-first support built for real operations",
+      "Focused on measurable commercial outcomes"
     ]
   },
   "timeline": [
     {
-      "date": "Mar 2019",
-      "title": "The Beginning",
-      "description": "Took over The Anchor. Empty tables, no strategy, pure hope.",
+      "date": "2019",
+      "title": "The Anchor Begins",
+      "description": "We took on The Anchor and lived the operational pressure firsthand.",
       "highlight": true
     },
     {
       "date": "2021",
-      "title": "AI Discovery",
-      "description": "Discovered AI tools. Started testing, failing, learning.",
+      "title": "Practical AI Testing",
+      "description": "We started testing practical AI workflows and stripped out what did not work in real service conditions.",
       "highlight": false
     },
     {
-      "date": "Jan-Feb 2024",
-      "title": "The Transformation",
-      "description": "Six brutal weeks forced full AI adoption. We focused on cutting waste and simplifying operations.",
+      "date": "2024",
+      "title": "Step-Change Performance",
+      "description": "The systems matured into measurable gains in efficiency, consistency, and trade.",
       "highlight": false
     },
     {
       "date": "Today",
-      "title": "Sharing What Worked",
-      "description": "Sharing proven tools and workflows that save hours every week.",
+      "title": "Helping Hospitality Partners",
+      "description": "We share those proven systems with partners who want faster progress and clearer direction.",
       "highlight": true
     }
   ],
   "founderSection": {
     "name": "Meet Peter Pitcher",
-    "role": "Founder & Hospitality Marketing Specialist",
+    "role": "Founder & Hospitality Growth Partner",
     "bio": [
-      "I'm not your typical consultant. By day, I'm an AI Marketing Capabilities Lead for a global food manufacturer. Billy runs The Anchor day-to-day, and I jump in on nights and weekends while handling marketing and business development in my spare time.",
-      "My curiosity for technology made me an early AI adopter in 2021. When I saw how it could save hours on pub admin, I had to share it with other pub licensees struggling like we were.",
-      "Now I help pub licensees implement the same AI workflows that transformed our business. No theory, no fluff - just practical tools that work in real pub life."
+      "I am not here to give generic agency advice. I care about practical action that works in busy operations.",
+      "Billy runs The Anchor day-to-day, and I lead marketing and growth while balancing a full-time role in AI marketing leadership. That combination keeps our approach both practical and modern.",
+      "You get direct support from people who understand hospitality pressure, care about progress, and are genuinely easy to work with."
     ],
-    "quote": "Every strategy we recommend has been tested in our own pub first. If it doesn't work for us, we won't recommend it to you.",
+    "quote": "Disruptive thinking, safe execution. We modernize tired marketing habits without destabilizing day-to-day operations.",
     "image": "/images/peter-pitcher.jpg"
   },
   "values": [
     {
-      "icon": "🎯",
-      "title": "Real Experience",
-      "description": "We run an actual pub. Every strategy has been tested at The Anchor first."
-    },
-    {
-      "icon": "💪",
-      "title": "Honest Pricing",
-      "description": "£75 per hour plus VAT. No packages, no hidden fees, no surprises."
-    },
-    {
-      "icon": "🛡️",
-      "title": "Results Backed by Experience",
-      "description": "Everything we share runs daily inside The Anchor first."
-    },
-    {
       "icon": "🤝",
-      "title": "Personal Service",
-      "description": "Just me, no sales team. You get direct access to someone who understands."
+      "title": "Partnership First",
+      "description": "We work with you, not at you. Collaboration is where the best change happens."
+    },
+    {
+      "icon": "⚡",
+      "title": "Action Before Theatre",
+      "description": "Less talk, more traction. We prioritize practical work that moves performance."
+    },
+    {
+      "icon": "🧭",
+      "title": "Clear Direction",
+      "description": "We turn ambiguity into clear decisions, standards, and momentum."
+    },
+    {
+      "icon": "😊",
+      "title": "Thoroughly Nice People",
+      "description": "Calm, friendly, dependable, and straight-talking in how we work."
     }
   ],
   "whyOrangeJelly": {
     "title": "Why Orange Jelly?",
     "content": [
-      "Just a fun play on words! We wanted a name that's friendly, memorable, and doesn't take itself too seriously - just like us.",
-      "It reflects our approach: making complicated things simple and approachable. Whether it's AI automation or menu optimization, we turn complex problems into clear solutions."
+      "The name is friendly and memorable, just like the way we work. We take serious outcomes seriously, without taking ourselves too seriously.",
+      "Orange Jelly is about making complex marketing problems practical: clear plan, weekly rhythm, and work that lands in the real world."
     ]
   },
   "partnerships": [
     {
       "name": "Greene King",
-      "relationship": "We operate The Anchor as a Greene King tenant, sharing our AI innovations with one of the UK's leading pub companies.",
+      "relationship": "We operate The Anchor as a Greene King tenant and continuously test practical growth systems in live trading conditions.",
       "logo": "/partners/greene-king-logo.png"
     },
     {
       "name": "BII Member",
-      "relationship": "Proud BII members, featured in their Autumn 2025 magazine for our AI innovation in hospitality.",
+      "relationship": "Proud BII members, featured for practical AI innovation in hospitality.",
       "logo": "/partners/bii-logo.png"
     }
   ],
   "visitCTA": {
-    "title": "Come See The Results Yourself",
-    "subtitle": "Visit The Anchor and see how we use AI in real pub operations. First pint's on me if you mention Orange Jelly.",
+    "title": "See The Approach In Real Life",
+    "subtitle": "Visit The Anchor to see how we run practical systems in a live venue, or message us directly for a focused conversation.",
     "locationName": "The Anchor",
     "address": "Horton Road, Stanwell Moor\nStaines TW19 6AQ",
-    "mapUrl": "https://maps.google.com/?q=The+Anchor+Stanwell+Moor",
-    "ctaText": "Get Directions →"
+    "mapUrl": "https://www.the-anchor.pub",
+    "ctaText": "Visit The Anchor website"
   },
   "faqs": [
     {
-      "question": "Who is Peter Pitcher and why should I trust Orange Jelly?",
-      "answer": "I'm Peter Pitcher. Billy runs The Anchor pub in Stanwell Moor day-to-day, and I handle marketing and business development around my full-time role as an AI Marketing Capabilities Lead for a global food manufacturer. I've been an early AI adopter since 2021 and discovered how AI can add 25 hours of value per week. Orange Jelly exists to share these proven strategies with pubs, restaurants, and bars."
+      "question": "What makes Orange Jelly different from a typical agency?",
+      "answer": "We are a very small, hands-on team. You work directly with us, and your investment goes into practical delivery, not agency layers or overhead."
     },
     {
-      "question": "What makes Orange Jelly different from other consultants?",
-      "answer": "We're not consultants who've never pulled a pint. We run an actual pub and test every strategy in our own business first. No corporate nonsense, no jargon - just one licensee helping another with tools that actually work."
+      "question": "Who do you work with?",
+      "answer": "We work with hospitality partners including pubs, bars, restaurants, venues, hotels, and event spaces."
     },
     {
-      "question": "Is Orange Jelly a big company?",
-      "answer": "No, Orange Jelly started in 2016 with Laura Willis as a digital agency, then pivoted in 2019. Now it's just me (Peter) working around my full-time job, while Billy runs The Anchor day-to-day. No big office, no sales team. This means you get personal service, honest advice, and someone who genuinely understands your challenges because I face them too."
+      "question": "What does transformative mean in your work?",
+      "answer": "It means a step-change in business performance, not just more activity. We focus on outcomes that show up in bookings, footfall, repeat visits, and revenue."
     },
     {
-      "question": "Why is it called Orange Jelly?",
-      "answer": "Just a fun play on words in a world that's ever-changing! We wanted a name that's friendly, memorable, and doesn't take itself too seriously - just like us. It reflects our approach: making complicated things simple and approachable."
+      "question": "Are you only focused on AI?",
+      "answer": "No. AI is one practical tool inside a wider action-first approach. We only use tools that improve speed and consistency without adding complexity."
     },
     {
-      "question": "Can I visit The Anchor to see your strategies in action?",
-      "answer": "Absolutely! We'd love to show you around. Pop in for a pint and see how we use AI tools in real pub operations. First pint's on me if you mention Orange Jelly. We're at Horton Road, Stanwell Moor, Staines TW19 6AQ."
+      "question": "How do you keep work practical?",
+      "answer": "We test and adapt systems in real hospitality conditions at The Anchor first. If it does not work in real operations, we do not recommend it."
     },
     {
-      "question": "How did you discover AI could help pubs?",
-      "answer": "Through my curiosity for technology and being an early adopter. I started with ChatGPT in 2021 when it first launched. The early results were terrible, but as the models evolved, they became business-ready. Now AI helps us unlock 25 hours of value per week in the pub."
-    },
-    {
-      "question": "What results have you achieved at The Anchor?",
-      "answer": "We reach 60,000-70,000 people every month on social media, our quiz nights now attract 25-30 regular teams each month, we've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub."
-    },
-    {
-      "question": "Do you understand the challenges of running a small pub?",
-      "answer": "Completely. We've dealt with empty Monday nights, staff no-shows, supplier price hikes, TripAdvisor nightmares, and competing with Wetherspoons. That's why our solutions are practical, affordable, and designed for real pub life."
-    },
-    {
-      "question": "Is Orange Jelly just about AI and technology?",
-      "answer": "No, it's about giving you your life back. AI is just the tool - the real goal is helping you work less and earn more. Whether that's automating social media so you can have Sunday lunch with family, or creating menus that sell themselves so you're not stressing about GP."
-    },
-    {
-      "question": "How can I be sure Orange Jelly will work for my pub?",
-      "answer": "Every pub is different, but the challenges are similar. That's why we offer a free consultation to understand your specific situation and stay hands-on through the first month so adjustments happen quickly. These aren't theories - they're proven strategies from our own pub."
-    },
-    {
-      "question": "What areas does Orange Jelly cover?",
-      "answer": "For in-person training and consultations, we cover a 30-mile radius from Stanwell Moor (Surrey, Berkshire, West London). For online services like marketing and menu design, we help pubs across the UK. Technology means distance isn't a barrier."
-    },
-    {
-      "question": "What's your promise to pub owners?",
-      "answer": "To help you claw back up to 25 hours every week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it."
+      "question": "What is your tone when working with partners?",
+      "answer": "Warm, commercially sharp, and straight-talking. We keep things clear and practical so decisions happen quickly."
     }
   ]
 }

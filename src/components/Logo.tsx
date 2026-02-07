@@ -18,13 +18,13 @@ function Logo({
   size = 'medium',
   showTagline = false,
   className = '',
-  href
+  href,
 }: LogoProps) {
   const sizes = {
     small: { logo: 32, text: 'text-sm' },
     medium: { logo: 48, text: 'text-lg' },
     large: { logo: 64, text: 'text-xl' },
-    xlarge: { logo: 96, text: 'text-2xl' }
+    xlarge: { logo: 96, text: 'text-2xl' },
   };
 
   const currentSize = sizes[size];
@@ -62,7 +62,9 @@ function Logo({
                 Orange Jelly
               </Heading>
               {showTagline && (
-                <Text size="xs" className="text-charcoal/60">AI Solutions for Smarter Pub Marketing</Text>
+                <Text size="xs" className="text-charcoal/60">
+                  Transformative Hospitality Marketing
+                </Text>
               )}
             </div>
           </div>
@@ -83,7 +85,9 @@ function Logo({
               Orange Jelly
             </Heading>
             {showTagline && (
-              <Text size="sm" className="text-charcoal/60 mt-1">AI Solutions for Smarter Pub Marketing</Text>
+              <Text size="sm" className="text-charcoal/60 mt-1">
+                Transformative Hospitality Marketing
+              </Text>
             )}
           </div>
         );
@@ -102,11 +106,7 @@ function Logo({
     }
   };
 
-  const content = (
-    <div className={`inline-block ${className}`}>
-      {logoContent()}
-    </div>
-  );
+  const content = <div className={`inline-block ${className}`}>{logoContent()}</div>;
 
   if (href) {
     return (

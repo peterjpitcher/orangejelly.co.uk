@@ -112,27 +112,26 @@ export function generatePageMeta(
 ): Metadata {
   const pageMeta: Record<string, MetaProps> = {
     home: {
-      title: 'Orange Jelly - Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
+      title: 'Orange Jelly - Transformative Hospitality Growth Partner',
       description:
-        'Hospitality marketing specialist leveraging AI to deliver great results for pubs, restaurants, and bars. Real operator experience, honest pricing at £75/hour. No packages, just results.',
+        'Transformative, action-first marketing for hospitality partners. Practical systems that accelerate bookings, footfall, repeat visits, and revenue.',
       keywords: [
-        'hospitality marketing specialist',
+        'transformative hospitality marketing',
         'pub marketing',
-        'restaurant marketing',
         'bar marketing',
-        'AI hospitality marketing',
-        'fill tables',
+        'venue marketing',
+        'AI-enabled marketing',
+        'increase bookings',
       ],
       canonical: '/',
     },
     services: {
-      title: 'Hospitality Marketing Services - Fill Tables & Boost Revenue | Orange Jelly',
+      title: 'Hospitality Growth Services | Orange Jelly',
       description:
-        'Proven hospitality marketing services from a real operator. Social media, events, menu design, business analysis. £75/hour plus VAT. No packages, pay for what you need.',
+        'Outcome-led hospitality growth support built for pubs, bars, restaurants, venues, hotels, and event spaces. Faster execution, smarter decisions, measurable outcomes.',
       keywords: [
-        'hospitality marketing services',
+        'hospitality growth programmes',
         'pub marketing',
-        'restaurant marketing',
         'bar marketing',
         'social media management',
         'event planning',
@@ -141,28 +140,28 @@ export function generatePageMeta(
       canonical: '/services',
     },
     about: {
-      title: 'About Orange Jelly - Hospitality Marketing Specialist',
+      title: 'About Orange Jelly - Small Team, Transformative Growth Partner',
       description:
-        'Meet Peter Pitcher, operator of The Anchor pub. Learn how AI-powered hospitality marketing drives results for pubs, restaurants, and bars.',
+        'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. Learn how a small, hands-on team creates measurable hospitality growth.',
       keywords: [
         'Peter Pitcher',
         'The Anchor pub',
         'Orange Jelly story',
-        'hospitality marketing specialist',
+        'hospitality growth partner',
       ],
       canonical: '/about',
     },
     contact: {
       title: 'Contact Orange Jelly - Hospitality Marketing Help',
       description:
-        'Contact Peter Pitcher directly. WhatsApp 07990 587315 or visit The Anchor pub. No call centres, just one operator helping another. Available 7 days.',
+        'Contact Peter Pitcher directly for action-first hospitality growth support. WhatsApp 07990 587315 or visit The Anchor.',
       keywords: ['contact Orange Jelly', 'Peter Pitcher contact', 'hospitality marketing help'],
       canonical: '/contact',
     },
     results: {
       title: 'Success Stories - Hospitality Marketing Results | Orange Jelly',
       description:
-        'Real numbers from The Anchor: 25-30 quiz teams each month, £250/week waste cut, £4,000+ monthly savings. See what we changed and why it worked.',
+        'Real numbers from The Anchor: 25-30 quiz teams each month, £250/week waste cut, £4,000+ monthly savings. See what changed and why it worked.',
       keywords: [
         'hospitality marketing results',
         'pub success stories',

@@ -1,27 +1,27 @@
 {
   "heroSection": {
-    "title": "Pub Rescue Emergency Service",
-    "subtitle": "When your pub is in crisis, you need help NOW. Not next month."
+    "title": "Pub Recovery Support",
+    "subtitle": "When performance is under pressure, clear priorities and fast execution make all the difference."
   },
   "emergencyBanner": {
-    "heading": "Is Your Pub in Crisis?",
-    "description": "Empty tables, rising costs, staff nightmares - we know the feeling. The Anchor was failing too until we figured out how to fix it. Everything we share is tested in our own pub first.",
-    "ctaText": "URGENT: I need help with my pub NOW",
+    "heading": "Is Your Pub Under Pressure?",
+    "description": "Empty tables, rising costs, and stretched teams are real challenges. We faced the same at The Anchor and built practical systems to fix it. Everything here is tested in our own venue first.",
+    "ctaText": "I need help improving pub performance",
     "supportText": "I'll do my best to respond quickly"
   },
   "emergencyCategories": [
     {
       "_key": "empty-pub",
       "icon": "🏚️",
-      "title": "Empty Pub Emergency",
+      "title": "Quiet Trade",
       "description": "Monday to Thursday looking like a ghost town. Weekend barely covering costs.",
       "impact": "An empty wet-led table costs less than the £30-£50 figure you see online - context matters.",
-      "solution": "Rapid response plan to fill seats"
+      "solution": "Action-first plan to rebuild demand"
     },
     {
       "_key": "no-bookings",
       "icon": "📉",
-      "title": "No Bookings Crisis",
+      "title": "Low Booking Flow",
       "description": "Phone not ringing. Online bookings non-existent. Walk-ins only.",
       "impact": "Missing reliable weekly food profit",
       "solution": "Booking system that actually works"
@@ -29,23 +29,23 @@
     {
       "_key": "food-sales",
       "icon": "🍽️",
-      "title": "Food Sales Disaster",
+      "title": "Food Sales Underperforming",
       "description": "Kitchen prepped but plates not leaving. Food waste mounting daily.",
-      "impact": "Low GP means you're losing money",
+      "impact": "Low GP erodes margin quickly",
       "solution": "Menu psychology that sells"
     },
     {
       "_key": "staff-nightmare",
       "icon": "😰",
-      "title": "Staff Nightmare",
+      "title": "Team Capacity Strain",
       "description": "Can't find good staff. Current team unmotivated. Doing everything yourself.",
-      "impact": "Owner burnout leads to pub closure",
+      "impact": "Owner burnout blocks consistent growth",
       "solution": "Systems that run without you"
     },
     {
       "_key": "cost-crisis",
       "icon": "💸",
-      "title": "Cost Crisis",
+      "title": "Cost Pressure",
       "description": "Bills mounting. Suppliers increasing prices. Margins disappearing.",
       "impact": "Small GP losses compound fast",
       "solution": "Immediate cost reduction strategies"
@@ -55,7 +55,7 @@
       "icon": "📱",
       "title": "Marketing Chaos",
       "description": "Social media not working. No time to post. Money wasted on ads.",
-      "impact": "Invisible pub = empty pub",
+      "impact": "Low visibility often leads to quieter trade.",
       "solution": "30-day content batching system"
     },
     {
@@ -63,16 +63,16 @@
       "icon": "⚔️",
       "title": "Losing to Competition",
       "description": "Wetherspoons stealing customers. Other pubs busier. Can't compete on price.",
-      "impact": "Market share loss is rarely recovered",
+      "impact": "Consistent drift to competitors is hard to reverse",
       "solution": "Compete on experience, not price"
     },
     {
       "_key": "event-flops",
       "icon": "🎉",
-      "title": "Event Flops",
+      "title": "Events Not Landing",
       "description": "Quiz nights empty. Live music to 10 people. Events costing more than earning.",
       "impact": "Failed events damage reputation",
-      "solution": "Events that guarantee profit"
+      "solution": "Repeatable event formats with better promotion"
     },
     {
       "_key": "online-invisible",
@@ -85,9 +85,9 @@
     {
       "_key": "owner-burnout",
       "icon": "🔥",
-      "title": "Owner Burnout Crisis",
+      "title": "Owner Burnout",
       "description": "Working long hours. No holidays. Relationship stress. Want to give up.",
-      "impact": "Burnout is a top reason pubs fail",
+      "impact": "Burnout makes recovery harder",
       "solution": "Start getting your life back inside 30 days"
     }
   ],
@@ -98,7 +98,7 @@
       {
         "timeframe": "Days 1-7",
         "label": "First Results",
-        "description": "Quick wins implemented. Bleeding stops."
+        "description": "Quick wins implemented. Performance stabilises."
       },
       {
         "timeframe": "Week 2-4",
@@ -131,10 +131,10 @@
     ]
   },
   "ctaSection": {
-    "title": "Every Day You Wait Costs You Money",
-    "subtitle": "While you're reading this, tables sit empty and money bleeds away.",
+    "title": "Momentum Slows When Action Is Delayed",
+    "subtitle": "While plans are delayed, gaps in trade and margin often continue.",
     "urgencyText": "Message me anytime. I'll get back as quickly as I can, but bear with me if I'm in service.",
-    "ctaText": "Get Emergency Help Now",
+    "ctaText": "Start My Recovery Plan",
     "guarantee": "30-day action plan with weekly support • No contracts • Pay only for the time you need"
   },
   "pricing": {
@@ -143,7 +143,7 @@
   },
   "founderNote": {
     "title": "From Peter Pitcher",
-    "content": "I've been where you are. Staring at empty tables, wondering how to pay next week's bills, considering if it's time to give up. The Anchor nearly broke us. But we figured it out, and now I want to help you do the same. No corporate BS, no theory - just what actually works."
+    "content": "I've been where you are: inconsistent trade, rising costs, and not enough time. The Anchor forced us to build better systems quickly. Now I help other operators apply the same action-first approach with practical support that works in real pub life."
   },
   "faqs": [
     {

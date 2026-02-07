@@ -11,12 +11,12 @@
       "order": 2
     },
     {
-      "label": "Pub Marketing",
+      "label": "Hospitality Marketing",
       "href": "/pub-marketing",
       "order": 3
     },
     {
-      "label": "Licensee's Guide",
+      "label": "Guides",
       "href": "/licensees-guide",
       "order": 4
     },
@@ -48,12 +48,12 @@
       "order": 2
     },
     {
-      "label": "Pub Marketing",
+      "label": "Hospitality Marketing",
       "href": "/pub-marketing",
       "order": 3
     },
     {
-      "label": "Licensee's Guide",
+      "label": "Guides",
       "href": "/licensees-guide",
       "order": 4
     },
@@ -75,7 +75,7 @@
   ],
   "whatsappCta": {
     "enabled": true,
-    "text": "Hi Peter, I'd like to chat about Orange Jelly",
+    "text": "Hi Peter, I'd like help building momentum for my venue.",
     "phoneNumber": "+447990587315",
     "showInDesktop": true,
     "showInMobile": true

@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
-import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CTASection from '@/components/CTASection';
@@ -10,13 +10,12 @@ import FAQItem from '@/components/FAQItem';
 import TrustBar from '@/components/TrustBar';
 import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
-import { URLS } from '@/lib/constants';
 import { generateMetadata } from '@/lib/metadata';
 
 export const metadata = generateMetadata({
-  title: '£0 Marketing Budget? These Pub Strategies Cost Nothing',
+  title: 'No-Budget Pub Marketing - Practical Free Strategies',
   description:
-    'No money for marketing? These free strategies filled our pub. Social media, community partnerships, email marketing - all free, all proven to work.',
+    'No budget for marketing? Use practical free strategies for local visibility, community engagement, and repeat visits.',
   path: '/pub-marketing-no-budget',
 });
 
@@ -204,8 +203,8 @@ export default function PubMarketingNoBudget() {
             No Problem.
           </>
         }
-        subtitle="Free strategies that filled our pub (and will fill yours too)"
-        bottomText="💪 From empty Tuesday nights to turning people away - all with no spend"
+        subtitle="Free strategies that help pubs build visibility and momentum without paid spend"
+        bottomText="Practical, no-fluff actions you can implement this week"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing No Budget' }]}
       />
 
@@ -219,8 +218,8 @@ export default function PubMarketingNoBudget() {
               The Best Pub Marketing Costs Nothing
             </Heading>
             <Text size="xl" color="muted" className="mb-8">
-              We spent money on various marketing agencies before discovering the truth: the
-              strategies that actually filled our pub were completely free.
+              Many of the strongest pub marketing actions are low cost or free. The key is
+              consistency, clear offers, and practical community visibility.
             </Text>
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="medium" className="text-center">
@@ -286,7 +285,7 @@ export default function PubMarketingNoBudget() {
           </Heading>
           <div className="max-w-4xl mx-auto">
             <Text size="lg" color="muted" align="center" className="mb-8">
-              These exact posts have generated thousands in revenue. Just adapt to your pub:
+              Use these as practical templates and adapt them to your venue:
             </Text>
             <Grid columns={{ default: 1, md: 2 }} gap="medium">
               {zeroComstTemplates.map((item, index) => (
@@ -315,7 +314,7 @@ export default function PubMarketingNoBudget() {
               Your 7-Day Free Marketing Plan
             </Heading>
             <Text size="lg" color="muted" align="center" className="mb-8">
-              Just 15 minutes a day keeps empty tables away:
+              A short daily rhythm is enough when the system is clear:
             </Text>
             <div className="bg-teal rounded-lg p-8">
               <Grid columns={{ default: 1, md: 2 }} gap="medium">
@@ -419,7 +418,7 @@ export default function PubMarketingNoBudget() {
             </Heading>
             <Card variant="colored" background="teal-dark" padding="large">
               <Heading level={3} color="white" className="text-2xl mb-6">
-                We'll Set Up Your Free Marketing Machine
+                We Can Help You Set Up A Practical No-Budget System
               </Heading>
               <div className="text-white text-left max-w-2xl mx-auto">
                 <FeatureList
@@ -436,17 +435,16 @@ export default function PubMarketingNoBudget() {
               </div>
               <div className="mt-8 pt-6 border-t border-cream/20">
                 <Text className="text-cream mb-4">Investment: £75 per hour plus VAT</Text>
-                <Button
-                  href={URLS.whatsapp()}
-                  variant="secondary"
+                <WhatsAppButton
+                  text="Hi Peter, I need help building a practical no-budget pub marketing system."
+                  label="Set Up My Free Marketing"
                   size="large"
-                  external
+                  variant="secondary"
                   className="!bg-white !text-teal hover:!bg-cream"
-                >
-                  Set Up My Free Marketing
-                </Button>
+                  showPhone={false}
+                />
                 <Text size="sm" className="text-cream/80 mt-4">
-                  Most pubs make this back in week one
+                  Start small, focus on the fastest wins, then build momentum
                 </Text>
               </div>
             </Card>
@@ -467,10 +465,10 @@ export default function PubMarketingNoBudget() {
       </Section>
 
       <CTASection
-        title="Empty Pub + No Budget = Big Problem"
-        subtitle="But with the right free strategies, you'll fill tables fast. Let's get started today."
+        title="No Budget Does Not Mean No Progress"
+        subtitle="Use the right free strategies, keep execution consistent, and build momentum week by week."
         whatsappMessage="Help me market my pub for free"
-        buttonText="Show Me How"
+        buttonText="Show Me The Plan"
       />
     </>
   );

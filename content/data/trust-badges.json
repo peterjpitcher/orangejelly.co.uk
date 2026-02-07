@@ -1,15 +1,15 @@
 [
   {
     "title": "30-Day Action Plan",
-    "subtitle": "Weekly support from a working licensee",
+    "subtitle": "Weekly support from a hands-on hospitality team",
     "icon": "check",
     "color": "orange",
     "order": 1,
     "isActive": true
   },
   {
-    "title": "Real Licensee",
-    "subtitle": "Not just another agency",
+    "title": "Small Team Support",
+    "subtitle": "Direct support with no agency layers",
     "icon": "heart",
     "color": "teal",
     "order": 2,
@@ -25,7 +25,7 @@
   },
   {
     "title": "Proven at The Anchor",
-    "subtitle": "Real results from real pub",
+    "subtitle": "Real results from real hospitality operations",
     "icon": "star",
     "color": "teal",
     "order": 4,

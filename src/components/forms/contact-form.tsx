@@ -109,7 +109,7 @@ export function ContactForm() {
           name="pubName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Pub Name</FormLabel>
+              <FormLabel>Venue Name</FormLabel>
               <FormControl>
                 <Input placeholder={PLACEHOLDERS.pubName.default} {...field} />
               </FormControl>

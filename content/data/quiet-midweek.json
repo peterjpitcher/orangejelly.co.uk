@@ -1,37 +1,37 @@
 {
   "heroSection": {
-    "title": "Tuesday & Wednesday Nights Killing Your Profits?",
-    "subtitle": "Transform dead midweek nights into your most profitable days. From empty tables to fully booked using our proven system."
+    "title": "Tuesday & Wednesday Nights Too Quiet?",
+    "subtitle": "Transform quiet midweek nights into consistent, profitable trade with a proven action-first system."
   },
   "problemSection": {
-    "heading": "Tuesday & Wednesday Nights Killing Your Profits?",
+    "heading": "Tuesday & Wednesday Nights Too Quiet?",
     "problems": [
       {
         "emoji": "💀",
-        "title": "Ghost Town Tuesdays",
+        "title": "Quiet Tuesdays",
         "description": "A handful of tables occupied. Staff standing around. Losing money each night.",
         "linkText": "Fix Tuesdays",
         "linkHref": "#solutions"
       },
       {
         "emoji": "📉",
-        "title": "Wednesday Wasteland",
+        "title": "Slow Wednesdays",
         "description": "Kitchen prepped for a full room, serving only a handful. Food waste mounting. Morale dropping.",
         "linkText": "Fix Wednesdays",
         "linkHref": "#solutions"
       },
       {
         "emoji": "🔄",
-        "title": "The Vicious Cycle",
-        "description": "Empty pub looks closed → People avoid it → Gets emptier → Death spiral.",
+        "title": "The Visibility Cycle",
+        "description": "Quiet room looks flat -> fewer people choose you -> trade stays quiet.",
         "linkText": "Break the cycle",
         "linkHref": "#solutions"
       }
     ],
     "brutalMath": {
-      "heading": "The Brutal Math: Every Dead Midweek Night Costs You Money",
-      "description": "Money bleeds from your business while your competition gets busier because they cracked the midweek code. Time to steal it back.",
-      "ctaText": "Fix my midweek crisis NOW"
+      "heading": "The Practical Math: Quiet Midweek Nights Have a Cost",
+      "description": "While competitors build midweek routines, inconsistent trade slows momentum. A clear plan helps close the gap.",
+      "ctaText": "Help me fix midweek trade"
     }
   },
   "solutionsSection": {
@@ -41,7 +41,7 @@
       {
         "_key": "quiz-night",
         "title": "Quiz Night 2.0",
-        "description": "Not your grandad's quiz",
+        "description": "Fast, modern, and repeatable",
         "features": [
           "AI-generated topical questions",
           "Social media teasers build anticipation",
@@ -53,19 +53,19 @@
       {
         "_key": "taco-tuesday",
         "title": "Taco Tuesday",
-        "description": "Simple, profitable, Instagram-worthy",
+        "description": "Simple, profitable, and easy to promote",
         "features": [
           "3 tacos + beer for £12.95",
           "65% GP on food combo",
           "Build-your-own options",
           "Sharing platters for groups"
         ],
-        "result": "Turns the deadest night into a busy one"
+        "result": "Turns a quiet night into a busy one"
       },
       {
         "_key": "open-mic",
         "title": "Open Mic Night",
-        "description": "Zero cost, maximum community",
+        "description": "Low cost, high community value",
         "features": [
           "Performers bring their crowd",
           "No entertainment costs",
@@ -115,7 +115,7 @@
     ]
   },
   "transformationTimeline": {
-    "heading": "Your Midweek Transformation Timeline",
+    "heading": "Your Midweek Momentum Timeline",
     "weeks": [
       {
         "week": "Week 1-2",
@@ -131,7 +131,7 @@
       },
       {
         "week": "Month 2+",
-        "title": "Midweek = Money",
+        "title": "Midweek Momentum",
         "description": "Events established. Bookings required. Staff excited.",
         "result": "Midweek as busy as weekends"
       }
@@ -144,11 +144,11 @@
     }
   },
   "implementationGuide": {
-    "heading": "Your 30-Day Midweek Rescue Plan",
+    "heading": "Your 30-Day Midweek Plan",
     "steps": [
       {
         "day": "Week 1",
-        "title": "Choose Your Weapon",
+        "title": "Choose Your First Format",
         "tasks": [
           "Pick ONE Tuesday event to start",
           "Pick ONE Wednesday event to start",
@@ -158,7 +158,7 @@
       },
       {
         "day": "Week 2",
-        "title": "Build the Machine",
+        "title": "Build the System",
         "tasks": [
           "Create social media templates",
           "Design promotional materials",
@@ -225,25 +225,25 @@
     ]
   },
   "urgencySection": {
-    "heading": "Every Empty Tuesday Costs You Money. Every Empty Wednesday Does Too.",
-    "calculation": "That loss goes straight to your competition.",
-    "question": "How many more empty midweek nights can you afford?",
-    "ctaText": "Fix My Midweek Problem Now",
-    "guarantee": "30-day action plan with weekly support to keep the turnaround on track"
+    "heading": "Quiet Midweek Nights Have A Cost",
+    "calculation": "Without a weekly rhythm, momentum is harder to build.",
+    "question": "Ready to reset Tuesday and Wednesday trade?",
+    "ctaText": "Start My Midweek Plan",
+    "guarantee": "30-day action plan with weekly support to keep momentum on track"
   },
   "ctaSection": {
-    "title": "Ready to Pack Your Midweek Nights?",
-    "subtitle": "Let's turn your quietest nights into your most profitable",
-    "offerText": "Get your complete midweek transformation plan quickly",
+    "title": "Ready to Build Midweek Momentum?",
+    "subtitle": "Let's turn your quietest nights into consistent trade",
+    "offerText": "Get your complete midweek momentum plan quickly",
     "pricing": "Investment: £75/hour + VAT",
-    "note": "Limited availability to ensure quality support",
-    "ctaText": "Start My Midweek Transformation",
-    "whatsappMessage": "Hi Peter, my Tuesday and Wednesday nights are dead. Can you help?"
+    "note": "Small-team support, tailored to your venue",
+    "ctaText": "Start My Midweek Plan",
+    "whatsappMessage": "Hi Peter, my Tuesday and Wednesday nights are too quiet. Can you help?"
   },
   "faqs": [
     {
       "question": "What if my locals don't like change?",
-      "answer": "Start small and test. Run events alongside normal service initially. Your regulars might grumble, but when they see new faces and energy, they'll come around. Empty pubs die - busy pubs thrive. Your regulars want you to succeed."
+      "answer": "Start small and test. Run events alongside normal service first. Some regulars may be cautious, but when they see better atmosphere and consistency, they usually support it."
     },
     {
       "question": "How much promotion is needed?",
@@ -259,7 +259,7 @@
     },
     {
       "question": "What about staff costs for quiet nights?",
-      "answer": "That's the point - you're paying staff anyway! Better they serve 50 customers than stand around serving 5. Your fixed costs are covered. Every additional customer is almost pure profit. Busy staff are happy staff."
+      "answer": "That is exactly why midweek momentum matters. If staffing is already in place, each additional cover improves contribution. Better trade usually improves team energy as well."
     }
   ]
 }

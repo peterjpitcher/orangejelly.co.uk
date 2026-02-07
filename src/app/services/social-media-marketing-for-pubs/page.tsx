@@ -5,7 +5,7 @@ import socialMediaData from '../../../../content/data/services/social-media-mark
 export const metadata = generateMetadata({
   title: 'Social Media Marketing for Pubs - A Simple System That Works',
   description:
-    'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates, and local engagement that drives footfall. £75/hour + VAT.',
+    'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates, and execution rhythm that drives bookings and footfall. £75/hour + VAT.',
   path: '/services/social-media-marketing-for-pubs',
   keywords:
     'social media marketing for pubs, pub social media marketing, pub social media management, pub marketing on instagram and facebook, pub social strategy',

@@ -3,11 +3,10 @@ import Section from '@/components/Section';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
-import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Container from '@/components/Container';
 import FAQItem from '@/components/FAQItem';
 import { FAQSchema, ServiceSchema } from '@/components/StructuredData';
-import { URLS } from '@/lib/constants';
 import { type BreadcrumbItem } from '@/components/Breadcrumb';
 import { getBaseUrl } from '@/lib/site-config';
 
@@ -160,15 +159,14 @@ export default function PubServiceLandingPage({
             <Text size="lg" color="white" className="opacity-90 mb-8 max-w-2xl mx-auto">
               {data.cta.subtitle}
             </Text>
-            <Button
-              href={URLS.whatsapp(data.cta.whatsappMessage)}
-              variant="secondary"
+            <WhatsAppButton
+              text={data.cta.whatsappMessage}
+              label="Message Peter on WhatsApp"
               size="large"
-              external
+              variant="secondary"
               className="!bg-white !text-charcoal hover:!bg-cream"
-            >
-              Message Peter on WhatsApp
-            </Button>
+              showPhone={false}
+            />
           </div>
         </Container>
       </Section>

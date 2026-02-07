@@ -12,7 +12,7 @@ export const CONTACT = {
 // Company Information
 export const COMPANY = {
   name: 'Orange Jelly',
-  tagline: 'Hospitality marketing that delivers great results',
+  tagline: 'Transformative, action-first marketing for hospitality partners',
   website: 'https://www.orangejelly.co.uk',
   vatStatus: 'All prices exclude VAT',
 } as const;
@@ -31,22 +31,20 @@ export const PRICING = {
 export const MESSAGES = {
   // WhatsApp Messages
   whatsapp: {
-    default: 'Hi Peter, got time for a quick chat about my pub?',
-    services: "Hi Peter, I'd like to chat about your services",
-    training: "Hi Peter, I'm interested in AI training for my pub",
-    recovery: 'Hi Peter, I need help with my struggling pub',
-    blog: 'Hi Peter, I just read your blog post and need help with my venue',
+    default: "Hi Peter, I'd like help building momentum for my venue.",
+    services: "Hi Peter, I'd like to discuss your hospitality growth services.",
+    training: "Hi Peter, I'm interested in practical AI workflows for my venue.",
+    recovery: 'Hi Peter, I need help improving trade and momentum at my venue.',
+    blog: "Hi Peter, I just read your guide and I'd like help applying it.",
     notListed: 'Hi Peter, I need help with something not on your services list...',
     caseStudies: 'Hi Peter, just read your results from The Anchor. Can we chat?',
-    lostPage: "Hi Peter, I got lost on your site. Can you help me find what I'm looking for?",
+    lostPage: 'Hi Peter, I got lost on your site. Can you point me in the right direction?',
   },
 
   // Response Times
   response: {
-    whatsapp:
-      "Message me anytime - I'll get back as quickly as I can, but bear with me if I'm in service.",
-    email:
-      "Message me anytime - I'll get back as quickly as I can, but bear with me if I'm in service.",
+    whatsapp: "Message me anytime and I'll reply as quickly as I can around service.",
+    email: "Message me anytime and I'll reply as quickly as I can around service.",
   },
 
   // Trust Messages
@@ -56,7 +54,7 @@ export const MESSAGES = {
     thirtyDays: '30 Days',
     noContracts: 'No hidden fees, no long contracts, no surprises',
     noAgencyFees: 'No Agency Fees',
-    fromlicensees: 'From Real Operators',
+    fromlicensees: 'Small Team Support',
     resultsIn14Days: 'Results in 30 Days',
     costEffective: '£75/hour plus VAT',
     coversIncrease: '25-30 Quiz Teams',
@@ -69,13 +67,13 @@ export const MESSAGES = {
 
   // CTA Messages
   cta: {
-    primary: 'Fill Your Tables',
-    secondary: 'Get More Customers',
-    bookCall: 'Get Help Now',
-    tryRiskFree: 'Start Your Turnaround',
-    getQuickWins: 'Start Filling Tables',
-    seeHow: 'See What Works',
-    getHelp: 'Stop Struggling',
+    primary: "Let's Build Momentum",
+    secondary: 'Get More Bookings',
+    bookCall: 'Start a Growth Chat',
+    tryRiskFree: 'Build Momentum',
+    getQuickWins: 'Start With Quick Wins',
+    seeHow: 'See Measurable Results',
+    getHelp: 'Get Action-First Support',
   },
 } as const;
 
@@ -103,8 +101,8 @@ export const SUCCESS_METRICS = {
 export const FEATURES = {
   support: [
     'WhatsApp preferred for quick responses',
-    'Based in Stanwell Moor, serving pubs, restaurants, and bars across the UK',
-    'Run by actual operators who understand your challenges',
+    'Based in Stanwell Moor, supporting hospitality partners across the UK',
+    'Run by operators who understand trading pressure firsthand',
   ],
 } as const;
 

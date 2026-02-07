@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
-import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CTASection from '@/components/CTASection';
@@ -10,14 +10,13 @@ import TrustBar from '@/components/TrustBar';
 import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
 import ResultCard from '@/components/ResultCard';
-import { URLS } from '@/lib/constants';
 import { generateMetadata } from '@/lib/metadata';
 import { HowToSchema } from '@/components/StructuredData';
 
 export const metadata = generateMetadata({
-  title: '30 Days to Fuller Tables - Transform Your Empty Pub',
+  title: '30-Day Pub Growth Recovery Plan',
   description:
-    'Empty pub killing your profits? A practical 30-day plan to fill tables fast, tested at The Anchor.',
+    'A practical 30-day plan to turn quiet trade into consistent momentum. Action-first support tested at The Anchor.',
   path: '/empty-pub-solutions',
 });
 
@@ -156,7 +155,7 @@ export default function EmptyPubSolutions() {
       week: 'Week 3',
       title: 'Scaling Success',
       actions: [
-        'Leverage customer testimonials',
+        'Use customer testimonials consistently',
         'Build strategic local partnerships',
         'Implement referral systems',
         'Create repeatable success systems',
@@ -217,12 +216,12 @@ export default function EmptyPubSolutions() {
       <Hero
         title={
           <>
-            Your Pub is Empty.
+            Quiet Nights to
             <br />
-            We'll Fill It in 30 Days.
+            Consistent Trade in 30 Days.
           </>
         }
-        subtitle="Proven strategies that transformed The Anchor from empty to thriving"
+        subtitle="Proven, action-first strategies that transformed The Anchor and can be adapted to your venue"
         bottomText="£75/hour plus VAT • No long contracts • Real pub operators"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Empty Pub Solutions' }]}
       />
@@ -234,16 +233,17 @@ export default function EmptyPubSolutions() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-3xl mx-auto text-center">
             <Heading level={2} align="center" className="mb-6">
-              Empty Tables Are Killing Your Business
+              Quiet Tables Have a Cost
             </Heading>
             <Text size="xl" color="muted" align="center" className="mb-8">
-              Every empty chair costs you £30-50 in lost revenue. A half-empty pub on weeknights
-              means you're losing £15,000+ per month. That's £180,000 a year walking past your door.
+              Empty chairs reduce momentum and margin. The upside can be significant when you
+              improve discovery, give people a clear reason to visit, and execute consistently each
+              week.
             </Text>
             <div className="bg-orange-light rounded-lg p-6">
               <Text size="lg" weight="semibold" align="center">
-                The worst part? Your fixed costs stay the same whether you serve 10 customers or
-                100. Empty pubs bleed money fast.
+                Fixed costs stay the same regardless of covers. Improving demand consistency is
+                often the fastest route to commercial stability.
               </Text>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default function EmptyPubSolutions() {
       <Section background="teal">
         <AnimatedItem animation="slide-up">
           <Heading level={2} align="center" color="white" className="mb-12">
-            Your 30-Day Transformation Plan
+            Your 30-Day Momentum Plan
           </Heading>
           <Grid columns={{ default: 1, md: 2, lg: 4 }} gap="medium">
             {solutions.map((week, index) => (
@@ -304,7 +304,7 @@ export default function EmptyPubSolutions() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Everything You Need to Fill Your Pub
+              Everything You Need to Rebuild Momentum
             </Heading>
             <Grid columns={{ default: 1, md: 2 }} gap="large">
               <Card variant="colored" background="orange-light" padding="large">
@@ -352,13 +352,14 @@ export default function EmptyPubSolutions() {
               Real Support From A Fellow Licensee
             </Heading>
             <Text size="lg" align="center" className="mb-6">
-              We stay close through the first 30 days to make sure the plan sticks—weekly check-ins,
-              rapid adjustments, and practical help from someone who has filled the same empty
-              tables.
+              We stay close through the first 30 days so the plan sticks: weekly check-ins, rapid
+              adjustments, and practical guidance from someone running the same trading reality.
             </Text>
-            <Button href={URLS.whatsapp()} variant="primary" size="large" external>
-              Start Filling Tables Today
-            </Button>
+            <WhatsAppButton
+              text="Hi Peter, I need help rebuilding consistent trade in my pub."
+              label="Start Building Momentum"
+              size="large"
+            />
             <Text size="sm" color="muted" align="center" className="mt-4">
               £75 per hour plus VAT – Flexible support based on what your pub needs most
             </Text>
@@ -367,10 +368,10 @@ export default function EmptyPubSolutions() {
       </Section>
 
       <CTASection
-        title="How Many Empty Tables Can You Afford Tonight?"
-        subtitle="Every day you wait is money lost. Let's fill your pub starting tomorrow."
-        whatsappMessage="I need help filling my empty pub"
-        buttonText="Get My 30-Day Plan"
+        title="Ready to Rebuild Consistent Trade?"
+        subtitle="Let's focus on the highest-impact actions first and build measurable momentum over 30 days."
+        whatsappMessage="I need help rebuilding consistent trade in my pub"
+        buttonText="Start My 30-Day Plan"
       />
     </>
   );

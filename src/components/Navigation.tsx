@@ -59,7 +59,7 @@ export default function Navigation({ navigation }: NavigationProps) {
   // WhatsApp CTA configuration from local data
   const whatsappCta = navigation?.whatsappCta || {
     enabled: true,
-    text: "Hi Peter, I'd like to chat about Orange Jelly",
+    text: "Hi Peter, I'd like help building momentum for my venue.",
     phoneNumber: '+447990587315',
     showInDesktop: true,
     showInMobile: true,

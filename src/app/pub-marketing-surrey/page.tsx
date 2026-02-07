@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Surrey pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-surrey',
   keywords:
-    'pub marketing surrey, pub marketing consultant surrey, marketing for pubs surrey, surrey pub marketing agency, increase pub footfall surrey',
+    'pub marketing surrey, pub marketing consultant surrey, marketing for pubs surrey, surrey pub marketing support, increase pub footfall surrey',
   ogType: 'website',
 });
 

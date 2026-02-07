@@ -109,7 +109,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       <Section background="cream">
         <AnimatedItem animation="slide-up">
           <Heading level={2} align="center" className="mb-12">
-            Our Journey from Struggle to Success
+            Our Journey in Hospitality
           </Heading>
 
           <div className="max-w-4xl mx-auto">
@@ -270,28 +270,23 @@ export default function AboutPage({ faqs }: AboutPageProps) {
             <Text size="lg" color="white" className="mb-8">
               {aboutData.visitCTA.subtitle}
             </Text>
-            <Card
-              variant="shadowed"
-              className="inline-block max-w-md bg-black/20 backdrop-blur"
-              padding="large"
-            >
-              <Heading level={4} color="white" className="mb-2">
-                {aboutData.visitCTA.locationName}
-              </Heading>
-              {aboutData.visitCTA.address.split('\n').map((line, i, arr) => (
-                <Text key={i} color="white" className={i === arr.length - 1 ? 'mb-4' : ''}>
-                  {line}
-                </Text>
-              ))}
+            <div className="max-w-2xl mx-auto mb-8">
               <Link
                 href={aboutData.visitCTA.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-200 transition-colors underline font-medium"
+                className="block group"
+                aria-label="Visit The Anchor website"
               >
-                {aboutData.visitCTA.ctaText}
+                <OptimizedImage
+                  src="/images/the-anchor/the-anchor-exterior.jpg"
+                  alt="Exterior of The Anchor in Stanwell Moor"
+                  width={1200}
+                  height={675}
+                  className="rounded-xl shadow-xl object-cover w-full h-auto transition-opacity group-hover:opacity-90"
+                />
               </Link>
-            </Card>
+            </div>
           </div>
         </AnimatedItem>
       </Section>
@@ -300,7 +295,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       <Section background="cream" padding="medium">
         <RelatedLinks
           title="See How We Can Help"
-          subtitle="Choose where to start based on your biggest challenge"
+          subtitle="Choose where to start based on where momentum is stuck"
           links={aboutLinks}
           variant="card"
           columns={{ default: 1, md: 3 }}
@@ -308,8 +303,8 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       </Section>
 
       <CTASection
-        title="Ready to Transform Your Pub?"
-        subtitle="Let's chat about your challenges. No sales pitch, just one licensee to another."
+        title="Ready to Build Momentum?"
+        subtitle="Let's chat about your priorities. No sales pitch, just practical support from a small hands-on team."
       />
     </>
   );

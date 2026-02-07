@@ -15,34 +15,34 @@
   "links": {
     "services": [
       {
-        "label": "Empty Pub Recovery",
-        "href": "/services#empty-pub-recovery"
+        "label": "Event Innovation",
+        "href": "/services#event-innovation"
       },
       {
-        "label": "Menu Makeover",
-        "href": "/services#menu-makeover"
+        "label": "Transformational Marketing",
+        "href": "/services#transformational-marketing"
       },
       {
-        "label": "Marketing Package",
-        "href": "/services#marketing-package"
+        "label": "Simplified Technology Tools",
+        "href": "/services#simplified-technology-tools"
       },
       {
-        "label": "View All",
-        "href": "/services"
+        "label": "Clearing Up Ambiguity",
+        "href": "/services#clearing-up-ambiguity"
       }
     ],
     "resources": [
       {
-        "label": "Empty Pub Guide",
-        "href": "/empty-pub-solutions"
+        "label": "Hospitality Marketing Overview",
+        "href": "/pub-marketing"
       },
       {
-        "label": "Pub Rescue",
-        "href": "/pub-rescue"
+        "label": "Midweek Momentum",
+        "href": "/quiet-midweek-solutions"
       },
       {
-        "label": "ROI Calculator",
-        "href": "/#roi-calculator"
+        "label": "Success Stories",
+        "href": "/results"
       }
     ],
     "company": [
@@ -60,7 +60,7 @@
       },
       {
         "label": "The Anchor",
-        "href": "https://the-anchor.pub",
+        "href": "https://www.the-anchor.pub",
         "external": true
       }
     ]
@@ -69,8 +69,8 @@
     "whatsapp": {
       "enabled": true,
       "number": "447990587315",
-      "text": "Hi Peter, I'd like to chat about Orange Jelly"
+      "text": "Hi Peter, I'd like help building momentum for my venue."
     }
   },
-  "copyright": "© 2025 Orange Jelly Limited. All rights reserved."
+  "copyright": "© {year} Orange Jelly Limited. All rights reserved."
 }

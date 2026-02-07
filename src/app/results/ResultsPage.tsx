@@ -65,11 +65,11 @@ export default function ResultsPage({}: ResultsPageProps) {
                 us what to share.
               </Text>
               <Text size="lg" className="mb-6">
-                When you work with Orange Jelly, you're getting proven strategies from someone who's
-                been in your shoes and found a way out.
+                When you work with Orange Jelly, you get proven strategies from a small, hands-on
+                team working in hospitality every week.
               </Text>
               <Button href="/services" variant="primary" size="large">
-                See How We Can Help You
+                See How We Help
               </Button>
             </div>
             <Card variant="shadowed" padding="large" className="bg-white">
@@ -128,7 +128,7 @@ export default function ResultsPage({}: ResultsPageProps) {
 
       <CTASection
         title="Let's Fix Your Biggest Problem First"
-        subtitle="Tell me what's killing your business. I'll share exactly how we solved it at The Anchor."
+        subtitle="Tell me where performance is stuck. I'll share exactly how we moved the numbers at The Anchor."
       />
     </>
   );

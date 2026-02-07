@@ -96,7 +96,7 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
   const defaults: GenerateMetadataProps = {
     title: 'Orange Jelly',
     description:
-      'AI-powered pub marketing tested daily at The Anchor in Stanwell Moor. Practical systems that save time and help fill tables.',
+      'Transformative, action-first marketing for hospitality partners. Practical systems that accelerate bookings, footfall, repeat visits, and revenue.',
     path: '/',
     ogType: 'website',
     ogImage: '/images/og-default.jpg', // Standard OG image for non-article pages
@@ -108,37 +108,37 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
 // Helper for page-specific metadata
 export const pageMetadata = {
   home: {
-    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars',
+    title: 'Transformative Hospitality Growth Partner for Pubs, Bars & Venues',
     description:
-      'Hospitality marketing specialist leveraging AI to deliver great results for pubs, restaurants, and bars. Proven at The Anchor.',
+      'Orange Jelly accelerates hospitality growth with proactive strategy, AI-enabled delivery, and measurable commercial outcomes. Small team. Big momentum.',
     keywords:
-      'hospitality marketing specialist, pub marketing UK, restaurant marketing, bar marketing, fill tables, increase bookings',
+      'transformative hospitality marketing, pub marketing UK, bar marketing, venue marketing, increase bookings, commercial growth',
   },
   services: {
-    title: 'Hospitality Marketing Services | Fill Tables & Boost Revenue',
+    title: 'Hospitality Growth Services | Orange Jelly',
     description:
-      'Proven hospitality marketing services that fill empty tables. Menu optimization, social media automation, website design. From real operators who understand your challenges.',
+      'Outcome-led hospitality growth support built for pubs, bars, restaurants, venues, hotels, and event spaces. Faster execution, clearer priorities, measurable improvement.',
     keywords:
-      'hospitality marketing services, pub marketing, restaurant marketing, bar marketing, social media management',
+      'hospitality growth programmes, pub marketing services, bar marketing, venue marketing, social media systems',
   },
   results: {
     title: 'Hospitality Marketing Success Stories | Real Results',
     description:
-      "See real numbers and lessons from The Anchor. No theory - just what we've tested in our own pub.",
+      'See measurable outcomes from The Anchor and partner venues. Action-first systems focused on bookings, footfall, and repeat visits.',
     keywords:
       'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results',
   },
   about: {
-    title: 'About Orange Jelly | Hospitality Marketing Specialist',
+    title: 'About Orange Jelly | Small Team, Transformative Growth Partner',
     description:
-      'Meet Peter Pitcher, owner of The Anchor pub and founder of Orange Jelly. Learn how AI-powered marketing helps pubs, restaurants, and bars thrive.',
+      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. Learn how a small, hands-on team helps hospitality partners grow through challenging trading conditions.',
     keywords:
-      'Orange Jelly, hospitality marketing specialist, Peter Pitcher, The Anchor Stanwell Moor, pub marketing, restaurant marketing',
+      'Orange Jelly, hospitality growth partner, Peter Pitcher, The Anchor Stanwell Moor, pub marketing, bar marketing',
   },
   contact: {
     title: 'Contact Orange Jelly | Hospitality Marketing Help',
     description:
-      'Ready to fill your tables? Contact Orange Jelly for a free chat about your hospitality marketing challenges. Real advice from a real operator.',
+      'Talk to Orange Jelly about your biggest growth bottleneck and get an action-first plan for bookings, footfall, and repeat visits.',
     keywords:
       'contact hospitality marketing, pub marketing consultation, restaurant marketing help, bar marketing help UK',
   },

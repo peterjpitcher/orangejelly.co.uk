@@ -4,9 +4,10 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import FAQItem from '@/components/FAQItem';
 import Container from '@/components/Container';
 import { FAQSchema } from '@/components/StructuredData';
-import { URLS } from '@/lib/constants';
 
 type LandingFaq = {
   question: string;
@@ -145,15 +146,14 @@ export default function PubMarketingLocationLandingPage({
             <Text size="lg" color="white" className="opacity-90 mb-8 max-w-2xl mx-auto">
               {data.cta.subtitle}
             </Text>
-            <Button
-              href={URLS.whatsapp(data.cta.whatsappMessage)}
-              variant="secondary"
+            <WhatsAppButton
+              text={data.cta.whatsappMessage}
+              label="Message Peter on WhatsApp"
               size="large"
-              external
+              variant="secondary"
               className="!bg-white !text-charcoal hover:!bg-cream"
-            >
-              Message Peter on WhatsApp
-            </Button>
+              showPhone={false}
+            />
           </div>
         </Container>
       </Section>
@@ -165,12 +165,7 @@ export default function PubMarketingLocationLandingPage({
           </Heading>
           <div className="space-y-4">
             {faqsForDisplay.map((faq, index) => (
-              <Card key={index} variant="bordered" padding="medium">
-                <Heading level={3} className="mb-2">
-                  {faq.question}
-                </Heading>
-                <Text color="muted">{faq.answer}</Text>
-              </Card>
+              <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </Container>

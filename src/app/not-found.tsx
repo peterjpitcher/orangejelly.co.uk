@@ -3,6 +3,7 @@ import Section from '@/components/Section';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import Card from '@/components/Card';
 import { LandmarkMain } from '@/components/AriaLandmarks';
@@ -24,7 +25,7 @@ interface QuickStartLink {
 export const metadata = generateStaticMetadata({
   title: 'Page Not Found',
   description:
-    'The page you are looking for could not be found. Let us help you find what you need to fill your pub.',
+    'The page you are looking for could not be found. Let us help you find what you need.',
   path: '/404',
   noIndex: true,
 });
@@ -37,7 +38,7 @@ export default function NotFound() {
     <>
       <Hero
         title="Oops! This Page Got Lost"
-        subtitle="Like a punter who can't find your pub - but don't worry, we'll get you back on track"
+        subtitle="Looks like this page moved. We will get you back on track."
         showCTA={false}
       />
 
@@ -49,9 +50,8 @@ export default function NotFound() {
             </Heading>
 
             <Text size="lg" className="mb-8 max-w-2xl mx-auto">
-              The page you're looking for seems to have wandered off like a customer to the pub down
-              the road. But don't worry - we've got plenty of ways to help you fill those empty
-              tables.
+              The page you're looking for is not here anymore. No problem, here are the fastest
+              routes to the right section.
             </Text>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -74,38 +74,38 @@ export default function NotFound() {
             <Grid columns={{ default: 1, md: 2 }} gap="medium">
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Empty Pub Solutions?
+                  Transformational Marketing?
                 </Heading>
                 <Text className="mb-4">
-                  If your tables are sitting empty, we've got proven strategies to fill them - fast.
+                  Clear plans and action-first execution to build momentum quickly.
                 </Text>
-                <Button href="/empty-pub-solutions" variant="ghost" size="small">
-                  Fill Your Pub →
+                <Button href="/services#transformational-marketing" variant="ghost" size="small">
+                  See Transformational Marketing →
                 </Button>
               </Card>
 
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Marketing Help?
+                  Event Innovation?
                 </Heading>
                 <Text className="mb-4">
-                  Stop wasting time on social media. Let us handle your marketing while you serve
-                  customers.
+                  Fresh event formats that are easier to run, easier to sell, and built for repeat
+                  visits.
                 </Text>
-                <Button href="/services#done-for-you-marketing" variant="ghost" size="small">
-                  Get Marketing Help →
+                <Button href="/services#event-innovation" variant="ghost" size="small">
+                  See Event Innovation →
                 </Button>
               </Card>
 
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Menu Makeover?
+                  Simplified Technology Tools?
                 </Heading>
                 <Text className="mb-4">
-                  Turn your menu into a profit machine with descriptions that make mouths water.
+                  Simplify your stack, cut waste, and make your tools work harder.
                 </Text>
-                <Button href="/services#boost-food-sales" variant="ghost" size="small">
-                  Boost Food Sales →
+                <Button href="/services#simplified-technology-tools" variant="ghost" size="small">
+                  See Technology Tools →
                 </Button>
               </Card>
 
@@ -132,21 +132,17 @@ export default function NotFound() {
 
             <Text size="lg" className="mb-8">
               No problem! I'm Peter. Billy runs The Anchor day-to-day, and I handle marketing and
-              business development. Let's have a chat about what's keeping you up at night - I've
-              probably been there too.
+              business development. Let's have a quick chat about where momentum is stuck.
             </Text>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div>
                 <Text className="font-semibold mb-2">Quick Chat on WhatsApp</Text>
-                <Button
-                  href={`https://wa.me/${CONTACT.phoneInternational}?text=Hi%20Peter,%20I%20was%20looking%20for%20something%20on%20your%20website%20but%20couldn't%20find%20it`}
-                  variant="primary"
+                <WhatsAppButton
+                  text="Hi Peter, I was looking for something on your website but couldn't find it."
+                  label="Message Peter on WhatsApp"
                   size="medium"
-                  external
-                >
-                  Message Peter on WhatsApp
-                </Button>
+                />
               </div>
 
               <Text>or</Text>
@@ -164,7 +160,7 @@ export default function NotFound() {
         <Section background="orange-light">
           <RelatedLinks
             title="Popular Pages"
-            subtitle="Here's what most pub owners are looking for"
+            subtitle="Here's what most hospitality partners are looking for"
             links={quickStartLinks}
             variant="card"
             columns={{ default: 1, md: 3 }}

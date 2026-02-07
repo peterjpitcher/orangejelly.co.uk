@@ -1,7 +1,7 @@
 {
   "service": {
     "name": "Instagram services for pubs",
-    "description": "Practical Instagram support for pubs: a content plan, Reels workflow, local engagement routine, and simple reporting that drives footfall.",
+    "description": "Practical Instagram support for pubs: a content plan, Reels workflow, local visibility routine, and simple reporting that drives footfall.",
     "url": "/services/instagram-services-for-pubs",
     "price": "75",
     "currency": "GBP"
@@ -17,7 +17,7 @@
     "paragraphs": [
       "Most pub Instagram accounts fail for one reason: they post random stuff with no plan, then give up when it doesn't move the needle.",
       "I'll help you build a repeatable system: what to post, how to film it on a phone, how to batch it in one session, and how to get it seen by local people who actually visit pubs.",
-      "Everything is designed for real pub life and tested at The Anchor: quick to create, easy to run, and focused on getting bums on seats."
+      "Everything is designed for real pub life and tested at The Anchor: quick to create, easy to run, and focused on bookings and footfall."
     ]
   },
   "deliverables": {
@@ -36,7 +36,7 @@
         "description": "Ready-to-use copy that sells specific nights: quiz, Sunday lunch, sport, live music, and specials."
       },
       {
-        "title": "Local engagement routine",
+        "title": "Local visibility routine",
         "description": "What to do for 10 minutes a day to get in front of local customers without spam or cringe."
       },
       {
@@ -93,7 +93,7 @@
     },
     {
       "question": "What does it cost?",
-      "answer": "£75 per hour plus VAT. No packages. Start small, prove it works, then scale support if you want."
+      "answer": "£75 per hour plus VAT. No fixed retainers. Start small, prove it works, then scale support if you want."
     }
   ],
   "cta": {

@@ -186,8 +186,8 @@ export default function Partnerships({
         </div>
 
         <Text size="sm" color="muted" align="center" className="mt-8 pt-6 border-t border-gray-200">
-          We're proud to work with these industry leaders, sharing our AI innovations to help
-          transform the wider pub industry.
+          We're proud to work with these industry leaders, sharing practical innovation that helps
+          hospitality partners grow.
         </Text>
       </Card>
     </AnimatedItem>

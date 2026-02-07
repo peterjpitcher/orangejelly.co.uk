@@ -14,9 +14,9 @@ interface ResultsSectionProps {
 
 function ResultsSection({
   title = 'Real Results from The Anchor',
-  testimonial = "We've added £75,000-£100,000 of value to our business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. Every strategy we share has been proven in our own pub.",
-  subtext = "Featured in BII's Autumn 2025 magazine for AI innovation. From quiz nights to tasting events - see how we turned our pub around.",
-  buttonText = 'See More Pub Turnarounds',
+  testimonial = "We've added £75,000-£100,000 of value to our business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. Every strategy we share has been proven in our own venue.",
+  subtext = 'Featured in BII magazine for AI innovation in hospitality. From quiz nights to tasting events, this is measurable change in business performance.',
+  buttonText = 'See More Hospitality Results',
   buttonHref = '/results',
   className = '',
 }: ResultsSectionProps) {

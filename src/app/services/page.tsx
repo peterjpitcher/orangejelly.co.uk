@@ -3,12 +3,12 @@ import ServicesPage from './ServicesPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Pub Marketing Services - Instagram, Facebook, Ads & Content',
+    title: 'Hospitality Growth Services - Events, Marketing, Tools & Clarity',
     description:
-      'Pub marketing services from a working licensee: Instagram, Facebook, paid social ads, and content creation that drive footfall. £75 per hour plus VAT.',
+      'Transformative, action-first growth services for hospitality partners: event innovation, transformational marketing, simplified tools, and clarity that unlocks momentum.',
     path: '/services',
     keywords:
-      'pub marketing services, instagram services for pubs, facebook services for pubs, paid social for pubs, content creation for pubs, social media marketing for pubs',
+      'hospitality growth services, event innovation hospitality, transformational marketing hospitality, simplified technology tools hospitality, action-first marketing support',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

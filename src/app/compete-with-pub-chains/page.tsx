@@ -18,9 +18,9 @@ import Button from '@/components/Button';
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: 'Beat Wetherspoons & Pub Chains - David vs Goliath Strategy',
+    title: 'Compete with Pub Chains - Practical Challenger Strategy',
     description:
-      'Stop losing customers to chain pubs. Proven strategies to compete and win against Wetherspoons, Greene King, and Marstons. Turn their weaknesses into your strengths.',
+      'Stop losing customers to chain pubs. Practical strategies to compete through differentiation, community, and experience instead of price wars.',
     path: '/compete-with-pub-chains',
   });
 }
@@ -83,7 +83,7 @@ export default function CompeteWithPubChains() {
                 The David vs Goliath Strategy
               </Heading>
               <Text size="lg" align="center" className="mb-12 text-charcoal/70">
-                Turn their biggest strengths into weaknesses. Your small size is your superpower.
+                Turn chain strengths into opportunity. Your small size is your strategic advantage.
               </Text>
 
               <div className="space-y-6">
@@ -142,7 +142,7 @@ export default function CompeteWithPubChains() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto text-center">
             <Heading level={2} color="white" className="mb-12">
-              How We Beat Our Local Wetherspoons
+              How We Compete With Our Local Wetherspoons
             </Heading>
 
             <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
@@ -208,7 +208,7 @@ export default function CompeteWithPubChains() {
                 The Result?
               </Heading>
               <Text size="lg" className="mb-4">
-                They get the bargain hunters. We get the community.
+                They get bargain hunters. We focus on community and experience.
               </Text>
               <Text className="mb-6">
                 Our average spend is £18 vs their £8. Our customers come 3x per week vs their 1x.
@@ -279,7 +279,7 @@ export default function CompeteWithPubChains() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Your Unfair Advantages Over Chain Pubs
+              Your Practical Advantages Over Chain Pubs
             </Heading>
 
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
@@ -335,7 +335,7 @@ export default function CompeteWithPubChains() {
                   the football team meets Thursdays.
                 </Text>
                 <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Community insider
+                  Your superpower: Community insight
                 </Text>
               </Card>
 
@@ -387,7 +387,7 @@ export default function CompeteWithPubChains() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Your 30-Day Chain-Beating Action Plan
+              Your 30-Day Challenger Action Plan
             </Heading>
 
             <div className="space-y-4">
@@ -450,7 +450,7 @@ export default function CompeteWithPubChains() {
                   <div className="md:col-span-2">
                     <FeatureList
                       items={[
-                        'Launch "Refugees from Chains" welcome campaign',
+                        'Launch a local "choose independent" welcome campaign',
                         'Create experiences worth more than cheap pints',
                         'Build reputation as THE place for something specific',
                         'Turn your best customers into evangelical advocates',
@@ -497,7 +497,7 @@ export default function CompeteWithPubChains() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto text-center">
             <Heading level={2} color="white" className="mb-8">
-              Ready to Stop Losing to Chain Pubs?
+              Ready to Build a Stronger Independent Position?
             </Heading>
 
             <Card background="white" padding="large">
@@ -534,7 +534,7 @@ export default function CompeteWithPubChains() {
                   £75/hour + VAT
                 </Text>
                 <Text className="text-charcoal/70 mb-4">
-                  Most pubs see 25% revenue increase within 60 days
+                  Most pubs see meaningful momentum inside the first 30 to 60 days
                 </Text>
                 <Text size="sm" weight="semibold" className="text-green-600">
                   30-Day Partnership: weekly optimisation with a working licensee
@@ -544,7 +544,7 @@ export default function CompeteWithPubChains() {
               <WhatsAppButton text="I'm ready to beat the chains" size="large" />
 
               <Text size="sm" className="mt-4 text-charcoal/60">
-                Limited availability - I only work with 5 pubs at a time to ensure results
+                Small-team support - limited capacity to stay hands-on
               </Text>
             </Card>
           </div>
@@ -553,10 +553,10 @@ export default function CompeteWithPubChains() {
 
       {/* Final CTA */}
       <CTASection
-        title="David Beat Goliath. So Can You."
-        subtitle="Stop competing on price. Start competing on what matters. Get the strategy, tools, and support to build a pub that chain customers wish they had."
-        buttonText="Start Beating Chain Pubs Today"
-        whatsappMessage="Peter, I'm losing customers to chain pubs. Help me create my unique position and win them back."
+        title="Compete Smarter Than Chains"
+        subtitle="Stop competing on price. Start competing on what matters with practical strategy, clear positioning, and consistent execution."
+        buttonText="Start My Challenger Plan"
+        whatsappMessage="Peter, I'm losing customers to chain pubs. Help me build a stronger independent position."
       />
 
       {/* Structured Data */}

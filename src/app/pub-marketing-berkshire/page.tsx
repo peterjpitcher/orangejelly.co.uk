@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Berkshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-berkshire',
   keywords:
-    'pub marketing berkshire, pub marketing consultant berkshire, marketing for pubs berkshire, berkshire pub marketing agency, increase pub footfall berkshire',
+    'pub marketing berkshire, pub marketing consultant berkshire, marketing for pubs berkshire, berkshire pub marketing support, increase pub footfall berkshire',
   ogType: 'website',
 });
 

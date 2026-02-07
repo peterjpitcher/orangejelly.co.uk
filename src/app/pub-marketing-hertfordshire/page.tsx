@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Hertfordshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-hertfordshire',
   keywords:
-    'pub marketing hertfordshire, pub marketing consultant hertfordshire, marketing for pubs hertfordshire, hertfordshire pub marketing agency, increase pub footfall hertfordshire',
+    'pub marketing hertfordshire, pub marketing consultant hertfordshire, marketing for pubs hertfordshire, hertfordshire pub marketing support, increase pub footfall hertfordshire',
   ogType: 'website',
 });
 

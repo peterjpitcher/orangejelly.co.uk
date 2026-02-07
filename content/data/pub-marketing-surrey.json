@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Pub Marketing for Surrey Pubs",
-    "subtitle": "Surrey pubs win when they are easy to find on Google and give people a clear reason to visit. Here's a simple system that works without agency fluff.",
+    "subtitle": "Surrey pubs win when they are easy to find on Google and give people a clear reason to visit. Here's a simple system that works without generic marketing fluff.",
     "ctaText": "Hi Peter, I run a pub in Surrey and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
@@ -44,7 +44,7 @@
         "ctaText": "Pub marketing overview"
       },
       {
-        "title": "Fix dead midweek nights",
+        "title": "Build midweek momentum",
         "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"

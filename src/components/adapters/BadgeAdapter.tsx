@@ -20,7 +20,7 @@ export default function BadgeAdapter({ variant = 'inline', size = 'medium' }: Le
 
   return (
     <a
-      href="https://the-anchor.pub"
+      href="https://www.the-anchor.pub"
       target="_blank"
       rel="noopener noreferrer"
       className={cn('group', floatingClasses)}

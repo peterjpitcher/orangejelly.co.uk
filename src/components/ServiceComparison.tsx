@@ -16,49 +16,62 @@ import {
 } from '@/components/ui/table';
 
 export default function ServiceComparison() {
-  const [selectedService, setSelectedService] = useState('recovery');
+  const [selectedService, setSelectedService] = useState('transformational');
 
   const services = {
-    recovery: {
-      name: 'Empty Pub Recovery',
+    eventInnovation: {
+      name: 'Event Innovation',
       price: PRICING.hourlyRate.display,
-      timeline: '15-20 hours estimated',
-      perfect: 'Struggling pubs needing complete transformation',
+      timeline: 'Fast setup + weekly rhythm',
+      perfect: 'Venues that need stronger reasons to visit and return',
       includes: [
-        'Complete business analysis',
-        'Menu optimization for profit',
-        'Social media automation',
-        'Event planning systems',
-        'Customer retention strategy',
-        'Weekly progress reviews',
-      ],
-      highlight: true,
-    },
-    menu: {
-      name: 'Menu Makeover',
-      price: PRICING.hourlyRate.display,
-      timeline: '4-6 hours estimated',
-      perfect: 'Pubs with food GP below 65%',
-      includes: [
-        'Complete menu analysis',
-        'Psychology-based positioning',
-        'Profit margin optimization',
-        'Staff training materials',
-        'Seasonal planning system',
+        'Event formats that fit your venue and margins',
+        'Clear offer structure (name, pricing, timings, delivery)',
+        'Simple promotion and booking flow',
+        'Staff briefing and run-of-show guidance',
+        'Post-event review and improvement cycle',
       ],
       highlight: false,
     },
-    custom: {
-      name: 'Custom Projects',
+    transformational: {
+      name: 'Transformational Marketing',
       price: PRICING.hourlyRate.display,
-      timeline: 'As needed',
-      perfect: 'Specific projects or ongoing help',
+      timeline: '30/60/90-day momentum plan',
+      perfect: 'Partners who need clear direction and consistent execution',
       includes: [
-        'Social media automation',
-        'Website optimization',
-        'Event planning',
-        'AI training sessions',
-        'Whatever you need!',
+        'Goal-led marketing plan with practical priorities',
+        'Campaigns with clear start, middle, and finish',
+        'Stronger positioning and reasons to visit',
+        'Weekly execution rhythm and measurable tracking',
+        'Continuous iteration based on what works',
+      ],
+      highlight: true,
+    },
+    tools: {
+      name: 'Simplified Technology Tools',
+      price: PRICING.hourlyRate.display,
+      timeline: 'Audit first, simplify fast',
+      perfect: 'Teams with too many tools or underperforming systems',
+      includes: [
+        'Tool audit across booking, website, reviews, email, and socials',
+        'Fix-first approach before adding new platforms',
+        'Waste reduction on subscriptions and stack sprawl',
+        'Simple systems for consistency and time savings',
+        'Practical team enablement',
+      ],
+      highlight: false,
+    },
+    clarity: {
+      name: 'Clearing Up Ambiguity',
+      price: PRICING.hourlyRate.display,
+      timeline: 'Quick clarity sprint + playbooks',
+      perfect: 'Teams stuck in mixed priorities and slow decision cycles',
+      includes: [
+        'Clear priorities for now vs later',
+        'Simple standards for brand and customer experience',
+        'Action-ready guest profiles',
+        'Playbooks for events, offers, and key dates',
+        'Clear ownership so work stops falling through gaps',
       ],
       highlight: false,
     },
@@ -204,9 +217,8 @@ export default function ServiceComparison() {
       {/* Bottom comparison note */}
       <Card background="cream" padding="small" className="mt-8 text-center">
         <Text size="sm" className="text-charcoal/80 mb-2">
-          <strong>Not sure which to choose?</strong> Struggling pubs start with Empty Pub Recovery
-          for complete transformation, others choose specific services based on their biggest
-          challenges.
+          <strong>Not sure where to start?</strong> Most partners begin with Transformational
+          Marketing to set direction, then add the other offers as momentum builds.
         </Text>
         <Text size="xs" className="text-charcoal/60">
           {COMPANY.vatStatus}

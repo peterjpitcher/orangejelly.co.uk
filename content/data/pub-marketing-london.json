@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Pub Marketing for London Pubs",
-    "subtitle": "London is competitive. Your pub needs to be found fast and give people a clear reason to visit. Here's how we do it without agency fluff.",
+    "subtitle": "London is competitive. Your pub needs to be found fast and give people a clear reason to visit. Here's how we do it without generic marketing fluff.",
     "ctaText": "Hi Peter, I run a London pub and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
@@ -44,7 +44,7 @@
         "ctaText": "Pub marketing overview"
       },
       {
-        "title": "Fix dead midweek nights",
+        "title": "Build midweek momentum",
         "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"

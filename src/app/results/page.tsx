@@ -4,9 +4,9 @@ import { getBaseUrl } from '@/lib/site-config';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Hospitality Marketing Results for Pubs, Restaurants & Bars',
+    title: 'Hospitality Marketing Results for Pubs, Bars & Venues',
     description:
-      'See hospitality marketing results proven at The Anchor, then adapted for pubs, restaurants, and bars. Real numbers, real strategies, and measurable growth.',
+      'See hospitality marketing results proven at The Anchor, then adapted for hospitality partners. Real numbers, real strategies, measurable growth.',
     path: '/results',
     keywords:
       'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results, increase revenue, The Anchor success',
@@ -66,7 +66,7 @@ export default function Results() {
         },
         datePublished: '2024-09-15',
         articleBody:
-          'From posting once a week to daily engagement that actually fills tables. AI creates content that sounds like us, not a robot...',
+          'From posting once a week to daily visibility that drives bookings. AI creates content that sounds like us, not a robot...',
       },
       {
         '@type': 'Article',

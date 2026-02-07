@@ -32,24 +32,24 @@ export default function StickyCTA() {
           <div className="flex items-center gap-3">
             <OptimizedImage
               src="/logo.png"
-              alt="Orange Jelly - AI tools for licensees"
+              alt="Orange Jelly - transformative hospitality marketing"
               width={32}
               height={32}
               className="rounded hidden sm:block"
             />
             <div className="text-center sm:text-left">
               <Text size="sm" weight="semibold" className="sm:text-base">
-                Get More Customers Without Agency Fees
+                Small Team. Action-First Support.
               </Text>
               <Text size="xs" className="text-charcoal/60 hidden sm:block">
-                Costs less than a part-time employee – Meaningful results inside 30 days
+                Pay for progress, not overheads. Meaningful momentum inside 30 days.
               </Text>
             </div>
           </div>
 
           {/* Right side - CTA */}
           <div className="flex items-center gap-3">
-            <WhatsAppButton text="Get Marketing Help" size="small" />
+            <WhatsAppButton text="Start a Growth Chat" size="small" />
 
             {/* Close button */}
             <Button

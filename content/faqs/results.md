@@ -2,48 +2,24 @@
 
 ## What results have you achieved at The Anchor?
 
-We reach 60,000-70,000 people every month on social media, our quiz nights now attract 25-30 regular teams each month, we've cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs, and added £75,000-£100,000 of value to our business using AI. Most importantly - we got our evenings back. Every strategy we share has delivered real results in our own pub.
+At The Anchor we now see 25-30 regular quiz teams each month, cut Sunday waste by £250/week, reduced supplier/rota/energy costs by £4,000+ per month, and improved operational consistency with practical AI-enabled systems.
 
-## How quickly will I see more customers from the recovery plan?
+## How quickly can outcomes improve?
 
-Results vary by pub, but at The Anchor we've seen quiz nights reach 25-30 regular teams each month, weekday revenue lift ~20%, and social reach hit 60,000-70,000 people monthly. Most improvements show inside 30 days.
+You can often see early movement in days. We usually target meaningful, measurable momentum over the first 30 days.
 
-## How quickly can I see results for my empty pub?
+## Do you focus on vanity metrics?
 
-See meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries.
+No. We focus on outcomes that matter commercially: bookings, footfall, repeat visits, event demand, and conversion from visibility.
 
-## How long until free marketing shows results?
+## Will the same approach work for every venue?
 
-Everything we do is built around a 30-day turnaround. Some actions, like fixing your Google listing, can spark enquiries within hours, while social posts and email campaigns build momentum over the first couple of weeks. The compounding effect becomes obvious by the end of the month.
+The principles are consistent, but execution is tailored to each partner's goals, audience, and operating reality.
 
-## What's your success rate with pub turnarounds?
+## What if results are slower than expected?
 
-Everything we teach is tested at The Anchor first. We don't have public case studies from other pubs yet, but we will publish them as we build them. For now, you can judge the approach on what we've achieved in our own pub.
+We review weekly, adjust quickly, and keep attention on the highest-impact priorities so momentum stays moving.
 
-## How quickly will I see midweek improvements?
+## Can I see examples before we start?
 
-Inside 30 days. Expect to feel the first lift in bookings during week two, then notice fuller evenings and consistent enquiries by the end of the month. Full transformation comes when you stick with the playbook.
-
-## What if your solutions don't work for my pub?
-
-Every pub is different, which is why we stay closely involved during the first month. Weekly check-ins, rapid adjustments, and direct WhatsApp access mean we keep iterating until it works. These strategies are based on real pub experience, not theory.
-
-## How can menu descriptions increase my food sales?
-
-Psychology-based menu descriptions guide customers to choose higher-margin dishes. We use proven techniques like sensory language, storytelling, and strategic positioning that lift ordering confidence and reduce waste.
-
-## Can AI help with supplier negotiations?
-
-Yes! AI analyzes your purchasing patterns, compares supplier prices, and identifies savings opportunities. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs by optimizing ordering and operations.
-
-## Can AI predict which events will be successful?
-
-Yes! By analyzing local demographics, past event performance, and social media engagement, AI helps predict which events will draw crowds. It's helped us avoid costly flops and double down on winners.
-
-## How quickly will I see results?
-
-You should feel early wins, but the commitment we make is meaningful, bankable progress inside 30 days. You won't wait months wondering if it's working.
-
-## Can I see examples of your work?
-
-Visit The Anchor's social media pages - everything you see there, I created using the same tools I'll teach you. 60,000-70,000 people reached monthly and quiz nights with 25-30 regular teams each month. That's not theory - that's our actual pub.
+Yes. Our Results page shows practical case examples from The Anchor and the methods we apply with partners.

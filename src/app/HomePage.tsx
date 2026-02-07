@@ -8,9 +8,9 @@ import OptimizedImage from '@/components/OptimizedImage';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
-import { URLS, CONTACT } from '@/lib/constants';
 import Text from '@/components/Text';
 import Container from '@/components/Container';
 import Box from '@/components/Box';
@@ -134,7 +134,9 @@ export default function HomePage({
     emoji: problem.emoji || problem.icon || '🍺',
     title: problem.title || problem.problem || '',
     description:
-      problem.description || problem.solution || 'We have the solution to help your pub thrive.',
+      problem.description ||
+      problem.solution ||
+      'We have practical support to help your venue build momentum.',
     linkHref: problem.linkHref || '/services',
   }));
 
@@ -205,7 +207,7 @@ export default function HomePage({
               </Heading>
               <Text size="lg" color="muted" align="center" className="mb-12 max-w-2xl mx-auto">
                 {sectionHeadings?.calculatorSubtext ||
-                  'Every pub is different. See exactly how much more revenue you could generate with proven strategies.'}
+                  'Every venue is different. See how much more revenue you could generate with focused action-first strategy.'}
               </Text>
               <ROICalculator />
 
@@ -214,34 +216,40 @@ export default function HomePage({
                   Ready to Increase Your Revenue?
                 </Text>
                 <Text color="muted" className="mb-6">
-                  Choose the solution that fits your budget and timeline
+                  Choose the support focus that fits your priorities
                 </Text>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <Card variant="bordered" padding="large">
                     <Heading level={4} className="mb-3">
-                      Quick Win
+                      Event Innovation
                     </Heading>
-                    <Text className="mb-4">Single consultation to tackle your biggest problem</Text>
+                    <Text className="mb-4">
+                      Fresh event formats that are easier to run and easier to sell
+                    </Text>
                     <Button href="/services" variant="ghost">
-                      Start Here →
+                      Explore Service →
                     </Button>
                   </Card>
                   <Card variant="bordered" padding="large">
                     <Heading level={4} className="mb-3">
-                      Full Recovery
+                      Transformational Marketing
                     </Heading>
-                    <Text className="mb-4">Complete marketing makeover with ongoing support</Text>
+                    <Text className="mb-4">
+                      Clear plans, campaigns, and weekly execution that builds momentum
+                    </Text>
                     <Button href="/services" variant="primary">
-                      Learn More
+                      Explore Service
                     </Button>
                   </Card>
                   <Card variant="bordered" padding="large">
                     <Heading level={4} className="mb-3">
-                      DIY Training
+                      Simplified Technology Tools
                     </Heading>
-                    <Text className="mb-4">AI tools and training to do it yourself</Text>
+                    <Text className="mb-4">
+                      Simpler tools, lower waste, and practical systems your team can run
+                    </Text>
                     <Button href="/services" variant="ghost">
-                      Get Training →
+                      Explore Service →
                     </Button>
                   </Card>
                 </div>
@@ -257,62 +265,56 @@ export default function HomePage({
           <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
             <Box>
               <Heading level={2} className="mb-6">
-                {sectionHeadings?.aboutHeading || "We're licensees, Just Like You"}
+                {sectionHeadings?.aboutHeading || "We're hospitality operators, just like you"}
               </Heading>
               <Text size="lg" color="muted" className="mb-4">
                 {sectionHeadings?.aboutText1 ||
-                  "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I handle marketing and business development around a full-time role. We faced the same struggles - empty tables, rising costs, fierce competition."}
+                  "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I lead marketing and growth. We face the same trading pressure every week."}
               </Text>
               <Text size="lg" color="muted" className="mb-6">
                 {sectionHeadings?.aboutText2 ||
-                  "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and everything I recommend is tested at The Anchor first."}
+                  'Orange Jelly exists to help hospitality partners accelerate growth with proactive plans, AI-enabled delivery, and practical systems tested at The Anchor first. Small team, direct support, no layers.'}
               </Text>
               <Button href="/about" variant="ghost" className="text-lg">
                 {sectionHeadings?.aboutButtonText || 'Read Our Full Story →'}
               </Button>
             </Box>
-            <Card
-              variant="colored"
-              background="white"
-              padding="large"
-              className="!bg-teal text-center relative overflow-hidden"
+            <a
+              href="https://www.the-anchor.pub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              aria-label="Visit The Anchor website"
             >
-              {/* Orange Jelly watermark in corner */}
-              <Box className="absolute top-2 right-2 opacity-20" position="absolute">
+              <Card
+                variant="colored"
+                background="white"
+                padding="large"
+                className="!bg-teal text-center relative overflow-hidden transition-opacity hover:opacity-95"
+              >
+                <Text size="xs" color="white" align="center" className="mb-4 opacity-90">
+                  {sectionHeadings?.aboutCardLabel || 'Proven Daily At'}
+                </Text>
                 <OptimizedImage
-                  src="/logo.png"
-                  alt=""
-                  width={60}
-                  height={60}
-                  className="rounded-lg"
-                  loading="lazy"
+                  src="/images/the-anchor/the-anchor-exterior.jpg"
+                  alt="Exterior of The Anchor in Stanwell Moor"
+                  width={320}
+                  height={180}
+                  className="mx-auto mb-4 rounded-lg"
                   style={{ width: 'auto', height: 'auto' }}
                 />
-              </Box>
+                <Text color="white" align="center" className="opacity-90 font-semibold">
+                  {sectionHeadings?.aboutCardText ||
+                    'Real hospitality experience + proven growth systems'}
+                </Text>
 
-              <Text size="xs" color="white" align="center" className="mb-4 opacity-90">
-                {sectionHeadings?.aboutCardLabel || 'Proven Daily At'}
-              </Text>
-              <OptimizedImage
-                src="/logo_the-anchor.png"
-                alt="The Anchor - Stanwell Moor"
-                width={240}
-                height={120}
-                className="mx-auto mb-4"
-                priority
-                style={{ width: 'auto', height: 'auto' }}
-              />
-              <Text color="white" align="center" className="opacity-90 font-semibold">
-                {sectionHeadings?.aboutCardText ||
-                  'Real pub experience + proven strategies = Orange Jelly'}
-              </Text>
-
-              {/* Orange accent line */}
-              <Box
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange to-transparent"
-                position="absolute"
-              ></Box>
-            </Card>
+                {/* Orange accent line */}
+                <Box
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange to-transparent"
+                  position="absolute"
+                ></Box>
+              </Card>
+            </a>
           </Grid>
         </AnimatedItem>
       </Section>
@@ -322,21 +324,17 @@ export default function HomePage({
         <AnimatedItem animation="scale" delay={300}>
           <Container maxWidth="3xl" center className="text-center">
             <Heading level={3} align="center" className="mb-4">
-              {sectionHeadings?.ctaBannerHeading || 'Stop Struggling. Start Thriving.'}
+              {sectionHeadings?.ctaBannerHeading || 'Less Talk. More Traction.'}
             </Heading>
             <Text size="lg" align="center" className="mb-6 max-w-2xl mx-auto">
               {sectionHeadings?.ctaBannerText ||
-                "Tell me what's killing your business. I'll share exactly how we fixed the same problems at The Anchor. Real solutions, no fluff."}
+                "Tell me where performance is stuck. I'll share the highest-impact next steps we use at The Anchor to create measurable movement."}
             </Text>
-            <Button
-              href={URLS.whatsapp()}
-              variant="primary"
+            <WhatsAppButton
+              text="Hi Peter, I'd like help building momentum for my venue."
+              label={sectionHeadings?.ctaBannerButton || 'Start a Growth Conversation'}
               size="medium"
-              external
-              aria-label={`Contact ${CONTACT.owner} on WhatsApp at ${CONTACT.phone}`}
-            >
-              {sectionHeadings?.ctaBannerButton || 'Get Marketing Help'}
-            </Button>
+            />
           </Container>
         </AnimatedItem>
       </Section>
@@ -356,10 +354,10 @@ export default function HomePage({
       )}
 
       <CTASection
-        title={sectionHeadings?.finalCtaTitle || 'Ready to Turn Your Pub Around?'}
+        title={sectionHeadings?.finalCtaTitle || 'Ready for a Step-Change in Performance?'}
         subtitle={
           sectionHeadings?.finalCtaSubtitle ||
-          "Let's talk about what's really hurting your business. I'll share the exact strategies that saved ours."
+          "Let's focus on the biggest bottleneck first and build weekly momentum from there."
         }
       />
     </>

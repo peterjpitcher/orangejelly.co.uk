@@ -18,7 +18,7 @@ interface ProblemCardsSectionProps {
 
 function ProblemCardsSection({
   problems,
-  title = "What's Killing Your Business?",
+  title = 'Where Growth Gets Stuck',
   className = '',
 }: ProblemCardsSectionProps) {
   if (!problems || problems.length === 0) {

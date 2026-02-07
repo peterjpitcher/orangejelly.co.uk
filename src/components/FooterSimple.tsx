@@ -65,7 +65,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
               Orange Jelly
             </Heading>
             <Text align="center" color="white" className="text-cream/80">
-              AI-powered hospitality marketing that saves up to 25 hours every week
+              Small team. Big momentum. Transformative marketing for hospitality partners.
             </Text>
           </div>
 
@@ -161,7 +161,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 {footerContent?.bottomBar?.additionalText?.replace(
                   ' | Made with ❤️ in Stanwell Moor',
                   ''
-                ) || 'Run by operators, for pubs, restaurants, and bars'}
+                ) || 'Run by operators, for hospitality partners'}
               </Text>
 
               {/* CTA Button */}
@@ -172,11 +172,11 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 external
                 className="mb-4"
               >
-                Get Marketing Help
+                Start a Growth Conversation
               </Button>
 
               <Text size="xs" align="center" color="white" className="opacity-60 mb-2">
-                I personally reply to every message. During service? I'll get back to you after.
+                I personally reply to every message. During service? I'll reply as soon as I can.
               </Text>
               <Text size="xs" align="center" color="white" className="opacity-60 max-w-3xl mx-auto">
                 Information on this site is general guidance only. Always consult the relevant

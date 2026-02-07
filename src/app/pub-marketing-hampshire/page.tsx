@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Hampshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-hampshire',
   keywords:
-    'pub marketing hampshire, pub marketing consultant hampshire, marketing for pubs hampshire, hampshire pub marketing agency, increase pub footfall hampshire',
+    'pub marketing hampshire, pub marketing consultant hampshire, marketing for pubs hampshire, hampshire pub marketing support, increase pub footfall hampshire',
   ogType: 'website',
 });
 

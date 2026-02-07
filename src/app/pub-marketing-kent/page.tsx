@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Kent pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-kent',
   keywords:
-    'pub marketing kent, pub marketing consultant kent, marketing for pubs kent, kent pub marketing agency, increase pub footfall kent',
+    'pub marketing kent, pub marketing consultant kent, marketing for pubs kent, kent pub marketing support, increase pub footfall kent',
   ogType: 'website',
 });
 

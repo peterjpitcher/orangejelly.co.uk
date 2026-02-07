@@ -1,42 +1,43 @@
 {
   "hero": {
-    "title": "Pub Marketing Services That Fill Tables",
-    "subtitle": "AI-powered strategy and practical execution proven at The Anchor. If it didn't work in a real pub, it's not here.",
-    "ctaText": "WhatsApp: 07990 587315",
-    "bottomText": "All services £75/hour • No fixed packages • Pay for the help you need",
+    "title": "Hospitality Growth Services That Create Real Momentum",
+    "subtitle": "Not run-of-the-mill marketing. Four clear ways we help hospitality partners move faster with practical, action-first support.",
+    "ctaText": "Hi Peter, I'd like help building momentum for my venue.",
+    "ctaLabel": "Start a Growth Conversation",
+    "bottomText": "Pay for progress, not overheads • £75/hour + VAT • Small team, direct support",
     "backgroundImage": "/images/headers/services.png"
   },
   "realSolutionsSection": {
-    "heading": "Real Solutions, Not Theory",
-    "description": "I'm not selling you strategies I read in a book. Every service below is something I use daily at The Anchor and adapt for pubs. You're learning from real experience, not corporate theory.",
+    "heading": "Real Work. Real Outcomes.",
+    "description": "Everything here is built from practical hospitality experience at The Anchor, then adapted for partners. No marketing theatre, just measurable movement.",
     "metrics": [
       {
         "number": "1",
-        "title": "Quiz Night",
+        "title": "Quiz Teams",
         "value": "25-30",
-        "description": "Regular quiz teams every month"
+        "description": "Regular teams each month"
       },
       {
         "number": "2",
-        "title": "Sunday Waste",
+        "title": "Sunday Waste Cut",
         "value": "£250/week",
-        "description": "Cut in Sunday lunch waste"
+        "description": "90% reduction in food waste"
       },
       {
         "number": "3",
-        "title": "Value Added",
-        "value": "£75,000-£100,000",
-        "description": "Added to our business using AI"
+        "title": "Monthly Savings",
+        "value": "£4,000+",
+        "description": "Supplier, rota, and energy improvements"
       }
     ]
   },
   "serviceLandingSection": {
-    "heading": "Popular pub social media services",
-    "description": "If you're here because you searched for one of these, start with the matching page. Each one is designed to be clear, practical, and easy to implement in a busy pub.",
+    "heading": "Specialist Social Media Support For Pubs",
+    "description": "Need channel-specific support? These specialist pages are still available, and sit inside our wider transformational marketing approach.",
     "cards": [
       {
         "title": "Instagram services for pubs",
-        "description": "A simple plan, Reels workflow, local engagement routine, and templates that sell specific nights.",
+        "description": "A simple plan, Reels workflow, local visibility routine, and templates that sell specific nights.",
         "href": "/services/instagram-services-for-pubs",
         "ctaText": "Instagram help"
       },
@@ -60,13 +61,13 @@
       },
       {
         "title": "Social media marketing for pubs",
-        "description": "The full system across Instagram, Facebook, and local channels - without daily stress.",
+        "description": "The full system across Instagram, Facebook, and local channels without daily stress.",
         "href": "/services/social-media-marketing-for-pubs",
         "ctaText": "See the system"
       },
       {
         "title": "Fix my pub",
-        "description": "Tell me what's broken and I'll tell you the fastest win to start with (plus templates to implement).",
+        "description": "Tell me what is stuck and I will map the fastest practical win to start with.",
         "href": "/fix-my-pub",
         "ctaText": "Help me fix it"
       }
@@ -74,332 +75,184 @@
   },
   "servicePackages": [
     {
-      "id": "empty-pub-recovery",
-      "emoji": "🚨",
-      "title": "Empty Pub Recovery Plan",
-      "problem": "Problem: Staring at empty tables on quiet nights?",
-      "deliverable": "Deliverable: Effective marketing strategies delivered quickly",
-      "description": "Turn those soul-crushing empty nights into profitable ones. This is our emergency response for pubs bleeding money on quiet nights. I've been there - watching the clock, calculating losses, wondering if tomorrow will be better. It doesn't have to be this way.",
+      "id": "event-innovation",
+      "emoji": "🎉",
+      "title": "Event Innovation",
+      "problem": "Need more reasons for people to come out and come back?",
+      "deliverable": "Fresh event formats that are easier to run and easier to sell",
+      "description": "When events repeat the same tired format, people stop noticing. We help you create event ideas that fit your venue, your guests, your team, and your margins.",
       "features": [
-        "AI-powered social media campaigns that actually bring people in",
-        "Event ideas proven to work (not theory - real results)",
-        "Local community engagement strategies",
-        "Staff motivation techniques for quiet periods",
-        "Quick-win promotions you can start tomorrow",
-        "30-day action plan with weekly check-ins"
+        "Event ideas tailored to your venue and local audience",
+        "Clear event formats with strong names, structure, and pricing",
+        "Commercial event calendar that works in real operations",
+        "Simple promotion and booking setup",
+        "Staff briefing and on-the-night run plan",
+        "Review loop to improve each event cycle"
       ],
       "example": {
-        "before": "Deadly Tuesday nights with empty tables",
-        "after": "Quiz nights with 25-30 regular teams every month",
-        "result": "Tuesday now one of our busiest nights"
+        "before": "Inconsistent event attendance and low repeat booking",
+        "after": "Structured event formats with clearer promotion and stronger demand",
+        "result": "Events that build repeat visits and steady momentum"
       },
-      "ctaText": "Save my pub",
+      "ctaText": "Build event momentum",
+      "highlight": false
+    },
+    {
+      "id": "transformational-marketing",
+      "emoji": "🚀",
+      "title": "Transformational Marketing",
+      "problem": "Random posting, rushed campaigns, and no clear direction?",
+      "deliverable": "A 30/60/90-day plan with action-first execution",
+      "description": "Transformative means more than tweaks. We build a clear marketing plan, sharpen your message, and execute consistently so growth shows up in bookings, footfall, and repeat visits.",
+      "features": [
+        "Goal clarity around bookings, footfall, events, private hire, and quieter days",
+        "Simple 30/60/90-day momentum plan",
+        "Campaigns with clear beginning, middle, and end",
+        "Message and offer refinement for faster decision-making",
+        "Weekly execution rhythm and accountability",
+        "Measurement focused on commercial outcomes, not vanity metrics"
+      ],
+      "example": {
+        "before": "Inconsistent activity with little commercial impact",
+        "after": "Clear plan, consistent cadence, and campaigns tied to real goals",
+        "result": "More clarity, more consistency, and marketing that drives action"
+      },
+      "ctaText": "Start transformation",
       "highlight": true
     },
     {
-      "id": "menu-makeover",
-      "emoji": "🍴",
-      "title": "Menu Makeover & Profit Maximization",
-      "problem": "Problem: Food sitting in the kitchen while bills pile up?",
-      "deliverable": "Deliverable: AI-crafted menu descriptions that sell",
-      "description": "Your menu is a sales tool, not just a list. Wrong descriptions = lost money. I'll show you how AI transforms boring food lists into profit machines that make mouths water and tills ring.",
+      "id": "simplified-technology-tools",
+      "emoji": "🧰",
+      "title": "Simplified Technology Tools",
+      "problem": "Too many tools, unclear setup, and wasted subscriptions?",
+      "deliverable": "A simpler stack that saves time and earns its keep",
+      "description": "Most hospitality businesses either have too many tools, or the right tools set up badly. We simplify, fix, and focus on what genuinely supports trade.",
       "features": [
-        "Psychology-based descriptions that increase average spend",
-        "Strategic pricing for maximum profit",
-        "Dietary labels and allergen management",
-        "Seasonal menu planning with AI",
-        "Waste reduction strategies (we cut £250/week in Sunday waste)",
-        "Supplier negotiation tactics"
+        "Current stack review across booking, website, reviews, email, socials, and sign-ups",
+        "Fix what you already use before adding anything new",
+        "Waste reduction on low-value subscriptions",
+        "Simple systems that improve consistency and save time",
+        "Practical tracking without drowning in data",
+        "Team enablement so tools are actually used properly"
       ],
       "example": {
-        "before": "Low-margin menu, struggling to make profit",
-        "after": "Clearer pricing with higher-margin items",
-        "result": "£250/week cut in Sunday waste"
+        "before": "Fragmented platforms and unclear return on spend",
+        "after": "Lean stack with clear roles and better execution quality",
+        "result": "Lower waste, faster delivery, stronger operational consistency"
       },
-      "ctaText": "Boost food profits",
+      "ctaText": "Simplify my tools",
       "highlight": false
     },
     {
-      "id": "social-media",
-      "emoji": "📱",
-      "title": "Social Media That Actually Works",
-      "problem": "Problem: Posting into the void while competitors steal your customers?",
-      "deliverable": "Deliverable: Strategy playbook + AI-assisted workflows your team can run",
-      "description": "Stop wasting hours on posts nobody sees. We reach 60,000-70,000 people every month and plan and schedule 30 days of social content in 2 hours. I'll coach you through the exact planning frameworks, AI tools, and review rhythms we use so your team can execute confidently.",
+      "id": "clearing-up-ambiguity",
+      "emoji": "🧭",
+      "title": "Clearing Up Ambiguity",
+      "problem": "Too many priorities, unclear standards, and slow decisions?",
+      "deliverable": "Clarity, standards, and playbooks your team can follow",
+      "description": "When priorities are fuzzy, progress slows. We turn confusion into practical clarity so your team can make better decisions and execute consistently.",
       "features": [
-        "30-day content calendar mapped to your events",
-        "AI-assisted batching workflow (30 days in 2 hours)",
-        "Local engagement and community group playbook",
-        "Event promotion and recap templates",
-        "Crisis communication and review response guide",
-        "Weekly metrics scorecard you can update in minutes"
+        "Clear priorities: what matters now and what can wait",
+        "Simple definition of what good looks like for your brand and guest experience",
+        "Guest profiles that support real decisions",
+        "Practical playbooks for events, offers, and key dates",
+        "Basic standards for content and messaging",
+        "Clear ownership so work stops falling between roles"
       ],
       "example": {
-        "before": "No social media presence, relying on walk-ins",
-        "after": "60,000-70,000 people reached monthly across platforms",
-        "result": "Quiz night consistently full, noticeably stronger bookings"
+        "before": "Second-guessing, duplicated effort, and inconsistent delivery",
+        "after": "Shared direction and practical standards across the team",
+        "result": "Faster decisions, less friction, and steadier momentum"
       },
-      "ctaText": "Plan my strategy",
-      "highlight": false
-    },
-    {
-      "id": "quiz-night",
-      "emoji": "🎯",
-      "title": "Quiz Night Success System",
-      "problem": "Problem: Running quizzes for empty chairs and family members?",
-      "deliverable": "Deliverable: 25-30 regular teams every month",
-      "description": "Transform your quiet Tuesday into your busiest weeknight. Our quiz now attracts 25-30 regular teams every month who book tables, buy food, and bring friends. I'll share every trick, template, and AI tool that made it happen.",
-      "features": [
-        "Question sources and AI generation tools",
-        "Promotional templates that fill tables",
-        "Prize structures that maximize profit",
-        "Team booking systems",
-        "Food deals that increase spend",
-        "Building quiz night community"
-      ],
-      "example": {
-        "before": "Tuesday was our quietest night",
-        "after": "Regular quiz with 25-30 teams each month",
-        "result": "Tuesday now our 3rd busiest night"
-      },
-      "ctaText": "Pack my quiz nights",
-      "highlight": false
-    },
-    {
-      "id": "ai-business",
-      "emoji": "📊",
-      "title": "AI Business Analysis & Insights",
-      "problem": "Problem: Making decisions on gut feel while money disappears?",
-      "deliverable": "Deliverable: Know exactly where to focus for maximum profit",
-      "description": "Stop guessing, start knowing. AI reveals hidden profit opportunities in your data. Estimated business value added since adopting AI: £75,000-£100,000.",
-      "features": [
-        "Sales pattern analysis and predictions",
-        "Customer behavior insights",
-        "Profitable vs problem areas identified",
-        "Staff optimization recommendations",
-        "Supplier cost comparisons",
-        "Seasonal planning with data"
-      ],
-      "example": {
-        "before": "Sunday lunches losing £250/week",
-        "after": "Streamlined menu, AI-optimized portions",
-        "result": "Now profitable with less waste"
-      },
-      "ctaText": "Find hidden profits",
-      "highlight": false
-    },
-    {
-      "id": "events",
-      "emoji": "🎉",
-      "title": "Events That Fill Your Pub",
-      "problem": "Problem: Organizing events that nobody attends?",
-      "deliverable": "Deliverable: Events people mark in their diary",
-      "description": "Stop throwing parties for empty rooms. Our events consistently draw crowds because we use AI to understand what people actually want, then promote effectively. Many tasting night attendees become regulars.",
-      "features": [
-        "Event ideas matched to your community",
-        "AI-powered promotional campaigns",
-        "Booking and ticketing systems",
-        "Partnership opportunities",
-        "Post-event analysis for improvement",
-        "Seasonal event calendar planning"
-      ],
-      "example": {
-        "before": "Same old events, declining attendance",
-        "after": "Gin tasting nights, food pairings, themed events",
-        "result": "Events sell out fast and build regulars"
-      },
-      "ctaText": "Create buzzing events",
-      "highlight": false
-    },
-    {
-      "id": "consultation",
-      "emoji": "💬",
-      "title": "Pub Recovery Consultation",
-      "problem": "Problem: Need specific help with your unique challenges?",
-      "deliverable": "Deliverable: Practical solutions from someone who gets it",
-      "description": "Sometimes you just need to talk to someone who's been there. Book time with me to discuss your specific challenges. No corporate nonsense - just honest advice from one licensee to another.",
-      "features": [
-        "One-to-one video or phone consultations",
-        "Review your current situation",
-        "Identify quick wins and long-term strategies",
-        "Access to my AI tools and templates",
-        "Follow-up support via WhatsApp",
-        "Connection to helpful suppliers"
-      ],
-      "example": {
-        "before": "Using Word docs and manual calculations",
-        "after": "AI-powered tools for everything",
-        "result": "Save up to 25 hours every week on admin tasks"
-      },
-      "ctaText": "Book consultation",
-      "highlight": false
-    },
-    {
-      "id": "website",
-      "emoji": "🌐",
-      "title": "Website & Online Presence",
-      "problem": "Problem: Invisible online while chains dominate Google?",
-      "deliverable": "Deliverable: Found by locals searching for pubs",
-      "description": "If you're not online, you don't exist to most customers. But you don't need an expensive website - you need to be found. I'll show you free and low-cost ways to dominate local search results.",
-      "features": [
-        "Google My Business optimization",
-        "Simple website solutions that work",
-        "Online booking integration",
-        "Menu and events always up-to-date",
-        "Mobile-friendly design",
-        "Local SEO strategies"
-      ],
-      "example": {
-        "before": "Invisible on Google, no website",
-        "after": "Professional website, optimized Google listing",
-        "result": "Improved local search visibility and steady daily enquiries"
-      },
-      "ctaText": "Get found online",
+      "ctaText": "Create clarity",
       "highlight": false
     }
   ],
   "processSection": {
-    "heading": "Simple, Honest Process",
+    "heading": "How We Work",
     "steps": [
       {
         "number": "1",
-        "title": "Tell Me What's Wrong",
-        "description": "WhatsApp or call me. Explain what's keeping you up at night. Empty Tuesday? Weak food sales? No online presence? I've been there."
+        "title": "We Listen First",
+        "description": "We get the real picture of trade, pressure points, and what success needs to look like now."
       },
       {
         "number": "2",
-        "title": "We Create a Plan",
-        "description": "No cookie-cutter solutions. We'll discuss what's worked at The Anchor and adapt it to your pub. You'll know exactly what we're doing and why."
+        "title": "We Set Priorities",
+        "description": "We agree what matters most right now so effort goes into progress, not noise."
       },
       {
         "number": "3",
-        "title": "I Show You How",
-        "description": "Screen sharing, videos, or in-person - whatever works. I'll train you to use the exact AI tools and strategies that saved our pub."
+        "title": "We Move Fast",
+        "description": "Quick wins first, then practical systems that keep momentum building."
       },
       {
         "number": "4",
-        "title": "You See Results",
-        "description": "In our pub, the first improvements showed inside 30 days: quiz nights filling up, social media buzzing, food flying out the kitchen. We'll focus on the fastest wins first."
+        "title": "We Improve Weekly",
+        "description": "We measure what matters and iterate consistently so performance keeps moving."
       }
     ],
-    "ctaText": "WhatsApp: 07990 587315"
+    "ctaText": "Let's talk"
   },
   "guaranteeSection": {
-    "heading": "30-Day Partnership Support",
-    "description": "We stay hands-on throughout the first month with weekly check-ins, rapid adjustments, and direct WhatsApp access so momentum never drops.",
-    "checkmarkText": "Hands-on partnership",
-    "checkmarkSubtext": "You always have a working operator in your corner"
+    "heading": "Small Team. Hands-On Delivery.",
+    "description": "You work directly with us. No layers, no account manager handoffs, no overhead-heavy model. Just practical support focused on progress.",
+    "checkmarkText": "Direct partner support",
+    "checkmarkSubtext": "Pay for progress and experience, not agency overhead"
   },
   "faqSection": {
-    "heading": "Everything You Need to Know"
+    "heading": "Common Questions"
   },
   "partnershipsSection": {
     "heading": "Working With Industry Leaders",
     "partners": [
       {
         "name": "Greene King",
-        "description": "We operate The Anchor as a Greene King tenant, sharing our AI innovations with one of the UK's leading pub companies.",
+        "description": "We operate The Anchor as a Greene King tenant and continuously test practical growth systems in real hospitality conditions.",
         "logo": "/partners/greene-king-logo.png"
       },
       {
         "name": "British Institute of Innkeeping",
-        "description": "Proud BII members, featured in their Autumn 2025 magazine for our AI innovation in hospitality.",
+        "description": "Proud BII members, featured for practical AI innovation in hospitality.",
         "logo": "/partners/bii-logo.png"
       }
     ],
-    "footer": "We're proud to work with these industry leaders, sharing our AI innovations to help transform the wider pub industry."
+    "footer": "We keep things practical and measurable, with methods tested in real hospitality operations."
   },
   "ctaSection": {
-    "title": "Stop Watching Money Walk Past Your Pub",
-    "subtitle": "Every empty table is lost revenue. Every quiet night is bills unpaid. Let's change that - starting today.",
-    "buttonText": "WhatsApp me now",
-    "whatsappMessage": "Hi Peter, I need help with my pub",
-    "bottomText": "07990 587315 • Available 7 days a week"
+    "title": "Ready To Build Momentum?",
+    "subtitle": "Tell me where growth is stuck and we'll focus on the highest-impact next move first.",
+    "buttonText": "Let's talk",
+    "whatsappMessage": "Hi Peter, I'd like help building momentum for my venue.",
+    "bottomText": "07990 587315 • Small team • Action-first support"
   },
   "faqs": [
     {
-      "question": "How does the Empty Pub Recovery Plan work?",
-      "answer": "We start with a free consultation to understand your specific challenges. Then I create a custom 30-day action plan using strategies that worked at The Anchor. You get weekly check-ins, AI tools access, and my personal WhatsApp for questions. At The Anchor, we saw meaningful progress inside the first month once we got consistent."
+      "question": "Do you only work with pubs?",
+      "answer": "No. We work with hospitality partners across pubs, bars, restaurants, venues, hotels, and event spaces."
     },
     {
-      "question": "How does your hourly consulting work?",
-      "answer": "Simple - you only pay for the time you need. No packages, no minimum contracts. We agree on what needs doing, I track my time, and invoice you monthly. Most people start with a small block of time and scale as needed."
+      "question": "What does transformative mean in practice?",
+      "answer": "It means a step-change in outcomes, not just more activity. We focus on practical systems and weekly execution that moves bookings, footfall, repeat visits, and revenue."
     },
     {
-      "question": "How quickly will I see more customers from the recovery plan?",
-      "answer": "The plan is designed for meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries. The Anchor now sees 25-30 regular quiz teams each month when we stick to the system."
+      "question": "How quickly can we see progress?",
+      "answer": "Most partners see early movement in days, then meaningful progress across the first 30 days when execution stays consistent."
     },
     {
-      "question": "How can menu descriptions increase my food sales?",
-      "answer": "Psychology-based descriptions trigger hunger and justify higher prices. 'Fish & chips' becomes 'Beer-battered Atlantic cod with triple-cooked chips and mushy peas'. Same dish, stronger margins, customers happier."
+      "question": "What if disruptive sounds too risky?",
+      "answer": "For us, disruptive means challenging outdated habits, not disrupting your operations. It is disruptive thinking with safe, sensible execution."
     },
     {
-      "question": "What exactly do you do with menu AI?",
-      "answer": "I use AI to analyze your menu, identify profit opportunities, and create mouth-watering descriptions. We'll optimize pricing, highlight high-margin items, and create seasonal variations. Takes 2 hours what used to take days, and sells better."
+      "question": "Do you offer fixed retainers?",
+      "answer": "No. Support is £75 per hour plus VAT. You pay for progress and experience, not overhead-heavy packages."
     },
     {
-      "question": "Will AI-written menus sound fake or robotic?",
-      "answer": "Not at all. I train the AI with your pub's personality and local dialect. The descriptions sound like you wrote them on your best day. Customers won't know it's AI - they'll just know they want to order everything."
+      "question": "Will we work directly with you?",
+      "answer": "Yes. We are a small team on purpose. You work directly with us, with no extra agency layers."
     },
     {
-      "question": "How do you promote a pub quiz effectively?",
-      "answer": "Multi-channel approach: AI-generated social posts 3x weekly, WhatsApp broadcasts to regulars, table talkers, and strategic partnerships with local businesses. We track what works and double down. Our quiz now attracts 25-30 regular teams every month using this system."
-    },
-    {
-      "question": "What's the secret to quiz night success?",
-      "answer": "Consistency, community, and clever marketing. Same night, same time, build traditions. Use AI for questions so you're not scrambling. Food deals that make sense (not giving away profit). Most importantly - make it an event, not just a quiz."
-    },
-    {
-      "question": "Can AI really help with quiz nights?",
-      "answer": "Absolutely. AI generates themed rounds in seconds, creates promotional content, analyzes which questions work best, and even suggests food pairings. Preparation drops from hours to minutes."
-    },
-    {
-      "question": "Can AI really manage my pub's social media?",
-      "answer": "AI doesn't manage it - you do, with AI doing the heavy lifting. I teach you to plan and schedule 30 days of content in 2 hours, schedule it automatically, and track what works. You stay in control while saving up to 25 hours every week on admin tasks."
-    },
-    {
-      "question": "Will my social media posts look automated?",
-      "answer": "No - they'll look better than before. AI helps create engaging content that sounds like you on your most creative day. Mix in real photos from your pub, and nobody knows the difference. We reach 60,000-70,000 people every month this way."
-    },
-    {
-      "question": "What if I'm not tech-savvy?",
-      "answer": "Perfect - neither was I! If you can use WhatsApp, you can use these tools. I provide step-by-step videos, personal training, and ongoing support. Most people can create their first batch of AI-assisted content within a couple of hours."
-    },
-    {
-      "question": "What kind of business insights can AI provide?",
-      "answer": "AI reveals patterns humans miss: optimal pricing, quiet period opportunities, menu performance, staff scheduling efficiency, and customer behavior trends. Estimated business value added since adopting AI: £75,000-£100,000."
-    },
-    {
-      "question": "How detailed are your AI business reports?",
-      "answer": "As detailed as you want. From simple weekly dashboards to deep-dive analysis of every transaction. I'll teach you to generate reports that actually help make decisions, not just pretty graphs that mean nothing."
-    },
-    {
-      "question": "Can AI help with supplier negotiations?",
-      "answer": "Yes! AI analyzes your purchasing history, compares supplier prices, identifies over-ordering, and suggests negotiation points. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs using AI insights."
-    },
-    {
-      "question": "How do you create pub events that actually work?",
-      "answer": "Start with data - what does your community actually want? Use AI to analyze local trends, create compelling promotions, and track what works. Our gin tasting sells out because we know exactly what our customers want before they do."
-    },
-    {
-      "question": "What makes your event planning different?",
-      "answer": "I've run events that flopped and events that sold out fast. I'll share both lessons. Plus, AI tools for promotion, booking management, and follow-up that turn one-time attendees into regulars."
-    },
-    {
-      "question": "Can AI predict which events will be successful?",
-      "answer": "AI analyzes local trends, competitor events, weather patterns, and your customer data to predict success. Not 100% accurate, but much better than guessing. Planning with AI reduces failed events."
-    },
-    {
-      "question": "Why don't you offer fixed-price packages?",
-      "answer": "Every pub is different. You might need a few hours of menu help or more time for a full transformation. Hourly billing means you only pay for what you need, and can stop anytime. It's honest and fair."
-    },
-    {
-      "question": "Can I see examples of your work?",
-      "answer": "Visit The Anchor any Tuesday for quiz night, check our social media @TheAnchorStanwell, or look at our Sunday waste reduction. Better yet, WhatsApp me for a video walkthrough of everything."
-    },
-    {
-      "question": "Do you offer remote support?",
-      "answer": "Yes! Most support is via video calls, screen sharing, and WhatsApp. I'm available 7 days a week. In-person visits available for Surrey pubs, but honestly, remote works just as well and saves you money."
+      "question": "Can you work remotely?",
+      "answer": "Yes. Most strategy, planning, content, and systems work can be delivered remotely in a practical format your team can run."
     }
   ]
 }

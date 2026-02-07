@@ -10,6 +10,8 @@ interface HeroProps {
   subtitle?: string;
   showCTA?: boolean;
   ctaText?: string;
+  ctaLabel?: string;
+  ctaMessage?: string;
   secondaryAction?: {
     text: string;
     href: string;
@@ -23,7 +25,9 @@ export default function Hero({
   title,
   subtitle,
   showCTA = true,
-  ctaText = 'Hi Peter, I need help filling my pub',
+  ctaText = "Hi Peter, I'd like help building momentum for my venue.",
+  ctaLabel = 'Start a Growth Conversation',
+  ctaMessage,
   secondaryAction,
   bottomText,
   headingLevel = 1,
@@ -31,6 +35,7 @@ export default function Hero({
   backgroundImage,
 }: HeroProps & { backgroundImage?: string }) {
   const isImageBackground = !!backgroundImage;
+  const whatsappMessage = ctaMessage || ctaText;
 
   return (
     <section
@@ -102,7 +107,7 @@ export default function Hero({
 
           {showCTA && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-delay-2">
-              <WhatsAppButton text={ctaText} size="large" />
+              <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" />
 
               {secondaryAction && (
                 <Button

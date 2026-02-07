@@ -5,19 +5,20 @@ import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
+import FAQItem from '@/components/FAQItem';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { FAQSchema } from '@/components/StructuredData';
 import { generateMetadata } from '@/lib/metadata';
-import { URLS } from '@/lib/constants';
 import Link from 'next/link';
 import pubMarketingData from '../../../content/data/pub-marketing.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Consultant (UK) - Fill Tables & Boost Profit',
+  title: 'Pub Marketing Partner (UK) - Build Bookings & Profit',
   description:
     'Pub marketing help from a working licensee. Fix quiet nights, improve local visibility, and build repeat trade with simple systems. £75/hour + VAT.',
   path: '/pub-marketing',
   keywords:
-    'pub marketing consultant, pub marketing agency, pub marketing services, pub marketing UK, marketing for pubs, increase pub footfall, fill pub tables',
+    'pub marketing consultant, pub marketing support, pub marketing services, pub marketing UK, marketing for pubs, increase pub footfall, fill pub tables',
   ogType: 'website',
 });
 
@@ -182,12 +183,7 @@ export default function PubMarketingPage() {
           </Heading>
           <div className="space-y-4">
             {faqsForDisplay.map((faq, index) => (
-              <Card key={index} variant="bordered" padding="medium" background="white">
-                <Heading level={3} className="mb-2">
-                  {faq.question}
-                </Heading>
-                <Text color="muted">{faq.answer}</Text>
-              </Card>
+              <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </Container>
@@ -203,17 +199,14 @@ export default function PubMarketingPage() {
             <Text size="lg" className="mb-8 max-w-2xl mx-auto">
               {pubMarketingData.cta.subtitle}
             </Text>
-            <Button
-              href={URLS.whatsapp(pubMarketingData.cta.whatsappMessage)}
-              variant="primary"
+            <WhatsAppButton
+              text={pubMarketingData.cta.whatsappMessage}
+              label="Message Peter on WhatsApp"
               size="large"
-              external
               className="mb-2"
-            >
-              Message Peter on WhatsApp
-            </Button>
+            />
             <Text size="sm" color="muted">
-              £75/hour + VAT • No packages • No pressure
+              £75/hour + VAT • No fixed retainers • No pressure
             </Text>
           </div>
         </Container>

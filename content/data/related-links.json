@@ -4,13 +4,13 @@
     "links": [
       {
         "title": "Services Overview",
-        "description": "Discover how we can help your pub thrive",
+        "description": "Discover how we help hospitality partners build momentum",
         "href": "/services",
         "emoji": "🚀"
       },
       {
-        "title": "Pub Marketing",
-        "description": "Practical pub marketing that fills tables",
+        "title": "Hospitality Marketing",
+        "description": "Practical marketing that drives bookings and footfall",
         "href": "/pub-marketing",
         "emoji": "🍺"
       },
@@ -28,7 +28,7 @@
       },
       {
         "title": "Get in Touch",
-        "description": "Let's chat about your pub",
+        "description": "Let's chat about your goals",
         "href": "/contact",
         "emoji": "💬"
       }
@@ -39,14 +39,14 @@
     "links": [
       {
         "title": "Start with a Free Chat",
-        "description": "No obligation - just a friendly conversation",
+        "description": "No pressure, just practical next steps",
         "href": "/contact",
         "emoji": "☕",
         "highlight": true
       },
       {
         "title": "View Our Services",
-        "description": "See exactly what we can do for you",
+        "description": "See our four core growth offers",
         "href": "/services",
         "emoji": "🎯"
       },
@@ -63,14 +63,14 @@
     "links": [
       {
         "title": "Book a Free Consultation",
-        "description": "30-minute chat about your pub's potential",
+        "description": "30-minute chat about where momentum is stuck",
         "href": "/contact",
         "emoji": "📅",
         "highlight": true
       },
       {
         "title": "Browse Our Services",
-        "description": "See what's included in our £75/hour service",
+        "description": "See what's included in our £75/hour support",
         "href": "/services",
         "emoji": "📋"
       },
@@ -111,7 +111,7 @@
     "links": [
       {
         "title": "Our Services",
-        "description": "Marketing, menus, and more at £75/hour",
+        "description": "Event innovation, marketing, tools, and clarity support",
         "href": "/services",
         "emoji": "🚀"
       },
@@ -129,7 +129,7 @@
       },
       {
         "title": "Start a Conversation",
-        "description": "No pressure - just a friendly chat",
+        "description": "No pressure, just practical guidance",
         "href": "/contact",
         "emoji": "💬",
         "highlight": true

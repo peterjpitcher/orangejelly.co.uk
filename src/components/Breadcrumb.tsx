@@ -82,26 +82,26 @@ export const breadcrumbPaths = {
   emptyPubRecovery: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Empty Pub Recovery' },
+    { label: 'Transformational Marketing' },
   ],
   boostFoodSales: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Boost Food Sales' },
+    { label: 'Event Innovation' },
   ],
   marketing: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Marketing' },
+    { label: 'Transformational Marketing' },
   ],
   website: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Get Found Online' },
+    { label: 'Simplified Technology Tools' },
   ],
   training: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'AI Training' },
+    { label: 'Clearing Up Ambiguity' },
   ],
 };

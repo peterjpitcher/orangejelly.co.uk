@@ -28,15 +28,15 @@ const baseUrl = getBaseUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
+  title: 'Transformative Hospitality Growth Partner | Orange Jelly',
   description:
-    'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. We combine technology and creativity to fill tables, save time, and drive growth.',
+    'Orange Jelly accelerates hospitality growth with transformative, action-first marketing delivered by a small, hands-on team. Built for measurable gains in bookings, footfall, repeat visits, and revenue.',
   keywords:
-    'hospitality marketing specialist, AI hospitality marketing, pub marketing, restaurant marketing, bar marketing, fill tables, Peter Pitcher, Orange Jelly',
+    'transformative hospitality marketing, hospitality growth partner, small marketing team hospitality, action-first marketing, pub marketing, bar marketing, venue marketing, Orange Jelly',
   openGraph: {
-    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
+    title: 'Transformative Hospitality Growth Partner | Orange Jelly',
     description:
-      'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Proven strategies that combine technology and creativity.',
+      'Transformative, action-first marketing for hospitality partners. Small team support built to accelerate bookings, footfall, and revenue.',
     type: 'website',
     url: baseUrl,
     locale: 'en_GB',
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hospitality Marketing Specialist for Pubs, Restaurants & Bars | Orange Jelly',
+    title: 'Transformative Hospitality Growth Partner | Orange Jelly',
     description:
-      'Peter Pitcher is a Hospitality Marketing Specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Proven strategies that combine technology and creativity.',
+      'Transformative, action-first marketing for hospitality partners. Small team support built to accelerate bookings, footfall, and revenue.',
     images: [`${baseUrl}/opengraph-image`],
   },
   robots: {
@@ -102,14 +102,14 @@ export default function RootLayout({
     },
     image: `${baseUrl}/logo.png`,
     description:
-      'Specialist hospitality marketing services leveraging AI for pubs, restaurants, and bars. We combine technology and creativity to accelerate business success, using The Anchor as a live innovation lab.',
+      'Transformative marketing partner for hospitality businesses. We combine proactive growth strategy, AI-enabled delivery, and practical systems to create measurable uplift in bookings, visibility, repeat visits, and revenue.',
     founder: {
       '@type': 'Person',
       '@id': `${baseUrl}/#peter-pitcher`,
       name: 'Peter Pitcher',
-      jobTitle: 'Hospitality Marketing Specialist',
+      jobTitle: 'Founder & Hospitality Growth Partner',
       description:
-        'Hospitality Marketing Specialist who leverages AI to solve real business problems for pubs, restaurants, and bars. Owner of The Anchor and founder of Orange Jelly.',
+        'Hospitality growth partner focused on transformative, action-first marketing for pubs, bars, restaurants, venues, hotels, and event spaces. Owner of The Anchor and founder of Orange Jelly.',
     },
     foundingDate: '2019',
     areaServed: 'GB',
@@ -123,7 +123,7 @@ export default function RootLayout({
       contactOption: ['TollFree'],
       areaServed: 'GB',
     },
-    sameAs: ['https://the-anchor.pub'],
+    sameAs: ['https://www.the-anchor.pub'],
   };
 
   const websiteSchema = {
@@ -131,9 +131,9 @@ export default function RootLayout({
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     url: baseUrl,
-    name: 'Orange Jelly - Hospitality Marketing That Works',
+    name: 'Orange Jelly - Transformative Hospitality Marketing',
     description:
-      'Orange Jelly - Hospitality Marketing Specialist leveraging AI to deliver great results. The home of AI-powered marketing for pubs, restaurants, and bars.',
+      'Transformative hospitality marketing built to accelerate bookings, footfall, repeat visits, and revenue.',
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },

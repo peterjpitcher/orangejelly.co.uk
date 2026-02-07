@@ -1,6 +1,6 @@
 /**
  * Centralized validation messages for the Orange Jelly website
- * 
+ *
  * This file contains all validation messages, placeholder texts, and form-related
  * strings to enable easy maintenance and future internationalization support.
  */
@@ -35,8 +35,8 @@ export const VALIDATION_MESSAGES = {
 
   // Pub name validation
   pubName: {
-    required: 'Pub name is required',
-    minLength: 'Pub name must be at least 2 characters',
+    required: 'Venue name is required',
+    minLength: 'Venue name must be at least 2 characters',
   },
 
   // Generic validation messages
@@ -54,20 +54,20 @@ export const PLACEHOLDERS = {
     simple: 'Your email',
     footer: 'Your email address',
   },
-  
+
   name: {
     default: 'Your Name',
   },
-  
+
   phone: {
     default: '07XXX XXXXXX',
     optional: '(Optional)',
   },
-  
+
   pubName: {
-    default: 'The Best Pub',
+    default: 'Your venue name',
   },
-  
+
   message: {
     default: 'Tell us how we can help',
     general: 'Type your message here',
@@ -80,12 +80,12 @@ export const SUCCESS_MESSAGES = {
     subscribed: 'Success! Check your email to confirm.',
     subscribing: 'Subscribing...',
   },
-  
+
   contact: {
     submitted: 'Your message has been sent successfully!',
     submitting: 'Sending...',
   },
-  
+
   generic: {
     success: 'Success!',
     processing: 'Processing...',
@@ -97,21 +97,21 @@ export const FORM_LABELS = {
   email: 'Email Address',
   name: 'Name',
   phone: 'Phone',
-  pubName: 'Pub Name',
+  pubName: 'Venue Name',
   message: 'Message',
 } as const;
 
 // Form descriptions and help text
 export const FORM_DESCRIPTIONS = {
   newsletter: {
-    title: 'Get Pub Marketing Tips',
-    description: 'Weekly tips that actually work. No corporate nonsense.',
-    disclaimer: 'No spam. Unsubscribe anytime. We respect pub life hours.',
+    title: 'Get Hospitality Growth Tips',
+    description: 'Weekly action-first tips built for busy hospitality operators.',
+    disclaimer: 'No spam. Unsubscribe anytime. We respect hospitality hours.',
   },
-  
+
   contact: {
     title: 'Get In Touch',
-    description: 'Have a question or need help with your pub marketing?',
+    description: 'Have a question or need help building momentum in your venue?',
   },
 } as const;
 

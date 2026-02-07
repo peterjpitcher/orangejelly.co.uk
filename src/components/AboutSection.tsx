@@ -15,15 +15,15 @@ interface AboutSectionProps {
 }
 
 function AboutSection({
-  title = "We're licensees, Just Like You",
+  title = 'We Are Small On Purpose',
   content = [
-    "I'm Peter. My husband Billy and I have run The Anchor in Stanwell Moor since March 2019. We faced the same struggles - empty tables, rising costs, fierce competition.",
-    "Orange Jelly exists because we discovered how AI can add 25 hours of value per week. I've been an early AI adopter since 2021, and everything I recommend is tested at The Anchor first.",
+    "I'm Peter. Billy and I run The Anchor in Stanwell Moor. We face the same challenges hospitality operators face every week: pressure on trade, pressure on margins, and not enough time.",
+    'Orange Jelly exists to turn that experience into practical growth support: clear priorities, faster execution, and systems that move bookings, footfall, and repeat visits.',
   ],
   buttonText = 'Read Our Full Story',
   buttonHref = '/about',
-  imageUrl = '/logo_the-anchor.png',
-  imageAlt = 'The Anchor Pub',
+  imageUrl = '/images/the-anchor/the-anchor-exterior.jpg',
+  imageAlt = 'Exterior of The Anchor pub',
   className = '',
 }: AboutSectionProps) {
   return (
@@ -67,7 +67,7 @@ function AboutSection({
 
         <div className="text-center mt-12 pt-12 border-t border-gray-200">
           <Text size="lg" color="muted" className="mb-2">
-            Real pub experience + proven strategies =
+            Real hospitality experience + practical execution =
           </Text>
           <Heading level={3} className="text-orange">
             Orange Jelly

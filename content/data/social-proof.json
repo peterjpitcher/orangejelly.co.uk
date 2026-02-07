@@ -20,10 +20,10 @@
     "isActive": true
   },
   {
-    "title": "Social Media Views",
+    "title": "Monthly Visibility",
     "displayText": "60,000-70,000 people reached monthly on social media",
     "value": "60-70k",
-    "category": "engagement",
+    "category": "visibility",
     "timeframe": "monthly",
     "location": "The Anchor",
     "order": 3,

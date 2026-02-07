@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
     'Pub marketing for Oxfordshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
   path: '/pub-marketing-oxfordshire',
   keywords:
-    'pub marketing oxfordshire, pub marketing consultant oxfordshire, marketing for pubs oxfordshire, oxfordshire pub marketing agency, increase pub footfall oxfordshire',
+    'pub marketing oxfordshire, pub marketing consultant oxfordshire, marketing for pubs oxfordshire, oxfordshire pub marketing support, increase pub footfall oxfordshire',
   ogType: 'website',
 });
 

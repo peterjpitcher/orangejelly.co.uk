@@ -18,9 +18,9 @@ import pubRescueData from '../../../content/data/pub-rescue.json';
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: 'Pub Rescue - Emergency Help for Struggling UK Pubs',
+    title: 'Pub Recovery Support - Action-First Help for UK Pubs',
     description:
-      'Struggling pub? Get emergency help now. From empty Tuesday nights to staff crises, we provide immediate solutions proven at The Anchor.',
+      'If trade is under pressure, get practical action-first support to stabilise performance and rebuild momentum. Proven at The Anchor.',
     path: '/pub-rescue',
   });
 }
@@ -61,7 +61,7 @@ export default function PubRescue() {
             <WhatsAppButton
               text={pubRescueData.emergencyBanner.ctaText}
               size="large"
-              className="!bg-red-600 hover:!bg-red-700 !text-white"
+              className="!bg-orange hover:!bg-orange-dark !text-white"
             />
             <Text size="sm" className="text-charcoal/60">
               {pubRescueData.emergencyBanner.supportText}
@@ -74,11 +74,11 @@ export default function PubRescue() {
       {emergencyCategories.length > 0 && (
         <Section background="white">
           <Heading level={2} align="center" className="mb-4">
-            What's Your Biggest Emergency Right Now?
+            What's Your Biggest Growth Bottleneck Right Now?
           </Heading>
           <Text size="lg" align="center" className="mb-12 max-w-3xl mx-auto">
-            Click your most urgent problem. We'll share how we fixed the same crisis at The Anchor
-            and create an action plan to save your pub.
+            Pick the issue slowing performance most. We'll share how we solved similar challenges at
+            The Anchor and build a practical action plan.
           </Text>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -127,8 +127,8 @@ export default function PubRescue() {
               We've Been Where You Are Now
             </Heading>
             <Text size="lg" align="center" className="mb-6 text-cream/90 max-w-3xl mx-auto">
-              When we took over The Anchor, it was failing. Empty most nights. Losing money every
-              month. Sound familiar?
+              When we took over The Anchor, performance was flat and midweek trade was weak. Sound
+              familiar?
             </Text>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -167,10 +167,10 @@ export default function PubRescue() {
             </div>
           </div>
 
-          {/* Emergency Response Promise */}
+          {/* Support Promise */}
           <div className="bg-gradient-to-r from-orange/10 to-orange/5 rounded-lg p-8 border-2 border-orange/20">
             <Heading level={3} align="center" className="mb-6">
-              Our Emergency Response Promise
+              Our Action-First Support Promise
             </Heading>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
               <div>
@@ -199,7 +199,7 @@ export default function PubRescue() {
                 <Heading level={4} className="mb-1">
                   30-Day Partnership
                 </Heading>
-                <Text size="sm">We stay involved until the turnaround sticks</Text>
+                <Text size="sm">We stay involved until momentum sticks</Text>
               </div>
             </div>
           </div>
@@ -210,11 +210,11 @@ export default function PubRescue() {
       <Section background="cream" padding="small">
         <div className="text-center max-w-3xl mx-auto">
           <Heading level={3} className="mb-4">
-            Every Day You Wait Costs Money
+            Delays Have A Cost
           </Heading>
           <div className="bg-white rounded-lg p-6 border-2 border-red-200">
             <Text size="lg" className="font-semibold mb-4">
-              Your crisis is costing you:
+              When action is delayed, trade often drifts:
             </Text>
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div>
@@ -227,13 +227,13 @@ export default function PubRescue() {
               </div>
               <div>
                 <Text className="text-3xl font-bold text-red-600">Act Now</Text>
-                <Text size="sm">Every empty night compounds the problem</Text>
+                <Text size="sm">Every empty night compounds the gap</Text>
               </div>
             </div>
             <Text size="sm" className="text-charcoal/70 mb-4">
               Most pubs see meaningful progress inside 30 days
             </Text>
-            <WhatsAppButton text="Calculate my exact losses" size="medium" />
+            <WhatsAppButton text="Help me assess the gap" size="medium" />
           </div>
         </div>
       </Section>
@@ -243,28 +243,28 @@ export default function PubRescue() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              The Orange Jelly Pub Rescue Method
+              The Orange Jelly Recovery Method
             </Heading>
 
             <Text size="lg" align="center" className="mb-12 text-charcoal/70 max-w-3xl mx-auto">
-              We don't guess what your pub needs. We follow a proven process that transformed The
-              Anchor from struggling to thriving. Here's exactly how we turn things around:
+              We don't guess. We use a proven process that created a step-change at The Anchor. Here
+              is how we rebuild momentum:
             </Text>
 
             <Grid columns={{ default: 1, md: 2 }} gap="large">
               <Card variant="bordered" padding="large">
                 <div className="text-4xl mb-4">📊</div>
                 <Heading level={3} className="mb-4">
-                  Week 1: Emergency Triage
+                  Week 1: Performance Triage
                 </Heading>
                 <Text className="mb-4">
-                  We identify what's bleeding money RIGHT NOW. Empty nights? Bad GP? No bookings? We
-                  find the biggest leaks and plug them fast.
+                  We identify what is creating drag right now. Empty nights? Low GP? Weak bookings?
+                  We prioritise the biggest levers first.
                 </Text>
                 <FeatureList
                   items={[
                     'Analyze your numbers quickly',
-                    'Identify top 3 profit killers',
+                    'Identify top 3 profit drags',
                     'Implement quick wins immediately',
                     'Early savings from waste and cost fixes',
                   ]}
@@ -280,8 +280,8 @@ export default function PubRescue() {
                   Week 2-3: Quick Wins
                 </Heading>
                 <Text className="mb-4">
-                  While planning long-term fixes, we implement strategies that show results fast.
-                  You need cash flow NOW, not in 6 months.
+                  While we plan longer-term fixes, we execute actions that show visible movement
+                  quickly.
                 </Text>
                 <FeatureList
                   items={[
@@ -324,8 +324,8 @@ export default function PubRescue() {
                   Month 2+: Sustainable Success
                 </Heading>
                 <Text className="mb-4">
-                  Your pub is transformed. Busy nights, better margins, happy customers. Now we make
-                  sure it stays that way.
+                  You have a step-change in consistency: stronger nights, better margins, and better
+                  systems. Now we protect and compound it.
                 </Text>
                 <FeatureList
                   items={[
@@ -378,12 +378,12 @@ export default function PubRescue() {
         </AnimatedItem>
       </Section>
 
-      {/* Why Pubs Fail Section */}
+      {/* Why Pubs Plateau Section */}
       <Section background="cream">
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Why Good Pubs Fail (And How We Stop It)
+              Why Good Pubs Plateau (And How We Reset Momentum)
             </Heading>
 
             <div className="space-y-6">
@@ -394,8 +394,8 @@ export default function PubRescue() {
                       They Work IN the Business, Not ON It
                     </Heading>
                     <Text className="mb-4">
-                      You're behind the bar 7 days a week. No time to plan events, update social
-                      media, or analyze what's working. You're too busy surviving to actually grow.
+                      You're behind the bar most of the week. No time to plan campaigns, update
+                      channels, or analyse what is working. Delivery crowds out growth.
                     </Text>
                     <Text weight="semibold" className="text-green-600">
                       We Fix This: AI handles the boring bits. Marketing runs itself. You get
@@ -415,7 +415,7 @@ export default function PubRescue() {
                     </Heading>
                     <Text className="mb-4">
                       You can't beat chains on price. Trying to be the cheapest is a race to the
-                      bottom that kills your margins and attracts the wrong customers.
+                      bottom that erodes your margins and attracts the wrong customers.
                     </Text>
                     <Text weight="semibold" className="text-green-600">
                       We Fix This: Position your pub as THE place for something specific. Quiz
@@ -429,16 +429,15 @@ export default function PubRescue() {
                 <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
                   <div>
                     <Heading level={3} className="mb-4 text-red-600">
-                      They Hope Things Will Get Better
+                      They Wait for Conditions to Improve
                     </Heading>
                     <Text className="mb-4">
                       "Summer will be busier." "Once the roadworks finish." "When the economy
-                      improves." Hope isn't a strategy, and waiting costs you money every single
-                      day.
+                      improves." Waiting isn't a strategy, and delay has a cost.
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      We Fix This: Take action NOW. Our quick wins show results in days, not months.
-                      Every week you wait is money lost forever.
+                      We Fix This: Take action this week. Our quick wins create early movement, then
+                      we build consistency month by month.
                     </Text>
                   </div>
                   <div className="text-6xl text-center opacity-20">⏳</div>
@@ -448,13 +447,13 @@ export default function PubRescue() {
 
             <div className="mt-12 text-center">
               <Heading level={3} className="mb-6">
-                Your Pub Doesn't Have to Be Another Statistic
+                Your Pub Can Move Faster Than the Market
               </Heading>
               <Text size="lg" className="mb-8 text-charcoal/70 max-w-2xl mx-auto">
-                Pubs close every week in the UK. But with the right help, the right strategies, and
-                action taken TODAY, yours won't be one of them.
+                Trading conditions are tough, but proactive, modern execution still wins. Start with
+                the biggest bottleneck and build momentum from there.
               </Text>
-              <WhatsAppButton text="I refuse to let my pub fail - help me" size="large" />
+              <WhatsAppButton text="Help me build a recovery plan" size="large" />
             </div>
           </div>
         </AnimatedItem>
@@ -465,7 +464,7 @@ export default function PubRescue() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              What You Actually Get With Pub Rescue
+              What You Get With Pub Recovery Support
             </Heading>
 
             <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-12">
@@ -476,8 +475,8 @@ export default function PubRescue() {
                 <FeatureList
                   items={[
                     'Quick response when possible',
-                    'Emergency triage call same day',
-                    'Quick wins to implement NOW',
+                    'Priority triage call where possible',
+                    'Quick wins to implement this week',
                     'Direct WhatsApp access to Peter',
                     'No corporate call centres',
                   ]}
@@ -489,7 +488,7 @@ export default function PubRescue() {
 
               <Card background="teal-dark" padding="large">
                 <Heading level={3} color="white" className="mb-6">
-                  30-Day Transformation
+                  30-Day Momentum Sprint
                 </Heading>
                 <div className="text-white">
                   <FeatureList
@@ -509,7 +508,7 @@ export default function PubRescue() {
 
             <Card variant="bordered" padding="large" className="mb-8">
               <Heading level={3} align="center" className="mb-6">
-                Plus These Business-Saving Tools
+                Plus These Practical Growth Tools
               </Heading>
               <Grid columns={{ default: 1, md: 3 }} gap="medium">
                 <div className="text-center">
@@ -565,7 +564,7 @@ export default function PubRescue() {
           <AnimatedItem animation="slide-up">
             <div className="max-w-3xl mx-auto">
               <Heading level={2} align="center" className="mb-12">
-                Common Questions From Struggling Licensees
+                Common Questions From Hospitality Partners
               </Heading>
 
               <div className="space-y-6">
@@ -582,26 +581,26 @@ export default function PubRescue() {
       <Section background="cream">
         <div className="max-w-4xl mx-auto">
           <RelatedLinks
-            title="Choose Your Rescue Plan"
-            subtitle="Pick the idea that matches your biggest crisis and we'll tailor the hours"
+            title="Choose Your Recovery Focus"
+            subtitle="Pick the issue that is slowing growth most and we'll tailor the support"
             links={[
               {
-                title: 'Empty Pub Recovery',
-                description: 'Fill your quiet nights in 30 days with hands-on support',
-                href: '/services#empty-pub-recovery',
+                title: 'Transformational Marketing',
+                description: 'Clear plans and action-first delivery to rebuild momentum',
+                href: '/services#transformational-marketing',
                 emoji: '🏚️',
                 highlight: true,
               },
               {
-                title: 'Menu Makeover',
-                description: 'Psychology-based menus that lift spend and margins',
-                href: '/services#boost-food-sales',
+                title: 'Event Innovation',
+                description: 'Fresh event formats that build repeat demand',
+                href: '/services#event-innovation',
                 emoji: '🍽️',
               },
               {
-                title: 'Marketing Automation',
-                description: 'Never worry about social media again',
-                href: '/services#done-for-you-marketing',
+                title: 'Simplified Technology Tools',
+                description: 'Simpler systems, lower waste, better consistency',
+                href: '/services#simplified-technology-tools',
                 emoji: '📱',
               },
             ]}
@@ -613,10 +612,10 @@ export default function PubRescue() {
 
       {/* Final CTA */}
       <CTASection
-        title="Don't Let Your Pub Become Another Statistic"
-        subtitle="Pubs close every week in the UK. With the right help, yours doesn't have to be one of them. Message me now - let's fix your biggest problem first."
-        whatsappMessage="Peter, my pub needs urgent help with [describe your crisis]"
-        buttonText="Get Emergency Pub Help Now"
+        title="Ready to Rebuild Momentum?"
+        subtitle="With the right priorities and consistent execution, performance can shift quickly. Message me and we'll fix the highest-impact issue first."
+        whatsappMessage="Peter, I need help with my pub's performance. My biggest issue is [describe issue]."
+        buttonText="Start My Pub Recovery Plan"
       />
 
       {/* Add FAQ Schema */}

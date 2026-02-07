@@ -37,9 +37,9 @@ const extendedMidweekData = midweekData as typeof midweekData & {
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: 'Fix Dead Tuesday & Wednesday Nights - Proven Midweek Solutions',
+    title: 'Build Midweek Momentum - Proven Tuesday & Wednesday Solutions',
     description:
-      'Transform your dead midweek nights into profit. From empty tables to fully booked - proven strategies that work for UK pubs. Get the exact system we use at The Anchor.',
+      'Turn quiet midweek nights into consistent bookings with practical, action-first systems proven at The Anchor.',
     path: '/quiet-midweek-solutions',
   });
 }
@@ -104,7 +104,7 @@ export default function QuietMidweekSolutions() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto text-center">
             <Heading level={2} color="white" className="mb-8">
-              How We Fixed Our Own Dead Midweek Nights
+              How We Built Midweek Momentum at The Anchor
             </Heading>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -306,8 +306,8 @@ export default function QuietMidweekSolutions() {
               </div>
 
               <Text size="lg" className="mb-8">
-                These aren't cherry-picked success stories. This is the average improvement pubs see
-                when they implement our Midweek Momentum System.
+                These are practical examples of what can happen when pubs implement a consistent
+                midweek momentum system.
               </Text>
             </div>
           </AnimatedItem>
@@ -319,7 +319,7 @@ export default function QuietMidweekSolutions() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Steal These Proven Midweek Events
+              Proven Midweek Event Formats
             </Heading>
 
             <Grid columns={{ default: 1, md: 2 }} gap="large">
@@ -331,19 +331,19 @@ export default function QuietMidweekSolutions() {
                   <div>
                     <Text weight="semibold">Quiz Night 2.0</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      Not your grandad's pub quiz. Fast-paced, phone-friendly, prizes that matter.
+                      Fast-paced, phone-friendly, and built for repeat attendance.
                     </Text>
                   </div>
                   <div>
                     <Text weight="semibold">Taco Tuesday</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      £2 tacos, £5 margaritas. Simple menu, huge margins, Instagram gold.
+                      Simple menu, strong margins, and easy promotion.
                     </Text>
                   </div>
                   <div>
                     <Text weight="semibold">Open Mic Night</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      Performers bring friends. Friends buy drinks. Everyone wins.
+                      Performers bring their audience. Audience drives spend.
                     </Text>
                   </div>
                 </div>
@@ -363,13 +363,13 @@ export default function QuietMidweekSolutions() {
                   <div>
                     <Text weight="semibold">Wing Wednesday</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      50p wings. Yes, you lose money on wings. You make it on £6 pints.
+                      Low-ticket food that lifts drinks spend and dwell time.
                     </Text>
                   </div>
                   <div>
                     <Text weight="semibold">Wine & Paint Night</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      £25 ticket includes materials + first drink. 30 guaranteed customers.
+                      £25 ticket includes materials plus first drink with predictable attendance.
                     </Text>
                   </div>
                 </div>
@@ -383,19 +383,19 @@ export default function QuietMidweekSolutions() {
                   <div>
                     <Text weight="semibold">Curry Club</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      £12.95 curry + rice + naan + pint. Batch cook, minimal waste, packed tables.
+                      Set menu structure with efficient prep and stronger midweek demand.
                     </Text>
                   </div>
                   <div>
                     <Text weight="semibold">Speed Dating</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      Partner with dating company. They bring 40+ people. You provide drinks.
+                      Partner-led format that brings in a new crowd.
                     </Text>
                   </div>
                   <div>
                     <Text weight="semibold">Cocktail Masterclass</Text>
                     <Text size="sm" className="text-charcoal/70">
-                      £30 per person. Teach 3 cocktails. They drink them all. High margins.
+                      Premium ticketed format with high-margin upsell potential.
                     </Text>
                   </div>
                 </div>
@@ -470,7 +470,7 @@ export default function QuietMidweekSolutions() {
                     Month 2+
                   </Heading>
                   <Text size="sm">
-                    Midweek as busy as weekends, £8,000+ extra monthly revenue locked in
+                    Stronger midweek consistency with measurable uplift in contribution
                   </Text>
                 </div>
               </Grid>
@@ -499,36 +499,31 @@ export default function QuietMidweekSolutions() {
       <Section background="cream">
         <div className="max-w-4xl mx-auto text-center">
           <Heading level={2} className="mb-6 text-red-700">
-            ⚠️ Every Dead Tuesday Costs You Money. Every Dead Wednesday Does Too.
+            Every Quiet Tuesday and Wednesday Has a Cost
           </Heading>
           <Text size="lg" className="mb-8">
-            Money vanishes while your competition gets busier. The longer you wait, the harder it is
-            to recover.
+            The longer midweek stays inconsistent, the harder it is to build repeat behaviour.
+            Action-first changes are how you close the gap.
           </Text>
           <Card background="white" padding="large">
             <Heading level={3} className="mb-4">
-              Stop The Bleeding Today
+              Start Building Momentum This Week
             </Heading>
             <Text className="mb-6">
-              Next Tuesday could be busy instead of quiet. Next Wednesday could be fully booked. But
-              only if you act now. Limited spots available - I can only properly support a small
-              number of pubs at once.
+              Next Tuesday can look very different with the right offer and promotion rhythm. We'll
+              start with one high-impact change, implement fast, then iterate based on performance.
             </Text>
-            <WhatsAppButton
-              text="URGENT: Save my midweek nights"
-              size="large"
-              className="!bg-red-600 hover:!bg-red-700"
-            />
+            <WhatsAppButton text="Help me fix midweek trade" size="large" />
           </Card>
         </div>
       </Section>
 
       {/* Final CTA */}
       <CTASection
-        title="Your Midweek Nights Are 30 Days From Packed"
-        subtitle="Join the smart pub owners who turned their quietest nights into their most profitable. Get the exact system, templates, and support that transformed The Anchor's dead midweek into meaningful monthly profit."
-        buttonText="Transform My Midweek Nights Now"
-        whatsappMessage="Peter, my Tuesday and Wednesday nights are dead. I need the Midweek Momentum System."
+        title="Your Midweek Momentum Starts Now"
+        subtitle="Get practical systems, templates, and support that turned The Anchor's quiet midweek into consistent trade."
+        buttonText="Start My Midweek Plan"
+        whatsappMessage="Peter, my Tuesday and Wednesday trade is too quiet. I need a midweek plan."
       />
 
       {/* Structured Data */}

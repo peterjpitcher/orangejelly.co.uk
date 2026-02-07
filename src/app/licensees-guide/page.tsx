@@ -325,13 +325,13 @@ export default async function LicenseesGuidePage() {
               line.
             </Text>
             <Text className="mb-4">
-              Whether you're struggling with empty Tuesday nights, competing with Wetherspoons, or
-              trying to build a profitable food offering, you'll find honest, practical advice that
-              works for pubs, restaurants, and bars.
+              Whether you're tackling quiet Tuesday nights, competing with chains, or building a
+              stronger food offer, you'll find honest, practical advice that works for pubs, bars,
+              and venues.
             </Text>
             <Text className="mb-8">
-              No theory. No fluff. Just proven methods that have transformed our pub from struggling
-              to thriving - and can do the same for yours.
+              No theory. No fluff. Just proven methods that created a measurable step-change in our
+              own pub and can do the same for yours.
             </Text>
           </div>
 

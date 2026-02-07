@@ -10,7 +10,7 @@
     "title": "Fix My Pub",
     "subtitle": "Tell me what's broken. I'll tell you the fastest thing to fix first - and give you the templates to implement it.",
     "ctaText": "Hi Peter, please help me fix my pub",
-    "bottomText": "£75/hour + VAT • No packages • Start with a quick WhatsApp chat"
+    "bottomText": "£75/hour + VAT • No fixed retainers • Start with a quick WhatsApp chat"
   },
   "intro": {
     "heading": "Start with the fastest win",
@@ -41,7 +41,7 @@
       },
       {
         "title": "Midweek systems",
-        "description": "Repeatable hooks that turn dead nights into regulars."
+        "description": "Repeatable hooks that turn quiet nights into regulars."
       },
       {
         "title": "Ongoing support (optional)",
@@ -89,7 +89,7 @@
     },
     {
       "question": "How much does it cost?",
-      "answer": "£75 per hour plus VAT. No packages and no long contracts."
+      "answer": "£75 per hour plus VAT. No fixed retainers and no long contracts."
     },
     {
       "question": "Can you work remotely?",

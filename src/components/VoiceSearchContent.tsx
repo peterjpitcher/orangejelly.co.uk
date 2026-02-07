@@ -91,26 +91,26 @@ export function VoiceSearchSection({ title, items, className = '' }: VoiceSearch
   );
 }
 
-// Common voice search queries for pubs
+// Common voice search queries for hospitality operators
 export const commonPubQueries = [
   {
-    question: 'How can I get more customers in my pub?',
+    question: 'How can I get more customers in my hospitality venue?',
     answer:
-      'Orange Jelly helps UK pubs attract more customers through AI-powered marketing, menu optimization, and social media automation. Our proven strategies transformed The Anchor from struggling to thriving.',
+      'Orange Jelly helps hospitality partners attract more customers through action-first marketing, practical systems, and AI-enabled delivery. Our proven strategies created a measurable step-change at The Anchor.',
   },
   {
-    question: 'How much does pub marketing cost?',
+    question: 'How much does hospitality marketing support cost?',
     answer:
       'Orange Jelly charges £75 per hour plus VAT for all services. No hidden fees, transparent pricing. You only pay for the time you need.',
   },
   {
-    question: "What's the best way to promote my pub?",
+    question: "What's the best way to promote my venue?",
     answer:
-      'The most effective pub promotion combines compelling social media content, optimised menus that sell high-margin items, and targeted local marketing. Orange Jelly automates these tasks using AI, saving you up to 25 hours weekly.',
+      'The most effective venue promotion combines compelling social content, clear offers, practical events, and local visibility. Orange Jelly uses AI-enabled workflows to increase speed and consistency without adding noise.',
   },
   {
-    question: 'How do I fill my pub on quiet nights?',
+    question: 'How do I fill quiet nights?',
     answer:
-      'Orange Jelly specializes in filling quiet nights like Tuesdays. We create targeted promotions, quiz nights, and special events that work. The Anchor now sees 25-30 regular quiz teams each month using our strategies.',
+      'Orange Jelly specializes in turning quiet nights into repeat demand. We create targeted offers, events, and weekly execution rhythms that work. The Anchor now sees 25-30 regular quiz teams each month using these strategies.',
   },
 ];

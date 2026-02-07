@@ -3,20 +3,19 @@ import AboutPage from './AboutPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'About Orange Jelly - Hospitality Marketing Specialist',
+    title: 'About Orange Jelly - Small Team, Transformative Growth Partner',
     description:
-      'Meet Peter Pitcher, a hospitality marketing specialist who leverages AI to deliver great results for pubs, restaurants, and bars. Real experience from The Anchor, where Billy runs day-to-day and Peter handles marketing.',
+      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. We are a small, hands-on team helping hospitality partners grow through tough trading conditions.',
     path: '/about',
     keywords: [
       'Peter Pitcher',
       'Orange Jelly',
-      'hospitality marketing specialist',
+      'hospitality growth partner',
       'pub marketing',
-      'restaurant marketing',
       'bar marketing',
       'The Anchor Stanwell Moor',
-      'pub marketing consultant',
-      'licensee helping licensees',
+      'hospitality marketing consultant',
+      'hospitality growth partner',
     ].join(', '),
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
@@ -34,9 +33,9 @@ function AboutPageData() {
     '@graph': [
       {
         '@type': 'AboutPage',
-        name: 'About Orange Jelly - Hospitality Marketing Specialist',
+        name: 'About Orange Jelly - Transformative Hospitality Growth Partner',
         description:
-          'Learn about Peter Pitcher and Billy Summers. Billy runs The Anchor pub day-to-day while Peter handles marketing and business development, helping pubs, restaurants, and bars reclaim up to 25 hours each week with AI tools.',
+          'Learn about Peter Pitcher and Billy Summers. Billy runs The Anchor day-to-day while Peter leads marketing and growth, helping hospitality partners create measurable uplift in bookings, footfall, and revenue.',
         url: 'https://www.orangejelly.co.uk/about',
         mainEntity: {
           '@id': 'https://www.orangejelly.co.uk/#organization',
@@ -46,9 +45,9 @@ function AboutPageData() {
         '@type': 'Person',
         '@id': 'https://www.orangejelly.co.uk/#peter-pitcher',
         name: 'Peter Pitcher',
-        jobTitle: 'Founder & Hospitality Marketing Specialist',
+        jobTitle: 'Founder & Hospitality Growth Partner',
         description:
-          'Pub owner and hospitality marketing specialist who discovered how AI can save up to 25 hours a week on boring admin tasks. Co-owner of The Anchor in Stanwell Moor, where Billy runs day-to-day and Peter handles marketing.',
+          'Hospitality growth partner focused on transformative, action-first marketing. Co-owner of The Anchor in Stanwell Moor, where Billy runs day-to-day and Peter handles marketing.',
         spouse: {
           '@type': 'Person',
           name: 'Billy Summers',
@@ -95,7 +94,7 @@ function AboutPageData() {
         },
         foundingDate: '2019',
         description:
-          'AI-powered hospitality marketing for UK pubs, restaurants, and bars from real operators who understand the challenges.',
+          'Transformative hospitality marketing for UK hospitality businesses from a small, hands-on team that understands trading pressure.',
         areaServed: {
           '@type': 'Country',
           name: 'United Kingdom',
@@ -109,11 +108,11 @@ function AboutPageData() {
           'Menu Design',
           'Customer Retention',
         ],
-        slogan: 'Hospitality marketing that delivers great results with AI',
+        slogan: 'Small team. Big momentum. Transformative marketing for hospitality partners.',
         priceRange: '££',
         award: [
-          'Featured in BII Autumn 2025 magazine for AI innovation',
-          'Transformed The Anchor from struggling to thriving',
+          'Featured in BII magazine for AI innovation',
+          'Created a measurable performance step-change at The Anchor',
         ],
       },
     ],
