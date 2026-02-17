@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Fraunces, Open_Sans } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 import FooterWrapper from '@/components/FooterWrapper';
@@ -12,9 +12,19 @@ import { ROICalculatorProvider } from '@/contexts/ROICalculatorContext';
 import { getBaseUrl } from '@/lib/site-config';
 import CookieNotice from '@/components/CookieNotice';
 
-const inter = Inter({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-heading',
+  display: 'swap',
+  weight: ['500', '600', '700', '800'],
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
+  display: 'swap',
 });
 
 export const viewport: Viewport = {
@@ -172,7 +182,7 @@ export default function RootLayout({
         />
         <GoogleTagManager />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${fraunces.variable} ${openSans.variable} font-sans antialiased`}>
         <GoogleTagManagerNoscript />
         {/* Skip to main content link for keyboard navigation */}
         <Link
@@ -186,7 +196,7 @@ export default function RootLayout({
         <NavigationWrapper />
         <ROICalculatorProvider>
           <ErrorBoundary>
-            <main id="main-content" className="min-h-screen pt-16">
+            <main id="main-content" className="min-h-screen">
               {children}
             </main>
           </ErrorBoundary>

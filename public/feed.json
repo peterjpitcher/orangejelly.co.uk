@@ -24,7 +24,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["summer", "campaigns", "events", "marketing"],
+      "tags": [
+        "summer",
+        "campaigns",
+        "events",
+        "marketing"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/summer-moments-simple-campaigns.png"
     },
     {
@@ -102,7 +107,13 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["midweek offers", "pub marketing", "bundles", "footfall", "promotions"],
+      "tags": [
+        "midweek offers",
+        "pub marketing",
+        "bundles",
+        "footfall",
+        "promotions"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/fill-empty-seats-midweek-offers.png"
     },
     {
@@ -158,7 +169,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["theme hour", "power hour pub", "spin to win", "saturday promotions"],
+      "tags": [
+        "theme hour",
+        "power hour pub",
+        "spin to win",
+        "saturday promotions"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/theme-hour-power-hour.png"
     },
     {
@@ -173,7 +189,13 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["EPOS", "data", "analytics", "pub management", "performance"],
+      "tags": [
+        "EPOS",
+        "data",
+        "analytics",
+        "pub management",
+        "performance"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/epos-data-revenue-comeback.png"
     },
     {
@@ -188,7 +210,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["friday night pub ideas", "street food takeover", "spritz bundles", "pub events"],
+      "tags": [
+        "friday night pub ideas",
+        "street food takeover",
+        "spritz bundles",
+        "pub events"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/fizz-street-food-pop-up.png"
     },
     {
@@ -203,7 +230,13 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["energy costs", "utilities", "sustainability", "cost control", "pub operations"],
+      "tags": [
+        "energy costs",
+        "utilities",
+        "sustainability",
+        "cost control",
+        "pub operations"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/energy-bill-shock-cut-venue-costs.png"
     },
     {
@@ -218,7 +251,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["pub quiz guide", "quiz night ideas", "licensee toolkit", "rhythm of the week"],
+      "tags": [
+        "pub quiz guide",
+        "quiz night ideas",
+        "licensee toolkit",
+        "rhythm of the week"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/quiz-night-101.png"
     },
     {
@@ -254,7 +292,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["music bingo", "pub events toolkit", "licensee guide", "midweek mixer"],
+      "tags": [
+        "music bingo",
+        "pub events toolkit",
+        "licensee guide",
+        "midweek mixer"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/music-bingo-101.png"
     },
     {
@@ -290,7 +333,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["karaoke night", "pub events", "licensee toolkit", "music compliance"],
+      "tags": [
+        "karaoke night",
+        "pub events",
+        "licensee toolkit",
+        "music compliance"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/karaoke-night-101.png"
     },
     {
@@ -305,7 +353,13 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["delivery", "click and collect", "operations", "guest experience", "systems"],
+      "tags": [
+        "delivery",
+        "click and collect",
+        "operations",
+        "guest experience",
+        "systems"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/delivery-click-collect-without-harm.png"
     },
     {
@@ -320,7 +374,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["family pub ideas", "craft hour", "licensee guide", "sunday trade"],
+      "tags": [
+        "family pub ideas",
+        "craft hour",
+        "licensee guide",
+        "sunday trade"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/family-craft-hour-101.png"
     },
     {
@@ -335,7 +394,13 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["PR", "reviews", "reputation", "customer service", "communications"],
+      "tags": [
+        "PR",
+        "reviews",
+        "reputation",
+        "customer service",
+        "communications"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/crisis-pr-landlords-bad-reviews.png"
     },
     {
@@ -350,7 +415,12 @@
         "name": "Peter Pitcher",
         "email": "peter@orangejelly.co.uk"
       },
-      "tags": ["cash bingo", "pub gaming compliance", "midweek toolkit", "licensee guide"],
+      "tags": [
+        "cash bingo",
+        "pub gaming compliance",
+        "midweek toolkit",
+        "licensee guide"
+      ],
       "image": "https://www.orangejelly.co.uk/images/blog/cash-bingo-101.png"
     }
   ]

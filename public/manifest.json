@@ -4,8 +4,8 @@
   "description": "Save up to 25 hours a week running your pub with AI tools that actually work",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF5EB",
-  "theme_color": "#FF6B35",
+  "background_color": "#F2F8FC",
+  "theme_color": "#1A2F49",
   "orientation": "portrait-primary",
   "icons": [
     {

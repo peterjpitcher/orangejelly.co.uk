@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 // Heading component with SEO optimization
-const headingVariants = cva('font-bold tracking-tight scroll-m-20', {
+const headingVariants = cva('font-display font-bold tracking-tight scroll-m-20', {
   variants: {
     level: {
       1: 'text-4xl lg:text-5xl',
@@ -15,8 +15,13 @@ const headingVariants = cva('font-bold tracking-tight scroll-m-20', {
     },
     color: {
       default: 'text-foreground',
+      base: 'text-charcoal',
+      support: 'text-teal',
+      accent: 'text-orange',
+      highlight: 'text-[var(--color-highlight)]',
+      grounded: 'text-[var(--color-grounded)]',
       charcoal: 'text-charcoal',
-      orange: 'text-primary',
+      orange: 'text-orange',
       teal: 'text-secondary',
       white: 'text-white',
     },
@@ -72,10 +77,15 @@ const textVariants = cva('leading-7', {
     },
     color: {
       default: 'text-foreground',
+      base: 'text-charcoal',
+      support: 'text-teal',
+      accent: 'text-orange',
+      highlight: 'text-[var(--color-highlight)]',
+      grounded: 'text-[var(--color-grounded)]',
       charcoal: 'text-charcoal',
       muted: 'text-muted-foreground',
       white: 'text-white',
-      orange: 'text-primary',
+      orange: 'text-orange',
       error: 'text-destructive',
     },
     weight: {

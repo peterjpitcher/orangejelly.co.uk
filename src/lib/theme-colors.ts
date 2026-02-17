@@ -7,17 +7,28 @@
  */
 
 export const THEME_COLORS = {
-  // Brand Colors
-  orange: '#FF6B35',
-  orangeLight: '#FF8F66',
-  orangeDark: '#E55A2B',
-  teal: '#2C5F5F',
-  tealLight: '#4A7C7C',
-  tealDark: '#1A3D3D',
-  cream: '#FFF5EB',
-  charcoal: '#2C3E50',
-  charcoalLight: '#34495E',
+  // Canonical brand colors
+  base: '#1A2F49',
+  blueSupport: '#01619E',
+  accent: '#F65403',
+  accentSecondary: '#FF8901',
+  highlight: '#FFBD28',
+  grounded: '#736F26',
+  surface: '#F2F8FC',
+  surfaceAlt: '#E7F1F8',
+  text: '#1A2F49',
   white: '#FFFFFF',
+
+  // Backward-compatible aliases
+  orange: '#F65403',
+  orangeLight: '#FFF2D4',
+  orangeDark: '#FF8901',
+  teal: '#01619E',
+  tealLight: '#2B84B9',
+  tealDark: '#1A2F49',
+  cream: '#F2F8FC',
+  charcoal: '#1A2F49',
+  charcoalLight: '#324A68',
   
   // External Brand Colors
   whatsapp: '#25D366',
@@ -35,14 +46,16 @@ export const THEME_COLORS = {
 
 // Semantic color mappings
 export const SEMANTIC_COLORS = {
-  primary: THEME_COLORS.orange,
-  primaryHover: THEME_COLORS.orangeDark,
-  secondary: THEME_COLORS.teal,
-  secondaryHover: THEME_COLORS.tealDark,
-  background: THEME_COLORS.cream,
-  text: THEME_COLORS.charcoal,
-  textMuted: `${THEME_COLORS.charcoal}99`, // 60% opacity
-  border: `${THEME_COLORS.charcoal}1A`, // 10% opacity
+  primary: THEME_COLORS.base,
+  primaryHover: THEME_COLORS.blueSupport,
+  secondary: THEME_COLORS.blueSupport,
+  secondaryHover: THEME_COLORS.base,
+  background: THEME_COLORS.surface,
+  text: THEME_COLORS.text,
+  textMuted: 'rgba(26, 47, 73, 0.72)',
+  border: 'rgba(26, 47, 73, 0.18)',
+  accent: THEME_COLORS.accent,
+  accentSecondary: THEME_COLORS.accentSecondary,
 } as const;
 
 // Export type for TypeScript

@@ -5,7 +5,18 @@ import { Slot } from "@radix-ui/react-slot";
 
 interface LegacyCardProps {
   variant?: 'default' | 'bordered' | 'shadowed' | 'colored';
-  background?: 'white' | 'cream' | 'orange-light' | 'teal-dark' | 'orange' | 'teal';
+  background?:
+    | 'white'
+    | 'cream'
+    | 'orange-light'
+    | 'teal-dark'
+    | 'orange'
+    | 'teal'
+    | 'base'
+    | 'blue-support'
+    | 'surface'
+    | 'highlight'
+    | 'grounded';
   padding?: 'small' | 'medium' | 'large';
   className?: string;
   children: React.ReactNode;
@@ -18,7 +29,12 @@ const backgroundMap = {
   'orange-light': 'bg-orange/10',
   'teal-dark': 'bg-secondary text-secondary-foreground',
   orange: 'bg-primary text-primary-foreground',
-  teal: 'bg-secondary text-secondary-foreground'
+  teal: 'bg-secondary text-secondary-foreground',
+  base: 'bg-charcoal text-white',
+  'blue-support': 'bg-teal text-white',
+  surface: 'bg-cream',
+  highlight: 'bg-[var(--color-highlight)] text-charcoal',
+  grounded: 'bg-[var(--color-grounded)] text-white',
 };
 
 const paddingMap = {
@@ -51,7 +67,13 @@ export default function CardAdapter({
   const contentClasses = cn(
     paddingMap[padding],
     // Ensure proper text color for dark backgrounds
-    (background === 'teal-dark' || background === 'orange' || background === 'teal') && 'text-white'
+    (background === 'teal-dark' ||
+      background === 'orange' ||
+      background === 'teal' ||
+      background === 'base' ||
+      background === 'blue-support' ||
+      background === 'grounded') &&
+      'text-white'
   );
 
   if (asChild) {

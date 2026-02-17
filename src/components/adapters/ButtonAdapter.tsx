@@ -6,7 +6,16 @@ import { cn } from '@/lib/utils';
 
 // Map old props to new shadcn props
 interface LegacyButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'custom' | 'outline-white';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'outline'
+    | 'ghost'
+    | 'custom'
+    | 'outline-white'
+    | 'base'
+    | 'support'
+    | 'accent';
   size?: 'small' | 'medium' | 'large';
   loading?: boolean;
   disabled?: boolean;
@@ -29,6 +38,9 @@ const variantMap = {
   ghost: 'ghost',
   custom: 'default',
   'outline-white': 'outline',
+  base: 'default',
+  support: 'secondary',
+  accent: 'default',
 } as const;
 
 // Map old sizes to shadcn sizes
@@ -44,7 +56,10 @@ const legacyVariantClasses: Record<NonNullable<LegacyButtonProps['variant']>, st
   outline: 'border-2 border-orange text-orange hover:bg-orange hover:text-white',
   ghost: 'text-orange hover:bg-orange/10',
   custom: '',
-  'outline-white': 'border-2 border-white text-white hover:bg-white hover:text-charcoal',
+  'outline-white': 'border-2 border-white bg-transparent text-white hover:bg-white hover:text-charcoal',
+  base: 'bg-charcoal text-white hover:bg-charcoal-light',
+  support: 'bg-teal text-white hover:bg-teal-dark',
+  accent: 'bg-orange text-white hover:bg-orange-dark',
 };
 
 const legacySizeClasses: Record<NonNullable<LegacyButtonProps['size']>, string> = {

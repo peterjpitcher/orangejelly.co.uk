@@ -17,8 +17,8 @@ export default function OGImage() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#FFF5EB',
-          fontFamily: 'Inter, system-ui, sans-serif',
+          background: '#F2F8FC',
+          fontFamily: 'Fraunces, Open Sans, system-ui, sans-serif',
         }}
       >
         <div
@@ -27,13 +27,13 @@ export default function OGImage() {
             alignItems: 'center',
             gap: 32,
             padding: 48,
-            border: '8px solid #FF6B35',
+            border: '8px solid #1A2F49',
             borderRadius: 24,
           }}
         >
           <div
             style={{
-              background: '#FF6B35',
+              background: '#1A2F49',
               color: '#FFFFFF',
               fontSize: 72,
               fontWeight: 800,
@@ -45,11 +45,11 @@ export default function OGImage() {
             OJ
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: 56, color: '#2D2D2D', fontWeight: 800 }}>Orange Jelly</div>
-            <div style={{ fontSize: 36, color: '#2C5F5F', fontWeight: 600 }}>
+            <div style={{ fontSize: 56, color: '#1A2F49', fontWeight: 800 }}>Orange Jelly</div>
+            <div style={{ fontSize: 36, color: '#01619E', fontWeight: 600 }}>
               Hospitality marketing that works
             </div>
-            <div style={{ fontSize: 28, color: '#2D2D2D' }}>
+            <div style={{ fontSize: 28, color: '#1A2F49' }}>
               Fill tables for pubs, restaurants, and bars. Save up to 25 hours weekly.
             </div>
           </div>

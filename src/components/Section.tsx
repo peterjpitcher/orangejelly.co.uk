@@ -3,7 +3,17 @@ import { memo } from 'react';
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  background?: 'cream' | 'white' | 'orange-light' | 'teal' | 'charcoal';
+  background?:
+    | 'cream'
+    | 'white'
+    | 'orange-light'
+    | 'teal'
+    | 'charcoal'
+    | 'base'
+    | 'blue-support'
+    | 'surface'
+    | 'highlight'
+    | 'grounded';
   padding?: 'small' | 'medium' | 'large';
 }
 
@@ -18,7 +28,12 @@ function Section({
     white: 'bg-white',
     'orange-light': 'bg-orange/10',
     teal: 'bg-teal text-cream',
-    charcoal: 'bg-charcoal text-cream'
+    charcoal: 'bg-charcoal text-cream',
+    base: 'bg-charcoal text-cream',
+    'blue-support': 'bg-teal text-white',
+    surface: 'bg-cream',
+    highlight: 'bg-[var(--color-highlight)] text-charcoal',
+    grounded: 'bg-[var(--color-grounded)] text-white',
   };
 
   const paddingClasses = {

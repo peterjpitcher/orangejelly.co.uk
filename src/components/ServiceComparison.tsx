@@ -99,13 +99,13 @@ export default function ServiceComparison() {
       <div className="hidden md:block">
         <Table>
           <TableHeader>
-            <TableRow className="border-b-2 border-orange/20">
+            <TableRow className="border-b-2 border-teal/25">
               <TableHead className="text-left py-4"></TableHead>
               {Object.entries(services).map(([key, service]) => (
                 <TableHead key={key} className="text-center px-4 py-4">
                   <div className={service.highlight ? 'relative' : ''}>
                     {service.highlight && (
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-orange text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-teal text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                         MOST POPULAR
                       </div>
                     )}
@@ -139,7 +139,7 @@ export default function ServiceComparison() {
                   <ul className="space-y-2">
                     {service.includes.map((item, index) => (
                       <li key={index} className="flex items-start text-sm">
-                        <span className="text-orange mr-2 mt-0.5">✓</span>
+                        <span className="text-teal mr-2 mt-0.5">✓</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -169,11 +169,11 @@ export default function ServiceComparison() {
           <div
             key={key}
             className={`${selectedService === key ? 'block' : 'hidden'} ${
-              service.highlight ? 'ring-2 ring-orange' : ''
+              service.highlight ? 'ring-2 ring-teal' : ''
             } rounded-lg p-6`}
           >
             {service.highlight && (
-              <div className="bg-orange text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
+              <div className="bg-teal text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
                 MOST POPULAR
               </div>
             )}
@@ -202,7 +202,7 @@ export default function ServiceComparison() {
               <ul className="space-y-2">
                 {service.includes.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-orange mr-2 mt-0.5">✓</span>
+                    <span className="text-teal mr-2 mt-0.5">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}

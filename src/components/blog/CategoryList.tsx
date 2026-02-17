@@ -42,11 +42,11 @@ function CategoryList({
               <Card
                 variant="bordered"
                 className={`
-                  text-center hover:border-orange transition-colors
-                  ${currentCategory === category.slug ? 'border-orange' : ''}
+                  text-center hover:border-teal transition-colors
+                  ${currentCategory === category.slug ? 'border-teal' : ''}
                 `}
               >
-                <Heading level={4} className="mb-1 group-hover:text-orange transition-colors">
+                <Heading level={4} className="mb-1 group-hover:text-teal transition-colors">
                   {category.name}
                 </Heading>
                 {category.postCount !== undefined && (
@@ -73,8 +73,8 @@ function CategoryList({
                     inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors
                     ${
                       currentCategory === category.slug
-                        ? 'border-orange bg-orange/10 text-orange'
-                        : 'border-charcoal/10 text-charcoal/70 hover:border-orange/50 hover:text-orange'
+                        ? 'border-teal bg-teal/10 text-teal'
+                        : 'border-charcoal/10 text-charcoal/70 hover:border-teal/50 hover:text-teal'
                     }
                   `}
                 >
@@ -102,7 +102,7 @@ function CategoryList({
             href="/licensees-guide"
             className={`
               block py-2 px-3 rounded-lg transition-colors text-sm
-              ${!currentCategory ? 'bg-orange text-white' : 'hover:bg-orange/10 text-charcoal'}
+              ${!currentCategory ? 'bg-teal text-white' : 'hover:bg-teal/10 text-charcoal'}
             `}
           >
             All Articles
@@ -116,8 +116,8 @@ function CategoryList({
                 block py-2 px-3 rounded-lg transition-colors text-sm
                 ${
                   currentCategory === category.slug
-                    ? 'bg-orange text-white'
-                    : 'hover:bg-orange/10 text-charcoal'
+                    ? 'bg-teal text-white'
+                    : 'hover:bg-teal/10 text-charcoal'
                 }
               `}
             >

@@ -11,7 +11,15 @@ interface CTASectionProps {
   subtitle?: string;
   buttonText?: string;
   whatsappMessage?: string;
-  variant?: 'orange' | 'teal' | 'charcoal';
+  variant?:
+    | 'orange'
+    | 'teal'
+    | 'charcoal'
+    | 'base'
+    | 'support'
+    | 'accent'
+    | 'highlight'
+    | 'grounded';
   bottomText?: string;
 }
 
@@ -27,6 +35,11 @@ function CTASection({
     orange: 'bg-orange',
     teal: 'bg-teal',
     charcoal: 'bg-charcoal',
+    base: 'bg-charcoal',
+    support: 'bg-teal',
+    accent: 'bg-orange',
+    highlight: 'bg-[var(--color-highlight)] text-charcoal',
+    grounded: 'bg-[var(--color-grounded)]',
   };
 
   return (

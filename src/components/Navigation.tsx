@@ -66,7 +66,7 @@ export default function Navigation({ navigation }: NavigationProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-brand-base text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
         {/* Mobile logo */}
         <Link href="/" className="flex md:hidden items-center space-x-2">
@@ -75,6 +75,7 @@ export default function Navigation({ navigation }: NavigationProps) {
             alt="Orange Jelly"
             width={40}
             height={40}
+            priority
             className="rounded-lg"
             style={{ width: '40px', height: '40px' }}
           />
@@ -103,7 +104,8 @@ export default function Navigation({ navigation }: NavigationProps) {
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        pathname === link.href && 'bg-accent'
+                        'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
+                        pathname === link.href && 'bg-brand text-white hover:bg-brand/90'
                       )}
                     >
                       {link.label}
@@ -166,13 +168,14 @@ export default function Navigation({ navigation }: NavigationProps) {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-white">
+            <SheetContent side="left" className="bg-cream">
               <Link href="/" className="flex items-center">
                 <OptimizedImage
                   src="/logo.png"
                   alt="Orange Jelly"
                   width={48}
                   height={48}
+                  priority
                   className="rounded-lg"
                 />
                 <span className="ml-2 font-bold">Orange Jelly</span>
@@ -183,7 +186,7 @@ export default function Navigation({ navigation }: NavigationProps) {
                     <Link
                       href={link.href}
                       className={cn(
-                        'block py-3 px-4 min-h-[44px] flex items-center text-charcoal hover:text-orange hover:bg-orange/5 rounded-lg transition-quick',
+                        'block py-3 px-4 min-h-[44px] flex items-center text-charcoal hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
                         pathname === link.href && 'bg-accent'
                       )}
                     >

@@ -9,7 +9,17 @@ interface LinkProps {
   className?: string;
   variant?: 'default' | 'button' | 'underline' | 'nav';
   size?: 'sm' | 'md' | 'lg';
-  color?: 'orange' | 'teal' | 'charcoal' | 'white' | 'inherit';
+  color?:
+    | 'orange'
+    | 'teal'
+    | 'charcoal'
+    | 'white'
+    | 'inherit'
+    | 'base'
+    | 'support'
+    | 'accent'
+    | 'highlight'
+    | 'grounded';
   target?: string;
   rel?: string;
   onClick?: () => void;
@@ -42,6 +52,11 @@ function Link({
     teal: 'text-teal hover:text-teal-dark',
     charcoal: 'text-charcoal hover:text-charcoal/80',
     white: 'text-white hover:text-cream',
+    base: 'text-charcoal hover:text-teal',
+    support: 'text-teal hover:text-teal-light',
+    accent: 'text-orange hover:text-orange-dark',
+    highlight: 'text-[var(--color-grounded)] hover:text-charcoal',
+    grounded: 'text-[var(--color-grounded)] hover:text-charcoal',
     inherit: '',
   };
 
@@ -49,9 +64,15 @@ function Link({
   const variantClasses = {
     default: `${colorClasses[color]} transition-colors`,
     button: `inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all ${
-      color === 'orange' 
-        ? 'bg-orange text-white hover:bg-orange-dark' 
-        : 'bg-teal text-white hover:bg-teal-dark'
+      ['orange', 'accent'].includes(color)
+        ? 'bg-orange text-white hover:bg-orange-dark'
+        : ['teal', 'support'].includes(color)
+          ? 'bg-teal text-white hover:bg-teal-dark'
+          : ['base', 'charcoal'].includes(color)
+            ? 'bg-charcoal text-white hover:bg-charcoal-light'
+            : ['highlight', 'grounded'].includes(color)
+              ? 'bg-[var(--color-grounded)] text-white hover:bg-[var(--color-base)]'
+              : 'bg-teal text-white hover:bg-teal-dark'
     }`,
     underline: `${colorClasses[color]} underline hover:no-underline transition`,
     nav: `text-charcoal hover:text-orange transition-colors font-medium`,

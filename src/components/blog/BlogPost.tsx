@@ -87,7 +87,7 @@ export default function BlogPost({
     <>
       {/* Reading progress bar */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-cream z-50">
-        <div id="reading-progress" className="h-full bg-orange transition-all duration-100 w-0" />
+        <div id="reading-progress" className="h-full bg-teal transition-all duration-100 w-0" />
       </div>
 
       {/* Share buttons (floating on desktop) */}
@@ -104,7 +104,7 @@ export default function BlogPost({
               href={`/licensees-guide/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
               variant="ghost"
               size="small"
-              className="text-orange hover:text-orange-dark font-medium text-sm p-0"
+              className="text-teal hover:text-charcoal font-medium text-sm p-0"
             >
               {typeof post.category === 'string' ? post.category : post.category.name}
             </Button>
@@ -175,7 +175,7 @@ export default function BlogPost({
         </div>
 
         {/* Call to action */}
-        <Card variant="bordered" className="bg-orange mb-12">
+        <Card variant="bordered" className="bg-charcoal mb-12">
           <div className="text-center">
             <Heading level={3} align="center" color="white" className="mb-4">
               Need Help Implementing These Ideas?

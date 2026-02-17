@@ -40,14 +40,21 @@ export default function Hero({
   return (
     <section
       className={`relative overflow-hidden ${
-        isImageBackground ? 'bg-charcoal' : 'bg-gradient-to-b from-cream to-cream-light'
+        isImageBackground ? 'bg-charcoal' : 'bg-gradient-to-b from-cream to-white'
       }`}
     >
       {/* Background Image with Overlay */}
       {isImageBackground && (
         <div className="absolute inset-0 z-0">
-          <OptimizedImage src={backgroundImage} alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-charcoal/80" />
+          <OptimizedImage
+            src={backgroundImage}
+            alt=""
+            fill
+            className="object-cover brightness-[0.34] contrast-110 saturate-75"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0b1627]/78 via-[#10233a]/74 to-[#0b1627]/84" />
+          <div className="absolute inset-0 bg-black/22" />
         </div>
       )}
 
@@ -69,25 +76,44 @@ export default function Hero({
       {/* Decorative orange circles - only show if no background image */}
       {!isImageBackground && (
         <>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-orange/5 rounded-full -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange/5 rounded-full translate-y-48 -translate-x-48"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-teal/10 rounded-full -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal/10 rounded-full translate-y-48 -translate-x-48"></div>
         </>
       )}
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+      <div
+        className={`relative z-10 ${isImageBackground ? '' : 'max-w-6xl mx-auto px-4 sm:px-6'}`}
+      >
         {/* Breadcrumbs at top of hero */}
         {breadcrumbs && (
-          <div className="pt-4 pb-2">
+          <div
+            className={
+              isImageBackground ? 'max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-2' : 'pt-4 pb-2'
+            }
+          >
             <Breadcrumb items={breadcrumbs} variant={isImageBackground ? 'light' : 'dark'} />
           </div>
         )}
 
-        <div className="text-center py-12 md:py-20">
+        <div
+          className={
+            isImageBackground
+              ? 'w-full border-y border-white/12 bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-[2px]'
+              : ''
+          }
+        >
+          <div
+            className={`text-center py-12 md:py-20 ${
+              isImageBackground ? 'mx-auto max-w-5xl px-6 sm:px-8 md:px-10' : ''
+            }`}
+          >
           <Heading
             level={headingLevel}
             align="center"
             color={isImageBackground ? 'white' : 'charcoal'}
-            className="text-4xl md:text-6xl mb-6 animate-fade-in"
+            className={`text-4xl md:text-6xl mb-6 animate-fade-in ${
+              isImageBackground ? '[text-shadow:0_4px_20px_rgba(0,0,0,0.65)]' : ''
+            }`}
           >
             {title}
           </Heading>
@@ -98,7 +124,9 @@ export default function Hero({
               color={isImageBackground ? 'white' : 'muted'}
               align="center"
               className={`md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-delay ${
-                isImageBackground ? 'text-white/90' : ''
+                isImageBackground
+                  ? 'text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.65)]'
+                  : ''
               }`}
             >
               {subtitle}
@@ -125,17 +153,18 @@ export default function Hero({
             <Text
               size="sm"
               className={`${
-                isImageBackground ? 'text-white/70' : 'text-charcoal/60'
+                isImageBackground ? 'text-white/85' : 'text-charcoal/60'
               } animate-fade-in-delay-3 text-center`}
             >
               {bottomText}
             </Text>
           )}
+          </div>
         </div>
       </div>
 
       {/* Decorative element */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent"></div>
     </section>
   );
 }

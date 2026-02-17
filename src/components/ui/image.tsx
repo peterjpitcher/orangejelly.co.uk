@@ -178,7 +178,7 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
           )}
           {isLoading && !priority && !useImgTag && (
             <div
-              className={cn('absolute inset-0 animate-pulse bg-muted', className)}
+              className={cn('absolute inset-0 bg-muted/40', className)}
               aria-hidden="true"
             />
           )}
@@ -197,7 +197,7 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
         )}
         {isLoading && !priority && !useImgTag && (
           <div
-            className={cn('absolute inset-0 animate-pulse bg-muted', className)}
+            className={cn('absolute inset-0 bg-muted/40', className)}
             aria-hidden="true"
           />
         )}

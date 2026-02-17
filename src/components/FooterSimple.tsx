@@ -72,13 +72,13 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           {/* Quick Links Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-cream/90">
             <div>
-              <Heading level={5} color="orange" className="mb-3 text-cream">
+              <Heading level={5} color="white" className="mb-3 text-cream">
                 Services
               </Heading>
               <ul className="space-y-2 text-sm">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <Link href={service.href} className="hover:text-orange transition-colors">
+                    <Link href={service.href} className="hover:text-teal-light transition-colors">
                       {service.title}
                     </Link>
                   </li>
@@ -87,7 +87,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3 text-cream">
+              <Heading level={5} color="white" className="mb-3 text-cream">
                 Company
               </Heading>
               <ul className="space-y-2 text-sm">
@@ -95,7 +95,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="hover:text-orange transition-colors"
+                      className="hover:text-teal-light transition-colors"
                       external={link.external}
                     >
                       {link.title}
@@ -106,13 +106,13 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3 text-cream">
+              <Heading level={5} color="white" className="mb-3 text-cream">
                 Resources
               </Heading>
               <ul className="space-y-2 text-sm">
                 {resources.map((resource, index) => (
                   <li key={index}>
-                    <Link href={resource.href} className="hover:text-orange transition-colors">
+                    <Link href={resource.href} className="hover:text-teal-light transition-colors">
                       {resource.title}
                     </Link>
                   </li>
@@ -121,26 +121,26 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </div>
 
             <div>
-              <Heading level={5} color="orange" className="mb-3 text-cream">
+              <Heading level={5} color="white" className="mb-3 text-cream">
                 Get in Touch
               </Heading>
               <div className="space-y-2 text-sm text-cream/90">
                 <Link
                   href={URLS.whatsapp()}
-                  className="block hover:text-orange transition-colors"
+                  className="block hover:text-teal-light transition-colors"
                   external
                 >
                   📱 WhatsApp
                 </Link>
                 <Link
                   href={`tel:${footerContent?.contactInfo?.phone || CONTACT.phone}`}
-                  className="block hover:text-orange transition-colors"
+                  className="block hover:text-teal-light transition-colors"
                 >
                   📞 {footerContent?.contactInfo?.phone || CONTACT.phone}
                 </Link>
                 <Link
                   href={`mailto:${footerContent?.contactInfo?.email || CONTACT.email}`}
-                  className="block hover:text-orange transition-colors"
+                  className="block hover:text-teal-light transition-colors"
                 >
                   ✉️ Email Us
                 </Link>

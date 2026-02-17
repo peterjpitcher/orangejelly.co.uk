@@ -22,7 +22,7 @@ describe('Heading Component', () => {
       </Heading>
     );
     const heading = container.querySelector('h1');
-    expect(heading).toHaveClass('text-primary');
+    expect(heading).toHaveClass('text-orange');
   });
 
   it('applies correct alignment', () => {

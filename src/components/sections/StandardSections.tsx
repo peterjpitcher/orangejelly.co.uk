@@ -11,7 +11,17 @@ import relatedLinksData from '../../../content/data/related-links.json';
 type RelatedLinkCluster = Record<string, { links: RelatedLink[] }>;
 
 interface SectionWrapperProps {
-  background?: 'white' | 'cream' | 'teal' | 'orange-light' | 'charcoal';
+  background?:
+    | 'white'
+    | 'cream'
+    | 'teal'
+    | 'orange-light'
+    | 'charcoal'
+    | 'base'
+    | 'blue-support'
+    | 'surface'
+    | 'highlight'
+    | 'grounded';
   padding?: 'small' | 'medium' | 'large';
   children: React.ReactNode;
 }
@@ -32,7 +42,7 @@ function SectionWrapper({
 // Working With Industry Leaders Section
 interface IndustryLeadersSectionProps {
   variant?: 'full' | 'compact' | 'minimal';
-  background?: 'white' | 'cream';
+  background?: 'white' | 'cream' | 'surface';
 }
 
 export function IndustryLeadersSection({
@@ -57,7 +67,7 @@ interface HelpSectionProps {
   subtitle?: string;
   links?: RelatedLink[];
   linkCluster?: string; // Cluster ID for related links
-  background?: 'white' | 'cream';
+  background?: 'white' | 'cream' | 'surface';
   columns?: {
     default?: 1 | 2 | 3 | 4;
     sm?: 1 | 2 | 3 | 4;
@@ -118,7 +128,15 @@ interface StandardCTASectionProps {
   buttonText?: string;
   whatsappMessage?: string;
   bottomText?: string;
-  variant?: 'orange' | 'teal' | 'charcoal';
+  variant?:
+    | 'orange'
+    | 'teal'
+    | 'charcoal'
+    | 'base'
+    | 'support'
+    | 'accent'
+    | 'highlight'
+    | 'grounded';
 }
 
 export function StandardCTASection({
@@ -146,7 +164,7 @@ interface TrustCredibilitySectionProps {
   showBadges?: boolean;
   showPartnerships?: boolean;
   partnershipsVariant?: 'full' | 'compact' | 'minimal';
-  background?: 'white' | 'cream';
+  background?: 'white' | 'cream' | 'surface';
 }
 
 export function TrustCredibilitySection({
@@ -184,7 +202,14 @@ interface MetricsBarProps {
     label: string;
     highlight?: boolean;
   }>;
-  background?: 'orange' | 'teal' | 'charcoal';
+  background?:
+    | 'orange'
+    | 'teal'
+    | 'charcoal'
+    | 'base'
+    | 'blue-support'
+    | 'highlight'
+    | 'grounded';
   textColor?: 'white' | 'charcoal';
 }
 
@@ -201,6 +226,10 @@ export function MetricsBar({
     orange: 'bg-orange',
     teal: 'bg-teal',
     charcoal: 'bg-charcoal',
+    base: 'bg-charcoal',
+    'blue-support': 'bg-teal',
+    highlight: 'bg-[var(--color-highlight)]',
+    grounded: 'bg-[var(--color-grounded)]',
   }[background];
 
   const textClass = textColor === 'white' ? 'text-white' : 'text-charcoal';

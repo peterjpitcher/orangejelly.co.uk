@@ -7,7 +7,19 @@ interface BoxProps {
   // Common styling props
   padding?: 'none' | 'small' | 'medium' | 'large' | 'xlarge';
   margin?: 'none' | 'small' | 'medium' | 'large' | 'xlarge';
-  background?: 'white' | 'cream' | 'orange' | 'teal' | 'orange-light' | 'teal-dark' | 'transparent';
+  background?:
+    | 'white'
+    | 'cream'
+    | 'orange'
+    | 'teal'
+    | 'orange-light'
+    | 'teal-dark'
+    | 'base'
+    | 'blue-support'
+    | 'surface'
+    | 'highlight'
+    | 'grounded'
+    | 'transparent';
   rounded?: boolean | 'sm' | 'md' | 'lg' | 'xl' | 'full';
   position?: 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky';
   textAlign?: 'left' | 'center' | 'right';
@@ -49,7 +61,12 @@ export default function Box({
     teal: 'bg-teal',
     'orange-light': 'bg-orange-light',
     'teal-dark': 'bg-teal-dark',
-    transparent: 'bg-transparent'
+    base: 'bg-charcoal',
+    'blue-support': 'bg-teal',
+    surface: 'bg-cream',
+    highlight: 'bg-[var(--color-highlight)]',
+    grounded: 'bg-[var(--color-grounded)]',
+    transparent: 'bg-transparent',
   };
 
   const roundedClasses = {
