@@ -13,6 +13,12 @@ const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
   'revenue-growth': 'sales',
 };
 
+const RETIRED_CONTENT_PATHS = new Set([
+  '/licensees-guide/README',
+  '/licensees-guide/readme',
+  '/licensees-guide/cash-flow-crisis-breaking-cycle',
+]);
+
 function normalizePathSegment(value: string): string {
   return value
     .toLowerCase()
@@ -70,6 +76,10 @@ export function middleware(request: NextRequest) {
   const forwardedProto = request.headers.get('x-forwarded-proto');
   const isProductionHost = hostname === 'orangejelly.co.uk' || hostname === canonicalHostname;
   const isGetOrHead = request.method === 'GET' || request.method === 'HEAD';
+
+  if (isGetOrHead && RETIRED_CONTENT_PATHS.has(url.pathname)) {
+    return applySecurityHeaders(new NextResponse('Gone', { status: 410 }));
+  }
 
   if (isGetOrHead && url.pathname.startsWith(categoryPrefix)) {
     const categorySegment = url.pathname.slice(categoryPrefix.length);
