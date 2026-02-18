@@ -80,7 +80,7 @@ Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then s
 
 **Key KPI**: consistency week to week.
 
-## Leadership behaviors that make it stick
+## Leadership behaviours that make it stick
 
 - Share the numbers weekly.
 - Celebrate small wins publicly.

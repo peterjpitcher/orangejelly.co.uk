@@ -53,7 +53,7 @@
     "title": "Sunday Lunch Waste",
     "displayText": "£250/week cut in Sunday lunch waste",
     "value": "£250",
-    "category": "savings",
+    "category": "margin",
     "timeframe": "weekly",
     "location": "The Anchor",
     "order": 6,
@@ -70,8 +70,8 @@
     "isActive": true
   },
   {
-    "title": "Time Saved Weekly",
-    "displayText": "Up to 25 hours saved weekly using AI systems",
+    "title": "Weekly Growth Capacity",
+    "displayText": "Up to 25 hours redirected weekly into growth actions",
     "value": "25 hours",
     "category": "efficiency",
     "timeframe": "weekly",

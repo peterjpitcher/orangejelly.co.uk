@@ -56,7 +56,7 @@ export default function ServiceComparison() {
         'Tool audit across booking, website, reviews, email, and socials',
         'Fix-first approach before adding new platforms',
         'Waste reduction on subscriptions and stack sprawl',
-        'Simple systems for consistency and time savings',
+        'Simple systems for consistent execution and faster growth',
         'Practical team enablement',
       ],
       highlight: false,

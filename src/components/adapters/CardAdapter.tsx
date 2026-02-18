@@ -1,7 +1,14 @@
-import * as React from "react";
-import { Card as ShadcnCard, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { Slot } from "@radix-ui/react-slot";
+import * as React from 'react';
+import {
+  Card as ShadcnCard,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { Slot } from '@radix-ui/react-slot';
 
 interface LegacyCardProps {
   variant?: 'default' | 'bordered' | 'shadowed' | 'colored';
@@ -40,7 +47,7 @@ const backgroundMap = {
 const paddingMap = {
   small: 'p-4',
   medium: 'p-6',
-  large: 'p-8'
+  large: 'p-8',
 };
 
 export default function CardAdapter({
@@ -53,14 +60,14 @@ export default function CardAdapter({
   ...props
 }: LegacyCardProps) {
   const Comp = asChild ? Slot : 'div';
-  
+
   const cardClasses = cn(
     // Base styles handled by shadcn Card
     variant === 'bordered' && 'border-2',
     variant === 'shadowed' && 'shadow-lg',
     variant === 'colored' && backgroundMap[background],
     // Remove default padding since we'll apply it to the content
-    "p-0",
+    'p-0',
     className
   );
 
@@ -86,9 +93,7 @@ export default function CardAdapter({
 
   return (
     <ShadcnCard className={cardClasses} {...props}>
-      <div className={contentClasses}>
-        {children}
-      </div>
+      <div className={contentClasses}>{children}</div>
     </ShadcnCard>
   );
 }

@@ -1,6 +1,6 @@
 /**
  * Theme Colors Constants
- * 
+ *
  * These colors are used throughout the application and match the CSS variables
  * defined in globals.css. Use these constants for server-side rendering or
  * where CSS variables are not available (e.g., ImageResponse, email templates).
@@ -29,14 +29,14 @@ export const THEME_COLORS = {
   cream: '#F2F8FC',
   charcoal: '#1A2F49',
   charcoalLight: '#324A68',
-  
+
   // External Brand Colors
   whatsapp: '#25D366',
   whatsappHover: '#128C7E',
   facebook: '#1877F2',
   twitter: '#1DA1F2',
   instagram: '#E4405F',
-  
+
   // Status Colors
   success: '#10B981',
   warning: '#F59E0B',

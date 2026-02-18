@@ -67,7 +67,7 @@ export default function Navigation({ navigation }: NavigationProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-brand-base text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 md:h-16 items-center justify-between">
         {/* Mobile logo */}
         <Link href="/" className="flex md:hidden items-center space-x-2">
           <OptimizedImage
@@ -104,6 +104,7 @@ export default function Navigation({ navigation }: NavigationProps) {
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
+                        'h-12 py-3',
                         'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
                         pathname === link.href && 'bg-brand text-white hover:bg-brand/90'
                       )}

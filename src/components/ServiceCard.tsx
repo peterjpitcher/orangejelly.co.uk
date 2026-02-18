@@ -14,6 +14,7 @@ interface ServiceCardExample {
 
 interface ServiceCardProps {
   id: string;
+  image?: string;
   emoji?: string;
   title: string;
   problem?: string;
@@ -27,7 +28,8 @@ interface ServiceCardProps {
 
 function ServiceCard({
   id,
-  emoji,
+  image,
+  emoji, // Keep for backward compatibility if needed, though we're focusing on image
   title,
   problem,
   deliverable,
@@ -42,24 +44,34 @@ function ServiceCard({
       <Card
         variant="shadowed"
         padding="medium"
-        className={`h-full flex flex-col relative overflow-hidden hover:shadow-xl transition-all ${
-          highlight ? 'ring-2 ring-orange' : ''
-        }`}
+        className={`h-full flex flex-col relative overflow-hidden hover:shadow-xl transition-all ${highlight ? 'ring-2 ring-orange' : ''
+          }`}
       >
         {/* Most Popular Badge */}
         {highlight && (
-          <div className="absolute top-0 right-0 bg-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+          <div className="absolute top-0 right-0 bg-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
             MOST POPULAR
           </div>
         )}
 
-        {/* Orange Jelly watermark - subtle in corner */}
-        <div className="absolute bottom-2 right-2 opacity-5">
+        {/* Note: Removed the watermark here as it might clash with item images, or we can keep it if subtle enough */}
+        <div className="absolute bottom-2 right-2 opacity-5 pointer-events-none">
           <OptimizedImage src="/logo.png" alt="" width={48} height={48} className="w-12 h-12" />
         </div>
 
-        {/* Content */}
-        {emoji && <div className="text-3xl mb-3">{emoji}</div>}
+        {/* Image or Emoji */}
+        {image ? (
+          <div className="mb-4 w-full h-48 relative rounded-lg overflow-hidden shadow-sm">
+            <OptimizedImage
+              src={image}
+              alt={title}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ) : (
+          emoji && <div className="text-3xl mb-3">{emoji}</div>
+        )}
 
         <Heading level={4} className="mb-3 text-lg">
           {title}
@@ -100,7 +112,7 @@ function ServiceCard({
         )}
 
         {example && (
-          <Card background="cream" padding="small" className="mb-4">
+          <Card background="cream" padding="small" className="mb-4 mt-auto">
             <Text size="xs" weight="semibold" className="mb-2">
               Real example:
             </Text>
@@ -123,7 +135,7 @@ function ServiceCard({
         )}
 
         {/* Button at bottom */}
-        <div className="mt-auto pt-4">
+        <div className="mt-4">
           <Button
             href={URLS.whatsapp(`I'm interested in ${title}`)}
             variant={highlight ? 'primary' : 'secondary'}

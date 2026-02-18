@@ -26,56 +26,59 @@ export function CollectionPageSchema({
   description,
   url,
   items,
-  breadcrumbs = []
+  breadcrumbs = [],
 }: CollectionPageSchemaProps) {
   const isAbsolute = (u: string) => /^https?:\/\//i.test(u);
   const site = getBaseUrl();
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": name,
-    "description": description,
-    "url": isAbsolute(url) ? url : `${site}${url}`,
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": `${site}/#website`
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: name,
+    description: description,
+    url: isAbsolute(url) ? url : `${site}${url}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${site}/#website`,
     },
-    "breadcrumb": breadcrumbs.length > 0 ? {
-      "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbs.map((crumb, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": crumb.name,
-        "item": isAbsolute(crumb.url) ? crumb.url : `${site}${crumb.url}`
-      }))
-    } : undefined,
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": items.map((item, index) => ({
-        "@type": "BlogPosting",
-        "position": index + 1,
-        "url": isAbsolute(item.url) ? item.url : `${site}${item.url}`,
-        "headline": item.name,
-        ...(item.description && { "description": item.description }),
-        ...(item.datePublished && { "datePublished": item.datePublished }),
-        ...(item.author && {
-          "author": {
-            "@type": "Person",
-            "name": item.author
+    breadcrumb:
+      breadcrumbs.length > 0
+        ? {
+            '@type': 'BreadcrumbList',
+            itemListElement: breadcrumbs.map((crumb, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: crumb.name,
+              item: isAbsolute(crumb.url) ? crumb.url : `${site}${crumb.url}`,
+            })),
           }
+        : undefined,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'BlogPosting',
+        position: index + 1,
+        url: isAbsolute(item.url) ? item.url : `${site}${item.url}`,
+        headline: item.name,
+        ...(item.description && { description: item.description }),
+        ...(item.datePublished && { datePublished: item.datePublished }),
+        ...(item.author && {
+          author: {
+            '@type': 'Person',
+            name: item.author,
+          },
         }),
         ...(item.image && {
-          "image": {
-            "@type": "ImageObject",
-            "url": isAbsolute(item.image) ? item.image : `${site}${item.image}`
-          }
+          image: {
+            '@type': 'ImageObject',
+            url: isAbsolute(item.image) ? item.image : `${site}${item.image}`,
+          },
         }),
-        "publisher": {
-          "@type": "Organization",
-          "name": "Orange Jelly Limited"
-        }
-      }))
-    }
+        publisher: {
+          '@type': 'Organization',
+          name: 'Orange Jelly Limited',
+        },
+      })),
+    },
   };
 
   // Validate in development

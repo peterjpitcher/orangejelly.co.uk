@@ -29,7 +29,7 @@ describe('ROICalculator Component', () => {
   it('renders calculator with default values', () => {
     renderWithProvider(<ROICalculator />);
 
-    expect(screen.getByText(/Calculate Your Time & Money Savings/i)).toBeInTheDocument();
+    expect(screen.getByText(/Forecast Your Growth Potential/i)).toBeInTheDocument();
     expect(screen.getByText(/Hours per week on admin tasks/i)).toBeInTheDocument();
     expect(screen.getByText(/Hours per week on social media/i)).toBeInTheDocument();
   });

@@ -1,6 +1,26 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
+  marketing: 'social-media',
+  'supplier-relations': 'empty-pub-solutions',
+  'financial-management': 'empty-pub-solutions',
+  'crisis-management': 'empty-pub-solutions',
+  'customer-acquisition': 'empty-pub-solutions',
+  'location-challenges': 'empty-pub-solutions',
+  'digital-reputation': 'social-media',
+  events: 'events-promotions',
+  'revenue-growth': 'sales',
+};
+
+function normalizePathSegment(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
 function applySecurityHeaders(response: NextResponse) {
   // Security headers
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
@@ -44,11 +64,34 @@ function applySecurityHeaders(response: NextResponse) {
 export function middleware(request: NextRequest) {
   const canonicalHostname = 'www.orangejelly.co.uk';
   const url = request.nextUrl.clone();
+  const categoryPrefix = '/licensees-guide/category/';
 
   const hostname = url.hostname;
   const forwardedProto = request.headers.get('x-forwarded-proto');
   const isProductionHost = hostname === 'orangejelly.co.uk' || hostname === canonicalHostname;
   const isGetOrHead = request.method === 'GET' || request.method === 'HEAD';
+
+  if (isGetOrHead && url.pathname.startsWith(categoryPrefix)) {
+    const categorySegment = url.pathname.slice(categoryPrefix.length);
+    const hasNestedPath = categorySegment.includes('/');
+
+    if (categorySegment && !hasNestedPath) {
+      let decodedCategory = categorySegment;
+      try {
+        decodedCategory = decodeURIComponent(categorySegment);
+      } catch {
+        decodedCategory = categorySegment;
+      }
+
+      const normalizedCategory = normalizePathSegment(decodedCategory);
+      const targetCategory = LEGACY_CATEGORY_REDIRECTS[normalizedCategory] || normalizedCategory;
+
+      if (targetCategory && categorySegment !== targetCategory) {
+        url.pathname = `${categoryPrefix}${targetCategory}`;
+        return applySecurityHeaders(NextResponse.redirect(url, 308));
+      }
+    }
+  }
 
   if (
     isGetOrHead &&

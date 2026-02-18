@@ -18,7 +18,7 @@ Yes - we reach 60,000-70,000 people every month and plan and schedule 30 days of
 
 ## How detailed are your AI business reports?
 
-Very detailed but easy to understand. You'll get insights on customer behavior, menu performance, event ROI, and seasonal trends - all presented in plain English with clear action steps.
+Very detailed but easy to understand. You'll get insights on customer behaviour, menu performance, event ROI, and seasonal trends - all presented in plain English with clear action steps.
 
 ## What makes your event planning different?
 
@@ -46,11 +46,11 @@ Not at all! I'll teach you to guide AI to create posts that sound like you, show
 
 ## What kind of business insights can AI provide?
 
-AI helps analyze your sales patterns, identify your most profitable customers, optimize staff scheduling, and predict busy periods. Estimated business value added since adopting AI: £75,000-£100,000.
+AI helps analyse your sales patterns, identify your most profitable customers, optimise staff scheduling, and predict busy periods. Estimated business value added since adopting AI: £75,000-£100,000.
 
 ## What exactly do you do with menu AI?
 
-I'll teach you to use AI for menu analysis, pricing optimization, and seasonal updates. We've cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts.
+I'll teach you to use AI for menu analysis, pricing optimisation, and seasonal updates. We've cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts.
 
 ## Will AI-written menus sound fake or robotic?
 
@@ -58,11 +58,11 @@ Not at all! I guide the AI to write in your pub's authentic voice. The descripti
 
 ## How do you create pub events that actually work?
 
-By using AI to analyze what your community wants, automate promotion, and track results. Our tasting nights build strong repeat attendance because we use data to plan events people actually want to attend.
+By using AI to analyse what your community wants, automate promotion, and track results. Our tasting nights build strong repeat attendance because we use data to plan events people actually want to attend.
 
 ## Do you work with chains or just independents?
 
-Both. We support independent pubs and pub chain teams. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and save up to 25 hours every week, I can help.
+Both. We support independent pubs and pub chain teams. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and turn up to 25 hours every week into growth actions, I can help.
 
 ## What areas do you cover?
 
@@ -78,4 +78,4 @@ Create experiences chains can't match. Regular's benefits, personalized service,
 
 ## What free marketing works best for pubs?
 
-Social media (especially local Facebook groups), Google My Business optimization, email marketing to existing customers, community partnerships, and creating shareable moments. These strategies consistently outperform paid ads for local pubs.
+Social media (especially local Facebook groups), Google My Business optimisation, email marketing to existing customers, community partnerships, and creating shareable moments. These strategies consistently outperform paid ads for local pubs.

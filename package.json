@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:growth-language && npm run check:british-english && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint && npm run check:growth-language && npm run check:british-english",
+    "check:growth-language": "node scripts/check-growth-language.mjs",
+    "check:british-english": "node scripts/check-british-english.mjs",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css}\"",
     "type-check": "tsc --noEmit",
@@ -20,6 +22,10 @@
     "prepare": "husky || true"
   },
   "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "node scripts/check-growth-language.mjs",
+      "node scripts/check-british-english.mjs"
+    ],
     "*.{js,jsx,ts,tsx,json,css}": [
       "prettier --write",
       "eslint --fix"

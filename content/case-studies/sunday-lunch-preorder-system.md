@@ -14,7 +14,7 @@ We were losing approximately £250 per week on Sunday lunch waste - thrown away 
 
 ## The Solution
 
-Implemented a custom-built pre-order system requiring deposits through PayPal. Everything is now prepared fresh to order. Used AI to analyze booking patterns and optimize purchasing. Built a back-office management system for bookings, customer details, and invoicing. Clear communication about why pre-orders ensure freshness and reduce waste.
+Implemented a custom-built pre-order system requiring deposits through PayPal. Everything is now prepared fresh to order. Used AI to analyse booking patterns and optimise purchasing. Built a back-office management system for bookings, customer details, and invoicing. Clear communication about why pre-orders ensure freshness and reduce waste.
 
 ## Results
 

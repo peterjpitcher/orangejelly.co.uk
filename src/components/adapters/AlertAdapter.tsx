@@ -1,13 +1,13 @@
-import * as React from "react";
-import { Alert as ShadcnAlert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { cn } from "@/lib/utils";
-import { CheckCircle2, XCircle, AlertCircle, Info } from "lucide-react";
+import * as React from 'react';
+import { Alert as ShadcnAlert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { cn } from '@/lib/utils';
+import { CheckCircle2, XCircle, AlertCircle, Info } from 'lucide-react';
 
 interface LegacyAlertProps {
   title?: string;
   description?: string;
   children?: React.ReactNode;
-  variant?: "default" | "success" | "error" | "warning" | "info";
+  variant?: 'default' | 'success' | 'error' | 'warning' | 'info';
   closable?: boolean;
   onClose?: () => void;
   className?: string;
@@ -18,33 +18,33 @@ export default function AlertAdapter({
   title,
   description,
   children,
-  variant = "default",
+  variant = 'default',
   closable,
   onClose,
   className,
   icon = true,
 }: LegacyAlertProps) {
   const [isVisible, setIsVisible] = React.useState(true);
-  
+
   if (!isVisible) return null;
-  
+
   const handleClose = () => {
     setIsVisible(false);
     onClose?.();
   };
-  
+
   // Map legacy variants to shadcn variants
-  const shadcnVariant = variant === "error" ? "destructive" : "default";
-  
+  const shadcnVariant = variant === 'error' ? 'destructive' : 'default';
+
   // Variant-specific styles
   const variantStyles = {
-    default: "",
-    success: "border-green-200 bg-green-50 [&>svg]:text-green-600",
-    error: "",
-    warning: "border-orange-200 bg-orange-50 [&>svg]:text-orange-600",
-    info: "border-blue-200 bg-blue-50 [&>svg]:text-blue-600",
+    default: '',
+    success: 'border-green-200 bg-green-50 [&>svg]:text-green-600',
+    error: '',
+    warning: 'border-orange-200 bg-orange-50 [&>svg]:text-orange-600',
+    info: 'border-blue-200 bg-blue-50 [&>svg]:text-blue-600',
   };
-  
+
   // Default icons for each variant
   const defaultIcons = {
     default: null,
@@ -53,14 +53,11 @@ export default function AlertAdapter({
     warning: <AlertCircle className="h-4 w-4" />,
     info: <Info className="h-4 w-4" />,
   };
-  
+
   const alertIcon = icon === true ? defaultIcons[variant] : icon;
-  
+
   return (
-    <ShadcnAlert
-      variant={shadcnVariant}
-      className={cn(variantStyles[variant], className)}
-    >
+    <ShadcnAlert variant={shadcnVariant} className={cn(variantStyles[variant], className)}>
       {alertIcon}
       <div className="flex-1">
         {title && <AlertTitle>{title}</AlertTitle>}
@@ -84,27 +81,33 @@ export default function AlertAdapter({
 interface ToastProps {
   message: string;
   title?: string;
-  variant?: "default" | "success" | "error" | "warning" | "info";
+  variant?: 'default' | 'success' | 'error' | 'warning' | 'info';
   duration?: number;
   onClose?: () => void;
 }
 
-export function Toast({ message, title, variant = "default", duration = 5000, onClose }: ToastProps) {
+export function Toast({
+  message,
+  title,
+  variant = 'default',
+  duration = 5000,
+  onClose,
+}: ToastProps) {
   const [isVisible, setIsVisible] = React.useState(true);
-  
+
   React.useEffect(() => {
     if (duration && duration > 0) {
       const timer = setTimeout(() => {
         setIsVisible(false);
         onClose?.();
       }, duration);
-      
+
       return () => clearTimeout(timer);
     }
   }, [duration, onClose]);
-  
+
   if (!isVisible) return null;
-  
+
   return (
     <div className="fixed bottom-4 right-4 z-50 animate-in slide-in-from-bottom-2">
       <AlertAdapter
@@ -131,16 +134,16 @@ const ToastContext = React.createContext<ToastContextType | undefined>(undefined
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = React.useState<(ToastProps & { id: string })[]>([]);
-  
+
   const showToast = React.useCallback((props: ToastProps) => {
     const id = Math.random().toString(36).substring(7);
     setToasts((prev) => [...prev, { ...props, id }]);
   }, []);
-  
+
   const removeToast = React.useCallback((id: string) => {
     setToasts((prev) => prev.filter((toast) => toast.id !== id));
   }, []);
-  
+
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
@@ -168,7 +171,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 export function useToast() {
   const context = React.useContext(ToastContext);
   if (!context) {
-    throw new Error("useToast must be used within a ToastProvider");
+    throw new Error('useToast must be used within a ToastProvider');
   }
   return context;
 }

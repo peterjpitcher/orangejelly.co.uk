@@ -4,7 +4,7 @@ export {
   HelpSection,
   StandardCTASection,
   TrustCredibilitySection,
-  MetricsBar
+  MetricsBar,
 } from './StandardSections';
 
 // Export reusable components that are commonly used in sections

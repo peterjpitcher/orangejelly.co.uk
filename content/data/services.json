@@ -25,7 +25,7 @@
       },
       {
         "number": "3",
-        "title": "Monthly Savings",
+        "title": "Monthly Margin Growth",
         "value": "£4,000+",
         "description": "Supplier, rota, and energy improvements"
       }
@@ -76,7 +76,7 @@
   "servicePackages": [
     {
       "id": "event-innovation",
-      "emoji": "🎉",
+      "image": "/images/services/event-innovation.png",
       "title": "Event Innovation",
       "problem": "Need more reasons for people to come out and come back?",
       "deliverable": "Fresh event formats that are easier to run and easier to sell",
@@ -99,7 +99,7 @@
     },
     {
       "id": "transformational-marketing",
-      "emoji": "🚀",
+      "image": "/images/services/transformational-marketing.png",
       "title": "Transformational Marketing",
       "problem": "Random posting, rushed campaigns, and no clear direction?",
       "deliverable": "A 30/60/90-day plan with action-first execution",
@@ -122,16 +122,16 @@
     },
     {
       "id": "simplified-technology-tools",
-      "emoji": "🧰",
+      "image": "/images/services/simplified-technology-tools.png",
       "title": "Simplified Technology Tools",
       "problem": "Too many tools, unclear setup, and wasted subscriptions?",
-      "deliverable": "A simpler stack that saves time and earns its keep",
+      "deliverable": "A simpler stack that accelerates execution and earns its keep",
       "description": "Most hospitality businesses either have too many tools, or the right tools set up badly. We simplify, fix, and focus on what genuinely supports trade.",
       "features": [
         "Current stack review across booking, website, reviews, email, socials, and sign-ups",
         "Fix what you already use before adding anything new",
         "Waste reduction on low-value subscriptions",
-        "Simple systems that improve consistency and save time",
+        "Simple systems that improve consistency and accelerate execution",
         "Practical tracking without drowning in data",
         "Team enablement so tools are actually used properly"
       ],
@@ -145,7 +145,7 @@
     },
     {
       "id": "clearing-up-ambiguity",
-      "emoji": "🧭",
+      "image": "/images/services/clearing-up-ambiguity.png",
       "title": "Clearing Up Ambiguity",
       "problem": "Too many priorities, unclear standards, and slow decisions?",
       "deliverable": "Clarity, standards, and playbooks your team can follow",

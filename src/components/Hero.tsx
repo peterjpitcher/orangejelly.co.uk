@@ -81,15 +81,11 @@ export default function Hero({
         </>
       )}
 
-      <div
-        className={`relative z-10 ${isImageBackground ? '' : 'max-w-6xl mx-auto px-4 sm:px-6'}`}
-      >
+      <div className={`relative z-10 ${isImageBackground ? '' : 'max-w-6xl mx-auto px-4 sm:px-6'}`}>
         {/* Breadcrumbs at top of hero */}
         {breadcrumbs && (
           <div
-            className={
-              isImageBackground ? 'max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-2' : 'pt-4 pb-2'
-            }
+            className={isImageBackground ? 'max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-2' : 'pt-4 pb-2'}
           >
             <Breadcrumb items={breadcrumbs} variant={isImageBackground ? 'light' : 'dark'} />
           </div>
@@ -98,7 +94,7 @@ export default function Hero({
         <div
           className={
             isImageBackground
-              ? 'w-full border-y border-white/12 bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-[2px]'
+              ? 'w-full border-y border-white/12 bg-black/40 shadow-[0_6px_18px_rgba(0,0,0,0.24)]'
               : ''
           }
         >
@@ -107,58 +103,50 @@ export default function Hero({
               isImageBackground ? 'mx-auto max-w-5xl px-6 sm:px-8 md:px-10' : ''
             }`}
           >
-          <Heading
-            level={headingLevel}
-            align="center"
-            color={isImageBackground ? 'white' : 'charcoal'}
-            className={`text-4xl md:text-6xl mb-6 animate-fade-in ${
-              isImageBackground ? '[text-shadow:0_4px_20px_rgba(0,0,0,0.65)]' : ''
-            }`}
-          >
-            {title}
-          </Heading>
-
-          {subtitle && (
-            <Text
-              size="lg"
-              color={isImageBackground ? 'white' : 'muted'}
+            <Heading
+              level={headingLevel}
               align="center"
-              className={`md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-delay ${
-                isImageBackground
-                  ? 'text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.65)]'
-                  : ''
-              }`}
+              color={isImageBackground ? 'white' : 'charcoal'}
+              className="text-4xl md:text-6xl mb-6"
             >
-              {subtitle}
-            </Text>
-          )}
+              {title}
+            </Heading>
 
-          {showCTA && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-delay-2">
-              <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" />
+            {subtitle && (
+              <Text
+                size="lg"
+                color={isImageBackground ? 'white' : 'muted'}
+                align="center"
+                className={`md:text-2xl mb-8 max-w-3xl mx-auto ${isImageBackground ? 'text-white' : ''}`}
+              >
+                {subtitle}
+              </Text>
+            )}
 
-              {secondaryAction && (
-                <Button
-                  href={secondaryAction.href}
-                  variant={isImageBackground ? 'outline-white' : 'outline'}
-                  size="large"
-                >
-                  {secondaryAction.text}
-                </Button>
-              )}
-            </div>
-          )}
+            {showCTA && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" />
 
-          {bottomText && (
-            <Text
-              size="sm"
-              className={`${
-                isImageBackground ? 'text-white/85' : 'text-charcoal/60'
-              } animate-fade-in-delay-3 text-center`}
-            >
-              {bottomText}
-            </Text>
-          )}
+                {secondaryAction && (
+                  <Button
+                    href={secondaryAction.href}
+                    variant={isImageBackground ? 'outline-white' : 'outline'}
+                    size="large"
+                  >
+                    {secondaryAction.text}
+                  </Button>
+                )}
+              </div>
+            )}
+
+            {bottomText && (
+              <Text
+                size="sm"
+                className={`${isImageBackground ? 'text-white font-medium' : 'text-charcoal/70'} text-center`}
+              >
+                {bottomText}
+              </Text>
+            )}
           </div>
         </div>
       </div>

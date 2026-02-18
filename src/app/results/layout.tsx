@@ -6,7 +6,7 @@ const canonicalUrl = getAbsoluteUrl('/results');
 export const metadata: Metadata = {
   title: 'Results - Hospitality Marketing Success Stories',
   description:
-    'See how we use AI at The Anchor to save time and increase revenue, then apply it to pubs, restaurants, and bars. Real examples, real numbers, no fluff.',
+    'See how we use AI at The Anchor to accelerate revenue growth, then apply it to pubs, restaurants, and bars. Real examples, real numbers, no fluff.',
   alternates: {
     canonical: canonicalUrl,
   },

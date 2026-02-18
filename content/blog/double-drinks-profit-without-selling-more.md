@@ -36,7 +36,7 @@ faqs:
   - question: "Do I need expensive equipment for premium drinks?"
     answer: "No. Start with a reliable bean-to-cup machine, master a handful of classic cocktails with existing spirits, and stock premium soft drinks. Keep the setup lean and build from there."
   - question: "Will regular customers resist premium drinks?"
-    answer: "Not if positioned correctly. Don't remove favorites - add options. Offer tasting nights with strong repeat attendance, samples with meals, and educate staff on flavor profiles. Most resistance is fear of the unknown."
+    answer: "Not if positioned correctly. Don't remove favourites - add options. Offer tasting nights with strong repeat attendance, samples with meals, and educate staff on flavor profiles. Most resistance is fear of the unknown."
   - question: "How do I train staff to sell premium drinks?"
     answer: "Replace 'What would you like to drink?' with specific suggestions: 'Our new IPA pairs perfectly with that burger' or 'Can I tempt you with our salted caramel espresso martini?' Role-play for 10 minutes before each shift."
 localSEO:
@@ -44,11 +44,11 @@ localSEO:
   - Premium drinks strategy for British pubs
   - Coffee sales in local pubs
 ctaSettings:
-  ctaType: "calculator"
-  ctaHeading: "Calculate Your Premium Drinks Potential"
-  ctaDescription: "See how much extra profit you could make"
-  ctaButtonText: "Start Calculating"
-  ctaButtonLink: "#roi-calculator"
+  ctaType: "conversation"
+  ctaHeading: "Start a Growth Conversation"
+  ctaDescription: "Tell us where momentum is stuck and get practical next steps"
+  ctaButtonText: "Start a Growth Conversation"
+  ctaButtonLink: "/contact"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"

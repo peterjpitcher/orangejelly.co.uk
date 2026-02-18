@@ -11,6 +11,6 @@ export function formatDate(dateString: string): string {
   return date.toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
-    year: 'numeric'
+    year: 'numeric',
   });
 }

@@ -17,14 +17,14 @@ function MobileCTA({
   primaryText = 'Get Started',
   whatsappText,
   showBoth = false,
-  className = ''
+  className = '',
 }: MobileCTAProps) {
   const baseClasses = 'w-full';
-  
+
   const variantClasses = {
     fixed: 'fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg z-40 safe-area-bottom',
     sticky: 'sticky bottom-0 p-4 bg-white shadow-lg z-30 safe-area-bottom',
-    inline: ''
+    inline: '',
   };
 
   const containerClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
@@ -33,7 +33,7 @@ function MobileCTA({
     <div className={containerClasses}>
       <div className={showBoth ? 'grid grid-cols-2 gap-3' : ''}>
         {whatsappText && (
-          <WhatsAppButton 
+          <WhatsAppButton
             text={whatsappText}
             size="large"
             fullWidth

@@ -37,7 +37,7 @@ const fieldConfigs: FieldConfig[] = [
     min: 0,
     max: 25,
     step: 1,
-    helper: 'Content batching + scheduling saves about 80% of the effort once the system is live.',
+    helper: 'Content batching + scheduling cuts about 80% of effort once the system is live.',
     unit: 'hours',
     cadence: 'week',
   },
@@ -89,7 +89,7 @@ export default function ROICalculator() {
       className="bg-gradient-to-br from-orange/10 to-orange/5 shadow-xl"
     >
       <Heading level={3} align="center" className="mb-6">
-        Calculate Your Time & Money Savings
+        Forecast Your Growth Potential
       </Heading>
       <div className="space-y-6">
         {fieldConfigs.map(({ key, label, min, max, step, helper, unit }) => {
@@ -146,7 +146,7 @@ export default function ROICalculator() {
       {/* Results */}
       <Card className="mt-8 shadow-inner" padding="medium">
         <Heading level={4} align="center" className="mb-4">
-          Your Potential Savings:
+          Your Growth Forecast:
         </Heading>
 
         <div className="grid md:grid-cols-3 gap-4 text-center mb-6">
@@ -155,7 +155,7 @@ export default function ROICalculator() {
               {totalHoursSaved}h
             </Text>
             <Text size="sm" className="text-charcoal/70">
-              Saved per week
+              Growth hours per week
             </Text>
           </div>
           <div>
@@ -188,7 +188,7 @@ export default function ROICalculator() {
           </Text>
 
           <WhatsAppButton
-            text={`I want to save ${totalHoursSaved} hours a week - let's chat!`}
+            text={`I want to turn ${totalHoursSaved} hours a week into growth - let's chat!`}
             label="Talk to Peter on WhatsApp"
             size="medium"
             fullWidth

@@ -20,11 +20,7 @@ export function ClientOnly({ children }: { children: React.ReactNode }) {
 
 // Fallback content for when JavaScript is disabled
 export function NoScriptFallback({ children }: { children: React.ReactNode }) {
-  return (
-    <noscript>
-      {children}
-    </noscript>
-  );
+  return <noscript>{children}</noscript>;
 }
 
 // Enhanced image that works without JavaScript
@@ -34,7 +30,7 @@ export function ProgressiveImage({
   className = '',
   width,
   height,
-  priority = false
+  priority = false,
 }: {
   src: string;
   alt: string;
@@ -54,7 +50,6 @@ export function ProgressiveImage({
         height={height || 100}
         priority={priority}
       />
-      
     </>
   );
 }
@@ -63,7 +58,7 @@ export function ProgressiveImage({
 export function ProgressiveAccordion({
   title,
   children,
-  defaultOpen = false
+  defaultOpen = false,
 }: {
   title: string;
   children: React.ReactNode;
@@ -74,14 +69,10 @@ export function ProgressiveAccordion({
       <summary className="cursor-pointer list-none p-4 bg-white rounded-lg shadow-soft hover:shadow-hover transition-shadow">
         <div className="flex justify-between items-center">
           <span className="font-semibold">{title}</span>
-          <span className="transition-transform group-open:rotate-180">
-            ▼
-          </span>
+          <span className="transition-transform group-open:rotate-180">▼</span>
         </div>
       </summary>
-      <div className="mt-2 p-4 bg-cream-light rounded-lg">
-        {children}
-      </div>
+      <div className="mt-2 p-4 bg-cream-light rounded-lg">{children}</div>
     </details>
   );
 }
@@ -91,7 +82,7 @@ export function ProgressiveForm({
   action,
   method = 'POST',
   children,
-  onSubmit
+  onSubmit,
 }: {
   action: string;
   method?: 'GET' | 'POST';

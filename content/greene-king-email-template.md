@@ -28,7 +28,7 @@
 #### 4. How We Can Help Greene King Pubs (5-6 specific examples)
 - Menu engineering for GP targets
 - Midweek promotion strategies
-- Quiz night optimization
+- Quiz night optimisation
 - Social media automation
 - Community engagement tactics
 
@@ -68,7 +68,7 @@ When we took over, quiz nights were empty. Now we consistently see 25-30 regular
 
 **Specific ways we help Greene King pubs:**
 
-1. **Menu Engineering**: Redesign your menu to hit Greene King's GP targets while keeping customers happy. We'll analyze your current offerings and suggest proven high-margin dishes that actually sell.
+1. **Menu Engineering**: Redesign your menu to hit Greene King's GP targets while keeping customers happy. We'll analyse your current offerings and suggest proven high-margin dishes that actually sell.
 
 2. **Midweek Strategies**: Our "Burger & Pint Tuesday" and enhanced quiz nights consistently fill previously empty tables. These aren't generic promotions - they're tested in a real Greene King pub.
 

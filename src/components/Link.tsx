@@ -81,7 +81,12 @@ function Link({
   const baseClasses = `${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   // Handle external links
-  if (external || href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:')) {
+  if (
+    external ||
+    href.startsWith('http') ||
+    href.startsWith('tel:') ||
+    href.startsWith('mailto:')
+  ) {
     return (
       <a
         href={href}
@@ -98,12 +103,7 @@ function Link({
 
   // Internal links use Next.js Link
   return (
-    <NextLink
-      href={href}
-      className={baseClasses}
-      onClick={onClick}
-      aria-label={ariaLabel}
-    >
+    <NextLink href={href} className={baseClasses} onClick={onClick} aria-label={ariaLabel}>
       {children}
     </NextLink>
   );

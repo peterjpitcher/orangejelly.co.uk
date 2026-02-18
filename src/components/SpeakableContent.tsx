@@ -8,13 +8,13 @@ interface SpeakableContentProps {
 
 export function SpeakableContent({ cssSelectors, url }: SpeakableContentProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    ...(url && { "@id": `${getBaseUrl()}${url}` }),
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": cssSelectors
-    }
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    ...(url && { '@id': `${getBaseUrl()}${url}` }),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: cssSelectors,
+    },
   };
 
   // Validate in development

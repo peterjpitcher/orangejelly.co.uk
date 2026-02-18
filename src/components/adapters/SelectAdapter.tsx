@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Select,
   SelectContent,
@@ -7,9 +7,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/select';
+import { Label } from '@/components/ui/label';
+import { cn } from '@/lib/utils';
 
 interface SelectOption {
   value: string;
@@ -43,7 +43,7 @@ export default function SelectAdapter({
   options,
   value,
   defaultValue,
-  placeholder = "Select an option",
+  placeholder = 'Select an option',
   onChange,
   error,
   helperText,
@@ -55,19 +55,19 @@ export default function SelectAdapter({
 }: LegacySelectProps) {
   const generatedId = React.useId();
   const selectId = id || generatedId;
-  
+
   // Check if options are grouped
   const isGrouped = options.length > 0 && 'options' in options[0];
-  
+
   return (
     <div className="space-y-2">
       {label && (
-        <Label htmlFor={selectId} className={cn(error && "text-destructive")}>
+        <Label htmlFor={selectId} className={cn(error && 'text-destructive')}>
           {label}
           {required && <span className="text-destructive ml-1">*</span>}
         </Label>
       )}
-      
+
       <Select
         value={value}
         defaultValue={defaultValue}
@@ -77,10 +77,7 @@ export default function SelectAdapter({
       >
         <SelectTrigger
           id={selectId}
-          className={cn(
-            error && "border-destructive focus-visible:ring-destructive",
-            className
-          )}
+          className={cn(error && 'border-destructive focus-visible:ring-destructive', className)}
           aria-invalid={!!error}
           aria-describedby={
             error ? `${selectId}-error` : helperText ? `${selectId}-helper` : undefined
@@ -89,43 +86,33 @@ export default function SelectAdapter({
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent>
-          {isGrouped ? (
-            // Render grouped options
-            (options as SelectGroup[]).map((group) => (
-              <SelectGroup key={group.label}>
-                <SelectLabel>{group.label}</SelectLabel>
-                {group.options.map((option) => (
-                  <SelectItem
-                    key={option.value}
-                    value={option.value}
-                    disabled={option.disabled}
-                  >
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectGroup>
-            ))
-          ) : (
-            // Render flat options
-            (options as SelectOption[]).map((option) => (
-              <SelectItem
-                key={option.value}
-                value={option.value}
-                disabled={option.disabled}
-              >
-                {option.label}
-              </SelectItem>
-            ))
-          )}
+          {isGrouped
+            ? // Render grouped options
+              (options as SelectGroup[]).map((group) => (
+                <SelectGroup key={group.label}>
+                  <SelectLabel>{group.label}</SelectLabel>
+                  {group.options.map((option) => (
+                    <SelectItem key={option.value} value={option.value} disabled={option.disabled}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              ))
+            : // Render flat options
+              (options as SelectOption[]).map((option) => (
+                <SelectItem key={option.value} value={option.value} disabled={option.disabled}>
+                  {option.label}
+                </SelectItem>
+              ))}
         </SelectContent>
       </Select>
-      
+
       {helperText && !error && (
         <p id={`${selectId}-helper`} className="text-sm text-muted-foreground">
           {helperText}
         </p>
       )}
-      
+
       {error && (
         <p id={`${selectId}-error`} className="text-sm text-destructive" role="alert">
           {error}

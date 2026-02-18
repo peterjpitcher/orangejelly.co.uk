@@ -15,15 +15,15 @@ export default function Loading() {
             className="rounded-lg animate-pulse"
             priority
           />
-          
+
           {/* Orange glow effect */}
           <div className="absolute inset-0 bg-orange/30 rounded-lg blur-2xl animate-pulse"></div>
         </div>
-        
+
         <Text className="mt-6 text-charcoal font-semibold animate-fade-in">
           Loading Orange Jelly...
         </Text>
-        
+
         {/* Loading dots */}
         <div className="flex justify-center gap-2 mt-4">
           <div className="w-2 h-2 bg-orange rounded-full animate-bounce animation-delay-0"></div>

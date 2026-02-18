@@ -1,12 +1,7 @@
-import * as React from "react";
-import {
-  Tabs as ShadcnTabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
-import Heading from "@/components/Heading";
+import * as React from 'react';
+import { Tabs as ShadcnTabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { cn } from '@/lib/utils';
+import Heading from '@/components/Heading';
 
 interface TabItem {
   id: string;
@@ -21,9 +16,9 @@ interface LegacyTabsProps {
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string) => void;
-  orientation?: "horizontal" | "vertical";
+  orientation?: 'horizontal' | 'vertical';
   className?: string;
-  variant?: "default" | "pills" | "underline";
+  variant?: 'default' | 'pills' | 'underline';
   // SEO props
   itemScope?: boolean;
   itemType?: string;
@@ -34,32 +29,33 @@ export default function TabsAdapter({
   defaultValue,
   value,
   onValueChange,
-  orientation = "horizontal",
+  orientation = 'horizontal',
   className,
-  variant = "default",
+  variant = 'default',
   itemScope,
   itemType,
 }: LegacyTabsProps) {
   const defaultTab = defaultValue || tabs[0]?.id;
-  
+
   const tabsListClasses = cn(
-    variant === "pills" && "bg-muted p-1 rounded-lg",
-    variant === "underline" && "border-b bg-transparent p-0",
-    orientation === "vertical" && "flex-col h-auto"
+    variant === 'pills' && 'bg-muted p-1 rounded-lg',
+    variant === 'underline' && 'border-b bg-transparent p-0',
+    orientation === 'vertical' && 'flex-col h-auto'
   );
-  
+
   const tabsTriggerClasses = cn(
-    variant === "pills" && "data-[state=active]:bg-white data-[state=active]:shadow-sm",
-    variant === "underline" && "rounded-none border-b-2 border-transparent data-[state=active]:border-primary"
+    variant === 'pills' && 'data-[state=active]:bg-white data-[state=active]:shadow-sm',
+    variant === 'underline' &&
+      'rounded-none border-b-2 border-transparent data-[state=active]:border-primary'
   );
-  
+
   return (
     <ShadcnTabs
       defaultValue={defaultTab}
       value={value}
       onValueChange={onValueChange}
       orientation={orientation}
-      className={cn("w-full", className)}
+      className={cn('w-full', className)}
       itemScope={itemScope}
       itemType={itemType}
     >
@@ -77,11 +73,7 @@ export default function TabsAdapter({
         ))}
       </TabsList>
       {tabs.map((tab) => (
-        <TabsContent
-          key={tab.id}
-          value={tab.id}
-          className="mt-4"
-        >
+        <TabsContent key={tab.id} value={tab.id} className="mt-4">
           {tab.content}
         </TabsContent>
       ))}
@@ -108,43 +100,46 @@ interface ServiceTabsProps {
 export function ServiceTabs({ services, defaultService, className }: ServiceTabsProps) {
   const schemaMarkup = React.useMemo(() => {
     const servicesSchema = {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
       itemListElement: services.map((service, index) => ({
-        "@type": "Service",
+        '@type': 'Service',
         position: index + 1,
         name: service.title,
         description: service.description,
-        offers: service.price ? {
-          "@type": "Offer",
-          price: service.price,
-          priceCurrency: "GBP"
-        } : undefined
-      }))
+        offers: service.price
+          ? {
+              '@type': 'Offer',
+              price: service.price,
+              priceCurrency: 'GBP',
+            }
+          : undefined,
+      })),
     };
-    
+
     return JSON.stringify(servicesSchema);
   }, [services]);
-  
-  const tabs: TabItem[] = services.map(service => ({
+
+  const tabs: TabItem[] = services.map((service) => ({
     id: service.id,
     label: service.title,
     content: (
       <div itemScope itemType="https://schema.org/Service">
-        <Heading level={3} itemProp="name" className="sr-only">{service.title}</Heading>
-        <p itemProp="description" className="sr-only">{service.description}</p>
+        <Heading level={3} itemProp="name" className="sr-only">
+          {service.title}
+        </Heading>
+        <p itemProp="description" className="sr-only">
+          {service.description}
+        </p>
         {service.content}
       </div>
     ),
-    icon: service.icon
+    icon: service.icon,
   }));
-  
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schemaMarkup }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
       <TabsAdapter
         tabs={tabs}
         defaultValue={defaultService}

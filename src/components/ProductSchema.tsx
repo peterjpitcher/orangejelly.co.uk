@@ -34,58 +34,58 @@ export function ProductSchema({
   category,
   url,
   aggregateRating,
-  review = []
+  review = [],
 }: ProductSchemaProps) {
   const baseUrl = getBaseUrl();
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": name,
-    "description": description,
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: name,
+    description: description,
     ...(image && {
-      "image": {
-        "@type": "ImageObject",
-        "url": `${baseUrl}${image}`
-      }
+      image: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}${image}`,
+      },
     }),
-    "brand": {
-      "@type": "Brand",
-      "name": brand
+    brand: {
+      '@type': 'Brand',
+      name: brand,
     },
-    ...(category && { "category": category }),
-    ...(url && { "url": `${baseUrl}${url}` }),
-    "offers": {
-      "@type": "Offer",
-      "price": price,
-      "priceCurrency": priceCurrency,
-      "availability": `https://schema.org/${availability}`,
-      "seller": {
-        "@type": "Organization",
-        "name": "Orange Jelly Limited"
-      }
+    ...(category && { category: category }),
+    ...(url && { url: `${baseUrl}${url}` }),
+    offers: {
+      '@type': 'Offer',
+      price: price,
+      priceCurrency: priceCurrency,
+      availability: `https://schema.org/${availability}`,
+      seller: {
+        '@type': 'Organization',
+        name: 'Orange Jelly Limited',
+      },
     },
     ...(aggregateRating && {
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": aggregateRating.ratingValue,
-        "reviewCount": aggregateRating.reviewCount
-      }
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: aggregateRating.ratingValue,
+        reviewCount: aggregateRating.reviewCount,
+      },
     }),
     ...(review.length > 0 && {
-      "review": review.map(r => ({
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": r.author
+      review: review.map((r) => ({
+        '@type': 'Review',
+        author: {
+          '@type': 'Person',
+          name: r.author,
         },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": r.ratingValue
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: r.ratingValue,
         },
-        "reviewBody": r.reviewBody,
-        ...(r.datePublished && { "datePublished": r.datePublished })
-      }))
-    })
+        reviewBody: r.reviewBody,
+        ...(r.datePublished && { datePublished: r.datePublished }),
+      })),
+    }),
   };
 
   // Validate in development

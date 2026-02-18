@@ -74,7 +74,7 @@ You can't outspend chains on Google Ads, but you can dominate the places your co
 
 - **Local Instagram hashtags**: \#\[YourArea\]Life \#\[YourArea\]Pubs
 
-**Real example**: a typical town center pub in Whitstable posts their daily specials in five local Facebook groups every morning. Result? Noticeable lift at The Anchor in weekday lunch trade.
+**Real example**: a typical town centre pub in Whitstable posts their daily specials in five local Facebook groups every morning. Result? Noticeable lift at The Anchor in weekday lunch trade.
 
 **Physical Presence**:
 
@@ -490,7 +490,7 @@ Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings
 
 ### How much will this cost to implement?
 
-Implementation costs vary by strategy. Many improvements like social media optimization and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT.
+Implementation costs vary by strategy. Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT.
 
 ### Can this work for my type of pub?
 

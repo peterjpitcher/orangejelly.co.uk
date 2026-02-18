@@ -177,10 +177,7 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
           )}
           {isLoading && !priority && !useImgTag && (
-            <div
-              className={cn('absolute inset-0 bg-muted/40', className)}
-              aria-hidden="true"
-            />
+            <div className={cn('absolute inset-0 bg-muted/40', className)} aria-hidden="true" />
           )}
           {imageElement}
           {caption && (
@@ -196,10 +193,7 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
         )}
         {isLoading && !priority && !useImgTag && (
-          <div
-            className={cn('absolute inset-0 bg-muted/40', className)}
-            aria-hidden="true"
-          />
+          <div className={cn('absolute inset-0 bg-muted/40', className)} aria-hidden="true" />
         )}
         {imageElement}
       </>

@@ -3,7 +3,7 @@ title: "Brewery Tie Strangling Your Profits? Legal Ways to Improve Your Deal"
 slug: "brewery-tie-improve-your-deal"
 publishedDate: 2025-08-15
 excerpt: "Work within your tie to boost profits without breaking contracts. Real strategies from a tied tenant who improved GP without going free of tie."
-quickAnswer: "Improve your deal by demonstrating success first: increase volumes, reduce wastage, maintain quality standards. Then negotiate better terms using your track record. Explore MRO options for guest ales, maximize free-of-tie categories, and build strong relationships with your Business Development Manager."
+quickAnswer: "Improve your deal by demonstrating success first: increase volumes, reduce wastage, maintain quality standards. Then negotiate better terms using your track record. Explore MRO options for guest ales, maximise free-of-tie categories, and build strong relationships with your Business Development Manager."
 author: "Peter Pitcher"
 category: "supplier-relations"
 featuredImage: "/images/blog/brewery-tie-improve-your-deal.png"

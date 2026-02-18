@@ -49,8 +49,8 @@ export const MESSAGES = {
 
   // Trust Messages
   trust: {
-    timeSaved: 'Time saved promise',
-    atLeastFiveHours: 'Save up to 25 hours',
+    timeSaved: 'Growth capacity promise',
+    atLeastFiveHours: 'Transform 25 hours into growth',
     thirtyDays: '30 Days',
     noContracts: 'No hidden fees, no long contracts, no surprises',
     noAgencyFees: 'No Agency Fees',
@@ -61,8 +61,8 @@ export const MESSAGES = {
     coversIncreaseLabel: 'Regular teams each month',
     foodGPIncrease: '£250/week waste cut',
     foodGPIncreaseLabel: '90% reduction in food waste',
-    sundayRoastRevenue: '£4,000+ monthly savings',
-    sundayRoastRevenueLabel: 'Supplier, rota, energy savings',
+    sundayRoastRevenue: '£4,000+ monthly margin growth',
+    sundayRoastRevenueLabel: 'Supplier, rota, energy margin gains',
   },
 
   // CTA Messages
@@ -81,7 +81,7 @@ export const MESSAGES = {
 export const SUCCESS_METRICS = {
   timeSaved: {
     value: 'Up to 25 hours',
-    description: 'Weekly time saved using AI systems',
+    description: 'Weekly growth hours activated using AI systems',
   },
   wasteSavings: {
     value: '£250/week',
@@ -89,7 +89,7 @@ export const SUCCESS_METRICS = {
   },
   monthlySavings: {
     value: '£4,000+/month',
-    description: 'Supplier, rota, and energy savings',
+    description: 'Supplier, rota, and energy margin growth',
   },
   valueAdded: {
     value: '£75k-£100k',

@@ -202,14 +202,7 @@ interface MetricsBarProps {
     label: string;
     highlight?: boolean;
   }>;
-  background?:
-    | 'orange'
-    | 'teal'
-    | 'charcoal'
-    | 'base'
-    | 'blue-support'
-    | 'highlight'
-    | 'grounded';
+  background?: 'orange' | 'teal' | 'charcoal' | 'base' | 'blue-support' | 'highlight' | 'grounded';
   textColor?: 'white' | 'charcoal';
 }
 

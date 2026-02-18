@@ -293,7 +293,7 @@ Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings
 
 ### How much will this cost to implement?
 
-Implementation costs vary by strategy. Many improvements like social media optimization and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT.
+Implementation costs vary by strategy. Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT.
 
 ### Can this work for my type of pub?
 

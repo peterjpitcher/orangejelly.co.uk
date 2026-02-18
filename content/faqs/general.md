@@ -34,7 +34,7 @@ Not at all! We handle all the technical bits. You just serve the extra customers
 
 ## How does Orange Jelly use AI for pub marketing?
 
-We use AI to plan and schedule 30 days of social media content in 2 hours, write menu descriptions that sell, analyze competitor strategies, automate booking responses, and optimize pricing. It's about working smarter, not harder.
+We use AI to plan and schedule 30 days of social media content in 2 hours, write menu descriptions that sell, analyse competitor strategies, automate booking responses, and optimise pricing. It's about working smarter, not harder.
 
 ## What if I'm not happy with the results?
 
@@ -82,7 +82,7 @@ Absolutely. The Anchor was in terrible physical state when we took over in March
 
 ## How is Orange Jelly different from other consultants?
 
-I'm not a consultant - I'm a licensee working alongside a real pub operator. Billy runs The Anchor day-to-day and I handle marketing and business development. No suits, no PowerPoints, no corporate jargon. Just practical help from someone who understands because I'm dealing with the same challenges. Plus, we use AI to save time on the boring bits.
+I'm not a consultant - I'm a licensee working alongside a real pub operator. Billy runs The Anchor day-to-day and I handle marketing and business development. No suits, no PowerPoints, no corporate jargon. Just practical help from someone who understands because I'm dealing with the same challenges. Plus, we use AI to accelerate the boring bits so your team can focus on growth.
 
 ## Will this work for my type of pub?
 

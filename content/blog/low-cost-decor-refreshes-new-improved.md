@@ -50,7 +50,7 @@ Old signage whispers "neglect." Clean typography, clear boards, and a tidy menu 
 
 - Re-stain wooden chairs.
 - Steam clean upholstery.
-- Add seat pads in a consistent color.
+- Add seat pads in a consistent colour.
 
 These changes feel like new furniture without the price tag.
 
@@ -69,7 +69,7 @@ Give guests one or two visual moments to remember. A wall of local history photo
 ## Common mistakes
 
 - Trying to refresh everything at once.
-- Choosing colors that are trendy but wrong for your pub.
+- Choosing colours that are trendy but wrong for your pub.
 - Forgetting to refresh the toilets and entrance.
 
 ## Quick checklist

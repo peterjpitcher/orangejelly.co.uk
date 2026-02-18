@@ -55,8 +55,8 @@ export default function EmptyPubSolutions() {
       url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-2',
     },
     {
-      name: 'Optimize Your Menu for Profit',
-      text: 'Analyze your menu performance, highlight high-margin items, and remove poor performers. Design matters as much as content.',
+      name: 'Optimise Your Menu for Profit',
+      text: 'Analyse your menu performance, highlight high-margin items, and remove poor performers. Design matters as much as content.',
       url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-2',
     },
     {
@@ -70,7 +70,7 @@ export default function EmptyPubSolutions() {
       url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-3',
     },
     {
-      name: 'Analyze and Double Down on Winners',
+      name: 'Analyse and Double Down on Winners',
       text: "Track what's working, measure results, and invest more in successful strategies. Data-driven decisions lead to sustainable growth.",
       url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-4',
     },
@@ -147,7 +147,7 @@ export default function EmptyPubSolutions() {
       actions: [
         'Implement proven email sequences',
         'Create events that actually draw crowds',
-        'Optimize your menu for profit',
+        'Optimise your menu for profit',
         'Activate dormant customers',
       ],
     },
@@ -165,7 +165,7 @@ export default function EmptyPubSolutions() {
       week: 'Week 4',
       title: 'Lock In Growth',
       actions: [
-        "Analyze what's working best",
+        "Analyse what's working best",
         'Double down on winners',
         'Create long-term marketing calendar',
         'Build sustainable growth systems',

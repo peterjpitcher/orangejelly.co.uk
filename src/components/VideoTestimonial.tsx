@@ -113,7 +113,7 @@ export function VideoTestimonialGrid() {
       testimonialText:
         'I used to spend Sunday nights doing Facebook posts. Now I batch create everything monthly and spend Sundays with Marty instead.',
       author: 'Billy Summers, The Anchor',
-      result: '2 hours saved every week',
+      result: '2 growth hours created every week',
     },
     {
       title: 'Menu Magic That Works',

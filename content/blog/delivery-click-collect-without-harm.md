@@ -59,7 +59,7 @@ Build a clean, labeled area for packing, checks, and pickup. The person on dispa
 
 A single missed sauce can undo a good meal.
 
-## Step 4: Optimize collection flow
+## Step 4: Optimise collection flow
 
 Click and collect should be fast. Clear signage, a dedicated pick-up point, and a one-minute handover keeps it smooth.
 

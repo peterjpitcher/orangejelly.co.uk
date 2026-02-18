@@ -53,7 +53,7 @@ export function getAllPostSlugs() {
 
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
+    .filter((fileName) => fileName.endsWith('.md') && fileName.toLowerCase() !== 'readme.md')
     .map((fileName) => fileName.replace(/\.md$/, ''));
 }
 
@@ -83,8 +83,21 @@ const categoryMapping: Record<string, string> = {
   'digital-reputation': 'social-media',
   'location-challenges': 'empty-pub-solutions',
   'customer-acquisition': 'empty-pub-solutions',
-  'Revenue Growth': 'empty-pub-solutions',
+  'revenue-growth': 'sales',
 };
+
+function normalizeCategorySlug(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+export function resolveCategorySlug(rawCategory?: string | null): string {
+  const normalized = normalizeCategorySlug(rawCategory || 'undefined');
+  return categoryMapping[normalized] || normalized || 'empty-pub-solutions';
+}
 
 const isPublishable = (meta: BlogPostMeta, options: PublishOptions = {}): boolean => {
   const now = options.now ?? new Date();
@@ -124,8 +137,13 @@ export function getPostBySlug(slug: string, options: PublishOptions = {}): BlogP
       return null;
     }
 
-    // Map category if needed
-    const mappedCategory = categoryMapping[meta.category] || meta.category;
+    if (typeof meta.title !== 'string' || meta.title.trim().length === 0) {
+      console.warn(`Skipping blog post with missing title: ${slug}`);
+      return null;
+    }
+
+    // Map legacy/variant category values to canonical slugs
+    const mappedCategory = resolveCategorySlug(meta.category);
     const category = getCategoryBySlug(mappedCategory);
 
     if (!category) {

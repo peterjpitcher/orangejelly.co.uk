@@ -34,13 +34,13 @@ voiceSearchQueries:
 
 # How to Build a Loyalty Scheme That Fills the Pub Every Friday
 
-Punch cards are nostalgic but they rarely change behavior. Real loyalty is about giving people a reason to choose you more often, and a clear reward for doing it. A good scheme creates progress, identity, and a small win every time someone returns.
+Punch cards are nostalgic but they rarely change behaviour. Real loyalty is about giving people a reason to choose you more often, and a clear reward for doing it. A good scheme creates progress, identity, and a small win every time someone returns.
 
 This guide shows you how to build a simple, trackable loyalty scheme that drives frequency without heavy discounts.
 
-## Step 1: Define the behavior you want
+## Step 1: Define the behaviour you want
 
-Start with one clear goal. Do you want midweek visits, higher spend per head, or more group bookings? Pick the single behavior that moves cash fastest and build the scheme around it.
+Start with one clear goal. Do you want midweek visits, higher spend per head, or more group bookings? Pick the single behaviour that moves cash fastest and build the scheme around it.
 
 Example goals:
 - Two visits per week from locals.

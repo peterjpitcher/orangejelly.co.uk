@@ -351,7 +351,7 @@ export default async function LicenseesGuidePage() {
               </div>
               <div className="flex items-start">
                 <span className="text-orange mr-3">✓</span>
-                <Text size="sm">Food menu optimization for maximum profit</Text>
+                <Text size="sm">Food menu optimisation for maximum profit</Text>
               </div>
               <div className="flex items-start">
                 <span className="text-orange mr-3">✓</span>

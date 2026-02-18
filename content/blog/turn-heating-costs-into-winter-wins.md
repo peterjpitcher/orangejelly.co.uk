@@ -32,11 +32,11 @@ localSEO:
   - British hospitality energy bills
   - Winter revenue strategies UK pubs
 ctaSettings:
-  ctaType: "calculator"
-  ctaHeading: "Calculate Your Winter Revenue Potential"
-  ctaDescription: "See how much extra you could generate this winter"
-  ctaButtonText: "Start Calculating"
-  ctaButtonLink: "#roi-calculator"
+  ctaType: "conversation"
+  ctaHeading: "Start a Growth Conversation"
+  ctaDescription: "Tell us where momentum is stuck and get practical next steps"
+  ctaButtonText: "Start a Growth Conversation"
+  ctaButtonLink: "/contact"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"

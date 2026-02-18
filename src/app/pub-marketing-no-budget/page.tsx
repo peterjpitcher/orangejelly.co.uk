@@ -30,7 +30,7 @@ export default function PubMarketingNoBudget() {
     {
       question: 'What free marketing works best for pubs?',
       answer:
-        'Social media (especially local Facebook groups), Google My Business optimization, email marketing to existing customers, community partnerships, and creating shareable moments. These strategies consistently outperform paid ads for local pubs.',
+        'Social media (especially local Facebook groups), Google My Business optimisation, email marketing to existing customers, community partnerships, and creating shareable moments. These strategies consistently outperform paid ads for local pubs.',
     },
     {
       question: 'How long until free marketing shows results?',
@@ -232,7 +232,7 @@ export default function PubMarketingNoBudget() {
                 <Text size="2xl" weight="bold" className="text-teal text-3xl mb-2">
                   25 hrs
                 </Text>
-                <Text size="sm">saved each week with AI systems</Text>
+                <Text size="sm">redirected weekly into growth with AI systems</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-green-600 text-3xl mb-2">
@@ -423,7 +423,7 @@ export default function PubMarketingNoBudget() {
               <div className="text-white text-left max-w-2xl mx-auto">
                 <FeatureList
                   items={[
-                    '✓ Optimize your Google My Business (1 hour)',
+                    '✓ Optimise your Google My Business (1 hour)',
                     '✓ Create 30 days of social content (2 hours)',
                     '✓ Set up email marketing system (1 hour)',
                     '✓ Train you on everything (2 hours)',

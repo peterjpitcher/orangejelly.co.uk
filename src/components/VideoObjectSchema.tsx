@@ -36,11 +36,11 @@ export function VideoObjectSchema({
   publication,
   creator,
   keywords,
-  transcript
+  transcript,
 }: VideoObjectSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
     name,
     description,
     thumbnailUrl: Array.isArray(thumbnailUrl) ? thumbnailUrl : [thumbnailUrl],
@@ -50,40 +50,52 @@ export function VideoObjectSchema({
     ...(embedUrl && { embedUrl }),
     ...(interactionStatistic && {
       interactionStatistic: [
-        ...(interactionStatistic.watchCount ? [{
-          "@type": "InteractionCounter",
-          interactionType: { "@type": "WatchAction" },
-          userInteractionCount: interactionStatistic.watchCount
-        }] : []),
-        ...(interactionStatistic.likeCount ? [{
-          "@type": "InteractionCounter",
-          interactionType: { "@type": "LikeAction" },
-          userInteractionCount: interactionStatistic.likeCount
-        }] : []),
-        ...(interactionStatistic.commentCount ? [{
-          "@type": "InteractionCounter",
-          interactionType: { "@type": "CommentAction" },
-          userInteractionCount: interactionStatistic.commentCount
-        }] : [])
-      ]
+        ...(interactionStatistic.watchCount
+          ? [
+              {
+                '@type': 'InteractionCounter',
+                interactionType: { '@type': 'WatchAction' },
+                userInteractionCount: interactionStatistic.watchCount,
+              },
+            ]
+          : []),
+        ...(interactionStatistic.likeCount
+          ? [
+              {
+                '@type': 'InteractionCounter',
+                interactionType: { '@type': 'LikeAction' },
+                userInteractionCount: interactionStatistic.likeCount,
+              },
+            ]
+          : []),
+        ...(interactionStatistic.commentCount
+          ? [
+              {
+                '@type': 'InteractionCounter',
+                interactionType: { '@type': 'CommentAction' },
+                userInteractionCount: interactionStatistic.commentCount,
+              },
+            ]
+          : []),
+      ],
     }),
     ...(publication && {
       publication: {
-        "@type": "BroadcastEvent",
+        '@type': 'BroadcastEvent',
         isLiveBroadcast: publication.isLiveBroadcast,
         ...(publication.startDate && { startDate: publication.startDate }),
-        ...(publication.endDate && { endDate: publication.endDate })
-      }
+        ...(publication.endDate && { endDate: publication.endDate }),
+      },
     }),
     ...(creator && {
       creator: {
-        "@type": "Person",
+        '@type': 'Person',
         name: creator.name,
-        ...(creator.url && { url: creator.url })
-      }
+        ...(creator.url && { url: creator.url }),
+      },
     }),
-    ...(keywords && { keywords: keywords.join(", ") }),
-    ...(transcript && { transcript })
+    ...(keywords && { keywords: keywords.join(', ') }),
+    ...(transcript && { transcript }),
   };
 
   return (

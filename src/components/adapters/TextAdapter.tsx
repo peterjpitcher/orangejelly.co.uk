@@ -6,15 +6,7 @@ interface LegacyTextProps {
   children: React.ReactNode;
   id?: string;
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl';
-  color?:
-    | 'charcoal'
-    | 'muted'
-    | 'white'
-    | 'base'
-    | 'support'
-    | 'accent'
-    | 'highlight'
-    | 'grounded';
+  color?: 'charcoal' | 'muted' | 'white' | 'base' | 'support' | 'accent' | 'highlight' | 'grounded';
   weight?: 'normal' | 'medium' | 'semibold' | 'bold';
   align?: 'left' | 'center' | 'right';
   className?: string;

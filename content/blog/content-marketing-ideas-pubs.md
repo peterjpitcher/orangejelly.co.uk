@@ -46,7 +46,7 @@ Tell people who you are and why you exist. This builds emotional connection.
 Examples:
 - Your origin story and why you took on the pub.
 - A regular's story and what the pub means to them.
-- A staff spotlight and their favorite drink.
+- A staff spotlight and their favourite drink.
 
 Keep stories short and specific. People remember the details.
 

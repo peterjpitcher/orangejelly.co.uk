@@ -6,4 +6,4 @@ How to unlock 25 hours of value per week using AI: create rotas in minutes, writ
 
 ## Is AI training suitable for someone who's not tech-savvy?
 
-Absolutely! We're licensees, not tech experts. Our training is designed for busy pub owners who want practical solutions, not complicated technology. We focus on simple tools that save time immediately.
+Absolutely! We're licensees, not tech experts. Our training is designed for busy pub owners who want practical solutions, not complicated technology. We focus on simple tools that accelerate execution immediately.

@@ -263,10 +263,10 @@ export default function PubRescue() {
                 </Text>
                 <FeatureList
                   items={[
-                    'Analyze your numbers quickly',
+                    'Analyse your numbers quickly',
                     'Identify top 3 profit drags',
                     'Implement quick wins immediately',
-                    'Early savings from waste and cost fixes',
+                    'Early margin gains from waste and cost fixes',
                   ]}
                   icon="check"
                   iconColor="green"
@@ -307,7 +307,7 @@ export default function PubRescue() {
                 </Text>
                 <FeatureList
                   items={[
-                    'Automate marketing (save up to 25 hours/week)',
+                    'Automate marketing (redirect 25 hours/week into growth)',
                     'Build customer database for repeat visits',
                     'Train your team on upselling techniques',
                     'Create systems so it runs without you',
@@ -517,8 +517,8 @@ export default function PubRescue() {
                     AI Marketing Assistant
                   </Heading>
                   <Text size="sm">
-                    Creates all your social media, emails, and promotions. Saves up to 25 hours
-                    every week.
+                    Creates all your social media, emails, and promotions. Redirects 25 hours every
+                    week into growth actions.
                   </Text>
                 </div>
                 <div className="text-center">
@@ -527,7 +527,7 @@ export default function PubRescue() {
                     Profit Analysis Tools
                   </Heading>
                   <Text size="sm">
-                    Find where you're losing money. Identify £4,000+ in monthly savings
+                    Find where you're losing money. Identify £4,000+ in monthly margin gain
                     opportunities.
                   </Text>
                 </div>

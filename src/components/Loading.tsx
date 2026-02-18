@@ -14,21 +14,19 @@ interface LoadingProps {
   className?: string;
 }
 
-export default function Loading({ 
-  fullScreen = false, 
+export default function Loading({
+  fullScreen = false,
   variant = 'minimal',
   message = 'Loading...',
-  className 
+  className,
 }: LoadingProps) {
   if (variant === 'minimal') {
-    return (
-      <div className={cn("animate-pulse rounded-md bg-muted", className)} />
-    );
+    return <div className={cn('animate-pulse rounded-md bg-muted', className)} />;
   }
 
   if (variant === 'card') {
     return (
-      <Card className={cn("p-6 space-y-4", className)}>
+      <Card className={cn('p-6 space-y-4', className)}>
         <Skeleton className="h-6 w-3/4" />
         <Skeleton className="h-4 w-1/2" />
         <div className="space-y-2">
@@ -42,7 +40,7 @@ export default function Loading({
 
   if (variant === 'section') {
     return (
-      <div className={cn("py-16", className)}>
+      <div className={cn('py-16', className)}>
         <Container>
           <div className="text-center space-y-8">
             <div className="space-y-4">
@@ -78,7 +76,7 @@ export default function Loading({
             <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-b-teal rounded-full animate-spin animation-delay-200"></div>
           </div>
         </div>
-        
+
         <div className="space-y-2">
           <Heading level={3} className="text-charcoal">
             {message}
@@ -87,14 +85,14 @@ export default function Loading({
             Just like pulling the perfect pint, good things take a moment...
           </Text>
         </div>
-        
+
         {/* Content skeleton */}
         <div className="max-w-4xl mx-auto space-y-8 pt-8">
           <div className="space-y-4">
             <Skeleton className="h-8 w-2/3 mx-auto" />
             <Skeleton className="h-4 w-1/2 mx-auto" />
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => (
               <Card key={i} className="p-6 space-y-4">
@@ -115,10 +113,7 @@ export default function Loading({
 
   if (fullScreen) {
     return (
-      <div className={cn(
-        "min-h-screen bg-cream flex items-center justify-center", 
-        className
-      )}>
+      <div className={cn('min-h-screen bg-cream flex items-center justify-center', className)}>
         {content}
       </div>
     );
@@ -131,7 +126,7 @@ export default function Loading({
 export { Skeleton };
 
 // Specialized loading components for common use cases
-export function PageLoading({ message = "Loading page content..." }: { message?: string }) {
+export function PageLoading({ message = 'Loading page content...' }: { message?: string }) {
   return <Loading fullScreen variant="page" message={message} />;
 }
 

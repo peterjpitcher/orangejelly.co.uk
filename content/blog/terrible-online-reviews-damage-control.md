@@ -158,7 +158,7 @@ For false reviews:
 ## Crisis Management: The Review Bombing
 
 When you're being targeted:
-1. **Don't panic** - platforms recognize patterns
+1. **Don't panic** - platforms recognise patterns
 2. **Document everything** - screenshots, dates, usernames
 3. **Rally your supporters** - one email to regulars asking for honest reviews
 4. **Stay professional** - respond to each calmly
@@ -236,7 +236,7 @@ The formula:
 
 - Address second most common complaint
 
-- Analyze results
+- Analyse results
 
 - Adjust approach
 

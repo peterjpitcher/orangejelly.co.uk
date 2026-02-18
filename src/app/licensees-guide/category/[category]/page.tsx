@@ -1,11 +1,11 @@
 import { type Metadata } from 'next';
 import { draftMode } from 'next/headers';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import BlogPostCard from '@/components/blog/BlogPostCard';
 import CategoryList from '@/components/blog/CategoryList';
-import { getAllPosts, getCategories } from '@/lib/blog-md';
+import { getAllPosts, getCategories, resolveCategorySlug } from '@/lib/blog-md';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
@@ -26,6 +26,14 @@ function humanizeCategorySlug(slug: string): string {
     .join(' ');
 }
 
+function getCanonicalCategorySlug(rawCategory: string): string {
+  try {
+    return resolveCategorySlug(decodeURIComponent(rawCategory));
+  } catch {
+    return resolveCategorySlug(rawCategory);
+  }
+}
+
 // Enable ISR (Incremental Static Regeneration) - pages revalidate every 60 seconds
 export const revalidate = 60;
 
@@ -37,8 +45,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const category = getCategoryBySlug(params.category);
-  const title = category?.name || humanizeCategorySlug(params.category);
+  const canonicalCategorySlug = getCanonicalCategorySlug(params.category);
+  const category = getCategoryBySlug(canonicalCategorySlug);
+  const title = category?.name || humanizeCategorySlug(canonicalCategorySlug);
   const description =
     category?.description ||
     `Browse all ${title} articles from The Licensee's Guide. Practical, proven ideas you can use.`;
@@ -46,12 +55,17 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return generateMeta({
     title: `${title} - The Licensee's Guide`,
     description,
-    path: `/licensees-guide/category/${params.category}`,
+    path: `/licensees-guide/category/${canonicalCategorySlug}`,
     ogType: 'website',
   });
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
+  const canonicalCategorySlug = getCanonicalCategorySlug(params.category);
+  if (params.category !== canonicalCategorySlug) {
+    permanentRedirect(`/licensees-guide/category/${canonicalCategorySlug}`);
+  }
+
   const { isEnabled } = draftMode();
   const publishOptions = isEnabled ? { includeDrafts: true, includeFuture: true } : undefined;
   const posts = getAllPosts(publishOptions);
@@ -74,14 +88,14 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       return a.name.localeCompare(b.name);
     });
 
-  const categoryPosts = posts.filter((post) => post.category === params.category);
+  const categoryPosts = posts.filter((post) => post.category === canonicalCategorySlug);
 
   if (categoryPosts.length === 0) {
     notFound();
   }
 
-  const category = getCategoryBySlug(params.category);
-  const categoryTitle = category?.name || humanizeCategorySlug(params.category);
+  const category = getCategoryBySlug(canonicalCategorySlug);
+  const categoryTitle = category?.name || humanizeCategorySlug(canonicalCategorySlug);
   const categoryDescription = category?.description;
 
   return (
@@ -89,7 +103,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       <CollectionPageSchema
         name={`${categoryTitle} - The Licensee's Guide`}
         description={categoryDescription || `Browse all ${categoryTitle} articles`}
-        url={`/licensees-guide/category/${params.category}`}
+        url={`/licensees-guide/category/${canonicalCategorySlug}`}
         items={categoryPosts.map((post) => ({
           url: `/licensees-guide/${post.slug}`,
           name: post.title,
@@ -101,14 +115,14 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: "The Licensee's Guide", url: '/licensees-guide' },
-          { name: categoryTitle, url: `/licensees-guide/category/${params.category}` },
+          { name: categoryTitle, url: `/licensees-guide/category/${canonicalCategorySlug}` },
         ]}
       />
       <BreadcrumbJsonLd
         items={[
           { name: 'Home', url: '/' },
           { name: "The Licensee's Guide", url: '/licensees-guide' },
-          { name: categoryTitle, url: `/licensees-guide/category/${params.category}` },
+          { name: categoryTitle, url: `/licensees-guide/category/${canonicalCategorySlug}` },
         ]}
       />
       <Hero
@@ -117,7 +131,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         showCTA={false}
         breadcrumbs={[
           ...breadcrumbPaths.licenseesGuide,
-          { label: categoryTitle, href: `/licensees-guide/category/${params.category}` },
+          { label: categoryTitle, href: `/licensees-guide/category/${canonicalCategorySlug}` },
         ]}
       />
 
@@ -127,7 +141,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           <div className="mb-12">
             <CategoryList
               categories={categoriesWithCounts}
-              currentCategory={params.category}
+              currentCategory={canonicalCategorySlug}
               variant="grid"
               maxVisible={6}
             />
@@ -145,7 +159,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                   publishedDate: post.publishedDate,
                   category: {
                     name: categoryTitle,
-                    slug: params.category,
+                    slug: canonicalCategorySlug,
                   },
                   featuredImage: {
                     src: post.featuredImage || '/logo.png',

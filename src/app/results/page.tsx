@@ -53,7 +53,7 @@ export default function Results() {
             text: 'Pre-orders mean exact prep with no waste',
           },
         ],
-        yield: '£250 weekly savings, 90% reduction in food waste',
+        yield: '£250 weekly margin gain, 90% reduction in food waste',
       },
       {
         '@type': 'Article',
@@ -90,7 +90,7 @@ export default function Results() {
           {
             '@type': 'HowToStep',
             name: 'Ask locals what they want',
-            text: 'Use AI to analyze feedback and identify gaps',
+            text: 'Use AI to analyse feedback and identify gaps',
           },
           {
             '@type': 'HowToStep',

@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Textarea as ShadcnTextarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
+import * as React from 'react';
+import { Textarea as ShadcnTextarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { cn } from '@/lib/utils';
 
 interface LegacyTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -22,23 +22,23 @@ export default function TextareaAdapter({
   // Generate an ID if not provided
   const generatedId = React.useId();
   const textareaId = id || generatedId;
-  
+
   const textareaClasses = cn(
-    error && "border-destructive focus-visible:ring-destructive",
-    variant === 'filled' && "bg-muted",
-    variant === 'outlined' && "border-2",
+    error && 'border-destructive focus-visible:ring-destructive',
+    variant === 'filled' && 'bg-muted',
+    variant === 'outlined' && 'border-2',
     className
   );
 
   return (
     <div className="space-y-2">
       {label && (
-        <Label htmlFor={textareaId} className={cn(error && "text-destructive")}>
+        <Label htmlFor={textareaId} className={cn(error && 'text-destructive')}>
           {label}
           {props.required && <span className="text-destructive ml-1">*</span>}
         </Label>
       )}
-      
+
       <ShadcnTextarea
         id={textareaId}
         className={textareaClasses}
@@ -48,13 +48,13 @@ export default function TextareaAdapter({
         }
         {...props}
       />
-      
+
       {helperText && !error && (
         <p id={`${textareaId}-helper`} className="text-sm text-muted-foreground">
           {helperText}
         </p>
       )}
-      
+
       {error && (
         <p id={`${textareaId}-error`} className="text-sm text-destructive" role="alert">
           {error}

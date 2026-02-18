@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { type Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
@@ -11,8 +10,6 @@ import { BlogPostingSchema } from '@/components/BlogPostingSchema';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
-import { AsyncErrorBoundary } from '@/components/ErrorBoundary';
-import { PageLoading } from '@/components/Loading';
 import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
@@ -26,6 +23,7 @@ interface BlogPostPageProps {
 
 // Enable ISR (Incremental Static Regeneration) - pages revalidate every 60 seconds
 export const revalidate = 60;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content/blog');
@@ -80,6 +78,20 @@ type AdjacentPosts = {
   previous?: AdjacentPost;
   next?: AdjacentPost;
 };
+
+function isNextControlFlowError(error: unknown): boolean {
+  if (typeof error !== 'object' || error === null || !('digest' in error)) {
+    return false;
+  }
+
+  const digest = (error as { digest?: unknown }).digest;
+  return (
+    typeof digest === 'string' &&
+    (digest === 'NEXT_NOT_FOUND' ||
+      digest.startsWith('NEXT_HTTP_ERROR_FALLBACK') ||
+      digest.startsWith('NEXT_REDIRECT'))
+  );
+}
 
 const mapAdjacentPost = (source?: MarkdownBlogPost): AdjacentPost | undefined => {
   if (!source) return undefined;
@@ -472,7 +484,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 // Async component that fetches data
-async function BlogPostPageData({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   try {
     const { isEnabled } = draftMode();
     const post = await getMarkdownPost(params.slug, { includeDrafts: isEnabled });
@@ -683,17 +695,10 @@ async function BlogPostPageData({ params }: { params: { slug: string } }) {
       </>
     );
   } catch (error) {
+    if (isNextControlFlowError(error)) {
+      throw error;
+    }
     console.error('Error fetching blog post data:', error);
     throw new Error('Failed to load blog post content. Please try again.');
   }
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  return (
-    <AsyncErrorBoundary>
-      <Suspense fallback={<PageLoading message="Loading blog post..." />}>
-        <BlogPostPageData params={params} />
-      </Suspense>
-    </AsyncErrorBoundary>
-  );
 }

@@ -26,20 +26,18 @@ function QuickStats({ stats, className = '' }: QuickStatsProps) {
           Key Metrics
         </Heading>
       </div>
-      
+
       <Grid columns={{ default: 1, sm: 2, md: stats.length > 2 ? 3 : 2 }} gap="small">
         {stats.map((stat, index) => (
-          <div 
+          <div
             key={index}
             className={`text-center p-3 rounded-lg ${
-              stat.highlight 
-                ? 'bg-white border-2 border-teal shadow-sm' 
-                : 'bg-white/50'
+              stat.highlight ? 'bg-white border-2 border-teal shadow-sm' : 'bg-white/50'
             }`}
           >
-            <Text 
-              size="2xl" 
-              weight="bold" 
+            <Text
+              size="2xl"
+              weight="bold"
               className={stat.highlight ? 'text-teal' : 'text-charcoal'}
             >
               {stat.value}

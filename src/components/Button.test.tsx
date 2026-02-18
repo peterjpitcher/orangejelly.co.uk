@@ -11,7 +11,7 @@ describe('Button', () => {
   it('handles click events', async () => {
     const handleClick = vi.fn();
     render(<Button onClick={handleClick}>Click me</Button>);
-    
+
     fireEvent.click(screen.getByRole('button'));
     await vi.waitFor(() => {
       expect(handleClick).toHaveBeenCalledTimes(1);
@@ -33,10 +33,10 @@ describe('Button', () => {
   it('applies correct variant styles', () => {
     const { rerender } = render(<Button variant="primary">Primary</Button>);
     expect(screen.getByRole('button').className).toContain('bg-orange');
-    
+
     rerender(<Button variant="secondary">Secondary</Button>);
     expect(screen.getByRole('button').className).toContain('bg-teal');
-    
+
     rerender(<Button variant="ghost">Ghost</Button>);
     expect(screen.getByRole('button').className).toContain('text-orange');
     expect(screen.getByRole('button').className).toContain('hover:bg-orange/10');
@@ -55,11 +55,11 @@ describe('Button', () => {
     const { rerender } = render(<Button size="small">Small</Button>);
     expect(screen.getByRole('button').className).toContain('px-4');
     expect(screen.getByRole('button').className).toContain('py-2.5');
-    
+
     rerender(<Button size="medium">Medium</Button>);
     expect(screen.getByRole('button').className).toContain('px-6');
     expect(screen.getByRole('button').className).toContain('py-3');
-    
+
     rerender(<Button size="large">Large</Button>);
     expect(screen.getByRole('button').className).toContain('px-8');
     expect(screen.getByRole('button').className).toContain('py-4');
@@ -71,7 +71,11 @@ describe('Button', () => {
   });
 
   it('opens external links in new tab', () => {
-    render(<Button href="https://example.com" external>External Link</Button>);
+    render(
+      <Button href="https://example.com" external>
+        External Link
+      </Button>
+    );
     const link = screen.getByRole('link');
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
@@ -79,11 +83,7 @@ describe('Button', () => {
 
   it('renders whatsapp button with correct link and aria attributes', () => {
     render(
-      <Button
-        href="https://wa.me/12345"
-        whatsapp
-        aria-label="Chat on WhatsApp"
-      >
+      <Button href="https://wa.me/12345" whatsapp aria-label="Chat on WhatsApp">
         WhatsApp
       </Button>
     );
@@ -107,9 +107,9 @@ describe('Button', () => {
   it('handles async onClick', async () => {
     const asyncClick = vi.fn().mockResolvedValue(undefined);
     render(<Button onClick={asyncClick}>Async</Button>);
-    
+
     fireEvent.click(screen.getByRole('button'));
-    
+
     await vi.waitFor(() => {
       expect(asyncClick).toHaveBeenCalledTimes(1);
     });
@@ -123,12 +123,7 @@ describe('Button', () => {
 
   it('forwards aria-busy to links when loading', () => {
     render(
-      <Button
-        href="https://example.com"
-        external
-        loading
-        aria-label="Loading link"
-      >
+      <Button href="https://example.com" external loading aria-label="Loading link">
         Loading
       </Button>
     );

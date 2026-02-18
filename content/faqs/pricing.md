@@ -6,7 +6,7 @@ We charge £75 per hour plus VAT as a flat rate. I'll work with you to implement
 
 ## What exactly do you do for £75 per hour?
 
-Everything from writing your social media posts to designing menus that sell. I can create quiz nights that pack your pub, write emails that get opened, fix your Google listing so locals find you, or teach you AI tools that save up to 25 hours a week. You tell me what's hurting your business most - I'll fix it using methods proven at The Anchor.
+Everything from writing your social media posts to designing menus that sell. I can create quiz nights that pack your pub, write emails that get opened, fix your Google listing so locals find you, or teach you AI tools that turn up to 25 hours a week into growth actions. You tell me what's hurting your business most - I'll fix it using methods proven at The Anchor.
 
 ## Why £75 per hour? Why not packages?
 

@@ -6,8 +6,10 @@ export const MIN_TOUCH_TARGET = 44;
 // Check if device is mobile
 export const isMobile = () => {
   if (typeof window === 'undefined') return false;
-  return window.innerWidth < 768 || 
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return (
+    window.innerWidth < 768 ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  );
 };
 
 // Check if device supports touch
@@ -19,13 +21,13 @@ export const hasTouch = () => {
 // Get safe area insets
 export const getSafeAreaInsets = () => {
   if (typeof window === 'undefined') return { top: 0, right: 0, bottom: 0, left: 0 };
-  
+
   const computedStyle = getComputedStyle(document.documentElement);
   return {
     top: parseInt(computedStyle.getPropertyValue('--safe-area-inset-top') || '0'),
     right: parseInt(computedStyle.getPropertyValue('--safe-area-inset-right') || '0'),
     bottom: parseInt(computedStyle.getPropertyValue('--safe-area-inset-bottom') || '0'),
-    left: parseInt(computedStyle.getPropertyValue('--safe-area-inset-left') || '0')
+    left: parseInt(computedStyle.getPropertyValue('--safe-area-inset-left') || '0'),
   };
 };
 
@@ -59,7 +61,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  
+
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -79,20 +81,23 @@ export const isInViewport = (element: Element): boolean => {
 
 // Mobile-optimized lazy loading
 export const lazyLoadImage = (img: HTMLImageElement) => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const image = entry.target as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.classList.add('loaded');
-          observer.unobserve(image);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target as HTMLImageElement;
+          if (image.dataset.src) {
+            image.src = image.dataset.src;
+            image.classList.add('loaded');
+            observer.unobserve(image);
+          }
         }
-      }
-    });
-  }, {
-    rootMargin: '50px' // Start loading 50px before entering viewport
-  });
+      });
+    },
+    {
+      rootMargin: '50px', // Start loading 50px before entering viewport
+    }
+  );
 
   observer.observe(img);
 };

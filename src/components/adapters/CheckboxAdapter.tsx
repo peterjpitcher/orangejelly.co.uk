@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Checkbox as ShadcnCheckbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
+import * as React from 'react';
+import { Checkbox as ShadcnCheckbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
+import { cn } from '@/lib/utils';
 
 interface LegacyCheckboxProps {
   label?: string;
@@ -34,7 +34,7 @@ export default function CheckboxAdapter({
 }: LegacyCheckboxProps) {
   const generatedId = React.useId();
   const checkboxId = id || generatedId;
-  
+
   return (
     <div className="space-y-2">
       <div className="flex items-center space-x-2">
@@ -44,7 +44,7 @@ export default function CheckboxAdapter({
           defaultChecked={defaultChecked}
           onCheckedChange={onCheckedChange}
           disabled={disabled}
-          className={cn(error && "border-destructive", className)}
+          className={cn(error && 'border-destructive', className)}
           aria-invalid={!!error}
           aria-describedby={
             error ? `${checkboxId}-error` : helperText ? `${checkboxId}-helper` : undefined
@@ -56,8 +56,8 @@ export default function CheckboxAdapter({
           <Label
             htmlFor={checkboxId}
             className={cn(
-              "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-              error && "text-destructive"
+              'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+              error && 'text-destructive'
             )}
           >
             {label}
@@ -65,13 +65,13 @@ export default function CheckboxAdapter({
           </Label>
         )}
       </div>
-      
+
       {helperText && !error && (
         <p id={`${checkboxId}-helper`} className="text-sm text-muted-foreground ml-6">
           {helperText}
         </p>
       )}
-      
+
       {error && (
         <p id={`${checkboxId}-error`} className="text-sm text-destructive ml-6" role="alert">
           {error}
@@ -113,27 +113,25 @@ export function CheckboxGroup({
 }: CheckboxGroupProps) {
   const [values, setValues] = React.useState<string[]>(defaultValues || []);
   const activeValues = controlledValues !== undefined ? controlledValues : values;
-  
+
   const handleCheckChange = (value: string, checked: boolean) => {
-    const newValues = checked
-      ? [...activeValues, value]
-      : activeValues.filter(v => v !== value);
-    
+    const newValues = checked ? [...activeValues, value] : activeValues.filter((v) => v !== value);
+
     if (controlledValues === undefined) {
       setValues(newValues);
     }
     onValuesChange?.(newValues);
   };
-  
+
   return (
-    <div className={cn("space-y-3", className)}>
+    <div className={cn('space-y-3', className)}>
       {label && (
-        <Label className={cn(error && "text-destructive")}>
+        <Label className={cn(error && 'text-destructive')}>
           {label}
           {required && <span className="text-destructive ml-1">*</span>}
         </Label>
       )}
-      
+
       <div className="space-y-2">
         {options.map((option) => (
           <CheckboxAdapter
@@ -146,13 +144,9 @@ export function CheckboxGroup({
           />
         ))}
       </div>
-      
-      {helperText && !error && (
-        <p className="text-sm text-muted-foreground">
-          {helperText}
-        </p>
-      )}
-      
+
+      {helperText && !error && <p className="text-sm text-muted-foreground">{helperText}</p>}
+
       {error && (
         <p className="text-sm text-destructive" role="alert">
           {error}

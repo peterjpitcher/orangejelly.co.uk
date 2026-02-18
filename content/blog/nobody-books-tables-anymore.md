@@ -155,7 +155,7 @@ Still use a physical diary because:
 
 - Mark special occasions
 
-- Color code (red = confirmed, blue = tentative)
+- Colour code (red = confirmed, blue = tentative)
 
 ## Day-by-Day Strategy
 

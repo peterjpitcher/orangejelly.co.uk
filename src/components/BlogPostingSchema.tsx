@@ -27,50 +27,50 @@ export function BlogPostingSchema({
   image,
   url,
   keywords = [],
-  speakableSections = []
+  speakableSections = [],
 }: BlogPostingSchemaProps) {
   const isAbsolute = (u: string) => /^https?:\/\//i.test(u);
   const site = getBaseUrl();
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": description,
-    "image": {
-      "@type": "ImageObject",
-      "url": isAbsolute(image) ? image : `${site}${image}`,
-      "width": 1200,
-      "height": 630
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: description,
+    image: {
+      '@type': 'ImageObject',
+      url: isAbsolute(image) ? image : `${site}${image}`,
+      width: 1200,
+      height: 630,
     },
-    "datePublished": datePublished,
-    ...(dateModified && { "dateModified": dateModified }),
-    "author": {
-      "@type": "Person",
-      "name": author.name,
-      ...(author.url && { "url": isAbsolute(author.url) ? author.url : `${site}${author.url}` })
+    datePublished: datePublished,
+    ...(dateModified && { dateModified: dateModified }),
+    author: {
+      '@type': 'Person',
+      name: author.name,
+      ...(author.url && { url: isAbsolute(author.url) ? author.url : `${site}${author.url}` }),
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Orange Jelly Limited",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${site}/logo.png`,
-        "width": 200,
-        "height": 60
-      }
+    publisher: {
+      '@type': 'Organization',
+      name: 'Orange Jelly Limited',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${site}/logo.png`,
+        width: 200,
+        height: 60,
+      },
     },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": isAbsolute(url) ? url : `${site}${url}`
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': isAbsolute(url) ? url : `${site}${url}`,
     },
-    "articleBody": content,
-    ...(keywords.length > 0 && { "keywords": keywords.join(", ") }),
+    articleBody: content,
+    ...(keywords.length > 0 && { keywords: keywords.join(', ') }),
     ...(speakableSections.length > 0 && {
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": speakableSections
-      }
-    })
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: speakableSections,
+      },
+    }),
   };
 
   // Validate in development

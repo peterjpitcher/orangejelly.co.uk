@@ -39,7 +39,8 @@ const headingVariants = cva('font-display font-bold tracking-tight scroll-m-20',
 });
 
 export interface HeadingProps
-  extends Omit<React.HTMLAttributes<HTMLHeadingElement>, 'color'>,
+  extends
+    Omit<React.HTMLAttributes<HTMLHeadingElement>, 'color'>,
     VariantProps<typeof headingVariants> {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   itemProp?: string; // For schema markup
@@ -110,7 +111,8 @@ const textVariants = cva('leading-7', {
 });
 
 export interface TextProps
-  extends Omit<React.HTMLAttributes<HTMLParagraphElement>, 'color'>,
+  extends
+    Omit<React.HTMLAttributes<HTMLParagraphElement>, 'color'>,
     VariantProps<typeof textVariants> {
   as?: 'p' | 'span' | 'div';
   itemProp?: string; // For schema markup

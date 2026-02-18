@@ -2,7 +2,7 @@
 
 ## What's included in your pub business analysis?
 
-We analyze 9 key areas including GP optimization, quiet period solutions, event profitability, social media effectiveness, competitor gaps, quick wins for cash flow, staff efficiency, customer data opportunities, and local market positioning. Delivered as a practical action plan with projected ROI for each recommendation.
+We analyse 9 key areas including GP optimisation, quiet period solutions, event profitability, social media effectiveness, competitor gaps, quick wins for cash flow, staff efficiency, customer data opportunities, and local market positioning. Delivered as a practical action plan with projected ROI for each recommendation.
 
 ## How can you improve margins and reduce waste?
 

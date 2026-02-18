@@ -59,7 +59,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
         {
           pub: 'The Anchor',
           location: 'Stanwell Moor',
-          message: '£4,000+ monthly savings across supplier, rota, and energy',
+          message: '£4,000+ monthly margin growth across supplier, rota, and energy',
           time: 'Monthly',
         },
       ];

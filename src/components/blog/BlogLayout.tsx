@@ -10,14 +10,10 @@ interface BlogLayoutProps {
   sidebar?: React.ReactNode;
 }
 
-export default function BlogLayout({ 
-  children, 
-  breadcrumbs,
-  sidebar 
-}: BlogLayoutProps) {
+export default function BlogLayout({ children, breadcrumbs, sidebar }: BlogLayoutProps) {
   const defaultBreadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: "The Licensee's Guide", href: '/licensees-guide' }
+    { label: "The Licensee's Guide", href: '/licensees-guide' },
   ];
 
   const finalBreadcrumbs = breadcrumbs || defaultBreadcrumbs;

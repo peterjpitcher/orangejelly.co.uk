@@ -26,8 +26,8 @@ interface BoxProps {
   id?: string;
 }
 
-export default function Box({ 
-  children, 
+export default function Box({
+  children,
   className,
   as: Component = 'div',
   padding = 'none',
@@ -36,14 +36,14 @@ export default function Box({
   rounded = false,
   position = 'static',
   textAlign,
-  id
+  id,
 }: BoxProps) {
   const paddingClasses = {
     none: '',
     small: 'p-4',
     medium: 'p-6',
     large: 'p-8',
-    xlarge: 'p-12'
+    xlarge: 'p-12',
   };
 
   const marginClasses = {
@@ -51,7 +51,7 @@ export default function Box({
     small: 'm-4',
     medium: 'm-6',
     large: 'm-8',
-    xlarge: 'm-12'
+    xlarge: 'm-12',
   };
 
   const backgroundClasses = {
@@ -76,17 +76,17 @@ export default function Box({
     md: 'rounded-md',
     lg: 'rounded-lg',
     xl: 'rounded-xl',
-    full: 'rounded-full'
+    full: 'rounded-full',
   };
 
   const textAlignClasses = {
     left: 'text-left',
     center: 'text-center',
-    right: 'text-right'
+    right: 'text-right',
   };
 
   return (
-    <Component 
+    <Component
       id={id}
       className={cn(
         paddingClasses[padding],

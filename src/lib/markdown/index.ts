@@ -32,11 +32,7 @@ export type {
 } from './markdown-types';
 
 // Error classes
-export {
-  MarkdownError,
-  FrontMatterError,
-  FileNotFoundError,
-} from './markdown-types';
+export { MarkdownError, FrontMatterError, FileNotFoundError } from './markdown-types';
 
 // Default export for convenience
 export * from './markdown';

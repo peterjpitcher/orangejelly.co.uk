@@ -33,7 +33,7 @@ export default function TestShadcnPage() {
     },
     {
       id: '3',
-      question: 'Is this SEO optimized?',
+      question: 'Is this SEO optimised?',
       answer:
         'Absolutely! Every component includes proper schema.org markup and accessibility features.',
     },
@@ -130,14 +130,14 @@ export default function TestShadcnPage() {
           <Card background="white">
             <OptimizedImage
               src="/images/pub-transformation.jpg"
-              alt="Test image with SEO optimization"
+              alt="Test image with SEO optimisation"
               width={800}
               height={400}
               priority
               className="rounded-lg"
             />
             <Text className="mt-4">
-              The image component includes loading states, error handling, and SEO optimization.
+              The image component includes loading states, error handling, and SEO optimisation.
             </Text>
           </Card>
         </div>

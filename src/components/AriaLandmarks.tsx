@@ -15,7 +15,7 @@ export function LandmarkSection({
   ariaLabel,
   ariaLabelledBy,
   role,
-  as: Component = 'section'
+  as: Component = 'section',
 }: SectionProps) {
   return (
     <Component
@@ -64,18 +64,9 @@ interface AsideProps {
   ariaLabelledBy?: string;
 }
 
-export function LandmarkAside({ 
-  children, 
-  className = '', 
-  ariaLabel,
-  ariaLabelledBy 
-}: AsideProps) {
+export function LandmarkAside({ children, className = '', ariaLabel, ariaLabelledBy }: AsideProps) {
   return (
-    <aside 
-      className={className}
-      aria-label={ariaLabel}
-      aria-labelledby={ariaLabelledBy}
-    >
+    <aside className={className} aria-label={ariaLabel} aria-labelledby={ariaLabelledBy}>
       {children}
     </aside>
   );
@@ -87,11 +78,7 @@ interface HeaderProps {
 }
 
 export function LandmarkHeader({ children, className = '' }: HeaderProps) {
-  return (
-    <header className={className}>
-      {children}
-    </header>
-  );
+  return <header className={className}>{children}</header>;
 }
 
 interface FooterProps {
@@ -100,11 +87,7 @@ interface FooterProps {
 }
 
 export function LandmarkFooter({ children, className = '' }: FooterProps) {
-  return (
-    <footer className={className}>
-      {children}
-    </footer>
-  );
+  return <footer className={className}>{children}</footer>;
 }
 
 // Helper component for search regions
@@ -114,18 +97,13 @@ interface SearchRegionProps {
   ariaLabel?: string;
 }
 
-export function SearchRegion({ 
-  children, 
-  className = '', 
-  ariaLabel = 'Search' 
+export function SearchRegion({
+  children,
+  className = '',
+  ariaLabel = 'Search',
 }: SearchRegionProps) {
   return (
-    <LandmarkSection
-      role="search"
-      className={className}
-      ariaLabel={ariaLabel}
-      as="div"
-    >
+    <LandmarkSection role="search" className={className} ariaLabel={ariaLabel} as="div">
       {children}
     </LandmarkSection>
   );
@@ -140,12 +118,12 @@ interface FormRegionProps {
   onSubmit?: (e: React.FormEvent) => void;
 }
 
-export function FormRegion({ 
-  children, 
-  className = '', 
+export function FormRegion({
+  children,
+  className = '',
   ariaLabel,
   ariaLabelledBy,
-  onSubmit
+  onSubmit,
 }: FormRegionProps) {
   return (
     <form

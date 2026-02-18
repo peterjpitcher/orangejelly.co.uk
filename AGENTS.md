@@ -19,3 +19,16 @@ Vitest with Testing Library backs unit and interaction tests. Place specs as `*.
 
 ## Commit & Pull Request Guidelines
 Follow the existing imperative style (`feat: add cookie consent`, `docs: update redeploy note`). Keep messages short, prefix with a Conventional Commit type when it fits, and avoid multi-topic commits. PRs should link related issues, summarise behavioural changes, list commands executed (tests, linting, build), and include screenshots or recordings for UI-facing updates. Highlight any config, content, or search/feed rebuild steps reviewers must repeat.
+
+## Growth Messaging Guardrails
+All customer-facing conversion copy must use the growth voice standard in `docs/voice/growth-messaging.md`.
+
+- Keep language plain English with strong verbs: `transform`, `accelerate`, `disrupt`.
+- Write to commercial outcomes multi-operators care about: bookings, covers, revenue, margin optimisation, loyalty, engagement, retention.
+- Use British English spellings in all customer-facing copy.
+- Avoid savings-led phrasing in conversion surfaces (for example: `save time`, `savings`, `saved`).
+- Use the approved phrase bank and replacement map in `docs/voice/growth-messaging.md`.
+- Before any PR that touches conversion copy, run `npm run check:growth-language`.
+- Before any PR that touches customer-facing copy, run `npm run check:british-english`.
+- `npm run lint` now includes growth language and British English enforcement and must pass.
+- `lint-staged` is configured to run both checks on changed `js/jsx/ts/tsx/json/md` files when pre-commit hooks are enabled.

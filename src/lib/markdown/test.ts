@@ -54,7 +54,6 @@ async function runTest() {
     console.log('✅ Reading time details:', readingTime);
 
     console.log('\n🎉 All tests passed successfully!');
-
   } catch (error) {
     console.error('❌ Test failed:', error);
     process.exit(1);

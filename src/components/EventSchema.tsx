@@ -30,7 +30,10 @@ interface EventSchemaProps {
     url?: string;
   };
   eventStatus?: 'EventScheduled' | 'EventCancelled' | 'EventPostponed' | 'EventRescheduled';
-  eventAttendanceMode?: 'OfflineEventAttendanceMode' | 'OnlineEventAttendanceMode' | 'MixedEventAttendanceMode';
+  eventAttendanceMode?:
+    | 'OfflineEventAttendanceMode'
+    | 'OnlineEventAttendanceMode'
+    | 'MixedEventAttendanceMode';
 }
 
 export function EventSchema({
@@ -45,11 +48,11 @@ export function EventSchema({
   performer,
   organizer,
   eventStatus = 'EventScheduled',
-  eventAttendanceMode = 'OfflineEventAttendanceMode'
+  eventAttendanceMode = 'OfflineEventAttendanceMode',
 }: EventSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "Event",
+    '@context': 'https://schema.org',
+    '@type': 'Event',
     name,
     description,
     startDate,
@@ -57,37 +60,37 @@ export function EventSchema({
     eventStatus: `https://schema.org/${eventStatus}`,
     eventAttendanceMode: `https://schema.org/${eventAttendanceMode}`,
     location: {
-      "@type": "Place",
+      '@type': 'Place',
       name: location.name,
       address: {
-        "@type": "PostalAddress",
-        ...location.address
-      }
+        '@type': 'PostalAddress',
+        ...location.address,
+      },
     },
     ...(image && { image }),
     ...(url && { url }),
     ...(offers && {
       offers: {
-        "@type": "Offer",
+        '@type': 'Offer',
         price: offers.price,
         priceCurrency: offers.priceCurrency,
         ...(offers.availability && { availability: `https://schema.org/${offers.availability}` }),
-        ...(offers.url && { url: offers.url })
-      }
+        ...(offers.url && { url: offers.url }),
+      },
     }),
     ...(performer && {
       performer: {
-        "@type": performer.type || "Person",
-        name: performer.name
-      }
+        '@type': performer.type || 'Person',
+        name: performer.name,
+      },
     }),
     ...(organizer && {
       organizer: {
-        "@type": "Organization",
+        '@type': 'Organization',
         name: organizer.name,
-        ...(organizer.url && { url: organizer.url })
-      }
-    })
+        ...(organizer.url && { url: organizer.url }),
+      },
+    }),
   };
 
   return (

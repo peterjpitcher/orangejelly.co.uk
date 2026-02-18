@@ -12,10 +12,7 @@ export const emailSchema = z
 export const phoneSchema = z
   .string()
   .min(1, VALIDATION_MESSAGES.phone.required)
-  .regex(
-    /^(\+44|0)?[1-9]\d{9,10}$/,
-    VALIDATION_MESSAGES.phone.invalid
-  );
+  .regex(/^(\+44|0)?[1-9]\d{9,10}$/, VALIDATION_MESSAGES.phone.invalid);
 
 export const nameSchema = z
   .string()
@@ -76,7 +73,10 @@ export function sanitizeInput(input: string): string {
   // Remove any HTML tags
   const withoutTags = input.replace(/<[^>]*>/g, '');
   // Remove any script tags content
-  const withoutScripts = withoutTags.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  const withoutScripts = withoutTags.replace(
+    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+    ''
+  );
   // Trim whitespace
   return withoutScripts.trim();
 }
@@ -84,9 +84,9 @@ export function sanitizeInput(input: string): string {
 // XSS prevention for display
 export function escapeHtml(unsafe: string): string {
   return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }

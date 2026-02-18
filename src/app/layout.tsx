@@ -8,7 +8,6 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import PerformanceMonitor, { PreloadResources } from '@/components/PerformanceMonitor';
 import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
 import { CONTACT } from '@/lib/constants';
-import { ROICalculatorProvider } from '@/contexts/ROICalculatorContext';
 import { getBaseUrl } from '@/lib/site-config';
 import CookieNotice from '@/components/CookieNotice';
 
@@ -194,13 +193,11 @@ export default function RootLayout({
 
         {/* Navigation only - SuperHeader removed for cleaner layout */}
         <NavigationWrapper />
-        <ROICalculatorProvider>
-          <ErrorBoundary>
-            <main id="main-content" className="min-h-screen">
-              {children}
-            </main>
-          </ErrorBoundary>
-        </ROICalculatorProvider>
+        <ErrorBoundary>
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
+        </ErrorBoundary>
         <FooterWrapper />
         <PerformanceMonitor />
         <CookieNotice />

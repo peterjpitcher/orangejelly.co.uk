@@ -1,6 +1,6 @@
 # Menu Makeover FAQs
 
-## What's the ROI on menu optimization?
+## What's the ROI on menu optimisation?
 
 At The Anchor, we cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts. Menu psychology can lift ordering confidence and margins. We charge £75 per hour plus VAT, and most menu reviews are completed in a short focused session.
 

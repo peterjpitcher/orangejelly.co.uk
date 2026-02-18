@@ -24,7 +24,7 @@ export async function generateMetadata() {
 // Local data for homepage
 const getLocalHomeData = () => {
   const hero = {
-    title: 'Transformative marketing for hospitality. Built to accelerate growth.',
+    title: 'Transformational hospitality marketing. Built to accelerate growth.',
     subtitle:
       'Orange Jelly is a transformative marketing partner for hospitality businesses. We are a small, hands-on team helping partners grow through challenging times with proactive strategy, AI-enabled delivery, and practical systems that drive bookings, footfall, and repeat visits.',
     ctaText: 'See How We Help',
@@ -105,8 +105,8 @@ const getLocalHomeData = () => {
     },
     {
       icon: '⭐',
-      title: 'Up to 25 Hours Reclaimed',
-      description: 'Time saved each week through practical AI-enabled systems',
+      title: 'Accelerate Weekly Execution',
+      description: 'Turn 25 hours each week into growth actions that drive bookings and revenue',
     },
   ];
 
@@ -117,8 +117,8 @@ const getLocalHomeData = () => {
     foodGPContext: 'Sunday waste cut',
     socialViews: '60,000-70,000',
     socialViewsContext: 'people reached monthly',
-    hoursSaved: 'Up to 25 hours',
-    hoursSavedContext: 'saved every week with AI',
+    hoursSaved: '25 growth hours',
+    hoursSavedContext: 'redirected weekly with AI',
   };
 
   const trustBadges = [
@@ -182,9 +182,6 @@ const getLocalHomeData = () => {
     resultsSubtext:
       'Featured in BII magazine for AI innovation. From quiz nights to tasting events, this is measurable change in performance.',
     resultsButtonText: 'See More Hospitality Results',
-    calculatorHeading: 'Estimate Your Growth Potential',
-    calculatorSubtext:
-      'Every venue is different. Estimate the upside from focused, action-first marketing.',
     aboutHeading: 'Built in a Real Venue',
     aboutText1:
       "I'm Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I lead marketing and growth. The Anchor is our proving ground for strategies that work under real trading pressure.",

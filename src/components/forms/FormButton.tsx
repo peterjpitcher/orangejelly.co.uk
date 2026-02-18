@@ -29,7 +29,8 @@ export default function FormButton({
   const variantClasses = {
     primary: 'bg-orange text-white hover:bg-orange-dark focus:ring-orange/50',
     secondary: 'bg-teal text-white hover:bg-teal-dark focus:ring-teal/50',
-    outline: 'bg-transparent text-orange border-2 border-orange hover:bg-orange hover:text-white focus:ring-orange/50',
+    outline:
+      'bg-transparent text-orange border-2 border-orange hover:bg-orange hover:text-white focus:ring-orange/50',
     base: 'bg-charcoal text-white hover:bg-charcoal-light focus:ring-charcoal/50',
     support: 'bg-teal text-white hover:bg-teal-dark focus:ring-teal/50',
     accent: 'bg-orange text-white hover:bg-orange-dark focus:ring-orange/50',
@@ -47,11 +48,7 @@ export default function FormButton({
   `;
 
   return (
-    <button
-      className={buttonClasses}
-      disabled={disabled || loading}
-      {...props}
-    >
+    <button className={buttonClasses} disabled={disabled || loading} {...props}>
       {loading ? (
         <>
           <svg

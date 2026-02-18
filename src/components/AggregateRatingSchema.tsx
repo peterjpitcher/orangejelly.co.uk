@@ -16,21 +16,21 @@ export function AggregateRatingSchema({
   ratingValue,
   reviewCount,
   bestRating = 5,
-  worstRating = 1
+  worstRating = 1,
 }: AggregateRatingSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
     itemReviewed: {
-      "@type": itemReviewed.type,
+      '@type': itemReviewed.type,
       name: itemReviewed.name,
       ...(itemReviewed.description && { description: itemReviewed.description }),
-      ...(itemReviewed.url && { url: itemReviewed.url })
+      ...(itemReviewed.url && { url: itemReviewed.url }),
     },
     ratingValue,
     reviewCount,
     bestRating,
-    worstRating
+    worstRating,
   };
 
   return (

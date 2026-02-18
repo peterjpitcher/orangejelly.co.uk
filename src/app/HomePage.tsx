@@ -3,7 +3,6 @@ import TrustBar from '@/components/TrustBar';
 import CTASection from '@/components/CTASection';
 import FAQItem from '@/components/FAQItem';
 import Section from '@/components/Section';
-import ROICalculator from '@/components/ROICalculator';
 import OptimizedImage from '@/components/OptimizedImage';
 import Heading from '@/components/Heading';
 import Card from '@/components/Card';
@@ -80,8 +79,6 @@ interface SectionHeadings {
   resultsTestimonial?: string;
   resultsSubtext?: string;
   resultsButtonText?: string;
-  calculatorHeading?: string;
-  calculatorSubtext?: string;
   aboutHeading?: string;
   aboutText1?: string;
   aboutText2?: string;
@@ -196,68 +193,6 @@ export default function HomePage({
         subtext={sectionHeadings?.resultsSubtext}
         buttonText={sectionHeadings?.resultsButtonText}
       />
-
-      {/* ROI Calculator Section */}
-      <Box id="roi-calculator">
-        <Section background="white">
-          <AnimatedItem animation="fade-in" delay={100}>
-            <Container maxWidth="4xl">
-              <Heading level={2} align="center" className="mb-4">
-                {sectionHeadings?.calculatorHeading || 'Calculate Your Potential Revenue'}
-              </Heading>
-              <Text size="lg" color="muted" align="center" className="mb-12 max-w-2xl mx-auto">
-                {sectionHeadings?.calculatorSubtext ||
-                  'Every venue is different. See how much more revenue you could generate with focused action-first strategy.'}
-              </Text>
-              <ROICalculator />
-
-              <div className="text-center mt-8">
-                <Text size="lg" className="mb-4">
-                  Ready to Increase Your Revenue?
-                </Text>
-                <Text color="muted" className="mb-6">
-                  Choose the support focus that fits your priorities
-                </Text>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <Card variant="bordered" padding="large">
-                    <Heading level={4} className="mb-3">
-                      Event Innovation
-                    </Heading>
-                    <Text className="mb-4">
-                      Fresh event formats that are easier to run and easier to sell
-                    </Text>
-                    <Button href="/services" variant="ghost">
-                      Explore Service →
-                    </Button>
-                  </Card>
-                  <Card variant="bordered" padding="large">
-                    <Heading level={4} className="mb-3">
-                      Transformational Marketing
-                    </Heading>
-                    <Text className="mb-4">
-                      Clear plans, campaigns, and weekly execution that builds momentum
-                    </Text>
-                    <Button href="/services" variant="primary">
-                      Explore Service
-                    </Button>
-                  </Card>
-                  <Card variant="bordered" padding="large">
-                    <Heading level={4} className="mb-3">
-                      Simplified Technology Tools
-                    </Heading>
-                    <Text className="mb-4">
-                      Simpler tools, lower waste, and practical systems your team can run
-                    </Text>
-                    <Button href="/services" variant="ghost">
-                      Explore Service →
-                    </Button>
-                  </Card>
-                </div>
-              </div>
-            </Container>
-          </AnimatedItem>
-        </Section>
-      </Box>
 
       {/* About Preview with The Anchor Logo */}
       <Section>

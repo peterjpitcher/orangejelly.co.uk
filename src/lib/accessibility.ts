@@ -15,9 +15,9 @@ export const ariaLabels = {
     breadcrumb: 'Breadcrumb navigation',
     mobile: 'Mobile navigation menu',
     quickLinks: 'Quick links',
-    problemCategories: 'Problem categories navigation'
+    problemCategories: 'Problem categories navigation',
   },
-  
+
   buttons: {
     close: 'Close',
     menu: 'Open menu',
@@ -25,13 +25,13 @@ export const ariaLabels = {
     phone: 'Call us',
     email: 'Email us',
     viewMore: 'View more information',
-    expandCollapse: (expanded: boolean) => expanded ? 'Collapse content' : 'Expand content',
-    playPause: (playing: boolean) => playing ? 'Pause video' : 'Play video',
-    mute: (muted: boolean) => muted ? 'Unmute' : 'Mute',
+    expandCollapse: (expanded: boolean) => (expanded ? 'Collapse content' : 'Expand content'),
+    playPause: (playing: boolean) => (playing ? 'Pause video' : 'Play video'),
+    mute: (muted: boolean) => (muted ? 'Unmute' : 'Mute'),
     share: 'Share this page',
-    bookmark: 'Bookmark this page'
+    bookmark: 'Bookmark this page',
   },
-  
+
   forms: {
     search: 'Search the website',
     newsletter: 'Newsletter signup',
@@ -39,9 +39,9 @@ export const ariaLabels = {
     calculator: 'ROI calculator',
     required: 'Required field',
     error: (field: string) => `Error in ${field} field`,
-    success: 'Form submitted successfully'
+    success: 'Form submitted successfully',
   },
-  
+
   regions: {
     hero: 'Hero section',
     services: 'Our services',
@@ -50,16 +50,16 @@ export const ariaLabels = {
     pricing: 'Pricing information',
     faq: 'Frequently asked questions',
     results: 'Success stories and results',
-    calculator: 'ROI calculator tool'
+    calculator: 'ROI calculator tool',
   },
-  
+
   status: {
     loading: 'Loading content',
     error: 'Error loading content',
     success: 'Action completed successfully',
     info: 'Information',
-    warning: 'Warning message'
-  }
+    warning: 'Warning message',
+  },
 };
 
 // Helper to build descriptive button labels
@@ -72,7 +72,7 @@ export function getButtonLabel(action: string, context?: string): string {
 
 // Helper to build form field descriptions
 export function getFieldDescription(
-  fieldName: string, 
+  fieldName: string,
   required: boolean = false,
   helpText?: string
 ): string {
@@ -84,20 +84,20 @@ export function getFieldDescription(
 
 // Helper for live region announcements
 export function announceToScreenReader(
-  message: string, 
+  message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
   if (typeof document === 'undefined') return;
-  
+
   const announcement = document.createElement('div');
   announcement.setAttribute('role', 'status');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
-  
+
   document.body.appendChild(announcement);
-  
+
   // Remove after announcement
   setTimeout(() => {
     document.body.removeChild(announcement);
@@ -109,10 +109,10 @@ export function trapFocus(container: HTMLElement): () => void {
   const focusableElements = container.querySelectorAll(
     'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])'
   );
-  
+
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
+
   function handleKeyDown(e: KeyboardEvent) {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -128,9 +128,9 @@ export function trapFocus(container: HTMLElement): () => void {
       }
     }
   }
-  
+
   container.addEventListener('keydown', handleKeyDown);
-  
+
   // Return cleanup function
   return () => {
     container.removeEventListener('keydown', handleKeyDown);
@@ -145,7 +145,7 @@ export function handleArrowKeyNavigation(
   onNavigate: (newIndex: number) => void
 ): void {
   let newIndex = currentIndex;
-  
+
   switch (e.key) {
     case 'ArrowUp':
     case 'ArrowLeft':
@@ -168,6 +168,6 @@ export function handleArrowKeyNavigation(
     default:
       return;
   }
-  
+
   onNavigate(newIndex);
 }

@@ -8,29 +8,29 @@ interface ContainerProps {
   padding?: boolean;
 }
 
-export default function Container({ 
-  children, 
+export default function Container({
+  children,
   className,
   maxWidth = '7xl',
   center = true,
-  padding = true
+  padding = true,
 }: ContainerProps) {
   const maxWidthClasses = {
-    'sm': 'max-w-sm',
-    'md': 'max-w-md',
-    'lg': 'max-w-lg',
-    'xl': 'max-w-xl',
+    sm: 'max-w-sm',
+    md: 'max-w-md',
+    lg: 'max-w-lg',
+    xl: 'max-w-xl',
     '2xl': 'max-w-2xl',
     '3xl': 'max-w-3xl',
     '4xl': 'max-w-4xl',
     '5xl': 'max-w-5xl',
     '6xl': 'max-w-6xl',
     '7xl': 'max-w-7xl',
-    'full': 'max-w-full'
+    full: 'max-w-full',
   };
 
   return (
-    <div 
+    <div
       className={cn(
         maxWidthClasses[maxWidth],
         center && 'mx-auto',
