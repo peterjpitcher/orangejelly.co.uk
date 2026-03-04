@@ -25,10 +25,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I start planning christmas now: 30 festive ideas to secure december bookings early"
-  - "What's the best way to start planning christmas now: 30 festive ideas to secure december bookings early"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "when should I start planning Christmas at my pub?"
+  - "what are the best Christmas promotion ideas for pubs?"
+  - "how do I get more Christmas party bookings for my pub?"
+faqs:
+  - question: "When should pubs start planning for Christmas?"
+    answer: "Start in June or July. Corporate bookers plan early, and the best dates fill fast. By September you should have packages priced, menus finalised, and entertainment booked. Early planning captures the most profitable bookings before competitors."
+  - question: "What Christmas packages work best for pubs?"
+    answer: "Keep it simple: a fixed menu plus welcome drink at a clear price point. Offer tiered options for different budgets. Include weekday packages at a slight discount to fill quieter midweek dates. Always take deposits to reduce no-shows."
+  - question: "How can I attract corporate Christmas bookings to my pub?"
+    answer: "Contact local businesses directly with a clear package and pricing. Offer a hard finish time for lunchtime bookings so they can return to work. Early bird discounts for bookings made before October create urgency and lock in revenue early."
 ---
 
 # Start Planning Christmas Now: 30 Festive Ideas to Secure December Bookings Early
@@ -78,6 +84,8 @@ Daytime events fill gaps and add incremental revenue.
 **October**: push corporate bookings.
 **November**: final push and confirmation.
 **December**: execute and capture reviews.
+
+If you want professional support getting your Christmas marketing right, take a look at our [pub marketing services](/services) — we can help with everything from social media to event promotion.
 
 ## Common mistakes
 

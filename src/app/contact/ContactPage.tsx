@@ -225,7 +225,7 @@ export default function ContactPage({}: ContactPageProps) {
                   size="large"
                 />
                 <Text size="sm" color="muted" className="mt-2">
-                  Response within hours
+                  Peter responds within 24 hours — no sales pitch
                 </Text>
               </Card>
             </AnimatedItem>
@@ -517,14 +517,57 @@ export default function ContactPage({}: ContactPageProps) {
         </div>
       </Section>
 
+      {/* Social proof strip */}
+      <Section background="charcoal" padding="medium">
+        <div className="max-w-5xl mx-auto">
+          <Heading level={2} align="center" color="white" className="mb-8">
+            What We Have Achieved at The Anchor
+          </Heading>
+          <Grid columns={{ default: 2, md: 4 }} gap="medium">
+            <div className="text-center">
+              <Text size="2xl" weight="bold" color="white">
+                58% → 71%
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Food gross profit
+              </Text>
+            </div>
+            <div className="text-center">
+              <Text size="2xl" weight="bold" color="white">
+                25-35
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Weekly quiz regulars
+              </Text>
+            </div>
+            <div className="text-center">
+              <Text size="2xl" weight="bold" color="white">
+                60-70K
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Monthly social views
+              </Text>
+            </div>
+            <div className="text-center">
+              <Text size="2xl" weight="bold" color="white">
+                £75-100K
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Value added
+              </Text>
+            </div>
+          </Grid>
+        </div>
+      </Section>
+
       {/* Final CTA */}
-      <Section background="charcoal" padding="large">
+      <Section background="teal" padding="large">
         <div className="max-w-2xl mx-auto text-center">
           <Heading level={2} color="white" className="mb-6">
             Ready to Build Momentum?
           </Heading>
           <Text size="lg" color="white" className="mb-8">
-            Share your biggest growth challenge and we'll map the fastest, practical next steps.
+            Share your biggest growth challenge and we will map the fastest, practical next steps.
           </Text>
 
           <div className="space-y-4">
@@ -533,7 +576,8 @@ export default function ContactPage({}: ContactPageProps) {
               size="large"
             />
             <Text size="sm" color="white" className="opacity-80">
-              {CONTACT.phone} • Available 7 days • We understand hospitality hours
+              {CONTACT.phone} • Peter responds within 24 hours • No sales pitch, just practical
+              advice
             </Text>
           </div>
         </div>

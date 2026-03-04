@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Affordable way to refresh pub"
   - "DIY decor ideas for bar"
   - "Make pub look new"
+faqs:
+  - question: "How much does it cost to refresh a pub interior?"
+    answer: "You can make a visible impact for a few hundred pounds. Repainting a feature wall, updating signage, adding plants, and swapping light fittings are all low-cost moves that change the first impression dramatically. You do not need a full refurbishment to signal change."
+  - question: "What pub decor changes have the biggest impact?"
+    answer: "Focus on what guests see first: the entrance, the bar front, and the main seating area. A fresh coat of paint, clean modern signage, updated menu boards, and better lighting in these zones create the strongest perception shift for the least spend."
+  - question: "How often should a pub refresh its look?"
+    answer: "Small updates every six to twelve months keep the venue feeling current. You don't need a major refit — rotating artwork, seasonal table dressing, and refreshing worn soft furnishings are enough to signal that the pub is cared for and evolving."
 ---
 
 # Low-Cost Decor Refreshes that Signal "New and Improved"

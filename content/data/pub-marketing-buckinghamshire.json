@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for Buckinghamshire Pubs",
-    "subtitle": "From market towns to destination country pubs, Buckinghamshire is competitive. We'll get you found locally and give people a clear reason to visit.",
+    "subtitle": "Buckinghamshire has around 700 pubs — from Chilterns destination venues to Marlow gastropubs and Milton Keynes high-street locals. Each needs a different approach to fill tables consistently.",
     "ctaText": "Hi Peter, I run a pub in Buckinghamshire and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
   "intro": {
     "heading": "What works in Buckinghamshire (and what doesn't)",
     "paragraphs": [
-      "Buckinghamshire pubs often compete on food, gardens, and weekends, but midweek can be brutal if you rely on passing trade.",
-      "The fastest wins usually come from local discovery: your Google profile, photos, reviews, and the words that match what people actually want.",
-      "Then we build one repeatable hook (quiz, steak night, live sport, tastings) and a simple marketing routine your team can run."
+      "Buckinghamshire is one of the most affluent counties in the country, but that doesn't mean pubs have it easy. The gastropub competition in Marlow, Beaconsfield, and Amersham is fierce, and if you're not positioned clearly, you lose to the pub with better photos and more reviews.",
+      "Then there's Milton Keynes — a completely different market. Town-centre pubs compete on price and convenience, not ambience. Rural Chilterns pubs rely on walkers, families, and weekend destination trade. You need a plan that fits your actual market, not a generic one.",
+      "We build around what Buckinghamshire pubs actually need: strong Google visibility for food-led searches, a repeatable events calendar for midweek, and seasonal campaigns for Chilterns walking season (spring and autumn) and the Christmas party rush."
     ]
   },
   "wins": {
-    "heading": "Fast wins for Buckinghamshire pubs",
+    "heading": "What's working for Buckinghamshire pubs right now",
     "items": [
       {
-        "title": "Destination positioning",
-        "description": "Make your pub the obvious choice for the occasion: dates, families, Sunday, sport, or bigger bookings."
+        "title": "Chilterns walker and family trade",
+        "description": "Pubs near walking routes can capture serious weekend and holiday footfall. The right Google categories (dog-friendly, family pub, beer garden) and clear parking information make the difference."
       },
       {
-        "title": "Beer garden and family searches",
-        "description": "Show up when people search for what you actually have: garden, parking, dog-friendly, kids menu, and food."
+        "title": "Compete in the gastropub market",
+        "description": "Marlow, Beaconsfield, and Amersham have serious food competition. Strong food photography, a curated review strategy, and consistent social posting help you stand out without needing a celebrity chef."
       },
       {
-        "title": "Midweek hooks",
-        "description": "Simple weekly events that turn quiet nights into regulars."
+        "title": "Build a midweek rhythm",
+        "description": "Affluent Buckinghamshire customers will come out midweek for the right reason: a well-run quiz, a steak night with quality cuts, or a tasting evening. One repeatable hook is all you need."
       },
       {
-        "title": "Templates that accelerate growth",
-        "description": "Messages and posts you can reuse without sounding like every other pub."
+        "title": "Christmas and seasonal events",
+        "description": "Christmas party bookings start early in Buckinghamshire — corporate groups from nearby business parks book months ahead. Get your packages and booking page live by September."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Build midweek momentum",
-        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "description": "Proven systems to build regulars and consistent Tuesday–Wednesday trade in affluent areas.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your Buckinghamshire pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Can you help a food-led pub or gastropub?",
-      "answer": "Yes. We align your menus, photos, reviews, and messaging so you show up for the searches that match your best sellers."
+      "question": "Can you help food-led pubs compete in Buckinghamshire?",
+      "answer": "Yes. Buckinghamshire's gastropub market is competitive, especially around Marlow and Beaconsfield. We focus on what wins customers: strong food photography, curated Google reviews, clear menu positioning, and consistent social content that sells specific dishes and nights."
     },
     {
-      "question": "What if we are great on weekends but quiet midweek?",
-      "answer": "That's common. We build one repeatable midweek hook and a simple plan to promote it consistently."
+      "question": "What about village pubs in the Chilterns?",
+      "answer": "Chilterns pubs thrive on walker, family, and destination trade. We optimise for the searches people actually use — dog-friendly pub, pub with garden, Sunday lunch near [village] — and build seasonal campaigns for spring and autumn walking season."
     },
     {
-      "question": "Do we need to post every day?",
-      "answer": "No. You need consistency, not daily stress. We'll batch content and focus on posts that sell specific nights."
+      "question": "Is Milton Keynes a different market?",
+      "answer": "Completely. Milton Keynes town-centre pubs compete on convenience and price, not the destination dining that works in the Chilterns. We tailor the approach to your location — there's no one-size-fits-all for Buckinghamshire."
     }
   ],
   "cta": {
     "title": "Want more customers through the door in Buckinghamshire?",
-    "subtitle": "Message me what your pub is known for and where trade is dropping. I'll tell you the fastest win to start with.",
+    "subtitle": "Tell me where your pub is — Chilterns village, Marlow high street, or Milton Keynes — and I'll give you the right approach for your market.",
     "whatsappMessage": "Hi Peter, I run a pub in Buckinghamshire and I need help with marketing. Can we have a quick chat?"
   }
 }

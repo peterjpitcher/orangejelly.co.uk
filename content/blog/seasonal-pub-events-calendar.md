@@ -26,10 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I seasonal pub events calendar: year-round ideas that drive revenue"
-  - "What's the best way to seasonal pub events calendar: year-round ideas that drive revenue"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "what pub events should I run each month of the year?"
+  - "how do I plan a year-round events calendar for my pub?"
+  - "what are the best seasonal promotions for pubs in the UK?"
+faqs:
+  - question: "How far ahead should I plan my pub events calendar?"
+    answer: "Plan at least one quarter ahead, ideally two. This gives you time to book entertainment, order stock, and promote properly. A rolling 12-month skeleton calendar with key dates marked lets you slot in details as each quarter approaches."
+  - question: "What are the best months for pub events in the UK?"
+    answer: "December is the obvious peak, but March (Mother's Day, Six Nations), June (Father's Day, summer solstice), and October (Halloween, Oktoberfest) are strong too. The real skill is filling January, February, and September — themed food nights, indoor events, and community activities work well in these quieter months."
+  - question: "How many events per month should a pub run?"
+    answer: "Two to four well-executed events per month is better than filling every night. One recurring weekly event (like a quiz) plus one or two seasonal specials gives you a rhythm without exhausting your team or your audience."
 ---
 
 # Seasonal Pub Events Calendar: Year-Round Ideas That Drive Revenue

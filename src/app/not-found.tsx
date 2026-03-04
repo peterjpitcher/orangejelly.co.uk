@@ -55,10 +55,10 @@ export default function NotFound() {
             </Text>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button href="/" variant="primary" size="medium">
+              <Button href="/" variant="primary" size="large">
                 Back to Homepage
               </Button>
-              <Button href="/services" variant="secondary" size="medium">
+              <Button href="/services" variant="secondary" size="large">
                 View Our Services
               </Button>
             </div>
@@ -79,7 +79,7 @@ export default function NotFound() {
                 <Text className="mb-4">
                   Clear plans and action-first execution to build momentum quickly.
                 </Text>
-                <Button href="/services#transformational-marketing" variant="ghost" size="small">
+                <Button href="/services#transformational-marketing" variant="ghost" size="medium">
                   See Transformational Marketing →
                 </Button>
               </Card>
@@ -92,7 +92,7 @@ export default function NotFound() {
                   Fresh event formats that are easier to run, easier to sell, and built for repeat
                   visits.
                 </Text>
-                <Button href="/services#event-innovation" variant="ghost" size="small">
+                <Button href="/services#event-innovation" variant="ghost" size="medium">
                   See Event Innovation →
                 </Button>
               </Card>
@@ -104,7 +104,7 @@ export default function NotFound() {
                 <Text className="mb-4">
                   Simplify your stack, cut waste, and make your tools work harder.
                 </Text>
-                <Button href="/services#simplified-technology-tools" variant="ghost" size="small">
+                <Button href="/services#simplified-technology-tools" variant="ghost" size="medium">
                   See Technology Tools →
                 </Button>
               </Card>
@@ -116,7 +116,7 @@ export default function NotFound() {
                 <Text className="mb-4">
                   See what we've achieved at The Anchor and the systems we teach.
                 </Text>
-                <Button href="/results" variant="ghost" size="small">
+                <Button href="/results" variant="ghost" size="medium">
                   View Results →
                 </Button>
               </Card>

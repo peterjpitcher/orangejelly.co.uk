@@ -26,9 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I nobody books tables anymore?"
-  - "What should I do when nobody books tables anymore?"
-  - "Help with nobody books tables anymore"
+  - "how do I handle no-shows when people book tables at my pub?"
+  - "should I take bookings or just do walk-ins at my pub?"
+  - "what's the best way to manage table reservations in a small pub?"
+faqs:
+  - question: "How many tables should I keep for walk-ins versus bookings?"
+    answer: "Keep around 60-70% of tables bookable and leave the rest for walk-ins. On quieter days, make more bookable; on busier nights, hold more for walk-ins. Never book out completely — an empty-looking pub kills atmosphere."
+  - question: "How do I reduce no-shows at my pub?"
+    answer: "Send a confirmation text when the booking is made, a reminder 24 hours before, and a final check 2 hours before. Take phone numbers for every booking and consider deposits for groups of 8 or more. This system alone can cut no-shows dramatically."
+  - question: "Should I use a booking system or just take phone calls?"
+    answer: "A simple phone and notebook system works well for most pubs. Free or low-cost online booking tools can help if you want to take bookings 24/7, but avoid paying for expensive platforms unless you are doing 50+ covers a night consistently."
 ---
 
 "We're fully booked," I said to the couple at the door. The pub was half empty. They looked confused, frustrated, and left. Twenty minutes later, three bookings no-showed. We served twelve covers in a sixty-seat pub on a Saturday night.

@@ -46,8 +46,8 @@ export default function NewsletterSignup({
         onSuccess();
       }
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setSuccess(false), 5000);
+      // Reset success message after 15 seconds - longer for less tech-savvy audience
+      setTimeout(() => setSuccess(false), 15000);
     },
   });
 
@@ -98,7 +98,7 @@ export default function NewsletterSignup({
       )}
 
       {success ? (
-        <div className="bg-green-50 text-green-800 p-4 rounded-lg">
+        <div className="bg-green-50 text-green-800 p-4 rounded-lg" role="status" aria-live="polite">
           <Text weight="semibold">{SUCCESS_MESSAGES.newsletter.subscribed}</Text>
         </div>
       ) : (

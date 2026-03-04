@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to relaunch pub quiz night"
   - "Make live music nights profitable"
   - "Plan sport screenings for pub"
+faqs:
+  - question: "How do I relaunch a quiz night that lost momentum?"
+    answer: "Treat it as a brand new launch, not a restart. Pick a new night if needed, rebrand the format, and promote it for three weeks before the first session. Offer a free first entry or a drink incentive to rebuild the crowd. Consistency from week one is critical — never cancel."
+  - question: "Is live music worth the cost for a pub?"
+    answer: "It depends on how you structure it. A solo acoustic act costing £150-£250 can drive an extra £500-£1,000 in bar revenue on the right night. Pre-sell tables with a drink minimum, promote heavily on social media, and choose acts that match your audience. If the bar uplift doesn't cover the fee, rethink the format."
+  - question: "Do I need a Sky or TNT Sports subscription for my pub?"
+    answer: "Only if sport is a core part of your offer. Subscriptions cost thousands per year, so you need enough match-day footfall to justify it. If you only get 10-15 extra customers on a big game, the numbers rarely stack up. Consider showing free-to-air sport and putting those funds to better use elsewhere."
 ---
 
 # Restarting Your Quiz, Live Music, and Sport Nights for Maximum ROI

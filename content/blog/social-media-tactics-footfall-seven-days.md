@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to get pub bookings from Instagram"
   - "Social media ideas to fill my pub"
   - "Seven day plan to boost bar visits"
+faqs:
+  - question: "How often should a pub post on social media?"
+    answer: "At least once a day on your main platform (usually Instagram or Facebook). Mix content types — behind-the-scenes prep, menu highlights, customer moments, and event teasers. Consistency matters more than perfection. A quick phone photo posted daily beats a polished post once a week."
+  - question: "Do Facebook ads actually work for pubs?"
+    answer: "Yes, when targeted correctly. Even £5 per day aimed at people within a 5-mile radius can drive measurable bookings. Boost posts that show your best food, busiest nights, or upcoming events. Always include a clear call to action — 'Book your table' or 'Message us to reserve.'"
+  - question: "What's the best social media platform for a pub?"
+    answer: "Facebook for the over-35 crowd and local community groups. Instagram for food-led content, atmosphere shots, and reaching under-40s. TikTok for viral reach if you have a fun, visual format. Most pubs get the best return from Facebook and Instagram combined."
 ---
 
 # Social Media Tactics That Drive Footfall in Seven Days

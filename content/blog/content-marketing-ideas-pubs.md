@@ -1,9 +1,9 @@
 ---
-title: "Content Marketing for Pubs: Stories That Fill Seats and Build Loyalty"
+title: "Pub Content That Fills Seats: What to Post and When"
 slug: "content-marketing-ideas-pubs"
 publishedDate: 2025-10-03
 updatedDate: "2025-05-19T00:00:00.000Z"
-excerpt: "Transform your pub into a content powerhouse. Learn how to create stories, videos, and experiences that attract customers, build community, and drive"
+excerpt: "A week-by-week content plan for pubs: exactly what to post on Facebook and Instagram, when to post it, and how to turn views into actual bookings."
 quickAnswer: "Share behind-the-scenes kitchen videos, customer stories, and local history. Post consistently across Facebook, Instagram, and local community groups. Focus on storytelling that builds emotional connection rather than just promoting opening hours and menu items."
 author: "Peter Pitcher"
 category: "social-media"
@@ -27,10 +27,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I content marketing for pubs: stories that fill seats and build loyalty"
-  - "What's the best way to content marketing for pubs: stories that fill seats and build loyalty"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "what content should I post for my pub on social media?"
+  - "how do I market my pub without a big budget?"
+  - "what kind of stories work best for pub marketing?"
+faqs:
+  - question: "How often should a pub post on social media?"
+    answer: "Aim for three to five posts per week across Facebook and Instagram. Consistency matters more than volume. Plan a simple weekly rhythm: behind-the-scenes Monday, menu highlight midweek, event teaser Thursday, weekend atmosphere Friday."
+  - question: "What type of content gets the most engagement for pubs?"
+    answer: "Behind-the-scenes kitchen videos, customer stories, staff spotlights, and local history posts consistently outperform promotional content. People connect with real stories, not sales pitches. Show the personality behind the pub."
+  - question: "Do I need professional photos for pub marketing?"
+    answer: "No. Authentic smartphone photos and short videos often outperform polished content. Good natural light, a clean background, and genuine moments are more important than expensive equipment. Your regulars want to see the real pub, not a glossy advert."
 ---
 
 # Content Marketing for Pubs: Stories That Fill Seats and Build Loyalty
@@ -84,6 +90,8 @@ Use content to drive action. A good post has a clear offer and a clear booking p
 - Wednesday: a story or staff feature.
 - Friday: social proof or event recap.
 - Sunday: next week teaser.
+
+If you would rather hand off the content creation entirely, our [content creation service for pubs](/services/content-creation-for-pubs) handles the planning, writing, and posting so you can focus on running service.
 
 ## Common mistakes
 

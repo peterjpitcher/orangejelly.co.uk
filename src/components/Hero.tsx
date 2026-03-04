@@ -53,7 +53,7 @@ export default function Hero({
             className="object-cover brightness-[0.34] contrast-110 saturate-75"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0b1627]/78 via-[#10233a]/74 to-[#0b1627]/84" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-dark/78 via-charcoal/74 to-charcoal-dark/84" />
           <div className="absolute inset-0 bg-black/22" />
         </div>
       )}

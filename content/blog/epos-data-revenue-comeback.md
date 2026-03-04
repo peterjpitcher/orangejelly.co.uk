@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Use epos data to grow pub"
   - "What should I track in bar epos"
   - "Data driven pub decisions"
+faqs:
+  - question: "What EPOS data should a pub owner look at every week?"
+    answer: "Track four core metrics: covers by day and time, average spend per head, gross profit by category, and labour percentage by shift. These four numbers reveal where you are winning and where you are leaking money. Review them every Monday."
+  - question: "How do I use EPOS data to increase revenue?"
+    answer: "Run one experiment per week based on what the data shows. If Tuesday lunch is weak, test a set menu offer. If spirit sales are low, brief staff on upsells. Small, data-led changes compounded weekly create significant revenue lifts over a quarter."
+  - question: "Do I need an expensive EPOS system for good reporting?"
+    answer: "No. Most modern EPOS systems, even entry-level ones, provide the core reports you need. The value comes from actually reviewing the data weekly and acting on it, not from the system itself. A basic setup used well beats an expensive system that nobody checks."
 ---
 
 # Why Your EPOS Data Is the Key to a Revenue Comeback

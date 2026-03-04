@@ -27,6 +27,13 @@ voiceSearchQueries:
   - "How to run karaoke in a pub"
   - "What equipment do I need for karaoke night"
   - "Karaoke licence requirements UK pub"
+faqs:
+  - question: "Do I need a music licence to run karaoke in my pub?"
+    answer: "Yes. You need TheMusicLicence from PPL PRS, which covers the public performance of recorded music. Most pubs already have this for background music. Check your existing licence covers live performance and karaoke use, and display the appropriate signage."
+  - question: "What equipment do I need for pub karaoke?"
+    answer: "A reliable karaoke system or laptop with subscription software, a decent PA system with two microphones, a screen visible to the singer and audience, and a queue management display. Budget around £500 to £1,000 for a solid setup that lasts years."
+  - question: "How do I manage the karaoke queue fairly?"
+    answer: "Set a three-minute song limit and display the rotation on screen so everyone can see their position. Use a sign-up sheet or digital queue. Give first-timers priority early in the night when the room is quieter, and keep the energy up by mixing fast and slow songs."
 ---
 
 # Karaoke Night 101: Plan, Host and Grow a Singalong Hit
@@ -48,7 +55,7 @@ Decide whether the host also sings to warm the room—great in quieter periods, 
 
 | Item | Spec | Why |
 | --- | --- | --- |
-| Microphones | 2x dynamic wireless + 1 wired backup | Wireless lets singers move; wired backup saves the night. |
+| Microphones | 2x dynamic wireless + 1 wired backup | Wireless lets singers move; wired backup rescues the night. |
 | Mixer/audio interface | 4+ channels with EQ and reverb | Balance backing track vs vocals. |
 | Speakers/monitor | FOH + wedge monitor or in-ears | Prevent feedback, help singers pitch. |
 | Playback device | Laptop/tablet with licensed karaoke software (e.g., KaraFun Business) | Instant key changes, large catalogue, offline playlists. |

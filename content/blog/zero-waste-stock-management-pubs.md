@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to cut pub waste"
   - "Stock control tips for bar"
   - "Stop throwing food away in pub"
+faqs:
+  - question: "How much waste is acceptable in a pub kitchen?"
+    answer: "Aim for less than 3% of food cost as waste. Anything above 5% signals a problem — either over-ordering, poor portion control, or a menu that's too wide for your volume. Track waste daily in a simple log and review it weekly with your chef."
+  - question: "What's the best way to reduce drink waste behind the bar?"
+    answer: "Measure every pour using spirit measures and correct glass sizes, check line yields against expected output, and train staff on proper cellar management. Even small improvements — reducing a 5% variance to 2% — can free up hundreds of pounds per month on a busy bar."
+  - question: "Should I reduce my pub menu to cut waste?"
+    answer: "Often yes. A tighter menu with shared base ingredients means faster turnover, less spoilage, and easier prep. If you can serve 80% of your dishes from 20 core ingredients, your ordering becomes simpler, your waste drops, and your kitchen runs more efficiently."
 ---
 
 # Zero-Waste Stock Management for Pubs in Survival Mode

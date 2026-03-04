@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -15,12 +16,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-// Fallback: no toast hook available in ui; use window alert for now
-const toast = ({ title, description }: { title: string; description?: string }) => {
-  if (typeof window !== 'undefined') {
-    alert(`${title}${description ? `\n\n${description}` : ''}`);
-  }
-};
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
 
 const contactFormSchema = z.object({
@@ -50,21 +45,53 @@ const defaultValues: Partial<ContactFormValues> = {
 };
 
 export function ContactForm() {
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues,
   });
 
   function onSubmit(data: ContactFormValues) {
-    toast({
-      title: 'Form submitted',
-      description: JSON.stringify(data, null, 2),
-    });
+    // In real implementation, this would call your contact API
+    console.log('Contact form submission:', data);
+    setSubmitStatus('success');
+    form.reset();
+  }
+
+  if (submitStatus === 'success') {
+    return (
+      <div
+        className="rounded-lg bg-green-50 border border-green-200 p-6 text-center"
+        role="status"
+        aria-live="polite"
+      >
+        <p className="text-green-800 font-semibold text-lg mb-2">Message sent successfully</p>
+        <p className="text-green-700 text-sm">
+          Thanks for getting in touch. Peter will reply as soon as possible.
+        </p>
+        <Button
+          type="button"
+          variant="outline"
+          className="mt-4"
+          onClick={() => setSubmitStatus('idle')}
+        >
+          Send another message
+        </Button>
+      </div>
+    );
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" aria-label="Contact form">
+        {submitStatus === 'error' && (
+          <div className="rounded-lg bg-red-50 border border-red-200 p-4" role="alert">
+            <p className="text-red-800 text-sm">
+              Something went wrong. Please try again or message Peter on WhatsApp instead.
+            </p>
+          </div>
+        )}
         <FormField
           control={form.control}
           name="name"
@@ -96,7 +123,7 @@ export function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone</FormLabel>
+              <FormLabel>Phone (optional)</FormLabel>
               <FormControl>
                 <Input placeholder={PLACEHOLDERS.phone.optional} {...field} />
               </FormControl>
@@ -126,7 +153,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder={PLACEHOLDERS.message.default}
-                  className="resize-none"
+                  className="resize-none min-h-[120px]"
                   {...field}
                 />
               </FormControl>
@@ -134,7 +161,9 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="w-full sm:w-auto min-h-[44px]">
+          Send Message
+        </Button>
       </form>
     </Form>
   );

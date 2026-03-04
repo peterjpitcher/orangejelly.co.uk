@@ -66,7 +66,7 @@ export default function Navigation({ navigation }: NavigationProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-brand-base text-white">
+    <header className="sticky top-0 z-50 w-full bg-brand-base text-white" role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 md:h-16 items-center justify-between">
         {/* Mobile logo */}
         <Link href="/" className="flex md:hidden items-center space-x-2">
@@ -135,7 +135,8 @@ export default function Navigation({ navigation }: NavigationProps) {
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 disabled:pointer-events-none disabled:opacity-50 hover:bg-white/10 hover:text-white min-h-[44px] min-w-[44px] h-11 w-11"
+                aria-label="Open navigation menu"
               >
                 <svg
                   strokeWidth="1.5"
@@ -166,7 +167,7 @@ export default function Navigation({ navigation }: NavigationProps) {
                     strokeLinejoin="round"
                   ></path>
                 </svg>
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="bg-cream">

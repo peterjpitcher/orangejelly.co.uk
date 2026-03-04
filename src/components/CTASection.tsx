@@ -38,8 +38,8 @@ function CTASection({
     base: 'bg-charcoal',
     support: 'bg-teal',
     accent: 'bg-orange',
-    highlight: 'bg-[var(--color-highlight)] text-charcoal',
-    grounded: 'bg-[var(--color-grounded)]',
+    highlight: 'bg-brand-highlight text-charcoal',
+    grounded: 'bg-brand-grounded',
   };
 
   return (

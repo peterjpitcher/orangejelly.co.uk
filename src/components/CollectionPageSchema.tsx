@@ -55,27 +55,31 @@ export function CollectionPageSchema({
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: items.map((item, index) => ({
-        '@type': 'BlogPosting',
+        '@type': 'ListItem',
         position: index + 1,
         url: isAbsolute(item.url) ? item.url : `${site}${item.url}`,
-        headline: item.name,
-        ...(item.description && { description: item.description }),
-        ...(item.datePublished && { datePublished: item.datePublished }),
-        ...(item.author && {
-          author: {
-            '@type': 'Person',
-            name: item.author,
+        item: {
+          '@type': 'BlogPosting',
+          url: isAbsolute(item.url) ? item.url : `${site}${item.url}`,
+          headline: item.name,
+          ...(item.description && { description: item.description }),
+          ...(item.datePublished && { datePublished: item.datePublished }),
+          ...(item.author && {
+            author: {
+              '@type': 'Person',
+              name: item.author,
+            },
+          }),
+          ...(item.image && {
+            image: {
+              '@type': 'ImageObject',
+              url: isAbsolute(item.image) ? item.image : `${site}${item.image}`,
+            },
+          }),
+          publisher: {
+            '@type': 'Organization',
+            name: 'Orange Jelly Limited',
           },
-        }),
-        ...(item.image && {
-          image: {
-            '@type': 'ImageObject',
-            url: isAbsolute(item.image) ? item.image : `${site}${item.image}`,
-          },
-        }),
-        publisher: {
-          '@type': 'Organization',
-          name: 'Orange Jelly Limited',
         },
       })),
     },

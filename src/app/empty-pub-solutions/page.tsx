@@ -14,9 +14,9 @@ import { generateMetadata } from '@/lib/metadata';
 import { HowToSchema } from '@/components/StructuredData';
 
 export const metadata = generateMetadata({
-  title: '30-Day Pub Growth Recovery Plan',
+  title: '30-Day Pub Growth Recovery Plan | Empty Pub Solutions',
   description:
-    'A practical 30-day plan to turn quiet trade into consistent momentum. Action-first support tested at The Anchor.',
+    'A practical 30-day plan to turn quiet trade into consistent momentum. Action-first recovery support tested at The Anchor. Start seeing results this week.',
   path: '/empty-pub-solutions',
 });
 

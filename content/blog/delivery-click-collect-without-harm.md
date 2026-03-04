@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Run delivery from my pub"
   - "Set up click and collect without chaos"
   - "Menu for takeaway and dine in"
+faqs:
+  - question: "Should my pub delivery menu be the same as the dine-in menu?"
+    answer: "No. Create a shorter delivery menu with dishes that travel well, have short prep times, and maintain strong margins after platform fees. Keep it stable for at least four weeks to build consistency and good ratings."
+  - question: "How do I stop delivery orders disrupting dine-in service?"
+    answer: "Ringfence kitchen capacity by setting a cap on delivery orders per hour. Staff a dedicated dispatcher to manage collection windows and keep delivery tickets separate from dine-in. On-site guests must always feel like the priority."
+  - question: "Is delivery worth it for pubs after platform fees?"
+    answer: "It can be if you design for it. Use a focused menu with strong margins, cap orders during peak dine-in times, and treat delivery as incremental revenue rather than your main channel. Direct click-and-collect through your own website avoids platform fees entirely."
 ---
 
 # Harnessing Delivery and Click & Collect Without Killing Service

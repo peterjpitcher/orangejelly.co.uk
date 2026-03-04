@@ -27,9 +27,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I brewery tie improve your deal?"
-  - "What should I do when brewery tie improve your deal?"
-  - "Help with brewery tie improve your deal"
+  - "how can I improve my brewery tie deal without breaking the contract?"
+  - "what is the MRO option for tied pubs?"
+  - "how do I negotiate better terms with my pubco?"
+faqs:
+  - question: "Can I negotiate my brewery tie without going free of tie?"
+    answer: "Yes. Start by demonstrating strong performance — increased volumes, reduced wastage, and consistent quality. Then approach your BDM with a clear plan showing how better terms would help you grow further. Evidence-based requests get results."
+  - question: "What is the Market Rent Only option and should I use it?"
+    answer: "MRO lets eligible tied tenants request a free-of-tie lease at market rent. It can work well for operators with strong buying power, but you lose pubco support like marketing funds and repairs. Treat it as a decision, not a default."
+  - question: "Which product categories are usually free of tie?"
+    answer: "Spirits, wines, soft drinks, and coffee are often outside the tie or less restricted. Maximise margin in these categories by building a strong premium range and training staff to recommend them consistently."
 ---
 
 # Brewery Tie Strangling Your Profits? Legal Ways to Improve Your Deal

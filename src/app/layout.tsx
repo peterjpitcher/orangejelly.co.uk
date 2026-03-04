@@ -120,7 +120,7 @@ export default function RootLayout({
       description:
         'Hospitality growth partner focused on transformative, action-first marketing for pubs, bars, restaurants, venues, hotels, and event spaces. Owner of The Anchor and founder of Orange Jelly.',
     },
-    foundingDate: '2019',
+    foundingDate: '2019-03-05',
     areaServed: 'GB',
     priceRange: '££',
     contactPoint: {
@@ -129,7 +129,7 @@ export default function RootLayout({
       contactType: 'Customer Service',
       email: CONTACT.email,
       availableLanguage: 'English',
-      contactOption: ['TollFree'],
+      contactOption: ['HearingImpairedSupported'],
       areaServed: 'GB',
     },
     sameAs: ['https://www.the-anchor.pub'],
@@ -171,10 +171,6 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <PreloadResources />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="format-detection" content="telephone=no" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
@@ -186,7 +182,7 @@ export default function RootLayout({
         {/* Skip to main content link for keyboard navigation */}
         <Link
           href="#main-content"
-          className="skip-to-main sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-orange focus:text-white focus:px-4 focus:py-2 focus:rounded"
+          className="skip-to-main sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-orange focus:text-white focus:px-6 focus:py-3 focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange"
         >
           Skip to main content
         </Link>

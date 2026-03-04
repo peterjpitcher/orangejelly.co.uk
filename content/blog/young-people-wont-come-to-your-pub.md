@@ -26,9 +26,16 @@ hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I young people wont come to your pub?"
-  - "What should I do when young people wont come to your pub?"
-  - "Help with young people wont come to your pub"
+  - "how do I get younger people to come to my pub?"
+  - "why don't 18 to 30 year olds visit pubs anymore?"
+  - "what kind of events attract young adults to a local pub?"
+faqs:
+  - question: "What's the main reason young people don't visit local pubs?"
+    answer: "Cost-of-living pressure and competition from home entertainment are the biggest factors. Young adults will come out, but they need a compelling reason — a unique experience, good social media content, or an event their friends are already talking about. Generic pint-and-crisps won't cut it."
+  - question: "Do I need to completely change my pub to attract younger customers?"
+    answer: "No. Small, targeted changes work better than a full reinvention. Improve your lighting for photos, add a couple of cocktails or craft options, host events they actually want (themed quizzes, live music, comedy nights), and make your pub feel welcoming to newcomers. Keep your character — authenticity appeals to younger audiences."
+  - question: "How important is social media for attracting young customers to a pub?"
+    answer: "Essential. Under-30s discover new venues through Instagram, TikTok, and recommendations in group chats. Create shareable moments — a signature serve, a photogenic corner, or a fun event format. If your customers are posting about you, that's more powerful than any paid advert."
 ---
 
 Remember when pubs were the default social hub for young people? Those days might seem long gone, but here's the truth: young people still want what pubs offer - community, experiences, and somewhere that isn't their flat. They just need a reason to choose you over Netflix.

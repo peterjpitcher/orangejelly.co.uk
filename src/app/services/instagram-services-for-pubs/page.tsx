@@ -3,9 +3,9 @@ import PubServiceLandingPage from '@/components/PubServiceLandingPage';
 import instagramData from '../../../../content/data/services/instagram-services-for-pubs.json';
 
 export const metadata = generateMetadata({
-  title: 'Instagram Services for Pubs - Content That Drives Footfall',
+  title: 'Instagram for Pubs — Posts That Actually Drive Footfall',
   description:
-    'Practical Instagram support for UK pubs: content plan, Reels workflow, visibility routine, and simple reporting focused on bookings and footfall. £75/hour + VAT.',
+    'Stop posting into the void. Get a Reels workflow, content plan, and local engagement system built for busy licensees. Tested at a real pub. £75/hr + VAT.',
   path: '/services/instagram-services-for-pubs',
   keywords:
     'instagram services for pubs, pub instagram marketing, instagram management for pubs, pub reels, social media for pubs',

@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to fill my pub midweek"
   - "Best Tuesday pub offer"
   - "Ideas for quiet nights in my bar"
+faqs:
+  - question: "What midweek offers actually work for pubs?"
+    answer: "Data-backed bundles that give a clear reason to visit work best. A set menu with a drink, a themed food night, or an event-plus-meal deal all outperform generic discounts. Each night needs a single clear promise that is easy to communicate and book."
+  - question: "How do I get people to book midweek instead of just turning up?"
+    answer: "Create limited-capacity offers that require pre-booking. Scarcity drives action — if guests know there are only 30 covers available for Tuesday steak night, they book rather than risk missing out. Take deposits for higher-value evenings."
+  - question: "Should I discount to fill quiet midweek nights?"
+    answer: "Avoid blanket discounts that train customers to wait for deals. Instead, create bundles that feel like great value while protecting your gross profit. A main course plus a drink at a fixed price feels generous but keeps your margin intact."
 ---
 
 # Fill Empty Seats: Proven Midweek Offers That Actually Convert

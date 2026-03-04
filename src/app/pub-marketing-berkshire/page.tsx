@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import berkshireData from '../../../content/data/pub-marketing-berkshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Berkshire - Consultant for Berkshire Pubs',
+  title: 'Pub Marketing Berkshire - Fill Tables Consistently',
   description:
-    'Pub marketing for Berkshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Marketing support for Berkshire pubs: build a loyal local following, run profitable events, and improve midweek trade with proven systems. £75/hr + VAT.',
   path: '/pub-marketing-berkshire',
   keywords:
     'pub marketing berkshire, pub marketing consultant berkshire, marketing for pubs berkshire, berkshire pub marketing support, increase pub footfall berkshire',

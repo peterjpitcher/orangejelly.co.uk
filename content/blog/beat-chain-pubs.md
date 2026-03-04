@@ -26,10 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I independent pub vs chains: how to win the david vs goliath battle"
-  - "What's the best way to independent pub vs chains: how to win the david vs goliath battle"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "how can my independent pub compete with big chain pubs?"
+  - "what advantages do independent pubs have over chains?"
+  - "how do I beat Wetherspoons and other chains near my pub?"
+faqs:
+  - question: "Can an independent pub really compete with chain pub prices?"
+    answer: "You don't need to match their prices. Compete on experience, personal service, and community connection instead. Chains can't offer the flexibility, local knowledge, or genuine relationships that independents can. Focus on value, not just cost."
+  - question: "What do independent pubs offer that chains can't?"
+    answer: "Agility to change menus overnight, personal relationships with regulars, genuine community involvement, unique character, and the freedom to respond to local trends instantly. Chains need committee approval for changes that you can make before tomorrow's service."
+  - question: "How do I find my pub's unique selling point against chains?"
+    answer: "Ask your regulars why they choose you over the chain down the road. The answer is usually personal service, atmosphere, or a specific offering like live music or a brilliant Sunday roast. Double down on whatever they mention most."
 ---
 
 # Independent Pub vs Chains: How to Win the David vs Goliath Battle

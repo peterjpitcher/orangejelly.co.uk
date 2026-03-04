@@ -55,8 +55,8 @@ function Link({
     base: 'text-charcoal hover:text-teal',
     support: 'text-teal hover:text-teal-light',
     accent: 'text-orange hover:text-orange-dark',
-    highlight: 'text-[var(--color-grounded)] hover:text-charcoal',
-    grounded: 'text-[var(--color-grounded)] hover:text-charcoal',
+    highlight: 'text-brand-grounded hover:text-charcoal',
+    grounded: 'text-brand-grounded hover:text-charcoal',
     inherit: '',
   };
 
@@ -71,7 +71,7 @@ function Link({
           : ['base', 'charcoal'].includes(color)
             ? 'bg-charcoal text-white hover:bg-charcoal-light'
             : ['highlight', 'grounded'].includes(color)
-              ? 'bg-[var(--color-grounded)] text-white hover:bg-[var(--color-base)]'
+              ? 'bg-brand-grounded text-white hover:bg-charcoal'
               : 'bg-teal text-white hover:bg-teal-dark'
     }`,
     underline: `${colorClasses[color]} underline hover:no-underline transition`,

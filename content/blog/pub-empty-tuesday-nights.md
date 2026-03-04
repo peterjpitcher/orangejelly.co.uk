@@ -25,14 +25,19 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I your pub is empty on tuesday nights (and how to fix it)"
-  - "What's the best way to your pub is empty on tuesday nights (and how to fix it)"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
-  - "Why is my pub empty"
-  - "How do I get more customers in my pub"
-  - "What attracts people to pubs"
-  - "Why is my pub quiet on weekdays"
+  - "Why is my pub empty on Tuesday nights"
+  - "How do I get customers on a Tuesday"
+  - "What events work on a Tuesday night"
+  - "How do I fill my pub on quiet weeknights"
+  - "What do successful pubs do on Tuesdays"
+  - "Best Tuesday night pub ideas"
+faqs:
+  - question: "Why are Tuesday nights the quietest for pubs?"
+    answer: "Post-weekend fatigue and tight budgets combine to keep people at home. Tuesday lacks the anticipation of Friday or the routine of Wednesday quiz night. The key is creating a compelling reason to leave the house that feels effortless and affordable."
+  - question: "What is the best event for a Tuesday night pub?"
+    answer: "Comfort-focused offerings work best: a hearty meal deal, a film or board game night, or a low-key wine and cheese tasting. Tuesday customers want relaxation, not high-energy events. Make it feel like a treat rather than an effort."
+  - question: "How many weeks does it take to build a regular Tuesday crowd?"
+    answer: "Expect six to eight weeks of consistent delivery before you see a reliable Tuesday crowd forming. The first month is about building awareness. By week six, early adopters start bringing friends. Persistence is everything."
 ---
 
 # Why Your Pub is Empty on Tuesday Nights (And How to Fix It)
@@ -71,7 +76,7 @@ After surveying 200 regular customers, we discovered the main reasons pubs are e
 
 ### What Didn't Work
 
-Before I share what transformed our Tuesday nights, let me save you from our expensive mistakes:
+Before I share what transformed our Tuesday nights, let me spare you our expensive mistakes:
 
 **Generic Quiz Nights**: We tried the standard pub quiz format. It attracted the same 8 regulars who would've come anyway. The prize money ate into our already thin margins.
 

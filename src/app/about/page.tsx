@@ -3,9 +3,9 @@ import AboutPage from './AboutPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'About Orange Jelly - Small Team, Transformative Growth Partner',
+    title: 'About Us - Small Team, Transformative Growth',
     description:
-      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. We are a small, hands-on team helping hospitality partners grow through tough trading conditions.',
+      'Meet Peter Pitcher and Billy Summers — the team behind Orange Jelly. Real pub experience at The Anchor, Stanwell Moor. Hands-on marketing help.',
     path: '/about',
     keywords: [
       'Peter Pitcher',

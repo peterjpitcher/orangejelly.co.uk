@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for Berkshire Pubs",
-    "subtitle": "Berkshire pubs compete for commuter, corporate, and weekend trade. We'll get you found locally and build a repeatable offer that people actually choose.",
+    "subtitle": "Berkshire's 600 pubs span everything from affluent Windsor gastropubs to Reading commuter locals. We're based just over the border and know the M4 corridor market inside out.",
     "ctaText": "Hi Peter, I run a pub in Berkshire and need help",
-    "bottomText": "£75/hour + VAT • Practical help from a working licensee"
+    "bottomText": "£75/hour + VAT • From a licensee on the Berkshire border"
   },
   "intro": {
     "heading": "What works in Berkshire (and what doesn't)",
     "paragraphs": [
-      "Berkshire has busy towns, business parks, and a lot of choice within a short drive. If your pub is hard to find on Google, you lose to whoever shows up first.",
-      "We start by making you easy to choose: correct categories, great photos, review replies, and clear keywords for what you sell (Sunday lunch, beer garden, quiz, live sport, private hire).",
-      "Then we build a repeatable plan for the crowd you want: after-work pints, families, food-led trade, or function bookings. No fluff, just a system you can run weekly."
+      "Berkshire splits into two markets: the affluent towns — Windsor, Ascot, Henley, Maidenhead — where food quality and positioning matter most, and the commuter belt — Reading, Bracknell, Wokingham — where convenience and midweek offers drive trade.",
+      "We run The Anchor in Stanwell Moor, right on the Berkshire border near the M4 and M25. We serve the same commuter crowd and compete for the same weekend trade. We know what works because we test it ourselves.",
+      "The biggest opportunity most Berkshire pubs miss? Seasonal events. Royal Ascot in June brings thousands of people looking for somewhere to eat and drink nearby. Reading Festival in late August does the same. If you're not marketing to those crowds in advance, you're leaving money on the table."
     ]
   },
   "wins": {
-    "heading": "Fast wins for Berkshire pubs",
+    "heading": "What's working for Berkshire pubs right now",
     "items": [
       {
-        "title": "Commuter and office trade",
-        "description": "Messaging and promotions that pull in after-work footfall without turning into discount chaos."
+        "title": "Royal Ascot and event trade",
+        "description": "Pubs within driving distance of Ascot Racecourse can fill every table during Royal Ascot week (June) with the right pre-event campaigns, packages, and Google positioning."
       },
       {
-        "title": "Private hire and parties",
-        "description": "Fix what stops enquiries: what you offer, how to book, and how you appear for searches like function room near me."
+        "title": "Win the gastropub battle",
+        "description": "Berkshire's food scene is competitive. You don't need a Michelin star — you need brilliant photos, strong reviews, and a clear answer to 'why should I eat here instead of there?'"
       },
       {
-        "title": "Sunday lunch that books out",
-        "description": "Better menu descriptions, photos, and social proof so Sunday becomes reliable."
+        "title": "M4 corridor commuter trade",
+        "description": "Reading, Bracknell, and Wokingham pubs can build reliable weekday lunch and after-work trade by targeting office park workers and station commuters with the right midweek offer."
       },
       {
-        "title": "One-hour content batching",
-        "description": "Create a month's posts in one session with simple AI templates and a content calendar."
+        "title": "Function and private hire",
+        "description": "Affluent Berkshire means corporate events, birthday parties, and wedding receptions. Fix your booking process and Google visibility for 'function room near me' searches."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Build midweek momentum",
-        "description": "Systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "description": "Systems to build regulars and consistent Tuesday–Wednesday trade in the commuter belt.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your Berkshire pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Do you help pubs that rely on after-work trade?",
-      "answer": "Yes. We'll build a clear reason to visit (and return) and make sure you show up for the searches that match your offer."
+      "question": "Do you know the Berkshire pub market?",
+      "answer": "Yes. We run The Anchor just over the border in Stanwell Moor, near the M4 and M25. We serve the same commuter belt, compete for weekend trade, and understand the mix of affluent destination dining and high-street locals that defines Berkshire."
     },
     {
-      "question": "Can you improve enquiries for parties and functions?",
-      "answer": "Yes. We tighten up the messaging, booking route, and local discovery so people can find you and take the next step quickly."
+      "question": "Can you help us make the most of Royal Ascot week?",
+      "answer": "Absolutely. Royal Ascot brings huge footfall to pubs across Berkshire every June. We build pre-event campaigns, special menus, booking systems, and social content that fills your tables before, during, and after race week."
     },
     {
-      "question": "How do we measure if it's working?",
-      "answer": "We track the simple stuff that matters: calls, messages, bookings, covers on key nights, and how often you show up in local searches."
+      "question": "How do we compete with gastropubs in Windsor and Henley?",
+      "answer": "Strong food photography, consistent reviews, and a clear 'why us' message. Most gastropubs rely on reputation and word of mouth — they're often weak on Google and social. That's your opportunity."
     }
   ],
   "cta": {
-    "title": "Want more customers through the door in Berkshire?",
-    "subtitle": "Message me your pub type and your biggest problem. I'll tell you what to fix first.",
+    "title": "Let's talk about your Berkshire pub",
+    "subtitle": "Tell me where your pub is and what's hurting trade. As a neighbouring licensee, I'll give you a straight answer on what to fix first.",
     "whatsappMessage": "Hi Peter, I run a pub in Berkshire and I need help with marketing. Can we have a quick chat?"
   }
 }

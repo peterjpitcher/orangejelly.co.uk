@@ -25,10 +25,19 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I midweek pub offers that actually drive profits (not just footfall)"
-  - "What's the best way to midweek pub offers that actually drive profits (not just footfall)"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "What midweek offers work best for pubs"
+  - "How do I get more customers on quiet nights"
+  - "What pub promotions actually make money"
+  - "Should I do two-for-one deals at my pub"
+  - "How do I fill my pub on Wednesday nights"
+  - "What midweek deals do successful pubs run"
+faqs:
+  - question: "Should pubs offer two-for-one deals midweek?"
+    answer: "Rarely. Deep discounts attract bargain hunters who never return at full price. Instead, create bundled offers with high-margin items like a meal-and-drink deal that feels generous but protects your margin. Value perception matters more than actual discount."
+  - question: "What is the most profitable midweek pub promotion?"
+    answer: "Themed food nights and tasting events consistently outperform discount deals. A wine and cheese night or curry club creates an experience worth paying for, drives higher spend per head, and builds a loyal weekly crowd."
+  - question: "How long does it take for a new midweek offer to work?"
+    answer: "Give any new promotion at least six weeks of consistent delivery before judging it. The first two weeks build awareness, weeks three and four bring early adopters, and weeks five and six show whether it has legs. Promote it every single week without fail."
 ---
 
 # Midweek Pub Offers That Actually Drive Profits (Not Just Footfall)
@@ -475,7 +484,7 @@ Pivot quickly. Failed fast is better than failed slowly. Try something new withi
 
 This week, calculate the TRUE profit margin of your current midweek offers. Are you busy being broke or building a business?
 
-Choose ONE profitable promotion from this guide. Test it. Track it. Transform your midweek.
+Choose ONE profitable promotion from this guide. Test it. Track it. Transform your midweek. For a complete system to fill those empty Tuesday-to-Thursday slots, see our [quiet midweek solutions](/quiet-midweek-solutions) page.
 
 ## Ready to Make Midweek Profitable?
 

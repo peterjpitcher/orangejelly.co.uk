@@ -30,6 +30,16 @@ voiceSearchQueries:
   - "How can I boost pub revenue fast"
   - "What levers should my struggling pub pull"
   - "Ways to fill my pub this week"
+  - "How do I increase pub revenue quickly"
+  - "What can I do to turn around my struggling pub"
+  - "Quick ways to make more money from my pub"
+faqs:
+  - question: "What if my kitchen is closed midweek?"
+    answer: "Lean harder on event tickets, tasting flights, and room hire until you can reopen food. Cash first, menu later. Many pubs generate strong midweek revenue without any food service by focusing on drinks-led events."
+  - question: "Do I need fancy software for referral codes?"
+    answer: "No. Numbered paper cards or unique emojis in WhatsApp threads work fine. Track redemptions at the till. Keep it simple and focus on the behaviour change rather than the technology."
+  - question: "How quickly will these revenue levers show results?"
+    answer: "Most levers produce visible results within one to two weeks if implemented properly. Event relaunches and Sunday pre-selling can show returns within days. The compound effect of pulling multiple levers makes the biggest difference by week three or four."
 ---
 
 # 9 Revenue Levers Every Struggling Pub Should Pull Today

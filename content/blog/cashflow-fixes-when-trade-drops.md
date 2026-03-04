@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Cashflow help for my pub"
   - "Trade dropped what now"
   - "Pay suppliers when sales slow"
+faqs:
+  - question: "What is the first thing I should do when pub takings drop suddenly?"
+    answer: "Build a daily cash board for the next 14 days listing every payment and expected inflow. This gives you a clear picture of what is due and when, so you can make informed decisions instead of guessing. Share it with your management team."
+  - question: "Should I offer discounts when trade is slow?"
+    answer: "Avoid blanket discounts — they train customers to wait for deals and destroy margin. Instead, run a focused special on slow-moving stock or create a high-margin bundle that feels like great value. Protect GP at all costs when cash is tight."
+  - question: "How do I talk to suppliers when I cannot pay on time?"
+    answer: "Call them before the payment is due, not after. Lead with a clear plan: explain the situation honestly, propose a realistic repayment schedule, and stick to it. Suppliers prefer a structured conversation over silence. Most will work with you if you communicate early."
 ---
 
 # Cashflow Fixes: Immediate Steps When Trade Drops Off a Cliff

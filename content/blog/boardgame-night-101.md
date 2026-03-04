@@ -27,6 +27,13 @@ voiceSearchQueries:
   - "How to host a board game night in a pub"
   - "Best pub games for Mondays"
   - "Pub team night ideas"
+faqs:
+  - question: "How many board games do I need to start a pub game night?"
+    answer: "Start with 20 to 25 titles covering different moods: party games for big groups, gateway strategy games for tables of four, two-player classics, and traditional pub games like cribbage and dominoes. Sleeve card games and label each box with player count and duration."
+  - question: "Do board game nights actually make money for pubs?"
+    answer: "Yes. Board game tables typically stay two to three hours and order multiple rounds of drinks and food. The games themselves are a one-off purchase, so the ongoing cost is almost zero. Pair with sharing platters or table bundles to increase average spend per head."
+  - question: "What night works best for a pub board game event?"
+    answer: "Monday or Tuesday evenings work well because they are typically your quietest nights and board game crowds enjoy a relaxed atmosphere. Avoid clashing with quiz nights or live music. Consistency is key — pick one night and stick with it."
 ---
 
 # Board Game Night 101: Formats, Libraries and Teaching That Win

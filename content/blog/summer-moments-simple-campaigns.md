@@ -7,6 +7,17 @@ category: "events-promotions"
 tags: ["summer", "campaigns", "events", "marketing"]
 featuredImage: "/images/blog/summer-moments-simple-campaigns.png"
 author: "Peter Pitcher"
+voiceSearchQueries:
+  - "what simple summer campaigns can I run at my pub?"
+  - "how do I make the most of summer at my pub without a big budget?"
+  - "what are the best summer moments to promote in a pub?"
+faqs:
+  - question: "How many summer campaigns should a pub run?"
+    answer: "Focus on one clear campaign per fortnight rather than trying to fill every day. Pick the moments that naturally draw people out — bank holidays, sunny weekends, Father's Day, sports finals — and build a simple, repeatable format around each one. Quality and clarity beat quantity."
+  - question: "Do I need a beer garden to run summer pub campaigns?"
+    answer: "No. Pubs without gardens can still win summer by creating a bright, airy indoor atmosphere, offering seasonal drinks and food specials, and running events that celebrate the season. Open windows, fresh flowers, and a summer playlist can transform the feel of an indoor space."
+  - question: "What's the easiest summer campaign for a pub with limited staff?"
+    answer: "A weekly summer drinks special with a simple food pairing — for example, a featured cocktail or spritz with a sharing platter. It needs no extra staff, minimal prep, and gives you something fresh to post about on social media every week."
 ---
 
 Summer is not one long season. It is a chain of moments.

@@ -26,10 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I premium pub positioning: how to go upmarket and increase profits"
-  - "What's the best way to premium pub positioning: how to go upmarket and increase profits"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "how do I make my pub feel more premium without a full refurb?"
+  - "can I charge higher prices at my pub without losing customers?"
+  - "what do premium pubs do differently to justify their prices?"
+faqs:
+  - question: "How much does it cost to reposition a pub as premium?"
+    answer: "You don't need a fortune. Start with lighting upgrades, better glassware, a curated drinks menu, and staff training on product knowledge. Many pubs achieve a noticeable shift for under £3,000 by focusing on perception and experience rather than fixtures."
+  - question: "Will I lose regulars if I go upmarket?"
+    answer: "Some price-sensitive drinkers may visit less often, but premium customers spend more per visit and tend to be more loyal. The key is elevating the experience gradually — keep your warmth and character while improving quality. Most regulars appreciate the upgrade."
+  - question: "What's the easiest way to start charging more at my pub?"
+    answer: "Introduce a premium tier alongside your standard range. Add two or three craft beers, a signature cocktail, and a premium spirit shelf. Train staff to recommend them naturally. Customers self-select into the tier that suits them, and your average spend rises without forcing anyone out."
 ---
 
 # Premium Pub Positioning: How to Go Upmarket and Increase Profits

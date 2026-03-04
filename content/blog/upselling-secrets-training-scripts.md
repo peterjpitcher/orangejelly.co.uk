@@ -27,9 +27,18 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["training","service","hospitality"],"nearbyLandmarks":["Belfast","Lisburn","Newry"],"targetLocation":"Northern Ireland"}
 voiceSearchQueries:
-  - "Upsell without being pushy"
-  - "Bartender upsell scripts"
-  - "How to train pub team to sell"
+  - "How do I upsell without being pushy"
+  - "What are good bartender upsell scripts"
+  - "How do I train my pub team to sell"
+  - "How do I increase spend per head in my pub"
+  - "What upselling techniques work in pubs"
+faqs:
+  - question: "Will guests feel pressured by upselling?"
+    answer: "Not if you ask a preference question first and present the upsell as a helpful option. The best scripts sound like recommendations from a friend, not a sales pitch. Train staff to read the moment and back off if the guest declines."
+  - question: "How long before upselling training shows results?"
+    answer: "Most teams see a lift in average spend within one week when the scripts are used consistently. The key is daily practice at pre-shift briefings so the language becomes natural and automatic."
+  - question: "How much can upselling increase average spend?"
+    answer: "A well-trained team can lift average spend per head by £2-5. That might sound small, but across 100 covers a week it adds £200-500 to your weekly revenue with zero extra marketing cost."
 ---
 
 # Upselling Secrets: Training Scripts That Do Not Sound Pushy

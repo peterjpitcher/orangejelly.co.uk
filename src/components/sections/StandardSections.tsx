@@ -221,8 +221,8 @@ export function MetricsBar({
     charcoal: 'bg-charcoal',
     base: 'bg-charcoal',
     'blue-support': 'bg-teal',
-    highlight: 'bg-[var(--color-highlight)]',
-    grounded: 'bg-[var(--color-grounded)]',
+    highlight: 'bg-brand-highlight',
+    grounded: 'bg-brand-grounded',
   }[background];
 
   const textClass = textColor === 'white' ? 'text-white' : 'text-charcoal';

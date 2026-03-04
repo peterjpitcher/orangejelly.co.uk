@@ -25,14 +25,23 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I is my pub empty? 12 brutal truths and how to fix them"
-  - "What's the best way to is my pub empty? 12 brutal truths and how to fix them"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
   - "Why is my pub empty"
   - "How do I get more customers in my pub"
   - "What attracts people to pubs"
   - "Why is my pub quiet on weekdays"
+  - "How can I improve my pub"
+  - "Why is my pub struggling"
+  - "What do I do if nobody comes to my pub"
+  - "How do I increase footfall in my pub"
+faqs:
+  - question: "How quickly can I turn around an empty pub?"
+    answer: "Meaningful change takes 3-6 months with consistent effort. Small improvements like cleanliness, consistent opening hours, and friendlier greetings can show results within days. Full transformation typically takes 12-18 months."
+  - question: "What is the main reason pubs are empty?"
+    answer: "The primary cause is usually poor visibility and communication. Customers simply do not know what is happening at your pub. Secondary factors include atmosphere, value perception, and competition. Fixing visibility through social media and events typically lifts footfall."
+  - question: "How much does it cost to fix a struggling pub?"
+    answer: "Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support from Orange Jelly is available at £75 per hour plus VAT."
+  - question: "Can these strategies work for my type of pub?"
+    answer: "Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor."
 ---
 
 # Why Is My Pub Empty? 12 Brutal Truths and How to Fix Them

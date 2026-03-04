@@ -26,9 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I cash flow crisis breaking cycle?"
-  - "What should I do when cash flow crisis breaking cycle?"
-  - "Help with cash flow crisis breaking cycle"
+  - "how do I stop running out of cash every month in my pub?"
+  - "how can I build a cash buffer for my pub business?"
+  - "why does my pub always struggle to pay rent on time?"
+faqs:
+  - question: "How much cash reserve should a pub keep?"
+    answer: "Aim for a buffer equal to one week of fixed costs as a starting point. Build it slowly by setting aside a fixed percentage of weekly profit. Even a small buffer stops you making panic decisions when a quiet week hits."
+  - question: "What recurring revenue streams work for pubs?"
+    answer: "Regular weekly events like quiz nights, set menu evenings, and loyalty schemes all create predictable midweek income. Function bookings with deposits also bring cash forward. The key is consistency — two reliable midweek anchors reduce your dependence on weekend spikes."
+  - question: "Should I ask suppliers for extended payment terms?"
+    answer: "Yes, if it helps smooth your cash flow. Most suppliers would rather adjust terms than lose a customer. Approach them with a clear repayment plan rather than waiting until you're overdue. Fortnightly terms or split payments can make a real difference."
 ---
 
 # Cash Flow Crisis Every Month? Breaking the Feast-or-Famine Cycle

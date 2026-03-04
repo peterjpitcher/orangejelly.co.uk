@@ -26,9 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I terrible online reviews damage control?"
-  - "What should I do when terrible online reviews damage control?"
-  - "Help with terrible online reviews damage control"
+  - "how should I respond to a bad review of my pub on Google?"
+  - "what do I do when someone leaves a terrible review about my pub?"
+  - "can I get fake or unfair reviews removed from TripAdvisor?"
+faqs:
+  - question: "How quickly should I respond to a negative review?"
+    answer: "Within 24 hours is the target. A fast, professional response shows potential customers that you care and take feedback seriously. Future visitors read your replies more than the original complaint, so treat every response as marketing."
+  - question: "Should I offer freebies to people who leave bad reviews?"
+    answer: "Not publicly — it can encourage complaint culture. Instead, acknowledge the issue, apologise genuinely, and invite them to contact you directly. If you resolve it privately and they return, they often update the review themselves. The goal is relationship recovery, not bribery."
+  - question: "How do I get more positive reviews to push down the bad ones?"
+    answer: "Ask happy customers at the point of delight — after a great meal, a fun quiz night, or a compliment to staff. A simple 'We'd love it if you left us a review on Google' works well. Table cards with a QR code to your review page make it effortless. Aim for a steady stream rather than a sudden burst."
 ---
 
 I still remember the review that nearly broke me: "Worst pub in Surrey. Rude staff, terrible food, wouldn't feed it to my dog." One star. Top of our Google listing. 47 people had "found it helpful."

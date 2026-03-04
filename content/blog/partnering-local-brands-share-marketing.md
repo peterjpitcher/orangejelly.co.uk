@@ -27,9 +27,16 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["makers","independent","local"],"nearbyLandmarks":["Exeter","Torquay","Plymouth"],"targetLocation":"Devon"}
 voiceSearchQueries:
-  - "Partner my pub with local brands"
-  - "Share marketing costs businesses"
-  - "Collaboration ideas for bar"
+  - "how do I partner with local businesses to promote my pub?"
+  - "can I share marketing costs with other businesses near my pub?"
+  - "what kind of brand collaborations work for pubs?"
+faqs:
+  - question: "What types of local businesses make good marketing partners for a pub?"
+    answer: "Gyms, bakeries, florists, independent breweries, and community clubs work well because they serve similar local audiences without competing directly. Look for businesses with active social media followings and regular customer contact — they bring reach you don't have to pay for."
+  - question: "How do I split costs fairly in a pub partnership?"
+    answer: "Put it in writing, even if it's just a one-page agreement. Common splits include 50/50 on print and social promotion, each party covering their own product costs, and shared ownership of the guest list. The key is clarity upfront so nobody feels short-changed afterwards."
+  - question: "How do I measure whether a brand partnership actually worked?"
+    answer: "Track three things: bookings or covers attributed to the event, new email sign-ups or social followers gained, and spend per head on the night. Compare these against a normal trading session. If you gained new customers and broke even on costs, the partnership delivered value."
 ---
 
 # Partnering with Local Brands to Share Marketing Costs

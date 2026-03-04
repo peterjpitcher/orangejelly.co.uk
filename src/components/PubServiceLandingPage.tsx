@@ -150,6 +150,48 @@ export default function PubServiceLandingPage({
         </Container>
       </Section>
 
+      <Section background="charcoal" padding="medium">
+        <Container maxWidth="5xl">
+          <Heading level={2} align="center" color="white" className="mb-8">
+            Real Results from The Anchor
+          </Heading>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <Text size="2xl" weight="bold" color="white">
+                58% → 71%
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Food gross profit
+              </Text>
+            </div>
+            <div>
+              <Text size="2xl" weight="bold" color="white">
+                25-35
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Weekly quiz regulars
+              </Text>
+            </div>
+            <div>
+              <Text size="2xl" weight="bold" color="white">
+                60-70K
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Monthly social views
+              </Text>
+            </div>
+            <div>
+              <Text size="2xl" weight="bold" color="white">
+                £75-100K
+              </Text>
+              <Text size="sm" color="white" className="opacity-80">
+                Value added
+              </Text>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       <Section background="teal" padding="large">
         <Container maxWidth="3xl">
           <div className="text-center">

@@ -26,9 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I food allergies gdpr compliance?"
-  - "What should I do when food allergies gdpr compliance?"
-  - "Help with food allergies gdpr compliance"
+  - "what are the allergen rules for pubs in the UK?"
+  - "do pubs need to comply with GDPR for email lists?"
+  - "how do I set up an allergen system for my pub kitchen?"
+faqs:
+  - question: "What are the 14 allergens pubs must declare?"
+    answer: "Celery, cereals containing gluten, crustaceans, eggs, fish, lupin, milk, molluscs, mustard, nuts, peanuts, sesame, soya, and sulphur dioxide. Every dish must be checked against all 14, and staff must know how to direct guests to the information."
+  - question: "Do I need written consent to collect customer email addresses?"
+    answer: "Yes. Under GDPR you need clear, affirmative consent before adding anyone to a mailing list. Use a simple sign-up form that explains what you will send and how often. Never add emails without permission, even if someone left a business card."
+  - question: "What happens if a customer has an allergic reaction in my pub?"
+    answer: "Call emergency services immediately if severe. Record everything: what was ordered, what was served, and the allergen information provided. Contact your insurer and local authority. Prevention is key — train every team member to say 'let me check' rather than guessing."
 ---
 
 # Food Allergies and GDPR: The Compliance Nightmares That Could Close You Down

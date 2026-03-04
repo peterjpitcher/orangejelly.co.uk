@@ -27,6 +27,13 @@ voiceSearchQueries:
   - "How do I run cash bingo in a pub legally"
   - "What are the UK pub bingo rules"
   - "How to price pub bingo books"
+faqs:
+  - question: "Do I need a licence to run bingo in my pub?"
+    answer: "In most cases, no. Bingo in alcohol-licensed premises can run as exempt equal-chance gaming without a Gambling Commission operating licence, provided you stay within stake and prize limits. Maximum stakes are £5 per person per game, and combined stakes and prizes must not exceed £2,000 in any seven-day period."
+  - question: "How much should I charge for pub bingo books?"
+    answer: "Most pubs charge £1 to £3 per book depending on prize levels. Keep it affordable so regulars return weekly. The real revenue comes from drinks and food during the session, not the bingo itself. Bundle books with a drink deal to increase average spend."
+  - question: "What equipment do I need to run pub bingo?"
+    answer: "A bingo machine or digital randomiser, a caller's book, a visible number board, printed tickets or books, and dabbers. Test everything before doors open. Keep a spare set of balls and colour-code tickets per game for clarity. A good microphone and clear display are essential."
 ---
 
 # Cash Bingo 101: Responsible Formats, Smooth Operations, Happy Players

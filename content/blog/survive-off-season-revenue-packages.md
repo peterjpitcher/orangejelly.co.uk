@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Winter packages for pub"
   - "How to sell venue hire in off season"
   - "Pub revenue ideas winter"
+faqs:
+  - question: "What kind of packages can a pub sell in the off-season?"
+    answer: "Corporate meeting packages (room, coffee, lunch), celebration bundles (birthday or anniversary meals with drinks), and hobby group hire (book club, craft group, or running club post-session). Price them as all-inclusive deals so they are easy to say yes to and easy to promote."
+  - question: "How do I price a venue hire package for my pub?"
+    answer: "Calculate your food and drink cost, add a room hire element to cover staffing and overheads, and build in a margin of at least 40%. Compare with local competitors and position slightly below hotel rates but above free community spaces. A clear, transparent price builds confidence."
+  - question: "When should I start promoting off-season packages?"
+    answer: "At least 8 weeks before the quiet period begins. If January is your slowest month, start marketing Christmas gift vouchers and New Year packages in early November. Early promotion gives corporate clients time to plan and gives you a booking pipeline before trade drops."
 ---
 
 # Survive the Off-Season: Packages That Keep Revenue Coming

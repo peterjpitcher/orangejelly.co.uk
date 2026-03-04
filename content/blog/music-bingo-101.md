@@ -27,6 +27,13 @@ voiceSearchQueries:
   - "How to run music bingo in a pub"
   - "Music bingo playlist ideas"
   - "Music bingo rules UK pub"
+faqs:
+  - question: "How does music bingo work in a pub?"
+    answer: "Guests receive bingo cards with song titles instead of numbers. The host plays short clips and players mark off matching songs. First to complete a line or full house wins a prize. It combines the fun of bingo with singalong energy and requires no marking from staff."
+  - question: "What playlists work best for pub music bingo?"
+    answer: "Match the playlist to your crowd and time slot. Eighties synth and Britpop work for after-work crowds, Disney and film soundtracks for family Sundays, and TikTok viral hits for student nights. Rotate themes every fortnight to keep regulars coming back."
+  - question: "Do I need a music licence for music bingo?"
+    answer: "Yes. Playing recorded music publicly requires TheMusicLicence from PPL PRS, which most pubs already hold. Check your existing licence covers the use case. Keep clips to 30 seconds or less for pace, and credit artists on screen for a professional touch."
 ---
 
 # Music Bingo 101: Cards, Playlists, Hosting and Prizes

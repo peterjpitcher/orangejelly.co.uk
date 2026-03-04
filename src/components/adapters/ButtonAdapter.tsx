@@ -64,9 +64,9 @@ const legacyVariantClasses: Record<NonNullable<LegacyButtonProps['variant']>, st
 };
 
 const legacySizeClasses: Record<NonNullable<LegacyButtonProps['size']>, string> = {
-  small: 'px-4 py-2.5 text-sm',
-  medium: 'px-6 py-3 text-base',
-  large: 'px-8 py-4 text-lg',
+  small: 'px-4 py-2.5 text-sm min-h-[44px]',
+  medium: 'px-6 py-3 text-base min-h-[44px]',
+  large: 'px-8 py-4 text-lg min-h-[48px]',
 };
 
 export default function ButtonAdapter({

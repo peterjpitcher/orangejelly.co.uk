@@ -6,7 +6,7 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: 'Transformative Marketing for Hospitality Partners',
     description:
-      'Orange Jelly accelerates hospitality growth through transformative, action-first marketing. Small team support, proactive strategy, AI-enabled delivery, measurable outcomes.',
+      'Orange Jelly helps UK pubs grow with action-first marketing. Proactive strategy, AI-enabled delivery, and measurable outcomes. Talk to us today.',
     path: '/',
     keywords: [
       'transformative hospitality marketing',

@@ -1,9 +1,9 @@
 ---
-title: "Summer Pub Event Ideas: 35 Profitable Outdoor Promotions That Pack Your Garden"
+title: "35 Summer Pub Events That Actually Make Money (Not Just Noise)"
 slug: "summer-pub-event-ideas"
 publishedDate: 2025-07-17
 updatedDate: "2025-07-21T00:00:00.000Z"
-excerpt: "Make the most of summer with these proven pub garden events and outdoor promotions. From festivals to family days, discover profitable ideas with costs,"
+excerpt: "Most summer events cost more than they earn. These 35 ideas are costed, tested, and ranked by profit — so you fill your garden without burning your margin."
 quickAnswer: "Host beer garden BBQs (low setup, strong ROI), outdoor quiz nights with prizes, family fun days with bouncy castles, live acoustic music sessions, and themed festivals. Focus on events that utilize your outdoor space and encourage longer stays."
 author: "Peter Pitcher"
 category: "empty-pub-solutions"
@@ -25,10 +25,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I summer pub event ideas: 35 profitable outdoor promotions that pack your garden"
-  - "What's the best way to summer pub event ideas: 35 profitable outdoor promotions that pack your garden"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "what are the best summer events to run in a pub garden?"
+  - "how do I make money from outdoor events at my pub?"
+  - "what summer promotions actually work for pubs?"
+faqs:
+  - question: "Do I need a licence for outdoor events at my pub?"
+    answer: "Your existing premises licence usually covers your garden and defined outdoor areas. For live music, the Live Music Act allows unamplified performances and amplified music for up to 500 people until 11pm without extra permission. Check your licence plan and speak to your local authority if you want to extend your trading area."
+  - question: "What's the most profitable summer pub event?"
+    answer: "BBQ events and outdoor food specials consistently deliver the best margins because food costs are low and customers stay longer. A simple burger-and-drink bundle can hit 70%+ GP. Add a modest entry fee or minimum spend for themed festivals and your profit per head climbs further."
+  - question: "How do I deal with bad weather ruining outdoor events?"
+    answer: "Always have a wet weather plan. Invest in a gazebo or pop-up canopy, and frame the event so it can move indoors if needed. Avoid committing big spend to a single outdoor-only date — run weekly formats instead so one washout doesn't sink your calendar."
 ---
 
 # Summer Pub Event Ideas: 35 Profitable Outdoor Promotions That Pack Your Garden
@@ -65,6 +71,8 @@ Use these filters:
 - Does it work in bad weather?
 - Can the team deliver it weekly?
 - Does it create a clear spend per head?
+
+Summer is great, but what about the rest of the year? If your quieter midweek nights need the same attention, see our guide to [filling those empty slots](/quiet-midweek-solutions).
 
 ## Common mistakes
 

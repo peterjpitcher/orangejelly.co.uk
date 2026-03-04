@@ -120,7 +120,7 @@ export default function ROICalculator() {
                   step={step}
                   value={value}
                   onChange={(e) => handleChange(Number(e.target.value))}
-                  className="flex-1 accent-orange"
+                  className="flex-1 accent-orange min-h-[44px] cursor-pointer"
                   aria-describedby={helperId}
                 />
                 <input
@@ -131,7 +131,8 @@ export default function ROICalculator() {
                   step={step}
                   value={value}
                   onChange={(e) => handleChange(Number(e.target.value))}
-                  className="w-full md:w-28 border border-charcoal/20 rounded-md px-3 py-2"
+                  className="w-full md:w-28 border border-charcoal/20 rounded-md px-3 py-2 min-h-[44px] text-base"
+                  aria-label={`${label} - enter exact value`}
                   aria-describedby={helperId}
                 />
               </div>

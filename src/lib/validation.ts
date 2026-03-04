@@ -70,15 +70,10 @@ export function validateForm<T>(
 
 // Sanitization helpers
 export function sanitizeInput(input: string): string {
-  // Remove any HTML tags
-  const withoutTags = input.replace(/<[^>]*>/g, '');
-  // Remove any script tags content
-  const withoutScripts = withoutTags.replace(
-    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-    ''
-  );
-  // Trim whitespace
-  return withoutScripts.trim();
+  // Strip script blocks (including content) first, then remaining tags
+  const withoutScripts = input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  const withoutTags = withoutScripts.replace(/<[^>]*>/g, '');
+  return withoutTags.trim();
 }
 
 // XSS prevention for display

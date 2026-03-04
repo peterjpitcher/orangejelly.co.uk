@@ -27,6 +27,13 @@ voiceSearchQueries:
   - "How to host kids craft in a pub"
   - "Family friendly pub sunday ideas"
   - "Safeguarding for pub craft events"
+faqs:
+  - question: "What age group works best for pub craft sessions?"
+    answer: "Aim for three to eleven year olds with a responsible adult per child. Offer a toddler-safe tray with chunky crayons and sticker sheets for younger siblings. Cap sessions at 60 to 75 minutes to avoid fatigue and keep the energy positive."
+  - question: "Do I need safeguarding training to run kids events in my pub?"
+    answer: "Basic safeguarding awareness is essential for any staff involved. Ensure a responsible adult accompanies every child, collect consent forms for photos and allergens, and keep craft materials age-appropriate. Brief your team before every session."
+  - question: "How do I make money from family craft hours?"
+    answer: "Charge £3 to £5 per child including materials, and bundle with a roast or family meal deal to increase spend. Pre-booking through your website reduces no-shows. The craft session fills quieter Sunday slots and the family food spend is where the real margin sits."
 ---
 
 # Family Craft Hour 101: Safe Projects, Smooth Setups, Happy Families

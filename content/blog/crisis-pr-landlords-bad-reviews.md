@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to reply to bad pub review"
   - "Pub crisis PR plan"
   - "Turn negative review into positive"
+faqs:
+  - question: "How quickly should I respond to a bad pub review?"
+    answer: "Within 12 hours. Speed signals accountability and reduces the damage. A calm, professional response shows future guests that you take feedback seriously. Never reply in anger — draft your response, pause, then post."
+  - question: "What should I say when replying to a negative review?"
+    answer: "Thank them for the feedback, apologise sincerely, explain briefly what you are doing to fix it, and invite them to contact you directly. Keep it short, professional, and empathetic. Future customers are reading your response more carefully than the original complaint."
+  - question: "Can a bad review actually help my pub?"
+    answer: "Yes, if you handle it well. A thoughtful, transparent response shows potential guests that you care and take action. Publishing a recovery story — what went wrong and what you changed — builds more trust than a perfect five-star rating with no context."
 ---
 
 # Crisis PR for Landlords: Turning Bad Reviews into Bookings

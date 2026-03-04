@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Create pub loyalty scheme"
   - "Fill my pub Fridays"
   - "Loyalty ideas for bar"
+faqs:
+  - question: "Do loyalty schemes actually work for pubs?"
+    answer: "Yes, when they reward frequency rather than just spend. A simple stamp card or visit-based system encourages regulars to return more often. The key is keeping it easy to understand — if guests can't grasp it in 10 seconds, it won't work."
+  - question: "What rewards should I offer in a pub loyalty scheme?"
+    answer: "Focus on perks that feel personal rather than deep discounts. Free soft drinks, early event access, a sharer board after five visits, or VIP status on a board all cost less than you think but make guests feel valued. Avoid giving away margin on your core products."
+  - question: "Do I need an app for a pub loyalty scheme?"
+    answer: "No. Paper stamp cards kept behind the bar, a simple QR-code sign-up form, or a tag in your booking system all work well. Choose whatever your team can actually run consistently. The best system is the one that gets used every shift."
 ---
 
 # How to Build a Loyalty Scheme That Fills the Pub Every Friday

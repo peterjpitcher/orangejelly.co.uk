@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to make my pub feel busy"
   - "Low cost pub atmosphere tips"
   - "Improve bar vibe without refurb"
+faqs:
+  - question: "What's the quickest way to make an empty pub feel busy?"
+    answer: "Consolidate customers into one area rather than letting them spread out. Close off sections, move tables closer together, and seat people near the bar. A room that's 60% full in one zone feels buzzing; the same number scattered across the whole pub feels dead."
+  - question: "Does music really make a difference to pub atmosphere?"
+    answer: "Absolutely. The right music at the right volume sets the mood instantly. Keep it low and warm during lunch, build energy into the evening, and match the genre to your audience. Silence or badly chosen music is one of the biggest atmosphere killers in pubs."
+  - question: "How much does it cost to improve a pub's atmosphere?"
+    answer: "Many of the best atmosphere improvements cost almost nothing — rearranging furniture, adjusting lighting with dimmers or candles, curating a playlist, and training staff to greet every customer warmly. You can transform the feel of a pub for under £500 if you focus on the senses."
 ---
 
 # From Quiet to Buzzing: Rebooting Your Pub's Atmosphere on a Budget

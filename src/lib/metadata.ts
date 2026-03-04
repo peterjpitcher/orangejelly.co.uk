@@ -115,30 +115,30 @@ export const pageMetadata = {
       'transformative hospitality marketing, pub marketing UK, bar marketing, venue marketing, increase bookings, commercial growth',
   },
   services: {
-    title: 'Hospitality Growth Services | Orange Jelly',
+    title: 'Hospitality Growth Services for Pubs & Venues',
     description:
-      'Outcome-led hospitality growth support built for pubs, bars, restaurants, venues, hotels, and event spaces. Faster execution, clearer priorities, measurable improvement.',
+      'Action-first growth services for hospitality partners: event innovation, marketing systems, simplified tools, and clarity that unlocks momentum.',
     keywords:
       'hospitality growth programmes, pub marketing services, bar marketing, venue marketing, social media systems',
   },
   results: {
-    title: 'Hospitality Marketing Success Stories | Real Results',
+    title: 'Hospitality Marketing Results for Pubs & Venues',
     description:
-      'See measurable outcomes from The Anchor and partner venues. Action-first systems focused on bookings, footfall, and repeat visits.',
+      'See hospitality marketing results proven at The Anchor, then adapted for partners. Real numbers, real strategies, measurable growth.',
     keywords:
       'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results',
   },
   about: {
-    title: 'About Orange Jelly | Small Team, Transformative Growth Partner',
+    title: 'About Us - Small Team, Transformative Growth',
     description:
-      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. Learn how a small, hands-on team helps hospitality partners grow through challenging trading conditions.',
+      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. A small, hands-on team helping hospitality partners grow through tough trading conditions.',
     keywords:
       'Orange Jelly, hospitality growth partner, Peter Pitcher, The Anchor Stanwell Moor, pub marketing, bar marketing',
   },
   contact: {
-    title: 'Contact Orange Jelly | Hospitality Marketing Help',
+    title: 'Contact Us - Speak Directly with Peter',
     description:
-      'Talk to Orange Jelly about your biggest growth bottleneck and get an action-first plan for bookings, footfall, and repeat visits.',
+      'Speak directly with Peter Pitcher about action-first marketing for your hospitality business. Small team, direct support. WhatsApp or call 07990 587315.',
     keywords:
       'contact hospitality marketing, pub marketing consultation, restaurant marketing help, bar marketing help UK',
   },

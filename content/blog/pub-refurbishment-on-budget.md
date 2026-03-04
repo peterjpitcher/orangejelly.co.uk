@@ -1,9 +1,9 @@
 ---
-title: "Pub Refurbishment on a Budget: Transform Your Space for Under £5,000"
+title: "Should You Refurb Your Pub? What to Fix First for Under £5K"
 slug: "pub-refurbishment-on-budget"
 publishedDate: 2025-04-17
 updatedDate: "2025-07-14T00:00:00.000Z"
-excerpt: "Complete guide to budget pub refurbishment with real costs and DIY solutions. Learn how to transform your pub's appearance, improve atmosphere, and boost"
+excerpt: "Before you rip anything out, read this. The changes that actually bring customers back cost under £5K — and most licensees start in the wrong place."
 quickAnswer: "Prioritize lighting improvements (£800), fresh paint and deep clean (£600), comfortable seating updates (£1,200), and create Instagram-worthy photo spots (£400). Focus on cleanliness and atmosphere over expensive fixtures - customers notice comfort more than luxury."
 author: "Peter Pitcher"
 category: "empty-pub-solutions"
@@ -25,10 +25,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I pub refurbishment on a budget: transform your space for under £5,000"
-  - "What's the best way to pub refurbishment on a budget: transform your space for under £5,000"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "how can I refresh my pub without spending a fortune?"
+  - "what are the cheapest improvements that make the biggest difference in a pub?"
+  - "how much does it cost to do up a pub on a tight budget?"
+faqs:
+  - question: "What's the single best low-cost improvement for a tired-looking pub?"
+    answer: "Lighting makes the biggest difference for the least money. Swap harsh fluorescent tubes for warm LED bulbs, add dimmers, and use table lamps or candles in the evening. You can transform the feel of the room for under £300."
+  - question: "Can I refurbish my pub while staying open?"
+    answer: "Yes, and you should. Close sections one at a time, do the messiest work on your quietest day, and involve regulars in the changes — they love feeling part of the transformation. A phased approach also spreads the cost."
+  - question: "Should I ask my brewery or pubco for refurbishment money?"
+    answer: "Always ask. Many tied pub companies and breweries have capital investment funds or will contribute to improvements that increase trade. Present a clear plan showing how the refurb will boost turnover, and you may get a significant contribution or a rent holiday during works."
 ---
 
 # Pub Refurbishment on a Budget: Transform Your Space for Under 5,000
@@ -57,7 +63,7 @@ Comfort drives dwell time and spend.
 - Upgrade bar back display.
 - Improve exterior signage and entrance.
 
-A single statement area can change the entire perception of the pub.
+A single statement area can change the entire perception of the pub. If your pub needs more than a cosmetic refresh — if trade has dropped and you need a clear recovery plan — our [Fix My Pub](/fix-my-pub) service can help you prioritise what to tackle first.
 
 ## Where to avoid spending
 

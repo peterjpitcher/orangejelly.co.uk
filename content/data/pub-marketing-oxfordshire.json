@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for Oxfordshire Pubs",
-    "subtitle": "Oxfordshire pubs compete for locals, tourists, and student trade. We'll improve local visibility and build repeatable nights that keep the place busy.",
+    "subtitle": "Oxfordshire has around 800 pubs serving a mix of Oxford tourists, Cotswolds visitors, university trade, and rural communities. The competition is food-focused and the seasonality is real.",
     "ctaText": "Hi Peter, I run a pub in Oxfordshire and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
   "intro": {
     "heading": "What works in Oxfordshire (and what doesn't)",
     "paragraphs": [
-      "Oxfordshire can swing between term time and holidays, tourists and locals, and heavy competition for good food and good atmosphere.",
-      "We tighten up your local presence: Google profile, photos, reviews, and the words that match what people search for.",
-      "Then we build a simple repeatable plan: one midweek hook, one weekend focus, and content that you can batch in advance."
+      "Oxfordshire's pub market is shaped by two powerful forces: Oxford itself — with its year-round tourist trade, university population, and museum visitors — and the Cotswolds edge, where destination pubs compete fiercely on food, atmosphere, and Instagram appeal.",
+      "Rural village pubs face a different challenge entirely. Population decline, the drive-to-town habit, and rising costs put enormous pressure on traditional locals. But the pubs that survive are the ones that become the heart of their village — the community hub that people genuinely can't do without.",
+      "We build around Oxfordshire's specific rhythms: summer punting and river trade (June to August is peak), Henley Royal Regatta in late June and early July, Oxford's Christmas market season, and the university term-time patterns that swing trade dramatically between October and June."
     ]
   },
   "wins": {
-    "heading": "Fast wins for Oxfordshire pubs",
+    "heading": "What's working for Oxfordshire pubs right now",
     "items": [
       {
-        "title": "Be the obvious choice",
-        "description": "Clarify what you are best at and reflect it across Google, your menu, and socials."
+        "title": "Capture the tourist trade",
+        "description": "Oxford draws millions of visitors for the university, museums, and river. Pubs near the centre need strong TripAdvisor presence, clear 'near the colleges' messaging, and a daytime food offer that converts browsers into customers."
       },
       {
-        "title": "Term-time and tourist trade",
-        "description": "Messaging for the right crowd at the right time, not generic posting."
+        "title": "Henley Regatta and river trade",
+        "description": "The Henley Royal Regatta and summer punting season bring serious footfall to riverside pubs. Pre-event packages, garden bookings, and social campaigns should be live by April."
       },
       {
-        "title": "Midweek rhythm",
-        "description": "A weekly hook that builds regulars and bookings."
+        "title": "Cotswolds destination positioning",
+        "description": "Cotswolds-edge pubs live or die by their food reputation and visual appeal. Stunning photography, a clear food identity, and consistent TripAdvisor reviews are the foundation."
       },
       {
-        "title": "Better spend",
-        "description": "Menu and upsell tweaks that lift average spend without discounting."
+        "title": "Revive the village pub",
+        "description": "Rural Oxfordshire pubs under pressure need to become community hubs: coffee mornings, village events, pop-up shops, and WhatsApp groups that make you indispensable — not just a place to drink."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Build midweek momentum",
-        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "description": "Proven systems to build regulars and consistent midweek trade — essential for term-time and off-season trade.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your Oxfordshire pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Do you help pubs that rely on food?",
-      "answer": "Yes. We align your menus, photos, reviews, and messaging so you show up for searches that match your best sellers."
+      "question": "Can you help Oxfordshire pubs with tourist trade?",
+      "answer": "Yes. Oxford's tourist market runs almost year-round but peaks from June to August and during the Christmas market season. We optimise your Google and TripAdvisor profiles, build clear messaging for visitors, and create seasonal campaigns timed to tourist peaks."
     },
     {
-      "question": "Can this work without a big team?",
-      "answer": "Yes. It's built for busy pubs. We use templates and batching so you can stay consistent with less time."
+      "question": "What about village pubs struggling in rural Oxfordshire?",
+      "answer": "Rural pubs need to become more than just a drinking venue. We help you build community hub status: coffee mornings, village WhatsApp groups, local producer partnerships, and events that bring people together. That builds the loyal following that keeps you sustainable."
     },
     {
-      "question": "Do you only work with pubs?",
-      "answer": "Yes for now. Everything here is based on pub trade and what works in a real venue."
+      "question": "How do we make the most of Henley Regatta and summer river trade?",
+      "answer": "Henley Regatta (late June to early July) and the summer punting season are massive for nearby pubs. We build pre-event campaigns, garden booking systems, and picnic or drinks packages. Start promoting by April to capture early planners."
     }
   ],
   "cta": {
     "title": "Want more customers through the door in Oxfordshire?",
-    "subtitle": "Message me your pub type and the one thing hurting trade. I'll tell you the fastest win to start with.",
+    "subtitle": "Tell me whether you're Oxford city, Cotswolds edge, or a village local — I'll give you the right approach for your specific market.",
     "whatsappMessage": "Hi Peter, I run a pub in Oxfordshire and I need help with marketing. Can we have a quick chat?"
   }
 }

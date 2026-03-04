@@ -32,8 +32,8 @@ function Section({
     base: 'bg-charcoal text-cream',
     'blue-support': 'bg-teal text-white',
     surface: 'bg-cream',
-    highlight: 'bg-[var(--color-highlight)] text-charcoal',
-    grounded: 'bg-[var(--color-grounded)] text-white',
+    highlight: 'bg-brand-highlight text-charcoal',
+    grounded: 'bg-brand-grounded text-white',
   };
 
   const paddingClasses = {

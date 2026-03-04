@@ -15,7 +15,7 @@ tags:
   - "music events"
   - "acoustic nights"
 status: "published"
-metaDescription: "Master live music events in your pub. Complete guide covering booking artists, sound setup, legal requirements, promotion strategies, and maximising"
+metaDescription: "Master live music events in your pub. Booking artists, sound setup, legal requirements, and promotion strategies to maximise profit from music nights."
 keywords:
   - "live music for pubs"
   - "pub music events"
@@ -26,10 +26,19 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I live music events for pubs: the complete guide to booking, hosting & profiting"
-  - "What's the best way to live music events for pubs: the complete guide to booking, hosting & profiting"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "How do I book live music for my pub"
+  - "Do I need a licence for live music in a pub"
+  - "How much should I pay a band to play at my pub"
+  - "How do I start hosting live music nights"
+  - "Does live music increase pub revenue"
+  - "How do I promote a live music night at my pub"
+faqs:
+  - question: "Do I need music licences for live music in my pub?"
+    answer: "Yes. Check your PRS for Music and PPL TheMusicLicence requirements before hosting live music. Most pubs already have a premises licence that covers live music up to 11pm for audiences under 500, but always verify your specific permissions with your local authority."
+  - question: "How do I stop regulars complaining about live music?"
+    answer: "Keep volume controlled, give regulars advance notice of music nights, and designate a quieter area for those who want conversation. Consistency helps too; if people know Saturday is always music night, they can plan around it."
+  - question: "How much should I pay a live music act?"
+    answer: "Acoustic soloists typically charge £150-300, duos £200-400, and full bands £400-800. Start with open mic nights which cost almost nothing, then book acoustic acts as you prove demand. Always agree fees, set times, and volume levels in advance."
 ---
 
 # Live Music Events for Pubs: The Complete Guide to Booking, Hosting and Profiting

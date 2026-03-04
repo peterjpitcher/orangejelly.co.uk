@@ -64,8 +64,8 @@ export default function Box({
     base: 'bg-charcoal',
     'blue-support': 'bg-teal',
     surface: 'bg-cream',
-    highlight: 'bg-[var(--color-highlight)]',
-    grounded: 'bg-[var(--color-grounded)]',
+    highlight: 'bg-brand-highlight',
+    grounded: 'bg-brand-grounded',
     transparent: 'bg-transparent',
   };
 

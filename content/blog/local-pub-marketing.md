@@ -26,10 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I local pub marketing: community-focused strategies that drive real results"
-  - "What's the best way to local pub marketing: community-focused strategies that drive real results"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
+  - "how do I market my local pub to the community?"
+  - "what are the best free marketing ideas for pubs?"
+  - "how can I get more locals through the door of my pub?"
+faqs:
+  - question: "What is the cheapest way to market a local pub?"
+    answer: "Community involvement costs almost nothing and delivers the strongest results. Join local Facebook groups, offer your space for community meetings, support local events, and build relationships with nearby businesses. Word of mouth from genuine community connection beats paid advertising."
+  - question: "How do I get my pub noticed in the local area?"
+    answer: "Be visibly useful to your neighbourhood. Host charity events, offer parcel collection, sponsor a local sports team, or provide meeting space for clubs. When people see your pub solving problems, they remember you when choosing where to eat and drink."
+  - question: "Should I spend money on advertising for my pub?"
+    answer: "Start with free community marketing before spending on ads. If you do advertise, target hyperlocal Facebook and Instagram ads to people within a few miles. A small budget aimed at your actual catchment area outperforms a larger spend aimed at everyone."
 ---
 
 # Local Pub Marketing: Community-Focused Strategies That Drive Real Results

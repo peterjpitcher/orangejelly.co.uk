@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import hertfordshireData from '../../../content/data/pub-marketing-hertfordshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Hertfordshire - Consultant for Hertfordshire Pubs',
+  title: 'Pub Marketing Hertfordshire - Build Repeat Trade',
   description:
-    'Pub marketing for Hertfordshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Marketing help for Hertfordshire pubs: attract new customers, retain regulars, and build a consistent weekly rhythm that keeps tables full. £75/hr + VAT.',
   path: '/pub-marketing-hertfordshire',
   keywords:
     'pub marketing hertfordshire, pub marketing consultant hertfordshire, marketing for pubs hertfordshire, hertfordshire pub marketing support, increase pub footfall hertfordshire',

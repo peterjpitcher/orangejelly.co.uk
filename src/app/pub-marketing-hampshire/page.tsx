@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import hampshireData from '../../../content/data/pub-marketing-hampshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Hampshire - Consultant for Hampshire Pubs',
+  title: 'Pub Marketing Hampshire - Grow Bookings & Trade',
   description:
-    'Pub marketing for Hampshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Grow your Hampshire pub with targeted marketing: seasonal events, local partnerships, and social content that brings people through the door. £75/hr + VAT.',
   path: '/pub-marketing-hampshire',
   keywords:
     'pub marketing hampshire, pub marketing consultant hampshire, marketing for pubs hampshire, hampshire pub marketing support, increase pub footfall hampshire',

@@ -76,6 +76,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'pub-marketing-no-budget', changeFrequency: 'monthly', priority: 0.7 },
     { slug: 'compete-with-pub-chains', changeFrequency: 'monthly', priority: 0.7 },
+    { slug: 'pub-marketing-agency', changeFrequency: 'monthly', priority: 0.8 },
   ];
 
   const marketingPages = marketingRoutes.map((route) => ({
@@ -91,7 +92,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/licensees-guide/${post.slug}`,
     lastModified: post.updatedDate || post.publishedDate,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.7,
   }));
 
   // Dynamically get all categories

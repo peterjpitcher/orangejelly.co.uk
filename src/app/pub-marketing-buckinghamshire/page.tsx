@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import buckinghamshireData from '../../../content/data/pub-marketing-buckinghamshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Buckinghamshire - Consultant for Buckinghamshire Pubs',
+  title: 'Pub Marketing Buckinghamshire - Boost Your Pub',
   description:
-    'Pub marketing for Buckinghamshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Hands-on marketing for Buckinghamshire pubs: Google visibility, weekly social content, and event ideas that turn quiet nights into full ones. £75/hr + VAT.',
   path: '/pub-marketing-buckinghamshire',
   keywords:
     'pub marketing buckinghamshire, pub marketing bucks, pub marketing consultant buckinghamshire, marketing for pubs buckinghamshire, increase pub footfall buckinghamshire',

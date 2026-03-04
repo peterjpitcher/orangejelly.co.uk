@@ -27,9 +27,18 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["team","people","staff"],"nearbyLandmarks":["Nottingham","Derby","Leicester"],"targetLocation":"East Midlands"}
 voiceSearchQueries:
-  - "Motivate bar staff without pay rise"
-  - "Hospitality recognition ideas"
-  - "Keep pub team happy on budget"
+  - "How do I motivate bar staff without a pay rise"
+  - "What are cheap recognition ideas for hospitality staff"
+  - "How do I keep my pub team happy on a budget"
+  - "How do I stop pub staff leaving"
+  - "What motivates hospitality workers besides money"
+faqs:
+  - question: "Will non-financial motivation actually work without pay rises?"
+    answer: "It does not replace fair pay, but it significantly reduces churn and improves daily performance while you rebuild cash flow. Staff who feel recognised and developed stay longer than those who get a small raise but feel invisible."
+  - question: "What is the fastest way to lift staff morale?"
+    answer: "Honest communication about the business situation plus quick, specific recognition in front of peers. A genuine thank-you for something specific beats a generic 'good job' every time. Do it daily and the culture shifts within weeks."
+  - question: "How do I retain my best staff when I cannot match competitor wages?"
+    answer: "Offer what chains cannot: flexibility, skill development, genuine relationships, and a voice in how things run. Let your best people own a section of the business like events or social media. Autonomy and purpose are powerful retention tools."
 ---
 
 # Staff Motivation Hacks When You Cannot Afford Pay Rises
@@ -38,7 +47,7 @@ A wage freeze does not have to mean a motivation crash. People stay for respect,
 
 ## 1. Make recognition daily
 
-Do not save praise for meetings. Recognise great service in the moment. A quick, specific thank you builds momentum.
+Do not hold praise back for meetings. Recognise great service in the moment. A quick, specific thank you builds momentum.
 
 Example: "You handled that complaint perfectly. Thank you for keeping calm."
 

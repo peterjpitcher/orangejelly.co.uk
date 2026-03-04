@@ -20,7 +20,7 @@ keywords:
   - "pub turnaround plan"
   - "independent bar recovery"
   - "hospitality rescue steps"
-  - "save my pub"
+  - "recover my pub"
   - "bar turnaround strategy"
 hasFAQs: true
 hasQuickAnswer: true
@@ -29,7 +29,14 @@ localSEO: {"localModifiers":["UK","near me","local"],"nearbyLandmarks":["Manches
 voiceSearchQueries:
   - "How do I turn around my pub"
   - "Independent bar turnaround plan"
-  - "Save my bar fast"
+  - "Turn my bar around fast"
+faqs:
+  - question: "How long does a pub turnaround take?"
+    answer: "A structured turnaround typically takes 12-16 weeks across four phases: stabilise cash (week 1), reset your offer (weeks 2-4), relaunch with marketing (weeks 5-8), and scale winning habits (weeks 9-16). You should see measurable improvement by week 6 if you follow the plan consistently."
+  - question: "What's the first thing to fix in a struggling pub?"
+    answer: "Cash flow. Before improving your offer, marketing, or events, you need to know exactly what's coming in and going out each week. Cut any spend that isn't driving immediate revenue, renegotiate payment terms with suppliers, and create a 13-week cash forecast so you can see the runway ahead."
+  - question: "Can I turn around my pub without spending money on marketing?"
+    answer: "Yes, at least initially. Personal outreach, social media posts, community group partnerships, and in-venue signage cost nothing but time. Focus on getting lapsed regulars back through direct invitations and word of mouth before investing in paid advertising."
 ---
 
 # The Turnaround Playbook: How Independent Bars Bounce Back Fast

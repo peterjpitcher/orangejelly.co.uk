@@ -44,6 +44,8 @@ export function getDefaultBlogImage(slug: string): string {
     'double-drinks-profit-without-selling-more':
       '/images/blog/double-drinks-profit-without-selling-more.svg',
     'turn-heating-costs-into-winter-wins': '/images/blog/turn-heating-costs-into-winter-wins.svg',
+    // New articles (March 2026)
+    'how-to-attract-families-to-your-pub': '/images/blog/how-to-attract-families-to-your-pub.svg',
   };
 
   // Return the mapped image or a default

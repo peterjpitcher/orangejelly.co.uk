@@ -34,6 +34,13 @@ voiceSearchQueries:
   - "How can I reduce wastage in my pub?"
   - "What is a good GP percentage for a pub?"
   - "How often should I clean beer lines?"
+faqs:
+  - question: "What gross profit percentage should a pub aim for?"
+    answer: "A well-run pub should target 60-65% GP on wet sales and 65-70% on food. If your overall GP is below 55%, you are likely losing money on some lines. Review your pricing, supplier deals, and wastage to find the leaks."
+  - question: "How often should I do a stock take in my pub?"
+    answer: "Weekly for your top 10 selling lines and monthly for the full range. Regular counting catches problems early — a variance of more than 2% on any line needs investigating. It could be over-pouring, theft, or incorrect deliveries."
+  - question: "What are the most important numbers a pub landlord should check every week?"
+    answer: "Track your weekly takings against the same week last year, your GP percentage, average spend per head, and wastage. These four numbers tell you whether your pub is healthy or heading for trouble. Add footfall count and you have the full picture."
 ---
 
 Running a successful pub in 2024 requires more than just pulling pints and hoping for the best. With rising costs, changing customer habits, and increased competition, understanding your business fundamentals has never been more critical. This comprehensive health check framework will help you assess where you stand and identify opportunities for improvement.
@@ -214,7 +221,7 @@ Target minimal wastage by implementing:
 
 - First in, first out: Rigorous stock rotation
 
-A typical pub losing a small amount per tap daily wastes thousands annually. Reducing wastage saves serious money.
+A typical pub losing a small amount per tap daily wastes thousands annually. Reducing wastage adds serious margin.
 
 ### Line Cleaning - Non-Negotiable
 
@@ -442,7 +449,7 @@ Knowledge without action is worthless. Here's how to implement your health check
 
 Running a successful pub in 2024 requires attention to multiple moving parts. By regularly conducting this health check and acting on the findings, you can:
 
-- Save meaningful money through wastage reduction
+- Recover meaningful margin through wastage reduction
 
 - Increase GP% by meaningful points
 
@@ -470,7 +477,7 @@ Gross Profit Percentage (GP%) is your most critical metric. If GP% falls sharply
 
 ### How much can poor cellar management really cost?
 
-Poor cellar management can cost thousands annually for a typical pub. Poor practices waste beer, but reducing wastage saves serious money. That's pure profit going straight to your bottom line.
+Poor cellar management can cost thousands annually for a typical pub. Poor practices waste beer, but reducing wastage puts serious money back into your margin. That's pure profit going straight to your bottom line.
 
 ### What's the best wet/dry sales ratio?
 

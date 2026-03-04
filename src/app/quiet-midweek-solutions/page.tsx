@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Build Midweek Momentum - Proven Tuesday & Wednesday Solutions',
     description:
-      'Turn quiet midweek nights into consistent bookings with practical, action-first systems proven at The Anchor.',
+      'Turn quiet midweek nights into consistent bookings with practical systems proven at The Anchor. Tuesday and Wednesday solutions that actually work.',
     path: '/quiet-midweek-solutions',
   });
 }

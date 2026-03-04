@@ -27,9 +27,16 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["town","market","village"],"nearbyLandmarks":["York","Harrogate","Ripon"],"targetLocation":"North Yorkshire"}
 voiceSearchQueries:
-  - "How to run profitable pub event"
-  - "Pub event planning template"
-  - "Sell tickets for bar night"
+  - "how do I plan a pub event that actually makes money?"
+  - "what's a good template for running events at my pub?"
+  - "how far in advance should I plan pub events?"
+faqs:
+  - question: "How far in advance should I start planning a pub event?"
+    answer: "Six weeks is the sweet spot for most pub events. Use weeks six to four for concept and pricing, weeks four to two for promotion and bookings, and the final two weeks for execution. Anything shorter than four weeks risks poor attendance; anything longer loses momentum."
+  - question: "Should I charge entry or sell tickets for pub events?"
+    answer: "Pre-selling tickets or taking deposits is the safest approach. It commits people, reduces no-shows, and gives you a guaranteed revenue baseline before the night. Even a small deposit of £5 per head dramatically improves attendance rates."
+  - question: "How do I know if a pub event was profitable?"
+    answer: "Calculate total revenue from tickets, food, and drinks, then subtract all costs including extra staffing, entertainment, stock, and any promotion spend. Compare your net profit against what you would have taken on a normal trading night. If the event beats a standard session and builds your database, it's a winner."
 ---
 
 # The Ultimate Pub Event Template for Guaranteed Profit Nights

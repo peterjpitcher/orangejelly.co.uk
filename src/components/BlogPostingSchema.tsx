@@ -63,7 +63,7 @@ export function BlogPostingSchema({
       '@type': 'WebPage',
       '@id': isAbsolute(url) ? url : `${site}${url}`,
     },
-    articleBody: content,
+    articleBody: content.replace(/<[^>]*>/g, '').slice(0, 5000),
     ...(keywords.length > 0 && { keywords: keywords.join(', ') }),
     ...(speakableSections.length > 0 && {
       speakable: {

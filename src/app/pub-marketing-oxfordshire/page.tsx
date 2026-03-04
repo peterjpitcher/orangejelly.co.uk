@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import oxfordshireData from '../../../content/data/pub-marketing-oxfordshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Oxfordshire - Consultant for Oxfordshire Pubs',
+  title: 'Pub Marketing Oxfordshire - More Covers, Less Stress',
   description:
-    'Pub marketing for Oxfordshire pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Marketing support for Oxfordshire pubs: simple systems for local visibility, repeat trade, and events that fill your pub without adding workload. £75/hr + VAT.',
   path: '/pub-marketing-oxfordshire',
   keywords:
     'pub marketing oxfordshire, pub marketing consultant oxfordshire, marketing for pubs oxfordshire, oxfordshire pub marketing support, increase pub footfall oxfordshire',

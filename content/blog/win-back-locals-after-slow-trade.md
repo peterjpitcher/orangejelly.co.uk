@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to bring locals back to pub"
   - "Pub lost regulars what now"
   - "Reintroduce my bar to community"
+faqs:
+  - question: "How do I get lapsed regulars to come back to my pub?"
+    answer: "Reach out personally — a text, a phone call, or a handwritten note. Invite them to a specific occasion rather than a vague 'pop in sometime.' People drift away quietly and often just need a warm reminder that they're missed. A personal touch beats a mass social media post every time."
+  - question: "How long does it take to rebuild a pub's local reputation?"
+    answer: "Expect 30-60 days of consistent effort before momentum builds. The first two weeks are about visibility and direct invitations. Weeks three and four bring back the first wave. By month two, word of mouth kicks in if the experience matches the promise. Don't give up after one quiet relaunch event."
+  - question: "Should I offer discounts to win back lost customers?"
+    answer: "Be cautious with blanket discounts — they can devalue your offer and attract deal-seekers rather than loyal regulars. Instead, offer a personal incentive: a free drink on their return, a priority booking for a special event, or a tasting invitation. Make it feel like a welcome back, not a desperate plea."
 ---
 
 # How to Win Back Locals After Months of Slow Trade

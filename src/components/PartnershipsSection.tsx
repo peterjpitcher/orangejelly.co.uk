@@ -2,6 +2,7 @@ import { memo } from 'react';
 import Heading from './Heading';
 import Text from './Text';
 import OptimizedImage from './OptimizedImage';
+import Link from './Link';
 
 interface Partner {
   name: string;
@@ -34,12 +35,7 @@ function PartnershipsSection({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {partners.map((partner, index) => (
             <div key={index} className="text-center">
-              <a
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
+              <Link href={partner.url} external className="block group">
                 <div className="bg-white rounded-xl p-8 h-48 flex items-center justify-center mb-6 shadow-md hover:shadow-xl transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
                   <OptimizedImage
                     src={partner.logoUrl}
@@ -59,7 +55,7 @@ function PartnershipsSection({
                 <Text size="base" color="muted" className="max-w-sm mx-auto">
                   {partner.description}
                 </Text>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

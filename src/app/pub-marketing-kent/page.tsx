@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import kentData from '../../../content/data/pub-marketing-kent.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Kent - Consultant for Kent Pubs',
+  title: 'Pub Marketing Kent - Drive Local Footfall',
   description:
-    'Pub marketing for Kent pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Practical marketing for Kent pubs: local search dominance, community engagement, and social media that converts nearby browsers into regulars. £75/hr + VAT.',
   path: '/pub-marketing-kent',
   keywords:
     'pub marketing kent, pub marketing consultant kent, marketing for pubs kent, kent pub marketing support, increase pub footfall kent',

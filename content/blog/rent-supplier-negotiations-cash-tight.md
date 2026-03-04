@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "How to negotiate pub rent"
   - "Payment plan with drinks supplier"
   - "What to say to landlord when behind"
+faqs:
+  - question: "What should I say to my landlord if I can't pay the rent on time?"
+    answer: "Contact them before the payment is due, not after. Present your current trading figures, a realistic forecast, and a proposed repayment plan. Landlords prefer tenants who communicate openly and show a path to recovery over tenants who go silent and force them to chase."
+  - question: "Can I negotiate better terms with my drinks supplier?"
+    answer: "Yes — suppliers would rather adjust terms than lose an account. Ask for extended payment windows, volume-based discounts, or promotional support. Come with data showing your order history and future projections. Even small concessions on payment terms can ease weekly cash flow significantly."
+  - question: "Should I get professional help with pub financial negotiations?"
+    answer: "If the amounts are significant or you are facing legal action, yes. The BII offers member support, and there are specialist hospitality accountants who understand pub leases and supplier contracts. For smaller negotiations, a clear data pack and an honest conversation often achieve the same result."
 ---
 
 # Handling Rent and Supplier Negotiations When Cash Is Tight

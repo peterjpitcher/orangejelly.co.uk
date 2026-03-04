@@ -27,9 +27,18 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["gastropub","menu","dining"],"nearbyLandmarks":["Cambridge","Ely","Bury St Edmunds"],"targetLocation":"Cambridgeshire"}
 voiceSearchQueries:
-  - "How to design pub menu for profit"
-  - "Increase spend per head in pub"
-  - "Menu engineering tricks"
+  - "How do I design my pub menu for profit"
+  - "How do I increase spend per head in my pub"
+  - "What are menu engineering tricks for pubs"
+  - "How should I lay out my pub menu"
+  - "How do I price items on a pub menu"
+faqs:
+  - question: "Do I need a designer for menu engineering?"
+    answer: "Not always. Small layout changes and consistent spacing can do most of the work. Focus on highlighting your most profitable dishes with boxes or bold text, and use decoy pricing to guide customers toward high-margin items."
+  - question: "How fast can menu engineering lift average spend?"
+    answer: "Often within two weeks if the menu layout changes and staff scripts are applied consistently. The biggest gains come from repositioning existing dishes rather than adding new ones."
+  - question: "What is the most common menu engineering mistake?"
+    answer: "Too many items. A smaller menu with 15-20 dishes sells better than 40 options that overwhelm customers and increase waste. Remove your lowest-selling, lowest-margin items first and watch both spend and kitchen efficiency improve."
 ---
 
 # Menu Engineering Tricks to Lift Average Spend Fast

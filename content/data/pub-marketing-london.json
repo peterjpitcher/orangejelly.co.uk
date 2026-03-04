@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for London Pubs",
-    "subtitle": "London is competitive. Your pub needs to be found fast and give people a clear reason to visit. Here's how we do it without generic marketing fluff.",
+    "subtitle": "With around 7,500 pubs battling chains, craft bars, and endless choice, London is the toughest pub market in the UK. You need to be found fast and give people a reason to choose you over the place next door.",
     "ctaText": "Hi Peter, I run a London pub and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
   "intro": {
     "heading": "What works in London (and what doesn't)",
     "paragraphs": [
-      "In London you're fighting for attention against thousands of venues, endless choice, and customers who decide where to go in minutes.",
-      "The pubs that win usually do the basics brilliantly: strong Google presence, clear midweek hooks, repeatable events, and social content that drives footfall instead of vanity likes.",
-      "I'll help you build a simple system your team can actually run while the pub stays busy."
+      "London is different from the rest of the country: you get year-round trade instead of seasonal swings, but the competition is brutal. You're fighting craft beer bars, chain pubs with deep marketing budgets, and restaurants that do drinks better than they used to.",
+      "The good news? Most London pubs are terrible at the basics. Their Google profile is wrong, their photos are from 2019, and their social media goes quiet for weeks. Fix that and you're already ahead of half the competition in your postcode.",
+      "We focus on what actually fills a London pub: strong local search visibility, a clear daytime offer (coffee, lunch, remote workers), repeatable evening events, and Christmas party bookings that keep December profitable. Tourist peaks from March to September and the December rush need different approaches — we help you plan for both."
     ]
   },
   "wins": {
-    "heading": "Fast wins for London pubs",
+    "heading": "What's working for London pubs right now",
     "items": [
       {
-        "title": "Local discovery",
-        "description": "Google Business Profile, photos, reviews, and keywords that match what people actually search."
+        "title": "Own your postcode on Google",
+        "description": "In London, people search by area: 'pub near Clapham Junction', 'quiz night Islington'. We make sure you dominate your local patch with the right categories, photos, and keywords."
       },
       {
-        "title": "Repeatable events",
-        "description": "Quiz nights, tastings, theme nights, and weekly hooks that compound over time."
+        "title": "Build daytime revenue",
+        "description": "Remote workers, lunch trade, and coffee drinkers are untapped gold for many London pubs. A clear daytime offer can transform your quiet mornings and early afternoons."
       },
       {
-        "title": "Community channels",
-        "description": "Neighbourhood groups, WhatsApp lists, and partnerships that send real customers through the door."
+        "title": "Christmas party machine",
+        "description": "December can make or break a London pub's year. We build party packages, booking systems, and targeted campaigns that fill your diary from late November through New Year."
       },
       {
-        "title": "Content that sells",
-        "description": "Simple templates so you can post consistently without living on Instagram."
+        "title": "Stand out from chains",
+        "description": "Your independence is your strength. We help you lean into what chains can't offer: character, community, flexibility, and a landlord who actually cares."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Build midweek momentum",
-        "description": "Proven systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "description": "Even in London, Tuesday and Wednesday can be quiet. Proven systems to build consistent midweek regulars.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your London pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Do you travel into London?",
-      "answer": "Yes when it makes sense, but most work can be done remotely with your team: messaging, templates, content planning, offers, and training."
+      "question": "Do you work with London pubs specifically?",
+      "answer": "Yes. We're based near Staines and serve London-bound commuters from The Anchor in Stanwell Moor. We understand the London market: high rents, staff turnover, tourist trade, and the pressure from chains. Most of our work is done remotely with on-site visits when needed."
     },
     {
-      "question": "Can you help us get found on Google in London?",
-      "answer": "Yes. For London pubs, local discovery is critical. We focus on accuracy, photos, review replies, posts, and getting your key searches aligned to your offer."
+      "question": "Can you help us compete with craft beer bars and chains?",
+      "answer": "Yes. Chains have big budgets but slow decision-making. Craft bars have buzz but often poor Google presence. We help you move faster than both: better local visibility, stronger community ties, and events they can't replicate."
     },
     {
-      "question": "Will this work without a big ad budget?",
-      "answer": "Yes. We prioritise organic wins first: local discovery, repeatable events, and community channels. Paid ads can amplify later, but they're not the foundation."
+      "question": "How do we make the most of tourist season?",
+      "answer": "London's tourist peaks (March–September and December) need specific approaches: multilingual Google posts, TripAdvisor optimisation, nearby attraction partnerships, and clear messaging for visitors. We build seasonal plans so you're ready."
     }
   ],
   "cta": {
-    "title": "Want more London customers through the door?",
-    "subtitle": "Message me your pub type and your biggest problem. I'll tell you what to fix first.",
+    "title": "Want more customers through the door in London?",
+    "subtitle": "Tell me your area and what's hurting trade most. I'll give you a straight answer on the fastest win for your patch.",
     "whatsappMessage": "Hi Peter, I run a pub in London and I need help with marketing. Can we have a quick chat?"
   }
 }

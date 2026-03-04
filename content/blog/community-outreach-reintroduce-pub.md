@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Community ideas for my pub"
   - "How to reconnect pub with neighbours"
   - "CSR ideas hospitality"
+faqs:
+  - question: "How do I get my local community back into my pub?"
+    answer: "Start by showing up where locals already are — post in local Facebook groups, offer your space for community meetings, and put up a noticeboard. Then collaborate with schools, sports clubs, or charities on shared events. Consistent visibility rebuilds trust over time."
+  - question: "What community events work best for pubs?"
+    answer: "School fundraisers, local maker markets, charity quiz nights, and community group meetings all drive footfall and goodwill. Choose events that match your space and strengths. The goal is giving people a reason to visit regularly, not one-off stunts."
+  - question: "Does community outreach actually increase pub revenue?"
+    answer: "Yes. When locals see your pub as a genuine part of the neighbourhood, they choose you over alternatives. Community involvement creates word-of-mouth recommendations that no advertising budget can buy. The return comes through repeat visits and referrals, not immediately."
 ---
 
 # Community Outreach Ideas That Reintroduce Your Pub to the Neighbourhood

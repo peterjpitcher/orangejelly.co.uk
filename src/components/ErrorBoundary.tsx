@@ -124,21 +124,21 @@ export default class ErrorBoundary extends Component<Props, State> {
                 </Text>
               )}
             </Text>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 onClick={this.handleRetry}
                 variant="secondary"
-                size="small"
+                size="medium"
                 disabled={retryCount >= 3}
               >
                 {retryCount >= 3 ? 'Max Retries' : 'Try Again'}
               </Button>
               {this.props.showReload !== false && (isAsyncError || retryCount >= 2) && (
-                <Button onClick={this.handleReload} variant="primary" size="small">
+                <Button onClick={this.handleReload} variant="primary" size="medium">
                   Reload Page
                 </Button>
               )}
-              <Button href="/" variant="ghost" size="small">
+              <Button href="/" variant="ghost" size="medium">
                 Go Home
               </Button>
             </div>

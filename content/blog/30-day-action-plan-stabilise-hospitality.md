@@ -19,7 +19,7 @@ metaDescription: "30-day action plan and checklist to stabilise a struggling hos
 keywords:
   - "30 day pub plan"
   - "hospitality turnaround checklist"
-  - "save my bar in a month"
+  - "turn around my bar in a month"
   - "pub recovery roadmap"
   - "action plan for struggling pub"
 hasFAQs: true
@@ -27,9 +27,16 @@ hasQuickAnswer: true
 hasQuickStats: false
 localSEO: {"localModifiers":["turnaround","plan","UK"],"nearbyLandmarks":["Bournemouth","Poole","Southampton"],"targetLocation":"South Coast"}
 voiceSearchQueries:
-  - "30 day plan to save pub"
+  - "30 day plan to turn around a pub"
   - "Action checklist for struggling bar"
   - "What to do first to stabilise pub"
+faqs:
+  - question: "What should I do in the first week of a pub turnaround?"
+    answer: "Focus on cash visibility. Build a 13-week cashflow forecast, triage supplier payments, audit stock for slow movers, cut non-essential spend, and brief your team honestly. Week one is about stopping the bleed and getting a clear picture of where you stand."
+  - question: "How long does it take to stabilise a struggling pub?"
+    answer: "With a focused plan, you can stabilise cash and restore confidence within 30 days. The first two weeks tackle cash and offer clarity, weeks three and four build sales momentum and repeatable systems. Real transformation takes longer, but 30 days buys you the runway."
+  - question: "Can I turn my pub around without spending money?"
+    answer: "Many of the highest-impact actions cost nothing: renegotiating supplier terms, simplifying your menu, briefing the team on upsells, and launching social media promotions. Focus on free and low-cost moves in the first fortnight, then reinvest early wins into growth."
 ---
 
 # Checklist: 30-Day Action Plan to Stabilise a Struggling Hospitality Business

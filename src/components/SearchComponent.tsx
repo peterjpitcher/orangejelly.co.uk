@@ -120,7 +120,7 @@ export default function SearchComponent({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          className="w-full pl-10 pr-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-base"
           disabled={!isIndexLoaded}
           aria-autocomplete="list"
           aria-controls={resultsListId}
@@ -159,11 +159,16 @@ export default function SearchComponent({
 
       {query.trim() && results.length === 0 && !isLoading && isIndexLoaded && (
         <div
-          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-4 text-center text-gray-500"
+          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center"
           role="status"
           aria-live="polite"
         >
-          No articles found for "{query}"
+          <Text size="sm" color="muted" className="mb-2">
+            No articles found for &ldquo;{query}&rdquo;
+          </Text>
+          <Text size="xs" color="muted">
+            Try a different search term, or browse all articles on the blog page.
+          </Text>
         </div>
       )}
     </div>
@@ -182,7 +187,7 @@ function SearchResultItem({ result, isLast }: SearchResultItemProps) {
     <li
       role="option"
       aria-selected="false"
-      className={`p-4 transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
+      className={`p-4 min-h-[44px] transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
     >
       <a
         href={item.url}

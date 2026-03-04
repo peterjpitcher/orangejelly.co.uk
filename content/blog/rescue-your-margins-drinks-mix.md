@@ -30,6 +30,13 @@ voiceSearchQueries:
   - "Improve bar drink margins"
   - "Profitable pub drinks mix"
   - "How to price drinks ladder"
+faqs:
+  - question: "What GP should I aim for on drinks in my pub?"
+    answer: "Target 60-65% GP on your overall wet mix. Draught lager and ale should deliver 65%+, wines 70%+, and spirits 75%+. If your blended wet GP is below 58%, you likely have lines that are losing money or heavy over-pouring — audit your top 10 sellers first."
+  - question: "How do I get customers to trade up to higher-margin drinks?"
+    answer: "Use a three-tier pricing ladder: a value option, a mid-range default, and a premium choice. Train staff to recommend the middle tier naturally — 'Would you like the house gin or our featured Cotswolds gin?' Most customers pick the middle option, which should be your best margin line."
+  - question: "Should I cut slow-selling drinks from my menu?"
+    answer: "Yes. Dead stock ties up cash and takes up tap or shelf space that could earn more. If a product sells fewer than 5 units a week, consider dropping it unless it serves a specific customer need. A tighter range with faster turnover protects your cash flow and reduces waste."
 ---
 
 # Rescue Your Margins: The Drinks Mix That Keeps Money in the Till

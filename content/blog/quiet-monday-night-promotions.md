@@ -25,14 +25,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"_type":"object","localModifiers":["near me","local","in my area"],"nearbyLandmarks":["Heathrow","Staines","M25"],"targetLocation":"Surrey"}
 voiceSearchQueries:
-  - "How do I monday night pub promotions that actually work (not another quiz night)"
-  - "What's the best way to monday night pub promotions that actually work (not another quiz night)"
-  - "How can I improve my pub"
-  - "Why is my pub struggling"
-  - "How do I run a successful pub quiz"
-  - "What night should I run a quiz"
-  - "How much should quiz prizes be"
-  - "How do I promote a pub quiz"
+  - "what events work on a Monday night in a pub besides a quiz?"
+  - "how do I get people into my pub on the quietest night of the week?"
+  - "what Monday night promotions actually bring people through the door?"
+faqs:
+  - question: "What's the best food offer for a Monday night pub promotion?"
+    answer: "A simple comfort food deal works best — pie and a pint, curry night, or a burger and chips special at a fixed price. Keep the kitchen operation lean with one or two hero dishes rather than your full menu. Regulars build the habit when the offer is easy to remember."
+  - question: "How do I get people off the sofa on a Monday?"
+    answer: "Make it low-effort to attend. Community-based formats like board game nights, craft clubs, or skill-share sessions feel relaxing rather than demanding. Promote on Sunday afternoon when people are planning their week, and keep the vibe cosy rather than high-energy."
+  - question: "How long does it take for a Monday night promotion to build momentum?"
+    answer: "Give any new Monday format at least 6-8 weeks before judging it. The first two weeks attract the curious, weeks three and four test commitment, and by week six you should see a core group forming. Consistency is everything — never cancel, even if numbers are low early on."
 ---
 
 # Monday Night Pub Promotions That Actually Work (Not Another Quiz Night)

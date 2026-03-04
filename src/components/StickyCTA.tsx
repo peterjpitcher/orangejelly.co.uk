@@ -51,15 +51,21 @@ export default function StickyCTA() {
           <div className="flex items-center gap-3">
             <WhatsAppButton text="Start a Growth Chat" size="small" />
 
-            {/* Close button */}
+            {/* Close button - 44px minimum touch target */}
             <Button
               onClick={() => setIsVisible(false)}
               variant="ghost"
               size="small"
-              className="p-2 hover:bg-cream rounded-lg transition-quick text-charcoal/60 hover:text-charcoal"
-              aria-label="Close"
+              className="min-h-[44px] min-w-[44px] p-2 hover:bg-cream rounded-lg transition-quick text-charcoal/60 hover:text-charcoal flex items-center justify-center"
+              aria-label="Close promotional banner"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"

@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for Kent Pubs",
-    "subtitle": "Kent pubs often face seasonality and heavy competition. We'll help you win local search and build repeatable trade all year.",
+    "subtitle": "Kent has around 1,500 pubs — from coastal Margate and Broadstairs to the hop-country heartland and Channel Tunnel business trade. Seasonality is your biggest challenge, and we can help you beat it.",
     "ctaText": "Hi Peter, I run a pub in Kent and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
   "intro": {
     "heading": "What works in Kent (and what doesn't)",
     "paragraphs": [
-      "Kent pubs can feel seasonal: busy weekends and summer spikes, then quiet stretches where you need reliable reasons for people to visit.",
-      "We start with local discovery so you show up for the searches that matter: food pubs, beer gardens, dog-friendly, live sport, quiz night, Sunday lunch, and events.",
-      "Then we build a simple calendar of repeatable hooks and content that keeps you visible without stealing your time."
+      "Kent is the Garden of England — and its pubs reflect that heritage. From the hop-picking history that shaped the county's brewing tradition to the coastal regeneration bringing new life to Margate, Broadstairs, and Folkestone, there's real opportunity here. But seasonality can be brutal.",
+      "Coastal pubs pack out from May to September, then face long quiet months. Inland pubs near the Channel Tunnel and Eurostar corridor get business trade but struggle at weekends. Rural Kent pubs are under pressure from village population decline and the drive-to-town habit.",
+      "We build year-round systems: summer coastal campaigns, autumn harvest and beer festivals (Kent's hop heritage is a marketing gift), winter food events, and a strong Google presence that keeps you visible when the tourists go home. The key is turning summer visitors into year-round regulars."
     ]
   },
   "wins": {
-    "heading": "Fast wins for Kent pubs",
+    "heading": "What's working for Kent pubs right now",
     "items": [
       {
-        "title": "Season-proof your calendar",
-        "description": "A monthly plan of events and offers that keeps trade steady outside peak weeks."
+        "title": "Lean into Kent's hop heritage",
+        "description": "Kent's brewing and hop-picking history is genuinely unique. Beer festivals, harvest events, and local brewery partnerships give you marketing stories that no other county can match."
       },
       {
-        "title": "Tourism and day-trip traffic",
-        "description": "Better messaging for visitors: what makes you worth the drive and how to book."
+        "title": "Coastal tourism done right",
+        "description": "Margate, Broadstairs, and Folkestone are booming with regeneration visitors. Show up for 'pub near [beach/harbour]' searches with strong photos, clear family messaging, and a booking system for peak weekends."
       },
       {
-        "title": "Reviews that sell",
-        "description": "Get more (and better) reviews and reply in a way that builds trust."
+        "title": "Turn summer visitors into regulars",
+        "description": "The biggest missed opportunity for Kent coastal pubs: letting summer visitors leave without capturing their details. WhatsApp lists, email sign-ups, and follow-up campaigns bring them back in autumn and winter."
       },
       {
-        "title": "Simple social systems",
-        "description": "Batch content and reuse winning posts so you stay consistent."
+        "title": "Channel and business corridor trade",
+        "description": "Pubs near Ashford, Ebbsfleet, and the M20 corridor can capture business travellers, Eurostar commuters, and lorry drivers with a clear lunch and evening offer."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Stop falling trade",
-        "description": "A focused 30-day plan to get momentum back quickly.",
+        "description": "A focused 30-day plan to get momentum back — especially useful after the summer season drops off.",
         "href": "/empty-pub-solutions",
         "ctaText": "Start the recovery"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your Kent pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Can you help with marketing for destination pubs?",
-      "answer": "Yes. We position you clearly, make you easy to find, and build proof so people are happy to travel."
+      "question": "Can you help Kent pubs deal with seasonality?",
+      "answer": "Yes — it's one of the most common problems we solve. We build a year-round calendar: summer coastal campaigns, autumn harvest and beer festivals (leveraging Kent's unique hop heritage), winter food and quiz nights, and February half-term family events. The goal is reliable trade in every season."
     },
     {
-      "question": "Will this help in the off-season?",
-      "answer": "Yes. We focus on repeatable hooks and local discovery, not one-off spikes."
+      "question": "What about pubs in regeneration areas like Margate and Folkestone?",
+      "answer": "These areas are booming with new visitors, but competition is growing fast too. We help you capture the regeneration trade with strong Google positioning, clear identity (traditional pub vs wine bar vs family venue), and social content that appeals to both new visitors and established locals."
     },
     {
-      "question": "Do I need a big content plan?",
-      "answer": "No. You need a simple repeatable rhythm. We'll build a calendar that fits real pub life."
+      "question": "Can beer festivals and hop heritage events really work?",
+      "answer": "Absolutely. Kent's hop-picking history is a genuine differentiator. Harvest festivals, local brewery tap takeovers, and hop-themed tasting events give you marketing stories that resonate with both locals and visitors. No other county has this heritage — use it."
     }
   ],
   "cta": {
     "title": "Want more customers through the door in Kent?",
-    "subtitle": "Message me your pub type and where trade is dropping. I'll tell you what to fix first.",
+    "subtitle": "Tell me whether you're coastal, rural, or on the business corridor — I'll give you the right approach for your Kent market.",
     "whatsappMessage": "Hi Peter, I run a pub in Kent and I need help with marketing. Can we have a quick chat?"
   }
 }

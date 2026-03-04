@@ -26,9 +26,16 @@ hasQuickAnswer: true
 hasQuickStats: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I village pub dying village survival?"
-  - "What should I do when village pub dying village survival?"
-  - "Help with village pub dying village survival"
+  - "how do I keep my village pub going when the village is shrinking?"
+  - "can a rural pub survive without much local population?"
+  - "how do I turn my village pub into a destination venue?"
+faqs:
+  - question: "How do I attract customers from outside my village?"
+    answer: "Become a destination by offering something worth the drive — exceptional food, unique events, or beautiful surroundings. Invest in your online presence so people searching for 'Sunday lunch near me' or 'country pub walks' find you. A 15-minute drive catchment can multiply your potential audience tenfold."
+  - question: "Should I diversify my village pub beyond just being a pub?"
+    answer: "Yes, and many successful rural pubs do exactly this. Consider daytime coffee trade, a community shop counter, private dining and function hire, or hosting local groups and clubs. Each additional use brings footfall and revenue without conflicting with your evening trade."
+  - question: "Is it worth investing in a village pub with a declining population?"
+    answer: "It can be, if you shift your model. Village pubs that thrive treat the local community as their base but actively market to a wider catchment. If you can draw visitors from surrounding towns for food, events, or celebrations, the economics work even with a small village."
 ---
 
 # Village Pub in a Dying Village? Survival Strategies That Actually Work
@@ -59,7 +66,7 @@ Partner with local walks, attractions, or stays. Create simple packages like "wa
 
 ## Step 5: Strengthen digital presence
 
-Rural pubs rely on people searching before they travel. Keep Google, socials, and booking options clean and updated.
+Rural pubs rely on people searching before they travel. Keep Google, socials, and booking options clean and updated. If trade has dropped sharply and you need a structured recovery plan, our [pub rescue service](/pub-rescue) is designed for exactly that situation.
 
 ## Step 6: Keep the community heart
 

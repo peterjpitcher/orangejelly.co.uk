@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import surreyData from '../../../content/data/pub-marketing-surrey.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Surrey - Consultant for Surrey Pubs',
+  title: 'Pub Marketing Surrey - Grow Your Local Trade',
   description:
-    'Pub marketing for Surrey pubs: get found locally, build repeatable events, and drive footfall with simple systems. Practical help at £75/hour + VAT.',
+    'Practical pub marketing for Surrey venues: local SEO, community events, and social media systems that drive footfall from nearby residents. £75/hr + VAT.',
   path: '/pub-marketing-surrey',
   keywords:
     'pub marketing surrey, pub marketing consultant surrey, marketing for pubs surrey, surrey pub marketing support, increase pub footfall surrey',

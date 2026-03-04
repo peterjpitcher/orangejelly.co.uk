@@ -28,6 +28,13 @@ voiceSearchQueries:
   - "How do I run a pub quiz night"
   - "What should a weekly pub quiz include"
   - "How can I make quiz night profitable"
+faqs:
+  - question: "How long should a pub quiz last?"
+    answer: "90 minutes is the sweet spot — long enough to feel like a proper event but short enough to keep energy high. Start and finish on time every week so teams can plan around it. A typical format is five or six rounds with a break halfway for food and drink orders."
+  - question: "What should I charge for pub quiz entry?"
+    answer: "Most successful pub quizzes charge £1-£2 per person or include entry with a drink purchase. The quiz itself isn't the profit centre — it's the extra drinks, food, and atmosphere spending that makes the night worthwhile. Keep the barrier to entry low to build regular attendance."
+  - question: "How do I stop the same team winning every week?"
+    answer: "Mix up round topics so no single team dominates. Include a picture round, a music round, and a local knowledge round alongside general knowledge. Add a wildcard or joker mechanic, cap team sizes at 6, and rotate bonus rounds so variety rewards different strengths each week."
 ---
 
 # Quiz Night 101: Plan, Host and Grow a Brilliant Weekly Quiz

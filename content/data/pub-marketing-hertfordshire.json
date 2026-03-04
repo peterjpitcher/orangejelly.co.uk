@@ -1,36 +1,36 @@
 {
   "hero": {
     "title": "Pub Marketing for Hertfordshire Pubs",
-    "subtitle": "Hertfordshire has strong pubs and tough competition. We'll fix local discovery, build repeatable events, and drive footfall with a simple plan.",
+    "subtitle": "Hertfordshire has around 800 pubs in one of the busiest commuter corridors in the country. Strong lunch trade, fierce competition from London-spillover chains, and customers who decide fast.",
     "ctaText": "Hi Peter, I run a pub in Hertfordshire and need help",
     "bottomText": "£75/hour + VAT • Practical help from a working licensee"
   },
   "intro": {
     "heading": "What works in Hertfordshire (and what doesn't)",
     "paragraphs": [
-      "In Hertfordshire you have commuter towns, strong local competition, and customers who decide fast. If your pub is invisible on Google, you lose before they even consider you.",
-      "We tighten up your Google presence: categories, photos, reviews, and posts that match real searches like Sunday lunch, quiz night, live sport, and private hire.",
-      "Then we build a repeatable weekly rhythm (one or two hooks) plus a content plan you can run in batches."
+      "Hertfordshire is a commuter county. The M1 and M25 corridors mean your customers often work in London and make snap decisions about where to eat and drink based on convenience, Google results, and habit. If you're not easy to find, you're invisible.",
+      "The markets vary hugely: St Albans has a thriving food and drink scene with serious gastropub competition. Watford feels like outer London with chain pub pressure. Stevenage and Welwyn Garden City have more traditional high-street dynamics. Each needs a different approach.",
+      "What works consistently across Hertfordshire is strong local search visibility, a clear weekday lunch offer for the commuter crowd, and at least one reliable midweek evening event. We've seen the same commuter-belt patterns at The Anchor near Staines — it translates directly to Herts."
     ]
   },
   "wins": {
-    "heading": "Fast wins for Hertfordshire pubs",
+    "heading": "What's working for Hertfordshire pubs right now",
     "items": [
       {
-        "title": "Local map visibility",
-        "description": "Get more calls and clicks by fixing the basics and adding proof (photos, reviews, and the right keywords)."
+        "title": "Capture the commuter lunch crowd",
+        "description": "Hertfordshire's commuter towns have strong daytime trade potential. A clear lunch menu, fast service messaging, and Google posts targeting 'lunch near [town]' can transform your quiet afternoons."
       },
       {
-        "title": "Regulars on quiet nights",
-        "description": "Weekly hooks that build habit: quiz, games, food nights, or local partnerships."
+        "title": "Beat the London-spillover chains",
+        "description": "Watford, Hemel Hempstead, and Hatfield have chain pubs moving in. Your advantage? Local character, flexibility, and the ability to build genuine community ties they simply can't."
       },
       {
-        "title": "Reviews and reputation",
-        "description": "A simple review-request system and replies that make people trust you."
+        "title": "St Albans food scene positioning",
+        "description": "If you're in or near St Albans, the food competition is serious. Strong photography, consistent reviews, and a clear identity — traditional pub, wine bar, family venue — help you own your niche."
       },
       {
-        "title": "Content that converts",
-        "description": "Posts that sell a night and drive bookings, not just a nice photo."
+        "title": "Build a reliable midweek rhythm",
+        "description": "Commuter customers want a reason to stop before going home. A well-promoted quiz, curry night, or steak evening gives them that reason — and builds the habit that fills your quietest nights."
       }
     ]
   },
@@ -45,13 +45,13 @@
       },
       {
         "title": "Build midweek momentum",
-        "description": "Systems to build regulars and consistent Tuesday/Wednesday trade.",
+        "description": "Systems to build regulars and consistent Tuesday–Wednesday trade — critical for commuter-belt pubs.",
         "href": "/quiet-midweek-solutions",
         "ctaText": "Fix midweek"
       },
       {
         "title": "Full services",
-        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your pub.",
+        "description": "Social, menus, events, training, and a simple 30-day plan tailored to your Hertfordshire pub.",
         "href": "/services",
         "ctaText": "View services"
       }
@@ -59,21 +59,21 @@
   },
   "faqs": [
     {
-      "question": "Can you help with Google Business Profile optimisation?",
-      "answer": "Yes. For most pubs, it's the fastest route to more calls and bookings. We focus on accuracy, photos, reviews, and posts."
+      "question": "Do you understand the Hertfordshire commuter market?",
+      "answer": "Yes. We run The Anchor near Staines on the M25, so we deal with the same commuter-belt dynamics: customers who work in London, make quick decisions, and need a reason to stop before going home. The patterns translate directly to Hertfordshire's M1 and M25 corridor towns."
     },
     {
-      "question": "What if we have a small team and no time?",
-      "answer": "That's exactly who this is for. We use templates and batching so marketing stops being a daily job."
+      "question": "How do we compete with chains in towns like Watford?",
+      "answer": "Chains have budgets but no personality. We help you lean into what makes you different — local character, community events, flexible menus — and make sure you're more visible on Google than they are in your immediate area."
     },
     {
-      "question": "Do you only work with pubs?",
-      "answer": "Yes for now. Everything here is built around pub trade and what actually works on the floor."
+      "question": "Can you help pubs in smaller Hertfordshire towns?",
+      "answer": "Absolutely. Smaller towns like Berkhamsted, Hitchin, and Tring often have less competition and stronger community ties. We focus on becoming the obvious local choice and building events that draw people from surrounding villages."
     }
   ],
   "cta": {
     "title": "Want more customers through the door in Hertfordshire?",
-    "subtitle": "Message me your pub type and the one thing hurting trade. I'll tell you the fastest win to start with.",
+    "subtitle": "Tell me your town and what's hurting trade. I'll give you a straight answer — the commuter-belt challenges are ones I deal with every day.",
     "whatsappMessage": "Hi Peter, I run a pub in Hertfordshire and I need help with marketing. Can we have a quick chat?"
   }
 }
