@@ -174,110 +174,106 @@ export default function QuietMidweekSolutions() {
       </Section>
 
       {/* The System */}
-      {false && (
-        <Section>
-          <AnimatedItem animation="fade-in">
-            <div className="max-w-4xl mx-auto">
-              <Heading level={2} align="center" className="mb-4">
-                The Midweek Momentum System™
-              </Heading>
-              <Text size="lg" align="center" className="mb-12 text-charcoal/70">
-                5 proven strategies that transform dead nights into your busiest (and most
-                profitable) evenings
-              </Text>
+      <Section>
+        <AnimatedItem animation="fade-in">
+          <div className="max-w-4xl mx-auto">
+            <Heading level={2} align="center" className="mb-4">
+              The Midweek Momentum System™
+            </Heading>
+            <Text size="lg" align="center" className="mb-12 text-charcoal/70">
+              5 proven strategies that transform dead nights into your busiest (and most profitable)
+              evenings
+            </Text>
+
+            <div className="space-y-8">
+              {midweekStrategies.map((strategy, index) => (
+                <Card
+                  key={strategy._key}
+                  padding="large"
+                  variant="bordered"
+                  className="relative overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-20 h-20 bg-orange/10 rounded-br-full flex items-center justify-center">
+                    <Text size="2xl" weight="bold" className="text-orange">
+                      {index + 1}
+                    </Text>
+                  </div>
+                  <div className="ml-16">
+                    <Heading level={3} className="mb-4">
+                      {strategy.title}
+                    </Heading>
+                    {strategy.description && <Text className="mb-4">{strategy.description}</Text>}
+                    {strategy.points && strategy.points.length > 0 && (
+                      <div className="bg-cream rounded-lg p-4">
+                        <FeatureList
+                          items={strategy.points}
+                          icon="check"
+                          iconColor="green"
+                          spacing="tight"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </AnimatedItem>
+      </Section>
+
+      {/* Implementation Timeline */}
+      <Section background="orange-light">
+        <AnimatedItem animation="slide-up">
+          <div className="max-w-4xl mx-auto">
+            <Heading level={2} align="center" className="mb-12">
+              Your 4-Week Midweek Transformation
+            </Heading>
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-orange/30 hidden md:block" />
 
               <div className="space-y-8">
-                {midweekStrategies.map((strategy, index) => (
-                  <Card
-                    key={strategy._key}
-                    padding="large"
-                    variant="bordered"
-                    className="relative overflow-hidden"
-                  >
-                    <div className="absolute top-0 left-0 w-20 h-20 bg-orange/10 rounded-br-full flex items-center justify-center">
-                      <Text size="2xl" weight="bold" className="text-orange">
-                        {index + 1}
-                      </Text>
+                {timeline.weeks.map((week, index) => (
+                  <div key={index} className="relative flex gap-6 items-start">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-orange text-white flex items-center justify-center font-bold text-lg z-10">
+                      W{index + 1}
                     </div>
-                    <div className="ml-16">
-                      <Heading level={3} className="mb-4">
-                        {strategy.title}
+                    <Card background="white" padding="large" className="flex-1">
+                      <Heading level={3} className="mb-2">
+                        {week.week}: {week.title}
                       </Heading>
-                      {strategy.description && <Text className="mb-4">{strategy.description}</Text>}
-                      {strategy.points && strategy.points.length > 0 && (
-                        <div className="bg-cream rounded-lg p-4">
-                          <FeatureList
-                            items={strategy.points}
-                            icon="check"
-                            iconColor="green"
-                            spacing="tight"
-                          />
-                        </div>
+                      {week.description && (
+                        <Text className="mb-4 text-charcoal/80">{week.description}</Text>
                       )}
-                    </div>
-                  </Card>
+                      {week.result && (
+                        <Text weight="semibold" className="text-orange">
+                          Result: {week.result}
+                        </Text>
+                      )}
+                    </Card>
+                  </div>
                 ))}
               </div>
             </div>
-          </AnimatedItem>
-        </Section>
-      )}
 
-      {/* Implementation Timeline */}
-      {false && (
-        <Section background="orange-light">
-          <AnimatedItem animation="slide-up">
-            <div className="max-w-4xl mx-auto">
-              <Heading level={2} align="center" className="mb-12">
-                Your 4-Week Midweek Transformation
+            <Card background="teal" padding="large" className="mt-12 text-center">
+              <Heading level={3} color="white" className="mb-4">
+                By Week 4: Your Midweek Nights Are Transformed
               </Heading>
-
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-orange/30 hidden md:block" />
-
-                <div className="space-y-8">
-                  {timeline.weeks.map((week, index) => (
-                    <div key={index} className="relative flex gap-6 items-start">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-orange text-white flex items-center justify-center font-bold text-lg z-10">
-                        W{index + 1}
-                      </div>
-                      <Card background="white" padding="large" className="flex-1">
-                        <Heading level={3} className="mb-2">
-                          {week.week}: {week.title}
-                        </Heading>
-                        {week.description && (
-                          <Text className="mb-4 text-charcoal/80">{week.description}</Text>
-                        )}
-                        {week.result && (
-                          <Text weight="semibold" className="text-orange">
-                            Result: {week.result}
-                          </Text>
-                        )}
-                      </Card>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <Card background="teal" padding="large" className="mt-12 text-center">
-                <Heading level={3} color="white" className="mb-4">
-                  By Week 4: Your Midweek Nights Are Transformed
-                </Heading>
-                <Text color="white" className="mb-6">
-                  Tuesday quiz packed. Wednesday offers selling out. Thursday becoming the new
-                  Friday. You're making £2,000+ more per week and working less.
-                </Text>
-                <WhatsAppButton
-                  text="Start my midweek transformation"
-                  size="large"
-                  variant="secondary"
-                />
-              </Card>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
+              <Text color="white" className="mb-6">
+                Tuesday quiz packed. Wednesday offers selling out. Thursday becoming the new Friday.
+                You're making £2,000+ more per week and working less.
+              </Text>
+              <WhatsAppButton
+                text="Start my midweek transformation"
+                size="large"
+                variant="secondary"
+              />
+            </Card>
+          </div>
+        </AnimatedItem>
+      </Section>
 
       {successMetrics?.metrics && successMetrics.metrics.length > 0 && (
         <Section background="white">
@@ -418,23 +414,21 @@ export default function QuietMidweekSolutions() {
       </Section>
 
       {/* FAQ Section */}
-      {false && (
-        <Section>
-          <AnimatedItem animation="fade-in">
-            <div className="max-w-3xl mx-auto">
-              <Heading level={2} align="center" className="mb-12">
-                Common Questions About Fixing Quiet Midweek Nights
-              </Heading>
+      <Section>
+        <AnimatedItem animation="fade-in">
+          <div className="max-w-3xl mx-auto">
+            <Heading level={2} align="center" className="mb-12">
+              Common Questions About Fixing Quiet Midweek Nights
+            </Heading>
 
-              <div className="space-y-6">
-                {faqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
-              </div>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              ))}
             </div>
-          </AnimatedItem>
-        </Section>
-      )}
+          </div>
+        </AnimatedItem>
+      </Section>
 
       {/* Investment Section */}
       <Section background="white">

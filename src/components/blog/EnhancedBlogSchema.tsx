@@ -103,30 +103,6 @@ export default function EnhancedBlogSchema({ post, baseUrl }: EnhancedBlogSchema
         }
       : null;
 
-  // HowTo schema if the title suggests it's a guide
-  const isHowTo =
-    post.title.toLowerCase().includes('how to') || post.title.toLowerCase().includes('guide');
-
-  const howToSchema =
-    isHowTo && post.quickAnswer
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'HowTo',
-          name: post.title,
-          description: post.excerpt,
-          totalTime: 'PT10M', // Estimate based on implementation
-          supply: [],
-          tool: [],
-          step: [
-            {
-              '@type': 'HowToStep',
-              name: 'Quick Solution',
-              text: post.quickAnswer,
-            },
-          ],
-        }
-      : null;
-
   return (
     <>
       <script
@@ -140,14 +116,6 @@ export default function EnhancedBlogSchema({ post, baseUrl }: EnhancedBlogSchema
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(faqSchema),
-          }}
-        />
-      )}
-      {howToSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(howToSchema),
           }}
         />
       )}

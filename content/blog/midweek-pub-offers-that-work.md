@@ -60,7 +60,7 @@ Let me share a painful lesson. In desperation, we once ran "50% off all food Wed
 
 - **Weekend trade**: Dropped (customers waited for discounts)
 
-The real kicker? Regular customers told us the pub felt "cheap" and started dining elsewhere on weekends.
+The real kicker? Regular customers told us the pub felt "cheap" and started dining elsewhere on weekends. We cover more lessons like this in our guide to [filling empty seats with midweek offers](/licensees-guide/fill-empty-seats-midweek-offers).
 
 ### The Profitable Midweek Formula
 
@@ -97,6 +97,8 @@ Every successful midweek offer balances these elements.
 ### 2. "The Midweek Feasts"
 
 **The Strategy**: Premium set menus, not discounts.
+
+If Tuesday is your weakest night, our dedicated guide on [fixing empty Tuesday nights](/licensees-guide/pub-empty-tuesday-nights) goes deeper on what works specifically for that day.
 
 **Tuesday**: Steak Night - 8oz sirloin, chips, sauce £15
 

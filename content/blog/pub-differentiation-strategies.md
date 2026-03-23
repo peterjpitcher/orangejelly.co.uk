@@ -43,7 +43,7 @@ faqs:
 
 # How to Differentiate Your Pub: 15 Unique Ideas That Actually Work
 
-Differentiation is not about gimmicks. It is about choosing one or two things you do better than anyone nearby and then making that obvious to guests.
+Differentiation is not about gimmicks. It is about choosing one or two things you do better than anyone nearby and then making that obvious to guests. If chain competition is your main concern, our guides on [competing with Wetherspoons](/licensees-guide/compete-with-wetherspoons) and [beating chain pubs](/licensees-guide/beat-chain-pubs) go deeper on that specific challenge.
 
 Instead of a long list, use these five themes and pick one to own.
 
@@ -55,7 +55,7 @@ Instead of a long list, use these five themes and pick one to own.
 ## Theme 2: Product focus
 
 - Specialise in one drinks category (gin, craft beer, wine).
-- Build a focused menu with a clear hero dish.
+- Build a focused menu with a clear hero dish. [Premium positioning](/licensees-guide/premium-pub-positioning) can justify higher prices when paired with genuine quality.
 
 ## Theme 3: Community integration
 

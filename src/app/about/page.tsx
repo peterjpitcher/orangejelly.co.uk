@@ -7,16 +7,6 @@ export async function generateMetadata() {
     description:
       'Meet Peter Pitcher and Billy Summers — the team behind Orange Jelly. Real pub experience at The Anchor, Stanwell Moor. Hands-on marketing help.',
     path: '/about',
-    keywords: [
-      'Peter Pitcher',
-      'Orange Jelly',
-      'hospitality growth partner',
-      'pub marketing',
-      'bar marketing',
-      'The Anchor Stanwell Moor',
-      'hospitality marketing consultant',
-      'hospitality growth partner',
-    ].join(', '),
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

@@ -7,8 +7,6 @@ export async function generateMetadata() {
     description:
       'Speak directly with Peter Pitcher about pub marketing that actually works. No agency fluff — just direct, honest advice. Book a free chat today.',
     path: '/contact',
-    keywords:
-      'contact Orange Jelly, hospitality growth support, pub marketing help, bar marketing help, Peter Pitcher contact',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

@@ -7,8 +7,6 @@ export const metadata = generateMetadata({
   description:
     'Events, local groups, reviews, and a simple weekly rhythm that brings locals back in. Built for busy licensees who need Facebook to actually work. £75/hr + VAT.',
   path: '/services/facebook-services-for-pubs',
-  keywords:
-    'facebook services for pubs, pub facebook marketing, facebook marketing for pubs, local facebook groups pubs, pub events facebook',
   ogType: 'website',
 });
 

@@ -6,7 +6,6 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import BlogPostClient from './BlogPostClient';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
-import { BlogPostingSchema } from '@/components/BlogPostingSchema';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
@@ -434,21 +433,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const resolvedTitle = override?.title || metaTitle || post.title;
   const resolvedDescription = override?.description || metaDescription || post.excerpt;
 
-  const keywords =
-    Array.isArray(post.keywords) && post.keywords.length > 0
-      ? post.keywords
-      : Array.isArray(post.tags)
-        ? post.tags
-        : undefined;
-
-  const resolvedKeywords =
-    override?.keywords && override.keywords.length > 0 ? override.keywords : keywords;
   const canonicalUrl = override?.canonical || `${baseUrl}${canonicalPath}`;
 
   return {
     title: resolvedTitle,
     description: resolvedDescription,
-    keywords: resolvedKeywords,
     openGraph: {
       title: resolvedTitle,
       description: resolvedDescription,
@@ -501,11 +490,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     ) as MarkdownBlogPost[];
     const categorySlug = post.category?.slug;
 
-    const relatedPostsData = allPosts
-      .filter((p) => categorySlug && p.slug !== post.slug && p.categories?.includes(categorySlug))
-      .slice(0, 3);
-
-    const relatedPosts: BlogPostType[] = relatedPostsData.map((p) => {
+    // Build related posts: same category first, then fall back to recent posts
+    const mapMarkdownToBlogPost = (p: MarkdownBlogPost): BlogPostType => {
       const frontMatterRecord = p.frontMatter as Record<string, unknown>;
       const normalizedCategory =
         toStringValue(p.frontMatter.category) || toStringArray(p.frontMatter.categories)[0];
@@ -543,7 +529,32 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           image: '/images/peter-pitcher.jpg',
         },
       };
-    });
+    };
+
+    // Match by category using frontMatter.category (singular string, not categories array)
+    const sameCategoryPosts = allPosts
+      .filter((p) => {
+        if (p.slug === post.slug) return false;
+        const postCat = toStringValue(p.frontMatter.category);
+        const postCats = toStringArray(p.frontMatter.categories);
+        if (!categorySlug) return false;
+        const normalizedCat = postCat?.toLowerCase().replace(/\s+/g, '-');
+        return normalizedCat === categorySlug || postCats.includes(categorySlug);
+      })
+      .sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a))
+      .slice(0, 4);
+
+    // Fall back to most recent posts if fewer than 3 in the same category
+    let relatedPostsRaw = sameCategoryPosts;
+    if (relatedPostsRaw.length < 3) {
+      const existingSlugs = new Set(relatedPostsRaw.map((p) => p.slug));
+      const recentFallbacks = [...allPosts]
+        .sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a))
+        .filter((p) => p.slug !== post.slug && !existingSlugs.has(p.slug));
+      relatedPostsRaw = [...relatedPostsRaw, ...recentFallbacks].slice(0, 4);
+    }
+
+    const relatedPosts: BlogPostType[] = relatedPostsRaw.map(mapMarkdownToBlogPost);
 
     const sortedPosts = [...allPosts].sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a));
     const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug);
@@ -627,10 +638,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     };
 
     const baseUrl = getBaseUrl();
-    const schemaImage =
-      typeof post.featuredImage === 'string'
-        ? post.featuredImage
-        : post.featuredImage?.src || post.featuredImage?.asset?.url || '/logo.png';
 
     return (
       <>
@@ -651,27 +658,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             { name: post.title, url: `/licensees-guide/${post.slug}` },
           ]}
         />
-        <BlogPostingSchema
-          title={post.title}
-          description={post.excerpt}
-          content={post.content}
-          author={{
-            name: post.author?.name || 'Peter Pitcher',
-            url: '/about',
-          }}
-          datePublished={post.publishedDate}
-          dateModified={post.updatedDate}
-          image={schemaImage}
-          url={`/licensees-guide/${post.slug}`}
-          keywords={post.tags}
-          speakableSections={[
-            '.prose h2',
-            '.prose h3',
-            '.prose > p:first-of-type',
-            '.quick-answer',
-          ]}
-        />
-        {/* FAQs are already included in EnhancedBlogSchema - removed duplicate FAQSchema */}
+        {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
         <Hero
           title={post.title}
           subtitle={post.excerpt}

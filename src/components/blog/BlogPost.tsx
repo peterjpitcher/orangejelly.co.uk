@@ -17,6 +17,7 @@ import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
 import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
 import AdjacentPostNav from './AdjacentPostNav';
+import RelatedPosts from './RelatedPosts';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -46,11 +47,7 @@ interface BlogPostProps {
   };
 }
 
-export default function BlogPost({
-  post,
-  relatedPosts: _relatedPosts = [],
-  adjacentPosts,
-}: BlogPostProps) {
+export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
   // Track reading progress
   useEffect(() => {
     const updateProgress = () => {
@@ -241,6 +238,9 @@ export default function BlogPost({
         />
 
         {hasAdjacentPosts && adjacentPosts && <AdjacentPostNav adjacentPosts={adjacentPosts} />}
+
+        {/* Related posts */}
+        <RelatedPosts posts={relatedPosts} currentPostSlug={post.slug} />
 
         {/* Tags */}
         {post.tags.length > 0 && (

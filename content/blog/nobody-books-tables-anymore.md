@@ -1,7 +1,7 @@
 ---
 title: "Nobody Books Tables Anymore? Master the Art of Walk-ins vs Reservations"
 slug: "nobody-books-tables-anymore"
-publishedDate: 2025-02-20
+publishedDate: 2025-03-24
 excerpt: "Find the perfect balance between guaranteed bookings and spontaneous trade. Learn the system that increased our covers without turning anyone away."
 quickAnswer: "Reserve a majority of tables for bookings and keep a healthy share for walk-ins. Take phone numbers for all bookings and confirm day-of. Release no-show tables after a short grace period. Create a waiting list system and overbook slightly on peak nights to account for cancellations."
 author: "Peter Pitcher"
@@ -13,7 +13,7 @@ tags:
   - "reservations"
   - "restaurant management"
   - "operations"
-status: "draft"
+status: "published"
 metaDescription: "Master the perfect balance of bookings and walk-ins. Increase covers with this proven table management system."
 keywords:
   - "pub bookings"

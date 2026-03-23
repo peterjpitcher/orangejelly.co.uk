@@ -19,6 +19,7 @@ import FeaturesGrid from '@/components/FeaturesGrid';
 import PartnershipsSection from '@/components/PartnershipsSection';
 import ProblemCardsSection from '@/components/ProblemCardsSection';
 import ResultsSection from '@/components/ResultsSection';
+import Link from 'next/link';
 // Type definitions
 interface FAQ {
   question: string;
@@ -93,6 +94,14 @@ interface SectionHeadings {
   finalCtaSubtitle?: string;
 }
 
+interface RecentPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedDate: string;
+  readingTime: number;
+}
+
 interface HomePageProps {
   faqs?: FAQ[];
   problems?: Problem[];
@@ -110,6 +119,7 @@ interface HomePageProps {
   };
   sectionHeadings?: SectionHeadings;
   trustBarItems?: Array<{ value: string; label: string }> | null;
+  recentPosts?: RecentPost[];
 }
 
 export default function HomePage({
@@ -123,6 +133,7 @@ export default function HomePage({
   hero,
   sectionHeadings,
   trustBarItems,
+  recentPosts,
 }: HomePageProps) {
   // Process FAQs if available
   const displayFAQs = faqs ?? [];
@@ -174,27 +185,9 @@ export default function HomePage({
 
       <TrustBar items={trustBarItems || undefined} />
 
-      <FeaturesGrid features={displayFeatures} />
-
-      <PartnershipsSection
-        partners={(partnerships || []).map((partner) => ({
-          name: partner.name,
-          description: partner.description || '',
-          logoUrl: partner.logoUrl || '/logo.png',
-          url: partner.url || 'https://www.orangejelly.co.uk',
-        }))}
-      />
-
       <ProblemCardsSection problems={displayProblems} title={sectionHeadings?.problemsHeading} />
 
-      <ResultsSection
-        title={sectionHeadings?.resultsHeading}
-        testimonial={sectionHeadings?.resultsTestimonial}
-        subtext={sectionHeadings?.resultsSubtext}
-        buttonText={sectionHeadings?.resultsButtonText}
-      />
-
-      {/* About Preview with The Anchor Logo */}
+      {/* About Preview — Solutions overview */}
       <Section>
         <AnimatedItem animation="slide-up" delay={200}>
           <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
@@ -253,6 +246,102 @@ export default function HomePage({
           </Grid>
         </AnimatedItem>
       </Section>
+
+      {/* Latest Pub Marketing Guides */}
+      {recentPosts && recentPosts.length > 0 && (
+        <Section background="white">
+          <Heading level={2} align="center" className="mb-4">
+            Latest Pub Marketing Guides
+          </Heading>
+          <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+            Practical advice from a working licensee. Every guide is tested at The Anchor first.
+          </Text>
+          <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="large">
+            {recentPosts.map((post) => (
+              <AnimatedItem key={post.slug} animation="slide-up" delay={100}>
+                <Link href={`/licensees-guide/${post.slug}`} className="block group h-full">
+                  <Card
+                    variant="bordered"
+                    className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
+                  >
+                    <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                      {post.title}
+                    </Heading>
+                    <Text color="muted" className="mb-4 line-clamp-2">
+                      {post.excerpt}
+                    </Text>
+                    <Text size="sm" color="muted">
+                      {post.readingTime} min read
+                    </Text>
+                  </Card>
+                </Link>
+              </AnimatedItem>
+            ))}
+          </Grid>
+          <Box className="text-center mt-8">
+            <Button href="/licensees-guide" variant="secondary">
+              Browse All Guides
+            </Button>
+          </Box>
+        </Section>
+      )}
+
+      {/* Areas We Cover */}
+      <Section background="cream">
+        <Heading level={2} align="center" className="mb-4">
+          Areas We Cover
+        </Heading>
+        <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+          Pub marketing support across Surrey and the South East. Based at The Anchor in Stanwell
+          Moor, serving independent pubs locally.
+        </Text>
+        <Grid columns={{ default: 2, md: 4 }} gap="medium">
+          {[
+            { label: 'Surrey', href: '/pub-marketing-surrey' },
+            { label: 'London', href: '/pub-marketing-london' },
+            { label: 'Berkshire', href: '/pub-marketing-berkshire' },
+            { label: 'Buckinghamshire', href: '/pub-marketing-buckinghamshire' },
+            { label: 'Hampshire', href: '/pub-marketing-hampshire' },
+            { label: 'Hertfordshire', href: '/pub-marketing-hertfordshire' },
+            { label: 'Kent', href: '/pub-marketing-kent' },
+            { label: 'Oxfordshire', href: '/pub-marketing-oxfordshire' },
+          ].map((area) => (
+            <AnimatedItem key={area.href} animation="slide-up" delay={100}>
+              <Link href={area.href} className="block group">
+                <Card
+                  variant="bordered"
+                  className="p-6 text-center transition-all hover:shadow-lg hover:-translate-y-1"
+                >
+                  <Heading level={3} className="group-hover:text-orange transition-colors">
+                    {area.label}
+                  </Heading>
+                  <Text size="sm" color="muted" className="mt-1">
+                    Pub Marketing
+                  </Text>
+                </Card>
+              </Link>
+            </AnimatedItem>
+          ))}
+        </Grid>
+      </Section>
+
+      <ResultsSection
+        title={sectionHeadings?.resultsHeading}
+        testimonial={sectionHeadings?.resultsTestimonial}
+        subtext={sectionHeadings?.resultsSubtext}
+        buttonText={sectionHeadings?.resultsButtonText}
+      />
+
+      <FeaturesGrid features={displayFeatures} />
+
+      <PartnershipsSection
+        partners={(partnerships || []).map((partner) => ({
+          name: partner.name,
+          description: partner.description || '',
+          logoUrl: partner.logoUrl || '/logo.png',
+          url: partner.url || 'https://www.orangejelly.co.uk',
+        }))}
+      />
 
       {/* Free Chat Banner */}
       <Section background="orange-light" padding="small">

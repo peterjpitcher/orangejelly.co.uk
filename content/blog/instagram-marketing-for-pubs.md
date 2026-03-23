@@ -70,6 +70,8 @@ Examples:
 
 Stories are perfect for availability updates, behind-the-scenes clips, and quick reminders. Use them daily during event weeks.
 
+Instagram works best as part of a broader strategy. For the full picture, read our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) and our companion guide on [Facebook marketing for local pubs](/licensees-guide/facebook-marketing-local-pubs).
+
 ## Step 5: Engage locally
 
 Comment on local posts, tag partners, and use local hashtags. Instagram rewards local relevance.
@@ -94,3 +96,5 @@ No. A phone and consistent light are enough.
 
 **How often should I post?**
 Three to four posts a week plus stories during event weeks.
+
+If you want professional help managing your pub's Instagram, explore our [Instagram services for pubs](/services/instagram-services-for-pubs).

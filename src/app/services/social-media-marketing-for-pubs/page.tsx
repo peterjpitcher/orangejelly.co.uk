@@ -7,8 +7,6 @@ export const metadata = generateMetadata({
   description:
     'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates, and execution rhythm that drives bookings and footfall. £75/hour + VAT.',
   path: '/services/social-media-marketing-for-pubs',
-  keywords:
-    'social media marketing for pubs, pub social media marketing, pub social media management, pub marketing on instagram and facebook, pub social strategy',
   ogType: 'website',
 });
 

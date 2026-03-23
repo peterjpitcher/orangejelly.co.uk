@@ -63,6 +63,66 @@
         "href": "https://www.the-anchor.pub",
         "external": true
       }
+    ],
+    "solutions": [
+      {
+        "label": "Fix My Pub",
+        "href": "/fix-my-pub"
+      },
+      {
+        "label": "Empty Pub Solutions",
+        "href": "/empty-pub-solutions"
+      },
+      {
+        "label": "Quiet Midweek Solutions",
+        "href": "/quiet-midweek-solutions"
+      },
+      {
+        "label": "Compete With Chains",
+        "href": "/compete-with-pub-chains"
+      },
+      {
+        "label": "Fix My Pub",
+        "href": "/fix-my-pub"
+      },
+      {
+        "label": "Marketing on No Budget",
+        "href": "/pub-marketing-no-budget"
+      }
+    ],
+    "locations": [
+      {
+        "label": "London",
+        "href": "/pub-marketing-london"
+      },
+      {
+        "label": "Surrey",
+        "href": "/pub-marketing-surrey"
+      },
+      {
+        "label": "Berkshire",
+        "href": "/pub-marketing-berkshire"
+      },
+      {
+        "label": "Buckinghamshire",
+        "href": "/pub-marketing-buckinghamshire"
+      },
+      {
+        "label": "Hampshire",
+        "href": "/pub-marketing-hampshire"
+      },
+      {
+        "label": "Hertfordshire",
+        "href": "/pub-marketing-hertfordshire"
+      },
+      {
+        "label": "Kent",
+        "href": "/pub-marketing-kent"
+      },
+      {
+        "label": "Oxfordshire",
+        "href": "/pub-marketing-oxfordshire"
+      }
     ]
   },
   "social": {

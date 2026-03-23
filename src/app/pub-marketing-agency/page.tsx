@@ -20,8 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       'Pub marketing agency run by a licensee, not a desk. We grew food GP from 58% to 71% and built 60-70K monthly social views at The Anchor. £75/hr + VAT.',
     path: '/pub-marketing-agency',
-    keywords:
-      'pub marketing agency, marketing agency for pubs, digital marketing for pubs, marketing agency for bars, marketing for pubs, pub marketing company',
     ogType: 'website',
   });
 }

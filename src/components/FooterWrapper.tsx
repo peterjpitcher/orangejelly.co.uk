@@ -18,6 +18,14 @@ export default function FooterWrapper() {
       href: link.href,
       external: false,
     })),
+    solutions: footerData.links.solutions.map((link) => ({
+      title: link.label,
+      href: link.href,
+    })),
+    locations: footerData.links.locations.map((link) => ({
+      title: link.label,
+      href: link.href,
+    })),
     quickLinks: [
       ...footerData.links.resources.map((link) => ({
         title: link.label,

@@ -10,6 +10,8 @@ import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleT
 import { CONTACT } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 import CookieNotice from '@/components/CookieNotice';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -40,8 +42,6 @@ export const metadata: Metadata = {
   title: 'Transformative Hospitality Growth Partner | Orange Jelly',
   description:
     'Orange Jelly accelerates hospitality growth with transformative, action-first marketing delivered by a small, hands-on team. Built for measurable gains in bookings, footfall, repeat visits, and revenue.',
-  keywords:
-    'transformative hospitality marketing, hospitality growth partner, small marketing team hospitality, action-first marketing, pub marketing, bar marketing, venue marketing, Orange Jelly',
   openGraph: {
     title: 'Transformative Hospitality Growth Partner | Orange Jelly',
     description:
@@ -132,6 +132,19 @@ export default function RootLayout({
       contactOption: ['HearingImpairedSupported'],
       areaServed: 'GB',
     },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'The Anchor, 20 High Street',
+      addressLocality: 'Stanwell Moor',
+      addressRegion: 'Staines',
+      postalCode: 'TW19 6AQ',
+      addressCountry: 'GB',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 51.4583,
+      longitude: -0.4867,
+    },
     sameAs: ['https://www.the-anchor.pub'],
   };
 
@@ -175,9 +188,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
         />
-        <GoogleTagManager />
       </head>
       <body className={`${fraunces.variable} ${openSans.variable} font-sans antialiased`}>
+        <GoogleTagManager />
         <GoogleTagManagerNoscript />
         {/* Skip to main content link for keyboard navigation */}
         <Link
@@ -197,6 +210,8 @@ export default function RootLayout({
         <FooterWrapper />
         <PerformanceMonitor />
         <CookieNotice />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

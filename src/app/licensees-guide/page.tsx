@@ -47,15 +47,6 @@ export async function generateMetadata() {
     description:
       'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice that also applies to restaurants and bars.',
     path: '/licensees-guide',
-    keywords: [
-      'pub management',
-      'pub marketing',
-      'restaurant marketing',
-      'bar marketing',
-      'licensee guide',
-      'pub business advice',
-      'pub owner tips',
-    ].join(', '),
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });

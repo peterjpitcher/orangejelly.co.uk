@@ -7,6 +7,7 @@ import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CTASection from '@/components/CTASection';
 import FAQItem from '@/components/FAQItem';
+import StickyCTA from '@/components/StickyCTA';
 import TrustBar from '@/components/TrustBar';
 import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
@@ -470,6 +471,8 @@ export default function PubMarketingNoBudget() {
         whatsappMessage="Help me market my pub for free"
         buttonText="Show Me The Plan"
       />
+
+      <StickyCTA />
     </>
   );
 }

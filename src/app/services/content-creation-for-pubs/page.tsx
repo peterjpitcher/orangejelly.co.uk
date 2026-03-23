@@ -7,8 +7,6 @@ export const metadata = generateMetadata({
   description:
     'Photos, Reels, captions, and a batching system so you create a week of pub content in one session. Phone-first and no editing skills needed. £75/hr + VAT.',
   path: '/services/content-creation-for-pubs',
-  keywords:
-    'content creation for pubs, pub content creation, pub social content, reels for pubs, pub marketing content, pub photography',
   ogType: 'website',
 });
 

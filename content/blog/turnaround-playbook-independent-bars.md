@@ -41,7 +41,7 @@ faqs:
 
 # The Turnaround Playbook: How Independent Bars Bounce Back Fast
 
-Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then scale the habits. The mistake is trying to do everything at once. This playbook focuses the team on the right moves at the right time.
+Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then scale the habits. The mistake is trying to do everything at once. Before diving in, our [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) helps you diagnose exactly where the problems lie. This playbook focuses the team on the right moves at the right time.
 
 ## Phase 1: Stabilise in 7 days
 
@@ -58,7 +58,7 @@ Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then s
 
 **Goal**: simplify and make the offer clear.
 
-- Choose one hero food offer and one drinks focus.
+- Choose one hero food offer and one drinks focus. Our guide to the [nine revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) can help you pick the highest-impact changes.
 - Cost and price properly.
 - Refresh the room for atmosphere.
 - Train the team on scripts and upsells.
@@ -112,4 +112,4 @@ Every successful turnaround follows a rhythm: stabilise, reset, relaunch, then s
 Expect meaningful stability in 8 to 12 weeks if the plan is followed.
 
 **Should I rebrand during a turnaround?**
-Only after the offer and cashflow are stable. Rebrands are expensive distractions.
+Only after the offer and cashflow are stable. Rebrands are expensive distractions. If you want structured support through the process, our [fix my pub](/fix-my-pub) programme walks you through each phase.

@@ -6,6 +6,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CTASection from '@/components/CTASection';
+import StickyCTA from '@/components/StickyCTA';
 import TrustBar from '@/components/TrustBar';
 import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
@@ -14,9 +15,9 @@ import { generateMetadata } from '@/lib/metadata';
 import { HowToSchema } from '@/components/StructuredData';
 
 export const metadata = generateMetadata({
-  title: '30-Day Pub Growth Recovery Plan | Empty Pub Solutions',
+  title: 'Fill Empty Pub Tables — 30-Day Footfall Recovery Plan',
   description:
-    'A practical 30-day plan to turn quiet trade into consistent momentum. Action-first recovery support tested at The Anchor. Start seeing results this week.',
+    'Quiet midweek nights and empty tables? A practical 30-day plan to increase footfall and fill seats consistently. Proven at The Anchor. Start this week.',
   path: '/empty-pub-solutions',
 });
 
@@ -189,12 +190,12 @@ export default function EmptyPubSolutions() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema()) }}
       />
       <HowToSchema
-        name="30-Day Empty Pub Recovery Plan"
-        description="Transform your empty pub into a thriving business with our proven 30-day system. Step-by-step guide to increase covers and bookings inside 30 days."
+        name="30-Day Empty Pub Footfall Plan"
+        description="Fill empty pub tables with our proven 30-day footfall system. Step-by-step guide to increase covers, boost midweek trade, and keep tables turning."
         image="https://www.orangejelly.co.uk/images/empty-pub-recovery.svg"
         estimatedCost={{
           currency: 'GBP',
-          value: '499',
+          value: 'From 75 per hour',
         }}
         supply={[
           'Google My Business access',
@@ -216,12 +217,12 @@ export default function EmptyPubSolutions() {
       <Hero
         title={
           <>
-            Quiet Nights to
+            Empty Tables to
             <br />
-            Consistent Trade in 30 Days.
+            Full Houses in 30 Days.
           </>
         }
-        subtitle="Proven, action-first strategies that transformed The Anchor and can be adapted to your venue"
+        subtitle="A step-by-step footfall plan to fill quiet nights, boost midweek covers, and keep tables turning — proven at The Anchor"
         bottomText="£75/hour plus VAT • No long contracts • Real pub operators"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Empty Pub Solutions' }]}
       />
@@ -233,12 +234,12 @@ export default function EmptyPubSolutions() {
         <AnimatedItem animation="fade-in">
           <div className="max-w-3xl mx-auto text-center">
             <Heading level={2} align="center" className="mb-6">
-              Quiet Tables Have a Cost
+              Every Empty Table Costs You Money
             </Heading>
             <Text size="xl" color="muted" align="center" className="mb-8">
-              Empty chairs reduce momentum and margin. The upside can be significant when you
-              improve discovery, give people a clear reason to visit, and execute consistently each
-              week.
+              Empty chairs mean wasted overheads — rent, rates, and wages don't pause for quiet
+              nights. The upside is significant when you improve local discovery, give people a
+              clear reason to visit, and fill those midweek gaps consistently.
             </Text>
             <div className="bg-orange-light rounded-lg p-6">
               <Text size="lg" weight="semibold" align="center">
@@ -304,7 +305,7 @@ export default function EmptyPubSolutions() {
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-12">
-              Everything You Need to Rebuild Momentum
+              Everything You Need to Fill More Tables
             </Heading>
             <Grid columns={{ default: 1, md: 2 }} gap="large">
               <Card variant="colored" background="orange-light" padding="large">
@@ -368,11 +369,13 @@ export default function EmptyPubSolutions() {
       </Section>
 
       <CTASection
-        title="Ready to Rebuild Consistent Trade?"
-        subtitle="Let's focus on the highest-impact actions first and build measurable momentum over 30 days."
-        whatsappMessage="I need help rebuilding consistent trade in my pub"
-        buttonText="Start My 30-Day Plan"
+        title="Ready to Fill Those Empty Tables?"
+        subtitle="Let's focus on getting more customers through the door — starting with the highest-impact footfall actions this week."
+        whatsappMessage="I need help filling empty tables in my pub"
+        buttonText="Start My 30-Day Footfall Plan"
       />
+
+      <StickyCTA />
     </>
   );
 }

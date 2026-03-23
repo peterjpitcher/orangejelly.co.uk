@@ -15,6 +15,7 @@ import { FAQSchema } from '@/components/StructuredData';
 import competeData from '../../../content/data/compete-with-chains.json';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Button from '@/components/Button';
+import StickyCTA from '@/components/StickyCTA';
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
@@ -561,6 +562,8 @@ export default function CompeteWithPubChains() {
 
       {/* Structured Data */}
       {faqs.length > 0 && <FAQSchema faqs={faqs} />}
+
+      <StickyCTA />
     </>
   );
 }

@@ -3,12 +3,10 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import hampshireData from '../../../content/data/pub-marketing-hampshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Hampshire - Grow Bookings & Trade',
+  title: 'Pub Marketing in Hampshire — Results-Driven Help',
   description:
-    'Grow your Hampshire pub with targeted marketing: seasonal events, local partnerships, and social content that brings people through the door. £75/hr + VAT.',
+    'Local pub marketing consultant for Hampshire pubs in Winchester, Southampton, Portsmouth, and beyond. Proven systems from a working publican. £75/hr + VAT.',
   path: '/pub-marketing-hampshire',
-  keywords:
-    'pub marketing hampshire, pub marketing consultant hampshire, marketing for pubs hampshire, hampshire pub marketing support, increase pub footfall hampshire',
   ogType: 'website',
 });
 
@@ -17,6 +15,7 @@ export default function PubMarketingHampshirePage() {
     <PubMarketingLocationLandingPage
       data={hampshireData}
       breadcrumbLabel="Pub Marketing Hampshire"
+      currentSlug="pub-marketing-hampshire"
     />
   );
 }

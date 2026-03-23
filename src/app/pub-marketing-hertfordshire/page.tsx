@@ -3,12 +3,10 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import hertfordshireData from '../../../content/data/pub-marketing-hertfordshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Hertfordshire - Build Repeat Trade',
+  title: 'Pub Marketing in Hertfordshire — Build Repeat Trade',
   description:
-    'Marketing help for Hertfordshire pubs: attract new customers, retain regulars, and build a consistent weekly rhythm that keeps tables full. £75/hr + VAT.',
+    'Pub marketing for Hertfordshire pubs in St Albans, Watford, Hertford, and the Home Counties. Local SEO, events, and social media. £75/hr + VAT.',
   path: '/pub-marketing-hertfordshire',
-  keywords:
-    'pub marketing hertfordshire, pub marketing consultant hertfordshire, marketing for pubs hertfordshire, hertfordshire pub marketing support, increase pub footfall hertfordshire',
   ogType: 'website',
 });
 
@@ -17,6 +15,7 @@ export default function PubMarketingHertfordshirePage() {
     <PubMarketingLocationLandingPage
       data={hertfordshireData}
       breadcrumbLabel="Pub Marketing Hertfordshire"
+      currentSlug="pub-marketing-hertfordshire"
     />
   );
 }

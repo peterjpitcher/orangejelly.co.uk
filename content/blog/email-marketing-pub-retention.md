@@ -46,6 +46,8 @@ faqs:
 
 A great visit means nothing if you never see the guest again. Email gives you a direct way to bring people back without paying for ads every time. The key is to keep it simple and consistent.
 
+Email works even better alongside a [loyalty scheme that fills your pub](/licensees-guide/build-loyalty-scheme-fill-pub) — the two reinforce each other.
+
 ## Step 1: Build the list the right way
 
 Use opt-in forms, booking checkboxes, and in-pub QR cards. Do not buy lists. You want locals who actually visit.
@@ -89,6 +91,8 @@ If bookings rise, the email is working.
 - Month 2: establish weekly rhythm.
 - Month 3: segment and test two offers.
 
+Email is one channel in a wider retention mix. Pair it with a strong [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) to reach customers wherever they spend their time.
+
 ## Common mistakes
 
 - Sending too many emails.
@@ -109,3 +113,5 @@ Even 200 engaged locals can move a quiet night.
 
 **Should I send discounts?**
 Use added value or priority booking rather than constant discounts.
+
+If you want professional help setting up your email marketing and retention systems, take a look at our [pub marketing services](/services).

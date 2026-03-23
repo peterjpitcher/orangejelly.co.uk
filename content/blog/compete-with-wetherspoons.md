@@ -59,7 +59,7 @@ Before crafting your defence strategy, you need to understand what you're up aga
 
 - **Minimal staff interaction**: Self-service apps and quick transactions
 
-Here's the crucial bit: **These strengths are also their weaknesses**.
+Here's the crucial bit: **These strengths are also their weaknesses**. Understanding these gaps is the foundation of any [pub differentiation strategy](/licensees-guide/pub-differentiation-strategies).
 
 ## What Wetherspoons Can't Offer (Your Competitive Advantage)
 
@@ -155,7 +155,7 @@ Create switching costs that make leaving for Spoons feel like a loss:
 
 Wetherspoons sells drinks. You sell experiences:
 
-- **Weekly pub quiz** (with personality, not a generic app)
+- **Weekly pub quiz** (with personality, not a generic app) — see our [quiz night ideas](/licensees-guide/quiz-night-ideas)
 
 - **Live music** (local bands Spoons won't book)
 
@@ -313,7 +313,7 @@ Wetherspoons might have buying power, but you have something more valuable: the 
 
 Your pub isn't just a place to drink – it's a cornerstone of the community. That's something no chain can replicate, no matter how cheap their pints. Focus on what makes you irreplaceable, and you'll find that competing with Wetherspoons isn't about beating them at their game – it's about playing a completely different sport.
 
-Remember: Wetherspoons sells beverages. You sell belonging. There's room for both, but only one creates customers for life.
+Remember: Wetherspoons sells beverages. You sell belonging. There's room for both, but only one creates customers for life. For a practical action plan you can start today, see our guide to [beating chain pubs](/licensees-guide/beat-chain-pubs).
 
 ## Frequently Asked Questions
 

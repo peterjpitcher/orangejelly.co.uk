@@ -43,7 +43,7 @@ faqs:
     answer: "Track your weekly takings against the same week last year, your GP percentage, average spend per head, and wastage. These four numbers tell you whether your pub is healthy or heading for trouble. Add footfall count and you have the full picture."
 ---
 
-Running a successful pub in 2024 requires more than just pulling pints and hoping for the best. With rising costs, changing customer habits, and increased competition, understanding your business fundamentals has never been more critical. This comprehensive health check framework will help you assess where you stand and identify opportunities for improvement.
+Running a successful pub today requires more than just pulling pints and hoping for the best. With rising costs, changing customer habits, and increased competition, understanding your business fundamentals has never been more critical. This comprehensive health check framework will help you assess where you stand and identify opportunities for improvement.
 
 Whether you're a seasoned licensee or new to the trade, regularly reviewing these essential metrics and strategies can mean the difference between struggling to survive and building a thriving community hub. Let's dive into the key areas that determine your pub's health.
 
@@ -347,7 +347,7 @@ Use technology to improve efficiency:
 
 - Customer WiFi: Data capture opportunity
 
-## Part 6: Adapting to 2024 Trends
+## Part 6: Adapting to Current Trends
 
 The pub industry continues to evolve. Stay relevant by embracing change while maintaining traditional values.
 
@@ -447,7 +447,7 @@ Knowledge without action is worthless. Here's how to implement your health check
 
 ## The Bottom Line
 
-Running a successful pub in 2024 requires attention to multiple moving parts. By regularly conducting this health check and acting on the findings, you can:
+Running a successful pub today requires attention to multiple moving parts. By regularly conducting this health check and acting on the findings, you can:
 
 - Recover meaningful margin through wastage reduction
 

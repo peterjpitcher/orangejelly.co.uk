@@ -19,8 +19,6 @@ export const metadata = generateMetadata({
   description:
     'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering — all tested at The Anchor. £75/hr + VAT.',
   path: '/pub-marketing',
-  keywords:
-    'pub marketing, pub marketing ideas, pub marketing strategies, marketing for pubs, pub promotion ideas, how to market a pub, increase pub footfall, pub marketing UK',
   ogType: 'website',
 });
 

@@ -5,7 +5,6 @@ interface GenerateMetadataProps {
   title: string;
   description: string;
   path: string;
-  keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
   ogType?: 'website' | 'article' | 'profile';
@@ -18,7 +17,6 @@ export function generateMetadata({
   title,
   description,
   path,
-  keywords,
   ogImage = '/images/og-default.jpg',
   noIndex = false,
   ogType = 'website',
@@ -38,7 +36,6 @@ export function generateMetadata({
   return {
     title: fullTitle,
     description,
-    keywords,
     openGraph: {
       title: fullTitle,
       description,
@@ -111,35 +108,25 @@ export const pageMetadata = {
     title: 'Transformative Hospitality Growth Partner for Pubs, Bars & Venues',
     description:
       'Orange Jelly accelerates hospitality growth with proactive strategy, AI-enabled delivery, and measurable commercial outcomes. Small team. Big momentum.',
-    keywords:
-      'transformative hospitality marketing, pub marketing UK, bar marketing, venue marketing, increase bookings, commercial growth',
   },
   services: {
     title: 'Hospitality Growth Services for Pubs & Venues',
     description:
       'Action-first growth services for hospitality partners: event innovation, marketing systems, simplified tools, and clarity that unlocks momentum.',
-    keywords:
-      'hospitality growth programmes, pub marketing services, bar marketing, venue marketing, social media systems',
   },
   results: {
     title: 'Hospitality Marketing Results for Pubs & Venues',
     description:
       'See hospitality marketing results proven at The Anchor, then adapted for partners. Real numbers, real strategies, measurable growth.',
-    keywords:
-      'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results',
   },
   about: {
     title: 'About Us - Small Team, Transformative Growth',
     description:
       'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. A small, hands-on team helping hospitality partners grow through tough trading conditions.',
-    keywords:
-      'Orange Jelly, hospitality growth partner, Peter Pitcher, The Anchor Stanwell Moor, pub marketing, bar marketing',
   },
   contact: {
     title: 'Contact Us - Speak Directly with Peter',
     description:
       'Speak directly with Peter Pitcher about action-first marketing for your hospitality business. Small team, direct support. WhatsApp or call 07990 587315.',
-    keywords:
-      'contact hospitality marketing, pub marketing consultation, restaurant marketing help, bar marketing help UK',
   },
 };

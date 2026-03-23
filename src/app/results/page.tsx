@@ -4,12 +4,10 @@ import { getBaseUrl } from '@/lib/site-config';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Hospitality Marketing Results for Pubs, Bars & Venues',
+    title: 'Pub Marketing Results - Proven at The Anchor',
     description:
-      'See hospitality marketing results proven at The Anchor, then adapted for hospitality partners. Real numbers, real strategies, measurable growth.',
+      'Pub marketing results from The Anchor: food GP 58% to 71%, quiz night to 35 regulars, 60-70K social views. See what works.',
     path: '/results',
-    keywords:
-      'hospitality marketing results, pub success stories, restaurant marketing results, bar marketing results, increase revenue, The Anchor success',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });
@@ -109,27 +107,6 @@ export default function Results() {
           },
         ],
         yield: 'Sold-out tasting nights with strong repeat attendance',
-      },
-      {
-        '@type': 'Review',
-        itemReviewed: {
-          '@type': 'Service',
-          name: 'Orange Jelly Pub Consulting',
-          provider: {
-            '@id': `${baseUrl}/#organization`,
-          },
-        },
-        reviewBody:
-          "Peter's AI strategies transformed our pub. Quiz nights now attract 25-30 regular teams each month, Sunday waste is down £250/week, and we actually have evenings off now. Best investment we've made.",
-        author: {
-          '@type': 'Restaurant',
-          name: 'The Anchor',
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
       },
     ],
   };

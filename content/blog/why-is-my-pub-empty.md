@@ -50,7 +50,7 @@ Staring at empty chairs on what should be a busy Friday night? You're not alone,
 
 ## The Hard Truth: It's Not Just the Economy
 
-When I bought The Anchor in 2019, I blamed everything except myself for our empty pub. The weather, the economy, changing drinking habits, Netflix, the lot. It took a brutal conversation with a regular (after one too many) for me to realise: **the problem was staring back at me in the mirror**.
+When I took on The Anchor in 2019, I blamed everything except myself for our empty pub. The weather, the economy, changing drinking habits, Netflix, the lot. It took a brutal conversation with a regular (after one too many) for me to realise: **the problem was staring back at me in the mirror**.
 
 ### The Real Cost of an Empty Pub
 
@@ -64,7 +64,7 @@ Before we dive into solutions, let's quantify what those empty seats are costing
 
 - **Mental health toll**: The stress of a failing pub is crushing
 
-At our lowest point, we were losing £2,000 per week. That's not sustainable for anyone.
+At our lowest point, we were losing £2,000 per week. That's not sustainable for anyone. If this sounds like your situation, our [fix my pub](/fix-my-pub) programme is designed for exactly this moment.
 
 ## The 12 Reasons Your Pub Is Empty (And How to Fix Each One)
 
@@ -194,7 +194,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Create "can't miss" weekly fixtures
 
-**Winner**: "Pie and Pint Wednesdays" now account for a meaningful share of our weekly revenue.
+**Winner**: "Pie and Pint Wednesdays" now account for a meaningful share of our weekly revenue. For 15 more practical tactics, read our guide on [how to fill empty pub tables](/licensees-guide/fill-empty-pub-tables).
 
 ### 9. Your Prices Are Wrong (Too High OR Too Low)
 
@@ -316,7 +316,7 @@ Over time, The Anchor went from quiet nights to regularly turning people away. H
 
 ## The Mindset Shift That Changes Everything
 
-Stop thinking like a failing publican and start thinking like a hospitality entrepreneur. Every empty chair is feedback. Every quiet night is data. Every lost customer is a lesson.
+Stop thinking like a failing publican and start thinking like a hospitality entrepreneur. Every empty chair is feedback. Every quiet night is data. Every lost customer is a lesson. Our guide to the [nine revenue levers every struggling pub should pull](/licensees-guide/revenue-levers-struggling-pubs) gives you specific actions to take this week.
 
 ## Common Excuses That Keep Pubs Empty
 

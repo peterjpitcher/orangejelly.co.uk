@@ -20,7 +20,7 @@ keywords:
   - "profitable pub food"
   - "pub menu ideas"
   - "high margin pub dishes"
-  - "pub food trends 2024"
+  - "pub food trends"
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: true

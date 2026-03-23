@@ -1,7 +1,7 @@
 ---
 title: "Village Pub in a Dying Village? Survival Strategies That Actually Work"
 slug: "village-pub-dying-village-survival"
-publishedDate: 2025-08-28
+publishedDate: 2025-03-24
 excerpt: "When your village is shrinking but your bills aren't, here's how to transform from local boozer to destination venue without losing your soul."
 quickAnswer: "Transform into a destination by focusing on exceptional food, unique experiences, and strong online presence. Diversify with private dining, wedding receptions, corporate events, and daytime coffee trade. Maintain local character while attracting visitors from surrounding areas who'll travel for quality."
 author: "Peter Pitcher"
@@ -13,7 +13,7 @@ tags:
   - "destination dining"
   - "community hub"
   - "pub diversification"
-status: "draft"
+status: "published"
 metaDescription: "Transform your struggling village pub into a thriving destination. Proven strategies for rural pubs facing population decline."
 keywords:
   - "village pub survival"
@@ -66,7 +66,7 @@ Partner with local walks, attractions, or stays. Create simple packages like "wa
 
 ## Step 5: Strengthen digital presence
 
-Rural pubs rely on people searching before they travel. Keep Google, socials, and booking options clean and updated. If trade has dropped sharply and you need a structured recovery plan, our [pub rescue service](/pub-rescue) is designed for exactly that situation.
+Rural pubs rely on people searching before they travel. Keep Google, socials, and booking options clean and updated. If trade has dropped sharply and you need a structured recovery plan, our [pub recovery service](/fix-my-pub) is designed for exactly that situation.
 
 ## Step 6: Keep the community heart
 

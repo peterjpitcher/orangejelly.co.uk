@@ -50,10 +50,10 @@ Monday morning panic only eases when you know exactly which levers produce cash 
 Dig into EPOS history or even scribbled diaries to find the last quiz, themed night, or tasting that actually filled the room. Bring it back with a fresher name, a guaranteed prize, and a £5 advance ticket that includes the first drink. Promote it relentlessly for seven days and treat it like a product launch.
 
 ## 2. Bundle Plates and Pints
-Create one hero bundle for lunch and one for early evening, both priced for contribution margin not vanity. Think pie, pint, and pudding for £16.95 or two tapas boards plus jug serves. Stick posters on the door, WhatsApp your regulars, and ask staff to mention it to every seated guest.
+Create one hero bundle for lunch and one for early evening, both priced for contribution margin not vanity. Our guide to [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) explains how to structure pricing so your bundles protect margin. Think pie, pint, and pudding for £16.95 or two tapas boards plus jug serves. Stick posters on the door, WhatsApp your regulars, and ask staff to mention it to every seated guest.
 
 ## 3. Sell Premium Pours on Purpose
-Brief the team on three profitable swaps – house gin to local craft, standard lager to imported keg, 175ml wine to a carafe for the table. Role-play the lines at line-up so it feels natural.
+Brief the team on three profitable swaps – house gin to local craft, standard lager to imported keg, 175ml wine to a carafe for the table. Role-play the lines at line-up so it feels natural. Our guide to [upselling secrets and training scripts](/licensees-guide/upselling-secrets-training-scripts) gives you ready-made phrases your team can use tonight.
 
 ## 4. Monetise Dead Space
 If a side room sits empty Monday to Thursday, package it for chess clubs, yoga teachers, or remote teams that want an off-site. Charge a minimum spend and throw in filter coffee to make it irresistible.
@@ -87,4 +87,4 @@ Lean harder on event tickets, tasting flights, and room hire until you can reope
 **Do I need fancy software for referral codes?**
 No. Numbered paper cards or unique emojis in WhatsApp threads work fine. Track redemptions at the till.
 
-Pull even five of these nine levers properly and next week's bank balance will look very different.
+Pull even five of these nine levers properly and next week's bank balance will look very different. If you need a structured recovery plan beyond quick wins, our [fix my pub](/fix-my-pub) programme takes you through the full turnaround process.

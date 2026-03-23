@@ -1,21 +1,15 @@
 import HomePage from './HomePage';
 import { AsyncErrorBoundary } from '@/components/ErrorBoundary';
 import { generateStaticMetadata } from '@/lib/metadata';
+import { getAllBlogPosts } from '@/lib/markdown/markdown';
+import path from 'path';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Transformative Marketing for Hospitality Partners',
+    title: 'Pub Marketing That Works -- From a Real Publican',
     description:
-      'Orange Jelly helps UK pubs grow with action-first marketing. Proactive strategy, AI-enabled delivery, and measurable outcomes. Talk to us today.',
+      'Pub marketing tested at a real pub. We grew quiz night to 35 regulars and food GP from 58% to 71%. Practical help from \u00a375/hr + VAT. No retainers.',
     path: '/',
-    keywords: [
-      'transformative hospitality marketing',
-      'hospitality growth partner',
-      'pub marketing',
-      'bar marketing',
-      'increase bookings',
-      'hospitality marketing UK',
-    ].join(', '),
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });
@@ -24,9 +18,9 @@ export async function generateMetadata() {
 // Local data for homepage
 const getLocalHomeData = () => {
   const hero = {
-    title: 'Transformational hospitality marketing. Built to accelerate growth.',
+    title: 'Pub marketing from a working pub. Proven systems that fill seats.',
     subtitle:
-      'Orange Jelly is a transformative marketing partner for hospitality businesses. We are a small, hands-on team helping partners grow through challenging times with proactive strategy, AI-enabled delivery, and practical systems that drive bookings, footfall, and repeat visits.',
+      'Orange Jelly helps pubs, bars, and hospitality venues fill empty tables and build midweek trade. We are a small, hands-on team using proactive strategy, AI-enabled delivery, and practical systems proven at The Anchor to drive bookings, footfall, and revenue.',
     ctaText: 'See How We Help',
     bottomText:
       'Pay for progress, not overheads • £75 per hour plus VAT • Small team, direct support',
@@ -59,21 +53,39 @@ const getLocalHomeData = () => {
   const problems = [
     {
       emoji: '🪑',
-      title: 'Inconsistent Bookings',
-      description: 'Turn quiet periods into reliable demand',
+      title: 'Empty Tables Midweek',
+      description: 'Proven systems to fill Tuesday and Wednesday nights',
       linkHref: '/quiet-midweek-solutions',
     },
     {
-      emoji: '📱',
-      title: 'Low Visibility',
-      description: 'Show up where local customers decide',
-      linkHref: '/services#transformational-marketing',
+      emoji: '📉',
+      title: 'Pub Struggling?',
+      description: 'Honest diagnosis and a clear plan to turn things around',
+      linkHref: '/fix-my-pub',
     },
     {
-      emoji: '🎯',
-      title: 'Slow Execution',
-      description: 'Move from ideas to weekly momentum',
-      linkHref: '/services',
+      emoji: '🏚️',
+      title: 'Empty Pub',
+      description: 'A 30-day recovery plan that rebuilds consistent trade',
+      linkHref: '/empty-pub-solutions',
+    },
+    {
+      emoji: '🏪',
+      title: 'Competing with Chains',
+      description: 'Beat the big brands without matching their budgets',
+      linkHref: '/compete-with-pub-chains',
+    },
+    {
+      emoji: '🚨',
+      title: 'Pub in Crisis?',
+      description: 'Emergency turnaround help for struggling pubs',
+      linkHref: '/fix-my-pub',
+    },
+    {
+      emoji: '💷',
+      title: 'No Marketing Budget?',
+      description: 'Free and low-cost pub marketing ideas that work',
+      linkHref: '/pub-marketing-no-budget',
     },
   ];
 
@@ -91,7 +103,7 @@ const getLocalHomeData = () => {
     {
       icon: '🛡️',
       title: 'Positive Disruption, Safe Delivery',
-      description: 'Fresh thinking that modernizes growth without operational chaos',
+      description: 'Fresh thinking that modernises growth without operational chaos',
     },
     {
       icon: '❤️',
@@ -168,9 +180,10 @@ const getLocalHomeData = () => {
   const partnerships = partnershipsData;
 
   const trustBarItems = [
-    { value: 'Small team', label: 'Direct, hands-on support' },
-    { value: 'Action-first', label: 'Clear plans and weekly momentum' },
-    { value: '£75/hour', label: 'Pay for progress, not overheads' },
+    { value: '25-35', label: 'Quiz Night Regulars' },
+    { value: '58% → 71%', label: 'Food GP Growth' },
+    { value: '60-70K', label: 'Monthly Social Views' },
+    { value: '£75-100K', label: 'Value Added' },
   ];
 
   const sectionHeadings = {
@@ -214,9 +227,43 @@ const getLocalHomeData = () => {
   };
 };
 
+// Load recent blog posts for the homepage
+function getRecentBlogPosts() {
+  try {
+    const blogDirectory = path.join(process.cwd(), 'content/blog');
+    const allPosts = getAllBlogPosts(
+      blogDirectory,
+      { draft: false, dateTo: new Date() },
+      { field: 'publishedAt', direction: 'desc' }
+    );
+
+    return allPosts.slice(0, 9).map((post) => {
+      const frontMatterRecord = post.frontMatter as Record<string, unknown>;
+      const publishedDate =
+        typeof post.publishedAt === 'string'
+          ? post.publishedAt
+          : typeof frontMatterRecord.publishedDate === 'string'
+            ? frontMatterRecord.publishedDate
+            : new Date().toISOString();
+
+      return {
+        slug: post.slug,
+        title: post.title,
+        excerpt: post.excerpt || '',
+        publishedDate,
+        readingTime: Math.round(post.readingTime?.minutes || 5),
+      };
+    });
+  } catch (error) {
+    console.error('Error loading blog posts for homepage:', error);
+    return [];
+  }
+}
+
 // Component that uses local data
 function HomePageData() {
   const data = getLocalHomeData();
+  const recentPosts = getRecentBlogPosts();
 
   return (
     <HomePage
@@ -230,6 +277,7 @@ function HomePageData() {
       partnerships={data.partnerships}
       trustBarItems={data.trustBarItems}
       sectionHeadings={data.sectionHeadings}
+      recentPosts={recentPosts}
     />
   );
 }

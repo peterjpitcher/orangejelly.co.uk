@@ -7,7 +7,7 @@ excerpt: "Proven low-cost marketing strategies for pubs. From free social media 
 quickAnswer: "Focus on free social media tactics like user-generated content campaigns, local Facebook group engagement, and Instagram story polls. Use community partnerships, email marketing, and loyalty schemes. Most effective strategies cost under £50 and rely on creativity rather than budget."
 author: "Peter Pitcher"
 category: "empty-pub-solutions"
-featuredImage: "/images/blog/low-budget-pub-marketing-ideas.png"
+featuredImage: "/images/blog/low-budget-pub-marketing-ideas.webp"
 tags:
   - "pub marketing"
   - "low budget marketing"
@@ -46,11 +46,15 @@ faqs:
 
 Marketing does not need big budgets. It needs focus, local relevance, and consistency. Instead of a long list, here are five pillars with the few ideas that move the needle.
 
+If you genuinely have zero budget to work with, start with our [pub marketing on no budget](/pub-marketing-no-budget) resource — it covers the free-first approach in detail.
+
 ## Pillar 1: Visibility in the community
 
 - Post weekly in local Facebook groups.
 - Keep Google Business updated with photos and offers.
 - Use a clear sign at the entrance with this week's offer.
+
+For a deeper dive into what to post and when, see our [content marketing ideas for pubs](/licensees-guide/content-marketing-ideas-pubs).
 
 ## Pillar 2: Social proof
 
@@ -95,4 +99,4 @@ Marketing does not need big budgets. It needs focus, local relevance, and consis
 Two short sessions per week if you plan ahead.
 
 **Do I need paid ads?**
-Not at the start. Organic local visibility often wins first.
+Not at the start. Organic local visibility often wins first. Our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) explains how to build a consistent organic presence before spending a penny on ads.

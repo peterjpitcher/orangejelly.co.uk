@@ -39,7 +39,7 @@ faqs:
 
 # Start Planning Christmas Now: 30 Festive Ideas to Secure December Bookings Early
 
-Christmas makes or breaks the year for many pubs. The winners start planning early, lock in corporate bookings, and create a clear festive offer that is easy to say yes to. This guide trims the noise and focuses on the ideas that actually drive bookings.
+Christmas makes or breaks the year for many pubs. The winners start planning early, lock in corporate bookings, and create a clear festive offer that is easy to say yes to. For a month-by-month view of how Christmas fits into the bigger picture, see our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar). This guide trims the noise and focuses on the ideas that actually drive bookings.
 
 ## The three things that matter most
 
@@ -54,6 +54,8 @@ Christmas makes or breaks the year for many pubs. The winners start planning ear
 - Lunchtime corporate packages with a hard finish time.
 
 Keep the packages simple and margin positive. Too many options slows decisions.
+
+Once the festive season is over, keep the momentum going with [summer pub event ideas](/licensees-guide/summer-pub-event-ideas) that fill the warmer months too.
 
 ## Event ideas that create buzz
 
@@ -106,4 +108,4 @@ If you want professional support getting your Christmas marketing right, take a 
 September is the latest. Many corporate groups book in August.
 
 **Should I discount to win parties?**
-No. Use added value instead of price cuts.
+No. Use added value instead of price cuts. Our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events) covers pricing models that protect your margins.

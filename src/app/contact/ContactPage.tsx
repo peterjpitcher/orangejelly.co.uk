@@ -12,6 +12,7 @@ import FeatureList from '@/components/FeatureList';
 import AvailabilityStatus from '@/components/AvailabilityStatus';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
+import { ContactForm } from '@/components/forms/contact-form';
 
 // Import related links data
 import relatedLinksData from '../../../content/data/related-links.json';
@@ -26,7 +27,7 @@ interface ContactPageProps {
   // No props needed - using local data
 }
 
-// Contact FAQs
+// Contact FAQs — kept to the 5 most useful for prospective partners
 const fallbackFAQs = [
   {
     question: 'How quickly can we get started?',
@@ -34,29 +35,9 @@ const fallbackFAQs = [
       "Fast. Message me on WhatsApp and I'll reply as quickly as I can. We start with the highest-impact quick wins, then build a 30-day plan to create measurable momentum.",
   },
   {
-    question: 'Trade is under pressure. Can we talk today?',
-    answer:
-      'Yes. WhatsApp me at 07990 587315 and share your biggest bottleneck. If I am in service, I will come back to you as soon as I can so we can map your next actions.',
-  },
-  {
-    question: "I messaged but haven't heard back - did you get it?",
-    answer:
-      "I personally read every message. If it's been a while, please send a follow-up in case technology failed. You're not bothering me - this is exactly what I do.",
-  },
-  {
-    question: "What's the best way to contact Orange Jelly?",
-    answer:
-      "WhatsApp is fastest: 07990 587315. Phone and email both work too, but WhatsApp is usually easiest while we're both in hospitality hours.",
-  },
-  {
     question: 'Will I speak to someone who understands hospitality operations?',
     answer:
       "Yes. I'm Peter. Billy runs The Anchor day-to-day and I handle marketing and growth. You speak directly to us, not a sales team.",
-  },
-  {
-    question: 'I work long hospitality hours - when can I reach you?',
-    answer:
-      "Message anytime. I understand hospitality schedules and will respond as soon as I can around service. We'll find a slot that works for both of us.",
   },
   {
     question: 'I hate pushy sales calls - will you pressure me?',
@@ -64,29 +45,14 @@ const fallbackFAQs = [
       "Never. We'll talk through your goals and constraints, then I'll share the most practical next step. No scripts, no pressure.",
   },
   {
-    question: 'Can I visit before committing to anything?',
-    answer:
-      'Yes. Come to The Anchor and see the systems in action. You can chat with Billy, see how we run the routines, and decide if the approach fits your venue.',
-  },
-  {
-    question: 'What if I need help outside normal hours?',
-    answer:
-      "Hospitality doesn't run on normal hours. Message whenever you need to and I'll reply as soon as I can.",
-  },
-  {
     question: "I'm not in your area - can you still help?",
     answer:
       'Absolutely. Strategy, marketing systems, menu work, and AI-enabled workflows can all be delivered remotely over video and screen share.',
   },
   {
-    question: 'What if I just need 10 minutes of advice?',
+    question: "What's the best way to contact Orange Jelly?",
     answer:
-      "That's fine. Send the question. If it's quick, I'll answer quickly. If it needs depth, we'll schedule a focused call.",
-  },
-  {
-    question: "How do I know you'll actually respond?",
-    answer:
-      "Every message comes directly to me. You will always get a response, even if it's a short note to say I'm in service and will follow up shortly.",
+      "WhatsApp is fastest: 07990 587315. Phone and email both work too, but WhatsApp is usually easiest while we're both in hospitality hours.",
   },
 ];
 
@@ -280,8 +246,23 @@ export default function ContactPage({}: ContactPageProps) {
         </div>
       </Section>
 
-      {/* Contact details section */}
+      {/* Contact Form Section */}
       <Section background="cream" padding="large">
+        <div className="max-w-2xl mx-auto">
+          <Heading level={2} align="center" className="mb-4">
+            Send a Message
+          </Heading>
+          <Text align="center" color="muted" className="mb-8">
+            Prefer to write? Fill in the form and Peter will get back to you.
+          </Text>
+          <Card variant="bordered" background="white" padding="large">
+            <ContactForm />
+          </Card>
+        </div>
+      </Section>
+
+      {/* Contact details section */}
+      <Section background="white" padding="large">
         <div className="max-w-5xl mx-auto">
           <Grid columns={{ default: 1, md: 2 }} gap="large">
             <AnimatedItem animation="fade-in">

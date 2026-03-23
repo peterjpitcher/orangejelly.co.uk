@@ -17,6 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
+import { submitContactForm } from '@/app/actions/contact';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -45,18 +46,28 @@ const defaultValues: Partial<ContactFormValues> = {
 };
 
 export function ContactForm() {
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>(
+    'idle'
+  );
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues,
   });
 
-  function onSubmit(data: ContactFormValues) {
-    // In real implementation, this would call your contact API
-    console.log('Contact form submission:', data);
-    setSubmitStatus('success');
-    form.reset();
+  async function onSubmit(data: ContactFormValues) {
+    setSubmitStatus('submitting');
+    try {
+      const result = await submitContactForm(data);
+      if (result.error) {
+        setSubmitStatus('error');
+        return;
+      }
+      setSubmitStatus('success');
+      form.reset();
+    } catch {
+      setSubmitStatus('error');
+    }
   }
 
   if (submitStatus === 'success') {
@@ -161,8 +172,12 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full sm:w-auto min-h-[44px]">
-          Send Message
+        <Button
+          type="submit"
+          className="w-full sm:w-auto min-h-[44px]"
+          disabled={submitStatus === 'submitting'}
+        >
+          {submitStatus === 'submitting' ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
     </Form>

@@ -259,4 +259,4 @@ But they only work with a system. Choose the right event, price it properly, pro
 
 Start with one event. Give it six weeks. Track the numbers. Then build from there.
 
-If you're struggling to work out which event fits your pub, or you want help building the promotion system around it, [get in touch](/contact). A quick conversation with someone who's been through the same process can cut out weeks of trial and error.
+If you're struggling to work out which event fits your pub, or you want help building the promotion system around it, [get in touch](/contact). You can also explore our [pub marketing services](/services) for hands-on support. A quick conversation with someone who's been through the same process can cut out weeks of trial and error.

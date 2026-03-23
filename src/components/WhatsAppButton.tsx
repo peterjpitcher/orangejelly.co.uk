@@ -19,6 +19,8 @@ interface WhatsAppButtonProps {
   label?: string;
   /** Toggle displaying the phone number on the button */
   showPhone?: boolean;
+  /** Optional trust micro-copy shown below the button */
+  trustText?: string;
 }
 
 // WhatsApp button with mobile-first touch target sizing (min 44px)
@@ -31,6 +33,7 @@ function WhatsAppButton({
   className = '',
   label,
   showPhone = true,
+  trustText = 'Free 15-minute chat. No obligation.',
 }: WhatsAppButtonProps) {
   const whatsappUrl = phoneNumber
     ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`
@@ -54,18 +57,21 @@ function WhatsAppButton({
   const widthClass = fullWidth ? 'w-full' : '';
 
   return (
-    <a
-      href={whatsappUrl}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label ? `${label} on WhatsApp` : `Contact us on WhatsApp at ${CONTACT.phone}`}
-    >
-      <span className="flex flex-col items-center justify-center sm:flex-row sm:gap-1">
-        <span>{buttonCopy}</span>
-        {showPhone && <span className="text-sm sm:text-xs opacity-90">{CONTACT.phone}</span>}
-      </span>
-    </a>
+    <span className="inline-flex flex-col items-center">
+      <a
+        href={whatsappUrl}
+        className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label ? `${label} on WhatsApp` : `Contact us on WhatsApp at ${CONTACT.phone}`}
+      >
+        <span className="flex flex-col items-center justify-center sm:flex-row sm:gap-1">
+          <span>{buttonCopy}</span>
+          {showPhone && <span className="text-sm sm:text-xs opacity-90">{CONTACT.phone}</span>}
+        </span>
+      </a>
+      {trustText && <span className="block text-xs text-charcoal/60 mt-2">{trustText}</span>}
+    </span>
   );
 }
 

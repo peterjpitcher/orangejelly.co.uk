@@ -58,6 +58,8 @@ export default function CookieNotice() {
       };
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       setPreferences(payload);
+      // Notify GTM component in the same tab about the consent change
+      window.dispatchEvent(new Event('oj-consent-changed'));
     }
     setVisible(false);
   };

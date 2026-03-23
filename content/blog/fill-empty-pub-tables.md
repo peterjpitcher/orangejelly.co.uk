@@ -61,7 +61,7 @@ Let's do the maths that keeps landlords awake at night:
 
 - **Annual impact**: £262,080
 
-That's a quarter of a million pounds sitting in empty chairs. But the real cost goes deeper:
+That's a quarter of a million pounds sitting in empty chairs. If this feels familiar, our [empty pub solutions](/empty-pub-solutions) page has a full diagnostic to help you work out what's going wrong. But the real cost goes deeper:
 
 - **Atmosphere dies**: Empty tables create empty atmosphere
 
@@ -115,7 +115,7 @@ Before diving into solutions, understand why customers choose tables:
 
 - Midweek table packages
 
-**Key Success**: Noticeable lift in Tuesday-Thursday 5pm bookings.
+**Key Success**: Noticeable lift in Tuesday-Thursday 5pm bookings. For more ideas on filling those midweek gaps, see our guide to [midweek pub offers that actually work](/licensees-guide/midweek-pub-offers-that-work).
 
 ### 3. Create Instagram-Worthy Table Settings
 
@@ -465,7 +465,7 @@ Download our free "Table Filling Toolkit" including:
 
 - Staff training guides
 
-Remember: Every bustling pub started with empty tables. The difference between struggle and success is taking action. Which strategy will you implement first?
+Remember: Every bustling pub started with empty tables. The difference between struggle and success is taking action. If you need a structured recovery plan, our [fix my pub](/fix-my-pub) programme gives you a step-by-step path forward. And if budget is tight, start with our [pub marketing on no budget](/pub-marketing-no-budget) resource. Which strategy will you implement first?
 
 Your empty tables are waiting to become profit centres. Let's fill them.
 

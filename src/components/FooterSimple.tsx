@@ -20,6 +20,14 @@ type FooterContent = {
     href: string;
     external?: boolean;
   }>;
+  solutions?: Array<{
+    title: string;
+    href: string;
+  }>;
+  locations?: Array<{
+    title: string;
+    href: string;
+  }>;
   quickLinks?: Array<{
     title: string;
     href: string;
@@ -46,6 +54,8 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
   const services = footerContent?.services || [];
   const company = footerContent?.company || [];
   const resources = footerContent?.resources || [];
+  const solutions = footerContent?.solutions || [];
+  const locations = footerContent?.locations || [];
 
   return (
     <footer className="bg-charcoal text-cream">
@@ -70,7 +80,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           </div>
 
           {/* Quick Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 text-cream/90">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8 text-cream/90">
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">
                 Services
@@ -80,6 +90,36 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                   <li key={index}>
                     <Link href={service.href} className="hover:text-teal-light transition-colors">
                       {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <Heading level={5} color="white" className="mb-3 text-cream">
+                Solutions
+              </Heading>
+              <ul className="space-y-2 text-sm">
+                {solutions.map((solution, index) => (
+                  <li key={index}>
+                    <Link href={solution.href} className="hover:text-teal-light transition-colors">
+                      {solution.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <Heading level={5} color="white" className="mb-3 text-cream">
+                Areas We Serve
+              </Heading>
+              <ul className="space-y-2 text-sm">
+                {locations.map((location, index) => (
+                  <li key={index}>
+                    <Link href={location.href} className="hover:text-teal-light transition-colors">
+                      {location.title}
                     </Link>
                   </li>
                 ))}

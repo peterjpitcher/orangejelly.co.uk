@@ -7,8 +7,6 @@ export const metadata = generateMetadata({
   description:
     'Facebook and Instagram ads that sell one specific night — your quiet Tuesday, Sunday lunch, or event. Locally targeted and measured on real bookings. £75/hr + VAT.',
   path: '/services/paid-social-for-pubs',
-  keywords:
-    'paid social for pubs, pub facebook ads, pub instagram ads, meta ads for pubs, pub advertising on facebook, pub marketing ads',
   ogType: 'website',
 });
 

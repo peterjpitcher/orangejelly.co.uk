@@ -3,12 +3,10 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import berkshireData from '../../../content/data/pub-marketing-berkshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing Berkshire - Fill Tables Consistently',
+  title: 'Pub Marketing in Berkshire — Proven Local Systems',
   description:
-    'Marketing support for Berkshire pubs: build a loyal local following, run profitable events, and improve midweek trade with proven systems. £75/hr + VAT.',
+    'Pub marketing consultant for Berkshire pubs in Reading, Windsor, Maidenhead, and beyond. Events, social media, and local SEO. £75/hr + VAT.',
   path: '/pub-marketing-berkshire',
-  keywords:
-    'pub marketing berkshire, pub marketing consultant berkshire, marketing for pubs berkshire, berkshire pub marketing support, increase pub footfall berkshire',
   ogType: 'website',
 });
 
@@ -17,6 +15,7 @@ export default function PubMarketingBerkshirePage() {
     <PubMarketingLocationLandingPage
       data={berkshireData}
       breadcrumbLabel="Pub Marketing Berkshire"
+      currentSlug="pub-marketing-berkshire"
     />
   );
 }

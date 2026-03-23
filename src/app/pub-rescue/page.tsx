@@ -13,6 +13,7 @@ import FAQItem from '@/components/FAQItem';
 import RelatedLinks from '@/components/RelatedLinks';
 import { generateMetadata as generateMeta } from '@/lib/metadata';
 import { FAQSchema } from '@/components/StructuredData';
+import StickyCTA from '@/components/StickyCTA';
 // Import local data
 import pubRescueData from '../../../content/data/pub-rescue.json';
 
@@ -620,6 +621,8 @@ export default function PubRescue() {
 
       {/* Add FAQ Schema */}
       {faqs.length > 0 && <FAQSchema faqs={faqs} />}
+
+      <StickyCTA />
     </>
   );
 }

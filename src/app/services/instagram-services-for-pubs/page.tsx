@@ -7,8 +7,6 @@ export const metadata = generateMetadata({
   description:
     'Stop posting into the void. Get a Reels workflow, content plan, and local engagement system built for busy licensees. Tested at a real pub. £75/hr + VAT.',
   path: '/services/instagram-services-for-pubs',
-  keywords:
-    'instagram services for pubs, pub instagram marketing, instagram management for pubs, pub reels, social media for pubs',
   ogType: 'website',
 });
 

@@ -76,7 +76,9 @@ Run a theme once a month to avoid fatigue.
 - A monthly leaderboard.
 - Bonus points for social shares.
 
-Loyalty turns quiz night into a weekly habit. A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-midweek-solutions) — it gives regulars a reason to come in on a Tuesday or Wednesday.
+Loyalty turns quiz night into a weekly habit. A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-midweek-solutions) — it gives regulars a reason to come in on a Tuesday or Wednesday. If you are new to running a pub quiz, our [quiz night starter guide](/licensees-guide/quiz-night-101) walks through the basics from scratch.
+
+Quiz night is just one event format that works. For a wider view of [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events), including live music and tasting evenings, see our complete events guide.
 
 ## Hosting tips that matter
 
@@ -104,3 +106,5 @@ Enough to create atmosphere, not so many that service slows. Aim for steady grow
 
 **Should I charge entry?**
 Small entry fees help cover prizes and increase commitment.
+
+If you want hands-on help building your events programme, explore our [pub consultancy services](/services) or browse the full [licensees' guide](/licensees-guide) for more ideas.
