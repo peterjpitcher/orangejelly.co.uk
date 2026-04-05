@@ -1,218 +1,58 @@
+import { type Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 import Card from '@/components/Card';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
-import CTASection from '@/components/CTASection';
-import StickyCTA from '@/components/StickyCTA';
-import TrustBar from '@/components/TrustBar';
-import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
-import ResultCard from '@/components/ResultCard';
-import { generateMetadata } from '@/lib/metadata';
-import { HowToSchema } from '@/components/StructuredData';
+import FAQItem from '@/components/FAQItem';
+import { generateMetadata as generateMeta } from '@/lib/metadata';
+import { FAQSchema } from '@/components/StructuredData';
+import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components/packages';
 
-export const metadata = generateMetadata({
-  title: 'Fill Empty Pub Tables — 30-Day Footfall Recovery Plan',
-  description:
-    'Quiet midweek nights and empty tables? A practical 30-day plan to increase footfall and fill seats consistently. Proven at The Anchor. Start this week.',
-  path: '/empty-pub-solutions',
-});
+export async function generateMetadata(): Promise<Metadata> {
+  return generateMeta({
+    title: 'Fill Empty Pub Tables — 30-Day Footfall Recovery Plan',
+    description:
+      'Quiet midweek nights and empty tables? A practical plan to increase footfall and fill seats consistently. Proven at The Anchor. Packages from £375 + VAT.',
+    path: '/empty-pub-solutions',
+  });
+}
+
+const faqs = [
+  {
+    question: 'How quickly can I see results for my empty pub?',
+    answer:
+      'Growth Fix clients typically see their first win within 2 weeks. If you need ongoing support, Growth Partner clients build visible momentum within 30-60 days.',
+  },
+  {
+    question: "What if I've tried everything and nothing works?",
+    answer:
+      "We hear this a lot. The difference is we are licensees who have solved this exact problem. Our strategies are not theories — they are proven methods that transformed The Anchor's quiet nights into profitable evenings.",
+  },
+  {
+    question: 'How much does the empty pub recovery plan cost?',
+    answer:
+      'A focused Growth Fix starts from just £375 + VAT — 5 hours on your biggest bottleneck. If you need ongoing monthly support, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
+  },
+  {
+    question: 'Do I need to spend money on advertising?',
+    answer:
+      'No. Our system focuses on organic growth through better messaging, community engagement, and word-of-mouth. Optional paid ads can accelerate results, but they are not required.',
+  },
+  {
+    question: 'Will this work for my type of pub?',
+    answer:
+      'Yes. The principles work for gastropubs, community locals, sports bars, and country inns because they are based on human psychology and proven hospitality fundamentals. We tailor the plan to your pub and your catchment.',
+  },
+];
 
 export default function EmptyPubSolutions() {
-  // HowTo schema for empty pub recovery
-  const howToSteps = [
-    {
-      name: 'Audit Your Current Customer Touchpoints',
-      text: 'Identify and fix all the places customers interact with your pub online and offline. Check Google listing accuracy, review response times, and menu visibility.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-1',
-      image: 'https://www.orangejelly.co.uk/images/audit-touchpoints.svg',
-    },
-    {
-      name: 'Fix Your Google Listing',
-      text: 'Update business hours, add photos, respond to reviews, and ensure all information is accurate. Many pubs have errors that cost them customers.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-1',
-    },
-    {
-      name: 'Create Irresistible Midweek Offers',
-      text: 'Design special offers that give people a reason to visit Monday-Thursday. Focus on value without devaluing your brand.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-1',
-    },
-    {
-      name: 'Launch Targeted Social Media Campaigns',
-      text: "Create content that showcases your pub's personality and connects with your local community. Post consistently and engage authentically.",
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-1',
-    },
-    {
-      name: 'Implement Email Marketing Sequences',
-      text: 'Build a customer database and send regular updates about events, offers, and news. Email marketing has the highest ROI for pubs.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-2',
-    },
-    {
-      name: 'Create Events That Draw Crowds',
-      text: "Plan and promote events that match your customers' interests. Quiz nights, live music, and themed evenings can transform quiet nights.",
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-2',
-    },
-    {
-      name: 'Optimise Your Menu for Profit',
-      text: 'Analyse your menu performance, highlight high-margin items, and remove poor performers. Design matters as much as content.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-2',
-    },
-    {
-      name: 'Build Strategic Local Partnerships',
-      text: 'Connect with local businesses, sports clubs, and community groups. Cross-promotion multiplies your marketing reach.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-3',
-    },
-    {
-      name: 'Implement Referral Systems',
-      text: 'Turn happy customers into advocates with incentivized referral programs. Word-of-mouth is still the most powerful marketing.',
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-3',
-    },
-    {
-      name: 'Analyse and Double Down on Winners',
-      text: "Track what's working, measure results, and invest more in successful strategies. Data-driven decisions lead to sustainable growth.",
-      url: 'https://www.orangejelly.co.uk/empty-pub-solutions#week-4',
-    },
-  ];
-
-  // Generate FAQ schema
-  const generateFAQSchema = () => {
-    const faqSchema = {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How quickly can I see results for my empty pub?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'See meaningful, bankable progress inside 30 days. Week 1 brings more website traffic and calls, week 2 is for tuning before promising busier nights, and by week 4 you should notice fuller evenings and consistent enquiries.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "What if I've tried everything and nothing works?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "We hear this a lot. The difference is we're licensees who've solved this exact problem. Our strategies aren't theories - they're proven methods that transformed The Anchor's quiet nights into profitable evenings.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does the empty pub recovery plan cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "£75 per hour plus VAT. I'll work with you to implement the AI strategies that transformed The Anchor with flexible support based on your goals.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I need to spend money on advertising?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "No. Our system focuses on organic growth through better messaging, community engagement, and word-of-mouth. Optional paid ads can accelerate results, but they're not required.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Will this work for my type of pub?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes. The principles work for gastropubs, community locals, sports bars, and country inns because they're based on human psychology and proven hospitality fundamentals. We'll tailor the plan to your pub and your catchment.",
-          },
-        },
-      ],
-    };
-
-    return {
-      '@context': 'https://schema.org',
-      '@graph': [faqSchema],
-    };
-  };
-
-  const solutions = [
-    {
-      week: 'Week 1',
-      title: 'Immediate Impact',
-      actions: [
-        'Audit your current customer touchpoints',
-        'Fix your Google listing (errors are common)',
-        'Create irresistible midweek offers',
-        'Launch targeted social media campaigns',
-      ],
-    },
-    {
-      week: 'Week 2',
-      title: 'Building Momentum',
-      actions: [
-        'Implement proven email sequences',
-        'Create events that actually draw crowds',
-        'Optimise your menu for profit',
-        'Activate dormant customers',
-      ],
-    },
-    {
-      week: 'Week 3',
-      title: 'Scaling Success',
-      actions: [
-        'Use customer testimonials consistently',
-        'Build strategic local partnerships',
-        'Implement referral systems',
-        'Create repeatable success systems',
-      ],
-    },
-    {
-      week: 'Week 4',
-      title: 'Lock In Growth',
-      actions: [
-        "Analyse what's working best",
-        'Double down on winners',
-        'Create long-term marketing calendar',
-        'Build sustainable growth systems',
-      ],
-    },
-  ];
-
-  const realResults = [
-    {
-      pub: 'The Anchor, Stanwell Moor',
-      before: 'Dead Monday-Wednesday',
-      after: 'Quiz night: 25-30 regular teams monthly, Tasting nights: strong repeat attendance',
-      timeframe: '8 weeks',
-    },
-  ];
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema()) }}
-      />
-      <HowToSchema
-        name="30-Day Empty Pub Footfall Plan"
-        description="Fill empty pub tables with our proven 30-day footfall system. Step-by-step guide to increase covers, boost midweek trade, and keep tables turning."
-        image="https://www.orangejelly.co.uk/images/empty-pub-recovery.svg"
-        estimatedCost={{
-          currency: 'GBP',
-          value: 'From 75 per hour',
-        }}
-        supply={[
-          'Google My Business access',
-          'Social media accounts',
-          'Email marketing platform',
-          'Basic marketing budget (optional)',
-        ]}
-        tool={[
-          'Orange Jelly AI tools',
-          'Social media scheduler',
-          'Email marketing software',
-          'Analytics tracking',
-        ]}
-        steps={howToSteps}
-        totalTime="P30D"
-        url="https://www.orangejelly.co.uk/empty-pub-solutions"
-      />
+      <FAQSchema faqs={faqs} />
 
       <Hero
         title={
@@ -223,11 +63,15 @@ export default function EmptyPubSolutions() {
           </>
         }
         subtitle="A step-by-step footfall plan to fill quiet nights, boost midweek covers, and keep tables turning — proven at The Anchor"
-        bottomText="£75/hour plus VAT • No long contracts • Real pub operators"
+        secondaryAction={{
+          text: 'See Our Packages',
+          href: '/ways-to-work',
+        }}
+        bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Empty Pub Solutions' }]}
       />
 
-      <TrustBar />
+      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
 
       {/* The Problem */}
       <Section>
@@ -237,7 +81,7 @@ export default function EmptyPubSolutions() {
               Every Empty Table Costs You Money
             </Heading>
             <Text size="xl" color="muted" align="center" className="mb-8">
-              Empty chairs mean wasted overheads — rent, rates, and wages don't pause for quiet
+              Empty chairs mean wasted overheads — rent, rates, and wages do not pause for quiet
               nights. The upside is significant when you improve local discovery, give people a
               clear reason to visit, and fill those midweek gaps consistently.
             </Text>
@@ -251,131 +95,117 @@ export default function EmptyPubSolutions() {
         </AnimatedItem>
       </Section>
 
-      {/* 30-Day Plan */}
+      {/* What We Did */}
       <Section background="teal">
         <AnimatedItem animation="slide-up">
-          <Heading level={2} align="center" color="white" className="mb-12">
-            Your 30-Day Momentum Plan
-          </Heading>
-          <Grid columns={{ default: 1, md: 2, lg: 4 }} gap="medium">
-            {solutions.map((week, index) => (
-              <div key={index} id={`week-${index + 1}`}>
-                <Card background="white" padding="medium">
-                  <Heading level={3} color="orange" className="mb-2">
-                    {week.week}
-                  </Heading>
-                  <Heading level={4} className="mb-4">
-                    {week.title}
-                  </Heading>
-                  <FeatureList
-                    items={week.actions}
-                    icon="check"
-                    iconColor="teal"
-                    spacing="normal"
-                  />
-                </Card>
-              </div>
-            ))}
-          </Grid>
-        </AnimatedItem>
-      </Section>
-
-      {/* Real Results */}
-      <Section>
-        <AnimatedItem animation="fade-in">
-          <Heading level={2} align="center" className="mb-12">
-            Proof from The Anchor
-          </Heading>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {realResults.map((result, index) => (
-              <ResultCard
-                key={index}
-                pub={result.pub}
-                before={result.before}
-                after={result.after}
-                timeframe={result.timeframe}
-              />
-            ))}
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* What You Get */}
-      <Section background="white">
-        <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
-              Everything You Need to Fill More Tables
+          <div className="max-w-4xl mx-auto text-center">
+            <Heading level={2} color="white" className="mb-4">
+              How We Filled The Anchor
             </Heading>
-            <Grid columns={{ default: 1, md: 2 }} gap="large">
-              <Card variant="colored" background="orange-light" padding="large">
-                <Heading level={3} className="mb-4">
-                  Done-For-You Setup
-                </Heading>
-                <FeatureList
-                  items={[
-                    '📱 Complete social media overhaul',
-                    '📧 Email campaigns that fill tables',
-                    '🎯 Event ideas proven to pack pubs',
-                    '💬 Scripts that convert browsers to bookings',
-                  ]}
-                  icon="bullet"
-                  spacing="loose"
-                />
-              </Card>
-              <Card variant="colored" background="teal-dark" padding="large">
-                <Heading level={3} color="white" className="mb-4">
-                  Ongoing Support
-                </Heading>
-                <div className="text-white">
-                  <FeatureList
-                    items={[
-                      '🤝 Weekly check-ins for 30 days',
-                      '📊 Real-time performance tracking',
-                      '🔧 Instant adjustments based on results',
-                      '📚 Training so you can maintain momentum',
-                    ]}
-                    icon="bullet"
-                    spacing="loose"
-                  />
-                </div>
-              </Card>
+            <Text size="lg" color="white" className="opacity-90 mb-10">
+              We went from dead midweek nights to consistent trade. Here are the results.
+            </Text>
+            <Grid columns={{ default: 1, md: 3 }} gap="large">
+              <CaseStudyCard id="anchor-midweek-turnaround" />
+              <CaseStudyCard id="anchor-food-gp" />
+              <CaseStudyCard id="anchor-social-growth" />
             </Grid>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* Partnership Assurance */}
-      <Section background="orange-light" padding="small">
-        <AnimatedItem animation="scale">
-          <div className="text-center max-w-3xl mx-auto">
-            <Heading level={3} align="center" className="mb-4">
-              Real Support From A Fellow Licensee
+      {/* What You Get */}
+      <Section>
+        <AnimatedItem animation="fade-in">
+          <div className="max-w-4xl mx-auto">
+            <Heading level={2} align="center" className="mb-4">
+              The Right Package to Fill Your Tables
             </Heading>
-            <Text size="lg" align="center" className="mb-6">
-              We stay close through the first 30 days so the plan sticks: weekly check-ins, rapid
-              adjustments, and practical guidance from someone running the same trading reality.
+            <Text size="lg" color="muted" align="center" className="mb-10">
+              Start with a focused Growth Fix on your biggest bottleneck, or go deeper with Growth
+              Partner for ongoing monthly support across multiple priorities.
             </Text>
-            <WhatsAppButton
-              text="Hi Peter, I need help rebuilding consistent trade in my pub."
-              label="Start Building Momentum"
-              size="large"
-            />
-            <Text size="sm" color="muted" align="center" className="mt-4">
-              £75 per hour plus VAT – Flexible support based on what your pub needs most
-            </Text>
+
+            <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
+              <div>
+                <Card background="cream" padding="large" className="mb-4">
+                  <Heading level={3} className="mb-3">
+                    One Clear Bottleneck?
+                  </Heading>
+                  <Text color="muted" className="mb-4">
+                    If your main issue is one thing — weak midweek events, low local visibility, or
+                    confusing offers — a Growth Fix solves it fast.
+                  </Text>
+                  <FeatureList
+                    items={[
+                      'Diagnosis of main footfall issue',
+                      'One focused action plan',
+                      'Messaging and offer refinement',
+                      'From just £375 + VAT',
+                    ]}
+                    icon="check"
+                    iconColor="green"
+                    spacing="tight"
+                  />
+                </Card>
+                <PackageCard packageId="growth-fix" />
+              </div>
+              <div>
+                <Card background="orange-light" padding="large" className="mb-4">
+                  <Heading level={3} className="mb-3">
+                    Multiple Growth Challenges?
+                  </Heading>
+                  <Text color="muted" className="mb-4">
+                    If you need event strategy, social media, bookings, and local visibility working
+                    together, Growth Partner delivers ongoing support across all of them.
+                  </Text>
+                  <FeatureList
+                    items={[
+                      '24 hours per month',
+                      'Strategy plus hands-on implementation',
+                      'Events, social, bookings, local visibility',
+                      'Weekly execution and accountability',
+                    ]}
+                    icon="check"
+                    iconColor="green"
+                    spacing="tight"
+                  />
+                </Card>
+                <PackageCard packageId="growth-partner" highlighted />
+              </div>
+            </Grid>
           </div>
         </AnimatedItem>
       </Section>
 
-      <CTASection
-        title="Ready to Fill Those Empty Tables?"
-        subtitle="Let's focus on getting more customers through the door — starting with the highest-impact footfall actions this week."
-        whatsappMessage="I need help filling empty tables in my pub"
-        buttonText="Start My 30-Day Footfall Plan"
-      />
+      {/* FAQ */}
+      <Section background="cream">
+        <Heading level={2} align="center" className="mb-8">
+          Common Questions About Filling Empty Tables
+        </Heading>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          ))}
+        </div>
+      </Section>
 
-      <StickyCTA />
+      {/* Final CTA */}
+      <Section background="orange-light" padding="small">
+        <div className="max-w-3xl mx-auto text-center">
+          <Heading level={2} align="center" className="mb-4">
+            Ready to Fill Those Empty Tables?
+          </Heading>
+          <Text size="lg" align="center" className="mb-6">
+            Tell Peter what is not working. He will point you to the right package and the fastest
+            footfall action.
+          </Text>
+          <PackageCTA />
+          <Text size="sm" color="muted" align="center" className="mt-4">
+            Packages from £375 + VAT. Payment plans available.
+          </Text>
+        </div>
+      </Section>
     </>
   );
 }

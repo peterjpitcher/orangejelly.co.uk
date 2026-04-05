@@ -2,112 +2,97 @@ import { type Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
-import CTASection from '@/components/CTASection';
-import FAQItem from '@/components/FAQItem';
-import ProblemCard from '@/components/ProblemCard';
-import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
+import FAQItem from '@/components/FAQItem';
 import { generateMetadata as generateMeta } from '@/lib/metadata';
 import { FAQSchema } from '@/components/StructuredData';
-// Import local data
-import midweekData from '../../../content/data/quiet-midweek.json';
-import WhatsAppButton from '@/components/WhatsAppButton';
-
-type MidweekStrategy = {
-  _key: string;
-  title: string;
-  description?: string;
-  points?: string[];
-};
-
-type MidweekMetric = {
-  _key: string;
-  value: string;
-  label: string;
-  description?: string;
-};
-
-const extendedMidweekData = midweekData as typeof midweekData & {
-  midweekStrategies?: MidweekStrategy[];
-  successMetrics?: { title?: string; metrics?: MidweekMetric[] };
-};
+import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components/packages';
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Build Midweek Momentum - Proven Tuesday & Wednesday Solutions',
     description:
-      'Turn quiet midweek nights into consistent bookings with practical systems proven at The Anchor. Tuesday and Wednesday solutions that actually work.',
+      'Turn quiet midweek nights into consistent bookings with practical systems proven at The Anchor. Tuesday and Wednesday solutions that actually work. From £375 + VAT.',
     path: '/quiet-midweek-solutions',
   });
 }
 
-export default function QuietMidweekSolutions() {
-  // Use local data
-  const heroSection = extendedMidweekData.heroSection;
-  const problemSection = extendedMidweekData.problemSection;
-  const timeline = extendedMidweekData.transformationTimeline;
-  const faqs = extendedMidweekData.faqs;
-  const midweekStrategies: MidweekStrategy[] = extendedMidweekData.midweekStrategies || [];
-  const successMetrics = extendedMidweekData.successMetrics;
+const faqs = [
+  {
+    question: 'How quickly will I see midweek improvements?',
+    answer:
+      'Growth Fix clients typically see their first win within 2 weeks. We focus on one high-impact change first — a midweek event, a targeted offer, or a local visibility fix — then build from there.',
+  },
+  {
+    question: 'What midweek events actually work?',
+    answer:
+      'Quiz nights, steak nights, tasting events, and themed food nights are proven midweek performers. The key is promotion rhythm and consistency, not the event itself. We built The Anchor quiz night to 25-35 regulars using WhatsApp groups and weekly reminders.',
+  },
+  {
+    question: 'Do I need a big budget to fix midweek trade?',
+    answer:
+      'No. A Growth Fix starts from just £375 + VAT — 5 focused hours on your biggest midweek bottleneck. Many of the best midweek strategies cost nothing to implement.',
+  },
+  {
+    question: 'What if I have tried events before and they did not work?',
+    answer:
+      'The event format is rarely the problem. It is usually the promotion, timing, or consistency. We will diagnose what went wrong and build a repeatable system that sticks.',
+  },
+];
 
+export default function QuietMidweekSolutions() {
   return (
     <>
-      {heroSection && (
-        <Hero
-          title={heroSection.title}
-          subtitle={heroSection.subtitle}
-          breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Quiet Midweek Solutions' }]}
-        />
-      )}
+      <FAQSchema faqs={faqs} />
 
-      {/* Problem Agitation */}
-      <Section background="cream" padding="small">
+      <Hero
+        title="Turn Quiet Midweek Nights Into Your Best Trade"
+        subtitle="Proven systems to fill Tuesday and Wednesday nights with consistent bookings — tested at The Anchor, delivered for your venue"
+        secondaryAction={{
+          text: 'See Growth Fix Package',
+          href: '/ways-to-work/growth-fix',
+        }}
+        bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Quiet Midweek Solutions' }]}
+      />
+
+      <ProofStrip claimIds={['quiz-regulars', 'social-views', 'food-gp-growth', 'value-added']} />
+
+      {/* The Problem */}
+      <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto text-center">
-            <Heading level={2} className="mb-8">
-              {problemSection.heading}
+          <div className="max-w-3xl mx-auto text-center">
+            <Heading level={2} align="center" className="mb-6">
+              Every Quiet Tuesday and Wednesday Has a Cost
             </Heading>
-
-            <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-              {problemSection.problems.map((problem, index) => (
-                <ProblemCard
-                  key={index}
-                  emoji={problem.emoji}
-                  problem={problem.title}
-                  solution={problem.description}
-                  linkText={problem.linkText}
-                  linkHref={problem.linkHref}
-                />
-              ))}
-            </Grid>
-
-            <Card background="white" padding="large" variant="bordered" className="border-red-200">
-              <Text size="lg" weight="semibold" className="text-red-600 mb-4">
-                {problemSection.brutalMath.heading}
-              </Text>
-              <Text className="mb-6">{problemSection.brutalMath.description}</Text>
-              <WhatsAppButton
-                text={problemSection.brutalMath.ctaText}
-                size="large"
-                className="!bg-red-600 hover:!bg-red-700"
-              />
-            </Card>
+            <Text size="lg" color="muted" align="center" className="mb-4">
+              The longer midweek stays inconsistent, the harder it is to build repeat behaviour.
+              Staff still cost, stock still expires, and rent does not care if Monday was dead.
+            </Text>
+            <Text size="lg" color="muted" align="center" className="mb-8">
+              The good news? Midweek is often the fastest win. One strong event, one clear offer,
+              and a consistent promotion rhythm can transform your quietest nights within weeks.
+            </Text>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* Our Results */}
+      {/* How We Did It */}
       <Section background="teal">
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto text-center">
-            <Heading level={2} color="white" className="mb-8">
+            <Heading level={2} color="white" className="mb-4">
               How We Built Midweek Momentum at The Anchor
             </Heading>
+            <Text size="lg" color="white" className="opacity-90 mb-10">
+              We went from losing money on quiet nights to making meaningful midweek profit.
+            </Text>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
               <Card background="white" padding="large">
                 <Heading level={3} className="mb-4 text-teal">
                   Tuesday Quiz Night
@@ -121,407 +106,177 @@ export default function QuietMidweekSolutions() {
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
-                      After 30 days:
+                      After:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      25-30 regular teams monthly, stronger takings
+                      25-35 regular teams, stronger takings
                     </Text>
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
-                      Secret:
+                      How:
                     </Text>
-                    <Text>WhatsApp quiz group + weekly reminders</Text>
+                    <Text>WhatsApp quiz group + weekly reminders + consistent format</Text>
                   </div>
                 </div>
               </Card>
 
               <Card background="white" padding="large">
                 <Heading level={3} className="mb-4 text-teal">
-                  Wednesday Steak Night
+                  Tasting Events
                 </Heading>
                 <div className="space-y-4">
                   <div>
                     <Text size="sm" className="text-charcoal/60">
                       Before:
                     </Text>
-                    <Text weight="semibold">Random walk-ins only</Text>
+                    <Text weight="semibold">No midweek events beyond quiz</Text>
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
-                      After 30 days:
+                      After:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      Consistent midweek bookings, filled early in the week
+                      85% retention rate on tasting nights
                     </Text>
                   </div>
                   <div>
                     <Text size="sm" className="text-charcoal/60">
-                      Secret:
+                      How:
                     </Text>
-                    <Text>Simple set-price deal + social media countdown</Text>
+                    <Text>Ticketed format + social proof + database marketing</Text>
                   </div>
                 </div>
               </Card>
-            </div>
+            </Grid>
 
-            <Text size="lg" color="white" className="mb-6">
-              We went from losing money on quiet nights to making meaningful midweek profit. Here's
-              the exact system we used...
-            </Text>
+            <CaseStudyCard id="anchor-midweek-turnaround" variant="full" />
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* The System */}
-      <Section>
+      {/* Proven Event Formats */}
+      <Section background="cream">
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto">
             <Heading level={2} align="center" className="mb-4">
-              The Midweek Momentum System™
-            </Heading>
-            <Text size="lg" align="center" className="mb-12 text-charcoal/70">
-              5 proven strategies that transform dead nights into your busiest (and most profitable)
-              evenings
-            </Text>
-
-            <div className="space-y-8">
-              {midweekStrategies.map((strategy, index) => (
-                <Card
-                  key={strategy._key}
-                  padding="large"
-                  variant="bordered"
-                  className="relative overflow-hidden"
-                >
-                  <div className="absolute top-0 left-0 w-20 h-20 bg-orange/10 rounded-br-full flex items-center justify-center">
-                    <Text size="2xl" weight="bold" className="text-orange">
-                      {index + 1}
-                    </Text>
-                  </div>
-                  <div className="ml-16">
-                    <Heading level={3} className="mb-4">
-                      {strategy.title}
-                    </Heading>
-                    {strategy.description && <Text className="mb-4">{strategy.description}</Text>}
-                    {strategy.points && strategy.points.length > 0 && (
-                      <div className="bg-cream rounded-lg p-4">
-                        <FeatureList
-                          items={strategy.points}
-                          icon="check"
-                          iconColor="green"
-                          spacing="tight"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* Implementation Timeline */}
-      <Section background="orange-light">
-        <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
-              Your 4-Week Midweek Transformation
-            </Heading>
-
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-orange/30 hidden md:block" />
-
-              <div className="space-y-8">
-                {timeline.weeks.map((week, index) => (
-                  <div key={index} className="relative flex gap-6 items-start">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-orange text-white flex items-center justify-center font-bold text-lg z-10">
-                      W{index + 1}
-                    </div>
-                    <Card background="white" padding="large" className="flex-1">
-                      <Heading level={3} className="mb-2">
-                        {week.week}: {week.title}
-                      </Heading>
-                      {week.description && (
-                        <Text className="mb-4 text-charcoal/80">{week.description}</Text>
-                      )}
-                      {week.result && (
-                        <Text weight="semibold" className="text-orange">
-                          Result: {week.result}
-                        </Text>
-                      )}
-                    </Card>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <Card background="teal" padding="large" className="mt-12 text-center">
-              <Heading level={3} color="white" className="mb-4">
-                By Week 4: Your Midweek Nights Are Transformed
-              </Heading>
-              <Text color="white" className="mb-6">
-                Tuesday quiz packed. Wednesday offers selling out. Thursday becoming the new Friday.
-                You're making £2,000+ more per week and working less.
-              </Text>
-              <WhatsAppButton
-                text="Start my midweek transformation"
-                size="large"
-                variant="secondary"
-              />
-            </Card>
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {successMetrics?.metrics && successMetrics.metrics.length > 0 && (
-        <Section background="white">
-          <AnimatedItem animation="fade-in">
-            <div className="max-w-4xl mx-auto text-center">
-              <Heading level={2} className="mb-12">
-                {successMetrics.title || 'Average Results After 30 Days'}
-              </Heading>
-
-              <div className="grid md:grid-cols-4 gap-6 mb-12">
-                {successMetrics.metrics.map((metric) => (
-                  <Card key={metric._key} background="cream" padding="large">
-                    <Text size="2xl" weight="bold" className="text-orange mb-2">
-                      {metric.value}
-                    </Text>
-                    <Text weight="semibold" className="mb-1">
-                      {metric.label}
-                    </Text>
-                    {metric.description && (
-                      <Text size="sm" className="text-charcoal/60">
-                        {metric.description}
-                      </Text>
-                    )}
-                  </Card>
-                ))}
-              </div>
-
-              <Text size="lg" className="mb-8">
-                These are practical examples of what can happen when pubs implement a consistent
-                midweek momentum system.
-              </Text>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
-
-      {/* Event Ideas */}
-      <Section background="cream">
-        <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
               Proven Midweek Event Formats
             </Heading>
-
-            <Grid columns={{ default: 1, md: 2 }} gap="large">
+            <Text size="lg" color="muted" align="center" className="mb-10">
+              These formats work because they are easy to run, easy to promote, and easy to repeat.
+            </Text>
+            <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="large">
-                <Heading level={3} className="mb-6">
-                  🎯 Tuesday Winners
-                </Heading>
-                <div className="space-y-4">
-                  <div>
-                    <Text weight="semibold">Quiz Night 2.0</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Fast-paced, phone-friendly, and built for repeat attendance.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Taco Tuesday</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Simple menu, strong margins, and easy promotion.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Open Mic Night</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Performers bring their audience. Audience drives spend.
-                    </Text>
-                  </div>
-                </div>
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <Heading level={3} className="mb-6">
-                  🎯 Wednesday Winners
-                </Heading>
-                <div className="space-y-4">
-                  <div>
-                    <Text weight="semibold">Steak Night</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Two steaks + bottle of wine for £39.95. Books out every week.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Wing Wednesday</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Low-ticket food that lifts drinks spend and dwell time.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Wine & Paint Night</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      £25 ticket includes materials plus first drink with predictable attendance.
-                    </Text>
-                  </div>
-                </div>
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <Heading level={3} className="mb-6">
-                  🎯 Thursday Winners
-                </Heading>
-                <div className="space-y-4">
-                  <div>
-                    <Text weight="semibold">Curry Club</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Set menu structure with efficient prep and stronger midweek demand.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Speed Dating</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Partner-led format that brings in a new crowd.
-                    </Text>
-                  </div>
-                  <div>
-                    <Text weight="semibold">Cocktail Masterclass</Text>
-                    <Text size="sm" className="text-charcoal/70">
-                      Premium ticketed format with high-margin upsell potential.
-                    </Text>
-                  </div>
-                </div>
-              </Card>
-
-              <Card background="orange-light" padding="large">
                 <Heading level={3} className="mb-4">
-                  🚀 The Secret Sauce
+                  Tuesday Winners
                 </Heading>
-                <Text className="mb-4">
-                  It's not about the event - it's about the promotion. We'll show you exactly how to
-                  fill ANY midweek event using our proven social media templates, WhatsApp
-                  broadcasts, and community engagement tactics.
-                </Text>
-                <WhatsAppButton text="Get the promotion templates" fullWidth />
+                <FeatureList
+                  items={[
+                    'Quiz Night 2.0 — fast-paced, phone-friendly',
+                    'Taco Tuesday — simple menu, strong margins',
+                    'Open Mic — performers bring their audience',
+                  ]}
+                  icon="check"
+                  iconColor="green"
+                  spacing="normal"
+                />
+              </Card>
+              <Card variant="bordered" padding="large">
+                <Heading level={3} className="mb-4">
+                  Wednesday Winners
+                </Heading>
+                <FeatureList
+                  items={[
+                    'Steak Night — set-price deal, books out weekly',
+                    'Wing Wednesday — lifts drinks spend and dwell time',
+                    'Wine and Paint — ticketed, predictable attendance',
+                  ]}
+                  icon="check"
+                  iconColor="green"
+                  spacing="normal"
+                />
+              </Card>
+              <Card variant="bordered" padding="large">
+                <Heading level={3} className="mb-4">
+                  Thursday Winners
+                </Heading>
+                <FeatureList
+                  items={[
+                    'Curry Club — set menu, efficient prep',
+                    'Speed Dating — brings a new crowd',
+                    'Cocktail Masterclass — premium upsell potential',
+                  ]}
+                  icon="check"
+                  iconColor="green"
+                  spacing="normal"
+                />
               </Card>
             </Grid>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* FAQ Section */}
+      {/* The Solution */}
       <Section>
-        <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
-              Common Questions About Fixing Quiet Midweek Nights
-            </Heading>
-
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <FAQItem key={index} question={faq.question} answer={faq.answer} />
-              ))}
-            </div>
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* Investment Section */}
-      <Section background="white">
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
-            <Card background="orange-light" padding="large" className="text-center">
-              <Heading level={2} className="mb-8">
-                Transform Your Midweek Nights in 30 Days
-              </Heading>
+            <Heading level={2} align="center" className="mb-4">
+              A Growth Fix for Your Midweek
+            </Heading>
+            <Text size="lg" color="muted" align="center" className="mb-10">
+              Five focused hours on your biggest midweek bottleneck. Diagnosis, action plan, and one
+              clear intervention — from just £375 + VAT.
+            </Text>
 
-              <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-                <div>
-                  <div className="text-4xl mb-2">📅</div>
-                  <Heading level={4} className="mb-2">
-                    Week 1-2
-                  </Heading>
-                  <Text size="sm">
-                    Launch first events, see immediate increase in Tuesday/Wednesday covers
-                  </Text>
-                </div>
-                <div>
-                  <div className="text-4xl mb-2">📈</div>
-                  <Heading level={4} className="mb-2">
-                    Week 3-4
-                  </Heading>
-                  <Text size="sm">
-                    Events gaining momentum, regulars forming, bookings coming in advance
-                  </Text>
-                </div>
-                <div>
-                  <div className="text-4xl mb-2">💰</div>
-                  <Heading level={4} className="mb-2">
-                    Month 2+
-                  </Heading>
-                  <Text size="sm">
-                    Stronger midweek consistency with measurable uplift in contribution
-                  </Text>
-                </div>
-              </Grid>
+            <div className="max-w-md mx-auto">
+              <PackageCard packageId="growth-fix" highlighted />
+            </div>
 
-              <div className="bg-white rounded-lg p-6 mb-6">
-                <Text size="2xl" weight="bold" className="text-orange mb-2">
-                  Investment: £75/hour + VAT
-                </Text>
-                <Text className="text-charcoal/70">
-                  Most pubs see meaningful progress inside 30 days
-                </Text>
-              </div>
-
-              <Text weight="semibold" className="mb-6">
-                30-Day Intensive Support: Weekly check-ins and adjustments until your midweek is
-                busy again
+            <Card background="cream" padding="large" className="mt-8 text-center">
+              <Text size="lg" className="mb-2">
+                Need ongoing midweek support?
               </Text>
-
-              <WhatsAppButton text="Fix my quiet midweek nights" size="large" />
+              <Text color="muted" className="mb-4">
+                If you want weekly execution, event promotion, and social media support month after
+                month, step up to Momentum Month or Growth Partner.
+              </Text>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <PackageCard packageId="momentum-month" />
+                <PackageCard packageId="growth-partner" />
+              </div>
             </Card>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* Urgency Section */}
-      <Section background="cream">
-        <div className="max-w-4xl mx-auto text-center">
-          <Heading level={2} className="mb-6 text-red-700">
-            Every Quiet Tuesday and Wednesday Has a Cost
-          </Heading>
-          <Text size="lg" className="mb-8">
-            The longer midweek stays inconsistent, the harder it is to build repeat behaviour.
-            Action-first changes are how you close the gap.
-          </Text>
-          <Card background="white" padding="large">
-            <Heading level={3} className="mb-4">
-              Start Building Momentum This Week
-            </Heading>
-            <Text className="mb-6">
-              Next Tuesday can look very different with the right offer and promotion rhythm. We'll
-              start with one high-impact change, implement fast, then iterate based on performance.
-            </Text>
-            <WhatsAppButton text="Help me fix midweek trade" size="large" />
-          </Card>
+      {/* FAQ */}
+      <Section background="white">
+        <Heading level={2} align="center" className="mb-8">
+          Common Questions About Fixing Quiet Midweek Nights
+        </Heading>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          ))}
         </div>
       </Section>
 
       {/* Final CTA */}
-      <CTASection
-        title="Your Midweek Momentum Starts Now"
-        subtitle="Get practical systems, templates, and support that turned The Anchor's quiet midweek into consistent trade."
-        buttonText="Start My Midweek Plan"
-        whatsappMessage="Peter, my Tuesday and Wednesday trade is too quiet. I need a midweek plan."
-      />
-
-      {/* Structured Data */}
-      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
+      <Section background="orange-light" padding="small">
+        <div className="max-w-3xl mx-auto text-center">
+          <Heading level={2} align="center" className="mb-4">
+            Your Midweek Momentum Starts Now
+          </Heading>
+          <Text size="lg" align="center" className="mb-6">
+            Next Tuesday can look very different with the right offer and promotion rhythm. Tell
+            Peter what is not working.
+          </Text>
+          <PackageCTA packageId="growth-fix" />
+          <Text size="sm" color="muted" align="center" className="mt-4">
+            From £375 + VAT. Payment plans available.
+          </Text>
+        </div>
+      </Section>
     </>
   );
 }

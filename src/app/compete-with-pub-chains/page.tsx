@@ -2,568 +2,272 @@ import { type Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
-import CTASection from '@/components/CTASection';
-import FAQItem from '@/components/FAQItem';
-import Text from '@/components/Text';
 import FeatureList from '@/components/FeatureList';
+import FAQItem from '@/components/FAQItem';
 import { generateMetadata as generateMeta } from '@/lib/metadata';
 import { FAQSchema } from '@/components/StructuredData';
-// Import local data
-import competeData from '../../../content/data/compete-with-chains.json';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import Button from '@/components/Button';
-import StickyCTA from '@/components/StickyCTA';
+import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components/packages';
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Compete with Pub Chains - Practical Challenger Strategy',
     description:
-      'Stop losing customers to chain pubs. Practical strategies to compete through differentiation, community, and experience instead of price wars.',
+      'Stop losing customers to chain pubs. Practical strategies to compete through differentiation, community, and experience. Packages from £375 + VAT.',
     path: '/compete-with-pub-chains',
   });
 }
 
-export default function CompeteWithPubChains() {
-  // Use local data
-  const heroSection = competeData.heroSection;
-  const problemSection = competeData.problemSection;
-  const strategies = competeData.strategies;
-  const successMetrics = competeData.successMetrics;
-  const faqs = competeData.faqs;
+const faqs = [
+  {
+    question: 'Can an independent pub really compete with chains?',
+    answer:
+      'Absolutely. Chains compete on price and scale. Independents win on personality, agility, community, and experience. We prove this every day at The Anchor — competing against a local Wetherspoons with higher average spend and better repeat visit rates.',
+  },
+  {
+    question: 'How much does it cost to build a challenger strategy?',
+    answer:
+      'A Growth Fix starts from £375 + VAT — 5 focused hours on your positioning and competitive advantage. For ongoing support building your independent brand, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
+  },
+  {
+    question: 'How long does it take to see results?',
+    answer:
+      'Positioning changes show up quickly — within 2-4 weeks you will notice different conversations with customers. Building a loyal community that chooses you over chains takes 2-3 months of consistent execution.',
+  },
+  {
+    question: 'Do I need to change my whole pub?',
+    answer:
+      'No. You need to identify and amplify what already makes you different. Most independents are already doing things chains cannot — they just are not promoting it.',
+  },
+];
 
+export default function CompeteWithPubChains() {
   return (
     <>
-      {heroSection && (
-        <Hero
-          title={heroSection.title}
-          subtitle={heroSection.subtitle}
-          breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Compete With Chains' }]}
-        />
-      )}
+      <FAQSchema faqs={faqs} />
 
-      {/* Problem Section */}
-      <Section background="cream" padding="small">
+      <Hero
+        title="Stop Competing on Price. Start Winning on Experience."
+        subtitle="Chain pubs have scale and cheap pints. You have personality, community, and agility. We will help you turn those into an unbeatable advantage."
+        secondaryAction={{
+          text: 'See Our Packages',
+          href: '/ways-to-work',
+        }}
+        bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Compete With Chains' }]}
+      />
+
+      <ProofStrip claimIds={['quiz-regulars', 'social-views', 'food-gp-growth', 'value-added']} />
+
+      {/* The Problem */}
+      <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto text-center">
-            <Heading level={2} className="mb-8">
-              {problemSection.heading}
+          <div className="max-w-3xl mx-auto text-center">
+            <Heading level={2} align="center" className="mb-6">
+              You Cannot Out-Spend a Chain. But You Can Out-Care One.
             </Heading>
-
-            <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-              {problemSection.challenges.map((challenge, index) => (
-                <Card key={index} background="white" padding="medium">
-                  <div className="text-3xl mb-3">{challenge.icon}</div>
-                  <Heading level={4} className="mb-2">
-                    {challenge.title}
-                  </Heading>
-                  <Text size="sm">{challenge.description}</Text>
-                </Card>
-              ))}
-            </Grid>
-
-            <Card background="cream" padding="large" variant="bordered" className="border-red-200">
-              <Text size="lg" weight="semibold" className="text-red-600 mb-4">
-                {problemSection.truthStatement}
-              </Text>
-              <Text className="mb-6">{problemSection.solution}</Text>
-              <WhatsAppButton text={problemSection.ctaText} size="large" />
-            </Card>
+            <Text size="lg" color="muted" align="center" className="mb-4">
+              Chains compete on price, consistency, and marketing budgets you will never match. If
+              you try to play their game, you will lose.
+            </Text>
+            <Text size="lg" color="muted" align="center" className="mb-8">
+              The good news? They cannot compete on what you have: personality, agility, local
+              knowledge, and the ability to create experiences worth more than cheap pints.
+            </Text>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* David vs Goliath Strategy */}
-      {strategies.length > 0 && (
-        <Section>
-          <AnimatedItem animation="slide-up">
-            <div className="max-w-4xl mx-auto">
-              <Heading level={2} align="center" className="mb-4">
-                The David vs Goliath Strategy
-              </Heading>
-              <Text size="lg" align="center" className="mb-12 text-charcoal/70">
-                Turn chain strengths into opportunity. Your small size is your strategic advantage.
-              </Text>
-
-              <div className="space-y-6">
-                {strategies.map((strategy, index) => (
-                  <Card
-                    key={strategy._key}
-                    padding="large"
-                    variant="bordered"
-                    background={index % 2 === 0 ? 'white' : 'cream'}
-                  >
-                    <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
-                      <div className={index % 2 === 0 ? '' : 'md:order-2'}>
-                        <div className="flex items-center mb-4">
-                          <div className="w-12 h-12 rounded-full bg-orange text-white flex items-center justify-center font-bold mr-4">
-                            {index + 1}
-                          </div>
-                          <Heading level={3}>{strategy.title}</Heading>
-                        </div>
-                        {strategy.description && (
-                          <Text className="mb-4">{strategy.description}</Text>
-                        )}
-                        {strategy.tactics && strategy.tactics.length > 0 && (
-                          <FeatureList
-                            items={strategy.tactics}
-                            icon="check"
-                            iconColor="green"
-                            spacing="tight"
-                          />
-                        )}
-                        {strategy.result && (
-                          <Text size="sm" weight="semibold" className="mt-4 text-orange">
-                            → {strategy.result}
-                          </Text>
-                        )}
-                      </div>
-                      <div className={`text-center ${index % 2 === 0 ? '' : 'md:order-1'}`}>
-                        <div className="text-6xl opacity-20">
-                          {index === 0 && '👥'}
-                          {index === 1 && '⚡'}
-                          {index === 2 && '🎯'}
-                          {index === 3 && '💝'}
-                          {index === 4 && '🏆'}
-                        </div>
-                      </div>
-                    </Grid>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
-
-      {/* Real Examples */}
+      {/* How We Compete */}
       <Section background="teal">
-        <AnimatedItem animation="fade-in">
+        <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto text-center">
-            <Heading level={2} color="white" className="mb-12">
+            <Heading level={2} color="white" className="mb-4">
               How We Compete With Our Local Wetherspoons
             </Heading>
+            <Text size="lg" color="white" className="opacity-90 mb-10">
+              At The Anchor, we stopped trying to match chain prices and focused on what they cannot
+              do.
+            </Text>
 
             <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
               <Card background="white" padding="large">
-                <Heading level={3} className="mb-4 text-teal">
+                <Heading level={3} className="mb-4 text-red-600">
                   They Have
                 </Heading>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <Text className="text-red-500 mr-2">✗</Text>
-                    <Text size="sm">£2.49 pints all day</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-red-500 mr-2">✗</Text>
-                    <Text size="sm">500+ capacity venue</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-red-500 mr-2">✗</Text>
-                    <Text size="sm">App ordering from table</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-red-500 mr-2">✗</Text>
-                    <Text size="sm">Open from 8am daily</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-red-500 mr-2">✗</Text>
-                    <Text size="sm">National TV advertising</Text>
-                  </div>
-                </div>
+                <FeatureList
+                  items={[
+                    'Low prices all day',
+                    '500+ capacity',
+                    'App ordering',
+                    'National TV advertising',
+                  ]}
+                  icon="bullet"
+                  iconColor="red"
+                  spacing="normal"
+                />
               </Card>
-
               <Card background="white" padding="large">
-                <Heading level={3} className="mb-4 text-orange">
+                <Heading level={3} className="mb-4 text-green-600">
                   We Have
                 </Heading>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <Text className="text-green-500 mr-2">✓</Text>
-                    <Text size="sm">Customers know our names</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-green-500 mr-2">✓</Text>
-                    <Text size="sm">Dogs welcome everywhere</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-green-500 mr-2">✓</Text>
-                    <Text size="sm">WhatsApp group with 180+ locals</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-green-500 mr-2">✓</Text>
-                    <Text size="sm">Birthday cards for regulars</Text>
-                  </div>
-                  <div className="flex items-start">
-                    <Text className="text-green-500 mr-2">✓</Text>
-                    <Text size="sm">Atmosphere you can't fake</Text>
-                  </div>
-                </div>
+                <FeatureList
+                  items={[
+                    'Customers know our names',
+                    'Dogs welcome everywhere',
+                    'WhatsApp group with 180+ locals',
+                    'Atmosphere you cannot fake',
+                  ]}
+                  icon="check"
+                  iconColor="green"
+                  spacing="normal"
+                />
               </Card>
             </Grid>
 
-            <Card background="orange-light" padding="large">
-              <Heading level={3} className="mb-4">
-                The Result?
-              </Heading>
-              <Text size="lg" className="mb-4">
-                They get bargain hunters. We focus on community and experience.
-              </Text>
-              <Text className="mb-6">
-                Our average spend is £18 vs their £8. Our customers come 3x per week vs their 1x.
-                Our Trip Advisor is 4.8 vs their 3.2. We're not competing - we're in different
-                leagues.
-              </Text>
-              <WhatsAppButton text="Help me create my unique position" size="large" />
-            </Card>
+            <CaseStudyCard id="anchor-midweek-turnaround" variant="full" />
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* Success Metrics */}
-      {successMetrics && successMetrics.metrics && (
-        <Section background="white">
-          <AnimatedItem animation="slide-up">
-            <div className="max-w-4xl mx-auto text-center">
-              <Heading level={2} className="mb-12">
-                {successMetrics.title || 'What Happens When You Stop Competing on Price'}
-              </Heading>
-
-              {(() => {
-                const count = successMetrics.metrics.length;
-                const mdCols = (count >= 4 ? 4 : count === 3 ? 3 : count === 2 ? 2 : 1) as
-                  | 1
-                  | 2
-                  | 3
-                  | 4;
-                return (
-                  <Grid columns={{ default: 1, md: mdCols }} gap="large" className="mb-12">
-                    {successMetrics.metrics.map((metric, index) => (
-                      <Card key={index} background="white" padding="large" variant="bordered">
-                        <Heading level={4} className="mb-3">
-                          {metric.metric}
-                        </Heading>
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2">
-                            <Text size="sm" weight="semibold" className="text-red-600">
-                              Before:
-                            </Text>
-                            <Text size="sm">{metric.before}</Text>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Text size="sm" weight="semibold" className="text-green-600">
-                              After:
-                            </Text>
-                            <Text size="sm">{metric.after}</Text>
-                          </div>
-                        </div>
-                      </Card>
-                    ))}
-                  </Grid>
-                );
-              })()}
-
-              <Text size="lg" className="max-w-3xl mx-auto">
-                When you stop trying to be a cheaper Wetherspoons and start being the best version
-                of YOUR pub, everything changes. Margins improve. Stress reduces. Customers become
-                advocates.
-              </Text>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
-
-      {/* Your Unfair Advantages */}
+      {/* Your Advantages */}
       <Section background="cream">
         <AnimatedItem animation="fade-in">
           <div className="max-w-4xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
+            <Heading level={2} align="center" className="mb-4">
               Your Practical Advantages Over Chain Pubs
             </Heading>
-
+            <Text size="lg" color="muted" align="center" className="mb-10">
+              Every independent pub has advantages chains cannot replicate. We help you identify and
+              amplify them.
+            </Text>
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">🚀</div>
                 <Heading level={3} className="mb-3">
                   Speed
                 </Heading>
-                <Text size="sm" className="mb-4">
+                <Text size="sm" color="muted">
                   New event idea? Launch it tomorrow. Menu change? Done today. Chains need 6 months
                   and board approval.
                 </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Agility
-                </Text>
               </Card>
-
               <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">❤️</div>
                 <Heading level={3} className="mb-3">
                   Personality
                 </Heading>
-                <Text size="sm" className="mb-4">
-                  You're not employee #47823. You're Sarah, Mike, or Dave. People come to see YOU,
-                  not just for a pint.
-                </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Being human
+                <Text size="sm" color="muted">
+                  You are not employee number 47823. People come to see YOU, not just for a pint.
                 </Text>
               </Card>
-
               <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">🎯</div>
                 <Heading level={3} className="mb-3">
-                  Focus
+                  Community
                 </Heading>
-                <Text size="sm" className="mb-4">
-                  Chains try to please everyone. You can be THE place for craft beer, dogs, or
-                  Sunday roasts.
-                </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Specialization
-                </Text>
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">🏘️</div>
-                <Heading level={3} className="mb-3">
-                  Local Knowledge
-                </Heading>
-                <Text size="sm" className="mb-4">
-                  You know Mrs. Johnson likes her wine cold. That Jim's birthday is Tuesday. That
-                  the football team meets Thursdays.
-                </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Community insight
-                </Text>
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">🎨</div>
-                <Heading level={3} className="mb-3">
-                  Creativity
-                </Heading>
-                <Text size="sm" className="mb-4">
-                  Weird Wednesday? Do it. Dog birthday parties? Why not. Chains can't risk their
-                  brand with fun.
-                </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Freedom to experiment
-                </Text>
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-3xl mb-4">💪</div>
-                <Heading level={3} className="mb-3">
-                  Flexibility
-                </Heading>
-                <Text size="sm" className="mb-4">
-                  Customer wants off-menu item? Sure. Need to stay late for a wake? Of course.
-                  Chains say computer says no.
-                </Text>
-                <Text size="xs" className="text-green-600 font-semibold">
-                  Your superpower: Saying yes
+                <Text size="sm" color="muted">
+                  You know the regulars by name, their birthdays, their favourite drink. Chains sell
+                  transactions. You build relationships.
                 </Text>
               </Card>
             </Grid>
-
-            <Card background="orange-light" padding="large" className="mt-8 text-center">
-              <Heading level={3} className="mb-4">
-                Stop Playing Their Game. Start Playing Yours.
-              </Heading>
-              <Text className="mb-6 max-w-2xl mx-auto">
-                We'll help you identify your unique strengths, build an unbeatable position, and
-                create customers so loyal they'd never dream of going to Spoons.
-              </Text>
-              <WhatsAppButton text="Create my chain-beating strategy" size="large" />
-            </Card>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* Action Plan */}
+      {/* The Solution */}
       <Section>
         <AnimatedItem animation="slide-up">
           <div className="max-w-4xl mx-auto">
-            <Heading level={2} align="center" className="mb-12">
-              Your 30-Day Challenger Action Plan
+            <Heading level={2} align="center" className="mb-4">
+              The Right Package to Build Your Challenger Position
             </Heading>
+            <Text size="lg" color="muted" align="center" className="mb-10">
+              Start with a Growth Fix for positioning and competitive strategy, or go deeper with
+              Growth Partner for ongoing brand building and execution.
+            </Text>
 
-            <div className="space-y-4">
-              <Card padding="large" variant="bordered">
-                <Grid columns={{ default: 1, md: 3 }} gap="large" className="items-center">
-                  <div>
-                    <Text size="lg" weight="bold" className="text-orange mb-2">
-                      Days 1-10
-                    </Text>
-                    <Heading level={4}>Stop the Bleeding</Heading>
-                  </div>
-                  <div className="md:col-span-2">
-                    <FeatureList
-                      items={[
-                        'Identify exactly who your ideal customer is (hint: not everyone)',
-                        "List 10 things you can do that chains can't",
-                        'Create your "Never Compete on Price" promise',
-                        'Start a WhatsApp community group',
-                      ]}
-                      icon="arrow"
-                      iconColor="orange"
-                      spacing="tight"
-                    />
-                  </div>
-                </Grid>
-              </Card>
-
-              <Card padding="large" variant="bordered">
-                <Grid columns={{ default: 1, md: 3 }} gap="large" className="items-center">
-                  <div>
-                    <Text size="lg" weight="bold" className="text-orange mb-2">
-                      Days 11-20
-                    </Text>
-                    <Heading level={4}>Build Your Fortress</Heading>
-                  </div>
-                  <div className="md:col-span-2">
-                    <FeatureList
-                      items={[
-                        "Launch one signature thing chains can't copy",
-                        'Create a loyalty program based on recognition, not points',
-                        'Partner with 3 local businesses for cross-promotion',
-                        'Start birthday/anniversary program for regulars',
-                      ]}
-                      icon="arrow"
-                      iconColor="orange"
-                      spacing="tight"
-                    />
-                  </div>
-                </Grid>
-              </Card>
-
-              <Card padding="large" variant="bordered">
-                <Grid columns={{ default: 1, md: 3 }} gap="large" className="items-center">
-                  <div>
-                    <Text size="lg" weight="bold" className="text-orange mb-2">
-                      Days 21-30
-                    </Text>
-                    <Heading level={4}>Go on Offense</Heading>
-                  </div>
-                  <div className="md:col-span-2">
-                    <FeatureList
-                      items={[
-                        'Launch a local "choose independent" welcome campaign',
-                        'Create experiences worth more than cheap pints',
-                        'Build reputation as THE place for something specific',
-                        'Turn your best customers into evangelical advocates',
-                      ]}
-                      icon="arrow"
-                      iconColor="orange"
-                      spacing="tight"
-                    />
-                  </div>
-                </Grid>
-              </Card>
-            </div>
-
-            <div className="mt-8 text-center">
-              <Button href="#cta" size="large" variant="primary">
-                Start My 30-Day Plan Today
-              </Button>
-            </div>
+            <Grid columns={{ default: 1, md: 2 }} gap="large">
+              <div>
+                <Card background="cream" padding="large" className="mb-4">
+                  <Heading level={3} className="mb-3">
+                    Find Your Competitive Angle
+                  </Heading>
+                  <Text color="muted" className="mb-4">
+                    A Growth Fix gives you 5 focused hours on your positioning, competitive
+                    advantage, and a clear action plan to differentiate from the chains.
+                  </Text>
+                  <FeatureList
+                    items={[
+                      'Positioning audit vs local chains',
+                      'Unique selling point refinement',
+                      'Community engagement strategy',
+                      'From £375 + VAT',
+                    ]}
+                    icon="check"
+                    iconColor="green"
+                    spacing="tight"
+                  />
+                </Card>
+                <PackageCard packageId="growth-fix" />
+              </div>
+              <div>
+                <Card background="orange-light" padding="large" className="mb-4">
+                  <Heading level={3} className="mb-3">
+                    Build an Unbeatable Brand
+                  </Heading>
+                  <Text color="muted" className="mb-4">
+                    Growth Partner gives you ongoing strategy, events, social media, and community
+                    building — everything you need to become the independent pub of choice.
+                  </Text>
+                  <FeatureList
+                    items={[
+                      '24 hours per month',
+                      'Event strategy and promotion',
+                      'Social media and community building',
+                      'Weekly execution and accountability',
+                    ]}
+                    icon="check"
+                    iconColor="green"
+                    spacing="tight"
+                  />
+                </Card>
+                <PackageCard packageId="growth-partner" highlighted />
+              </div>
+            </Grid>
           </div>
         </AnimatedItem>
       </Section>
 
-      {/* FAQ Section */}
-      {faqs.length > 0 && (
-        <Section background="white">
-          <AnimatedItem animation="fade-in">
-            <div className="max-w-3xl mx-auto">
-              <Heading level={2} align="center" className="mb-12">
-                Common Questions About Competing With Chain Pubs
-              </Heading>
-
-              <div className="space-y-6">
-                {faqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
-
-      {/* Investment */}
-      <Section background="charcoal">
-        <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto text-center">
-            <Heading level={2} color="white" className="mb-8">
-              Ready to Build a Stronger Independent Position?
-            </Heading>
-
-            <Card background="white" padding="large">
-              <Heading level={3} className="mb-6">
-                The Chain-Beater Package
-              </Heading>
-
-              <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-                <div>
-                  <div className="text-3xl mb-3">🎯</div>
-                  <Text weight="semibold" className="mb-2">
-                    Positioning Workshop
-                  </Text>
-                  <Text size="sm">Find your unique angle that chains can't touch</Text>
-                </div>
-                <div>
-                  <div className="text-3xl mb-3">📱</div>
-                  <Text weight="semibold" className="mb-2">
-                    Community Building
-                  </Text>
-                  <Text size="sm">Create loyalty that transcends price</Text>
-                </div>
-                <div>
-                  <div className="text-3xl mb-3">🚀</div>
-                  <Text weight="semibold" className="mb-2">
-                    30-Day Action Plan
-                  </Text>
-                  <Text size="sm">Daily steps to beat the chains at their own game</Text>
-                </div>
-              </Grid>
-
-              <div className="bg-cream rounded-lg p-6 mb-6">
-                <Text size="2xl" weight="bold" className="text-orange mb-2">
-                  £75/hour + VAT
-                </Text>
-                <Text className="text-charcoal/70 mb-4">
-                  Most pubs see meaningful momentum inside the first 30 to 60 days
-                </Text>
-                <Text size="sm" weight="semibold" className="text-green-600">
-                  30-Day Partnership: weekly optimisation with a working licensee
-                </Text>
-              </div>
-
-              <WhatsAppButton text="I'm ready to beat the chains" size="large" />
-
-              <Text size="sm" className="mt-4 text-charcoal/60">
-                Small-team support - limited capacity to stay hands-on
-              </Text>
-            </Card>
-          </div>
-        </AnimatedItem>
+      {/* FAQ */}
+      <Section background="white">
+        <Heading level={2} align="center" className="mb-8">
+          Common Questions About Competing With Chain Pubs
+        </Heading>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          ))}
+        </div>
       </Section>
 
       {/* Final CTA */}
-      <CTASection
-        title="Compete Smarter Than Chains"
-        subtitle="Stop competing on price. Start competing on what matters with practical strategy, clear positioning, and consistent execution."
-        buttonText="Start My Challenger Plan"
-        whatsappMessage="Peter, I'm losing customers to chain pubs. Help me build a stronger independent position."
-      />
-
-      {/* Structured Data */}
-      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
-
-      <StickyCTA />
+      <Section background="orange-light" padding="small">
+        <div className="max-w-3xl mx-auto text-center">
+          <Heading level={2} align="center" className="mb-4">
+            Ready to Build a Stronger Independent Position?
+          </Heading>
+          <Text size="lg" align="center" className="mb-6">
+            Stop playing the chains&apos; game. Tell Peter about your local competition and he will
+            help you find your unbeatable angle.
+          </Text>
+          <PackageCTA />
+          <Text size="sm" color="muted" align="center" className="mt-4">
+            Packages from £375 + VAT. Payment plans available.
+          </Text>
+        </div>
+      </Section>
     </>
   );
 }
