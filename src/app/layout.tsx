@@ -10,6 +10,7 @@ import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleT
 import { CONTACT } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 import CookieNotice from '@/components/CookieNotice';
+import { StickyEngagementBar, ExitIntentModal, MobileScrollPrompt } from '@/components/engagement';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -210,6 +211,9 @@ export default function RootLayout({
         <FooterWrapper />
         <PerformanceMonitor />
         <CookieNotice />
+        <StickyEngagementBar />
+        <ExitIntentModal />
+        <MobileScrollPrompt />
         <Analytics />
         <SpeedInsights />
       </body>
