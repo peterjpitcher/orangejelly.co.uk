@@ -47,6 +47,54 @@ interface BlogPostProps {
   };
 }
 
+function getCategoryCTA(categorySlug: string): {
+  heading: string;
+  body: string;
+} {
+  const toolkitCategories = ['toolkits', 'events-promotions'];
+  const acquisitionCategories = [
+    'customer-acquisition',
+    'empty-pub-solutions',
+    'turnaround',
+    'community',
+    'social-media',
+  ];
+  const operationalCategories = [
+    'food-drink',
+    'analytics',
+    'sales',
+    'communications',
+    'competition',
+    'people',
+  ];
+
+  if (toolkitCategories.includes(categorySlug)) {
+    return {
+      heading: 'Running a pub?',
+      body: 'See how our packages help licensees grow revenue, fill tables, and build momentum.',
+    };
+  }
+
+  if (acquisitionCategories.includes(categorySlug)) {
+    return {
+      heading: 'Need help putting this into practice?',
+      body: 'Our packages give you strategy, direction, and hands-on support — from a one-off Growth Fix to ongoing Growth Partner.',
+    };
+  }
+
+  if (operationalCategories.includes(categorySlug)) {
+    return {
+      heading: 'We do this for pubs every week',
+      body: 'See our packages to find the right level of support for your venue.',
+    };
+  }
+
+  return {
+    heading: 'Want hands-on help?',
+    body: 'See our packages — clear pricing, real expertise, no agency overhead.',
+  };
+}
+
 export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
   // Track reading progress
   useEffect(() => {
@@ -71,6 +119,8 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
     return () => window.removeEventListener('scroll', updateProgress);
   }, []);
 
+  const categorySlug = typeof post.category === 'string' ? post.category : post.category.slug;
+  const categoryCTA = getCategoryCTA(categorySlug);
   const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
   const quickAnswerText = (
     post.quickAnswer ||
@@ -175,21 +225,25 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         <Card variant="bordered" className="bg-charcoal mb-12">
           <div className="text-center">
             <Heading level={3} align="center" color="white" className="mb-4">
-              Need Help Implementing These Ideas?
+              {categoryCTA.heading}
             </Heading>
             <Text align="center" color="white" className="mb-6 max-w-2xl mx-auto">
-              I've proven these strategies work at The Anchor. If you want help turning them into a
-              simple plan for your pub, let's chat - no sales pitch, just licensee to licensee.
+              {categoryCTA.body}
             </Text>
-            <Button
-              href={URLS.whatsapp(post.ctaSettings?.whatsappMessage || MESSAGES.whatsapp.blog)}
-              variant="secondary"
-              size="large"
-              external
-              className="!bg-white !text-charcoal hover:!bg-cream"
-            >
-              Get Help Now
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button href="/ways-to-work" variant="primary" size="large">
+                See Our Packages
+              </Button>
+              <Button
+                href={URLS.whatsapp(post.ctaSettings?.whatsappMessage || MESSAGES.whatsapp.blog)}
+                variant="secondary"
+                size="large"
+                external
+                className="!bg-white !text-charcoal hover:!bg-cream"
+              >
+                Message Peter on WhatsApp
+              </Button>
+            </div>
           </div>
         </Card>
 

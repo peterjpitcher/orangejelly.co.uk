@@ -73,19 +73,23 @@ export default function StickyCTA() {
               </button>
 
               <Text size="sm" className="font-semibold mb-2 pr-6">
-                Need help with your pub?
+                Packages for every pub
               </Text>
               <Text size="xs" color="muted" className="mb-3">
-                Get practical advice from a real licensee who's been there.
+                Strategy, direction, and hands-on support — from a one-off fix to ongoing partner.
               </Text>
+              <Button href="/ways-to-work" variant="primary" size="small" fullWidth>
+                See Our Packages
+              </Button>
               <Button
                 href={URLS.whatsapp('Hi Peter, I just read your blog and need help with my pub')}
-                variant="primary"
+                variant="ghost"
                 size="small"
                 fullWidth
                 external
+                className="mt-2"
               >
-                Get in Touch
+                Or message Peter
               </Button>
             </div>
           )}
@@ -102,20 +106,19 @@ export default function StickyCTA() {
           <div className="flex items-center justify-between gap-3">
             <div className="flex-1">
               <Text size="sm" className="font-semibold text-white">
-                Need help with your pub?
+                Packages for every pub
               </Text>
               <Text size="xs" className="text-white/90">
-                Real advice from a real licensee
+                Clear pricing, real expertise
               </Text>
             </div>
             <Button
-              href={URLS.whatsapp('Hi Peter, I just read your blog and need help')}
+              href="/ways-to-work"
               variant="secondary"
               size="small"
-              external
               className="!bg-white !text-orange hover:!bg-cream whitespace-nowrap"
             >
-              Get Help
+              See Packages
             </Button>
           </div>
         </div>
