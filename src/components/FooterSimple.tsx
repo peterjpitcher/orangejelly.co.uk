@@ -83,7 +83,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8 text-cream/90">
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">
-                Services
+                Packages
               </Heading>
               <ul className="space-y-2 text-sm">
                 {services.map((service, index) => (
@@ -98,7 +98,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
 
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">
-                Solutions
+                Capabilities
               </Heading>
               <ul className="space-y-2 text-sm">
                 {solutions.map((solution, index) => (

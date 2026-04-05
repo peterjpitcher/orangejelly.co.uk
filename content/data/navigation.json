@@ -1,81 +1,25 @@
 {
   "mainMenu": [
-    {
-      "label": "Home",
-      "href": "/",
-      "order": 1
-    },
-    {
-      "label": "Services",
-      "href": "/services",
-      "order": 2
-    },
-    {
-      "label": "Hospitality Marketing",
-      "href": "/pub-marketing",
-      "order": 3
-    },
-    {
-      "label": "Guides",
-      "href": "/licensees-guide",
-      "order": 4
-    },
-    {
-      "label": "Success Stories",
-      "href": "/results",
-      "order": 5
-    },
-    {
-      "label": "About",
-      "href": "/about",
-      "order": 6
-    },
-    {
-      "label": "Contact",
-      "href": "/contact",
-      "order": 7
-    }
+    { "label": "Home", "href": "/", "order": 1 },
+    { "label": "Ways to Work", "href": "/ways-to-work", "order": 2 },
+    { "label": "Capabilities", "href": "/capabilities", "order": 3 },
+    { "label": "Results", "href": "/results", "order": 4 },
+    { "label": "Guides", "href": "/licensees-guide", "order": 5 },
+    { "label": "About", "href": "/about", "order": 6 },
+    { "label": "Contact", "href": "/contact", "order": 7 }
   ],
   "mobileMenu": [
-    {
-      "label": "Home",
-      "href": "/",
-      "order": 1
-    },
-    {
-      "label": "Services",
-      "href": "/services",
-      "order": 2
-    },
-    {
-      "label": "Hospitality Marketing",
-      "href": "/pub-marketing",
-      "order": 3
-    },
-    {
-      "label": "Guides",
-      "href": "/licensees-guide",
-      "order": 4
-    },
-    {
-      "label": "Success Stories",
-      "href": "/results",
-      "order": 5
-    },
-    {
-      "label": "About",
-      "href": "/about",
-      "order": 6
-    },
-    {
-      "label": "Contact",
-      "href": "/contact",
-      "order": 7
-    }
+    { "label": "Home", "href": "/", "order": 1 },
+    { "label": "Ways to Work", "href": "/ways-to-work", "order": 2 },
+    { "label": "Capabilities", "href": "/capabilities", "order": 3 },
+    { "label": "Results", "href": "/results", "order": 4 },
+    { "label": "Guides", "href": "/licensees-guide", "order": 5 },
+    { "label": "About", "href": "/about", "order": 6 },
+    { "label": "Contact", "href": "/contact", "order": 7 }
   ],
   "whatsappCta": {
     "enabled": true,
-    "text": "Hi Peter, I'd like help building momentum for my venue.",
+    "text": "Hi Peter, I'd like to find out about your packages.",
     "phoneNumber": "+447990587315",
     "showInDesktop": true,
     "showInMobile": true

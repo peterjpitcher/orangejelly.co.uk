@@ -4,21 +4,21 @@ import footerData from '../../content/data/footer.json';
 export default function FooterWrapper() {
   // Transform the local footer data to the expected format
   const footerContent = {
-    services: footerData.links.services.map((service) => ({
-      title: service.label,
-      href: service.href,
+    services: footerData.links.packages.map((pkg) => ({
+      title: pkg.label,
+      href: pkg.href,
     })),
     company: footerData.links.company.map((link) => ({
       title: link.label,
       href: link.href,
-      external: link.external || false,
+      external: 'external' in link ? (link as { external?: boolean }).external || false : false,
     })),
     resources: footerData.links.resources.map((link) => ({
       title: link.label,
       href: link.href,
       external: false,
     })),
-    solutions: footerData.links.solutions.map((link) => ({
+    solutions: footerData.links.capabilities.map((link) => ({
       title: link.label,
       href: link.href,
     })),

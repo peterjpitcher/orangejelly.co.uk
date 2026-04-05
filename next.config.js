@@ -16,9 +16,36 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Old /services hub → new /ways-to-work
       {
-        source: '/pub-rescue',
-        destination: '/fix-my-pub',
+        source: '/services',
+        destination: '/ways-to-work',
+        permanent: true,
+      },
+      // All service sub-pages → /capabilities
+      {
+        source: '/services/instagram-services-for-pubs',
+        destination: '/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/services/facebook-services-for-pubs',
+        destination: '/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/services/paid-social-for-pubs',
+        destination: '/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/services/content-creation-for-pubs',
+        destination: '/capabilities',
+        permanent: true,
+      },
+      {
+        source: '/services/social-media-marketing-for-pubs',
+        destination: '/capabilities',
         permanent: true,
       },
     ];

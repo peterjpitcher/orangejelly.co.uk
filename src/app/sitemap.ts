@@ -15,19 +15,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: '2026-03-17',
+      lastModified: '2026-04-05',
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: '2026-03-10',
+      url: `${baseUrl}/ways-to-work`,
+      lastModified: '2026-04-05',
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/ways-to-work/growth-fix`,
+      lastModified: '2026-04-05',
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ways-to-work/momentum-month`,
+      lastModified: '2026-04-05',
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ways-to-work/growth-partner`,
+      lastModified: '2026-04-05',
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ways-to-work/turnaround-intensive`,
+      lastModified: '2026-04-05',
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/capabilities`,
+      lastModified: '2026-04-05',
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/results`,
-      lastModified: '2026-03-10',
+      lastModified: '2026-04-05',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
@@ -39,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: '2026-03-10',
+      lastModified: '2026-04-05',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
@@ -56,12 +86,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
     priority: number;
   }> = [
-    { slug: 'services/social-media-marketing-for-pubs', changeFrequency: 'monthly', priority: 0.8 },
-    { slug: 'services/instagram-services-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
-    { slug: 'services/facebook-services-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
-    { slug: 'services/paid-social-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
-    { slug: 'services/content-creation-for-pubs', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'fix-my-pub', changeFrequency: 'monthly', priority: 0.8 },
+    { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'pub-marketing', changeFrequency: 'weekly', priority: 0.85 },
     { slug: 'pub-marketing-london', changeFrequency: 'monthly', priority: 0.65 },
     { slug: 'pub-marketing-surrey', changeFrequency: 'monthly', priority: 0.6 },
