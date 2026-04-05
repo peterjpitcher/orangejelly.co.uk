@@ -185,17 +185,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           </div>
         </header>
 
-        {/* Featured image - always show, use default if not set */}
-        <div className="relative aspect-[16/9] mb-8 -mx-4 sm:mx-0 sm:rounded-lg overflow-hidden">
-          <OptimizedImage
-            src={getBlogImageSrc(post.featuredImage, post.slug)}
-            alt={getBlogImageAlt(post.featuredImage, post.title)}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-          />
-        </div>
+        {/* Category hero handles the visual header — no featured image needed */}
 
         {/* Quick Answer for featured snippets */}
         <QuickAnswer answer={quickAnswerText} className="mb-8" />

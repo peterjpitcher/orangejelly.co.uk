@@ -1,12 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import OptimizedImage from '@/components/OptimizedImage';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { formatDate } from '@/lib/utils';
-import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
+import { getCategoryGradient, getCategoryLabel } from '@/lib/category-colours';
 
 interface BlogPostCardProps {
   post: {
@@ -18,7 +17,7 @@ interface BlogPostCardProps {
       name: string;
       slug: string;
     };
-    featuredImage:
+    featuredImage?:
       | string
       | {
           src?: string;
@@ -38,40 +37,58 @@ interface BlogPostCardProps {
 
 export default function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
   const postUrl = `/licensees-guide/${post.slug}`;
+  const categorySlug = post.category?.slug || 'operations';
+  const gradient = getCategoryGradient(categorySlug);
+  const categoryLabel = getCategoryLabel(categorySlug);
 
   if (featured) {
     return (
       <Card variant="bordered" className="overflow-hidden">
         <Link href={postUrl} className="group">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative aspect-[16/9] md:aspect-auto">
-              <OptimizedImage
-                src={getBlogImageSrc(post.featuredImage, post.slug)}
-                alt={getBlogImageAlt(post.featuredImage, post.title)}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-                width={0}
-                height={0}
+          <div className="grid md:grid-cols-2 gap-0">
+            <div
+              className="relative aspect-[16/9] md:aspect-auto md:min-h-[280px] flex items-center justify-center p-8"
+              style={{ background: gradient }}
+            >
+              <div
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)',
+                }}
               />
-              <div className="absolute top-4 left-4">
-                <span className="bg-orange text-white px-3 py-1 rounded-full text-sm font-medium">
+              <div className="relative text-center">
+                <span className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium mb-3">
                   Featured
                 </span>
+                <Text size="lg" color="white" align="center" className="text-white/90 font-medium">
+                  {categoryLabel}
+                </Text>
               </div>
             </div>
 
             <div className="p-6 flex flex-col justify-center">
               <div
-                className="text-orange hover:text-orange-dark text-sm font-medium mb-2 inline-block cursor-pointer"
+                className="text-sm font-medium mb-2 inline-block cursor-pointer"
+                style={{
+                  color: getCategoryGradient(categorySlug).includes('#') ? categorySlug : undefined,
+                }}
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   window.location.href = `/licensees-guide/category/${post.category.slug}`;
                 }}
               >
-                {post.category.name}
+                <span
+                  className="inline-block w-2 h-2 rounded-full mr-1.5"
+                  style={{
+                    backgroundColor: gradient
+                      .split(',')[0]
+                      ?.replace('linear-gradient(135deg', '')
+                      .trim(),
+                  }}
+                />
+                {categoryLabel}
               </div>
 
               <Heading level={2} className="mb-3 group-hover:text-orange transition-colors">
@@ -84,9 +101,9 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
 
               <div className="flex items-center gap-4 text-sm text-charcoal/60">
                 <span>{post.author.name}</span>
-                <span>•</span>
+                <span>&middot;</span>
                 <time dateTime={post.publishedDate}>{formatDate(post.publishedDate)}</time>
-                <span>•</span>
+                <span>&middot;</span>
                 <span>{post.readingTime} min read</span>
               </div>
             </div>
@@ -99,28 +116,47 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
   return (
     <Card variant="bordered" className="overflow-hidden h-full flex flex-col">
       <Link href={postUrl} className="group flex flex-col h-full">
-        <div className="relative aspect-[16/9] overflow-hidden">
-          <OptimizedImage
-            src={getBlogImageSrc(post.featuredImage, post.slug)}
-            alt={getBlogImageAlt(post.featuredImage, post.title)}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={0}
-            height={0}
+        <div
+          className="relative aspect-[16/9] overflow-hidden flex items-center justify-center"
+          style={{ background: gradient }}
+        >
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)',
+            }}
           />
+          <Text
+            size="sm"
+            color="white"
+            align="center"
+            weight="medium"
+            className="relative text-white/80 uppercase tracking-wider"
+          >
+            {categoryLabel}
+          </Text>
         </div>
 
         <div className="p-6 flex flex-col flex-grow">
           <div
-            className="text-orange hover:text-orange-dark text-sm font-medium mb-2 inline-block cursor-pointer"
+            className="text-sm font-medium mb-2 inline-block cursor-pointer hover:underline"
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
               window.location.href = `/licensees-guide/category/${post.category.slug}`;
             }}
           >
-            {post.category.name}
+            <span
+              className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
+              style={{
+                backgroundColor: gradient
+                  .split(',')[0]
+                  ?.replace('linear-gradient(135deg', '')
+                  .trim(),
+              }}
+            />
+            {categoryLabel}
           </div>
 
           <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
@@ -133,7 +169,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
 
           <div className="flex items-center gap-3 text-sm text-charcoal/60">
             <time dateTime={post.publishedDate}>{formatDate(post.publishedDate)}</time>
-            <span>•</span>
+            <span>&middot;</span>
             <span>{post.readingTime} min read</span>
           </div>
         </div>
