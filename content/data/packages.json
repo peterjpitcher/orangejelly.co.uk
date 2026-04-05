@@ -1,0 +1,319 @@
+[
+  {
+    "id": "growth-fix",
+    "name": "Growth Fix",
+    "slug": "growth-fix",
+    "shortDescription": "A focused package for one clear bottleneck",
+    "price": {
+      "amount": 375,
+      "display": "From £375 + VAT",
+      "type": "one-off"
+    },
+    "hours": "5 hours",
+    "badge": null,
+    "bestFor": [
+      "Quiet midweek trade",
+      "Weak event turnout",
+      "Confusing offer communication",
+      "Low local visibility",
+      "One urgent marketing issue"
+    ],
+    "included": [
+      "Diagnosis of main issue",
+      "One focused commercial priority",
+      "One clear action plan",
+      "Messaging and offer refinement",
+      "One capability-led intervention"
+    ],
+    "lightTouch": [
+      "Organic social direction",
+      "Local visibility guidance",
+      "Basic paid social advice",
+      "Basic website and booking journey review"
+    ],
+    "addOns": [
+      "content-production",
+      "posting-scheduling",
+      "paid-social-execution",
+      "community-management",
+      "build-work"
+    ],
+    "notIncluded": [
+      "Ongoing support",
+      "Multi-channel campaign management",
+      "Filming",
+      "Large content batches",
+      "Website rebuild or development"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "We listen",
+        "description": "30-min diagnostic call to understand the problem"
+      },
+      {
+        "step": 2,
+        "title": "We diagnose",
+        "description": "Identify the one priority that will move the needle"
+      },
+      {
+        "step": 3,
+        "title": "We deliver",
+        "description": "Action plan plus one focused intervention within 5 hours"
+      },
+      {
+        "step": 4,
+        "title": "You decide",
+        "description": "Results speak — step up to Momentum Month if you want ongoing support"
+      }
+    ],
+    "paymentPlan": {
+      "available": true,
+      "copy": "Payment plans available",
+      "cardCopy": "Payment plans available"
+    },
+    "ctaWhatsApp": "Hi Peter, I'm interested in the Growth Fix package.",
+    "relatedProof": ["food-gp-growth", "quiz-regulars"],
+    "relatedCaseStudies": ["anchor-midweek-turnaround"],
+    "sortOrder": 1,
+    "visible": true
+  },
+  {
+    "id": "momentum-month",
+    "name": "Momentum Month",
+    "slug": "momentum-month",
+    "shortDescription": "A practical monthly plan to build consistency and momentum",
+    "price": {
+      "amount": 900,
+      "display": "£900 + VAT /month",
+      "type": "monthly"
+    },
+    "hours": "12 hours /month",
+    "badge": null,
+    "bestFor": [
+      "Building consistency",
+      "Improving local marketing rhythm",
+      "Supporting one main monthly priority",
+      "Staying focused without overcommitting"
+    ],
+    "included": [
+      "One monthly growth objective",
+      "30-day momentum plan",
+      "Weekly priority setting",
+      "One main campaign, offer, or event focus",
+      "Organic social direction",
+      "Content themes and caption guidance",
+      "Local visibility routine",
+      "One light paid social campaign setup and optimisation",
+      "Simple reporting",
+      "Light website and booking journey recommendations"
+    ],
+    "lightTouch": [
+      "Limited content shaping and repurposing",
+      "Light paid social support",
+      "Light tool and tracking guidance"
+    ],
+    "addOns": [
+      "content-production",
+      "posting-scheduling",
+      "paid-social-execution",
+      "community-management",
+      "build-work"
+    ],
+    "notIncluded": [
+      "Unlimited content creation",
+      "Full social management",
+      "Website rebuild",
+      "Deep CRM or automation work"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Monthly kickoff",
+        "description": "Set the month's one main objective"
+      },
+      {
+        "step": 2,
+        "title": "Weekly priorities",
+        "description": "Clear tasks tied to the objective"
+      },
+      {
+        "step": 3,
+        "title": "Hands-on support",
+        "description": "We work alongside you on the priority"
+      },
+      {
+        "step": 4,
+        "title": "Monthly review",
+        "description": "What worked, what's next, adjust the plan"
+      }
+    ],
+    "paymentPlan": {
+      "available": true,
+      "copy": "Payment plans available",
+      "cardCopy": "Payment plans available"
+    },
+    "ctaWhatsApp": "Hi Peter, I'm interested in the Momentum Month package.",
+    "relatedProof": ["quiz-regulars", "social-views"],
+    "relatedCaseStudies": ["anchor-midweek-turnaround", "anchor-social-growth"],
+    "sortOrder": 2,
+    "visible": true
+  },
+  {
+    "id": "growth-partner",
+    "name": "Growth Partner",
+    "slug": "growth-partner",
+    "shortDescription": "Full growth support with strategy, execution, and accountability",
+    "price": {
+      "amount": 1800,
+      "display": "£1,800 + VAT /month",
+      "type": "monthly"
+    },
+    "hours": "24 hours /month",
+    "badge": "Most Popular",
+    "bestFor": [
+      "Venues with multiple growth challenges",
+      "Event-led growth",
+      "Bookings, footfall, and repeat visits together",
+      "Strategic direction plus hands-on support"
+    ],
+    "included": [
+      "30/60/90-day momentum plan",
+      "Ongoing commercial prioritisation",
+      "Event and offer marketing support",
+      "Strong organic social planning",
+      "Campaign structure and creative direction",
+      "Local visibility actions",
+      "Website and booking journey optimisation guidance",
+      "Moderate paid social support",
+      "Reporting tied to commercial outcomes",
+      "Playbooks and internal clarity where needed"
+    ],
+    "lightTouch": [
+      "Moderate content shaping and repurposing",
+      "Moderate tools support",
+      "Moderate paid social management",
+      "Moderate website improvement guidance"
+    ],
+    "addOns": [
+      "filming-days",
+      "content-production",
+      "community-management",
+      "build-work",
+      "automation-crm"
+    ],
+    "notIncluded": [
+      "Unlimited creative production",
+      "Ongoing content factory-style output",
+      "Full redesign or rebuild work",
+      "Complex development as standard"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "90-day roadmap",
+        "description": "Map the full growth plan across 3 months"
+      },
+      {
+        "step": 2,
+        "title": "Weekly execution",
+        "description": "Priorities, campaigns, events, content direction"
+      },
+      {
+        "step": 3,
+        "title": "Ongoing accountability",
+        "description": "We track what matters — bookings, footfall, revenue"
+      },
+      {
+        "step": 4,
+        "title": "Evolve and grow",
+        "description": "Adjust strategy as your venue develops"
+      }
+    ],
+    "paymentPlan": {
+      "available": true,
+      "copy": "Payment plans available",
+      "cardCopy": "Payment plans available"
+    },
+    "ctaWhatsApp": "Hi Peter, I'm interested in the Growth Partner package.",
+    "relatedProof": ["food-gp-growth", "value-added", "social-views"],
+    "relatedCaseStudies": ["anchor-food-gp", "anchor-social-growth"],
+    "sortOrder": 3,
+    "visible": true
+  },
+  {
+    "id": "turnaround-intensive",
+    "name": "Turnaround Intensive",
+    "slug": "turnaround-intensive",
+    "shortDescription": "A 30-day commercial reset for venues that need a complete turnaround",
+    "price": {
+      "amount": null,
+      "display": "Pricing confirmed after diagnostic",
+      "type": "custom"
+    },
+    "hours": "30-day sprint",
+    "badge": "Premium",
+    "bestFor": [
+      "Venues needing a complete commercial reset",
+      "Deep diagnostic and offer reset",
+      "Event and promotional reset",
+      "Local visibility reset with priority actions"
+    ],
+    "included": [
+      "Deep diagnostic and reset plan",
+      "Offer and message reset",
+      "Event and promotional reset",
+      "Local visibility reset",
+      "Priority social and paid actions",
+      "Website and booking journey reset",
+      "Lean website rebuild",
+      "Tighter founder involvement",
+      "Reporting against immediate commercial goals",
+      "Stabilisation playbooks"
+    ],
+    "lightTouch": [
+      "Additional content shaping during reset",
+      "Limited urgent asset repurposing",
+      "Limited tools simplification where it supports the turnaround"
+    ],
+    "addOns": ["content-production", "build-work"],
+    "notIncluded": [
+      "Unlimited custom design or development",
+      "Open-ended website scope",
+      "Indefinite monthly delivery beyond the agreed sprint",
+      "Full rebrand unless separately scoped"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Deep diagnostic",
+        "description": "2-3 day assessment of your venue, offer, and market"
+      },
+      {
+        "step": 2,
+        "title": "Reset plan",
+        "description": "Complete commercial reset strategy with Peter"
+      },
+      {
+        "step": 3,
+        "title": "30-day sprint",
+        "description": "Intensive implementation including lean website rebuild"
+      },
+      {
+        "step": 4,
+        "title": "Handover",
+        "description": "Stabilisation playbooks, clear next steps, optional Growth Partner transition"
+      }
+    ],
+    "paymentPlan": {
+      "available": true,
+      "copy": "Payment plans available — discuss with Peter",
+      "cardCopy": "Payment plans available"
+    },
+    "ctaWhatsApp": "Hi Peter, I'm interested in the Turnaround Intensive package.",
+    "relatedProof": ["food-gp-growth", "value-added", "sunday-margin-growth"],
+    "relatedCaseStudies": ["anchor-food-gp"],
+    "sortOrder": 4,
+    "visible": true
+  }
+]

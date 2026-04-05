@@ -1,0 +1,169 @@
+[
+  {
+    "id": "growth-strategy",
+    "name": "Growth Strategy & Momentum Planning",
+    "shortDescription": "Commercial direction, prioritisation, 30/60/90-day plans",
+    "icon": "target",
+    "defaultSupportLevel": {
+      "growth-fix": "included",
+      "momentum-month": "included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": ["Clear 90-day growth roadmap", "Weekly priorities that drive revenue"],
+    "sortOrder": 1
+  },
+  {
+    "id": "event-marketing",
+    "name": "Event & Offer Marketing",
+    "shortDescription": "Event formats, promotional campaigns, seasonal calendars",
+    "icon": "calendar",
+    "defaultSupportLevel": {
+      "growth-fix": "included",
+      "momentum-month": "included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Profitable quiz night attracting 25-35 regulars",
+      "Seasonal event calendar with clear ROI"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "id": "organic-social",
+    "name": "Organic Social Direction",
+    "shortDescription": "Content themes, posting strategy, engagement approach",
+    "icon": "share-2",
+    "defaultSupportLevel": {
+      "growth-fix": "light-touch",
+      "momentum-month": "included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "60-70K monthly social media views",
+      "Consistent posting rhythm that drives footfall"
+    ],
+    "sortOrder": 3
+  },
+  {
+    "id": "paid-social",
+    "name": "Paid Social",
+    "shortDescription": "Meta ads, campaign setup, targeting, optimisation",
+    "icon": "trending-up",
+    "defaultSupportLevel": {
+      "growth-fix": "light-touch",
+      "momentum-month": "light-touch",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Targeted ads filling quiet midweek nights",
+      "Cost-effective local reach campaigns"
+    ],
+    "sortOrder": 4
+  },
+  {
+    "id": "content-planning",
+    "name": "Content Planning & Creative Direction",
+    "shortDescription": "Campaign briefs, shot lists, creative prompts, caption guidance",
+    "icon": "pen-tool",
+    "defaultSupportLevel": {
+      "growth-fix": "not-included",
+      "momentum-month": "included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Clear content calendar tied to commercial priorities",
+      "Creative direction that builds a recognisable brand"
+    ],
+    "sortOrder": 5
+  },
+  {
+    "id": "content-production",
+    "name": "Content Production",
+    "shortDescription": "Filming, photography, editing, asset creation",
+    "icon": "camera",
+    "defaultSupportLevel": {
+      "growth-fix": "add-on",
+      "momentum-month": "add-on",
+      "growth-partner": "add-on",
+      "turnaround-intensive": "light-touch"
+    },
+    "exampleOutcomes": [
+      "Professional-quality content from a phone",
+      "Consistent visual identity across channels"
+    ],
+    "sortOrder": 6
+  },
+  {
+    "id": "local-visibility",
+    "name": "Local Visibility",
+    "shortDescription": "Google Business Profile, local SEO, directories, reviews",
+    "icon": "map-pin",
+    "defaultSupportLevel": {
+      "growth-fix": "light-touch",
+      "momentum-month": "included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Top 3 Google Maps position for local searches",
+      "Consistent 4.5+ star review rating"
+    ],
+    "sortOrder": 7
+  },
+  {
+    "id": "website-booking",
+    "name": "Website & Booking Journey Optimisation",
+    "shortDescription": "Website improvements, booking flow, menu display, contact paths",
+    "icon": "monitor",
+    "defaultSupportLevel": {
+      "growth-fix": "light-touch",
+      "momentum-month": "light-touch",
+      "growth-partner": "light-touch",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Clear booking journey that converts visitors",
+      "Mobile-friendly menu and contact flow"
+    ],
+    "sortOrder": 8
+  },
+  {
+    "id": "tools-tracking",
+    "name": "Tools, Tracking & Reporting",
+    "shortDescription": "Analytics, tool simplification, commercial reporting",
+    "icon": "bar-chart-2",
+    "defaultSupportLevel": {
+      "growth-fix": "not-included",
+      "momentum-month": "light-touch",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Simple dashboard tracking bookings and footfall",
+      "Monthly report tied to commercial outcomes"
+    ],
+    "sortOrder": 9
+  },
+  {
+    "id": "playbooks-standards",
+    "name": "Playbooks, Standards & Team Clarity",
+    "shortDescription": "SOPs, content standards, ownership clarity, team briefings",
+    "icon": "book-open",
+    "defaultSupportLevel": {
+      "growth-fix": "not-included",
+      "momentum-month": "not-included",
+      "growth-partner": "included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Staff know exactly what good looks like",
+      "Repeatable systems that work without you"
+    ],
+    "sortOrder": 10
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "anchor-midweek-turnaround",
+    "title": "How The Anchor Filled Midweek Tables",
+    "challenge": "Quiet Tuesday and Wednesday nights with minimal footfall",
+    "action": "Introduced quiz night format, steak night promotion, and targeted social media campaigns",
+    "result": "Built quiz night to 25-35 weekly regulars, midweek covers up significantly",
+    "metrics": ["quiz-regulars", "social-views"],
+    "relatedPackages": ["growth-fix", "momentum-month"],
+    "relatedCapabilities": ["event-marketing", "organic-social"]
+  },
+  {
+    "id": "anchor-food-gp",
+    "title": "From 58% to 71% Food Gross Profit",
+    "challenge": "Food margins below industry standard, waste issues, pricing not optimised",
+    "action": "Menu engineering, portion control, supplier renegotiation, waste tracking systems",
+    "result": "Food GP grew from 58% to 71%, unlocking thousands per month in margin gains",
+    "metrics": ["food-gp-growth", "sunday-margin-growth"],
+    "relatedPackages": ["growth-partner", "turnaround-intensive"],
+    "relatedCapabilities": ["growth-strategy"]
+  },
+  {
+    "id": "anchor-social-growth",
+    "title": "60-70K Monthly Social Views From Scratch",
+    "challenge": "Minimal social media presence, no consistent posting, low local awareness",
+    "action": "Content strategy, posting rhythm, local engagement, community building",
+    "result": "Grew to 60-70K monthly views and built a 300-contact database",
+    "metrics": ["social-views", "contact-database"],
+    "relatedPackages": ["momentum-month", "growth-partner"],
+    "relatedCapabilities": ["organic-social", "tools-tracking"]
+  }
+]

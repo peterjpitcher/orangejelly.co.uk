@@ -1,0 +1,105 @@
+{
+  "claims": [
+    {
+      "id": "food-gp-growth",
+      "metric": "58% → 71%",
+      "context": "Food gross profit growth at The Anchor",
+      "displayShort": "Food GP: 58% → 71%",
+      "displayLong": "Grew food gross profit from 58% to 71% at The Anchor",
+      "source": "The Anchor trading records",
+      "lastVerified": "2026-03-01",
+      "category": "revenue",
+      "relatedPackages": ["growth-partner", "turnaround-intensive"],
+      "relatedCapabilities": ["growth-strategy"]
+    },
+    {
+      "id": "quiz-regulars",
+      "metric": "25-35",
+      "context": "Weekly quiz night regulars (up from 20)",
+      "displayShort": "25-35 quiz regulars",
+      "displayLong": "Built quiz night to 25-35 regulars, up from 20",
+      "source": "The Anchor weekly counts",
+      "lastVerified": "2026-03-01",
+      "category": "footfall",
+      "relatedPackages": ["momentum-month", "growth-partner"],
+      "relatedCapabilities": ["event-marketing"]
+    },
+    {
+      "id": "social-views",
+      "metric": "60-70K",
+      "context": "Monthly social media views",
+      "displayShort": "60-70K monthly social views",
+      "displayLong": "Generating 60,000 to 70,000 monthly social media views",
+      "source": "Meta Business Suite analytics",
+      "lastVerified": "2026-03-01",
+      "category": "visibility",
+      "relatedPackages": ["momentum-month", "growth-partner"],
+      "relatedCapabilities": ["organic-social"]
+    },
+    {
+      "id": "contact-database",
+      "metric": "300",
+      "context": "Customer contacts in database",
+      "displayShort": "300 contacts",
+      "displayLong": "Built a database of 300 customer contacts",
+      "source": "The Anchor CRM",
+      "lastVerified": "2026-03-01",
+      "category": "retention",
+      "relatedPackages": ["growth-partner"],
+      "relatedCapabilities": ["tools-tracking"]
+    },
+    {
+      "id": "value-added",
+      "metric": "£75-100K",
+      "context": "Total value added to The Anchor",
+      "displayShort": "£75-100K value added",
+      "displayLong": "Added £75,000 to £100,000 in value to The Anchor",
+      "source": "The Anchor financial review",
+      "lastVerified": "2026-03-01",
+      "category": "revenue",
+      "relatedPackages": ["growth-partner", "turnaround-intensive"],
+      "relatedCapabilities": ["growth-strategy"]
+    },
+    {
+      "id": "sunday-margin-growth",
+      "metric": "£250/week",
+      "context": "Weekly margin gains from Sunday operations improvement",
+      "displayShort": "£250/week Sunday margin growth",
+      "displayLong": "Unlocking £250 per week through improved Sunday operations",
+      "source": "The Anchor weekly P&L",
+      "lastVerified": "2026-03-01",
+      "category": "efficiency",
+      "relatedPackages": ["growth-partner", "turnaround-intensive"],
+      "relatedCapabilities": ["growth-strategy"]
+    },
+    {
+      "id": "tasting-retention",
+      "metric": "85%",
+      "context": "Tasting event customer retention rate",
+      "displayShort": "85% tasting retention",
+      "displayLong": "85% of tasting event attendees return within 30 days",
+      "source": "The Anchor booking records",
+      "lastVerified": "2026-03-01",
+      "category": "retention",
+      "relatedPackages": ["momentum-month", "growth-partner"],
+      "relatedCapabilities": ["event-marketing"]
+    },
+    {
+      "id": "ai-time-reclaimed",
+      "metric": "25 hours/week",
+      "context": "Time reclaimed through AI workflow implementation",
+      "displayShort": "25 hrs/week reclaimed with AI",
+      "displayLong": "Reclaiming 25 hours per week through AI-powered workflows",
+      "source": "Orange Jelly time tracking",
+      "lastVerified": "2026-03-01",
+      "category": "efficiency",
+      "relatedPackages": ["growth-partner"],
+      "relatedCapabilities": ["tools-tracking"]
+    }
+  ],
+  "governance": {
+    "reviewFrequency": "quarterly",
+    "lastFullReview": "2026-03-01",
+    "approvedBy": "Peter Pitcher"
+  }
+}

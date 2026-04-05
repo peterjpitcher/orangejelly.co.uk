@@ -1,0 +1,65 @@
+[
+  {
+    "id": "content-production",
+    "name": "Content Production",
+    "description": "Filming, photography, heavy editing, large asset batches",
+    "whoFor": "Venues that need regular professional content",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-fix", "momentum-month", "growth-partner"],
+    "sortOrder": 1
+  },
+  {
+    "id": "posting-scheduling",
+    "name": "Posting & Scheduling",
+    "description": "Daily posting, content scheduling, platform management",
+    "whoFor": "Venues that want fully managed social feeds",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-fix", "momentum-month"],
+    "sortOrder": 2
+  },
+  {
+    "id": "paid-social-execution",
+    "name": "Paid Social Management",
+    "description": "Full campaign management, budget optimisation, reporting",
+    "whoFor": "Venues running significant ad spend",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-fix", "momentum-month"],
+    "sortOrder": 3
+  },
+  {
+    "id": "community-management",
+    "name": "Community Management",
+    "description": "Comment responses, DM handling, review management",
+    "whoFor": "Venues with active social communities",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-fix", "momentum-month", "growth-partner"],
+    "sortOrder": 4
+  },
+  {
+    "id": "build-work",
+    "name": "Web Build & Technical Work",
+    "description": "Website development, booking integrations, CRM setup",
+    "whoFor": "Venues needing technical implementation",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-fix", "momentum-month", "growth-partner"],
+    "sortOrder": 5
+  },
+  {
+    "id": "filming-days",
+    "name": "Filming Days",
+    "description": "On-site professional filming and photography sessions",
+    "whoFor": "Venues building a content library",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-partner"],
+    "sortOrder": 6
+  },
+  {
+    "id": "automation-crm",
+    "name": "CRM & Automation",
+    "description": "CRM setup, email automation, booking system integration",
+    "whoFor": "Venues ready to systematise customer relationships",
+    "priceNote": "Scoped separately",
+    "relatedPackages": ["growth-partner"],
+    "sortOrder": 7
+  }
+]
