@@ -78,7 +78,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
       role="complementary"
       aria-label="Engagement bar"
     >
-      <div className="relative mx-auto flex max-w-5xl items-center justify-center gap-3 px-4 py-3 pr-12">
+      <div className="relative mx-auto flex max-w-5xl items-center justify-center gap-3 px-4 py-2 pr-12">
         {/* Rotating problem statement */}
         <p
           className={cn(
@@ -93,7 +93,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/ways-to-work"
-            className="rounded-full bg-orange px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-orange/90 whitespace-nowrap"
+            className="rounded-full bg-orange px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-orange/90 whitespace-nowrap"
           >
             See Packages
           </Link>
@@ -101,7 +101,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-green-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap"
+            className="rounded-full bg-green-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap"
           >
             WhatsApp
           </a>
