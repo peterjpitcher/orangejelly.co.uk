@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import BlogPostCard from '@/components/blog/BlogPostCard';
 import CategoryList from '@/components/blog/CategoryList';
+import CategoryLegend from '@/components/blog/CategoryLegend';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
@@ -376,6 +377,11 @@ export default async function LicenseesGuidePage() {
               Top Topics
             </Heading>
             <CategoryList categories={categories} variant="grid" maxVisible={6} />
+          </div>
+
+          {/* Category Colour Legend */}
+          <div className="mb-8">
+            <CategoryLegend />
           </div>
 
           {/* Blog Posts Grid */}

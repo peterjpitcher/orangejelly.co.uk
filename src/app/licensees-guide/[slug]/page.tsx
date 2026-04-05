@@ -2,11 +2,11 @@ import { type Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
 import path from 'path';
-import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import BlogPostClient from './BlogPostClient';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
+import BlogCategoryHero from '@/components/blog/BlogCategoryHero';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { getBaseUrl } from '@/lib/site-config';
@@ -659,16 +659,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           ]}
         />
         {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
-        <Hero
+        <BlogCategoryHero
           title={post.title}
-          subtitle={post.excerpt}
-          showCTA={false}
+          excerpt={post.excerpt}
+          category={post.category?.slug || 'general'}
           breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
-          backgroundImage={
-            typeof post.featuredImage === 'string' && post.featuredImage
-              ? post.featuredImage
-              : '/images/licensee-guide-hero.png'
-          }
         />
         <Section background="white">
           <div className="max-w-6xl mx-auto">
