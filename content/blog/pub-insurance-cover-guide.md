@@ -13,7 +13,7 @@ tags:
   - "employers liability"
   - "pub business"
   - "pub operations"
-status: "draft"
+status: "published"
 metaDescription: "What insurance does a pub need? Public liability, employers liability, buildings, contents, and business interruption explained with realistic costs."
 keywords:
   - "pub insurance"

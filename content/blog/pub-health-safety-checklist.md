@@ -13,7 +13,7 @@ tags:
   - "pub compliance"
   - "pub noise complaint"
   - "licensee checklist"
-status: "draft"
+status: "published"
 metaDescription: "A practical health and safety checklist for pub licensees. Fire safety, risk assessments, COSHH, cellar safety, noise management, and how to prepare for inspections."
 keywords:
   - "pub health and safety"

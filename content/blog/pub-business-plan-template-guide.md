@@ -12,7 +12,7 @@ tags:
   - "operations"
   - "finance"
   - "brewery applications"
-status: "draft"
+status: "published"
 featuredImage: "/images/blog/pub-business-plan-template-guide.svg"
 metaDescription: "Write a pub business plan that gets approved. Step-by-step guide covering financials, market analysis, operations, and marketing. Free template from a working licensee."
 keywords:

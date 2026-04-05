@@ -15,7 +15,7 @@ tags:
   - "pub soft drinks"
   - "menu engineering"
   - "drinks revenue"
-status: "draft"
+status: "published"
 metaDescription: "Design a pub drinks menu that grows revenue. Layout psychology, pricing ladders, cocktail lists, wine for non-experts, and premium soft drinks. From a working licensee."
 keywords:
   - "pub drinks menu"

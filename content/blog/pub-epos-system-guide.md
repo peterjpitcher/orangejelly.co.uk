@@ -13,7 +13,7 @@ tags:
   - "pub technology"
   - "pub operations"
   - "stock management"
-status: "draft"
+status: "published"
 metaDescription: "What to look for in a pub EPOS system. Key features, integration checklist, and how to use till data to grow revenue. Written by a working licensee."
 keywords:
   - "pub epos system"

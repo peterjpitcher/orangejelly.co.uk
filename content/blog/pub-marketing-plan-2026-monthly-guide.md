@@ -13,7 +13,7 @@ tags:
   - "pub events calendar"
   - "pub promotion ideas"
   - "pub marketing 2026"
-status: "draft"
+status: "published"
 metaDescription: "Month-by-month pub marketing plan for 2026. What to promote, events to run, social media themes, and how to build momentum across the year. Written by a licensee."
 keywords:
   - "pub marketing plan"

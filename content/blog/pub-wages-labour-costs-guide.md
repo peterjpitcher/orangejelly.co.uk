@@ -14,7 +14,7 @@ tags:
   - "pub overheads"
   - "rota management"
   - "hospitality wages"
-status: "draft"
+status: "published"
 metaDescription: "What to pay pub staff in the UK and how to keep labour costs under 30%. Realistic rates by role, rota tips, and benchmarks from a working licensee."
 keywords:
   - "pub wages uk"

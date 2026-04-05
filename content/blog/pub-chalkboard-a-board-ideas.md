@@ -14,7 +14,7 @@ tags:
   - "pub marketing"
   - "local pub marketing"
   - "pub signage"
-status: "draft"
+status: "published"
 metaDescription: "Pub chalkboard and A-board ideas that actually drive footfall. What to write, design tips, seasonal messages, legal rules, and how to amplify your board on social media."
 keywords:
   - "pub chalkboard ideas"

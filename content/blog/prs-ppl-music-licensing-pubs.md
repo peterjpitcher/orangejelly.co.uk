@@ -14,7 +14,7 @@ tags:
   - "music licence cost pub"
   - "pub music playlist"
   - "pub compliance"
-status: "draft"
+status: "published"
 metaDescription: "TheMusicLicence for pubs explained. What PRS and PPL cover, how fees work by venue size, what is included, and penalties for non-compliance. Written by a working licensee."
 keywords:
   - "pub background music"

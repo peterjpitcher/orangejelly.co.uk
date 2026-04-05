@@ -14,7 +14,7 @@ tags:
   - "how to start a pub"
   - "taking over a pub"
   - "pub business"
-status: "draft"
+status: "published"
 metaDescription: "Complete guide to buying a pub in the UK. Freehold vs leasehold, due diligence, financing, legal steps, and a 90-day plan from a working licensee."
 keywords:
   - "buying a pub"

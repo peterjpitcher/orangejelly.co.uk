@@ -13,7 +13,7 @@ tags:
   - "rugby"
   - "pub events"
   - "match day"
-status: "draft"
+status: "published"
 metaDescription: "How to screen Six Nations rugby in your pub. Screening setup, food and drink deals, booking systems, social media promotion, and converting visitors into regulars."
 keywords:
   - "pub Six Nations"

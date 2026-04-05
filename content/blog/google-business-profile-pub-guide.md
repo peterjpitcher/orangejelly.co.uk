@@ -13,7 +13,7 @@ tags:
   - "local seo"
   - "pub marketing"
   - "pub near me"
-status: "draft"
+status: "published"
 metaDescription: "How to set up and optimise your pub's Google Business Profile. Get into the local 3-pack, manage reviews, and turn Google searches into real customers."
 keywords:
   - "pub google maps"

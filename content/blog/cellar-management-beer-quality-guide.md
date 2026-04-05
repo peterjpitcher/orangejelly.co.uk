@@ -14,7 +14,7 @@ tags:
   - "cask ale"
   - "beer quality"
   - "pub operations"
-status: "draft"
+status: "published"
 metaDescription: "Cellar management guide for pub landlords. Temperature control, line cleaning schedules, FIFO stock rotation, cask vs keg, and wastage tracking to protect GP."
 keywords:
   - "cellar management"

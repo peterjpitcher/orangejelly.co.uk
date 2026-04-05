@@ -14,7 +14,7 @@ tags:
   - "pub operations"
   - "break even"
   - "pub business"
-status: "draft"
+status: "published"
 metaDescription: "Realistic pub profit benchmarks for 2026. Wet GP, food GP, labour, rent, and what you actually take home. From a licensee who grew food GP from 58% to 71%."
 keywords:
   - "how much profit does a pub make"

@@ -14,7 +14,7 @@ tags:
   - "vat on pub food"
   - "pub finances"
   - "pub tax"
-status: "draft"
+status: "published"
 metaDescription: "Plain-English guide to pub VAT, bookkeeping, and common tax mistakes. Know what to reclaim, when to register, and how to choose a hospitality accountant."
 keywords:
   - "pub vat"

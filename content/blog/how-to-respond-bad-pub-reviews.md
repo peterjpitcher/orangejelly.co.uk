@@ -13,7 +13,7 @@ tags:
   - "pub marketing"
   - "Google reviews"
   - "TripAdvisor"
-status: "draft"
+status: "published"
 metaDescription: "How to respond to bad pub reviews without making it worse. Real templates, the 3 golden rules, platform differences, and a system to generate more positive reviews."
 keywords:
   - "how to respond to bad pub reviews"

@@ -13,7 +13,7 @@ tags:
   - "local seo"
   - "digital marketing"
   - "pub marketing"
-status: "draft"
+status: "published"
 metaDescription: "Does your pub need a website in 2026? Honest advice on what works, what to include, how much it costs, and why Google Business Profile matters more than you think."
 keywords:
   - "pub website"

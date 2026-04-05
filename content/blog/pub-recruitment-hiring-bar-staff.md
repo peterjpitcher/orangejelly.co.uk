@@ -13,7 +13,7 @@ tags:
   - "pub staff recruitment"
   - "pub chef recruitment"
   - "pub staff retention"
-status: "draft"
+status: "published"
 metaDescription: "How to hire and keep great pub staff. Where to find candidates, job ad templates, interview red flags, onboarding plans, and retention strategies from a working licensee."
 keywords:
   - "hospitality recruitment"

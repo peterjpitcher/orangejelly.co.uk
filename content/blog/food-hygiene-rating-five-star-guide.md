@@ -13,7 +13,7 @@ tags:
   - "food safety"
   - "pub compliance"
   - "kitchen management"
-status: "draft"
+status: "published"
 metaDescription: "How to get a 5-star food hygiene rating at your pub. What EHO inspectors assess, how to prepare, common failures, and the daily routines that keep your score."
 keywords:
   - "food hygiene rating"

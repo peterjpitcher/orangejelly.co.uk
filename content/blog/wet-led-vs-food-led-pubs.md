@@ -14,7 +14,7 @@ tags:
   - "pub business strategy"
   - "pub economics"
   - "dry led pub"
-status: "draft"
+status: "published"
 metaDescription: "Wet-led vs food-led pubs explained. Revenue models, GP targets, staffing, marketing differences, and how to decide which model is right for your venue."
 keywords:
   - "wet led pub"

@@ -14,7 +14,7 @@ tags:
   - "temporary event notice"
   - "alcohol licence"
   - "DPS"
-status: "draft"
+status: "published"
 metaDescription: "Every licence a pub landlord needs explained in plain English. Premises licences, personal licences, TENs, costs, timelines, and common mistakes to avoid."
 keywords:
   - "premises licence"

@@ -14,7 +14,7 @@ tags:
   - "child friendly pub"
   - "pub operations"
   - "Equality Act 2010"
-status: "draft"
+status: "published"
 metaDescription: "Make your pub accessible, dog friendly, and family friendly. Legal requirements, practical improvements, and the business case for welcoming everyone to your venue."
 keywords:
   - "disabled access"

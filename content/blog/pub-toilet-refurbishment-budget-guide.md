@@ -13,7 +13,7 @@ tags:
   - "pub lighting ideas"
   - "pub operations"
   - "budget refurbishment"
-status: "draft"
+status: "published"
 metaDescription: "Budget pub toilet refurbishment guide. Prioritise paint, lighting, mirrors, and hand drying for under £1,000. Maintenance schedule and cost breakdowns from a working licensee."
 keywords:
   - "pub toilet refurbishment"
