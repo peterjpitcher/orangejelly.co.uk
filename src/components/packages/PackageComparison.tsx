@@ -4,7 +4,6 @@
 
 import { useState } from 'react';
 import { getPackages, getCapabilities } from '@/lib/packages';
-import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { cn } from '@/lib/utils';
 import type { SupportLevel } from '@/types/packages';
