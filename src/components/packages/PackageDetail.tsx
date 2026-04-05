@@ -26,7 +26,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
   return (
     <>
       {/* Hero */}
-      <Section className="bg-white pt-16 pb-12">
+      <Section background="white" padding="large">
         <Container>
           {pkg.badge && (
             <span className="inline-block rounded-full bg-orange px-4 py-1 text-sm font-semibold text-white mb-4">
@@ -70,7 +70,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       </Section>
 
       {/* Included */}
-      <Section className="bg-cream py-12">
+      <Section background="cream" padding="medium">
         <Container>
           <Heading level={2} className="mb-6">
             What&apos;s included
@@ -88,7 +88,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
 
       {/* Light-touch */}
       {pkg.lightTouch.length > 0 && (
-        <Section className="bg-white py-12">
+        <Section background="white" padding="medium">
           <Container>
             <Heading level={2} className="mb-2">
               Light-touch support
@@ -110,7 +110,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
 
       {/* Add-ons */}
       {packageAddOns.length > 0 && (
-        <Section className="bg-cream py-12">
+        <Section background="cream" padding="medium">
           <Container>
             <Heading level={2} className="mb-2">
               Available as add-ons
@@ -134,7 +134,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
 
       {/* Not included */}
       {pkg.notIncluded.length > 0 && (
-        <Section className="bg-white py-12">
+        <Section background="white" padding="medium">
           <Container>
             <Heading level={2} className="mb-2">
               To keep this package focused
@@ -155,7 +155,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       )}
 
       {/* How it works */}
-      <Section className="bg-cream py-12">
+      <Section background="cream" padding="medium">
         <Container>
           <Heading level={2} className="mb-8">
             How it works
@@ -180,7 +180,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
 
       {/* Proof */}
       {relatedCaseStudies.length > 0 && (
-        <Section className="bg-white py-12">
+        <Section background="white" padding="medium">
           <Container>
             <Heading level={2} className="mb-6">
               Results from The Anchor
@@ -198,7 +198,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       {pkg.paymentPlan.available && <PaymentPlanBanner />}
 
       {/* Final CTA */}
-      <Section className="bg-charcoal py-16">
+      <Section background="charcoal" padding="large">
         <Container>
           <Heading level={2} align="center" color="white" className="mb-4">
             Ready to get started?
