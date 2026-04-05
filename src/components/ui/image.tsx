@@ -176,9 +176,6 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
           {schemaMarkup && (
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
           )}
-          {isLoading && !priority && !useImgTag && (
-            <div className={cn('absolute inset-0 bg-muted/40', className)} aria-hidden="true" />
-          )}
           {imageElement}
           {caption && (
             <figcaption className="text-sm text-muted-foreground text-center">{caption}</figcaption>
@@ -191,9 +188,6 @@ const Image = React.forwardRef<HTMLImageElement, ImageProps>(
       <>
         {schemaMarkup && (
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-        )}
-        {isLoading && !priority && !useImgTag && (
-          <div className={cn('absolute inset-0 bg-muted/40', className)} aria-hidden="true" />
         )}
         {imageElement}
       </>

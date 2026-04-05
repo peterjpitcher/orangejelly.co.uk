@@ -204,7 +204,7 @@ export default function RootLayout({
         {/* Navigation only - SuperHeader removed for cleaner layout */}
         <NavigationWrapper />
         <ErrorBoundary>
-          <main id="main-content" className="min-h-screen pb-14">
+          <main id="main-content" className="min-h-screen">
             {children}
           </main>
         </ErrorBoundary>

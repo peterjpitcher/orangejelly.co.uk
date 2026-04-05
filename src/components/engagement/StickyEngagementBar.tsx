@@ -72,7 +72,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
   return (
     <div
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-40 bg-charcoal text-white transition-transform duration-300',
+        'fixed bottom-0 left-0 right-0 z-40 bg-orange text-white transition-transform duration-300',
         visible ? 'translate-y-0' : 'translate-y-full'
       )}
       role="complementary"
@@ -93,7 +93,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/ways-to-work"
-            className="rounded-full bg-orange px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-orange/90 whitespace-nowrap"
+            className="rounded-full bg-charcoal px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-charcoal/90 whitespace-nowrap min-h-0"
           >
             See Packages
           </Link>
@@ -101,9 +101,9 @@ export default function StickyEngagementBar(): React.ReactElement | null {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-green-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap"
+            className="rounded-full bg-green-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap min-h-0"
           >
-            WhatsApp
+            Chat on WhatsApp
           </a>
         </div>
 
@@ -111,7 +111,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
         <button
           type="button"
           onClick={handleDismiss}
-          className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 transition-colors hover:text-white"
+          className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 transition-colors hover:text-white min-h-0 min-w-0"
           aria-label="Dismiss"
         >
           <svg
