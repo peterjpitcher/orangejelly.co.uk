@@ -60,13 +60,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   });
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
   const canonicalCategorySlug = getCanonicalCategorySlug(params.category);
   if (params.category !== canonicalCategorySlug) {
     permanentRedirect(`/licensees-guide/category/${canonicalCategorySlug}`);
   }
 
-  const { isEnabled } = draftMode();
+  const { isEnabled } = await draftMode();
   const publishOptions = isEnabled ? { includeDrafts: true, includeFuture: true } : undefined;
   const posts = getAllPosts(publishOptions);
   const categories = getCategories(publishOptions);
