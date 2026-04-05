@@ -7,33 +7,15 @@ import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import CaseStudySelector from '@/components/CaseStudySelector';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
-import RelatedLinks from '@/components/RelatedLinks';
-
-// Import related links data
-import relatedLinksData from '../../../content/data/related-links.json';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
+import { Claim, CaseStudyCard, PackageCTA } from '@/components/packages';
 // Local data imports
 import resultsData from '../../../content/data/results.json';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface ResultsPageProps {
-  // No props needed - using local data
-}
-
-interface QuickWinLink {
-  title: string;
-  href: string;
-  description: string;
-  emoji?: string;
-  highlight?: boolean;
-}
-
-export default function ResultsPage({}: ResultsPageProps) {
+export default function ResultsPage() {
   // Use local case study data
   const transformedCaseStudies = resultsData.caseStudies;
-  const quickWinLinks =
-    (relatedLinksData as { quickWins?: { links: QuickWinLink[] } }).quickWins?.links || [];
 
   return (
     <>
@@ -51,62 +33,131 @@ export default function ResultsPage({}: ResultsPageProps) {
         </AnimatedItem>
       </Section>
 
+      {/* Claims-governed proof section */}
+      <Section background="white" padding="large">
+        <div className="max-w-4xl mx-auto">
+          <Heading level={2} align="center" className="mb-4">
+            The Numbers Don&apos;t Lie
+          </Heading>
+          <Text align="center" color="muted" className="mb-12">
+            Every metric comes from our own venue. Verified quarterly.
+          </Text>
+          <Grid columns={{ default: 2, md: 4 }} gap="medium">
+            <Card variant="bordered" className="text-center p-6">
+              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Claim id="food-gp-growth" variant="metric-only" />
+              </Text>
+              <Text size="sm" color="muted">
+                Food GP Growth
+              </Text>
+            </Card>
+            <Card variant="bordered" className="text-center p-6">
+              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Claim id="quiz-regulars" variant="metric-only" />
+              </Text>
+              <Text size="sm" color="muted">
+                Weekly Quiz Regulars
+              </Text>
+            </Card>
+            <Card variant="bordered" className="text-center p-6">
+              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Claim id="social-views" variant="metric-only" />
+              </Text>
+              <Text size="sm" color="muted">
+                Monthly Social Views
+              </Text>
+            </Card>
+            <Card variant="bordered" className="text-center p-6">
+              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Claim id="value-added" variant="metric-only" />
+              </Text>
+              <Text size="sm" color="muted">
+                Value Added
+              </Text>
+            </Card>
+          </Grid>
+        </div>
+      </Section>
+
+      {/* Case Studies with CaseStudyCard */}
+      <Section background="cream" padding="large">
+        <div className="max-w-4xl mx-auto">
+          <Heading level={2} align="center" className="mb-4">
+            How We Did It
+          </Heading>
+          <Text align="center" color="muted" className="mb-12">
+            Three case studies from The Anchor, each with verified claims.
+          </Text>
+          <Grid columns={{ default: 1, md: 3 }} gap="medium">
+            <AnimatedItem animation="slide-up" delay={0}>
+              <CaseStudyCard id="anchor-midweek-turnaround" variant="full" />
+            </AnimatedItem>
+            <AnimatedItem animation="slide-up" delay={100}>
+              <CaseStudyCard id="anchor-food-gp" variant="full" />
+            </AnimatedItem>
+            <AnimatedItem animation="slide-up" delay={200}>
+              <CaseStudyCard id="anchor-social-growth" variant="full" />
+            </AnimatedItem>
+          </Grid>
+        </div>
+      </Section>
+
       {/* Trust Section */}
       <Section background="orange-light">
         <AnimatedItem animation="fade-in" delay={200}>
           <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
             <div>
               <Heading level={2} className="mb-4">
-                This Isn't Theory
+                This Isn&apos;t Theory
               </Heading>
               <Text size="lg" className="mb-6">
-                Every strategy, every number, every result comes from our own pub. We've tested it
-                all at The Anchor first. The failures taught us what to avoid. The successes showed
-                us what to share.
+                Every strategy, every number, every result comes from our own pub. We&apos;ve tested
+                it all at The Anchor first. The failures taught us what to avoid. The successes
+                showed us what to share.
               </Text>
               <Text size="lg" className="mb-6">
                 When you work with Orange Jelly, you get proven strategies from a small, hands-on
                 team working in hospitality every week.
               </Text>
-              <Button href="/services" variant="primary" size="large">
-                See How We Help
+              <Button href="/ways-to-work" variant="primary" size="large">
+                See Our Packages
               </Button>
             </div>
             <Card variant="shadowed" padding="large" className="bg-white">
               <Heading level={3} className="mb-4 text-center">
-                The Numbers Don't Lie
+                Additional Proof Points
               </Heading>
               <Grid columns={{ default: 2 }} gap="medium">
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.valueAdded}
+                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                    <Claim id="sunday-margin-growth" variant="metric-only" />
                   </Text>
                   <Text size="sm" color="muted">
-                    Value Added
+                    Sunday Margin Growth
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.quizRegulars}
+                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                    <Claim id="tasting-retention" variant="metric-only" />
                   </Text>
                   <Text size="sm" color="muted">
-                    Quiz Teams
+                    Tasting Retention
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.weeklySavings}
+                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                    <Claim id="ai-time-reclaimed" variant="metric-only" />
                   </Text>
                   <Text size="sm" color="muted">
-                    Sunday Waste Cut
+                    AI Time Reclaimed
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange">
-                    {resultsData.stats.monthlyReach}
+                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                    <Claim id="contact-database" variant="metric-only" />
                   </Text>
                   <Text size="sm" color="muted">
-                    Monthly Reach
+                    Customer Contacts
                   </Text>
                 </div>
               </Grid>
@@ -115,15 +166,9 @@ export default function ResultsPage({}: ResultsPageProps) {
         </AnimatedItem>
       </Section>
 
-      {/* Related Links */}
-      <Section background="cream" padding="medium">
-        <RelatedLinks
-          title="Ready to Get Similar Results?"
-          subtitle="Choose where to start based on your biggest challenge"
-          links={quickWinLinks}
-          variant="card"
-          columns={{ default: 1, md: 2, lg: 3 }}
-        />
+      {/* Package CTA */}
+      <Section background="white" padding="large">
+        <PackageCTA />
       </Section>
 
       <CTASection

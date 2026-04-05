@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useSearchParams } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -16,8 +17,23 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
 import { submitContactForm } from '@/app/actions/contact';
+
+const PACKAGE_OPTIONS = [
+  { value: 'none', label: 'Not sure yet' },
+  { value: 'growth-fix', label: 'Growth Fix (from £375 + VAT)' },
+  { value: 'momentum-month', label: 'Momentum Month (£900/mo + VAT)' },
+  { value: 'growth-partner', label: 'Growth Partner (£1,800/mo + VAT)' },
+  { value: 'turnaround-intensive', label: 'Turnaround Intensive (POA)' },
+] as const;
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -30,6 +46,7 @@ const contactFormSchema = z.object({
   pubName: z.string().min(2, {
     message: VALIDATION_MESSAGES.pubName.minLength,
   }),
+  package: z.string().optional(),
   message: z.string().min(10, {
     message: VALIDATION_MESSAGES.message.minLength,
   }),
@@ -37,22 +54,23 @@ const contactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-const defaultValues: Partial<ContactFormValues> = {
-  name: '',
-  email: '',
-  phone: '',
-  pubName: '',
-  message: '',
-};
-
 export function ContactForm() {
+  const searchParams = useSearchParams();
+  const preselectedPackage = searchParams.get('package') || 'none';
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>(
     'idle'
   );
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues,
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      pubName: '',
+      package: preselectedPackage,
+      message: '',
+    },
   });
 
   async function onSubmit(data: ContactFormValues) {
@@ -151,6 +169,30 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder={PLACEHOLDERS.pubName.default} {...field} />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="package"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Interested in a package?</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value || 'none'}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a package (optional)" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {PACKAGE_OPTIONS.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}

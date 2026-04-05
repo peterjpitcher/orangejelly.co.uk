@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import OptimizedImage from '@/components/OptimizedImage';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
@@ -113,7 +114,7 @@ export default function ContactPage({}: ContactPageProps) {
         closes: '23:59',
         description: 'Available via WhatsApp 24/7. In-person meetings by appointment.',
       },
-      priceRange: '£75 per hour plus VAT',
+      priceRange: 'Packages from £375 + VAT',
       paymentAccepted: ['Cash', 'Bank Transfer', 'Invoice'],
       areaServed: {
         '@type': 'Country',
@@ -252,11 +253,16 @@ export default function ContactPage({}: ContactPageProps) {
           <Heading level={2} align="center" className="mb-4">
             Send a Message
           </Heading>
-          <Text align="center" color="muted" className="mb-8">
+          <Text align="center" color="muted" className="mb-4">
             Prefer to write? Fill in the form and Peter will get back to you.
           </Text>
+          <Text align="center" size="sm" color="muted" className="mb-8">
+            Payment plans available on all packages.
+          </Text>
           <Card variant="bordered" background="white" padding="large">
-            <ContactForm />
+            <Suspense fallback={<div className="h-96 animate-pulse bg-gray-100 rounded-lg" />}>
+              <ContactForm />
+            </Suspense>
           </Card>
         </div>
       </Section>
@@ -342,7 +348,7 @@ export default function ContactPage({}: ContactPageProps) {
                       'No call centre or junior handoff',
                       'Clear priorities and action-first plans',
                       'Modern tools, practical execution',
-                      'Pay for progress, not overhead-heavy retainers',
+                      'Clear packages from £375 + VAT — payment plans available',
                       'No pushy sales process',
                     ]}
                     icon="check"

@@ -196,32 +196,32 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         <Card variant="bordered" className="mb-12">
           <div className="text-center">
             <Heading level={3} align="center" className="mb-4">
-              Related services
+              How we can help
             </Heading>
             <Text align="center" color="muted" className="mb-6 max-w-2xl mx-auto">
-              If you'd rather copy a proven system than figure it out alone, these are the most
-              requested pub marketing pages.
+              If you&apos;d rather copy a proven system than figure it out alone, see how we work
+              with pubs like yours.
             </Text>
           </div>
 
           <div className="flex flex-wrap gap-3 justify-center">
-            <Button href="/services/instagram-services-for-pubs" variant="outline" size="small">
-              Instagram services for pubs
+            <Button href="/capabilities" variant="outline" size="small">
+              Social media for pubs
             </Button>
-            <Button href="/services/facebook-services-for-pubs" variant="outline" size="small">
-              Facebook services for pubs
+            <Button href="/capabilities" variant="outline" size="small">
+              Paid social and ads
             </Button>
-            <Button href="/services/paid-social-for-pubs" variant="outline" size="small">
-              Paid social for pubs
+            <Button href="/capabilities" variant="outline" size="small">
+              Content and creative
             </Button>
-            <Button href="/services/content-creation-for-pubs" variant="outline" size="small">
-              Content creation for pubs
+            <Button href="/capabilities" variant="outline" size="small">
+              Event marketing
             </Button>
-            <Button href="/services/social-media-marketing-for-pubs" variant="outline" size="small">
-              Social media marketing for pubs
+            <Button href="/ways-to-work" variant="outline" size="small">
+              See our packages
             </Button>
-            <Button href="/fix-my-pub" variant="outline" size="small">
-              Fix my pub
+            <Button href="/ways-to-work/turnaround-intensive" variant="outline" size="small">
+              Turnaround Intensive
             </Button>
           </div>
         </Card>
