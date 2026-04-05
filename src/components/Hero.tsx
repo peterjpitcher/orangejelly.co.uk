@@ -143,9 +143,6 @@ export default function Hero({
           </div>
         </div>
       </div>
-
-      {/* Decorative element */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent"></div>
     </section>
   );
 }
