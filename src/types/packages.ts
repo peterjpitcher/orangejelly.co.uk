@@ -60,6 +60,7 @@ export interface AddOn {
   description: string;
   whoFor: string;
   priceNote: string;
+  includedNote?: string;
   relatedPackages: string[];
   sortOrder: number;
 }

@@ -133,6 +133,23 @@
     "sortOrder": 8
   },
   {
+    "id": "website-rebuild",
+    "name": "Lean Website Rebuild",
+    "shortDescription": "5-8 page template-led website reset with positioning, proof flow, and SEO",
+    "icon": "layout",
+    "defaultSupportLevel": {
+      "growth-fix": "not-included",
+      "momentum-month": "not-included",
+      "growth-partner": "not-included",
+      "turnaround-intensive": "included"
+    },
+    "exampleOutcomes": [
+      "Fresh 5-8 page website supporting the commercial reset",
+      "Mobile-first with clear booking and contact flow"
+    ],
+    "sortOrder": 9
+  },
+  {
     "id": "tools-tracking",
     "name": "Tools, Tracking & Reporting",
     "shortDescription": "Analytics, tool simplification, commercial reporting",
@@ -147,7 +164,7 @@
       "Simple dashboard tracking bookings and footfall",
       "Monthly report tied to commercial outcomes"
     ],
-    "sortOrder": 9
+    "sortOrder": 10
   },
   {
     "id": "playbooks-standards",
@@ -164,6 +181,6 @@
       "Staff know exactly what good looks like",
       "Repeatable systems that work without you"
     ],
-    "sortOrder": 10
+    "sortOrder": 11
   }
 ]

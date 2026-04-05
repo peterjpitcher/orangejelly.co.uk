@@ -65,9 +65,12 @@ export function PackageComparison({ className }: PackageComparisonProps): React.
                   <Text weight="medium" size="sm">
                     {cap.name}
                   </Text>
+                  <Text size="xs" color="muted" className="mt-0.5">
+                    {cap.shortDescription}
+                  </Text>
                 </td>
                 {packages.map((pkg) => (
-                  <td key={pkg.id} className="py-3 px-4 text-center">
+                  <td key={pkg.id} className="py-3 px-4 text-center align-top">
                     <SupportBadge level={cap.defaultSupportLevel[pkg.id] as SupportLevel} />
                   </td>
                 ))}
@@ -98,12 +101,16 @@ export function PackageComparison({ className }: PackageComparisonProps): React.
           {capabilities.map((cap) => {
             const level = cap.defaultSupportLevel[activePackage] as SupportLevel;
             return (
-              <div
-                key={cap.id}
-                className="flex items-center justify-between py-2 border-b border-gray-100"
-              >
-                <Text size="sm">{cap.name}</Text>
-                <SupportBadge level={level} />
+              <div key={cap.id} className="py-2 border-b border-gray-100">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <Text size="sm">{cap.name}</Text>
+                    <Text size="xs" color="muted" className="mt-0.5">
+                      {cap.shortDescription}
+                    </Text>
+                  </div>
+                  <SupportBadge level={level} />
+                </div>
               </div>
             );
           })}

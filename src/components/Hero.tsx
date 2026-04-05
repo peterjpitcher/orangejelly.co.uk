@@ -66,19 +66,11 @@ export default function Hero({
             alt=""
             width={400}
             height={400}
-            className="opacity-5 blur-sm"
+            className="opacity-[0.03] blur-sm"
             style={{ width: 'auto', height: 'auto' }}
             priority
           />
         </div>
-      )}
-
-      {/* Decorative orange circles - only show if no background image */}
-      {!isImageBackground && (
-        <>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-teal/10 rounded-full -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal/10 rounded-full translate-y-48 -translate-x-48"></div>
-        </>
       )}
 
       <div className={`relative z-10 ${isImageBackground ? '' : 'max-w-6xl mx-auto px-4 sm:px-6'}`}>
@@ -91,13 +83,7 @@ export default function Hero({
           </div>
         )}
 
-        <div
-          className={
-            isImageBackground
-              ? 'w-full border-y border-white/12 bg-black/40 shadow-[0_6px_18px_rgba(0,0,0,0.24)]'
-              : ''
-          }
-        >
+        <div className={isImageBackground ? 'w-full' : ''}>
           <div
             className={`text-center py-12 md:py-20 ${
               isImageBackground ? 'mx-auto max-w-5xl px-6 sm:px-8 md:px-10' : ''
@@ -125,13 +111,14 @@ export default function Hero({
 
             {showCTA && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" />
+                <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" trustText="" />
 
                 {secondaryAction && (
                   <Button
                     href={secondaryAction.href}
                     variant={isImageBackground ? 'outline-white' : 'outline'}
                     size="large"
+                    className="min-h-[56px]"
                   >
                     {secondaryAction.text}
                   </Button>

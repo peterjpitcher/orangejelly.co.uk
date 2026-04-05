@@ -11,6 +11,7 @@ import {
   Camera,
   MapPin,
   Monitor,
+  Layout,
   BarChart2,
   BookOpen,
 } from 'lucide-react';
@@ -25,6 +26,7 @@ const iconMap: Record<string, LucideIcon> = {
   camera: Camera,
   'map-pin': MapPin,
   monitor: Monitor,
+  layout: Layout,
   'bar-chart-2': BarChart2,
   'book-open': BookOpen,
 };

@@ -26,6 +26,11 @@ export function AddOnList({ packageId, className }: AddOnListProps): React.React
           <Text size="xs" color="muted">
             {addOn.priceNote}
           </Text>
+          {addOn.includedNote && (
+            <Text size="xs" className="mt-2 text-teal font-medium">
+              {addOn.includedNote}
+            </Text>
+          )}
         </Card>
       ))}
     </div>

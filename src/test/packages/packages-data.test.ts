@@ -51,9 +51,9 @@ describe('packages.json', () => {
 });
 
 describe('capabilities.json', () => {
-  it('should load 10 capabilities', () => {
+  it('should load 11 capabilities', () => {
     const capabilities = getCapabilities();
-    expect(capabilities).toHaveLength(10);
+    expect(capabilities).toHaveLength(11);
   });
 
   it('should have support levels for all 4 packages', () => {

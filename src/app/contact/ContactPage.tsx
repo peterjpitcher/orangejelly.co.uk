@@ -14,6 +14,7 @@ import AvailabilityStatus from '@/components/AvailabilityStatus';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import RelatedLinks from '@/components/RelatedLinks';
 import { ContactForm } from '@/components/forms/contact-form';
+import { ProofStrip } from '@/components/packages';
 
 // Import related links data
 import relatedLinksData from '../../../content/data/related-links.json';
@@ -173,77 +174,95 @@ export default function ContactPage({}: ContactPageProps) {
             Three Ways to Start Momentum
           </Heading>
 
-          <Grid columns={{ default: 1, md: 3 }} gap="medium">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedItem animation="slide-up" delay={0}>
-              <Card variant="bordered" className="text-center hover:shadow-lg transition-normal">
+              <Card
+                variant="bordered"
+                className="text-center hover:shadow-lg transition-normal h-full flex flex-col"
+              >
                 <div className="mb-4">
                   <HandshakeIcon />
                 </div>
                 <Heading level={3} className="mb-4">
                   WhatsApp (Fastest)
                 </Heading>
-                <Text color="muted" className="mb-6">
+                <Text color="muted" className="mb-6 flex-1">
                   Fastest for a quick brief on your goals, current blockers, and what you want to
                   improve first.
                 </Text>
-                <WhatsAppButton
-                  text="Hi Peter, can we discuss growth for my venue?"
-                  fullWidth
-                  size="large"
-                />
-                <Text size="sm" color="muted" className="mt-2">
-                  Peter responds within 24 hours — no sales pitch
-                </Text>
+                <div>
+                  <WhatsAppButton
+                    text="Hi Peter, can we discuss growth for my venue?"
+                    label="Message Peter on WhatsApp"
+                    fullWidth
+                    size="medium"
+                    showPhone={false}
+                    trustText=""
+                  />
+                  <Text size="sm" color="muted" className="mt-2">
+                    Peter responds within 24 hours — no sales pitch
+                  </Text>
+                </div>
               </Card>
             </AnimatedItem>
 
             <AnimatedItem animation="slide-up" delay={100}>
-              <Card variant="bordered" className="text-center hover:shadow-lg transition-normal">
+              <Card
+                variant="bordered"
+                className="text-center hover:shadow-lg transition-normal h-full flex flex-col"
+              >
                 <div className="mb-4">
                   <IdeaIcon />
                 </div>
                 <Heading level={3} className="mb-4">
                   Phone Call
                 </Heading>
-                <Text color="muted" className="mb-6">
-                  Great for detailed planning. If I'm in service, I'll return your call as soon as
-                  possible.
+                <Text color="muted" className="mb-6 flex-1">
+                  Great for detailed planning. If I&#39;m in service, I&#39;ll return your call as
+                  soon as possible.
                 </Text>
-                <Button href={`tel:${CONTACT.phone}`} variant="primary" size="large" fullWidth>
-                  Call {CONTACT.phone}
-                </Button>
-                <Text size="sm" color="muted" className="mt-2">
-                  UK business hours
-                </Text>
+                <div>
+                  <Button href={`tel:${CONTACT.phone}`} variant="primary" size="medium" fullWidth>
+                    Call {CONTACT.phone}
+                  </Button>
+                  <Text size="sm" color="muted" className="mt-2">
+                    UK business hours
+                  </Text>
+                </div>
               </Card>
             </AnimatedItem>
 
             <AnimatedItem animation="slide-up" delay={200}>
-              <Card variant="bordered" className="text-center hover:shadow-lg transition-normal">
+              <Card
+                variant="bordered"
+                className="text-center hover:shadow-lg transition-normal h-full flex flex-col"
+              >
                 <div className="mb-4">
                   <SupportIcon />
                 </div>
                 <Heading level={3} className="mb-4">
                   Visit The Anchor
                 </Heading>
-                <Text color="muted" className="mb-6">
+                <Text color="muted" className="mb-6 flex-1">
                   See the systems in action and how we run execution rhythms in a real venue.
                 </Text>
-                <Button
-                  href="https://www.the-anchor.pub"
-                  variant="primary"
-                  size="large"
-                  fullWidth
-                  external
-                >
-                  Visit The Anchor Website
-                </Button>
-                <Text size="sm" color="muted" className="mt-2">
-                  First pint's on me
-                </Text>
+                <div>
+                  <Button
+                    href="https://www.the-anchor.pub"
+                    variant="primary"
+                    size="medium"
+                    fullWidth
+                    external
+                  >
+                    Visit The Anchor
+                  </Button>
+                  <Text size="sm" color="muted" className="mt-2">
+                    First pint&#39;s on me
+                  </Text>
+                </div>
               </Card>
             </AnimatedItem>
-          </Grid>
+          </div>
         </div>
       </Section>
 
@@ -284,8 +303,11 @@ export default function ContactPage({}: ContactPageProps) {
                     </Text>
                     <WhatsAppButton
                       text="Hi Peter, I need help accelerating growth for my venue"
+                      label="Message on WhatsApp"
                       fullWidth
                       size="medium"
+                      showPhone={false}
+                      trustText=""
                     />
                     <Text size="sm" color="muted" className="mt-2">
                       Available 7 days - I'll respond within hours
@@ -505,47 +527,7 @@ export default function ContactPage({}: ContactPageProps) {
       </Section>
 
       {/* Social proof strip */}
-      <Section background="charcoal" padding="medium">
-        <div className="max-w-5xl mx-auto">
-          <Heading level={2} align="center" color="white" className="mb-8">
-            What We Have Achieved at The Anchor
-          </Heading>
-          <Grid columns={{ default: 2, md: 4 }} gap="medium">
-            <div className="text-center">
-              <Text size="2xl" weight="bold" color="white">
-                58% → 71%
-              </Text>
-              <Text size="sm" color="white" className="opacity-80">
-                Food gross profit
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" color="white">
-                25-35
-              </Text>
-              <Text size="sm" color="white" className="opacity-80">
-                Weekly quiz regulars
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" color="white">
-                60-70K
-              </Text>
-              <Text size="sm" color="white" className="opacity-80">
-                Monthly social views
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" color="white">
-                £75-100K
-              </Text>
-              <Text size="sm" color="white" className="opacity-80">
-                Value added
-              </Text>
-            </div>
-          </Grid>
-        </div>
-      </Section>
+      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
 
       {/* Final CTA */}
       <Section background="teal" padding="large">
@@ -560,7 +542,10 @@ export default function ContactPage({}: ContactPageProps) {
           <div className="space-y-4">
             <WhatsAppButton
               text="Peter, I need help accelerating growth for my venue"
+              label="Message Peter on WhatsApp"
               size="large"
+              showPhone={false}
+              trustText=""
             />
             <Text size="sm" color="white" className="opacity-80">
               {CONTACT.phone} • Peter responds within 24 hours • No sales pitch, just practical

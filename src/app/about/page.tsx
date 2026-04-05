@@ -3,9 +3,9 @@ import AboutPage from './AboutPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'About Us - Small Team, Transformative Growth',
+    title: 'Hospitality Consultant — Meet the Team Behind Orange Jelly',
     description:
-      'Meet Peter Pitcher and Billy Summers — the team behind Orange Jelly. Real pub experience at The Anchor, Stanwell Moor. Hands-on marketing help.',
+      'Meet Peter Pitcher, hospitality consultant and pub consultancy founder. Real experience running The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs and venues.',
     path: '/about',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
@@ -23,7 +23,7 @@ function AboutPageData() {
     '@graph': [
       {
         '@type': 'AboutPage',
-        name: 'About Orange Jelly - Transformative Hospitality Growth Partner',
+        name: 'About Orange Jelly - Hospitality Consultant and Pub Consultancy',
         description:
           'Learn about Peter Pitcher and Billy Summers. Billy runs The Anchor day-to-day while Peter leads marketing and growth, helping hospitality partners create measurable uplift in bookings, footfall, and revenue.',
         url: 'https://www.orangejelly.co.uk/about',
@@ -35,9 +35,9 @@ function AboutPageData() {
         '@type': 'Person',
         '@id': 'https://www.orangejelly.co.uk/#peter-pitcher',
         name: 'Peter Pitcher',
-        jobTitle: 'Founder & Hospitality Growth Partner',
+        jobTitle: 'Hospitality Consultant & Founder',
         description:
-          'Hospitality growth partner focused on transformative, action-first marketing. Co-owner of The Anchor in Stanwell Moor, where Billy runs day-to-day and Peter handles marketing.',
+          'Hospitality consultant focused on transformative, action-first marketing. Co-owner of The Anchor in Stanwell Moor, where Billy runs day-to-day and Peter handles marketing.',
         spouse: {
           '@type': 'Person',
           name: 'Billy Summers',

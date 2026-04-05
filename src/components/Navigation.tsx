@@ -213,7 +213,7 @@ export default function Navigation({ navigation }: NavigationProps) {
         </div>
 
         {/* Desktop WhatsApp button */}
-        <div className="hidden md:flex flex-1 items-center justify-end">
+        <div className="hidden md:flex shrink-0 items-center ml-auto">
           {whatsappCta.enabled && whatsappCta.showInDesktop && (
             <WhatsAppButton
               text={whatsappCta.text}
@@ -221,6 +221,7 @@ export default function Navigation({ navigation }: NavigationProps) {
               size="small"
               label="Chat on WhatsApp"
               showPhone={false}
+              trustText=""
             />
           )}
         </div>

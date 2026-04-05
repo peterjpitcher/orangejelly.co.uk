@@ -5,6 +5,7 @@
     "description": "Filming, photography, heavy editing, large asset batches",
     "whoFor": "Venues that need regular professional content",
     "priceNote": "Scoped separately",
+    "includedNote": "Content strategy and planning are already included in Momentum Month, Growth Partner, and Turnaround Intensive. This add-on covers the production itself.",
     "relatedPackages": ["growth-fix", "momentum-month", "growth-partner"],
     "sortOrder": 1
   },
@@ -14,6 +15,7 @@
     "description": "Daily posting, content scheduling, platform management",
     "whoFor": "Venues that want fully managed social feeds",
     "priceNote": "Scoped separately",
+    "includedNote": "Content themes and caption guidance are included from Momentum Month upwards. This add-on covers hands-on daily posting.",
     "relatedPackages": ["growth-fix", "momentum-month"],
     "sortOrder": 2
   },
@@ -23,6 +25,7 @@
     "description": "Full campaign management, budget optimisation, reporting",
     "whoFor": "Venues running significant ad spend",
     "priceNote": "Scoped separately",
+    "includedNote": "Light paid social support is included in Momentum Month. Moderate support is included in Growth Partner and Turnaround Intensive. This add-on covers full campaign management.",
     "relatedPackages": ["growth-fix", "momentum-month"],
     "sortOrder": 3
   },
@@ -41,6 +44,7 @@
     "description": "Website development, booking integrations, CRM setup",
     "whoFor": "Venues needing technical implementation",
     "priceNote": "Scoped separately",
+    "includedNote": "A lean website rebuild is included in the Turnaround Intensive package.",
     "relatedPackages": ["growth-fix", "momentum-month", "growth-partner"],
     "sortOrder": 5
   },
