@@ -59,7 +59,7 @@ export function PackageCard({
         </Text>
       </div>
 
-      <div className="mb-6 flex-1">
+      <div className="mb-6">
         <Text weight="semibold" size="sm" className="mb-2 block">
           Best for:
         </Text>
@@ -73,20 +73,22 @@ export function PackageCard({
         </ul>
       </div>
 
-      {pkg.paymentPlan.available && (
-        <Text size="xs" color="muted" className="mb-4 text-center">
-          {pkg.paymentPlan.cardCopy}
-        </Text>
-      )}
+      <div className="mt-auto">
+        {pkg.paymentPlan.available && (
+          <Text size="xs" color="muted" className="mb-4 text-center">
+            {pkg.paymentPlan.cardCopy}
+          </Text>
+        )}
 
-      <Button
-        href={`/ways-to-work/${pkg.slug}`}
-        variant={highlighted ? 'primary' : 'outline'}
-        size="medium"
-        className="w-full"
-      >
-        Learn more
-      </Button>
+        <Button
+          href={`/ways-to-work/${pkg.slug}`}
+          variant={highlighted ? 'primary' : 'outline'}
+          size="medium"
+          className="w-full"
+        >
+          Learn more
+        </Button>
+      </div>
     </div>
   );
 }
