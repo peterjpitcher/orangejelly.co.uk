@@ -19,11 +19,10 @@ export const COMPANY = {
 
 // Pricing Configuration
 export const PRICING = {
-  // Hourly Rate - All services billed at this rate
-  hourlyRate: {
-    amount: 75,
-    display: '£75/hour plus VAT',
-    description: 'Simple, honest pricing for all services',
+  startingFrom: {
+    amount: 375,
+    display: 'Packages from £375 + VAT',
+    description: 'Clear packages for every stage of growth',
   },
 } as const;
 
@@ -56,7 +55,7 @@ export const MESSAGES = {
     noAgencyFees: 'No Agency Fees',
     fromlicensees: 'Small Team Support',
     resultsIn14Days: 'Results in 30 Days',
-    costEffective: '£75/hour plus VAT',
+    costEffective: 'Packages from £375 + VAT',
     coversIncrease: '25-30 Quiz Teams',
     coversIncreaseLabel: 'Regular teams each month',
     foodGPIncrease: '£250/week waste cut',

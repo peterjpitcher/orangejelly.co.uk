@@ -105,9 +105,9 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
 // Helper for page-specific metadata
 export const pageMetadata = {
   home: {
-    title: 'Transformative Hospitality Growth Partner for Pubs, Bars & Venues',
+    title: 'Hospitality Marketing That Fills Seats | From a Real Publican',
     description:
-      'Orange Jelly accelerates hospitality growth with proactive strategy, AI-enabled delivery, and measurable commercial outcomes. Small team. Big momentum.',
+      'Hospitality marketing proven at a real pub. We grew quiz night to 35 regulars and food GP from 58% to 71%. Packages from £375 + VAT.',
   },
   services: {
     title: 'Hospitality Growth Services for Pubs & Venues',
@@ -120,9 +120,9 @@ export const pageMetadata = {
       'See hospitality marketing results proven at The Anchor, then adapted for partners. Real numbers, real strategies, measurable growth.',
   },
   about: {
-    title: 'About Us - Small Team, Transformative Growth',
+    title: 'Hospitality Consultant — Meet the Team Behind Orange Jelly',
     description:
-      'Meet Peter Pitcher, founder of Orange Jelly and co-owner of The Anchor. A small, hands-on team helping hospitality partners grow through tough trading conditions.',
+      'Meet Peter Pitcher, hospitality consultant and pub consultancy founder. Real experience running The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs and venues.',
   },
   contact: {
     title: 'Contact Us - Speak Directly with Peter',

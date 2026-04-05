@@ -21,7 +21,7 @@ export default function ServiceComparison() {
   const services = {
     eventInnovation: {
       name: 'Event Innovation',
-      price: PRICING.hourlyRate.display,
+      price: PRICING.startingFrom.display,
       timeline: 'Fast setup + weekly rhythm',
       perfect: 'Venues that need stronger reasons to visit and return',
       includes: [
@@ -35,7 +35,7 @@ export default function ServiceComparison() {
     },
     transformational: {
       name: 'Transformational Marketing',
-      price: PRICING.hourlyRate.display,
+      price: PRICING.startingFrom.display,
       timeline: '30/60/90-day momentum plan',
       perfect: 'Partners who need clear direction and consistent execution',
       includes: [
@@ -49,7 +49,7 @@ export default function ServiceComparison() {
     },
     tools: {
       name: 'Simplified Technology Tools',
-      price: PRICING.hourlyRate.display,
+      price: PRICING.startingFrom.display,
       timeline: 'Audit first, simplify fast',
       perfect: 'Teams with too many tools or underperforming systems',
       includes: [
@@ -63,7 +63,7 @@ export default function ServiceComparison() {
     },
     clarity: {
       name: 'Clearing Up Ambiguity',
-      price: PRICING.hourlyRate.display,
+      price: PRICING.startingFrom.display,
       timeline: 'Quick clarity sprint + playbooks',
       perfect: 'Teams stuck in mixed priorities and slow decision cycles',
       includes: [

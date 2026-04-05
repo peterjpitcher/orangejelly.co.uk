@@ -5,7 +5,7 @@ import buckinghamshireData from '../../../content/data/pub-marketing-buckinghams
 export const metadata = generateMetadata({
   title: 'Pub Marketing in Buckinghamshire — Grow Your Trade',
   description:
-    'Pub marketing for Buckinghamshire pubs in Aylesbury, High Wycombe, and the Chilterns. Google visibility, events, and social media. £75/hr + VAT.',
+    'Pub marketing for Buckinghamshire pubs in Aylesbury, High Wycombe, and the Chilterns. Google visibility, events, and social media. Packages from £375 + VAT.',
   path: '/pub-marketing-buckinghamshire',
   ogType: 'website',
 });

@@ -5,7 +5,7 @@ import kentData from '../../../content/data/pub-marketing-kent.json';
 export const metadata = generateMetadata({
   title: 'Pub Marketing in Kent — Drive Local Footfall',
   description:
-    'Pub marketing consultant for Kent pubs in Canterbury, Maidstone, Tunbridge Wells, and across the county. Proven systems from a licensee. £75/hr + VAT.',
+    'Pub marketing consultant for Kent pubs in Canterbury, Maidstone, Tunbridge Wells, and across the county. Proven systems from a licensee. Packages from £375 + VAT.',
   path: '/pub-marketing-kent',
   ogType: 'website',
 });

@@ -101,7 +101,7 @@ export const commonPubQueries = [
   {
     question: 'How much does hospitality marketing support cost?',
     answer:
-      'Orange Jelly charges £75 per hour plus VAT for all services. No hidden fees, transparent pricing. You only pay for the time you need.',
+      'Orange Jelly offers clear packages from £375 + VAT for a one-off Growth Fix, with monthly support from £900 + VAT. No hidden fees, transparent pricing.',
   },
   {
     question: "What's the best way to promote my venue?",

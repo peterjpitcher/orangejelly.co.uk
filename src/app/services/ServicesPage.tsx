@@ -154,8 +154,8 @@ export default function ServicesPage() {
       <Section background="cream" padding="large">
         <Container maxWidth="4xl">
           <Text size="sm" color="muted" align="center" className="mb-8">
-            These are proven ways we can help, not fixed retainers. You still pay £75 per hour plus
-            VAT and we tailor support to whatever your hospitality business needs right now.
+            These are proven ways we can help. Clear packages from £375 + VAT, tailored to whatever
+            your hospitality business needs right now. Payment plans available.
           </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {servicePackages.map((service) => (

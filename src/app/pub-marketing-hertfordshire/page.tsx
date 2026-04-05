@@ -5,7 +5,7 @@ import hertfordshireData from '../../../content/data/pub-marketing-hertfordshire
 export const metadata = generateMetadata({
   title: 'Pub Marketing in Hertfordshire — Build Repeat Trade',
   description:
-    'Pub marketing for Hertfordshire pubs in St Albans, Watford, Hertford, and the Home Counties. Local SEO, events, and social media. £75/hr + VAT.',
+    'Pub marketing for Hertfordshire pubs in St Albans, Watford, Hertford, and the Home Counties. Local SEO, events, and social media. Packages from £375 + VAT.',
   path: '/pub-marketing-hertfordshire',
   ogType: 'website',
 });

@@ -549,7 +549,7 @@ export default function PubRescue() {
                 Investment is simple and transparent
               </Text>
               <Text size="2xl" weight="bold" className="text-orange mb-4">
-                £75/hour + VAT
+                Packages from £375 + VAT
               </Text>
               <Text size="sm" color="muted" className="mb-8">
                 Most pubs see meaningful progress inside 30 days

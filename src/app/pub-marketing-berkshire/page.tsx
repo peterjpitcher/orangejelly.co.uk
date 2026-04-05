@@ -5,7 +5,7 @@ import berkshireData from '../../../content/data/pub-marketing-berkshire.json';
 export const metadata = generateMetadata({
   title: 'Pub Marketing in Berkshire — Proven Local Systems',
   description:
-    'Pub marketing consultant for Berkshire pubs in Reading, Windsor, Maidenhead, and beyond. Events, social media, and local SEO. £75/hr + VAT.',
+    'Pub marketing consultant for Berkshire pubs in Reading, Windsor, Maidenhead, and beyond. Events, social media, and local SEO. Packages from £375 + VAT.',
   path: '/pub-marketing-berkshire',
   ogType: 'website',
 });

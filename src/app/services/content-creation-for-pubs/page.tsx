@@ -5,7 +5,7 @@ import contentCreationData from '../../../../content/data/services/content-creat
 export const metadata = generateMetadata({
   title: 'Content Creation for Pubs — Phone-First, Done in Hours',
   description:
-    'Photos, Reels, captions, and a batching system so you create a week of pub content in one session. Phone-first and no editing skills needed. £75/hr + VAT.',
+    'Photos, Reels, captions, and a batching system so you create a week of pub content in one session. Phone-first and no editing skills needed. Packages from £375 + VAT.',
   path: '/services/content-creation-for-pubs',
   ogType: 'website',
 });

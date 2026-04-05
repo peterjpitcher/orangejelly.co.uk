@@ -17,7 +17,7 @@ import pubMarketingData from '../../../content/data/pub-marketing.json';
 export const metadata = generateMetadata({
   title: 'Pub Marketing: The Complete Guide for UK Licensees',
   description:
-    'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering — all tested at The Anchor. £75/hr + VAT.',
+    'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering — all tested at The Anchor. Packages from £375 + VAT.',
   path: '/pub-marketing',
   ogType: 'website',
 });
@@ -44,7 +44,7 @@ const pillarFaqs = [
   {
     question: 'Should I hire a pub marketing agency or do it myself?',
     answer:
-      'Start by doing the basics yourself using templates and systems. If you are too busy to maintain consistency, a specialist like Orange Jelly can either do it for you or set up AI-powered workflows so it takes minutes instead of hours. We charge £75 per hour plus VAT with no retainers.',
+      'Start by doing the basics yourself using templates and systems. If you are too busy to maintain consistency, a specialist like Orange Jelly can either do it for you or set up AI-powered workflows so it takes minutes instead of hours. Packages start from £375 + VAT with no lock-in contracts.',
   },
 ];
 
@@ -718,7 +718,7 @@ export default function PubMarketingPage() {
               </Button>
             </div>
             <Text size="sm" color="muted" className="mt-4">
-              £75/hour + VAT • No fixed retainers • No pressure
+              Packages from £375 + VAT • No lock-in • Payment plans available
             </Text>
           </div>
         </Container>

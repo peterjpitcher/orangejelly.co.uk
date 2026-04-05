@@ -33,7 +33,7 @@ function LocationLocalBusinessSchema({ countyName, slug }: { countyName: string;
     url: `${baseUrl}/${slug}`,
     telephone: '+447990587315',
     email: 'peter@orangejelly.co.uk',
-    priceRange: 'From £75/hour',
+    priceRange: 'Packages from £375 + VAT',
     areaServed: {
       '@type': 'AdministrativeArea',
       name: countyName,
