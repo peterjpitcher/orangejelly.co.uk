@@ -1,488 +1,485 @@
 ---
-title: "The Pub Health Check: Essential Fundamentals for Licensee Success"
+title: "How to Run a Pub: The Licensee's Essential Guide"
 slug: "pub-health-check-essential-fundamentals-licensee-success"
 publishedDate: 2025-04-10
-updatedDate: "2025-08-11T12:27:19.060Z"
-excerpt: "Essential pub health check guide: 7 P's of marketing, financial metrics, cellar management, and community strategies every licensee needs."
-quickAnswer: "Track your gross profit, monitor wastage weekly, clean beer lines every 7 days, review your 7 P's of marketing monthly, and engage your community through events and partnerships. These fundamentals protect margins."
+updatedDate: "2026-04-05T10:00:00.000Z"
+excerpt: "The definitive guide to running a pub in the UK. Covers licensing, daily operations, finances, marketing, staffing, compliance, and growing revenue — from a working licensee."
+quickAnswer: "Running a pub successfully means mastering daily operations, tracking your gross profit weekly, building a reliable team, marketing consistently on social media and locally, staying compliant with licensing and food safety laws, and growing revenue through events, food, and customer loyalty. This guide covers every area a new or experienced licensee needs."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "pub-management"
 tags:
-  - "business health"
-  - "financial management"
-  - "cellar management"
-  - "marketing"
-  - "operations"
-  - "community engagement"
-status: "published"
-metaDescription: "Complete guide to pub business health checks. Learn to track GP, reduce wastage, manage your cellar, and build community engagement."
-keywords:
-  - "pub health check"
-  - "pub business metrics"
-  - "GP percentage"
-  - "cellar management"
-  - "beer wastage"
+  - "how to run a pub"
+  - "pub management"
+  - "running a pub"
+  - "licensee guide"
+  - "pub operations"
+  - "pub finances"
   - "pub marketing"
-  - "7 Ps marketing"
+  - "pub compliance"
+status: "published"
+metaDescription: "How to run a pub: the complete licensee's guide covering operations, finances, marketing, staffing, compliance, and revenue growth. Written by a working publican."
+keywords:
+  - "how to run a pub"
+  - "running a pub"
+  - "pub management"
+  - "pub landlord guide"
+  - "licensee guide"
+  - "pub operations"
+  - "pub business"
+  - "pub finances"
 featuredImage: "/images/blog/pub-health-check-essential-fundamentals.png"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local pub","in my area","nearby"],"nearbyLandmarks":["Local high street","Town centre","Village pub"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "How do I check if my pub is healthy?"
-  - "What metrics should I track for my pub?"
-  - "How can I reduce wastage in my pub?"
-  - "What is a good GP percentage for a pub?"
-  - "How often should I clean beer lines?"
+  - "How do I run a pub?"
+  - "What do I need to know about running a pub?"
+  - "How to be a good pub landlord?"
+  - "What are the basics of pub management?"
+  - "How much does it cost to run a pub?"
+  - "What qualifications do I need to run a pub?"
+  - "How do I make my pub profitable?"
 faqs:
+  - question: "What qualifications do I need to run a pub?"
+    answer: "You need a personal licence, which requires completing an accredited licensing qualification (typically a one-day course costing around 150-250 pounds). Your premises also needs a premises licence. If you serve food, at least one person must hold a Level 2 Food Hygiene certificate. Beyond formal qualifications, practical experience in hospitality, basic financial literacy, and strong people skills are what actually determine success."
+  - question: "How much does it cost to run a pub?"
+    answer: "Costs vary hugely depending on whether you are a tenant, leaseholder, or freehold owner. A tied tenancy might require 5,000-20,000 pounds upfront with weekly rent of 500-2,000 pounds. A free-of-tie lease could need 50,000-150,000 pounds ingoing. Monthly running costs for a typical community pub include rent, stock, wages, utilities, insurance, and licensing fees. Your biggest ongoing costs will be stock (around 35-40 percent of turnover), wages (20-30 percent), and rent."
   - question: "What gross profit percentage should a pub aim for?"
-    answer: "A well-run pub should target 60-65% GP on wet sales and 65-70% on food. If your overall GP is below 55%, you are likely losing money on some lines. Review your pricing, supplier deals, and wastage to find the leaks."
-  - question: "How often should I do a stock take in my pub?"
-    answer: "Weekly for your top 10 selling lines and monthly for the full range. Regular counting catches problems early — a variance of more than 2% on any line needs investigating. It could be over-pouring, theft, or incorrect deliveries."
-  - question: "What are the most important numbers a pub landlord should check every week?"
-    answer: "Track your weekly takings against the same week last year, your GP percentage, average spend per head, and wastage. These four numbers tell you whether your pub is healthy or heading for trouble. Add footfall count and you have the full picture."
+    answer: "A well-run pub should target 60-65 percent GP on wet sales and 65-70 percent on food. At The Anchor, we pushed food GP from 58 percent to 71 percent through careful menu engineering and portion control. If your overall GP is below 55 percent, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately."
+  - question: "How do I attract more customers to my pub?"
+    answer: "Start with consistent events — our quiz night grew to 25-35 regulars by running it every single week without fail. Combine that with active social media (we hit 60-70K monthly views), a Google Business Profile that is fully optimised, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there."
+  - question: "What are the most common mistakes new pub landlords make?"
+    answer: "The biggest mistakes are underestimating working capital needs, trying to change everything on day one, not tracking GP weekly, hiring friends instead of skilled staff, and competing on price instead of value. Most new licensees also underestimate how physically and emotionally demanding the role is. Get your finances and your support network sorted before you take on a pub."
+  - question: "How many hours a week does running a pub take?"
+    answer: "Honestly, expect 60-80 hours a week in your first year, especially if you are hands-on behind the bar and in the kitchen. As you build a reliable team and put systems in place, you can work towards 50-60 hours. The licensees who burn out are the ones who try to do everything themselves. Delegation and smart use of technology are essential for sustainability."
+  - question: "Is running a pub profitable?"
+    answer: "It can be, but margins are tighter than most people expect. A well-run community pub might generate 10-15 percent net profit on turnover. The key levers are GP management, labour efficiency, and driving revenue through events and food. Pubs that treat it as a proper business — tracking numbers weekly, controlling costs, and actively marketing — are far more likely to be profitable than those winging it."
 ---
 
-Running a successful pub today requires more than just pulling pints and hoping for the best. With rising costs, changing customer habits, and increased competition, understanding your business fundamentals has never been more critical. This comprehensive health check framework will help you assess where you stand and identify opportunities for improvement.
+Running a pub looks simple from the other side of the bar. Pull pints, chat to regulars, lock up at closing time. The reality is that running a pub is one of the most demanding small business roles in the UK. You are a retailer, a chef, an events manager, an HR department, a compliance officer, and a therapist — often all before lunchtime.
 
-Whether you're a seasoned licensee or new to the trade, regularly reviewing these essential metrics and strategies can mean the difference between struggling to survive and building a thriving community hub. Let's dive into the key areas that determine your pub's health.
+I am Peter Pitcher, founder of Orange Jelly and licensee at The Anchor in Stanwell Moor. Everything in this guide comes from real experience running a real pub. No theory, no fluff — just what actually works when you are standing behind that bar wondering how to make this month's rent.
 
-## Part 1: The 7 P's Framework - Your Marketing Foundation
+Whether you are thinking about taking on your first pub, you have just picked up the keys, or you have been at it for years and want to sharpen up, this guide covers every fundamental you need. Let's get into it.
 
-The 7 P's of marketing provide a structured approach to evaluating and improving your pub's market position. Originally developed for service industries, this framework is perfectly suited to the hospitality sector.
+## Before You Start: Are You Ready for This?
 
-### Product - What You're Really Selling
+Before you sign a lease or hand over a penny, you need an honest conversation with yourself. Running a pub is not a lifestyle choice — it is a business decision that will consume your time, your money, and your energy.
 
-Your product extends far beyond the drinks you serve. Consider your entire offering:
+### Personal Readiness
 
-- Wet sales: Your beer range, wine selection, spirits, and soft drinks
+Ask yourself these questions honestly:
 
-- Dry sales: Food menu, snacks, and retail items
+- Can you work 60-80 hours a week for the first year without resentment?
+- Does your family or partner fully understand what this means for your home life?
+- Can you handle confrontation? You will need to refuse service, manage difficult customers, and have tough conversations with staff.
+- Are you comfortable with financial risk? There will be months where cash is tight.
+- Do you have a support network? Isolation is the silent killer for licensees.
 
-- Entertainment: Quiz nights, live music, sports screenings
+If any of those gave you pause, that is actually a good sign. The people who struggle most are the ones who went in thinking it would be easy.
 
-- Atmosphere: The experience and environment you create
+### Licensing and Legal Basics
 
-- Community role: Your pub as a social hub and meeting place
+To run a pub in England and Wales, you need:
 
-Regularly audit your product mix. Are you offering what your customers actually want, or what you think they want? Survey your regulars, monitor what sells, and be prepared to adapt.
+- **A premises licence** — this is held by the business and covers the property itself. It specifies what you can do (sell alcohol, provide entertainment, serve food late) and any conditions.
+- **A personal licence** — you need this to authorise the sale of alcohol. It requires passing an accredited licensing qualification. At least one personal licence holder must be named as the Designated Premises Supervisor (DPS).
+- **Food hygiene certification** — if you serve food, at least one person on your team needs a Level 2 Food Hygiene certificate. In practice, everyone who handles food should have one.
 
-### Price - Finding Your Sweet Spot
+Your local council's licensing team is usually more helpful than people expect. Introduce yourself early and build a relationship.
 
-Pricing isn't just about being competitive; it's about positioning. Consider:
+### Financial Planning
 
-- Local competition analysis: Know your competitors' pricing
+This is where dreams meet spreadsheets. You need to understand:
 
-- Value perception: Price communicates quality
+- **Ingoing costs** — the upfront investment to take on the pub. For a tied tenancy this could be 5,000-20,000 pounds. For a free-of-tie lease, 50,000-150,000 pounds or more.
+- **Working capital** — you need enough cash to cover at least three months of operating costs before the pub generates enough to sustain itself. Most new licensees underestimate this badly.
+- **Ongoing costs** — rent, stock, wages, utilities, insurance, licensing fees, maintenance, and the hundred small costs that add up fast.
 
-- Happy hour strategies: Drive footfall during quiet periods
+Get professional advice. Talk to an accountant who knows hospitality. Talk to other licensees. The British Institute of Innkeeping (BII), of which we are members, is a solid resource for new entrants.
 
-- Premium offerings: Create higher-margin options
+## Daily Operations: The Engine Room
 
-- Bundle deals: Increase average transaction value
+The difference between a pub that thrives and one that survives comes down to daily discipline. It is not glamorous, but getting your operations right is the foundation everything else sits on.
 
-Remember: competing on price alone is a race to the bottom. Focus on value instead.
+### Opening Procedures
 
-### Place - Location and Accessibility
+Every day should start the same way:
 
-While you can't move your pub, you can optimise how customers find and access you:
+- Walk the pub with fresh eyes. Check cleanliness, check the toilets, check the garden or outside area. Would you want to drink here?
+- Check cellar temperatures. Beer should be stored at 11-13 degrees Celsius. If your cellar is too warm, everything downstream suffers.
+- Check stock levels against expected trade. Do you have enough of your top sellers to get through the day?
+- Brief your team. What is on today? Any bookings? Any issues from yesterday?
+- Check your till float and card machine.
 
-- Physical visibility: Signage, lighting, kerb appeal
+This takes 20 minutes. It prevents 80 percent of the problems that ruin a trading day.
 
-- Digital presence: Google My Business, social media, website
+### Stock Management
 
-- Accessibility: Parking, public transport links, disabled access
+Stock is cash sitting on your shelves. Managing it properly is one of the fastest ways to improve profitability.
 
-- Distribution channels: Direct visits, bookings, deliveries
+- **Weekly stocktakes** on your top 10 selling lines. Monthly full stocktake. A variance above 2 percent on any line needs investigating — it could be over-pouring, theft, or delivery errors.
+- **Par stock levels** — know exactly how much of each product you need for a normal week. Order to par, not to gut feeling.
+- **First in, first out** — rigorous stock rotation prevents wastage from out-of-date products.
+- **Supplier management** — review your supplier deals quarterly. Are you getting the best terms? Even small margin gains per unit add up to thousands over a year.
 
-- Online ordering: Apps and platforms for food orders
+For a deeper dive into stock control, read our guide on [zero-waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs).
 
-### Promotion - Getting Your Message Out
+### Cash Handling
 
-Effective promotion doesn't require a massive budget:
+Cash might be declining, but it still matters. Have clear procedures:
 
-- Social media: Free platforms for daily engagement
+- Count the float at opening and closing. Two people present for cashing up.
+- Reconcile daily against your EPOS system.
+- Bank regularly. Do not leave large amounts of cash on the premises.
+- Track card vs cash split — it affects your cash flow timing.
 
-- Local partnerships: Collaborate with nearby businesses
+### Cellar Management
 
-- Event calendars: Regular activities create anticipation
+Your cellar is where your profit is made or lost. Poor cellar management can waste thousands of pounds a year.
 
-- Email marketing: Build and nurture your database
+- **Beer lines must be cleaned weekly.** No exceptions. This is not just best practice — it is a legal requirement. Dirty lines increase wastage through excess fobbing and affect beer quality.
+- **Temperature control** — maintain 11-13 degrees consistently. Invest in a cellar cooler if you do not have one.
+- **Gas pressure** — set correctly for each product. Wrong pressure means foamy pints and wasted beer.
+- **FOB detectors** — clean and maintain them. They prevent beer loss when kegs blow.
+- **Daily dip tests** — monitor exactly what you are losing. Target minimal wastage per line.
 
-- Word of mouth: Your most powerful marketing tool
+## Financial Fundamentals: Know Your Numbers
 
-### People - Your Greatest Asset
+If you only take one thing from this guide, let it be this: know your numbers. The licensees who fail are almost always the ones who do not track their finances weekly.
 
-Your team can make or break your pub:
+### Gross Profit — Your Most Important Number
 
-- Staff training: Product knowledge and service standards
+Your gross profit percentage (GP%) tells you whether you are making money on what you sell. It is the single most critical metric in your business.
 
-- Customer relationships: Remember names and preferences
+- **Wet sales target:** 60-65% GP
+- **Food sales target:** 65-70% GP
 
-- Team morale: Happy staff create happy customers
+At The Anchor, we pushed food GP from 58% to 71% through disciplined [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) and portion control. That kind of improvement drops straight to the bottom line.
 
-- Cellar management skills: Technical expertise matters
+Calculate it weekly. If GP drops by more than 2 points, investigate immediately. Common culprits are wastage, theft, over-pouring, incorrect pricing, or supplier price increases you have not passed on.
 
-- Conflict resolution: Handle difficult situations professionally
+### Labour Costs
 
-### Physical Evidence - What Customers See and Feel
+Staff wages are typically your second biggest cost after stock:
 
-Every touchpoint shapes perception:
+- **Wet-led pubs:** aim for 20-25% of turnover on labour
+- **Food-led pubs:** 28-35% of turnover (kitchens are labour-intensive)
 
-- Cleanliness: Non-negotiable basics
+Include everything: wages, employer's NI, pension contributions, holiday pay. Review your rota weekly against actual trade. Are you overstaffed on quiet nights? Understaffed when it is busy? Cross-train your team so you have flexibility.
 
-- Atmosphere: Lighting, music, temperature
+For ideas on keeping your team motivated without increasing the wage bill, see our guide on [staff motivation when pay rises are off the table](/licensees-guide/staff-motivation-hacks-no-pay-rise).
 
-- Décor: Consistent with your brand positioning
+### Overheads and Cash Flow
 
-- Maintenance: Fix issues promptly
+Beyond stock and wages, your overheads include rent, utilities, insurance, repairs, licensing fees, subscriptions, and maintenance. Track them monthly and look for margin growth.
 
-- Toilets: Often cited in reviews - keep them spotless
+Energy costs have hit pubs hard. Smart scheduling of heating, switching to LED lighting, and negotiating better tariffs can make a real difference. We cover this in detail in our [energy bill guide](/licensees-guide/energy-bill-shock-cut-venue-costs).
 
-### Process - Smooth Operations
+Cash flow is where many pubs come unstuck. You might be profitable on paper but unable to pay this week's bills because the timing is wrong. A simple 13-week cash flow forecast will protect you from nasty surprises. If you are already feeling the squeeze, read our [cash flow crisis guide](/licensees-guide/cashflow-fixes-when-trade-drops).
 
-Efficient processes improve customer experience and profitability:
+### Key Numbers to Track Weekly
 
-- Service speed: Balance efficiency with friendliness
+Keep a simple weekly dashboard:
 
-- Order taking: Clear systems for food and drinks
+- Total takings (compare to same week last year)
+- GP percentage (wet and dry separately)
+- Average spend per head
+- Wastage value
+- Labour cost as a percentage of turnover
+- Number of covers (if you serve food)
 
-- Payment options: Offer convenience
+These six numbers tell you whether your pub is healthy or heading for trouble.
 
-- Complaint handling: Turn negatives into positives
+## Marketing Your Pub: The Basics Every Landlord Needs
 
-- Closing time: Manage last orders professionally
+You do not need a marketing degree or a big budget. You need consistency and a willingness to show up. Most pubs fail at marketing not because they do the wrong things, but because they do the right things inconsistently.
 
-## Part 2: Financial Health - The Numbers That Matter
+### Social Media
 
-Understanding your financial metrics is crucial for survival and growth. These are the key performance indicators every licensee should monitor weekly.
+Social media is free and it works. At The Anchor, we built to 60-70K monthly views. Here is what matters:
 
-### Gross Profit Margins - Your Lifeline
+- **Post consistently.** Three to five times a week minimum. Regularity beats perfection.
+- **Show the real pub.** Behind-the-scenes content, your team, the food coming out of the kitchen, the atmosphere on a busy night. Authenticity beats polish.
+- **Promote events early and often.** Do not just post once — build anticipation over the week.
+- **Engage with comments and messages.** Social media is a conversation, not a broadcast.
 
-Your gross profit percentage (GP%) is the most critical metric to track:
+For a detailed weekly system, read our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs). We also have specific guides for [Facebook marketing](/licensees-guide/facebook-marketing-local-pubs) and [Instagram marketing](/licensees-guide/instagram-marketing-for-pubs).
 
-- Overall target: Healthy GP across all sales
+### Google Business Profile
 
-- Wet margins: Aim for healthy GP on drinks
+This is the single most important piece of online real estate for a pub. When someone searches "pub near me," your Google Business Profile is what shows up.
 
-- Food margins: Target healthy GP on food sales
-
-- Monitor weekly: Spot issues before they become crises
-
-- Benchmark regularly: Compare with industry standards
-
-If your GP% drops noticeably, you're heading for trouble. Common causes include theft, wastage, incorrect pricing, or poor portion control.
-
-### Wet/Dry Sales Mix - Finding Balance
-
-Your sales mix significantly impacts profitability:
-
-- Community wet-led pubs: Heavy wet-led mix
-
-- Food-focused pubs: More balanced mix
-
-- Hybrid model: Balanced mix provides resilience
-
-- Track trends: Monitor shifts in customer preferences
-
-- Seasonal variations: Plan for fluctuations
-
-There's no perfect mix - it depends on your location, customer base, and capabilities. The key is understanding your current position and optimising accordingly.
-
-### Labour Costs - Balancing Service and Efficiency
-
-Staff costs typically should be:
-
-- A lower share of turnover for wet-led pubs
-
-- A higher share for food-led establishments
-
-- Include all employment costs: wages, NI, pensions
-
-- Review rotas weekly: Match staffing to demand
-
-- Cross-train team members: Increase flexibility
-
-## Part 3: Cellar & Stock Management - Your Profit Foundation
-
-Poor cellar management is literally pouring money down the drain. Poor practices can lose a meaningful amount of beer, costing thousands annually for a typical pub.
-
-### Yield Management - Stop the Waste
-
-Target minimal wastage by implementing:
-
-- Daily dip tests: Monitor exactly what you're losing
-
-- Proper pouring techniques: Train all staff thoroughly
-
-- Temperature control: Maintain a consistent cellar temperature
-
-- Gas pressure: Set correctly for each product
-
-- First in, first out: Rigorous stock rotation
-
-A typical pub losing a small amount per tap daily wastes thousands annually. Reducing wastage adds serious margin.
-
-### Line Cleaning - Non-Negotiable
-
-Beer lines must be cleaned weekly - it's not just best practice, it's a legal requirement:
-
-- Weekly: No exceptions
-
-- Use proper chemicals: Don't cut corners
-
-- Document cleaning: Keep records for due diligence
-
-- Check python cleanliness: Often overlooked
-
-- FOB detectors: Clean and maintain regularly
-
-Dirty lines don't just affect quality - they increase wastage through excess fobbing and can lead to serious health issues.
-
-### Stock Control Systems
-
-Implement robust stock management:
-
-- Weekly stocktakes: Know exactly what you have
-
-- Par stock levels: Avoid over-ordering
-
-- Supplier management: Negotiate better terms
-
-- Security measures: Prevent theft
-
-- Waste recording: Identify patterns and problems
-
-## Part 4: Customer Experience & Community Engagement
-
-Your pub's role in the community determines long-term success. Building strong local connections creates a loyal customer base that weathers economic storms.
-
-### Regular Events Programme
-
-Consistency builds anticipation and habit:
-
-- Quiz nights: Monthly fixture for 25-30 regular teams
-
-- Live music: Monthly or fortnightly depending on your market
-
-- Sports screenings: Know your customers' teams
-
-- Charity events: Build goodwill and PR
-
-- Seasonal celebrations: Mark key dates in the calendar
-
-The key is reliability - customers should know what happens when. "Quiz Tuesday" becomes part of their routine.
+- Claim and verify your listing if you have not already.
+- Fill in every field: opening hours, menu link, photos, description.
+- Post updates weekly — Google rewards active profiles.
+- Respond to every review, positive and negative, within 48 hours.
+- Ask happy customers to leave reviews. A steady stream of fresh reviews boosts your ranking.
 
 ### Local Partnerships
 
-Work with your community:
+Work with your community, not just in it:
 
-- Sports clubs: Post-match venue
+- **Sports clubs** — become the post-match venue. Offer a deal for teams.
+- **Local businesses** — cross-promote. A hair salon, a gym, a local shop — they all have customers who could be your customers.
+- **Charities** — fundraising events build goodwill and bring in people who might not usually visit.
+- **Schools and community groups** — appropriate family events, meeting space, craft fairs.
 
-- Local businesses: Networking events
+For more on community-based marketing, see our guides on [local pub marketing](/licensees-guide/local-pub-marketing) and [community outreach](/licensees-guide/community-outreach-reintroduce-pub).
 
-- Schools and colleges: Appropriate family events
+### Email and Database Marketing
 
-- Charities: Fundraising partnerships
+Build a customer database. We have built ours to 300 contacts, and it is one of our most valuable marketing assets. Collect email addresses through WiFi sign-in, event bookings, and loyalty schemes.
 
-- Suppliers: Showcase local products
+A monthly email newsletter keeps your pub front of mind. Share upcoming events, new menu items, and behind-the-scenes stories. Read more in our [email marketing guide](/licensees-guide/email-marketing-pub-retention).
 
-### Customer Feedback Systems
+## Building Your Team
 
-You can't improve what you don't measure:
+Your team will make or break your pub. The best menu, the best location, the best marketing — none of it matters if the person behind the bar cannot pull a decent pint or make a customer feel welcome.
 
-- Google reviews: Respond to all feedback
+### Hiring
 
-- TripAdvisor: Monitor and engage
+- Hire for attitude, train for skill. You can teach someone to use a till. You cannot teach them to be friendly.
+- Be clear about expectations from day one. Hours in hospitality are unsociable. Make sure candidates understand what they are signing up for.
+- Trial shifts are essential. You learn more in four hours of watching someone work than in any interview.
+- Check references. Actually call them.
 
-- Social media: Daily interaction
+### Training
 
-- Customer surveys: Annual deep dive
+Invest in your team and they will invest in your pub:
 
-- Mystery visits: Objective assessment
+- **Induction** — every new starter gets a structured first week. Introduce the pub, the team, the standards, and the safety procedures.
+- **Product knowledge** — your team should know what is on tap, what the specials are, and be able to recommend confidently.
+- **Upselling** — not pushy selling, but genuine recommendations. "That pairs really well with..." or "Have you tried our..." can meaningfully lift average spend. See our [upselling scripts guide](/licensees-guide/upselling-secrets-training-scripts) for natural approaches.
+- **Cellar skills** — at least two people should be able to change a barrel, clean lines, and troubleshoot issues.
+- **Food safety** — everyone who handles food needs Level 2 Food Hygiene at minimum.
 
-Aim for 4.0+ stars across all platforms. Address negative feedback within 24-48 hours.
+### Retention and Rota Management
 
-## Part 5: Operational Excellence Checklist
+Staff turnover in hospitality is notoriously high. Reduce it by:
 
-### Compliance & Standards
+- Publishing rotas at least two weeks in advance. Last-minute rota changes are the number one complaint from pub staff.
+- Being fair and consistent with hours. Do not give all the good shifts to your favourites.
+- Saying thank you. Recognition costs nothing and means everything.
+- Creating progression opportunities. Can your bar staff learn cellar management? Can your KP train on starters?
 
-Stay legal and safe:
+At The Anchor, we use technology to reclaim 25 hours a week from admin tasks, including rota planning. That is time back for the things that actually grow the business.
 
-- Food Safety Act: Full compliance required
+## Customer Experience: Making People Want to Come Back
 
-- Weights & Measures: Accurate serving sizes
+Getting a customer through the door once is marketing. Getting them back every week is experience. The pubs that build loyal regulars are the ones that get the experience right consistently.
 
-- Health & Safety: Risk assessments and training
+### Atmosphere
 
-- Licensing conditions: Know and follow them
+Atmosphere is not something you can fake. It comes from getting the details right:
 
-- Insurance: Adequate cover for all risks
+- **Cleanliness** — non-negotiable. Clean toilets, clean tables, clean glasses. If a customer notices the cleaning, you have already failed.
+- **Temperature** — too cold in winter, too hot in summer, and people will not stay for a second drink.
+- **Music** — background music sets the mood. Too loud kills conversation. No music feels dead. Get the balance right and change it through the day.
+- **Lighting** — bright for lunchtime, warmer for evenings. Lighting changes how a space feels more than almost anything else.
 
-### Staff Training Programme
+For budget-friendly ideas on refreshing your space, see our [pub atmosphere guide](/licensees-guide/reboot-pub-atmosphere-on-budget) and [low-cost decor refreshes](/licensees-guide/low-cost-decor-refreshes-new-improved).
 
-Invest in your team:
+### Service Standards
 
-- Cellar management: Technical skills
+Set clear standards and hold everyone to them:
 
-- Customer service: Soft skills matter
+- Acknowledge every customer within 30 seconds of arriving at the bar, even if you are busy. A nod and "I'll be with you in a moment" is enough.
+- Remember regulars' names and their usual. This is the single most powerful retention tool in hospitality.
+- Handle complaints immediately and generously. A free drink costs you pennies and can retain a customer worth hundreds over a year. For serious issues, see our [bad review recovery guide](/licensees-guide/terrible-online-reviews-damage-control).
+- Train your team to read the room. A couple on a date and a group of lads watching football need different energy.
 
-- Upselling techniques: Increase spend per head
+### Building a Regular Base
 
-- Conflict resolution: Handle difficult situations
+Regulars are the backbone of every successful pub. They provide consistent, predictable income and they become your best marketers through word of mouth.
 
-- Product knowledge: Become the expert
+Build regulars by:
 
-### Technology Integration
+- Running consistent events. Our quiz night brings in 25-35 regulars every week because it happens every week without fail. See our [quiz night guide](/licensees-guide/quiz-night-101) for the full system.
+- Creating a [loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub) that rewards frequency, not just spend.
+- Knowing your community. What do they need? A meeting space? A family-friendly Sunday? A late-night venue? Serve the gap.
 
-Use technology to improve efficiency:
+## Compliance and Legal: Staying on the Right Side
 
-- EPOS systems: Track everything
+Compliance is not optional and it is not something you can wing. Getting it wrong can cost you your licence, your livelihood, or worse.
 
-- Stock management software: Automate ordering
+### Licensing Laws
 
-- Social media scheduling: Plan ahead
+- Know your licence conditions inside out. What hours can you sell alcohol? What entertainment is permitted? Are there noise conditions?
+- The Licensing Act 2003 governs alcohol sales in England and Wales. Understand the four licensing objectives: prevention of crime and disorder, public safety, prevention of public nuisance, and protection of children from harm.
+- Challenge 25 policy — anyone who looks under 25 must be asked for ID. Train your team, display your policy, and keep a refusals log.
+- Your DPS (Designated Premises Supervisor) must hold a personal licence and be named on your premises licence. If they leave, you must appoint a new DPS immediately.
 
-- Online booking systems: Capture food sales
+### Food Safety and Hygiene
 
-- Customer WiFi: Data capture opportunity
+If you serve food:
 
-## Part 6: Adapting to Current Trends
+- Maintain your Food Safety Management System (based on HACCP principles). Your local Environmental Health Officer will inspect this.
+- Display your Food Hygiene Rating prominently. Aim for a 5. Anything below 4 puts customers off.
+- Allergen management is a legal requirement under Natasha's Law. You must be able to tell customers about all 14 allergens in every dish. See our [allergen compliance guide](/licensees-guide/food-allergies-gdpr-compliance) for practical systems.
+- Temperature records for fridges, freezers, and hot holding. Daily checks, documented.
 
-The pub industry continues to evolve. Stay relevant by embracing change while maintaining traditional values.
+### Health and Safety
 
-### Health-Conscious Offerings
+- Fire risk assessment — required by law. Review it annually and after any changes to the premises.
+- Risk assessments for all activities — cellar work, kitchen operations, events, outdoor areas.
+- First aid — at least one trained first aider on every shift. Stocked first aid kit checked monthly.
+- COSHH — all cleaning chemicals stored and used correctly, with data sheets accessible.
+- Accident book — record every incident, no matter how minor.
 
-Growing year on year:
+### Insurance
 
-- Low/no alcohol options: Stock quality alternatives
+At minimum you need:
 
-- Lighter menu options: Not everyone wants chips
+- Employer's liability insurance (legal requirement if you have staff)
+- Public liability insurance
+- Buildings and contents insurance
+- Stock insurance
+- Business interruption insurance
 
-- Allergen awareness: Clear labelling essential
+Review your cover annually. Underinsurance is a common and costly mistake.
 
-- Vegan/vegetarian: Cater for all diets
+## Growing Revenue: Beyond Just Opening the Doors
 
-- Calorie information: Required for larger operators
+Once your operations are solid and your compliance is in order, it is time to think about growth. The most profitable pubs do not just wait for customers — they create reasons for people to visit.
 
-### Experience Over Consumption
+### Events
 
-Customers seek more than just drinks:
+Events are the single most effective revenue driver for community pubs. They create regular footfall, build community, and generate social media content.
 
-- Instagram-worthy moments: Create photo opportunities
+Start with the basics:
 
-- Unique experiences: What makes you special?
+- **Quiz night** — the classic for good reason. Ours grew to 25-35 regulars with consistent promotion and a good format. See our [quiz night guide](/licensees-guide/quiz-night-101) and [quiz night ideas](/licensees-guide/quiz-night-ideas).
+- **Live music** — monthly or fortnightly depending on your space and audience. Our [live music guide](/licensees-guide/live-music-events-for-pubs) covers booking, sound, and licensing.
+- **Themed nights** — [music bingo](/licensees-guide/music-bingo-101), [cash bingo](/licensees-guide/cash-bingo-101), [karaoke](/licensees-guide/karaoke-night-101), [board game nights](/licensees-guide/boardgame-night-101). Each one fills a different night and attracts a different crowd.
+- **Seasonal events** — plan your year in advance with a [seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar). Christmas bookings, summer BBQs, bank holiday specials.
 
-- Community connection: Foster belonging
+For a complete events planning system, read our [pub events guide](/licensees-guide/how-to-run-successful-pub-events).
 
-- Quality over quantity: Premium experiences
+### Food
 
-- Storytelling: Share your pub's history
+Food can transform a pub's profitability when done right. The key is matching your food offer to your capabilities and your market.
 
-### Sustainability Initiatives
+- Start simple. A small, well-executed menu beats a long menu of average food every time.
+- Focus on high-margin items. Our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend) shows you how to design a menu that naturally steers customers towards your most profitable dishes.
+- Portion control is everything. Inconsistent portions destroy your GP.
+- For menu ideas that balance quality with margin, see our [profitable pub food guide](/licensees-guide/profitable-pub-food-menu-ideas).
 
-Increasingly important to customers:
+### Drinks Mix
 
-- Local sourcing: Reduce food miles
+Your drinks range is not just about what customers ask for — it is about guiding them towards higher-margin options.
 
-- Waste reduction: Compost and recycle
+- Premium spirits, craft beers, and cocktails all carry better margins than standard lagers.
+- Train your team to recommend. "We have a really good local IPA on at the moment" costs nothing and can shift the mix.
+- Review your range quarterly. Drop what does not sell, trial what might.
 
-- Energy efficiency: LED lighting, smart heating
+For a detailed strategy on improving your drinks profitability, read our guide on [rescuing margins through your drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
 
-- Plastic reduction: Alternatives to single-use
+### Upselling and Average Spend
 
-- Community gardens: Grow your own produce
+Small increases in average spend add up to big revenue gains over a year.
 
-## Taking Action - Your Next Steps
+- Offer sides and extras with food orders.
+- Suggest a specific drink with each dish — not "would you like a drink?" but "the Malbec goes really well with that steak."
+- Promote desserts actively. They are high margin and often an afterthought.
+- Run meal deals that bundle a starter or dessert at a discount — you still increase total spend.
 
-Knowledge without action is worthless. Here's how to implement your health check findings:
+## Common Mistakes New Licensees Make
 
-### Week 1: Measure Your Baseline
+After years in the trade and working with pubs across the UK through Orange Jelly, these are the mistakes I see most often:
 
-- Calculate your current GP%
+1. **Not tracking GP weekly.** If you do not know your numbers, you cannot fix your numbers. By the time you notice profits are down, you have already lost thousands.
 
-- Document your wet/dry split
+2. **Trying to change everything at once.** New licensees often want to stamp their mark immediately. Resist the urge. Learn how the pub operates first, understand your customers, then make changes gradually.
 
-- Measure current wastage levels
+3. **Underestimating working capital.** The pub will cost more than you think and take longer to turn a profit. Have a bigger financial cushion than you think you need.
 
-- Review your events calendar
+4. **Hiring friends.** It feels comfortable, but managing friends is miserable. Hire the best person for the job and keep your friendships separate.
 
-- Check online review scores
+5. **Competing on price.** If the pub down the road sells a pint for 50p less, your answer is not to cut your prices. It is to offer something they cannot — better atmosphere, better events, better service. Read our [pub differentiation guide](/licensees-guide/pub-differentiation-strategies) for more on this.
 
-### Week 2: Identify Quick Wins
+6. **Neglecting social media.** "I'm too busy to post" means you are too busy to market your business. Make it part of the daily routine.
 
-- Fix any line cleaning issues
+7. **Ignoring compliance.** It is boring until you lose your licence or get a food hygiene rating of 1. Then it is terrifying.
 
-- Adjust obvious pricing errors
+8. **Not asking for help.** Whether it is the BII, fellow licensees, or a consultancy like Orange Jelly, there are people who have been through what you are going through. Use them.
 
-- Update Google My Business
+9. **Burning out.** Running a pub is a marathon, not a sprint. If you are working every session, never taking a day off, and snapping at your team, something has to change. Build a team you trust and delegate.
 
-- Plan next month's events
+10. **Forgetting why you started.** On the hard days — and there will be hard days — remember why you wanted to do this. Pubs are about community, about bringing people together, about being part of something bigger than a business.
 
-- Train staff on wastage reduction
+## Your First 90 Days Action Plan
 
-### Week 3: Develop Your Plan
+If you are taking on a new pub or want to reset your approach, here is a practical 90-day framework.
 
-- Set specific improvement targets
+### Days 1-30: Observe, Measure, Stabilise
 
-- Create training schedules
+- Spend the first week just watching. How does the pub operate? Who are the regulars? What works and what does not?
+- Set up your weekly tracking: GP, takings, labour costs, wastage, covers.
+- Audit your cellar management. Are lines being cleaned weekly? Is the temperature right?
+- Get your compliance in order: food hygiene, fire safety, licensing conditions, insurance.
+- Meet your community. Introduce yourself to local businesses, sports clubs, and community groups.
+- Set up or optimise your Google Business Profile.
+- Establish consistent social media posting — minimum three times a week.
 
-- Design marketing calendar
+For a detailed day-by-day version, see our [30-day stabilisation plan](/licensees-guide/30-day-action-plan-stabilise-hospitality).
 
-- Plan cellar improvements
+### Days 31-60: Fix and Build
 
-- Schedule regular review dates
+- Address any GP issues you identified. Renegotiate supplier deals, fix portion control, adjust pricing where needed.
+- Launch your first regular event. Pick one night, one format, and commit to it every single week.
+- Build your staff training programme. Start with product knowledge and upselling basics.
+- Begin building your customer database — email addresses through WiFi, events, and direct collection.
+- Improve your online presence. Fresh photos, updated menus, regular social posting.
+- Review and optimise your rota against actual trade patterns.
 
-### Week 4: Begin Implementation
+### Days 61-90: Grow
 
-- Start daily monitoring
-
-- Launch one new initiative
-
-- Communicate changes to team
-
-- Engage with customers
-
-- Track early results
+- Launch a second regular event or activity.
+- Introduce or refine your food offer based on what you have learned about your customers.
+- Start email marketing to your growing database.
+- Review your first two months of data. What is improving? What needs more work?
+- Plan your next quarter: seasonal events, menu changes, marketing campaigns.
+- Consider what support you might need — whether that is a better EPOS system, staff training, or outside help with marketing.
 
 ## The Bottom Line
 
-Running a successful pub today requires attention to multiple moving parts. By regularly conducting this health check and acting on the findings, you can:
+Running a pub is one of the hardest and most rewarding things you can do. It will test you in ways you did not expect, and it will reward you in ways you could never have imagined. The feeling of a packed pub on a Friday night, the regulars who become friends, the community events that bring people together — that is why people do this.
 
-- Recover meaningful margin through wastage reduction
+But feelings do not pay the rent. Get your operations right. Know your numbers. Market consistently. Look after your team. Stay legal. And never stop learning.
 
-- Increase GP% by meaningful points
+At The Anchor, we have built something we are genuinely proud of: 25-35 quiz night regulars, food GP at 71%, 60-70K social media views a month, a database of 300 contacts, and 25 hours a week reclaimed through smart use of technology. None of that happened overnight. It happened because we treated the pub as a business while never forgetting it is a community hub.
 
-- Build a loyal customer base of regulars
+If you are just starting out, you do not have to figure this all out alone. Orange Jelly exists because we have been through it and we know how much a bit of experienced guidance can help. Whether you need help with your marketing, your operations, or just someone to bounce ideas off, [get in touch](/contact). We charge 75 pounds plus VAT per hour, and we back everything with a 30-day guarantee.
 
-- Create sustainable competitive advantages
-
-- Build a business that thrives, not just survives
-
-Remember, you don't have to tackle everything at once. Start with the areas that will have the biggest impact on your specific situation. Focus on progress, not perfection.
-
-Most importantly, remember why you're in this business. Pubs are about people, community, and creating moments that matter. Get the fundamentals right, and you'll have the foundation to deliver on that promise every single day.
-
-Need help implementing these strategies? Sometimes an outside perspective can identify opportunities you're too close to see. That's where targeted support can make all the difference.
+Your pub has potential. Let's unlock it.
 
 ## Frequently Asked Questions
 
-### How often should I conduct a pub health check?
+### What qualifications do I need to run a pub?
 
-Conduct a full health check quarterly, with monthly reviews of key metrics like GP%, wastage, and sales mix. Weekly monitoring of critical areas like cellar temperature and line cleaning is essential. Set aside time each Monday to review the previous week's performance.
+You need a personal licence, which requires completing an accredited licensing qualification (typically a one-day course costing around 150-250 pounds). Your premises also needs a premises licence. If you serve food, at least one person must hold a Level 2 Food Hygiene certificate. Beyond formal qualifications, practical experience in hospitality, basic financial literacy, and strong people skills are what actually determine success.
 
-### What's the single most important metric to track?
+### How much does it cost to run a pub?
 
-Gross Profit Percentage (GP%) is your most critical metric. If GP% falls sharply, you're in danger. This single number tells you whether you're making money on what you sell. Track it weekly and investigate any drops immediately.
+Costs vary hugely depending on whether you are a tenant, leaseholder, or freehold owner. A tied tenancy might require 5,000-20,000 pounds upfront with weekly rent of 500-2,000 pounds. A free-of-tie lease could need 50,000-150,000 pounds ingoing. Monthly running costs include rent, stock, wages, utilities, insurance, and licensing fees. Your biggest ongoing costs will be stock (around 35-40 percent of turnover), wages (20-30 percent), and rent.
 
-### How much can poor cellar management really cost?
+### What gross profit percentage should a pub aim for?
 
-Poor cellar management can cost thousands annually for a typical pub. Poor practices waste beer, but reducing wastage puts serious money back into your margin. That's pure profit going straight to your bottom line.
+A well-run pub should target 60-65% GP on wet sales and 65-70% on food. At The Anchor, we pushed food GP from 58% to 71% through careful menu engineering and portion control. If your overall GP is below 55%, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately.
 
-### What's the best wet/dry sales ratio?
+### How do I attract more customers to my pub?
 
-There's no universal "best" ratio - it depends on your location and customer base. Community wet-led pubs lean wet, while food-focused venues lean more balanced. The key is knowing your ratio and optimising your offer accordingly.
+Start with consistent events — our quiz night grew to 25-35 regulars by running it every single week without fail. Combine that with active social media (we hit 60-70K monthly views), a fully optimised Google Business Profile, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there.
 
-### How do I know if my prices are right?
+### What are the most common mistakes new pub landlords make?
 
-Right pricing balances competitiveness with profitability. Survey local competition, calculate your costs accurately, and ensure you're achieving target GP%. If customers complain about price but still buy, you're probably about right. If they stop coming, you've gone too far.
+The biggest mistakes are underestimating working capital needs, trying to change everything on day one, not tracking GP weekly, hiring friends instead of skilled staff, and competing on price instead of value. Most new licensees also underestimate how physically and emotionally demanding the role is. Get your finances and your support network sorted before you take on a pub.
+
+### How many hours a week does running a pub take?
+
+Honestly, expect 60-80 hours a week in your first year, especially if you are hands-on behind the bar and in the kitchen. As you build a reliable team and put systems in place, you can work towards 50-60 hours. The licensees who burn out are the ones who try to do everything themselves. Delegation and smart use of technology are essential for sustainability.
+
+### Is running a pub profitable?
+
+It can be, but margins are tighter than most people expect. A well-run community pub might generate 10-15 percent net profit on turnover. The key levers are GP management, labour efficiency, and driving revenue through events and food. Pubs that treat it as a proper business — tracking numbers weekly, controlling costs, and actively marketing — are far more likely to be profitable than those winging it.

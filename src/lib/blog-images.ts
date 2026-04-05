@@ -46,6 +46,10 @@ export function getDefaultBlogImage(slug: string): string {
     'turn-heating-costs-into-winter-wins': '/images/blog/turn-heating-costs-into-winter-wins.svg',
     // New articles (March 2026)
     'how-to-attract-families-to-your-pub': '/images/blog/how-to-attract-families-to-your-pub.svg',
+    // New articles (June 2025)
+    'does-your-pub-need-a-website': '/images/blog/does-your-pub-need-a-website.svg',
+    'pub-business-plan-template-guide': '/images/blog/pub-business-plan-template-guide.svg',
+    'buying-a-pub-complete-guide': '/images/blog/buying-a-pub-complete-guide.svg',
   };
 
   // Return the mapped image or a default
