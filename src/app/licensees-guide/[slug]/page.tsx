@@ -406,7 +406,7 @@ async function getMarkdownPost(
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const { isEnabled } = draftMode();
+  const { isEnabled } = await draftMode();
   const post = await getMarkdownPost(params.slug, { includeDrafts: isEnabled });
 
   if (!post) {
@@ -475,7 +475,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 // Async component that fetches data
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   try {
-    const { isEnabled } = draftMode();
+    const { isEnabled } = await draftMode();
     const post = await getMarkdownPost(params.slug, { includeDrafts: isEnabled });
 
     if (!post) {

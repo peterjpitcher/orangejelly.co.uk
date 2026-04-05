@@ -5,7 +5,7 @@ import Card from '@/components/Card';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { formatDate } from '@/lib/utils';
-import { getCategoryGradient, getCategoryLabel } from '@/lib/category-colours';
+import { getCategoryColour, getCategoryGradient, getCategoryLabel } from '@/lib/category-colours';
 
 interface BlogPostCardProps {
   post: {
@@ -39,6 +39,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
   const postUrl = `/licensees-guide/${post.slug}`;
   const categorySlug = post.category?.slug || 'operations';
   const gradient = getCategoryGradient(categorySlug);
+  const colour = getCategoryColour(categorySlug);
   const categoryLabel = getCategoryLabel(categorySlug);
 
   if (featured) {
@@ -69,24 +70,16 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
 
             <div className="p-6 flex flex-col justify-center">
               <div
-                className="text-sm font-medium mb-2 inline-block cursor-pointer"
-                style={{
-                  color: getCategoryGradient(categorySlug).includes('#') ? categorySlug : undefined,
-                }}
+                className="text-sm font-medium mb-2 inline-block cursor-pointer hover:underline"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  window.location.href = `/licensees-guide/category/${post.category.slug}`;
+                  window.location.href = `/licensees-guide/category/${categorySlug}`;
                 }}
               >
                 <span
-                  className="inline-block w-2 h-2 rounded-full mr-1.5"
-                  style={{
-                    backgroundColor: gradient
-                      .split(',')[0]
-                      ?.replace('linear-gradient(135deg', '')
-                      .trim(),
-                  }}
+                  className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
+                  style={{ backgroundColor: colour }}
                 />
                 {categoryLabel}
               </div>
@@ -144,17 +137,12 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              window.location.href = `/licensees-guide/category/${post.category.slug}`;
+              window.location.href = `/licensees-guide/category/${categorySlug}`;
             }}
           >
             <span
               className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
-              style={{
-                backgroundColor: gradient
-                  .split(',')[0]
-                  ?.replace('linear-gradient(135deg', '')
-                  .trim(),
-              }}
+              style={{ backgroundColor: colour }}
             />
             {categoryLabel}
           </div>

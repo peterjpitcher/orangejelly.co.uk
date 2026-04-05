@@ -56,85 +56,45 @@ export async function generateMetadata() {
 // Helper function to map category slugs to display names and descriptions
 function getCategoryDisplayInfo(categorySlug: string) {
   const categoryMap: Record<string, { name: string; slug: string; description: string }> = {
-    'customer-acquisition': {
-      name: 'Customer Acquisition',
-      slug: 'customer-acquisition',
-      description: 'Attracting and retaining new customer segments',
-    },
-    'digital-reputation': {
-      name: 'Digital Reputation',
-      slug: 'digital-reputation',
-      description: 'Managing online presence and reviews',
-    },
-    'location-challenges': {
-      name: 'Location Challenges',
-      slug: 'location-challenges',
-      description: 'Overcoming geographical and demographic obstacles',
-    },
-    compliance: {
-      name: 'Compliance',
-      slug: 'compliance',
-      description: 'Regulations, licensing, and legal requirements',
-    },
-    'crisis-management': {
-      name: 'Crisis Management',
-      slug: 'crisis-management',
-      description: 'Handling emergencies and unexpected situations',
-    },
-    competition: {
-      name: 'Competition',
-      slug: 'competition',
-      description: 'Strategies for competing with other pubs and chains',
-    },
-    'empty-pub-solutions': {
-      name: 'Empty Pub Solutions',
-      slug: 'empty-pub-solutions',
-      description: 'Solutions for filling quiet pubs and increasing footfall',
-    },
-    events: {
-      name: 'Events',
-      slug: 'events',
-      description: 'Articles about events & entertainment',
-    },
-    'events-promotions': {
-      name: 'Events & Promotions',
-      slug: 'events-promotions',
-      description: 'Planning and running successful pub events and promotions',
-    },
-    'food-drink': {
-      name: 'Food & Drink',
-      slug: 'food-drink',
-      description: 'Food and beverage management, menus, and offerings',
-    },
-    'menu-pricing': {
-      name: 'Menu & Pricing',
-      slug: 'menu-pricing',
-      description: 'Articles about menu & pricing',
-    },
-    'social-media': {
-      name: 'Social Media',
-      slug: 'social-media',
-      description: 'Social media marketing and online presence',
-    },
-    'supplier-relations': {
-      name: 'Supplier Relations',
-      slug: 'supplier-relations',
-      description: 'Managing brewery ties and supplier relationships',
-    },
-    'financial-management': {
-      name: 'Financial Management',
-      slug: 'financial-management',
-      description: 'Cash flow, budgeting, and financial planning',
+    'revenue-growth': {
+      name: 'Revenue & Growth',
+      slug: 'revenue-growth',
+      description: 'Cash flow, pricing, sales tactics, and financial planning for pubs',
     },
     operations: {
       name: 'Operations',
       slug: 'operations',
-      description: 'Day-to-day pub management and systems',
+      description: 'Day-to-day pub management, systems, compliance, and licensing',
     },
-    toolkits: {
-      name: 'Toolkits & Templates',
-      slug: 'toolkits',
-      description: 'Licensee playbooks, checklists, and downloadable assets',
+    marketing: {
+      name: 'Marketing',
+      slug: 'marketing',
+      description: 'Social media, online reputation, customer acquisition, and local marketing',
+    },
+    events: {
+      name: 'Events',
+      slug: 'events',
+      description: 'Planning and running successful pub events, promotions, and entertainment',
+    },
+    'food-drink': {
+      name: 'Food & Drink',
+      slug: 'food-drink',
+      description: 'Food and beverage management, menus, and drinks',
+    },
+    people: {
+      name: 'People',
+      slug: 'people',
+      description: 'Recruitment, staff motivation, team leadership, and training',
+    },
+    property: {
+      name: 'Property',
+      slug: 'property',
+      description: 'Location challenges, refurbishment, supplier and brewery relations',
+    },
+    turnaround: {
+      name: 'Turnaround',
+      slug: 'turnaround',
+      description: 'Crisis management, empty pub recovery, and community reconnection',
     },
   };
 
@@ -142,7 +102,7 @@ function getCategoryDisplayInfo(categorySlug: string) {
 }
 
 export default async function LicenseesGuidePage() {
-  const { isEnabled } = draftMode();
+  const { isEnabled } = await draftMode();
   let posts: GuidePost[] = [];
   let categories: GuideCategory[] = [];
 
