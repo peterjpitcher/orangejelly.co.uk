@@ -205,15 +205,18 @@ export default function PubMarketingLocationLandingPage({
             We help pubs throughout London and the Home Counties. Find pub marketing support near
             you.
           </Text>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
             {otherLocations.map((loc) => (
               <Link key={loc.slug} href={`/${loc.slug}`} className="block group">
                 <Card
                   variant="bordered"
-                  padding="large"
-                  className="text-center group-hover:border-orange transition-colors"
+                  padding="small"
+                  className="text-center group-hover:border-orange transition-colors sm:!p-6"
                 >
-                  <Text weight="semibold" className="group-hover:text-orange transition-colors">
+                  <Text
+                    weight="semibold"
+                    className="text-sm sm:text-base group-hover:text-orange transition-colors break-words"
+                  >
                     {loc.name}
                   </Text>
                 </Card>
@@ -248,6 +251,7 @@ export default function PubMarketingLocationLandingPage({
                 variant="secondary"
                 className="!bg-white !text-charcoal hover:!bg-cream"
                 showPhone={false}
+                trustText=""
               />
             </div>
             <Text size="sm" color="white" className="opacity-70 mt-4">

@@ -111,7 +111,13 @@ export default function Hero({
 
             {showCTA && (
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <WhatsAppButton text={whatsappMessage} label={ctaLabel} size="large" trustText="" />
+                <WhatsAppButton
+                  text={whatsappMessage}
+                  label={ctaLabel}
+                  size="large"
+                  trustText=""
+                  showPhone={false}
+                />
 
                 {secondaryAction && (
                   <Button

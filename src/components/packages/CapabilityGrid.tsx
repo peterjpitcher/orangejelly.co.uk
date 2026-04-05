@@ -44,7 +44,7 @@ export function CapabilityGrid({
 
   return (
     <div
-      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${compact ? '5' : '3'} gap-${compact ? '4' : '6'} ${className || ''}`}
+      className={`grid grid-cols-1 sm:grid-cols-2 ${compact ? 'lg:grid-cols-5 gap-4' : 'lg:grid-cols-3 gap-6'} ${className || ''}`}
     >
       {capabilities.map((cap) => {
         const IconComponent = iconMap[cap.icon] || Target;

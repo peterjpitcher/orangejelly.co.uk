@@ -371,12 +371,15 @@ export default function Home() {
               <Link href={area.href} className="block group">
                 <Card
                   variant="bordered"
-                  className="p-6 text-center transition-all hover:shadow-lg hover:-translate-y-1"
+                  className="!p-3 sm:!p-4 md:!p-6 text-center transition-all hover:shadow-lg hover:-translate-y-1"
                 >
-                  <Heading level={3} className="group-hover:text-orange transition-colors">
+                  <Heading
+                    level={3}
+                    className="text-sm sm:text-base md:text-lg group-hover:text-orange transition-colors break-words"
+                  >
                     {area.label}
                   </Heading>
-                  <Text size="sm" color="muted" className="mt-1">
+                  <Text size="xs" color="muted" className="mt-1 sm:text-sm">
                     Pub Marketing
                   </Text>
                 </Card>

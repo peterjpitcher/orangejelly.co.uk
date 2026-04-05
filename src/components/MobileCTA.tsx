@@ -37,6 +37,8 @@ function MobileCTA({
             text={whatsappText}
             size="large"
             fullWidth
+            showPhone={false}
+            trustText=""
             className="mobile-cta-button"
           />
         )}
