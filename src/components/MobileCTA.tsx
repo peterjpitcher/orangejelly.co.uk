@@ -42,7 +42,7 @@ function MobileCTA({
         )}
         {showBoth && primaryText && (
           <Button
-            href="/services"
+            href="/ways-to-work"
             size="large"
             variant="secondary"
             fullWidth

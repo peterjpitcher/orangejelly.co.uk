@@ -586,22 +586,22 @@ export default function PubRescue() {
             subtitle="Pick the issue that is slowing growth most and we'll tailor the support"
             links={[
               {
-                title: 'Transformational Marketing',
-                description: 'Clear plans and action-first delivery to rebuild momentum',
-                href: '/services#transformational-marketing',
+                title: 'Growth Fix',
+                description: 'Solve one clear problem fast with a focused action plan',
+                href: '/ways-to-work/growth-fix',
                 emoji: '🏚️',
                 highlight: true,
               },
               {
-                title: 'Event Innovation',
-                description: 'Fresh event formats that build repeat demand',
-                href: '/services#event-innovation',
+                title: 'Momentum Month',
+                description: 'Ongoing monthly support to build consistent trade',
+                href: '/ways-to-work/momentum-month',
                 emoji: '🍽️',
               },
               {
-                title: 'Simplified Technology Tools',
-                description: 'Simpler systems, lower waste, better consistency',
-                href: '/services#simplified-technology-tools',
+                title: 'Turnaround Intensive',
+                description: 'A 30-day sprint to reset your commercial model',
+                href: '/ways-to-work/turnaround-intensive',
                 emoji: '📱',
               },
             ]}

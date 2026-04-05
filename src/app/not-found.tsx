@@ -58,8 +58,8 @@ export default function NotFound() {
               <Button href="/" variant="primary" size="large">
                 Back to Homepage
               </Button>
-              <Button href="/services" variant="secondary" size="large">
-                View Our Services
+              <Button href="/ways-to-work" variant="secondary" size="large">
+                See Our Packages
               </Button>
             </div>
           </div>
@@ -74,38 +74,40 @@ export default function NotFound() {
             <Grid columns={{ default: 1, md: 2 }} gap="medium">
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Transformational Marketing?
+                  Our Packages?
                 </Heading>
                 <Text className="mb-4">
-                  Clear plans and action-first execution to build momentum quickly.
+                  Four clear packages for every stage of growth. From a one-off fix to ongoing
+                  partner support.
                 </Text>
-                <Button href="/services#transformational-marketing" variant="ghost" size="medium">
-                  See Transformational Marketing →
+                <Button href="/ways-to-work" variant="ghost" size="medium">
+                  See Our Packages →
                 </Button>
               </Card>
 
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Event Innovation?
+                  What We Can Help With?
                 </Heading>
                 <Text className="mb-4">
-                  Fresh event formats that are easier to run, easier to sell, and built for repeat
-                  visits.
+                  Social media, events, local visibility, paid ads, content, and more — tested at
+                  The Anchor.
                 </Text>
-                <Button href="/services#event-innovation" variant="ghost" size="medium">
-                  See Event Innovation →
+                <Button href="/capabilities" variant="ghost" size="medium">
+                  See Capabilities →
                 </Button>
               </Card>
 
               <Card variant="bordered" padding="medium">
                 <Heading level={3} className="mb-4">
-                  Simplified Technology Tools?
+                  Pub Marketing Guide?
                 </Heading>
                 <Text className="mb-4">
-                  Simplify your stack, cut waste, and make your tools work harder.
+                  The complete pub marketing guide — social media, events, email, local SEO, and
+                  menu engineering.
                 </Text>
-                <Button href="/services#simplified-technology-tools" variant="ghost" size="medium">
-                  See Technology Tools →
+                <Button href="/pub-marketing" variant="ghost" size="medium">
+                  Read the Guide →
                 </Button>
               </Card>
 

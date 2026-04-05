@@ -3,9 +3,9 @@
     "title": "Popular Pages",
     "links": [
       {
-        "title": "Services Overview",
-        "description": "Discover how we help hospitality partners build momentum",
-        "href": "/services",
+        "title": "Our Packages",
+        "description": "Four clear packages for every stage of growth",
+        "href": "/ways-to-work",
         "emoji": "🚀"
       },
       {
@@ -45,9 +45,9 @@
         "highlight": true
       },
       {
-        "title": "View Our Services",
-        "description": "See our four core growth offers",
-        "href": "/services",
+        "title": "See Our Packages",
+        "description": "Four clear packages from £375 + VAT",
+        "href": "/ways-to-work",
         "emoji": "🎯"
       },
       {
@@ -69,9 +69,9 @@
         "highlight": true
       },
       {
-        "title": "Browse Our Services",
-        "description": "See our packages and what's included",
-        "href": "/services",
+        "title": "See Our Packages",
+        "description": "Four clear packages for every stage of growth",
+        "href": "/ways-to-work",
         "emoji": "📋"
       },
       {
@@ -110,9 +110,9 @@
     "title": "See How We Can Help",
     "links": [
       {
-        "title": "Our Services",
-        "description": "Event innovation, marketing, tools, and clarity support",
-        "href": "/services",
+        "title": "Our Packages",
+        "description": "Four clear packages from £375 + VAT",
+        "href": "/ways-to-work",
         "emoji": "🚀"
       },
       {

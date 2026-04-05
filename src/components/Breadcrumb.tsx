@@ -71,6 +71,8 @@ export default function Breadcrumb({ items, className = '', variant = 'dark' }: 
 // Pre-defined breadcrumb paths for common pages
 export const breadcrumbPaths = {
   services: [{ label: 'Home', href: '/' }, { label: 'Services' }],
+  waysToWork: [{ label: 'Home', href: '/' }, { label: 'Ways to Work' }],
+  capabilities: [{ label: 'Home', href: '/' }, { label: 'Capabilities' }],
   about: [{ label: 'Home', href: '/' }, { label: 'About' }],
   results: [{ label: 'Home', href: '/' }, { label: 'Success Stories' }],
   contact: [{ label: 'Home', href: '/' }, { label: 'Contact' }],
@@ -78,30 +80,25 @@ export const breadcrumbPaths = {
     { label: 'Home', href: '/' },
     { label: "The Licensee's Guide", href: '/licensees-guide' },
   ],
-  // Service-specific breadcrumbs
-  emptyPubRecovery: [
+  // Package-specific breadcrumbs
+  growthFix: [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Transformational Marketing' },
+    { label: 'Ways to Work', href: '/ways-to-work' },
+    { label: 'Growth Fix' },
   ],
-  boostFoodSales: [
+  momentumMonth: [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Event Innovation' },
+    { label: 'Ways to Work', href: '/ways-to-work' },
+    { label: 'Momentum Month' },
   ],
-  marketing: [
+  growthPartner: [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Transformational Marketing' },
+    { label: 'Ways to Work', href: '/ways-to-work' },
+    { label: 'Growth Partner' },
   ],
-  website: [
+  turnaroundIntensive: [
     { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Simplified Technology Tools' },
-  ],
-  training: [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Clearing Up Ambiguity' },
+    { label: 'Ways to Work', href: '/ways-to-work' },
+    { label: 'Turnaround Intensive' },
   ],
 };
