@@ -706,19 +706,26 @@ export default function PubMarketingPage() {
             <Text size="lg" className="mb-8 max-w-2xl mx-auto">
               {pubMarketingData.cta.subtitle}
             </Text>
-            <WhatsAppButton
-              text={pubMarketingData.cta.whatsappMessage}
-              label="Message Peter on WhatsApp"
-              size="large"
-              className="mb-4"
-            />
-            <div className="mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+              <Button href="/ways-to-work" variant="primary" size="large">
+                See Our Packages
+              </Button>
+              <WhatsAppButton
+                text={pubMarketingData.cta.whatsappMessage}
+                label="Message Peter on WhatsApp"
+                size="large"
+              />
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center mt-4">
+              <Button href="/capabilities" variant="ghost" size="medium">
+                What we do
+              </Button>
               <Button href="/pub-marketing-agency" variant="ghost" size="medium">
-                Why choose Orange Jelly as your pub marketing agency?
+                Why choose Orange Jelly?
               </Button>
             </div>
             <Text size="sm" color="muted" className="mt-4">
-              Packages from £375 + VAT • No lock-in • Payment plans available
+              Packages from £375 + VAT — no lock-in — payment plans available
             </Text>
           </div>
         </Container>
