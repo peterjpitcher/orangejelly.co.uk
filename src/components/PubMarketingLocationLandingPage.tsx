@@ -237,14 +237,22 @@ export default function PubMarketingLocationLandingPage({
             <Text size="lg" color="white" className="opacity-90 mb-8 max-w-2xl mx-auto">
               {data.cta.subtitle}
             </Text>
-            <WhatsAppButton
-              text={data.cta.whatsappMessage}
-              label="Message Peter on WhatsApp"
-              size="large"
-              variant="secondary"
-              className="!bg-white !text-charcoal hover:!bg-cream"
-              showPhone={false}
-            />
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button href="/ways-to-work" variant="primary" size="large">
+                See Our Packages
+              </Button>
+              <WhatsAppButton
+                text={data.cta.whatsappMessage}
+                label="Message Peter on WhatsApp"
+                size="large"
+                variant="secondary"
+                className="!bg-white !text-charcoal hover:!bg-cream"
+                showPhone={false}
+              />
+            </div>
+            <Text size="sm" color="white" className="opacity-70 mt-4">
+              Packages from £375 + VAT — no lock-in contracts
+            </Text>
           </div>
         </Container>
       </Section>
