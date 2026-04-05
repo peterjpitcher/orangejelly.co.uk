@@ -163,7 +163,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pkg.process.map((step) => (
               <div key={step.step}>
-                <span className="inline-block w-8 h-8 rounded-full bg-orange text-white text-sm font-bold flex items-center justify-center mb-3">
+                <span className="w-8 h-8 rounded-full bg-orange text-white text-sm font-bold flex items-center justify-center mb-3">
                   {step.step}
                 </span>
                 <Text weight="semibold" className="mb-1 block">

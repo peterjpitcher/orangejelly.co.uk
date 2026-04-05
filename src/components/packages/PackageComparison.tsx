@@ -82,14 +82,14 @@ export function PackageComparison({ className }: PackageComparisonProps): React.
 
       {/* Mobile: Tabbed cards */}
       <div className="md:hidden">
-        <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
+        <div className="grid grid-cols-2 gap-2 mb-6">
           {packages.map((pkg) => (
             <button
               key={pkg.id}
               type="button"
               onClick={() => setActivePackage(pkg.id)}
               className={cn(
-                'px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors',
+                'px-3 py-2 rounded-full text-xs font-medium transition-colors text-center',
                 activePackage === pkg.id ? 'bg-orange text-white' : 'bg-gray-100 text-charcoal'
               )}
             >
