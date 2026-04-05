@@ -12,7 +12,6 @@ import AnimatedItem from '@/components/AnimatedItem';
 import Container from '@/components/Container';
 import Box from '@/components/Box';
 import OptimizedImage from '@/components/OptimizedImage';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 import { FAQSchema } from '@/components/StructuredData';
