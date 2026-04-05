@@ -51,50 +51,48 @@ export default function StickyEngagementBar(): React.ReactElement | null {
       role="complementary"
       aria-label="Engagement bar"
     >
-      <div className="mx-auto flex h-full max-w-4xl items-center justify-between px-4">
-        <p className="mr-3 truncate text-sm">{config.message}</p>
+      <div className="relative mx-auto flex h-full max-w-5xl items-center justify-center gap-4 px-4 pr-12">
+        <p className="text-sm text-white/90">{config.message}</p>
 
-        <div className="flex shrink-0 items-center gap-3">
-          {isExternal ? (
-            <a
-              href={config.ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-orange px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-orange/90"
-            >
-              {config.ctaText}
-            </a>
-          ) : (
-            <Link
-              href={config.ctaLink}
-              className="rounded-full bg-orange px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-orange/90"
-            >
-              {config.ctaText}
-            </Link>
-          )}
-
-          <button
-            type="button"
-            onClick={handleDismiss}
-            className="text-white/60 transition-colors hover:text-white"
-            aria-label="Dismiss engagement bar"
+        {isExternal ? (
+          <a
+            href={config.ctaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 rounded-full bg-orange px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-orange/90"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
-        </div>
+            {config.ctaText}
+          </a>
+        ) : (
+          <Link
+            href={config.ctaLink}
+            className="shrink-0 rounded-full bg-orange px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-orange/90"
+          >
+            {config.ctaText}
+          </Link>
+        )}
+
+        <button
+          type="button"
+          onClick={handleDismiss}
+          className="absolute right-4 text-white/60 transition-colors hover:text-white"
+          aria-label="Dismiss engagement bar"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
       </div>
     </div>
   );
