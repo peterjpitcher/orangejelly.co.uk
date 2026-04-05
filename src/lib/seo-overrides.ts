@@ -440,6 +440,30 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'pub tenancy',
     ],
   },
+  '/licensees-guide/pub-recruitment-hiring-bar-staff': {
+    title: 'Pub Recruitment: How to Hire (and Keep) Great Bar Staff',
+    description:
+      'How to hire and keep great pub staff. Where to find candidates, job ad templates, interview red flags, onboarding plans, and retention strategies from a working licensee.',
+    keywords: [
+      'hospitality recruitment',
+      'hiring bar staff',
+      'pub staff recruitment',
+      'pub chef recruitment',
+      'pub staff retention',
+    ],
+  },
+  '/licensees-guide/food-hygiene-rating-five-star-guide': {
+    title: 'How to Get a 5-Star Food Hygiene Rating (Pub Guide)',
+    description:
+      'Everything pub landlords need to score 5 on food hygiene. What EHO inspectors assess, how to prepare, common failures, re-inspection process, and daily routines that keep your stars.',
+    keywords: [
+      'food hygiene rating',
+      'how to improve food hygiene rating',
+      'EHO inspection',
+      'food hygiene rating 5',
+      'food hygiene inspection pub',
+    ],
+  },
   '/licensees-guide/pub-business-plan-template-guide': {
     title: 'Pub Business Plan: Free Template & Step-by-Step Guide',
     description:
@@ -449,6 +473,262 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'pub business plan template',
       'how to write a pub business plan',
       'brewery application business plan',
+    ],
+  },
+  '/licensees-guide/pub-insurance-cover-guide': {
+    title: 'Pub Insurance: What Cover You Need and What It Costs',
+    description:
+      'What insurance does a pub need? Public liability, employers liability, buildings, contents, and business interruption explained with realistic UK costs and an annual review checklist.',
+    keywords: [
+      'pub insurance',
+      'pub liability insurance',
+      'employers liability pub',
+      'pub insurance cost',
+      'pub buildings insurance',
+      'business interruption insurance pub',
+    ],
+  },
+  '/licensees-guide/prs-ppl-music-licensing-pubs': {
+    title: 'PRS and PPL Music Licensing for Pubs: What You Actually Pay',
+    description:
+      'TheMusicLicence for pubs explained. What PRS and PPL cover, how fees work by venue size, what is included, and penalties for non-compliance. Written by a working licensee.',
+    keywords: [
+      'pub background music',
+      'PRS licence pub',
+      'PPL licence pub',
+      'music licence cost pub',
+      'pub music playlist',
+      'TheMusicLicence',
+    ],
+  },
+  '/licensees-guide/pub-health-safety-checklist': {
+    title: "Pub Health and Safety: The Licensee's Practical Checklist",
+    description:
+      'A practical health and safety checklist for pub licensees. Risk assessments, fire safety, COSHH, cellar safety, noise management, and inspection prep from a working publican.',
+    keywords: [
+      'pub health and safety',
+      'fire safety pub',
+      'pub noise complaint',
+      'pub risk assessment',
+      'COSHH pub',
+      'pub inspection checklist',
+    ],
+  },
+  '/licensees-guide/pub-epos-system-guide': {
+    title: 'The Complete Guide to Pub EPOS Systems in 2026',
+    description:
+      'What to look for in a pub EPOS system. Key features, integration checklist, and how to use till data to grow revenue. Written by a working licensee.',
+    keywords: [
+      'pub epos system',
+      'best epos system for pubs',
+      'pub till system',
+      'pub point of sale',
+      'epos system for pubs',
+    ],
+  },
+  '/licensees-guide/pub-wages-labour-costs-guide': {
+    title: 'Pub Wages and Labour Costs: What to Pay and How to Control Costs',
+    description:
+      'What to pay pub staff in the UK and how to keep labour costs under 30%. Realistic rates by role, rota tips, and benchmarks from a working licensee.',
+    keywords: [
+      'pub wages uk',
+      'bar staff pay rates',
+      'pub overheads',
+      'pub labour costs',
+      'pub staff wages',
+    ],
+  },
+  '/licensees-guide/pub-christmas-bookings-fill-december': {
+    title: 'Pub Christmas Bookings: How to Fill Your December Calendar',
+    description:
+      'Fill your pub December calendar with Christmas bookings. Pricing strategies, deposit policies, set menus, entertainment ideas, and a 12-week promotion timeline from a working licensee.',
+    keywords: [
+      'pub christmas party booking',
+      'pub christmas ideas',
+      'christmas pub quiz',
+      'pub christmas menu',
+      'pub december bookings',
+    ],
+  },
+  '/licensees-guide/pub-licensing-premises-personal-licence-guide': {
+    title: 'Pub Licensing Explained: Premises Licences, Personal Licences & TENs',
+    description:
+      'Every licence a pub landlord needs explained in plain English. Premises licences, personal licences, TENs, costs, timelines, and common mistakes to avoid.',
+    keywords: [
+      'premises licence',
+      'pub licensing',
+      'personal licence holder',
+      'temporary event notice',
+      'TEN notice',
+      'alcohol licence',
+      'designated premises supervisor',
+    ],
+  },
+  '/licensees-guide/how-to-respond-bad-pub-reviews': {
+    title: 'How to Respond to Bad Pub Reviews (Without Making It Worse)',
+    description:
+      'Real response templates for 1-star pub reviews. The 3 golden rules, what never to say, and a systematic approach to generating more positive reviews for your pub.',
+    keywords: [
+      'how to respond to bad pub reviews',
+      'pub reputation management',
+      'pub tripadvisor ranking',
+      'how to get more pub reviews',
+      'bad pub review response',
+    ],
+  },
+  '/licensees-guide/google-business-profile-pub-guide': {
+    title: 'Google Business Profile for Pubs: The Complete Setup Guide',
+    description:
+      'Step-by-step guide to setting up and optimising your pub Google Business Profile. Get into the local 3-pack, manage reviews, and turn searches into customers.',
+    keywords: [
+      'pub google maps',
+      'google business profile pub',
+      'how to get on google maps pub',
+      'pub near me ranking',
+      'local seo for pubs',
+    ],
+  },
+  '/licensees-guide/cellar-management-beer-quality-guide': {
+    title: 'Cellar Management: Keep Beer Perfect, Waste Low',
+    description:
+      'Practical cellar management guide for pub landlords. Temperature control, line cleaning schedules, FIFO stock rotation, cask vs keg, and wastage tracking to protect your GP.',
+    keywords: [
+      'cellar management',
+      'pub stock take',
+      'pub wastage',
+      'cask ale',
+      'beer quality',
+      'line cleaning',
+      'pub cellar temperature',
+    ],
+  },
+  '/licensees-guide/pub-halloween-bonfire-night-events': {
+    title: 'Pub Bonfire Night & Halloween: Events That Actually Work',
+    description:
+      'Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family daytime events, ticketed fireworks, and seasonal menus that drive real autumn revenue.',
+    keywords: [
+      'pub halloween party',
+      'pub bonfire night',
+      'pub autumn events',
+      'halloween pub event ideas',
+      'bonfire night pub menu',
+    ],
+  },
+  '/licensees-guide/pub-accessibility-welcoming-guide': {
+    title: 'Pub Accessibility: Making Your Venue Welcoming for Everyone',
+    description:
+      'Make your pub accessible, dog friendly, and family friendly. Equality Act 2010 requirements, practical improvements, and the business case for welcoming everyone.',
+    keywords: [
+      'disabled access',
+      'pub dog friendly',
+      'pub child friendly',
+      'accessible pub',
+      'pub accessibility',
+      'Equality Act 2010 pubs',
+    ],
+  },
+  '/licensees-guide/pub-vat-accounting-guide': {
+    title: "Pub VAT and Accounting: The Landlord's Plain-English Guide",
+    description:
+      'Plain-English guide to pub VAT, bookkeeping, and common tax mistakes. Know what to reclaim, when to register, and how to choose a hospitality accountant.',
+    keywords: [
+      'pub vat',
+      'vat on pub food',
+      'pub accounting',
+      'pub bookkeeping',
+      'pub tax mistakes',
+      'hospitality accountant',
+    ],
+  },
+  '/licensees-guide/pub-drinks-menu-design-guide': {
+    title: 'Pub Drinks Menu: Design a Menu That Grows Revenue',
+    description:
+      'How to design a pub drinks menu that sells high-margin lines. Layout psychology, pricing ladders, cocktail lists, wine for non-experts, and premium soft drinks. From a working licensee.',
+    keywords: [
+      'pub drinks menu',
+      'pub cocktail list',
+      'pub wine list ideas',
+      'pub gin menu',
+      'pub soft drinks',
+      'drinks menu design',
+    ],
+  },
+  '/licensees-guide/pub-toilet-refurbishment-budget-guide': {
+    title: 'Pub Toilet Refurbishment: Make a Great Impression on a Budget',
+    description:
+      'Budget pub toilet refurbishment guide. Prioritise paint, lighting, mirrors, and hand drying for under £1,000. Maintenance schedule and cost breakdowns from a working licensee.',
+    keywords: [
+      'pub toilet refurbishment',
+      'pub lighting ideas',
+      'pub toilet upgrade',
+      'pub bathroom renovation',
+      'pub toilet maintenance',
+    ],
+  },
+  '/licensees-guide/pub-new-years-eve-planning-guide': {
+    title: "New Year's Eve for Pubs: Planning, Pricing & Promotion",
+    description:
+      "Plan a profitable pub New Year's Eve. Ticketing vs walk-in, pricing psychology, menu planning, entertainment, staffing, and how to convert NYE visitors into January regulars.",
+    keywords: [
+      'pub new year menu',
+      'pub valentines menu',
+      'pub bank holiday events',
+      'new years eve pub',
+      'pub NYE event',
+    ],
+  },
+  '/licensees-guide/pub-chalkboard-a-board-ideas': {
+    title: 'Pub Chalkboard & A-Board Ideas That Actually Drive Footfall',
+    description:
+      'Practical pub chalkboard and A-board ideas that turn passers-by into customers. What to write, design tips, seasonal messages, legal rules, and social media amplification.',
+    keywords: [
+      'pub chalkboard ideas',
+      'pub a-board signs',
+      'pub window display',
+      'pub pavement sign',
+      'pub signage ideas',
+    ],
+  },
+  '/licensees-guide/how-much-profit-does-a-pub-make': {
+    title: 'How Much Profit Does a Pub Make? Realistic Numbers for 2026',
+    description:
+      'Honest pub profit benchmarks for 2026. Wet GP targets, food GP targets, labour costs, rent, and what you actually take home. From a licensee who grew food GP from 58% to 71%.',
+    keywords: [
+      'how much profit does a pub make',
+      'average pub turnover uk',
+      'pub gross profit',
+      'pub profit calculator',
+      'pub break even',
+    ],
+  },
+  // --- Week 24-26: Final editorial calendar posts ---
+  '/licensees-guide/pub-six-nations-rugby-marketing': {
+    title: 'Six Nations 2026: How to Make the Most of Rugby in Your Pub',
+    description:
+      'How to screen Six Nations rugby in your pub. Setup, food and drink deals, booking systems, social media promotion, and converting match-day visitors into regulars.',
+    keywords: ['pub Six Nations', 'pub sporting events', 'screening rugby in pub', 'pub match day'],
+  },
+  '/licensees-guide/wet-led-vs-food-led-pubs': {
+    title: 'Wet-Led vs Food-Led Pubs: Understanding Your Revenue Model',
+    description:
+      'Wet-led vs food-led pubs explained. Revenue models, GP targets, staffing, marketing differences, and how to decide which model is right for your venue.',
+    keywords: [
+      'wet led pub',
+      'dry led pub',
+      'food led pub',
+      'pub revenue model',
+      'pub gross profit',
+    ],
+  },
+  '/licensees-guide/pub-marketing-plan-2026-monthly-guide': {
+    title: 'Your Pub Marketing Plan for 2026: Month-by-Month Guide',
+    description:
+      'Month-by-month pub marketing plan for 2026. What to promote, events to run, social media themes, and how to build momentum across the year.',
+    keywords: [
+      'pub marketing plan',
+      'pub marketing calendar 2026',
+      'pub promotion ideas',
+      'pub events calendar',
     ],
   },
 };

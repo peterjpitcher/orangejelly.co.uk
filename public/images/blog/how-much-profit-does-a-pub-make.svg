@@ -1,0 +1,15 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#006064"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="white">
+    How Much Profit Does
+  </text>
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="#EA580C">
+    a Pub Make?
+  </text>
+  <text x="600" y="410" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" opacity="0.8">
+    Realistic Numbers for 2026
+  </text>
+  <text x="600" y="460" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="white" opacity="0.6">
+    Orange Jelly Limited
+  </text>
+</svg>

@@ -50,6 +50,52 @@ export function getDefaultBlogImage(slug: string): string {
     'does-your-pub-need-a-website': '/images/blog/does-your-pub-need-a-website.svg',
     'pub-business-plan-template-guide': '/images/blog/pub-business-plan-template-guide.svg',
     'buying-a-pub-complete-guide': '/images/blog/buying-a-pub-complete-guide.svg',
+    // New articles (August 2025)
+    'pub-insurance-cover-guide': '/images/blog/pub-insurance-cover-guide.svg',
+    // New articles (July 2025)
+    'pub-licensing-premises-personal-licence-guide':
+      '/images/blog/pub-licensing-premises-personal-licence-guide.svg',
+    'food-hygiene-rating-five-star-guide': '/images/blog/food-hygiene-rating-five-star-guide.svg',
+    // New articles (August 2025 — Week 7)
+    'prs-ppl-music-licensing-pubs': '/images/blog/prs-ppl-music-licensing-pubs.svg',
+    // New articles (August 2025 — Week 8)
+    'pub-epos-system-guide': '/images/blog/pub-epos-system-guide.svg',
+    // New articles (September 2025 — Week 9)
+    'pub-recruitment-hiring-bar-staff': '/images/blog/pub-recruitment-hiring-bar-staff.svg',
+    // New articles (September 2025 — Week 10)
+    'pub-christmas-bookings-fill-december': '/images/blog/pub-christmas-bookings-fill-december.svg',
+    // New articles (September 2025 — Week 11)
+    'how-to-respond-bad-pub-reviews': '/images/blog/how-to-respond-bad-pub-reviews.svg',
+    // New articles (September 2025 — Week 12)
+    'google-business-profile-pub-guide': '/images/blog/google-business-profile-pub-guide.svg',
+    // New articles (September 2025 — Week 13)
+    'pub-halloween-bonfire-night-events': '/images/blog/pub-halloween-bonfire-night-events.svg',
+    // New articles (October 2025 — Week 14)
+    'pub-health-safety-checklist': '/images/blog/pub-health-safety-checklist.svg',
+    // New articles (October 2025 — Week 15)
+    'pub-wages-labour-costs-guide': '/images/blog/pub-wages-labour-costs-guide.svg',
+    // New articles (October 2025 — Week 16)
+    'cellar-management-beer-quality-guide': '/images/blog/cellar-management-beer-quality-guide.svg',
+    // New articles (October 2025 — Week 17)
+    'pub-drinks-menu-design-guide': '/images/blog/pub-drinks-menu-design-guide.svg',
+    // New articles (November 2025 — Week 18)
+    'pub-accessibility-welcoming-guide': '/images/blog/pub-accessibility-welcoming-guide.svg',
+    // New articles (November 2025 — Week 19)
+    'pub-vat-accounting-guide': '/images/blog/pub-vat-accounting-guide.svg',
+    // New articles (November 2025 — Week 20)
+    'pub-toilet-refurbishment-budget-guide':
+      '/images/blog/pub-toilet-refurbishment-budget-guide.svg',
+    // New articles (November 2025 — Week 21)
+    'pub-new-years-eve-planning-guide': '/images/blog/pub-new-years-eve-planning-guide.svg',
+    // New articles (December 2025 — Week 22)
+    'pub-chalkboard-a-board-ideas': '/images/blog/pub-chalkboard-a-board-ideas.svg',
+    // New articles (December 2025 — Week 23)
+    'how-much-profit-does-a-pub-make': '/images/blog/how-much-profit-does-a-pub-make.svg',
+    // New articles (December 2025 — Weeks 24-26)
+    'pub-six-nations-rugby-marketing': '/images/blog/pub-six-nations-rugby-marketing.svg',
+    'wet-led-vs-food-led-pubs': '/images/blog/wet-led-vs-food-led-pubs.svg',
+    'pub-marketing-plan-2026-monthly-guide':
+      '/images/blog/pub-marketing-plan-2026-monthly-guide.svg',
   };
 
   // Return the mapped image or a default

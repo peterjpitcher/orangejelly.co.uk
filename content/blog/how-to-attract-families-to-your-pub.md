@@ -8,6 +8,7 @@ author:
   name: Peter Pitcher
   bio: Founder of Orange Jelly, helping UK pubs increase revenue through proven strategies
 featured: false
+featuredImage: /images/blog/how-to-attract-families.png
 category: Revenue Growth
 tags:
   - Family Friendly
