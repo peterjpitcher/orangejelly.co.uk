@@ -1,16 +1,25 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Old category slugs → new 8-category taxonomy
 const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
-  marketing: 'social-media',
-  'supplier-relations': 'empty-pub-solutions',
-  'financial-management': 'empty-pub-solutions',
-  'crisis-management': 'empty-pub-solutions',
-  'customer-acquisition': 'empty-pub-solutions',
-  'location-challenges': 'empty-pub-solutions',
-  'digital-reputation': 'social-media',
-  events: 'events-promotions',
-  'revenue-growth': 'sales',
+  'social-media': 'marketing',
+  'customer-acquisition': 'marketing',
+  'digital-reputation': 'marketing',
+  communications: 'marketing',
+  competition: 'marketing',
+  'financial-management': 'revenue-growth',
+  'menu-pricing': 'revenue-growth',
+  sales: 'revenue-growth',
+  analytics: 'revenue-growth',
+  compliance: 'operations',
+  'events-promotions': 'events',
+  toolkits: 'events',
+  'crisis-management': 'turnaround',
+  'empty-pub-solutions': 'turnaround',
+  community: 'turnaround',
+  'supplier-relations': 'property',
+  'location-challenges': 'property',
 };
 
 const RETIRED_CONTENT_PATHS = new Set([
