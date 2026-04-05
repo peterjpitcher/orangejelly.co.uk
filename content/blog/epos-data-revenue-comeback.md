@@ -6,7 +6,7 @@ updatedDate: "2026-04-06T00:00:00.000Z"
 excerpt: "Transform EPOS reports into weekly action plans that boost covers, spend per head, and labour productivity."
 quickAnswer: "Track four metrics (covers, average spend, product mix, labour cost) and run one experiment per week based on what the data reveals."
 author: "Peter Pitcher"
-category: "analytics"
+category: "revenue-growth"
 tags:
   - "EPOS"
   - "data"

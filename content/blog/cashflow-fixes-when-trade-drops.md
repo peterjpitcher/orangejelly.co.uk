@@ -6,7 +6,7 @@ updatedDate: "2025-12-15T00:00:00.000Z"
 excerpt: "A practical triage checklist for publicans who need to protect cash this week without destroying the guest experience."
 quickAnswer: "Model 13-week cash daily, negotiate breathing room with suppliers, convert stock to cash fast, and double down on high-margin activities so the business stabilises before panic sets in."
 author: "Peter Pitcher"
-category: "financial-management"
+category: "revenue-growth"
 tags:
   - "cashflow"
   - "finance"

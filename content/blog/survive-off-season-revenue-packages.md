@@ -6,7 +6,7 @@ updatedDate: "2026-01-26T00:00:00.000Z"
 excerpt: "Build shoulder-season packages that convert corporate, community, and staycation guests when tourist footfall disappears."
 quickAnswer: "Bundle space hire, F&B, and hosted experiences into ready-to-buy packages aimed at three segments: local businesses, family celebrations, and hobby groups."
 author: "Peter Pitcher"
-category: "sales"
+category: "revenue-growth"
 tags:
   - "off-season"
   - "packages"

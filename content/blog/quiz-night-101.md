@@ -6,7 +6,7 @@ updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Step-by-step playbook for running a 90-minute pub quiz that feels hyper-local, stays compliant, and fills the till every week."
 quickAnswer: "Lock in a repeatable 90-minute format, bundle entry with a drink, and rotate localised rounds so regulars plan their week around your quiz."
 author: "Peter Pitcher"
-category: "toolkits"
+category: "events"
 tags:
   - "pub quiz guide"
   - "quiz night ideas"

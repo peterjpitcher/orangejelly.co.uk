@@ -5,7 +5,7 @@ publishedDate: 2025-03-24
 excerpt: "When your village is shrinking but your bills aren't, here's how to transform from local boozer to destination venue without losing your soul."
 quickAnswer: "Transform into a destination by focusing on exceptional food, unique experiences, and strong online presence. Diversify with private dining, wedding receptions, corporate events, and daytime coffee trade. Maintain local character while attracting visitors from surrounding areas who'll travel for quality."
 author: "Peter Pitcher"
-category: "location-challenges"
+category: "property"
 featuredImage: "/images/blog/village-pub-dying-village-survival.png"
 tags:
   - "village pub"

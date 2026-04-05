@@ -6,7 +6,7 @@ updatedDate: "2025-02-10T01:00:00.000Z"
 excerpt: "Discover the real reasons your pub is struggling with footfall and learn practical, proven solutions that actually work. From a landlord who's been there."
 quickAnswer: "Most empty pubs suffer from poor first impressions, inconsistent opening hours, or pricing that doesn't match their positioning. Start with rock-solid opening times, clean windows, and friendly greetings. Focus on one core strength rather than trying to be everything to everyone."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/why-is-my-pub-empty.png"
 tags:
   - "empty pub solutions"

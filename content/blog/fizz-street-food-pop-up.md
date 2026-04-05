@@ -6,7 +6,7 @@ updatedDate: "2026-02-25T00:00:00.000Z"
 excerpt: "Turn the handover from after-work drinks into a sell-out street-food takeover with bundled spritz menus, partner-ready checklists, and ops flows built for stretched teams."
 quickAnswer: "Pair one local street-food trader with a fixed-price small plate and fizz/spritz bundle, cap service to 90 minutes, and trail it as a weekly handover ritual so you own the Friday after-work crowd without overloading the kitchen."
 author: "Peter Pitcher"
-category: "events-promotions"
+category: "events"
 tags:
   - "friday night pub ideas"
   - "street food takeover"

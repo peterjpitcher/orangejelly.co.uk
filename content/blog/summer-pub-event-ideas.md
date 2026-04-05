@@ -6,7 +6,7 @@ updatedDate: "2025-07-21T00:00:00.000Z"
 excerpt: "Most summer events cost more than they earn. These 35 ideas are costed, tested, and ranked by profit — so you fill your garden without burning your margin."
 quickAnswer: "Host beer garden BBQs (low setup, strong ROI), outdoor quiz nights with prizes, family fun days with bouncy castles, live acoustic music sessions, and themed festivals. Focus on events that utilize your outdoor space and encourage longer stays."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/summer-pub-event-ideas.webp"
 tags:
   - "seasonal"

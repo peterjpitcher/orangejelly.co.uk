@@ -9,7 +9,7 @@ author:
   bio: Founder of Orange Jelly, helping UK pubs increase revenue through proven strategies
 featured: false
 featuredImage: /images/blog/how-to-attract-families.png
-category: Revenue Growth
+category: "revenue-growth"
 tags:
   - Family Friendly
   - Pub Events

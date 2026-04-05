@@ -6,7 +6,7 @@ updatedDate: "2025-04-28T00:00:00.000Z"
 excerpt: "Unlock Facebook's potential for your pub with proven strategies for events, community building, and local marketing that drive real footfall."
 quickAnswer: "Use Facebook Events to promote activities, join local community groups to share updates, post high-quality photos of food and atmosphere, and create targeted local ads for £5-20 weekly. Focus on building genuine community connections rather than just selling."
 author: "Peter Pitcher"
-category: "social-media"
+category: "marketing"
 featuredImage: "/images/blog/facebook-marketing-local-pubs.png"
 tags:
   - "pub Facebook marketing"

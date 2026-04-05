@@ -6,7 +6,7 @@ updatedDate: "2025-05-19T00:00:00.000Z"
 excerpt: "A week-by-week content plan for pubs: exactly what to post on Facebook and Instagram, when to post it, and how to turn views into actual bookings."
 quickAnswer: "Share behind-the-scenes kitchen videos, customer stories, and local history. Post consistently across Facebook, Instagram, and local community groups. Focus on storytelling that builds emotional connection rather than just promoting opening hours and menu items."
 author: "Peter Pitcher"
-category: "social-media"
+category: "marketing"
 featuredImage: "/images/blog/content-marketing-ideas-pubs.png"
 tags:
   - "pub marketing ideas"

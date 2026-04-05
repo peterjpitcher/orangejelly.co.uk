@@ -6,7 +6,7 @@ updatedDate: "2025-12-22T00:00:00.000Z"
 excerpt: "Engineer a drinks range that delights guests while defending gross profit, even when supplier prices climb."
 quickAnswer: "Balance three tiers of pours, spotlight limited releases, and train the bar team on round-building so every tray balances volume and premium spend."
 author: "Peter Pitcher"
-category: "financial-management"
+category: "revenue-growth"
 tags:
   - "margins"
   - "drinks strategy"

@@ -6,7 +6,7 @@ updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Turn Thursdays into high-energy karaoke shows with the right kit, rotation rules, and compliance guardrails."
 quickAnswer: "Set clear 3-minute song limits, track the rotation on-screen, and use TheMusicLicence plus consent signage so karaoke stays fun and compliant."
 author: "Peter Pitcher"
-category: "toolkits"
+category: "events"
 tags:
   - "karaoke night"
   - "pub events"

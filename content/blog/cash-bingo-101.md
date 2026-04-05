@@ -6,7 +6,7 @@ updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Keep Thursday nights lively with a compliant bingo format that respects Gambling Act rules, protects your float, and delights locals."
 quickAnswer: "Cap stakes at £5, log every prize, and script a 75-minute format with bundled books so bingo builds steady spend without risking your licence."
 author: "Peter Pitcher"
-category: "toolkits"
+category: "events"
 tags:
   - "cash bingo"
   - "pub gaming compliance"

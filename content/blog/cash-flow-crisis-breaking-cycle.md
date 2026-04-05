@@ -5,7 +5,7 @@ publishedDate: 2025-03-24
 excerpt: "Stop the monthly panic of making rent. Build predictable income, manage seasonal swings, and create the cash buffer that lets you sleep at night."
 quickAnswer: "Break the cycle by creating recurring revenue streams: regular events, monthly quiz nights, function bookings, and loyalty schemes. Build a 3-month cash buffer by saving £100 weekly from improved margins. Track daily cash position and extend supplier payment terms where possible."
 author: "Peter Pitcher"
-category: "financial-management"
+category: "revenue-growth"
 featuredImage: "/images/blog/cash-flow-crisis-breaking-cycle.png"
 tags:
   - "cash flow management"

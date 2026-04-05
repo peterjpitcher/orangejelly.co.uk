@@ -6,7 +6,7 @@ updatedDate: "2026-03-16T00:00:00.000Z"
 excerpt: "Teach the team to recommend higher-value items with confidence and warmth so guests feel guided, not hustled."
 quickAnswer: "Use needs-based questions, offer two options, and script conversational bridges that make upgrades feel natural."
 author: "Peter Pitcher"
-category: "sales"
+category: "revenue-growth"
 tags:
   - "upselling"
   - "training"

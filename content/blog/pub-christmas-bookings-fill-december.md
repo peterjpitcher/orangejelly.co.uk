@@ -5,7 +5,7 @@ publishedDate: 2025-09-08
 excerpt: "Start filling your pub's December calendar now. Pricing strategies, deposit policies, menu planning, and a promotion timeline that secures Christmas bookings early."
 quickAnswer: "Start marketing your pub Christmas offering in September. Build set menu packages at three price points, take non-refundable deposits of 10 to 15 pounds per head, promote through social media and email in a phased timeline, and plan entertainment like a Christmas pub quiz or live music to fill midweek gaps. The pubs that win December are the ones that start early."
 author: "Peter Pitcher"
-category: "events-and-promotions"
+category: "events"
 featuredImage: "/images/blog/pub-christmas-bookings-fill-december.svg"
 tags:
   - "pub christmas party booking"

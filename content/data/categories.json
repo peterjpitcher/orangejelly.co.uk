@@ -1,68 +1,30 @@
 [
   {
-    "_id": "Csdd80pLvugiOUK0y2JOjZ",
+    "_id": "category-revenue-growth",
     "_type": "category",
-    "title": "Customer Acquisition",
+    "title": "Revenue & Growth",
     "slug": {
-      "current": "customer-acquisition"
+      "current": "revenue-growth"
     },
-    "description": "Attracting and retaining new customer segments"
+    "description": "Cash flow, pricing, sales tactics, and financial planning for pubs"
   },
   {
-    "_id": "Csdd80pLvugiOUK0y2JOlJ",
+    "_id": "category-operations",
     "_type": "category",
-    "title": "Digital Reputation",
+    "title": "Operations",
     "slug": {
-      "current": "digital-reputation"
+      "current": "operations"
     },
-    "description": "Managing online presence and reviews"
+    "description": "Day-to-day pub management, systems, compliance, and licensing"
   },
   {
-    "_id": "Csdd80pLvugiOUK0y2JOn3",
+    "_id": "category-marketing",
     "_type": "category",
-    "title": "Location Challenges",
+    "title": "Marketing",
     "slug": {
-      "current": "location-challenges"
+      "current": "marketing"
     },
-    "description": "Overcoming geographical and demographic obstacles"
-  },
-  {
-    "_id": "Csdd80pLvugiOUK0y2JOon",
-    "_type": "category",
-    "title": "Compliance",
-    "slug": {
-      "current": "compliance"
-    },
-    "description": "Regulations, licensing, and legal requirements"
-  },
-  {
-    "_id": "Csdd80pLvugiOUK0y2JOqX",
-    "_type": "category",
-    "title": "Crisis Management",
-    "slug": {
-      "current": "crisis-management"
-    },
-    "description": "Handling emergencies and unexpected situations"
-  },
-  {
-    "_id": "category-competition",
-    "_type": "category",
-    "title": "Competition",
-    "slug": {
-      "_type": "slug",
-      "current": "competition"
-    },
-    "description": "Strategies for competing with other pubs and chains"
-  },
-  {
-    "_id": "category-empty-pub-solutions",
-    "_type": "category",
-    "title": "Empty Pub Solutions",
-    "slug": {
-      "_type": "slug",
-      "current": "empty-pub-solutions"
-    },
-    "description": "Solutions for filling quiet pubs and increasing footfall"
+    "description": "Social media, online reputation, customer acquisition, and local marketing"
   },
   {
     "_id": "category-events",
@@ -71,72 +33,42 @@
     "slug": {
       "current": "events"
     },
-    "description": "Articles about events & entertainment"
-  },
-  {
-    "_id": "category-events-promotions",
-    "_type": "category",
-    "title": "Events & Promotions",
-    "slug": {
-      "_type": "slug",
-      "current": "events-promotions"
-    },
-    "description": "Planning and running successful pub events and promotions"
+    "description": "Planning and running successful pub events, promotions, and entertainment"
   },
   {
     "_id": "category-food-drink",
     "_type": "category",
     "title": "Food & Drink",
     "slug": {
-      "_type": "slug",
       "current": "food-drink"
     },
-    "description": "Food and beverage management, menus, and offerings"
+    "description": "Menu strategies, food and beverage management, and offerings"
   },
   {
-    "_id": "category-menu-pricing",
+    "_id": "category-people",
     "_type": "category",
-    "title": "Menu & Pricing",
+    "title": "People",
     "slug": {
-      "current": "menu-pricing"
+      "current": "people"
     },
-    "description": "Articles about menu & pricing"
+    "description": "Recruitment, staff motivation, team leadership, and training"
   },
   {
-    "_id": "category-social-media",
+    "_id": "category-property",
     "_type": "category",
-    "title": "Social Media",
+    "title": "Property",
     "slug": {
-      "_type": "slug",
-      "current": "social-media"
+      "current": "property"
     },
-    "description": "Social media marketing and online presence"
+    "description": "Location challenges, refurbishment, supplier and brewery relations"
   },
   {
-    "_id": "jKwgQNCsrs019jNuQ4SDge",
+    "_id": "category-turnaround",
     "_type": "category",
-    "title": "Supplier Relations",
+    "title": "Turnaround",
     "slug": {
-      "current": "supplier-relations"
+      "current": "turnaround"
     },
-    "description": "Managing brewery ties and supplier relationships"
-  },
-  {
-    "_id": "jKwgQNCsrs019jNuQ4SDrs",
-    "_type": "category",
-    "title": "Financial Management",
-    "slug": {
-      "current": "financial-management"
-    },
-    "description": "Cash flow, budgeting, and financial planning"
-  },
-  {
-    "_id": "rtuM5GmqOByzZCRYAH5b9C",
-    "_type": "category",
-    "title": "Operations",
-    "slug": {
-      "current": "operations"
-    },
-    "description": "Day-to-day pub management and systems"
+    "description": "Crisis management, empty pub recovery, and community reconnection"
   }
 ]

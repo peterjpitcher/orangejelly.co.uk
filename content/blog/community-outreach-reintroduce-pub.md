@@ -6,7 +6,7 @@ updatedDate: "2026-04-13T00:00:00.000Z"
 excerpt: "Reconnect with residents, schools, and clubs through purposeful outreach that turns goodwill into bookings."
 quickAnswer: "Host helpful events, volunteer visibly, and provide space for local causes so the community champions your business again."
 author: "Peter Pitcher"
-category: "community"
+category: "turnaround"
 tags:
   - "community"
   - "outreach"

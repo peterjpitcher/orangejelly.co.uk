@@ -3,7 +3,7 @@ title: "Summer Moments, Simple Campaigns: an inspiring idea bank for pub teams (
 slug: "summer-moments-simple-campaigns"
 publishedAt: "2026-01-28"
 description: "Summer is not one long season. It is a chain of moments. A guide to winning summer with simple, effective campaigns."
-category: "events-promotions"
+category: "events"
 tags: ["summer", "campaigns", "events", "marketing"]
 featuredImage: "/images/blog/summer-moments-simple-campaigns.png"
 author: "Peter Pitcher"

@@ -57,33 +57,51 @@ export function getAllPostSlugs() {
     .map((fileName) => fileName.replace(/\.md$/, ''));
 }
 
-// Category mapping for legacy posts
+// Category mapping — resolves legacy and variant slugs to the 8-category taxonomy
 const categoryMapping: Record<string, string> = {
-  turnaround: 'turnaround',
-  community: 'community',
-  communications: 'communications',
-  analytics: 'analytics',
-  sales: 'sales',
-  people: 'people',
-  marketing: 'social-media',
-  'pub-management': 'empty-pub-solutions',
-  'pub-promotions': 'events-promotions',
-  events: 'events-promotions',
+  // Revenue & Growth
+  'revenue-growth': 'revenue-growth',
+  'financial-management': 'revenue-growth',
+  'menu-pricing': 'revenue-growth',
+  sales: 'revenue-growth',
+  analytics: 'revenue-growth',
+  // Operations
+  operations: 'operations',
+  compliance: 'operations',
+  'pub-management': 'operations',
+  // Marketing
+  marketing: 'marketing',
+  'social-media': 'marketing',
+  'customer-acquisition': 'marketing',
+  'digital-reputation': 'marketing',
+  communications: 'marketing',
+  competition: 'marketing',
+  // Events
+  events: 'events',
+  'events-promotions': 'events',
+  'events-and-promotions': 'events',
+  toolkits: 'events',
+  'pub-promotions': 'events',
+  seasonal: 'events',
+  // Food & Drink
+  'food-drink': 'food-drink',
   food: 'food-drink',
-  seasonal: 'events-promotions',
-  budget: 'empty-pub-solutions',
-  undefined: 'empty-pub-solutions',
-  'getting-started': 'empty-pub-solutions',
-  competition: 'competition',
-  'supplier-relations': 'empty-pub-solutions',
-  'financial-management': 'empty-pub-solutions',
-  compliance: 'food-drink',
-  'crisis-management': 'empty-pub-solutions',
-  operations: 'empty-pub-solutions',
-  'digital-reputation': 'social-media',
-  'location-challenges': 'empty-pub-solutions',
-  'customer-acquisition': 'empty-pub-solutions',
-  'revenue-growth': 'sales',
+  // People
+  people: 'people',
+  // Property
+  property: 'property',
+  'location-challenges': 'property',
+  'supplier-relations': 'property',
+  // Turnaround
+  turnaround: 'turnaround',
+  'crisis-management': 'turnaround',
+  'empty-pub-solutions': 'turnaround',
+  community: 'turnaround',
+  // Fallbacks
+  undefined: 'turnaround',
+  'getting-started': 'turnaround',
+  budget: 'turnaround',
+  'category-name': 'turnaround',
 };
 
 function normalizeCategorySlug(value: string): string {
@@ -96,7 +114,7 @@ function normalizeCategorySlug(value: string): string {
 
 export function resolveCategorySlug(rawCategory?: string | null): string {
   const normalized = normalizeCategorySlug(rawCategory || 'undefined');
-  return categoryMapping[normalized] || normalized || 'empty-pub-solutions';
+  return categoryMapping[normalized] || normalized || 'turnaround';
 }
 
 const isPublishable = (meta: BlogPostMeta, options: PublishOptions = {}): boolean => {

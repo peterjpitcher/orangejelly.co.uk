@@ -6,7 +6,7 @@ updatedDate: "2025-07-14T00:00:00.000Z"
 excerpt: "Before you rip anything out, read this. The changes that actually bring customers back cost under £5K — and most licensees start in the wrong place."
 quickAnswer: "Prioritize lighting improvements (£800), fresh paint and deep clean (£600), comfortable seating updates (£1,200), and create Instagram-worthy photo spots (£400). Focus on cleanliness and atmosphere over expensive fixtures - customers notice comfort more than luxury."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/pub-refurbishment-on-budget.png"
 tags:
   - "refurbishment"

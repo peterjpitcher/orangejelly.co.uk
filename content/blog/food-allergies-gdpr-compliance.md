@@ -5,7 +5,7 @@ publishedDate: 2025-12-12
 excerpt: "Navigate the compliance minefield without hiring expensive consultants. Simple systems that keep you legal and let you focus on running your pub."
 quickAnswer: "Create one master allergen spreadsheet listing every ingredient in every dish. Train all staff to say 'let me check' instead of guessing. For GDPR, get consent before collecting emails, use secure storage, and respond to requests within 30 days. Simple systems prevent devastating fines."
 author: "Peter Pitcher"
-category: "compliance"
+category: "operations"
 tags:
   - "allergen management"
   - "GDPR compliance"

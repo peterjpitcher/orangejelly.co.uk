@@ -6,7 +6,7 @@ updatedDate: "2026-02-09T00:00:00.000Z"
 excerpt: "A practical protocol for handling brutal reviews, correcting the issue, and showing the public how you fixed it."
 quickAnswer: "Respond within 12 hours, take the conversation offline, fix the root cause, and publish the comeback story so onlookers regain trust."
 author: "Peter Pitcher"
-category: "communications"
+category: "marketing"
 tags:
   - "PR"
   - "reviews"

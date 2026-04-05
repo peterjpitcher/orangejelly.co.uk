@@ -5,7 +5,7 @@ publishedDate: 2025-03-24
 excerpt: "Turn your worst reviews into your best marketing tool. Learn the response framework that converted our angriest critics into regulars."
 quickAnswer: "Respond to every review within 24 hours. For negative reviews: acknowledge the issue, apologize genuinely, explain what you've learned, and invite them back. Be professional, specific, and show that you take feedback seriously. Future customers judge your responses more than the complaints themselves."
 author: "Peter Pitcher"
-category: "digital-reputation"
+category: "marketing"
 featuredImage: "/images/blog/terrible-online-reviews-damage-control.png"
 tags:
   - "online reviews"

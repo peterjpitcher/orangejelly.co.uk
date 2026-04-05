@@ -6,7 +6,7 @@ updatedDate: "2025-05-12T00:00:00.000Z"
 excerpt: "Turn one-time visitors into regulars with email marketing that works. List building, automation, and campaign strategies to keep customers coming back."
 quickAnswer: "Collect emails through WiFi signup, loyalty programs, and table tent offers. Send weekly newsletters featuring upcoming events, special offers, and local news. Use automation for birthday offers and re-engagement campaigns to keep customers returning regularly."
 author: "Peter Pitcher"
-category: "social-media"
+category: "marketing"
 featuredImage: "/images/blog/email-marketing-pub-retention.png"
 tags:
   - "email marketing for pubs"

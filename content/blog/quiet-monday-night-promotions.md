@@ -6,7 +6,7 @@ updatedDate: "2025-03-03T01:00:00.000Z"
 excerpt: "Transform dead Monday nights into thriving profit centres with promotional ideas tested at The Anchor."
 quickAnswer: "Try community-focused events like craft clubs, board game nights, or skill-sharing sessions instead of traditional quizzes. Partner with local groups, offer cooking classes, or create weekly social meetups. Focus on building regular attendance through unique experiences that give people a reason to come every Monday."
 author: "Peter Pitcher"
-category: "events-promotions"
+category: "events"
 featuredImage: "/images/blog/quiet-monday-night-promotions.png"
 tags:
   - "monday night pub ideas"

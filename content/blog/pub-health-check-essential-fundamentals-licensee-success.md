@@ -6,7 +6,7 @@ updatedDate: "2026-04-05T10:00:00.000Z"
 excerpt: "The definitive guide to running a pub in the UK. Covers licensing, daily operations, finances, marketing, staffing, compliance, and growing revenue — from a working licensee."
 quickAnswer: "Running a pub successfully means mastering daily operations, tracking your gross profit weekly, building a reliable team, marketing consistently on social media and locally, staying compliant with licensing and food safety laws, and growing revenue through events, food, and customer loyalty. This guide covers every area a new or experienced licensee needs."
 author: "Peter Pitcher"
-category: "pub-management"
+category: "operations"
 tags:
   - "how to run a pub"
   - "pub management"

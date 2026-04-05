@@ -6,7 +6,7 @@ updatedDate: "2025-02-24T01:00:00.000Z"
 excerpt: "Discover practical strategies to transform dead Tuesday nights into profitable evenings. Real solutions from a licensee who's been there."
 quickAnswer: "Combat Tuesday's post-weekend fatigue with comfort-focused offers: hearty meal deals, wine and cheese nights, or cosy atmosphere events. Partner with local businesses for after-work meetups. Create Tuesday traditions that make it the night people look forward to rather than endure."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/pub-empty-tuesday-nights.png"
 tags:
   - "tuesday night promotions"

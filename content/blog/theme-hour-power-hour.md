@@ -6,7 +6,7 @@ updatedDate: "2026-02-25T00:00:00.000Z"
 excerpt: "60-minute Saturday bursts that lift pre-peak trade, use existing playlists, and feed straight into dinner bookings."
 quickAnswer: "Drop a tightly-timed Theme Hour (80s/90s Power Hour or Spin-to-Win) before the dinner rush, script every 10 minutes, and bundle a signature spritz so you bank covers without hurting restaurant service."
 author: "Peter Pitcher"
-category: "events-promotions"
+category: "events"
 tags:
   - "theme hour"
   - "power hour pub"

@@ -5,7 +5,7 @@ publishedDate: 2025-06-09
 excerpt: "A step-by-step guide to writing a pub business plan that banks, breweries, and landlords actually approve. Free template included."
 quickAnswer: "A solid pub business plan covers six sections: executive summary, market analysis, operations, marketing, financials, and team. Banks want to see realistic revenue forecasts, GP targets of 65-70% on food, and proof you understand your local market. Download our free template to get started."
 author: "Peter Pitcher"
-category: "Operations"
+category: "operations"
 tags:
   - "pub business plan"
   - "pub management"

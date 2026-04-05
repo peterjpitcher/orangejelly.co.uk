@@ -5,7 +5,7 @@ publishedDate: 2025-09-29
 excerpt: "Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family-friendly daytime events, ticketed fireworks, and seasonal food tie-ins that drive real revenue."
 quickAnswer: "The best pub Halloween and Bonfire Night events are practical, not gimmicky. A themed quiz night, a family pumpkin afternoon, and a ticketed fireworks viewing with a bonfire menu can each add hundreds of pounds to a single weekend. Start promoting six weeks out, build a simple social media countdown, and focus on food and drink tie-ins that lift your average spend."
 author: "Peter Pitcher"
-category: "events-and-promotions"
+category: "events"
 featuredImage: "/images/blog/pub-halloween-bonfire-night-events.svg"
 tags:
   - "pub halloween party"

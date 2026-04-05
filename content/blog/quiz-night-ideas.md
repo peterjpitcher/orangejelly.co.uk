@@ -6,7 +6,7 @@ updatedDate: "2025-06-16T00:00:00.000Z"
 excerpt: "Transform your quiz night from predictable to unmissable. Creative formats, round ideas, and hosting tips that create loyal quiz teams and boost revenue."
 quickAnswer: "Run 6-8 varied quiz rounds over 2.5 hours with maximum 6 people per team. Mix formats: themed rounds, interactive challenges, music rounds, and picture rounds. Include 15-minute halftime break for bar sales. Entry £2-3 per person covers prizes and transforms Tuesday turnover."
 author: "Peter Pitcher"
-category: "events-promotions"
+category: "events"
 featuredImage: "/images/blog/quiz-night-ideas.png"
 tags:
   - "quiz night"

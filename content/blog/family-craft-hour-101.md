@@ -6,7 +6,7 @@ updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "A safeguarded Sunday playbook for running craft tables, card bars, and seasonal trails that fill the dining room."
 quickAnswer: "Pre-book tables, brief staff on safeguarding, and offer craft-plus-roast bundles so families lock in every Sunday."
 author: "Peter Pitcher"
-category: "toolkits"
+category: "events"
 tags:
   - "family pub ideas"
   - "craft hour"

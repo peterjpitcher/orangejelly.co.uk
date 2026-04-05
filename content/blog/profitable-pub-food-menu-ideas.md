@@ -6,7 +6,7 @@ updatedDate: "2025-05-26T00:00:00.000Z"
 excerpt: "Proven pub food menu ideas that balance customer appeal with profitability. High-margin dishes, menu engineering, and pricing strategies that work."
 quickAnswer: "Focus on high-margin dishes like loaded fries, sharing platters, and comfort classics. Use pre-prep ingredients, control portion sizes, and price for healthy gross profit. Test new dishes as specials before adding to the main menu."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/profitable-pub-food-menu-ideas.png"
 tags:
   - "pub food"

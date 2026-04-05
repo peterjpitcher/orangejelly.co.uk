@@ -6,7 +6,7 @@ updatedDate: "2026-02-02T00:00:00.000Z"
 excerpt: "Use behavioural design to push guests toward profitable dishes and drinks without feeling pushy."
 quickAnswer: "Highlight stars, reframe decoys, and guide eyes with layout so guests instinctively choose high-contribution items."
 author: "Peter Pitcher"
-category: "sales"
+category: "revenue-growth"
 tags:
   - "menu engineering"
   - "average spend"

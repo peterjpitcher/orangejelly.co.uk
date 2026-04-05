@@ -6,7 +6,7 @@ updatedDate: "2025-05-05T00:00:00.000Z"
 excerpt: "Transform your pub's Instagram from amateur snapshots to a customer magnet. Photography tips, hashtag strategies, and content ideas that fill tables."
 quickAnswer: "Build a successful pub Instagram strategy by combining consistent brand photography with local hashtags and story-driven posts. Plan content in batches and review performance weekly to turn likes into footfall."
 author: "Peter Pitcher"
-category: "social-media"
+category: "marketing"
 featuredImage: "/images/blog/instagram-marketing-for-pubs.png"
 tags:
   - "pub Instagram ideas"

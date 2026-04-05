@@ -6,7 +6,7 @@ updatedDate: "2026-04-20T00:00:00.000Z"
 excerpt: "Approach landlords and suppliers with data, humility, and a repayment plan so you secure breathing room without burning bridges."
 quickAnswer: "Lead with transparency, show your recovery plan, propose structured repayments, and maintain weekly updates until arrears clear."
 author: "Peter Pitcher"
-category: "financial-management"
+category: "revenue-growth"
 tags:
   - "negotiation"
   - "suppliers"

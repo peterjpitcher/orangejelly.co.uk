@@ -6,7 +6,7 @@ updatedDate: "2025-08-08T10:49:26.912Z"
 excerpt: "Proven strategies to maintain and grow your pub business during economic downturns. Cost-cutting, revenue optimisation, and community-building tactics."
 quickAnswer: "Focus on value-driven offers like 2-for-1 meals on quiet days, reduce wastage through better stock management, create affordable comfort experiences, and build customer loyalty through personal service. Emphasize community connection over premium pricing."
 author: "Peter Pitcher"
-category: "empty-pub-solutions"
+category: "turnaround"
 featuredImage: "/images/blog/recession-proof-pub-strategies.png"
 tags:
   - "recession proof pub"

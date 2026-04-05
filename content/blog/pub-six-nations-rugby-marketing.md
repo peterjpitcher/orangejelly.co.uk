@@ -5,7 +5,7 @@ publishedDate: 2025-12-15
 excerpt: "A practical guide to screening Six Nations rugby in your pub. From setup and deals to converting match-day visitors into year-round regulars."
 quickAnswer: "To make the most of Six Nations rugby in your pub, invest in reliable screening equipment, create match-day food and drink deals that protect your GP, set up a simple booking system, promote fixtures on social media two to three weeks in advance, and have a plan to capture contact details so you can bring match-day visitors back after the tournament ends."
 author: "Peter Pitcher"
-category: "events-and-promotions"
+category: "events"
 featuredImage: "/images/blog/pub-six-nations-rugby-marketing.svg"
 tags:
   - "Six Nations"

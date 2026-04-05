@@ -6,7 +6,7 @@ updatedDate: "2025-04-07T00:00:00.000Z"
 excerpt: "Stand out from the crowd with proven differentiation strategies. From dog-friendly excellence to specialist spirits, unique pub ideas that build loyalty."
 quickAnswer: "Choose one specialization and master it completely: become the local dog-friendly destination, specialist gin house, live music venue, or hyperlocal food champion. Focus your efforts on being exceptional at one thing rather than average at everything."
 author: "Peter Pitcher"
-category: "competition"
+category: "marketing"
 featuredImage: "/images/blog/pub-differentiation-strategies.png"
 tags:
   - "differentiation"

@@ -6,7 +6,7 @@ updatedDate: "2025-06-26T00:00:00.000Z"
 excerpt: "Build a social media strategy for your pub that drives real footfall. Platform-specific tactics, content calendars, and engagement tips that work."
 quickAnswer: "Map a repeatable social media plan with content pillars, weekly scheduling, and review rituals. Focus on telling your pub's story, highlighting events, and responding quickly to keep relationships strong."
 author: "Peter Pitcher"
-category: "social-media"
+category: "marketing"
 featuredImage: "/images/blog/social-media-strategy-for-pubs.png"
 tags:
   - "social media for pubs"

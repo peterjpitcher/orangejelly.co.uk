@@ -92,67 +92,47 @@ export const defaultAuthor: Author = {
   image: '/images/peter-pitcher.jpg',
 };
 
-// Blog categories
+// Blog categories — simplified 8-category taxonomy
 export const blogCategories: Category[] = [
   {
-    slug: 'empty-pub-solutions',
-    name: 'Empty Pub Solutions',
-    description: 'Proven strategies to fill empty tables and boost footfall',
+    slug: 'revenue-growth',
+    name: 'Revenue & Growth',
+    description: 'Cash flow, pricing, sales tactics, and financial planning for pubs',
   },
   {
-    slug: 'social-media',
-    name: 'Social Media',
-    description: 'Make social media work for your pub without wasting hours',
+    slug: 'operations',
+    name: 'Operations',
+    description: 'Day-to-day pub management, systems, compliance, and licensing',
   },
   {
-    slug: 'competition',
-    name: 'Competition',
-    description: 'Stand out from chains and nearby pubs',
+    slug: 'marketing',
+    name: 'Marketing',
+    description: 'Social media, online reputation, customer acquisition, and local marketing',
+  },
+  {
+    slug: 'events',
+    name: 'Events',
+    description: 'Planning and running successful pub events, promotions, and entertainment',
   },
   {
     slug: 'food-drink',
     name: 'Food & Drink',
-    description: 'Menu strategies that increase sales and profits',
-  },
-  {
-    slug: 'events-promotions',
-    name: 'Events & Promotions',
-    description: 'Events and promotions that actually bring customers in',
-  },
-  {
-    slug: 'toolkits',
-    name: 'Toolkits & Templates',
-    description: 'Ready-to-use playbooks, guides, and assets for busy licensees',
-  },
-  {
-    slug: 'turnaround',
-    name: 'Turnaround Playbooks',
-    description: 'Rapid response plans to stabilise struggling venues',
-  },
-  {
-    slug: 'community',
-    name: 'Community & Outreach',
-    description: 'Grassroots ideas to reconnect with locals and partners',
-  },
-  {
-    slug: 'communications',
-    name: 'Communications & PR',
-    description: 'Protect your reputation and keep stakeholders informed',
-  },
-  {
-    slug: 'analytics',
-    name: 'Data & Analytics',
-    description: 'Use numbers and systems to focus your next move',
-  },
-  {
-    slug: 'sales',
-    name: 'Sales & Revenue',
-    description: 'Upsell scripts, offers, and packages that lift takings',
+    description: 'Menu strategies, food and beverage management, and offerings',
   },
   {
     slug: 'people',
-    name: 'People & Leadership',
-    description: 'Motivate teams and keep everyone aligned under pressure',
+    name: 'People',
+    description: 'Recruitment, staff motivation, team leadership, and training',
+  },
+  {
+    slug: 'property',
+    name: 'Property',
+    description: 'Location challenges, refurbishment, supplier and brewery relations',
+  },
+  {
+    slug: 'turnaround',
+    name: 'Turnaround',
+    description: 'Crisis management, empty pub recovery, and community reconnection',
   },
 ];
 

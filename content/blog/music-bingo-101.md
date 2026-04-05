@@ -6,7 +6,7 @@ updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Hybrid quiz/karaoke toolkit with playlists, Canva cards, and MC tips so you can run 90-minute music bingo nights without marking."
 quickAnswer: "Print 24-track bingo cards, keep each clip to 30 seconds, and rotate themes weekly so music bingo stays fresh and fast."
 author: "Peter Pitcher"
-category: "toolkits"
+category: "events"
 tags:
   - "music bingo"
   - "pub events toolkit"
