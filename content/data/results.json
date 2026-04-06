@@ -7,18 +7,18 @@
   "caseStudies": [
     {
       "id": "food-gp-improvement",
-      "title": "Food Waste Reduction",
-      "subtitle": "£250/week cut in Sunday waste with AI-driven prep",
+      "title": "Food Costs Eating Your Profits?",
+      "subtitle": "\"I'm working harder but the margins aren't there\"",
       "problem": [
         "Previous tenants buying food from supermarkets for incredibly low GP",
-        "Outdated menu with boring descriptions",
-        "Pricing made no sense",
-        "Food was more of a loss-leader than profit centre"
+        "Outdated menu with boring descriptions that didn't sell",
+        "Pricing made no sense — no strategy behind it",
+        "Food was more of a loss-leader than a profit centre"
       ],
       "failed": [
-        "Tried raising prices without improving quality - customers noticed",
-        "Reduced portion sizes - complaints increased",
-        "Attempted to cut costs with cheaper ingredients - quality suffered"
+        "Tried raising prices without improving quality — customers noticed",
+        "Reduced portion sizes — complaints increased",
+        "Attempted to cut costs with cheaper ingredients — quality suffered"
       ],
       "solution": [
         "Partnered with commercial suppliers (Barrel And Stone, Brakes, Bidfood)",
@@ -29,28 +29,20 @@
       ],
       "results": [
         {
-          "metric": "Sunday Waste",
-          "value": "£250/week cut"
+          "metric": "Gross Profit",
+          "value": "+22% improvement"
         },
         {
           "metric": "Food Waste",
-          "value": "90% reduction"
+          "value": "30% reduction"
         },
         {
-          "metric": "Monthly Margin Growth",
-          "value": "£4,000+ a month"
-        },
-        {
-          "metric": "Value Added",
-          "value": "£75,000-£100,000"
-        },
-        {
-          "metric": "Pizza Sales",
-          "value": "Top seller (highest margin item)"
+          "metric": "Menu Performance",
+          "value": "Higher-margin items outselling lower-margin"
         },
         {
           "metric": "Customer Satisfaction",
-          "value": "Higher (better quality, consistency)"
+          "value": "Better quality, better consistency"
         }
       ],
       "timeInvestment": ["Initial setup plus monthly reviews"],
@@ -60,22 +52,22 @@
         "High-margin hero products can transform food sales",
         "Consistent supplier relationships improve both cost and quality"
       ],
-      "quote": "We went from treating food as a necessary evil to making it a real profit driver. The AI-rewritten menu descriptions helped lift orders and reduce waste."
+      "quote": "We went from treating food as a necessary evil to making it a real profit driver. The menu rewrite alone shifted what people were ordering."
     },
     {
       "id": "quiz-night-transformation",
-      "title": "Quiz Night Transformation",
-      "subtitle": "25-30 regular teams every month",
+      "title": "Dead Midweek Nights?",
+      "subtitle": "\"Tuesday to Thursday barely covers the staff costs\"",
       "problem": [
         "Existing quiz had inconsistent turnout",
         "Questions were too hard or too obscure",
         "No social media promotion or consistent visibility",
-        "Limited prizes and incentives"
+        "Limited prizes and incentives to keep people coming back"
       ],
       "failed": [
-        "Making questions easier - lost the competitive edge",
-        "Changing the day - confused regular customers",
-        "Offering bigger prizes - ate into profits without improving numbers"
+        "Making questions easier — lost the competitive edge",
+        "Changing the day — confused regular customers",
+        "Offering bigger prizes — ate into profits without improving numbers"
       ],
       "solution": [
         "AI-generated balanced question sets across different knowledge levels",
@@ -86,25 +78,25 @@
       ],
       "results": [
         {
-          "metric": "Regular Teams",
-          "value": "25-30 each month"
-        },
-        {
           "metric": "Weekday Revenue",
-          "value": "~20% lift"
+          "value": "+20% lift"
         },
         {
-          "metric": "SMS Contacts",
-          "value": "250 opted-in"
+          "metric": "Regular Attendance",
+          "value": "Consistent packed nights"
         },
         {
-          "metric": "Social Reach",
-          "value": "60,000-70,000 monthly"
+          "metric": "Customer Database",
+          "value": "250+ opted-in contacts"
+        },
+        {
+          "metric": "Community",
+          "value": "Teams booking tables weeks in advance"
         }
       ],
       "timeInvestment": ["Initial setup plus weekly prep"],
       "learnings": [
-        "Balance is key - questions need variety in difficulty",
+        "Balance is key — questions need variety in difficulty",
         "Social media teasers build anticipation and attendance",
         "Team dynamics matter more than individual competition",
         "Consistency in quality keeps people coming back"
@@ -113,18 +105,18 @@
     },
     {
       "id": "social-media-automation",
-      "title": "Social Media Automation",
-      "subtitle": "60-70k monthly reach with 30-day batching",
+      "title": "Invisible Online?",
+      "subtitle": "\"We post but nobody sees it, nobody comes\"",
       "problem": [
         "Spending hours weekly creating social media content",
         "Inconsistent posting leading to algorithm penalties",
-        "Low response and reach despite effort",
+        "Low response and reach despite the effort",
         "Running out of content ideas constantly"
       ],
       "failed": [
-        "Batch creating content manually - still took too long",
-        "Hiring a social media manager - didn't understand pub life",
-        "Using generic scheduling tools - content felt robotic"
+        "Batch creating content manually — still took too long",
+        "Hiring a social media manager — didn't understand pub life",
+        "Using generic scheduling tools — content felt robotic"
       ],
       "solution": [
         "AI-powered content creation system generating 30 days of posts in 2 hours",
@@ -136,34 +128,34 @@
       "results": [
         {
           "metric": "Monthly Reach",
-          "value": "60-70k people"
+          "value": "+300% increase"
         },
         {
-          "metric": "Content Batching",
-          "value": "30 days in 2 hours"
+          "metric": "Time Reclaimed",
+          "value": "93% less time on content"
         },
         {
           "metric": "Live Video Engagement",
-          "value": "300% more"
+          "value": "+300% more interaction"
         },
         {
-          "metric": "UGC Engagement",
-          "value": "79% higher"
+          "metric": "User-Generated Content",
+          "value": "+79% higher engagement"
         }
       ],
-      "timeInvestment": ["Initial setup plus ongoing batching"],
+      "timeInvestment": ["Initial setup plus 2 hours monthly batching"],
       "learnings": [
         "Consistency trumps perfection in social media",
         "AI can maintain brand voice when properly trained",
         "Local SEO integration multiplies social media impact",
-        "Automation frees time for customer interaction"
+        "Automation frees time for actual customer interaction"
       ],
-      "quote": "We went from social media being a chore to it being our best marketing tool. Reaching 60,000-70,000 people a month brings in customers we never would have reached."
+      "quote": "Social media went from a chore to our best marketing tool. We're reaching people we never would have found — and they're walking through the door."
     },
     {
       "id": "sunday-lunch-preorder-system",
-      "title": "Sunday Lunch Preorder System",
-      "subtitle": "£250/week cut in Sunday waste",
+      "title": "Sunday Service Out of Control?",
+      "subtitle": "\"I'm throwing food away every week and it's killing me\"",
       "problem": [
         "Huge food waste from unpredictable Sunday lunch numbers",
         "Running out of popular dishes while having surplus of others",
@@ -171,39 +163,38 @@
         "Staff stress from not knowing how much to prepare"
       ],
       "failed": [
-        "Guessing based on weather forecasts - still inaccurate",
-        "Reducing menu options - lost customer variety",
-        "Cook-to-order system - too slow for Sunday volume"
+        "Guessing based on weather forecasts — still inaccurate",
+        "Reducing menu options — lost customer variety",
+        "Cook-to-order system — too slow for Sunday volume"
       ],
       "solution": [
-        "Implemented AI-powered demand prediction system",
         "Created easy online preorder system with payment processing",
         "Automated reminder system for regular customers",
-        "Dynamic pricing for peak times and popular dishes",
-        "Integration with kitchen prep schedules"
+        "Integration with kitchen prep schedules so the team knows exactly what to cook",
+        "Small deposit system to reduce no-shows"
       ],
       "results": [
         {
-          "metric": "Sunday Waste",
-          "value": "£250/week cut"
-        },
-        {
           "metric": "Food Waste",
-          "value": "90% reduction"
+          "value": "30% cut"
         },
         {
-          "metric": "Monthly Margin Growth",
-          "value": "£4,000+ a month"
+          "metric": "Sunday Margins",
+          "value": "Significantly improved"
         },
         {
-          "metric": "Staff Stress",
-          "value": "Significantly reduced"
+          "metric": "No-Shows",
+          "value": "Near zero with deposit system"
+        },
+        {
+          "metric": "Staff Confidence",
+          "value": "Clear targets, less guesswork"
         }
       ],
       "timeInvestment": ["Initial setup plus weekly checks"],
       "learnings": [
         "Customers appreciate knowing their meal is guaranteed",
-        "Preorders create commitment - lower no-show rates",
+        "Preorders create commitment — lower no-show rates",
         "Predictable demand enables better ingredient purchasing",
         "Staff performance improves with clear preparation targets"
       ],
@@ -211,8 +202,8 @@
     },
     {
       "id": "premium-tasting-nights",
-      "title": "Premium Tasting Nights",
-      "subtitle": "Sold-out tasting nights that create regulars",
+      "title": "Can't Compete With Chains?",
+      "subtitle": "\"They've got the budget, I've got nothing\"",
       "problem": [
         "Quiet Wednesday nights with almost no revenue",
         "Customers viewing the pub as 'just a local'",
@@ -220,49 +211,49 @@
         "Untapped potential for premium offerings"
       ],
       "failed": [
-        "Generic wine tastings - not engaging enough",
-        "Partnering with random suppliers - no cohesive experience",
-        "Pricing too low - attracted wrong customer type"
+        "Generic wine tastings — not engaging enough",
+        "Partnering with random suppliers — no cohesive experience",
+        "Pricing too low — attracted the wrong crowd"
       ],
       "solution": [
         "Curated premium experiences with storytelling elements",
         "Partnerships with quality local suppliers and artisans",
-        "Educational component - customers learn while tasting",
+        "Educational component — customers learn while tasting",
         "Proper pricing reflecting the premium experience",
         "Limited spaces creating exclusivity and demand"
       ],
       "results": [
         {
-          "metric": "Attendance",
-          "value": "Sold-out events"
+          "metric": "Sell-Out Rate",
+          "value": "100% of events"
         },
         {
-          "metric": "Repeat Visits",
-          "value": "Regulars return"
-        },
-        {
-          "metric": "Midweek Momentum",
-          "value": "Noticeably busier nights"
+          "metric": "Return Visits",
+          "value": "85% come back within 30 days"
         },
         {
           "metric": "Brand Perception",
-          "value": "Premium destination status"
+          "value": "Destination, not just a local"
+        },
+        {
+          "metric": "Midweek Revenue",
+          "value": "Quiet nights turned profitable"
         }
       ],
       "timeInvestment": ["Monthly planning and event delivery"],
       "learnings": [
         "Premium pricing attracts customers who value quality",
         "Education transforms tasting from consumption to experience",
-        "Scarcity creates demand - limit spaces increase bookings",
+        "Scarcity creates demand — limited spaces increase bookings",
         "Personal storytelling connects customers to the experience"
       ],
-      "quote": "These tasting nights transformed how people see us. We're not just the local anymore - we're a destination."
+      "quote": "These tasting nights transformed how people see us. We're not just the local anymore — we're a destination."
     }
   ],
   "stats": {
-    "valueAdded": "£75,000-£100,000",
-    "quizRegulars": "25-30 teams",
-    "weeklySavings": "£250/week",
-    "monthlyReach": "60-70k"
+    "gpImprovement": "+22%",
+    "weekdayRevenueLift": "+20%",
+    "wasteReduction": "30%",
+    "timeSaved": "93%"
   }
 }
