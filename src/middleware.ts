@@ -58,11 +58,11 @@ function applySecurityHeaders(response: NextResponse) {
     [
       "default-src 'self'",
       // Use next/script and nonces in future to remove 'unsafe-inline'. Kept temporarily for GTM bootstrap.
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms https://vercel.live",
       "style-src 'self' 'unsafe-inline' https://tagmanager.google.com https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
       "img-src 'self' data: blob: https: https://www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://www.clarity.ms https://h.clarity.ms https://j.clarity.ms",
+      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://vercel.live https://www.clarity.ms https://h.clarity.ms https://j.clarity.ms",
       "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
       "media-src 'self' https:",
       "object-src 'none'",
