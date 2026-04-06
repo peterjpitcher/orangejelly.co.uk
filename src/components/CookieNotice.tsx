@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { updateGtagConsent } from '@/components/GoogleTagManager';
 
 const STORAGE_KEY = 'oj-cookie-consent';
 
@@ -35,9 +36,11 @@ export default function CookieNotice() {
         };
         setPreferences(legacyPrefs);
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(legacyPrefs));
+        updateGtagConsent(legacyPrefs.analytics);
         return;
       }
       setPreferences(parsed);
+      updateGtagConsent(parsed.analytics);
     } catch {
       // Handle legacy string value
       const analyticsAllowed = stored === 'accepted';
@@ -47,6 +50,7 @@ export default function CookieNotice() {
       };
       setPreferences(payload);
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      updateGtagConsent(analyticsAllowed);
     }
   }, []);
 
@@ -58,8 +62,8 @@ export default function CookieNotice() {
       };
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       setPreferences(payload);
-      // Notify GTM component in the same tab about the consent change
-      window.dispatchEvent(new Event('oj-consent-changed'));
+      // Update Google Consent Mode so GTM tags respond immediately
+      updateGtagConsent(analytics);
     }
     setVisible(false);
   };
@@ -103,7 +107,7 @@ export default function CookieNotice() {
           <div>
             <p className="font-semibold">Analytics (optional)</p>
             <p className="text-cream/80">
-              Google Tag Manager + GA4 events. Loaded only after you tap “Accept analytics”.
+              Google Tag Manager + GA4 events. Runs in cookieless mode until you accept.
             </p>
           </div>
         </div>
