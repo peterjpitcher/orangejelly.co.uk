@@ -95,3 +95,5 @@ For local pubs, yes. It often outperforms other platforms for bookings.
 
 **How often should I post?**
 Two to three times a week is enough if it is consistent.
+
+If you would rather not run it yourself, see how we handle [social media for pubs](/services/social-media-marketing-for-pubs) — Facebook included.
