@@ -1,14 +1,14 @@
 {
   "hero": {
     "title": "Pub Marketing for Surrey Pubs",
-    "subtitle": "With around 1,000 pubs across Surrey competing for commuter trade, weekend footfall, and race day crowds, you need to stand out locally. We know — we run The Anchor in Stanwell Moor.",
+    "subtitle": "With around 1,000 pubs across Surrey competing for commuter trade, weekend footfall, and race day crowds, you need to stand out locally. We help pubs across the region do exactly that, using systems proven at our own pub, The Anchor.",
     "ctaText": "Hi Peter, I run a pub in Surrey and need help",
-    "bottomText": "Packages from £375 + VAT • From a working Surrey licensee who gets it"
+    "bottomText": "Packages from £375 + VAT • Based near Heathrow, working with pubs across the region"
   },
   "intro": {
-    "heading": "We run a Surrey pub — here's what actually works",
+    "heading": "What works for Surrey pubs (and what doesn't)",
     "paragraphs": [
-      "We're not outsiders guessing. Peter runs The Anchor in Stanwell Moor, right on the Surrey border near Staines and the M25. We deal with the same challenges you do: commuters who vanish by 7pm, weekday quiet spells, and the constant pull of Wetherspoons in town centres.",
+      "We also run our own pub, The Anchor, so we're not guessing. We deal with the same challenges you do: commuters who vanish by 7pm, weekday quiet spells, and the constant pull of Wetherspoons in town centres.",
       "Surrey's pub market splits roughly three ways: station pubs chasing the after-work crowd, village locals building community trade, and destination venues competing with the gastropubs in Guildford, Woking, and Farnham. Each needs a different approach.",
       "We fix the basics first — your Google profile, photos, and reviews — then build a repeatable system around what actually drives trade in your part of Surrey: whether that's commuter lunches near the M25, summer garden sessions, or Epsom and Kempton race day crowds."
     ]
@@ -60,7 +60,7 @@
   "faqs": [
     {
       "question": "Do you actually know the Surrey pub market?",
-      "answer": "Yes — we run The Anchor in Stanwell Moor, near Staines and the M25. We deal with the same challenges: commuter patterns, Wetherspoons competition, and seasonal swings. Everything we recommend, we've tested ourselves."
+      "answer": "Yes. We work with pubs across Surrey and run our own pub, The Anchor, so we deal with the same challenges first-hand: commuter patterns, Wetherspoons competition, and seasonal swings. Everything we recommend, we've tested ourselves."
     },
     {
       "question": "Can you help with race day and event marketing?",
@@ -73,7 +73,7 @@
   ],
   "cta": {
     "title": "Let's talk about your Surrey pub",
-    "subtitle": "Tell me where your pub is and what's hurting trade. As a fellow Surrey licensee, I'll give you a straight answer on what to fix first.",
+    "subtitle": "Tell me where your pub is and what's hurting trade, and I'll give you a straight answer on what to fix first.",
     "whatsappMessage": "Hi Peter, I run a pub in Surrey and I need help with marketing. Can we have a quick chat?"
   }
 }

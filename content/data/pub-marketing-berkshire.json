@@ -1,15 +1,15 @@
 {
   "hero": {
     "title": "Pub Marketing for Berkshire Pubs",
-    "subtitle": "Berkshire's 600 pubs span everything from affluent Windsor gastropubs to Reading commuter locals. We're based just over the border and know the M4 corridor market inside out.",
+    "subtitle": "Berkshire's 600 pubs span everything from affluent Windsor gastropubs to Reading commuter locals. We know the M4 corridor market well and help pubs across it stand out.",
     "ctaText": "Hi Peter, I run a pub in Berkshire and need help",
-    "bottomText": "Packages from £375 + VAT • From a licensee on the Berkshire border"
+    "bottomText": "Packages from £375 + VAT • Based near Heathrow, working with pubs across the region"
   },
   "intro": {
     "heading": "What works in Berkshire (and what doesn't)",
     "paragraphs": [
       "Berkshire splits into two markets: the affluent towns — Windsor, Ascot, Henley, Maidenhead — where food quality and positioning matter most, and the commuter belt — Reading, Bracknell, Wokingham — where convenience and midweek offers drive trade.",
-      "We run The Anchor in Stanwell Moor, right on the Berkshire border near the M4 and M25. We serve the same commuter crowd and compete for the same weekend trade. We know what works because we test it ourselves.",
+      "We also run our own pub, The Anchor, near the M4 and M25, so we know the commuter crowd and weekend trade Berkshire pubs compete for — and we test what works before we recommend it.",
       "The biggest opportunity most Berkshire pubs miss? Seasonal events. Royal Ascot in June brings thousands of people looking for somewhere to eat and drink nearby. Reading Festival in late August does the same. If you're not marketing to those crowds in advance, you're leaving money on the table."
     ]
   },
@@ -60,7 +60,7 @@
   "faqs": [
     {
       "question": "Do you know the Berkshire pub market?",
-      "answer": "Yes. We run The Anchor just over the border in Stanwell Moor, near the M4 and M25. We serve the same commuter belt, compete for weekend trade, and understand the mix of affluent destination dining and high-street locals that defines Berkshire."
+      "answer": "Yes. We work with pubs across Berkshire and run our own pub, The Anchor, near the M4 and M25, so we understand the same commuter belt, weekend trade, and the mix of affluent destination dining and high-street locals that defines Berkshire."
     },
     {
       "question": "Can you help us make the most of Royal Ascot week?",
@@ -73,7 +73,7 @@
   ],
   "cta": {
     "title": "Let's talk about your Berkshire pub",
-    "subtitle": "Tell me where your pub is and what's hurting trade. As a neighbouring licensee, I'll give you a straight answer on what to fix first.",
+    "subtitle": "Tell me where your pub is and what's hurting trade, and I'll give you a straight answer on what to fix first.",
     "whatsappMessage": "Hi Peter, I run a pub in Berkshire and I need help with marketing. Can we have a quick chat?"
   }
 }

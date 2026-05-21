@@ -3,9 +3,9 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import surreyData from '../../../content/data/pub-marketing-surrey.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing in Surrey — Local Expertise, Real Results',
+  title: 'Pub Marketing for Surrey Pubs — Practical, Proven Help',
   description:
-    'Pub marketing in Surrey from a local licensee. Social media, events, and local SEO proven at The Anchor, Stanwell Moor. Packages from £375 + VAT.',
+    'Pub marketing for Surrey pubs from a working licensee near Heathrow. Social media, events and local SEO, proven at our own pub. Packages from £375 + VAT.',
   path: '/pub-marketing-surrey',
   ogType: 'website',
 });
