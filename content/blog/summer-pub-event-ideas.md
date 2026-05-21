@@ -50,7 +50,7 @@ Summer events work when they are simple, repeatable, and easy to explain. Instea
 ## Category 2: Food-led events
 
 - BBQ nights with pre-booked tables.
-- Street food pop-ups with a partner.
+- [Street food pop-ups](/licensees-guide/pop-up-events-for-pubs) with a partner.
 - Sharing board nights.
 
 ## Category 3: Sport and competitions

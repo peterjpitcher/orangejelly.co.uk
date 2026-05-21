@@ -57,33 +57,33 @@ Before diving into the how, let's talk about which events are worth your time. N
 
 ### The Reliable Money-Makers
 
-**Quiz nights** are the single most proven pub event in the UK. Low cost to run, high drink spend, strong repeat attendance. A weekly quiz can add £400-800 to your weekly takings once established. If you haven't started one yet, read our [complete quiz night guide](/blog/quiz-night-ideas) for step-by-step setup.
+**Quiz nights** are the single most proven pub event in the UK. Low cost to run, high drink spend, strong repeat attendance. A weekly quiz can add £400-800 to your weekly takings once established. If you haven't started one yet, read our [complete quiz night guide](/licensees-guide/quiz-night-ideas) for step-by-step setup.
 
-**Live music** works brilliantly when you match the act to your audience. Acoustic sessions on a Friday or Saturday draw a different crowd and keep people in the pub longer. Budget £150-300 per act and aim to cover it through increased spend. Our guide to [live music events for pubs](/blog/live-music-events-for-pubs) covers how to book acts, manage sound, and make it profitable.
+**Live music** works brilliantly when you match the act to your audience. Acoustic sessions on a Friday or Saturday draw a different crowd and keep people in the pub longer. Budget £150-300 per act and aim to cover it through increased spend. Our guide to [live music events for pubs](/licensees-guide/live-music-events-for-pubs) covers how to book acts, manage sound, and make it profitable.
 
 **Tasting evenings** — wine, gin, whisky, or craft beer — attract a premium crowd willing to spend. Charge £15-25 per head, partner with a supplier for stock at reduced cost, and you've got a profitable event with built-in margin. Our tasting nights at The Anchor deliver 85% retention — meaning people come back for the next one.
 
-**Themed food nights** turn a quiet kitchen into a revenue driver. Curry night, pie and mash, or a monthly steak special give people a specific reason to book. Pair it with a drink deal and you've got a complete evening out. See our [profitable pub food menu ideas](/blog/profitable-pub-food-menu-ideas) for inspiration.
+**Themed food nights** turn a quiet kitchen into a revenue driver. Curry night, pie and mash, or a monthly steak special give people a specific reason to book. Pair it with a drink deal and you've got a complete evening out. See our [profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas) for inspiration.
 
-**[Family events](/blog/how-to-attract-families-to-your-pub)** fill weekend daytime slots that many pubs waste. Sunday afternoon quizzes, craft sessions, and seasonal events bring in families who spend £60-80 per table.
+**[Family events](/licensees-guide/how-to-attract-families-to-your-pub)** fill weekend daytime slots that many pubs waste. Sunday afternoon quizzes, craft sessions, and seasonal events bring in families who spend £60-80 per table.
 
 ### Events for Specific Nights
 
 Different nights need different approaches. Here's what works where:
 
-**Monday:** [Board game nights](/blog/boardgame-night-101) or poker tournaments. Low cost, attracts a niche crowd who become fierce regulars. See our guide to [quiet Monday night promotions](/blog/quiet-monday-night-promotions).
+**Monday:** [Board game nights](/licensees-guide/boardgame-night-101) or poker tournaments. Low cost, attracts a niche crowd who become fierce regulars. See our guide to [quiet Monday night promotions](/licensees-guide/quiet-monday-night-promotions).
 
-**Tuesday:** [Music bingo](/blog/music-bingo-101) or themed food nights. Tuesday is the hardest night to fill, so you need something with novelty. Read our deep dive into [fixing empty Tuesday nights](/blog/pub-empty-tuesday-nights).
+**Tuesday:** [Music bingo](/licensees-guide/music-bingo-101) or themed food nights. Tuesday is the hardest night to fill, so you need something with novelty. Read our deep dive into [fixing empty Tuesday nights](/licensees-guide/pub-empty-tuesday-nights).
 
-**Wednesday:** Quiz night or [karaoke](/blog/karaoke-night-101). Midweek is quiz territory for a reason — it works. Our [midweek offers guide](/blog/midweek-pub-offers-that-work) has more tactics.
+**Wednesday:** Quiz night or [karaoke](/licensees-guide/karaoke-night-101). Midweek is quiz territory for a reason — it works. Our [midweek offers guide](/licensees-guide/midweek-pub-offers-that-work) has more tactics.
 
 **Thursday:** Tasting evenings or live acoustic. Thursday crowds are ready for the weekend and willing to spend more.
 
-**Friday/Saturday:** Live music, DJs, or [themed party nights](/blog/theme-hour-power-hour). Your busiest nights should have events that extend dwell time and increase per-head spend.
+**Friday/Saturday:** Live music, DJs, or [themed party nights](/licensees-guide/theme-hour-power-hour). Your busiest nights should have events that extend dwell time and increase per-head spend.
 
 **Sunday:** Family events, Sunday roast specials, or gentle live music. Sunday is about creating a warm, welcoming atmosphere that makes people stay longer.
 
-For seasonal planning across the full year, our [seasonal pub events calendar](/blog/seasonal-pub-events-calendar) maps out what works month by month. And if you're planning for summer specifically, see our [summer pub event ideas](/blog/summer-pub-event-ideas).
+For seasonal planning across the full year, our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar) maps out what works month by month. And if you're planning for summer specifically, see our [summer pub event ideas](/licensees-guide/summer-pub-event-ideas).
 
 ## Step 1: Choose the Right Concept
 
@@ -129,7 +129,7 @@ This is where most pub events fail. You can't post once on Facebook the day befo
 
 ### The 3-Week Promotion Plan
 
-**Week 1 — Announce and create buzz.** Post on all your social channels. Put a poster inside the pub. Tell every customer who walks in. The goal is awareness. If you need help with your social strategy, our guides to [Facebook marketing](/blog/facebook-marketing-local-pubs), [Instagram marketing](/blog/instagram-marketing-for-pubs), and [social media strategy for pubs](/blog/social-media-strategy-for-pubs) cover the fundamentals.
+**Week 1 — Announce and create buzz.** Post on all your social channels. Put a poster inside the pub. Tell every customer who walks in. The goal is awareness. If you need help with your social strategy, our guides to [Facebook marketing](/licensees-guide/facebook-marketing-local-pubs), [Instagram marketing](/licensees-guide/instagram-marketing-for-pubs), and [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) cover the fundamentals.
 
 **Week 2 — Share details and build anticipation.** Post the menu if it's a food night. Share the prize list if it's a quiz. Reveal the music act. Give people specific reasons to be excited. If you're taking bookings, create urgency: "Only 8 tables left."
 
@@ -145,7 +145,7 @@ This is where most pub events fail. You can't post once on Facebook the day befo
 
 **Local community groups** — Facebook groups, Nextdoor, parish newsletters. These are free and reach exactly the right people.
 
-For more on building your marketing machine with minimal budget, read our [low-budget pub marketing ideas](/blog/low-budget-pub-marketing-ideas) and [content marketing ideas for pubs](/blog/content-marketing-ideas-pubs).
+For more on building your marketing machine with minimal budget, read our [low-budget pub marketing ideas](/licensees-guide/low-budget-pub-marketing-ideas) and [content marketing ideas for pubs](/licensees-guide/content-marketing-ideas-pubs).
 
 ## Step 4: Run the Night With a Script
 
@@ -182,7 +182,7 @@ Within 48 hours of any event:
 
 **Invite to the next one.** The follow-up message is where repeat bookings come from. Don't wait for people to remember — remind them.
 
-If you want to build this into a proper retention system, our guide to [email marketing for pub retention](/blog/email-marketing-pub-retention) covers how to keep customers coming back systematically.
+If you want to build this into a proper retention system, our guide to [email marketing for pub retention](/licensees-guide/email-marketing-pub-retention) covers how to keep customers coming back systematically.
 
 ## Step 6: Track What Works and Iterate
 
@@ -218,7 +218,7 @@ Once your first event is established, start planning a weekly rhythm:
 - **One monthly special** — a tasting evening, a themed night, a seasonal event. This creates excitement and gives you something bigger to promote.
 - **One seasonal highlight** — Easter, summer, Christmas. These are your premium events with higher production and higher revenue.
 
-This gives you a calendar that's manageable but always has something coming up. For a complete annual plan, our [seasonal pub events calendar](/blog/seasonal-pub-events-calendar) maps this out month by month.
+This gives you a calendar that's manageable but always has something coming up. For a complete annual plan, our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar) maps this out month by month.
 
 ## Making Events Pay for Themselves
 
