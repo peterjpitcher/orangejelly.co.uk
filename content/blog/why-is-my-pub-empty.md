@@ -391,3 +391,5 @@ Implementation costs vary by strategy. Many improvements like social media optim
 ### Can this work for my type of pub?
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
+
+If you would rather not tackle it alone, our [empty pub solutions](/empty-pub-solutions) set out a focused plan to get footfall back.

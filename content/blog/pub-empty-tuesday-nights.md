@@ -303,3 +303,5 @@ Implementation costs vary by strategy. Many improvements like social media optim
 ### Can this work for my type of pub?
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
+
+Want a hand turning quiet midweeks around? Our [quiet midweek solutions](/quiet-midweek-solutions) give you a focused plan for Tuesday and Wednesday trade.

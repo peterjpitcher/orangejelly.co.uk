@@ -85,3 +85,5 @@ Only if your audience already wants it. Do not force it.
 
 **How long before Monday improves?**
 Give it four to six weeks of consistency.
+
+For a plan that covers the whole quiet midweek, see our [quiet midweek solutions](/quiet-midweek-solutions).
