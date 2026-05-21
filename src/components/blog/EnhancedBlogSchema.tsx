@@ -45,7 +45,7 @@ export default function EnhancedBlogSchema({ post, baseUrl }: EnhancedBlogSchema
       name: 'Orange Jelly Limited',
       logo: {
         '@type': 'ImageObject',
-        url: `${baseUrl}/images/logo.png`,
+        url: `${baseUrl}/logo.png`,
       },
     },
     mainEntityOfPage: {
