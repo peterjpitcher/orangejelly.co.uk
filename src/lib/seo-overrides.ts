@@ -273,7 +273,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'Run 90-minute music bingo nights at your pub. Playlists, Canva card templates, MC tips, and compliance notes for a midweek crowd-filler.',
   },
   '/licensees-guide/partnering-local-brands-share-marketing': {
-    title: 'Partner with Local Brands to Cut Pub Marketing',
+    title: 'Pub Brand Partnerships & Co-Branding to Cut Marketing Costs',
     description:
       'Share pub marketing costs by partnering with local brands. Co-branded campaigns, contract templates, and distribution swaps that fill both calendars.',
   },
@@ -591,7 +591,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/cellar-management-beer-quality-guide': {
     title: 'Cellar Management: Keep Beer Perfect, Waste Low',
     description:
-      'Practical cellar management guide for pub landlords. Temperature control, line cleaning schedules, FIFO stock rotation, cask vs keg, and wastage tracking to protect your GP.',
+      'Flat pints and wastage quietly kill your GP. The cellar routine — temperature, line cleaning, stock rotation — that keeps beer perfect and protects your margin.',
     keywords: [
       'cellar management',
       'pub stock take',
