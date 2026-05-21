@@ -51,17 +51,17 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/profitable-pub-food-menu-ideas': {
     title: 'Profitable Pub Food Menu Ideas (High-Margin Picks)',
     description:
-      'High-margin pub food ideas plus simple menu engineering tips to increase spend and profit. Practical, proven guidance from a working pub.',
+      'High-margin pub menu ideas and simple menu engineering that lift food GP — we took ours from 58% to 71%. Practical picks from a working pub.',
   },
   '/licensees-guide/social-media-strategy-for-pubs': {
     title: 'Social Media Strategy for Pubs (Weekly System)',
     description:
-      'A weekly social media plan for pubs: what to post, when to post it, and how to turn followers into footfall. Tested at The Anchor.',
+      'A weekly social media plan for pubs: what to post, when, and how to turn views into footfall. The system behind 60-70K monthly views at our pub.',
   },
   '/licensees-guide/summer-pub-event-ideas': {
-    title: 'Summer Pub Event Ideas That Fill Tables',
+    title: 'Pub Event Ideas for Summer: 35 That Make Money',
     description:
-      'Summer pub event ideas you can actually run: themes, timelines, promotion tips, and simple systems that drive bookings and repeat visits.',
+      '35 summer pub event ideas you can actually run — themes, timelines, and promotion that drive bookings and repeat visits. From a working pub.',
   },
   '/licensees-guide/pub-empty-tuesday-nights': {
     title: 'How to Fill an Empty Tuesday Night at Your Pub',
@@ -90,7 +90,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   },
   // --- Sprint 2: Top 20 blog post SEO overrides ---
   '/licensees-guide/quiz-night-ideas': {
-    title: 'Quiz Night Ideas: 25 Formats That Pack Your Pub',
+    title: 'Quiz Night Ideas: 25 Pub Quiz Formats That Pack Tables',
     description:
       '25 quiz night ideas that fill pubs weekly. Formats, round ideas, and hosting tips from a pub that runs 25-35 teams every week. Steal our system.',
   },
@@ -125,7 +125,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
       '25 low budget pub marketing ideas that actually work. Free and cheap tactics to fill your pub, tested by a licensee. No agency fees required.',
   },
   '/licensees-guide/content-marketing-ideas-pubs': {
-    title: 'Content Marketing Ideas for Pubs (Simple Plan)',
+    title: 'Pub Content Ideas: What to Post to Fill Tables',
     description:
       'What to post and when: a simple content plan for pubs. Weekly templates, real examples, and ideas that turn social media views into bookings.',
   },
@@ -172,7 +172,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-health-check-essential-fundamentals-licensee-success': {
     title: "How to Run a Pub: The Licensee's Essential Guide",
     description:
-      'How to run a pub: the complete guide covering licensing, daily operations, finances, marketing, staffing, compliance, and revenue growth. Written by a working publican.',
+      'Running a pub is relentless. The essentials that actually matter — licensing, money, staff, marketing, and filling tables — from a working publican.',
     keywords: [
       'how to run a pub',
       'running a pub',
@@ -431,7 +431,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/buying-a-pub-complete-guide': {
     title: 'Buying a Pub: Complete UK Guide for First-Time Buyers',
     description:
-      'Everything you need to know about buying a pub in the UK. Freehold vs leasehold, due diligence, financing, legal steps, and a 90-day plan from a working licensee.',
+      'Thinking of buying a pub? Freehold vs leasehold, the real costs, due-diligence traps, and a 90-day plan — honest guidance from someone who runs one.',
     keywords: [
       'buying a pub',
       'how to start a pub',
