@@ -1,5 +1,6 @@
 import { type Metadata } from 'next';
 import { getBaseUrl } from './site-config';
+import { seoOverrides } from './seo-overrides';
 
 interface GenerateMetadataProps {
   title: string;
@@ -30,15 +31,21 @@ export function generateMetadata({
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   const cleanPath = normalizedPath === '/' ? normalizedPath : normalizedPath.replace(/\/$/, '');
 
-  const canonicalUrl = `${baseUrl}${cleanPath}`;
-  const fullTitle = `${title} | Orange Jelly`;
+  // App pages can be centrally overridden via seo-overrides.ts (same source the
+  // blog route uses). When an override exists, its title is used as-is (no brand
+  // suffix) to match the blog and avoid double-branding.
+  const override = seoOverrides[cleanPath];
+  const resolvedTitle = override?.title || title;
+  const resolvedDescription = override?.description || description;
+  const canonicalUrl = override?.canonical || `${baseUrl}${cleanPath}`;
+  const fullTitle = override?.title ? override.title : `${title} | Orange Jelly`;
 
   return {
     title: fullTitle,
-    description,
+    description: resolvedDescription,
     openGraph: {
       title: fullTitle,
-      description,
+      description: resolvedDescription,
       url: canonicalUrl,
       siteName: 'Orange Jelly',
       type: ogType,
@@ -48,7 +55,7 @@ export function generateMetadata({
           url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: resolvedTitle,
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -60,7 +67,7 @@ export function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
-      description,
+      description: resolvedDescription,
       images: [ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`],
     },
     alternates: {

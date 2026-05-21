@@ -48,6 +48,31 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Full-stack pub marketing support: social media, events, paid ads, local visibility, content, website optimisation, and more. See what is included in each package.',
   },
+  '/pub-marketing': {
+    title: 'Pub Marketing — Proven Systems From a Working Licensee',
+    description:
+      'Pub marketing that fills tables, run by a licensee who does it daily at The Anchor: strategy, social, events, and local visibility. Packages from £375 + VAT.',
+  },
+  '/pub-marketing-agency': {
+    title: 'Pub Marketing Agency for Independent Pubs & Bars',
+    description:
+      'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads, and local SEO built for independent pubs. Packages from £375 + VAT.',
+  },
+  '/pub-rescue': {
+    title: 'Pub Rescue — Fast Turnaround Help From a Working Licensee',
+    description:
+      'Pub in trouble? Get a fast, practical rescue plan from a licensee who has done it. We fix the highest-impact problem first. Packages from £375 + VAT.',
+  },
+  '/empty-pub-solutions': {
+    title: 'Empty Pub? A Proven Plan to Fill Tables Again',
+    description:
+      'An empty pub is a fixable problem. A practical plan to bring footfall back — events, offers, and local visibility — from a working licensee. Packages from £375 + VAT.',
+  },
+  '/quiet-midweek-solutions': {
+    title: 'Quiet Midweek? Fill Tuesday & Wednesday Nights',
+    description:
+      'Turn dead midweek nights into reliable trade with proven Tuesday and Wednesday formats tested at The Anchor, tailored to your pub. Packages from £375 + VAT.',
+  },
   '/licensees-guide/profitable-pub-food-menu-ideas': {
     title: 'Profitable Pub Food Menu Ideas (High-Margin Picks)',
     description:
