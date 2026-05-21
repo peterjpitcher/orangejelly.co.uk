@@ -41,6 +41,8 @@ faqs:
 
 Summer events work when they are simple, repeatable, and easy to explain. Instead of 35 random ideas, use these four categories and pick the strongest from each.
 
+For events beyond summer, see our full guide to [pub event ideas](/licensees-guide/pub-event-ideas) across every season and type.
+
 ## Category 1: Garden parties and socials
 
 - Weekly garden party with a fixed drinks bundle.
