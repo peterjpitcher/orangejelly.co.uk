@@ -214,7 +214,7 @@ The template works for:
 
 **[Request your free template](/contact)** -- tell us about your pub or planned pub, and we will send it across with a few pointers tailored to your situation.
 
-If you want hands-on help building your plan, Orange Jelly offers one-to-one business planning sessions at £75 plus VAT per hour. We have been through the process ourselves at The Anchor, and we know what banks and breweries actually look for versus what they say they look for.
+If you want hands-on help building your plan, Orange Jelly offers one-to-one business planning sessions at £75 plus VAT per hour, or fixed-price packages from £375 + VAT. We have been through the process ourselves at The Anchor, and we know what banks and breweries actually look for versus what they say they look for.
 
 ## FAQs
 
