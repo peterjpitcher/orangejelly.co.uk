@@ -382,7 +382,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Reconnect your pub with the neighbourhood through purposeful outreach. Schools, clubs, and charity partnerships that turn goodwill into bookings.',
   },
-  '/licensees-guide/fizz-street-food-pop-up': {
+  '/licensees-guide/pop-up-events-for-pubs': {
     title: 'Pop-Up Events for Pubs: Formats That Fill Quiet Nights',
     description:
       'Pop-up events for pubs that fill quiet nights: street food, guest chefs, makers markets and themed takeovers, plus how to plan, price, promote and run them.',

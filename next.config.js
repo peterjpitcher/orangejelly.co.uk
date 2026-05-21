@@ -46,6 +46,12 @@ const nextConfig = {
         destination: '/licensees-guide/terrible-online-reviews-damage-control',
         permanent: true,
       },
+      // Slug rename: narrow Friday-fizz post broadened into the pop-up pillar.
+      {
+        source: '/licensees-guide/fizz-street-food-pop-up',
+        destination: '/licensees-guide/pop-up-events-for-pubs',
+        permanent: true,
+      },
     ];
   },
   // Page-level security headers are in src/middleware.ts.

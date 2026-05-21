@@ -1,6 +1,6 @@
 ---
 title: "Pop-Up Events for Pubs: Formats That Fill Quiet Nights"
-slug: "fizz-street-food-pop-up"
+slug: "pop-up-events-for-pubs"
 publishedDate: 2025-11-13
 updatedDate: "2026-05-21T00:00:00.000Z"
 excerpt: "Pop-up events fill quiet nights without a permanent kitchen overhaul. Street food, guest chefs, makers' markets and more, with how to plan, price, promote and run them."
