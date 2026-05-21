@@ -22,32 +22,9 @@ const nextConfig = {
         destination: '/ways-to-work',
         permanent: true,
       },
-      // All service sub-pages → /capabilities
-      {
-        source: '/services/instagram-services-for-pubs',
-        destination: '/capabilities',
-        permanent: true,
-      },
-      {
-        source: '/services/facebook-services-for-pubs',
-        destination: '/capabilities',
-        permanent: true,
-      },
-      {
-        source: '/services/paid-social-for-pubs',
-        destination: '/capabilities',
-        permanent: true,
-      },
-      {
-        source: '/services/content-creation-for-pubs',
-        destination: '/capabilities',
-        permanent: true,
-      },
-      {
-        source: '/services/social-media-marketing-for-pubs',
-        destination: '/capabilities',
-        permanent: true,
-      },
+      // Service sub-pages are reinstated (D1): content-creation, paid-social and
+      // social-media-marketing serve their own pages; instagram/facebook resolve
+      // via their page-level redirect to /services/social-media-marketing-for-pubs.
     ];
   },
   // Page-level security headers are in src/middleware.ts.
