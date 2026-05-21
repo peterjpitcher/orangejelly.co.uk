@@ -22,8 +22,9 @@
     "capabilities": [
       { "label": "Growth Strategy", "href": "/capabilities" },
       { "label": "Event Marketing", "href": "/capabilities" },
-      { "label": "Social Media", "href": "/capabilities" },
-      { "label": "Paid Social", "href": "/capabilities" },
+      { "label": "Social Media", "href": "/services/social-media-marketing-for-pubs" },
+      { "label": "Paid Social", "href": "/services/paid-social-for-pubs" },
+      { "label": "Content Creation", "href": "/services/content-creation-for-pubs" },
       { "label": "Local Visibility", "href": "/capabilities" }
     ],
     "resources": [
