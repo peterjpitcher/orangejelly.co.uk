@@ -25,6 +25,27 @@ const nextConfig = {
       // Service sub-pages are reinstated (D1): content-creation, paid-social and
       // social-media-marketing serve their own pages; instagram/facebook resolve
       // via their page-level redirect to /services/social-media-marketing-for-pubs.
+      // Cannibalisation merges (D2): thin/duplicate posts 301'd to the stronger page.
+      {
+        source: '/licensees-guide/beat-chain-pubs',
+        destination: '/licensees-guide/compete-with-wetherspoons',
+        permanent: true,
+      },
+      {
+        source: '/licensees-guide/local-pub-marketing',
+        destination: '/pub-marketing',
+        permanent: true,
+      },
+      {
+        source: '/licensees-guide/fill-empty-seats-midweek-offers',
+        destination: '/licensees-guide/fill-empty-pub-tables',
+        permanent: true,
+      },
+      {
+        source: '/licensees-guide/crisis-pr-landlords-bad-reviews',
+        destination: '/licensees-guide/terrible-online-reviews-damage-control',
+        permanent: true,
+      },
     ];
   },
   // Page-level security headers are in src/middleware.ts.

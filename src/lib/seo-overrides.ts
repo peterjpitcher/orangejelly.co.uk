@@ -206,11 +206,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'licensee guide',
     ],
   },
-  '/licensees-guide/beat-chain-pubs': {
-    title: 'Beat Chain Pubs: Independent Pub Survival Guide',
-    description:
-      'How independent pubs beat chain pub competition. Leverage your advantages: personal service, flexibility, and community. Strategies that actually work.',
-  },
   '/licensees-guide/email-marketing-pub-retention': {
     title: 'Email Marketing for Pubs (Build Repeat Trade)',
     description:
@@ -247,11 +242,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Immediate cashflow fixes for pubs when trade drops. 13-week forecast, supplier talks, upsells, and emergency sales drives to stabilise your bar.',
   },
-  '/licensees-guide/crisis-pr-landlords-bad-reviews': {
-    title: 'Crisis PR for Pub Landlords: Bad Review Recovery',
-    description:
-      'Handle brutal pub reviews with a 12-hour response protocol. Templates, root-cause fixes, and comeback stories that rebuild trust with locals.',
-  },
   '/licensees-guide/delivery-click-collect-without-harm': {
     title: 'Pub Delivery and Click & Collect Without Harm',
     description:
@@ -267,11 +257,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Run a safeguarded Sunday craft hour that fills your pub dining room. Seasonal themes, consent templates, and craft-plus-roast bundles included.',
   },
-  '/licensees-guide/fill-empty-seats-midweek-offers': {
-    title: 'Pub Midweek Offers That Fill Empty Seats',
-    description:
-      'Design midweek pub offers that protect GP and fill empty seats. Data-backed bundles, pre-booking hooks, and upsell stacks that convert.',
-  },
   '/licensees-guide/food-allergies-gdpr-compliance': {
     title: 'Pub Allergen and GDPR Compliance Made Simple',
     description:
@@ -281,11 +266,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: 'Live Music for Pubs: Booking, Hosting, Profit',
     description:
       'Complete guide to profitable live music in your pub. Booking acts, sound setup, licensing, and promotion strategies from open mic to ticketed shows.',
-  },
-  '/licensees-guide/local-pub-marketing': {
-    title: 'Local Pub Marketing: Community Strategies Guide',
-    description:
-      'Community-focused pub marketing that builds loyal customers. Facebook groups, local partnerships, and neighbourhood strategies that drive footfall.',
   },
   '/licensees-guide/low-cost-decor-refreshes-new-improved': {
     title: 'Low-Cost Pub Decor Refreshes That Signal Change',
