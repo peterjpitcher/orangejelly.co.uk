@@ -89,7 +89,7 @@ You don't need a different event every week. You need a rough calendar so you're
 
 - **Spring:** Mother's Day, Easter family events, the start of beer-garden season.
 - **Summer:** garden sessions, BBQs, sport, and food-led pop-ups. Our deep-dive on [summer pub event ideas](/licensees-guide/summer-pub-event-ideas) has 35 to choose from.
-- **Autumn:** Halloween, Bonfire Night, quiz leagues restarting as nights draw in.
+- **Autumn:** Halloween, Bonfire Night, quiz leagues restarting as nights draw in. See our [autumn pub event ideas](/licensees-guide/autumn-pub-event-ideas) for a full September-to-November plan.
 - **Winter:** the Christmas season (plan it early — see [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas)), then events that carry you through a quiet January.
 
 For a month-by-month framework you can reuse every year, use our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar).

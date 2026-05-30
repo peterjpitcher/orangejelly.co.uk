@@ -52,6 +52,13 @@ const nextConfig = {
         destination: '/licensees-guide/pop-up-events-for-pubs',
         permanent: true,
       },
+      // Greene King autumn toolkit QR → tracked autumn hub (temporary so it can be repointed each year).
+      {
+        source: '/autumn',
+        destination:
+          '/licensees-guide/autumn-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=autumn-2026',
+        permanent: false,
+      },
     ];
   },
   // Page-level security headers are in src/middleware.ts.

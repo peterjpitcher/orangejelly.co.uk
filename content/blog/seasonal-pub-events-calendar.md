@@ -75,6 +75,8 @@ Keep the format repeatable so the team can deliver every week.
 - Bonfire night warm-up.
 - Christmas party packages and daytime groups.
 
+For the full September-to-November plan — cask, low/no, wine, Halloween, rugby and gifting — see our [autumn pub event ideas](/licensees-guide/autumn-pub-event-ideas) guide.
+
 Book early and cap capacity to protect service.
 
 ## How to choose the right events

@@ -96,6 +96,11 @@ export function getDefaultBlogImage(slug: string): string {
     'wet-led-vs-food-led-pubs': '/images/blog/wet-led-vs-food-led-pubs.svg',
     'pub-marketing-plan-2026-monthly-guide':
       '/images/blog/pub-marketing-plan-2026-monthly-guide.svg',
+    // New articles (2026 — Autumn toolkit)
+    'autumn-pub-event-ideas': '/images/blog/autumn-pub-event-ideas.svg',
+    'wine-tasting-evenings-for-pubs': '/images/blog/wine-tasting-evenings-for-pubs.svg',
+    'sober-october-low-no-alcohol-pubs': '/images/blog/sober-october-low-no-alcohol-pubs.svg',
+    'cask-ale-week-pub-guide': '/images/blog/cask-ale-week-pub-guide.svg',
   };
 
   // Return the mapped image or a default
