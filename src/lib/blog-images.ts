@@ -101,6 +101,11 @@ export function getDefaultBlogImage(slug: string): string {
     'wine-tasting-evenings-for-pubs': '/images/blog/wine-tasting-evenings-for-pubs.svg',
     'sober-october-low-no-alcohol-pubs': '/images/blog/sober-october-low-no-alcohol-pubs.svg',
     'cask-ale-week-pub-guide': '/images/blog/cask-ale-week-pub-guide.svg',
+    'macmillan-coffee-morning-pub-guide': '/images/blog/macmillan-coffee-morning-pub-guide.svg',
+    'national-drinks-days-pub-guide': '/images/blog/national-drinks-days-pub-guide.svg',
+    'autumn-rugby-nations-championship-pubs':
+      '/images/blog/autumn-rugby-nations-championship-pubs.svg',
+    'black-friday-pub-ideas': '/images/blog/black-friday-pub-ideas.svg',
   };
 
   // Return the mapped image or a default

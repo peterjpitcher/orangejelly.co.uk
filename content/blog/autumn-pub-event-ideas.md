@@ -91,7 +91,7 @@ October is also the right month to **relaunch your wine list** before party seas
 
 ## November: rugby, then the run to Christmas
 
-November is a rugby month. The autumn internationals run through the first three weekends, finishing with a **finals weekend at Twickenham (Friday 27–Sunday 29 November)** — there's a big game most Saturdays, so take **big-screen table bookings early**. (Our [pub rugby marketing guide](/licensees-guide/pub-six-nations-rugby-marketing) has the booking and match-day playbook.)
+November is a rugby month. The autumn internationals run through the first three weekends, finishing with a **finals weekend at Twickenham (Friday 27–Sunday 29 November)** — there's a big game most Saturdays, so take **big-screen table bookings early**. (Our [autumn rugby playbook](/licensees-guide/autumn-rugby-nations-championship-pubs) has the fixtures, booking terms and match-day checklist.)
 
 That last weekend also brings **Black Friday (27 Nov)**, then **Cyber Monday and St Andrew's Day (both Mon 30 Nov)**. Rather than discounting your margin away, sell **gift cards, take Christmas party deposits, and push a January bounce-back voucher** — turn autumn footfall into Christmas bookings. When you're ready for December, our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) and guide to [filling December bookings](/licensees-guide/pub-christmas-bookings-fill-december) pick up the baton.
 
