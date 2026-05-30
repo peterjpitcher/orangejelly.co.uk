@@ -14,19 +14,7 @@ import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { seoOverrides } from '@/lib/seo-overrides';
-
-// Seasonal pillar: the Autumn Pub Playbook hub curates these evergreen spokes.
-// They keep their own URLs in the guides section; the hub links to them as a series.
-const AUTUMN_HUB_SLUG = 'autumn-pub-event-ideas';
-const AUTUMN_SPOKE_SLUGS = [
-  'wine-tasting-evenings-for-pubs',
-  'sober-october-low-no-alcohol-pubs',
-  'cask-ale-week-pub-guide',
-  'macmillan-coffee-morning-pub-guide',
-  'national-drinks-days-pub-guide',
-  'autumn-rugby-nations-championship-pubs',
-  'black-friday-pub-ideas',
-];
+import { getHubBySlug } from '@/lib/seasonal-hubs';
 
 interface BlogPostPageProps {
   params: {
@@ -76,6 +64,8 @@ type ExtendedBlogPost = BlogPostType & {
     buttonText?: string;
     whatsappMessage?: string;
   };
+  featuredGuides?: string[];
+  seasons?: string[];
   rawContent?: string;
 };
 
@@ -354,6 +344,8 @@ async function getMarkdownPost(
   const voiceSearchQueries = toStringArray(frontMatterRecord.voiceSearchQueries);
   const quickStats = toQuickStats(frontMatterRecord.quickStats);
   const faqs = toFaqs(frontMatterRecord.faqs);
+  const featuredGuides = getOptionalStringArray(frontMatterRecord.featuredGuides);
+  const seasons = getOptionalStringArray(frontMatterRecord.seasons);
 
   const localSeoRecord = asRecord(frontMatterRecord.localSEO);
   let localSeoKeywords: string[] | undefined;
@@ -415,6 +407,8 @@ async function getMarkdownPost(
     faqs,
     localSEO,
     ctaSettings,
+    featuredGuides,
+    seasons,
     rawContent: parsedPost.content,
   };
 }
@@ -570,11 +564,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     const relatedPosts: BlogPostType[] = relatedPostsRaw.map(mapMarkdownToBlogPost);
 
-    // On the Autumn Pub Playbook hub, show a curated grid of its spokes (in order)
+    // On a seasonal hub (config-driven), show a curated grid of its spokes (in order)
     // instead of generic related posts, and emit ItemList schema for the series.
-    const isAutumnHub = post.slug === AUTUMN_HUB_SLUG;
-    const autumnSpokes: BlogPostType[] = isAutumnHub
-      ? AUTUMN_SPOKE_SLUGS.map((spokeSlug) => allPosts.find((p) => p.slug === spokeSlug))
+    // Frontmatter `featuredGuides` can override the config order; otherwise the config wins.
+    const hub = getHubBySlug(post.slug);
+    const isHub = Boolean(hub);
+    const hubSpokeSlugs = hub ? (post.featuredGuides ?? hub.featuredGuides) : [];
+    const hubSpokes: BlogPostType[] = hub
+      ? hubSpokeSlugs
+          .map((spokeSlug) => allPosts.find((p) => p.slug === spokeSlug))
           .filter((p): p is MarkdownBlogPost => Boolean(p))
           .map(mapMarkdownToBlogPost)
       : [];
@@ -692,11 +690,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="max-w-6xl mx-auto">
             <BlogPostClient
               post={postWithFaqs}
-              relatedPosts={isAutumnHub ? [] : relatedPosts}
+              relatedPosts={isHub ? [] : relatedPosts}
               adjacentPosts={adjacentPosts}
             />
-            {isAutumnHub && autumnSpokes.length > 0 && (
-              <SeriesHubGrid posts={autumnSpokes} baseUrl={baseUrl} />
+            {isHub && hubSpokes.length > 0 && (
+              <SeriesHubGrid
+                posts={hubSpokes}
+                baseUrl={baseUrl}
+                heading={`The full ${hub!.label}`}
+                listName={hub!.label}
+              />
             )}
           </div>
         </Section>
