@@ -48,6 +48,8 @@ schema:
 
 # How to Host a Macmillan Coffee Morning in Your Pub
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Most pubs treat the daytime as a write-off. The doors are open, the lights are on, a member of staff is leaning on the bar, and barely anyone comes in until lunch. That quiet stretch between opening and the first proper rush is where a surprising amount of money quietly leaks away every single week.
 
 A coffee morning is one of the simplest ways to plug that gap. It gives people a specific reason to come in at a time they'd usually skip, it costs you almost nothing to run, and it does it under the banner of a cause everyone already understands and respects. Macmillan's World's Biggest Coffee Morning is the obvious hook, and it sits perfectly alongside a Greene King autumn toolkit, because autumn daytimes are exactly when the pub goes quiet.

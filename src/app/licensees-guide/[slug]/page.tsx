@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import path from 'path';
 import Section from '@/components/Section';
 import BlogPostClient from './BlogPostClient';
+import SeriesHubGrid from '@/components/blog/SeriesHubGrid';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
 import BlogCategoryHero from '@/components/blog/BlogCategoryHero';
@@ -13,6 +14,19 @@ import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { seoOverrides } from '@/lib/seo-overrides';
+
+// Seasonal pillar: the Autumn Pub Playbook hub curates these evergreen spokes.
+// They keep their own URLs in the guides section; the hub links to them as a series.
+const AUTUMN_HUB_SLUG = 'autumn-pub-event-ideas';
+const AUTUMN_SPOKE_SLUGS = [
+  'wine-tasting-evenings-for-pubs',
+  'sober-october-low-no-alcohol-pubs',
+  'cask-ale-week-pub-guide',
+  'macmillan-coffee-morning-pub-guide',
+  'national-drinks-days-pub-guide',
+  'autumn-rugby-nations-championship-pubs',
+  'black-friday-pub-ideas',
+];
 
 interface BlogPostPageProps {
   params: {
@@ -556,6 +570,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     const relatedPosts: BlogPostType[] = relatedPostsRaw.map(mapMarkdownToBlogPost);
 
+    // On the Autumn Pub Playbook hub, show a curated grid of its spokes (in order)
+    // instead of generic related posts, and emit ItemList schema for the series.
+    const isAutumnHub = post.slug === AUTUMN_HUB_SLUG;
+    const autumnSpokes: BlogPostType[] = isAutumnHub
+      ? AUTUMN_SPOKE_SLUGS.map((spokeSlug) => allPosts.find((p) => p.slug === spokeSlug))
+          .filter((p): p is MarkdownBlogPost => Boolean(p))
+          .map(mapMarkdownToBlogPost)
+      : [];
+
     const sortedPosts = [...allPosts].sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a));
     const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug);
     const adjacentPosts: AdjacentPosts =
@@ -669,9 +692,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="max-w-6xl mx-auto">
             <BlogPostClient
               post={postWithFaqs}
-              relatedPosts={relatedPosts}
+              relatedPosts={isAutumnHub ? [] : relatedPosts}
               adjacentPosts={adjacentPosts}
             />
+            {isAutumnHub && autumnSpokes.length > 0 && (
+              <SeriesHubGrid posts={autumnSpokes} baseUrl={baseUrl} />
+            )}
           </div>
         </Section>
       </>

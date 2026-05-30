@@ -48,6 +48,8 @@ schema:
 
 # Cask Ale Week: A 10-Day Plan to Get Regulars Trying Something New
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Cask is one of the few things a chain down the road can't really copy. They can match your prices and out-spend your marketing, but a well-kept cask ale, poured by someone who can tell you what it tastes like, is properly your patch. The trouble is most of us never make a fuss about it. The handpulls just sit there, and half your customers walk past them every week without ever giving one a go.
 
 Cask Ale Week is the nudge that fixes that. It gives you the one thing that's hard to manufacture on a normal Tuesday: a reason. A reason for regulars to try the pump they always ignore, a reason for lager drinkers to be curious, and a reason for you to talk about the thing you're already good at.

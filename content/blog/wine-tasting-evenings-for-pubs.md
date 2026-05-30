@@ -48,6 +48,8 @@ schema:
 
 # How to Run a Wine Tasting Evening in Your Pub (Without Overcomplicating It)
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Wine is the quiet underperformer behind most pub bars. The cellar work is sorted, the beer range gets all the attention, and the wine just sits there on a tired list, selling the same two house options to people who'd happily spend more if you gave them a reason to.
 
 That reason is a wine tasting evening. Done simply, it's one of the easiest ways to lift spend per head, fill a quiet midweek night, and turn wine from an afterthought into something your regulars actually look forward to. And no, you don't need a sommelier, a white tablecloth, or a single bit of jargon.

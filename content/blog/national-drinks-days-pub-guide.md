@@ -48,6 +48,8 @@ schema:
 
 # Vodka, Gin and Champagne Days: Easy Autumn Drinks Activations
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Autumn is full of awkward gaps. The garden has gone quiet, Christmas bookings haven't landed yet, and the weeks between the August bank holiday and December can drift. You don't always have the time or the team to put on a full event in that window, and you don't need to.
 
 This is where single-serve drinks days earn their place. National Vodka Day, International Gin and Tonic Day, Champagne Day. They're not events in the way a quiz or a pop-up is. There's no booking sheet, no host, no run-sheet. There's one drink, one reason to mention it, and a higher spend per head on a day that would otherwise tick along on the usual.

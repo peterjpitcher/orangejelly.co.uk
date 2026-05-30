@@ -48,6 +48,8 @@ schema:
 
 # Autumn Rugby 2026: Filling Your Pub for the Nations Championship
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But if you show sport, November is quietly one of the best trading months you've got, because rugby gives people a fixed reason to be out, in a warm room, with a pint in hand.
 
 This year it gets bigger. The new **Nations Championship** launches in 2026 and **replaces the standalone Autumn Internationals** for the home nations. Instead of a loose run of friendlies, you've now got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.

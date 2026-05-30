@@ -48,6 +48,8 @@ schema:
 
 # Sober October: Low and No Drinks That Actually Sell in Your Pub
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Let's clear one thing up before we start. Sober October isn't a threat to your wet sales. It's a month where a chunk of your customers are actively looking for a reason to come to the pub and not drink alcohol, and most pubs make it weirdly hard for them.
 
 That's a missed trick. Because the people reaching for a low or no drink aren't people who'd otherwise be propping up the bar all night. They're the designated driver who currently nurses one lime and soda and leaves early. The friend who's pacing themselves so they can stay for the whole round. The midweek guest who fancies a night out without the next-day fog. The younger crowd who simply drink less than we did at their age.

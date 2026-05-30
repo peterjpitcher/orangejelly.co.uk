@@ -48,6 +48,8 @@ schema:
 
 # Black Friday for Pubs: Gift Cards and Bookings, Not Discounts
 
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+
 Black Friday lands on **Friday 27 November 2026**, and every retailer in the country will be screaming about money off. The temptation is to join in — knock a few quid off a round, run a cheap-pint night, do something so the weekend doesn't feel quiet.
 
 Don't. A pub is not a shop with a warehouse to clear. When you blanket-discount, you train your best regulars to wait for the cheap night, you tell everyone your normal price is more than it should be, and you hand away the margin you need to get through January. The drinks would have sold anyway. You've just sold them for less.
