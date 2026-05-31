@@ -59,6 +59,13 @@ const nextConfig = {
           '/licensees-guide/autumn-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=autumn-2026',
         permanent: false,
       },
+      // Greene King Christmas toolkit QR → tracked Christmas hub (temporary so it can be repointed each year).
+      {
+        source: '/christmas',
+        destination:
+          '/licensees-guide/christmas-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=christmas-2026',
+        permanent: false,
+      },
     ];
   },
   // Page-level security headers are in src/middleware.ts.

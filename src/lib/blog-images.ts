@@ -106,6 +106,8 @@ export function getDefaultBlogImage(slug: string): string {
     'autumn-rugby-nations-championship-pubs':
       '/images/blog/autumn-rugby-nations-championship-pubs.svg',
     'black-friday-pub-ideas': '/images/blog/black-friday-pub-ideas.svg',
+    // New articles (2026 — Christmas/winter toolkit)
+    'christmas-pub-event-ideas': '/images/blog/christmas-pub-event-ideas.svg',
   };
 
   // Return the mapped image or a default

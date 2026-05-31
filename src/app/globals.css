@@ -180,15 +180,15 @@
   --season-hero-text: #ffffff;
 }
 
-/* Winter — placeholder: cool brand blue. Replace when the winter hub ships. */
+/* Winter — festive evergreen + midnight-pine (Christmas Pub Playbook). */
 [data-season='winter'] {
-  --season-accent: #01619e;
-  --season-accent-strong: #014d7e;
+  --season-accent: #0f7a52;
+  --season-accent-strong: #0a5c3d;
   --season-accent-contrast: #ffffff;
-  --season-tint: #eef5fb;
-  --season-tint-strong: #d8e8f5;
-  --season-border: rgba(1, 97, 158, 0.22);
-  --season-hero: linear-gradient(135deg, #01619e 0%, #1a2f49 100%);
+  --season-tint: #f0f6f2;
+  --season-tint-strong: #dcebe2;
+  --season-border: rgba(15, 122, 82, 0.24);
+  --season-hero: linear-gradient(135deg, #0c2a3f 0%, #0a5c3d 100%);
   --season-hero-text: #ffffff;
 }
 

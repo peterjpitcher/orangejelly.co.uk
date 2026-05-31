@@ -78,10 +78,12 @@ export default function SeasonalCalendar({
           ))}
         </Grid>
 
-        <Text color="muted" size="sm" className="mt-6 max-w-3xl italic">
-          International Champagne Day falls on the fourth Friday of October — Friday 23 October in
-          2026 — so we&rsquo;ve made it a weekend to keep the Saturday trade too.
-        </Text>
+        {season === 'autumn' && (
+          <Text color="muted" size="sm" className="mt-6 max-w-3xl italic">
+            International Champagne Day falls on the fourth Friday of October — Friday 23 October in
+            2026 — so we&rsquo;ve made it a weekend to keep the Saturday trade too.
+          </Text>
+        )}
       </div>
     </section>
   );

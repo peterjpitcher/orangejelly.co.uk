@@ -99,6 +99,69 @@ export const SEASON_HUBS: SeasonalHub[] = [
       'black-friday-pub-ideas',
     ],
   },
+  {
+    season: 'winter',
+    theme: 'winter',
+    hubSlug: 'christmas-pub-event-ideas',
+    label: 'Christmas Pub Playbook',
+    shortLabel: 'Christmas Playbook',
+    dateRangeLabel: 'November to January',
+    calendar: [
+      {
+        date: 'Fri 27 Nov',
+        moment: 'Black Friday',
+        opportunity: 'Gift cards, party deposits, a December bounce-back voucher',
+      },
+      {
+        date: 'Mon 30 Nov',
+        moment: "Cyber Monday + St Andrew's Day",
+        opportunity: 'An online voucher push and a Scottish supper special',
+      },
+      {
+        date: 'All December',
+        moment: 'Christmas party season',
+        opportunity: 'Set menus, pre-orders, deposits — the diary fills early',
+      },
+      {
+        date: 'Fri 25 Dec',
+        moment: 'Christmas Day',
+        opportunity: 'A booked-only lunch, or a well-earned rest with deposits banked',
+      },
+      {
+        date: 'Sat 26 Dec',
+        moment: 'Boxing Day',
+        opportunity: 'Walkers, leftovers buffet, sport on the big screen',
+      },
+      {
+        date: 'Thu 31 Dec',
+        moment: "New Year's Eve",
+        opportunity: 'A ticketed night with a deposit, not a quiet free-for-all',
+      },
+      {
+        date: 'Fri 1 Jan',
+        moment: "New Year's Day",
+        opportunity: 'A recovery brunch and a warming roast for the walkers',
+      },
+      {
+        date: 'All January',
+        moment: 'Dry January / low and no',
+        opportunity: 'A proper low-and-no range that keeps January tables full',
+      },
+      {
+        date: 'Mon 25 Jan',
+        moment: 'Burns Night',
+        opportunity: 'A haggis supper, a whisky flight, a reason to book midweek',
+      },
+    ],
+    featuredGuides: [
+      'christmas-pub-promotion-ideas',
+      'pub-christmas-bookings-fill-december',
+      'black-friday-pub-ideas',
+      'wine-tasting-evenings-for-pubs',
+      'pub-new-years-eve-planning-guide',
+      'turn-heating-costs-into-winter-wins',
+    ],
+  },
 ];
 
 export function getHubBySlug(slug: string): SeasonalHub | undefined {

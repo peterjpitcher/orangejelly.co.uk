@@ -28,7 +28,8 @@
       { "label": "Local Visibility", "href": "/capabilities" }
     ],
     "playbooks": [
-      { "label": "Autumn Playbook", "href": "/licensees-guide/autumn-pub-event-ideas" }
+      { "label": "Autumn Playbook", "href": "/licensees-guide/autumn-pub-event-ideas" },
+      { "label": "Christmas Playbook", "href": "/licensees-guide/christmas-pub-event-ideas" }
     ],
     "resources": [
       { "label": "Licensee's Guide", "href": "/licensees-guide" },
