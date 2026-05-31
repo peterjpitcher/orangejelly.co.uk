@@ -12,6 +12,9 @@ tags:
   - "pub fundraising event"
   - "pub coffee morning"
   - "community pub events"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "How to host a Macmillan Coffee Morning in your pub: a simple run-sheet, why it pays for a wet-led pub, and how to promote it. Date for 2026 and the free pack."
 keywords:

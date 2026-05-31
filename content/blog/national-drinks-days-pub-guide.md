@@ -12,6 +12,9 @@ tags:
   - "international gin and tonic day"
   - "champagne day"
   - "pub drinks promotion"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "National Vodka Day, Gin and Tonic Day and Champagne Day for pubs. Low-effort, high-margin autumn drinks activations with serves, pricing and promotion that work."
 keywords:

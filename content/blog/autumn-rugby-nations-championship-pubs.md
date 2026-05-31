@@ -12,6 +12,9 @@ tags:
   - "nations championship"
   - "rugby in pubs"
   - "showing rugby in your pub"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "Fill your pub for the new Nations Championship, November 2026. Home-nation fixtures, table bookings, match platters and a screen and sound checklist for licensees."
 keywords:

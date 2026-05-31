@@ -12,6 +12,9 @@ tags:
   - "autumn pub ideas"
   - "pub event ideas"
   - "seasonal pub events"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "A practical autumn plan for pubs — cask, low/no, wine, Halloween, rugby and gifting. The September-to-November moments that fill tables and how to run them."
 keywords:

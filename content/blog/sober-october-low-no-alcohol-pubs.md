@@ -12,6 +12,9 @@ tags:
   - "sober october"
   - "alcohol free pub"
   - "pub drinks"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "Low and no alcohol drinks that actually sell in your pub. A tight range, staff scripts, pricing for margin, food pairings and how to promote Sober October."
 keywords:

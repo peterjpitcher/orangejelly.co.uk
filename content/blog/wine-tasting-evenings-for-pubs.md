@@ -12,6 +12,10 @@ tags:
   - "pub wine sales"
   - "wine tasting night"
   - "pub events"
+seasons:
+  - autumn
+  - winter
+occasions: []
 status: "published"
 metaDescription: "How to run a wine tasting evening in your pub without overcomplicating it. A simple £10 flight format, staff crib notes, food pairings and repeat bookings."
 keywords:

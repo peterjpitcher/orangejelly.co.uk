@@ -5,6 +5,9 @@ publishedAt: "2026-01-28"
 description: "Summer is not one long season. It is a chain of moments. A guide to winning summer with simple, effective campaigns."
 category: "events"
 tags: ["summer", "campaigns", "events", "marketing"]
+seasons:
+  - summer
+occasions: []
 featuredImage: "/images/blog/summer-moments-simple-campaigns.png"
 author: "Peter Pitcher"
 voiceSearchQueries:

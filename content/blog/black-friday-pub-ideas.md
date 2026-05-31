@@ -12,6 +12,11 @@ tags:
   - "pub gift cards"
   - "cyber monday pub"
   - "st andrews day pub"
+seasons:
+  - autumn
+  - winter
+occasions:
+  - black-friday
 status: "published"
 metaDescription: "A Black Friday plan for pubs that protects margin: sell gift cards, take Christmas deposits, run a January bounce-back, and mark St Andrew's Day on 30 November."
 keywords:

@@ -14,6 +14,12 @@ tags:
   - "holiday events"
   - "event planning"
   - "year-round marketing"
+seasons:
+  - spring
+  - summer
+  - autumn
+  - winter
+occasions: []
 status: "published"
 metaDescription: "Complete seasonal pub events calendar with month-by-month ideas. From Burns Night to Christmas parties, discover profitable events that work throughout"
 keywords:

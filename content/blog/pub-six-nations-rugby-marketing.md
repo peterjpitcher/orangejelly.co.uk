@@ -13,6 +13,11 @@ tags:
   - "rugby"
   - "pub events"
   - "match day"
+seasons:
+  - winter
+  - spring
+occasions:
+  - six-nations
 status: "published"
 metaDescription: "How to screen Six Nations rugby in your pub. Screening setup, food and drink deals, booking systems, social media promotion, and converting visitors into regulars."
 keywords:

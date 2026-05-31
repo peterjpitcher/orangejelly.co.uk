@@ -12,6 +12,9 @@ tags:
   - "cask ale"
   - "real ale pub"
   - "pub events"
+seasons:
+  - autumn
+occasions: []
 status: "published"
 metaDescription: "Cask Ale Week 2026 runs 17–27 September. A practical 10-day plan for pubs: featured cask, cask passport, tasting paddles and plain-English notes that build lasting sales."
 keywords:
