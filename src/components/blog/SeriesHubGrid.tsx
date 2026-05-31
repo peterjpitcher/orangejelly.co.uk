@@ -46,7 +46,7 @@ export default function SeriesHubGrid({
   posts,
   baseUrl,
   heading = 'The full Autumn Pub Playbook',
-  subtitle = 'Seven practical guides — pick the moments that fit your pub.',
+  subtitle = 'Practical guides — pick the moments that fit your pub.',
   listName = 'The Autumn Pub Playbook',
 }: SeriesHubGridProps) {
   if (!posts || posts.length === 0) return null;

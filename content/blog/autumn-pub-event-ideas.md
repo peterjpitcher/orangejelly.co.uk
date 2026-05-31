@@ -1,9 +1,9 @@
 ---
-title: "The Autumn Pub Playbook: How to Fill Your Pub from September to November"
+title: "Autumn Pub Event Ideas: The Playbook for Sept–Nov"
 slug: "autumn-pub-event-ideas"
 publishedDate: 2026-05-25
-excerpt: "A practical autumn plan for pubs: cask, low and no, wine, Halloween, rugby and gifting — the September-to-November moments that fill tables, and how to run them."
-quickAnswer: "The autumn moments that reliably fill pubs are Cask Ale Week, Sober October's low-and-no range, wine tasting nights, Halloween and Bonfire, November rugby and early Christmas gifting. Pick two or three that fit your pub, plan them early, and take bookings before guests drift into Christmas mode."
+excerpt: "The autumn pub event ideas that actually fill tables: cask, low and no, wine, Halloween, rugby and gifting — the September-to-November moments and how to run them."
+quickAnswer: "The best autumn pub event ideas are Cask Ale Week, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire, November rugby, and early Christmas gifting. Pick two or three that fit your pub, plan them early, and take bookings before guests drift into Christmas mode."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/autumn-pub-event-ideas.svg"
@@ -16,23 +16,25 @@ seasons:
   - autumn
 occasions: []
 status: "published"
-metaDescription: "A practical autumn plan for pubs — cask, low/no, wine, Halloween, rugby and gifting. The September-to-November moments that fill tables and how to run them."
+metaDescription: "Autumn pub event ideas that fill tables — cask, low/no, wine, Halloween, rugby and gifting. A September-to-November plan and how to run each one."
 keywords:
-  - "autumn pub events"
-  - "autumn pub ideas"
-  - "autumn pub promotions"
-  - "what to do in a pub in autumn"
+  - "pub event ideas"
+  - "autumn pub event ideas"
+  - "pub entertainment ideas"
+  - "bar event ideas"
+  - "pub promotion ideas"
+  - "seasonal pub marketing ideas"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "what events can a pub run in autumn"
+  - "what are the best autumn pub event ideas"
+  - "pub event ideas to fill a quiet midweek"
   - "how do I get my pub busy in November"
-  - "autumn pub promotion ideas"
   - "what dates matter for pubs in autumn"
 faqs:
-  - question: "What are the best autumn events for a pub?"
-    answer: "The reliable ones are Cask Ale Week in September, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire Night, November rugby, and early Christmas gifting. Pick the two or three that fit your pub rather than trying to run all of them."
+  - question: "What are the best autumn pub event ideas?"
+    answer: "The reliable autumn pub event ideas are Cask Ale Week in September, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire Night, November rugby, and early Christmas gifting. Pick the two or three that fit your pub rather than trying to run all of them."
   - question: "When should I start planning autumn?"
     answer: "Now. The moments run from mid-September to the end of November, and the pubs that win take bookings weeks ahead. Block the dates, brief the team, and open bookings three to four weeks before each event."
   - question: "How do I get my pub busy in November?"
@@ -49,9 +51,9 @@ schema:
   "@type": "Article"
 ---
 
-# The Autumn Pub Playbook: How to Fill Your Pub from September to November
+# Autumn Pub Event Ideas: The Autumn Pub Playbook for September to November
 
-Autumn isn't one long season. It's a chain of reasons to visit — a pint of cask in September, a coffee for a good cause, a brilliant alcohol-free round in October, a Halloween night that fills the diary, a new glass off the wine list, a pub full of rugby shirts in November.
+The best autumn pub event ideas aren't one long season — they're a chain of reasons to visit. A pint of cask in September, a coffee for a good cause, a brilliant alcohol-free round in October, a Halloween night that fills the diary, a new glass off the wine list, a pub full of rugby shirts in November.
 
 At The Anchor in Stanwell Moor, the lesson is always the same: you don't need to do everything. Pick two or three of the moments below that suit your pub, plan them early, and give people a reason to book before everyone drifts into Christmas mode. This is the overview — each section links to the full how-to.
 
@@ -59,7 +61,7 @@ At The Anchor in Stanwell Moor, the lesson is always the same: you don't need to
 
 ## September: cask and community
 
-September is about easing people back into midweek habits as the nights draw in. **Cask Ale Week (17–27 September)** is the easy excuse to get regulars trying something new and casual drinkers asking questions at the bar — one featured cask, a plain-English tasting note, and a confident staff recommendation go a long way. The full ten-day plan is in our [Cask Ale Week guide](/licensees-guide/cask-ale-week-pub-guide).
+September is about easing people back into midweek habits as the nights draw in. **Cask Ale Week (expected 17–27 September)** is the easy excuse to get regulars trying something new and casual drinkers asking questions at the bar — one featured cask, a plain-English tasting note, and a confident staff recommendation go a long way. The full ten-day plan is in our [Cask Ale Week guide](/licensees-guide/cask-ale-week-pub-guide).
 
 The same week, **Macmillan's World's Biggest Coffee Morning (Friday 25 September)** fills a quiet daytime and does some good — coffee, cake, and a reason for the community to gather before the lunch rush.
 
@@ -79,18 +81,18 @@ November is a rugby month. The autumn internationals run through the first three
 
 That last weekend also brings **Black Friday (27 Nov)**, then **Cyber Monday and St Andrew's Day (both Mon 30 Nov)**. Rather than discounting your margin away, sell **gift cards, take Christmas party deposits, and push a January bounce-back voucher** — turn autumn footfall into Christmas bookings. When you're ready for December, our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) and guide to [filling December bookings](/licensees-guide/pub-christmas-bookings-fill-december) pick up the baton.
 
-## Your first move
+## Choosing your autumn pub event ideas
 
-Don't try to run the whole calendar. Pick the two or three moments that fit your pub and your crowd, block the dates now, and open bookings early. Brief the team so everyone can talk about what's on, and use every event to capture the next booking before people leave.
+Don't try to run the whole calendar. The best autumn pub event ideas are the two or three that fit your pub and your crowd — so pick those, block the dates now, and open bookings early. Brief the team so everyone can talk about what's on, and use every event to capture the next booking before people leave.
 
-For a month-by-month framework you can reuse every year, use our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar). For the wider list of formats beyond autumn, see [pub event ideas](/licensees-guide/pub-event-ideas).
+A few of the moments above lean on drinks and entertainment (cask, wine, the rugby), and a few are pure promotion (gifting, the Christmas bounce-back). That mix is deliberate: a good autumn balances something to do with something to sell. If you want more pub entertainment ideas to slot alongside these — quizzes, live music, that sort of thing — and a wider set of bar event ideas and pub promotion ideas for the rest of the year, our [pub event ideas guide](/licensees-guide/pub-event-ideas) is the full list. For a month-by-month framework of seasonal pub marketing ideas you can reuse every year, use our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar).
 
 If you'd like a hand choosing the right moments for your pub or building the promotion around them, that's what we do at Orange Jelly — see [how we work with pubs](/ways-to-work).
 
 ## FAQs
 
-**What are the best autumn events for a pub?**
-The reliable ones are Cask Ale Week in September, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire Night, November rugby, and early Christmas gifting. Pick the two or three that fit your pub.
+**What are the best autumn pub event ideas?**
+The reliable autumn pub event ideas are Cask Ale Week in September, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire Night, November rugby, and early Christmas gifting. Pick the two or three that fit your pub.
 
 **When should I start planning autumn?**
 Now. The moments run from mid-September to the end of November, and the pubs that win take bookings weeks ahead. Block the dates and open bookings three to four weeks before each event.

@@ -1,40 +1,49 @@
 ---
-title: "Vodka, Gin and Champagne Days: Easy Autumn Drinks Activations"
+title: "National Vodka Day & Drinks Days: A Pub Calendar"
 slug: "national-drinks-days-pub-guide"
 publishedDate: 2026-05-25
-excerpt: "Three autumn drinks days your pub can run in a single shift. Vodka, gin and tonic, and a Champagne weekend, with serves, pricing and promotion that actually work."
-quickAnswer: "Three autumn drinks days fit neatly into the run-up to Christmas: National Vodka Day on Sunday 4 October, International Gin and Tonic Day on Monday 19 October, and Champagne Day, which you run as a weekend on Friday 23 and Saturday 24 October. Each needs one featured serve, one chalkboard and one social post."
+excerpt: "A pub calendar of national drinks days to pick from, anchored by National Vodka Day. Pick a hook, run it in one shift, with serves, pricing and promotion that work."
+quickAnswer: "National Vodka Day is Sunday 4 October 2026, and it anchors a calendar of national drinks days a pub can pick from. The easy autumn run is National Vodka Day (4 Oct), International Gin and Tonic Day (19 Oct) and Champagne Day (the fourth Friday of October, 23 Oct 2026). Earlier in the year you've also got World Gin Day, National Beer Day, National Prosecco Day and World Cocktail Day. Each needs one featured serve, one chalkboard and one social post."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/national-drinks-days-pub-guide.svg"
 tags:
   - "national vodka day"
-  - "international gin and tonic day"
-  - "champagne day"
+  - "national drinks days"
+  - "world gin day"
+  - "international champagne day"
   - "pub drinks promotion"
 seasons:
   - autumn
 occasions: []
 status: "published"
-metaDescription: "National Vodka Day, Gin and Tonic Day and Champagne Day for pubs. Low-effort, high-margin autumn drinks activations with serves, pricing and promotion that work."
+metaDescription: "National Vodka Day and a calendar of national drinks days for pubs, from world gin day to national beer day. Low-effort serves, pricing and promotion."
 keywords:
-  - "national vodka day 2026"
-  - "international gin and tonic day"
-  - "champagne day pub"
-  - "pub cocktail promotion ideas"
+  - "national vodka day"
+  - "national drinks days"
+  - "world gin day"
+  - "national beer day"
+  - "national cocktail day"
+  - "national prosecco day"
+  - "international champagne day"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
   - "when is national vodka day 2026"
-  - "when is international gin and tonic day 2026"
+  - "what national drinks days can a pub run"
+  - "when is world gin day 2026"
+  - "when is national beer day 2026"
   - "when is champagne day 2026"
-  - "pub cocktail promotion ideas"
 faqs:
   - question: "When is National Vodka Day 2026?"
-    answer: "National Vodka Day is Sunday 4 October 2026. It lands perfectly on a Sunday, so build it around a Bloody Mary brunch or a signature martini and run it alongside your usual roast trade."
-  - question: "When is International Gin and Tonic Day 2026?"
-    answer: "International Gin and Tonic Day is Monday 19 October 2026. A Monday is one of the quietest nights of the week, which is exactly why a G&T board and a local gin spotlight earn their keep here."
+    answer: "National Vodka Day is Sunday 4 October 2026. It lands perfectly on a Sunday, so build it around a Bloody Mary brunch or a signature martini and run it alongside your usual roast trade. It's also the easiest of the national drinks days to start with."
+  - question: "What national drinks days can a pub run through the year?"
+    answer: "Plenty, and you only need a few. The easy autumn run is National Vodka Day (4 October), International Gin and Tonic Day (19 October) and Champagne Day (the fourth Friday of October, 23 October 2026). Earlier in the year there's World Gin Day (the second Saturday of June), National Beer Day or Beer Day Britain (15 June), National Prosecco Day (13 August) and World Cocktail Day (13 May). Pick the ones that suit your crowd rather than chasing all of them."
+  - question: "When is World Gin Day 2026?"
+    answer: "World Gin Day falls on the second Saturday of June, which is 13 June 2026. Being a Saturday it suits a proper gin board and a local distillery spotlight, where International Gin and Tonic Day on 19 October is better as a quiet-Monday lift."
+  - question: "When is National Beer Day 2026?"
+    answer: "National Beer Day in Britain, also called Beer Day Britain, is 15 June every year, which in 2026 is a Monday. It's tied to the sealing of Magna Carta and has a 7pm Cheers to Beer toast, so it's an easy excuse to feature a local cask or a guest beer."
   - question: "When is Champagne Day 2026?"
     answer: "International Champagne Day falls on the fourth Friday of October, which is Friday 23 October 2026. Run it as a Champagne Weekend across Friday 23 and Saturday 24 October so you keep the Saturday trade too."
   - question: "How do I run a low-effort drinks day in a pub?"
@@ -49,15 +58,29 @@ schema:
   "@type": "Article"
 ---
 
-# Vodka, Gin and Champagne Days: Easy Autumn Drinks Activations
+# National Vodka Day & Drinks Days: A Pub Calendar to Pick From
 
 *Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
 
-Autumn is full of awkward gaps. The garden has gone quiet, Christmas bookings haven't landed yet, and the weeks between the August bank holiday and December can drift. You don't always have the time or the team to put on a full event in that window, and you don't need to.
+National Vodka Day is Sunday 4 October 2026, and it's the easiest place to start with national drinks days in your pub. There's a recognised day for nearly every spirit and style now, which sounds like a lot until you realise you don't have to run them all. You just pick the handful that suit your crowd and treat each one as a single featured serve, not a full event.
 
-This is where single-serve drinks days earn their place. National Vodka Day, International Gin and Tonic Day, Champagne Day. They're not events in the way a quiz or a pop-up is. There's no booking sheet, no host, no run-sheet. There's one drink, one reason to mention it, and a higher spend per head on a day that would otherwise tick along on the usual.
+That's the difference. A drinks day isn't a quiz or a pop-up. There's no booking sheet, no host, no run-sheet. There's one drink, one reason to mention it, and a higher spend per head on a day that would otherwise tick along on the usual.
 
-Three of them fall in October, neatly spaced through the month, right when you want to keep people in the habit of coming in before the Christmas rush starts. This guide covers exactly how to run each one in a single shift, and how to price them so they actually move your margin rather than just your stock.
+Three of the best fall in October, neatly spaced through the month, right when you want to keep people in the habit of coming in before the Christmas rush starts. Below is a calendar you can pick from, then exactly how to run any one of them in a single shift, and how to price them so they actually move your margin rather than just your stock.
+
+## The national drinks days calendar (pick what suits you)
+
+Here's the shortlist worth a pub's attention. Dates that move around are described by their rule as well, so you can plan ahead without second-guessing.
+
+- **World Cocktail Day — Wednesday 13 May 2026.** The internationally recognised one (the UK also nods to National Cocktail Day on 24 March). A single signature cocktail on the board is plenty.
+- **World Gin Day — Saturday 13 June 2026** (the second Saturday of June). A Saturday, so it suits a proper gin board and a local distillery spotlight.
+- **National Beer Day — Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask.
+- **National Prosecco Day — Thursday 13 August 2026.** High summer, fizz by the glass, garden weather. Easy yes for a treat.
+- **National Vodka Day — Sunday 4 October 2026.** Lands on a Sunday, so it rides alongside your roast trade. The pick of the bunch to start with.
+- **International Gin and Tonic Day — Monday 19 October 2026.** A quiet Monday, which is exactly why a G&T lift earns its keep.
+- **International Champagne Day — Friday 23 October 2026** (the fourth Friday of October). Run it as a weekend and keep the Saturday too.
+
+You won't run all seven, and you shouldn't try. The three October dates make the tidiest autumn run, so the rest of this guide works through those in detail. The earlier dates are there for when you're planning the wider year.
 
 ## Why a single drink is the easiest hook you've got
 
@@ -65,7 +88,7 @@ A spirit has a built-in story. People already know what a martini is, what a goo
 
 That's the whole trick. A featured serve nudges spend per head up without asking anyone to plan their week around you. The drinks are high-margin to begin with, the theatre is free, and the prep is minimal. One chalkboard does most of the marketing in the room. One social post does the rest outside it.
 
-And because each of these days is a recognised date, you're borrowing a hook that's already in people's heads. You don't have to explain why today is vodka day. You just have to have something worth ordering when they walk in.
+And because each of these national drinks days is a recognised date, you're borrowing a hook that's already in people's heads. You don't have to explain why today is vodka day. You just have to have something worth ordering when they walk in.
 
 A quick word before the fun bit: these days are about trading up, not drinking more. Keep your sensible drinks messaging visible, run Challenge 25 as you always do, and a small Drinkaware line on the menu never goes amiss.
 
@@ -142,10 +165,16 @@ If you'd like a hand building a drinks offer that genuinely lifts spend rather t
 ## FAQs
 
 **When is National Vodka Day 2026?**
-National Vodka Day is Sunday 4 October 2026. It lands on a Sunday, so build it around a Bloody Mary brunch or a signature martini and let it run alongside your roast trade.
+National Vodka Day is Sunday 4 October 2026. It lands on a Sunday, so build it around a Bloody Mary brunch or a signature martini and let it run alongside your roast trade. It's also the easiest of the national drinks days to start with.
 
-**When is International Gin and Tonic Day 2026?**
-International Gin and Tonic Day is Monday 19 October 2026. Monday is usually a quiet night, which is exactly why a G&T board and a local gin spotlight earn their keep.
+**What national drinks days can a pub run through the year?**
+Plenty, and you only need a few. The easy autumn run is National Vodka Day (4 October), International Gin and Tonic Day (19 October) and Champagne Day (the fourth Friday of October, 23 October 2026). Earlier in the year there's World Gin Day (the second Saturday of June), National Beer Day or Beer Day Britain (15 June), National Prosecco Day (13 August) and World Cocktail Day (13 May). Pick the ones that suit your crowd rather than chasing all of them.
+
+**When is World Gin Day 2026?**
+World Gin Day falls on the second Saturday of June, which is 13 June 2026. Being a Saturday it suits a proper gin board and a local distillery spotlight, where International Gin and Tonic Day on 19 October is better as a quiet-Monday lift.
+
+**When is National Beer Day 2026?**
+National Beer Day in Britain, also called Beer Day Britain, is 15 June every year, which in 2026 is a Monday. It's tied to the sealing of Magna Carta and has a 7pm Cheers to Beer toast, so it's an easy excuse to feature a local cask or a guest beer.
 
 **When is Champagne Day 2026?**
 International Champagne Day falls on the fourth Friday of October, which is Friday 23 October 2026. Run it as a Champagne Weekend across Friday 23 and Saturday 24 October so you keep the Saturday trade too.

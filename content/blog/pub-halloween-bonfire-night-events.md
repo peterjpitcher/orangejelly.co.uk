@@ -1,40 +1,45 @@
 ---
-title: "Pub Bonfire Night & Halloween: Events That Actually Work"
+title: "Halloween Food & Party Ideas for Pubs (+ Bonfire Night)"
 slug: "pub-halloween-bonfire-night-events"
-publishedDate: 2025-09-29
-excerpt: "Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family-friendly daytime events, ticketed fireworks, and seasonal food tie-ins that drive real revenue."
-quickAnswer: "The best pub Halloween and Bonfire Night events are practical, not gimmicky. A themed quiz night, a family pumpkin afternoon, and a ticketed fireworks viewing with a bonfire menu can each add hundreds of pounds to a single weekend. Start promoting six weeks out, build a simple social media countdown, and focus on food and drink tie-ins that lift your average spend."
+publishedDate: 2026-05-25
+excerpt: "Halloween food ideas and party ideas for pubs that actually drive trade — themed menus, adult party nights, plus Bonfire Night events and food. Practical, profitable, and easy to run."
+quickAnswer: "The best Halloween food ideas for pubs are warming, shareable, and high-margin: loaded nachos, chilli in a bread bowl, toffee apples and dark cocktails with a bit of theatre. For Halloween party ideas, pair a themed quiz or a ticketed adult party night with that food, then carry the momentum into Bonfire Night with hot dogs, mulled cider and a fixed-price supper. Promote six weeks out and lean on the food to lift your average spend."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/pub-halloween-bonfire-night-events.svg"
 tags:
+  - "halloween food ideas"
+  - "halloween party ideas"
   - "pub halloween party"
-  - "pub bonfire night"
+  - "bonfire night events"
   - "pub autumn events"
-  - "seasonal pub events"
-  - "pub event ideas"
 seasons:
   - autumn
 occasions:
   - halloween
   - bonfire-night
 status: "published"
-metaDescription: "Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family daytime events, ticketed fireworks, and seasonal menus that actually drive revenue."
+metaDescription: "Halloween food ideas and party ideas for pubs — themed menus, adult party nights, plus Bonfire Night events and food. Practical, profitable, easy to run."
 keywords:
-  - "pub halloween party"
-  - "pub bonfire night"
-  - "pub autumn events"
-  - "halloween pub event ideas"
-  - "bonfire night pub"
+  - "halloween food ideas"
+  - "halloween party ideas"
+  - "adult halloween party ideas"
+  - "halloween bar ideas"
+  - "bonfire night events"
+  - "bonfire night food"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "what events should a pub run for Halloween?"
+  - "what are good halloween food ideas for a pub?"
+  - "halloween party ideas for adults at a pub"
+  - "what food should a pub serve for bonfire night?"
   - "how do I plan a bonfire night at my pub?"
-  - "pub halloween party ideas that work"
-  - "how to do a fireworks night at a pub"
 faqs:
+  - question: "What are the best Halloween food ideas for a pub?"
+    answer: "Keep it warming, shareable, and high-margin. Loaded nachos badged as 'witches' fingers', chilli served in a hollowed bread bowl, pumpkin soup, and toffee apples or sticky toffee pudding for afters all photograph well and cost pennies to dress up. Put one or two dark cocktails on the bar — a rum punch or a green apple sour with a bit of dry ice — and you lift the average spend without touching your kitchen prep much."
+  - question: "What are good Halloween party ideas for adults at a pub?"
+    answer: "A ticketed adult Halloween party night works best: charge a small entry fee, include a drink on arrival, and run a fancy dress competition with a bar tab as the prize so the winner spends it with you. Pair it with a Halloween cocktail menu and a themed quiz, and hold it on the nearest Friday or Saturday rather than midweek so people can actually turn up. Halloween 2026 falls on Saturday 31 October, which makes that weekend an easy one to build around."
   - question: "How far in advance should I promote a pub Halloween event?"
     answer: "Start six weeks before, around mid-September. Post a mark-your-calendar on social media, add the event to your Google Business Profile, and open ticket sales or bookings at least three weeks out. A countdown series on social media in the final two weeks builds urgency and fills late seats."
   - question: "Do I need a TEN for a pub bonfire night event?"
@@ -55,17 +60,19 @@ schema:
   "@type": "Article"
 ---
 
-# Pub Bonfire Night & Halloween: Events That Actually Work
+# Halloween Food & Party Ideas for Pubs (+ Bonfire Night)
 
-October and November are two of the most underused months in the pub calendar. Summer beer gardens have gone quiet, Christmas bookings have not started yet, and the weather is doing its best to keep people at home.
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
 
-But here is the thing. Halloween and Bonfire Night are two of the few occasions in the entire year when people actively want a reason to go out. They want atmosphere. They want something to do. They want somewhere warm with good food and a decent drink.
+The best Halloween food ideas for a pub aren't a freezer full of novelty nonsense — they're warming, shareable plates you can dress up for pennies and sell at a proper margin. And the best Halloween party ideas aren't a wall of pound-shop cobwebs either. They're a reason to go out: a themed quiz, a daft fancy dress competition, a dark cocktail with a bit of theatre. Get the food and the party right and October stops being a dead month. Then Bonfire Night, a week later, gives you a second bite of the same crowd.
 
-If you give them that, they will come. And they will spend.
+That matters because October and November are two of the most underused months in the pub calendar. Summer beer gardens have gone quiet, Christmas bookings haven't started yet, and the weather's doing its best to keep people at home.
 
-At The Anchor in Stanwell Moor, our autumn events regularly fill the pub on nights that would otherwise be quiet. None of what we do is complicated. It is just planned properly and promoted early enough.
+But here's the thing. Halloween and Bonfire Night are two of the few occasions all year when people actively want a reason to go out. They want atmosphere. Somewhere warm, good food, a decent drink. Give them that and they'll come — and they'll spend.
 
-This guide covers exactly what works. No plastic skeletons from a pound shop. No events that cost more to run than they bring in. Just practical, profitable ideas you can adapt to your pub, your space, and your team.
+At The Anchor in Stanwell Moor, our autumn events regularly fill the pub on nights that would otherwise be quiet. None of it's complicated. It's just planned properly and promoted early enough.
+
+This guide covers what actually works. No plastic skeletons from a pound shop, no events that cost more to run than they bring in. Just practical, profitable ideas you can adapt to your pub, your space, and your team. We'll lead with the Halloween food and party side, then carry it through to Bonfire Night.
 
 ## Why autumn events matter more than you think
 
@@ -75,7 +82,22 @@ Halloween and Bonfire Night give you two natural anchor points. They are built-i
 
 Done well, a strong October and November also sets up your December. Customers who come for your Halloween quiz or Bonfire Night supper are the same people who will book your Christmas party if you ask them at the right moment.
 
-## Halloween events that actually fill your pub
+## Halloween food ideas that lift your spend
+
+Start with the food, because it's where the margin lives and it's the bit most pubs phone in. You don't need a separate Halloween menu printed up — you need three or four warming, shareable plates off your existing kitchen, badged with a daft name and a chalkboard.
+
+Here's what works without tying your kitchen in knots:
+
+- **"Witches' fingers" loaded nachos.** Your normal nachos, a sausage finger on top, a smear of red sauce. Costs pennies, photographs brilliantly, and people order it because of the name.
+- **Chilli in a hollowed bread bowl.** Batch-cook the chilli, hollow a cob, ladle it in. Warming, filling, high-margin, and it looks the part without any effort.
+- **Pumpkin soup in a mug.** Cheap to make, sells as a starter or a standalone, and ties straight into the season.
+- **Toffee apples and sticky toffee pudding** for afters. Traditional, expected, profitable. A toffee apple on every table as a bit of theatre costs next to nothing.
+
+The drinks are where you turn a meal into an occasion. One or two Halloween cocktails on the bar — a dark rum punch, or a green apple sour with a bit of dry ice — cost pennies to make, photograph well, and carry a premium. That's your Halloween bar ideas sorted: you don't need a cocktail list as long as your arm, you need two drinks people will queue up to photograph.
+
+The whole point of leading with food is that it does the quiet work. The drinks largely take care of themselves on a busy night. It's the plates that protect your margin and give people a reason to stay for another round.
+
+## Halloween party ideas that actually fill your pub
 
 ### The themed quiz night
 
@@ -118,9 +140,11 @@ Daytime trade in autumn is hard. Families are back into the school routine, the 
 
 Pumpkins, tea lights, newspaper, and a few bags of fun-size chocolate. You are looking at under fifty pounds for materials that can drive a full afternoon of covers.
 
-### The Halloween party night
+### The adult Halloween party night
 
-A full evening Halloween party works best if your pub has a younger or mixed-age crowd and if you have space for either a DJ or live music. Be honest about whether this suits your venue. A forced party night in a quiet village local can feel awkward and lose money.
+When people search for adult Halloween party ideas, this is the one they mean: a proper evening event for grown-ups, not a kids' afternoon with cobwebs. A full Halloween party night works best if your pub has a younger or mixed-age crowd and you have space for a DJ or live music. Be honest about whether it suits your venue — a forced party night in a quiet village local can feel awkward and lose money.
+
+One thing in your favour for 2026: **Halloween falls on Saturday 31 October**, so you can run the party on the night itself without dragging anyone out midweek. That doesn't happen every year, so make the most of it.
 
 **If it does suit you:**
 
@@ -133,9 +157,11 @@ A full evening Halloween party works best if your pub has a younger or mixed-age
 
 - Over-decorating to the point where it looks cheap. A few well-placed items beat a hundred pound shop purchases
 - Promising a DJ and then playing Spotify through a Bluetooth speaker. If you cannot afford proper entertainment, do not advertise it
-- Running it on Halloween night itself if that falls midweek. Move it to the nearest Friday or Saturday when people can actually come
+- In a year where Halloween lands midweek, do not cling to the date itself. Move it to the nearest Friday or Saturday when people can actually come. (You're fine in 2026 — it's a Saturday.)
 
 ## Bonfire Night events that work for pubs
+
+**Bonfire Night falls on Thursday 5 November 2026.** A weeknight, so the smart money runs the big event on the Saturday either side and treats the night itself as a warming midweek supper. Either way, bonfire night events live or die on the food and the atmosphere far more than on actual fireworks — which, as you'll see, most pubs are better off not hosting themselves.
 
 ### The ticketed fireworks viewing
 
@@ -158,9 +184,9 @@ If your pub is within sight of a local display, or within walking distance of on
 - A fire pit or chiminea in the beer garden creates genuine bonfire atmosphere without the safety complications
 - Indoor sparkler cakes for dessert. Yes, they exist, and they photograph brilliantly
 
-### The bonfire menu
+### Bonfire Night food: the menu that protects your margin
 
-Food is where the real margin lives on Bonfire Night. People expect and want warming, hearty food. This plays to a pub kitchen's strengths.
+Food is where the real margin lives on Bonfire Night. People expect and want warming, hearty food — and good bonfire night food plays straight to a pub kitchen's strengths.
 
 **Menu ideas that work:**
 
@@ -300,4 +326,29 @@ Halloween and Bonfire Night are two of the easiest revenue opportunities in the 
 
 Keep it practical, promote it early, and focus on the food and drink tie-ins that actually make you money. You do not need a haunted house or a professional fireworks display. You need a well-planned event, a decent menu, and six weeks of consistent promotion.
 
+Halloween and Bonfire Night are two threads in a busier autumn. If you're planning the whole run, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls September to November together — and [the Cask Ale Week plan](/licensees-guide/cask-ale-week-pub-guide) is a good companion piece for the same period.
+
 Start planning now. Your autumn is about to get a lot busier.
+
+## FAQs
+
+**What are the best Halloween food ideas for a pub?**
+Keep it warming, shareable, and high-margin. Loaded nachos badged as "witches' fingers", chilli served in a hollowed bread bowl, pumpkin soup, and toffee apples or sticky toffee pudding for afters all photograph well and cost pennies to dress up. Put one or two dark cocktails on the bar — a rum punch or a green apple sour with a bit of dry ice — and you lift the average spend without touching your kitchen prep much.
+
+**What are good Halloween party ideas for adults at a pub?**
+A ticketed adult Halloween party night works best: charge a small entry fee, include a drink on arrival, and run a fancy dress competition with a bar tab as the prize so the winner spends it with you. Pair it with a Halloween cocktail menu and a themed quiz, and hold it on the nearest Friday or Saturday rather than midweek so people can actually turn up. Halloween 2026 falls on Saturday 31 October, which makes that weekend an easy one to build around.
+
+**How far in advance should I promote a pub Halloween event?**
+Start six weeks before, around mid-September. Post a mark-your-calendar on social media, add the event to your Google Business Profile, and open ticket sales or bookings at least three weeks out. A countdown series on social media in the final two weeks builds urgency and fills late seats.
+
+**Do I need a TEN for a pub bonfire night event?**
+If you are selling alcohol within your existing licensed hours and on your licensed premises, you do not need a Temporary Event Notice. However, if you plan to extend hours, serve alcohol in an unlicensed outdoor area, or host the event off-site, you may need a TEN. Check with your local council at least four weeks in advance.
+
+**Can a pub legally have a bonfire or fireworks?**
+You need to check with your local council and fire service. Most urban pubs cannot safely host a live bonfire, but a fire pit or chiminea in a beer garden can create the atmosphere. For fireworks, you typically need a licensed display operator and public liability insurance. Many pubs find it easier to partner with a local fireworks display and host the after-party instead.
+
+**What food should a pub serve for bonfire night?**
+Think warming, shareable, and high-margin. Loaded hot dogs, chilli con carne with jacket potatoes, pulled pork buns, and soup in mugs all work well. Toffee apples, parkin, and sticky toffee pudding are traditional dessert options. A set bonfire menu at a fixed price simplifies kitchen ops and protects your margin.
+
+**How do I make a pub Halloween event family-friendly during the day?**
+Run a daytime session between midday and three in the afternoon, separate from any adult evening event. Pumpkin carving, a fancy dress parade with small prizes, and a simple treasure hunt around the pub keep children entertained. Serve a kids meal deal alongside your regular menu so parents spend on food and drinks while the children are occupied.

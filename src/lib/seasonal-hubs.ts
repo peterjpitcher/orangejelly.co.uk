@@ -34,6 +34,11 @@ export const SEASON_HUBS: SeasonalHub[] = [
         opportunity: 'Beer of the day, cask passport, meet-the-brewer',
       },
       {
+        date: '19 Sep–4 Oct',
+        moment: 'Oktoberfest',
+        opportunity: 'Steins, pretzels and an Oompah night of your own',
+      },
+      {
         date: 'Fri 25 Sep',
         moment: 'Macmillan Coffee Morning',
         opportunity: 'A quiet daytime filled, and a good cause',
@@ -93,8 +98,10 @@ export const SEASON_HUBS: SeasonalHub[] = [
       'wine-tasting-evenings-for-pubs',
       'sober-october-low-no-alcohol-pubs',
       'cask-ale-week-pub-guide',
+      'oktoberfest-pub-guide',
       'macmillan-coffee-morning-pub-guide',
       'national-drinks-days-pub-guide',
+      'pub-halloween-bonfire-night-events',
       'autumn-rugby-nations-championship-pubs',
       'black-friday-pub-ideas',
     ],
