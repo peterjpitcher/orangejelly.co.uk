@@ -2,6 +2,7 @@
 title: "Autumn Pub Event Ideas: The Playbook for Sept–Nov"
 slug: "autumn-pub-event-ideas"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "The autumn pub event ideas that actually fill tables: cask, low and no, wine, Halloween, rugby and gifting — the September-to-November moments and how to run them."
 quickAnswer: "The best autumn pub event ideas are Cask Ale Week, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire, November rugby, and early Christmas gifting. Pick two or three that fit your pub, plan them early, and take bookings before guests drift into Christmas mode."
 author: "Peter Pitcher"
@@ -63,13 +64,15 @@ At The Anchor in Stanwell Moor, the lesson is always the same: you don't need to
 
 September is about easing people back into midweek habits as the nights draw in. **Cask Ale Week (expected 17–27 September)** is the easy excuse to get regulars trying something new and casual drinkers asking questions at the bar — one featured cask, a plain-English tasting note, and a confident staff recommendation go a long way. The full ten-day plan is in our [Cask Ale Week guide](/licensees-guide/cask-ale-week-pub-guide).
 
-The same week, **Macmillan's World's Biggest Coffee Morning (Friday 25 September)** fills a quiet daytime and does some good — coffee, cake, and a reason for the community to gather before the lunch rush.
+The biggest September opportunity, though, lands right at the end of the month: **Oktoberfest** runs into the last weekend, and it's the easiest themed night to make a proper noise about — steins, a stack of bratwurst, a bit of oompah and a German beer or two on the bar. Our [Oktoberfest pub guide](/licensees-guide/oktoberfest-pub-guide) has the whole thing, from the food to the playlist.
+
+The same week, **Macmillan's World's Biggest Coffee Morning (Friday 25 September)** fills a quiet daytime and does some good — coffee, cake, and a reason for the community to gather before the lunch rush. Our [coffee morning guide for pubs](/licensees-guide/macmillan-coffee-morning-pub-guide) has the run-sheet, the raffle and how to make a daytime pay.
 
 ## October: low/no, wine and the spirit days
 
 **Sober October** is not a threat to your wet sales — it's a chance to sell to drivers, moderators, midweek visitors and anyone who wants to stay longer without another full-strength round. A small, visible low/no range earns its place all year. See [Sober October: low and no drinks that sell](/licensees-guide/sober-october-low-no-alcohol-pubs).
 
-October is also the right month to **relaunch your wine list** before party season — make it easy to choose, put a staff pick on social, and test a tasting night. Our guide to [running a wine tasting evening](/licensees-guide/wine-tasting-evenings-for-pubs) keeps it simple. Build in the drinks days as light hooks too: **National Vodka Day (4 Oct)**, **Gin & Tonic Day (19 Oct)** and **Champagne Weekend (23–24 Oct)**.
+October is also the right month to **relaunch your wine list** before party season — make it easy to choose, put a staff pick on social, and test a tasting night. Our guide to [running a wine tasting evening](/licensees-guide/wine-tasting-evenings-for-pubs) keeps it simple. Build in the [national drinks days](/licensees-guide/national-drinks-days-pub-guide) as light hooks too — **National Vodka Day (4 Oct)**, **Gin & Tonic Day (19 Oct)** and **Champagne Weekend (23–24 Oct)** — each one a single featured serve that lifts spend without becoming a whole event.
 
 ## Halloween and Bonfire
 

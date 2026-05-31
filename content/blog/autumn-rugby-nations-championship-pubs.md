@@ -2,6 +2,7 @@
 title: "Autumn Internationals 2026: Fill Your Pub for the Rugby"
 slug: "autumn-rugby-nations-championship-pubs"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "Your operator's guide to filling the pub for the autumn internationals in November 2026. Where to watch rugby, table bookings, match platters and a screen checklist."
 quickAnswer: "The autumn internationals are the home nations' November rugby window, and in 2026 they run inside the new Nations Championship. There's a marquee home-nation game most weekends from 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. If you show rugby in your pub, take table bookings before kick-off, build a simple match-day package, and check your screens and sound work before the room fills."
 author: "Peter Pitcher"

@@ -2,6 +2,7 @@
 title: "National Vodka Day & Drinks Days: A Pub Calendar"
 slug: "national-drinks-days-pub-guide"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "A pub calendar of national drinks days to pick from, anchored by National Vodka Day. Pick a hook, run it in one shift, with serves, pricing and promotion that work."
 quickAnswer: "National Vodka Day is Sunday 4 October 2026, and it anchors a calendar of national drinks days a pub can pick from. The easy autumn run is National Vodka Day (4 Oct), International Gin and Tonic Day (19 Oct) and Champagne Day (the fourth Friday of October, 23 Oct 2026). Earlier in the year you've also got World Gin Day, National Beer Day, National Prosecco Day and World Cocktail Day. Each needs one featured serve, one chalkboard and one social post."
 author: "Peter Pitcher"
@@ -74,7 +75,7 @@ Here's the shortlist worth a pub's attention. Dates that move around are describ
 
 - **World Cocktail Day — Wednesday 13 May 2026.** The internationally recognised one (the UK also nods to National Cocktail Day on 24 March). A single signature cocktail on the board is plenty.
 - **World Gin Day — Saturday 13 June 2026** (the second Saturday of June). A Saturday, so it suits a proper gin board and a local distillery spotlight.
-- **National Beer Day — Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask.
+- **National Beer Day — Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask — and a natural warm-up for going bigger with your own beer festival come [Cask Ale Week](/licensees-guide/cask-ale-week-pub-guide) in September.
 - **National Prosecco Day — Thursday 13 August 2026.** High summer, fizz by the glass, garden weather. Easy yes for a treat.
 - **National Vodka Day — Sunday 4 October 2026.** Lands on a Sunday, so it rides alongside your roast trade. The pick of the bunch to start with.
 - **International Gin and Tonic Day — Monday 19 October 2026.** A quiet Monday, which is exactly why a G&T lift earns its keep.
@@ -123,7 +124,7 @@ International Champagne Day always falls on the fourth Friday of October, which 
 Fizz is the highest-margin pour on this list, and the one people most associate with "treating themselves," so it suits a weekend perfectly.
 
 - **Fizz by the glass.** The single most important move is making it available by the glass, not just the bottle. Most people won't commit to a full bottle on a whim, but a single glass to mark the occasion is an easy yes. That's where the volume is.
-- **A sparkling tasting.** A small, relaxed flight, two or three sparkling wines side by side with a card explaining each, gives people a reason to linger and order a second round. It doesn't need to be formal. A board, three small pours, a few lines of description.
+- **A sparkling tasting.** A small, relaxed flight, two or three sparkling wines side by side with a card explaining each, gives people a reason to linger and order a second round. It doesn't need to be formal. A board, three small pours, a few lines of description. It's the same format as a full [wine and cheese evening](/licensees-guide/wine-tasting-evenings-for-pubs), so if it flies you've already got the next event half-built.
 - **A premium treat.** Offer one genuinely nice option for the people who do want to push the boat out. An anniversary, a birthday, a Friday that's earned a celebration. Having something premium on the board gives that moment somewhere to land.
 
 A weekend gives the occasion room to breathe and means you're not relying on one night going well. If Friday is quiet, Saturday catches it.

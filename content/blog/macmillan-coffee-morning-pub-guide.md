@@ -2,6 +2,7 @@
 title: "Coffee Morning Ideas for Pubs: Fundraising That Works"
 slug: "macmillan-coffee-morning-pub-guide"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "Coffee morning ideas that fill a quiet daytime and raise money: a simple run-sheet, a raffle, a local-group tie-in, and how to make a Macmillan Coffee Morning pay for a wet-led pub."
 quickAnswer: "The best coffee morning ideas for pubs are the simple ones: put on coffee and cake with a donation jar, add a raffle, and tie in a local group to bring a crowd. It's one of the easiest charity fundraising ideas going — it fills a quiet daytime, lifts food and drink spend, and earns real goodwill. For the September date, sign up for the free Macmillan pack at macmillan.org.uk/coffee-morning."
 author: "Peter Pitcher"
@@ -142,7 +143,7 @@ The first coffee morning is the hard one. By the second or third, people know wh
 
 You don't have to wait a full year between them, either. The Macmillan morning in September is a brilliant launchpad, but the format works any month. A monthly or seasonal coffee morning — tied to a different local group each time, or to a seasonal moment — keeps that quiet daytime working for you all year round and gives a whole crowd of people a standing reason to choose your pub before lunch.
 
-It also slots neatly into a wider plan. If you want to build out the rest of your autumn around it, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) maps out a September-to-November calendar you can drop a coffee morning straight into.
+It also slots neatly into a wider plan. A late-September coffee morning is the gentle opener; a few weeks later your [Halloween and Bonfire Night events](/licensees-guide/pub-halloween-bonfire-night-events) bring the louder, family-and-evening trade, and the two together carry a quiet autumn from daytime right through to the dark nights. If you want to build out the rest of your autumn around it, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) maps out a September-to-November calendar you can drop a coffee morning straight into.
 
 ## A quick word on doing it properly
 

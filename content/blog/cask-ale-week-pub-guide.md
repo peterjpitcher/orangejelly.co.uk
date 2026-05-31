@@ -2,6 +2,7 @@
 title: "Beer Festival & Cask Ale Week: A 10-Day Plan for Pubs"
 slug: "cask-ale-week-pub-guide"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "Run Cask Ale Week as your own beer festival: a practical 10-day plan with a featured cask, a beer passport, tasting paddles and plain-English notes that turn one week into lasting trade."
 quickAnswer: "Run Cask Ale Week as your own small beer festival. Pick a few cask ales to feature, write a human tasting note for each, give every staff member one to recommend, and add a reason to come back. A simple beer passport gets regulars working through the range across the ten days, and a spot-on cellar means every pint tastes the way it should. You don't need a marquee or a brewery — a handful of well-kept ales and a bit of theatre is a festival."
 author: "Peter Pitcher"
@@ -178,7 +179,7 @@ A few moves that make it stick:
 - **Capture who showed up.** Every passport handed back is someone to tell about your next guest ale. Build the relationship, not just the one sale.
 - **Ask what they liked.** The ales that flew this week are the ones worth keeping on. Let your customers shape your range and they'll feel ownership of it.
 
-Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. If you're planning the whole season, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
+Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. It also sits right next to another beer-led moment: if your festival lands late in September, you can roll it straight into [Oktoberfest](/licensees-guide/oktoberfest-pub-guide) on the same kit — different beers, same theatre, two reasons to come in across one fortnight. If you're planning the whole season, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
 
 ## Your first move
 

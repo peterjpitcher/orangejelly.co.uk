@@ -2,6 +2,7 @@
 title: "Non Alcoholic Beer & a Low/No Bar That Sells: Sober October"
 slug: "sober-october-low-no-alcohol-pubs"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "Start with one cracking non alcoholic beer, then build a small alcohol free bar — low and no alcohol drinks, a non alcoholic drinks menu and mocktail menu ideas — that earns its space and sells through Sober October and beyond."
 quickAnswer: "Lead with one genuinely good non alcoholic beer, then build a small alcohol free bar around it: a cider or fizz, a proper mocktail, good softs. Put it on a non alcoholic drinks menu section, price it for the margin it deserves, and train staff to offer it naturally. Sober October gets people through the door; keep your best low and no alcohol drinks on all year and it becomes steady trade, not lost trade."
 author: "Peter Pitcher"
@@ -142,7 +143,7 @@ Then, when November comes, don't pack it all away. The whole point of those Drin
 
 And there's a natural follow-on waiting. Dry January is the same crowd, twice the volume — a whole month when half the country's at least curious about going alcohol-free. If your alcohol free bar is already bedded in by autumn, you walk into January ready instead of scrambling. We cover that one properly in the winter plans; for now, just don't dismantle in November what you'll only want to rebuild in January.
 
-If you want the wider seasonal context, this slots straight into [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) alongside your quizzes, Halloween and Bonfire Night plans.
+It pairs neatly with the rest of October's drinks calendar, too. The [national drinks days](/licensees-guide/national-drinks-days-pub-guide) — Vodka Day, Gin & Tonic Day, a Champagne weekend — all run through the same month, and a confident no/low alternative on each means the driver and the moderator get a proper version of the featured serve rather than a shrug. If you want the wider seasonal context, this slots straight into [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) alongside your quizzes, Halloween and Bonfire Night plans.
 
 One quick note on doing it responsibly: an alcohol-free range sits nicely alongside good serving practice generally. Keep supporting sensible drinking, stick to Challenge 25 on anything age-restricted, and point anyone who's interested towards Drinkaware. It's the right thing to do, and it's exactly the welcoming, non-judgemental atmosphere that makes people choose your pub in the first place.
 

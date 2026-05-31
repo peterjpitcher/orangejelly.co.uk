@@ -2,6 +2,7 @@
 title: "Halloween Food & Party Ideas for Pubs (+ Bonfire Night)"
 slug: "pub-halloween-bonfire-night-events"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "Halloween food ideas and party ideas for pubs that actually drive trade — themed menus, adult party nights, plus Bonfire Night events and food. Practical, profitable, and easy to run."
 quickAnswer: "The best Halloween food ideas for pubs are warming, shareable, and high-margin: loaded nachos, chilli in a bread bowl, toffee apples and dark cocktails with a bit of theatre. For Halloween party ideas, pair a themed quiz or a ticketed adult party night with that food, then carry the momentum into Bonfire Night with hot dogs, mulled cider and a fixed-price supper. Promote six weeks out and lean on the food to lift your average spend."
 author: "Peter Pitcher"

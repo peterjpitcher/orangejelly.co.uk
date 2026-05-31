@@ -2,6 +2,7 @@
 title: "Wine & Cheese Evening: How to Run One in Your Pub"
 slug: "wine-tasting-evenings-for-pubs"
 publishedDate: 2026-05-25
+updatedDate: 2026-05-31
 excerpt: "A plain-English guide to running a wine and cheese evening in your pub, from a simple £10 flight and pairing board to local cheese, staff crib notes and repeat bookings."
 quickAnswer: "A wine and cheese night pairs three small wine tastes with a simple cheese and charcuterie board for around £10 to £15 a head, ideally part-funded by your wine supplier. Keep it informal, give guests a scorecard, match each wine to a cheese, and take the next booking before they leave. You do not need a sommelier, just a clear running order, a decent board and confident staff."
 author: "Peter Pitcher"
@@ -150,13 +151,13 @@ The golden rule: if a customer asks what a wine's like, answer in food. "It's gr
 
 ## Other premium serve moments
 
-A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening:
+A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening. These are the [national drinks days](/licensees-guide/national-drinks-days-pub-guide) worth a look — each one a single featured serve rather than a whole event:
 
 - **National Vodka Day** (4 October) for a small batch of proper martinis or a signature serve
 - **A gin tasting evening** around International Gin & Tonic Day (19 October) — a perfect-serve flight is gin's answer to the wine flight, and it runs on exactly the same format: three contrasting gins, a scorecard, a garnish each, and a supplier glad to part-fund it
 - **Champagne Friday or a Fizz Weekend** heading into party-booking season, when people are already in the mood to treat themselves
 
-You'll find the full calendar of these in [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
+And don't forget the ones drinking less. A good alcohol-free pour deserves the same care as a fine wine, so it's worth reading your wine evening alongside our [Sober October low-and-no guide](/licensees-guide/sober-october-low-no-alcohol-pubs) — a confident no/low option means nobody at the table feels left out of the occasion. You'll find the full calendar of all this in [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
 
 ## Turning a tasting into repeat bookings
 
