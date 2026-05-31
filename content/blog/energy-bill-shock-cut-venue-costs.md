@@ -13,6 +13,9 @@ tags:
   - "sustainability"
   - "cost control"
   - "pub operations"
+seasons:
+  - winter
+occasions: []
 status: "published"
 featuredImage: "/images/blog/energy-bill-shock-cut-venue-costs.png"
 metaDescription: "Actionable energy-saving tactics for UK pubs facing bill shocks, including audits, behavioural tweaks, and supplier negotiations."

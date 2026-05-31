@@ -14,6 +14,10 @@ tags:
   - "pub events"
   - "seasonal marketing"
   - "group bookings"
+seasons:
+  - winter
+occasions:
+  - christmas
 status: "published"
 metaDescription: "How to fill your pub's December calendar with Christmas bookings. Pricing, deposits, menus, entertainment, and a promotion timeline from a working licensee."
 keywords:

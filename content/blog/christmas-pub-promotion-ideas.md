@@ -11,6 +11,11 @@ featuredImage: "/images/blog/christmas-pub-promotion-ideas.png"
 tags:
   - "seasonal"
   - "promotions"
+seasons:
+  - winter
+  - autumn
+occasions:
+  - christmas
 status: "published"
 metaDescription: "Smart licensees start Christmas planning in summer. Lock in corporate bookings, plan your festive menu, and get ahead of the competition with these 30"
 keywords:

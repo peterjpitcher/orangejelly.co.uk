@@ -13,6 +13,11 @@ tags:
   - "rugby"
   - "pub events"
   - "match day"
+seasons:
+  - winter
+  - spring
+occasions:
+  - six-nations
 status: "published"
 metaDescription: "How to screen Six Nations rugby in your pub. Screening setup, food and drink deals, booking systems, social media promotion, and converting visitors into regulars."
 keywords:
@@ -53,6 +58,8 @@ schema:
 The Six Nations is one of the biggest sporting events of the early calendar year, and for pubs it represents something rare: a guaranteed reason for people to leave their sofas and watch together. Six weekends of fixtures, afternoon kick-offs, emotionally charged crowds, and a natural appetite for food and drink.
 
 But here is what separates the pubs that profit from it and the pubs that just have a telly on in the corner: preparation. If you plan your screening, your deals, your promotion, and your follow-up properly, the Six Nations can do more than fill your pub for six Saturdays. It can introduce you to customers who come back all year.
+
+Rugby isn't only a spring fixture, either. For the autumn internationals and the new Nations Championship in November, see our [Autumn Rugby 2026 guide](/licensees-guide/autumn-rugby-nations-championship-pubs).
 
 I have screened every major tournament at The Anchor in Stanwell Moor since we took on the Greene King tenancy in 2019. Some of those tournaments were brilliant for us, and some taught us expensive lessons. This guide is built on what actually works.
 

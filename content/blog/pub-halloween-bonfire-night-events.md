@@ -13,6 +13,11 @@ tags:
   - "pub autumn events"
   - "seasonal pub events"
   - "pub event ideas"
+seasons:
+  - autumn
+occasions:
+  - halloween
+  - bonfire-night
 status: "published"
 metaDescription: "Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family daytime events, ticketed fireworks, and seasonal menus that actually drive revenue."
 keywords:

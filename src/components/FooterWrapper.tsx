@@ -13,6 +13,10 @@ export default function FooterWrapper() {
       href: link.href,
       external: 'external' in link ? (link as { external?: boolean }).external || false : false,
     })),
+    playbooks: footerData.links.playbooks.map((link) => ({
+      title: link.label,
+      href: link.href,
+    })),
     resources: footerData.links.resources.map((link) => ({
       title: link.label,
       href: link.href,

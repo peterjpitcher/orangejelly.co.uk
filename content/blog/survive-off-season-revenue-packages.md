@@ -13,6 +13,10 @@ tags:
   - "events"
   - "revenue"
   - "sales"
+seasons:
+  - autumn
+  - winter
+occasions: []
 status: "published"
 featuredImage: "/images/blog/survive-off-season-revenue-packages.png"
 metaDescription: "How pubs can survive the off-season with targeted packages for corporates, families, and clubs, complete with pricing and marketing tips."

@@ -4,15 +4,19 @@ import { notFound } from 'next/navigation';
 import path from 'path';
 import Section from '@/components/Section';
 import BlogPostClient from './BlogPostClient';
+import SeriesHubGrid from '@/components/blog/SeriesHubGrid';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
 import BlogCategoryHero from '@/components/blog/BlogCategoryHero';
+import SeasonalHubHero from '@/components/blog/SeasonalHubHero';
+import SeasonalCalendar from '@/components/blog/SeasonalCalendar';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { seoOverrides } from '@/lib/seo-overrides';
+import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
 
 interface BlogPostPageProps {
   params: {
@@ -62,6 +66,8 @@ type ExtendedBlogPost = BlogPostType & {
     buttonText?: string;
     whatsappMessage?: string;
   };
+  featuredGuides?: string[];
+  seasons?: string[];
   rawContent?: string;
 };
 
@@ -340,6 +346,8 @@ async function getMarkdownPost(
   const voiceSearchQueries = toStringArray(frontMatterRecord.voiceSearchQueries);
   const quickStats = toQuickStats(frontMatterRecord.quickStats);
   const faqs = toFaqs(frontMatterRecord.faqs);
+  const featuredGuides = getOptionalStringArray(frontMatterRecord.featuredGuides);
+  const seasons = getOptionalStringArray(frontMatterRecord.seasons);
 
   const localSeoRecord = asRecord(frontMatterRecord.localSEO);
   let localSeoKeywords: string[] | undefined;
@@ -401,6 +409,8 @@ async function getMarkdownPost(
     faqs,
     localSEO,
     ctaSettings,
+    featuredGuides,
+    seasons,
     rawContent: parsedPost.content,
   };
 }
@@ -556,6 +566,38 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     const relatedPosts: BlogPostType[] = relatedPostsRaw.map(mapMarkdownToBlogPost);
 
+    // On a seasonal hub (config-driven), show a curated grid of its spokes (in order)
+    // instead of generic related posts, and emit ItemList schema for the series.
+    // Frontmatter `featuredGuides` can override the config order; otherwise the config wins.
+    const hub = getHubBySlug(post.slug);
+    const isHub = Boolean(hub);
+    const hubSpokeSlugs = hub ? (post.featuredGuides ?? hub.featuredGuides) : [];
+    const hubSpokes: BlogPostType[] = hub
+      ? hubSpokeSlugs
+          .map((spokeSlug) => allPosts.find((p) => p.slug === spokeSlug))
+          .filter((p): p is MarkdownBlogPost => Boolean(p))
+          .map(mapMarkdownToBlogPost)
+      : [];
+
+    // For a non-hub post that belongs to a seasonal hub, add a hub-level
+    // breadcrumb so the spoke sits under its playbook in the trail. Posts that
+    // are not part of any hub (and hub pages themselves) keep the default trail.
+    const spokeHub = !isHub ? getHubForSpoke(post.slug) : undefined;
+
+    // "More for this season": other guides tagged with the hub's season that
+    // aren't the hub itself and aren't already in the curated featured grid.
+    const moreThisSeason: BlogPostType[] = hub
+      ? allPosts
+          .filter((p) => {
+            if (p.slug === post.slug) return false;
+            if (hubSpokeSlugs.includes(p.slug)) return false;
+            const seasons = toStringArray(p.frontMatter.seasons).map((s) => s.toLowerCase());
+            return seasons.includes(hub.season);
+          })
+          .sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a))
+          .map(mapMarkdownToBlogPost)
+      : [];
+
     const sortedPosts = [...allPosts].sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a));
     const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug);
     const adjacentPosts: AdjacentPosts =
@@ -655,23 +697,68 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           items={[
             { name: 'Home', url: '/' },
             { name: "The Licensee's Guide", url: '/licensees-guide' },
+            ...(spokeHub
+              ? [
+                  {
+                    name: spokeHub.shortLabel,
+                    url: `/licensees-guide/${spokeHub.hubSlug}`,
+                  },
+                ]
+              : []),
             { name: post.title, url: `/licensees-guide/${post.slug}` },
           ]}
         />
         {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
-        <BlogCategoryHero
-          title={post.title}
-          excerpt={post.excerpt}
-          category={post.category?.slug || 'general'}
-          breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
-        />
+        {isHub && hub ? (
+          <>
+            <SeasonalHubHero
+              title={post.title}
+              excerpt={post.excerpt}
+              dateRangeLabel={hub.dateRangeLabel}
+              label={hub.label}
+              season={hub.theme}
+              breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+            />
+            <SeasonalCalendar entries={hub.calendar} season={hub.theme} />
+          </>
+        ) : (
+          <BlogCategoryHero
+            title={post.title}
+            excerpt={post.excerpt}
+            category={post.category?.slug || 'general'}
+            breadcrumbs={[
+              ...breadcrumbPaths.licenseesGuide,
+              ...(spokeHub
+                ? [{ label: spokeHub.shortLabel, href: `/licensees-guide/${spokeHub.hubSlug}` }]
+                : []),
+              { label: post.title },
+            ]}
+          />
+        )}
         <Section background="white">
           <div className="max-w-6xl mx-auto">
             <BlogPostClient
               post={postWithFaqs}
-              relatedPosts={relatedPosts}
+              relatedPosts={isHub ? [] : relatedPosts}
               adjacentPosts={adjacentPosts}
             />
+            {isHub && hubSpokes.length > 0 && (
+              <SeriesHubGrid
+                posts={hubSpokes}
+                baseUrl={baseUrl}
+                heading={`The full ${hub!.label}`}
+                listName={hub!.label}
+              />
+            )}
+            {isHub && moreThisSeason.length > 0 && (
+              <SeriesHubGrid
+                posts={moreThisSeason}
+                baseUrl={baseUrl}
+                heading={`More for this ${hub!.season}`}
+                subtitle="Extra guides that fit the same season."
+                listName={`More for ${hub!.season}`}
+              />
+            )}
           </div>
         </Section>
       </>

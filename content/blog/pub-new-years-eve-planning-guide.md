@@ -14,6 +14,10 @@ tags:
   - "new years eve pub"
   - "pub valentines menu"
   - "seasonal events"
+seasons:
+  - winter
+occasions:
+  - new-year
 status: "published"
 metaDescription: "Plan a profitable pub New Year's Eve. Ticketing vs walk-in, pricing psychology, menu planning, entertainment, staffing, and converting NYE visitors into January regulars."
 keywords:

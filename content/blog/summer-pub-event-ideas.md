@@ -11,6 +11,9 @@ featuredImage: "/images/blog/summer-pub-event-ideas.webp"
 tags:
   - "seasonal"
   - "events"
+seasons:
+  - summer
+occasions: []
 status: "published"
 metaDescription: "Make the most of summer with these proven pub garden events and outdoor promotions. From festivals to family days, discover profitable ideas with costs,"
 keywords:

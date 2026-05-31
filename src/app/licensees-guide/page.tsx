@@ -12,6 +12,7 @@ import { draftMode } from 'next/headers';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { generateStaticMetadata } from '@/lib/metadata';
 import SearchComponent from '@/components/SearchComponent';
+import SeasonalPlaybooksBand from '@/components/SeasonalPlaybooksBand';
 
 type GuidePost = {
   slug: string;
@@ -237,6 +238,8 @@ export default async function LicenseesGuidePage() {
         breadcrumbs={breadcrumbPaths.licenseesGuide}
         backgroundImage="/images/headers/licensees-guide.png"
       />
+
+      <SeasonalPlaybooksBand background="cream" />
 
       <Section background="white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">

@@ -125,6 +125,73 @@
   --color-info: #3b82f6;
 }
 
+/*
+ * Seasonal hub themes
+ * --------------------
+ * Each season exposes the same token contract, selected via a STATIC
+ * data-season attribute on a wrapper (e.g. <div data-season="autumn">).
+ * Never construct Tailwind classes dynamically — components read these
+ * variables via inline style (var(--season-accent), etc.) so the theme
+ * swaps with the attribute and no dynamic class names are ever built.
+ *
+ *   --season-accent        primary accent (text/CTA/spine)
+ *   --season-accent-strong darker accent for contrast on tints
+ *   --season-accent-contrast text colour for use on the accent fill
+ *   --season-tint          soft background tint for sections/cards
+ *   --season-tint-strong   slightly deeper tint for nested chips
+ *   --season-border        hairline border tuned to the season
+ *   --season-hero          hero background treatment (gradient)
+ *   --season-hero-text     text colour on the hero
+ */
+
+/* Autumn — warm brand-orange family (fully designed) */
+[data-season='autumn'] {
+  --season-accent: #ea580c;
+  --season-accent-strong: #c2410c;
+  --season-accent-contrast: #ffffff;
+  --season-tint: #fff5ec;
+  --season-tint-strong: #ffe8d6;
+  --season-border: rgba(234, 88, 12, 0.22);
+  --season-hero: linear-gradient(135deg, #ea580c 0%, #9a3412 100%);
+  --season-hero-text: #ffffff;
+}
+
+/* Spring — placeholder: fresh green. Replace when the spring hub ships. */
+[data-season='spring'] {
+  --season-accent: #2f8f4e;
+  --season-accent-strong: #246b3b;
+  --season-accent-contrast: #ffffff;
+  --season-tint: #eef7f0;
+  --season-tint-strong: #d9eede;
+  --season-border: rgba(47, 143, 78, 0.22);
+  --season-hero: linear-gradient(135deg, #2f8f4e 0%, #1f5e36 100%);
+  --season-hero-text: #ffffff;
+}
+
+/* Summer — placeholder: bright highlight. Replace when the summer hub ships. */
+[data-season='summer'] {
+  --season-accent: #d97706;
+  --season-accent-strong: #b45309;
+  --season-accent-contrast: #ffffff;
+  --season-tint: #fff8ec;
+  --season-tint-strong: #fdeccf;
+  --season-border: rgba(217, 119, 6, 0.22);
+  --season-hero: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  --season-hero-text: #ffffff;
+}
+
+/* Winter — festive evergreen + midnight-pine (Christmas Pub Playbook). */
+[data-season='winter'] {
+  --season-accent: #0f7a52;
+  --season-accent-strong: #0a5c3d;
+  --season-accent-contrast: #ffffff;
+  --season-tint: #f0f6f2;
+  --season-tint-strong: #dcebe2;
+  --season-border: rgba(15, 122, 82, 0.24);
+  --season-hero: linear-gradient(135deg, #0c2a3f 0%, #0a5c3d 100%);
+  --season-hero-text: #ffffff;
+}
+
 body {
   @apply bg-background text-foreground;
   font-family:

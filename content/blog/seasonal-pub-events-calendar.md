@@ -14,6 +14,12 @@ tags:
   - "holiday events"
   - "event planning"
   - "year-round marketing"
+seasons:
+  - spring
+  - summer
+  - autumn
+  - winter
+occasions: []
 status: "published"
 metaDescription: "Complete seasonal pub events calendar with month-by-month ideas. From Burns Night to Christmas parties, discover profitable events that work throughout"
 keywords:
@@ -74,6 +80,8 @@ Keep the format repeatable so the team can deliver every week.
 - Halloween events.
 - Bonfire night warm-up.
 - Christmas party packages and daytime groups.
+
+For the full September-to-November plan — cask, low/no, wine, Halloween, rugby and gifting — see our [autumn pub event ideas](/licensees-guide/autumn-pub-event-ideas) guide.
 
 Book early and cap capacity to protect service.
 

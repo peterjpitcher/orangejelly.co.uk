@@ -15,6 +15,9 @@ tags:
   - Winter Strategy
   - Revenue Generation
   - Cost Management
+seasons:
+  - winter
+occasions: []
 quickAnswer: "Heating costs spike in winter. Spread the increase across covers and add one signature hot drink per table to cover it. The opportunity is bigger than the cost."
 voiceSearchQueries:
   - "how much does it cost to heat a pub in winter"
