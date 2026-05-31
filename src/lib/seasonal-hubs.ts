@@ -108,3 +108,12 @@ export function getHubBySlug(slug: string): SeasonalHub | undefined {
 export function isHubSlug(slug: string): boolean {
   return SEASON_HUBS.some((hub) => hub.hubSlug === slug);
 }
+
+/**
+ * Find the hub that features a given spoke slug among its `featuredGuides`.
+ * Returns the first matching hub (a spoke belongs to at most one hub today).
+ * Used to add a hub-level breadcrumb to spoke posts.
+ */
+export function getHubForSpoke(slug: string): SeasonalHub | undefined {
+  return SEASON_HUBS.find((hub) => hub.featuredGuides.includes(slug));
+}

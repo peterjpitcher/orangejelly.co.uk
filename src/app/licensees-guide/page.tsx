@@ -1,5 +1,8 @@
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
+import Grid from '@/components/Grid';
+import Card from '@/components/Card';
+import Link from '@/components/Link';
 import BlogPostCard from '@/components/blog/BlogPostCard';
 import CategoryList from '@/components/blog/CategoryList';
 import CategoryLegend from '@/components/blog/CategoryLegend';
@@ -12,6 +15,7 @@ import { draftMode } from 'next/headers';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { generateStaticMetadata } from '@/lib/metadata';
 import SearchComponent from '@/components/SearchComponent';
+import { SEASON_HUBS } from '@/lib/seasonal-hubs';
 
 type GuidePost = {
   slug: string;
@@ -237,6 +241,41 @@ export default async function LicenseesGuidePage() {
         breadcrumbs={breadcrumbPaths.licenseesGuide}
         backgroundImage="/images/headers/licensees-guide.png"
       />
+
+      {SEASON_HUBS.length > 0 && (
+        <Section background="cream">
+          <div className="text-center mb-8">
+            <Heading level={2} align="center" className="mb-3">
+              Seasonal Playbooks
+            </Heading>
+            <Text size="lg" align="center" className="max-w-2xl mx-auto text-charcoal/70">
+              Curated, ready-to-run guides for the moments that matter each season — pick the
+              playbook that fits the calendar ahead.
+            </Text>
+          </div>
+          <Grid columns={{ default: 1, sm: 2, lg: 3 }} gap="medium">
+            {SEASON_HUBS.map((hub) => (
+              <Card key={hub.hubSlug} variant="bordered" asChild>
+                <Link
+                  href={`/licensees-guide/${hub.hubSlug}`}
+                  color="inherit"
+                  className="group block h-full"
+                >
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-3 bg-orange/10 text-orange">
+                    {hub.dateRangeLabel}
+                  </span>
+                  <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                    {hub.label}
+                  </Heading>
+                  <Text color="muted">
+                    {hub.featuredGuides.length} practical guides for the {hub.season} season.
+                  </Text>
+                </Link>
+              </Card>
+            ))}
+          </Grid>
+        </Section>
+      )}
 
       <Section background="white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">

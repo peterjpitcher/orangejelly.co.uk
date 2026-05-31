@@ -27,6 +27,9 @@
       { "label": "Content Creation", "href": "/services/content-creation-for-pubs" },
       { "label": "Local Visibility", "href": "/capabilities" }
     ],
+    "playbooks": [
+      { "label": "Autumn Playbook", "href": "/licensees-guide/autumn-pub-event-ideas" }
+    ],
     "resources": [
       { "label": "Licensee's Guide", "href": "/licensees-guide" },
       { "label": "Results", "href": "/results" },

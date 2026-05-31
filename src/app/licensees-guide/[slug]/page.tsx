@@ -16,7 +16,7 @@ import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { seoOverrides } from '@/lib/seo-overrides';
-import { getHubBySlug } from '@/lib/seasonal-hubs';
+import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
 
 interface BlogPostPageProps {
   params: {
@@ -579,6 +579,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           .map(mapMarkdownToBlogPost)
       : [];
 
+    // For a non-hub post that belongs to a seasonal hub, add a hub-level
+    // breadcrumb so the spoke sits under its playbook in the trail. Posts that
+    // are not part of any hub (and hub pages themselves) keep the default trail.
+    const spokeHub = !isHub ? getHubForSpoke(post.slug) : undefined;
+
+    // "More for this season": other guides tagged with the hub's season that
+    // aren't the hub itself and aren't already in the curated featured grid.
+    const moreThisSeason: BlogPostType[] = hub
+      ? allPosts
+          .filter((p) => {
+            if (p.slug === post.slug) return false;
+            if (hubSpokeSlugs.includes(p.slug)) return false;
+            const seasons = toStringArray(p.frontMatter.seasons).map((s) => s.toLowerCase());
+            return seasons.includes(hub.season);
+          })
+          .sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a))
+          .map(mapMarkdownToBlogPost)
+      : [];
+
     const sortedPosts = [...allPosts].sort((a, b) => getPostTimestamp(b) - getPostTimestamp(a));
     const currentIndex = sortedPosts.findIndex((p) => p.slug === post.slug);
     const adjacentPosts: AdjacentPosts =
@@ -678,6 +697,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           items={[
             { name: 'Home', url: '/' },
             { name: "The Licensee's Guide", url: '/licensees-guide' },
+            ...(spokeHub
+              ? [
+                  {
+                    name: spokeHub.shortLabel,
+                    url: `/licensees-guide/${spokeHub.hubSlug}`,
+                  },
+                ]
+              : []),
             { name: post.title, url: `/licensees-guide/${post.slug}` },
           ]}
         />
@@ -699,7 +726,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             title={post.title}
             excerpt={post.excerpt}
             category={post.category?.slug || 'general'}
-            breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+            breadcrumbs={[
+              ...breadcrumbPaths.licenseesGuide,
+              ...(spokeHub
+                ? [{ label: spokeHub.shortLabel, href: `/licensees-guide/${spokeHub.hubSlug}` }]
+                : []),
+              { label: post.title },
+            ]}
           />
         )}
         <Section background="white">
@@ -715,6 +748,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 baseUrl={baseUrl}
                 heading={`The full ${hub!.label}`}
                 listName={hub!.label}
+              />
+            )}
+            {isHub && moreThisSeason.length > 0 && (
+              <SeriesHubGrid
+                posts={moreThisSeason}
+                baseUrl={baseUrl}
+                heading={`More for this ${hub!.season}`}
+                subtitle="Extra guides that fit the same season."
+                listName={`More for ${hub!.season}`}
               />
             )}
           </div>

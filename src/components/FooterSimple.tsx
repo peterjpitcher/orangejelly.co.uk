@@ -20,6 +20,10 @@ type FooterContent = {
     href: string;
     external?: boolean;
   }>;
+  playbooks?: Array<{
+    title: string;
+    href: string;
+  }>;
   solutions?: Array<{
     title: string;
     href: string;
@@ -54,6 +58,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
   const services = footerContent?.services || [];
   const company = footerContent?.company || [];
   const resources = footerContent?.resources || [];
+  const playbooks = footerContent?.playbooks || [];
   const solutions = footerContent?.solutions || [];
   const locations = footerContent?.locations || [];
 
@@ -80,7 +85,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           </div>
 
           {/* Quick Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8 text-cream/90">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 mb-8 text-cream/90">
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">
                 Packages
@@ -159,6 +164,26 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 ))}
               </ul>
             </div>
+
+            {playbooks.length > 0 && (
+              <div>
+                <Heading level={5} color="white" className="mb-3 text-cream">
+                  Playbooks
+                </Heading>
+                <ul className="space-y-2 text-sm">
+                  {playbooks.map((playbook, index) => (
+                    <li key={index}>
+                      <Link
+                        href={playbook.href}
+                        className="hover:text-teal-light transition-colors"
+                      >
+                        {playbook.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">
