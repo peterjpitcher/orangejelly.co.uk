@@ -34,8 +34,8 @@ interface RelatedPostsProps {
 }
 
 export default function RelatedPosts({ posts, currentPostSlug }: RelatedPostsProps) {
-  // Filter out current post and limit to 4
-  const relatedPosts = posts.filter((post) => post.slug !== currentPostSlug).slice(0, 4);
+  // Filter out current post and limit to 3 — one clean row at the 3-wide card standard.
+  const relatedPosts = posts.filter((post) => post.slug !== currentPostSlug).slice(0, 3);
 
   if (relatedPosts.length === 0) return null;
 
@@ -47,7 +47,7 @@ export default function RelatedPosts({ posts, currentPostSlug }: RelatedPostsPro
       <Text color="muted" className="mb-8">
         More guides to help you grow your pub
       </Text>
-      <Grid columns={{ default: 1, sm: 2, lg: 2 }} gap="medium">
+      <Grid columns={{ default: 1, sm: 2, lg: 3 }} gap="medium">
         {relatedPosts.map((post) => (
           <BlogPostCard key={post.slug} post={post} />
         ))}
