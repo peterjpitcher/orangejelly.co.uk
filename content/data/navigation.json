@@ -4,7 +4,12 @@
     { "label": "Ways to Work", "href": "/ways-to-work", "order": 2 },
     { "label": "Capabilities", "href": "/capabilities", "order": 3 },
     { "label": "Results", "href": "/results", "order": 4 },
-    { "label": "Guides", "href": "/licensees-guide", "order": 5 },
+    {
+      "label": "Guides",
+      "href": "/licensees-guide",
+      "order": 5,
+      "children": [{ "label": "The Licensee's Guide", "href": "/licensees-guide", "order": 1 }]
+    },
     { "label": "About", "href": "/about", "order": 6 },
     { "label": "Contact", "href": "/contact", "order": 7 }
   ],
@@ -13,7 +18,12 @@
     { "label": "Ways to Work", "href": "/ways-to-work", "order": 2 },
     { "label": "Capabilities", "href": "/capabilities", "order": 3 },
     { "label": "Results", "href": "/results", "order": 4 },
-    { "label": "Guides", "href": "/licensees-guide", "order": 5 },
+    {
+      "label": "Guides",
+      "href": "/licensees-guide",
+      "order": 5,
+      "children": [{ "label": "The Licensee's Guide", "href": "/licensees-guide", "order": 1 }]
+    },
     { "label": "About", "href": "/about", "order": 6 },
     { "label": "Contact", "href": "/contact", "order": 7 }
   ],

@@ -164,6 +164,26 @@ export const SEASON_HUBS: SeasonalHub[] = [
   },
 ];
 
+/**
+ * Calendar months (1–12) that belong to each season, Northern-hemisphere /
+ * UK convention. Used to decide which hub is "on now".
+ */
+const SEASON_MONTHS: Record<SeasonTheme, number[]> = {
+  spring: [3, 4, 5],
+  summer: [6, 7, 8],
+  autumn: [9, 10, 11],
+  winter: [12, 1, 2],
+};
+
+/**
+ * Is the given hub in its season for the supplied date?
+ * Defaults to "now". Drives the "on now" badge on playbook cards.
+ */
+export function isHubInSeason(hub: SeasonalHub, date: Date = new Date()): boolean {
+  const month = date.getMonth() + 1; // getMonth() is 0-indexed
+  return SEASON_MONTHS[hub.season].includes(month);
+}
+
 export function getHubBySlug(slug: string): SeasonalHub | undefined {
   return SEASON_HUBS.find((hub) => hub.hubSlug === slug);
 }

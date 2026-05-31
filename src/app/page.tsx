@@ -16,6 +16,7 @@ import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 import { FAQSchema } from '@/components/StructuredData';
 import { SpeakableContent } from '@/components/SpeakableContent';
+import SeasonalPlaybooksBand from '@/components/SeasonalPlaybooksBand';
 import {
   ProofStrip,
   PackageCard,
@@ -163,6 +164,13 @@ export default function Home() {
 
       {/* Proof Strip */}
       <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+
+      {/* Seasonal Playbooks */}
+      <SeasonalPlaybooksBand
+        highlightInSeason
+        background="cream"
+        subtitle="Ready-to-run guides for the moments that matter each season — built and tested at The Anchor. Pick the playbook that fits the calendar ahead."
+      />
 
       {/* Where Growth Gets Stuck */}
       <Section>

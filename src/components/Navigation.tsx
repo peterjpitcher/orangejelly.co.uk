@@ -7,9 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import OptimizedImage from './OptimizedImage';
@@ -21,6 +23,7 @@ interface NavigationLink {
   label: string;
   href: string;
   order?: number;
+  children?: NavigationLink[];
 }
 
 interface WhatsAppCta {
@@ -98,22 +101,64 @@ export default function Navigation({ navigation }: NavigationProps) {
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
-              {navLinks.map((link) => (
-                <NavigationMenuItem key={link.href}>
-                  <Link href={link.href} legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={cn(
-                        navigationMenuTriggerStyle(),
-                        'h-12 py-3',
-                        'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
-                        pathname === link.href && 'bg-brand text-white hover:bg-brand/90'
-                      )}
-                    >
-                      {link.label}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              ))}
+              {navLinks.map((link) => {
+                const children = link.children ?? [];
+                const hasChildren = children.length > 0;
+                const isActive =
+                  pathname === link.href ||
+                  (hasChildren && children.some((child) => pathname === child.href));
+
+                if (hasChildren) {
+                  return (
+                    <NavigationMenuItem key={link.href}>
+                      <NavigationMenuTrigger
+                        className={cn(
+                          'h-12 py-3',
+                          'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
+                          isActive && 'bg-brand text-white hover:bg-brand/90'
+                        )}
+                      >
+                        {link.label}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-64 gap-1 p-2">
+                          {children.map((child) => (
+                            <li key={child.href}>
+                              <Link href={child.href} legacyBehavior passHref>
+                                <NavigationMenuLink
+                                  className={cn(
+                                    'block select-none rounded-md px-3 py-2 text-sm font-medium leading-none text-charcoal no-underline outline-none transition-colors hover:bg-teal/10 hover:text-teal focus:bg-teal/10 focus:text-teal',
+                                    pathname === child.href && 'bg-accent text-teal'
+                                  )}
+                                >
+                                  {child.label}
+                                </NavigationMenuLink>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  );
+                }
+
+                return (
+                  <NavigationMenuItem key={link.href}>
+                    <Link href={link.href} legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          'h-12 py-3',
+                          'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
+                          isActive && 'bg-brand text-white hover:bg-brand/90'
+                        )}
+                      >
+                        {link.label}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                );
+              })}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -187,19 +232,41 @@ export default function Navigation({ navigation }: NavigationProps) {
                 <span className="ml-2 font-bold">Orange Jelly</span>
               </Link>
               <div className="mt-4">
-                {mobileNavLinks.map((link) => (
-                  <SheetClose key={link.href} asChild>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        'block py-3 px-4 min-h-[44px] flex items-center text-charcoal hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
-                        pathname === link.href && 'bg-accent'
+                {mobileNavLinks.map((link) => {
+                  const children = link.children ?? [];
+                  return (
+                    <div key={link.href}>
+                      <SheetClose asChild>
+                        <Link
+                          href={link.href}
+                          className={cn(
+                            'block py-3 px-4 min-h-[44px] flex items-center text-charcoal hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
+                            pathname === link.href && 'bg-accent'
+                          )}
+                        >
+                          {link.label}
+                        </Link>
+                      </SheetClose>
+                      {children.length > 0 && (
+                        <div className="ml-4 border-l border-charcoal/10 pl-2">
+                          {children.map((child) => (
+                            <SheetClose key={child.href} asChild>
+                              <Link
+                                href={child.href}
+                                className={cn(
+                                  'block py-2.5 px-4 min-h-[44px] flex items-center text-sm text-charcoal/80 hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
+                                  pathname === child.href && 'bg-accent text-teal'
+                                )}
+                              >
+                                {child.label}
+                              </Link>
+                            </SheetClose>
+                          ))}
+                        </div>
                       )}
-                    >
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
+                    </div>
+                  );
+                })}
               </div>
               {whatsappCta.enabled && whatsappCta.showInMobile && (
                 <div className="mt-4">
