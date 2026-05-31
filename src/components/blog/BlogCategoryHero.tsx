@@ -37,7 +37,7 @@ export default function BlogCategoryHero({
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
         {/* Breadcrumbs — light variant for dark backgrounds */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <div className="mb-6">

@@ -40,7 +40,7 @@ export default function SeasonalCalendar({
 
   return (
     <section data-season={season} aria-label={heading} className="py-12 md:py-16" style={tintStyle}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="mb-8 max-w-3xl">
           <Heading level={2} className="mb-2">
             {heading}

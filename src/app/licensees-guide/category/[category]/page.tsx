@@ -136,7 +136,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       />
 
       <Section background="white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Category Navigation */}
           <div className="mb-12">
             <CategoryList

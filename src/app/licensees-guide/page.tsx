@@ -199,7 +199,7 @@ export default async function LicenseesGuidePage() {
           showCTA={false}
         />
         <Section background="white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
             <Text className="text-red-600 text-center">
               Error loading blog posts. Please try refreshing the page.
             </Text>
@@ -242,9 +242,9 @@ export default async function LicenseesGuidePage() {
       <SeasonalPlaybooksBand background="cream" />
 
       <Section background="white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           {/* Lead paragraph */}
-          <Text size="lg" align="center" className="max-w-3xl mx-auto mb-8 text-charcoal/70">
+          <Text size="lg" align="center" className="max-w-4xl mx-auto mb-8 text-charcoal/70">
             Essential guides for modern pub management, with ideas you can adapt for restaurants and
             bars. From filling empty venues to competing with chains, discover practical advice that
             actually works.
@@ -273,7 +273,7 @@ export default async function LicenseesGuidePage() {
           </div>
 
           {/* Introduction */}
-          <div className="prose prose-lg max-w-3xl mx-auto mb-12">
+          <div className="prose prose-lg max-w-4xl mx-auto mb-12">
             <Text className="mb-4">
               Every guide in this collection comes from real experience at The Anchor in Stanwell
               Moor. We've tested these strategies firsthand, measuring their impact on our bottom
