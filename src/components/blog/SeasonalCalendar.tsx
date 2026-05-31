@@ -32,7 +32,8 @@ export default function SeasonalCalendar({
     backgroundColor: 'var(--color-white)',
   };
   const dateChipStyle: CSSProperties = {
-    backgroundColor: 'var(--season-accent)',
+    // accent-strong (not accent) keeps the small chip text ≥4.5:1 on white (WCAG AA).
+    backgroundColor: 'var(--season-accent-strong)',
     color: 'var(--season-accent-contrast)',
   };
   const spineStyle: CSSProperties = { backgroundColor: 'var(--season-accent)' };
