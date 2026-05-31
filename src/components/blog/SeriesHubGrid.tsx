@@ -69,17 +69,19 @@ export default function SeriesHubGrid({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
-      <Heading level={2} className="mb-2">
-        {heading}
-      </Heading>
-      <Text color="muted" className="mb-8">
-        {subtitle}
-      </Text>
-      <Grid columns={{ default: 1, sm: 2, lg: 3 }} gap="medium">
-        {posts.map((post) => (
-          <BlogPostCard key={post.slug} post={post} />
-        ))}
-      </Grid>
+      <div className="max-w-4xl mx-auto">
+        <Heading level={2} className="mb-2">
+          {heading}
+        </Heading>
+        <Text color="muted" className="mb-8">
+          {subtitle}
+        </Text>
+        <Grid columns={{ default: 1, sm: 2, lg: 3 }} gap="medium">
+          {posts.map((post) => (
+            <BlogPostCard key={post.slug} post={post} />
+          ))}
+        </Grid>
+      </div>
     </section>
   );
 }

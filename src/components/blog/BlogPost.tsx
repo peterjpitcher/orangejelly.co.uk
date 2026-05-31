@@ -143,9 +143,9 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       {/* Sticky CTA */}
       <StickyCTA />
 
-      <article id="blog-article" className="max-w-3xl mx-auto">
+      <article id="blog-article" className="max-w-4xl mx-auto">
         {/* Post metadata */}
-        <header className="mb-8 max-w-3xl mx-auto">
+        <header className="mb-8 max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 mb-6">
             <Button
               href={`/licensees-guide/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
