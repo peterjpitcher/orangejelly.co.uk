@@ -54,25 +54,6 @@ At The Anchor in Stanwell Moor, the lesson is always the same: you don't need to
 
 > **The rhythm that works:** Plan it. Post it. Brief it. Book it. Measure it.
 
-## Autumn at a glance
-
-| When | Moment | The opportunity |
-|---|---|---|
-| 17–27 Sep | Cask Ale Week | Beer of the day, cask passport, meet-the-brewer |
-| Fri 25 Sep | Macmillan Coffee Morning | A quiet daytime filled, and a good cause |
-| All October | Sober October | A proper low/no range that earns its place |
-| Sun 4 Oct | National Vodka Day | A cocktail special, a Bloody Mary brunch |
-| Mon 19 Oct | Gin & Tonic Day | A G&T board, a local gin spotlight |
-| Fri 23–Sat 24 Oct | Champagne Weekend | Fizz by the glass, a sparkling tasting |
-| Sat 31 Oct | Halloween | Family by day, fancy dress by night |
-| Thu 5 Nov | Bonfire Night | Hot drinks, comfort food, the warm-up |
-| 6–21 Nov | Autumn rugby | Big-screen bookings, match platters |
-| Fri 27–Sun 29 Nov | Rugby finals weekend (Twickenham) | A full weekend of bookable rugby |
-| Fri 27 Nov | Black Friday | Gift cards, deposits, bounce-back vouchers |
-| Mon 30 Nov | St Andrew's Day + Cyber Monday | A Scottish special + an online voucher push |
-
-*International Champagne Day falls on the fourth Friday of October — Friday 23 October in 2026 — so we've made it a weekend to keep the Saturday trade too.*
-
 ## September: cask and community
 
 September is about easing people back into midweek habits as the nights draw in. **Cask Ale Week (17–27 September)** is the easy excuse to get regulars trying something new and casual drinkers asking questions at the bar — one featured cask, a plain-English tasting note, and a confident staff recommendation go a long way. The full ten-day plan is in our [Cask Ale Week guide](/licensees-guide/cask-ale-week-pub-guide).

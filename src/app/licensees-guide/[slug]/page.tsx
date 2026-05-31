@@ -8,6 +8,8 @@ import SeriesHubGrid from '@/components/blog/SeriesHubGrid';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
 import EnhancedBlogSchema from '@/components/blog/EnhancedBlogSchema';
 import BlogCategoryHero from '@/components/blog/BlogCategoryHero';
+import SeasonalHubHero from '@/components/blog/SeasonalHubHero';
+import SeasonalCalendar from '@/components/blog/SeasonalCalendar';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import { getBaseUrl } from '@/lib/site-config';
@@ -680,12 +682,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           ]}
         />
         {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
-        <BlogCategoryHero
-          title={post.title}
-          excerpt={post.excerpt}
-          category={post.category?.slug || 'general'}
-          breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
-        />
+        {isHub && hub ? (
+          <>
+            <SeasonalHubHero
+              title={post.title}
+              excerpt={post.excerpt}
+              dateRangeLabel={hub.dateRangeLabel}
+              label={hub.label}
+              season={hub.theme}
+              breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+            />
+            <SeasonalCalendar entries={hub.calendar} season={hub.theme} />
+          </>
+        ) : (
+          <BlogCategoryHero
+            title={post.title}
+            excerpt={post.excerpt}
+            category={post.category?.slug || 'general'}
+            breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+          />
+        )}
         <Section background="white">
           <div className="max-w-6xl mx-auto">
             <BlogPostClient
