@@ -1,38 +1,40 @@
 ---
-title: "Autumn Rugby 2026: Filling Your Pub for the Nations Championship"
+title: "Autumn Internationals 2026: Fill Your Pub for the Rugby"
 slug: "autumn-rugby-nations-championship-pubs"
 publishedDate: 2026-05-25
-excerpt: "Your operator's guide to filling the pub for the new Nations Championship in November 2026. Fixtures, bookings, match platters and a screen checklist that works."
-quickAnswer: "November 2026 brings the new Nations Championship, replacing the Autumn Internationals. There's a marquee home-nation game most weekends from 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. Take table bookings before kick-off, build a simple match-day package, and check your screens and sound work before the room fills."
+updatedDate: 2026-05-31
+excerpt: "Your operator's guide to filling the pub for the autumn internationals in November 2026. Where to watch rugby, table bookings, match platters and a screen checklist."
+quickAnswer: "The autumn internationals are the home nations' November rugby window, and in 2026 they run inside the new Nations Championship. There's a marquee home-nation game most weekends from 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. If you show rugby in your pub, take table bookings before kick-off, build a simple match-day package, and check your screens and sound work before the room fills."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/autumn-rugby-nations-championship-pubs.svg"
 tags:
+  - "autumn internationals"
   - "autumn rugby"
-  - "nations championship"
   - "rugby in pubs"
   - "showing rugby in your pub"
 seasons:
   - autumn
 occasions: []
 status: "published"
-metaDescription: "Fill your pub for the new Nations Championship, November 2026. Home-nation fixtures, table bookings, match platters and a screen and sound checklist for licensees."
+metaDescription: "Fill your pub for the autumn internationals, November 2026. Where to watch rugby, fixtures, table bookings and a screen and sound checklist for licensees."
 keywords:
-  - "autumn rugby 2026"
-  - "nations championship fixtures 2026"
-  - "rugby in pubs"
-  - "showing rugby in your pub"
+  - "autumn internationals"
+  - "autumn internationals rugby"
+  - "where to watch rugby"
+  - "showing rugby in pubs"
+  - "big screen sport pub"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "when is the rugby on in november 2026"
-  - "nations championship fixtures 2026"
+  - "when are the autumn internationals 2026"
+  - "where to watch the autumn internationals"
   - "how do I get my pub busy for the rugby"
   - "when is the rugby finals weekend 2026"
 faqs:
-  - question: "What is the Nations Championship?"
-    answer: "It's a new global rugby competition launching in 2026 that replaces the standalone Autumn Internationals for the home nations. Through November, teams play a pool of fixtures, then every nation finishes with a placement match at the inaugural Finals Weekend at Twickenham, 27 to 29 November 2026."
+  - question: "What are the autumn internationals in 2026?"
+    answer: "The autumn internationals are the home nations' run of November rugby fixtures against southern-hemisphere sides. In 2026 they sit inside the new Nations Championship: through November the teams play a pool of fixtures, then every nation finishes with a placement match at the inaugural Finals Weekend at Twickenham, 27 to 29 November 2026."
   - question: "When are the November 2026 rugby fixtures?"
     answer: "The November pool window runs from Friday 6 to Saturday 21 November 2026, with a marquee home-nation game most weekends, followed by Finals Weekend at Twickenham from Friday 27 to Sunday 29 November. Confirm kick-off times and TV listings nearer the date, as these can move."
   - question: "How do I get bookings for the rugby?"
@@ -49,27 +51,27 @@ schema:
   "@type": "Article"
 ---
 
-# Autumn Rugby 2026: Filling Your Pub for the Nations Championship
+# Autumn Internationals 2026: Fill Your Pub for the Rugby
 
 *Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
 
-November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But if you show sport, November is quietly one of the best trading months you've got, because rugby gives people a fixed reason to be out, in a warm room, with a pint in hand.
+November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But the **autumn internationals** change that. If you show rugby in your pub, this is quietly one of the best trading months you've got, because a big game gives people a fixed reason to be out — in a warm room, on a big screen, with a pint in hand.
 
-This year it gets bigger. The new **Nations Championship** launches in 2026 and **replaces the standalone Autumn Internationals** for the home nations. Instead of a loose run of friendlies, you've now got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.
+This year it gets bigger. The November window — the **autumn internationals rugby** most of your customers already know by name — now sits inside the new **Nations Championship**. Instead of a loose run of friendlies, you've got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.
 
-This guide is the practical version. What's on, how to take the bookings, what to put on a plate, and how to make sure the screens and sound actually deliver when the room's full. It sits alongside [our year-round pub rugby playbook](/licensees-guide/pub-six-nations-rugby-marketing), which covers the Six Nations and the long game; this one is about nailing this November.
+This guide is the practical version. What's on, how to take the bookings, what to put on a plate, and how to make sure the big screen and sound actually deliver when the room's full. It sits alongside [our year-round pub rugby playbook](/licensees-guide/pub-six-nations-rugby-marketing), which covers the Six Nations and the long game; this one is about nailing this November.
 
-## Why November is a rugby month
+## Why the autumn internationals fill a pub
 
-The new format does you a favour. Where the old Autumn Internationals could feel like a scattering of one-off games, the Nations Championship has a shape to it. There's a marquee fixture nearly every weekend in the pool window, the placement matches build toward Finals Weekend, and people who came in for one game have a reason to plan the next.
+The new format does you a favour. Where the old autumn internationals could feel like a scattering of one-off games, sitting them inside the Nations Championship gives the month a shape. There's a marquee fixture nearly every weekend in the pool window, the placement matches build toward Finals Weekend, and people who came in for one game have a reason to plan the next.
 
-That rhythm is exactly what fills a pub. The same logic that makes a weekly quiz work makes a run of rugby weekends work: people learn there's something on, they get into the habit, and they bring others. Your job is to make sure every fixture is in their diary and yours, not left to chance on the day.
+That rhythm is exactly what fills a pub. The same logic that makes a weekly quiz work makes a run of rugby weekends work: people learn there's something on, they get into the habit, and they bring others. And plenty of them are simply searching for where to watch the rugby with a decent screen and a proper pint — so be the obvious answer. Your job is to make sure every fixture is in their diary and yours, not left to chance on the day.
 
-## The fixtures: November 2026
+## The autumn internationals fixtures: November 2026
 
-Here's the home-nation grid for the pool window and the finale. Block these out now, decide which ones you'll build an event around, and get them on your wall planner.
+Here's the home-nation grid for the pool window and the finale. Block these out now, decide which ones you'll build an event around — and which you'll just have on the big screen — and get them on your wall planner.
 
-*Fixtures are correct at the time of writing (last checked 30 May 2026) — confirm kick-off times and TV listings nearer the date.*
+*Provisional and correct at the time of writing (last checked 30 May 2026). Match-ups, kick-off times and TV listings can still move, so confirm each fixture against the official listings nearer the date before you promote it.*
 
 **Pool window (6–21 November)**
 
@@ -148,8 +150,8 @@ If you'd like a hand setting up the bookings, the package and the promotion so y
 
 ## FAQs
 
-**What is the Nations Championship?**
-It's a new global rugby competition launching in 2026 that replaces the standalone Autumn Internationals for the home nations. Teams play a pool of fixtures through November, then every nation finishes with a placement match at the inaugural Finals Weekend at Twickenham, 27 to 29 November 2026.
+**What are the autumn internationals in 2026?**
+The autumn internationals are the home nations' run of November rugby fixtures against southern-hemisphere sides. In 2026 they sit inside the new Nations Championship: teams play a pool of fixtures through November, then every nation finishes with a placement match at the inaugural Finals Weekend at Twickenham, 27 to 29 November 2026.
 
 **When are the November 2026 rugby fixtures?**
 The pool window runs from Friday 6 to Saturday 21 November, with a marquee home-nation game most weekends, followed by Finals Weekend at Twickenham from Friday 27 to Sunday 29 November. Confirm kick-off times and TV listings nearer the date, as they can move.

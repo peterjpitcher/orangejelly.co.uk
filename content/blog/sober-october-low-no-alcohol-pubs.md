@@ -1,38 +1,44 @@
 ---
-title: "Sober October: Low and No Drinks That Actually Sell in Your Pub"
+title: "Non Alcoholic Beer & a Low/No Bar That Sells: Sober October"
 slug: "sober-october-low-no-alcohol-pubs"
 publishedDate: 2026-05-25
-excerpt: "How to build a low and no range that earns its space behind the bar, with staff scripts, pricing, food pairings and how to promote Sober October properly."
-quickAnswer: "Stock a tight low and no range (a beer, a cider or fizz, a proper mocktail, good softs), make it visible on the menu, and price it for the margin it deserves. Train staff to offer it naturally, lean into Sober October, then keep your best lines all year. It is incremental trade, not lost trade."
+updatedDate: 2026-05-31
+excerpt: "Start with one cracking non alcoholic beer, then build a small alcohol free bar — low and no alcohol drinks, a non alcoholic drinks menu and mocktail menu ideas — that earns its space and sells through Sober October and beyond."
+quickAnswer: "Lead with one genuinely good non alcoholic beer, then build a small alcohol free bar around it: a cider or fizz, a proper mocktail, good softs. Put it on a non alcoholic drinks menu section, price it for the margin it deserves, and train staff to offer it naturally. Sober October gets people through the door; keep your best low and no alcohol drinks on all year and it becomes steady trade, not lost trade."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/sober-october-low-no-alcohol-pubs.svg"
 tags:
+  - "non alcoholic beer"
+  - "alcohol free bar"
   - "low and no alcohol"
   - "sober october"
-  - "alcohol free pub"
-  - "pub drinks"
 seasons:
   - autumn
 occasions: []
 status: "published"
-metaDescription: "Low and no alcohol drinks that actually sell in your pub. A tight range, staff scripts, pricing for margin, food pairings and how to promote Sober October."
+metaDescription: "Non alcoholic beer that sells in your pub, plus a small alcohol free bar: low and no alcohol drinks, a non alcoholic drinks menu and Sober October done right."
 keywords:
-  - "low and no alcohol drinks for pubs"
+  - "non alcoholic beer"
+  - "alcohol free bar"
+  - "low and no alcohol drinks"
+  - "non alcoholic drinks menu"
+  - "mocktail menu ideas"
   - "sober october pub ideas"
-  - "alcohol free drinks pub"
-  - "no and low pub range"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
-  - "what low and no drinks should a pub stock"
-  - "do alcohol free drinks make money in pubs"
+  - "what non alcoholic beer should a pub stock"
+  - "how do I set up an alcohol free bar in my pub"
+  - "do non alcoholic drinks make money in pubs"
+  - "what low and no alcohol drinks sell best"
   - "how to promote sober october in a pub"
-  - "what is zebra striping drinking"
 faqs:
-  - question: "What low and no drinks should a pub stock?"
-    answer: "Keep it tight: one good alcohol-free lager or beer, a cider or sparkling option, one proper mocktail you can make consistently, and a couple of grown-up soft drinks beyond the usual cola. Four or five well-chosen lines that you can serve well beat a fridge full of dusty cans nobody can find."
+  - question: "What is the best non alcoholic beer for a pub to stock?"
+    answer: "The best non alcoholic beer is one you'd happily drink yourself and can keep in stock — an alcohol-free lager or pale ale from a brand your drinkers recognise, served cold and on the menu like it matters. Start your alcohol free bar with one cracking AF beer, get the whole team to taste it, then build the cider, mocktail and softs around it once you see it sell."
+  - question: "What low and no alcohol drinks should a pub stock?"
+    answer: "Keep it tight: one good non alcoholic beer, a cider or sparkling option, one proper mocktail you can make consistently, and a couple of grown-up soft drinks beyond the usual cola. Four or five well-chosen lines that you can serve well beat a fridge full of dusty cans nobody can find."
   - question: "Do low and no alcohol drinks actually make money?"
     answer: "Yes, when you price them properly. Low and no drinks often carry a healthy margin, and they capture spend from drivers, moderators and people who would otherwise have one round and leave. The mistake is pricing them like a cheap soft drink and undervaluing what people are happy to pay for a quality alcohol-free pint."
   - question: "How do I promote Sober October without alienating my regular drinkers?"
@@ -41,7 +47,7 @@ faqs:
     answer: "Zebra striping is alternating between an alcoholic drink and an alcohol-free one across a session, so one full-strength, then one alcohol-free. It helps people pace themselves, stay out longer and spend more across the night, which is exactly why having a good low and no range behind the bar pays off."
 ctaSettings:
   ctaType: "contact"
-  ctaHeading: "Want a low and no range that sells?"
+  ctaHeading: "Want an alcohol free bar that actually sells?"
   ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/ways-to-work/growth-fix"
 schema:
@@ -49,11 +55,13 @@ schema:
   "@type": "Article"
 ---
 
-# Sober October: Low and No Drinks That Actually Sell in Your Pub
+# Non Alcoholic Beer & a Low/No Bar That Sells: Your Sober October Plan
 
 *Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
 
-Let's clear one thing up before we start. Sober October isn't a threat to your wet sales. It's a month where a chunk of your customers are actively looking for a reason to come to the pub and not drink alcohol, and most pubs make it weirdly hard for them.
+Here's the move that turns Sober October from a worry into a winner: lead with a genuinely good non alcoholic beer, then build a small alcohol free bar around it. One AF pint someone would actually choose, a couple of low and no alcohol drinks alongside it, and a tidy menu so people can find them — that's the whole thing. Get that right and a month a lot of licensees dread becomes one that quietly adds trade.
+
+Because let's clear one thing up before we go further. Sober October isn't a threat to your wet sales. It's a month where a chunk of your customers are actively looking for a reason to come to the pub and not drink alcohol, and most pubs make it weirdly hard for them.
 
 That's a missed trick. Because the people reaching for a low or no drink aren't people who'd otherwise be propping up the bar all night. They're the designated driver who currently nurses one lime and soda and leaves early. The friend who's pacing themselves so they can stay for the whole round. The midweek guest who fancies a night out without the next-day fog. The younger crowd who simply drink less than we did at their age.
 
@@ -63,20 +71,22 @@ The numbers back this up. 45% of drinkers had a no- or low-alcohol drink in the 
 
 So this guide isn't about turning your pub into a juice bar. It's about building a small, smart low and no range that earns its space, then selling it like you mean it.
 
-## Build a small board that earns its place
+## Start your alcohol free bar with one great non alcoholic beer
+
+Your alcohol free bar doesn't start with fifteen lines. It starts with one. Get a single, genuinely good non alcoholic beer on properly — listed, priced and poured cold — and you've already done more than most pubs manage all month. Everything else builds out from that anchor.
 
 The single biggest mistake is range bloat. A fridge stuffed with fifteen alcohol-free options nobody can choose between is worse than four good ones, because your staff can't recommend them and your customers can't find them.
 
 Keep it tight. You're aiming for a handful of lines that cover the main occasions:
 
-- **A proper alcohol-free beer.** This is the non-negotiable. An AF lager or pale ale that you'd happily drink yourself. The category has come a long way; the days of the apologetic warm half are over.
+- **A proper non alcoholic beer.** This is the non-negotiable, and the line your whole alcohol free bar hangs off. An AF lager or pale ale that you'd happily drink yourself. The category has come a long way; the days of the apologetic warm half are over.
 - **A cider or a sparkling option.** Something for the people who don't drink beer. An alcohol-free cider, or a grown-up sparkling pressé you can serve in a wine glass so it doesn't feel like a kids' drink.
-- **One proper mocktail.** Not an afterthought. One signature alcohol-free cocktail you can make the same way every time, fast, even on a busy Friday. A virgin mojito or a spiced ginger and citrus number works well.
+- **One proper mocktail.** Not an afterthought. You don't need a book of mocktail menu ideas — you need one signature alcohol-free cocktail you can make the same way every time, fast, even on a busy Friday. A virgin mojito or a spiced ginger and citrus number works well, and you can always add a second once the first one's flying.
 - **Two or three grown-up softs.** Move beyond the standard cola and lemonade. A good ginger beer, an artisan tonic over ice with garnish, a quality sparkling elderflower. These cost pennies more and sell for a lot more.
 
 That's it. Five or six lines, chosen so your team can recommend any of them with a straight face.
 
-Then make them visible. This is where most pubs fall down. If your low and no options live only in the bottom of a fridge or in your staff's heads, they don't exist. Put them on the menu as their own little section. Give them a chalkboard line. A proper [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) treats low and no as a category worth choosing from, not a footnote for people who "aren't drinking".
+Then make them visible. This is where most pubs fall down. If your low and no options live only in the bottom of a fridge or in your staff's heads, they don't exist. Give them their own non alcoholic drinks menu section and a chalkboard line, so the choice is obvious before anyone has to ask. A proper [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) treats low and no as a category worth choosing from, not a footnote for people who "aren't drinking".
 
 ## Make pacing the easy choice
 
@@ -131,7 +141,9 @@ A few practical moves:
 
 Then, when November comes, don't pack it all away. The whole point of those Drinkaware numbers is that this is year-round behaviour now. Keep your best two or three lines on permanently, leave them on the menu, and you'll find drivers and moderators come to rely on you for it all year. October just gets people through the door; the habit is what pays off.
 
-If you want the wider seasonal context, this slots straight into [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) alongside your quizzes, Halloween and Bonfire Night plans.
+And there's a natural follow-on waiting. Dry January is the same crowd, twice the volume — a whole month when half the country's at least curious about going alcohol-free. If your alcohol free bar is already bedded in by autumn, you walk into January ready instead of scrambling. We cover that one properly in the winter plans; for now, just don't dismantle in November what you'll only want to rebuild in January.
+
+It pairs neatly with the rest of October's drinks calendar, too. The [national drinks days](/licensees-guide/national-drinks-days-pub-guide) — Vodka Day, Gin & Tonic Day, a Champagne weekend — all run through the same month, and a confident no/low alternative on each means the driver and the moderator get a proper version of the featured serve rather than a shrug. If you want the wider seasonal context, this slots straight into [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) alongside your quizzes, Halloween and Bonfire Night plans.
 
 One quick note on doing it responsibly: an alcohol-free range sits nicely alongside good serving practice generally. Keep supporting sensible drinking, stick to Challenge 25 on anything age-restricted, and point anyone who's interested towards Drinkaware. It's the right thing to do, and it's exactly the welcoming, non-judgemental atmosphere that makes people choose your pub in the first place.
 
@@ -149,8 +161,11 @@ If you'd like a hand putting a low and no range together that actually sells, or
 
 ## FAQs
 
-**What low and no drinks should a pub stock?**
-Keep it tight: one good alcohol-free lager or beer, a cider or sparkling option, one proper mocktail you can make consistently, and a couple of grown-up soft drinks beyond the usual cola. Four or five well-chosen lines that you can serve well beat a fridge full of dusty cans nobody can find.
+**What is the best non alcoholic beer for a pub to stock?**
+The best non alcoholic beer is one you'd happily drink yourself and can keep in stock — an alcohol-free lager or pale ale from a brand your drinkers recognise, served cold and on the menu like it matters. Start your alcohol free bar with one cracking AF beer, get the whole team to taste it, then build the cider, mocktail and softs around it once you see it sell.
+
+**What low and no alcohol drinks should a pub stock?**
+Keep it tight: one good non alcoholic beer, a cider or sparkling option, one proper mocktail you can make consistently, and a couple of grown-up soft drinks beyond the usual cola. Four or five well-chosen lines that you can serve well beat a fridge full of dusty cans nobody can find.
 
 **Do low and no alcohol drinks actually make money?**
 Yes, when you price them properly. Low and no drinks often carry a healthy margin, and they capture spend from drivers, moderators and people who would otherwise have one round and leave. The mistake is pricing them like a cheap soft drink and undervaluing what people are happy to pay for a quality alcohol-free pint.

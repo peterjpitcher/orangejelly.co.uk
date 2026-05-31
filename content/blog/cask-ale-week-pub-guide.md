@@ -1,39 +1,48 @@
 ---
-title: "Cask Ale Week: A 10-Day Plan to Get Regulars Trying Something New"
+title: "Beer Festival & Cask Ale Week: A 10-Day Plan for Pubs"
 slug: "cask-ale-week-pub-guide"
 publishedDate: 2026-05-25
-excerpt: "A practical 10-day plan for Cask Ale Week 2026: a featured cask, a cask passport, tasting paddles and plain-English tasting notes that turn one week into lasting sales."
-quickAnswer: "Make Cask Ale Week easy. Pick one featured cask, write a human tasting note, give every staff member one recommendation to push, and add a reason to come back. Run a simple cask passport so regulars try different ales across the ten days, and keep your cellar spot-on so every pint tastes the way it should."
+updatedDate: 2026-05-31
+excerpt: "Run Cask Ale Week as your own beer festival: a practical 10-day plan with a featured cask, a beer passport, tasting paddles and plain-English notes that turn one week into lasting trade."
+quickAnswer: "Run Cask Ale Week as your own small beer festival. Pick a few cask ales to feature, write a human tasting note for each, give every staff member one to recommend, and add a reason to come back. A simple beer passport gets regulars working through the range across the ten days, and a spot-on cellar means every pint tastes the way it should. You don't need a marquee or a brewery — a handful of well-kept ales and a bit of theatre is a festival."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/cask-ale-week-pub-guide.svg"
 tags:
+  - "beer festival"
   - "cask ale week"
+  - "real ale festival"
   - "cask ale"
-  - "real ale pub"
   - "pub events"
 seasons:
   - autumn
 occasions: []
 status: "published"
-metaDescription: "Cask Ale Week 2026 runs 17–27 September. A practical 10-day plan for pubs: featured cask, cask passport, tasting paddles and plain-English notes that build lasting sales."
+metaDescription: "Run your own beer festival around Cask Ale Week 2026: a 10-day pub plan with featured casks, a beer passport, tasting paddles and plain-English notes."
 keywords:
-  - "cask ale week ideas for pubs"
+  - "beer festival ideas for pubs"
+  - "how to run a beer festival in a pub"
+  - "real ale festival"
+  - "craft beer festival"
   - "cask ale week 2026"
-  - "how to promote cask ale"
-  - "real ale events pub"
+  - "meet the brewer event"
+  - "cask ale week ideas for pubs"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local","in my area","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
+  - "how to run a beer festival in a pub"
   - "when is cask ale week 2026"
-  - "how do I run a cask passport in my pub"
+  - "beer festival ideas for a small pub"
+  - "how do I run a beer passport in my pub"
   - "how to get customers to try cask ale"
   - "how to keep cask ale in good condition"
 faqs:
+  - question: "How do I run a beer festival in my pub?"
+    answer: "You don't need a marquee or a brewery to call it a festival. Pick a handful of cask ales to feature across the run, give it a name and a bit of theatre, and add a beer passport so drinkers work through the range. Cask Ale Week in September is the perfect hook to hang it on. Keep the cellar spot-on, brief your team to recommend, and a small real ale festival comes together with kit you already own."
   - question: "When is Cask Ale Week 2026?"
-    answer: "Cask Ale Week runs Thursday 17 to Sunday 27 September 2026. That gives you two weekends and the midweek in between, so it works as a proper ten-day campaign rather than a single night you have to cram everything into."
-  - question: "How do I run a cask passport?"
+    answer: "Cask Ale Week runs in late September; the 2026 dates are expected to be Thursday 17 to Sunday 27 September (confirm at caskaleweek.co.uk). That gives you two weekends and the midweek in between, so it works as a proper ten-day campaign rather than a single night you have to cram everything into."
+  - question: "How do I run a beer passport?"
     answer: "Print a simple card listing the cask ales you'll feature across the run. Every time a customer buys a different one, stamp or tick it off. Set a reachable target, say four ales, and reward a completed card with something small like a free half or a branded glass. It quietly turns one pint into several visits."
   - question: "How do I get customers to try cask ale?"
     answer: "Lower the risk and make it human. Offer a third-pint or a small taster before they commit, describe each ale in plain English rather than brewery jargon, and have staff recommend one personally. Most people who say they don't like 'real ale' just haven't found the right one yet."
@@ -49,17 +58,32 @@ schema:
   "@type": "Article"
 ---
 
-# Cask Ale Week: A 10-Day Plan to Get Regulars Trying Something New
+# Beer Festival & Cask Ale Week: A 10-Day Plan for Pubs
 
 *Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
 
-Cask is one of the few things a chain down the road can't really copy. They can match your prices and out-spend your marketing, but a well-kept cask ale, poured by someone who can tell you what it tastes like, is properly your patch. The trouble is most of us never make a fuss about it. The handpulls just sit there, and half your customers walk past them every week without ever giving one a go.
+You don't need a marquee, a field, or a dozen breweries to run a beer festival. The best one you can put on is the pub you've already got, a handful of well-kept ales, and a week with a name on it. Cask is one of the few things a chain down the road can't really copy. They'll match your prices and out-spend your marketing, but a well-kept cask, poured by someone who can tell you what it tastes like, is properly your patch. The trouble is most of us never make a fuss about it. The handpulls just sit there, and half your customers walk past them every week without giving one a go.
 
-Cask Ale Week is the nudge that fixes that. It gives you the one thing that's hard to manufacture on a normal Tuesday: a reason. A reason for regulars to try the pump they always ignore, a reason for lager drinkers to be curious, and a reason for you to talk about the thing you're already good at.
+Cask Ale Week is the nudge that fixes that — and the perfect hook to turn a normal September into your own beer festival. It gives you the one thing that's hard to manufacture on a wet Tuesday: a reason. A reason for regulars to try the pump they always ignore, a reason for lager drinkers to be curious, and a reason for you to talk about the thing you're already good at.
 
-**Cask Ale Week runs Thursday 17 to Sunday 27 September 2026.** That's two weekends with the midweek in between, so you've got room to build something over ten days rather than blowing it all on one night.
+**Cask Ale Week runs in late September — expect Thursday 17 to Sunday 27 September in 2026 (confirm the dates at caskaleweek.co.uk).** That's two weekends with the midweek in between, so you've got room to build something over ten days rather than blowing it all on one night.
 
 This guide is the practical version. No beer-bore lectures, no kit you don't already own. Just a simple plan to get more people drinking your cask, and to keep some of them doing it long after the week is over.
+
+## Run it as your own beer festival
+
+Here's the reframe that makes the week land harder: don't call it "we've got some ales on," call it a festival. The word does real work. A beer festival sounds like an event worth a trip and a text to a mate; a few extra handpulls sounds like a normal Tuesday. Same ales, same cellar, completely different pull.
+
+And you can absolutely earn the word without the overheads. People picture a real ale festival as a marquee and a hundred firkins on stillage. It can be — but for most of us it's better as a small, well-run thing: a curated handful of cask ales, a name, a passport, and a bit of theatre. That's a festival your regulars will actually turn up to, run on kit you already own.
+
+A few ways to dress it up so it reads as an event:
+
+- **Give it a name and a look.** "[Your Pub] Autumn Ale Festival" on a chalkboard A-board, a printed list on every table, a hashtag. Naming it is half the job — it tells people something's on.
+- **Curate a theme.** Pick an angle so the line-up tells a story: all local breweries, a darker-beers week as the nights draw in, or a "best of British bitter" run. A theme gives you something to talk about and a reason for the curious to come.
+- **Widen the tent if it suits you.** If your crowd leans younger, run it as a craft beer festival too — a couple of keg lines or cans alongside the cask, so hop-forward drinkers have a way in. The point is range and occasion, not purism.
+- **Programme it lightly.** A "meet the brewer" slot one evening, a tap-takeover feel at the weekend, the new ale revealed each morning. You're giving the week a shape so it feels like a festival, not a fridge.
+
+The rest of this guide is the engine room of that festival — the daily formats, the passport, the paddles and the cellar work that make it run. Lift what fits, slap a name on it, and you've got a beer festival that's unmistakably yours.
 
 ## The simple version (start here)
 
@@ -96,9 +120,9 @@ The single biggest barrier to trying cask is risk. Nobody wants to spend on a fu
 
 Where your licence and glassware allow, offer a third-pint flight — three small measures on a paddle so people can taste and compare without committing to a pint. It turns "I don't really drink real ale" into "go on then," and the one they like becomes the pint they order next. If you can't do paddles, a small taster before they buy does the same job for free.
 
-### A low-effort "meet the maker" night
+### A low-effort meet the brewer event
 
-You don't need to fly in a head brewer. A "meet the maker" night can be as simple as your local or regional brewery sending a rep along for a couple of hours on a weekend evening, pouring their ale and chatting to drinkers. Many will jump at it — it's their shop window too — and they'll often bring glassware, pump clips and point-of-sale with them.
+A meet the brewer event is the bit that makes the week feel like a proper festival, and it's easier to pull off than it sounds. You don't need to fly in a head brewer. It can be as simple as your local or regional brewery sending a rep along for a couple of hours on a weekend evening, pouring their ale and chatting to drinkers. Many will jump at it — it's their shop window too — and they'll often bring glassware, pump clips and point-of-sale with them.
 
 If that's a stretch, run a "meet the cask" instead: you behind the bar, one good ale, a few words about where it's from and why you put it on. People love a story with their pint, and you're the maker of the experience whether or not a brewer turns up.
 
@@ -155,7 +179,7 @@ A few moves that make it stick:
 - **Capture who showed up.** Every passport handed back is someone to tell about your next guest ale. Build the relationship, not just the one sale.
 - **Ask what they liked.** The ales that flew this week are the ones worth keeping on. Let your customers shape your range and they'll feel ownership of it.
 
-Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. If you're planning the whole season, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
+Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. It also sits right next to another beer-led moment: if your festival lands late in September, you can roll it straight into [Oktoberfest](/licensees-guide/oktoberfest-pub-guide) on the same kit — different beers, same theatre, two reasons to come in across one fortnight. If you're planning the whole season, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
 
 ## Your first move
 
@@ -172,10 +196,13 @@ If you'd like a hand turning the week into a proper plan, or making cask the her
 
 ## FAQs
 
-**When is Cask Ale Week 2026?**
-Cask Ale Week runs Thursday 17 to Sunday 27 September 2026. That gives you two weekends and the midweek in between, so it works as a proper ten-day campaign rather than a single night you have to cram everything into.
+**How do I run a beer festival in my pub?**
+You don't need a marquee or a brewery to call it a festival. Pick a handful of cask ales to feature across the run, give it a name and a bit of theatre, and add a beer passport so drinkers work through the range. Cask Ale Week in September is the perfect hook to hang it on. Keep the cellar spot-on, brief your team to recommend, and a small real ale festival comes together with kit you already own.
 
-**How do I run a cask passport?**
+**When is Cask Ale Week 2026?**
+Cask Ale Week runs in late September; the 2026 dates are expected to be Thursday 17 to Sunday 27 September (confirm at caskaleweek.co.uk). That gives you two weekends and the midweek in between, so it works as a proper ten-day campaign rather than a single night you have to cram everything into.
+
+**How do I run a beer passport?**
 Print a simple card listing the cask ales you'll feature across the run. Every time a customer buys a different one, stamp or tick it off. Set a reachable target, say four ales, and reward a completed card with something small like a free half or a branded glass. It quietly turns one pint into several visits.
 
 **How do I get customers to try cask ale?**
