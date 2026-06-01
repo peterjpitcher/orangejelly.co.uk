@@ -6,7 +6,7 @@ const mockResults = [
   {
     id: 'food-gp-improvement',
     title: 'Food Waste Reduction',
-    subtitle: '£250/week cut in Sunday waste',
+    subtitle: 'Booking no-shows cut by 89%',
     problem: ['Problem A'],
     failed: ['Failed A'],
     solution: ['Solution A'],
@@ -17,7 +17,7 @@ const mockResults = [
   {
     id: 'quiz-night-transformation',
     title: 'Quiz Night Transformation',
-    subtitle: 'From 20 to 35 regulars',
+    subtitle: 'Table bookings up 403%',
     problem: ['Problem B'],
     failed: ['Failed B'],
     solution: ['Solution B'],
