@@ -39,7 +39,7 @@ faqs:
   - question: "How often should I change my pub food menu?"
     answer: "Seasonally, with small changes rather than full resets. Keep your hero dishes consistent and rotate two to three specials. This reduces waste, keeps the kitchen confident, and gives regulars a reason to try something new."
   - question: "What gross profit should pub food achieve?"
-    answer: "Aim for 65-70% gross profit across your menu. Individual dishes will vary, but your overall food GP should hit this range. At The Anchor, we moved food GP from 58% to 71% by tightening portions, cross-using ingredients, and pricing based on true cost rather than competitors."
+    answer: "Aim for 65-70% gross profit across your menu. Individual dishes will vary, but your overall food GP should hit this range. At The Anchor, applying these systems — tightening portions, cross-using ingredients, and pricing on true cost rather than competitors — grew our food revenue by 98% in three months."
 ---
 
 # Profitable Pub Food Menu Ideas: High-Margin Dishes That Actually Sell
@@ -79,7 +79,7 @@ Keep it simple and repeatable.
 - Track sales and margin for two weeks.
 - Keep the winners, drop the rest.
 
-If you want help building a menu that protects margin and drives repeat visits, [get in touch with us directly](/contact) — we have moved food GP from 58% to 71% at The Anchor using these exact systems.
+If you want help building a menu that protects margin and drives repeat visits, [get in touch with us directly](/contact) — we grew food revenue by 98% in three months at The Anchor using these exact systems.
 
 ## Common mistakes
 

@@ -51,7 +51,7 @@ This guide is the overview: the formats that actually work, organised by type an
 
 A good pub event isn't about novelty. It's about three things: it fits a gap in your week, it suits the people you already serve, and it runs on a rhythm people can rely on. The single biggest mistake is scattering one-off events and wondering why none of them stick. Pick one format, run it the same night every week or month, and let the habit build. The first one might be quiet. By the third or fourth, you've got a fixture.
 
-At The Anchor in Stanwell Moor, our quiz went from an afterthought to 25–35 regulars precisely because we kept it the same night, same time, every week, until it became part of people's routine.
+At The Anchor in Stanwell Moor, a consistent quiz — same night, same time, every week — was part of what grew our table bookings by 403%, simply because it became part of people's routine.
 
 ## Event ideas by type
 

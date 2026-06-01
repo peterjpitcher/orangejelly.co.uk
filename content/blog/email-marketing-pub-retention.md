@@ -35,7 +35,7 @@ voiceSearchQueries:
   - "What email marketing tool is best for pubs"
 faqs:
   - question: "How do I collect customer emails at my pub?"
-    answer: "Use WiFi signup, loyalty card registration, booking confirmation forms, and table tent offers like 'join our list for a free drink on your birthday'. At The Anchor, we built a database of 300 contacts using these methods without any hard-sell tactics."
+    answer: "Use WiFi signup, loyalty card registration, booking confirmation forms, and table tent offers like 'join our list for a free drink on your birthday'. At The Anchor, we built our customer database steadily using these methods without any hard-sell tactics."
   - question: "How often should a pub send marketing emails?"
     answer: "Weekly is the sweet spot. Send a short, friendly email every Monday or Tuesday with what is on that week, any special offers, and one piece of local news or pub personality. Monthly is too infrequent to build habit; daily is too much."
   - question: "What email marketing platform should a pub use?"

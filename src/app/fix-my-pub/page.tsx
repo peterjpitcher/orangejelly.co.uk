@@ -51,9 +51,10 @@ export default function FixMyPubPage() {
         }}
         bottomText="Packages from £375 + VAT • 30-day intensive option • No lock-in"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Fix My Pub' }]}
+        backgroundImage="/images/headers/fix-my-pub.png"
       />
 
-      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* The Problem */}
       <Section>

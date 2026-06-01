@@ -108,7 +108,7 @@ If Tuesday is your weakest night, our dedicated guide on [fixing empty Tuesday n
 
 **Key Insight**: Fixed offerings reduce kitchen complexity while maintaining margins.
 
-**Impact**: Sunday waste cut £250/week and food waste reduced by 90% using AI-driven prep forecasts.
+**Impact**: Sharper prep forecasts cut food waste significantly while keeping covers steady through the week.
 
 ### 3. "Lunch & Learn" Business Packages
 

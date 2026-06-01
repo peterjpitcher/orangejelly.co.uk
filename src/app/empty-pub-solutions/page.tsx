@@ -69,9 +69,10 @@ export default function EmptyPubSolutions() {
         }}
         bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Empty Pub Solutions' }]}
+        backgroundImage="/images/headers/empty-pub-solutions.png"
       />
 
-      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* The Problem */}
       <Section>

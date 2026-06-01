@@ -134,6 +134,7 @@ export default function PubMarketingLocationLandingPage({
         ctaText={data.hero.ctaText}
         bottomText={data.hero.bottomText}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: breadcrumbLabel }]}
+        backgroundImage={`/images/headers/hero_${currentSlug.replace('pub-marketing-', '')}.png`}
       />
 
       <Section background="white" padding="large">

@@ -6,4 +6,4 @@ We analyse 9 key areas including GP optimisation, quiet period solutions, event 
 
 ## How can you improve margins and reduce waste?
 
-Through menu engineering, waste reduction systems, portion control, and strategic pricing. At The Anchor, we cut £250/week in Sunday waste and achieved a 90% reduction in food waste using these methods. Most pubs see meaningful progress inside 30 days when changes are implemented quickly.
+Through menu engineering, waste reduction systems, portion control, and strategic pricing. At The Anchor, these methods helped us grow food revenue by 98% in three months and cut booking no-shows by 89%, so every cover counts and far less prep goes in the bin. Most pubs see meaningful progress inside 30 days when changes are implemented quickly.

@@ -14,7 +14,7 @@ interface ResultsSectionProps {
 
 function ResultsSection({
   title = 'Real Results from The Anchor',
-  testimonial = "We've added £75,000-£100,000 of value to our business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. Every strategy we share has been proven in our own venue.",
+  testimonial = "We grew Google Search visibility by 828%, table bookings by 403%, and food revenue by 98% — all using AI, all proven in our own venue. Every strategy we share, we've tested behind our own bar.",
   subtext = 'Featured in BII magazine for AI innovation in hospitality. From quiz nights to tasting events, this is measurable change in business performance.',
   buttonText = 'See More Hospitality Results',
   buttonHref = '/results',

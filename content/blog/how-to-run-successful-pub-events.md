@@ -34,7 +34,7 @@ voiceSearchQueries:
   - "What is the best pub event for a quiet night"
 faqs:
   - question: "Do I need a big budget to run pub events?"
-    answer: "No. Small, repeatable events often outperform expensive one-offs. A quiz night costs almost nothing to run but can bring 25-35 regulars every week. Focus on consistency and community rather than spectacle."
+    answer: "No. Small, repeatable events often outperform expensive one-offs. A quiz night costs almost nothing to run but can fill a quiet night week after week — at The Anchor, getting events and bookings right grew our table bookings by 403%. Focus on consistency and community rather than spectacle."
   - question: "How often should I run events at my pub?"
     answer: "Consistency matters more than volume. One strong event per week is enough to start. Build a weekly rhythm so customers know what to expect, then add a second event once the first is established."
   - question: "How far ahead should I promote a pub event?"
@@ -49,7 +49,7 @@ But here's the problem most licensees hit: they try one event, promote it badly,
 
 Events work when they're treated like a product, not a one-off experiment. The formula is straightforward: clear concept, simple pricing, focused promotion, and a tight run sheet. Get those four things right, and events become the most reliable footfall driver your pub has.
 
-At The Anchor in Stanwell Moor, our quiz night brings in 25-35 regulars every week. It didn't start that way. It started with 12 people and a lot of learning. But the system we built around it is what made it stick — and it's the same system that works for any pub event.
+At The Anchor in Stanwell Moor, getting events and bookings right grew our table bookings by 403%. It didn't start that way. It started with a dozen people and a lot of learning. But the system we built around it is what made it stick — and it's the same system that works for any pub event.
 
 ## Pub Event Ideas That Actually Make Money
 
@@ -61,7 +61,7 @@ Before diving into the how, let's talk about which events are worth your time. N
 
 **Live music** works brilliantly when you match the act to your audience. Acoustic sessions on a Friday or Saturday draw a different crowd and keep people in the pub longer. Budget £150-300 per act and aim to cover it through increased spend. Our guide to [live music events for pubs](/licensees-guide/live-music-events-for-pubs) covers how to book acts, manage sound, and make it profitable.
 
-**Tasting evenings** — wine, gin, whisky, or craft beer — attract a premium crowd willing to spend. Charge £15-25 per head, partner with a supplier for stock at reduced cost, and you've got a profitable event with built-in margin. Our tasting nights at The Anchor deliver 85% retention — meaning people come back for the next one.
+**Tasting evenings** — wine, gin, whisky, or craft beer — attract a premium crowd willing to spend. Charge £15-25 per head, partner with a supplier for stock at reduced cost, and you've got a profitable event with built-in margin. Running events like these at The Anchor grew our private hire bookings by 567% — people who came once came back and booked the space again.
 
 **Themed food nights** turn a quiet kitchen into a revenue driver. Curry night, pie and mash, or a monthly steak special give people a specific reason to book. Pair it with a drink deal and you've got a complete evening out. See our [profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas) for inspiration.
 
@@ -139,7 +139,7 @@ This is where most pub events fail. You can't post once on Facebook the day befo
 
 **Facebook** is still king for pub events. Create an event page, invite your followers, and post updates to it. Facebook events get shared and create social proof.
 
-**WhatsApp groups** or broadcast lists are gold. If you've built a customer database (even 50 contacts), a WhatsApp message on the day gets better response than any social post. We've built a database of 300 contacts at The Anchor and it's one of our most powerful marketing tools.
+**WhatsApp groups** or broadcast lists are gold. If you've built a customer database (even 50 contacts), a WhatsApp message on the day gets better response than any social post. We've built a customer database at The Anchor and it's one of our most powerful marketing tools.
 
 **In-pub promotion** is underrated. Table talkers, a chalk board by the entrance, your staff mentioning it at the bar. The people already in your pub are the most likely to come to your event.
 
@@ -226,7 +226,7 @@ The real profit from events isn't the door take — it's the compound effect:
 
 **Increased dwell time.** Event customers stay 1-2 hours longer than normal customers. That's 2-3 extra drinks per person.
 
-**New customer acquisition.** Events bring in people who wouldn't normally visit your pub. Our social media across Orange Jelly's channels reaches 60-70K monthly views — events give you something worth posting about.
+**New customer acquisition.** Events bring in people who wouldn't normally visit your pub. Getting found online matters too — at The Anchor we grew our Google Search visibility by 828%, and events give you something worth posting about.
 
 **Higher average spend.** Event nights typically see 30-40% higher per-head spend than regular nights.
 

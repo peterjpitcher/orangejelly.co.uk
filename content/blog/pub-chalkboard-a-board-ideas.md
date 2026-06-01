@@ -103,7 +103,7 @@ A word of caution: witty does not mean offensive. Keep it family-friendly and in
 
 Use your board to show that other people love what you do.
 
-- "25-35 teams every quiz night — room for one more?"
+- "Busiest quiz in the area — room for one more team?"
 - "Rated 4.8 on Google — see what the fuss is about"
 - "Your neighbours are already inside"
 

@@ -131,6 +131,7 @@ export default function WaysToWorkPage() {
         subtitle="Four ways to work with Orange Jelly — from a focused one-off fix to full ongoing partnership. Pick the level that fits your venue today."
         showCTA={false}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Ways to Work' }]}
+        backgroundImage="/images/headers/ways-to-work.png"
       />
 
       {/* Package Cards */}

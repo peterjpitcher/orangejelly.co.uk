@@ -18,10 +18,10 @@ Developed custom AI prompts to generate social media content in bulk - creating 
 
 ## Results
 
-- **Monthly Reach**: 60,000-70,000 people
-- **Content Batching**: 30 days in 2 hours
-- **Live Video Engagement**: 300% more than static posts
-- **UGC Engagement**: 79% higher than standard posts
+- **Google Search Visibility**: Grew by 828% (proven at The Anchor, our own pub)
+- **Posting Consistency**: A month of content created in one batching session
+- **Local Discovery**: Found by far more people searching for us online
+- **Community Engagement**: Consistent daily presence across Facebook, Instagram and Google
 
 ## Time Investment
 

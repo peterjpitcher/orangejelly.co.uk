@@ -1,5 +1,7 @@
 # Orange Jelly Approved Claims Document
 
+> ⚠️ **DEPRECATED (2026-05-31).** Superseded by [`/CLAIMS.md`](../../CLAIMS.md) in the repository root, which is now the single source of truth for all business claims. The metrics below are **out of date — do not use them.** See `/CLAIMS.md` for the approved, percentage-based claim set.
+
 ## Overview
 This document contains all approved claims for the Orange Jelly website, incorporating Peter's feedback from August 2025. These claims will be migrated to Sanity CMS for centralized management.
 

@@ -73,7 +73,7 @@
       "cardCopy": "Payment plans available"
     },
     "ctaWhatsApp": "Hi Peter, I'm interested in the Growth Fix package.",
-    "relatedProof": ["food-gp-growth", "quiz-regulars"],
+    "relatedProof": ["search-visibility", "table-bookings"],
     "relatedCaseStudies": ["anchor-midweek-turnaround"],
     "sortOrder": 1,
     "visible": true
@@ -154,7 +154,7 @@
       "cardCopy": "Payment plans available"
     },
     "ctaWhatsApp": "Hi Peter, I'm interested in the Momentum Month package.",
-    "relatedProof": ["quiz-regulars", "social-views"],
+    "relatedProof": ["search-visibility", "no-shows"],
     "relatedCaseStudies": ["anchor-midweek-turnaround", "anchor-social-growth"],
     "sortOrder": 2,
     "visible": true
@@ -236,7 +236,7 @@
       "cardCopy": "Payment plans available"
     },
     "ctaWhatsApp": "Hi Peter, I'm interested in the Growth Partner package.",
-    "relatedProof": ["food-gp-growth", "value-added", "social-views"],
+    "relatedProof": ["search-visibility", "table-bookings", "food-revenue"],
     "relatedCaseStudies": ["anchor-food-gp", "anchor-social-growth"],
     "sortOrder": 3,
     "visible": true
@@ -311,7 +311,7 @@
       "cardCopy": "Payment plans available"
     },
     "ctaWhatsApp": "Hi Peter, I'm interested in the Turnaround Intensive package.",
-    "relatedProof": ["food-gp-growth", "value-added", "sunday-margin-growth"],
+    "relatedProof": ["food-revenue", "table-bookings", "no-shows"],
     "relatedCaseStudies": ["anchor-food-gp"],
     "sortOrder": 4,
     "visible": true

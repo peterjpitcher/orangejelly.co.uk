@@ -243,7 +243,7 @@ The key question is whether the total package works. Compare:
 
 If the tied total is significantly higher, you have grounds to negotiate or explore MRO. If the difference is marginal, staying tied and focusing on the categories you can control may be the smarter move.
 
-At The Anchor, we improved our food GP from 58% to 71% by focusing on what we could control rather than fighting the tie on every front. Sometimes the biggest wins are in the areas where the tie does not apply.
+At The Anchor, we grew food revenue by 98% in three months by focusing on what we could control rather than fighting the tie on every front. Sometimes the biggest wins are in the areas where the tie does not apply.
 
 ### The Landlord and Tenant Act 1954
 
@@ -305,7 +305,7 @@ Understanding where your money comes from matters:
 - **Dry sales** (food) are usually free of tie and where you can build margin most effectively
 - A healthy balance depends on your pub's model, but 60/40 wet to dry or 50/50 is common for food-led pubs
 
-We pushed our food GP to 71% at The Anchor by tightening portions, renegotiating suppliers, and engineering the menu. That margin improvement on the dry side more than offset the tie premium on the wet side.
+At The Anchor we grew food revenue by 98% in three months by tightening portions, renegotiating suppliers, and engineering the menu. That growth on the dry side more than offset the tie premium on the wet side.
 
 ### Hidden Costs to Budget For
 
@@ -399,7 +399,7 @@ Whether you are taking on a new pub lease or renegotiating an existing one, here
 
 **"The tie is killing my business."**
 
-The tie affects margin, but it is rarely the sole problem. At The Anchor, we improved profitability significantly by focusing on food GP (58% to 71%), building events like quiz night (now 25-35 regulars), and maximising free-of-tie categories. Fix the things you can control before fighting the things you cannot.
+The tie affects margin, but it is rarely the sole problem. At The Anchor, we improved profitability significantly by tightening food margins (food revenue grew by 98% in three months), filling the place with events until table bookings were up by 403%, and maximising free-of-tie categories. Fix the things you can control before fighting the things you cannot.
 
 **"I cannot afford to go MRO."**
 
@@ -431,4 +431,4 @@ You are not powerless. You have more levers than you think. Use them.
 
 Understanding your pub lease does not have to be overwhelming. At Orange Jelly, we help licensees across the UK make better business decisions, from lease negotiations to operational improvements that add real value.
 
-We have helped operators reclaim on average 25 hours per week through smarter systems and grow social media reach to 60-70K monthly views. If you want a fresh pair of eyes on your situation, [talk to us](/contact).
+At The Anchor we have grown Google Search visibility by 828% and table bookings by 403% through smarter systems and a sharper offer. If you want a fresh pair of eyes on your situation, [talk to us](/contact).

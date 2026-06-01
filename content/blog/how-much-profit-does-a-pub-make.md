@@ -2,7 +2,7 @@
 title: "How Much Profit Does a Pub Make? Realistic Numbers for 2026"
 slug: "how-much-profit-does-a-pub-make"
 publishedDate: 2025-12-08
-excerpt: "Honest pub profit benchmarks for 2026. Wet GP, food GP, labour costs, rent, and what is actually left. From a working licensee who grew food GP from 58% to 71%."
+excerpt: "Honest pub profit benchmarks for 2026. Wet GP, food GP, labour costs, rent, and what is actually left. From a working licensee who grew food revenue by 98% in three months."
 quickAnswer: "A well-run community pub turning over 400K to 600K a year can expect to net between 20K and 60K in owner's profit after all costs. The key variables are gross profit on drinks (target 60-65%), food GP (target 65-70%), labour costs (keep below 30%), and rent. Most pubs that struggle are losing money in places they have never measured."
 author: "Peter Pitcher"
 category: "operations"
@@ -15,7 +15,7 @@ tags:
   - "break even"
   - "pub business"
 status: "published"
-metaDescription: "Realistic pub profit benchmarks for 2026. Wet GP, food GP, labour, rent, and what you actually take home. From a licensee who grew food GP from 58% to 71%."
+metaDescription: "Realistic pub profit benchmarks for 2026. Wet GP, food GP, labour, rent, and what you actually take home. From a licensee who grew food revenue by 98% in three months."
 keywords:
   - "how much profit does a pub make"
   - "average pub turnover uk"
@@ -35,7 +35,7 @@ faqs:
   - question: "How much profit does a pub make in the UK?"
     answer: "A typical community pub turning over 400K to 600K per year can expect owner's profit of 20K to 60K after all costs including rent, wages, stock, and overheads. Higher-turnover food-led pubs can net more, but they also carry higher costs. The range is wide because profit depends on your GP margins, labour control, and how much of your turnover leaks through waste, poor pricing, and unnecessary spend."
   - question: "What is a good gross profit for a pub?"
-    answer: "For wet sales (drinks), target 60-65% gross profit. For food, target 65-70%. A blended GP across the whole business should sit between 60% and 68% depending on your wet-to-food ratio. If your food GP is below 60%, your menu is costing you money. At The Anchor we moved food GP from 58% to 71% through portion control, supplier renegotiation, and menu engineering."
+    answer: "For wet sales (drinks), target 60-65% gross profit. For food, target 65-70%. A blended GP across the whole business should sit between 60% and 68% depending on your wet-to-food ratio. If your food GP is below 60%, your menu is costing you money. At The Anchor, tightening food GP through portion control, supplier renegotiation, and menu engineering helped us grow food revenue by 98% in three months."
   - question: "What is the average turnover of a pub in the UK?"
     answer: "Average UK pub turnover varies enormously by type and location. A small wet-led village pub might turn over 150K to 250K. A busy community local doing food and drink could manage 400K to 700K. A large food-led destination pub can exceed 1M. The number that matters more than turnover is what percentage you keep as profit."
   - question: "How do I calculate my pub break-even point?"
@@ -60,7 +60,7 @@ You have probably searched this question because you are either thinking about b
 
 Either way, you deserve honest numbers. Not the inflated projections from a business plan template. Not the doom-and-gloom headlines about pubs closing at a rate of two a day. Real benchmarks from someone who runs a pub and looks at the P&L every single week.
 
-I am Peter Pitcher. I run The Anchor in Stanwell Moor as a Greene King tenant. When I took it on, our food gross profit was sitting at 58%. Today it is 71%. That 13-point swing changed everything about the financial health of the business. In this guide, I will walk you through what a pub actually makes, where the money goes, and how to calculate whether yours is healthy or haemorrhaging cash.
+I am Peter Pitcher. I run The Anchor in Stanwell Moor as a Greene King tenant. When I took it on, the kitchen was barely washing its face. By tightening the margins and reworking the offer, we grew food revenue by 98% in three months. That swing changed everything about the financial health of the business. In this guide, I will walk you through what a pub actually makes, where the money goes, and how to calculate whether yours is healthy or haemorrhaging cash.
 
 ## What does average pub turnover look like in the UK?
 
@@ -110,9 +110,9 @@ For a deeper look at how to restructure your drinks range for better margins, re
 
 Food gross profit should be **65% to 70%** for a well-run pub kitchen. That means for every pound of food you sell, you keep 65p to 70p before wages and overheads.
 
-When I took on The Anchor, our food GP was **58%**. That is not unusual for a pub that has not been actively managing its food costs. Through a combination of portion control, menu engineering, supplier renegotiation, and removing low-margin dishes, we moved it to **71%**.
+When I took on The Anchor, the kitchen was not actively managing its food costs, and a weak GP is common in that situation. Through a combination of portion control, menu engineering, supplier renegotiation, and removing low-margin dishes, we tightened the margins and grew food revenue by 98% in three months.
 
-That 13-percentage-point improvement on a pub doing £200K in annual food sales is worth an extra £26,000 a year dropping straight to the bottom line. No extra customers needed. No extra marketing. Just tighter controls on what you already sell.
+A solid food GP improvement drops straight to the bottom line. No extra customers needed. No extra marketing. Just tighter controls on what you already sell.
 
 The most common food GP killers are:
 
@@ -249,7 +249,7 @@ In my experience working with pubs through Orange Jelly, these are the five area
 
 ### 1. Unmanaged food cost
 
-If you are not costing every dish on your menu, you are guessing. And guessing always costs you money. I have seen pubs where a single popular dish was running at 45% food cost and nobody knew because nobody had done the maths. At The Anchor, moving from 58% to 71% food GP was the single most impactful change we made.
+If you are not costing every dish on your menu, you are guessing. And guessing always costs you money. I have seen pubs where a single popular dish was running at 45% food cost and nobody knew because nobody had done the maths. At The Anchor, tightening food cost was the single most impactful change we made — it is what grew our food revenue by 98% in three months.
 
 ### 2. Overstaffing quiet sessions
 
@@ -300,7 +300,7 @@ For a broader set of strategies to lift revenue alongside margin, our guide on [
 
 **Within three to six months:** With consistent weekly tracking and ongoing adjustments, a 5 to 8 percentage point improvement in blended GP is achievable. That is the difference between a pub that barely breaks even and one that provides a decent living.
 
-At The Anchor, the improvement from 58% to 71% food GP did not happen overnight. It took discipline, weekly reviews, and a willingness to make changes that were sometimes uncomfortable. But the result was transformative.
+At The Anchor, growing food revenue by 98% in three months did not happen by accident. It took discipline, weekly reviews, and a willingness to make changes that were sometimes uncomfortable. But the result was transformative.
 
 ## Common objections
 

@@ -114,7 +114,7 @@ export const pageMetadata = {
   home: {
     title: 'Hospitality Marketing That Fills Seats | From a Real Publican',
     description:
-      'Hospitality marketing proven at a real pub. We grew quiz night to 35 regulars and food GP from 58% to 71%. Packages from £375 + VAT.',
+      'Hospitality marketing proven at a real pub. We grew table bookings 403% and food revenue 98% at The Anchor. Packages from £375 + VAT.',
   },
   services: {
     title: 'Hospitality Growth Services for Pubs & Venues',

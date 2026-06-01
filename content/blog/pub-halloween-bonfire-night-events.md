@@ -71,7 +71,7 @@ That matters because October and November are two of the most underused months i
 
 But here's the thing. Halloween and Bonfire Night are two of the few occasions all year when people actively want a reason to go out. They want atmosphere. Somewhere warm, good food, a decent drink. Give them that and they'll come — and they'll spend.
 
-At The Anchor in Stanwell Moor, our autumn events regularly fill the pub on nights that would otherwise be quiet. None of it's complicated. It's just planned properly and promoted early enough.
+At The Anchor in Stanwell Moor, leaning into events is part of what grew our private hire bookings by 567%, filling the pub on nights that would otherwise be quiet. None of it's complicated. It's just planned properly and promoted early enough.
 
 This guide covers what actually works. No plastic skeletons from a pound shop, no events that cost more to run than they bring in. Just practical, profitable ideas you can adapt to your pub, your space, and your team. We'll lead with the Halloween food and party side, then carry it through to Bonfire Night.
 
@@ -117,7 +117,7 @@ If you already run a [pub quiz night](/licensees-guide/quiz-night-101), a Hallow
 - A themed food special. Loaded nachos called "witches fingers" or a chilli served in a bread bowl are simple kitchen upgrades
 - A best-dressed team prize that encourages groups to coordinate. Groups that plan together usually arrive together, and they stay longer
 
-At The Anchor, our themed quiz nights consistently pull stronger numbers than a standard week. The fancy dress element alone brings people who do not usually come to quiz night, and many of them come back.
+At The Anchor, running themed quiz nights consistently was part of what grew our table bookings by 403%. The fancy dress element alone brings people who do not usually come to quiz night, and many of them come back.
 
 ### The family pumpkin afternoon
 
@@ -253,7 +253,7 @@ This is the timeline that works for us at The Anchor. Adapt the dates to fit you
 - Open bookings or ticket sales
 - Post the menu and any ticket prices
 - Share behind-the-scenes prep content. Pumpkin deliveries, menu tastings, decoration shopping
-- Email your database if you have one. Even a list of 300 contacts is enough to fill a midweek event
+- Email your database if you have one. Even a modest list is enough to fill a midweek event
 - Put posters in the pub and ask regulars to spread the word
 
 ### Two weeks out (mid-October for Halloween, late October for Bonfire Night)
@@ -295,7 +295,7 @@ For a full year of event planning, see our [seasonal pub events calendar](/licen
 
 **Ignoring the food opportunity.** The drinks will take care of themselves on event nights. The food is where you protect and grow your margin. A bonfire menu at a fixed price is your best friend.
 
-**Not capturing data.** Every ticket sold, every booking made, every email collected is a customer you can invite to your next event. Build your list. Our database of 300 contacts is one of the most valuable assets we have at The Anchor.
+**Not capturing data.** Every ticket sold, every booking made, every email collected is a customer you can invite to your next event. Build your list. Our customer database is one of the most valuable assets we have at The Anchor.
 
 **Copying what the chain pub down the road is doing.** They have a marketing budget and a formula. You have personality and flexibility. Use yours. A hand-written chalkboard menu and a genuine welcome beat a corporate Halloween poster every time.
 

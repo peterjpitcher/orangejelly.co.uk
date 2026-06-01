@@ -9,7 +9,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/': {
     title: 'Hospitality Marketing That Fills Seats | From a Real Publican',
     description:
-      'Hospitality marketing proven at a real pub. We grew quiz night to 35 regulars and food GP from 58% to 71%. Packages from £375 + VAT.',
+      'Hospitality marketing proven at a real pub. We grew table bookings 403% and food revenue 98% at The Anchor. Packages from £375 + VAT.',
     keywords: [
       'hospitality marketing',
       'hospitality marketing ideas',
@@ -76,12 +76,12 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/profitable-pub-food-menu-ideas': {
     title: 'Profitable Pub Food Menu Ideas (High-Margin Picks)',
     description:
-      'High-margin pub menu ideas and simple menu engineering that lift food GP — we took ours from 58% to 71%. Practical picks from a working pub.',
+      'High-margin pub menu ideas and simple menu engineering that grow food revenue — we nearly doubled ours (+98%). Practical picks from a working pub.',
   },
   '/licensees-guide/social-media-strategy-for-pubs': {
     title: 'Social Media Strategy for Pubs (Weekly System)',
     description:
-      'A weekly social media plan for pubs: what to post, when, and how to turn views into footfall. The system behind 60-70K monthly views at our pub.',
+      'A weekly social media plan for pubs: what to post, when, and how to turn views into footfall. The system behind our 828% Google Search visibility growth.',
   },
   '/licensees-guide/summer-pub-event-ideas': {
     title: 'Pub Event Ideas for Summer: 35 That Make Money',
@@ -117,7 +117,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/quiz-night-ideas': {
     title: 'Quiz Night Ideas: 25 Pub Quiz Formats That Pack Tables',
     description:
-      '25 quiz night ideas that fill pubs weekly. Formats, round ideas, and hosting tips from a pub that runs 25-35 teams every week. Steal our system.',
+      '25 quiz night ideas that fill pubs weekly. Formats, round ideas, and hosting tips from a pub that grew table bookings 403%. Steal our system.',
   },
   '/licensees-guide/compete-with-wetherspoons': {
     title: 'How to Compete with Wetherspoons (12 Strategies)',
@@ -127,7 +127,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/how-to-run-successful-pub-events': {
     title: 'How to Run Successful Pub Events (Complete Guide)',
     description:
-      'The complete guide to profitable pub events. Planning, promotion, and execution systems that grew our quiz night to 35 regulars. Templates included.',
+      'The complete guide to profitable pub events. Planning, promotion, and execution systems that grew our table bookings 403%. Templates included.',
   },
   '/licensees-guide/fill-empty-pub-tables': {
     title: 'How to Fill Empty Pub Tables (Proven System)',
@@ -137,7 +137,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/why-is-my-pub-empty': {
     title: 'Why Is My Pub Empty? 7 Real Reasons and Fixes',
     description:
-      'Honest reasons your pub is empty and practical fixes that work. From a licensee who turned quiet nights into 25-35 regulars. No fluff, just solutions.',
+      'Honest reasons your pub is empty and practical fixes that work. From a licensee who grew table bookings 403%. No fluff, just solutions.',
   },
   '/licensees-guide/midweek-pub-offers-that-work': {
     title: 'Midweek Pub Offers That Actually Work',
@@ -697,7 +697,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/how-much-profit-does-a-pub-make': {
     title: 'How Much Profit Does a Pub Make? Realistic Numbers for 2026',
     description:
-      'Honest pub profit benchmarks for 2026. Wet GP targets, food GP targets, labour costs, rent, and what you actually take home. From a licensee who grew food GP from 58% to 71%.',
+      'Real pub profit benchmarks for 2026: wet GP, food GP, labour, rent, and take-home pay. From a licensee who grew food revenue 98% and table bookings 403%.',
     keywords: [
       'how much profit does a pub make',
       'average pub turnover uk',

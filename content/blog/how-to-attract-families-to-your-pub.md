@@ -114,7 +114,7 @@ This is the single most effective family event you can run. A Sunday quiz starti
 
 Keep it light — picture rounds, music clips, a kids' round with age-appropriate questions. Let families play as teams. Charge £2 per team entry and offer a small prize — a bottle of wine or a round of drinks for the winners, colouring sets or small toys for the children's round.
 
-At The Anchor, our quiz nights bring in 25-35 regulars. A family-friendly version on Sunday afternoons works on the same principle — give people a reason to come, make it social, make it regular.
+At The Anchor, getting events and bookings right grew our table bookings by 403%. A family-friendly quiz on Sunday afternoons works on the same principle — give people a reason to come, make it social, make it regular.
 
 ### School Holiday Craft Sessions
 

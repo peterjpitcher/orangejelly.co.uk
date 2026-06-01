@@ -116,9 +116,10 @@ export default function PubMarketingNoBudget() {
         }}
         bottomText="Free strategies inside • Professional help from £375 + VAT • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing No Budget' }]}
+        backgroundImage="/images/headers/pub-marketing-no-budget.png"
       />
 
-      <ProofStrip claimIds={['social-views', 'quiz-regulars', 'food-gp-growth', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* The Truth */}
       <Section>
@@ -134,21 +135,21 @@ export default function PubMarketingNoBudget() {
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-orange mb-2">
-                  60-70K
+                  +828%
                 </Text>
-                <Text size="sm">monthly reach from consistent free marketing</Text>
+                <Text size="sm">Google Search visibility</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-teal mb-2">
-                  25 hrs
+                  +98%
                 </Text>
-                <Text size="sm">redirected weekly into growth with AI systems</Text>
+                <Text size="sm">Food revenue in three months</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
                 <Text size="2xl" weight="bold" className="text-green-600 mb-2">
-                  25-35
+                  +403%
                 </Text>
-                <Text size="sm">quiz night regulars built with free promotion</Text>
+                <Text size="sm">Table bookings</Text>
               </Card>
             </Grid>
           </div>

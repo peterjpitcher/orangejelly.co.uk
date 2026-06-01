@@ -14,7 +14,7 @@ Every strategy has been proven at The Anchor where we've been implementing AI so
 
 ## Can Orange Jelly help if my pub is losing money?
 
-Absolutely. We've added £75,000-£100,000 worth of value to our own business using AI. We cut £250/week in Sunday waste and £4,000+ a month in supplier, rota, and energy costs. We'll stay hands-on through the first month to make sure the plan is working for you.
+Absolutely. At The Anchor we used AI to grow food revenue by 98% in three months, increase table bookings by 403%, and cut booking no-shows by 89% — while reclaiming time and cutting waste across supplier, rota, and energy decisions. We'll stay hands-on through the first month to make sure the plan is working for you.
 
 ## How quickly can Orange Jelly help fill my empty pub?
 

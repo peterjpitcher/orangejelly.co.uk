@@ -18,10 +18,10 @@ Partnered with commercial suppliers (Barrel And Stone, Brakes, Bidfood) for cons
 
 ## Results
 
-- **Sunday Waste**: £250/week cut
-- **Food Waste**: 90% reduction
-- **Monthly Margin Growth**: £4,000+ a month
-- **Value Added**: £75,000-£100,000
+- **Food Revenue**: Grew by 98% in three months (proven at The Anchor, our own pub)
+- **Food Waste**: Cut sharply by preparing fresh to order
+- **Monthly Margins**: Stronger and more consistent through better suppliers and pricing
+- **High-margin Sales**: Stone-baked pizzas became a reliable hero product
 
 ## Time Investment
 

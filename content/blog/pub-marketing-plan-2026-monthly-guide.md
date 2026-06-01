@@ -57,7 +57,7 @@ January is the worst month in the pub trade. You already know this. But what sep
 
 Not a complicated plan. Not a marketing agency's 40-page strategy document. A simple, practical calendar that tells you what to promote, when to promote it, and what to plan ahead for each month.
 
-I have run The Anchor in Stanwell Moor as a Greene King tenant since 2019, and every year I build a monthly marketing plan. It has evolved — the early versions were scribbled on the back of a delivery note. But the discipline of planning month by month is the single biggest reason we have grown from 20 quiz night regulars to 25-35, pushed our food GP from 58 percent to 71 percent, and built a database of 300 contacts we can reach directly.
+I have run The Anchor in Stanwell Moor as a Greene King tenant since 2019, and every year I build a monthly marketing plan. It has evolved — the early versions were scribbled on the back of a delivery note. But the discipline of planning month by month is the single biggest reason we have grown table bookings by 403 percent, grown food revenue by 98 percent in three months, and built a customer database we can reach directly.
 
 This is the 2026 version. Take what works for your pub, ignore what does not, and make it your own.
 
@@ -260,7 +260,7 @@ September is the second most important planning month of the year after December
 
 ### What to promote
 
-**Quiz night relaunch.** If your quiz dipped over summer (it always does), September is the relaunch. New format, new promotion push, prizes that drive teams to return. We grew our quiz night to 25-35 regulars by treating September as the start of the quiz season.
+**Quiz night relaunch.** If your quiz dipped over summer (it always does), September is the relaunch. New format, new promotion push, prizes that drive teams to return. Treating September as the start of the quiz season was part of how we grew table bookings by 403% at The Anchor.
 
 **Back-to-work offers.** Mid-week promotions that catch people settling back into routine. Steak night, curry night, pie and a pint. Habitual mid-week offers build regular trade across the autumn.
 
@@ -366,11 +366,11 @@ This single habit prevents the "oh no, that event is this Saturday and we have n
 
 ### Build your database
 
-Every event, every promotion, every interaction is an opportunity to capture a contact. A QR code on the table, a sign-up form at events, a competition entry that requires an email address. We have built a database of 300 contacts at The Anchor and every one of them receives our monthly updates directly — no algorithm required.
+Every event, every promotion, every interaction is an opportunity to capture a contact. A QR code on the table, a sign-up form at events, a competition entry that requires an email address. We have built a customer database at The Anchor and every contact receives our monthly updates directly — no algorithm required.
 
 ### Use social media consistently
 
-You do not need to post every day. Three to four quality posts per week is enough for most pubs. The key is consistency — same day, same time, same quality. Our social media channels generate 60 to 70K monthly views because we show up regularly with authentic content.
+You do not need to post every day. Three to four quality posts per week is enough for most pubs. The key is consistency — same day, same time, same quality. Showing up regularly with authentic content helped grow our Google Search visibility by 828%.
 
 For a detailed social media system, read our guide on [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs).
 
@@ -378,9 +378,9 @@ For a detailed social media system, read our guide on [social media strategy for
 
 After every event or promotion, record three things: how many people came, how much revenue it generated, and whether you would run it again. After a full year of tracking, you have hard data on what your customers actually respond to. That data makes next year's plan better.
 
-### Reclaim 25 hours a week
+### Reclaim hours every week
 
-One of the biggest changes we made at The Anchor was using AI tools to handle routine marketing tasks — social media scheduling, content drafting, image creation, and email campaigns. That reclaims roughly 25 hours a week in marketing time, which goes straight back into running the pub and serving customers.
+One of the biggest changes we made at The Anchor was using AI tools to handle routine marketing tasks — social media scheduling, content drafting, image creation, and email campaigns. That frees up hours of marketing time every week, which goes straight back into running the pub and serving customers.
 
 ## Common mistakes
 
