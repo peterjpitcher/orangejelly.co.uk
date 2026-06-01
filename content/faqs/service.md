@@ -10,11 +10,11 @@ Every pub is different, but the challenges are similar. That's why we offer a fr
 
 ## What's your promise to pub owners?
 
-To help you claw back up to 25 hours every week on admin tasks, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it.
+To free up real time on admin tasks so you can focus on growth, be honest about what AI can and can't do, only recommend tools we use ourselves, keep prices transparent and fair, and provide personal support when you need it.
 
 ## Can AI really manage my pub's social media?
 
-Yes - we reach 60,000-70,000 people every month and plan and schedule 30 days of social content in 2 hours. I'll train you on the exact AI tools and prompts I use, so you can achieve similar results without the time drain.
+Yes - we grew Google Search visibility by 828% and plan and schedule 30 days of social content in 2 hours. I'll train you on the exact AI tools and prompts I use, so you can achieve similar results without the time drain.
 
 ## How detailed are your AI business reports?
 
@@ -30,11 +30,11 @@ We work with you to implement AI-powered marketing strategies that have been pro
 
 ## How do you promote a pub quiz effectively?
 
-Through AI-powered social media campaigns, automated reminders, and community engagement. Our quiz attendance now sits at 25-30 regular teams every month using these exact methods - I'll show you how to replicate this success.
+Through AI-powered social media campaigns, automated reminders, and community engagement. We grew table bookings by 403% using these exact methods - I'll show you how to replicate this success.
 
 ## What's the secret to quiz night success?
 
-AI automation for consistent promotion, WhatsApp groups for regular attendees, and prize structures that encourage teams. We now see 25-30 regular teams every month with these methods.
+AI automation for consistent promotion, WhatsApp groups for regular attendees, and prize structures that encourage teams. We grew table bookings by 403% with these methods.
 
 ## Can AI really help with quiz nights?
 
@@ -46,11 +46,11 @@ Not at all! I'll teach you to guide AI to create posts that sound like you, show
 
 ## What kind of business insights can AI provide?
 
-AI helps analyse your sales patterns, identify your most profitable customers, optimise staff scheduling, and predict busy periods. Estimated business value added since adopting AI: £75,000-£100,000.
+AI helps analyse your sales patterns, identify your most profitable customers, optimise staff scheduling, and predict busy periods. Since adopting AI we've grown food revenue by 98% in three months and lifted Google Search visibility by 828% - real commercial gains, not guesswork.
 
 ## What exactly do you do with menu AI?
 
-I'll teach you to use AI for menu analysis, pricing optimisation, and seasonal updates. We've cut £250/week in Sunday waste and reduced food waste by 90% using AI-driven prep forecasts.
+I'll teach you to use AI for menu analysis, pricing optimisation, and seasonal updates. We've grown food revenue by 98% in three months and cut booking no-shows by 89% using AI-driven forecasts and reminders.
 
 ## Will AI-written menus sound fake or robotic?
 
@@ -58,11 +58,11 @@ Not at all! I guide the AI to write in your pub's authentic voice. The descripti
 
 ## How do you create pub events that actually work?
 
-By using AI to analyse what your community wants, automate promotion, and track results. Our tasting nights build strong repeat attendance because we use data to plan events people actually want to attend.
+By using AI to analyse what your community wants, automate promotion, and track results. We grew private hire bookings by 567% because we use data to plan events people actually want to attend.
 
 ## Do you work with chains or just independents?
 
-Both. We support independent pubs and pub chain teams. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and turn up to 25 hours every week into growth actions, I can help.
+Both. We support independent pubs and pub chain teams. Whether you're a family-run free house or part of a larger group, if you want to fill your pub and free up real time for the work that drives growth, I can help.
 
 ## What areas do you cover?
 

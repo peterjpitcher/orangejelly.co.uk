@@ -49,19 +49,19 @@ export const MESSAGES = {
   // Trust Messages
   trust: {
     timeSaved: 'Growth capacity promise',
-    atLeastFiveHours: 'Transform 25 hours into growth',
+    atLeastFiveHours: 'Built to grow bookings and revenue',
     thirtyDays: '30 Days',
     noContracts: 'No hidden fees, no long contracts, no surprises',
     noAgencyFees: 'No Agency Fees',
     fromlicensees: 'Small Team Support',
     resultsIn14Days: 'Results in 30 Days',
     costEffective: 'Packages from £375 + VAT',
-    coversIncrease: '25-30 Quiz Teams',
-    coversIncreaseLabel: 'Regular teams each month',
-    foodGPIncrease: '£250/week waste cut',
-    foodGPIncreaseLabel: '90% reduction in food waste',
-    sundayRoastRevenue: '£4,000+ monthly margin growth',
-    sundayRoastRevenueLabel: 'Supplier, rota, energy margin gains',
+    coversIncrease: '+403%',
+    coversIncreaseLabel: 'More table bookings at The Anchor',
+    foodGPIncrease: '+98%',
+    foodGPIncreaseLabel: 'Food revenue in three months',
+    sundayRoastRevenue: '+828%',
+    sundayRoastRevenueLabel: 'Google Search visibility at The Anchor',
   },
 
   // CTA Messages
@@ -76,23 +76,27 @@ export const MESSAGES = {
   },
 } as const;
 
-// Success Metrics (from case studies)
+// Success Metrics (from The Anchor — see /CLAIMS.md, the single source of truth)
 export const SUCCESS_METRICS = {
-  timeSaved: {
-    value: 'Up to 25 hours',
-    description: 'Weekly growth hours activated using AI systems',
+  searchVisibility: {
+    value: '+828%',
+    description: 'Growth in Google Search visibility at The Anchor',
   },
-  wasteSavings: {
-    value: '£250/week',
-    description: 'Sunday food waste reduction',
+  tableBookings: {
+    value: '+403%',
+    description: 'Increase in table bookings at The Anchor',
   },
-  monthlySavings: {
-    value: '£4,000+/month',
-    description: 'Supplier, rota, and energy margin growth',
+  privateHire: {
+    value: '+567%',
+    description: 'Growth in private hire bookings at The Anchor',
   },
-  valueAdded: {
-    value: '£75k-£100k',
-    description: 'Estimated business value added with AI',
+  noShows: {
+    value: '-89%',
+    description: 'Reduction in booking no-shows at The Anchor',
+  },
+  foodRevenue: {
+    value: '+98%',
+    description: 'Food revenue growth in three months at The Anchor',
   },
 } as const;
 

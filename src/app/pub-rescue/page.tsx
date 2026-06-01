@@ -40,6 +40,7 @@ export default function PubRescue() {
           subtitle={heroSection.subtitle}
           showCTA={false}
           breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Rescue' }]}
+          backgroundImage="/images/headers/pub-rescue.png"
         />
       )}
 
@@ -140,7 +141,7 @@ export default function PubRescue() {
                   Were: sparse attendance, losing money
                 </Text>
                 <Text size="sm" className="font-semibold">
-                  Now: 25-30 regular teams monthly, good atmosphere
+                  Now: table bookings up 403%, good atmosphere
                 </Text>
               </div>
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -151,7 +152,7 @@ export default function PubRescue() {
                   Were: half-full room
                 </Text>
                 <Text size="sm" className="font-semibold">
-                  Now: £250/week waste cut with pre-orders
+                  Now: booking no-shows down 89% with pre-orders
                 </Text>
               </div>
               <div className="bg-teal-dark/30 rounded-lg p-4">
@@ -308,7 +309,7 @@ export default function PubRescue() {
                 </Text>
                 <FeatureList
                   items={[
-                    'Automate marketing (redirect 25 hours/week into growth)',
+                    'Automate the marketing grind and focus on growth',
                     'Build customer database for repeat visits',
                     'Train your team on upselling techniques',
                     'Create systems so it runs without you',
@@ -518,8 +519,8 @@ export default function PubRescue() {
                     AI Marketing Assistant
                   </Heading>
                   <Text size="sm">
-                    Creates all your social media, emails, and promotions. Redirects 25 hours every
-                    week into growth actions.
+                    Creates all your social media, emails, and promotions. Takes the marketing grind
+                    off your plate so you can focus on growth.
                   </Text>
                 </div>
                 <div className="text-center">
@@ -528,8 +529,8 @@ export default function PubRescue() {
                     Profit Analysis Tools
                   </Heading>
                   <Text size="sm">
-                    Find where you're losing money. Identify £4,000+ in monthly margin gain
-                    opportunities.
+                    Find where you're losing money and where the biggest margin gains are
+                    hiding.
                   </Text>
                 </div>
                 <div className="text-center">

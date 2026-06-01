@@ -49,7 +49,7 @@ export default function OGImage() {
             Hospitality marketing that works
           </div>
           <div style={{ fontSize: 28, color: '#1A2F49' }}>
-            Fill tables for pubs, restaurants, and bars. Transform 25 hours weekly into growth.
+            Fill tables for pubs, restaurants, and bars. Get found, get booked, grow.
           </div>
         </div>
       </div>

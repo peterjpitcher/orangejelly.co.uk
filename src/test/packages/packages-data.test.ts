@@ -85,15 +85,15 @@ describe('add-ons.json', () => {
 });
 
 describe('claims.json', () => {
-  it('should load 8 claims', () => {
+  it('should load 5 claims', () => {
     const claims = getClaims();
-    expect(claims).toHaveLength(8);
+    expect(claims).toHaveLength(5);
   });
 
-  it('should find food-gp-growth by ID', () => {
-    const claim = getClaimById('food-gp-growth');
+  it('should find food-revenue by ID', () => {
+    const claim = getClaimById('food-revenue');
     expect(claim).toBeDefined();
-    expect(claim!.displayShort).toContain('58%');
+    expect(claim!.displayShort).toContain('98%');
   });
 
   it('should return undefined for non-existent claim', () => {

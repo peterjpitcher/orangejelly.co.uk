@@ -13,21 +13,21 @@
     "metrics": [
       {
         "number": "1",
-        "title": "Quiz Teams",
-        "value": "25-30",
-        "description": "Regular teams each month"
+        "title": "Table Bookings",
+        "value": "+403%",
+        "description": "More tables booked each month"
       },
       {
         "number": "2",
-        "title": "Sunday Waste Cut",
-        "value": "£250/week",
-        "description": "90% reduction in food waste"
+        "title": "Booking No-Shows",
+        "value": "-89%",
+        "description": "Fewer no-shows, so covers actually turn up"
       },
       {
         "number": "3",
-        "title": "Monthly Margin Growth",
-        "value": "£4,000+",
-        "description": "Supplier, rota, and energy improvements"
+        "title": "Food Revenue",
+        "value": "+98%",
+        "description": "Food revenue grown in three months"
       }
     ]
   },

@@ -253,21 +253,21 @@ export default async function LicenseesGuidePage() {
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">25-30</div>
+              <div className="text-3xl font-bold text-orange mb-2">+403%</div>
               <Text size="sm" className="text-charcoal/70">
-                Quiz teams each month
+                Table bookings
               </Text>
             </div>
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">£250/week</div>
+              <div className="text-3xl font-bold text-orange mb-2">-89%</div>
               <Text size="sm" className="text-charcoal/70">
-                Sunday waste cut
+                Booking no-shows
               </Text>
             </div>
             <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">£75k-£100k</div>
+              <div className="text-3xl font-bold text-orange mb-2">+828%</div>
               <Text size="sm" className="text-charcoal/70">
-                Added to business value
+                Google Search visibility
               </Text>
             </div>
           </div>

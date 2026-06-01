@@ -2,7 +2,7 @@
 
 ## What results have you achieved at The Anchor?
 
-At The Anchor we now see 25-30 regular quiz teams each month, cut Sunday waste by £250/week, reduced supplier/rota/energy costs by £4,000+ per month, and improved operational consistency with practical AI-enabled systems.
+At The Anchor we grew Google Search visibility by 828%, increased table bookings by 403%, grew private hire bookings by 567%, cut booking no-shows by 89%, and grew food revenue by 98% in three months - all with practical AI-enabled systems.
 
 ## How quickly can outcomes improve?
 

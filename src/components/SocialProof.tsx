@@ -41,25 +41,25 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
         {
           pub: 'The Anchor',
           location: 'Stanwell Moor',
-          message: 'Cut £250/week in Sunday food waste',
+          message: 'Booking no-shows down 89%',
           time: 'Ongoing',
         },
         {
           pub: 'The Anchor',
           location: 'Stanwell Moor',
-          message: '25-30 quiz teams every month',
+          message: 'Table bookings up 403%',
           time: 'Monthly',
         },
         {
           pub: 'The Anchor',
           location: 'Stanwell Moor',
-          message: '60,000-70,000 people reached on social media',
+          message: 'Google Search visibility up 828%',
           time: 'Monthly',
         },
         {
           pub: 'The Anchor',
           location: 'Stanwell Moor',
-          message: '£4,000+ monthly margin growth across supplier, rota, and energy',
+          message: 'Food revenue up 98% in three months',
           time: 'Monthly',
         },
       ];

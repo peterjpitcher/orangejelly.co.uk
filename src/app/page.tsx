@@ -163,7 +163,7 @@ export default function Home() {
       />
 
       {/* Proof Strip */}
-      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* Seasonal Playbooks */}
       <SeasonalPlaybooksBand

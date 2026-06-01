@@ -111,6 +111,6 @@ export const commonPubQueries = [
   {
     question: 'How do I fill quiet nights?',
     answer:
-      'Orange Jelly specializes in turning quiet nights into repeat demand. We create targeted offers, events, and weekly execution rhythms that work. The Anchor now sees 25-30 regular quiz teams each month using these strategies.',
+      'Orange Jelly specializes in turning quiet nights into repeat demand. We create targeted offers, events, and weekly execution rhythms that work. The Anchor grew table bookings by 403% using these strategies.',
   },
 ];

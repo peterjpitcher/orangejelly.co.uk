@@ -158,34 +158,34 @@ export default function PubServiceLandingPage({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <Text size="2xl" weight="bold" color="white">
-                58% → 71%
+                +98%
               </Text>
               <Text size="sm" color="white" className="opacity-80">
-                Food gross profit
+                Food revenue in 3 months
               </Text>
             </div>
             <div>
               <Text size="2xl" weight="bold" color="white">
-                25-35
+                +403%
               </Text>
               <Text size="sm" color="white" className="opacity-80">
-                Weekly quiz regulars
+                Table bookings
               </Text>
             </div>
             <div>
               <Text size="2xl" weight="bold" color="white">
-                60-70K
+                +828%
               </Text>
               <Text size="sm" color="white" className="opacity-80">
-                Monthly social views
+                Google Search visibility
               </Text>
             </div>
             <div>
               <Text size="2xl" weight="bold" color="white">
-                £75-100K
+                +567%
               </Text>
               <Text size="sm" color="white" className="opacity-80">
-                Value added
+                Private hire bookings
               </Text>
             </div>
           </div>

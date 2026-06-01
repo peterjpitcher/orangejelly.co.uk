@@ -108,7 +108,7 @@ Christmas is not the time to discount. It is the time to demonstrate value.
 
 ### Know your food GP target
 
-If you are running food at a 65 to 71 percent GP (which is where you should be — we pushed ours from 58 percent to 71 percent at The Anchor), your set menu pricing needs to reflect that. Cost every dish on your Christmas menu individually, then price the package to hit your target.
+If you are running food at a 65 to 71 percent GP (which is where you should be — getting our food right at The Anchor is what grew our food revenue by 98% in three months), your set menu pricing needs to reflect that. Cost every dish on your Christmas menu individually, then price the package to hit your target.
 
 ### The drinks margin multiplier
 
@@ -168,7 +168,7 @@ A Christmas pub quiz works because:
 - It creates atmosphere and social media content.
 - It is low cost to run — your quizmaster, some Christmas-themed rounds, maybe a hamper as the prize.
 
-We run our quiz night with 25 to 35 regulars every week at The Anchor. In December, that number swells because groups come as a Christmas outing. Make sure you take bookings for the Christmas quiz specials because demand will exceed your normal capacity.
+Running our quiz night consistently at The Anchor was part of what grew our table bookings by 403%. In December, that number swells because groups come as a Christmas outing. Make sure you take bookings for the Christmas quiz specials because demand will exceed your normal capacity.
 
 For ideas on quiz formats and logistics, see our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events).
 
@@ -220,7 +220,7 @@ Throughout this entire timeline, make sure every post includes a clear call to a
 
 ### Email marketing
 
-If you have a customer database — and you should, even if it is only 300 contacts — email is your most powerful Christmas tool.
+If you have a customer database — and you should, even a modest one — email is your most powerful Christmas tool.
 
 - **September:** One email announcing Christmas bookings are open, with a link to the menu and booking form.
 - **October:** One email highlighting what is already booked and what is still available. Include the midweek party packages.
@@ -251,7 +251,7 @@ In the first week of January, email your entire December guest list:
 - Share your January events calendar (quiz nights, live music, themed food nights).
 - Include the bounce-back offer as a reminder.
 
-The pubs that treat December purely as a revenue month miss the bigger picture. December is when you build the database and create the impressions that drive trade for the rest of the year. We built our contact list to 300 and it pays dividends every month — not just in December.
+The pubs that treat December purely as a revenue month miss the bigger picture. December is when you build the database and create the impressions that drive trade for the rest of the year. Building our contact list at The Anchor pays dividends every month — not just in December.
 
 ## Your action plan
 

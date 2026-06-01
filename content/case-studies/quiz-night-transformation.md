@@ -18,7 +18,7 @@ We took over the quiz ourselves and completely renovated the concept using AI. C
 
 ## Results
 
-- **Regular Attendance**: 25-30 regular teams every month
+- **Table Bookings**: Increased by 403% (proven at The Anchor, our own pub)
 - **Average Spend**: Higher average spend per team
 - **Entry Fee Revenue**: Entry fees cover costs and prizes
 - **Tuesday Performance**: One of our busiest nights

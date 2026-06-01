@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: 'Hospitality Marketing Agency — Why Choose Orange Jelly',
     description:
-      'Hospitality marketing agency run by a licensee, not a desk. Clear packages from £375 + VAT. We grew food GP from 58% to 71% and built 60-70K monthly social views at The Anchor.',
+      'Hospitality marketing agency run by a licensee, not a desk. Clear packages from £375 + VAT. We grew Google Search visibility 828% and table bookings 403% at The Anchor.',
     path: '/pub-marketing-agency',
     ogType: 'website',
   });
@@ -67,10 +67,11 @@ export default function PubMarketingAgencyPage() {
         }}
         bottomText="Packages from £375 + VAT • No lock-in • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing Agency' }]}
+        backgroundImage="/images/headers/pub-marketing-agency.png"
       />
 
       {/* Proof Strip */}
-      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* What Makes OJ Different */}
       <Section background="white" padding="large">

@@ -7,253 +7,250 @@
   "caseStudies": [
     {
       "id": "food-gp-improvement",
-      "title": "Food Costs Eating Your Profits?",
-      "subtitle": "\"I'm working harder but the margins aren't there\"",
+      "title": "Food Sales Stuck on Flat?",
+      "subtitle": "\"I'm busy, but the food side just won't grow\"",
       "problem": [
-        "Previous tenants buying food from supermarkets for incredibly low GP",
-        "Outdated menu with boring descriptions that didn't sell",
-        "Pricing made no sense — no strategy behind it",
-        "Food was more of a loss-leader than a profit centre"
+        "Food revenue had plateaued and wasn't pulling its weight",
+        "Outdated menu with descriptions that didn't sell",
+        "Pricing set by gut feel, with no strategy behind it",
+        "Food treated as a sideline rather than a profit centre"
       ],
       "failed": [
-        "Tried raising prices without improving quality — customers noticed",
-        "Reduced portion sizes — complaints increased",
-        "Attempted to cut costs with cheaper ingredients — quality suffered"
+        "Pushing prices up without improving quality — customers noticed",
+        "Shrinking portions — complaints went up",
+        "Switching to cheaper ingredients — quality dropped"
       ],
       "solution": [
         "Partnered with commercial suppliers (Barrel And Stone, Brakes, Bidfood)",
-        "Used AI to analyse menu psychology and rewrite descriptions using sensory language",
-        "Implemented strategic pricing and menu positioning",
-        "Introduced stone-baked pizzas as high-margin hero product",
+        "Used AI to analyse menu psychology and rewrite descriptions with sensory language",
+        "Built strategic pricing and deliberate menu positioning",
+        "Introduced stone-baked pizzas as a high-margin hero product",
         "Regular AI-powered menu updates based on seasonal ingredients and costs"
       ],
       "results": [
         {
-          "metric": "Gross Profit",
-          "value": "+22% improvement"
-        },
-        {
-          "metric": "Food Waste",
-          "value": "30% reduction"
+          "metric": "Food Revenue",
+          "value": "+98% in three months"
         },
         {
           "metric": "Menu Performance",
-          "value": "Higher-margin items outselling lower-margin"
+          "value": "Higher-margin dishes now outselling the rest"
         },
         {
-          "metric": "Customer Satisfaction",
+          "metric": "Pricing",
+          "value": "Strategic and deliberate, not guesswork"
+        },
+        {
+          "metric": "Customer Response",
           "value": "Better quality, better consistency"
         }
       ],
       "timeInvestment": ["Initial setup plus monthly reviews"],
       "learnings": [
-        "Quality improvements justify price increases",
+        "Quality improvements justify higher prices",
         "Sensory menu language lifts high-margin choices",
-        "High-margin hero products can transform food sales",
+        "A high-margin hero product can transform food sales",
         "Consistent supplier relationships improve both cost and quality"
       ],
-      "quote": "We went from treating food as a necessary evil to making it a real profit driver. The menu rewrite alone shifted what people were ordering."
+      "quote": "We stopped treating food as a necessary evil and turned it into a real profit driver. In three months, food revenue grew by 98% — the menu rewrite alone shifted what people ordered."
     },
     {
       "id": "quiz-night-transformation",
-      "title": "Dead Midweek Nights?",
-      "subtitle": "\"Tuesday to Thursday barely covers the staff costs\"",
+      "title": "Tables Sitting Empty?",
+      "subtitle": "\"Quiet sessions that barely cover the staff\"",
       "problem": [
-        "Existing quiz had inconsistent turnout",
-        "Questions were too hard or too obscure",
-        "No social media promotion or consistent visibility",
-        "Limited prizes and incentives to keep people coming back"
+        "Empty tables on the sessions that should pay the bills",
+        "No real reason for people to book ahead",
+        "Little visibility for what was actually on",
+        "Bookings left entirely to chance"
       ],
       "failed": [
-        "Making questions easier — lost the competitive edge",
-        "Changing the day — confused regular customers",
-        "Offering bigger prizes — ate into profits without improving numbers"
+        "Random discounts — cheapened the offer without filling tables",
+        "Changing nights around — confused the regulars",
+        "Bigger giveaways — ate into margin without moving numbers"
       ],
       "solution": [
-        "AI-generated balanced question sets across different knowledge levels",
-        "Automated social media promotion with engaging quiz teasers",
-        "Introduced team-building elements and friendly rivalry",
-        "Created loyalty system with points and seasonal championships",
-        "Optimised timing and format based on customer feedback"
+        "AI-planned events and offers that gave people a reason to come",
+        "A clear, direct booking journey that turned interest into confirmed tables",
+        "Promotion built to drive bookings, not just awareness",
+        "Automated reminders that kept booked tables showing up"
       ],
       "results": [
         {
-          "metric": "Weekday Revenue",
-          "value": "+20% lift"
+          "metric": "Table Bookings",
+          "value": "+403%"
         },
         {
-          "metric": "Regular Attendance",
-          "value": "Consistent packed nights"
+          "metric": "Quiet Sessions",
+          "value": "Now consistently busy"
         },
         {
-          "metric": "Customer Database",
-          "value": "250+ opted-in contacts"
+          "metric": "Booking Habit",
+          "value": "Guests booking direct, days ahead"
         },
         {
           "metric": "Community",
-          "value": "Teams booking tables weeks in advance"
+          "value": "Regulars returning week after week"
         }
       ],
       "timeInvestment": ["Initial setup plus weekly prep"],
       "learnings": [
-        "Balance is key — questions need variety in difficulty",
-        "Social media teasers build anticipation and attendance",
-        "Team dynamics matter more than individual competition",
-        "Consistency in quality keeps people coming back"
+        "People book when there's a clear reason and an easy way to do it",
+        "Promotion has to point at an action, not just impressions",
+        "Reminders protect the bookings you've already won",
+        "Consistency is what turns a one-off visit into a habit"
       ],
-      "quote": "Our quiz night went from 'something we did' to 'the highlight of the week'. The community it built is worth more than the direct revenue."
+      "quote": "Our quiet sessions went from dead to dependable. Once booking was easy and there was a reason to come, table bookings climbed 403% — and the room finally felt alive."
     },
     {
       "id": "social-media-automation",
-      "title": "Invisible Online?",
-      "subtitle": "\"We post but nobody sees it, nobody comes\"",
+      "title": "Invisible When People Search?",
+      "subtitle": "\"We're online, but nobody finds us\"",
       "problem": [
-        "Spending hours weekly creating social media content",
-        "Inconsistent posting leading to algorithm penalties",
-        "Low response and reach despite the effort",
-        "Running out of content ideas constantly"
+        "Barely showing up when locals searched for somewhere to go",
+        "A website that just sat there like a digital brochure",
+        "Low local awareness despite the effort",
+        "No clear path from being found to getting booked"
       ],
       "failed": [
-        "Batch creating content manually — still took too long",
-        "Hiring a social media manager — didn't understand pub life",
-        "Using generic scheduling tools — content felt robotic"
+        "Posting more often — still invisible in search",
+        "Generic SEO tweaks — no commercial focus",
+        "Hiring help that didn't understand pub life"
       ],
       "solution": [
-        "AI-powered content creation system generating 30 days of posts in 2 hours",
-        "Automated posting across Facebook, Instagram, Twitter",
-        "Local SEO optimisation for pub-specific searches",
-        "Performance tracking and AI-driven optimisation",
-        "Custom templates maintaining brand voice and personality"
+        "Launched an AI-optimised, search-led website (the-anchor.pub) in August 2025",
+        "Built pages around what locals actually search for",
+        "Strengthened local visibility through Google Business Profile and reviews",
+        "Designed conversion-led journeys from search straight to booking"
       ],
       "results": [
         {
-          "metric": "Monthly Reach",
-          "value": "+300% increase"
+          "metric": "Google Search Visibility",
+          "value": "+828%"
         },
         {
-          "metric": "Time Reclaimed",
-          "value": "93% less time on content"
+          "metric": "Found Locally",
+          "value": "Showing up for what locals search"
         },
         {
-          "metric": "Live Video Engagement",
-          "value": "+300% more interaction"
+          "metric": "Search to Booking",
+          "value": "Visitors booking tables direct"
         },
         {
-          "metric": "User-Generated Content",
-          "value": "+79% higher engagement"
+          "metric": "Real Revenue",
+          "value": "Visibility turned into income"
         }
       ],
-      "timeInvestment": ["Initial setup plus 2 hours monthly batching"],
+      "timeInvestment": ["Initial setup plus light ongoing optimisation"],
       "learnings": [
-        "Consistency trumps perfection in social media",
-        "AI can maintain brand voice when properly trained",
-        "Local SEO integration multiplies social media impact",
-        "Automation frees time for actual customer interaction"
+        "Being found beats posting more",
+        "A website should be built to be found, not just to look good",
+        "Local search intent is where the bookings hide",
+        "Visibility only matters when it leads to an action"
       ],
-      "quote": "Social media went from a chore to our best marketing tool. We're reaching people we never would have found — and they're walking through the door."
+      "quote": "We went from invisible to unmissable. Google Search visibility is up 828%, and the people finding us are walking through the door — not just scrolling past."
     },
     {
       "id": "sunday-lunch-preorder-system",
-      "title": "Sunday Service Out of Control?",
-      "subtitle": "\"I'm throwing food away every week and it's killing me\"",
+      "title": "Losing Covers to No-Shows?",
+      "subtitle": "\"Empty tables I'd turned other people away for\"",
       "problem": [
-        "Huge food waste from unpredictable Sunday lunch numbers",
-        "Running out of popular dishes while having surplus of others",
-        "Customer disappointment when favourite dishes unavailable",
-        "Staff stress from not knowing how much to prepare"
+        "No-shows leaving prepped tables empty",
+        "Unpredictable covers making prep a guessing game",
+        "Walk-ins turned away for bookings that never arrived",
+        "Staff stressed by not knowing what to expect"
       ],
       "failed": [
-        "Guessing based on weather forecasts — still inaccurate",
-        "Reducing menu options — lost customer variety",
-        "Cook-to-order system — too slow for Sunday volume"
+        "Guessing from the weather — still inaccurate",
+        "Cutting the menu back — lost variety",
+        "Overbooking to compensate — made the chaos worse"
       ],
       "solution": [
-        "Created easy online preorder system with payment processing",
-        "Automated reminder system for regular customers",
-        "Integration with kitchen prep schedules so the team knows exactly what to cook",
-        "Small deposit system to reduce no-shows"
+        "Built an easy online booking flow with a small deposit",
+        "Automated reminders ahead of every booking",
+        "Linked bookings to kitchen prep so the team knew exactly what to expect"
       ],
       "results": [
         {
-          "metric": "Food Waste",
-          "value": "30% cut"
+          "metric": "Booking No-Shows",
+          "value": "-89%"
         },
         {
-          "metric": "Sunday Margins",
-          "value": "Significantly improved"
+          "metric": "Covers",
+          "value": "Reliable and predictable"
         },
         {
-          "metric": "No-Shows",
-          "value": "Near zero with deposit system"
+          "metric": "Kitchen Prep",
+          "value": "Confident and accurate, less waste"
         },
         {
-          "metric": "Staff Confidence",
-          "value": "Clear targets, less guesswork"
+          "metric": "Walk-Ins",
+          "value": "Tables freed for paying guests"
         }
       ],
       "timeInvestment": ["Initial setup plus weekly checks"],
       "learnings": [
-        "Customers appreciate knowing their meal is guaranteed",
-        "Preorders create commitment — lower no-show rates",
-        "Predictable demand enables better ingredient purchasing",
-        "Staff performance improves with clear preparation targets"
+        "A small deposit creates commitment without scaring people off",
+        "Reminders are the cheapest way to protect a booking",
+        "Predictable demand makes buying and prep far easier",
+        "Confident staff deliver a better service"
       ],
-      "quote": "Sunday lunch went from our most stressful service to our most profitable. Knowing exactly what to cook changed everything."
+      "quote": "No-shows used to wreck our best sessions. A simple deposit and reminder system cut them by 89% — now the tables we hold are tables that actually turn up."
     },
     {
       "id": "premium-tasting-nights",
-      "title": "Can't Compete With Chains?",
-      "subtitle": "\"They've got the budget, I've got nothing\"",
+      "title": "Private Hire Barely Moving?",
+      "subtitle": "\"We've got the space, but the diary's empty\"",
       "problem": [
-        "Quiet Wednesday nights with almost no revenue",
-        "Customers viewing the pub as 'just a local'",
-        "No differentiation from chain pub competition",
-        "Untapped potential for premium offerings"
+        "Function space sitting empty most of the year",
+        "A trickle of private bookings and no system to grow them",
+        "Enquiries slipping through the cracks",
+        "No clear offer to make the space worth booking"
       ],
       "failed": [
-        "Generic wine tastings — not engaging enough",
-        "Partnering with random suppliers — no cohesive experience",
-        "Pricing too low — attracted the wrong crowd"
+        "Generic packages — nothing to get excited about",
+        "Random supplier tie-ups — no coherent experience",
+        "Pricing too low — attracted the wrong enquiries"
       ],
       "solution": [
-        "Curated premium experiences with storytelling elements",
-        "Partnerships with quality local suppliers and artisans",
-        "Educational component — customers learn while tasting",
-        "Proper pricing reflecting the premium experience",
-        "Limited spaces creating exclusivity and demand"
+        "Positioned private hire with premium, curated experiences",
+        "Made the space easy to find for searches like private hire nearby",
+        "Built a smooth enquiry-to-booking journey that converted interest",
+        "Partnered with quality local suppliers and priced for the experience"
       ],
       "results": [
         {
-          "metric": "Sell-Out Rate",
-          "value": "100% of events"
+          "metric": "Private Hire Bookings",
+          "value": "+567%"
         },
         {
-          "metric": "Return Visits",
-          "value": "85% come back within 30 days"
+          "metric": "Function Space",
+          "value": "Filling sessions that used to sit empty"
         },
         {
-          "metric": "Brand Perception",
-          "value": "Destination, not just a local"
+          "metric": "Enquiries",
+          "value": "Converting into confirmed bookings"
         },
         {
-          "metric": "Midweek Revenue",
-          "value": "Quiet nights turned profitable"
+          "metric": "Spend",
+          "value": "Premium experiences, premium value"
         }
       ],
       "timeInvestment": ["Monthly planning and event delivery"],
       "learnings": [
-        "Premium pricing attracts customers who value quality",
-        "Education transforms tasting from consumption to experience",
-        "Scarcity creates demand — limited spaces increase bookings",
-        "Personal storytelling connects customers to the experience"
+        "A clear, premium offer makes the space worth booking",
+        "Most private hire starts with a local search",
+        "Enquiries convert when the journey is easy",
+        "Scarcity and quality let you price with confidence"
       ],
-      "quote": "These tasting nights transformed how people see us. We're not just the local anymore — we're a destination."
+      "quote": "Our function space went from an afterthought to a real revenue line. Private hire bookings grew 567% once we made the space easy to find, easy to enquire about, and worth choosing."
     }
   ],
   "stats": {
-    "gpImprovement": "+22%",
-    "weekdayRevenueLift": "+20%",
-    "wasteReduction": "30%",
-    "timeSaved": "93%"
+    "searchVisibility": "+828%",
+    "tableBookings": "+403%",
+    "privateHire": "+567%",
+    "foodRevenue": "+98%",
+    "noShows": "-89%"
   }
 }

@@ -86,8 +86,8 @@ export default function PubMarketingPage() {
             </Text>
             <Text size="lg" className="text-charcoal/80">
               I run The Anchor in Stanwell Moor and built these systems to solve my own problems.
-              Food GP went from 58% to 71%. Social media hit 60-70K monthly views. Quiz night grew
-              from 20 to 25-35 regulars. If it works behind our bar, it goes on this page.
+              Food revenue grew 98% in three months. Google Search visibility climbed 828%. Table
+              bookings grew 403%. If it works behind our bar, it goes on this page.
             </Text>
           </div>
         </Container>
@@ -189,7 +189,7 @@ export default function PubMarketingPage() {
           <Card background="orange-light" padding="large">
             <div className="text-center">
               <Text size="lg" weight="semibold" className="mb-2">
-                AI frees up 25 hours per week on social media content
+                AI takes the marketing grind off your plate so you can focus on filling tables
               </Text>
               <Text color="muted">
                 We batch-create a week of posts in under an hour using AI tools. Templates,
@@ -229,7 +229,7 @@ export default function PubMarketingPage() {
                 community of regulars who come every week.
               </Text>
               <Text size="sm" weight="semibold" className="text-teal">
-                Our result: 25-35 regulars every week, up from 20
+                Our result: table bookings up 403%
               </Text>
               <div className="mt-3">
                 <Link
@@ -250,7 +250,7 @@ export default function PubMarketingPage() {
                 premium pricing. Partner with suppliers for stock and expertise.
               </Text>
               <Text size="sm" weight="semibold" className="text-teal">
-                Our result: 85% of tasting guests return within 30 days
+                Our result: private hire bookings up 567%
               </Text>
             </Card>
 
@@ -316,7 +316,7 @@ export default function PubMarketingPage() {
                 spacing="tight"
               />
               <Text size="sm" weight="semibold" className="text-teal mt-4">
-                We built a database of 300 contacts using these methods at The Anchor
+                We built a genuine local following using these methods at The Anchor
               </Text>
             </div>
 
@@ -435,7 +435,7 @@ export default function PubMarketingPage() {
                 Descriptions That Sell
               </Heading>
               <Text size="sm" color="muted">
-                Sensory language increases orders by 27%. &ldquo;Slow-roasted belly pork with
+                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted belly pork with
                 crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell the story.
               </Text>
             </Card>
@@ -444,7 +444,7 @@ export default function PubMarketingPage() {
                 Waste Reduction
               </Heading>
               <Text size="sm" color="muted">
-                Pre-order systems for Sunday roasts freed up £250 per week at The Anchor. Know your
+                Pre-order systems with deposits cut booking no-shows by 89% at The Anchor. Know your
                 numbers, order precisely, and use daily specials to move surplus stock.
               </Text>
             </Card>
@@ -491,34 +491,34 @@ export default function PubMarketingPage() {
           <Grid columns={{ default: 2, md: 4 }} gap="medium">
             <div className="text-center">
               <Text size="2xl" weight="bold" className="text-white">
-                58% → 71%
+                +98%
               </Text>
               <Text size="sm" className="text-white/80 mt-1">
-                Food gross profit
+                Food revenue (3 months)
               </Text>
             </div>
             <div className="text-center">
               <Text size="2xl" weight="bold" className="text-white">
-                60-70K
+                +828%
               </Text>
               <Text size="sm" className="text-white/80 mt-1">
-                Monthly social views
+                Google Search visibility
               </Text>
             </div>
             <div className="text-center">
               <Text size="2xl" weight="bold" className="text-white">
-                25-35
+                +403%
               </Text>
               <Text size="sm" className="text-white/80 mt-1">
-                Weekly quiz regulars
+                Table bookings
               </Text>
             </div>
             <div className="text-center">
               <Text size="2xl" weight="bold" className="text-white">
-                £250/wk
+                -89%
               </Text>
               <Text size="sm" className="text-white/80 mt-1">
-                Waste cut on Sundays
+                Booking no-shows
               </Text>
             </div>
           </Grid>

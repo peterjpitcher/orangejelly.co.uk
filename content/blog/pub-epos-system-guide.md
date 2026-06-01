@@ -56,7 +56,7 @@ Your EPOS system is the single most important piece of technology in your pub. I
 
 Yet most licensees I speak to treat their till like a cash register with a touchscreen. They ring up sales, print a Z reading at the end of the night, and never look at the data sitting underneath. That is like having a full-time analyst working for you and never reading their reports.
 
-This guide is not a product comparison or a review site. It is a practical walkthrough of what a pub EPOS system should do for you, what features actually matter, and how to use the data it generates to grow your revenue. I write this as a Greene King tenant running The Anchor in Stanwell Moor, where our EPOS data has been central to improving our food GP from 58% to 71%.
+This guide is not a product comparison or a review site. It is a practical walkthrough of what a pub EPOS system should do for you, what features actually matter, and how to use the data it generates to grow your revenue. I write this as a Greene King tenant running The Anchor in Stanwell Moor, where our EPOS data has been central to growing our food revenue by 98% in three months.
 
 ## Why your EPOS choice matters more than you think
 
@@ -82,7 +82,7 @@ This is the feature that separates a useful system from an expensive cash regist
 
 Your EPOS should track stock at product level, calculate theoretical versus actual stock, and give you a gross profit figure by department — wet, dry, and other — without you having to export data to a spreadsheet.
 
-At The Anchor, switching to proper EPOS-driven stock management was one of the biggest factors in moving our food GP from 58% to 71%. When you can see exactly which dishes are underperforming on margin, you can fix pricing, portion sizes, or supplier costs with precision instead of guessing.
+At The Anchor, switching to proper EPOS-driven stock management was one of the biggest factors behind growing our food revenue by 98% in three months. When you can see exactly which dishes are underperforming on margin, you can fix pricing, portion sizes, or supplier costs with precision instead of guessing.
 
 For a deeper look at stock discipline, our guide on [zero-waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs) covers the counting rhythms and waste KPIs that make your EPOS data meaningful.
 

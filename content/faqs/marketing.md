@@ -2,7 +2,7 @@
 
 ## How much value can AI marketing add?
 
-We've added £75,000-£100,000 of value to The Anchor using AI. It helps us unlock up to 25 hours of value per week. We charge £75 per hour plus VAT to teach you the same strategies.
+At The Anchor we used AI to grow Google Search visibility by 828%, table bookings by 403%, and food revenue by 98% in three months, while freeing up real time to focus on customers. We charge £75 per hour plus VAT to teach you the same strategies.
 
 ## What's included in the Done-For-You marketing service?
 

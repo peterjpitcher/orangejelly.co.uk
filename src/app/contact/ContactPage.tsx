@@ -527,7 +527,7 @@ export default function ContactPage({}: ContactPageProps) {
       </Section>
 
       {/* Social proof strip */}
-      <ProofStrip claimIds={['food-gp-growth', 'quiz-regulars', 'social-views', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* Final CTA */}
       <Section background="teal" padding="large">

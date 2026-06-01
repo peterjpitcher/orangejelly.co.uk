@@ -66,7 +66,7 @@ Cellar management is not a back-of-house afterthought. It directly affects three
 
 **Beer quality.** Customers judge your pub on the first sip. A pint that tastes stale, yeasty, or warm tells them everything they need to know about how you run the place. One bad pint can lose a regular.
 
-**Gross profit.** At The Anchor, we pushed food GP from 58% to 71% through disciplined management. The same principle applies to wet sales. Every pint lost to poor storage, fobbing, or ullage is money that never reaches your till. A cellar running at 5 percent wastage instead of 2 percent on a pub turning over 5,000 pounds a week in wet sales is losing 150 pounds a week — nearly 8,000 pounds a year.
+**Gross profit.** At The Anchor, disciplined management of our food margins grew food revenue by 98% in three months. The same principle applies to wet sales. Every pint lost to poor storage, fobbing, or ullage is money that never reaches your till. A cellar running at 5 percent wastage instead of 2 percent on a pub turning over 5,000 pounds a week in wet sales is losing 150 pounds a week — nearly 8,000 pounds a year.
 
 **Compliance.** Environmental Health Officers inspect cellars. Brewery area managers inspect cellars. If you are a tenant — as I am with Greene King — your cellar condition reflects on your tenancy performance. A dirty cellar with inconsistent temperatures is a red flag that invites deeper scrutiny of your operation.
 

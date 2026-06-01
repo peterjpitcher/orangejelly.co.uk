@@ -33,6 +33,7 @@ export default function CapabilitiesPage() {
         subtitle="From social media strategy to event marketing, local visibility to paid ads — this is our full digital capability stack, tested at The Anchor and delivered for your venue."
         showCTA={false}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Capabilities' }]}
+        backgroundImage="/images/headers/capabilities.png"
       />
 
       {/* Capability Grid (full mode) */}

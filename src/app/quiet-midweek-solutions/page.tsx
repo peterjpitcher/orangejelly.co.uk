@@ -30,7 +30,7 @@ const faqs = [
   {
     question: 'What midweek events actually work?',
     answer:
-      'Quiz nights, steak nights, tasting events, and themed food nights are proven midweek performers. The key is promotion rhythm and consistency, not the event itself. We built The Anchor quiz night to 25-35 regulars using WhatsApp groups and weekly reminders.',
+      'Quiz nights, steak nights, tasting events, and themed food nights are proven midweek performers. The key is promotion rhythm and consistency, not the event itself. We grew table bookings by 403% at The Anchor using AI-planned events, WhatsApp groups, and weekly reminders.',
   },
   {
     question: 'Do I need a big budget to fix midweek trade?',
@@ -58,9 +58,10 @@ export default function QuietMidweekSolutions() {
         }}
         bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Quiet Midweek Solutions' }]}
+        backgroundImage="/images/headers/quiet-midweek-solutions.png"
       />
 
-      <ProofStrip claimIds={['quiz-regulars', 'social-views', 'food-gp-growth', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* The Problem */}
       <Section>
@@ -109,7 +110,7 @@ export default function QuietMidweekSolutions() {
                       After:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      25-35 regular teams, stronger takings
+                      Table bookings up 403%, stronger takings
                     </Text>
                   </div>
                   <div>
@@ -137,7 +138,7 @@ export default function QuietMidweekSolutions() {
                       After:
                     </Text>
                     <Text weight="semibold" className="text-green-600">
-                      85% retention rate on tasting nights
+                      Private hire bookings up 567%
                     </Text>
                   </div>
                   <div>

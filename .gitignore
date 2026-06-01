@@ -46,3 +46,10 @@ docs/archive/
 *.swp
 *.swo
 
+# claude session context (local/generated)
+.claude/
+
+# node/tsx compile caches (local build artefacts)
+node-compile-cache/
+tsx-501/
+

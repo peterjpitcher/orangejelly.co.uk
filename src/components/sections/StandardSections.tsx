@@ -208,8 +208,8 @@ interface MetricsBarProps {
 
 export function MetricsBar({
   metrics = [
-    { value: '£250/week', label: 'Sunday Waste Cut', highlight: true },
-    { value: '25-30', label: 'Quiz Teams Each Month' },
+    { value: '-89%', label: 'Booking No-Shows', highlight: true },
+    { value: '+403%', label: 'Table Bookings' },
     { value: '30 Days', label: 'To lock in progress' },
   ],
   background = 'orange',

@@ -1,32 +1,32 @@
 [
   {
     "id": "anchor-midweek-turnaround",
-    "title": "How The Anchor Filled Midweek Tables",
-    "challenge": "Quiet Tuesday and Wednesday nights with minimal footfall",
-    "action": "Introduced quiz night format, steak night promotion, and targeted social media campaigns",
-    "result": "Built quiz night to 25-35 weekly regulars, midweek covers up significantly",
-    "metrics": ["quiz-regulars", "social-views"],
+    "title": "How The Anchor Filled Empty Tables",
+    "challenge": "Quiet sessions and empty tables that barely covered staff costs",
+    "action": "AI-planned events and offers, a clear reason to book, and a booking journey that turned interest into confirmed tables",
+    "result": "Table bookings grew 403%, with quiet sessions now consistently busy",
+    "metrics": ["table-bookings", "search-visibility"],
     "relatedPackages": ["growth-fix", "momentum-month"],
-    "relatedCapabilities": ["event-marketing", "organic-social"]
+    "relatedCapabilities": ["event-marketing", "website-booking"]
   },
   {
     "id": "anchor-food-gp",
-    "title": "From 58% to 71% Food Gross Profit",
-    "challenge": "Food margins below industry standard, waste issues, pricing not optimised",
-    "action": "Menu engineering, portion control, supplier renegotiation, waste tracking systems",
-    "result": "Food GP grew from 58% to 71%, unlocking thousands per month in margin gains",
-    "metrics": ["food-gp-growth", "sunday-margin-growth"],
+    "title": "How The Anchor Grew Food Revenue by 98%",
+    "challenge": "Flat food sales, an underpowered menu, and pricing with no strategy behind it",
+    "action": "Menu engineering with AI, sensory descriptions, strategic pricing, and a high-margin hero product",
+    "result": "Food revenue grew 98% in three months, with higher-margin dishes leading sales",
+    "metrics": ["food-revenue", "no-shows"],
     "relatedPackages": ["growth-partner", "turnaround-intensive"],
     "relatedCapabilities": ["growth-strategy"]
   },
   {
     "id": "anchor-social-growth",
-    "title": "60-70K Monthly Social Views From Scratch",
-    "challenge": "Minimal social media presence, no consistent posting, low local awareness",
-    "action": "Content strategy, posting rhythm, local engagement, community building",
-    "result": "Grew to 60-70K monthly views and built a 300-contact database",
-    "metrics": ["social-views", "contact-database"],
+    "title": "How The Anchor Grew Google Search Visibility by 828%",
+    "challenge": "Barely showing up when locals searched, and a website that just sat there",
+    "action": "A search-led, AI-optimised website built around what locals actually search for, plus consistent local visibility",
+    "result": "Google Search visibility grew 828%, turning searches into real bookings",
+    "metrics": ["search-visibility", "private-hire"],
     "relatedPackages": ["momentum-month", "growth-partner"],
-    "relatedCapabilities": ["organic-social", "tools-tracking"]
+    "relatedCapabilities": ["local-visibility", "website-booking"]
   }
 ]

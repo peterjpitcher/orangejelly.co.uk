@@ -59,9 +59,9 @@ Young customers take 5-10 photos per visit. Make sure they've got something wort
 
 The Signature Serve
 Create one drink that's uniquely yours:
-- Our "Anchor Sunset" (gin, elderflower, and edible flowers) gets posted 20+ times a week
-- Cost: £1.20 to make, sells for £8.50
-- The flower costs 10p but drives £170 weekly revenue
+- Our "Anchor Sunset" (gin, elderflower, and edible flowers) is one of our most-shared posts
+- A cheap garnish, like an edible flower, costs pennies but makes the drink instantly photogenic
+- A signature serve like this is part of how we grew our Google Search visibility by 828%
 
 ## Events They Actually Want
 
@@ -87,7 +87,7 @@ Build a Proper Zero-Proof Menu
 - Price them fairly (£4-6, not £2)
 - Train staff to recommend them without judgment
 
-We introduced this and saw weekday revenue lift around 20% - mostly from groups where not everyone was drinking.
+We introduced this and it helped bring in more groups where not everyone was drinking - part of the wider push that grew our table bookings by 403%.
 
 ## Build a Vibe, Not a Venue
 
@@ -169,11 +169,13 @@ Week 4: Measure, adjust, repeat
 
 - Noticeable lift in under-30s customers
 
-- Weekday revenue lift of around 20%
+- More groups choosing you on quieter weekdays
 
-- Steady growth in Instagram followers
+- Steady growth in social media reach and engagement
 
 - A growing core of regulars who bring friends
+
+When we applied this thinking at The Anchor, table bookings grew by 403% and our Google Search visibility grew by 828%.
 
 ## Your Action Plan
 

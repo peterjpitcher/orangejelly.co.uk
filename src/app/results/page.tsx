@@ -6,7 +6,7 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: 'Pub Marketing Results - Proven at The Anchor',
     description:
-      'Pub marketing results from The Anchor: food GP 58% to 71%, quiz night to 35 regulars, 60-70K social views. See what works.',
+      'Pub marketing results from The Anchor: Google Search visibility +828%, table bookings +403%, food revenue +98%. See what works.',
     path: '/results',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
@@ -23,90 +23,104 @@ export default function Results() {
     '@graph': [
       {
         '@type': 'HowTo',
-        '@id': `${baseUrl}/results#sunday-lunches`,
-        name: 'How to Fix Sunday Lunch Chaos with Pre-Order System',
+        '@id': `${baseUrl}/results#no-shows`,
+        name: 'How to Cut Booking No-Shows with a Deposit System',
         description:
-          'Learn how The Anchor reduced Sunday lunch waste by £250/week using a custom-built pre-order system',
-        supply: ['Google Forms or similar', 'Payment processor', 'SMS system'],
+          'How The Anchor cut booking no-shows by 89% using a simple online booking, deposit, and reminder system',
+        supply: ['Online booking form', 'Payment processor', 'SMS system'],
         tool: ['Online form builder', 'Automated SMS tool'],
         step: [
           {
             '@type': 'HowToStep',
-            name: 'Set up simple pre-order form',
-            text: 'Create online form with menu choices and deposit option',
+            name: 'Set up an easy online booking flow',
+            text: 'Create a simple booking form with a small deposit option',
           },
           {
             '@type': 'HowToStep',
-            name: 'Implement a small deposit system',
-            text: 'A small deposit prevents no-shows without scaring customers',
+            name: 'Take a small deposit',
+            text: 'A small deposit creates commitment without scaring guests off',
           },
           {
             '@type': 'HowToStep',
-            name: 'Send confirmation texts',
-            text: 'Automated SMS confirms booking and reminds day before',
+            name: 'Send automated reminders',
+            text: 'Automated SMS confirms the booking and reminds guests the day before',
           },
           {
             '@type': 'HowToStep',
-            name: 'Lock in menu choices',
-            text: 'Pre-orders mean exact prep with no waste',
+            name: 'Link bookings to kitchen prep',
+            text: 'Confirmed bookings mean accurate prep and reliable covers',
           },
         ],
-        yield: '£250 weekly margin gain, 90% reduction in food waste',
+        yield: 'Booking no-shows cut by 89%',
       },
       {
         '@type': 'Article',
-        '@id': `${baseUrl}/results#social-media`,
-        headline: 'How AI Transformed Our Social Media from Chore to Customer Magnet',
+        '@id': `${baseUrl}/results#search-visibility`,
+        headline: 'How an AI-Optimised Website Grew Our Google Search Visibility by 828%',
         description:
-          'Case study showing how The Anchor plans and schedules 30 days of social content in 2 hours',
+          'Case study showing how The Anchor launched a search-led website that grew Google Search visibility by 828%',
         author: {
           '@id': `${baseUrl}/#peter-pitcher`,
         },
-        datePublished: '2024-09-15',
+        datePublished: '2025-08-15',
         articleBody:
-          'From posting once a week to daily visibility that drives bookings. AI creates content that sounds like us, not a robot...',
+          'We launched the-anchor.pub as an AI-optimised, search-led website in August 2025. Built around what locals actually search for, Google Search visibility grew 828% — and the people finding us are booking tables...',
       },
       {
         '@type': 'Article',
-        '@id': `${baseUrl}/results#quiz-night`,
-        headline: 'Tuesday Quiz Night: 25-30 Regular Teams Every Month Using AI',
+        '@id': `${baseUrl}/results#table-bookings`,
+        headline: 'How We Grew Table Bookings by 403% at The Anchor',
         description:
-          'How we ditched expensive quiz subscriptions and created better quizzes with AI in minutes',
+          'How AI-planned events, a clear reason to book, and an easy booking journey grew table bookings by 403%',
         author: {
           '@id': `${baseUrl}/#peter-pitcher`,
         },
-        datePublished: '2024-10-01',
+        datePublished: '2025-10-01',
         articleBody:
-          'QuestionOne was stale and expensive. Now AI creates custom quizzes with local flavor that pack the pub every Tuesday...',
+          'Quiet sessions used to barely cover the staff. With AI-planned events, a clear reason to book, and an easy direct booking journey, table bookings grew 403% and the quiet nights started to pay...',
       },
       {
         '@type': 'HowTo',
-        '@id': `${baseUrl}/results#quiet-weeks`,
-        name: 'Transform Quiet Weeks into Premium Events',
-        description: 'How The Anchor created sold-out tasting events with premium pricing',
+        '@id': `${baseUrl}/results#private-hire`,
+        name: 'How to Grow Private Hire Bookings by 567%',
+        description:
+          'How The Anchor grew private hire bookings by 567% with a clear offer and an easy enquiry-to-booking journey',
         step: [
           {
             '@type': 'HowToStep',
-            name: 'Ask locals what they want',
-            text: 'Use AI to analyse feedback and identify gaps',
+            name: 'Build a clear, premium offer',
+            text: 'Give the space a reason to be booked with curated, premium experiences',
           },
           {
             '@type': 'HowToStep',
-            name: 'Partner with local suppliers',
-            text: 'Gin distilleries and breweries love showcasing products',
+            name: 'Make the space easy to find',
+            text: 'Show up for local searches like private hire nearby',
           },
           {
             '@type': 'HowToStep',
-            name: 'Price for value not volume',
-            text: 'Premium pricing with a proper experience beats cheap offers',
+            name: 'Convert enquiries quickly',
+            text: 'A smooth enquiry-to-booking journey turns interest into confirmed dates',
           },
           {
             '@type': 'HowToStep',
-            name: 'Build WhatsApp community',
-            text: 'Direct communication with interested customers',
+            name: 'Price for the experience',
+            text: 'Partner with quality local suppliers and price with confidence',
           },
         ],
-        yield: 'Sold-out tasting nights with strong repeat attendance',
+        yield: 'Private hire bookings up 567%',
+      },
+      {
+        '@type': 'Article',
+        '@id': `${baseUrl}/results#food-revenue`,
+        headline: 'How We Grew Food Revenue by 98% in Three Months',
+        description:
+          'How menu engineering, strategic pricing, and a high-margin hero product grew food revenue by 98%',
+        author: {
+          '@id': `${baseUrl}/#peter-pitcher`,
+        },
+        datePublished: '2025-09-15',
+        articleBody:
+          'Food sales had gone flat. With AI-led menu engineering, sensory descriptions, strategic pricing, and a stone-baked pizza hero product, food revenue grew 98% in three months...',
       },
     ],
   };

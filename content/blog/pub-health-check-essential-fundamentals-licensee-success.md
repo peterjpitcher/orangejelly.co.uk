@@ -45,9 +45,9 @@ faqs:
   - question: "How much does it cost to run a pub?"
     answer: "Costs vary hugely depending on whether you are a tenant, leaseholder, or freehold owner. A tied tenancy might require 5,000-20,000 pounds upfront with weekly rent of 500-2,000 pounds. A free-of-tie lease could need 50,000-150,000 pounds ingoing. Monthly running costs for a typical community pub include rent, stock, wages, utilities, insurance, and licensing fees. Your biggest ongoing costs will be stock (around 35-40 percent of turnover), wages (20-30 percent), and rent."
   - question: "What gross profit percentage should a pub aim for?"
-    answer: "A well-run pub should target 60-65 percent GP on wet sales and 65-70 percent on food. At The Anchor, we pushed food GP from 58 percent to 71 percent through careful menu engineering and portion control. If your overall GP is below 55 percent, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately."
+    answer: "A well-run pub should target 60-65 percent GP on wet sales and 65-70 percent on food. At The Anchor, careful menu engineering and portion control grew our food revenue by 98 percent in three months. If your overall GP is below 55 percent, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately."
   - question: "How do I attract more customers to my pub?"
-    answer: "Start with consistent events — our quiz night grew to 25-35 regulars by running it every single week without fail. Combine that with active social media (we hit 60-70K monthly views), a Google Business Profile that is fully optimised, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there."
+    answer: "Start with consistent events run every single week without fail — at The Anchor, that discipline helped grow table bookings by 403 percent. Combine that with active social media (which grew our Google Search visibility by 828 percent), a Google Business Profile that is fully optimised, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there."
   - question: "What are the most common mistakes new pub landlords make?"
     answer: "The biggest mistakes are underestimating working capital needs, trying to change everything on day one, not tracking GP weekly, hiring friends instead of skilled staff, and competing on price instead of value. Most new licensees also underestimate how physically and emotionally demanding the role is. Get your finances and your support network sorted before you take on a pub."
   - question: "How many hours a week does running a pub take?"
@@ -155,7 +155,7 @@ Your gross profit percentage (GP%) tells you whether you are making money on wha
 - **Wet sales target:** 60-65% GP
 - **Food sales target:** 65-70% GP
 
-At The Anchor, we pushed food GP from 58% to 71% through disciplined [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) and portion control. That kind of improvement drops straight to the bottom line.
+At The Anchor, disciplined [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) and portion control grew our food revenue by 98% in three months. That kind of improvement drops straight to the bottom line.
 
 Calculate it weekly. If GP drops by more than 2 points, investigate immediately. Common culprits are wastage, theft, over-pouring, incorrect pricing, or supplier price increases you have not passed on.
 
@@ -197,7 +197,7 @@ You do not need a marketing degree or a big budget. You need consistency and a w
 
 ### Social Media
 
-Social media is free and it works. At The Anchor, we built to 60-70K monthly views. Here is what matters:
+Social media is free and it works. At The Anchor, consistent posting helped grow our Google Search visibility by 828%. Here is what matters:
 
 - **Post consistently.** Three to five times a week minimum. Regularity beats perfection.
 - **Show the real pub.** Behind-the-scenes content, your team, the food coming out of the kitchen, the atmosphere on a busy night. Authenticity beats polish.
@@ -229,7 +229,7 @@ For more on community-based marketing, see our guides on [local pub marketing](/
 
 ### Email and Database Marketing
 
-Build a customer database. We have built ours to 300 contacts, and it is one of our most valuable marketing assets. Collect email addresses through WiFi sign-in, event bookings, and loyalty schemes.
+Build a customer database. Ours has become one of our most valuable marketing assets — a direct line to regulars that does not depend on social media algorithms. Collect email addresses through WiFi sign-in, event bookings, and loyalty schemes.
 
 A monthly email newsletter keeps your pub front of mind. Share upcoming events, new menu items, and behind-the-scenes stories. Read more in our [email marketing guide](/licensees-guide/email-marketing-pub-retention).
 
@@ -263,7 +263,7 @@ Staff turnover in hospitality is notoriously high. Reduce it by:
 - Saying thank you. Recognition costs nothing and means everything.
 - Creating progression opportunities. Can your bar staff learn cellar management? Can your KP train on starters?
 
-At The Anchor, we use technology to reclaim 25 hours a week from admin tasks, including rota planning. That is time back for the things that actually grow the business.
+At The Anchor, we use technology to reclaim hours every week from admin tasks, including rota planning. That is time back for the things that actually grow the business.
 
 ## Customer Experience: Making People Want to Come Back
 
@@ -295,7 +295,7 @@ Regulars are the backbone of every successful pub. They provide consistent, pred
 
 Build regulars by:
 
-- Running consistent events. Our quiz night brings in 25-35 regulars every week because it happens every week without fail. See our [quiz night guide](/licensees-guide/quiz-night-101) for the full system.
+- Running consistent events. Our weekly quiz night runs without fail every single week, and that consistency was part of growing our table bookings by 403%. See our [quiz night guide](/licensees-guide/quiz-night-101) for the full system.
 - Creating a [loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub) that rewards frequency, not just spend.
 - Knowing your community. What do they need? A meeting space? A family-friendly Sunday? A late-night venue? Serve the gap.
 
@@ -349,7 +349,7 @@ Events are the single most effective revenue driver for community pubs. They cre
 
 Start with the basics:
 
-- **Quiz night** — the classic for good reason. Ours grew to 25-35 regulars with consistent promotion and a good format. See our [quiz night guide](/licensees-guide/quiz-night-101) and [quiz night ideas](/licensees-guide/quiz-night-ideas).
+- **Quiz night** — the classic for good reason. Ours has thrived on consistent promotion and a good format, and it helped grow our table bookings by 403%. See our [quiz night guide](/licensees-guide/quiz-night-101) and [quiz night ideas](/licensees-guide/quiz-night-ideas).
 - **Live music** — monthly or fortnightly depending on your space and audience. Our [live music guide](/licensees-guide/live-music-events-for-pubs) covers booking, sound, and licensing.
 - **Themed nights** — [music bingo](/licensees-guide/music-bingo-101), [cash bingo](/licensees-guide/cash-bingo-101), [karaoke](/licensees-guide/karaoke-night-101), [board game nights](/licensees-guide/boardgame-night-101). Each one fills a different night and attracts a different crowd.
 - **Seasonal events** — plan your year in advance with a [seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar). Christmas bookings, summer BBQs, bank holiday specials.
@@ -448,7 +448,7 @@ Running a pub is one of the hardest and most rewarding things you can do. It wil
 
 But feelings do not pay the rent. Get your operations right. Know your numbers. Market consistently. Look after your team. Stay legal. And never stop learning.
 
-At The Anchor, we have built something we are genuinely proud of: 25-35 quiz night regulars, food GP at 71%, 60-70K social media views a month, a database of 300 contacts, and 25 hours a week reclaimed through smart use of technology. None of that happened overnight. It happened because we treated the pub as a business while never forgetting it is a community hub.
+At The Anchor, we have built something we are genuinely proud of: table bookings up 403%, food revenue up 98% in three months, Google Search visibility up 828%, and a direct customer database that keeps regulars coming back. None of that happened overnight. It happened because we treated the pub as a business while never forgetting it is a community hub.
 
 If you are just starting out, you do not have to figure this all out alone. Orange Jelly exists because we have been through it and we know how much a bit of experienced guidance can help. Whether you need help with your marketing, your operations, or just someone to bounce ideas off, [get in touch](/contact). We charge 75 pounds plus VAT per hour, and we back everything with a 30-day guarantee.
 
@@ -466,11 +466,11 @@ Costs vary hugely depending on whether you are a tenant, leaseholder, or freehol
 
 ### What gross profit percentage should a pub aim for?
 
-A well-run pub should target 60-65% GP on wet sales and 65-70% on food. At The Anchor, we pushed food GP from 58% to 71% through careful menu engineering and portion control. If your overall GP is below 55%, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately.
+A well-run pub should target 60-65% GP on wet sales and 65-70% on food. At The Anchor, careful menu engineering and portion control grew our food revenue by 98% in three months. If your overall GP is below 55%, you are losing money on some lines and need to review pricing, supplier deals, and wastage immediately.
 
 ### How do I attract more customers to my pub?
 
-Start with consistent events — our quiz night grew to 25-35 regulars by running it every single week without fail. Combine that with active social media (we hit 60-70K monthly views), a fully optimised Google Business Profile, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there.
+Start with consistent events run every single week without fail — at The Anchor, that discipline helped grow table bookings by 403%. Combine that with active social media (which grew our Google Search visibility by 828%), a fully optimised Google Business Profile, and genuine community engagement. The biggest mistake is trying everything at once. Pick two or three things, do them well, and build from there.
 
 ### What are the most common mistakes new pub landlords make?
 

@@ -79,7 +79,7 @@ The critical thing is audio. One screen with clear sound beats three screens on 
 
 Six Nations matches typically air on BBC and ITV, which are free to air. You still need a business TV licence (around 170 per year), but you do not need Sky or TNT Sports for the core fixtures. However, if you want to screen the Autumn Internationals, Premiership Rugby, or Champions Cup alongside the Six Nations, you will need a commercial Sky Sports subscription. Check your existing agreements before the tournament starts.
 
-Do not use a domestic Sky subscription in a commercial premises. It violates the terms of service, the picture quality is audited by rights holders, and the fines are not worth the saving.
+Do not use a domestic Sky subscription in a commercial premises. It violates the terms of service, the picture quality is audited by rights holders, and the fines dwarf anything you would cut from your subscription bill.
 
 ### Room layout for match days
 
@@ -149,7 +149,7 @@ Post a short video of the atmosphere during the match. This is content for the n
 
 ### Day after
 
-Post the final score, a crowd photo, and a teaser for the next fixture. Thank everyone who came. Tag your pub and use location-specific hashtags. We consistently see 60 to 70K monthly views on our social channels by keeping this kind of rhythm going.
+Post the final score, a crowd photo, and a teaser for the next fixture. Thank everyone who came. Tag your pub and use location-specific hashtags. Keeping this kind of rhythm going is part of how we grew our Google Search visibility by 828%.
 
 ## Converting match-day visitors into regulars
 
@@ -159,7 +159,7 @@ This is the part most pubs skip, and it is the most valuable part of the entire 
 
 Have a simple sign-up mechanism on every table. A QR code that links to a Google Form works well. Offer an incentive — 10 percent off their next midweek visit, entry into a prize draw for a free meal, or early access to booking for the next fixture. You are building a database of local people who like pubs and sport. That database is gold.
 
-At The Anchor we have built a database of 300 contacts using exactly this approach across events throughout the year. Every one of those contacts is someone we can reach directly without relying on social media algorithms.
+At The Anchor we have built a sizeable customer database using exactly this approach across events throughout the year. Every one of those contacts is someone we can reach directly without relying on social media algorithms.
 
 ### Follow up within 48 hours
 

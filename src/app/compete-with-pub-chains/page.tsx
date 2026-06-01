@@ -58,9 +58,10 @@ export default function CompeteWithPubChains() {
         }}
         bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Compete With Chains' }]}
+        backgroundImage="/images/headers/compete-with-pub-chains.png"
       />
 
-      <ProofStrip claimIds={['quiz-regulars', 'social-views', 'food-gp-growth', 'value-added']} />
+      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* The Problem */}
       <Section>

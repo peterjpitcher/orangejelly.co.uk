@@ -35,8 +35,8 @@ export default function ResultsPage() {
               Search Optimisation That Drives Real Revenue
             </Heading>
             <Text align="center" color="muted" className="mb-8 max-w-2xl mx-auto">
-              We launched the-anchor.pub as an AI-optimised website in August 2025. The results
-              speak for themselves.
+              We launched the-anchor.pub as an AI-optimised, search-led website in August 2025.
+              Google Search visibility is up 828% — and it&apos;s driving real bookings.
             </Text>
           </AnimatedItem>
 
@@ -117,34 +117,34 @@ export default function ResultsPage() {
           <Grid columns={{ default: 2, md: 4 }} gap="medium">
             <Card variant="bordered" className="text-center p-6">
               <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                +22%
+                +403%
               </Text>
               <Text size="sm" color="muted">
-                Gross Profit Improvement
+                Table Bookings
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
               <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                +20%
+                +567%
               </Text>
               <Text size="sm" color="muted">
-                Weekday Revenue Lift
+                Private Hire Bookings
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
               <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                30%
+                +98%
               </Text>
               <Text size="sm" color="muted">
-                Food Waste Eliminated
+                Food Revenue in 3 Months
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
               <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                93%
+                -89%
               </Text>
               <Text size="sm" color="muted">
-                Marketing Time Reclaimed
+                Booking No-Shows
               </Text>
             </Card>
           </Grid>
@@ -202,34 +202,34 @@ export default function ResultsPage() {
               <Grid columns={{ default: 2 }} gap="medium">
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                    100%
+                    Get Found
                   </Text>
                   <Text size="sm" color="muted">
-                    Event Sell-Out Rate
+                    People search, find you, and choose you
                   </Text>
                 </div>
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                    85%
+                    Get Booked
                   </Text>
                   <Text size="sm" color="muted">
-                    Return Within 30 Days
+                    Tables and private hire fill direct
                   </Text>
                 </div>
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                    +300%
+                    Fill Quiet Sessions
                   </Text>
                   <Text size="sm" color="muted">
-                    Online Reach Growth
+                    The nights that used to sit empty start to pay
                   </Text>
                 </div>
                 <div className="text-center">
                   <Text size="2xl" weight="bold" className="text-orange block mb-1">
-                    250+
+                    Grow Revenue
                   </Text>
                   <Text size="sm" color="muted">
-                    Opted-In Contacts Built
+                    Visibility and bookings turn into income
                   </Text>
                 </div>
               </Grid>

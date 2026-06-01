@@ -61,7 +61,7 @@ Most pubs sit somewhere in between, and many licensees have never consciously de
 
 Understanding whether your pub is wet-led, food-led, or a deliberate hybrid is one of the most important strategic decisions you can make. It affects your staffing, your GP targets, your marketing, your investment priorities, and ultimately how much money you take home at the end of the year.
 
-I run The Anchor in Stanwell Moor as a Greene King tenant. We have navigated this question ourselves — moving from a primarily wet-led model to a hybrid that uses food strategically to drive covers and lift average spend. Our food GP went from 58 percent to 71 percent through deliberate menu engineering and discipline. This article shares what I have learned about both models and how to choose the right one for your venue.
+I run The Anchor in Stanwell Moor as a Greene King tenant. We have navigated this question ourselves — moving from a primarily wet-led model to a hybrid that uses food strategically to drive covers and lift average spend. Through deliberate menu engineering and discipline we grew our food revenue by 98 percent in three months. This article shares what I have learned about both models and how to choose the right one for your venue.
 
 ## What do the terms actually mean?
 
@@ -129,7 +129,7 @@ Wet-led works best when:
 
 Food GP should be your obsession if you run a kitchen. The industry average sits around 60 to 65 percent, but well-managed operations can hit 68 to 72 percent consistently.
 
-At The Anchor, we moved our food GP from 58 percent to 71 percent through disciplined menu engineering — reducing waste, designing dishes around shared core ingredients, pricing with margin in mind rather than competitor-matching, and training the team to upsell higher-margin items. Our guide on [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend) explains the system in detail.
+At The Anchor, we grew our food revenue by 98 percent in three months through disciplined menu engineering — reducing waste, designing dishes around shared core ingredients, pricing with margin in mind rather than competitor-matching, and training the team to upsell higher-margin items. Our guide on [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend) explains the system in detail.
 
 ### The cost of a kitchen
 
