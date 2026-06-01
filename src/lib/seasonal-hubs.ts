@@ -4,6 +4,12 @@ export interface SeasonalCalendarEntry {
   date: string; // e.g. "Fri 23–Sat 24 Oct"
   moment: string; // e.g. "Champagne Weekend"
   opportunity: string; // e.g. "Fizz by the glass, a sparkling tasting"
+  /**
+   * Optional path to the in-depth guide for this moment. When present, the
+   * SeasonalCalendar renders the card as a link through to the full how-to.
+   * Omit for moments that don't (yet) have a dedicated guide.
+   */
+  href?: string;
 }
 
 export interface SeasonalHub {
@@ -32,61 +38,73 @@ export const SEASON_HUBS: SeasonalHub[] = [
         date: '17–27 Sep',
         moment: 'Cask Ale Week',
         opportunity: 'Beer of the day, cask passport, meet-the-brewer',
+        href: '/licensees-guide/cask-ale-week-pub-guide',
       },
       {
         date: '19 Sep–4 Oct',
         moment: 'Oktoberfest',
         opportunity: 'Steins, pretzels and an Oompah night of your own',
+        href: '/licensees-guide/oktoberfest-pub-guide',
       },
       {
         date: 'Fri 25 Sep',
         moment: 'Macmillan Coffee Morning',
         opportunity: 'A quiet daytime filled, and a good cause',
+        href: '/licensees-guide/macmillan-coffee-morning-pub-guide',
       },
       {
         date: 'All October',
         moment: 'Sober October',
         opportunity: 'A proper low/no range that earns its place',
+        href: '/licensees-guide/sober-october-low-no-alcohol-pubs',
       },
       {
         date: 'Sun 4 Oct',
         moment: 'National Vodka Day',
         opportunity: 'A cocktail special, a Bloody Mary brunch',
+        href: '/licensees-guide/national-drinks-days-pub-guide',
       },
       {
         date: 'Mon 19 Oct',
         moment: 'Gin & Tonic Day',
         opportunity: 'A G&T board, a local gin spotlight',
+        href: '/licensees-guide/national-drinks-days-pub-guide',
       },
       {
         date: 'Fri 23–Sat 24 Oct',
         moment: 'Champagne Weekend',
         opportunity: 'Fizz by the glass, a sparkling tasting',
+        href: '/licensees-guide/national-drinks-days-pub-guide',
       },
       {
         date: 'Sat 31 Oct',
         moment: 'Halloween',
         opportunity: 'Family by day, fancy dress by night',
+        href: '/licensees-guide/pub-halloween-bonfire-night-events',
       },
       {
         date: 'Thu 5 Nov',
         moment: 'Bonfire Night',
         opportunity: 'Hot drinks, comfort food, the warm-up',
+        href: '/licensees-guide/pub-halloween-bonfire-night-events',
       },
       {
         date: '6–21 Nov',
         moment: 'Autumn rugby',
         opportunity: 'Big-screen bookings, match platters',
+        href: '/licensees-guide/autumn-rugby-nations-championship-pubs',
       },
       {
         date: 'Fri 27–Sun 29 Nov',
         moment: 'Rugby finals weekend (Twickenham)',
         opportunity: 'A full weekend of bookable rugby',
+        href: '/licensees-guide/autumn-rugby-nations-championship-pubs',
       },
       {
         date: 'Fri 27 Nov',
         moment: 'Black Friday',
         opportunity: 'Gift cards, deposits, bounce-back vouchers',
+        href: '/licensees-guide/black-friday-pub-ideas',
       },
       {
         date: 'Mon 30 Nov',
@@ -118,6 +136,7 @@ export const SEASON_HUBS: SeasonalHub[] = [
         date: 'Fri 27 Nov',
         moment: 'Black Friday',
         opportunity: 'Gift cards, party deposits, a December bounce-back voucher',
+        href: '/licensees-guide/black-friday-pub-ideas',
       },
       {
         date: 'Mon 30 Nov',
@@ -128,11 +147,13 @@ export const SEASON_HUBS: SeasonalHub[] = [
         date: 'All December',
         moment: 'Christmas party season',
         opportunity: 'Set menus, pre-orders, deposits — the diary fills early',
+        href: '/licensees-guide/pub-christmas-bookings-fill-december',
       },
       {
         date: 'Fri 25 Dec',
         moment: 'Christmas Day',
         opportunity: 'A booked-only lunch, or a well-earned rest with deposits banked',
+        href: '/licensees-guide/christmas-pub-promotion-ideas',
       },
       {
         date: 'Sat 26 Dec',
@@ -143,6 +164,7 @@ export const SEASON_HUBS: SeasonalHub[] = [
         date: 'Thu 31 Dec',
         moment: "New Year's Eve",
         opportunity: 'A ticketed night with a deposit, not a quiet free-for-all',
+        href: '/licensees-guide/pub-new-years-eve-planning-guide',
       },
       {
         date: 'Fri 1 Jan',

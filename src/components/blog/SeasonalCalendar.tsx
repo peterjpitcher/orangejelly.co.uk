@@ -1,4 +1,5 @@
 import { type CSSProperties } from 'react';
+import Link from 'next/link';
 import Grid from '@/components/Grid';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -16,6 +17,10 @@ interface SeasonalCalendarProps {
  * table with a scannable, accessible grid of dated moments. Colour comes from the
  * season token set (var(--season-*)) selected by the static data-season attribute
  * on the wrapper — no hardcoded hex and no dynamically constructed Tailwind classes.
+ *
+ * Moments that carry an `href` render as a clickable card (whole card is the link)
+ * with a visible "Read the guide" cue, so visitors can jump straight to the full
+ * how-to. Moments without an `href` render as a plain, non-interactive card.
  */
 export default function SeasonalCalendar({
   entries,
@@ -37,6 +42,8 @@ export default function SeasonalCalendar({
     color: 'var(--season-accent-contrast)',
   };
   const spineStyle: CSSProperties = { backgroundColor: 'var(--season-accent)' };
+  // accent-strong keeps the small "Read the guide" cue ≥4.5:1 on the white card (WCAG AA).
+  const linkCueStyle: CSSProperties = { color: 'var(--season-accent-strong)' };
 
   return (
     <section data-season={season} aria-label={heading} className="py-12 md:py-16" style={tintStyle}>
@@ -51,32 +58,71 @@ export default function SeasonalCalendar({
         </div>
 
         <Grid columns={{ default: 1, sm: 2, lg: 3 }} gap="medium">
-          {entries.map((entry) => (
-            <div
-              key={`${entry.date}-${entry.moment}`}
-              className="relative h-full rounded-xl border bg-white p-5 pl-6 shadow-sm"
-              style={cardStyle}
-            >
-              {/* Accent spine — colour-independent of the text content */}
-              <span
-                aria-hidden="true"
-                className="absolute left-0 top-0 h-full w-1.5 rounded-l-xl"
-                style={spineStyle}
-              />
-              <span
-                className="inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide"
-                style={dateChipStyle}
+          {entries.map((entry) => {
+            const cardClassName = 'relative h-full rounded-xl border bg-white p-5 pl-6 shadow-sm';
+
+            const cardContent = (
+              <>
+                {/* Accent spine — colour-independent of the text content */}
+                <span
+                  aria-hidden="true"
+                  className="absolute left-0 top-0 h-full w-1.5 rounded-l-xl"
+                  style={spineStyle}
+                />
+                <span
+                  className="inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide"
+                  style={dateChipStyle}
+                >
+                  {entry.date}
+                </span>
+                <Heading level={3} className="mt-3 mb-1 text-lg">
+                  {entry.moment}
+                </Heading>
+                <Text color="charcoal" size="sm">
+                  {entry.opportunity}
+                </Text>
+                {entry.href && (
+                  <span
+                    className="mt-3 inline-flex items-center gap-1 text-sm font-semibold"
+                    style={linkCueStyle}
+                  >
+                    Read the guide
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </span>
+                )}
+              </>
+            );
+
+            // Moments with a guide become a whole-card link; the rest stay plain.
+            if (entry.href) {
+              return (
+                <Link
+                  key={`${entry.date}-${entry.moment}`}
+                  href={entry.href}
+                  aria-label={`${entry.moment} — read the full guide`}
+                  className={`group block ${cardClassName} transition-shadow hover:shadow-md`}
+                  style={cardStyle}
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={`${entry.date}-${entry.moment}`}
+                className={cardClassName}
+                style={cardStyle}
               >
-                {entry.date}
-              </span>
-              <Heading level={3} className="mt-3 mb-1 text-lg">
-                {entry.moment}
-              </Heading>
-              <Text color="charcoal" size="sm">
-                {entry.opportunity}
-              </Text>
-            </div>
-          ))}
+                {cardContent}
+              </div>
+            );
+          })}
         </Grid>
 
         {season === 'autumn' && (
