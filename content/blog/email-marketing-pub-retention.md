@@ -2,7 +2,7 @@
 title: "Email Marketing for Pubs: Build a Database That Drives Repeat Business"
 slug: "email-marketing-pub-retention"
 publishedDate: 2025-10-31
-updatedDate: "2025-05-12T00:00:00.000Z"
+updatedDate: "2026-06-01T00:00:00.000Z"
 excerpt: "Turn one-time visitors into regulars with email marketing that works. List building, automation, and campaign strategies to keep customers coming back."
 quickAnswer: "Collect emails through WiFi signup, loyalty programs, and table tent offers. Send weekly newsletters featuring upcoming events, special offers, and local news. Use automation for birthday offers and re-engagement campaigns to keep customers returning regularly."
 author: "Peter Pitcher"
@@ -92,6 +92,12 @@ If bookings rise, the email is working.
 - Month 3: segment and test two offers.
 
 Email is one channel in a wider retention mix. Pair it with a strong [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) to reach customers wherever they spend their time.
+
+## Capture details while summer trade is high
+
+The busiest weeks of the year are the best time to grow your list — there are simply more people to ask. Make it effortless: a **QR code** on the table and in the garden, an **event sign-up** when people book, a **summer prize draw** with one tick to opt in, and a booking flow that invites people to hear what is on next. Capture the detail in the moment; the quiet weeks are when that list earns its keep.
+
+This is move four of the [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 
 ## Common mistakes
 

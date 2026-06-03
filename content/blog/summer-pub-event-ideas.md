@@ -2,7 +2,7 @@
 title: "35 Summer Pub Events That Actually Make Money (Not Just Noise)"
 slug: "summer-pub-event-ideas"
 publishedDate: 2025-07-17
-updatedDate: "2025-07-21T00:00:00.000Z"
+updatedDate: "2026-06-01T00:00:00.000Z"
 excerpt: "Most summer events cost more than they earn. These 35 ideas are costed, tested, and ranked by profit — so you fill your garden without burning your margin."
 quickAnswer: "Host beer garden BBQs (low setup, strong ROI), outdoor quiz nights with prizes, family fun days with bouncy castles, live acoustic music sessions, and themed festivals. Focus on events that utilize your outdoor space and encourage longer stays."
 author: "Peter Pitcher"
@@ -78,6 +78,12 @@ Use these filters:
 - Does it create a clear spend per head?
 
 Summer is great, but what about the rest of the year? If your quieter midweek nights need the same attention, see our guide to [filling those empty slots](/quiet-midweek-solutions).
+
+## Make every summer event bookable
+
+A great summer event is only half the job. Package each one as a named, bookable moment, put it on your Google listing and socials with a direct booking link, and use the night itself to capture details and invite people back. That is how a single event turns into repeat trade rather than a one-off.
+
+For the full system around your events, see our [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 
 ## Common mistakes
 
