@@ -27,6 +27,25 @@ export interface SeasonalHub {
 
 export const SEASON_HUBS: SeasonalHub[] = [
   {
+    season: 'summer',
+    theme: 'summer',
+    hubSlug: 'summer-pub-marketing',
+    label: 'Summer Pub Playbook',
+    shortLabel: 'Summer Playbook',
+    dateRangeLabel: 'June–August',
+    // No dated calendar by design: this playbook is five evergreen summer
+    // marketing moves (not a run of dated events), so SeasonalCalendar is
+    // intentionally empty and renders nothing. The spokes are the five moves.
+    calendar: [],
+    featuredGuides: [
+      'summer-pub-event-ideas',
+      'social-media-strategy-for-pubs',
+      'google-business-profile-pub-guide',
+      'email-marketing-pub-retention',
+      'build-loyalty-scheme-fill-pub',
+    ],
+  },
+  {
     season: 'autumn',
     theme: 'autumn',
     hubSlug: 'autumn-pub-event-ideas',

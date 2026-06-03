@@ -168,7 +168,8 @@
   --season-hero-text: #ffffff;
 }
 
-/* Summer — placeholder: bright highlight. Replace when the summer hub ships. */
+/* Summer — warm golden amber (Summer Pub Playbook). Distinct from autumn's
+   red-orange; hero stops kept dark enough for white hero text to pass AA. */
 [data-season='summer'] {
   --season-accent: #d97706;
   --season-accent-strong: #b45309;

@@ -66,6 +66,13 @@ const nextConfig = {
           '/licensees-guide/christmas-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=christmas-2026',
         permanent: false,
       },
+      // BII (British Institute of Innkeeping) summer feature QR → tracked summer hub (temporary so it can be repointed each year).
+      {
+        source: '/summer',
+        destination:
+          '/licensees-guide/summer-pub-marketing?utm_source=bii&utm_medium=print-magazine&utm_campaign=summer-2026',
+        permanent: false,
+      },
     ];
   },
   // Page-level security headers are in src/middleware.ts.

@@ -109,6 +109,8 @@ export function getDefaultBlogImage(slug: string): string {
     'black-friday-pub-ideas': '/images/blog/black-friday-pub-ideas.svg',
     // New articles (2026 — Christmas/winter toolkit)
     'christmas-pub-event-ideas': '/images/blog/christmas-pub-event-ideas.svg',
+    // New articles (2026 — Summer hub / BII feature)
+    'summer-pub-marketing': '/images/blog/summer-pub-marketing.svg',
   };
 
   // Return the mapped image or a default
