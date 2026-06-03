@@ -401,6 +401,12 @@ If you are starting from scratch or know your profile needs work, here is a prac
 
 This is not a one-off project. The pubs that dominate local search are the ones that treat their Google Business Profile as a living, breathing part of their marketing. Fifteen minutes a week is all it takes once the foundation is built.
 
+## Keep it fresh for summer
+
+Your profile is only as good as the last time you touched it. Going into summer, run a five-minute check: update your **opening hours** (including later closes and bank holidays), confirm **food service times**, add **fresh photos** of the garden in full swing, reply to every recent **review**, and make sure your **booking link** still works. Then publish your summer events as Google Posts so they show on the profile.
+
+A listing that looks current and active builds confidence before anyone visits — it is the front door to all five summer moves. See the full [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
+
 ## Common mistakes to avoid
 
 **Keyword stuffing your business name.** "The Anchor Best Pub Quiz Staines Sunday Roast Beer Garden" will get your listing suspended. Use your real name.

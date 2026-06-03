@@ -2,7 +2,7 @@
 title: "How to Build a Loyalty Scheme That Fills the Pub Every Friday"
 slug: "build-loyalty-scheme-fill-pub"
 publishedDate: 2025-08-22
-updatedDate: "2026-02-16T00:00:00.000Z"
+updatedDate: "2026-06-01T00:00:00.000Z"
 excerpt: "Design a simple, trackable loyalty scheme that rewards frequency, drives referrals, and keeps Fridays standing-room only."
 quickAnswer: "Reward visits, not spend; add surprise upgrades; and use WhatsApp or email to drop exclusive invites every week."
 author: "Peter Pitcher"
@@ -112,6 +112,17 @@ Goal: drive Friday bookings without discounting the menu.
 - Reward: book Friday twice in a month and unlock a reserved table plus a sharer board.
 - Tracking: booking form tag and a simple spreadsheet.
 - Result: Fridays feel special, and regulars plan ahead.
+
+## Follow up after a summer visit
+
+The visit should not end when people leave. Modern pub marketing happens before, during and after — and the "after" is where loyalty is built. A simple post-visit habit turns a one-off summer guest into a regular:
+
+1. **Thank them** within a day, with a photo from the night if you have one.
+2. **Ask for a review** while the experience is still fresh.
+3. **Invite them to the next thing** — a specific summer event, not a vague "come back soon".
+4. **Reward the return** so the second visit is easy to say yes to.
+
+This is the final move in the [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 
 ## Common mistakes
 

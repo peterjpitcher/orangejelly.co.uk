@@ -2,7 +2,7 @@
 title: "The Complete Social Media Strategy Guide for Pubs in 2025"
 slug: "social-media-strategy-for-pubs"
 publishedDate: 2025-06-26
-updatedDate: "2025-06-26T00:00:00.000Z"
+updatedDate: "2026-06-01T00:00:00.000Z"
 excerpt: "Build a social media strategy for your pub that drives real footfall. Platform-specific tactics, content calendars, and engagement tips that work."
 quickAnswer: "Map a repeatable social media plan with content pillars, weekly scheduling, and review rituals. Focus on telling your pub's story, highlighting events, and responding quickly to keep relationships strong."
 author: "Peter Pitcher"
@@ -72,6 +72,18 @@ Batch content once a week. Take photos during service and store them in a shared
 ## Step 5: Track results that matter
 
 Track bookings, messages, and link clicks. Likes are useful only if they lead to visits.
+
+## Give every post a job
+
+Every post should lead somewhere. Before you publish, ask one question: what do you want someone to do? A nice photo of a pint in the sun is fine — a nice photo with a clear next step is better. Give each post one job:
+
+- **Book a table** — link straight to your booking page.
+- **View the menu** — send people to the summer or specials menu.
+- **Message on WhatsApp** — for quick questions and group bookings.
+- **Join an event** — point to the bookable moment, not just the poster.
+- **Share with a friend** — ask, and people will.
+
+Treat every post as part of the journey from interest to booking, not as content for its own sake. For how this fits the wider summer picture, see our [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 
 ## Common mistakes
 
