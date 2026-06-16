@@ -1,6 +1,6 @@
 import Link from '@/components/Link';
 import { CONTACT, URLS } from '@/lib/constants';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import OptimizedImage from '@/components/OptimizedImage';
@@ -230,7 +230,11 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
               </Text>
 
               {/* CTA Button */}
-              <Button
+              <TrackedButton
+                eventName="whatsapp_click"
+                eventProperties={{
+                  cta: 'footer_growth_conversation',
+                }}
                 href={URLS.whatsapp()}
                 variant="primary"
                 size="medium"
@@ -238,7 +242,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
                 className="mb-4"
               >
                 Start a Growth Conversation
-              </Button>
+              </TrackedButton>
 
               <Text size="xs" align="center" color="white" className="opacity-60 mb-2">
                 I personally reply to every message. During service? I'll reply as soon as I can.

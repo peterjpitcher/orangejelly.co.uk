@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useEffect, useId } from 'react';
+import React, { useState, useEffect, useId, useRef } from 'react';
 import { Search } from 'lucide-react';
 import { type SearchableItem, type SearchResult } from '@/lib/search';
 import Fuse from 'fuse.js';
 import Heading from './Heading';
 import Text from './Text';
+import { trackClientEvent } from '@/lib/tracking';
 
 interface SearchComponentProps {
   onResults?: (results: SearchResult[]) => void;
@@ -26,6 +27,7 @@ export default function SearchComponent({
   const [isLoading, setIsLoading] = useState(false);
   const [isIndexLoaded, setIsIndexLoaded] = useState(false);
   const [announcement, setAnnouncement] = useState('');
+  const lastTrackedSearchRef = useRef('');
   const resultsListId = useId();
   const statusMessageId = useId();
 
@@ -110,6 +112,30 @@ export default function SearchComponent({
     );
   }, [isLoading, results.length, query]);
 
+  useEffect(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (
+      normalizedQuery.length < 2 ||
+      isLoading ||
+      normalizedQuery === lastTrackedSearchRef.current
+    ) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      lastTrackedSearchRef.current = normalizedQuery;
+      trackClientEvent('site_search', {
+        properties: {
+          query: normalizedQuery,
+          result_count: results.length,
+          component: 'SearchComponent',
+        },
+      });
+    }, 1000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [isLoading, query, results.length]);
+
   return (
     <div className={`relative ${className}`}>
       <div className="relative">
@@ -151,6 +177,7 @@ export default function SearchComponent({
             <SearchResultItem
               key={result.item.id}
               result={result}
+              query={query}
               isLast={index === results.length - 1}
             />
           ))}
@@ -177,10 +204,11 @@ export default function SearchComponent({
 
 interface SearchResultItemProps {
   result: SearchResult;
+  query: string;
   isLast: boolean;
 }
 
-function SearchResultItem({ result, isLast }: SearchResultItemProps) {
+function SearchResultItem({ result, query, isLast }: SearchResultItemProps) {
   const { item } = result;
 
   return (
@@ -192,6 +220,16 @@ function SearchResultItem({ result, isLast }: SearchResultItemProps) {
       <a
         href={item.url}
         className="flex flex-col gap-2 hover:bg-gray-50 focus:bg-gray-100 rounded-md transition-colors p-2 -m-2"
+        onClick={() =>
+          trackClientEvent('search_result_click', {
+            properties: {
+              query: query.trim().toLowerCase(),
+              result_title: item.title,
+              result_url: item.url,
+              result_category: item.category,
+            },
+          })
+        }
       >
         <Heading level={3} className="text-sm truncate">
           {item.title}

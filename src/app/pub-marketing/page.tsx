@@ -4,6 +4,7 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Container from '@/components/Container';
 import Grid from '@/components/Grid';
 import FAQItem from '@/components/FAQItem';
@@ -715,9 +716,15 @@ export default function PubMarketingPage() {
               {pubMarketingData.cta.subtitle}
             </Text>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-              <Button href="/ways-to-work" variant="primary" size="large">
+              <TrackedButton
+                eventName="package_cta_click"
+                eventProperties={{ cta: 'pub_marketing_packages' }}
+                href="/ways-to-work"
+                variant="primary"
+                size="large"
+              >
                 See Our Packages
-              </Button>
+              </TrackedButton>
               <WhatsAppButton
                 text={pubMarketingData.cta.whatsappMessage}
                 label="Message Peter on WhatsApp"

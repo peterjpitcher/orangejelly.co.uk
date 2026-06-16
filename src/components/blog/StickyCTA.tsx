@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Text from '@/components/Text';
 import { URLS } from '@/lib/constants';
 
@@ -78,10 +78,19 @@ export default function StickyCTA() {
               <Text size="xs" color="muted" className="mb-3">
                 Strategy, direction, and hands-on support — from a one-off fix to ongoing partner.
               </Text>
-              <Button href="/ways-to-work" variant="primary" size="small" fullWidth>
+              <TrackedButton
+                eventName="guide_cta_click"
+                eventProperties={{ cta: 'blog_sticky_desktop_packages' }}
+                href="/ways-to-work"
+                variant="primary"
+                size="small"
+                fullWidth
+              >
                 See Our Packages
-              </Button>
-              <Button
+              </TrackedButton>
+              <TrackedButton
+                eventName="whatsapp_click"
+                eventProperties={{ cta: 'blog_sticky_desktop_whatsapp' }}
                 href={URLS.whatsapp('Hi Peter, I just read your blog and need help with my pub')}
                 variant="ghost"
                 size="small"
@@ -90,7 +99,7 @@ export default function StickyCTA() {
                 className="mt-2"
               >
                 Or message Peter
-              </Button>
+              </TrackedButton>
             </div>
           )}
         </div>
@@ -112,14 +121,16 @@ export default function StickyCTA() {
                 Clear pricing, real expertise
               </Text>
             </div>
-            <Button
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{ cta: 'blog_sticky_mobile_packages' }}
               href="/ways-to-work"
               variant="secondary"
               size="small"
               className="!bg-white !text-orange hover:!bg-cream whitespace-nowrap"
             >
               See Packages
-            </Button>
+            </TrackedButton>
           </div>
         </div>
       </div>

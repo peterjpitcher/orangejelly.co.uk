@@ -9,7 +9,7 @@ import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import FeatureList from '@/components/FeatureList';
 import FAQItem from '@/components/FAQItem';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import { FAQSchema } from '@/components/StructuredData';
 import { generateMetadata as generateMeta } from '@/lib/metadata';
 import { ProofStrip, PackageCard, PackageCTA, CaseStudyCard } from '@/components/packages';
@@ -173,9 +173,15 @@ export default function PubMarketingAgencyPage() {
             <PackageCard packageId="turnaround-intensive" />
           </Grid>
           <div className="text-center mt-8">
-            <Button href="/ways-to-work" variant="primary" size="large">
+            <TrackedButton
+              eventName="package_cta_click"
+              eventProperties={{ cta: 'agency_compare_packages' }}
+              href="/ways-to-work"
+              variant="primary"
+              size="large"
+            >
               Compare All Packages
-            </Button>
+            </TrackedButton>
           </div>
         </Container>
       </Section>

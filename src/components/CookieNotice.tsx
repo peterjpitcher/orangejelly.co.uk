@@ -84,9 +84,8 @@ export default function CookieNotice() {
         aria-label="Cookie preferences"
       >
         <p className="text-xs sm:text-sm leading-relaxed">
-          We use essential cookies to keep the site running and optional analytics (Google Tag
-          Manager & GA4) to understand how people find Orange Jelly. You can accept or reject
-          analytics below. Questions?{' '}
+          We use essential cookies to keep the site running and optional analytics to understand how
+          people find and use Orange Jelly. You can accept or reject analytics below. Questions?{' '}
           <Link href="/contact" className="underline underline-offset-2">
             Contact us
           </Link>
@@ -107,7 +106,8 @@ export default function CookieNotice() {
           <div>
             <p className="font-semibold">Analytics (optional)</p>
             <p className="text-cream/80">
-              Google Tag Manager + GA4 events. Runs in cookieless mode until you accept.
+              Google Tag Manager, GA4, and first-party conversion events. Runs in cookieless mode
+              until you accept.
             </p>
           </div>
         </div>

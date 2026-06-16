@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { CONTACT } from '@/lib/constants';
+import { trackClientEvent } from '@/lib/tracking';
 import { STICKY_BAR_HIDDEN_PATHS } from './engagement-config';
 
 const DISMISS_KEY = 'oj-sticky-dismissed';
@@ -94,6 +95,14 @@ export default function StickyEngagementBar(): React.ReactElement | null {
           <Link
             href="/ways-to-work"
             className="rounded-full bg-charcoal px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-charcoal/90 whitespace-nowrap min-h-0"
+            onClick={() =>
+              trackClientEvent('package_cta_click', {
+                properties: {
+                  cta: 'sticky_engagement_packages',
+                  source: 'sticky_engagement_bar',
+                },
+              })
+            }
           >
             See Packages
           </Link>
@@ -102,6 +111,14 @@ export default function StickyEngagementBar(): React.ReactElement | null {
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-green-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap min-h-0"
+            onClick={() =>
+              trackClientEvent('whatsapp_click', {
+                properties: {
+                  cta: 'sticky_engagement_whatsapp',
+                  source: 'sticky_engagement_bar',
+                },
+              })
+            }
           >
             Chat on WhatsApp
           </a>

@@ -1,10 +1,10 @@
 import { memo } from 'react';
-import Button from './Button';
 import Card from './Card';
 import Heading from './Heading';
 import Text from './Text';
 import OptimizedImage from './OptimizedImage';
 import { URLS } from '@/lib/constants';
+import TrackedButton from './TrackedButton';
 
 interface ServiceCardExample {
   before?: string;
@@ -44,8 +44,9 @@ function ServiceCard({
       <Card
         variant="shadowed"
         padding="medium"
-        className={`h-full flex flex-col relative overflow-hidden hover:shadow-xl transition-all ${highlight ? 'ring-2 ring-orange' : ''
-          }`}
+        className={`h-full flex flex-col relative overflow-hidden hover:shadow-xl transition-all ${
+          highlight ? 'ring-2 ring-orange' : ''
+        }`}
       >
         {/* Most Popular Badge */}
         {highlight && (
@@ -136,7 +137,13 @@ function ServiceCard({
 
         {/* Button at bottom */}
         <div className="mt-4">
-          <Button
+          <TrackedButton
+            eventName="whatsapp_click"
+            eventProperties={{
+              cta: 'service_card_whatsapp',
+              service_id: id,
+              service_title: title,
+            }}
             href={URLS.whatsapp(`I'm interested in ${title}`)}
             variant={highlight ? 'primary' : 'secondary'}
             size="small"
@@ -145,7 +152,7 @@ function ServiceCard({
             aria-label={`Contact about ${title}`}
           >
             {ctaText} <span className="hidden sm:inline">{title}</span>
-          </Button>
+          </TrackedButton>
         </div>
       </Card>
     </div>

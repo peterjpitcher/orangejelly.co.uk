@@ -1,7 +1,7 @@
 // src/components/packages/PackageCTA.tsx
 
 import { getPackageById } from '@/lib/packages';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Text from '@/components/Text';
 import { CONTACT } from '@/lib/constants';
 
@@ -19,12 +19,33 @@ export function PackageCTA({ packageId, className }: PackageCTAProps): React.Rea
   return (
     <div className={className}>
       <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-        <Button href={whatsappUrl} variant="primary" size="large" external>
+        <TrackedButton
+          eventName="whatsapp_click"
+          eventProperties={{
+            package_id: pkg?.id || null,
+            package_slug: pkg?.slug || null,
+            cta: 'package_cta_whatsapp',
+          }}
+          href={whatsappUrl}
+          variant="primary"
+          size="large"
+          external
+        >
           Message Peter on WhatsApp
-        </Button>
-        <Button href={contactUrl} variant="outline" size="large">
+        </TrackedButton>
+        <TrackedButton
+          eventName="package_cta_click"
+          eventProperties={{
+            package_id: pkg?.id || null,
+            package_slug: pkg?.slug || null,
+            cta: 'package_cta_enquiry',
+          }}
+          href={contactUrl}
+          variant="outline"
+          size="large"
+        >
           Send an enquiry
-        </Button>
+        </TrackedButton>
       </div>
       <Text size="xs" color="muted" align="center" className="mt-3">
         Prefer email? Use the enquiry form. Peter responds as quickly as he can.

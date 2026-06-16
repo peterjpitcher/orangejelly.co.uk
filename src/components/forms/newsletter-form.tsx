@@ -9,32 +9,50 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
+import { subscribeToNewsletter } from '@/app/actions/newsletter';
+import { getBrowserLeadSource } from '@/lib/lead-source';
 
 const newsletterFormSchema = z.object({
   email: z.string().email({
     message: VALIDATION_MESSAGES.email.invalid,
   }),
+  website: z.string().optional(),
 });
 
 type NewsletterFormValues = z.infer<typeof newsletterFormSchema>;
 
 const defaultValues: Partial<NewsletterFormValues> = {
   email: '',
+  website: '',
 };
 
 export function NewsletterForm() {
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>(
+    'idle'
+  );
 
   const form = useForm<NewsletterFormValues>({
     resolver: zodResolver(newsletterFormSchema),
     defaultValues,
   });
 
-  function onSubmit(data: NewsletterFormValues) {
-    // In real implementation, this would call your newsletter API
-    console.log('Newsletter signup:', data);
-    setSubmitStatus('success');
-    form.reset();
+  async function onSubmit(data: NewsletterFormValues) {
+    setSubmitStatus('submitting');
+    try {
+      const result = await subscribeToNewsletter({
+        email: data.email,
+        website: data.website,
+        leadSource: getBrowserLeadSource(),
+      });
+      if (result.error) {
+        setSubmitStatus('error');
+        return;
+      }
+      setSubmitStatus('success');
+      form.reset();
+    } catch {
+      setSubmitStatus('error');
+    }
   }
 
   if (submitStatus === 'success') {
@@ -58,6 +76,14 @@ export function NewsletterForm() {
         className="space-y-4"
         aria-label="Newsletter signup"
       >
+        <input
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+          {...form.register('website')}
+        />
         <FormField
           control={form.control}
           name="email"
@@ -74,8 +100,13 @@ export function NewsletterForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="min-h-[44px]">
-          Subscribe
+        {submitStatus === 'error' && (
+          <p className="text-red-800 text-sm" role="alert">
+            Something went wrong. Please try again later.
+          </p>
+        )}
+        <Button type="submit" className="min-h-[44px]" disabled={submitStatus === 'submitting'}>
+          {submitStatus === 'submitting' ? 'Subscribing...' : 'Subscribe'}
         </Button>
       </form>
     </Form>

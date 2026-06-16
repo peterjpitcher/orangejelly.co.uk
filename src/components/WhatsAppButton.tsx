@@ -1,6 +1,9 @@
+'use client';
+
 import { memo } from 'react';
 
 import { CONTACT, URLS } from '@/lib/constants';
+import { trackClientEvent } from '@/lib/tracking';
 
 interface WhatsAppButtonProps {
   /** Message that will be prefilled in WhatsApp */
@@ -64,6 +67,14 @@ function WhatsAppButton({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={label ? `${label} on WhatsApp` : `Contact us on WhatsApp at ${CONTACT.phone}`}
+        onClick={() =>
+          trackClientEvent('whatsapp_click', {
+            properties: {
+              label: buttonCopy,
+              component: 'WhatsAppButton',
+            },
+          })
+        }
       >
         <span className="flex flex-col items-center justify-center sm:flex-row sm:gap-1">
           <span>{buttonCopy}</span>
