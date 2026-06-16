@@ -3,6 +3,20 @@ const EMOJI_BULLET = /^([ \t]*)([❌✅✓✗•▪▫►▶▹▸🔥⭐️⭐�
 
 export function preprocessMarkdown(src: string): string {
   const lines = src.split(/\r?\n/);
+
+  // Strip a leading duplicate H1. Guide pages render the post title as an <h1> in the
+  // category hero (see BlogPost.tsx — "Category hero handles the visual header"), and the
+  // markdown body repeats it as a top-level "# Title", producing two H1s per page — an SEO
+  // defect. Remove the first heading (and one following blank line) when it is an H1 at the
+  // top of the body so the hero stays the single H1. Only the first line is considered, and
+  // only when it is a single-'#' heading (H2+ and ordinary text are left untouched).
+  let firstContent = 0;
+  while (firstContent < lines.length && lines[firstContent].trim() === '') firstContent++;
+  if (firstContent < lines.length && /^#\s+\S/.test(lines[firstContent])) {
+    lines.splice(0, firstContent + 1);
+    if (lines.length > 0 && lines[0].trim() === '') lines.shift();
+  }
+
   const out: string[] = [];
   let inEmojiBlock = false;
   let inCodeBlock = false;
