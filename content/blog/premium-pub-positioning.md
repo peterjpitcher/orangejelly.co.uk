@@ -42,7 +42,7 @@ faqs:
 
 Let's address the elephant in the room: you're never going to compete with Wetherspoons on price. And that's exactly why you're going to win.
 
-While chains race to the bottom with £2 pints and microwave meals, smart publicans are discovering a powerful truth – there's a growing market of customers who'll happily pay £8 for a pint if you give them a reason to. The secret isn't just charging more; it's delivering an experience that makes premium prices feel like excellent value.
+While chains race to the bottom with £2 pints and microwave meals, smart publicans are discovering a powerful truth – there's a growing market of customers who'll happily pay £8 for a pint if you give them a reason to. The secret isn't just charging more; it's delivering an experience that makes premium prices feel like excellent value. Going upmarket is one of the clearest ways [an independent pub competes with the pub chains](/compete-with-pub-chains) without ever entering a price war you can't win.
 
 ## The Premium Paradox: Why Expensive Can Be More Attractive
 

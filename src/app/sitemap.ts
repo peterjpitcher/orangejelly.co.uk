@@ -111,14 +111,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route.priority,
   }));
 
-  // Dynamically get all blog posts
+  // Dynamically get all blog posts. Exclude slugs that 301-redirect/retire so we never
+  // advertise a non-200 URL in the sitemap (e.g. cash-flow-crisis-breaking-cycle now
+  // redirects to /fix-my-pub via next.config redirects).
+  const REDIRECTED_GUIDE_SLUGS = new Set(['cash-flow-crisis-breaking-cycle']);
   const allPosts = getAllPosts();
-  const blogPages = allPosts.map((post) => ({
-    url: `${baseUrl}/licensees-guide/${post.slug}`,
-    lastModified: post.updatedDate || post.publishedDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const blogPages = allPosts
+    .filter((post) => !REDIRECTED_GUIDE_SLUGS.has(post.slug))
+    .map((post) => ({
+      url: `${baseUrl}/licensees-guide/${post.slug}`,
+      lastModified: post.updatedDate || post.publishedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }));
 
   // Dynamically get all categories
   const categoryPages = blogCategories.map((category) => ({

@@ -28,6 +28,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# supabase local metadata
+supabase/.temp/
+supabase/.DS_Store
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
@@ -52,4 +56,3 @@ docs/archive/
 # node/tsx compile caches (local build artefacts)
 node-compile-cache/
 tsx-501/
-

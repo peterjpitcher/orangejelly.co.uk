@@ -7,6 +7,7 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Grid from '@/components/Grid';
 import AnimatedItem from '@/components/AnimatedItem';
 import Container from '@/components/Container';
@@ -215,9 +216,15 @@ export default function Home() {
           <PackageCard packageId="turnaround-intensive" />
         </Grid>
         <Box className="text-center mt-8">
-          <Button href="/ways-to-work" variant="primary" size="large">
+          <TrackedButton
+            eventName="package_cta_click"
+            eventProperties={{ cta: 'homepage_compare_packages' }}
+            href="/ways-to-work"
+            variant="primary"
+            size="large"
+          >
             Compare All Packages
-          </Button>
+          </TrackedButton>
         </Box>
       </Section>
 

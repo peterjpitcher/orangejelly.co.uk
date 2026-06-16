@@ -1,23 +1,23 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import OptimizedImage from '@/components/OptimizedImage';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import ShareButtons from './ShareButtons';
 import AuthorInfo from './AuthorInfo';
 import StickyCTA from './StickyCTA';
 import QuickAnswer from './QuickAnswer';
 import { formatDate } from '@/lib/utils';
 import { type BlogPost as BlogPostType, type AdjacentPostNavItem, defaultAuthor } from '@/lib/blog';
-import { getBlogImageSrc, getBlogImageAlt } from '@/lib/blog-images';
 // MarkdownContent is now only used for PortableText (if needed)
 import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
 import AdjacentPostNav from './AdjacentPostNav';
 import RelatedPosts from './RelatedPosts';
+import { getGuideServiceBridge } from '@/lib/guide-service-bridge';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -121,6 +121,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
 
   const categorySlug = typeof post.category === 'string' ? post.category : post.category.slug;
   const categoryCTA = getCategoryCTA(categorySlug);
+  const serviceBridge = getGuideServiceBridge(categorySlug);
   const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
   const quickAnswerText = (
     post.quickAnswer ||
@@ -221,10 +222,26 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
               {categoryCTA.body}
             </Text>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button href="/ways-to-work" variant="primary" size="large">
+              <TrackedButton
+                eventName="guide_cta_click"
+                eventProperties={{
+                  post_slug: post.slug,
+                  category: categorySlug,
+                  cta: 'blog_primary_packages',
+                }}
+                href="/ways-to-work"
+                variant="primary"
+                size="large"
+              >
                 See Our Packages
-              </Button>
-              <Button
+              </TrackedButton>
+              <TrackedButton
+                eventName="whatsapp_click"
+                eventProperties={{
+                  post_slug: post.slug,
+                  category: categorySlug,
+                  cta: 'blog_primary_whatsapp',
+                }}
                 href={URLS.whatsapp(post.ctaSettings?.whatsappMessage || MESSAGES.whatsapp.blog)}
                 variant="secondary"
                 size="large"
@@ -232,7 +249,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
                 className="!bg-white !text-charcoal hover:!bg-cream"
               >
                 Message Peter on WhatsApp
-              </Button>
+              </TrackedButton>
             </div>
           </div>
         </Card>
@@ -249,26 +266,106 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           </div>
 
           <div className="flex flex-wrap gap-3 justify-center">
-            <Button href="/capabilities" variant="outline" size="small">
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_capability_social',
+              }}
+              href="/capabilities"
+              variant="outline"
+              size="small"
+            >
               Social media for pubs
-            </Button>
-            <Button href="/capabilities" variant="outline" size="small">
+            </TrackedButton>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_capability_paid',
+              }}
+              href="/capabilities"
+              variant="outline"
+              size="small"
+            >
               Paid social and ads
-            </Button>
-            <Button href="/capabilities" variant="outline" size="small">
+            </TrackedButton>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_capability_content',
+              }}
+              href="/capabilities"
+              variant="outline"
+              size="small"
+            >
               Content and creative
-            </Button>
-            <Button href="/capabilities" variant="outline" size="small">
+            </TrackedButton>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_capability_events',
+              }}
+              href="/capabilities"
+              variant="outline"
+              size="small"
+            >
               Event marketing
-            </Button>
-            <Button href="/ways-to-work" variant="outline" size="small">
+            </TrackedButton>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_help_packages',
+              }}
+              href="/ways-to-work"
+              variant="outline"
+              size="small"
+            >
               See our packages
-            </Button>
-            <Button href="/ways-to-work/turnaround-intensive" variant="outline" size="small">
+            </TrackedButton>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_help_turnaround',
+              }}
+              href="/ways-to-work/turnaround-intensive"
+              variant="outline"
+              size="small"
+            >
               Turnaround Intensive
-            </Button>
+            </TrackedButton>
           </div>
         </Card>
+
+        {/* Guide → service bridge: one relevant link per guide, by category */}
+        <div className="mb-12 rounded-lg border border-charcoal/10 bg-cream px-6 py-5 text-center">
+          <Text className="mb-3">Running a pub and want a hand putting this into practice?</Text>
+          <TrackedButton
+            eventName="guide_cta_click"
+            eventProperties={{
+              post_slug: post.slug,
+              category: categorySlug,
+              cta: 'guide_service_bridge',
+              bridge_href: serviceBridge.href,
+              bridge_label: serviceBridge.label,
+            }}
+            href={serviceBridge.href}
+            variant="primary"
+            size="medium"
+          >
+            {serviceBridge.label} →
+          </TrackedButton>
+        </div>
 
         {/* Author bio */}
         <AuthorInfo

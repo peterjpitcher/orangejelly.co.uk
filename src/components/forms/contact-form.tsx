@@ -26,6 +26,7 @@ import {
 } from '@/components/ui/select';
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
 import { submitContactForm } from '@/app/actions/contact';
+import { getBrowserLeadSource } from '@/lib/lead-source';
 
 const PACKAGE_OPTIONS = [
   { value: 'none', label: 'Not sure yet' },
@@ -50,6 +51,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10, {
     message: VALIDATION_MESSAGES.message.minLength,
   }),
+  website: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -70,13 +72,17 @@ export function ContactForm() {
       pubName: '',
       package: preselectedPackage,
       message: '',
+      website: '',
     },
   });
 
   async function onSubmit(data: ContactFormValues) {
     setSubmitStatus('submitting');
     try {
-      const result = await submitContactForm(data);
+      const result = await submitContactForm({
+        ...data,
+        leadSource: getBrowserLeadSource(),
+      });
       if (result.error) {
         setSubmitStatus('error');
         return;
@@ -114,6 +120,14 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" aria-label="Contact form">
+        <input
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+          {...form.register('website')}
+        />
         {submitStatus === 'error' && (
           <div className="rounded-lg bg-red-50 border border-red-200 p-4" role="alert">
             <p className="text-red-800 text-sm">

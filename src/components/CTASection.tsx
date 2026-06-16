@@ -1,10 +1,10 @@
 import { memo } from 'react';
 
-import Button from './Button';
 import Heading from './Heading';
 import AnimatedItem from './AnimatedItem';
 import { MESSAGES, URLS, formatPhoneDisplay } from '@/lib/constants';
 import Text from './Text';
+import TrackedButton from './TrackedButton';
 
 interface CTASectionProps {
   title: string;
@@ -67,7 +67,12 @@ function CTASection({
         )}
 
         <AnimatedItem animation="fade-in" delay={200}>
-          <Button
+          <TrackedButton
+            eventName="whatsapp_click"
+            eventProperties={{
+              cta: 'section_whatsapp',
+              section_title: title,
+            }}
             href={URLS.whatsapp(whatsappMessage)}
             variant="custom"
             size="large"
@@ -76,7 +81,7 @@ function CTASection({
             aria-label="Contact us on WhatsApp about Orange Jelly services"
           >
             {buttonText}
-          </Button>
+          </TrackedButton>
         </AnimatedItem>
 
         {bottomText && (

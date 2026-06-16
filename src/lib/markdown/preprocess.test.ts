@@ -106,6 +106,24 @@ Regular text`;
     expect(out).not.toContain('- ✅ This should not be converted');
   });
 
+  it('strips a leading duplicate H1 so the hero stays the only H1', () => {
+    const md = `# Quiz Night Ideas: 25 Formats
+
+A great quiz night is about variety.
+## Cluster 1
+- One`;
+    const out = preprocessMarkdown(md);
+    expect(out).not.toContain('# Quiz Night Ideas: 25 Formats');
+    expect(out.startsWith('A great quiz night')).toBe(true);
+    // section headings are untouched
+    expect(out).toContain('## Cluster 1');
+  });
+
+  it('only strips a LEADING h1 — not h2s or later headings', () => {
+    expect(preprocessMarkdown('## Section\nBody')).toContain('## Section');
+    expect(preprocessMarkdown('Intro paragraph\n# Later H1')).toContain('# Later H1');
+  });
+
   it('handles real-world example from blog', () => {
     const md = `## Events They Actually Want
 

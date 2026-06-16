@@ -3,7 +3,7 @@
 import { getPackageById } from '@/lib/packages';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import { cn } from '@/lib/utils';
 
 interface PackageCardProps {
@@ -80,14 +80,21 @@ export function PackageCard({
           </Text>
         )}
 
-        <Button
+        <TrackedButton
+          eventName="package_cta_click"
+          eventProperties={{
+            package_id: pkg.id,
+            package_slug: pkg.slug,
+            package_name: pkg.name,
+            cta: 'package_card_learn_more',
+          }}
           href={`/ways-to-work/${pkg.slug}`}
           variant={highlighted ? 'primary' : 'outline'}
           size="medium"
           className="w-full"
         >
           Learn more
-        </Button>
+        </TrackedButton>
       </div>
     </div>
   );

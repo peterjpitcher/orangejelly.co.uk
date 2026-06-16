@@ -23,7 +23,7 @@ interface LegacyButtonProps {
   href?: string;
   external?: boolean;
   whatsapp?: boolean;
-  onClick?: () => void | Promise<void>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
   children: React.ReactNode;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -115,7 +115,13 @@ export default function ButtonAdapter({
   if (whatsapp && href) {
     return (
       <ShadcnButton {...sharedButtonProps} asChild>
-        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={ariaLabel}
+          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
+        >
           {buttonContent}
         </a>
       </ShadcnButton>
@@ -126,7 +132,13 @@ export default function ButtonAdapter({
   if (href && external) {
     return (
       <ShadcnButton {...sharedButtonProps} asChild>
-        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={ariaLabel}
+          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
+        >
           {buttonContent}
         </a>
       </ShadcnButton>
@@ -137,7 +149,11 @@ export default function ButtonAdapter({
   if (href) {
     return (
       <ShadcnButton {...sharedButtonProps} asChild>
-        <Link href={href} aria-label={ariaLabel}>
+        <Link
+          href={href}
+          aria-label={ariaLabel}
+          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
+        >
           {buttonContent}
         </Link>
       </ShadcnButton>
@@ -149,7 +165,7 @@ export default function ButtonAdapter({
     <ShadcnButton
       {...sharedButtonProps}
       type={type}
-      onClick={onClick}
+      onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
       aria-label={ariaLabel}
       {...props}
     >

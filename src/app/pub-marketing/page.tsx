@@ -4,6 +4,7 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import Container from '@/components/Container';
 import Grid from '@/components/Grid';
 import FAQItem from '@/components/FAQItem';
@@ -76,7 +77,14 @@ export default function PubMarketingPage() {
             <Text size="lg" className="text-charcoal/80">
               Most small business marketing advice does not work for pubs. You cannot A/B test a
               Tuesday night. Your product is an experience, not a widget. And your competition
-              includes chains with six-figure marketing budgets.
+              includes chains with six-figure marketing budgets — here is{' '}
+              <Link
+                href="/compete-with-pub-chains"
+                className="text-teal underline hover:text-orange"
+              >
+                how an independent pub competes with pub chains
+              </Link>{' '}
+              without trying to outspend them.
             </Text>
             <Text size="lg" className="text-charcoal/80">
               Effective pub marketing focuses on three things: getting found by people already
@@ -435,8 +443,9 @@ export default function PubMarketingPage() {
                 Descriptions That Sell
               </Heading>
               <Text size="sm" color="muted">
-                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted belly pork with
-                crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell the story.
+                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted
+                belly pork with crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell
+                the story.
               </Text>
             </Card>
             <Card variant="bordered" padding="large">
@@ -707,9 +716,15 @@ export default function PubMarketingPage() {
               {pubMarketingData.cta.subtitle}
             </Text>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-              <Button href="/ways-to-work" variant="primary" size="large">
+              <TrackedButton
+                eventName="package_cta_click"
+                eventProperties={{ cta: 'pub_marketing_packages' }}
+                href="/ways-to-work"
+                variant="primary"
+                size="large"
+              >
                 See Our Packages
-              </Button>
+              </TrackedButton>
               <WhatsAppButton
                 text={pubMarketingData.cta.whatsappMessage}
                 label="Message Peter on WhatsApp"

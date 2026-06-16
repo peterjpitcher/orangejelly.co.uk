@@ -8,7 +8,7 @@ import AnimatedItem from '@/components/AnimatedItem';
 import CaseStudySelector from '@/components/CaseStudySelector';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
 import Text from '@/components/Text';
-import Button from '@/components/Button';
+import TrackedButton from '@/components/TrackedButton';
 import OptimizedImage from '@/components/OptimizedImage';
 import { CaseStudyCard, PackageCTA } from '@/components/packages';
 // Local data imports
@@ -90,9 +90,15 @@ export default function ResultsPage() {
               We can do the same for your venue.
             </Text>
             <div className="text-center">
-              <Button href="/ways-to-work" variant="primary" size="large">
+              <TrackedButton
+                eventName="package_cta_click"
+                eventProperties={{ cta: 'results_packages_top' }}
+                href="/ways-to-work"
+                variant="primary"
+                size="large"
+              >
                 See Our Packages
-              </Button>
+              </TrackedButton>
             </div>
           </AnimatedItem>
         </div>
@@ -191,9 +197,15 @@ export default function ResultsPage() {
                 When you work with Orange Jelly, you get proven strategies from a small, hands-on
                 team working in hospitality every week.
               </Text>
-              <Button href="/ways-to-work" variant="primary" size="large">
+              <TrackedButton
+                eventName="package_cta_click"
+                eventProperties={{ cta: 'results_packages_story' }}
+                href="/ways-to-work"
+                variant="primary"
+                size="large"
+              >
                 See Our Packages
-              </Button>
+              </TrackedButton>
             </div>
             <Card variant="shadowed" padding="large" className="bg-white">
               <Heading level={3} className="mb-4 text-center">

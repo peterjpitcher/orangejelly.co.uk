@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { getWhatsAppUrl } from './engagement-config';
 import { MESSAGES } from '@/lib/constants';
+import { trackClientEvent } from '@/lib/tracking';
 
 const SESSION_KEY = 'oj-scroll-prompt-shown';
 
@@ -86,6 +87,14 @@ export default function MobileScrollPrompt(): React.ReactElement | null {
           target="_blank"
           rel="noopener noreferrer"
           className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
+          onClick={() =>
+            trackClientEvent('whatsapp_click', {
+              properties: {
+                cta: 'mobile_scroll_prompt_whatsapp',
+                source: 'mobile_scroll_prompt',
+              },
+            })
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 // Mobile-optimized CTA component with minimum 44px touch targets
-import Button from './Button';
+import TrackedButton from './TrackedButton';
 import WhatsAppButton from './WhatsAppButton';
 
 interface MobileCTAProps {
@@ -43,7 +43,11 @@ function MobileCTA({
           />
         )}
         {showBoth && primaryText && (
-          <Button
+          <TrackedButton
+            eventName="package_cta_click"
+            eventProperties={{
+              cta: 'mobile_cta_packages',
+            }}
             href="/ways-to-work"
             size="large"
             variant="secondary"
@@ -51,7 +55,7 @@ function MobileCTA({
             className="mobile-cta-button"
           >
             {primaryText}
-          </Button>
+          </TrackedButton>
         )}
       </div>
     </div>
