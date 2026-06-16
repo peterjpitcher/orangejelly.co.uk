@@ -71,6 +71,8 @@ Instead of a long list, use these five themes and pick one to own.
 
 - Turn a side room into a clear use case: coworking, private dining, or gaming.
 
+Differentiation is also your single best answer to chain competition: when you own one thing locally, price stops being the comparison. If a nearby chain is your real worry, this is the heart of [how an independent pub competes with the pub chains](/compete-with-pub-chains) — you stop fighting on their terms and start winning on yours.
+
 ## How to choose your differentiation
 
 Use three filters:

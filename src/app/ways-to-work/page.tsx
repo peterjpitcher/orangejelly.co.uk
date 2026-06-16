@@ -6,6 +6,7 @@ import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
+import Link from 'next/link';
 import {
   PackageCard,
   PackageComparison,
@@ -144,6 +145,20 @@ export default function WaysToWorkPage() {
             <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
               Every package is built around real hospitality experience. No filler, no fluff — just
               practical support that moves the needle.
+            </Text>
+            <Text size="base" color="muted" className="mt-4 max-w-2xl mx-auto">
+              New to working with us? See{' '}
+              <Link href="/pub-marketing-agency" className="text-teal underline hover:text-orange">
+                why pubs choose Orange Jelly over a traditional marketing agency
+              </Link>
+              , or read how we help an independent pub{' '}
+              <Link
+                href="/compete-with-pub-chains"
+                className="text-teal underline hover:text-orange"
+              >
+                compete with the pub chains
+              </Link>{' '}
+              on its doorstep.
             </Text>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

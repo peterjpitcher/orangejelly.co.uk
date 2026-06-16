@@ -18,6 +18,7 @@ import MarkdownContent from '@/components/MarkdownContent';
 import { MESSAGES, URLS } from '@/lib/constants';
 import AdjacentPostNav from './AdjacentPostNav';
 import RelatedPosts from './RelatedPosts';
+import { getGuideServiceBridge } from '@/lib/guide-service-bridge';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -121,6 +122,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
 
   const categorySlug = typeof post.category === 'string' ? post.category : post.category.slug;
   const categoryCTA = getCategoryCTA(categorySlug);
+  const serviceBridge = getGuideServiceBridge(categorySlug);
   const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
   const quickAnswerText = (
     post.quickAnswer ||
@@ -269,6 +271,14 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
             </Button>
           </div>
         </Card>
+
+        {/* Guide → service bridge: one relevant link per guide, by category */}
+        <div className="mb-12 rounded-lg border border-charcoal/10 bg-cream px-6 py-5 text-center">
+          <Text className="mb-3">Running a pub and want a hand putting this into practice?</Text>
+          <Button href={serviceBridge.href} variant="primary" size="medium">
+            {serviceBridge.label} →
+          </Button>
+        </div>
 
         {/* Author bio */}
         <AuthorInfo

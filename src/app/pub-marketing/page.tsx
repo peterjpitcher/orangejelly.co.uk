@@ -76,7 +76,14 @@ export default function PubMarketingPage() {
             <Text size="lg" className="text-charcoal/80">
               Most small business marketing advice does not work for pubs. You cannot A/B test a
               Tuesday night. Your product is an experience, not a widget. And your competition
-              includes chains with six-figure marketing budgets.
+              includes chains with six-figure marketing budgets — here is{' '}
+              <Link
+                href="/compete-with-pub-chains"
+                className="text-teal underline hover:text-orange"
+              >
+                how an independent pub competes with pub chains
+              </Link>{' '}
+              without trying to outspend them.
             </Text>
             <Text size="lg" className="text-charcoal/80">
               Effective pub marketing focuses on three things: getting found by people already
@@ -435,8 +442,9 @@ export default function PubMarketingPage() {
                 Descriptions That Sell
               </Heading>
               <Text size="sm" color="muted">
-                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted belly pork with
-                crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell the story.
+                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted
+                belly pork with crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell
+                the story.
               </Text>
             </Card>
             <Card variant="bordered" padding="large">
