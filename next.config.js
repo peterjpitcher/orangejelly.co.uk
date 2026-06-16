@@ -22,6 +22,13 @@ const nextConfig = {
         destination: '/ways-to-work',
         permanent: true,
       },
+      // Retired guide previously served 410; 301 to the closest live page (rescue/turnaround)
+      // to preserve any link equity for the struggling-pub intent.
+      {
+        source: '/licensees-guide/cash-flow-crisis-breaking-cycle',
+        destination: '/fix-my-pub',
+        permanent: true,
+      },
       // Service sub-pages are reinstated (D1): content-creation, paid-social and
       // social-media-marketing serve their own pages; instagram/facebook resolve
       // via their page-level redirect to /services/social-media-marketing-for-pubs.
