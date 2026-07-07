@@ -30,8 +30,26 @@ const nextConfig = {
         permanent: true,
       },
       // Service sub-pages are reinstated (D1): content-creation, paid-social and
-      // social-media-marketing serve their own pages; instagram/facebook resolve
-      // via their page-level redirect to /services/social-media-marketing-for-pubs.
+      // social-media-marketing serve their own pages. instagram/facebook are folded
+      // into the social-media hub here at the config level — the previous page-level
+      // permanentRedirect() no-ops on the statically-rendered route, so both URLs were
+      // served as 200s that canonicalised to the homepage while still ranking pos 6-7.
+      {
+        source: '/services/instagram-services-for-pubs',
+        destination: '/services/social-media-marketing-for-pubs',
+        permanent: true,
+      },
+      {
+        source: '/services/facebook-services-for-pubs',
+        destination: '/services/social-media-marketing-for-pubs',
+        permanent: true,
+      },
+      // Slug rename never got a redirect: the -uk variant 404s while the -guide slug is live.
+      {
+        source: '/licensees-guide/pub-wages-labour-costs-uk',
+        destination: '/licensees-guide/pub-wages-labour-costs-guide',
+        permanent: true,
+      },
       // Cannibalisation merges (D2): thin/duplicate posts 301'd to the stronger page.
       {
         source: '/licensees-guide/beat-chain-pubs',

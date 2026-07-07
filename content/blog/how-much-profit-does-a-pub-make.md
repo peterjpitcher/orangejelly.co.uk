@@ -145,7 +145,7 @@ If you are above 30% and you are not running a serious food operation, your rota
 - Agency staff plugging gaps that better recruitment would prevent
 - The owner working 70 hours a week and not counting their own time as a cost
 
-For more on controlling staffing costs, see our guide on [pub wages and labour costs](/licensees-guide/pub-wages-labour-costs-uk).
+For more on controlling staffing costs, see our guide on [pub wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide).
 
 ### Rent: 10 — 15% of turnover
 
