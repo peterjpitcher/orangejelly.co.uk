@@ -2,6 +2,7 @@
 
 import { type LeadSourceInput } from '@/lib/lead-source';
 import { storeContactLead } from '@/lib/db/leads';
+import { sendLeadNotification, escapeHtml } from '@/lib/email';
 
 interface ContactFormData {
   name: string;
@@ -12,6 +13,25 @@ interface ContactFormData {
   message: string;
   leadSource?: LeadSourceInput;
   website?: string;
+}
+
+function buildLeadNotificationHtml(data: ContactFormData): string {
+  const rows: Array<[string, string | undefined]> = [
+    ['Name', data.name],
+    ['Email', data.email],
+    ['Phone', data.phone],
+    ['Venue', data.pubName],
+    ['Package', data.package],
+    ['Message', data.message],
+    ['Source page', data.leadSource?.sourcePage],
+  ];
+  return rows
+    .filter(([, value]) => value && value.trim())
+    .map(
+      ([label, value]) =>
+        `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(String(value))}</p>`
+    )
+    .join('\n');
 }
 
 export async function submitContactForm(
@@ -38,6 +58,21 @@ export async function submitContactForm(
   const result = await storeContactLead(data);
   if (!result.stored) {
     return { error: 'Something went wrong. Please try again or message Peter on WhatsApp.' };
+  }
+
+  // Best-effort alert: the lead is already captured in Supabase, so a failed or
+  // unconfigured notification must never turn a stored lead into a user-facing error.
+  try {
+    const notification = await sendLeadNotification({
+      subject: `New pub enquiry — ${data.pubName.replace(/[\r\n]+/g, ' ').trim()}`,
+      html: buildLeadNotificationHtml(data),
+      replyTo: data.email,
+    });
+    if (notification.error) {
+      console.error('[contact] Lead stored but notification not sent:', notification.error);
+    }
+  } catch (err) {
+    console.error('[contact] Lead stored but notification threw:', err);
   }
 
   return { success: true };

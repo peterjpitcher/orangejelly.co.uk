@@ -8,7 +8,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Landing pages are handled as static pages
 
-  // Services are represented on a single page; avoid fragment URLs in sitemap
+  // Individual service pages that render their own self-canonical content.
+  // (instagram/facebook are intentionally excluded — they 301 to the social hub.)
+  const serviceRoutes = [
+    'social-media-marketing-for-pubs',
+    'paid-social-for-pubs',
+    'content-creation-for-pubs',
+  ];
+  const servicePages = serviceRoutes.map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: '2026-07-07',
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
 
   // Define static pages with meaningful last-modified dates
   // reflecting when content was actually updated
@@ -133,5 +145,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...marketingPages, ...blogPages, ...categoryPages];
+  return [...staticPages, ...marketingPages, ...servicePages, ...blogPages, ...categoryPages];
 }
