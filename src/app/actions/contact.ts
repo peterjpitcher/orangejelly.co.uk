@@ -15,22 +15,29 @@ interface ContactFormData {
   website?: string;
 }
 
+function leadRows(data: ContactFormData): Array<[string, string]> {
+  return (
+    [
+      ['Name', data.name],
+      ['Email', data.email],
+      ['Phone', data.phone],
+      ['Venue', data.pubName],
+      ['Package', data.package],
+      ['Message', data.message],
+      ['Source page', data.leadSource?.sourcePage],
+    ] as Array<[string, string | undefined]>
+  ).filter((entry): entry is [string, string] => Boolean(entry[1] && entry[1].trim()));
+}
+
 function buildLeadNotificationHtml(data: ContactFormData): string {
-  const rows: Array<[string, string | undefined]> = [
-    ['Name', data.name],
-    ['Email', data.email],
-    ['Phone', data.phone],
-    ['Venue', data.pubName],
-    ['Package', data.package],
-    ['Message', data.message],
-    ['Source page', data.leadSource?.sourcePage],
-  ];
-  return rows
-    .filter(([, value]) => value && value.trim())
-    .map(
-      ([label, value]) =>
-        `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(String(value))}</p>`
-    )
+  return leadRows(data)
+    .map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`)
+    .join('\n');
+}
+
+function buildLeadNotificationText(data: ContactFormData): string {
+  return leadRows(data)
+    .map(([label, value]) => `${label}: ${value}`)
     .join('\n');
 }
 
@@ -66,6 +73,7 @@ export async function submitContactForm(
     const notification = await sendLeadNotification({
       subject: `New pub enquiry — ${data.pubName.replace(/[\r\n]+/g, ' ').trim()}`,
       html: buildLeadNotificationHtml(data),
+      text: buildLeadNotificationText(data),
       replyTo: data.email,
     });
     if (notification.error) {

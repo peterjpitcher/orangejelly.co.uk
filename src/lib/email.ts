@@ -16,6 +16,8 @@ export function escapeHtml(value: string): string {
 interface LeadNotification {
   subject: string;
   html: string;
+  /** Plain-text alternative — improves deliverability and avoids spam filters. */
+  text?: string;
   /** The enquirer's address, so a reply goes straight back to them. */
   replyTo?: string;
 }
@@ -35,26 +37,32 @@ interface LeadNotification {
 export async function sendLeadNotification({
   subject,
   html,
+  text,
   replyTo,
 }: LeadNotification): Promise<{ success?: boolean; error?: string }> {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_NOTIFICATION_EMAIL || 'peter@orangejelly.co.uk';
   const from = process.env.CONTACT_FROM_EMAIL;
 
-  if (!apiKey || !from) {
+  if (!apiKey) {
+    console.error('[email] Lead notification NOT sent — RESEND_API_KEY is not set.');
+    return { error: 'Email delivery is not configured (no API key).' };
+  }
+  if (!from) {
     console.error(
-      '[email] Lead notification NOT sent — missing configuration. Set RESEND_API_KEY and CONTACT_FROM_EMAIL (a verified Resend sender).'
+      '[email] Lead notification NOT sent — CONTACT_FROM_EMAIL is not set. It must be a sender on a Resend-verified domain.'
     );
-    return { error: 'Email delivery is not configured.' };
+    return { error: 'Email delivery is not configured (no from address).' };
   }
 
   try {
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({ from, to, subject, html, replyTo });
+    const { data, error } = await resend.emails.send({ from, to, subject, html, text, replyTo });
     if (error) {
-      console.error('[email] Resend reported an error:', error);
+      console.error('[email] Resend rejected the send:', JSON.stringify(error));
       return { error: 'Failed to send email.' };
     }
+    console.info('[email] Lead notification sent', { id: data?.id, to });
     return { success: true };
   } catch (err) {
     console.error('[email] Unexpected error sending email:', err);
