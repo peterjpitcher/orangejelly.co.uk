@@ -96,7 +96,7 @@ export async function GET(request: Request) {
     supabase
       .from('contacts')
       .select(
-        'id, name, email, pub_name, package_interest, source_page, utm_source, utm_campaign, created_at, status'
+        'id, name, email, phone, pub_name, package_interest, message, source_page, utm_source, utm_campaign, created_at, status'
       )
       .order('created_at', { ascending: false })
       .limit(20),

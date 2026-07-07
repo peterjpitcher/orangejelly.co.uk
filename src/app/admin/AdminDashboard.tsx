@@ -13,8 +13,10 @@ type ContactRow = {
   id: string;
   name: string;
   email: string;
+  phone: string | null;
   pub_name: string;
   package_interest: string | null;
+  message: string;
   source_page: string | null;
   utm_source: string | null;
   utm_campaign: string | null;
@@ -320,23 +322,40 @@ export default function AdminDashboard() {
                 <table className="w-full text-left text-sm">
                   <thead className="text-charcoal/60">
                     <tr>
-                      <th className="py-2 pr-4">When</th>
-                      <th className="py-2 pr-4">Name</th>
-                      <th className="py-2 pr-4">Venue</th>
-                      <th className="py-2 pr-4">Package</th>
-                      <th className="py-2 pr-4">Source</th>
+                      <th className="py-2 pr-4 align-top">When</th>
+                      <th className="py-2 pr-4 align-top">Contact</th>
+                      <th className="py-2 pr-4 align-top">Venue</th>
+                      <th className="py-2 pr-4 align-top">Package</th>
+                      <th className="py-2 pr-4 align-top">Message</th>
+                      <th className="py-2 pr-4 align-top">Source</th>
                     </tr>
                   </thead>
                   <tbody>
                     {stats.recentContacts.map((contact) => (
-                      <tr key={contact.id} className="border-t border-charcoal/10">
-                        <td className="py-3 pr-4">{formatDate(contact.created_at)}</td>
+                      <tr key={contact.id} className="border-t border-charcoal/10 align-top">
+                        <td className="whitespace-nowrap py-3 pr-4">
+                          {formatDate(contact.created_at)}
+                        </td>
                         <td className="py-3 pr-4">
                           <div className="font-medium">{contact.name}</div>
-                          <div className="text-charcoal/50">{contact.email}</div>
+                          <div className="text-charcoal/50">
+                            <a href={`mailto:${contact.email}`} className="hover:underline">
+                              {contact.email}
+                            </a>
+                          </div>
+                          {contact.phone && (
+                            <div className="text-charcoal/50">
+                              <a href={`tel:${contact.phone}`} className="hover:underline">
+                                {contact.phone}
+                              </a>
+                            </div>
+                          )}
                         </td>
                         <td className="py-3 pr-4">{contact.pub_name}</td>
                         <td className="py-3 pr-4">{contact.package_interest || '-'}</td>
+                        <td className="max-w-md whitespace-pre-wrap break-words py-3 pr-4">
+                          {contact.message}
+                        </td>
                         <td className="max-w-xs truncate py-3 pr-4">
                           {contact.source_page || '-'}
                         </td>
