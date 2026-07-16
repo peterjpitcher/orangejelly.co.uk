@@ -511,8 +511,11 @@ export async function confirmOption(
       return { stored: false, error: 'This poll cannot be confirmed.' };
     }
 
-    // Guard the option's parentage in application code too. The FK would catch a
-    // cross-poll id, but a clear message beats a constraint error.
+    // This check is the ONLY control on the option's parentage — do not remove it
+    // believing the database has your back. `polls_confirmed_option_fk` is a
+    // simple FK to poll_options(id), so it accepts an option belonging to any
+    // poll. The composite FKs on poll_responses do guard votes; nothing guards
+    // confirmed_option_id except this scope.
     const { data: option } = await supabase
       .from('poll_options')
       .select('id')
@@ -571,23 +574,55 @@ export async function deletePoll(organiserToken: string): Promise<StoredResult> 
   }
 }
 
+/** Most polls a single sweep may remove. See sweepExpiredPolls. */
+export const SWEEP_LIMIT = 500;
+
 /**
  * Deletes polls past their retention deadline. Driven by the Phase 5 cron.
  *
- * This is the GDPR retention promise made in the privacy notice, so it must
- * actually run — an unkept retention promise is worse than none.
+ * This is the retention promise made in the privacy notice, so it must actually
+ * run — an unkept retention promise is worse than none.
+ *
+ * **Bounded on purpose.** The first version issued an unqualified
+ * `delete().lt('expires_at', now)`: no limit, no ordering, no batching. Nothing
+ * called it, so it never fired — but Phase 5 wires this to a cron with no human
+ * watching, and the workspace rules require approval for any bulk operation
+ * touching more than 1,000 rows. An unbounded delete of other people's data,
+ * running unattended, is exactly what that rule exists to stop. Selecting the
+ * oldest SWEEP_LIMIT ids first and deleting by id keeps every run provably
+ * under the gate. A backlog simply clears over successive runs, which is the
+ * correct behaviour for a daily job.
  */
-export async function deleteExpiredPolls(): Promise<StoredResult<{ deleted: number }>> {
+export async function sweepExpiredPolls(
+  options: { limit?: number } = {}
+): Promise<StoredResult<{ deleted: number; remaining: number }>> {
+  const limit = Math.min(options.limit ?? SWEEP_LIMIT, SWEEP_LIMIT);
+
   try {
     const supabase = requireAdminClient();
-    const { data, error } = await supabase
-      .from('polls')
-      .delete()
-      .lt('expires_at', new Date().toISOString())
-      .select('id');
+    const now = new Date().toISOString();
 
-    if (error) return { stored: false, error: error.message };
-    return { stored: true, data: { deleted: data?.length ?? 0 } };
+    const { data: due, error: selectError } = await supabase
+      .from('polls')
+      .select('id')
+      .lt('expires_at', now)
+      .order('expires_at', { ascending: true })
+      .limit(limit);
+
+    if (selectError) return { stored: false, error: selectError.message };
+    if (!due || due.length === 0) return { stored: true, data: { deleted: 0, remaining: 0 } };
+
+    const ids = due.map((row: { id: string }) => row.id);
+    const { error: deleteError } = await supabase.from('polls').delete().in('id', ids);
+
+    if (deleteError) return { stored: false, error: deleteError.message };
+
+    // Report a full batch as a possible backlog so the cron can surface it
+    // rather than quietly falling behind on a deletion promise.
+    return {
+      stored: true,
+      data: { deleted: ids.length, remaining: ids.length === limit ? -1 : 0 },
+    };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
   }

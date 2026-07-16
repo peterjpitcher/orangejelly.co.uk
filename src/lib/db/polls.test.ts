@@ -5,6 +5,8 @@ import {
   createPoll,
   MAX_OPTIONS,
   RETENTION_DAYS,
+  SWEEP_LIMIT,
+  sweepExpiredPolls,
   updateResponse,
 } from './polls';
 
@@ -20,7 +22,15 @@ const update = vi.fn();
 const del = vi.fn();
 
 /** Rows the mocked database returns from a .select(). Set per test. */
-const rows: { participant: unknown; poll: unknown } = { participant: null, poll: null };
+const rows: { participant: unknown; poll: unknown; due: Array<{ id: string }> } = {
+  participant: null,
+  poll: null,
+  due: [],
+};
+
+/** Captured so the sweep's bound can be asserted rather than assumed. */
+let limitArg: number | null = null;
+let inFilter: string[] | null = null;
 
 vi.mock('./supabase-admin', () => ({
   isSupabaseAdminConfigured: vi.fn(() => true),
@@ -39,11 +49,22 @@ vi.mock('./supabase-admin', () => ({
           Promise.resolve({ error: null }).then(resolve);
         return chain;
       },
-      delete: () => ({ eq: (col: string, val: unknown) => del(table, col, val) }),
+      delete: () => ({
+        eq: (col: string, val: unknown) => del(table, col, val),
+        in: async (_col: string, ids: string[]) => {
+          inFilter = ids;
+          return { error: null };
+        },
+      }),
       select: () => {
         const chain: Record<string, unknown> = {};
         chain.eq = () => chain;
         chain.order = () => chain;
+        chain.lt = () => chain;
+        chain.limit = (n: number) => {
+          limitArg = n;
+          return Promise.resolve({ data: rows.due, error: null });
+        };
         chain.maybeSingle = async () => ({
           data: table === 'poll_participants' ? rows.participant : rows.poll,
           error: null,
@@ -61,6 +82,9 @@ beforeEach(() => {
   del.mockResolvedValue({ error: null });
   rows.participant = null;
   rows.poll = null;
+  rows.due = [{ id: 'poll-1' }];
+  limitArg = null;
+  inFilter = null;
 });
 
 const dateOption = (optionDate: string) => ({ optionDate });
@@ -236,6 +260,44 @@ describe('createPoll', () => {
 
     expect(first.data?.participantToken).not.toBe(second.data?.participantToken);
     expect(first.data?.organiserToken).not.toBe(second.data?.organiserToken);
+  });
+});
+
+describe('sweepExpiredPolls', () => {
+  it('should never delete more than the sweep limit in one run', async () => {
+    // The bound is the point. The first version issued an unqualified
+    // delete().lt('expires_at', now) — no limit, no ordering. Nothing called it,
+    // so it never fired, but Phase 5 wires this to an unattended cron, and the
+    // workspace rules require approval for a bulk operation over 1,000 rows.
+    // An unbounded delete of other people's data, running with nobody watching,
+    // is exactly what that rule exists to prevent.
+    expect(SWEEP_LIMIT).toBe(500);
+
+    const result = await sweepExpiredPolls({ limit: 10_000 });
+
+    expect(result.stored).toBe(true);
+    expect(limitArg).toBe(SWEEP_LIMIT);
+  });
+
+  it('should delete by id rather than by predicate', async () => {
+    // Select-then-delete-by-id is what makes the bound real: a bare predicate
+    // delete cannot be limited.
+    rows.due = [{ id: 'poll-1' }, { id: 'poll-2' }];
+
+    const result = await sweepExpiredPolls();
+
+    expect(inFilter).toEqual(['poll-1', 'poll-2']);
+    expect(result.data?.deleted).toBe(2);
+  });
+
+  it('should report nothing to do when no poll has expired', async () => {
+    rows.due = [];
+
+    const result = await sweepExpiredPolls();
+
+    expect(result.stored).toBe(true);
+    expect(result.data?.deleted).toBe(0);
+    expect(inFilter).toBeNull();
   });
 });
 
