@@ -60,6 +60,23 @@ export interface RateLimitResult {
   allowed: boolean;
   /** Seconds until the window resets. For callers that set Retry-After; never shown to the user. */
   retryAfterSeconds: number;
+  /**
+   * WHY this answer, which is not the same question as whether it was allowed.
+   *
+   * Without this a caller cannot tell "you have hit the limit" from "the limiter
+   * is broken" — both arrived as `allowed: false`, so a fail-open caller had no
+   * way to fail open and voting was silently fail-closed. That is the wrong
+   * default for the one action the whole tool exists to make effortless: a
+   * limiter outage must never stop a licensee answering a poll.
+   *
+   * - `ok`          — under the limit.
+   * - `limited`     — genuinely over the limit. Every caller denies.
+   * - `unavailable` — the limiter could not answer. Fail-CLOSED callers
+   *                   (createPoll, confirmOption) still deny: an outage must not
+   *                   become a way to mint polls on our sending domain.
+   *                   Fail-OPEN callers (voting) allow.
+   */
+  reason: 'ok' | 'limited' | 'unavailable';
 }
 
 /**
@@ -185,9 +202,13 @@ export async function checkRateLimit(
         developmentWarningLogged = true;
         console.warn('[polls] Rate limiter not configured — allowing in development.');
       }
-      return { allowed: true, retryAfterSeconds: 0 };
+      return { allowed: true, retryAfterSeconds: 0, reason: 'ok' };
     }
-    return { allowed: false, retryAfterSeconds: retryAfterFor(config.windowSeconds, Date.now()) };
+    return {
+      allowed: false,
+      retryAfterSeconds: retryAfterFor(config.windowSeconds, Date.now()),
+      reason: 'unavailable',
+    };
   }
 
   try {
@@ -202,15 +223,21 @@ export async function checkRateLimit(
     if (error) throw new Error(error.message);
     if (typeof data !== 'number') throw new Error('poll_rate_limit_hit returned no count.');
 
+    const allowed = data <= config.limit;
     return {
-      allowed: data <= config.limit,
+      allowed,
       retryAfterSeconds: retryAfterFor(config.windowSeconds, Date.now()),
+      reason: allowed ? 'ok' : 'limited',
     };
   } catch (error) {
     // Deliberately not re-thrown. A limiter outage is a limiter decision, not a
     // 500: the caller picks fail-closed or fail-open per SPEC §3.4.2.
     console.error('[polls] Rate limiter unavailable.', error);
-    return { allowed: false, retryAfterSeconds: retryAfterFor(config.windowSeconds, Date.now()) };
+    return {
+      allowed: false,
+      retryAfterSeconds: retryAfterFor(config.windowSeconds, Date.now()),
+      reason: 'unavailable',
+    };
   }
 }
 

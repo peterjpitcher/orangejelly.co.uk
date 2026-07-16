@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
 import { getSupabaseAdminClient, isSupabaseAdminConfigured } from './supabase-admin';
 import { generatePollTokens, generateToken } from '@/lib/poll-tokens';
-import { LONDON_TIME_ZONE, type IsoDate } from '@/lib/dateUtils';
+import { LONDON_TIME_ZONE, londonWallClockToInstant, type IsoDate } from '@/lib/dateUtils';
 
 /**
  * Data access for availability polls.
@@ -137,9 +137,16 @@ export function calculateExpiresAt(options: PollOptionInput[], from: Date = new 
 
   for (const option of options) {
     if (option.optionDate !== undefined) {
-      // End of the day in question, so a date-only option does not expire at
-      // midnight on the morning it refers to.
-      optionInstants.push(new Date(`${option.optionDate}T23:59:59Z`));
+      // End of that day IN LONDON, not in UTC.
+      //
+      // `${date}T23:59:59Z` was the obvious version and it is wrong for half
+      // the year: during BST it resolves to 00:59 the following morning. The
+      // drift is an hour on a 60-day window, so nothing breaks — but this is
+      // exactly the class of error dateUtils exists to stop, and a codebase
+      // that keeps a hand-rolled UTC anchor next to a library built to prevent
+      // hand-rolled UTC anchors teaches the wrong lesson to whoever reads it
+      // next. 23:59 is never inside the spring-forward gap, so this cannot throw.
+      optionInstants.push(londonWallClockToInstant(option.optionDate, '23:59'));
     } else if (option.endsAt !== undefined) {
       optionInstants.push(option.endsAt);
     }
@@ -219,23 +226,230 @@ export async function createPoll(input: CreatePollInput): Promise<StoredResult<P
   }
 }
 
-/** Marks the organiser's email verified and opens the poll for voting. */
-export async function verifyAndOpenPoll(organiserToken: string): Promise<StoredResult<PollRow>> {
+/** How long a verify link stays usable. Long enough to survive a night's sleep. */
+export const VERIFY_TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
+
+/** Shortest gap between two sends of the same verify email. */
+export const RESEND_COOLDOWN_SECONDS = 60;
+
+/** The tokens that gate a draft poll: one to publish it, one to re-send the first. */
+export interface VerifyTokensResult {
+  verifyToken: string;
+  resendToken: string;
+}
+
+/**
+ * What verification hands back — the two links the organiser needs, and the
+ * fields the "your poll is live" email interpolates.
+ *
+ * Deliberately not PollRow: PollRow carries no tokens, and this is the one call
+ * whose entire purpose is to return them.
+ */
+export interface VerifiedPollResult {
+  id: string;
+  title: string;
+  participantToken: string;
+  organiserToken: string;
+  organiserName: string;
+  organiserEmail: string;
+}
+
+/** A draft poll resolved by its resend token. Never carries a poll capability. */
+export interface ResendTargetResult {
+  id: string;
+  title: string;
+  organiserName: string;
+  organiserEmail: string;
+  verifyToken: string | null;
+  verifyTokenExpiresAt: string | null;
+}
+
+/**
+ * Issues a draft poll's verify and resend tokens.
+ *
+ * Separate from createPoll on purpose. createPoll is shipped, green and shared
+ * with other callers, and its CreatePollInput takes no tokens — so the verify
+ * columns are set in a second statement rather than by reworking a working
+ * function. The window between the two is harmless: a draft with no verify token
+ * is unreachable by anyone, and the caller deletes the poll if this fails.
+ *
+ * Each token is an independent CSPRNG draw. Nothing is derived from the poll id
+ * and nothing is derived from the organiser token — the verify link travels in
+ * the most forwardable email this feature sends, so it must not be a capability.
+ */
+export async function issueVerifyToken(pollId: string): Promise<StoredResult<VerifyTokensResult>> {
   try {
     const supabase = requireAdminClient();
+    const verifyToken = generateToken();
+    const resendToken = generateToken();
+    const expiresAt = new Date(Date.now() + VERIFY_TOKEN_TTL_MS).toISOString();
 
     const { data, error } = await supabase
       .from('polls')
-      .update({ email_verified_at: new Date().toISOString(), status: 'open' })
-      .eq('organiser_token', organiserToken)
+      .update({
+        verify_token: verifyToken,
+        verify_token_expires_at: expiresAt,
+        resend_token: resendToken,
+      })
+      .eq('id', pollId)
       .eq('status', 'draft')
-      .select()
+      .select('id')
+      .maybeSingle();
+
+    if (error) return { stored: false, error: error.message };
+    if (!data) return { stored: false, error: 'This poll cannot be verified.' };
+
+    return { stored: true, data: { verifyToken, resendToken } };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * Marks the organiser's email verified and opens the poll for voting.
+ *
+ * Matches on `verify_token`, NOT `organiser_token`. An earlier version of this
+ * function matched the organiser token, which predates the separate verify token
+ * and would have put admin capability in the one email most likely to be
+ * forwarded on.
+ *
+ * One statement, guarded and single-use: `status = 'draft'` and an unexpired
+ * `verify_token_expires_at` are part of the WHERE, so a consumed, expired or
+ * already-open poll simply matches zero rows and the caller cannot tell those
+ * cases apart. All three token columns are nulled in the same update — once the
+ * poll is live there is nothing left to verify or re-send, and a capability with
+ * no job left is a capability to delete.
+ */
+export async function verifyAndOpenPoll(
+  verifyToken: string
+): Promise<StoredResult<VerifiedPollResult>> {
+  try {
+    const supabase = requireAdminClient();
+    const now = new Date().toISOString();
+
+    const { data, error } = await supabase
+      .from('polls')
+      .update({
+        email_verified_at: now,
+        status: 'open',
+        verify_token: null,
+        verify_token_expires_at: null,
+        resend_token: null,
+      })
+      .eq('verify_token', verifyToken)
+      .eq('status', 'draft')
+      .gt('verify_token_expires_at', now)
+      .select('id, title, participant_token, organiser_token, organiser_name, organiser_email')
       .maybeSingle();
 
     if (error) return { stored: false, error: error.message };
     if (!data) return { stored: false, error: 'This link is no longer valid.' };
 
-    return { stored: true, data: data as PollRow };
+    return {
+      stored: true,
+      data: {
+        id: data.id,
+        title: data.title,
+        participantToken: data.participant_token,
+        organiserToken: data.organiser_token,
+        organiserName: data.organiser_name,
+        organiserEmail: data.organiser_email,
+      },
+    };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * Resolves a draft poll from its resend token.
+ *
+ * Returns no participant or organiser token by design: the resend path must not
+ * be able to hand back a poll capability, or it would become a way to skip
+ * verification entirely.
+ */
+export async function getResendTarget(resendToken: string): Promise<ResendTargetResult | null> {
+  const supabase = requireAdminClient();
+
+  const { data } = await supabase
+    .from('polls')
+    .select(
+      'id, title, status, organiser_name, organiser_email, verify_token, verify_token_expires_at'
+    )
+    .eq('resend_token', resendToken)
+    .maybeSingle();
+
+  if (!data || data.status !== 'draft') return null;
+
+  return {
+    id: data.id,
+    title: data.title,
+    organiserName: data.organiser_name,
+    organiserEmail: data.organiser_email,
+    verifyToken: data.verify_token,
+    verifyTokenExpiresAt: data.verify_token_expires_at,
+  };
+}
+
+/**
+ * Takes the 60-second resend slot, atomically.
+ *
+ * A read-then-write would race: two taps a millisecond apart would both see an
+ * old `resend_last_sent_at` and both send. The cooldown is therefore the WHERE
+ * clause of the update that records it — the second caller matches zero rows and
+ * is refused. Returns true when the slot was claimed.
+ *
+ * The slot is claimed before the mail is sent, so a send that then fails still
+ * costs the cooldown. That is the right way round: it bounds the damage when
+ * mail is failing, and the user waits a minute rather than hammering the API.
+ */
+export async function claimResendSlot(
+  pollId: string,
+  cooldownSeconds: number = RESEND_COOLDOWN_SECONDS
+): Promise<boolean> {
+  const supabase = requireAdminClient();
+  const now = new Date();
+  const threshold = new Date(now.getTime() - cooldownSeconds * 1000).toISOString();
+
+  const { data } = await supabase
+    .from('polls')
+    .update({ resend_last_sent_at: now.toISOString() })
+    .eq('id', pollId)
+    .eq('status', 'draft')
+    .or(`resend_last_sent_at.is.null,resend_last_sent_at.lt.${threshold}`)
+    .select('id')
+    .maybeSingle();
+
+  return Boolean(data);
+}
+
+/**
+ * Mints a fresh verify token and pushes the expiry out 24 hours.
+ *
+ * The recovery path when a link lapses while the organiser was looking for it.
+ * The old token stops working the moment this returns, because the column holds
+ * one value.
+ */
+export async function refreshVerifyToken(
+  pollId: string
+): Promise<StoredResult<{ verifyToken: string }>> {
+  try {
+    const supabase = requireAdminClient();
+    const verifyToken = generateToken();
+    const expiresAt = new Date(Date.now() + VERIFY_TOKEN_TTL_MS).toISOString();
+
+    const { data, error } = await supabase
+      .from('polls')
+      .update({ verify_token: verifyToken, verify_token_expires_at: expiresAt })
+      .eq('id', pollId)
+      .eq('status', 'draft')
+      .select('id')
+      .maybeSingle();
+
+    if (error) return { stored: false, error: error.message };
+    if (!data) return { stored: false, error: 'This poll cannot be verified.' };
+
+    return { stored: true, data: { verifyToken } };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
   }
@@ -439,9 +653,28 @@ export async function updateResponse(input: {
     // `unique (participant_id, option_id)` on poll_responses gives a real
     // conflict target, so one statement does the whole job atomically. A failure
     // now leaves the previous answers exactly where they were.
+    // Reuse the existing row's id where there is one.
+    //
+    // supabase-js builds its upsert as `on conflict do update set` across EVERY
+    // column in the payload, `id` included. Handing it a fresh randomUUID() on
+    // an edit therefore rewrites the primary key of a row that already exists —
+    // the row keeps its answer but changes identity every time its owner
+    // changes their mind. Nothing references that id today, so nothing breaks;
+    // it is churn, not corruption. But a surrogate key that moves is a trap
+    // laid for the first feature that does reference it, and the fix costs one
+    // indexed read.
+    const { data: existing } = await supabase
+      .from('poll_responses')
+      .select('id, option_id')
+      .eq('participant_id', participant.id);
+
+    const idByOption = new Map<string, string>(
+      (existing ?? []).map((row: { id: string; option_id: string }) => [row.option_id, row.id])
+    );
+
     const { error } = await supabase.from('poll_responses').upsert(
       input.answers.map((answer) => ({
-        id: randomUUID(),
+        id: idByOption.get(answer.optionId) ?? randomUUID(),
         poll_id: participant.poll_id,
         participant_id: participant.id,
         option_id: answer.optionId,
