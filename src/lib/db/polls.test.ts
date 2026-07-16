@@ -100,6 +100,28 @@ describe('createPoll', () => {
     expect(row.email_verified_at).toBeUndefined();
   });
 
+  it('should store the agenda separately from the description', async () => {
+    // Two different things: description frames the invitation, agenda says what
+    // will be discussed. Collapsing them loses the agenda from the calendar
+    // entry, which is where it matters most.
+    await createPoll({
+      ...validInput,
+      description: 'A catch-up about the quiz night.',
+      agenda: '1. Last quarter\n2. New format\n3. Prize budget',
+    });
+
+    const [, row] = insert.mock.calls.find(([table]) => table === 'polls')!;
+    expect(row.description).toBe('A catch-up about the quiz night.');
+    expect(row.agenda).toBe('1. Last quarter\n2. New format\n3. Prize budget');
+  });
+
+  it('should store a null agenda when none is given, not an empty string', async () => {
+    await createPoll({ ...validInput, agenda: '   ' });
+
+    const [, row] = insert.mock.calls.find(([table]) => table === 'polls')!;
+    expect(row.agenda).toBeNull();
+  });
+
   it('should normalise the organiser email to lower case', async () => {
     await createPoll(validInput);
 

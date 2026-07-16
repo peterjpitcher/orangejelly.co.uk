@@ -26,6 +26,8 @@ Peter's answers to §10. Recorded here so the build has a single reference.
 
 | 5 | The duplicate migration directories | **Delete `db/migrations/` and `scripts/migrate-db.ts`.** Done in `89e7ef2a`. Scoped narrowly on checking: `pg`, `DATABASE_URL` and `DATABASE_SSL` are **retained**, because `src/lib/db/client.ts` uses them for the app's Postgres fallback client — they were not the runner's alone, contrary to what §5 implied. |
 | 8 | Retention window | **60 days** after the last response or the last option date, whichever is later. Now the documented basis for `polls.expires_at` and for the Phase 2 privacy notice. |
+| 9 | **An agenda field** *(added 16 July 2026 — a change to §4's feature set)* | **Free text**, not a structured item list. `polls.agenda`, added by `20260716170000_availability_polls_agenda.sql` and applied. Distinct from `description`: description frames the invitation in a line, the agenda says what will be discussed. Shown on the vote page, and carried into the `.ics` `DESCRIPTION` so it is in the calendar entry on the day — which is where it earns its keep. |
+| 3 (revisited) | Aggregate counts vs per-person votes | **Unchanged — counts only.** Peter asked that "everyone should see the results as they're made, so it's easier for them to pick dates that work". That goal was already met: participants see live per-option counts and a responder total. "Aggregate only" means *counts without names*, not *nothing* — see SPEC.md ruling R11, which corrects a draft that had read it as showing nothing. Peter reviewed the further step of showing **who** voted which way and declined it. |
 
 **No decisions remain open.** The build is unblocked as far as the live database.
 

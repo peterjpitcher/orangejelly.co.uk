@@ -36,6 +36,12 @@ export type PollOptionInput =
 export interface CreatePollInput {
   title: string;
   description?: string;
+  /**
+   * What will actually be discussed. Distinct from `description`, which is the
+   * one-line framing of the invitation. Someone deciding whether they can make
+   * Tuesday wants both, and it carries into the calendar entry.
+   */
+  agenda?: string;
   location?: string;
   organiserName: string;
   organiserEmail: string;
@@ -68,6 +74,7 @@ export interface PollRow {
   id: string;
   title: string;
   description: string | null;
+  agenda: string | null;
   location: string | null;
   organiser_name: string;
   organiser_email: string;
@@ -172,6 +179,7 @@ export async function createPoll(input: CreatePollInput): Promise<StoredResult<P
       id: pollId,
       title: input.title.trim(),
       description: cleanText(input.description),
+      agenda: cleanText(input.agenda),
       location: cleanText(input.location),
       organiser_name: input.organiserName.trim(),
       organiser_email: normaliseEmail(input.organiserEmail),
