@@ -2925,13 +2925,21 @@ Handle `<n> = 0` — a poll nobody has answered is the commonest case for this e
 
 **The reputation exposure is the more serious half.** Poll mail is, by its nature, unsolicited mail to third parties who never asked Orange Jelly for anything. Even done perfectly — verified organiser, no address book, participants emailed only at addresses they typed themselves — this is mail that will attract spam complaints at a rate transactional client mail never does. Some percentage of recipients will mark it as junk simply because they do not remember agreeing to it. On a shared domain, those complaints are attributed to `orangejelly.co.uk`, and the damage lands on **the deliverability of the client work the business actually runs on**.
 
-**Recommendation: a separate sending subdomain for poll mail, before Phase 2b ships.**
+> **Corrected 16 July 2026 — the two paragraphs above overstate the case, and the correction matters.** They assume poll mail and client mail would share the **apex**. They would not. Production already sends as **`noreply@auth.orangejelly.co.uk`** (Peter, 16 July 2026), a subdomain that is already Resend-verified with its own DKIM. **The apex is already firewalled and was never at risk.** The quota argument below survives intact — one Resend account means one shared daily cap, whatever the domain. The reputation argument does not survive in the form stated: the question is no longer "protect the apex" but "should poll mail share `auth.*`", and that turns entirely on what else sends from `auth.*` — see the open question below.
+>
+> A second correction: within **this repo**, the only mail that sends today is the contact-form notification, and it goes **to Peter**. Nothing client-facing leaves this codebase. So poll mail would not be endangering established client-facing reputation *from here* — but `auth.` is a shared-sounding name and other Orange Jelly apps may well send from it, which is exactly the risk that cannot be checked from inside this repo.
+
+**Recommendation: reuse the existing `auth.orangejelly.co.uk` sender, unless it is shared with other Orange Jelly apps.**
 
 | | |
 |---|---|
-| **Domain** | `poll.orangejelly.co.uk`, verified separately in Resend with its own DKIM and its own Return-Path. |
-| **Sender** | `POLL_FROM_EMAIL=Orange Jelly Polls <polls@poll.orangejelly.co.uk>` — **NET NEW**, to be added to `.env.example` and to Vercel. |
-| **Client mail** | Stays exactly where it is on `CONTACT_FROM_EMAIL`. Not touched, not migrated, not risked. |
+| **Domain** | **`auth.orangejelly.co.uk`** — already verified in Resend with DKIM. Zero setup. |
+| **Sender** | `POLL_FROM_EMAIL`, defaulting to `CONTACT_FROM_EMAIL`. Keep the env var: it costs nothing now and is the whole migration if poll mail ever needs its own domain. |
+| **Apex** | Already protected. Nothing sends from `orangejelly.co.uk` itself. |
+
+**The open question that decides this — it cannot be answered from this repo.** If `auth.orangejelly.co.uk` also carries **authentication mail for other Orange Jelly products** (password resets, magic links for CheersAI, the Anchor tools, and so on), then poll mail must **not** share it. Auth mail is the least tolerant category of all: a spam complaint from someone who forgot they were invited to a poll would degrade deliverability for a user trying to get back into an account they are locked out of, and a password reset that lands in junk is a support incident. In that case, add `poll.orangejelly.co.uk` with its own DKIM and use it.
+
+If `auth.*` is only this site's contact notifications to Peter, reuse it. Its reputation is currently near-meaningless (an audience of one), poll mail would simply be establishing it, and there is nothing to protect.
 
 **Why a subdomain rather than a separate account or just "being careful":**
 
