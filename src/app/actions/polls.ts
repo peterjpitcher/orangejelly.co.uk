@@ -210,11 +210,34 @@ export async function createPoll(input: CreatePollFormValues): Promise<PollActio
   // Note what this email does NOT carry: the participant link or the organiser
   // link. Neither exists to the user until the poll is live, and this is the most
   // forwardable message the feature sends.
+  const verifyUrl = getAbsoluteUrl(`/availability/verify/${verifyToken}`);
+
+  // Development only: print the magic link to the terminal.
+  //
+  // Without this the feature cannot be exercised locally at all, and the reason
+  // is a pincer between two things that are each individually correct.
+  // sendPollEmail refuses to send unless the base URL is the production host,
+  // which is right — a preview deploy must never mail a licensee. But
+  // getBaseUrl() falls back to the production host when NEXT_PUBLIC_BASE_URL is
+  // unset, so a local run either sends a real email whose link points at
+  // production (where the poll does not exist), or sets the base URL to
+  // localhost and has the send correctly refused. Neither leaves a way in.
+  //
+  // Printing the link is the standard escape and it leaks nothing: the token is
+  // already in this process, and the gate is NODE_ENV, which is 'production' on
+  // every Vercel deployment including previews — so this cannot be switched on
+  // from the dashboard.
+  if (process.env.NODE_ENV !== 'production') {
+    console.info(
+      `\n[polls] DEV ONLY — verification link for "${data.title}":\n  ${verifyUrl}\n  (printed because poll mail does not send outside production)\n`
+    );
+  }
+
   try {
     const email = buildVerifyEmail({
       organiserName: data.organiserName,
       pollTitle: data.title,
-      verifyUrl: getAbsoluteUrl(`/availability/verify/${verifyToken}`),
+      verifyUrl,
     });
 
     const sent = await sendPollEmail({ to: data.organiserEmail, ...email });

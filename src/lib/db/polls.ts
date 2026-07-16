@@ -725,16 +725,68 @@ export async function closePoll(organiserToken: string): Promise<StoredResult> {
   }
 }
 
+/** Reopens a closed poll, clearing the advisory deadline that stopped voting. */
+export async function reopenPoll(organiserToken: string): Promise<StoredResult> {
+  try {
+    const supabase = requireAdminClient();
+    const { data, error } = await supabase
+      .from('polls')
+      .update({ status: 'open', closes_at: null })
+      .eq('organiser_token', organiserToken)
+      .eq('status', 'closed')
+      .select('id')
+      .maybeSingle();
+
+    if (error) return { stored: false, error: error.message };
+    if (!data) return { stored: false, error: 'This poll cannot be reopened.' };
+    return { stored: true };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * The sentinel `confirmOption` returns when its conditional update matched no
+ * row. The action maps it to user-facing copy; nothing else should match on it.
+ */
+export const ALREADY_CONFIRMED = 'ALREADY_CONFIRMED';
+
+/**
+ * What a confirmed poll's fan-out needs, read back from the update that
+ * confirmed it. `PollRow` carries none of the three, so they are selected by name.
+ */
+export interface ConfirmedPollResult {
+  poll: PollRow;
+  /** The option that was confirmed. Already proven to belong to this poll. */
+  option: PollOptionRow;
+  /** polls.confirm_sequence AFTER the bump. The iCalendar SEQUENCE. */
+  confirmSequence: number;
+  /** polls.participant_token — the poll link the confirmation email carries. */
+  participantToken: string;
+}
+
 /**
  * Picks the winning option and locks the poll.
  *
  * Permitted from 'open' or 'closed' — an organiser who closed a poll to stop
  * late votes must still be able to confirm one.
+ *
+ * THE STATUS FILTER ON THE UPDATE IS THE DOUBLE-TAP GUARD, and it is the reason
+ * this is a conditional update rather than a read-then-write. Two clicks landing
+ * together both pass the status check above; only one can match the update,
+ * because the first sets `status = 'confirmed'` and the second's
+ * `.in('status', ['open','closed'])` then matches zero rows. A caller that fans
+ * out only when a row came back therefore mails twenty people exactly once. Do
+ * not "simplify" this to `.eq('id', poll.id)` — that re-matches a confirmed poll
+ * and re-fires the fan-out.
+ *
+ * `closes_at` keeps its original value when there is one: a poll confirmed from
+ * 'closed' keeps the time it actually closed, not the time it was decided.
  */
 export async function confirmOption(
   organiserToken: string,
   optionId: string
-): Promise<StoredResult<PollRow>> {
+): Promise<StoredResult<ConfirmedPollResult>> {
   try {
     const supabase = requireAdminClient();
     const poll = await fetchPollByToken('organiser_token', organiserToken);
@@ -751,24 +803,122 @@ export async function confirmOption(
     // confirmed_option_id except this scope.
     const { data: option } = await supabase
       .from('poll_options')
-      .select('id')
+      .select('*')
       .eq('id', optionId)
       .eq('poll_id', poll.id)
       .maybeSingle();
 
     if (!option) return { stored: false, error: 'That option does not belong to this poll.' };
 
+    // Selected by name: `PollRow` declares neither, though `select('*')` returns
+    // both. The sequence is read here and incremented below. PostgREST cannot
+    // express `confirm_sequence = confirm_sequence + 1`, but it does not need
+    // to: the status filter already serialises the write, so only one of two
+    // racing callers can apply its computed value.
+    const { data: current } = await supabase
+      .from('polls')
+      .select('confirm_sequence, participant_token')
+      .eq('id', poll.id)
+      .maybeSingle();
+
+    if (!current) return { stored: false, error: 'This poll could not be found.' };
+
     const { data, error } = await supabase
       .from('polls')
-      .update({ status: 'confirmed', confirmed_option_id: optionId })
+      .update({
+        status: 'confirmed',
+        confirmed_option_id: optionId,
+        closes_at: poll.closes_at ?? new Date().toISOString(),
+        confirm_sequence: (current.confirm_sequence as number) + 1,
+      })
       .eq('id', poll.id)
-      .select()
+      .in('status', ['open', 'closed'])
+      .select('*')
       .maybeSingle();
 
     if (error) return { stored: false, error: error.message };
-    return { stored: true, data: data as PollRow };
+
+    // Zero rows matched: another request confirmed it first. The caller must
+    // fan out nothing.
+    if (!data) return { stored: false, error: ALREADY_CONFIRMED };
+
+    return {
+      stored: true,
+      data: {
+        poll: data as PollRow,
+        option: option as PollOptionRow,
+        confirmSequence: (data as { confirm_sequence: number }).confirm_sequence,
+        participantToken: current.participant_token as string,
+      },
+    };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * The addresses a confirmation fans out to, one row per distinct address.
+ *
+ * Grouped rather than UNIONed with the organiser. `UNION` deduplicates on the
+ * whole row, and nothing constrains `polls.organiser_name` to equal the
+ * `display_name` the organiser voted under — so a UNION keeps both rows and
+ * emails the organiser twice about their own meeting. The caller seeds a Map
+ * with the organiser and lets these fill in the rest.
+ *
+ * A participant can legitimately hold two rows (see `submitResponse`), so the
+ * caller collapses duplicates on the lowercased address.
+ */
+export async function getConfirmRecipients(
+  pollId: string
+): Promise<Array<{ email: string; display_name: string }>> {
+  const supabase = requireAdminClient();
+
+  const { data } = await supabase
+    .from('poll_participants')
+    .select('email, display_name')
+    .eq('poll_id', pollId)
+    .not('email', 'is', null);
+
+  const rows = (data ?? []) as Array<{ email: string | null; display_name: string }>;
+
+  // Grouped here rather than in SQL: PostgREST cannot express
+  // `group by lower(trim(email))`, and the set is at most a few dozen rows.
+  const byAddress = new Map<string, { email: string; display_name: string }>();
+  for (const row of rows) {
+    const email = row.email?.trim().toLowerCase();
+    if (!email) continue;
+
+    const existing = byAddress.get(email);
+    // Deterministic, matching `min(display_name)`: the same duplicate always
+    // collapses to the same name rather than to whichever row arrived first.
+    if (!existing || row.display_name < existing.display_name) {
+      byAddress.set(email, { email, display_name: row.display_name });
+    }
+  }
+
+  return [...byAddress.values()];
+}
+
+/**
+ * Records how many confirmation emails the fan-out could not deliver.
+ *
+ * A COUNT, NEVER AN ADDRESS. The column is `integer not null default 0`
+ * (migration 20260716180000). It was briefly jsonb holding the addresses that
+ * failed; that shape is gone and must not come back. The organiser's note says
+ * "we couldn't reach 2 people" — a count is everything that note needs, and
+ * keeping the addresses would be retaining personal data for a purpose we
+ * cannot state, with no retention rule of its own.
+ *
+ * Best-effort: the poll is already confirmed, and failing to record the count
+ * must not turn a confirmed poll into an error.
+ */
+export async function recordConfirmNotifyFailures(pollId: string, failures: number): Promise<void> {
+  try {
+    const supabase = requireAdminClient();
+    await supabase.from('polls').update({ confirm_notify_failures: failures }).eq('id', pollId);
+  } catch {
+    // Swallowed deliberately. The caller is already inside its own best-effort
+    // path and has nothing useful to do with this.
   }
 }
 
@@ -856,6 +1006,159 @@ export async function sweepExpiredPolls(
       stored: true,
       data: { deleted: ids.length, remaining: ids.length === limit ? -1 : 0 },
     };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/** How long an unverified draft is kept before it is swept. Matches VERIFY_TOKEN_TTL_MS. */
+export const UNVERIFIED_DRAFT_TTL_HOURS = 24;
+
+/**
+ * Deletes drafts whose organiser never verified their address. Driven by the cron.
+ *
+ * A draft is unreachable by anyone once its verify token lapses: the poll is not
+ * live, the verify link is dead, and no participant has ever been given a token
+ * for it. What is left is an organiser's name and address sitting in a table for
+ * no purpose, which is precisely the thing a retention promise is about. The TTL
+ * matches VERIFY_TOKEN_TTL_MS, so nothing is removed while its link still works.
+ *
+ * **Bounded like sweepExpiredPolls, and for the same reason** — this one needs it
+ * more, not less. The retention sweep leans on `expires_at`, which is set at
+ * creation and pushed forward as a poll is used, so its due set is naturally
+ * self-limiting. A draft has no such column: every draft older than a day is due,
+ * every day, forever. An unbounded delete here running unattended is exactly what
+ * the workspace's bulk-operation gate exists to stop. Select the oldest ids,
+ * delete by id, let a backlog drain over successive nights.
+ *
+ * `polls_draft_created_at_idx` (a partial index on created_at where status =
+ * 'draft', from 20260716160000) covers the select.
+ */
+export async function sweepUnverifiedDrafts(
+  options: { limit?: number } = {}
+): Promise<StoredResult<{ deleted: number; remaining: number }>> {
+  const limit = Math.min(options.limit ?? SWEEP_LIMIT, SWEEP_LIMIT);
+
+  try {
+    const supabase = requireAdminClient();
+    const cutoff = new Date(Date.now() - UNVERIFIED_DRAFT_TTL_HOURS * 60 * 60 * 1000).toISOString();
+
+    const { data: due, error: selectError } = await supabase
+      .from('polls')
+      .select('id')
+      .eq('status', 'draft')
+      .lt('created_at', cutoff)
+      .order('created_at', { ascending: true })
+      .limit(limit);
+
+    if (selectError) return { stored: false, error: selectError.message };
+    if (!due || due.length === 0) return { stored: true, data: { deleted: 0, remaining: 0 } };
+
+    const ids = due.map((row: { id: string }) => row.id);
+
+    // Re-assert `status = 'draft'` on the delete, not only on the select. A poll
+    // verified in the gap between the two statements would otherwise be deleted
+    // out from under an organiser who had just brought it to life. The window is
+    // milliseconds and the outcome would be silent, which is what makes it worth
+    // one extra predicate.
+    const { error: deleteError } = await supabase
+      .from('polls')
+      .delete()
+      .in('id', ids)
+      .eq('status', 'draft');
+
+    if (deleteError) return { stored: false, error: deleteError.message };
+
+    return {
+      stored: true,
+      data: { deleted: ids.length, remaining: ids.length === limit ? -1 : 0 },
+    };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * How long a closed rate-limit window is kept.
+ *
+ * Two days is one comfortable multiple of the longest bucket window (24 hours),
+ * so a live counter is never swept out from under the limiter.
+ */
+export const RATE_LIMIT_RETENTION_DAYS = 2;
+
+/**
+ * Deletes rate-limit counters whose window closed. Driven by the same cron.
+ *
+ * These rows are peppered hashes rather than addresses, but they are still keyed
+ * to people, and a counter whose window shut yesterday has no reason to exist.
+ *
+ * **Why this is not the select-ids-then-delete-by-id shape used above.**
+ * `poll_rate_limits` has no surrogate key — its primary key is the composite
+ * (bucket, key, window_start), so there is no id list to delete by, and PostgREST
+ * cannot express a composite `in`. Building one out of `.or()` terms would mean
+ * URL-encoding a timestamptz by hand into a filter string, where a `+00:00`
+ * offset decodes to a space and silently matches nothing. So the bound is made
+ * out of a count instead:
+ *
+ *  - Count the due rows first. The count is exact and costs one head request.
+ *  - If it is within the limit, one predicate delete removes them all, and the
+ *    row count is bounded *because it has just been measured* — not assumed.
+ *  - If it exceeds the limit, delete a bounded slice: take the window_start of
+ *    the limit-th oldest due row and delete strictly below it. By construction
+ *    fewer than `limit` rows sit below that boundary, so the run stays inside the
+ *    gate and the backlog drains over successive nights.
+ */
+export async function sweepRateLimitWindows(
+  options: { limit?: number } = {}
+): Promise<StoredResult<{ deleted: number; remaining: number }>> {
+  const limit = Math.min(options.limit ?? SWEEP_LIMIT, SWEEP_LIMIT);
+
+  try {
+    const supabase = requireAdminClient();
+    const cutoff = new Date(
+      Date.now() - RATE_LIMIT_RETENTION_DAYS * 24 * 60 * 60 * 1000
+    ).toISOString();
+
+    const { count, error: countError } = await supabase
+      .from('poll_rate_limits')
+      .select('*', { count: 'exact', head: true })
+      .lt('window_start', cutoff);
+
+    if (countError) return { stored: false, error: countError.message };
+    if (!count) return { stored: true, data: { deleted: 0, remaining: 0 } };
+
+    if (count <= limit) {
+      const { error } = await supabase.from('poll_rate_limits').delete().lt('window_start', cutoff);
+      if (error) return { stored: false, error: error.message };
+      return { stored: true, data: { deleted: count, remaining: 0 } };
+    }
+
+    const { data: boundaryRows, error: boundaryError } = await supabase
+      .from('poll_rate_limits')
+      .select('window_start')
+      .lt('window_start', cutoff)
+      .order('window_start', { ascending: true })
+      .range(limit - 1, limit - 1);
+
+    if (boundaryError) return { stored: false, error: boundaryError.message };
+
+    const boundary = (boundaryRows as Array<{ window_start: string }> | null)?.[0]?.window_start;
+    if (!boundary) return { stored: true, data: { deleted: 0, remaining: -1 } };
+
+    const { error: deleteError, count: deletedCount } = await supabase
+      .from('poll_rate_limits')
+      .delete({ count: 'exact' })
+      .lt('window_start', boundary);
+
+    if (deleteError) return { stored: false, error: deleteError.message };
+
+    // A zero here is not a no-op to shrug at: it means every one of the oldest
+    // `limit` due rows shares a single window_start, so nothing sits strictly
+    // below the boundary and the slice cannot advance. That needs one distinct
+    // window to hold 500+ counters — 500 distinct IPs inside one hour, which this
+    // site's volume does not reach. If it ever does, the sweep stalls rather than
+    // exceeding its bound, and `remaining: -1` is what makes the stall visible.
+    return { stored: true, data: { deleted: deletedCount ?? 0, remaining: -1 } };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
   }
