@@ -24,7 +24,20 @@ Peter's answers to §10. Recorded here so the build has a single reference.
 | 4 | Hard cap on options | **8** |
 | 6 | Poll mail on the orangejelly.co.uk sending domain | **Yes, but** Phase 2a (verification + rate limiting) lands before 2b. |
 
-**Still genuinely open — see §10:** decision 5 (deleting `db/migrations/`, a deletion needing an explicit yes) and decision 8 (the retention window, which blocks the GDPR notice in Phase 2).
+| 5 | The duplicate migration directories | **Delete `db/migrations/` and `scripts/migrate-db.ts`.** Done in `89e7ef2a`. Scoped narrowly on checking: `pg`, `DATABASE_URL` and `DATABASE_SSL` are **retained**, because `src/lib/db/client.ts` uses them for the app's Postgres fallback client — they were not the runner's alone, contrary to what §5 implied. |
+| 8 | Retention window | **60 days** after the last response or the last option date, whichever is later. Now the documented basis for `polls.expires_at` and for the Phase 2 privacy notice. |
+
+**No decisions remain open.** The build is unblocked as far as the live database.
+
+### Build progress
+
+| Phase | State |
+|---|---|
+| 0 — Date foundation | **Done**, `71356d71`. `src/lib/dateUtils.ts` + 43 tests. Pipeline green. |
+| 1 — Schema + data layer | **Part done**, `89e7ef2a`. Migration written to `supabase/migrations/20260716150000_availability_polls.sql` but **not applied** — that needs Peter's explicit go-ahead. `src/lib/db/polls.ts` and the token generator still to do. |
+| 2a onwards | Not started. |
+
+**A correction to §5 worth recording.** It said `npm run db:migrate` "reads `db/migrations/`, requires `DATABASE_URL` which is unset locally". Both true, but it implied `DATABASE_URL` existed only for the runner. It does not: `src/lib/db/client.ts` reads the same variable for a live application fallback path, and `newsletter.test.ts` asserts on its error message. Deleting the env var along with the runner would have broken that path silently.
 
 ---
 
