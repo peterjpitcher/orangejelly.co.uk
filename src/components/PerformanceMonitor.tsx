@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { isPollRoute } from '@/lib/token-routes';
 
 // Web Vitals monitoring component
 export default function PerformanceMonitor() {
@@ -50,16 +52,34 @@ export default function PerformanceMonitor() {
 
 // Preload critical resources
 export function PreloadResources() {
+  const pathname = usePathname();
+
+  // A preconnect opens a real TCP/TLS connection to a third party. It carries no
+  // path, so it does not leak the token by itself — but on a poll route the
+  // analytics it warms up never load (see MarketingChrome), so the connection is
+  // pointless as well as unwanted. Keeping it would also make "no third-party
+  // request fires on a token route" untrue, and that property is worth being able
+  // to state without an asterisk.
+  const analyticsPreconnectsAllowed = !isPollRoute(pathname);
+
   return (
     <>
       {/* Preload logo */}
       <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
       {/* DNS prefetch / preconnect for external resources used by analytics */}
-      <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+      {analyticsPreconnectsAllowed && (
+        <>
+          <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+          <link
+            rel="preconnect"
+            href="https://region1.google-analytics.com"
+            crossOrigin="anonymous"
+          />
+          <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+        </>
+      )}
     </>
   );
 }

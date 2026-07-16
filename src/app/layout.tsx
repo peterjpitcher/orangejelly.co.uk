@@ -5,14 +5,16 @@ import './globals.css';
 import FooterWrapper from '@/components/FooterWrapper';
 import NavigationWrapper from '@/components/NavigationWrapper';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import PerformanceMonitor, { PreloadResources } from '@/components/PerformanceMonitor';
+import { PreloadResources } from '@/components/PerformanceMonitor';
 import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
 import { CONTACT } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
-import CookieNotice from '@/components/CookieNotice';
-import { StickyEngagementBar, ExitIntentModal, MobileScrollPrompt } from '@/components/engagement';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+// Analytics, Speed Insights, the cookie notice and the marketing overlays are all
+// rendered by MarketingChrome, which gates them on the pathname. They must NOT be
+// imported directly here: poll URLs carry a bearer token in the path, and a
+// third-party script on those routes hands the token to Google or Vercel.
+// See src/components/engagement/MarketingChrome.tsx and its test.
+import { MarketingChrome } from '@/components/engagement';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -209,13 +211,7 @@ export default function RootLayout({
           </main>
         </ErrorBoundary>
         <FooterWrapper />
-        <PerformanceMonitor />
-        <CookieNotice />
-        <StickyEngagementBar />
-        <ExitIntentModal />
-        <MobileScrollPrompt />
-        <Analytics />
-        <SpeedInsights />
+        <MarketingChrome />
       </body>
     </html>
   );

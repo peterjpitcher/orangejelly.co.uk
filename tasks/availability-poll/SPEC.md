@@ -211,8 +211,8 @@ poll: {
 | O3.2 | **Given** the matrix, **when** a screen reader reaches any cell, **then** its accessible name is self-contained and position-independent — e.g. "Peter, Tuesday, 14 July 2026 at 2:00pm, if need be". Built from the composition table in §1.0, never by hand. |
 | O3.3 | **Given** the matrix on a 320px viewport, **when** I view it, **then** it sits in a scroll container that is `overflow-x: auto` **and** carries `tabIndex={0}` **and** `role="region"` **and** `aria-label="Poll results"`, with `position: sticky` on the header row and the first column. **`ui/table`'s `Table` cannot do this** — it hard-wraps the table in a bare `<div className="relative w-full overflow-auto">` and routes `className` to the `<table>`, leaving the wrapper unreachable. Build the matrix from `<table>`/`<thead>`/`<tbody>`/`<tfoot>` directly inside your own labelled container, or lift `Table` first. Do not pretend `ui/table` covers it. A scrolling *data table* is WCAG 1.4.10's named exception; the participant form is not, and never scrolls sideways. |
 | O3.4 | **Given** per-option totals, **when** they render, **then** each column foots with counts for Yes / If need be / No **as text first** ("4 yes · 1 if need be · 2 no"), plus a proportional bar. **The bar is not `ui/progress`.** `ui/progress` hardcodes `bg-primary` on its Indicator, accepts a single `value`, and exposes no way to segment or recolour — it physically cannot show three shares. Build a plain three-`<div>` flex bar with `aria-hidden="true"` (the text above it is the accessible version), widths as percentages, and colours applied inline: `hsl(var(--chart-3))` for Yes, `hsl(var(--chart-4))` for If need be, `hsl(var(--chart-1))` for No. **Do not write `bg-chart-3`** — `tailwind.config.js` has no `chart` colour key; the variables exist only as raw CSS at `globals.css:594-602`. Adding the tokens to `tailwind.config.js` is an acceptable alternative, but it is a change, not a given. |
-| O3.5 | **Given** totals, **when** the best option is picked out, **then** it is ranked by (Yes count desc, If-need-be count desc, `position` asc) and marked with a `Badge` **and** the words "Best so far" — never colour alone. |
-| O3.6 | **Given** a tie on that ranking, **when** the page renders, **then** every tied option carries the badge. No arbitrary winner. |
+| O3.5 | **Given** totals, **when** the best option is picked out, **then** it is ranked by **(Yes count desc, then If-need-be count desc)** and marked with a `Badge` **and** the words "Best so far" — never colour alone. **`position` orders the result; it is not a third ranking key.** Corrected 16 July 2026: this row previously read "(Yes desc, If-need-be desc, `position` asc)", which made O3.6 unreachable — `position` is unique, so a three-key ranking admits no ties at all, and a rule that can never fire is not a rule. Implemented by `bestOption` in `src/lib/poll-aggregate.ts` (§5.6). |
+| O3.6 | **Given** a tie on (Yes, If-need-be), **when** the page renders, **then** **every** tied option carries the badge, earliest position first. No arbitrary winner — breaking the tie by `position` would crown whichever option the organiser happened to type first, which is arbitrary in the precise sense this row forbids. |
 | O3.7 | **Given** an `open` poll with zero responses, **when** I open the organiser view, **then** I see an empty state: "Nobody has voted yet. Here's your participant link again — [link] — and a nudge is usually all it takes." Never a blank table. |
 | O3.8 | **Given** any organiser page, **when** the response headers are set, **then** `Referrer-Policy: no-referrer` is present and no third-party resource is requested. **This is a control to build, not a property the site already has.** `src/app/layout.tsx` today renders GTM, `GoogleTagManagerNoscript`, Vercel Analytics, `SpeedInsights`, `PerformanceMonitor`, `CookieNotice`, `StickyEngagementBar`, `ExitIntentModal` and `MobileScrollPrompt` on **every** route, so a token page inherits all of it and Vercel Analytics reports the raw path — which *is* the capability URL. The fix is a **pathname guard**, not a layout restructure: GTM is already a client component and the engagement widgets already call `usePathname`, so each returns `null` on `/availability/*`. Phase 2a, before any token URL is issued. |
 | O3.9 | **Given** every option has zero Yes **and** zero If-need-be responses, **when** the page renders, **then** **no option carries the "Best so far" badge.** The badge is suppressed entirely unless at least one option has `yes + if_need_be > 0`. Without this rule O3.6 makes every option tie and every option a winner — see E2. This is the badge's only suppression condition; it is stated once, here, and E2 refers to it rather than restating it. |
@@ -3826,7 +3826,12 @@ Do not attempt a Shannon-entropy estimate over a 22-character string — it is n
 
 ### 5.5 State machine — `src/lib/poll-state.test.ts`
 
-Module under test is **NET NEW**: `src/lib/poll-state.ts`, exporting `type PollStatus = 'draft' | 'open' | 'closed' | 'confirmed'`, `canTransition(from, to): boolean` and `assertTransition(from, to): void` (throws). The database CHECK constraint (`check (status in ('draft', 'open', 'closed', 'confirmed'))`) enforces the *set* of valid statuses; nothing in Postgres enforces the *edges*. That is why this module exists and why every edge is tested.
+**Built, 16 July 2026.** `src/lib/poll-state.ts` exists. It imports `PollStatus` from `./db/polls` rather than redeclaring it — the type has one home. It exports `canTransition(from, to): boolean`, `checkTransition(from, to): TransitionResult`, `isKnownStatus(value): value is PollStatus`, and the four capability predicates `canVote` / `canEditResponse` / `canConfirm` / `canClose`.
+
+> **`checkTransition` returns; it does not throw. `assertTransition` does not exist and must not be added.**
+> This section previously specified `assertTransition(from, to): void` that throws. That was wrong, and it is corrected here rather than annotated. Every caller of this module is a server action returning `{ success?: boolean; error?: string }` — the repo-wide pattern. A throwing guard would need a `try`/`catch` at every call site whose only job is to convert the throw back into the `{ error }` the caller had to return anyway, and the first call site that forgets becomes a 500 where a polite refusal belonged. `checkTransition` returns `{ ok: false, reason }` carrying exactly the information the throw would have, including both status names.
+
+The database CHECK constraint (`check (status in ('draft', 'open', 'closed', 'confirmed'))`) enforces the *set* of valid statuses; nothing in Postgres enforces the *edges*. That is why this module exists and why every edge is tested.
 
 Legal edges, and only these — **five, including `closed → open`, per R1**:
 
@@ -3863,9 +3868,9 @@ describe('canTransition', () => {
   it('should refuse the move when the target status is not a known status')
 })
 
-describe('assertTransition', () => {
-  it('should throw naming both statuses when the transition is illegal')
-  it('should not throw when the transition is legal')
+describe('checkTransition', () => {
+  it('should return ok false naming both statuses when the transition is illegal')
+  it('should return ok true when the transition is legal')
 })
 ```
 
@@ -3915,6 +3920,17 @@ describe('aggregateByOption', () => {
   it('should count responded excluding participants who skipped that option')
 })
 
+// Ranking: yes desc, then if_need_be desc. `position` orders the RESULT; it is
+// NOT a third ranking key, and this distinction is load-bearing.
+//
+// This section previously read "yes desc, if_need_be desc, position asc" while
+// also requiring (O3.6) that every tied option be badged. Those cannot both
+// hold: `position` is unique, so a three-key ranking makes a full tie
+// impossible and O3.6 unreachable — a rule that could never fire, quietly
+// dressed as behaviour. Corrected here rather than annotated. Options tied on
+// (yes, if_need_be) are ALL returned, earliest position first. Breaking the tie
+// by position would pick a winner on the arbitrary grounds of which option the
+// organiser happened to type first, which is exactly what O3.6 forbids.
 describe('bestOption', () => {
   it('should return nothing when no options exist')
   it('should return nothing when no responses exist')
@@ -3922,8 +3938,7 @@ describe('bestOption', () => {
   it('should return the option with the most yes votes when yes counts differ')
   it('should rank on yes count alone when one option has more yes and fewer if need be')
   it('should return the option with more if need be votes when two options tie on yes')
-  it('should return the earlier option by position when two options tie on yes and on if need be')
-  it('should return every tied option when two options tie completely')
+  it('should return every option tied on yes and on if need be, earliest position first')
 })
 ```
 
