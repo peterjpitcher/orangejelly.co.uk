@@ -32,6 +32,9 @@ export type Instant = Date | string;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const WALL_CLOCK_TIME_PATTERN = /^([01]\d|2[0-3]):([0-5]\d)$/;
 
+/** An ISO 8601 timestamp that names its offset: trailing Z, or ±HH:mm. */
+const ZONED_INSTANT_PATTERN = /T.*(Z|[+-]\d{2}:?\d{2})$/i;
+
 const HOUR_IN_MS = 60 * 60 * 1000;
 
 const LONG_DATE = 'EEEE, d MMMM yyyy';
@@ -86,15 +89,52 @@ export function formatDateInLondon(date: IsoDate, style: 'long' | 'short' = 'lon
   return formatInTimeZone(pinnedToUtc, 'UTC', style === 'short' ? SHORT_DATE : LONG_DATE);
 }
 
-/** The calendar date in London for a given instant, as 'YYYY-MM-DD'. */
-export function toLocalIsoDate(instant: Instant): IsoDate {
+/**
+ * Resolves a value that must be an instant, refusing anything ambiguous.
+ *
+ * This is the other half of the date/slot split, and it guards the direction
+ * that is easy to forget. `assertIsoDate` stops an instant being treated as a
+ * date; this stops a date being treated as an instant. Two failures are refused
+ * rather than papered over:
+ *
+ *   - **A date-only string.** '2026-07-04' parses happily as UTC midnight and
+ *     renders in London as "4 July 2026 at 1:00am" — a time nobody chose,
+ *     presented as fact. A date-only option has no time; asking for one is a
+ *     caller bug.
+ *   - **A timestamp with no zone.** '2026-07-04T19:00:00' is parsed as *local*
+ *     time. On a Vercel lambda that is UTC; on a laptop in London it is BST.
+ *     Same string, two instants an hour apart, and it only misbehaves in
+ *     production. A Date object is always unambiguous and passes untouched.
+ */
+function resolveInstant(instant: Instant, label = 'instant'): Date {
+  if (typeof instant === 'string') {
+    if (ISO_DATE_PATTERN.test(instant)) {
+      throw new Error(
+        `Received a date-only value where an ${label} was expected: "${instant}". ` +
+          'A date-only option carries no time — use formatDateInLondon instead.'
+      );
+    }
+
+    if (!ZONED_INSTANT_PATTERN.test(instant)) {
+      throw new Error(
+        `Timestamp "${instant}" has no timezone or offset, so it means different things ` +
+          'on different machines. Supply a Date, or an ISO string ending in Z or an offset.'
+      );
+    }
+  }
+
   const value = typeof instant === 'string' ? new Date(instant) : instant;
 
   if (Number.isNaN(value.getTime())) {
-    throw new Error(`Invalid instant: "${String(instant)}".`);
+    throw new Error(`Invalid ${label}: "${String(instant)}".`);
   }
 
-  return formatInTimeZone(value, LONDON_TIME_ZONE, 'yyyy-MM-dd');
+  return value;
+}
+
+/** The calendar date in London for a given instant, as 'YYYY-MM-DD'. */
+export function toLocalIsoDate(instant: Instant): IsoDate {
+  return formatInTimeZone(resolveInstant(instant), LONDON_TIME_ZONE, 'yyyy-MM-dd');
 }
 
 /**
@@ -107,15 +147,18 @@ export function getTodayIsoDate(): IsoDate {
   return toLocalIsoDate(new Date());
 }
 
-/** Renders an instant as a London wall-clock date and time. */
+/**
+ * Renders an instant as a London wall-clock date and time.
+ *
+ * Refuses a date-only value. See `resolveInstant` — a date has no time, and
+ * inventing one is how "Saturday the 4th" becomes "Saturday the 4th at 1:00am".
+ */
 export function formatSlotInLondon(instant: Instant): string {
-  const value = typeof instant === 'string' ? new Date(instant) : instant;
-
-  if (Number.isNaN(value.getTime())) {
-    throw new Error(`Invalid instant: "${String(instant)}".`);
-  }
-
-  return formatInTimeZone(value, LONDON_TIME_ZONE, `${LONG_DATE} 'at' ${TIME_OF_DAY}`);
+  return formatInTimeZone(
+    resolveInstant(instant),
+    LONDON_TIME_ZONE,
+    `${LONG_DATE} 'at' ${TIME_OF_DAY}`
+  );
 }
 
 /**
@@ -126,15 +169,9 @@ export function formatSlotInLondon(instant: Instant): string {
  * reads as a range running backwards.
  */
 export function formatSlotRangeInLondon(start: Instant, end: Instant): string {
-  const startValue = typeof start === 'string' ? new Date(start) : start;
-  const endValue = typeof end === 'string' ? new Date(end) : end;
+  const startValue = resolveInstant(start, 'start instant');
+  const endValue = resolveInstant(end, 'end instant');
 
-  if (Number.isNaN(startValue.getTime())) {
-    throw new Error(`Invalid start instant: "${String(start)}".`);
-  }
-  if (Number.isNaN(endValue.getTime())) {
-    throw new Error(`Invalid end instant: "${String(end)}".`);
-  }
   if (endValue.getTime() <= startValue.getTime()) {
     throw new Error('Slot end must be after slot start.');
   }

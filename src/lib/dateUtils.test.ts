@@ -121,6 +121,33 @@ describe('formatSlotInLondon — timed options', () => {
     // 23:30 UTC on 4 July is 00:30 on 5 July in London.
     expect(formatSlotInLondon('2026-07-04T23:30:00Z')).toBe('Sunday, 5 July 2026 at 12:30am');
   });
+
+  it('rejects a date-only value rather than inventing a time for it', () => {
+    // The guard must run BOTH ways. formatDateInLondon already refuses an
+    // instant, but without this the reverse slipped through: '2026-07-04' parsed
+    // as UTC midnight and rendered in London as "4 July 2026 at 1:00am" — a time
+    // nobody chose, presented as fact. A date-only option carries no time, so
+    // asking for its time is a caller bug, not a formatting question.
+    expect(() => formatSlotInLondon('2026-07-04')).toThrow(/date-only/i);
+  });
+
+  it('rejects a timestamp with no zone, which would silently mean two things', () => {
+    // '2026-07-04T19:00:00' is parsed as LOCAL time. On a Vercel lambda that is
+    // UTC; on a developer's laptop in London it is BST. Same string, two
+    // instants an hour apart, and the bug only shows in production.
+    expect(() => formatSlotInLondon('2026-07-04T19:00:00')).toThrow(/timezone|offset/i);
+  });
+
+  it('accepts an explicit positive offset, not only Z', () => {
+    // 19:00+01:00 is 18:00 UTC, which is 19:00 in London in July.
+    expect(formatSlotInLondon('2026-07-04T19:00:00+01:00')).toBe('Saturday, 4 July 2026 at 7:00pm');
+  });
+
+  it('still accepts a Date object, which is always unambiguous', () => {
+    expect(formatSlotInLondon(new Date('2026-07-04T18:00:00Z'))).toBe(
+      'Saturday, 4 July 2026 at 7:00pm'
+    );
+  });
 });
 
 describe('formatSlotRangeInLondon', () => {
