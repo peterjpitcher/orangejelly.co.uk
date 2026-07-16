@@ -16,7 +16,6 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "db:migrate": "tsx scripts/migrate-db.ts",
     "build:search": "tsx -e \"import { buildSearchIndex } from './src/lib/search'; buildSearchIndex();\"",
     "build:feeds": "tsx -e \"import { saveFeeds } from './src/lib/feeds'; saveFeeds();\"",
     "build:all": "npm run build:search && npm run build:feeds",
