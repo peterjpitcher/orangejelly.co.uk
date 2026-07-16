@@ -1,6 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { calculateExpiresAt, createPoll, MAX_OPTIONS, RETENTION_DAYS } from './polls';
+import {
+  calculateExpiresAt,
+  createPoll,
+  MAX_OPTIONS,
+  RETENTION_DAYS,
+  updateResponse,
+} from './polls';
 
 /**
  * Supabase is mocked throughout — the repo's rule is that tests never reach a
@@ -9,16 +15,41 @@ import { calculateExpiresAt, createPoll, MAX_OPTIONS, RETENTION_DAYS } from './p
  */
 
 const insert = vi.fn();
+const upsert = vi.fn();
+const update = vi.fn();
 const del = vi.fn();
-const eq = vi.fn();
+
+/** Rows the mocked database returns from a .select(). Set per test. */
+const rows: { participant: unknown; poll: unknown } = { participant: null, poll: null };
 
 vi.mock('./supabase-admin', () => ({
   isSupabaseAdminConfigured: vi.fn(() => true),
   getSupabaseAdminClient: vi.fn(() => ({
     from: (table: string) => ({
-      insert: (rows: unknown) => insert(table, rows),
+      insert: (r: unknown) => insert(table, r),
+      upsert: (r: unknown, opts: unknown) => upsert(table, r, opts),
+      update: (values: unknown) => {
+        update(table, values);
+        const chain: Record<string, unknown> = {};
+        chain.eq = () => chain;
+        chain.lt = () => chain;
+        chain.select = () => chain;
+        chain.maybeSingle = async () => ({ data: rows.poll, error: null });
+        chain.then = (resolve: (v: unknown) => unknown) =>
+          Promise.resolve({ error: null }).then(resolve);
+        return chain;
+      },
       delete: () => ({ eq: (col: string, val: unknown) => del(table, col, val) }),
-      select: () => ({ eq }),
+      select: () => {
+        const chain: Record<string, unknown> = {};
+        chain.eq = () => chain;
+        chain.order = () => chain;
+        chain.maybeSingle = async () => ({
+          data: table === 'poll_participants' ? rows.participant : rows.poll,
+          error: null,
+        });
+        return chain;
+      },
     }),
   })),
 }));
@@ -26,7 +57,10 @@ vi.mock('./supabase-admin', () => ({
 beforeEach(() => {
   vi.clearAllMocks();
   insert.mockResolvedValue({ error: null });
+  upsert.mockResolvedValue({ error: null });
   del.mockResolvedValue({ error: null });
+  rows.participant = null;
+  rows.poll = null;
 });
 
 const dateOption = (optionDate: string) => ({ optionDate });
@@ -202,5 +236,79 @@ describe('createPoll', () => {
 
     expect(first.data?.participantToken).not.toBe(second.data?.participantToken);
     expect(first.data?.organiserToken).not.toBe(second.data?.organiserToken);
+  });
+});
+
+describe('updateResponse', () => {
+  const openPoll = { participant: { id: 'p-1', poll_id: 'poll-1' }, poll: { status: 'open' } };
+  const answers = [{ optionId: 'opt-1', availability: 'yes' as const }];
+
+  it('should never delete a response in order to replace it', async () => {
+    // The bug this pins. The original implementation deleted every one of the
+    // participant's answers and then inserted the replacements. A failure
+    // between the two lost their response entirely — they submitted a change
+    // and their answers vanished. There is a unique constraint on
+    // (participant_id, option_id), so an upsert does the job in one atomic
+    // statement and the delete was never needed.
+    Object.assign(rows, openPoll);
+
+    await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    expect(del).not.toHaveBeenCalled();
+    expect(upsert).toHaveBeenCalled();
+  });
+
+  it('should upsert on the (participant_id, option_id) constraint', async () => {
+    Object.assign(rows, openPoll);
+
+    await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    const [table, , opts] = upsert.mock.calls[0];
+    expect(table).toBe('poll_responses');
+    expect(opts).toMatchObject({ onConflict: 'participant_id,option_id' });
+  });
+
+  it('should leave the previous answers intact when the write fails', async () => {
+    // The property that matters: a failed edit is a no-op, not a wipe.
+    Object.assign(rows, openPoll);
+    upsert.mockResolvedValueOnce({ error: { message: 'write exploded' } });
+
+    const result = await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    expect(result.stored).toBe(false);
+    expect(result.error).toBe('write exploded');
+    expect(del).not.toHaveBeenCalled();
+  });
+
+  it('should refuse an unknown edit token without touching any data', async () => {
+    rows.participant = null;
+
+    const result = await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    expect(result.stored).toBe(false);
+    expect(result.error).toMatch(/no longer valid/i);
+    expect(upsert).not.toHaveBeenCalled();
+    expect(del).not.toHaveBeenCalled();
+  });
+
+  it('should refuse to change a response once the poll is closed', async () => {
+    rows.participant = openPoll.participant;
+    rows.poll = { status: 'closed' };
+
+    const result = await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    expect(result.stored).toBe(false);
+    expect(result.error).toMatch(/no longer accepting changes/i);
+    expect(upsert).not.toHaveBeenCalled();
+  });
+
+  it('should refuse to change a response once the poll is confirmed', async () => {
+    rows.participant = openPoll.participant;
+    rows.poll = { status: 'confirmed' };
+
+    const result = await updateResponse({ editToken: 'a'.repeat(22), answers });
+
+    expect(result.stored).toBe(false);
+    expect(upsert).not.toHaveBeenCalled();
   });
 });

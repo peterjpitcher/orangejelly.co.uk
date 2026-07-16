@@ -426,16 +426,28 @@ export async function updateResponse(input: {
         .eq('id', participant.id);
     }
 
-    await supabase.from('poll_responses').delete().eq('participant_id', participant.id);
-
-    const { error } = await supabase.from('poll_responses').insert(
+    // Upsert, never delete-then-insert.
+    //
+    // The original version deleted every one of the participant's answers and
+    // then inserted the replacements. Anything failing between the two — a
+    // dropped connection, a rejected row — left them with no response at all:
+    // they submitted a change and their answers vanished, with an error message
+    // that did not mention it. Editing your own response is the feature this
+    // tool is meant to get right, so silently destroying it is the worst
+    // available bug.
+    //
+    // `unique (participant_id, option_id)` on poll_responses gives a real
+    // conflict target, so one statement does the whole job atomically. A failure
+    // now leaves the previous answers exactly where they were.
+    const { error } = await supabase.from('poll_responses').upsert(
       input.answers.map((answer) => ({
         id: randomUUID(),
         poll_id: participant.poll_id,
         participant_id: participant.id,
         option_id: answer.optionId,
         availability: answer.availability,
-      }))
+      })),
+      { onConflict: 'participant_id,option_id' }
     );
 
     if (error) return { stored: false, error: error.message };

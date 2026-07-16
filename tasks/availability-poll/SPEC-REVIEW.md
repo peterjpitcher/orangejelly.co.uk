@@ -2,9 +2,10 @@
 
 **Review date:** 16 July 2026  
 **Reviewed document:** `tasks/availability-poll/SPEC.md`  
-**Repository point checked:** `cd699365`  
+**Repository point checked:** `ededdb01` (the agenda commit landed while the review was in progress)
+
 **Audience:** Developer and delivery owner  
-**Original specification changed:** No
+**Changed by this review:** No. A separate agenda edit appeared while the review was in progress; it is assessed in C39.
 
 ## Overall assessment
 
@@ -22,6 +23,7 @@ The largest blockers are:
 6. Participant email is not verified. A person can type somebody else's address, so the claimed anti-relay control is not real.
 7. The privacy wording applies Article 14 to data entered directly by the participant and states a false source for that data.
 8. The test plan contains assertions that contradict the current code and makes end-to-end testing optional for the riskiest journeys.
+9. The newly added agenda requirement is only partly integrated into the specification and code contract.
 
 ## Review basis
 
@@ -35,7 +37,7 @@ This review checked the specification against:
 - the current dependency versions installed in the repository;
 - official ICO, Resend, Vercel, Cloudflare and Next.js guidance where the fact can change.
 
-The existing suite was run during review: **13 test files and 169 tests passed**. The specification says 12 files and 149 tests, which is one example of its stale repository snapshot.
+The existing suite was run during review: **13 test files and 171 tests passed**. The specification says 12 files and 149 tests, which is one example of its stale repository snapshot.
 
 ### Labels
 
@@ -57,7 +59,7 @@ The existing suite was run during review: **13 test files and 169 tests passed**
 **Type:** Delivery / documentation  
 **Status:** Confirmed issue
 
-**Description:** The document says `src/lib/db/polls.ts` is net new, says `formatSlotInLondon()` accepts date-only input, asks for a test proving the wrong 1:00am output, says the base migration is unapplied in the build table, and records 149 tests. The repository already has `src/lib/db/polls.ts`; `dateUtils.ts` now rejects date-only and zoneless slot values; both migrations are present; and 169 tests pass.
+**Description:** The document says `src/lib/db/polls.ts` is net new, says `formatSlotInLondon()` accepts date-only input, asks for a test proving the wrong 1:00am output, says the base migration is unapplied in the build table, and records 149 tests. The repository already has `src/lib/db/polls.ts`; `dateUtils.ts` now rejects date-only and zoneless slot values; all three migrations are present; and 171 tests pass.
 
 **Rationale:** A developer following the document would undo a date safety fix, duplicate an existing data layer, or write tests that must fail.
 
@@ -65,7 +67,7 @@ The existing suite was run during review: **13 test files and 169 tests passed**
 
 **Recommended action:** Produce a dated errata pass before coding. Remove superseded instructions instead of relying on the correction note at the top. Mark every existing file as **modify**, **replace** or **keep**, with the current commit as the baseline.
 
-**Open questions:** Is `cd699365` the agreed implementation baseline? Has any other branch moved the poll code further?
+**Open questions:** Is `ededdb01` the agreed implementation baseline? Has any other branch moved the poll code further?
 
 ### C02. The applied email migration does not match the specified contract
 
@@ -714,6 +716,26 @@ Add a per-address limit and suppression check whichever route is chosen.
 
 **Open questions:** Who owns keeping the contract aligned after each phase?
 
+### C39. The new agenda requirement is only partly integrated
+
+**Relevant section:** Settled decision 5; O1.1/O1.1a; P1.1; §2.1; §3.6.1; §4; §5; §6
+
+**Priority:** P1
+
+**Type:** Functional / data / delivery
+
+**Status:** Confirmed issue
+
+**Description:** An agenda field was added while this review was in progress. It now appears in the settled decisions, create-page acceptance criteria, data helper, unit tests, committed migration and calendar mapping. The rest of the contract was not reconciled. The detailed create-form table and microcopy omit it; the vote-page acceptance criteria, composition and content list omit it; `createPollSchema` has no agenda field or 2,000-character validation; email input/escaping contracts do not consistently include it; the calendar example still builds the description without it; and the build and test plans do not cover the full journey. The specification says the migration was applied, but application to the target database was not verified during this review.
+
+**Rationale:** A requirement is not implementable from one acceptance-criterion row when the binding schemas, page contracts, examples and tests say something different.
+
+**Impact:** The agenda could be stored but silently dropped from pages, email or calendar output. Oversized input could bypass the UI limit, and delivery may assume an unverified schema state.
+
+**Recommended action:** Finish one reconciliation pass after the concurrent edit settles. Add `agenda` to the server schema, create/vote page contracts, safe rendering and email/calendar inputs, exact limits, build inventory and unit/browser tests. Verify the target database migration history before calling it applied. Keep `description` and `agenda` separate, as the new decision requires.
+
+**Open questions:** Is the agenda required on the organiser results page and every participant email, or only the vote page and calendar file? Which database environment received the migration, and how was that verified?
+
 ---
 
 ## Optional improvements
@@ -859,4 +881,3 @@ These decisions must be answered before the affected work begins:
 5. Add transactional RPCs/outbox and the minimal token-safe layout before production mail.
 6. Complete privacy, security and accessibility review before Phase 3 is exposed publicly.
 7. Run browser, local-database, real-inbox and cron failure tests before enabling the feature.
-
