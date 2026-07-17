@@ -57,11 +57,11 @@ function privacyNoticeParagraphs({ organiserName }: PrivacyNoticeInput): string[
 
     `Your name and answers are visible to ${organiserName}, who set the poll up. We do not show your email address to anyone else. (If you reply to this email it goes to ${organiserName}, who will then see the address you reply from.)`,
 
-    'We use Supabase to store the poll, Resend to send this email, and Vercel to run the site. Resend processes it in the United States under standard contractual protections. We do not sell your details or use them for marketing.',
+    'Trusted providers host the poll and deliver this email on our behalf; the full list is at www.orangejelly.co.uk/privacy. We do not sell your details and we do not use them for marketing.',
 
     'We delete the whole poll 60 days after the last response or the last proposed date, whichever is later.',
 
-    `To see, correct or delete your data, write to ${PRIVACY_RIGHTS_EMAIL}. Please don't reply to this email for that — replies go to ${organiserName}, not to us. You can also complain to the ICO at ico.org.uk.`,
+    `To see, correct or delete your data, write to ${PRIVACY_RIGHTS_EMAIL}. Please don't reply to this email for that; replies go to ${organiserName}, not to us. Your full rights are at www.orangejelly.co.uk/privacy.`,
   ];
 }
 

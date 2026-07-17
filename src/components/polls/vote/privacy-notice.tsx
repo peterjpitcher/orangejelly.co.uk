@@ -58,9 +58,8 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
         </Text>
 
         <Text size="sm" color="muted">
-          We use Supabase to store the poll, Vercel to run the site, and Resend to send that one
-          email. They may process your details outside the UK under the standard protections in
-          their contracts with us. We do not sell your details and we do not use them for marketing.
+          Trusted providers host the poll and deliver that one email on our behalf; the full list is
+          in our privacy policy. We do not sell your details and we do not use them for marketing.
         </Text>
 
         <Text size="sm" color="muted">
@@ -73,20 +72,11 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
           <a className="underline hover:no-underline" href={`mailto:${CONTACT.email}`}>
             {CONTACT.email}
           </a>
-          . You can also complain to the ICO at{' '}
-          <a
-            className="underline hover:no-underline"
-            href="https://ico.org.uk"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            ico.org.uk
-          </a>
           .{' '}
           <Link className="underline hover:no-underline" href="/privacy">
             Read the full privacy policy
           </Link>
-          .
+          , which also covers your right to complain.
         </Text>
       </div>
     </section>

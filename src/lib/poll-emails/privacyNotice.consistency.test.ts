@@ -43,13 +43,32 @@ describe('the privacy notice says the same thing on the page and in the email', 
     expect(VOTE_NOTICE).toContain('Orange Jelly Limited');
   });
 
-  it('should name the same processors in both', () => {
-    // Naming a processor that does not touch the data is as wrong as omitting
-    // one that does. Turnstile is deliberately absent from both: it guards poll
-    // creation only and never sees a participant.
-    for (const processor of ['Supabase', 'Resend', 'Vercel']) {
-      expect(emailNotice).toContain(processor);
-      expect(VOTE_NOTICE).toContain(processor);
+  it('should name no vendor in either short notice, and defer both to /privacy', () => {
+    // Peter's decision, 17 July 2026: the short notices stop reading like a
+    // compliance form. The vendor list and the ICO complaint right move to the
+    // one durable document, /privacy, which both notices link to. That keeps the
+    // required disclosures made somewhere the reader is pointed at, while the
+    // poll page talks like a person.
+    for (const vendor of ['Supabase', 'Resend', 'Vercel']) {
+      expect(emailNotice).not.toContain(vendor);
+      expect(VOTE_NOTICE).not.toContain(vendor);
+    }
+    expect(emailNotice).toContain('orangejelly.co.uk/privacy');
+    expect(VOTE_NOTICE).toContain('/privacy');
+  });
+
+  it('should keep the ICO line OUT of the short notices but IN the full policy', () => {
+    // The right to complain to the regulator is a disclosure UK GDPR requires.
+    // Removing it from the short notices is fine only for as long as the full
+    // policy still carries it, so this test reads the policy page and fails the
+    // moment someone tidies the ICO out of there too.
+    expect(emailNotice).not.toMatch(/ico\.org\.uk/i);
+    expect(VOTE_NOTICE).not.toMatch(/ico\.org\.uk/i);
+
+    const policyPage = readFileSync(path.join(process.cwd(), 'src/app/privacy/page.tsx'), 'utf8');
+    expect(policyPage).toMatch(/ico\.org\.uk/i);
+    for (const vendor of ['Supabase', 'Resend', 'Vercel']) {
+      expect(policyPage).toContain(vendor);
     }
   });
 
