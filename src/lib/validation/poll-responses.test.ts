@@ -14,7 +14,7 @@ const OPTION_B = '22222222-2222-4222-8222-222222222222';
 function validSubmission(overrides: Record<string, unknown> = {}) {
   return {
     displayName: 'Billy Summers',
-    email: '',
+    email: 'billy@example.com',
     votes: [{ optionId: OPTION_A, availability: 'yes' as const }],
     ...overrides,
   };
@@ -37,13 +37,21 @@ describe('availabilitySchema', () => {
 });
 
 describe('submitResponseSchema', () => {
-  it('should accept a valid submission with no email', () => {
+  it('should accept a valid submission', () => {
     expect(submitResponseSchema.safeParse(validSubmission()).success).toBe(true);
   });
 
-  it('should accept an empty string email, because an untouched input posts one', () => {
+  it('should reject a submission with no email at all', () => {
+    // Required as of 17 July 2026. These two tests previously asserted the
+    // opposite, and the behaviour they pinned was the reason a participant could
+    // answer a poll and never be told the outcome.
+    const { email: _dropped, ...withoutEmail } = validSubmission();
+    expect(submitResponseSchema.safeParse(withoutEmail).success).toBe(false);
+  });
+
+  it('should reject an empty string email rather than storing a blank', () => {
     const result = submitResponseSchema.safeParse(validSubmission({ email: '' }));
-    expect(result.success).toBe(true);
+    expect(result.success).toBe(false);
   });
 
   it('should accept a valid email and lowercase it', () => {

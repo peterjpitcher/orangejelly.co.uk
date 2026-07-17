@@ -74,7 +74,12 @@ function bothVotes() {
 }
 
 function submission(overrides: Record<string, unknown> = {}) {
-  return { displayName: 'Billy Summers', email: '', votes: bothVotes(), ...overrides };
+  return {
+    displayName: 'Billy Summers',
+    email: 'billy@example.com',
+    votes: bothVotes(),
+    ...overrides,
+  };
 }
 
 beforeEach(() => {
@@ -123,9 +128,22 @@ describe('submitResponse', () => {
     );
   });
 
-  it('should normalise an empty email to undefined so no empty string is stored', async () => {
-    await submitResponse(TOKEN, submission({ email: '' }));
-    expect(storeResponse).toHaveBeenCalledWith(expect.objectContaining({ email: undefined }));
+  it('should refuse a blank email, because without one we cannot send the invite', async () => {
+    // Was: "normalises an empty email to undefined". The address is required as
+    // of 17 July 2026 — an optional one bought a participant the right to answer
+    // and then never hear the outcome, which is the one thing the tool exists to
+    // tell them.
+    const result = await submitResponse(TOKEN, submission({ email: '' }));
+
+    expect(result.error).toBeDefined();
+    expect(storeResponse).not.toHaveBeenCalled();
+  });
+
+  it('should refuse an address that is not an address', async () => {
+    const result = await submitResponse(TOKEN, submission({ email: 'not-an-email' }));
+
+    expect(result.error).toBeDefined();
+    expect(storeResponse).not.toHaveBeenCalled();
   });
 
   it('should short-circuit on the honeypot, reporting success and writing nothing', async () => {

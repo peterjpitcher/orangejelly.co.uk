@@ -53,7 +53,7 @@ function privacyNoticeParagraphs({ organiserName }: PrivacyNoticeInput): string[
   return [
     'Orange Jelly Limited runs this poll tool at www.orangejelly.co.uk and is the controller of your data. You gave us these details yourself when you responded to this poll.',
 
-    `We hold your name, your answers and — because you gave it — your email address, so the group can find a time that works and so we can tell you what was confirmed. Our lawful basis is legitimate interests: arranging a meeting people have chosen to take part in.`,
+    `We hold your name, your answers and your email address, so the group can find a time that works and so we can tell you what was confirmed. We ask for the address because without it we cannot send you the time that was picked. Our lawful basis is legitimate interests: arranging a meeting people have chosen to take part in.`,
 
     `Your name and answers are visible to ${organiserName}, who set the poll up. We do not show your email address to anyone else. (If you reply to this email it goes to ${organiserName}, who will then see the address you reply from.)`,
 

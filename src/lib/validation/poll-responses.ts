@@ -45,25 +45,35 @@ const displayNameSchema = z
   .max(50, VALIDATION_MESSAGES.name.maxLength);
 
 /**
- * Optional email.
+ * Required email. Peter's decision, 17 July 2026.
  *
- * Accepts `''` as well as `undefined` because an untouched optional input posts
- * an empty string. The action normalises `''` to `null` before it reaches
- * `poll_participants.email`, which is nullable — an empty string stored there is
- * a value that looks like an address and would later be treated as one.
+ * It was optional, on the reasoning that asking for less is kinder. It is not:
+ * without an address we cannot tell someone the time that was picked, so an
+ * optional email bought a participant the right to answer a poll and then never
+ * hear the outcome. That is not a lighter experience, it is a broken one, and
+ * the person it fails is the one who did what was asked.
+ *
+ * The trade is honest and worth naming: it is one more field, and someone who
+ * will not give an address can no longer take part. For a small group being
+ * invited by someone they know, that is the right side of the trade. It also
+ * makes the privacy notice simpler, because "we use it for exactly one thing"
+ * is now true of every participant rather than some of them.
+ *
+ * `poll_participants.email` stays nullable at the database level. There is no
+ * value in a migration that forbids what the form already forbids, and keeping
+ * the column nullable leaves the decision reversible without one.
  */
-const optionalEmailSchema = z
+const requiredEmailSchema = z
   .string()
   .trim()
   .toLowerCase()
+  .min(1, VALIDATION_MESSAGES.email.required)
   .email(VALIDATION_MESSAGES.email.invalid)
-  .max(254, 'That email address is too long')
-  .optional()
-  .or(z.literal(''));
+  .max(254, 'That email address is too long');
 
 export const submitResponseSchema = z.object({
   displayName: displayNameSchema,
-  email: optionalEmailSchema,
+  email: requiredEmailSchema,
   votes: votesSchema,
   /** Honeypot. Never rendered to a person, so anything in it is a bot. */
   website: z.string().optional(),

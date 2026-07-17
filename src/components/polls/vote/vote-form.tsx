@@ -18,7 +18,7 @@ import {
 } from './poll-display';
 
 /**
- * The vote form: name, optional email, one card per option, submit.
+ * The vote form: name, email, one card per option, submit.
  *
  * NO ANSWER IS PRESELECTED. Every option starts `null` and must be chosen
  * explicitly. Defaulting to "if need be" would be the tool inventing
@@ -170,7 +170,7 @@ export default function VoteForm({
         </div>
 
         <div>
-          <Label htmlFor="poll-email">Your email (optional)</Label>
+          <Label htmlFor="poll-email">Your email *</Label>
           <Input
             id="poll-email"
             name="email"
@@ -183,8 +183,8 @@ export default function VoteForm({
             onChange={(event) => setEmail(event.target.value)}
           />
           <Text size="sm" color="muted" className="mt-1" id="poll-email-help">
-            Only used to tell you the time once it&rsquo;s picked. Leave it blank if you&rsquo;d
-            rather.
+            So we can tell you the time once it&rsquo;s picked, and send you the calendar invite.
+            That&rsquo;s the only thing it&rsquo;s used for.
           </Text>
         </div>
 

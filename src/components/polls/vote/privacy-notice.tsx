@@ -45,9 +45,9 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
         </Text>
 
         <Text size="sm" color="muted">
-          We hold the name you type, your answers, and your email address if you choose to give one,
-          so the group can find a time that works. Our lawful basis is legitimate interests:
-          arranging a meeting people have chosen to take part in.
+          We hold the name you type, your answers, and your email address, so the group can find a
+          time that works. Our lawful basis is legitimate interests: arranging a meeting people have
+          chosen to take part in.
         </Text>
 
         <Text size="sm" color="muted">
