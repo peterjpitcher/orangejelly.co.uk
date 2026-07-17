@@ -89,7 +89,17 @@ export default function ButtonAdapter({
   const shadcnSize = sizeMap[size] || 'default';
 
   const buttonClasses = cn(
-    fullWidth && 'w-full block',
+    // `flex`, never `block`.
+    //
+    // The base is `inline-flex items-center justify-center`, and that
+    // items-center is the only thing vertically centring the label. Adding
+    // `block` here silently switched display away from flex, at which point
+    // align-items does nothing at all — it is not a flex container any more.
+    // The label then landed wherever line-height put it inside a box padded to
+    // min-h-[44px], which is why full-width buttons sat a few pixels off centre
+    // while inline ones looked fine. `flex` is block-level like `block` was, so
+    // w-full still behaves, and the centring survives.
+    fullWidth && 'w-full flex',
     whatsapp && '!bg-[var(--color-whatsapp)] hover:!bg-[var(--color-whatsapp-hover)] text-white',
     legacyVariantClasses[variant],
     legacySizeClasses[size],

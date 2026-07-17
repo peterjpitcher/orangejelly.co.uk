@@ -118,7 +118,13 @@ describe('Button', () => {
   it('shows fullWidth style when fullWidth is true', () => {
     render(<Button fullWidth>Full Width</Button>);
     expect(screen.getByRole('button').className).toContain('w-full');
-    expect(screen.getByRole('button').className).toContain('block');
+    // Was `toContain('block')`, which pinned a real bug in place. `block` is not
+    // a flex display, so it silently switched off the `items-center` that
+    // centres the label — full-width buttons rendered their text a few pixels
+    // off centre. The test asserted the implementation rather than the
+    // behaviour, so it passed all the way through. `flex` is block-level too,
+    // so w-full still works and the centring survives.
+    expect(screen.getByRole('button').className).toContain('flex');
   });
 
   it('forwards aria-busy to links when loading', () => {
