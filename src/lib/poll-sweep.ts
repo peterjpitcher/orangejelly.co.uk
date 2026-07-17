@@ -24,7 +24,7 @@ import { getAbsoluteUrl } from '@/lib/site-config';
 import type { IsoDate } from '@/lib/dateUtils';
 
 /**
- * The five passes behind the daily poll cron. See SPEC §3.8.
+ * The six passes behind the daily poll cron. See SPEC §3.8.
  *
  * Split out of the route handler because a route handler that also contains the
  * work cannot be tested without a request, and this is the one unattended job in
@@ -519,7 +519,7 @@ const NO_DELETES: SweepDeleteResult = { deleted: 0, backlog: false };
 const NO_EMAILS: SweepEmailResult = { sent: 0, failed: 0, backlog: false };
 
 /**
- * Runs all five passes and reports what actually happened.
+ * Runs all six passes and reports what actually happened.
  *
  * Never throws. A pass that fails is recorded in `errors` and the next one still
  * runs; the caller turns a non-empty `errors` into a 500.
