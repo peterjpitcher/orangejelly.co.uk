@@ -119,7 +119,14 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
     // Rendered outside <Section>: Section.tsx applies `overflow-hidden`, which
     // would clip the sticky headers and kill the horizontal scroll.
     <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
-      <div className="md:grid md:grid-cols-[2fr_1fr] md:items-start md:gap-8">
+      {/*
+        One column, in flow. This was a 2fr/1fr grid with the card in the right
+        column, which floated it as an island beside a near-empty header column:
+        a short title, a reply count, and a page of whitespace underneath. The
+        card caps its own width instead, so it reads as the next thing to look
+        at rather than furniture parked beside nothing.
+      */}
+      <div>
         <div>
           <Heading level={1}>{poll.title}</Heading>
           <Text color="muted" className="mt-2">
@@ -174,13 +181,15 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
         </div>
 
         {showBest && (
-          <BestOptionCard
-            organiserToken={params.token}
-            optionKind={poll.option_kind}
-            best={best}
-            options={options}
-            responderCount={responderCount}
-          />
+          <div className="max-w-xl">
+            <BestOptionCard
+              organiserToken={params.token}
+              optionKind={poll.option_kind}
+              best={best}
+              options={options}
+              responderCount={responderCount}
+            />
+          </div>
         )}
 
         {isConfirmed && (

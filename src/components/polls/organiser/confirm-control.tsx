@@ -40,6 +40,12 @@ export interface ConfirmControlProps {
   hasResponses: boolean;
   /** "Confirm this time" on the summary card; a per-row label reads oddly. */
   buttonLabel?: string;
+  /**
+   * The tied alternatives render as outline so the leader's button is the one
+   * that reads as "the" action. Three identical primaries stacked in one card
+   * is a wall of orange with no hierarchy at all.
+   */
+  buttonVariant?: 'primary' | 'outline';
 }
 
 export default function ConfirmControl({
@@ -48,6 +54,7 @@ export default function ConfirmControl({
   optionLabel,
   hasResponses,
   buttonLabel = 'Confirm this time',
+  buttonVariant = 'primary',
 }: ConfirmControlProps): JSX.Element {
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -70,7 +77,7 @@ export default function ConfirmControl({
   return (
     <>
       <Button
-        variant="primary"
+        variant={buttonVariant}
         size="medium"
         type="button"
         fullWidth

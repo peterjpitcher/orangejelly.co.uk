@@ -8,19 +8,21 @@ import ConfirmControl from './confirm-control';
 import { optionFullLabel, percentOf } from './results-display';
 
 /**
- * "Best so far" — the single most useful thing on this page, and the reason it
+ * "Best so far": the single most useful thing on this page, and the reason it
  * sits ABOVE the matrix rather than below it: the matrix needs horizontal
  * scrolling on a phone and this does not.
  *
- * PERCENTAGES HERE, COUNTS IN THE TABLE FOOT. Proportions are presented as
- * percentages per the standing rule, and the denominator is the number of people
- * who replied — never the number of `poll_responses` rows, which counts one
- * person once per option.
+ * COUNTS BELOW FIVE REPLIES, PERCENTAGES FROM FIVE. "100% said yes" computed
+ * from a single voter is true and absurd; "1 of 1 said yes" is the honest
+ * sentence. Once the denominator is big enough to mean something the display
+ * switches to percentages, per the house style for proportions. Either way the
+ * denominator is people who replied: never `poll_responses` rows, which count
+ * one person once per option.
  *
  * THE CARD IS SUPPRESSED ENTIRELY when nothing has any yes or if-need-be:
  * `bestOption` returns `[]` for that case, and rendering it anyway would badge
  * all eight options as joint winners, which is worse than showing none. The page
- * decides that by checking the array is non-empty — see `page.tsx`.
+ * decides that by checking the array is non-empty: see `page.tsx`.
  */
 
 export interface BestOptionCardProps {
@@ -46,29 +48,31 @@ export default function BestOptionCard({
   if (!leader || !leaderOption) return null;
 
   const label = optionFullLabel(leaderOption, optionKind);
-  const yesPct = percentOf(leader.yes, responderCount);
-  const ifNeedBePct = percentOf(leader.if_need_be, responderCount);
+
+  // "100% said yes" computed from one voter is technically true and reads like
+  // a joke. Below five replies the counts are the honest sentence ("1 of 1 said
+  // yes"); from five the percentage starts meaning something and stays per the
+  // house style for proportions.
+  const statLine =
+    responderCount < 5
+      ? `${leader.yes} of ${responderCount} said yes` +
+        (leader.if_need_be > 0 ? `, ${leader.if_need_be} if need be` : '')
+      : `${percentOf(leader.yes, responderCount)}% said yes, ${percentOf(
+          leader.if_need_be,
+          responderCount
+        )}% said if need be`;
 
   return (
     <Card variant="bordered" padding="medium" className="mt-6">
       <Heading level={2} className="text-xl">
         Best so far
       </Heading>
-      <Text className="mt-2">{optionKind === 'slots' ? `${label} UK time` : label}</Text>
-      <Text size="sm" color="muted" className="mt-1">
-        {yesPct}% said yes, {ifNeedBePct}% said if need be.
+      <Text className="mt-2 font-semibold">
+        {optionKind === 'slots' ? `${label} UK time` : label}
       </Text>
-
-      {/* Every tied option is badged. Picking one by `position` would be
-          arbitrary — that is the order the organiser typed them in, not a
-          preference — so the tie is stated and the choice handed back. */}
-      {best.length > 1 && (
-        <Text size="sm" color="muted" className="mt-2">
-          {best.length === 2
-            ? 'Two options are level. Pick whichever suits you.'
-            : `${best.length} options are level. Pick whichever suits you.`}
-        </Text>
-      )}
+      <Text size="sm" color="muted" className="mt-1">
+        {statLine}.
+      </Text>
 
       <ConfirmControl
         organiserToken={organiserToken}
@@ -78,28 +82,43 @@ export default function BestOptionCard({
         hasResponses={responderCount > 0}
       />
 
+      {/* Every tied option is offered. Picking one by `position` would be
+          arbitrary: that is the order the organiser typed them in, not a
+          preference: so the tie is stated WITH the alternatives it refers to,
+          and those render as outline buttons: subordinate to the leader's, not
+          three identical slabs of orange competing for the same click. */}
       {best.length > 1 && (
-        <ul className="mt-4 space-y-3 border-t border-charcoal/15 pt-4">
-          {best.slice(1).map((tally) => {
-            const option = optionById.get(tally.option_id);
-            if (!option) return null;
-            const tiedLabel = optionFullLabel(option, optionKind);
-            const display = optionKind === 'slots' ? `${tiedLabel} UK time` : tiedLabel;
+        <div className="mt-5 border-t border-charcoal/15 pt-4">
+          <Text size="sm" color="muted">
+            {best.length === 2
+              ? 'One more is level with it. Pick whichever suits you:'
+              : `${best.length - 1} more are level with it. Pick whichever suits you:`}
+          </Text>
+          <ul className="mt-3 space-y-4">
+            {best.slice(1).map((tally) => {
+              const option = optionById.get(tally.option_id);
+              if (!option) return null;
+              const tiedLabel = optionFullLabel(option, optionKind);
+              const display = optionKind === 'slots' ? `${tiedLabel} UK time` : tiedLabel;
 
-            return (
-              <li key={tally.option_id}>
-                <Text size="sm">{display}</Text>
-                <ConfirmControl
-                  organiserToken={organiserToken}
-                  optionId={tally.option_id}
-                  optionLabel={display}
-                  hasResponses={responderCount > 0}
-                  buttonLabel="Confirm this one instead"
-                />
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li key={tally.option_id}>
+                  <Text size="sm" className="font-medium">
+                    {display}
+                  </Text>
+                  <ConfirmControl
+                    organiserToken={organiserToken}
+                    optionId={tally.option_id}
+                    optionLabel={display}
+                    hasResponses={responderCount > 0}
+                    buttonLabel="Confirm this one instead"
+                    buttonVariant="outline"
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       )}
     </Card>
   );
