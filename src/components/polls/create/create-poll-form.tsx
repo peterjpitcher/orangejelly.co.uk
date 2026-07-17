@@ -42,6 +42,12 @@ import {
   type CreatePollFormValues,
 } from '@/lib/validation/polls';
 import { createPoll, resendVerification, type PollLinks } from '@/app/actions/polls';
+import CopyButton from '@/components/polls/copy-button';
+import {
+  buildInvitationText,
+  formatInvitationOption,
+  formatWallClockTime,
+} from '@/lib/poll-invitation';
 import AvailabilityGrid from './availability-grid';
 import DurationSelector from './duration-selector';
 import TurnstileWidget from './turnstile-widget';
@@ -118,6 +124,7 @@ export default function CreatePollForm(): JSX.Element {
   const [error, setError] = useState<string | null>(null);
   const [resendToken, setResendToken] = useState<string | null>(null);
   const [links, setLinks] = useState<PollLinks | null>(null);
+  const [invitation, setInvitation] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState('');
   const [duration, setDuration] = useState<DurationChoice>(DEFAULT_DURATION_MINUTES);
   const [pendingDuration, setPendingDuration] = useState<DurationChoice | null>(null);
@@ -279,6 +286,37 @@ export default function CreatePollForm(): JSX.Element {
       // Present only when a signed-in admin created it, in which case the poll
       // is already live and no email was ever sent.
       setLinks(result.links ?? null);
+      if (result.links) {
+        // Built here because only the form still holds the values; the action
+        // deliberately returns nothing but the links. Labels use the same
+        // wording rules as the server's version, tested in poll-invitation.
+        const labels =
+          values.optionKind === 'dates'
+            ? (values.dates ?? []).map((entry) => formatInvitationOption({ date: entry.date }))
+            : (values.slots ?? []).map((entry) =>
+                formatInvitationOption({
+                  date: entry.date,
+                  startTime: entry.startTime,
+                  endTime: entry.endTime,
+                  endsNextDay: entry.endsNextDay,
+                })
+              );
+        setInvitation(
+          buildInvitationText({
+            title: values.title,
+            organiserName: values.organiserName,
+            description: values.description,
+            agenda: values.agenda,
+            location: values.location,
+            optionLabels: labels,
+            participantUrl: result.links.participantUrl,
+            deadlineLabel:
+              values.deadlineDate && values.deadlineTime
+                ? `${formatInvitationOption({ date: values.deadlineDate })} at ${formatWallClockTime(values.deadlineTime)}`
+                : undefined,
+          })
+        );
+      }
       setStatus('success');
     } catch {
       setError('Something went wrong. Please try again, or message Peter on WhatsApp.');
@@ -288,7 +326,14 @@ export default function CreatePollForm(): JSX.Element {
   }
 
   if (status === 'success') {
-    return <SuccessState email={sentTo} resendToken={resendToken} links={links} />;
+    return (
+      <SuccessState
+        email={sentTo}
+        resendToken={resendToken}
+        links={links}
+        invitation={invitation}
+      />
+    );
   }
 
   const isSubmitting = status === 'submitting';
@@ -617,11 +662,14 @@ function SuccessState({
   email,
   resendToken,
   links,
+  invitation,
 }: {
   email: string;
   resendToken: string | null;
   /** Set only when a signed-in admin created the poll: it is already live. */
   links: PollLinks | null;
+  /** The pasteable message, built from the submitted values. Admin path only. */
+  invitation: string | null;
 }): JSX.Element {
   const [resendState, setResendState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [resendError, setResendError] = useState<string | null>(null);
@@ -688,9 +736,19 @@ function SuccessState({
             </p>
           </div>
 
-          <Button href={links.organiserUrl} variant="primary">
-            Open my poll
-          </Button>
+          <div className="flex flex-wrap items-center gap-2">
+            <Button href={links.organiserUrl} variant="primary">
+              Open my poll
+            </Button>
+            <CopyButton text={links.participantUrl} label="Copy the link" />
+            {invitation && (
+              <CopyButton
+                text={invitation}
+                label="Copy as an invitation"
+                copiedLabel="Invitation copied"
+              />
+            )}
+          </div>
         </div>
       </div>
     );

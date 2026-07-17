@@ -1,4 +1,5 @@
 import Text from '@/components/Text';
+import CopyButton from '@/components/polls/copy-button';
 
 /**
  * The participant link, ready to copy.
@@ -14,9 +15,19 @@ import Text from '@/components/Text';
 
 export interface ShareBlockProps {
   participantUrl: string;
+  /**
+   * The poll as one pasteable message: what it is, the times, the link, the
+   * deadline. Built server-side by the page, because only the server holds the
+   * options and the deadline. The bare link is for people who already know what
+   * it is; this is for the ones who do not.
+   */
+  invitationText: string;
 }
 
-export default function ShareBlock({ participantUrl }: ShareBlockProps): JSX.Element {
+export default function ShareBlock({
+  participantUrl,
+  invitationText,
+}: ShareBlockProps): JSX.Element {
   return (
     <section
       aria-labelledby="share-heading"
@@ -31,6 +42,18 @@ export default function ShareBlock({ participantUrl }: ShareBlockProps): JSX.Ele
       <p className="select-all break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
         {participantUrl}
       </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <CopyButton text={participantUrl} label="Copy the link" />
+        <CopyButton
+          text={invitationText}
+          label="Copy as an invitation"
+          copiedLabel="Invitation copied"
+        />
+      </div>
+      <Text size="sm" color="muted" className="mt-2">
+        The invitation is the whole message: what the meeting is, the times on offer, the link and
+        the deadline, ready to paste into WhatsApp or an email.
+      </Text>
     </section>
   );
 }

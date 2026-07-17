@@ -1,4 +1,7 @@
 import { notFound } from 'next/navigation';
+import { buildInvitationText } from '@/lib/poll-invitation';
+import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
+import { formatSlotInLondon } from '@/lib/dateUtils';
 import type { Metadata } from 'next';
 
 import Card from '@/components/Card';
@@ -73,6 +76,28 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
   const { poll, options, participants, responses, tallies, responderCount } = view;
 
   const participantUrl = getAbsoluteUrl(`/availability/p/${poll.participant_token}`);
+
+  // The pasteable message the share block offers. Labels come from the same
+  // formatter the emails use, so the invitation and the confirm email cannot
+  // describe one option two ways.
+  const invitationText = buildInvitationText({
+    title: poll.title,
+    organiserName: poll.organiser_name,
+    description: poll.description ?? undefined,
+    agenda: poll.agenda ?? undefined,
+    location: poll.location ?? undefined,
+    optionLabels: options.map((option) =>
+      formatOptionForEmail({
+        optionKind: poll.option_kind,
+        optionDate: option.option_date,
+        startsAt: option.starts_at,
+        endsAt: option.ends_at,
+      })
+    ),
+    participantUrl,
+    deadlineLabel: poll.entries_close_at ? formatSlotInLondon(poll.entries_close_at) : undefined,
+  });
+
   const best = bestOption(tallies);
   const hasReplies = participants.length > 0;
 
@@ -173,7 +198,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
       <div className="mt-8 space-y-6">
         {/* The share block renders above the matrix in EVERY state — the empty
             state is precisely when the organiser needs this link most. */}
-        <ShareBlock participantUrl={participantUrl} />
+        <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
 
         {hasReplies ? (
           <>
