@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const ADMIN_SESSION_KEY = 'oj-admin-session';
@@ -268,6 +269,19 @@ export default function AdminDashboard() {
             </p>
           </div>
           <div className="flex gap-3">
+            {/*
+              The only way in. The poll tool is deliberately absent from the
+              public nav — a poll is something you are sent a link to, not
+              something a visitor should browse to — but that reasoning stops at
+              the public nav. This is the authenticated page the one organiser
+              already uses, so it is the natural front door.
+            */}
+            <Link
+              href="/availability/new"
+              className="rounded-md border border-charcoal/20 bg-white px-4 py-2 text-sm font-medium text-charcoal transition-colors hover:bg-charcoal/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+            >
+              New availability poll
+            </Link>
             <button
               type="button"
               onClick={() => loadStats()}
