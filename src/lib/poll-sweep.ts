@@ -1,15 +1,23 @@
 import { sendPollEmail, POLL_EMAIL_SEND_INTERVAL_MS } from '@/lib/email';
 import {
   SWEEP_LIMIT,
+  findPollsDueForDeadlineReminder,
+  markDeadlineReminded,
   sweepExpiredPolls,
   sweepRateLimitWindows,
   sweepUnverifiedDrafts,
   type Availability,
   type OptionKind,
+  type PollDueForReminder,
 } from '@/lib/db/polls';
 import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supabase-admin';
 import { aggregateByOption, bestOption, countResponders } from '@/lib/poll-aggregate';
-import { buildDigestEmail, buildNudgeEmail, buildUnsubscribeHeaders } from '@/lib/poll-emails';
+import {
+  buildDeadlineReminderEmail,
+  buildDigestEmail,
+  buildNudgeEmail,
+  buildUnsubscribeHeaders,
+} from '@/lib/poll-emails';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 import { scrubTokens } from '@/lib/poll-tokens';
 import { getAbsoluteUrl } from '@/lib/site-config';
@@ -79,6 +87,7 @@ export interface PollSweepReport {
   rateLimits: SweepDeleteResult;
   digests: SweepEmailResult;
   nudges: SweepEmailResult;
+  deadlineReminders: SweepEmailResult;
   /** One scrubbed message per FAILED pass. Non-empty means the route returns 500. */
   errors: string[];
 }
@@ -429,6 +438,83 @@ async function runNudgePass(): Promise<SweepEmailResult> {
   return { sent, failed, backlog: candidates.length === EMAIL_PASS_LIMIT };
 }
 
+/**
+ * Emails the organiser, once, when a poll's entry deadline has passed.
+ *
+ * This is the human step of the deadline flow. Nothing here confirms a time or
+ * sends an invitation. It nudges the organiser to come and choose, because a
+ * poll's best answer is a judgement (a tie, a thin turnout, the person the
+ * meeting is for not having voted) and not a counter crossing a number.
+ *
+ * The claim is atomic and the send follows it, mirroring the nudge pass: mark
+ * the poll reminded only after the email is away, so a transient failure retries
+ * next run, while `markDeadlineReminded`'s `is null` guard stops two overlapping
+ * runs both stamping. The organiser address is verified, so a permanent failure
+ * that would loop is close to impossible.
+ */
+async function runDeadlineReminderPass(): Promise<SweepEmailResult> {
+  const supabase = getSupabaseAdminClient();
+  let sent = 0;
+  let failed = 0;
+
+  const due = await findPollsDueForDeadlineReminder({ limit: EMAIL_PASS_LIMIT });
+  if (!due.stored)
+    throw new Error(due.error ?? 'Could not read polls due for a deadline reminder.');
+
+  const polls = (due.data ?? []) as PollDueForReminder[];
+
+  for (let index = 0; index < polls.length; index++) {
+    const poll = polls[index];
+
+    // The turnout figure the email states, so it can say "only two people have
+    // answered" rather than push the organiser to confirm a thin poll.
+    const { data: responses } = await supabase
+      .from('poll_responses')
+      .select('participant_id, option_id, availability')
+      .eq('poll_id', poll.id);
+
+    const responderCount = countResponders((responses ?? []) as ResponseRow[]);
+
+    const email = buildDeadlineReminderEmail({
+      organiserName: poll.organiser_name,
+      pollTitle: poll.title,
+      totalResponders: responderCount,
+      organiserUrl: getAbsoluteUrl(`/availability/o/${poll.organiser_token}`),
+    });
+
+    const result = await sendPollEmail({
+      to: poll.organiser_email,
+      subject: email.subject,
+      html: email.html,
+      text: email.text,
+      // A single transactional reminder about one poll the organiser set up, not
+      // recurring mail, so no List-Unsubscribe. It cannot repeat.
+    });
+
+    if (result.error) {
+      failed++;
+      console.error(
+        `[poll-email] Deadline reminder not sent for poll ${poll.id}: ${scrubTokens(result.error)}`
+      );
+    } else {
+      sent++;
+      const stamped = await markDeadlineReminded(poll.id);
+      if (!stamped.stored) {
+        // Another run claimed it in the gap. The organiser has (or will have)
+        // exactly one reminder; this send was the redundant half of a race that
+        // the daily schedule makes near-impossible in practice.
+        console.error(
+          `[poll-email] Deadline reminder sent but not stamped for poll ${poll.id}: ${scrubTokens(stamped.error ?? 'unknown')}`
+        );
+      }
+    }
+
+    if (index < polls.length - 1) await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
+  }
+
+  return { sent, failed, backlog: polls.length === EMAIL_PASS_LIMIT };
+}
+
 const NO_DELETES: SweepDeleteResult = { deleted: 0, backlog: false };
 const NO_EMAILS: SweepEmailResult = { sent: 0, failed: 0, backlog: false };
 
@@ -451,6 +537,7 @@ export async function runPollSweep(): Promise<PollSweepReport> {
       rateLimits: NO_DELETES,
       digests: NO_EMAILS,
       nudges: NO_EMAILS,
+      deadlineReminders: NO_EMAILS,
       errors: ['The poll database is not configured.'],
     };
   }
@@ -488,6 +575,7 @@ export async function runPollSweep(): Promise<PollSweepReport> {
   const rateLimits = await runDelete('rate-limit sweep', runRateLimitPass);
   const digests = await runEmail('digest flush', runDigestPass);
   const nudges = await runEmail('nudge', runNudgePass);
+  const deadlineReminders = await runEmail('deadline reminder', runDeadlineReminderPass);
 
-  return { expired, drafts, rateLimits, digests, nudges, errors };
+  return { expired, drafts, rateLimits, digests, nudges, deadlineReminders, errors };
 }

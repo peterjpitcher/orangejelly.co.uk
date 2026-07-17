@@ -47,6 +47,12 @@ export interface CreatePollInput {
   organiserEmail: string;
   optionKind: OptionKind;
   options: PollOptionInput[];
+  /**
+   * Optional scheduled deadline. When it passes the organiser is nudged to
+   * confirm; nothing sends automatically. A UTC instant, already resolved from
+   * the London wall clock by the caller.
+   */
+  entriesCloseAt?: Date;
 }
 
 export interface PollTokensResult {
@@ -84,6 +90,8 @@ export interface PollRow {
   confirmed_option_id: string | null;
   email_verified_at: string | null;
   closes_at: string | null;
+  entries_close_at: string | null;
+  deadline_reminded_at: string | null;
   expires_at: string;
   created_at: string;
 }
@@ -195,6 +203,7 @@ export async function createPoll(input: CreatePollInput): Promise<StoredResult<P
       option_kind: input.optionKind,
       timezone: LONDON_TIME_ZONE,
       status: 'draft',
+      entries_close_at: input.entriesCloseAt?.toISOString() ?? null,
       expires_at: calculateExpiresAt(input.options).toISOString(),
     });
 
@@ -1073,6 +1082,84 @@ export async function sweepUnverifiedDrafts(
       stored: true,
       data: { deleted: ids.length, remaining: ids.length === limit ? -1 : 0 },
     };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/** A poll whose deadline has passed and whose organiser has not been nudged. */
+export interface PollDueForReminder {
+  id: string;
+  title: string;
+  organiser_name: string;
+  organiser_email: string;
+  organiser_token: string;
+  entries_close_at: string;
+}
+
+/**
+ * Finds open polls whose entry deadline has passed and which have not yet had
+ * their one reminder. Ordered oldest deadline first and bounded, like every
+ * other cron pass.
+ *
+ * The predicate mirrors `polls_deadline_due_idx` exactly (from
+ * 20260717090000), so the index covers it: `status = 'open'`, a non-null
+ * `entries_close_at` in the past, and a null `deadline_reminded_at`. A confirmed
+ * or closed poll is already dealt with and must not be nudged.
+ */
+export async function findPollsDueForDeadlineReminder(
+  options: { limit?: number } = {}
+): Promise<StoredResult<PollDueForReminder[]>> {
+  const limit = Math.min(options.limit ?? SWEEP_LIMIT, SWEEP_LIMIT);
+
+  try {
+    const supabase = requireAdminClient();
+    const now = new Date().toISOString();
+
+    const { data, error } = await supabase
+      .from('polls')
+      .select('id, title, organiser_name, organiser_email, organiser_token, entries_close_at')
+      .eq('status', 'open')
+      .not('entries_close_at', 'is', null)
+      .lte('entries_close_at', now)
+      .is('deadline_reminded_at', null)
+      .order('entries_close_at', { ascending: true })
+      .limit(limit);
+
+    if (error) return { stored: false, error: error.message };
+    return { stored: true, data: (data ?? []) as PollDueForReminder[] };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
+ * Stamps a poll as reminded, so its organiser is nudged once and not every day.
+ *
+ * Guarded on `deadline_reminded_at is null` so two overlapping cron runs cannot
+ * both stamp: whichever updates first claims it, and the second matches no row.
+ *
+ * Called AFTER a successful send, matching the nudge pass: a transient Resend
+ * failure then retries on the next run rather than being lost. The organiser's
+ * address is magic-link verified, so a permanent failure that would loop nightly
+ * is close to impossible. The concurrent-claim guard is what makes stamping
+ * after the send safe: two runs cannot both get through the send-then-stamp
+ * because the first stamp blocks the second.
+ */
+export async function markDeadlineReminded(pollId: string): Promise<StoredResult> {
+  try {
+    const supabase = requireAdminClient();
+    const { data, error } = await supabase
+      .from('polls')
+      .update({ deadline_reminded_at: new Date().toISOString() })
+      .eq('id', pollId)
+      .is('deadline_reminded_at', null)
+      .select('id')
+      .maybeSingle();
+
+    if (error) return { stored: false, error: error.message };
+    if (!data) return { stored: false, error: 'Already reminded.' };
+    return { stored: true };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
   }

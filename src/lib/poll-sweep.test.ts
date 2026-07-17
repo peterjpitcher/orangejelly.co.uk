@@ -18,6 +18,8 @@ import type * as EmailModule from './email';
 const sweepExpiredPolls = vi.fn();
 const sweepUnverifiedDrafts = vi.fn();
 const sweepRateLimitWindows = vi.fn();
+const findPollsDueForDeadlineReminder = vi.fn();
+const markDeadlineReminded = vi.fn();
 const sendPollEmail = vi.fn();
 
 /** Every pass that ran, in order. The order is a requirement, not an accident. */
@@ -48,6 +50,8 @@ vi.mock('./db/polls', async (importOriginal) => {
     sweepExpiredPolls: (options: unknown) => sweepExpiredPolls(options),
     sweepUnverifiedDrafts: (options: unknown) => sweepUnverifiedDrafts(options),
     sweepRateLimitWindows: (options: unknown) => sweepRateLimitWindows(options),
+    findPollsDueForDeadlineReminder: (options: unknown) => findPollsDueForDeadlineReminder(options),
+    markDeadlineReminded: (id: unknown) => markDeadlineReminded(id),
   };
 });
 
@@ -143,6 +147,11 @@ beforeEach(() => {
     callLog.push('rateLimits');
     return Promise.resolve(ok(0));
   });
+  // Not tracked in callLog: like the digest and nudge passes, it is a mail pass,
+  // and callLog exists to prove the three DELETES run first. Its ordering (last)
+  // is fixed structurally in runPollSweep.
+  findPollsDueForDeadlineReminder.mockResolvedValue({ stored: true, data: [] });
+  markDeadlineReminded.mockResolvedValue({ stored: true });
   sendPollEmail.mockResolvedValue({ success: true });
 });
 
@@ -172,6 +181,57 @@ describe('runPollSweep — the passes and their order', () => {
     expect(report.errors).toEqual([]);
     expect(report.expired).toEqual({ deleted: 0, backlog: false });
     expect(report.digests).toEqual({ sent: 0, failed: 0, backlog: false });
+    expect(report.deadlineReminders).toEqual({ sent: 0, failed: 0, backlog: false });
+  });
+
+  it('should email the organiser and stamp the poll when a deadline has passed', async () => {
+    findPollsDueForDeadlineReminder.mockResolvedValueOnce({
+      stored: true,
+      data: [
+        {
+          id: 'poll-1',
+          title: 'Quiz night',
+          organiser_name: 'Peter',
+          organiser_email: 'peter@orangejelly.co.uk',
+          organiser_token: 'org-token',
+          entries_close_at: '2026-07-17T09:00:00.000Z',
+        },
+      ],
+    });
+
+    const report = await runPollSweep();
+
+    expect(sendPollEmail).toHaveBeenCalledWith(
+      expect.objectContaining({ to: 'peter@orangejelly.co.uk' })
+    );
+    // Stamped only after the send, so a failed send retries next run.
+    expect(markDeadlineReminded).toHaveBeenCalledWith('poll-1');
+    expect(report.deadlineReminders.sent).toBe(1);
+    expect(report.errors).toEqual([]);
+  });
+
+  it('should not stamp the poll when the deadline reminder fails to send', async () => {
+    findPollsDueForDeadlineReminder.mockResolvedValueOnce({
+      stored: true,
+      data: [
+        {
+          id: 'poll-1',
+          title: 'Quiz night',
+          organiser_name: 'Peter',
+          organiser_email: 'peter@orangejelly.co.uk',
+          organiser_token: 'org-token',
+          entries_close_at: '2026-07-17T09:00:00.000Z',
+        },
+      ],
+    });
+    sendPollEmail.mockResolvedValueOnce({ error: 'Resend hiccup' });
+
+    const report = await runPollSweep();
+
+    expect(markDeadlineReminded).not.toHaveBeenCalled();
+    expect(report.deadlineReminders.failed).toBe(1);
+    // A failed send is per-poll, not a pass failure: no 500.
+    expect(report.errors).toEqual([]);
   });
 
   it('should report an error rather than five clean zeroes when the database is unconfigured', async () => {

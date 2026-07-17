@@ -29,6 +29,9 @@ export type { ConfirmEmailInput } from './confirm';
 export { buildNudgeEmail } from './nudge';
 export type { NudgeEmailInput } from './nudge';
 
+export { buildDeadlineReminderEmail } from './deadlineReminder';
+export type { DeadlineReminderInput } from './deadlineReminder';
+
 export {
   buildPrivacyNoticeHtml,
   buildPrivacyNoticeText,

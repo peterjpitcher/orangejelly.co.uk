@@ -28,7 +28,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { CONTACT } from '@/lib/constants';
-import type { IsoDate } from '@/lib/dateUtils';
+import { getTodayIsoDate, type IsoDate } from '@/lib/dateUtils';
 import {
   computeSlotEnd,
   DEFAULT_DURATION_MINUTES,
@@ -93,6 +93,10 @@ import TurnstileWidget from './turnstile-widget';
  * `website` is the honeypot and MUST stay empty — prefilling it would make every
  * real submission look like a bot to our own check.
  */
+// London's today, so the deadline picker never offers a date already gone. The
+// server rejects a past instant too; this only spares the obvious mistake.
+const minDeadlineDate = getTodayIsoDate();
+
 const DEFAULT_VALUES: CreatePollFormValues = {
   title: '',
   description: '',
@@ -103,6 +107,8 @@ const DEFAULT_VALUES: CreatePollFormValues = {
   optionKind: 'slots',
   dates: undefined,
   slots: [],
+  deadlineDate: '',
+  deadlineTime: '',
   turnstileToken: '',
   website: '',
 };
@@ -414,6 +420,62 @@ export default function CreatePollForm(): JSX.Element {
               </FormItem>
             )}
           />
+
+          {/*
+            Optional deadline. Leaving it blank keeps the old behaviour: the poll
+            stays open until you confirm it. Set it and we email YOU when it
+            passes, to come and pick. Nothing sends to guests on its own. The
+            invite always waits for you to choose, because a tie or a thin
+            turnout is a judgement, not a sum.
+          */}
+          <fieldset className="rounded-lg border border-charcoal/15 p-4">
+            <legend className="px-1 text-sm font-medium text-charcoal">
+              Close entries automatically (optional)
+            </legend>
+            <p className="mb-3 text-sm text-charcoal/60">
+              We&rsquo;ll email you when this passes so you can pick a time. We never send the
+              invite for you.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <FormField
+                control={form.control}
+                name="deadlineDate"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Date</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        value={field.value ?? ''}
+                        type="date"
+                        min={minDeadlineDate}
+                        disabled={isSubmitting}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="deadlineTime"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Time</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        value={field.value ?? ''}
+                        type="time"
+                        disabled={isSubmitting}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          </fieldset>
 
           {/* The duration decides what kind of poll this is, so it sits above the
               grid: "All day" asks about whole days, any length asks about times. */}

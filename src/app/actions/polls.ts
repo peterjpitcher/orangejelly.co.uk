@@ -14,6 +14,7 @@ import {
 import { sendPollEmail } from '@/lib/email';
 import { buildLinksEmail, buildVerifyEmail } from '@/lib/poll-emails';
 import { scrubTokens } from '@/lib/poll-tokens';
+import { londonWallClockToInstant } from '@/lib/dateUtils';
 import { checkRateLimit, getClientIp, hashKey, isRateLimitConfigured } from '@/lib/rate-limit';
 import { getAbsoluteUrl } from '@/lib/site-config';
 import { isTurnstileConfigured, verifyTurnstileToken } from '@/lib/turnstile';
@@ -193,6 +194,27 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     return { error: built.error ?? 'Please check your options and try again.' };
   }
 
+  // The optional deadline, resolved from the London wall clock the same way slots
+  // are. The schema has already checked that a date and a time arrive together;
+  // this is where the pair becomes an instant, is checked for being in the
+  // future, and where the spring-forward throw is caught rather than 500ing.
+  let entriesCloseAt: Date | undefined;
+  if (data.deadlineDate && data.deadlineTime) {
+    try {
+      const instant = londonWallClockToInstant(data.deadlineDate, data.deadlineTime);
+      if (instant.getTime() <= Date.now()) {
+        return { error: 'The deadline has already passed. Pick a time in the future.' };
+      }
+      entriesCloseAt = instant;
+    } catch (error) {
+      // londonWallClockToInstant throws on a time that does not exist on that
+      // date (the hour the clocks skip). Its message is already user-facing.
+      return {
+        error: error instanceof Error ? error.message : 'That deadline is not a valid time.',
+      };
+    }
+  }
+
   // Verified with Supabase, never a claim the browser made about itself. Null
   // for everyone who is not a signed-in admin, including on a forged token, an
   // expired one, or Supabase being unreachable.
@@ -214,6 +236,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     organiserEmail,
     optionKind: data.optionKind,
     options: built.options,
+    entriesCloseAt,
   });
 
   if (!stored.stored || !stored.data) {

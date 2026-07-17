@@ -162,6 +162,24 @@ export const createPollSchema = z
     dates: z.array(dateInputSchema).optional(),
     /** Populated when optionKind === 'slots'. */
     slots: z.array(slotInputSchema).optional(),
+    /**
+     * Optional entry deadline, as a London wall-clock date and time. Both or
+     * neither: a date with no time is a deadline with no meaning. Format is
+     * checked here; the future-instant check and the timezone conversion happen
+     * in the action, where `londonWallClockToInstant` lives and can throw on the
+     * spring-forward gap. `''` is accepted because an untouched optional input
+     * posts an empty string.
+     */
+    deadlineDate: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, 'Enter the deadline date as YYYY-MM-DD.')
+      .optional()
+      .or(z.literal('')),
+    deadlineTime: z
+      .string()
+      .regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Enter the deadline time as HH:mm.')
+      .optional()
+      .or(z.literal('')),
     /** Cloudflare Turnstile. See SPEC §3.4.3 — the keys exist; this is not optional. */
     turnstileToken: z.string().min(1, 'Please complete the verification check.'),
     /** Honeypot. Mirrors contact-form.tsx. */
@@ -211,6 +229,19 @@ export const createPollSchema = z
     );
     if (new Set(keys).size !== keys.length) {
       ctx.addIssue({ code: 'custom', path, message: VALIDATION_MESSAGES.poll.duplicateOption });
+    }
+
+    // A deadline is a date AND a time, or neither. A date with no time has no
+    // meaning, and a time with no date has nowhere to land. The future check and
+    // the London conversion belong to the action, not here.
+    const hasDeadlineDate = Boolean(value.deadlineDate);
+    const hasDeadlineTime = Boolean(value.deadlineTime);
+    if (hasDeadlineDate !== hasDeadlineTime) {
+      ctx.addIssue({
+        code: 'custom',
+        path: hasDeadlineDate ? ['deadlineTime'] : ['deadlineDate'],
+        message: 'A deadline needs both a date and a time, or leave both blank.',
+      });
     }
   });
 
