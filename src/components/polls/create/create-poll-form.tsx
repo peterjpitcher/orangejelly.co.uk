@@ -2,13 +2,12 @@
 
 import { useRef, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useFieldArray, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 import Button from '@/components/Button';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Checkbox } from '@/components/ui/checkbox';
 import {
   Dialog,
   DialogContent,
@@ -28,44 +27,82 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { getTodayIsoDate } from '@/lib/dateUtils';
+import { CONTACT } from '@/lib/constants';
+import type { IsoDate } from '@/lib/dateUtils';
+import {
+  computeSlotEnd,
+  DEFAULT_DURATION_MINUTES,
+  slotKey,
+  type CalendarSlot,
+  type DurationChoice,
+} from '@/lib/poll-calendar';
 import {
   createPollSchema,
   MAX_POLL_OPTIONS,
   type CreatePollFormValues,
 } from '@/lib/validation/polls';
 import { createPoll, resendVerification } from '@/app/actions/polls';
+import AvailabilityGrid from './availability-grid';
+import DurationSelector from './duration-selector';
 import TurnstileWidget from './turnstile-widget';
 
 /**
  * The create-poll form.
  *
- * A client component because it needs `useForm`, `useFieldArray` for the dynamic
- * option rows, and `useState` for the submitted state. Mirrors the split in
- * src/components/forms/contact-form.tsx in shape only — that file imports the
- * raw shadcn Button, whose `--primary` is charcoal rather than brand orange and
- * whose default size is under the 44px tap target. This one uses the legacy
- * Button.
+ * A client component because it needs `useForm` and `useState` for the submitted
+ * state. Mirrors the split in src/components/forms/contact-form.tsx in shape only
+ * — that file imports the raw shadcn Button, whose `--primary` is charcoal rather
+ * than brand orange and whose default size is under the 44px tap target. This one
+ * uses the legacy Button.
+ *
+ * The options are picked on a calendar grid rather than typed into a repeater.
+ * The grid is a different way of producing the same two shapes this form has
+ * always emitted, and nothing downstream knows it changed:
+ *
+ *   - `optionKind: 'dates'` → `{ date }`
+ *   - `optionKind: 'slots'` → `{ date, startTime, endTime, endsNextDay }`
+ *
+ * The duration is what decides between them — "All day" means whole days, any
+ * length means times — so there is no separate kind toggle any more. The two
+ * arrays stay in react-hook-form rather than in local state, so the schema, the
+ * error messages and the server action all keep working unchanged.
  *
  * The success state replaces the form in place. There is no navigation and no
  * separate route: the resend token lives in client state and must never reach a
  * URL, so there is nowhere for a success route to read it from.
  */
 
-const EMPTY_DATE = { date: '' };
-const EMPTY_SLOT = { date: '', startTime: '', endTime: '', endsNextDay: false };
-
-/** The form mounts with two rows. A poll with one option is meaningless. */
+/**
+ * The form mounts with nothing picked. The schema asks for at least two.
+ *
+ * The organiser fields are PREFILLED but not fixed: Peter is the only organiser
+ * this tool has, and making him retype his own details on his own tool is
+ * friction with nothing on the other side of it. Both stay editable and fully
+ * validated — creation is public by design, gated by email verification rather
+ * than by a login, so a stranger must be able to type straight over them.
+ *
+ * Both values come from CONTACT rather than a literal. The address is already
+ * the one the footer, the contact page and the privacy notice render, so a
+ * second copy here is just a second thing to miss when it changes — and it
+ * exposes nothing new, being public in three places already.
+ *
+ * It also fails safe. If a stranger did reach this form and left the defaults
+ * alone, the verification email goes to Peter, who will not click it, and the
+ * poll never opens. The prefill cannot be used to send mail in his name.
+ *
+ * `website` is the honeypot and MUST stay empty — prefilling it would make every
+ * real submission look like a bot to our own check.
+ */
 const DEFAULT_VALUES: CreatePollFormValues = {
   title: '',
   description: '',
   agenda: '',
   location: '',
-  organiserName: '',
-  organiserEmail: '',
-  optionKind: 'dates',
-  dates: [{ ...EMPTY_DATE }, { ...EMPTY_DATE }],
-  slots: undefined,
+  organiserName: CONTACT.owner,
+  organiserEmail: CONTACT.email,
+  optionKind: 'slots',
+  dates: undefined,
+  slots: [],
   turnstileToken: '',
   website: '',
 };
@@ -75,7 +112,8 @@ export default function CreatePollForm(): JSX.Element {
   const [error, setError] = useState<string | null>(null);
   const [resendToken, setResendToken] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState('');
-  const [pendingKind, setPendingKind] = useState<'dates' | 'slots' | null>(null);
+  const [duration, setDuration] = useState<DurationChoice>(DEFAULT_DURATION_MINUTES);
+  const [pendingDuration, setPendingDuration] = useState<DurationChoice | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
 
   const form = useForm<CreatePollFormValues>({
@@ -84,89 +122,108 @@ export default function CreatePollForm(): JSX.Element {
     mode: 'onSubmit',
   });
 
-  const optionKind = form.watch('optionKind');
-  const isSlots = optionKind === 'slots';
+  const allDay = duration === 'all-day';
 
-  const dateFields = useFieldArray({ control: form.control, name: 'dates' });
-  const slotFields = useFieldArray({ control: form.control, name: 'slots' });
-  const rows = isSlots ? slotFields : dateFields;
-  const atCap = rows.fields.length >= MAX_POLL_OPTIONS;
+  // Watched, not held in local state: react-hook-form stays the one place the
+  // emitted value lives, so the schema and the server action see exactly what
+  // they always saw.
+  const dates = form.watch('dates') ?? [];
+  const slots = form.watch('slots') ?? [];
 
   // The superRefine attaches its issues to the array itself, so they land on
   // `.message` (or `.root.message`) rather than on any row's field.
-  const optionArrayError = isSlots ? form.formState.errors.slots : form.formState.errors.dates;
+  const optionArrayError = allDay ? form.formState.errors.dates : form.formState.errors.slots;
   const optionsError = optionArrayError?.message ?? optionArrayError?.root?.message;
 
-  // `getTodayIsoDate()` is London's date, not UTC's. A naive toISOString() puts
-  // the poll a day out between midnight and 01:00 London in summer.
-  const today = getTodayIsoDate();
-
-  /** True when the organiser has typed anything into any option row. */
-  function hasOptionContent(): boolean {
+  /** True when there is anything to lose by changing the kind of poll. */
+  function hasSelections(): boolean {
     const values = form.getValues();
-    if (values.optionKind === 'dates') {
-      return (values.dates ?? []).some((row) => row.date !== '');
-    }
-    return (values.slots ?? []).some(
-      (row) => row.date !== '' || row.startTime !== '' || row.endTime !== ''
-    );
+    return (values.dates ?? []).length > 0 || (values.slots ?? []).length > 0;
   }
 
-  /** Swaps the option list to the other shape. Always two fresh, empty rows. */
-  function applyKind(kind: 'dates' | 'slots'): void {
-    form.setValue('optionKind', kind, { shouldValidate: false });
-    if (kind === 'dates') {
-      form.setValue('slots', undefined);
-      form.setValue('dates', [{ ...EMPTY_DATE }, { ...EMPTY_DATE }]);
-    } else {
-      form.setValue('dates', undefined);
-      form.setValue('slots', [{ ...EMPTY_SLOT }, { ...EMPTY_SLOT }]);
-    }
-    form.clearErrors(['dates', 'slots']);
+  /** Chronological, so the poll reads in the order the week runs. */
+  function sortSlots(list: CalendarSlot[]): CalendarSlot[] {
+    return [...list].sort((a, b) => slotKey(a).localeCompare(slotKey(b)));
   }
 
-  function requestKindChange(kind: 'dates' | 'slots'): void {
-    if (kind === optionKind) return;
-    // Warn before throwing away work, but only if there is work to throw away.
-    if (hasOptionContent()) {
-      setPendingKind(kind);
+  function toggleDate(date: IsoDate): void {
+    const current = form.getValues('dates') ?? [];
+    const selected = current.some((entry) => entry.date === date);
+
+    // Unpicking always works. Picking stops at the cap — the grid disables the
+    // cell too, but the cap is a rule about the value, so it is enforced here as
+    // well rather than trusted to the view.
+    if (!selected && current.length >= MAX_POLL_OPTIONS) return;
+
+    const next = selected
+      ? current.filter((entry) => entry.date !== date)
+      : [...current, { date }].sort((a, b) => a.date.localeCompare(b.date));
+
+    form.setValue('dates', next, { shouldValidate: false });
+    form.clearErrors('dates');
+  }
+
+  function toggleSlot(slot: CalendarSlot): void {
+    const current = form.getValues('slots') ?? [];
+    const key = slotKey(slot);
+    const selected = current.some((entry) => slotKey(entry) === key);
+
+    if (!selected && current.length >= MAX_POLL_OPTIONS) return;
+
+    const next = selected
+      ? current.filter((entry) => slotKey(entry) !== key)
+      : sortSlots([...current, slot]);
+
+    form.setValue('slots', next, { shouldValidate: false });
+    form.clearErrors('slots');
+  }
+
+  /**
+   * Applies a new duration.
+   *
+   * Two different changes wear the same control. Moving between "All day" and a
+   * timed length changes what kind of poll this is, and the two shapes cannot
+   * hold each other's values, so the selection goes. Moving between two timed
+   * lengths keeps every start and simply recomputes where each one ends — there
+   * is nothing to throw away, and throwing it away would be gratuitous.
+   */
+  function applyDuration(next: DurationChoice): void {
+    const crossesKind = allDay !== (next === 'all-day');
+
+    if (crossesKind) {
+      if (next === 'all-day') {
+        form.setValue('optionKind', 'dates', { shouldValidate: false });
+        form.setValue('slots', undefined);
+        form.setValue('dates', []);
+      } else {
+        form.setValue('optionKind', 'slots', { shouldValidate: false });
+        form.setValue('dates', undefined);
+        form.setValue('slots', []);
+      }
+      form.clearErrors(['dates', 'slots']);
+    } else if (next !== 'all-day') {
+      // Starts are untouched, so no selection can collide with another: the
+      // duplicate rule is keyed on the start.
+      const current = form.getValues('slots') ?? [];
+      form.setValue(
+        'slots',
+        current.map((slot) => computeSlotEnd(slot.date, slot.startTime, next)),
+        { shouldValidate: false }
+      );
+    }
+
+    setDuration(next);
+  }
+
+  function requestDuration(next: DurationChoice): void {
+    if (next === duration) return;
+    const crossesKind = allDay !== (next === 'all-day');
+    // Warn before discarding work, but only when there is work to discard.
+    if (crossesKind && hasSelections()) {
+      setPendingDuration(next);
       return;
     }
-    applyKind(kind);
-  }
-
-  function addRow(): void {
-    if (atCap) return;
-    if (isSlots) {
-      slotFields.append({ ...EMPTY_SLOT });
-    } else {
-      dateFields.append({ ...EMPTY_DATE });
-    }
-    // Focus the new row's date input, so a keyboard user is not dropped back at
-    // the top of the list.
-    window.requestAnimationFrame(() => {
-      const name = isSlots
-        ? `slots.${slotFields.fields.length}.date`
-        : `dates.${dateFields.fields.length}.date`;
-      document.getElementsByName(name)[0]?.focus();
-    });
-  }
-
-  function removeRow(index: number): void {
-    if (rows.fields.length <= 1) return;
-    if (isSlots) {
-      slotFields.remove(index);
-    } else {
-      dateFields.remove(index);
-    }
-    // Focus the previous row's remove button, or the add button when row 1 went.
-    window.requestAnimationFrame(() => {
-      const target =
-        index > 0
-          ? document.querySelector<HTMLElement>(`[data-remove-option="${index - 1}"]`)
-          : document.querySelector<HTMLElement>('[data-add-option]');
-      target?.focus();
-    });
+    applyDuration(next);
   }
 
   async function onSubmit(values: CreatePollFormValues): Promise<void> {
@@ -329,175 +386,32 @@ export default function CreatePollForm(): JSX.Element {
             )}
           />
 
-          {/* The kind toggle decides what every option row looks like, so it sits
-              above the options fieldset. Native radios, not a Select: two
-              mutually exclusive choices with helper text each. */}
-          <fieldset className="space-y-3">
-            <legend className="text-base font-medium text-charcoal">
-              What are you asking for?
-            </legend>
-            <Text size="sm" color="muted">
-              You can&apos;t change this once the poll is out, so pick the one that fits.
-            </Text>
+          {/* The duration decides what kind of poll this is, so it sits above the
+              grid: "All day" asks about whole days, any length asks about times. */}
+          <DurationSelector value={duration} onChange={requestDuration} disabled={isSubmitting} />
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              {(
-                [
-                  {
-                    value: 'dates' as const,
-                    label: 'Whole days',
-                    helper: 'People say which days work. No times.',
-                  },
-                  {
-                    value: 'slots' as const,
-                    label: 'Times on a day',
-                    helper: 'People say which time slots work.',
-                  },
-                ] satisfies Array<{ value: 'dates' | 'slots'; label: string; helper: string }>
-              ).map((choice) => (
-                <label
-                  key={choice.value}
-                  className="flex min-h-[44px] cursor-pointer items-start gap-3 rounded-md border border-border bg-white p-3 focus-within:ring-2 focus-within:ring-orange focus-within:ring-offset-2"
-                >
-                  <input
-                    type="radio"
-                    name="optionKind"
-                    value={choice.value}
-                    checked={optionKind === choice.value}
-                    onChange={() => requestKindChange(choice.value)}
-                    disabled={isSubmitting}
-                    className="mt-1 h-5 w-5 accent-orange"
-                  />
-                  <span>
-                    <Text size="base" weight="medium">
-                      {choice.label}
-                    </Text>
-                    <Text size="sm" color="muted">
-                      {choice.helper}
-                    </Text>
-                  </span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-
-          <fieldset className="space-y-3">
+          {/* min-w-0 is load-bearing. A fieldset's UA style is
+              `min-inline-size: min-content`, so it refuses to shrink below its
+              widest child — here, a 43rem grid. Without this it sits 690px wide
+              inside a 375px screen, the scroll container inherits that width and
+              therefore never scrolls, and the back half of the week becomes
+              unreachable on a phone. */}
+          <fieldset className="min-w-0 space-y-3">
             <legend className="text-base font-medium text-charcoal">Your options</legend>
             <Text size="sm" color="muted">
-              {isSlots
-                ? 'Add between two and eight. All times are London time.'
-                : 'Add between two and eight days.'}
+              {allDay
+                ? 'Tap the days that work. Pick between two and eight.'
+                : 'Tap the times that work. Pick between two and eight — all times are London time.'}
             </Text>
 
-            {/* Announced politely so adding or removing a row is not silent. */}
-            <div className="space-y-4" aria-live="polite">
-              {rows.fields.map((field, index) => (
-                <div
-                  key={field.id}
-                  className={
-                    isSlots
-                      ? 'rounded-md border border-border bg-white p-3 md:grid md:grid-cols-[1fr_auto_auto_auto_auto] md:gap-3 md:items-end md:border-0 md:bg-transparent md:p-0'
-                      : 'rounded-md border border-border bg-white p-3 md:grid md:grid-cols-[1fr_auto] md:gap-3 md:items-end md:border-0 md:bg-transparent md:p-0'
-                  }
-                >
-                  <FormField
-                    control={form.control}
-                    name={isSlots ? `slots.${index}.date` : `dates.${index}.date`}
-                    render={({ field: dateField }) => (
-                      <FormItem>
-                        <FormLabel>Date</FormLabel>
-                        <FormControl>
-                          <Input {...dateField} type="date" min={today} disabled={isSubmitting} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  {isSlots && (
-                    <>
-                      <div className="mt-3 grid grid-cols-2 gap-3 md:mt-0 md:contents">
-                        <FormField
-                          control={form.control}
-                          name={`slots.${index}.startTime`}
-                          render={({ field: startField }) => (
-                            <FormItem>
-                              <FormLabel>From</FormLabel>
-                              <FormControl>
-                                <Input
-                                  {...startField}
-                                  type="time"
-                                  step={900}
-                                  disabled={isSubmitting}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name={`slots.${index}.endTime`}
-                          render={({ field: endField }) => (
-                            <FormItem>
-                              <FormLabel>Until</FormLabel>
-                              <FormControl>
-                                <Input
-                                  {...endField}
-                                  type="time"
-                                  step={900}
-                                  disabled={isSubmitting}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
-                      {/* Its own line beneath the times, never beside them: it is
-                          not part of the end-time control. Never inferred from
-                          the times either — an inferred flag turns a mistyped
-                          time into a silent all-night event. */}
-                      <FormField
-                        control={form.control}
-                        name={`slots.${index}.endsNextDay`}
-                        render={({ field: nextDayField }) => (
-                          <FormItem className="mt-3 flex min-h-[44px] flex-row items-center gap-2 space-y-0 md:mt-0">
-                            <FormControl>
-                              <Checkbox
-                                checked={nextDayField.value}
-                                onCheckedChange={nextDayField.onChange}
-                                disabled={isSubmitting}
-                              />
-                            </FormControl>
-                            <FormLabel className="!mt-0 whitespace-nowrap">
-                              Ends the next day
-                            </FormLabel>
-                          </FormItem>
-                        )}
-                      />
-                    </>
-                  )}
-
-                  {rows.fields.length > 1 && (
-                    <div className="mt-3 md:mt-0">
-                      <Button
-                        variant="ghost"
-                        size="small"
-                        type="button"
-                        aria-label={`Remove option ${index + 1}`}
-                        onClick={() => removeRow(index)}
-                        disabled={isSubmitting}
-                        className="!px-3"
-                      >
-                        <span aria-hidden="true">✕</span>
-                      </Button>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <AvailabilityGrid
+              duration={duration}
+              dates={dates}
+              slots={slots}
+              onToggleDate={toggleDate}
+              onToggleSlot={toggleSlot}
+              disabled={isSubmitting}
+            />
 
             {/* The array-level message: too few, too many, duplicates.
                 A plain <p>, not <FormMessage>: FormMessage calls useFormField(),
@@ -508,25 +422,6 @@ export default function CreatePollForm(): JSX.Element {
               <p role="alert" className="text-[0.8rem] font-medium text-destructive">
                 {optionsError}
               </p>
-            )}
-
-            <div className="md:w-auto md:inline-block">
-              <Button
-                variant="outline"
-                size="medium"
-                type="button"
-                fullWidth
-                disabled={atCap || isSubmitting}
-                onClick={addRow}
-                data-add-option
-              >
-                Add another option
-              </Button>
-            </div>
-            {atCap && (
-              <Text size="sm" color="muted">
-                That&apos;s the maximum of eight options.
-              </Text>
             )}
           </fieldset>
 
@@ -576,13 +471,20 @@ export default function CreatePollForm(): JSX.Element {
         </form>
       </Form>
 
-      <Dialog open={pendingKind !== null} onOpenChange={(open) => !open && setPendingKind(null)}>
+      {/* Only ever opens for the one change that cannot keep what is picked:
+          whole days and times are different shapes and cannot hold each other's
+          values. Changing between two timed lengths keeps everything. */}
+      <Dialog
+        open={pendingDuration !== null}
+        onOpenChange={(open) => !open && setPendingDuration(null)}
+      >
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Start the options again?</DialogTitle>
             <DialogDescription>
-              Switching means your options don&apos;t fit any more, so we&apos;ll clear them and you
-              can put them in fresh.
+              {pendingDuration === 'all-day'
+                ? 'Asking about whole days means the times you picked no longer fit, so we’ll clear them and you can pick days instead.'
+                : 'Asking about times means the days you picked no longer fit, so we’ll clear them and you can pick times instead.'}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -590,7 +492,7 @@ export default function CreatePollForm(): JSX.Element {
               variant="ghost"
               size="medium"
               type="button"
-              onClick={() => setPendingKind(null)}
+              onClick={() => setPendingDuration(null)}
             >
               Leave it as it is
             </Button>
@@ -599,8 +501,8 @@ export default function CreatePollForm(): JSX.Element {
               size="medium"
               type="button"
               onClick={() => {
-                if (pendingKind) applyKind(pendingKind);
-                setPendingKind(null);
+                if (pendingDuration !== null) applyDuration(pendingDuration);
+                setPendingDuration(null);
               }}
             >
               Yes, clear them
