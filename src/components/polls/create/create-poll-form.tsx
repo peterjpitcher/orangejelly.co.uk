@@ -41,7 +41,7 @@ import {
   MAX_POLL_OPTIONS,
   type CreatePollFormValues,
 } from '@/lib/validation/polls';
-import { createPoll, resendVerification } from '@/app/actions/polls';
+import { createPoll, resendVerification, type PollLinks } from '@/app/actions/polls';
 import AvailabilityGrid from './availability-grid';
 import DurationSelector from './duration-selector';
 import TurnstileWidget from './turnstile-widget';
@@ -111,6 +111,7 @@ export default function CreatePollForm(): JSX.Element {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState<string | null>(null);
   const [resendToken, setResendToken] = useState<string | null>(null);
+  const [links, setLinks] = useState<PollLinks | null>(null);
   const [sentTo, setSentTo] = useState('');
   const [duration, setDuration] = useState<DurationChoice>(DEFAULT_DURATION_MINUTES);
   const [pendingDuration, setPendingDuration] = useState<DurationChoice | null>(null);
@@ -226,12 +227,37 @@ export default function CreatePollForm(): JSX.Element {
     applyDuration(next);
   }
 
+  /**
+   * The signed-in admin's Supabase token, if there is one.
+   *
+   * Read at submit time rather than on render: sessionStorage does not exist on
+   * the server, so touching it during render is a hydration mismatch waiting to
+   * happen. Absent for the public, which is the normal case.
+   *
+   * Sending this is not a claim the server trusts. It is verified with Supabase
+   * inside the action, and anything short of a live token for an allowlisted
+   * address is treated as a member of the public and gets the verify email.
+   */
+  function readAdminToken(): string | undefined {
+    try {
+      const raw = window.sessionStorage.getItem('oj-admin-session');
+      if (!raw) return undefined;
+      const parsed: unknown = JSON.parse(raw);
+      const token = (parsed as { access_token?: unknown })?.access_token;
+      return typeof token === 'string' && token.length > 0 ? token : undefined;
+    } catch {
+      // Malformed or unavailable storage means "not an admin", never a throw
+      // that costs someone the poll they just filled in.
+      return undefined;
+    }
+  }
+
   async function onSubmit(values: CreatePollFormValues): Promise<void> {
     setStatus('submitting');
     setError(null);
 
     try {
-      const result = await createPoll(values);
+      const result = await createPoll({ ...values, adminToken: readAdminToken() });
 
       if (result.error) {
         setError(result.error);
@@ -244,6 +270,9 @@ export default function CreatePollForm(): JSX.Element {
 
       setSentTo(values.organiserEmail);
       setResendToken(result.resendToken ?? null);
+      // Present only when a signed-in admin created it, in which case the poll
+      // is already live and no email was ever sent.
+      setLinks(result.links ?? null);
       setStatus('success');
     } catch {
       setError('Something went wrong. Please try again, or message Peter on WhatsApp.');
@@ -253,7 +282,7 @@ export default function CreatePollForm(): JSX.Element {
   }
 
   if (status === 'success') {
-    return <SuccessState email={sentTo} resendToken={resendToken} />;
+    return <SuccessState email={sentTo} resendToken={resendToken} links={links} />;
   }
 
   const isSubmitting = status === 'submitting';
@@ -525,9 +554,12 @@ export default function CreatePollForm(): JSX.Element {
 function SuccessState({
   email,
   resendToken,
+  links,
 }: {
   email: string;
   resendToken: string | null;
+  /** Set only when a signed-in admin created the poll: it is already live. */
+  links: PollLinks | null;
 }): JSX.Element {
   const [resendState, setResendState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [resendError, setResendError] = useState<string | null>(null);
@@ -544,6 +576,62 @@ function SuccessState({
       return;
     }
     setResendState('sent');
+  }
+
+  // The admin fast path. The poll is already live, no email was sent, and there
+  // is nothing to check an inbox for. Telling someone to check their inbox when
+  // nothing was sent is the worst of both: they wait, then they go looking.
+  if (links) {
+    return (
+      <div className="max-w-2xl mt-8">
+        <Heading level={1} color="charcoal">
+          Your poll is live
+        </Heading>
+
+        <Alert
+          variant="default"
+          role="status"
+          className="mt-4 border-orange bg-orange-light text-charcoal"
+        >
+          <AlertTitle>No email needed</AlertTitle>
+          <AlertDescription>
+            You were already signed in, so we did not make you confirm an address you had just
+            proved. Your poll is open and taking answers now.
+          </AlertDescription>
+        </Alert>
+
+        <div className="mt-6 space-y-6">
+          <div>
+            <Text weight="semibold" color="charcoal">
+              Send this one to your guests
+            </Text>
+            <Text size="sm" color="muted" className="mt-1">
+              Anyone with it can answer. They will not need an account.
+            </Text>
+            <p className="mt-2 break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
+              {links.participantUrl}
+            </p>
+          </div>
+
+          <div>
+            <Text weight="semibold" color="charcoal">
+              Keep this one to yourself
+            </Text>
+            <Text size="sm" color="muted" className="mt-1">
+              It shows who said what, and it can close the poll and confirm the time. Anyone you
+              forward it to can do the same, so do not send it round with the other one.
+            </Text>
+            <p className="mt-2 break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
+              {links.organiserUrl}
+            </p>
+          </div>
+
+          <Button href={links.organiserUrl} variant="primary">
+            Open my poll
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -1,6 +1,7 @@
 'use server';
 
 import { headers } from 'next/headers';
+import { resolveAdminIdentity } from '@/lib/admin-identity';
 import {
   claimResendSlot,
   createPoll as storePoll,
@@ -54,6 +55,21 @@ export interface PollActionResult {
    * email, and receiving it is what proves they own the address.
    */
   resendToken?: string;
+  /**
+   * Present ONLY when a signed-in admin created the poll, in which case it is
+   * already live and there was never a verification email.
+   *
+   * This is the one case where createPoll may hand capabilities straight back to
+   * the browser, and it is legitimate for the same reason the verification email
+   * is legitimate everywhere else: the point of that email is to prove the
+   * creator owns the address. An admin proved it by signing in, against Supabase,
+   * before the page rendered. Asking again would be asking someone to prove a
+   * thing they just proved.
+   *
+   * The gate is `resolveAdminIdentity`, which verifies the token WITH Supabase.
+   * A member of the public cannot reach this field by claiming anything.
+   */
+  links?: PollLinks;
 }
 
 /** The two links verification reveals, ready to render. */
@@ -114,7 +130,15 @@ function clientIp(): string {
  * Turnstile, then the two rate-limit buckets, then the write. Every gate that
  * costs a round-trip sits behind one that does not.
  */
-export async function createPoll(input: CreatePollFormValues): Promise<PollActionResult> {
+/**
+ * `adminToken` is the Supabase access token of a signed-in admin, if there is
+ * one. Optional and untrusted on arrival: it is verified with Supabase inside
+ * `resolveAdminIdentity`, and anything that is not a live token for an allowlisted
+ * address is treated as a member of the public.
+ */
+export type CreatePollInput = CreatePollFormValues & { adminToken?: string };
+
+export async function createPoll(input: CreatePollInput): Promise<PollActionResult> {
   // Honeypot first, before parsing. A bot gets a fake success: no write, no
   // mail, and no resendToken — so the fake success cannot be used to mail
   // anyone. Mirrors contact.ts.
@@ -169,13 +193,25 @@ export async function createPoll(input: CreatePollFormValues): Promise<PollActio
     return { error: built.error ?? 'Please check your options and try again.' };
   }
 
+  // Verified with Supabase, never a claim the browser made about itself. Null
+  // for everyone who is not a signed-in admin, including on a forged token, an
+  // expired one, or Supabase being unreachable.
+  const admin = await resolveAdminIdentity(input.adminToken);
+
+  // An admin's poll is stamped with the address Supabase confirmed, NOT the one
+  // in the form field. The form field is a default and stays editable, so
+  // trusting it here would let the fast path publish a poll under an address
+  // nobody proved. The typed value is only allowed to win when it is going to be
+  // proved by a verification email anyway.
+  const organiserEmail = admin ? admin.email : data.organiserEmail;
+
   const stored = await storePoll({
     title: data.title,
     description: data.description,
     agenda: data.agenda,
     location: data.location,
     organiserName: data.organiserName,
-    organiserEmail: data.organiserEmail,
+    organiserEmail,
     optionKind: data.optionKind,
     options: built.options,
   });
@@ -201,6 +237,41 @@ export async function createPoll(input: CreatePollFormValues): Promise<PollActio
   }
 
   const { verifyToken, resendToken } = tokens.data;
+
+  // The admin fast path.
+  //
+  // Verification exists to prove the creator owns the address they typed. A
+  // signed-in admin proved exactly that against Supabase before this page
+  // rendered, so sending them an email to prove it again is asking someone to
+  // show a ticket they just showed. Everyone else still gets the gate, because
+  // this form is public and the gate is what stops a script using our sending
+  // domain to mail strangers.
+  //
+  // Note it consumes the verify token it just issued, through the ordinary
+  // verifyAndOpenPoll path, rather than opening the poll by some private route.
+  // One way in, already tested, already single-use. If this call fails, the poll
+  // is simply left as a draft and the code below mails the link exactly as it
+  // would for anyone else, which is the right failure: a slower path, not a
+  // broken one.
+  if (admin) {
+    const opened = await verifyAndOpenPoll(verifyToken);
+
+    if (opened.stored && opened.data) {
+      return {
+        success: true,
+        links: {
+          participantUrl: getAbsoluteUrl(`/availability/p/${opened.data.participantToken}`),
+          organiserUrl: getAbsoluteUrl(`/availability/o/${opened.data.organiserToken}`),
+          organiserToken: opened.data.organiserToken,
+        },
+      };
+    }
+
+    console.error(
+      '[polls] Admin fast path could not open the poll; falling back to the verify email:',
+      scrubTokens(opened.error ?? 'Unknown error.')
+    );
+  }
 
   // Best-effort, exactly as contact.ts states: the poll is already stored, so a
   // failed or unconfigured send must never turn a stored poll into a user-facing
