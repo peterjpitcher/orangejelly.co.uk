@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import type { OptionKind } from '@/components/polls/vote/poll-display';
-import type { PollOptionRow, Availability } from '@/lib/db/polls';
+import type { AttendanceMode, Availability, PollOptionRow } from '@/lib/db/polls';
 import type { OptionTally } from '@/lib/poll-aggregate';
 import type { OrganiserParticipant } from '@/app/availability/o/organiser-data';
 import { answerKey } from '@/app/availability/o/organiser-data';
@@ -43,6 +43,14 @@ export interface ResultsTableProps {
   participants: OrganiserParticipant[];
   /** `${participant_id}:${option_id}` -> availability. Absence means not answered. */
   responses: Record<string, Availability>;
+  /**
+   * `${participant_id}:${option_id}` -> attendance, sparse. Only a yes or an
+   * if-need-be carries one, and only for answers given since the question
+   * existed. The organiser needs the exceptions: a cell is marked only when
+   * someone needs a video link, because "in person at the pub" is the assumed
+   * case and marking it would bury the signal in the noise.
+   */
+  attendance: Record<string, AttendanceMode>;
   tallies: OptionTally[];
   /** Highlighted column. Never by colour alone — the header carries sr-only text. */
   confirmedOptionId: string | null;
@@ -88,6 +96,7 @@ export default function ResultsTable({
   options,
   participants,
   responses,
+  attendance,
   tallies,
   confirmedOptionId,
 }: ResultsTableProps): JSX.Element {
@@ -172,6 +181,7 @@ export default function ResultsTable({
 
                 {options.map((option) => {
                   const state: CellState = responses[answerKey(participant.id, option.id)] ?? null;
+                  const needsLink = attendance[answerKey(participant.id, option.id)] === 'virtual';
                   const isConfirmed = option.id === confirmedOptionId;
 
                   return (
@@ -197,6 +207,12 @@ export default function ResultsTable({
                           {answerLabel(state)}
                         </span>
                       </span>
+                      {needsLink && (
+                        <span className="mt-1 block text-xs font-medium text-teal">
+                          <span aria-hidden="true">▶ </span>video
+                          <span className="sr-only"> — would join by video or dial-in</span>
+                        </span>
+                      )}
                     </td>
                   );
                 })}

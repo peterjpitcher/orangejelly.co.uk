@@ -2,7 +2,7 @@
 
 import Text from '@/components/Text';
 import { cn } from '@/lib/utils';
-import type { AvailabilityAnswer } from '@/lib/validation/poll-responses';
+import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
 import AnswerRadioGroup from './answer-radio-group';
 import {
   formatOptionLabel,
@@ -35,6 +35,9 @@ export interface OptionCardProps {
   responderCount: number;
   value: AvailabilityAnswer | null;
   onChange: (value: AvailabilityAnswer) => void;
+  /** How they would attend. Only rendered once the answer is yes or if-need-be. */
+  attendance: AttendanceAnswer;
+  onAttendanceChange: (value: AttendanceAnswer) => void;
   disabled?: boolean;
   /** Set after a submit that found this option unanswered. */
   invalid?: boolean;
@@ -47,6 +50,8 @@ export default function OptionCard({
   responderCount,
   value,
   onChange,
+  attendance,
+  onAttendanceChange,
   disabled = false,
   invalid = false,
 }: OptionCardProps): JSX.Element {
@@ -71,6 +76,59 @@ export default function OptionCard({
           disabled={disabled}
         />
       </div>
+
+      {/*
+        Only once they can make it. A "no" has no way of attending, and showing
+        the question anyway would imply the answer still matters. In-person is
+        the default: the pub is the usual venue, and the video link is the
+        exception worth flagging to the organiser.
+      */}
+      {value !== null && value !== 'no' && (
+        <div
+          className="mt-3 flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="How would you join?"
+        >
+          <span className="text-sm text-charcoal/70">Joining:</span>
+          {(
+            [
+              { mode: 'in_person', label: 'In person' },
+              { mode: 'virtual', label: 'Video or dial-in' },
+            ] as const
+          ).map(({ mode, label }) => {
+            const selected = attendance === mode;
+            return (
+              <label
+                key={mode}
+                className={cn(
+                  'flex min-h-[44px] cursor-pointer select-none items-center rounded-md border-2 px-3 text-sm font-medium transition-colors',
+                  'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-charcoal',
+                  selected
+                    ? 'border-teal bg-teal text-white'
+                    : 'border-charcoal/25 bg-white text-charcoal hover:border-charcoal/50',
+                  disabled && 'cursor-default opacity-90'
+                )}
+              >
+                <input
+                  type="radio"
+                  name={`attendance-${option.id}`}
+                  value={mode}
+                  checked={selected}
+                  disabled={disabled}
+                  onChange={() => onAttendanceChange(mode)}
+                  className="absolute h-px w-px overflow-hidden opacity-0"
+                />
+                {selected && (
+                  <span aria-hidden="true" className="mr-1.5">
+                    ✓
+                  </span>
+                )}
+                {label}
+              </label>
+            );
+          })}
+        </div>
+      )}
 
       {invalid && (
         // Text plus the red border — colour is never the only signal.

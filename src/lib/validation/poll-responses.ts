@@ -18,6 +18,18 @@ export const availabilitySchema = z.enum(['yes', 'if_need_be', 'no']);
 export type AvailabilityAnswer = z.infer<typeof availabilitySchema>;
 
 /**
+ * How they would attend, qualifying a yes or an if-need-be.
+ *
+ * Optional on the wire: the data layer defaults an unstated mode to in-person
+ * (the pub is the default venue; the video link is the exception worth
+ * flagging) and nulls it on a no, where attending has no meaning. Wire values
+ * are fixed by `poll_responses.attendance`'s CHECK constraint.
+ */
+export const attendanceSchema = z.enum(['in_person', 'virtual']);
+
+export type AttendanceAnswer = z.infer<typeof attendanceSchema>;
+
+/**
  * One answer per option.
  *
  * `.min(1)` and the duplicate refinement are structural only. They do not prove
@@ -29,6 +41,7 @@ const votesSchema = z
     z.object({
       optionId: z.string().uuid('That option is not valid'),
       availability: availabilitySchema,
+      attendance: attendanceSchema.optional(),
     })
   )
   .min(1, VALIDATION_MESSAGES.poll.answerEveryOption)

@@ -437,21 +437,25 @@ describe('buildPrivacyNotice', () => {
     expect(buildPrivacyNoticeHtml(input)).toContain('reply to this email for that');
   });
 
-  it('should name the processors and the US transfer', () => {
+  it('should defer the vendor list to the privacy policy rather than reciting it', () => {
+    // Peter's decision, 17 July 2026: the short notice talks like a person and
+    // points at /privacy, which is where the vendor names and the transfer
+    // detail now live. The consistency test guards the other half: it fails if
+    // /privacy stops carrying them.
     const text = buildPrivacyNoticeText(input);
-    expect(text).toContain('Supabase');
-    expect(text).toContain('Resend');
-    expect(text).toContain('Vercel');
-    expect(text).toContain('United States');
+    expect(text).not.toContain('Supabase');
+    expect(text).not.toContain('Resend');
+    expect(text).not.toContain('Vercel');
+    expect(text).toContain('orangejelly.co.uk/privacy');
   });
 
   it('should state the 60-day retention rule', () => {
     expect(buildPrivacyNoticeText(input)).toContain('60 days after the last response');
   });
 
-  it('should name the ICO and link the privacy policy', () => {
+  it('should link the privacy policy and leave the ICO to it', () => {
     const html = buildPrivacyNoticeHtml(input);
-    expect(html).toContain('https://ico.org.uk');
+    expect(html).not.toContain('ico.org.uk');
     expect(html).toContain('https://www.orangejelly.co.uk/privacy');
   });
 

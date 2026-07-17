@@ -28,6 +28,12 @@ export type PollStatus = 'draft' | 'open' | 'closed' | 'confirmed';
 export type OptionKind = 'dates' | 'slots';
 export type Availability = 'yes' | 'if_need_be' | 'no';
 
+/**
+ * How a participant would attend, qualifying a yes or an if-need-be. Never set
+ * on a no: someone who cannot make a time has no mode of attending it.
+ */
+export type AttendanceMode = 'in_person' | 'virtual';
+
 /** A proposed option: either a calendar date or an instant range, never both. */
 export type PollOptionInput =
   | { optionDate: IsoDate; startsAt?: never; endsAt?: never }
@@ -118,6 +124,12 @@ export interface OrganiserPollView {
   participants: Array<{ id: string; display_name: string; email: string | null }>;
   /** `${participant_id}:${option_id}` -> availability. The organiser sees all. */
   responses: Record<string, Availability>;
+  /**
+   * `${participant_id}:${option_id}` -> attendance, present only where one was
+   * recorded. A second map rather than a richer value in `responses`, so every
+   * existing consumer of that map keeps working unchanged.
+   */
+  attendance: Record<string, AttendanceMode>;
 }
 
 function cleanText(value?: string | null): string | null {
@@ -532,13 +544,18 @@ export async function getOrganiserView(organiserToken: string): Promise<Organise
       .order('created_at'),
     supabase
       .from('poll_responses')
-      .select('participant_id, option_id, availability')
+      .select('participant_id, option_id, availability, attendance')
       .eq('poll_id', poll.id),
   ]);
 
   const responseMap: Record<string, Availability> = {};
+  const attendanceMap: Record<string, AttendanceMode> = {};
   for (const response of responses ?? []) {
-    responseMap[`${response.participant_id}:${response.option_id}`] = response.availability;
+    const key = `${response.participant_id}:${response.option_id}`;
+    responseMap[key] = response.availability;
+    // Sparse on purpose: a no has no attendance, and rows recorded before the
+    // question existed are null. Absence reads as "not stated", which is true.
+    if (response.attendance) attendanceMap[key] = response.attendance;
   }
 
   return {
@@ -546,6 +563,7 @@ export async function getOrganiserView(organiserToken: string): Promise<Organise
     options: (options ?? []) as PollOptionRow[],
     participants: participants ?? [],
     responses: responseMap,
+    attendance: attendanceMap,
   };
 }
 
@@ -567,7 +585,7 @@ export async function submitResponse(input: {
   participantToken: string;
   displayName: string;
   email?: string;
-  answers: Array<{ optionId: string; availability: Availability }>;
+  answers: Array<{ optionId: string; availability: Availability; attendance?: AttendanceMode }>;
 }): Promise<StoredResult<{ editToken: string }>> {
   try {
     const supabase = requireAdminClient();
@@ -598,6 +616,9 @@ export async function submitResponse(input: {
         participant_id: participantId,
         option_id: answer.optionId,
         availability: answer.availability,
+        // Null on a no by rule, and in-person when unstated: the pub is the
+        // default venue, and the exception is the one worth flagging.
+        attendance: answer.availability === 'no' ? null : (answer.attendance ?? 'in_person'),
       }))
     );
 
@@ -619,7 +640,7 @@ export async function submitResponse(input: {
 export async function updateResponse(input: {
   editToken: string;
   displayName?: string;
-  answers: Array<{ optionId: string; availability: Availability }>;
+  answers: Array<{ optionId: string; availability: Availability; attendance?: AttendanceMode }>;
 }): Promise<StoredResult> {
   try {
     const supabase = requireAdminClient();
@@ -688,6 +709,9 @@ export async function updateResponse(input: {
         participant_id: participant.id,
         option_id: answer.optionId,
         availability: answer.availability,
+        // Null on a no by rule, and in-person when unstated: the pub is the
+        // default venue, and the exception is the one worth flagging.
+        attendance: answer.availability === 'no' ? null : (answer.attendance ?? 'in_person'),
       })),
       { onConflict: 'participant_id,option_id' }
     );

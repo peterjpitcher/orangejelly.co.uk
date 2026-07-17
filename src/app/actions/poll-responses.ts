@@ -173,6 +173,7 @@ export async function submitResponse(
     answers: parsed.data.votes.map((vote) => ({
       optionId: vote.optionId,
       availability: vote.availability,
+      attendance: vote.attendance,
     })),
   });
 
@@ -256,6 +257,7 @@ export async function updateResponse(
     answers: parsed.data.votes.map((vote) => ({
       optionId: vote.optionId,
       availability: vote.availability,
+      attendance: vote.attendance,
     })),
   });
 

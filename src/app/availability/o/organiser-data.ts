@@ -1,5 +1,6 @@
 import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supabase-admin';
 import {
+  type AttendanceMode,
   getOrganiserView,
   type Availability,
   type PollOptionRow,
@@ -55,6 +56,8 @@ export interface OrganiserResultsView {
   participants: OrganiserParticipant[];
   /** `${participant_id}:${option_id}` -> availability. Absence means "not answered". */
   responses: Record<string, Availability>;
+  /** Same key -> attendance, sparse. Present only where someone stated a mode. */
+  attendance: Record<string, AttendanceMode>;
   tallies: OptionTally[];
   responderCount: number;
 }
@@ -120,6 +123,7 @@ export async function getOrganiserResults(
     options: view.options,
     participants: (participants ?? []) as OrganiserParticipant[],
     responses: view.responses,
+    attendance: view.attendance,
     tallies: aggregateByOption(view.options, tallyRows),
     responderCount: countResponders(tallyRows),
   };

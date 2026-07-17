@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
 import { submitResponse } from '@/app/actions/poll-responses';
-import type { AvailabilityAnswer } from '@/lib/validation/poll-responses';
+import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
 import OptionCard from './option-card';
 import EditLinkPanel from './edit-link-panel';
 import {
@@ -36,6 +36,7 @@ export interface VoteFormProps {
 }
 
 type AnswerState = Record<string, AvailabilityAnswer | null>;
+type AttendanceState = Record<string, AttendanceAnswer>;
 
 export default function VoteForm({
   participantToken,
@@ -47,6 +48,12 @@ export default function VoteForm({
 }: VoteFormProps): JSX.Element {
   const [answers, setAnswers] = useState<AnswerState>(() =>
     Object.fromEntries(options.map((option) => [option.id, null]))
+  );
+  // In person by default: the pub is the usual venue, and the video link is the
+  // exception worth flagging. Unlike the answer itself, a default here cannot
+  // fake availability nobody gave; at worst it understates a preference.
+  const [modes, setModes] = useState<AttendanceState>(() =>
+    Object.fromEntries(options.map((option) => [option.id, 'in_person']))
   );
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
@@ -62,6 +69,10 @@ export default function VoteForm({
   function answer(optionId: string, value: AvailabilityAnswer): void {
     setAnswers((current) => ({ ...current, [optionId]: value }));
     setUnanswered((current) => current.filter((id) => id !== optionId));
+  }
+
+  function setMode(optionId: string, value: AttendanceAnswer): void {
+    setModes((current) => ({ ...current, [optionId]: value }));
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
@@ -90,6 +101,7 @@ export default function VoteForm({
           optionId: option.id,
           // Proven non-null by the guard above; the cast keeps the wire type honest.
           availability: answers[option.id] as AvailabilityAnswer,
+          attendance: modes[option.id],
         })),
       });
 
@@ -146,6 +158,8 @@ export default function VoteForm({
             responderCount={responderCount}
             value={answers[option.id] ?? null}
             onChange={(value) => answer(option.id, value)}
+            attendance={modes[option.id] ?? 'in_person'}
+            onAttendanceChange={(value) => setMode(option.id, value)}
             invalid={unanswered.includes(option.id)}
           />
         ))}

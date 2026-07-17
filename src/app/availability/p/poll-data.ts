@@ -1,6 +1,7 @@
 import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supabase-admin';
 import {
   getParticipantView,
+  type AttendanceMode,
   type PollOptionRow,
   type PollRow,
   type Availability,
@@ -66,6 +67,8 @@ export interface ResolvedEditParticipant {
 export interface EditView extends ResolvedEditParticipant {
   /** option_id -> this participant's answer. Their own, and only their own. */
   answers: Record<string, Availability>;
+  /** Their own attendance per option, where one was recorded. Sparse. */
+  attendance: Record<string, AttendanceMode>;
   tallies: OptionTally[];
   responderCount: number;
 }
@@ -178,15 +181,21 @@ export async function getEditView(editToken: string): Promise<EditView | null> {
   const supabase = getSupabaseAdminClient();
   const { data } = await supabase
     .from('poll_responses')
-    .select('option_id, availability')
+    .select('option_id, availability, attendance')
     .eq('participant_id', resolved.participantId);
 
   const answers: Record<string, Availability> = {};
-  for (const row of (data ?? []) as Array<{ option_id: string; availability: Availability }>) {
+  const attendance: Record<string, AttendanceMode> = {};
+  for (const row of (data ?? []) as Array<{
+    option_id: string;
+    availability: Availability;
+    attendance: AttendanceMode | null;
+  }>) {
     answers[row.option_id] = row.availability;
+    if (row.attendance) attendance[row.option_id] = row.attendance;
   }
 
   const { tallies, responderCount } = await readTallies(resolved.poll.id, resolved.options);
 
-  return { ...resolved, answers, tallies, responderCount };
+  return { ...resolved, answers, attendance, tallies, responderCount };
 }

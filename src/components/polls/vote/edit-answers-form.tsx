@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
 import { updateResponse } from '@/app/actions/poll-responses';
-import type { AvailabilityAnswer } from '@/lib/validation/poll-responses';
+import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
 import OptionCard from './option-card';
 import {
   formatReplyCount,
@@ -44,6 +44,8 @@ export interface EditAnswersFormProps {
   tallies: Record<string, TallyCounts>;
   responderCount: number;
   initialAnswers: Record<string, AvailabilityAnswer>;
+  /** Their recorded attendance per option. Sparse; missing reads as in person. */
+  initialAttendance: Record<string, AttendanceAnswer>;
   initialDisplayName: string;
   /** Poll closed or confirmed: show the answers, offer no way to change them. */
   readOnly?: boolean;
@@ -56,11 +58,17 @@ export default function EditAnswersForm({
   tallies,
   responderCount,
   initialAnswers,
+  initialAttendance,
   initialDisplayName,
   readOnly = false,
 }: EditAnswersFormProps): JSX.Element {
   const [answers, setAnswers] = useState<Record<string, AvailabilityAnswer | null>>(() =>
     Object.fromEntries(options.map((option) => [option.id, initialAnswers[option.id] ?? null]))
+  );
+  const [modes, setModes] = useState<Record<string, AttendanceAnswer>>(() =>
+    Object.fromEntries(
+      options.map((option) => [option.id, initialAttendance[option.id] ?? 'in_person'])
+    )
   );
   const [displayName, setDisplayName] = useState(initialDisplayName);
   const [website, setWebsite] = useState('');
@@ -101,6 +109,7 @@ export default function EditAnswersForm({
         votes: options.map((option) => ({
           optionId: option.id,
           availability: answers[option.id] as AvailabilityAnswer,
+          attendance: modes[option.id],
         })),
       });
 
@@ -134,6 +143,10 @@ export default function EditAnswersForm({
           responderCount={responderCount}
           value={answers[option.id] ?? null}
           onChange={(value) => answer(option.id, value)}
+          attendance={modes[option.id] ?? 'in_person'}
+          onAttendanceChange={(value) =>
+            setModes((current) => ({ ...current, [option.id]: value }))
+          }
           disabled={readOnly}
           invalid={unanswered.includes(option.id)}
         />

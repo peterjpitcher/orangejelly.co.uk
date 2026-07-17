@@ -47,7 +47,7 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
     notFound();
   }
 
-  const { poll, options, answers, tallies, responderCount, displayName } = view;
+  const { poll, options, answers, attendance, tallies, responderCount, displayName } = view;
 
   const tallyMap: Record<string, TallyCounts> = {};
   for (const tally of tallies) {
@@ -111,6 +111,7 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
           tallies={tallyMap}
           responderCount={responderCount}
           initialAnswers={answers}
+          initialAttendance={attendance}
           initialDisplayName={displayName}
           readOnly={!editable}
         />

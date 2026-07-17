@@ -182,6 +182,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               options={options}
               participants={participants}
               responses={responses}
+              attendance={view.attendance}
               tallies={tallies}
               confirmedOptionId={poll.confirmed_option_id}
             />
