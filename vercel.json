@@ -12,6 +12,12 @@
       "NEXT_PUBLIC_SANITY_DATASET": "production"
     }
   },
+  "crons": [
+    {
+      "path": "/api/cron/polls",
+      "schedule": "0 3 * * *"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",

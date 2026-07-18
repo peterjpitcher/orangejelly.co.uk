@@ -14,7 +14,9 @@ const FILE_TARGETS = new Set([
   'src/app/test-shadcn/page.tsx',
 ]);
 
-const DIRECTORY_TARGETS = ['content'];
+// Walked recursively on every run. Poll email copy goes to third parties, so it
+// is held to the same spelling rules as published content.
+const DIRECTORY_TARGETS = ['content', 'src/lib/poll-emails'];
 
 const ALLOWED_EXTENSIONS = new Set(['.md', '.json', '.ts', '.tsx']);
 

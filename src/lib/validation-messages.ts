@@ -20,6 +20,26 @@ export const VALIDATION_MESSAGES = {
     maxLength: 'Name must be less than 50 characters',
   },
 
+  // Availability polls. Names reuse the `name` rules above rather than inventing
+  // a second limit — a different cap would make name.maxLength a lie.
+  poll: {
+    titleRequired: 'Give your poll a title',
+    tooFewOptions: 'Propose at least two options — one option is an announcement, not a poll',
+    tooManyOptions: '8 options is the limit',
+    duplicateOption: "You've proposed the same time twice",
+    slotEndBeforeStart: 'The end time must be after the start time',
+    slotInPast: 'That time has already passed',
+    answerEveryOption: "Give an answer for every option — 'No' is a perfectly good answer",
+    votingClosed: 'Voting has closed on this poll',
+    alreadyConfirmed: 'This poll is already confirmed',
+    responsesLocked: 'This poll is confirmed. Responses are locked',
+    linkNotValid: 'This link is no longer valid',
+    // Deliberately identical on every rate-limit bucket. Naming the bucket that
+    // was hit tells an attacker which limit they found.
+    rateLimited: 'Too many attempts. Please try again in a few minutes.',
+    botCheckFailed: "We couldn't verify you're a person. Please try again.",
+  },
+
   // Phone validation
   phone: {
     required: 'Phone number is required',

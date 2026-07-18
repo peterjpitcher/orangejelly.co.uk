@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { isTokenRoute } from '@/lib/token-routes';
 
 // Old category slugs → new 8-category taxonomy
 const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
@@ -37,11 +38,23 @@ function normalizePathSegment(value: string): string {
     .replace(/(^-|-$)/g, '');
 }
 
-function applySecurityHeaders(response: NextResponse) {
+function applySecurityHeaders(response: NextResponse, pathname: string) {
   // Security headers
   response.headers.set('X-Frame-Options', 'SAMEORIGIN');
   response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // Token routes get `no-referrer`; everything else keeps the site-wide default.
+  //
+  // `strict-origin-when-cross-origin` is fine for the rest of the site but is a
+  // leak here, because it sends the FULL URL — path and all — on same-origin
+  // navigations, and on these routes the path IS the credential. Anything that
+  // reads Referer (an outbound link, an embedded resource, a proxy, an error
+  // reporter) would receive the whole capability, and whoever holds
+  // /availability/o/<token> is the organiser, permanently.
+  response.headers.set(
+    'Referrer-Policy',
+    isTokenRoute(pathname) ? 'no-referrer' : 'strict-origin-when-cross-origin'
+  );
   // Note: FLoC is obsolete; use browsing-topics to opt-out of Topics API (Issue #21)
   response.headers.set(
     'Permissions-Policy',
@@ -59,12 +72,18 @@ function applySecurityHeaders(response: NextResponse) {
     [
       "default-src 'self'",
       // Use next/script and nonces in future to remove 'unsafe-inline'. Kept temporarily for GTM bootstrap.
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms https://vercel.live",
+      // challenges.cloudflare.com is Turnstile, used by the poll create form only.
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms https://vercel.live https://challenges.cloudflare.com",
       "style-src 'self' 'unsafe-inline' https://tagmanager.google.com https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
       "img-src 'self' data: blob: https: https://www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com",
       "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://vercel.live https://www.clarity.ms https://h.clarity.ms https://j.clarity.ms",
-      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
+      // Turnstile renders its challenge in an iframe. Deliberately NOT added to
+      // connect-src: the widget's own network calls originate inside that iframe
+      // and are governed by Cloudflare's CSP, not ours, and siteverify is a
+      // server-to-server call that no CSP applies to. Adding connect-src would
+      // widen the policy for nothing.
+      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com",
       "media-src 'self' https:",
       "object-src 'none'",
       "base-uri 'self'",
@@ -82,13 +101,18 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const categoryPrefix = '/licensees-guide/category/';
 
+  // Captured before the redirect branches below mutate url.pathname. The
+  // Referrer-Policy decision must be made on the path the client actually
+  // requested, not on a rewritten target.
+  const requestPathname = url.pathname;
+
   const hostname = url.hostname;
   const forwardedProto = request.headers.get('x-forwarded-proto');
   const isProductionHost = hostname === 'orangejelly.co.uk' || hostname === canonicalHostname;
   const isGetOrHead = request.method === 'GET' || request.method === 'HEAD';
 
   if (isGetOrHead && RETIRED_CONTENT_PATHS.has(url.pathname)) {
-    return applySecurityHeaders(new NextResponse('Gone', { status: 410 }));
+    return applySecurityHeaders(new NextResponse('Gone', { status: 410 }), requestPathname);
   }
 
   if (isGetOrHead && url.pathname.startsWith(categoryPrefix)) {
@@ -108,7 +132,7 @@ export function middleware(request: NextRequest) {
 
       if (targetCategory && categorySegment !== targetCategory) {
         url.pathname = `${categoryPrefix}${targetCategory}`;
-        return applySecurityHeaders(NextResponse.redirect(url, 308));
+        return applySecurityHeaders(NextResponse.redirect(url, 308), requestPathname);
       }
     }
   }
@@ -120,10 +144,10 @@ export function middleware(request: NextRequest) {
   ) {
     url.hostname = canonicalHostname;
     url.protocol = 'https:';
-    return applySecurityHeaders(NextResponse.redirect(url, 301));
+    return applySecurityHeaders(NextResponse.redirect(url, 301), requestPathname);
   }
 
-  return applySecurityHeaders(NextResponse.next());
+  return applySecurityHeaders(NextResponse.next(), requestPathname);
 }
 
 export const config = {

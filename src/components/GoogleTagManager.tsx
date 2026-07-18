@@ -1,11 +1,25 @@
 'use client';
 
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
+import { isPollRoute } from '@/lib/token-routes';
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
+/**
+ * GTM must not load on poll routes — those URLs carry a bearer token in the path,
+ * and GTM reports the raw path to Google. Loading it there would hand a poll's own
+ * access token to a third party, letting anyone with analytics access act as that
+ * poll's organiser. Referrer-Policy does not help: GTM reads window.location
+ * directly.
+ *
+ * Gated here rather than in MarketingChrome because GTM has to stay at the top of
+ * <body> for its beforeInteractive consent defaults to run before anything else.
+ */
 export function GoogleTagManager() {
-  if (!GTM_ID) {
+  const pathname = usePathname();
+
+  if (!GTM_ID || isPollRoute(pathname)) {
     return null;
   }
 
@@ -47,7 +61,11 @@ export function GoogleTagManager() {
 }
 
 export function GoogleTagManagerNoscript() {
-  if (!GTM_ID) {
+  const pathname = usePathname();
+
+  // Same gate as GoogleTagManager: the noscript iframe is still a request to
+  // Google from a page whose URL is a credential.
+  if (!GTM_ID || isPollRoute(pathname)) {
     return null;
   }
 
