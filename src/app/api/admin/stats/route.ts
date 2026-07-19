@@ -5,6 +5,9 @@ import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supa
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+// Keep the numbers live: supabase-js reads are cached in Next's Data Cache
+// otherwise, and the dashboard would show yesterday's counts.
+export const fetchCache = 'force-no-store';
 
 type EventRow = {
   event_name: string;
