@@ -25,6 +25,9 @@ import { canEditResponse } from '@/lib/poll-state';
  * stream's ownership, so the route moved to where the protection already is.
  */
 export const dynamic = 'force-dynamic';
+// The edit form must prefill the participant's CURRENT answers, not a cached
+// snapshot. See the organiser page for why force-dynamic alone is not enough.
+export const fetchCache = 'force-no-store';
 
 export const metadata: Metadata = {
   title: 'Change your answer',

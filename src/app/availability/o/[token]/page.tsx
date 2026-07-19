@@ -33,6 +33,14 @@ import { getOrganiserResults } from '../organiser-data';
  * because the token in the path must never key a cache entry.
  */
 export const dynamic = 'force-dynamic';
+// `force-dynamic` alone was not enough. supabase-js reads through `fetch`, which
+// Next.js caches in its Data Cache, and that cache PERSISTS ACROSS DEPLOYS on
+// Vercel. The symptom: a freshly deployed results page kept serving a snapshot
+// of the responses from an earlier moment (missing the latest voters) even on a
+// CDN cache MISS, because the underlying Supabase read was served from the Data
+// Cache. `force-no-store` opts every fetch on this route out of that cache, so
+// the organiser always sees who has actually replied.
+export const fetchCache = 'force-no-store';
 
 /**
  * The confirm fan-out sends one email per recipient, paced at 600ms for Resend's

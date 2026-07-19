@@ -20,6 +20,10 @@ import { canVote } from '@/lib/poll-state';
  * because the token in the path must never key a cache entry.
  */
 export const dynamic = 'force-dynamic';
+// See the organiser page for the full story: supabase-js reads are cached in
+// Next's Data Cache, which persists across deploys, so the live vote counts a
+// participant sees could be stale. force-no-store keeps them current.
+export const fetchCache = 'force-no-store';
 
 /**
  * The token is a bearer credential sitting in the URL. Anything that indexes,

@@ -26,6 +26,9 @@ import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
 
 // This page mutates state. It must never be cached or statically rendered.
 export const dynamic = 'force-dynamic';
+// Verification consumes a single-use token and must read the poll's live state,
+// never a cached one. See the organiser page for the Data Cache reasoning.
+export const fetchCache = 'force-no-store';
 
 export const metadata: Metadata = {
   title: 'Confirm your email | Orange Jelly',
