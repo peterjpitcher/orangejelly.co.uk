@@ -59,17 +59,17 @@ import type { PollActionResult } from './polls';
 
 const organiserTokenSchema = z.object({ organiserToken: tokenSchema });
 
-export const setPollOpenSchema = z.object({
+const setPollOpenSchema = z.object({
   organiserToken: tokenSchema,
   open: z.boolean(),
 });
 
-export const confirmOptionSchema = z.object({
+const confirmOptionSchema = z.object({
   organiserToken: tokenSchema,
   optionId: z.string().uuid('That option is not valid.'),
 });
 
-export const deleteResponseSchema = z.object({
+const deleteResponseSchema = z.object({
   organiserToken: tokenSchema,
   participantId: z.string().uuid('That response is not valid.'),
 });
