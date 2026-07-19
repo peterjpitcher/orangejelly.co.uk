@@ -3,6 +3,7 @@ import Heading from '@/components/Heading';
 import Section from '@/components/Section';
 import Text from '@/components/Text';
 import CreatePollForm from '@/components/polls/create/create-poll-form';
+import AuthedNav from '@/components/admin/AuthedNav';
 
 /**
  * Create a poll.
@@ -23,15 +24,20 @@ export const metadata: Metadata = {
 
 export default function NewPollPage(): JSX.Element {
   return (
-    <Section background="cream" padding="large">
-      <Heading level={1} align="left" color="charcoal">
-        Find a time that works
-      </Heading>
-      <Text size="lg" color="muted" className="mt-4 max-w-2xl">
-        Put up to eight options to your team, send them one link, and see who can make what. No
-        accounts, no app, nothing for them to download.
-      </Text>
-      <CreatePollForm />
-    </Section>
+    <>
+      {/* Only visible when you are signed in, so you can move back to your polls
+          or the dashboard. A guest creating a poll sees no organiser chrome. */}
+      <AuthedNav />
+      <Section background="cream" padding="large">
+        <Heading level={1} align="left" color="charcoal">
+          Find a time that works
+        </Heading>
+        <Text size="lg" color="muted" className="mt-4 max-w-2xl">
+          Put up to eight options to your team, send them one link, and see who can make what. No
+          accounts, no app, nothing for them to download.
+        </Text>
+        <CreatePollForm />
+      </Section>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import './globals.css';
 import FooterWrapper from '@/components/FooterWrapper';
 import NavigationWrapper from '@/components/NavigationWrapper';
+import ChromeGate from '@/components/ChromeGate';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { PreloadResources } from '@/components/PerformanceMonitor';
 import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
@@ -203,14 +204,19 @@ export default function RootLayout({
           Skip to main content
         </Link>
 
-        {/* Navigation only - SuperHeader removed for cleaner layout */}
-        <NavigationWrapper />
+        {/* Marketing nav and footer, hidden on the organiser tool and poll
+            pages so they do not stack a second navigation on the tool. */}
+        <ChromeGate>
+          <NavigationWrapper />
+        </ChromeGate>
         <ErrorBoundary>
           <main id="main-content" className="min-h-screen">
             {children}
           </main>
         </ErrorBoundary>
-        <FooterWrapper />
+        <ChromeGate>
+          <FooterWrapper />
+        </ChromeGate>
         <MarketingChrome />
       </body>
     </html>
