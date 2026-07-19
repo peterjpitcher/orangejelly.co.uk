@@ -69,6 +69,10 @@ export async function POST(request: Request) {
     },
     session: {
       access_token: data.session.access_token,
+      // Returned so the client can refresh silently instead of forcing a fresh
+      // password login every time the short-lived access token expires. This is
+      // the whole fix for "I have to log in again every time I open /admin".
+      refresh_token: data.session.refresh_token,
       expires_at: data.session.expires_at,
     },
   });
