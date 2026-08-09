@@ -74,9 +74,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'Turn dead midweek nights into reliable trade with Tuesday and Wednesday formats tested at The Anchor, tailored to your pub. From £375 + VAT.',
   },
   '/licensees-guide/profitable-pub-food-menu-ideas': {
-    title: 'Profitable Pub Food: The Highest-Margin Menu Items',
+    title: 'Profitable Pub Food: 12 Dish Types and the GP Maths',
     description:
-      'The pub menu items with the best margins, plus the menu engineering that grew our food revenue by 98% in three months. Tested in a working kitchen.',
+      'Profitable pub food worked properly: 12 dish types, UK GP benchmarks, a VAT-correct costing example, and how to price up without losing your regulars.',
   },
   '/licensees-guide/social-media-strategy-for-pubs': {
     title: 'Social Media for Pubs: The Weekly Plan That Fills Tables',
