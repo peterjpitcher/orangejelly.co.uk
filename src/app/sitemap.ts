@@ -100,15 +100,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }> = [
     { slug: 'fix-my-pub', changeFrequency: 'monthly', priority: 0.8 },
     { slug: 'pub-rescue', changeFrequency: 'monthly', priority: 0.75 },
+    // The eight county pages were consolidated into /pub-marketing and now 301 to it,
+    // so they must not appear here. A sitemap listing redirecting URLs wastes crawl
+    // budget and tells Google the redirect was unintended.
     { slug: 'pub-marketing', changeFrequency: 'weekly', priority: 0.85 },
-    { slug: 'pub-marketing-london', changeFrequency: 'monthly', priority: 0.65 },
-    { slug: 'pub-marketing-surrey', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-berkshire', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-buckinghamshire', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-hertfordshire', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-kent', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-hampshire', changeFrequency: 'monthly', priority: 0.6 },
-    { slug: 'pub-marketing-oxfordshire', changeFrequency: 'monthly', priority: 0.6 },
     { slug: 'quiet-midweek-solutions', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'empty-pub-solutions', changeFrequency: 'monthly', priority: 0.75 },
     { slug: 'pub-marketing-no-budget', changeFrequency: 'monthly', priority: 0.7 },

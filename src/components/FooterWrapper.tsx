@@ -26,10 +26,15 @@ export default function FooterWrapper() {
       title: link.label,
       href: link.href,
     })),
-    locations: footerData.links.locations.map((link) => ({
-      title: link.label,
-      href: link.href,
-    })),
+    // Empty since the county pages were consolidated into /pub-marketing. Kept as a
+    // supported slot rather than removed, so a future region list needs no code change.
+    // Annotated because TypeScript infers never[] from the empty array in the JSON.
+    locations: ((footerData.links.locations ?? []) as Array<{ label: string; href: string }>).map(
+      (link) => ({
+        title: link.label,
+        href: link.href,
+      })
+    ),
     quickLinks: [
       ...footerData.links.resources.map((link) => ({
         title: link.label,

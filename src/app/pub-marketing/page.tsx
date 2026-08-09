@@ -640,23 +640,18 @@ export default function PubMarketingPage() {
             </Text>
           </div>
 
+          {/* Plain chips, not links. Each county used to have its own landing page; those
+              were consolidated into this page and now 301 here, so linking them would
+              either point at a redirect or point this page at itself. */}
           <div className="flex flex-wrap justify-center gap-3">
-            {pubMarketingData.locations.areas.map((area) => {
-              const areaSlug = area
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-')
-                .replace(/(^-|-$)/g, '');
-
-              return (
-                <Link
-                  key={area}
-                  href={`/pub-marketing-${areaSlug}`}
-                  className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40"
-                >
-                  {area}
-                </Link>
-              );
-            })}
+            {pubMarketingData.locations.areas.map((area) => (
+              <span
+                key={area}
+                className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-white"
+              >
+                {area}
+              </span>
+            ))}
           </div>
         </Container>
       </Section>

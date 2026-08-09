@@ -116,20 +116,25 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
               </ul>
             </div>
 
-            <div>
-              <Heading level={5} color="white" className="mb-3 text-cream">
-                Areas We Serve
-              </Heading>
-              <ul className="space-y-2 text-sm">
-                {locations.map((location, index) => (
-                  <li key={index}>
-                    <Link href={location.href} className="hover:text-teal-light transition-colors">
-                      {location.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {locations.length > 0 && (
+              <div>
+                <Heading level={5} color="white" className="mb-3 text-cream">
+                  Areas We Serve
+                </Heading>
+                <ul className="space-y-2 text-sm">
+                  {locations.map((location, index) => (
+                    <li key={index}>
+                      <Link
+                        href={location.href}
+                        className="hover:text-teal-light transition-colors"
+                      >
+                        {location.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div>
               <Heading level={5} color="white" className="mb-3 text-cream">

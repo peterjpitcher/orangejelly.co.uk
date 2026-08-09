@@ -22,6 +22,26 @@ const nextConfig = {
         destination: '/ways-to-work',
         permanent: true,
       },
+      // County landing pages consolidated into /pub-marketing (2026-08-09).
+      // Eight near-identical ~630-word templated pages returned 149 impressions and
+      // 1 click across 12 months while splitting authority away from /pub-marketing,
+      // which earns 847 impressions on its own. Orange Jelly works UK-wide, so
+      // county-level doorway pages argued against the positioning as well as
+      // underperforming. The counties are still named on /pub-marketing.
+      ...[
+        'surrey',
+        'london',
+        'berkshire',
+        'buckinghamshire',
+        'hampshire',
+        'hertfordshire',
+        'kent',
+        'oxfordshire',
+      ].map((county) => ({
+        source: `/pub-marketing-${county}`,
+        destination: '/pub-marketing',
+        permanent: true,
+      })),
       // Retired guide previously served 410; 301 to the closest live page (rescue/turnaround)
       // to preserve any link equity for the struggling-pub intent.
       {

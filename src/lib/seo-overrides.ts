@@ -739,11 +739,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // --- 2026-08-09 CTR reclaim: pages earning impressions well below the click-through
   // rate expected for their position. Evidence: GSC 12-month export, see
   // tasks/keyword-plan/2026-08-09-ctr-reclaim.md ---
-  '/services': {
-    title: 'Pub Marketing Services: Social, Events, Menus and Local SEO',
-    description:
-      'Pub marketing services from a working licensee: social media, events, menu engineering and local visibility. Packages from £375 + VAT.',
-  },
+  // No '/services' entry: next.config 301s /services to /ways-to-work, so an override
+  // here would never render. GSC still shows impressions against the old URL, which is
+  // historical rather than a live page.
   '/licensees-guide': {
     title: "The Licensee's Guide: 100+ Practical Guides for UK Pubs",
     description:
@@ -812,41 +810,8 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Facebook and Instagram ads that sell one specific night: your quiet Tuesday, Sunday lunch or event. Locally targeted, measured on real bookings.',
   },
-  '/pub-marketing-london': {
-    title: 'Pub Marketing in London: Fill Seats in a Busy City',
-    description:
-      'Pub marketing for London venues: stand out in a crowded market with local visibility, events and social that bring people through the door.',
-  },
-  '/pub-marketing-surrey': {
-    title: 'Pub Marketing for Surrey Pubs: Practical, Proven Help',
-    description:
-      'Pub marketing for Surrey venues from a licensee who runs one nearby. Local visibility, events and social that fill tables. From £375 + VAT.',
-  },
-  '/pub-marketing-hampshire': {
-    title: 'Pub Marketing in Hampshire: Results-Driven Help',
-    description:
-      'Pub marketing for Hampshire venues: local visibility, events and social media that turn quiet nights into reliable trade. From £375 + VAT.',
-  },
-  '/pub-marketing-berkshire': {
-    title: 'Pub Marketing for Berkshire Pubs: Proven Systems',
-    description:
-      'Pub marketing for Berkshire venues: the local visibility, events and social systems that fill tables, run by a working licensee.',
-  },
-  '/pub-marketing-oxfordshire': {
-    title: 'Pub Marketing in Oxfordshire: More Covers, Less Stress',
-    description:
-      'Pub marketing for Oxfordshire venues: practical systems for local visibility, events and social that lift covers without adding hours.',
-  },
-  '/pub-marketing-hertfordshire': {
-    title: 'Pub Marketing in Hertfordshire: Build Repeat Trade',
-    description:
-      'Pub marketing for Hertfordshire venues: local visibility, events and social media that turn first visits into regulars. From £375 + VAT.',
-  },
-  '/pub-marketing-buckinghamshire': {
-    title: 'Pub Marketing in Buckinghamshire: Grow Your Trade',
-    description:
-      'Pub marketing for Buckinghamshire venues: local visibility, events and social that grow covers and repeat trade. From £375 + VAT.',
-  },
+  // The seven county overrides that sat here were removed when those pages were
+  // consolidated into /pub-marketing. An override for a URL that 301s never renders.
   '/licensees-guide/pub-event-ideas': {
     title: 'Pub Event Ideas: A Year-Round Guide to Quiet Nights',
     description:

@@ -286,43 +286,34 @@ export default function HomePage({
         </Section>
       )}
 
-      {/* Areas We Cover */}
+      {/* Areas We Cover. County landing pages were consolidated into /pub-marketing, so
+          the counties are named here as plain text rather than eight competing links. */}
       <Section background="cream">
         <Heading level={2} align="center" className="mb-4">
-          Areas We Cover
+          Where We Work
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
-          Pub marketing support across Surrey and the South East. Based at The Anchor in Stanwell
-          Moor, serving independent pubs locally.
+        <Text size="lg" color="muted" align="center" className="mb-6 max-w-2xl mx-auto">
+          We work with pubs anywhere in the UK. Peter runs The Anchor in Stanwell Moor, so if you
+          are in Surrey, London, Berkshire, Buckinghamshire, Hampshire, Hertfordshire, Kent or
+          Oxfordshire he can get to you in person. Everywhere else works just as well remotely.
         </Text>
-        <Grid columns={{ default: 2, md: 4 }} gap="medium">
-          {[
-            { label: 'Surrey', href: '/pub-marketing-surrey' },
-            { label: 'London', href: '/pub-marketing-london' },
-            { label: 'Berkshire', href: '/pub-marketing-berkshire' },
-            { label: 'Buckinghamshire', href: '/pub-marketing-buckinghamshire' },
-            { label: 'Hampshire', href: '/pub-marketing-hampshire' },
-            { label: 'Hertfordshire', href: '/pub-marketing-hertfordshire' },
-            { label: 'Kent', href: '/pub-marketing-kent' },
-            { label: 'Oxfordshire', href: '/pub-marketing-oxfordshire' },
-          ].map((area) => (
-            <AnimatedItem key={area.href} animation="slide-up" delay={100}>
-              <Link href={area.href} className="block group">
-                <Card
-                  variant="bordered"
-                  className="p-6 text-center transition-all hover:shadow-lg hover:-translate-y-1"
-                >
-                  <Heading level={3} className="group-hover:text-orange transition-colors">
-                    {area.label}
-                  </Heading>
-                  <Text size="sm" color="muted" className="mt-1">
-                    Pub Marketing
-                  </Text>
-                </Card>
-              </Link>
-            </AnimatedItem>
-          ))}
-        </Grid>
+        <div className="text-center">
+          <AnimatedItem animation="slide-up" delay={100}>
+            <Link href="/pub-marketing" className="inline-block group">
+              <Card
+                variant="bordered"
+                className="!px-6 !py-4 text-center transition-all hover:shadow-lg hover:-translate-y-1"
+              >
+                <Heading level={3} className="group-hover:text-orange transition-colors">
+                  Pub Marketing
+                </Heading>
+                <Text size="sm" color="muted" className="mt-1">
+                  See how we work with pubs across the UK
+                </Text>
+              </Card>
+            </Link>
+          </AnimatedItem>
+        </div>
       </Section>
 
       <ResultsSection

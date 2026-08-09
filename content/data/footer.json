@@ -41,16 +41,7 @@
       { "label": "Contact", "href": "/contact" },
       { "label": "The Anchor", "href": "https://the-anchor.pub" }
     ],
-    "locations": [
-      { "label": "London", "href": "/pub-marketing-london" },
-      { "label": "Surrey", "href": "/pub-marketing-surrey" },
-      { "label": "Berkshire", "href": "/pub-marketing-berkshire" },
-      { "label": "Buckinghamshire", "href": "/pub-marketing-buckinghamshire" },
-      { "label": "Hampshire", "href": "/pub-marketing-hampshire" },
-      { "label": "Hertfordshire", "href": "/pub-marketing-hertfordshire" },
-      { "label": "Kent", "href": "/pub-marketing-kent" },
-      { "label": "Oxfordshire", "href": "/pub-marketing-oxfordshire" }
-    ]
+    "locations": []
   },
   "social": {
     "whatsapp": {
