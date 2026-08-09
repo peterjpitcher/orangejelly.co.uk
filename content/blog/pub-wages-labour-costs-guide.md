@@ -65,12 +65,12 @@ Before we talk about hourly rates, you need to understand that the number on a p
 
 On top of the gross wage, you are paying:
 
-- **Employer National Insurance** — 15 percent on earnings above the threshold (from April 2025, with the secondary threshold dropping to 5,000 per year)
-- **Workplace pension** — minimum 3 percent employer contribution on qualifying earnings
-- **Holiday pay** — 5.6 weeks statutory entitlement, which for a part-timer on irregular hours is calculated as 12.07 percent of hours worked
-- **Statutory sick pay** — 116.75 per week when staff are off sick for four or more days
-- **Training and induction costs** — the hours you or your manager spend getting someone up to speed
-- **Recruitment costs** — job ads, interview time, trial shifts, DBS checks if needed
+- **Employer National Insurance**: 15 percent on earnings above the threshold (from April 2025, with the secondary threshold dropping to 5,000 per year)
+- **Workplace pension**: minimum 3 percent employer contribution on qualifying earnings
+- **Holiday pay**: 5.6 weeks statutory entitlement, which for a part-timer on irregular hours is calculated as 12.07 percent of hours worked
+- **Statutory sick pay**: 116.75 per week when staff are off sick for four or more days
+- **Training and induction costs**: the hours you or your manager spend getting someone up to speed
+- **Recruitment costs**: job ads, interview time, trial shifts, DBS checks if needed
 
 A rough rule: the true cost of employing someone is 15 to 20 percent above their gross hourly rate. So a bar team member on 12.50 per hour is really costing you closer to 14.50 to 15 per hour when you account for everything.
 
@@ -161,11 +161,11 @@ For more on using your till data to drive decisions, our guide on [EPOS data and
 
 Instead of having your whole team start and finish at the same time, stagger arrivals and departures. A typical pub day might look like:
 
-- **10:00** — One opener: stock check, prep, clean
-- **11:30** — Second person arrives for lunch service
-- **14:00** — Lunch team member finishes or goes on break; afternoon cover starts
-- **17:00** — Evening team arrives; overlap with afternoon for handover
-- **23:00** — First evening person leaves; closer stays to cash up
+- **10:00**: One opener: stock check, prep, clean
+- **11:30**: Second person arrives for lunch service
+- **14:00**: Lunch team member finishes or goes on break; afternoon cover starts
+- **17:00**: Evening team arrives; overlap with afternoon for handover
+- **23:00**: First evening person leaves; closer stays to cash up
 
 This approach means you are only paying for the hands you need at each point in the day. It takes more thought to plan but reclaims hours every week.
 
@@ -198,7 +198,7 @@ If you are regularly paying 10 or more hours of overtime per week to cover gaps,
 - 10 hours overtime at time-and-a-half on 13 per hour = 195 per week
 - 10 hours for a new starter at 12.50 per hour (plus 20% on-costs) = 150 per week
 
-That is a saving of 45 per week, or over 2,300 per year, and you get a fresher, less overworked team.
+That is 45 per week back in your pocket, or over 2,300 per year, and you get a fresher, less overworked team.
 
 The tipping point is usually around 8 to 10 regular overtime hours per week. Below that, overtime is fine as a flex tool. Above that, recruit.
 
@@ -243,7 +243,7 @@ January and February are brutal for most pubs. Rather than keeping the same rota
 
 - Reduce opening hours on the quietest days (close Monday lunchtime if you serve 8 covers)
 - Drop to minimum staffing levels and flex up only when bookings justify it
-- Use the quiet period for training and deep cleaning — productive hours rather than standing-around hours
+- Use the quiet period for training and deep cleaning, productive hours rather than standing-around hours
 - Offer reduced hours to flexible staff who are happy to take them
 
 The key is making these decisions before the quiet period hits, not reacting week by week as the numbers get worse.

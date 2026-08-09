@@ -2,7 +2,7 @@
 title: "Pub Health and Safety: The Licensee's Practical Checklist"
 slug: "pub-health-safety-checklist"
 publishedDate: 2025-10-06
-excerpt: "A practical health and safety checklist for pub licensees. Fire safety, risk assessments, COSHH, cellar safety, and inspection prep — no legal jargon."
+excerpt: "A practical health and safety checklist for pub licensees. Fire safety, risk assessments, COSHH, cellar safety, and inspection prep. No legal jargon."
 quickAnswer: "Pub health and safety starts with five written risk assessments, maintained fire safety equipment, a stocked first aid kit, COSHH data sheets for every chemical, an up-to-date accident book, and a glass management policy. Review weekly, audit monthly, and keep an inspection-ready folder so you are never caught off guard."
 author: "Peter Pitcher"
 category: "operations"
@@ -56,13 +56,13 @@ schema:
 
 You did not get into this trade to spend your evenings reading legislation. You got into it because you love pubs, you love people, and you wanted to build something. But here is the uncomfortable truth: if your health and safety is not right, everything else you are building sits on shaky ground.
 
-One visit from an inspector with a clipboard, one accident you cannot account for, one fire exit blocked by a delivery — and you are looking at fines, closure notices, or worse. The good news is that pub health and safety is not complicated. It is just thorough. And once you have a system, it runs itself.
+One visit from an inspector with a clipboard, one accident you cannot account for, one fire exit blocked by a delivery, and you are looking at fines, closure notices, or worse. The good news is that pub health and safety is not complicated. It is just thorough. And once you have a system, it runs itself.
 
 This is not a legal textbook. It is a practical checklist built from running The Anchor in Stanwell Moor as a Greene King tenant. Every item on this list is something I either do myself or have learned the hard way that I should.
 
 ## Why this matters more than you think
 
-Health and safety failures do not just cost money. They cost reputation. A single serious accident, a failed inspection reported publicly, or a noise complaint that escalates to your licensing committee — any of these can damage the goodwill you have spent years building.
+Health and safety failures do not just cost money. They cost reputation. A single serious accident, a failed inspection reported publicly, or a noise complaint that escalates to your licensing committee: any of these can damage the goodwill you have spent years building.
 
 The businesses that get this right are not the ones with the thickest folders. They are the ones with simple, consistent habits. A five-minute check at the start of every shift is worth more than a 50-page policy document gathering dust behind the bar.
 
@@ -78,7 +78,7 @@ You need a written risk assessment for every significant hazard in your pub. For
 
 **2. Slips, trips, and falls.** Wet floors from spills and weather, uneven surfaces, steps without handrails, trailing cables, and poor lighting in toilets, corridors, and car parks.
 
-**3. Manual handling.** Cellar work is the big one here — moving casks, kegs, and cases of bottles. But also think about kitchen deliveries, furniture moves for events, and changing barrels.
+**3. Manual handling.** Cellar work is the big one here: moving casks, kegs, and cases of bottles. But also think about kitchen deliveries, furniture moves for events, and changing barrels.
 
 **4. Cellar hazards.** Carbon dioxide and nitrogen gas leaks, wet and slippery floors, heavy equipment, and confined spaces. If your cellar alarm goes off, nobody enters until the gas has cleared. No exceptions.
 
@@ -94,7 +94,7 @@ Keep it simple. For each hazard, write down:
 - What else you need to do
 - When you will review it
 
-You do not need fancy software. A table in a Word document is fine. What matters is that it exists, it is specific to your pub, and you review it at least once a year — or whenever something changes, like a new piece of equipment or a building alteration.
+You do not need fancy software. A table in a Word document is fine. What matters is that it exists, it is specific to your pub, and you review it at least once a year, or whenever something changes, like a new piece of equipment or a building alteration.
 
 ### Common mistakes
 
@@ -102,7 +102,7 @@ The biggest mistake I see is licensees downloading a generic risk assessment tem
 
 ## Fire safety: exits, extinguishers, and drills
 
-Fire safety in a pub is governed by the Regulatory Reform (Fire Safety) Order 2005. As the responsible person — which is you, the licensee — you are personally liable for compliance.
+Fire safety in a pub is governed by the Regulatory Reform (Fire Safety) Order 2005. As the responsible person (which is you, the licensee), you are personally liable for compliance.
 
 ### Your fire safety checklist
 
@@ -120,17 +120,17 @@ Fire safety in a pub is governed by the Regulatory Reform (Fire Safety) Order 20
 
 ### Kitchen-specific fire safety
 
-Your kitchen extraction system is a major fire risk if not maintained. Grease builds up in filters and ductwork and can ignite. Have the extraction system deep cleaned at least every six months — more often if you run a high-volume food operation. Keep a record of every clean.
+Your kitchen extraction system is a major fire risk if not maintained. Grease builds up in filters and ductwork and can ignite. Have the extraction system deep cleaned at least every six months, more often if you run a high-volume food operation. Keep a record of every clean.
 
 The suppression system above your fryers and ranges needs annual inspection. If you have an Ansul or similar system, the service engineer should tag it with the inspection date.
 
 ## Cellar safety
 
-The cellar is statistically the most dangerous area of a pub. It is where you combine heavy lifting, gas systems, wet floors, and steep stairs — often in a confined space with poor ventilation.
+The cellar is statistically the most dangerous area of a pub. It is where you combine heavy lifting, gas systems, wet floors, and steep stairs, often in a confined space with poor ventilation.
 
 ### Gas safety
 
-Every cellar using CO2 or mixed gas must have a fixed gas detection system with an audible alarm. Test it weekly. If the alarm sounds, evacuate immediately and do not re-enter until the area has been ventilated and tested. CO2 displaces oxygen — you cannot see it or smell it, and it can be fatal.
+Every cellar using CO2 or mixed gas must have a fixed gas detection system with an audible alarm. Test it weekly. If the alarm sounds, evacuate immediately and do not re-enter until the area has been ventilated and tested. CO2 displaces oxygen: you cannot see it or smell it, and it can be fatal.
 
 Post clear signage at the cellar entrance warning of the gas hazard. Make sure every member of staff knows what the alarm sounds like and what to do when they hear it.
 
@@ -146,7 +146,7 @@ A clean cellar is a safe cellar and a profitable one. Beer stored at the wrong t
 
 ## Glass management
 
-Glassware injuries are one of the most common accidents in pubs — for both staff and customers. A clear glass policy reduces risk and shows your insurer you take it seriously.
+Glassware injuries are one of the most common accidents in pubs, for both staff and customers. A clear glass policy reduces risk and shows your insurer you take it seriously.
 
 ### Your glass policy should cover
 
@@ -166,7 +166,7 @@ COSHH stands for Control of Substances Hazardous to Health. In a pub, that cover
 
 ### What you need
 
-**Data sheets.** A safety data sheet for every chemical product, filed in a COSHH folder accessible to all staff. Your suppliers must provide these — if they cannot, switch suppliers.
+**Data sheets.** A safety data sheet for every chemical product, filed in a COSHH folder accessible to all staff. Your suppliers must provide these. If they cannot, switch suppliers.
 
 **Training.** Every staff member who handles chemicals must know what they are using, what the risks are, and what to do if something goes wrong. This includes knowing where the eyewash station is and how to use it.
 
@@ -176,7 +176,7 @@ COSHH stands for Control of Substances Hazardous to Health. In a pub, that cover
 
 ## Accident book and RIDDOR
 
-Every pub must have an accident book. Record every accident, however minor — a staff member cutting their finger, a customer tripping on a step, a slip on a wet floor. Each entry should include the date, time, what happened, who was involved, what first aid was given, and what action you took to prevent it happening again.
+Every pub must have an accident book. Record every accident, however minor: a staff member cutting their finger, a customer tripping on a step, a slip on a wet floor. Each entry should include the date, time, what happened, who was involved, what first aid was given, and what action you took to prevent it happening again.
 
 ### When to report to RIDDOR
 
@@ -201,7 +201,7 @@ Report online at the HSE website within 15 days for over-seven-day injuries, or 
 
 ## Noise management
 
-Noise complaints are one of the fastest routes to losing your licence conditions or facing a review. If you have neighbours — and most pubs do — you need to manage this proactively, not reactively.
+Noise complaints are one of the fastest routes to losing your licence conditions or facing a review. If you have neighbours (and most pubs do), you need to manage this proactively, not reactively.
 
 ### Prevention is everything
 
@@ -209,7 +209,7 @@ Noise complaints are one of the fastest routes to losing your licence conditions
 
 **Sound limiters.** If you play live or amplified music, a sound limiter set to an agreed level is your best defence. It provides objective evidence that you are controlling noise output.
 
-**Building fabric.** Close windows and doors during entertainment. If your pub has thin walls or adjoining residential properties, consider acoustic treatment — even basic measures like heavy curtains and sealing gaps around doors make a measurable difference.
+**Building fabric.** Close windows and doors during entertainment. If your pub has thin walls or adjoining residential properties, consider acoustic treatment. Even basic measures like heavy curtains and sealing gaps around doors make a measurable difference.
 
 **Speaker placement.** Point speakers away from neighbouring properties. Bass travels through walls, so keep subwoofers off shared walls and raised off the floor.
 
@@ -231,7 +231,7 @@ If you have an outdoor space, it needs its own risk assessment covering:
 
 ## How to prepare for an inspection
 
-Inspections from environmental health, fire safety, or HSE officers are not announced in most cases. The best preparation is not scrambling before a visit — it is maintaining standards every day.
+Inspections from environmental health, fire safety, or HSE officers are not announced in most cases. The best preparation is not scrambling before a visit. It is maintaining standards every day.
 
 ### Your inspection-ready folder
 
@@ -242,7 +242,7 @@ Keep a single folder (physical or digital) containing:
 - COSHH data sheets
 - Accident book (or access to it)
 - Employers liability insurance certificate
-- Food hygiene records (if applicable — see our [food hygiene rating guide](/licensees-guide/food-hygiene-rating-five-star-guide))
+- Food hygiene records (if applicable, see our [food hygiene rating guide](/licensees-guide/food-hygiene-rating-five-star-guide))
 - Training records for staff (first aid, food hygiene, fire safety, manual handling)
 - Gas safety certificates for cellar systems
 - Electrical installation certificate (EICR)
@@ -274,17 +274,17 @@ Health and safety is not a one-off exercise. Build these checks into your routin
 
 - Full fire safety walkthrough (exits, signs, extinguishers, escape routes)
 - First aid kit formal audit and restock
-- Accident book review — look for patterns
-- COSHH folder check — any new products need data sheets
+- Accident book review: look for patterns
+- COSHH folder check: any new products need data sheets
 - Outdoor furniture condition check
-- Staff training records review — anyone due for renewal?
+- Staff training records review: anyone due for renewal?
 
 ### Annual checks
 
 - All risk assessments reviewed and updated
 - Fire extinguisher servicing
 - Emergency lighting full discharge test
-- Electrical installation inspection (EICR — every five years, but check annually)
+- Electrical installation inspection (EICR: every five years, but check annually)
 - PAT testing for portable appliances
 - Gas safety certificate renewal
 - Kitchen extraction deep clean (every six months minimum)
@@ -295,7 +295,7 @@ Health and safety is not a one-off exercise. Build these checks into your routin
 
 Two quick legal requirements that are easy to overlook:
 
-**Employers liability insurance.** If you have any staff — even one — you must have employers liability insurance of at least five million pounds. The certificate must be displayed where employees can see it. Failure to have this insurance is a criminal offence with fines of up to 2,500 pounds per day.
+**Employers liability insurance.** If you have any staff (even one), you must have employers liability insurance of at least five million pounds. The certificate must be displayed where employees can see it. Failure to have this insurance is a criminal offence with fines of up to 2,500 pounds per day.
 
 **Health and safety law poster.** You must display the HSE approved poster in a place where all employees can read it, or provide each employee with a pocket card. The poster must include the name and contact details of your competent person for health and safety. For most pubs, that is you.
 
@@ -310,7 +310,7 @@ Build that culture by:
 - **Encouraging reporting.** Staff should feel comfortable flagging issues without fear of being seen as difficult. A near-miss reported today prevents an accident tomorrow.
 - **Reviewing incidents properly.** When something does go wrong, investigate it, fix the root cause, and share the learning. Do not just patch it and move on.
 
-For more on how compliance fits into the bigger picture of running a well-managed pub, our [pub insurance guide](/licensees-guide/pub-insurance-cover-guide) covers what your insurer expects you to have in place — and where gaps in your safety systems could leave you exposed.
+For more on how compliance fits into the bigger picture of running a well-managed pub, our [pub insurance guide](/licensees-guide/pub-insurance-cover-guide) covers what your insurer expects you to have in place, and where gaps in your safety systems could leave you exposed.
 
 ## The bottom line
 
@@ -318,4 +318,4 @@ Pub health and safety is not glamorous. Nobody got into this industry because th
 
 The checklist in this article covers everything most pubs need. Print it, work through it, and build the weekly and monthly checks into your routine. Once the system is in place, it takes minutes, not hours. And when that inspector walks through your door unannounced, you will hand them your folder, offer them a cup of tea, and know that everything is in order.
 
-If you want a fresh pair of eyes on your pub's compliance and operations, [book a Growth Fix with Orange Jelly](/ways-to-work/growth-fix). We will walk your site, review your documentation, and give you a clear action plan — the same practical approach I use at The Anchor every day.
+If you want a fresh pair of eyes on your pub's compliance and operations, [book a Growth Fix with Orange Jelly](/ways-to-work/growth-fix). We will walk your site, review your documentation, and give you a clear action plan, the same practical approach I use at The Anchor every day.

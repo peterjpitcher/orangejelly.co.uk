@@ -4,7 +4,7 @@ slug: "recession-proof-pub-strategies"
 publishedDate: 2025-05-15
 updatedDate: "2025-08-08T10:49:26.912Z"
 excerpt: "Proven strategies to maintain and grow your pub business during economic downturns. Cost-cutting, revenue optimisation, and community-building tactics."
-quickAnswer: "Focus on value-driven offers like 2-for-1 meals on quiet days, reduce wastage through better stock management, create affordable comfort experiences, and build customer loyalty through personal service. Emphasize community connection over premium pricing."
+quickAnswer: "Recession-proof your pub by protecting value rather than cutting price: use bundles and set menus instead of heavy discounts, tighten the menu to reduce waste, add small luxuries like a premium dessert or a themed night, build repeat trade through loyalty and personal invites, and review cash weekly rather than monthly."
 author: "Peter Pitcher"
 category: "turnaround"
 featuredImage: "/images/blog/recession-proof-pub-strategies.png"
@@ -47,11 +47,11 @@ During a downturn, people still want community and comfort. They just need clear
 
 ## Strategy 1: Protect value, not just price
 
-Use bundles and set menus rather than heavy discounts. Guests feel the value while you protect margin.
+Use bundles and set menus rather than heavy discounts, built with the [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend). Guests feel the value while you protect margin.
 
 ## Strategy 2: Build repeat trade
 
-Loyalty, events, and personal invites matter more when wallets are tight. Focus on getting people back, not just in once.
+A [simple loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub), events, and personal invites matter more when wallets are tight. Focus on getting people back, not just in once.
 
 ## Strategy 3: Tighten the menu
 
@@ -63,7 +63,7 @@ People cut big spending but still want treats. A premium dessert, a themed night
 
 ## Strategy 5: Watch cash weekly
 
-In a recession, cashflow is your safety net. Review weekly, not monthly.
+In a recession, cashflow is your safety net, so work through the [cashflow fixes that apply when trade drops](/licensees-guide/cashflow-fixes-when-trade-drops). Review weekly, not monthly.
 
 ## Common mistakes
 

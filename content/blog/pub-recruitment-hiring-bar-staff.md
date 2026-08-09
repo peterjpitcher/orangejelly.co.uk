@@ -3,7 +3,7 @@ title: "Pub Recruitment: How to Hire (and Keep) Great Bar Staff"
 slug: "pub-recruitment-hiring-bar-staff"
 publishedDate: 2025-09-01
 excerpt: "Practical guide to finding, hiring, and keeping great pub staff. Where to recruit, how to write ads that work, and retention strategies from a working licensee."
-quickAnswer: "The best pub staff come from word of mouth, local colleges, and targeted social media posts — not generic job boards. Write ads that sell the role honestly, run paid trial shifts, onboard properly in week one, and retain through recognition, flexibility, and a culture worth staying for. Staff leave managers, not pubs."
+quickAnswer: "The best pub staff come from word of mouth, local colleges, and targeted social media posts, not generic job boards. Write ads that sell the role honestly, run paid trial shifts, onboard properly in week one, and retain through recognition, flexibility, and a culture worth staying for. Staff leave managers, not pubs."
 author: "Peter Pitcher"
 category: "people"
 featuredImage: "/images/blog/pub-recruitment-hiring-bar-staff.svg"
@@ -34,11 +34,11 @@ faqs:
   - question: "Where is the best place to advertise pub jobs?"
     answer: "Start with your own social media and ask existing staff if they know anyone. Word of mouth consistently produces the best pub hires. For wider reach, use Caterer.com for experienced hospitality candidates, Indeed for volume, and contact local college hospitality departments directly. Avoid paying for premium listings until you have exhausted free channels."
   - question: "How much should I pay bar staff in the UK?"
-    answer: "At minimum, pay the National Living Wage, which is reviewed annually. To attract and retain good people, pay above minimum and be transparent about it in your ads. Many pubs now offer 50p to 1 pound above minimum as a starting rate, with a review after three months. Tips, staff meals, and flexible hours also matter — sometimes more than the hourly rate itself."
+    answer: "At minimum, pay the National Living Wage, which is reviewed annually. To attract and retain good people, pay above minimum and be transparent about it in your ads. Many pubs now offer 50p to 1 pound above minimum as a starting rate, with a review after three months. Tips, staff meals, and flexible hours also matter, sometimes more than the hourly rate itself."
   - question: "Should I use a trial shift when hiring pub staff?"
     answer: "Yes, always. A trial shift is the single most reliable way to assess whether someone fits your pub. Keep it to three or four hours, pay them for it at the standard rate, and brief your existing team to observe. Watch how they interact with customers, how they handle being busy, and whether they ask questions when unsure."
   - question: "How do I stop pub staff from leaving after a few months?"
-    answer: "Most pub staff leave because of poor management, not poor pay. The biggest retention drivers are a fair rota published in advance, genuine recognition for good work, opportunities to learn new skills, and a manager who listens. Exit interviews reveal patterns — if three people leave citing the same issue, that issue is your priority."
+    answer: "Most pub staff leave because of poor management, not poor pay. The biggest retention drivers are a fair rota published in advance, genuine recognition for good work, opportunities to learn new skills, and a manager who listens. Exit interviews reveal patterns. If three people leave citing the same issue, that issue is your priority."
   - question: "What are the red flags when interviewing for pub jobs?"
     answer: "Watch for candidates who badmouth their previous employer, cannot explain gaps in their CV, show no curiosity about your pub, or are vague about availability. In hospitality, reliability matters more than experience. Someone who turns up on time, communicates clearly, and genuinely enjoys being around people will outperform a skilled bartender who calls in sick every other weekend."
   - question: "Do I need to provide a contract for pub staff?"
@@ -75,7 +75,7 @@ That starts with understanding what candidates actually want in 2025. It is not 
 - **Respect and recognition.** Being thanked for good work, being listened to, being treated like a professional.
 - **A workplace that does not feel chaotic.** Good systems, clear expectations, equipment that works.
 - **Flexibility.** Students want term-time hours. Parents want school-run compatibility. Everyone wants some control over their schedule.
-- **Development.** Even in a small pub, people want to learn. Cocktail making, cellar management, kitchen skills — progression matters.
+- **Development.** Even in a small pub, people want to learn. Cocktail making, cellar management, kitchen skills. Progression matters.
 
 If you can offer most of those things genuinely, not just in the job ad, you are already ahead of most pubs.
 
@@ -83,7 +83,7 @@ If you can offer most of those things genuinely, not just in the job ad, you are
 
 Not all recruitment channels are equal. Here is what actually works, ranked by effectiveness for pub hiring.
 
-### Word of mouth — your best channel
+### Word of mouth: your best channel
 
 Your existing team is your most powerful recruitment tool. Good people know good people. If your current staff enjoy working for you, they will recommend friends when a vacancy comes up.
 
@@ -91,11 +91,11 @@ Make it formal. Offer a referral bonus, even a modest one like 50 pounds after t
 
 The hires you get through word of mouth tend to stay longer because they already know someone on the team and have realistic expectations about the role.
 
-### Social media — free and targeted
+### Social media: free and targeted
 
 Post vacancies on your pub's Facebook and Instagram. Be specific and honest about the role. A short video of your team in action performs better than a text post.
 
-Ask your staff to share the post. Their networks are exactly the demographic you want — local, sociable, the right age range.
+Ask your staff to share the post. Their networks are exactly the demographic you want: local, sociable, the right age range.
 
 Local Facebook community groups are particularly effective for pub recruitment. Post in your village or town group, not just on your pub page. People who live nearby are more likely to stick around.
 
@@ -105,19 +105,19 @@ Contact the hospitality department at your nearest further education college. Ma
 
 The advantage is that these candidates are actively choosing hospitality as a career path. They may lack experience, but they have enthusiasm and current training. Offer to host a placement and you get a free trial period before committing to a hire.
 
-### Job boards — use selectively
+### Job boards: use selectively
 
 **Caterer.com** is the industry standard for hospitality recruitment in the UK. It costs money but reaches people who are specifically looking for hospitality work.
 
 **Indeed** has volume but lower quality for hospitality roles. You will get more applications but spend more time filtering.
 
-**Google Business Profile** — if you have a well-maintained profile, you can post job listings directly. Free and hyperlocal.
+**Google Business Profile**: if you have a well-maintained profile, you can post job listings directly. Free and hyperlocal.
 
 **Gumtree and local classifieds** still work in some areas, particularly for casual or part-time roles.
 
 Avoid spending money on premium listings until you have tried the free channels first.
 
-### Recruitment agencies — last resort for most pubs
+### Recruitment agencies: last resort for most pubs
 
 Agencies charge 10 to 20 percent of the annual salary, which is hard to justify for bar staff roles. They can be useful for chef recruitment, where the talent pool is smaller and more specialised, but for front-of-house roles, you will almost always get better results from direct recruitment.
 
@@ -138,7 +138,7 @@ The candidate is choosing you as much as you are choosing them. Start with what 
 Vague ads attract vague candidates. State clearly:
 
 - Exact hours and shift patterns (not "flexible hours," which means nothing).
-- Pay rate — not "competitive," an actual number. If you are embarrassed by the number, that is a different problem.
+- Pay rate: not "competitive," an actual number. If you are embarrassed by the number, that is a different problem.
 - Whether tips are pooled or individual.
 - What training you provide.
 - Start date.
@@ -153,13 +153,13 @@ Tell candidates exactly how to apply. "Drop your CV into the pub" works if you w
 
 ## Interview red flags and green lights
 
-Interviews in hospitality should be practical and conversational, not corporate. You are assessing personality, reliability, and attitude — skills can be taught.
+Interviews in hospitality should be practical and conversational, not corporate. You are assessing personality, reliability, and attitude. Skills can be taught.
 
 ### Red flags
 
 - **They badmouth their last employer.** Every pub they have worked in was awful? The common factor is them.
 - **They cannot explain why they left their last role.** Vagueness here usually means they were let go or walked out.
-- **They show zero curiosity about your pub.** If they have not looked at your menu, checked your social media, or even driven past, they are not interested — they just need a job.
+- **They show zero curiosity about your pub.** If they have not looked at your menu, checked your social media, or even driven past, they are not interested. They just need a job.
 - **They are inflexible on hours from the outset.** Some flexibility is fair, but if they cannot work any evenings or weekends, they cannot work in a pub.
 - **Late to the interview without contacting you.** If they cannot manage timekeeping for an interview, they will not manage it for a shift.
 
@@ -197,7 +197,7 @@ The biggest mistake pubs make is throwing new staff straight into a busy shift w
 - **Introduce them to every team member by name.** This sounds obvious but it rarely happens properly.
 - **Walk them through the building.** Fire exits, stock rooms, cellar, staff area, toilets, cleaning supplies. Remove the anxiety of not knowing where things are.
 - **Give them their contract and employee handbook.** If you do not have a handbook, create a one-page document covering the basics: dress code, shift procedures, sickness reporting, who to contact in an emergency.
-- **Pair them with your best team member.** Not your busiest or most senior — your best at explaining things patiently.
+- **Pair them with your best team member.** Not your busiest or most senior: your best at explaining things patiently.
 
 ### Days two to five
 
@@ -230,9 +230,9 @@ It is almost never just about pay. Exit conversations and industry research cons
 - **Publish the rota at least two weeks in advance.** Non-negotiable. This single change reduces staff turnover more than any pay rise.
 - **Recognise good work publicly and specifically.** Not "good job tonight" but "the way you handled that complaint was brilliant, the customer left smiling."
 - **Invest in development.** Send someone on a barista course. Teach cocktail making. Let a keen team member help plan events. People stay where they grow.
-- **Be consistent and fair.** Apply rules equally. If lateness has consequences, it has consequences for everyone — including your favourites.
+- **Be consistent and fair.** Apply rules equally. If lateness has consequences, it has consequences for everyone, including your favourites.
 - **Create team moments.** A staff drink after a big night, a group chat that is actually fun, a team outing once a quarter. People stay for the people as much as the job.
-- **Offer flexibility where you can.** A student who needs exam week off, a parent who cannot do school holidays — accommodate where possible and they will go the extra mile when you need them to.
+- **Offer flexibility where you can.** A student who needs exam week off, a parent who cannot do school holidays. Accommodate where possible and they will go the extra mile when you need them to.
 
 For more ideas on keeping your team motivated when budgets are tight, read our guide on [pub staff motivation without pay rises](/licensees-guide/staff-motivation-hacks-no-pay-rise).
 
@@ -266,7 +266,7 @@ When good candidates apply at the wrong time, keep their details on file with th
 
 ### Stay visible as an employer
 
-Your social media should occasionally show what it is like to work at your pub, not just what it is like to drink there. Team photos, behind-the-scenes content, staff achievements — this attracts future applicants passively.
+Your social media should occasionally show what it is like to work at your pub, not just what it is like to drink there. Team photos, behind-the-scenes content, staff achievements. This attracts future applicants passively.
 
 ### Build college relationships
 
@@ -300,6 +300,6 @@ After every hire, ask yourself: where did this person come from, what worked in 
 
 The pubs that consistently find and keep great staff are not paying double the market rate or offering fancy perks. They are doing the basics brilliantly: honest recruitment, proper onboarding, fair management, and genuine recognition.
 
-Your team is the single biggest factor in whether customers come back. A warm welcome, a well-pulled pint, and a smile that feels real — that is what turns a first visit into a regular habit. And that starts with hiring the right people and giving them every reason to stay.
+Your team is the single biggest factor in whether customers come back. A warm welcome, a well-pulled pint, and a smile that feels real. That is what turns a first visit into a regular habit. And that starts with hiring the right people and giving them every reason to stay.
 
-If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly about a Growth Partnership](/ways-to-work/growth-partner). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403% — and it starts with the people behind the bar.
+If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly about a Growth Partnership](/ways-to-work/growth-partner). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403%, and it starts with the people behind the bar.

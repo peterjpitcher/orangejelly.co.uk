@@ -4,7 +4,7 @@ slug: "rent-supplier-negotiations-cash-tight"
 publishedDate: 2025-05-22
 updatedDate: "2026-04-20T00:00:00.000Z"
 excerpt: "Approach landlords and suppliers with data, humility, and a repayment plan so you secure breathing room without burning bridges."
-quickAnswer: "Lead with transparency, show your recovery plan, propose structured repayments, and maintain weekly updates until arrears clear."
+quickAnswer: "Talk to your landlord or supplier before the payment is due, not after. Bring a short data pack: eight weeks of takings, an eight-week forecast, and a clear repayment plan. Ask for a call, propose a specific option such as split payments or a short payment holiday, confirm it in writing the same day, and update them weekly."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -34,14 +34,14 @@ faqs:
   - question: "What should I say to my landlord if I can't pay the rent on time?"
     answer: "Contact them before the payment is due, not after. Present your current trading figures, a realistic forecast, and a proposed repayment plan. Landlords prefer tenants who communicate openly and show a path to recovery over tenants who go silent and force them to chase."
   - question: "Can I negotiate better terms with my drinks supplier?"
-    answer: "Yes — suppliers would rather adjust terms than lose an account. Ask for extended payment windows, volume-based discounts, or promotional support. Come with data showing your order history and future projections. Even small concessions on payment terms can ease weekly cash flow significantly."
+    answer: "Yes. Suppliers would rather adjust terms than lose an account. Ask for extended payment windows, volume-based discounts, or promotional support. Come with data showing your order history and future projections. Even small concessions on payment terms can ease weekly cash flow significantly."
   - question: "Should I get professional help with pub financial negotiations?"
     answer: "If the amounts are significant or you are facing legal action, yes. The BII offers member support, and there are specialist hospitality accountants who understand pub leases and supplier contracts. For smaller negotiations, a clear data pack and an honest conversation often achieve the same result."
 ---
 
 # Handling Rent and Supplier Negotiations When Cash Is Tight
 
-Ignoring the phone does not fix cash pressure. The best outcome comes from early, honest negotiation backed by data and a clear plan.
+Ignoring the phone does not fix cash pressure, and it will not break the [cycle behind a cash flow crisis](/licensees-guide/cash-flow-crisis-breaking-cycle). The best outcome comes from early, honest negotiation backed by data and a clear plan.
 
 This is the structure that keeps relationships intact while you buy time.
 
@@ -60,7 +60,7 @@ Ask for a short call rather than sending a long email. It is easier to build tru
 
 ## Step 3: Lead with transparency
 
-Explain what happened and what you are doing about it. Avoid excuses. Focus on actions already taken.
+Explain what happened and what you are doing about it. Avoid excuses. Focus on actions already taken, such as the [cashflow fixes you have put in place as trade dropped](/licensees-guide/cashflow-fixes-when-trade-drops).
 
 ## Step 4: Propose, do not beg
 
@@ -69,7 +69,7 @@ Suggest a temporary adjustment:
 - A short payment holiday with a clear restart date.
 - A smaller weekly payment plus a catch-up plan.
 
-People respond better to clear proposals than open-ended requests.
+People respond better to clear proposals than open-ended requests, which is also the approach that works when you [improve the terms of a brewery tie](/licensees-guide/brewery-tie-improve-your-deal).
 
 ## Step 5: Put it in writing
 

@@ -4,7 +4,7 @@ slug: "theme-hour-power-hour"
 publishedDate: 2025-11-20
 updatedDate: "2026-02-25T00:00:00.000Z"
 excerpt: "60-minute Saturday bursts that lift pre-peak trade, use existing playlists, and feed straight into dinner bookings."
-quickAnswer: "Drop a tightly-timed Theme Hour (80s/90s Power Hour or Spin-to-Win) before the dinner rush, script every 10 minutes, and bundle a signature spritz so you bank covers without hurting restaurant service."
+quickAnswer: "Run a 60-minute Theme Hour in the Saturday pre-peak slot, 4 to 6pm, built from six ten-minute beats such as lyric challenges, a spin-to-win wheel and trivia blitzes. Script the MC in five-minute increments, anchor it with a Power-Hour Spritz bundle, then roll the crowd straight into dinner bookings."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -46,7 +46,7 @@ Saturday pre-peak (4–6pm) is prime for a punchy activation that fills the bar 
 ## Why Theme Hour Works
 - **Short and sharp:** Guests commit to one hour, then stay for dinner or rebook for next week.
 - **Low lift:** Reuse existing playlists, handheld mics, and prize stock.
-- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers healthy GP and anchors the promo.
+- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers healthy GP and anchors the promo, the same maths behind any [profitable event night template](/licensees-guide/pub-event-template-profit-nights).
 - **Content factory:** Every spin, winner, and crowd sing-along becomes a reel for the following week.
 
 ## Choose Your Theme
@@ -58,7 +58,7 @@ Saturday pre-peak (4–6pm) is prime for a punchy activation that fills the bar 
 | **Playlist Battle** | Two playlists compete; crowd applause meter decides the winner | MC + volunteer counters | Round of drinks for the team on stage |
 | **Flash Challenge Hour** | Dance-off, lyric-finish, “guess the riff” back-to-back | MC only if using autop-run cues | Gift cards, dessert tokens, VIP booth |
 
-Pick one theme per month to build muscle memory for staff and regulars.
+Pick one theme per month to build muscle memory for staff and regulars, then rotate it alongside the rest of your [pub event ideas](/licensees-guide/pub-event-ideas).
 
 ## Run-of-Show (Example for Power Hour)
 | Time | Beat | Notes |
@@ -81,7 +81,7 @@ Keep the MC script in 5-minute increments so covering staff can run it if the le
 - **Local collabs:** Print instant photo souvenirs (£1 cost, £5 upsell) with sponsor logo.
 
 ## Promotion Timetable
-- **Monday:** Drop teaser reel with last week’s winners + CTA.
+- **Monday:** Drop teaser reel with last week’s winners + CTA, following the same [seven-day social rhythm that drives footfall](/licensees-guide/social-media-tactics-footfall-seven-days).
 - **Wednesday:** Send SMS/WhatsApp reminder to booking list (“Spin-to-Win seats released for Saturday 4pm”).
 - **Friday:** Print table toppers for lunch service pushing the hour.
 - **Saturday morning:** Post schedule graphic + prize highlight. Encourage DMs for booth reservations.
@@ -102,9 +102,9 @@ Keep the MC script in 5-minute increments so covering staff can run it if the le
 | Content captured | A handful per event | Shot list tracking |
 
 ## Copy Snippets
-- **Caption:** “Theme Hour • Saturdays 4–5pm • 80s vs 90s + spin wheel prizes + Power-Hour Spritz. Limited booths — DM to grab yours.”
-- **MC line:** “Spin wins only land if you’re holding a spritz — grab one at the bar before the next cue.”
-- **Staff script:** “We wrap at 5 so you can slide into dinner — want me to check the bookings list for you now?”
+- **Caption:** “Theme Hour • Saturdays 4–5pm • 80s vs 90s + spin wheel prizes + Power-Hour Spritz. Limited booths. DM to grab yours.”
+- **MC line:** “Spin wins only land if you’re holding a spritz. Grab one at the bar before the next cue.”
+- **Staff script:** “We wrap at 5 so you can slide into dinner. Want me to check the bookings list for you now?”
 
 ## FAQs
 **Do I need extra security?** Not usually, but brief your SIA team (if you have one) on the schedule so they’re ready for sing-along surges or prize excitement.

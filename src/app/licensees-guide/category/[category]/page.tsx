@@ -133,6 +133,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           ...breadcrumbPaths.licenseesGuide,
           { label: categoryTitle, href: `/licensees-guide/category/${canonicalCategorySlug}` },
         ]}
+        breadcrumbEmitJsonLd={false}
       />
 
       <Section background="white">

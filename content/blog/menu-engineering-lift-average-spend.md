@@ -4,7 +4,7 @@ slug: "menu-engineering-lift-average-spend"
 publishedDate: 2025-02-06
 updatedDate: "2026-02-02T00:00:00.000Z"
 excerpt: "Use behavioural design to push guests toward profitable dishes and drinks without feeling pushy."
-quickAnswer: "Highlight stars, reframe decoys, and guide eyes with layout so guests instinctively choose high-contribution items."
+quickAnswer: "Map every dish by profit and popularity, then push the stars. Place high-margin items where eyes land first, use a higher-priced anchor to make your target dish feel like value, add simple upsells under key dishes, pair food with a named drink, and train three short scripts. Test one change over two weeks."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -81,7 +81,7 @@ If a dish pairs with a specific drink, name it. Guests are far more likely to ad
 - "That dish pairs perfectly with the house red."
 - "If you are hungry, the sharing board is great to start."
 
-Scripted lines remove hesitation and lift spend. Menu engineering is just one of [nine revenue levers struggling pubs should pull](/licensees-guide/revenue-levers-struggling-pubs) — combine it with the others for compounding results.
+Scripted lines remove hesitation and lift spend. Menu engineering is just one of [nine revenue levers struggling pubs should pull](/licensees-guide/revenue-levers-struggling-pubs). Combine it with the others for compounding results.
 
 ## Step 7: Run a two-week test
 

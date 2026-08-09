@@ -4,7 +4,7 @@ slug: "boardgame-night-101"
 publishedDate: 2025-10-02
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Blueprint for relaxed Monday/Tuesday socials built around cribbage, Shut the Box, and modern party games."
-quickAnswer: "Create clear game zones, track bragging rights on a leaderboard, and bundle table platters so boardgame nights drive dwell time and spend."
+quickAnswer: "Run it on a quiet Monday or Tuesday with a library of 20 to 25 titles, zoned tables for party, strategy and two-player games, and one-minute teach cards for staff. Add punch cards and a platter bundle, and most tables stay two to three hours."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -33,7 +33,7 @@ faqs:
   - question: "Do board game nights actually make money for pubs?"
     answer: "Yes. Board game tables typically stay two to three hours and order multiple rounds of drinks and food. The games themselves are a one-off purchase, so the ongoing cost is almost zero. Pair with sharing platters or table bundles to increase average spend per head."
   - question: "What night works best for a pub board game event?"
-    answer: "Monday or Tuesday evenings work well because they are typically your quietest nights and board game crowds enjoy a relaxed atmosphere. Avoid clashing with quiz nights or live music. Consistency is key — pick one night and stick with it."
+    answer: "Monday or Tuesday evenings work well because they are typically your quietest nights and board game crowds enjoy a relaxed atmosphere. Avoid clashing with quiz nights or live music. Consistency is key: pick one night and stick with it."
 ---
 
 # Board Game Night 101: Formats, Libraries and Teaching That Win
@@ -105,7 +105,7 @@ Print these cues on A6 cards and keep them with each game.
 
 ## Community and Retention
 
-- **Punch cards:** play five nights, get a limited enamel pin or free platter.
+- **Punch cards:** play five nights, get a limited enamel pin or free platter, the simplest version of a [loyalty scheme that rewards frequency](/licensees-guide/build-loyalty-scheme-fill-pub).
 - **Leaderboard:** highlight teams that completed the most games or achieved “King of Carcassonne”.
 - **Discord/WhatsApp group:** share teaches, vote for next spotlight, arrange off-site meetups.
 - **Photo consent system:** opt-out stickers/wristbands for anyone who doesn’t want to appear on socials.
@@ -115,7 +115,7 @@ Print these cues on A6 cards and keep them with each game.
 - **Table platters:** sausage rolls, scotch eggs, pickles (£12). Minimal cutlery so games stay clean.
 - **Low-spill drinks:** tankards, cans, stemless wine glasses.
 - **AF focus:** flight of 3 x 1/3 pints for designated drivers.
-- **Bundle example:** “Meeples & Munchies” — platter + 2 drinks for £25, bookable with a table.
+- **Bundle example:** “Meeples & Munchies” (platter + 2 drinks for £25), bookable with a table.
 
 ## Budget and Kit
 
@@ -139,7 +139,7 @@ Encourage guests to donate games in exchange for bar credit, but vet condition a
 
 - **Visuals:** overhead shots of colourful boards, “hands-in” moments.
 - **Copy-ready caption:** “Board Game Night every Monday, 7pm. Library provided, teaches included, solo players welcome. Reserve a seat 👉 [link].”
-- **Cross-promo:** tie into Quiz Night 101 (“Prefer tabletop strategy? Join us Mondays”), Music Bingo 101 (“Same crowd, different vibe”).
+- **Cross-promo:** tie into your [weekly quiz night](/licensees-guide/quiz-night-101) (“Prefer tabletop strategy? Join us Mondays”) and your [music bingo night](/licensees-guide/music-bingo-101) (“Same crowd, different vibe”).
 - **Community outreach:** drop flyers at local game shops, universities, community centres.
 
 ## Compliance & Housekeeping
@@ -166,7 +166,7 @@ Post-event, ask: Did we run out of specific games? Which teaches were requested?
 **How big should my starter library be?** Aim for 20–25 titles covering party, gateway strategy, two-player, co-op, and classic pub games; expect £150–£500 to get set up.  
 **How do I stop pieces from going missing?** Label and zip-lock every component, keep a returns trolley for staff to check, and log damages so you can recharge deposits if needed.  
 **Should I charge a cover fee?** Many pubs make it free but require a booking with food; if you charge, keep it under £5 and include a drink/snack voucher.  
-**Do staff need to be gamers?** Not necessarily—give them one-minute teach cards so they can explain basics confidently and escalate deeper questions to a “games captain.”  
+**Do staff need to be gamers?** Not necessarily. Give them one-minute teach cards so they can explain basics confidently and escalate deeper questions to a “games captain.”  
 **What KPIs prove the night is working?** Track table bookings vs walk-ins, average dwell time, food attachment rate, and punch-card returns so you can evidence uplift to your area manager.
 
 ## Need backup?

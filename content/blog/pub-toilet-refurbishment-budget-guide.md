@@ -33,7 +33,7 @@ faqs:
   - question: "How much does a basic pub toilet refurbishment cost?"
     answer: "A budget refresh covering paint, lighting, mirrors, and hand drying typically costs between 500 and 1,500 pounds per room depending on size and condition. A full strip-out with new cubicles, flooring, and plumbing runs 5,000 to 15,000 pounds or more. Start with the cosmetic upgrades first because they deliver the biggest perception shift for the lowest spend."
   - question: "What is the single most impactful upgrade for pub toilets?"
-    answer: "Lighting. Swapping flickering fluorescent tubes for warm LED panels or spotlights changes the entire feel of the room instantly. It costs under 200 pounds, takes an afternoon to fit, and makes everything else look better — including the paint, the mirrors, and the cleanliness."
+    answer: "Lighting. Swapping flickering fluorescent tubes for warm LED panels or spotlights changes the entire feel of the room instantly. It costs under 200 pounds, takes an afternoon to fit, and makes everything else look better, including the paint, the mirrors, and the cleanliness."
   - question: "Hand dryers or paper towels in a pub?"
     answer: "For most pubs, a decent automatic hand dryer wins on long-term cost and hygiene. A good unit costs 200 to 500 pounds and lasts years with minimal maintenance. Paper towels create litter, block drains, and need constant restocking. If you do choose towels, use a wall-mounted dispenser and a covered bin, never a basket."
   - question: "How often should pub toilets be deep cleaned?"
@@ -54,7 +54,7 @@ schema:
 
 Your regulars will forgive a lot. A slightly sticky bar top, a wobbly stool, the quiz machine that has been out of order since March. But they will not forgive disgusting toilets. Neither will the couple who popped in for a Sunday lunch and are now deciding whether to come back.
 
-Toilets are the second thing customers judge after the quality of the beer. It does not matter how good your carvery is or how buzzing the quiz night feels — if someone walks into a bathroom with a broken lock, yellow lighting, and a hand dryer that sounds like a jet engine but produces less air than a sigh, they are telling their friends. And they are writing that review.
+Toilets are the second thing customers judge after the quality of the beer. It does not matter how good your carvery is or how buzzing the quiz night feels. If someone walks into a bathroom with a broken lock, yellow lighting, and a hand dryer that sounds like a jet engine but produces less air than a sigh, they are telling their friends. And they are writing that review.
 
 The good news is that you do not need to spend thousands to make a real difference. At The Anchor in Stanwell Moor, we transformed our toilets with paint, lighting, a few mirrors, and a proper cleaning routine. The feedback was immediate. People noticed. They mentioned it. Some of them mentioned it unprompted, which tells you how much it matters.
 
@@ -70,7 +70,7 @@ For female customers in particular, toilet quality is a deal-breaker. If you are
 
 ## The priority list: where to spend first
 
-If your budget is tight — and as a Greene King tenant, I know what tight budgets look like — you need to spend in the right order. Here is the sequence that gives you the most impact per pound.
+If your budget is tight (and as a Greene King tenant, I know what tight budgets look like), you need to spend in the right order. Here is the sequence that gives you the most impact per pound.
 
 ### 1. Deep clean everything first
 
@@ -82,7 +82,7 @@ You will be amazed how different a room looks when it is genuinely clean rather 
 
 ### 2. Paint the walls and ceiling
 
-Fresh paint is the single biggest bang for your buck after cleaning. Use a specialist bathroom paint — it costs a few pounds more per tin but resists moisture and does not peel.
+Fresh paint is the single biggest bang for your buck after cleaning. Use a specialist bathroom paint: it costs a few pounds more per tin but resists moisture and does not peel.
 
 Choose light, neutral colours. White or off-white on the ceiling, and a single colour on the walls that fits your pub's feel. Dark colours can work if you have good lighting, but in small pub toilets they tend to make the space feel cramped and hard to keep looking clean.
 
@@ -92,7 +92,7 @@ Do not forget the ceiling. A grubby ceiling with damp stains undermines everythi
 
 ### 3. Upgrade the lighting
 
-This is the change that surprises people. Swap out whatever yellowing, flickering fluorescent tube is currently in there for warm-white LED panels or spotlights. The colour temperature matters — aim for 3000K to 3500K, which is warm enough to be flattering but bright enough to show the room is clean.
+This is the change that surprises people. Swap out whatever yellowing, flickering fluorescent tube is currently in there for warm-white LED panels or spotlights. The colour temperature matters. Aim for 3000K to 3500K, which is warm enough to be flattering but bright enough to show the room is clean.
 
 If your toilets have no natural light, consider adding an LED mirror or backlit mirror panel. It makes the space feel larger and more modern for relatively little cost.
 
@@ -100,7 +100,7 @@ If your toilets have no natural light, consider adding an LED mirror or backlit 
 
 ### 4. Replace or reframe mirrors
 
-Mirrors make small spaces feel bigger and brighter. If yours are scratched, tarnished, or stuck on with visible blobs of adhesive, replace them. A large, clean mirror above the sink is not a luxury — it is expected.
+Mirrors make small spaces feel bigger and brighter. If yours are scratched, tarnished, or stuck on with visible blobs of adhesive, replace them. A large, clean mirror above the sink is not a luxury. It is expected.
 
 You do not need expensive frames. A frameless mirror with polished edges looks contemporary and is easy to keep clean. If you want something with more character, charity shops and salvage yards often have mirrors that suit a traditional pub.
 
@@ -108,7 +108,7 @@ You do not need expensive frames. A frameless mirror with polished edges looks c
 
 ### 5. Sort out the hand drying
 
-This is where customers form their final impression before they walk out. If your hand dryer does not work, if the paper towels are scattered all over the floor, or if there is nothing at all and people are wiping their hands on their jeans — you have a problem.
+This is where customers form their final impression before they walk out. If your hand dryer does not work, if the paper towels are scattered all over the floor, or if there is nothing at all and people are wiping their hands on their jeans, you have a problem.
 
 A decent automatic hand dryer costs £200 to £500 and will last for years. The running cost is negligible compared to constantly restocking paper towels. It is also more hygienic and creates far less mess.
 
@@ -156,7 +156,7 @@ There are a few tricks that lift a pub toilet from acceptable to genuinely impre
 
 **A small plant or faux greenery.** A single piece of greenery on the windowsill or above the hand dryer adds life and signals that someone cares about the space. Use artificial if there is no natural light.
 
-**Framed prints or signage.** A single framed piece on the wall — a vintage pub advert, a local photograph, or even a cheeky bit of typography — gives people something to look at and adds personality. It also covers damaged walls cheaply.
+**Framed prints or signage.** A single framed piece on the wall (a vintage pub advert, a local photograph, or even a cheeky bit of typography) gives people something to look at and adds personality. It also covers damaged walls cheaply.
 
 **Consistent accessories.** Match your soap dispenser, towel dispenser, and bin in the same colour or material. Chrome or matte black both work. The consistency looks intentional, which reads as quality.
 
@@ -201,7 +201,7 @@ A refurbishment is wasted if the standard drops within a month. Here is the clea
 - Deep clean grout and tile edges
 - Clean extractor fans and vents
 - Wipe down walls and doors
-- Check lighting — replace any dead bulbs immediately
+- Check lighting: replace any dead bulbs immediately
 - Inspect for any maintenance issues (dripping taps, loose fittings, damp)
 
 ### Monthly
@@ -210,7 +210,7 @@ A refurbishment is wasted if the standard drops within a month. Here is the clea
 - Check sealant and re-apply if needed
 - Review cleaning product stock and reorder
 - Check hand dryer filters and clean
-- Audit the room with fresh eyes — pretend you are a first-time customer
+- Audit the room with fresh eyes: pretend you are a first-time customer
 
 ### The cleaning log
 
@@ -218,7 +218,7 @@ Put a simple cleaning log on the back of each toilet door. Staff initial and tim
 
 ## What to do if your budget stretches further
 
-If you have a bit more to spend — say two to five thousand pounds — here are the next upgrades in order of impact:
+If you have a bit more to spend, say two to five thousand pounds, here are the next upgrades in order of impact:
 
 1. **New flooring.** Vinyl plank or sheet vinyl is waterproof, durable, and easy to clean. It transforms a room and costs £200 to £500 per room fitted.
 2. **New taps.** Modern lever taps are more hygienic and less likely to drip. Sensor taps are excellent but cost more.
@@ -254,7 +254,7 @@ Upgrade the lighting and install new hand dryers or dispensers. Brief your team 
 
 ### Within three months
 
-Assess whether the budget upgrades have made enough difference or whether you need to invest in flooring, cubicles, or tiling. By this point you will have had customer feedback — use it to decide.
+Assess whether the budget upgrades have made enough difference or whether you need to invest in flooring, cubicles, or tiling. By this point you will have had customer feedback. Use it to decide.
 
 ## The bottom line
 
@@ -262,4 +262,4 @@ Pub toilet refurbishment does not need to be a five-figure project. A focused sp
 
 Nobody ever chose a pub because of the toilets. But plenty of people have decided not to come back because of them. Your job is to make sure the toilets are never the reason someone does not return.
 
-If you are planning a wider refresh of your venue and want a structured plan that prioritises the changes with the biggest commercial impact, a [Growth Fix](/ways-to-work/growth-fix) gives you exactly that — a focused session to identify what to fix first and a clear action plan to make it happen.
+If you are planning a wider refresh of your venue and want a structured plan that prioritises the changes with the biggest commercial impact, a [Growth Fix](/ways-to-work/growth-fix) gives you exactly that: a focused session to identify what to fix first and a clear action plan to make it happen.

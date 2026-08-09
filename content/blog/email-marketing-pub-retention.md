@@ -46,7 +46,7 @@ faqs:
 
 A great visit means nothing if you never see the guest again. Email gives you a direct way to bring people back without paying for ads every time. The key is to keep it simple and consistent.
 
-Email works even better alongside a [loyalty scheme that fills your pub](/licensees-guide/build-loyalty-scheme-fill-pub) — the two reinforce each other.
+Email works even better alongside a [loyalty scheme that fills your pub](/licensees-guide/build-loyalty-scheme-fill-pub). The two reinforce each other.
 
 ## Step 1: Build the list the right way
 
@@ -95,7 +95,7 @@ Email is one channel in a wider retention mix. Pair it with a strong [social med
 
 ## Capture details while summer trade is high
 
-The busiest weeks of the year are the best time to grow your list — there are simply more people to ask. Make it effortless: a **QR code** on the table and in the garden, an **event sign-up** when people book, a **summer prize draw** with one tick to opt in, and a booking flow that invites people to hear what is on next. Capture the detail in the moment; the quiet weeks are when that list earns its keep.
+The busiest weeks of the year are the best time to grow your list: there are simply more people to ask. Make it effortless: a **QR code** on the table and in the garden, an **event sign-up** when people book, a **summer prize draw** with one tick to opt in, and a booking flow that invites people to hear what is on next. Capture the detail in the moment; the quiet weeks are when that list earns its keep.
 
 This is move four of the [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 

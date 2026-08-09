@@ -24,15 +24,29 @@ interface EnhancedBlogSchemaProps {
     voiceSearchQueries?: string[];
   };
   baseUrl: string;
+  /**
+   * Absolute URL of an image that actually resolves. Google lists `image` as a
+   * recommended property on Article/BlogPosting and uses it for rich results, so
+   * omitting it left every guide ineligible for image-bearing article treatment.
+   */
+  imageUrl?: string;
 }
 
-export default function EnhancedBlogSchema({ post, baseUrl }: EnhancedBlogSchemaProps) {
+export default function EnhancedBlogSchema({ post, baseUrl, imageUrl }: EnhancedBlogSchemaProps) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
     url: `${baseUrl}/licensees-guide/${post.slug}`,
+    ...(imageUrl && {
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+      },
+    }),
     datePublished: post.publishedDate,
     dateModified: post.updatedDate || post.publishedDate,
     author: {

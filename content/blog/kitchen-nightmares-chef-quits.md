@@ -31,7 +31,7 @@ voiceSearchQueries:
   - "how can I prevent my chef from quitting?"
 faqs:
   - question: "What should I do in the first ten minutes after a chef walks out?"
-    answer: "Don't chase them. Assess what's already cooking, count outstanding orders, and identify anyone who can help — bar staff, KP, or even a capable regular. Simplify the menu to dishes you can deliver well. Communicate honestly with waiting guests."
+    answer: "Don't chase them. Assess what's already cooking, count outstanding orders, and identify anyone who can help: bar staff, KP, or even a capable regular. Simplify the menu to dishes you can deliver well. Communicate honestly with waiting guests."
   - question: "How do I build an emergency chef contact list?"
     answer: "Reach out to agency chefs, local catering college tutors, and retired chefs in your network before you need them. Keep a list of three to five people who could step in at short notice. Test the list once a quarter so numbers stay current."
   - question: "How can I stop my chef from wanting to leave?"
@@ -212,7 +212,7 @@ The "emergency menu" ready:
 - Anyone can cook
 - Ingredients always stocked
 
-Tested quarterly. Staff hate it. But it works.
+Tested quarterly. Staff hate it. But it works, and the discipline of a short, deliverable menu carries straight into your everyday [profitable pub food menu planning](/licensees-guide/profitable-pub-food-menu-ideas).
 
 Plan D: The Nuclear Option
 When everything fails:
@@ -234,7 +234,7 @@ Pay properly or pay the price:
 - Holiday pay
 - Sick pay (yes, really)
 
-Underpaying chefs costs more than overpaying.
+Underpaying chefs costs more than overpaying, so build the real number into your [wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide) plan.
 
 The Respect System
 Chefs aren't just "the kitchen":
@@ -244,7 +244,7 @@ Chefs aren't just "the kitchen":
 - Regular praise publicly
 - Mistakes handled privately
 
-Respected chefs don't walk out.
+Respected chefs don't walk out, and most of the [ways to motivate staff without a pay rise](/licensees-guide/staff-motivation-hacks-no-pay-rise) work just as well in the kitchen.
 
 The Development Deal
 Growth opportunities:

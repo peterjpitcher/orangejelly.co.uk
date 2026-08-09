@@ -4,7 +4,7 @@ slug: "delivery-click-collect-without-harm"
 publishedDate: 2025-10-17
 updatedDate: "2026-03-02T00:00:00.000Z"
 excerpt: "Layer takeaway revenue on top of pub trade without wrecking the guest experience on-site."
-quickAnswer: "Ringfence kitchen capacity, streamline menus for travel, and staff a dispatcher so on-site guests still feel like priority number one."
+quickAnswer: "Run delivery as a separate channel, not an add-on. Build a short delivery menu of dishes that travel well, cap orders per hour so the kitchen is never crushed, and set up a dispatch station with its own pick-up point. Review profit per channel weekly, and put a dine-in invitation in every bag."
 author: "Peter Pitcher"
 category: "operations"
 tags:
@@ -52,7 +52,7 @@ Your dine-in menu and delivery menu are not the same. Delivery needs:
 - Short prep time.
 - Strong margins after fees.
 
-Create a short delivery menu and keep it stable for four weeks. It will lift consistency and ratings.
+Create a short delivery menu and keep it stable for four weeks. It will lift consistency and ratings. Use the same [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend) to decide which dishes earn a place on it.
 
 ## Step 2: Ringfence capacity
 
@@ -68,13 +68,13 @@ A single missed sauce can undo a good meal.
 
 ## Step 4: Optimise collection flow
 
-Click and collect should be fast. Clear signage, a dedicated pick-up point, and a one-minute handover keeps it smooth.
+Click and collect should be fast. Clear signage, a dedicated pick-up point, and a one-minute handover keeps it smooth. Taking collection orders through [your own website rather than a platform](/licensees-guide/does-your-pub-need-a-website) keeps the fees out of it too.
 
 If guests have to queue at the bar, you are creating friction.
 
 ## Step 5: Track profit per channel
 
-Compare delivery margin to dine-in margin. If delivery is below your threshold, raise prices or reduce items. You are not here to sell at a loss.
+Compare delivery margin to dine-in margin, using the [weekly reports your EPOS already produces](/licensees-guide/epos-data-revenue-comeback). If delivery is below your threshold, raise prices or reduce items. You are not here to sell at a loss.
 
 ## Step 6: Cross-pollinate marketing
 

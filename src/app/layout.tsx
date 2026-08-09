@@ -166,22 +166,13 @@ export default function RootLayout({
     inLanguage: 'en-GB',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: baseUrl,
-      },
-    ],
-  };
-
+  // No site-wide BreadcrumbList here. It could only ever contain "Home", which
+  // carries no information, and emitting it on every page created a second (and on
+  // guide pages a third) competing BreadcrumbList alongside the real per-page trail.
+  // Breadcrumb schema is now emitted once, by the page that knows its own hierarchy.
   const combinedSchema = {
     '@context': 'https://schema.org',
-    '@graph': [organizationSchema, websiteSchema, breadcrumbSchema],
+    '@graph': [organizationSchema, websiteSchema],
   };
 
   return (

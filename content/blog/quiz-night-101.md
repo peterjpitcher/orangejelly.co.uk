@@ -4,7 +4,7 @@ slug: "quiz-night-101"
 publishedDate: 2025-11-06
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Step-by-step playbook for running a 90-minute pub quiz that feels hyper-local, stays compliant, and fills the till every week."
-quickAnswer: "Lock in a repeatable 90-minute format, bundle entry with a drink, and rotate localised rounds so regulars plan their week around your quiz."
+quickAnswer: "Run your pub quiz on the same night every week with a fixed 90-minute format: five or six rounds of eight to ten questions, including a music round, a picture round and a local knowledge round. Cap teams at six, bundle entry with a drink and snack, and track headcount, spend and next-week bookings."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -30,16 +30,16 @@ voiceSearchQueries:
   - "How can I make quiz night profitable"
 faqs:
   - question: "How long should a pub quiz last?"
-    answer: "90 minutes is the sweet spot — long enough to feel like a proper event but short enough to keep energy high. Start and finish on time every week so teams can plan around it. A typical format is five or six rounds with a break halfway for food and drink orders."
+    answer: "90 minutes is the sweet spot: long enough to feel like a proper event but short enough to keep energy high. Start and finish on time every week so teams can plan around it. A typical format is five or six rounds with a break halfway for food and drink orders."
   - question: "What should I charge for pub quiz entry?"
-    answer: "Most successful pub quizzes charge £1-£2 per person or include entry with a drink purchase. The quiz itself isn't the profit centre — it's the extra drinks, food, and atmosphere spending that makes the night worthwhile. Keep the barrier to entry low to build regular attendance."
+    answer: "Most successful pub quizzes charge £1-£2 per person or include entry with a drink purchase. The quiz itself isn't the profit centre: it's the extra drinks, food, and atmosphere spending that makes the night worthwhile. Keep the barrier to entry low to build regular attendance."
   - question: "How do I stop the same team winning every week?"
     answer: "Mix up round topics so no single team dominates. Include a picture round, a music round, and a local knowledge round alongside general knowledge. Add a wildcard or joker mechanic, cap team sizes at 6, and rotate bonus rounds so variety rewards different strengths each week."
 ---
 
 # Quiz Night 101: Plan, Host and Grow a Brilliant Weekly Quiz
 
-Quiet Tuesdays don’t have to stay that way. A well-run pub quiz keeps regulars loyal, gives newcomers an easy first visit, and delivers a predictable midweek bump for the bar. This guide walks you through every element: format, staffing, question writing, marketing, accessibility, compliance, and the numbers you should track afterwards.
+[Quiet Tuesday nights](/licensees-guide/pub-empty-tuesday-nights) don’t have to stay that way. A well-run pub quiz keeps regulars loyal, gives newcomers an easy first visit, and delivers a predictable midweek bump for the bar. This guide walks you through every element: format, staffing, question writing, marketing, accessibility, compliance, and the numbers you should track afterwards.
 
 > **At-a-glance checklist**
 > - ☐ Rounds scripted & printed  
@@ -64,7 +64,7 @@ Successful quiz nights share six traits:
 
 ## Choose Your Format
 
-Most pubs rotate between a classic mixed quiz, themed nights, and interactive rounds to keep things fresh without rewriting the rulebook.
+Most pubs rotate between a classic mixed quiz, [themed quiz night ideas](/licensees-guide/quiz-night-ideas), and interactive rounds to keep things fresh without rewriting the rulebook.
 
 ### Core structures
 
@@ -84,7 +84,7 @@ Most pubs rotate between a classic mixed quiz, themed nights, and interactive ro
 
 - Pictionary or charades on a flip chart.
 - Mystery box item passed around under cloth.
-- “Closest-to” cards for estimated answers—collect at end for fun stats.
+- “Closest-to” cards for estimated answers: collect at end for fun stats.
 - Playlist battle where two teams submit playlists and the room votes during breaks.
 
 ## Scoring and Fair Play
@@ -133,7 +133,7 @@ Even if you’re a one-person band, list the hats you’re wearing. Ideally:
 ## Questions People Love (with examples)
 
 - **Local flavour:** “What river separates Staines from Egham?” (Answer: River Thames.)
-- **Soundbites:** play the first second of “Common People”—ask for artist + album year.
+- **Soundbites:** play the first second of “Common People”. Ask for artist + album year.
 - **Picture clue:** zoomed-in shot of a Greene King pump clip.
 - **Connections:** Q1 “Haddock”, Q2 “Puffin”, Q3 “Gannet”, Q4 “Fulmar”, Q5 “Tern” → Connection: all birds on UK postage stamps.
 - **Closest-to tie-break:** “How many casks does the average Greene King managed pub sell per week?”
@@ -143,7 +143,7 @@ Aim for a 60/30/10 mix (easy/medium/tricky). Keep a spreadsheet tagging each que
 ## Prizes That Drive Return Visits
 
 - £20–£30 bar tab.
-- Local collaborator voucher (butcher, florist, barber)—low cost, cross-promo.
+- Local collaborator voucher (butcher, florist, barber): low cost, cross-promo.
 - Rolling jackpot jar (capped under £50 to avoid gambling implications).
 - Booby prize: pickled egg, bag of crisps, or pub-branded wooden spoon for last place.
 
@@ -169,7 +169,7 @@ Aim for a 60/30/10 mix (easy/medium/tricky). Keep a spreadsheet tagging each que
 
 ## Compliance Corner: Music Licensing
 
-If you play recorded music (audio clips, walk-in playlists) or host live performance, you’ll usually need **TheMusicLicence** from PPL PRS, which covers both PRS for Music and PPL permissions. Confirm your venue’s licence and keep documentation handy. More information: [PPL PRS](https://pplprs.co.uk/themusiclicence/).
+If you play recorded music (audio clips, walk-in playlists) or host live performance, you’ll usually need **TheMusicLicence** from PPL PRS, which covers both PRS for Music and PPL permissions. Confirm your venue’s licence against the [music licensing rules for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) and keep documentation handy. More information: [PPL PRS](https://pplprs.co.uk/themusiclicence/).
 
 ## Metrics and Post-Event Debrief
 
@@ -187,7 +187,7 @@ Debrief with staff within 12 hours: Which rounds landed? Any tech wobbles? Did w
 ## FAQs
 
 **How much prep time should I budget each week?** Once the format is locked, plan 60–90 minutes to refresh question banks, schedule socials, and print sheets; batch four weeks at a time to cut that in half.  
-**Do I need extra licensing for the music round?** Yes—recorded clips normally require **TheMusicLicence** (PPL PRS). Confirm your venue’s coverage before advertising audio rounds.  
+**Do I need extra licensing for the music round?** Yes. Recorded clips normally require **TheMusicLicence** (PPL PRS). Confirm your venue’s coverage before advertising audio rounds.  
 **Is it better to charge entry or bundle?** Bundles (£10 entry + drink + snack) drive higher spend and make reporting easier; switch to a suggested donation only if your demographic resists paying.  
 **What if attendance is slow for the first month?** Keep the slot going for at least four weeks, share photos even if turnout is small, and personally invite known regulars; consistency builds momentum.  
 **What metrics should I share with my BDM or owner?** Track headcount, average spend, dwell time, and next-week bookings so you can evidence uplift versus a normal Tuesday.

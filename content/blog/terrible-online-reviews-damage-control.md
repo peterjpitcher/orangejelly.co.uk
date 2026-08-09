@@ -3,7 +3,7 @@ title: "Terrible Online Reviews Ruining Your Reputation? The Damage Control Guid
 slug: "terrible-online-reviews-damage-control"
 publishedDate: 2025-03-24
 excerpt: "Turn your worst reviews into your best marketing tool. Learn the response framework that converted our angriest critics into regulars."
-quickAnswer: "Respond to every review within 24 hours. For negative reviews: acknowledge the issue, apologize genuinely, explain what you've learned, and invite them back. Be professional, specific, and show that you take feedback seriously. Future customers judge your responses more than the complaints themselves."
+quickAnswer: "Respond to every review within 24 hours. For negative reviews: acknowledge the issue, apologise genuinely, explain what you've learned, and invite them back. Be professional, specific, and show that you take feedback seriously. Future customers judge your responses more than the complaints themselves."
 author: "Peter Pitcher"
 category: "marketing"
 featuredImage: "/images/blog/terrible-online-reviews-damage-control.png"
@@ -33,9 +33,9 @@ faqs:
   - question: "How quickly should I respond to a negative review?"
     answer: "Within 24 hours is the target. A fast, professional response shows potential customers that you care and take feedback seriously. Future visitors read your replies more than the original complaint, so treat every response as marketing."
   - question: "Should I offer freebies to people who leave bad reviews?"
-    answer: "Not publicly — it can encourage complaint culture. Instead, acknowledge the issue, apologise genuinely, and invite them to contact you directly. If you resolve it privately and they return, they often update the review themselves. The goal is relationship recovery, not bribery."
+    answer: "Not publicly, because it can encourage complaint culture. Instead, acknowledge the issue, apologise genuinely, and invite them to contact you directly. If you resolve it privately and they return, they often update the review themselves. The goal is relationship recovery, not bribery."
   - question: "How do I get more positive reviews to push down the bad ones?"
-    answer: "Ask happy customers at the point of delight — after a great meal, a fun quiz night, or a compliment to staff. A simple 'We'd love it if you left us a review on Google' works well. Table cards with a QR code to your review page make it effortless. Aim for a steady stream rather than a sudden burst."
+    answer: "Ask happy customers at the point of delight: after a great meal, a fun quiz night, or a compliment to staff. A simple 'We'd love it if you left us a review on Google' works well. Table cards with a QR code to your review page make it effortless. Aim for a steady stream rather than a sudden burst."
 ---
 
 I still remember the review that nearly broke me: "Worst pub in Surrey. Rude staff, terrible food, wouldn't feed it to my dog." One star. Top of our Google listing. 47 people had "found it helpful."
@@ -52,7 +52,7 @@ Three months later, that same reviewer became a regular. Here's exactly how we t
 
 - One thoughtful response can neutralize ten bad reviews
 
-The game isn't avoiding bad reviews - it's showing future customers how you handle problems.
+The game isn't avoiding bad reviews - it's [showing future customers how you handle problems](/licensees-guide/how-to-respond-bad-pub-reviews).
 
 ## The 24-Hour Response Framework
 
@@ -130,7 +130,7 @@ Result: Higher review volume and stronger ratings
 ## Platform-Specific Strategies
 
 Google Reviews (Most Important)
-- Respond to everything quickly
+- Respond to everything quickly on your [Google Business Profile](/licensees-guide/google-business-profile-pub-guide)
 - Use owner's name in responses
 - Include one specific detail showing you remember them
 - Always invite them back
@@ -167,7 +167,7 @@ For false reviews:
 When you're being targeted:
 1. **Don't panic** - platforms recognise patterns
 2. **Document everything** - screenshots, dates, usernames
-3. **Rally your supporters** - one email to regulars asking for honest reviews
+3. **Rally your supporters** - one [email to your regulars](/licensees-guide/email-marketing-pub-retention) asking for honest reviews
 4. **Stay professional** - respond to each calmly
 5. **Report to platforms** - bulk false reviews often get removed
 

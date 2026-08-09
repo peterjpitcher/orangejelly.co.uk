@@ -62,7 +62,7 @@ schema:
 
 When I took on The Anchor in Stanwell Moor as a Greene King tenant in 2019, I thought the hard part was agreeing the rent and getting the keys. Nobody warned me about the licensing maze.
 
-Premises licences, personal licences, Designated Premises Supervisors, Temporary Event Notices, late night refreshment authorisations, licensing conditions — the jargon alone is enough to make your eyes glaze over. And the consequences of getting it wrong are serious: fines, prosecution, or losing the right to trade altogether.
+Premises licences, personal licences, Designated Premises Supervisors, Temporary Event Notices, late night refreshment authorisations, licensing conditions. The jargon alone is enough to make your eyes glaze over. And the consequences of getting it wrong are serious: fines, prosecution, or losing the right to trade altogether.
 
 Here is the guide I wish someone had handed me on day one. Plain English, no legalese, and based on what actually matters when you are running a pub.
 
@@ -70,9 +70,9 @@ Here is the guide I wish someone had handed me on day one. Plain English, no leg
 
 A premises licence is the document that authorises your pub to carry out licensable activities. Under the Licensing Act 2003, those activities include:
 
-- **The sale of alcohol** — this is the big one for any pub
-- **The provision of regulated entertainment** — live music, recorded music, performances of dance, films, indoor sporting events
-- **The provision of late night refreshment** — serving hot food or hot drinks to the public between 11pm and 5am
+- **The sale of alcohol**: this is the big one for any pub
+- **The provision of regulated entertainment**: live music, recorded music, performances of dance, films, indoor sporting events
+- **The provision of late night refreshment**: serving hot food or hot drinks to the public between 11pm and 5am
 
 Your premises licence is specific to the building, not to you personally. If you take over a pub that already has a premises licence, the licence stays with the premises. You apply for a transfer rather than a brand new application, which is simpler and cheaper.
 
@@ -80,12 +80,12 @@ Your premises licence is specific to the building, not to you personally. If you
 
 Every premises licence has conditions attached to it. These are legally binding and you must comply with them. Typical conditions include:
 
-- **Permitted hours** — the times you are allowed to sell alcohol and provide entertainment. These are not the same as your opening hours. You can be open without selling alcohol.
-- **Capacity limits** — maximum number of people allowed on the premises at any time.
-- **CCTV requirements** — many licences require you to operate CCTV that records at a minimum resolution, retains footage for a set number of days, and makes recordings available to the police on request.
-- **Door supervision** — some licences require SIA-registered door staff on certain nights or after certain hours.
-- **Noise conditions** — restrictions on amplified music, outdoor areas, or times when doors and windows must be closed.
-- **Challenge 25** — a condition requiring you to challenge anyone who looks under 25 for proof of age.
+- **Permitted hours**: the times you are allowed to sell alcohol and provide entertainment. These are not the same as your opening hours. You can be open without selling alcohol.
+- **Capacity limits**: maximum number of people allowed on the premises at any time.
+- **CCTV requirements**: many licences require you to operate CCTV that records at a minimum resolution, retains footage for a set number of days, and makes recordings available to the police on request.
+- **Door supervision**: some licences require SIA-registered door staff on certain nights or after certain hours.
+- **Noise conditions**: restrictions on amplified music, outdoor areas, or times when doors and windows must be closed.
+- **Challenge 25**: a condition requiring you to challenge anyone who looks under 25 for proof of age.
 
 Read your premises licence from cover to cover. Then read it again. I have seen licensees fall foul of conditions they did not know existed because they never properly read the document.
 
@@ -107,7 +107,7 @@ If you are opening a new venue or converting a premises that does not already ha
 
 7. **If there are objections:** a hearing is scheduled before the licensing committee. You attend, present your case, and the committee decides whether to grant the licence, grant it with modified conditions, or refuse it.
 
-The whole process typically takes 2 to 3 months. If you are buying a pub, start the licensing work as early as possible — ideally in parallel with the legal conveyancing.
+The whole process typically takes 2 to 3 months. If you are buying a pub, start the licensing work as early as possible, ideally in parallel with the legal conveyancing.
 
 ### The four licensing objectives
 
@@ -155,7 +155,7 @@ The DPS is the person named on the premises licence as being responsible for the
 - The DPS does not need to be on the premises at all times, but they must have meaningful oversight of how alcohol is sold.
 - To change the DPS, the premises licence holder submits a variation to the licensing authority. This is a simple process and takes effect immediately, with a 14-day window for police objections.
 
-If you are taking over a pub as a new tenant, one of your first actions should be transferring the premises licence into your name and nominating yourself as DPS. Do not delay this — trading without the correct DPS in place puts you at legal risk.
+If you are taking over a pub as a new tenant, one of your first actions should be transferring the premises licence into your name and nominating yourself as DPS. Do not delay this: trading without the correct DPS in place puts you at legal risk.
 
 ## Temporary Event Notices: when you need them
 
@@ -165,9 +165,9 @@ A Temporary Event Notice, commonly called a TEN, is a notification you give to t
 
 You might think that because you already have a premises licence, you would never need a TEN. Not so. Common scenarios include:
 
-- **Extending your hours for a special event** — New Year's Eve, a big sporting occasion, a charity fundraiser that runs later than your usual permitted hours.
-- **Using an area not covered by your premises licence** — a beer garden that is not on your licence plan, a marquee in the car park, a neighbouring field for a summer event.
-- **Running an event at a separate location** — a pop-up bar at a village fete, a food stall at a local market, a drinks service at a wedding venue.
+- **Extending your hours for a special event**: New Year's Eve, a big sporting occasion, a charity fundraiser that runs later than your usual permitted hours.
+- **Using an area not covered by your premises licence**: a beer garden that is not on your licence plan, a marquee in the car park, a neighbouring field for a summer event.
+- **Running an event at a separate location**: a pop-up bar at a village fete, a food stall at a local market, a drinks service at a wedding venue.
 
 ### TEN limits and rules
 
@@ -185,7 +185,7 @@ There are strict limits on TENs:
 | Minimum notice period (late TEN) | 5 working days |
 | Maximum late TENs per premises per year | 2 |
 
-The attendance limit of 499 is important. If you expect 500 or more people at an event, a TEN will not cover it — you need a full premises licence application or a time-limited premises licence.
+The attendance limit of 499 is important. If you expect 500 or more people at an event, a TEN will not cover it: you need a full premises licence application or a time-limited premises licence.
 
 ### How to apply for a TEN
 
@@ -193,7 +193,7 @@ The attendance limit of 499 is important. If you expect 500 or more people at an
 
 2. **Submit to the licensing authority and the police.** You must send copies to both. Most councils now accept online submissions.
 
-3. **Give at least 10 working days' notice.** This is the minimum for a standard TEN. Working days means Monday to Friday excluding bank holidays. Count carefully — if you get this wrong, your TEN is invalid and you cannot run the event.
+3. **Give at least 10 working days' notice.** This is the minimum for a standard TEN. Working days means Monday to Friday excluding bank holidays. Count carefully: if you get this wrong, your TEN is invalid and you cannot run the event.
 
 4. **Late TENs.** If you have missed the 10-working-day deadline, you can give a late TEN with a minimum of 5 working days' notice. But you only get 2 late TENs per premises per year, and if the police or environmental health object to a late TEN, it is automatically refused with no right to a hearing.
 
@@ -203,7 +203,7 @@ The attendance limit of 499 is important. If you expect 500 or more people at an
 
 The fee for a TEN is 21 pounds.
 
-My advice: plan your TENs at the start of each year. You only get 15 per premises, covering a maximum of 21 days. Map out the events you know you will need them for — New Year's Eve, bank holidays, your annual summer event — and submit them well in advance. Running out of TENs in October because you used them all in the summer is a mistake I have seen too many licensees make.
+My advice: plan your TENs at the start of each year. You only get 15 per premises, covering a maximum of 21 days. Map out the events you know you will need them for (New Year's Eve, bank holidays, your annual summer event) and submit them well in advance. Running out of TENs in October because you used them all in the summer is a mistake I have seen too many licensees make.
 
 ## Other licence types and authorisations
 
@@ -219,10 +219,10 @@ The Licensing Act 2003 defines regulated entertainment as: performance of a play
 
 However, the Live Music Act 2012 and the Deregulation Act 2015 created significant exemptions:
 
-- **Unamplified live music** — exempt between 8am and 11pm for any number of listeners at any premises.
-- **Amplified live music** — exempt between 8am and 11pm for audiences of up to 500 at premises with a premises licence authorising alcohol sales.
-- **Recorded music** — exempt between 8am and 11pm for audiences of up to 500 at premises with a premises licence authorising alcohol sales.
-- **Films** — exempt for community purposes at non-commercial venues.
+- **Unamplified live music**: exempt between 8am and 11pm for any number of listeners at any premises.
+- **Amplified live music**: exempt between 8am and 11pm for audiences of up to 500 at premises with a premises licence authorising alcohol sales.
+- **Recorded music**: exempt between 8am and 11pm for audiences of up to 500 at premises with a premises licence authorising alcohol sales.
+- **Films**: exempt for community purposes at non-commercial venues.
 
 This means most pubs can host live and recorded music until 11pm without needing specific entertainment authorisations on their premises licence. After 11pm, you need it on the licence or covered by a TEN.
 
@@ -240,7 +240,7 @@ Use a full variation for significant changes like extending permitted hours, add
 
 A minor variation is a simplified process for smaller changes that do not adversely affect the licensing objectives. Examples include adding or removing conditions, minor changes to the premises layout, or reducing hours. The fee is 89 pounds and the process takes 10 to 15 working days with no advertising requirement.
 
-Your council's licensing team can advise whether your proposed change qualifies as a minor variation. When in doubt, ask them before submitting — the wrong application wastes time and money.
+Your council's licensing team can advise whether your proposed change qualifies as a minor variation. When in doubt, ask them before submitting: the wrong application wastes time and money.
 
 ## Common licensing mistakes landlords make
 
@@ -264,7 +264,7 @@ After six years at The Anchor and countless conversations with other licensees, 
 
 ## Cost breakdown
 
-Here is a practical summary of the fees you are likely to encounter. These are the statutory fees set by the Home Office — your council cannot charge more or less.
+Here is a practical summary of the fees you are likely to encounter. These are the statutory fees set by the Home Office: your council cannot charge more or less.
 
 ### Premises licence fees (by rateable value)
 
@@ -294,10 +294,10 @@ Most independent pubs fall into Band B or C.
 
 Beyond the statutory fees, budget for:
 
-- **Personal licence course** — 150 to 250 pounds
-- **DBS check** — 18 pounds
-- **Solicitor or licensing consultant** for a new premises licence application — 1,000 to 3,000 pounds (optional but strongly recommended for contested applications)
-- **Newspaper advertisement** for new applications and full variations — 100 to 300 pounds
+- **Personal licence course**: 150 to 250 pounds
+- **DBS check**: 18 pounds
+- **Solicitor or licensing consultant** for a new premises licence application: 1,000 to 3,000 pounds (optional but strongly recommended for contested applications)
+- **Newspaper advertisement** for new applications and full variations: 100 to 300 pounds
 
 The statutory fees are modest. The professional fees are where the cost adds up, but a good licensing solicitor can be the difference between a smooth grant and a refusal.
 
@@ -333,7 +333,7 @@ Whether you are taking over an existing pub or starting from scratch, here is yo
 - [ ] Notify the council of any changes to your personal details
 - [ ] Submit TENs at least 10 working days in advance
 - [ ] Keep a copy of your premises licence summary on display at the premises (this is a legal requirement)
-- [ ] Review your licence conditions annually — if your business has changed, consider a variation
+- [ ] Review your licence conditions annually: if your business has changed, consider a variation
 
 For a broader look at the operational fundamentals every licensee should nail, read our [pub health check guide](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success).
 
@@ -353,7 +353,7 @@ At Orange Jelly, we help licensees navigate the operational and commercial side 
 
 Licensing is not the exciting part of running a pub. Nobody gets into this trade because they love filling in council forms. But your premises licence is the foundation that everything else sits on. Without it, you cannot sell a single pint.
 
-Get your personal licence early. Read your premises licence properly. Plan your TENs in advance. Build a relationship with your local licensing team. And when something feels uncertain, ask before you act — the licensing officers I have dealt with would always rather answer a question upfront than deal with an enforcement issue after the fact.
+Get your personal licence early. Read your premises licence properly. Plan your TENs in advance. Build a relationship with your local licensing team. And when something feels uncertain, ask before you act. The licensing officers I have dealt with would always rather answer a question upfront than deal with an enforcement issue after the fact.
 
 The pubs that run into licensing trouble are almost always the ones that treated it as an afterthought. Do not be one of them.
 

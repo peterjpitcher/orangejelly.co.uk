@@ -4,7 +4,7 @@ slug: "staff-motivation-hacks-no-pay-rise"
 publishedDate: 2025-07-10
 updatedDate: "2026-01-19T00:00:00.000Z"
 excerpt: "Keep your best team members engaged with recognition, flexibility, and development even when the wage pot is frozen."
-quickAnswer: "Swap cash you do not have for status, growth, and autonomy you can give freely. Structured praise, skill swaps, and micro-incentives outperform across-the-board rises you cannot sustain."
+quickAnswer: "When wages are frozen, motivation comes from respect, growth and clarity. Recognise great service specifically in the moment, let staff swap shifts and pick days off, run short training sessions, offer micro-incentives like a free meal or monthly award, share weekly targets, and release the rota on time."
 author: "Peter Pitcher"
 category: "people"
 tags:
@@ -43,7 +43,7 @@ faqs:
 
 # Staff Motivation Hacks When You Cannot Afford Pay Rises
 
-A wage freeze does not have to mean a motivation crash. People stay for respect, growth, and clarity as much as cash. Your job is to build a low-cost environment where the team feels valued and sees progress.
+A wage freeze does not have to mean a motivation crash. People stay for respect, growth, and clarity as much as cash, and keeping them costs far less than [hiring and training replacements](/licensees-guide/pub-recruitment-hiring-bar-staff). Your job is to build a low-cost environment where the team feels valued and sees progress.
 
 ## 1. Make recognition daily
 
@@ -57,7 +57,7 @@ Small scheduling choices make a big difference. Let staff swap shifts easily, or
 
 ## 3. Invest in development time
 
-Create short training sessions: wine knowledge, upsell scripts, or coffee skills. People stay where they feel they are learning.
+Create short training sessions: wine knowledge, [upsell scripts](/licensees-guide/upselling-secrets-training-scripts), or coffee skills. People stay where they feel they are learning.
 
 ## 4. Use micro-incentives
 
@@ -68,7 +68,7 @@ Small rewards beat promises. Examples:
 
 ## 5. Share the numbers
 
-When the team understands the targets, they feel ownership. Share weekly goals and celebrate progress.
+When the team understands the targets, and how [wages fit into the weekly numbers](/licensees-guide/pub-wages-labour-costs-guide), they feel ownership. Share weekly goals and celebrate progress.
 
 ## 6. Upgrade the staff experience
 

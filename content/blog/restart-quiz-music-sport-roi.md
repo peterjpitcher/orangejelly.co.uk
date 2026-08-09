@@ -4,7 +4,7 @@ slug: "restart-quiz-music-sport-roi"
 publishedDate: 2025-06-05
 updatedDate: "2026-03-30T00:00:00.000Z"
 excerpt: "Bring back entertainment nights with better planning, booking systems, and upsells so they drive profit instead of chaos."
-quickAnswer: "Plan 8 weeks ahead, pre-book tables with deposits, tier the experience, and stack bar bundles so every entertainment night pays for itself."
+quickAnswer: "Build an eight-week calendar that rotates quiz, live music and sport so the formats do not clash. Take small deposits on premium tables, tier seating into standard, plus and VIP, script your hosts for upsells, sell bundles rather than discounts, then track covers, spend per head and margin for each night."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -32,7 +32,7 @@ voiceSearchQueries:
   - "Plan sport screenings for pub"
 faqs:
   - question: "How do I relaunch a quiz night that lost momentum?"
-    answer: "Treat it as a brand new launch, not a restart. Pick a new night if needed, rebrand the format, and promote it for three weeks before the first session. Offer a free first entry or a drink incentive to rebuild the crowd. Consistency from week one is critical — never cancel."
+    answer: "Treat it as a brand new launch, not a restart. Pick a new night if needed, rebrand the format, and promote it for three weeks before the first session. Offer a free first entry or a drink incentive to rebuild the crowd. Consistency from week one is critical: never cancel."
   - question: "Is live music worth the cost for a pub?"
     answer: "It depends on how you structure it. A solo acoustic act costing £150-£250 can drive an extra £500-£1,000 in bar revenue on the right night. Pre-sell tables with a drink minimum, promote heavily on social media, and choose acts that match your audience. If the bar uplift doesn't cover the fee, rethink the format."
   - question: "Do I need a Sky or TNT Sports subscription for my pub?"
@@ -43,11 +43,11 @@ faqs:
 
 Entertainment nights can either anchor your week or drain your margins. The difference is structure. A relaunch works when it has a calendar, a booking system, and a clear path to profit.
 
-Use this framework to bring back quiz, music, and sport nights with confidence.
+Use this framework to bring back quiz nights, [live music that pays its way](/licensees-guide/live-music-events-for-pubs), and sport nights with confidence.
 
 ## Step 1: Build an 8-week calendar
 
-Map quiz, music, and sport nights across eight weeks so they do not cannibalise each other. Alternate formats and themes to keep regulars interested.
+Map quiz, music, and sport nights across eight weeks so they do not cannibalise each other, using the same planning rhythm as our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events). Alternate formats and themes to keep regulars interested.
 
 Example rotation:
 - Week 1: quiz
@@ -71,7 +71,7 @@ Create three levels so guests can choose their spend.
 
 ## Step 4: Script the hosts
 
-Give quizmasters and MCs clear cues for upsells and announcements. A scripted host drives revenue more consistently than a casual one.
+Give quizmasters and MCs clear cues for upsells and announcements, and revisit the [quiz night format basics](/licensees-guide/quiz-night-101) if you are rebuilding the round structure as well. A scripted host drives revenue more consistently than a casual one.
 
 ## Step 5: Maximise food and drink
 

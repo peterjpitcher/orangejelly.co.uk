@@ -162,14 +162,14 @@ Whether you are taking on a new pub or renegotiating an existing agreement, nego
 
 More than you think. Here is what you can typically push on:
 
-- **Rent level** — always challenge the first figure. Get an independent rent assessment.
-- **Rent-free period** — common when taking on a pub that needs work. Three to six months is not unusual.
-- **Tie discounts** — volume-based discounts, introductory pricing, or seasonal promotions.
-- **Repair obligations** — who pays for what, especially for the roof, boiler, and cellar equipment.
-- **Break clauses** — the ability to exit the agreement at set points without penalty.
-- **Lease length** — shorter if you want flexibility, longer if you want security.
-- **Restrictions** — food requirements, opening hours, entertainment limitations.
-- **Capital contributions** — pubco investment in refurbishment or equipment.
+- **Rent level**: always challenge the first figure. Get an independent rent assessment.
+- **Rent-free period**: common when taking on a pub that needs work. Three to six months is not unusual.
+- **Tie discounts**: volume-based discounts, introductory pricing, or seasonal promotions.
+- **Repair obligations**: who pays for what, especially for the roof, boiler, and cellar equipment.
+- **Break clauses**: the ability to exit the agreement at set points without penalty.
+- **Lease length**: shorter if you want flexibility, longer if you want security.
+- **Restrictions**: food requirements, opening hours, entertainment limitations.
+- **Capital contributions**: pubco investment in refurbishment or equipment.
 
 ### Negotiation Tactics That Work
 
@@ -278,10 +278,10 @@ Dilapidations are the repair costs your landlord claims when you leave. This is 
 
 **How to protect yourself:**
 
-- **Schedule of condition** — get a detailed, photographic record of the property's condition when you move in. This limits your liability to returning the property to its original state, not perfect condition.
-- **Maintain throughout** — regular maintenance is cheaper than a massive bill at the end.
-- **Budget from day one** — set aside a small amount each month for end-of-lease costs.
-- **Get an early assessment** — 18 months before your lease ends, get a surveyor to do a preliminary assessment so there are no surprises.
+- **Schedule of condition**: get a detailed, photographic record of the property's condition when you move in. This limits your liability to returning the property to its original state, not perfect condition.
+- **Maintain throughout**: regular maintenance is cheaper than a massive bill at the end.
+- **Budget from day one**: set aside a small amount each month for end-of-lease costs.
+- **Get an early assessment**: 18 months before your lease ends, get a surveyor to do a preliminary assessment so there are no surprises.
 
 ## Financial Planning for Pub Lease Holders
 
@@ -311,15 +311,15 @@ At The Anchor we grew food revenue by 98% in three months by tightening portions
 
 New licensees consistently underestimate these:
 
-- **Rates** — business rates can be substantial, especially in urban areas
-- **Insurance** — building insurance (if your responsibility), contents, public liability, employer's liability
-- **Utilities** — energy costs have risen sharply and pubs are energy-intensive businesses
-- **Cellar maintenance** — gas, cleaning, line maintenance, and equipment replacement
-- **Staff costs** — wages, pensions, training, and the National Living Wage
-- **Marketing** — even tied pubs need to invest in local marketing
-- **Professional fees** — accountant, solicitor, surveyor
-- **Machine income share** — gaming machines generate income but the split with your pubco may surprise you
-- **Dilapidations reserve** — start saving from day one
+- **Rates**: business rates can be substantial, especially in urban areas
+- **Insurance**: building insurance (if your responsibility), contents, public liability, employer's liability
+- **Utilities**: energy costs have risen sharply and pubs are energy-intensive businesses
+- **Cellar maintenance**: gas, cleaning, line maintenance, and equipment replacement
+- **Staff costs**: wages, pensions, training, and the National Living Wage
+- **Marketing**: even tied pubs need to invest in local marketing
+- **Professional fees**: accountant, solicitor, surveyor
+- **Machine income share**: gaming machines generate income but the split with your pubco may surprise you
+- **Dilapidations reserve**: put money aside from day one
 
 ### Cash Flow Planning
 
@@ -385,15 +385,15 @@ Whether you are taking on a new pub lease or renegotiating an existing one, here
 
 ## Common Mistakes to Avoid
 
-- **Signing without independent legal advice** — the pub company's solicitor works for them, not you
-- **Ignoring the total cost** — focusing on rent alone and forgetting the tie premium
-- **Not getting a schedule of condition** — this will cost you thousands at the end
-- **Assuming the tie is the only problem** — often the real issues are pricing, mix, and operational efficiency
-- **Starting MRO without modelling the numbers** — higher rent can wipe out drink margin gains
-- **Negotiating without data** — feelings and frustration do not move pub companies, evidence does
-- **Burning the BDM relationship** — your BDM is a lever, not an enemy
-- **Not budgeting for dilapidations** — start saving from day one
-- **Letting the lease run out without planning** — start renewal discussions 18 months early
+- **Signing without independent legal advice**: the pub company's solicitor works for them, not you
+- **Ignoring the total cost**: focusing on rent alone and forgetting the tie premium
+- **Not getting a schedule of condition**: this will cost you thousands at the end
+- **Assuming the tie is the only problem**: often the real issues are pricing, mix, and operational efficiency
+- **Starting MRO without modelling the numbers**: higher rent can wipe out drink margin gains
+- **Negotiating without data**: feelings and frustration do not move pub companies, evidence does
+- **Burning the BDM relationship**: your BDM is a lever, not an enemy
+- **Not budgeting for dilapidations**: put money aside from day one
+- **Letting the lease run out without planning**: start renewal discussions 18 months early
 
 ## Common Objections Solved
 

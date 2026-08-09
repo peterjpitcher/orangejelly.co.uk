@@ -3,7 +3,7 @@ title: "Young People Won't Come to Your Pub? Here's How to Change That"
 slug: "young-people-wont-come-to-your-pub"
 publishedDate: 2025-09-18
 excerpt: "Transform your pub into a magnet for 18-30s with proven strategies that actually work. No gimmicks, just real techniques from a licensee who cracked the code."
-quickAnswer: "Create Instagram-worthy moments with good lighting and photogenic corners, host events they actually want (quiz nights with prizes they care about), offer value without compromising quality, and focus on building a welcoming atmosphere where they feel comfortable bringing friends."
+quickAnswer: "Young adults are not avoiding pubs, they are avoiding boring ones. Give them a reason to choose you: warm lighting and one photogenic corner, a signature serve worth posting, events they actually want like bottomless brunch or board game afternoons, a proper alcohol-free range, fast WiFi and phone chargers. Quality beats cheap drinks."
 author: "Peter Pitcher"
 category: "marketing"
 featuredImage: "/images/blog/young-people-wont-come-to-your-pub.png"
@@ -31,11 +31,11 @@ voiceSearchQueries:
   - "what kind of events attract young adults to a local pub?"
 faqs:
   - question: "What's the main reason young people don't visit local pubs?"
-    answer: "Cost-of-living pressure and competition from home entertainment are the biggest factors. Young adults will come out, but they need a compelling reason — a unique experience, good social media content, or an event their friends are already talking about. Generic pint-and-crisps won't cut it."
+    answer: "Cost-of-living pressure and competition from home entertainment are the biggest factors. Young adults will come out, but they need a compelling reason: a unique experience, good social media content, or an event their friends are already talking about. Generic pint-and-crisps won't cut it."
   - question: "Do I need to completely change my pub to attract younger customers?"
-    answer: "No. Small, targeted changes work better than a full reinvention. Improve your lighting for photos, add a couple of cocktails or craft options, host events they actually want (themed quizzes, live music, comedy nights), and make your pub feel welcoming to newcomers. Keep your character — authenticity appeals to younger audiences."
+    answer: "No. Small, targeted changes work better than a full reinvention. Improve your lighting for photos, add a couple of cocktails or craft options, host events they actually want (themed quizzes, live music, comedy nights), and make your pub feel welcoming to newcomers. Keep your character. Authenticity appeals to younger audiences."
   - question: "How important is social media for attracting young customers to a pub?"
-    answer: "Essential. Under-30s discover new venues through Instagram, TikTok, and recommendations in group chats. Create shareable moments — a signature serve, a photogenic corner, or a fun event format. If your customers are posting about you, that's more powerful than any paid advert."
+    answer: "Essential. Under-30s discover new venues through Instagram, TikTok, and recommendations in group chats. Create shareable moments: a signature serve, a photogenic corner, or a fun event format. If your customers are posting about you, that's more powerful than any paid advert."
 ---
 
 Remember when pubs were the default social hub for young people? Those days might seem long gone, but here's the truth: young people still want what pubs offer - community, experiences, and somewhere that isn't their flat. They just need a reason to choose you over Netflix.
@@ -44,7 +44,7 @@ Remember when pubs were the default social hub for young people? Those days migh
 
 Young people aren't avoiding pubs - they're avoiding boring pubs. They've got unlimited entertainment in their pocket, Deliveroo at their fingertips, and a cost-of-living crisis hitting them harder than any generation before. Your warm beer and sticky carpets aren't competing with other pubs anymore - you're competing with everything.
 
-But here's the encouraging bit: when you give them a genuine reason to come, they become your most loyal, vocal advocates. They'll Instagram every visit, bring their entire friend group, and turn your quiet Tuesday into their weekly tradition.
+But here's the encouraging bit: when you give them a genuine reason to come, they become your most loyal, vocal advocates. They'll Instagram every visit, bring their entire friend group, and turn one of your [quiet Tuesday nights](/licensees-guide/pub-empty-tuesday-nights) into their weekly tradition.
 
 ## Create Instagram-Worthy Moments (Without Being Cringe)
 
@@ -55,7 +55,7 @@ Between 5-7pm, your pub should photograph like a dream. It's not about renovatin
 - Keep your glassware spotless - it photographs better
 - Serve drinks that look as good as they taste
 
-Young customers take 5-10 photos per visit. Make sure they've got something worth sharing.
+Young customers take 5-10 photos per visit. Make sure they've got something worth sharing, and that [your own Instagram feed](/licensees-guide/instagram-marketing-for-pubs) is doing the same job.
 
 The Signature Serve
 Create one drink that's uniquely yours:
@@ -79,7 +79,7 @@ What Actually Works
 
 ## The Non-Alcoholic Revolution
 
-This isn't about designated drivers anymore. Many under-30s are reducing alcohol consumption. If your non-alcoholic offering is J2O and Coke, you're already losing.
+This isn't about designated drivers anymore. Many under-30s are reducing alcohol consumption, so [a proper low and no alcohol range](/licensees-guide/sober-october-low-no-alcohol-pubs) is now a basic expectation. If your non-alcoholic offering is J2O and Coke, you're already losing.
 
 Build a Proper Zero-Proof Menu
 - Stock at least 5 craft alcohol-free beers

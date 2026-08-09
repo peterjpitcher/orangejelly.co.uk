@@ -33,11 +33,11 @@ voiceSearchQueries:
   - "can I request a food hygiene re-inspection?"
 faqs:
   - question: "How often do EHO inspections happen?"
-    answer: "It depends on your current rating and risk category. A premises rated 5 with low risk might not see an inspector for two years. A premises rated 0 to 2, or one flagged as high risk, could be re-inspected within six months. You will not get advance warning of the date — inspections are unannounced."
+    answer: "It depends on your current rating and risk category. A premises rated 5 with low risk might not see an inspector for two years. A premises rated 0 to 2, or one flagged as high risk, could be re-inspected within six months. You will not get advance warning of the date. Inspections are unannounced."
   - question: "Can I refuse an EHO inspection?"
     answer: "Technically an officer needs your consent or a warrant to enter, but refusing or obstructing an inspection is a criminal offence under the Food Safety Act 1990. It also looks terrible and will likely result in a formal follow-up with enforcement action. There is no scenario where refusing helps you."
   - question: "How long does it take to get a re-inspection after a bad rating?"
-    answer: "You can request a re-inspection once you have addressed the issues raised. Most councils allow a re-inspection request after a minimum of three months. You usually pay a fee, typically between 150 and 200 pounds. Only request it when you are genuinely confident the problems are fixed — a second poor score is worse than waiting."
+    answer: "You can request a re-inspection once you have addressed the issues raised. Most councils allow a re-inspection request after a minimum of three months. You usually pay a fee, typically between 150 and 200 pounds. Only request it when you are genuinely confident the problems are fixed. A second poor score is worse than waiting."
   - question: "Do I need a food hygiene certificate to run a pub kitchen?"
     answer: "There is no legal requirement for a specific certificate, but you must be able to demonstrate that food handlers are trained in food hygiene. In practice, a Level 2 Award in Food Safety is the industry minimum for kitchen staff, and a Level 3 is expected for the person managing food safety. Inspectors will ask about training records."
   - question: "What happens if I get a food hygiene rating of 0?"
@@ -45,7 +45,7 @@ faqs:
   - question: "Does my food hygiene rating affect my premises licence?"
     answer: "Not directly, but persistent poor hygiene can lead to enforcement action that creates problems with your licence. If environmental health makes a formal complaint to the licensing authority about your premises, it could trigger a licence review. It also gives ammunition to anyone who wants to object to a licence variation or renewal."
   - question: "Can I hide a bad food hygiene rating?"
-    answer: "No. Your rating is published on the Food Standards Agency website and is publicly searchable. In Wales, displaying your rating sticker is a legal requirement. In England, display is currently voluntary but strongly encouraged, and customers who do not see a sticker will check online. Hiding a bad score does not hide the problem — it just looks like you have something to hide."
+    answer: "No. Your rating is published on the Food Standards Agency website and is publicly searchable. In Wales, displaying your rating sticker is a legal requirement. In England, display is currently voluntary but strongly encouraged, and customers who do not see a sticker will check online. Hiding a bad score does not hide the problem. It just looks like you have something to hide."
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Get Your Pub Operating at Five Stars"
@@ -60,7 +60,7 @@ schema:
 
 Your food hygiene rating is the most public quality signal your pub has. It sits on the Food Standards Agency website. It appears on Tripadvisor, Just Eat, and Deliveroo. Customers google it before they book a table for Sunday lunch. And once you lose those stars, the damage lingers far longer than the problems that caused it.
 
-The good news is that a 5-star rating is not complicated. It is not about having the newest kitchen or the biggest budget. It is about systems, consistency, and being able to prove that you take food safety seriously every single day — not just when the inspector walks in.
+The good news is that a 5-star rating is not complicated. It is not about having the newest kitchen or the biggest budget. It is about systems, consistency, and being able to prove that you take food safety seriously every single day, not just when the inspector walks in.
 
 I have been through multiple EHO inspections at The Anchor. What I have learned is that the pubs which score well are not the ones that panic-clean the week before. They are the ones where good practice is just how the kitchen operates. This guide covers everything you need to know to get there and stay there.
 
@@ -70,7 +70,7 @@ The Food Hygiene Rating Scheme (FHRS) is run by local authorities in partnership
 
 Your rating is based on an unannounced inspection by an Environmental Health Officer (EHO). They do not call ahead. They turn up, show their credentials, and walk through your premises with a clipboard and a keen eye.
 
-The inspector scores you across three areas, each worth a different number of points. The lower your total points, the higher your rating. It is a penalty system — you start at the top and lose points for problems.
+The inspector scores you across three areas, each worth a different number of points. The lower your total points, the higher your rating. It is a penalty system: you start at the top and lose points for problems.
 
 ### Area 1: Food hygiene and safety procedures
 
@@ -78,10 +78,10 @@ This covers how you handle, prepare, cook, cool, reheat, and store food. The ins
 
 They look at:
 
-- **Temperature control.** Are your fridges running between 1 and 5 degrees? Are you checking and recording temperatures daily? Is hot food held above 63 degrees? Are you cooling food properly — down to 8 degrees within 90 minutes, then into the fridge?
+- **Temperature control.** Are your fridges running between 1 and 5 degrees? Are you checking and recording temperatures daily? Is hot food held above 63 degrees? Are you cooling food properly (down to 8 degrees within 90 minutes, then into the fridge)?
 - **Cross-contamination prevention.** Are raw and cooked foods stored separately? Do you have separate chopping boards, clearly colour-coded? Are staff washing hands between tasks?
 - **Cooking and reheating.** Is food cooked to a safe core temperature (75 degrees or above)? Is reheated food brought to at least 82 degrees in Scotland, or 75 degrees in England and Wales?
-- **Personal hygiene.** Are staff wearing clean clothing? Is there evidence of proper handwashing — soap, hot water, paper towels (not shared cloth towels)?
+- **Personal hygiene.** Are staff wearing clean clothing? Is there evidence of proper handwashing: soap, hot water, paper towels (not shared cloth towels)?
 - **Allergen management.** Can you demonstrate that you know the 14 allergens and can communicate them to customers? If you need to strengthen this area, our guide on [food allergen and GDPR compliance](/licensees-guide/food-allergies-gdpr-compliance) covers the practical systems.
 
 This area is worth up to 25 points. Serious failures here can single-handedly sink your rating.
@@ -105,12 +105,12 @@ This is where many pubs lose stars unnecessarily. The inspector is assessing whe
 
 They look at:
 
-- **HACCP or food safety management system.** In most pubs, this means the Safer Food Better Business (SFBB) pack. It must be filled in, up to date, and reflect what actually happens in your kitchen — not just sitting on a shelf gathering dust.
+- **HACCP or food safety management system.** In most pubs, this means the Safer Food Better Business (SFBB) pack. It must be filled in, up to date, and reflect what actually happens in your kitchen, not just sitting on a shelf gathering dust.
 - **Training records.** Evidence that your team has been trained in food hygiene and that training is refreshed regularly.
 - **Traceability.** Can you show where your food came from? Supplier invoices, delivery records, use-by date checks.
 - **Previous compliance history.** If the inspector had concerns last time and you have not addressed them, that destroys confidence instantly.
 
-This area is worth up to 30 points — the most heavily weighted of the three. An inspector who trusts your management is an inspector who gives you the benefit of the doubt.
+This area is worth up to 30 points, the most heavily weighted of the three. An inspector who trusts your management is an inspector who gives you the benefit of the doubt.
 
 ## How the 0 to 5 scale works
 
@@ -121,8 +121,8 @@ Your total penalty points across all three areas determine your rating:
 | 5 | Hygiene standards are very good | "This place takes food safety seriously" |
 | 4 | Hygiene standards are good | "Mostly good, minor improvements needed" |
 | 3 | Hygiene standards are generally satisfactory | "Acceptable, but there are issues" |
-| 2 | Some improvement necessary | "Problems found — be cautious" |
-| 1 | Major improvement necessary | "Significant issues — think twice" |
+| 2 | Some improvement necessary | "Problems found. Be cautious" |
+| 1 | Major improvement necessary | "Significant issues. Think twice" |
 | 0 | Urgent improvement required | "Avoid until they sort it out" |
 
 Anything below a 4 will cost you customers. A 3 might seem "satisfactory" on paper, but in practice, customers choosing between two pubs for a family meal will pick the one with 5 stars every time. And your competitors know that.
@@ -155,7 +155,7 @@ You cannot predict when the inspector will arrive, which is exactly the point. B
 
 ### The monthly review
 
-- [ ] Audit training records — is anyone overdue for a refresher?
+- [ ] Audit training records: is anyone overdue for a refresher?
 - [ ] Review supplier records and delivery temperatures
 - [ ] Check the physical condition of walls, floors, ceilings, and doors
 - [ ] Test your allergen information process (ask a staff member a scenario question)
@@ -169,10 +169,10 @@ The EHO will arrive unannounced during trading hours, typically when food is bei
 
 **What happens in practice:**
 
-1. **Introduction.** The officer shows their identification and explains they are conducting a food hygiene inspection. Be welcoming, not defensive. Offer them a drink (tea, coffee — not a pint).
-2. **Walk-through.** They will walk through your entire food operation — kitchen, stores, fridges, freezers, cellar (if food is stored there), bar areas where food is served, and toilets. They observe as they go, taking notes and sometimes photographs.
+1. **Introduction.** The officer shows their identification and explains they are conducting a food hygiene inspection. Be welcoming, not defensive. Offer them a drink (tea or coffee, not a pint).
+2. **Walk-through.** They will walk through your entire food operation: kitchen, stores, fridges, freezers, cellar (if food is stored there), bar areas where food is served, and toilets. They observe as they go, taking notes and sometimes photographs.
 3. **Document review.** They will ask to see your SFBB or equivalent food safety management system, temperature records, training records, cleaning schedules, and allergen documentation.
-4. **Questions.** They will ask you and your staff questions. Can a chef explain the allergen process? Does the KP know the correct sink for handwashing? These are not trick questions — they are checking whether your systems exist in practice, not just on paper.
+4. **Questions.** They will ask you and your staff questions. Can a chef explain the allergen process? Does the KP know the correct sink for handwashing? These are not trick questions. They are checking whether your systems exist in practice, not just on paper.
 5. **Feedback.** At the end, the officer will discuss their findings with you. They will explain what went well and what needs attention. Listen carefully and take notes. If they mention something you disagree with, stay calm and discuss it professionally.
 6. **Written report.** You will receive a formal letter confirming your rating, with details of any issues found and actions required. This is also when your rating goes live on the Food Standards Agency website.
 
@@ -213,7 +213,7 @@ Cracked tiles, chipped worktops, peeling paint, and damaged fridge seals all cre
 
 ### Pest evidence
 
-Even one mouse dropping in a dry store is a significant finding. Do not wait until you see a problem — have a professional pest control contract in place. Keep external doors closed (or fitted with strip curtains), seal gaps around pipes, and do not leave food waste accessible overnight.
+Even one mouse dropping in a dry store is a significant finding. Do not wait until you see a problem. Have a professional pest control contract in place. Keep external doors closed (or fitted with strip curtains), seal gaps around pipes, and do not leave food waste accessible overnight.
 
 ### Handwash basins used for food prep
 
@@ -227,7 +227,7 @@ If you receive a rating below 5 and you have addressed the issues, you can reque
 
 - You have genuinely fixed every issue in the inspection report
 - Enough time has passed for you to demonstrate sustained improvement (typically three months minimum)
-- You have evidence of the changes — new equipment, completed training records, updated SFBB, professional cleaning receipts
+- You have evidence of the changes: new equipment, completed training records, updated SFBB, professional cleaning receipts
 
 **When it does not make sense:**
 
@@ -238,13 +238,13 @@ If you receive a rating below 5 and you have addressed the issues, you can reque
 **The process:**
 
 1. Contact your local authority's environmental health team and request a re-inspection
-2. Pay the fee (typically 150 to 200 pounds — check with your council)
-3. The re-inspection will still be unannounced — you are requesting it, not scheduling it
+2. Pay the fee (typically 150 to 200 pounds; check with your council)
+3. The re-inspection will still be unannounced: you are requesting it, not scheduling it
 4. Your new rating replaces the old one on the Food Standards Agency website
 
 **The right to reply:**
 
-If you believe your rating is unfair, you can also submit a "right to reply" which is published alongside your rating on the FSA website. This does not change the score, but it lets you explain your side. Use it sparingly and professionally — a defensive or aggressive reply does more harm than good.
+If you believe your rating is unfair, you can also submit a "right to reply" which is published alongside your rating on the FSA website. This does not change the score, but it lets you explain your side. Use it sparingly and professionally. A defensive or aggressive reply does more harm than good.
 
 ## The business impact of your rating
 
@@ -260,11 +260,11 @@ Your food hygiene rating affects your pub in ways that go beyond a sticker in th
 
 **Staff recruitment.** Good chefs and kitchen staff want to work in well-run kitchens. A visible 5-star rating tells potential hires that you take standards seriously. If you are thinking about how food quality connects to your bottom line, read our guide on [profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas) for the revenue side of the equation.
 
-**Reputation compounding.** A 5-star rating is not just a score — it compounds your reputation. Customers mention it in reviews. It appears in social media posts. It gives your marketing credibility. And crucially, it is one less thing for a customer to worry about when deciding where to eat. For more on how your menu structure drives profitability alongside food safety, see our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend).
+**Reputation compounding.** A 5-star rating is not just a score. It compounds your reputation. Customers mention it in reviews. It appears in social media posts. It gives your marketing credibility. And crucially, it is one less thing for a customer to worry about when deciding where to eat. For more on how your menu structure drives profitability alongside food safety, see our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend).
 
 ## Maintaining your 5 stars: the routines that prevent slippage
 
-Getting a 5 is an achievement. Keeping it is a discipline. The pubs that slip from 5 to 3 almost always do so gradually — a few missed temperature checks become a habit, the SFBB stops being updated, a new starter does not get trained, and before you know it, the inspector arrives and you are not ready.
+Getting a 5 is an achievement. Keeping it is a discipline. The pubs that slip from 5 to 3 almost always do so gradually: a few missed temperature checks become a habit, the SFBB stops being updated, a new starter does not get trained, and before you know it, the inspector arrives and you are not ready.
 
 ### Build food safety into your daily rhythm
 
@@ -276,11 +276,11 @@ One person on your team owns food safety. They do not do everything themselves, 
 
 ### Quarterly self-audits
 
-Walk through your kitchen with the inspector's eyes every three months. Use the same three categories — food hygiene procedures, structural compliance, confidence in management. Score yourself honestly. Fix anything that would cost you points before the real inspector finds it.
+Walk through your kitchen with the inspector's eyes every three months. Use the same three categories: food hygiene procedures, structural compliance, confidence in management. Score yourself honestly. Fix anything that would cost you points before the real inspector finds it.
 
 ### New starter induction
 
-Every new kitchen team member gets a food safety briefing on day one. Not a quick chat — a structured induction covering handwashing, temperature control, allergen procedures, cleaning responsibilities, and where to find the SFBB. Document it. The inspector will ask.
+Every new kitchen team member gets a food safety briefing on day one. Not a quick chat: a structured induction covering handwashing, temperature control, allergen procedures, cleaning responsibilities, and where to find the SFBB. Document it. The inspector will ask.
 
 ### Supplier management
 
@@ -296,15 +296,15 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 
 2. **The three things the inspector checks.** Food safety procedures (how we handle food), structural condition (how clean and well-maintained the kitchen is), and confidence in management (whether our systems work and our team understands them).
 
-3. **Temperature control.** Fridges must be between 1 and 5 degrees. Hot food held above 63 degrees. Reheated food to 75 degrees core. Check and record daily — no exceptions.
+3. **Temperature control.** Fridges must be between 1 and 5 degrees. Hot food held above 63 degrees. Reheated food to 75 degrees core. Check and record daily, no exceptions.
 
 4. **Cross-contamination.** Raw and cooked foods are always separated. Colour-coded boards are always used correctly. Hands are washed between tasks, after handling raw food, after using the toilet, after touching your face, after handling waste.
 
-5. **Allergens.** We must be able to tell every customer exactly what is in every dish. If you are not sure, do not guess — check the recipe sheet or ask the head chef. If you need a refresher on the full allergen and data handling process, the detailed guide is [here](/licensees-guide/food-allergies-gdpr-compliance).
+5. **Allergens.** We must be able to tell every customer exactly what is in every dish. If you are not sure, do not guess. Check the recipe sheet or ask the head chef. If you need a refresher on the full allergen and data handling process, the detailed guide is [here](/licensees-guide/food-allergies-gdpr-compliance).
 
 6. **SFBB and record keeping.** The daily diary must be completed every day. If you are the opening chef, this is your responsibility. If you see a gap, fill it.
 
-7. **Cleaning.** Clean as you go during service. Deep clean schedule is posted in the kitchen — follow it. If a job is missed, it does not disappear — it doubles for the next person.
+7. **Cleaning.** Clean as you go during service. Deep clean schedule is posted in the kitchen. Follow it. If a job is missed, it does not disappear. It doubles for the next person.
 
 8. **What to do if the inspector arrives.** Stay calm, be friendly, answer honestly, and let the manager handle the walkthrough. Do not try to hide anything or rush to fix something while the inspector is watching.
 
@@ -327,7 +327,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 - Induct every new starter with a food safety briefing on day one
 - Fix structural issues as they arise, not when an inspection is due
 
-A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best — from food safety to [menu profitability](/licensees-guide/profitable-pub-food-menu-ideas) to marketing that fills tables — that is exactly what a [Growth Fix](/ways-to-work/growth-fix) is designed for.
+A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best (from food safety to [menu profitability](/licensees-guide/profitable-pub-food-menu-ideas) to marketing that fills tables), that is exactly what a [Growth Fix](/ways-to-work/growth-fix) is designed for.
 
 ## The bottom line
 

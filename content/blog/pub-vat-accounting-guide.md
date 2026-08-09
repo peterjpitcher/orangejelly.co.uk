@@ -56,7 +56,7 @@ schema:
 
 # Pub VAT and Accounting: The Landlord's Plain-English Guide
 
-There is a moment in every new licensee's journey where the penny drops. Not the one in the till — the one in your head. You are staring at a VAT return, your accountant has asked you three questions you cannot answer, and you realise that running a pub means running a proper business with proper tax obligations.
+There is a moment in every new licensee's journey where the penny drops. Not the one in the till: the one in your head. You are staring at a VAT return, your accountant has asked you three questions you cannot answer, and you realise that running a pub means running a proper business with proper tax obligations.
 
 This guide is not a replacement for a good accountant. It is a primer that helps you understand what is happening with your money, what questions to ask, and what mistakes to avoid. I wrote it because when I took on The Anchor in Stanwell Moor as a Greene King tenant, nobody handed me a guide like this. I learned it the hard way, and you should not have to.
 
@@ -70,7 +70,7 @@ The good news is that the principles are straightforward once somebody explains 
 
 ## VAT on drinks: the simple part
 
-Every alcoholic drink you sell carries VAT at the standard rate of 20 percent. Every soft drink, every coffee, every bottle of water served on the premises — 20 percent.
+Every alcoholic drink you sell carries VAT at the standard rate of 20 percent. Every soft drink, every coffee, every bottle of water served on the premises: 20 percent.
 
 This is the easy bit. If someone drinks it in your pub, you charge 20 percent VAT on it. No exceptions, no complications.
 
@@ -80,15 +80,15 @@ Where people sometimes get confused is with the maths. If you sell a pint for 5 
 
 Food is where the VAT rules start to feel like they were written by someone who has never been inside a pub.
 
-**Hot food eaten on the premises** — 20 percent VAT. This covers the vast majority of pub food. Your roast dinners, your burger and chips, your steak night specials. Standard rate, no arguments.
+**Hot food eaten on the premises:** 20 percent VAT. This covers the vast majority of pub food. Your roast dinners, your burger and chips, your steak night specials. Standard rate, no arguments.
 
-**Cold food eaten on the premises** — also 20 percent VAT. A cold sandwich, a ploughman's, a salad. If the customer eats it in your pub, it is standard-rated regardless of temperature.
+**Cold food eaten on the premises:** also 20 percent VAT. A cold sandwich, a ploughman's, a salad. If the customer eats it in your pub, it is standard-rated regardless of temperature.
 
-**Cold takeaway food** — zero-rated. Here is where it gets interesting. If a customer buys a cold sandwich and takes it away to eat elsewhere, there is no VAT. This is the same rule that applies to supermarkets and sandwich shops.
+**Cold takeaway food:** zero-rated. Here is where it gets interesting. If a customer buys a cold sandwich and takes it away to eat elsewhere, there is no VAT. This is the same rule that applies to supermarkets and sandwich shops.
 
-**Hot takeaway food** — 20 percent VAT. Fish and chips to take away, a hot pie from the bar, a coffee to go. All standard-rated.
+**Hot takeaway food:** 20 percent VAT. Fish and chips to take away, a hot pie from the bar, a coffee to go. All standard-rated.
 
-**The practical implication:** If you sell any cold food for takeaway, you are technically making some zero-rated sales. Most pubs do not bother tracking this separately because the volumes are small and the admin is not worth it. But if you run a significant takeaway operation — say, weekend sandwich orders for local offices — talk to your accountant about whether it is worth separating.
+**The practical implication:** If you sell any cold food for takeaway, you are technically making some zero-rated sales. Most pubs do not bother tracking this separately because the volumes are small and the admin is not worth it. But if you run a significant takeaway operation (say, weekend sandwich orders for local offices), talk to your accountant about whether it is worth separating.
 
 ### What about crisps and bar snacks?
 
@@ -115,20 +115,20 @@ This is where a good accountant earns their fee. You can reclaim VAT on legitima
 ### You can typically reclaim VAT on
 
 - **Stock purchases** from non-tied suppliers (you buy at VAT-inclusive prices and reclaim the input VAT)
-- **Equipment** — kitchen kit, glassware, furniture, EPOS systems
-- **Repairs and maintenance** — plumbing, electrical work, decorating
-- **Professional fees** — accountancy, legal, consultancy
-- **Marketing costs** — printing, advertising, website development
+- **Equipment:** kitchen kit, glassware, furniture, EPOS systems
+- **Repairs and maintenance:** plumbing, electrical work, decorating
+- **Professional fees:** accountancy, legal, consultancy
+- **Marketing costs:** printing, advertising, website development
 - **Cleaning and hygiene supplies**
-- **Utilities** — gas, electric, water (business proportion only if mixed use)
+- **Utilities:** gas, electric, water (business proportion only if mixed use)
 - **Telephone and broadband**
 
 ### You cannot reclaim VAT on
 
-- **Business entertainment** — buying drinks for customers, supplier hospitality
-- **Personal expenses** — anything not wholly for the business
-- **Items without a valid VAT invoice** — a till receipt from a cash and carry is not enough; you need a proper VAT invoice showing the supplier's VAT number
-- **Purchases from non-VAT-registered suppliers** — there is no VAT to reclaim
+- **Business entertainment:** buying drinks for customers, supplier hospitality
+- **Personal expenses:** anything not wholly for the business
+- **Items without a valid VAT invoice:** a till receipt from a cash and carry is not enough; you need a proper VAT invoice showing the supplier's VAT number
+- **Purchases from non-VAT-registered suppliers:** there is no VAT to reclaim
 
 ### The tied supply question
 
@@ -150,7 +150,7 @@ Instead of calculating input and output VAT separately, you pay a fixed percenta
 
 **The appeal:** Much simpler bookkeeping. You do not need to track input VAT on every purchase.
 
-**The catch:** You cannot reclaim input VAT on most purchases (except capital assets over 2,000 pounds). If you spend heavily on reclaimable items — repairs, equipment, marketing — the standard scheme usually recovers more money.
+**The catch:** You cannot reclaim input VAT on most purchases (except capital assets over 2,000 pounds). If you spend heavily on reclaimable items (repairs, equipment, marketing), the standard scheme usually recovers more money.
 
 **When it works:** Pubs with low overheads, minimal equipment spending, and a preference for simplicity. Run the numbers with your accountant before committing.
 
@@ -166,12 +166,12 @@ HMRC can go back four years when investigating VAT, and six years for income tax
 
 ### What to keep
 
-- **Every VAT invoice you receive** — scanned or physical, filed by month
-- **Daily till readings** — your EPOS should generate these automatically
-- **Bank statements** — reconciled monthly against your books
-- **Petty cash records** — every withdrawal and every receipt
-- **Wage records** — payslips, PAYE submissions, pension contributions
-- **Stock records** — delivery notes, wastage logs, stocktake sheets
+- **Every VAT invoice you receive:** scanned or physical, filed by month
+- **Daily till readings:** your EPOS should generate these automatically
+- **Bank statements:** reconciled monthly against your books
+- **Petty cash records:** every withdrawal and every receipt
+- **Wage records:** payslips, PAYE submissions, pension contributions
+- **Stock records:** delivery notes, wastage logs, stocktake sheets
 
 ### The weekly routine
 
@@ -219,7 +219,7 @@ Using the pub bank account for personal shopping, or paying pub suppliers from y
 
 ### Not claiming legitimate expenses
 
-Many licensees underlaim because they do not realise what qualifies. Staff uniforms, cleaning materials, trade subscriptions (BII membership, for example), training courses, mileage to the cash and carry — all legitimate business expenses that reduce your tax bill. Keep the receipts and log them.
+Many licensees underlaim because they do not realise what qualifies. Staff uniforms, cleaning materials, trade subscriptions (BII membership, for example), training courses, mileage to the cash and carry: all legitimate business expenses that reduce your tax bill. Keep the receipts and log them.
 
 ### Missing the VAT registration deadline
 

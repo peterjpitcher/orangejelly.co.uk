@@ -4,7 +4,7 @@ slug: "cashflow-fixes-when-trade-drops"
 publishedDate: 2025-09-05
 updatedDate: "2025-12-15T00:00:00.000Z"
 excerpt: "A practical triage checklist for publicans who need to protect cash this week without destroying the guest experience."
-quickAnswer: "Model 13-week cash daily, negotiate breathing room with suppliers, convert stock to cash fast, and double down on high-margin activities so the business stabilises before panic sets in."
+quickAnswer: "Act within 48 hours. Build a one-page 14-day cash board listing every payment and expected inflow, then triage costs into must pay now, can delay with a plan, and stop immediately. Convert slow stock with a focused special, bring cash forward through deposits, and talk to your landlord and suppliers early."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -34,7 +34,7 @@ faqs:
   - question: "What is the first thing I should do when pub takings drop suddenly?"
     answer: "Build a daily cash board for the next 14 days listing every payment and expected inflow. This gives you a clear picture of what is due and when, so you can make informed decisions instead of guessing. Share it with your management team."
   - question: "Should I offer discounts when trade is slow?"
-    answer: "Avoid blanket discounts — they train customers to wait for deals and destroy margin. Instead, run a focused special on slow-moving stock or create a high-margin bundle that feels like great value. Protect GP at all costs when cash is tight."
+    answer: "Avoid blanket discounts: they train customers to wait for deals and destroy margin. Instead, run a focused special on slow-moving stock or create a high-margin bundle that feels like great value. Protect GP at all costs when cash is tight."
   - question: "How do I talk to suppliers when I cannot pay on time?"
     answer: "Call them before the payment is due, not after. Lead with a clear plan: explain the situation honestly, propose a realistic repayment schedule, and stick to it. Suppliers prefer a structured conversation over silence. Most will work with you if you communicate early."
 ---
@@ -85,17 +85,17 @@ These create immediate cash without slashing margin.
 
 Train the team to push the one or two items that actually move margin. Script it, practice it, and track it for a week.
 
-A two percent shift in drink mix can stabilise a tight week.
+A two percent shift in [how your drinks mix is weighted](/licensees-guide/rescue-your-margins-drinks-mix) can stabilise a tight week.
 
 ## Step 6: Protect the marketing that works
 
-The fastest mistake is turning off the only channel that drives bookings. If a specific post type or local group drives covers, keep it alive even when cash is tight.
+The fastest mistake is turning off the only channel that drives bookings. If a specific post type or local group drives covers, keep it alive even when cash is tight, and fill the gaps with [marketing that costs time rather than money](/licensees-guide/low-budget-pub-marketing-ideas).
 
 Cut noise, not traction.
 
 ## Step 7: Talk to the landlord early
 
-This is hard but important. Share the plan, not the panic. Explain the actions you are taking, and propose a clear, time-bound adjustment if needed.
+This is hard but important. Share the plan, not the panic. Explain the actions you are taking, and propose a clear, time-bound adjustment if needed, the same way you would approach [rent and supplier negotiations when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight).
 
 The worst outcome is silence.
 

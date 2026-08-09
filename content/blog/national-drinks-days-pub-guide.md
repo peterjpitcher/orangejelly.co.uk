@@ -4,7 +4,7 @@ slug: "national-drinks-days-pub-guide"
 publishedDate: 2026-05-25
 updatedDate: 2026-05-31
 excerpt: "A pub calendar of national drinks days to pick from, anchored by National Vodka Day. Pick a hook, run it in one shift, with serves, pricing and promotion that work."
-quickAnswer: "National Vodka Day is Sunday 4 October 2026, and it anchors a calendar of national drinks days a pub can pick from. The easy autumn run is National Vodka Day (4 Oct), International Gin and Tonic Day (19 Oct) and Champagne Day (the fourth Friday of October, 23 Oct 2026). Earlier in the year you've also got World Gin Day, National Beer Day, National Prosecco Day and World Cocktail Day. Each needs one featured serve, one chalkboard and one social post."
+quickAnswer: "National Vodka Day is Sunday 4 October 2026, and it anchors a calendar of drinks days pubs can pick from. The tidiest autumn run adds International Gin and Tonic Day on Monday 19 October and Champagne Day on Friday 23 October. Each one needs only a featured serve, a chalkboard and a social post."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/national-drinks-days-pub-guide.svg"
@@ -61,7 +61,7 @@ schema:
 
 # National Vodka Day & Drinks Days: A Pub Calendar to Pick From
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 National Vodka Day is Sunday 4 October 2026, and it's the easiest place to start with national drinks days in your pub. There's a recognised day for nearly every spirit and style now, which sounds like a lot until you realise you don't have to run them all. You just pick the handful that suit your crowd and treat each one as a single featured serve, not a full event.
 
@@ -73,13 +73,13 @@ Three of the best fall in October, neatly spaced through the month, right when y
 
 Here's the shortlist worth a pub's attention. Dates that move around are described by their rule as well, so you can plan ahead without second-guessing.
 
-- **World Cocktail Day — Wednesday 13 May 2026.** The internationally recognised one (the UK also nods to National Cocktail Day on 24 March). A single signature cocktail on the board is plenty.
-- **World Gin Day — Saturday 13 June 2026** (the second Saturday of June). A Saturday, so it suits a proper gin board and a local distillery spotlight.
-- **National Beer Day — Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask — and a natural warm-up for going bigger with your own beer festival come [Cask Ale Week](/licensees-guide/cask-ale-week-pub-guide) in September.
-- **National Prosecco Day — Thursday 13 August 2026.** High summer, fizz by the glass, garden weather. Easy yes for a treat.
-- **National Vodka Day — Sunday 4 October 2026.** Lands on a Sunday, so it rides alongside your roast trade. The pick of the bunch to start with.
-- **International Gin and Tonic Day — Monday 19 October 2026.** A quiet Monday, which is exactly why a G&T lift earns its keep.
-- **International Champagne Day — Friday 23 October 2026** (the fourth Friday of October). Run it as a weekend and keep the Saturday too.
+- **World Cocktail Day: Wednesday 13 May 2026.** The internationally recognised one (the UK also nods to National Cocktail Day on 24 March). A single signature cocktail on the board is plenty.
+- **World Gin Day: Saturday 13 June 2026** (the second Saturday of June). A Saturday, so it suits a proper gin board and a local distillery spotlight.
+- **National Beer Day: Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask, and a natural warm-up for going bigger with your own beer festival come [Cask Ale Week](/licensees-guide/cask-ale-week-pub-guide) in September.
+- **National Prosecco Day: Thursday 13 August 2026.** High summer, fizz by the glass, garden weather. Easy yes for a treat.
+- **National Vodka Day: Sunday 4 October 2026.** Lands on a Sunday, so it rides alongside your roast trade. The pick of the bunch to start with.
+- **International Gin and Tonic Day: Monday 19 October 2026.** A quiet Monday, which is exactly why a G&T lift earns its keep.
+- **International Champagne Day: Friday 23 October 2026** (the fourth Friday of October). Run it as a weekend and keep the Saturday too.
 
 You won't run all seven, and you shouldn't try. The three October dates make the tidiest autumn run, so the rest of this guide works through those in detail. The earlier dates are there for when you're planning the wider year.
 
@@ -93,7 +93,7 @@ And because each of these national drinks days is a recognised date, you're borr
 
 A quick word before the fun bit: these days are about trading up, not drinking more. Keep your sensible drinks messaging visible, run Challenge 25 as you always do, and a small Drinkaware line on the menu never goes amiss.
 
-## National Vodka Day — Sunday 4 October
+## National Vodka Day: Sunday 4 October
 
 Vodka Day lands on a Sunday this year, which is a gift. You've already got roast trade and a relaxed daytime crowd, so you're adding spend to a session that's already busy rather than trying to fill a dead one.
 
@@ -105,7 +105,7 @@ Three ways to play it, pick whichever fits your room:
 
 You don't need all three. One featured serve, done well and put in front of people, beats a list of five they have to read.
 
-## International Gin and Tonic Day — Monday 19 October
+## International Gin and Tonic Day: Monday 19 October
 
 This one falls on a Monday, which on paper looks like the worst slot of the three. It's actually the best argument for running it. Monday is usually your quietest night, so anything that lifts spend here is pure addition.
 
@@ -117,7 +117,7 @@ A gin and tonic is the perfect quiet-Monday serve because it feels like a treat 
 
 Lean on your reps here. Many will provide glassware, garnish ideas and a little point-of-sale in exchange for a tag on social, which makes the whole thing close to free to set up.
 
-## Champagne Weekend — Friday 23 and Saturday 24 October
+## Champagne Weekend: Friday 23 and Saturday 24 October
 
 International Champagne Day always falls on the fourth Friday of October, which this year is Friday 23 October. Here's the thing, though: if you run it as a single Friday, you leave your Saturday trade untouched. So don't. Run it as a Champagne Weekend across Friday 23 and Saturday 24 October and you carry the occasion through both of your busiest nights.
 

@@ -41,7 +41,8 @@ export default function BlogCategoryHero({
         {/* Breadcrumbs — light variant for dark backgrounds */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <div className="mb-6">
-            <Breadcrumb items={breadcrumbs} variant="light" />
+            {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
+            <Breadcrumb items={breadcrumbs} variant="light" emitJsonLd={false} />
           </div>
         )}
 

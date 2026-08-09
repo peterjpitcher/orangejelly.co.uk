@@ -40,7 +40,7 @@ faqs:
   - question: "Can I use my pub chalkboard on social media?"
     answer: "Absolutely, and you should. A well-designed chalkboard is ready-made content. Photograph it at an angle with the pub frontage visible and post it to your socials daily. Some pubs generate thousands of views from a single witty board photo. It costs nothing and reinforces your brand personality to people who may never walk past in person."
   - question: "What should I avoid writing on my pub A-board?"
-    answer: "Avoid anything that could be seen as discriminatory, offensive, or that makes promises you cannot deliver. Do not advertise prices that are about to change. Avoid clutter and long paragraphs — if someone cannot read and understand your board in three seconds while walking past, it has failed. Also avoid inside jokes that only regulars understand; the A-board exists to attract new customers."
+    answer: "Avoid anything that could be seen as discriminatory, offensive, or that makes promises you cannot deliver. Do not advertise prices that are about to change. Avoid clutter and long paragraphs. If someone cannot read and understand your board in three seconds while walking past, it has failed. Also avoid inside jokes that only regulars understand; the A-board exists to attract new customers."
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Growing Your Pub's Local Visibility?"
@@ -57,7 +57,7 @@ You walk past dozens of pub A-boards every week. Most of them say "2 meals for �
 
 Your A-board is the single most underrated marketing tool your pub owns. It costs nothing to update, it reaches every person who walks or drives past, and when it is done well, it does the one thing that matters most: it gets someone through the door who was not planning to come in.
 
-At The Anchor in Stanwell Moor, we treat our boards as part of our [local marketing strategy](/licensees-guide/local-pub-marketing). They are not an afterthought. They are one of the first things people see, and first impressions count.
+At The Anchor in Stanwell Moor, we treat our boards as part of our [local marketing strategy](/pub-marketing). They are not an afterthought. They are one of the first things people see, and first impressions count.
 
 ## Why your A-board matters more than you think
 
@@ -81,12 +81,12 @@ The golden rule: your message needs to be understood by someone walking past at 
 
 This is the simplest and most effective approach. Tell people what is happening today.
 
-- "Fish & Chips Friday — battered to order"
+- "Fish & Chips Friday: battered to order"
 - "Live acoustic tonight from 8pm"
 - "Roast pork, crackling, all the trimmings"
-- "Quiz night 7:30 — table for your team?"
+- "Quiz night 7:30. Table for your team?"
 
-The daily hook works because it creates urgency. It is not "we do food" — it is "this specific thing is happening right now."
+The daily hook works because it creates urgency. It is not "we do food", it is "this specific thing is happening right now."
 
 ### The witty one-liner
 
@@ -103,8 +103,8 @@ A word of caution: witty does not mean offensive. Keep it family-friendly and in
 
 Use your board to show that other people love what you do.
 
-- "Busiest quiz in the area — room for one more team?"
-- "Rated 4.8 on Google — see what the fuss is about"
+- "Busiest quiz in the area. Room for one more team?"
+- "Rated 4.8 on Google. See what the fuss is about"
 - "Your neighbours are already inside"
 
 ### The seasonal message
@@ -115,15 +115,15 @@ Tie your board to the time of year and it feels current and relevant.
 - **Spring:** "Beer garden open. Pints in the sunshine from 12."
 - **Summer:** "It's too hot to cook. Burger and a cold pint, £12."
 - **Autumn:** "Fireside seats free. Red wine on offer."
-- **December:** "Christmas parties — last few dates left. Ask inside."
+- **December:** "Christmas parties: last few dates left. Ask inside."
 
 ### The event driver
 
 If you run regular events, your A-board is where you sell them.
 
-- "Cash bingo Sunday 3pm — eyes down, prizes up"
-- "Music bingo Wednesday — no singing required"
-- "Steak night Thursday — 8oz rump, chips, drink, £14"
+- "Cash bingo Sunday 3pm: eyes down, prizes up"
+- "Music bingo Wednesday: no singing required"
+- "Steak night Thursday: 8oz rump, chips, drink, £14"
 
 Cross-link these with your [community outreach](/licensees-guide/community-outreach-reintroduce-pub) efforts and your board becomes part of a wider campaign.
 
@@ -141,7 +141,7 @@ Too many colours create visual noise. Use white for the headline, a second colou
 
 ### Leave breathing space
 
-The biggest design mistake is cramming too much onto the board. White space is not wasted space — it is what makes the words you do include actually stand out. One strong message with room to breathe beats five messages competing for attention.
+The biggest design mistake is cramming too much onto the board. White space is not wasted space: it is what makes the words you do include actually stand out. One strong message with room to breathe beats five messages competing for attention.
 
 ### Add a simple illustration
 
@@ -149,7 +149,7 @@ You do not need to be an artist. A rough drawing of a pint glass, a roast dinner
 
 ### Frame the board properly
 
-A chalkboard propped against a wall on the ground gets overlooked. An A-board at standing eye height, positioned where pedestrians naturally walk, gets read. If your frontage allows it, consider a wall-mounted board at head height as well — it catches people from further away.
+A chalkboard propped against a wall on the ground gets overlooked. An A-board at standing eye height, positioned where pedestrians naturally walk, gets read. If your frontage allows it, consider a wall-mounted board at head height as well: it catches people from further away.
 
 ## How often to change your board
 
@@ -163,7 +163,7 @@ Here is a simple weekly rotation:
 - **Tuesday:** Midweek offer or daily special
 - **Wednesday:** Quiz or event night promotion
 - **Thursday:** Food special or themed night
-- **Friday:** Weekend message — live music, atmosphere, "the weekend starts here"
+- **Friday:** Weekend message. Live music, atmosphere, "the weekend starts here"
 - **Saturday:** Something witty or shareable for the social media crowd
 - **Sunday:** Roast dinner details or family-friendly message
 
@@ -240,7 +240,7 @@ If your board is funny or clever enough, customers will photograph it themselves
 
 ### Create a series
 
-Give your board personality. Some pubs are known for their daily pun. Others run a "question of the week." When your board becomes a series, people start looking for it — both in person and online. That consistency builds brand recognition that no amount of paid advertising can replicate.
+Give your board personality. Some pubs are known for their daily pun. Others run a "question of the week." When your board becomes a series, people start looking for it, both in person and online. That consistency builds brand recognition that no amount of paid advertising can replicate.
 
 ## Window displays: the overlooked cousin
 
@@ -285,10 +285,10 @@ A chalkboard is not going to transform your business overnight. But it is a comp
 
 ## The bottom line
 
-Your A-board is the cheapest, most visible, most underused marketing tool in your pub. It reaches exactly the right audience — people who are physically near your door — at exactly the right moment.
+Your A-board is the cheapest, most visible, most underused marketing tool in your pub. It reaches exactly the right audience (people who are physically near your door) at exactly the right moment.
 
 You do not need artistic talent. You do not need a budget. You need a clear message, changed regularly, photographed and shared. That is it.
 
 The pubs that treat their boards as an afterthought are missing an opportunity that costs nothing and delivers every single day. Do not be one of them.
 
-If you want help pulling together your pub's full local marketing strategy — signage, social media, events, and everything in between — [book a Growth Fix](/ways-to-work/growth-fix) and we will build a plan that works for your venue.
+If you want help pulling together your pub's full local marketing strategy (signage, social media, events, and everything in between), [book a Growth Fix](/ways-to-work/growth-fix) and we will build a plan that works for your venue.

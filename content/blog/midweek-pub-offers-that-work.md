@@ -60,7 +60,7 @@ Let me share a painful lesson. In desperation, we once ran "50% off all food Wed
 
 - **Weekend trade**: Dropped (customers waited for discounts)
 
-The real kicker? Regular customers told us the pub felt "cheap" and started dining elsewhere on weekends. We cover more lessons like this in our guide to [filling empty seats with midweek offers](/licensees-guide/fill-empty-seats-midweek-offers).
+The real kicker? Regular customers told us the pub felt "cheap" and started dining elsewhere on weekends. We cover more lessons like this in our guide to [filling empty pub tables](/licensees-guide/fill-empty-pub-tables).
 
 ### The Profitable Midweek Formula
 

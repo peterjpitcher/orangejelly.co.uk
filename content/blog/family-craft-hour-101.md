@@ -4,7 +4,7 @@ slug: "family-craft-hour-101"
 publishedDate: 2025-10-16
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "A safeguarded Sunday playbook for running craft tables, card bars, and seasonal trails that fill the dining room."
-quickAnswer: "Pre-book tables, brief staff on safeguarding, and offer craft-plus-roast bundles so families lock in every Sunday."
+quickAnswer: "Run a 60 to 75 minute craft session for ages three to eleven, with a grown-up staying at every table. Book it before the roast rush at 10 to 11am, charge £3 to £5 per child including materials, take pre-payment, and bundle craft with a kids roast. Brief staff on safeguarding, consent and allergies first."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -38,7 +38,7 @@ faqs:
 
 # Family Craft Hour 101: Safe Projects, Smooth Setups, Happy Families
 
-If you want Sunday lunch bookings to grow, give parents something extra beyond roast potatoes. A structured craft hour keeps kids busy, reassures carers about safety, and fills quieter slots (10–11am, midday, or rainy half-term afternoons). Use this guide to plan projects, lay out the room, handle safeguarding and allergies, and promote the session.
+If you want Sunday lunch bookings to grow, give parents something extra beyond roast potatoes, because [families pick the pub that plans for them](/licensees-guide/how-to-attract-families-to-your-pub). A structured craft hour keeps kids busy, reassures carers about safety, and fills quieter slots (10–11am, midday, or rainy half-term afternoons). Use this guide to plan projects, lay out the room, handle safeguarding and allergies, and promote the session.
 
 ## Who It’s For and When to Run It
 
@@ -51,7 +51,7 @@ If you want Sunday lunch bookings to grow, give parents something extra beyond r
 | Theme | Activity | Mess level | Notes |
 | --- | --- | --- | --- |
 | Valentine’s/Mother’s Day | Card bar with stamps, dried petals, ribbon | Low | Pre-cut hearts, provide glue dots instead of wet glue. |
-| Easter | Foam egg decorating, bunny-ear headbands | Medium | Avoid glitter—use metallic stickers instead. |
+| Easter | Foam egg decorating, bunny-ear headbands | Medium | Avoid glitter: use metallic stickers instead. |
 | Summer Holidays | DIY wind socks, beach-bottle sensory jars | Medium | Offer outdoor drying line. |
 | Halloween | Paper lanterns, upcycled costume props | Medium-high | Tablecloths + aprons essential. |
 | Christmas | Salt-dough ornaments (pre-baked), felt garlands | Medium | Air-dry overnight; provide boxes for transport. |
@@ -81,7 +81,7 @@ Prepare at least two stations per session: one seated craft, one “make and tak
 ## Safeguarding and Photography
 
 - Maintain ratios (1 staff per 8 children recommended). All staff should know who the designated safeguarding lead is.
-- Keep a clearly signed “grown-ups must stay” policy—this isn’t a drop-off club.
+- Keep a clearly signed “grown-ups must stay” policy: this isn’t a drop-off club.
 - For photos/videos, follow NSPCC guidance: explain how images will be used, obtain consent, and store footage securely. ([NSPCC Learning](https://learning.nspcc.org.uk/online-safety/photographing-filming-children))
 - First aid: have at least one paediatric first-aider on shift, stock plasters/eyewash, and log any incidents immediately.
 
@@ -90,7 +90,7 @@ Prepare at least two stations per session: one seated craft, one “make and tak
 - Offer adaptive scissors, chunky brushes, and stabilising mats for children with motor challenges.
 - Provide visual step-by-step cards with icons and simple text.
 - Keep a sensory-friendly corner with noise-reducing headphones, fidgets, and storybooks.
-- Ensure tables are spaced for wheelchair access and prams.
+- Ensure tables are [spaced for wheelchair access and prams](/licensees-guide/pub-accessibility-welcoming-guide).
 
 ## Budget and Bundles
 
@@ -108,7 +108,7 @@ Package craft hour with dining offers: “Craft & Roast” (£14.95 kids roast +
 - **Channels:** school/PTA newsletters, local Facebook “Family Fun” groups, WhatsApp parents chats, community noticeboards.
 - **Messaging:** emphasise structured fun, all materials included, allergy-aware, booking essential.
 - **Copy-ready caption:** “Family Craft Hour this Saturday, 10–11am. Ages 3–11 with a grown-up. Material kits included, book your table 👉 [link].”
-- **Cross-links:** mention Family Craft Hour at the end of boardgame or quiz articles (“Looking for daytime fun? Try our craft hour.”)
+- **Cross-links:** mention Family Craft Hour at the end of your [boardgame night](/licensees-guide/boardgame-night-101) and quiz articles (“Looking for daytime fun? Try our craft hour.”)
 
 ## Risk Management and House Rules
 
@@ -132,7 +132,7 @@ Use a QR survey asking what themes families want next (Mother’s Day, World Boo
 **Do I need DBS checks for staff?** If the same team members regularly supervise children, DBS checks are strongly advised; at minimum have a named safeguarding lead and documented safer recruitment steps.  
 **How do I manage allergies without scaring parents off?** Collect allergy info at sign-in, avoid high-risk materials (nuts, latex), label ingredients on homemade doughs, and keep EPI-pen-aware staff nearby.  
 **How much buffer time should I allow for clean-up?** Build in a 15-minute reset after each session for wiping surfaces, restocking trays, and drying crafts before the lunch rush.  
-**Can I monetise take-home kits?** Yes—bundle leftover supplies into £5 “mini kits” or offer pre-booked premium packs (e.g., wreath making) for seasonal upsell.  
+**Can I monetise take-home kits?** Yes: bundle leftover supplies into £5 “mini kits” or offer pre-booked premium packs (e.g., wreath making) for seasonal upsell.  
 **Do I need special insurance or risk assessments?** Review your public liability policy, complete an activity-specific risk assessment (tools, slips, choking hazards), and keep it on file with COSHH sheets for any paints/glues.
 
 ## Need backup?

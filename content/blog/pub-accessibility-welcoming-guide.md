@@ -36,7 +36,7 @@ faqs:
   - question: "Does the Equality Act 2010 apply to pubs?"
     answer: "Yes. Pubs are classed as service providers under the Equality Act 2010 and must make reasonable adjustments to ensure disabled customers are not placed at a substantial disadvantage. This applies to physical access, communication, and how you deliver your service. Failure to comply can result in legal action and compensation claims."
   - question: "Do I need to install a ramp if my pub has steps?"
-    answer: "If steps create a barrier for wheelchair users or customers with mobility difficulties, you are required to consider reasonable adjustments. A permanent ramp is ideal, but a portable ramp with a bell or intercom system can be an acceptable alternative for listed buildings or where structural changes are impractical. The key word is reasonable — proportionate to your size and resources."
+    answer: "If steps create a barrier for wheelchair users or customers with mobility difficulties, you are required to consider reasonable adjustments. A permanent ramp is ideal, but a portable ramp with a bell or intercom system can be an acceptable alternative for listed buildings or where structural changes are impractical. The key word is reasonable: proportionate to your size and resources."
   - question: "Can I allow dogs in my pub if I serve food?"
     answer: "Yes. There is no UK law preventing dogs in pubs that serve food. The Food Standards Agency guidance states that dogs can be allowed in eating areas at the discretion of the business, provided food hygiene standards are maintained. Most dog friendly pubs allow dogs in the bar area but not the kitchen, and many extend this to dining areas too."
   - question: "What do I need to make my pub family friendly?"
@@ -91,7 +91,7 @@ The word reasonable does a lot of heavy lifting here. What is reasonable depends
 - Whether the premises is a listed building
 - The extent of the disadvantage being addressed
 
-A Greene King tenant running a small village pub is not expected to spend 50,000 pounds on a lift. But you are expected to consider what you can do within your means. The law is about proportionate, practical steps — not perfection.
+A Greene King tenant running a small village pub is not expected to spend 50,000 pounds on a lift. But you are expected to consider what you can do within your means. The law is about proportionate, practical steps, not perfection.
 
 ### The consequences of non-compliance
 
@@ -121,7 +121,7 @@ Here is where theory meets reality. These are the improvements that make the big
 
 **Portable ramp.** A lightweight aluminium ramp for your front entrance costs 150 to 500 pounds. Add a doorbell or intercom so customers can alert you when they need it deployed. This is often the single most impactful change you can make.
 
-**Hearing loop system.** A counter loop for the bar area costs 200 to 500 pounds. A room loop for your dining area or function room costs 500 to 1,000 pounds. Display the hearing loop symbol prominently. Around 12 million people in the UK have hearing loss — this is a bigger market than you think.
+**Hearing loop system.** A counter loop for the bar area costs 200 to 500 pounds. A room loop for your dining area or function room costs 500 to 1,000 pounds. Display the hearing loop symbol prominently. Around 12 million people in the UK have hearing loss. This is a bigger market than you think.
 
 **Improved lighting.** Good, even lighting helps customers with visual impairments, older customers, and anyone trying to read your menu. LED upgrades throughout a small pub typically cost 500 to 1,500 pounds and reduce your energy bills at the same time.
 
@@ -135,7 +135,7 @@ Here is where theory meets reality. These are the improvements that make the big
 
 **Permanent ramp or level access.** Replacing steps with a permanent ramp or creating level access to your entrance costs 2,000 to 10,000 pounds depending on gradient and materials. If you are planning any building work, incorporate this into the project.
 
-**Automatic doors.** Automatic or push-button operated doors at the main entrance cost 1,500 to 4,000 pounds. They benefit everyone — parents with pushchairs, delivery drivers, elderly customers, and wheelchair users alike.
+**Automatic doors.** Automatic or push-button operated doors at the main entrance cost 1,500 to 4,000 pounds. They benefit everyone: parents with pushchairs, delivery drivers, elderly customers, and wheelchair users alike.
 
 If your premises needs broader work, our guide on [pub refurbishment on a budget](/licensees-guide/pub-refurbishment-on-budget) covers how to prioritise improvements that give the best return on investment.
 
@@ -147,7 +147,7 @@ This is not just about doing the right thing, though that matters. The numbers m
 
 **The ageing population.** Over 18 percent of the UK population is over 65, and that proportion is growing. Mobility difficulties, visual impairment, and hearing loss become more common with age. Accessibility improvements benefit your existing older regulars as much as they attract new customers.
 
-**Group decisions.** When a group of friends or a family chooses a pub, they go where everyone can go. One person with a disability or mobility issue in a group of six means all six go elsewhere if your pub cannot accommodate them. You are not losing one customer — you are losing the whole group.
+**Group decisions.** When a group of friends or a family chooses a pub, they go where everyone can go. One person with a disability or mobility issue in a group of six means all six go elsewhere if your pub cannot accommodate them. You are not losing one customer: you are losing the whole group.
 
 **Loyalty.** Customers who feel genuinely welcomed in a venue where they have previously been excluded become fiercely loyal. They tell their friends, they leave positive reviews, and they come back regularly.
 
@@ -155,7 +155,7 @@ At The Anchor, small changes like rearranging furniture for better wheelchair ac
 
 ## Making your pub dog friendly
 
-With around 12 million dog-owning households in the UK, the pub dog friendly search term is one of the highest-volume consumer queries in hospitality. And for good reason — dog owners actively choose pubs based on whether their dog is welcome.
+With around 12 million dog-owning households in the UK, the pub dog friendly search term is one of the highest-volume consumer queries in hospitality. And for good reason: dog owners actively choose pubs based on whether their dog is welcome.
 
 ### What it takes
 
@@ -185,11 +185,11 @@ These rules protect you, reassure non-dog customers, and give staff something cl
 
 Dog walkers are some of the most regular and loyal pub customers you will ever have. They walk the same route daily, often in groups, and they choose their coffee stop, lunch spot, or evening drink based on dog access. A dog friendly pub near popular walking routes can build a weekday daytime trade that most venues struggle to generate.
 
-Dog friendly status also drives word of mouth in ways that other features do not. Dog owners talk to each other constantly — on walks, in parks, on Facebook groups. If your pub welcomes dogs well, the local dog community will market you for free.
+Dog friendly status also drives word of mouth in ways that other features do not. Dog owners talk to each other constantly: on walks, in parks, on Facebook groups. If your pub welcomes dogs well, the local dog community will market you for free.
 
 ### Assistance dogs
 
-This is non-negotiable. Under the Equality Act 2010, you must allow assistance dogs in all areas of your premises, including dining areas. Refusing entry to an assistance dog is unlawful and can result in prosecution. Ensure your entire team understands this — no exceptions, no discussions.
+This is non-negotiable. Under the Equality Act 2010, you must allow assistance dogs in all areas of your premises, including dining areas. Refusing entry to an assistance dog is unlawful and can result in prosecution. Ensure your entire team understands this: no exceptions, no discussions.
 
 ## Making your pub family friendly
 
@@ -199,11 +199,11 @@ For a deeper dive on this topic, read our full guide on [how to attract families
 
 ### The essentials
 
-**Highchairs.** You need at least two, ideally four. Clean them properly between uses — parents notice. Budget 40 to 80 pounds each for commercial-grade highchairs.
+**Highchairs.** You need at least two, ideally four. Clean them properly between uses: parents notice. Budget 40 to 80 pounds each for commercial-grade highchairs.
 
 **Baby changing facilities.** A fold-down changing table in an accessible location is essential. Install it in a unisex accessible toilet rather than only in the women's, because fathers change nappies too. Cost: 80 to 200 pounds for the unit plus fitting.
 
-**Children's menu.** This does not need to be complicated. Smaller portions of popular adult dishes, a couple of guaranteed crowd-pleasers like fish fingers or pasta, and a drink included. Price it fairly — parents resent paying 8 pounds for three nuggets and chips.
+**Children's menu.** This does not need to be complicated. Smaller portions of popular adult dishes, a couple of guaranteed crowd-pleasers like fish fingers or pasta, and a drink included. Price it fairly: parents resent paying 8 pounds for three nuggets and chips.
 
 **Warm welcome.** This is the one that costs nothing and matters most. If a family walks in and gets a smile, a quick "we have highchairs if you need one" and a colouring sheet for the kids, they will come back. If they get a barely concealed sigh, they will not.
 
@@ -215,7 +215,7 @@ For a deeper dive on this topic, read our full guide on [how to attract families
 
 **Outdoor play.** If you have a garden, a small play area does not need to be expensive. A sandpit, a chalkboard wall, or a few outdoor games can transform your garden trade. Ensure it is visible from seating areas so parents can relax.
 
-**Timing.** Consider positioning your pub as family friendly during specific hours — lunchtimes and early evenings — while keeping the later evening for adult-only atmosphere. This avoids the tension between families and evening drinkers.
+**Timing.** Consider positioning your pub as family friendly during specific hours (lunchtimes and early evenings) while keeping the later evening for adult-only atmosphere. This avoids the tension between families and evening drinkers.
 
 ### Safeguarding
 
@@ -225,11 +225,11 @@ If you create any activities or spaces specifically for children, ensure you hav
 
 This is the concern I hear most often from licensees. "If I welcome dogs and families and put in ramps, will I lose the regulars? Will it stop feeling like a proper pub?"
 
-The honest answer is no — if you do it thoughtfully.
+The honest answer is no, if you do it thoughtfully.
 
 ### Zoning is your friend
 
-The best pubs create different experiences in different areas. The bar stays the bar — stools, banter, sport on the telly. The lounge or dining area can be family friendly during the day and more relaxed in the evening. The garden accommodates everyone.
+The best pubs create different experiences in different areas. The bar stays the bar: stools, banter, sport on the telly. The lounge or dining area can be family friendly during the day and more relaxed in the evening. The garden accommodates everyone.
 
 You are not changing what your pub is. You are expanding who gets to enjoy it.
 
@@ -261,11 +261,11 @@ Implement everything that costs under 100 pounds. Large print menus, rearranged 
 
 ### Week 3 to 4: Plan and communicate
 
-Decide your dog and family policies. Write them down. Brief your team. Update your website and social media. Add "dog friendly" and "family friendly" to your Google Business Profile. Post about the changes — this is good content that drives engagement.
+Decide your dog and family policies. Write them down. Brief your team. Update your website and social media. Add "dog friendly" and "family friendly" to your Google Business Profile. Post about the changes: this is good content that drives engagement.
 
 ### Month 2 to 3: Medium-cost improvements
 
-Get quotes for a portable ramp, hearing loop, and any lighting improvements. If your toilet is not accessible, start planning the conversion. Talk to your brewery or pub company about funding support — many have accessibility budgets for tenanted pubs.
+Get quotes for a portable ramp, hearing loop, and any lighting improvements. If your toilet is not accessible, start planning the conversion. Talk to your brewery or pub company about funding support: many have accessibility budgets for tenanted pubs.
 
 ### Month 3 to 6: Bigger projects
 
@@ -285,6 +285,6 @@ Making your pub accessible, dog friendly, and family friendly is not about compl
 
 The Equality Act requires you to make reasonable adjustments. Common sense requires you to welcome the 12 million dog-owning households and millions of families looking for a good pub lunch. And good business sense tells you that a wider, more loyal customer base is how you build sustainable trade.
 
-Start with the quick wins this week. Plan the bigger changes over the coming months. And remember — the goal is not to change what your pub is. It is to let more people enjoy it.
+Start with the quick wins this week. Plan the bigger changes over the coming months. And remember: the goal is not to change what your pub is. It is to let more people enjoy it.
 
 If you would like an independent assessment of your pub's accessibility and customer experience, [book a Growth Fix with Orange Jelly](/ways-to-work/growth-fix). We will walk your venue, identify the quick wins, and build a practical improvement plan that fits your budget.

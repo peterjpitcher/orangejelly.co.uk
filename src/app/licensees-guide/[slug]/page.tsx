@@ -16,6 +16,7 @@ import { getBaseUrl } from '@/lib/site-config';
 import { type BlogPost as BlogPostType, type Category, getCategoryBySlug } from '@/lib/blog';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { seoOverrides } from '@/lib/seo-overrides';
+import { resolveOgImage } from '@/lib/og-image';
 import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
 
 interface BlogPostPageProps {
@@ -429,11 +430,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const canonicalPath = `/licensees-guide/${params.slug}`;
   const override = seoOverrides[canonicalPath];
 
-  // Use the article's featured image for OpenGraph
-  const ogImage =
-    typeof post.featuredImage === 'string' && post.featuredImage.length > 0
-      ? post.featuredImage
-      : `/images/blog/${params.slug}.svg`;
+  // Resolve to an image that actually exists and that social platforms can render.
+  // See src/lib/og-image.ts: the old `/images/blog/<slug>.svg` assumption 404'd for
+  // 23 of 105 guides and SVG is not renderable as an og:image anyway.
+  const ogImage = resolveOgImage(params.slug, post.featuredImage);
   const absoluteImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
   const metaTitle = typeof post.metaTitle === 'string' ? post.metaTitle : undefined;
@@ -692,6 +692,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             localSEO: post.localSEO,
           }}
           baseUrl={baseUrl}
+          imageUrl={`${baseUrl}${resolveOgImage(post.slug, post.featuredImage)}`}
         />
         <BreadcrumbJsonLd
           items={[

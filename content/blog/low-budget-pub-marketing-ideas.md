@@ -46,7 +46,7 @@ faqs:
 
 Marketing does not need big budgets. It needs focus, local relevance, and consistency. Instead of a long list, here are five pillars with the few ideas that move the needle.
 
-If you genuinely have zero budget to work with, start with our [pub marketing on no budget](/pub-marketing-no-budget) resource — it covers the free-first approach in detail.
+If you genuinely have zero budget to work with, start with our [pub marketing on no budget](/pub-marketing-no-budget) resource. It covers the free-first approach in detail.
 
 ## Pillar 1: Visibility in the community
 

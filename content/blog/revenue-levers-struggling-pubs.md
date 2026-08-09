@@ -4,7 +4,7 @@ slug: "revenue-levers-struggling-pubs"
 publishedDate: 2025-06-12
 updatedDate: "2025-11-17T00:00:00.000Z"
 excerpt: "Nine practical levers any publican can pull this week to bring in cash, stabilise margin, and remind the neighbourhood your venue is still fighting."
-quickAnswer: "Focus on fast ROI levers: relaunch two proven events, bundle food and drink, upsell premium pours, monetise underused space, and tighten waste controls so every pint poured this week adds to cash on hand."
+quickAnswer: "Pull the nine levers that produce cash within days: relaunch your two best events with a £5 advance ticket, bundle plates and pints, sell premium pours, hire out dead space, pre-sell Sunday roasts on Wednesday, run a locals stamp card, audit pour cost, and give every staff member a referral code."
 author: "Peter Pitcher"
 category: "turnaround"
 tags:

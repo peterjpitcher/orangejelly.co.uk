@@ -4,7 +4,7 @@ slug: "cash-bingo-101"
 publishedDate: 2025-10-09
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Keep Thursday nights lively with a compliant bingo format that respects Gambling Act rules, protects your float, and delights locals."
-quickAnswer: "Cap stakes at £5, log every prize, and script a 75-minute format with bundled books so bingo builds steady spend without risking your licence."
+quickAnswer: "Most pubs can run bingo as exempt equal-chance gaming, with no Gambling Commission operating licence, provided stakes stay at or below £5 per person per game and combined stakes and prizes stay under £2,000 in any seven days. Charge for books only, publish the prize table, and log every payout."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -38,14 +38,14 @@ faqs:
 
 # Cash Bingo 101: Responsible Formats, Smooth Operations, Happy Players
 
-Cash bingo is pure nostalgia: dabbers in hand, friends cheering, and prizes that feel achievable. It’s also regulated, so this guide balances fun with the key compliance steps UK pubs must follow. Treat it as planning guidance—not legal advice—and always check the latest Gambling Commission and local authority rules before you advertise or accept money.
+Cash bingo is pure nostalgia: dabbers in hand, friends cheering, and prizes that feel achievable. It’s also regulated, so this guide balances fun with the key compliance steps UK pubs must follow. Treat it as planning guidance, not legal advice, and always check the latest Gambling Commission and local authority rules before you advertise or accept money.
 
 ## Quick Compliance Snapshot
 
-- Bingo in alcohol-licensed premises can usually run as **exempt equal-chance gaming** without a Gambling Commission operating licence—as long as you stay within stake/prize limits and follow the conditions. ([Gambling Commission](https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/page/exempt-gaming-in-pubs))
+- Bingo in alcohol-licensed premises can usually run as **exempt equal-chance gaming** without a Gambling Commission operating licence, as long as you stay within stake/prize limits and follow the conditions. ([Gambling Commission](https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/page/exempt-gaming-in-pubs))
 - Maximum stakes: no more than £5 per person per game.
 - Combined stakes/prizes from bingo must not exceed £2,000 within any seven-day period; if you go over you must obtain the relevant bingo operating licence.
-- No participation fees—charge for books/tickets only.
+- No participation fees: charge for books/tickets only.
 - Keep clear records of takings and payouts, and display house rules plus responsible gambling information.
 
 ## Know Your Format: 90-ball Bingo
@@ -56,7 +56,7 @@ UK pubs typically run 90-ball bingo:
 - Wins: one line, two lines, full house.
 - Each strip/book contains six tickets covering numbers 1–90.
 
-If you do something different (75-ball US-style cards, themed variations), explain it clearly at the start and note whether it fits exempt gaming rules.
+If you do something different (75-ball US-style cards, themed variations, or a prize-based [music bingo night](/licensees-guide/music-bingo-101)), explain it clearly at the start and note whether it fits exempt gaming rules.
 
 ## Kit and Setup
 
@@ -96,7 +96,7 @@ If you do something different (75-ball US-style cards, themed variations), expla
 - Challenge 25 signage and trained staff for age checks (bingo participation is 18+).
 - “Keep it fun” messaging on posters and tables; display links to support services (GamCare, BeGambleAware).
 - Allow players to self-exclude from future nights if needed; log any requests confidentially.
-- Watch alcohol intake—refuse sales to intoxicated guests who want to carry on playing.
+- Watch alcohol intake: refuse sales to intoxicated guests who want to carry on playing.
 
 ## Run-of-Show (120 Minutes)
 
@@ -111,8 +111,8 @@ If you do something different (75-ball US-style cards, themed variations), expla
 
 ## Marketing (Responsibly)
 
-- Focus messaging on community, atmosphere, and bundles—not guaranteed winnings.
-- Channels: in-house posters, Facebook “What’s On” groups, pensioner lunch leaflets, WhatsApp broadcast to regulars.
+- Focus messaging on community, atmosphere, and bundles, not guaranteed winnings.
+- Channels: in-house posters, [local Facebook groups and pages](/licensees-guide/facebook-marketing-local-pubs), pensioner lunch leaflets, WhatsApp broadcast to regulars.
 - **Copy-ready caption:** “Cash Bingo this Thursday, eyes down 7.15pm 👀 Books from £1, prizes every game, Challenge 25 in operation. Reserve a table: [link].”
 
 ## Budget Snapshot
@@ -141,7 +141,7 @@ Always log conversations with licensing officers and keep a folder containing: h
 | Average spend per head | Healthy |
 | Repeat attendance (4 weeks) | Strong |
 
-Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we need more dabbers? Capture feedback before the next session.
+Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we need more dabbers? Capture feedback before the next session, the same discipline behind [any profitable pub event night](/licensees-guide/pub-event-template-profit-nights).
 
 ## FAQs
 
@@ -149,7 +149,7 @@ Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we n
 **How do I ensure I never exceed the £2,000 weekly limit?** Keep a running spreadsheet of every night’s takings and payouts; once you approach £1,600 pause cash bingo or switch to prize-based games until the rolling seven-day window resets.  
 **What pricing structure works best?** Sell books rather than single tickets (£3 per book, £10 “night pass”) and publish exactly what each prize tier pays to avoid disputes.  
 **How do I handle claims or disputes professionally?** Have a written protocol: pause calling, verify against the master sheet, record the outcome in the winners log, and communicate calmly over the mic.  
-**Can I combine cash bingo with charity fundraising?** Yes—just keep charitable donations ring-fenced from stake money and be transparent about which games are for charity vs standard payout.
+**Can I combine cash bingo with charity fundraising?** Yes, just keep charitable donations ring-fenced from stake money and be transparent about which games are for charity vs standard payout.
 
 ## Need backup?
 

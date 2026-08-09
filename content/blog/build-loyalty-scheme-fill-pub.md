@@ -4,7 +4,7 @@ slug: "build-loyalty-scheme-fill-pub"
 publishedDate: 2025-08-22
 updatedDate: "2026-06-01T00:00:00.000Z"
 excerpt: "Design a simple, trackable loyalty scheme that rewards frequency, drives referrals, and keeps Fridays standing-room only."
-quickAnswer: "Reward visits, not spend; add surprise upgrades; and use WhatsApp or email to drop exclusive invites every week."
+quickAnswer: "Pick one behaviour you want, then build a scheme guests grasp in 10 seconds: a stamp card, spend ladder or event streak. Reward frequency with perks rather than discounts, track it on paper or a booking tag, announce it everywhere for two weeks, and review sign-ups, returns and redemptions weekly."
 author: "Peter Pitcher"
 category: "marketing"
 tags:
@@ -32,7 +32,7 @@ voiceSearchQueries:
   - "Loyalty ideas for bar"
 faqs:
   - question: "Do loyalty schemes actually work for pubs?"
-    answer: "Yes, when they reward frequency rather than just spend. A simple stamp card or visit-based system encourages regulars to return more often. The key is keeping it easy to understand — if guests can't grasp it in 10 seconds, it won't work."
+    answer: "Yes, when they reward frequency rather than just spend. A simple stamp card or visit-based system encourages regulars to return more often. The key is keeping it easy to understand: if guests can't grasp it in 10 seconds, it won't work."
   - question: "What rewards should I offer in a pub loyalty scheme?"
     answer: "Focus on perks that feel personal rather than deep discounts. Free soft drinks, early event access, a sharer board after five visits, or VIP status on a board all cost less than you think but make guests feel valued. Avoid giving away margin on your core products."
   - question: "Do I need an app for a pub loyalty scheme?"
@@ -115,11 +115,11 @@ Goal: drive Friday bookings without discounting the menu.
 
 ## Follow up after a summer visit
 
-The visit should not end when people leave. Modern pub marketing happens before, during and after — and the "after" is where loyalty is built. A simple post-visit habit turns a one-off summer guest into a regular:
+The visit should not end when people leave. Modern pub marketing happens before, during and after. The "after" is where loyalty is built. A simple post-visit habit turns a one-off summer guest into a regular:
 
 1. **Thank them** within a day, with a photo from the night if you have one.
 2. **Ask for a review** while the experience is still fresh.
-3. **Invite them to the next thing** — a specific summer event, not a vague "come back soon".
+3. **Invite them to the next thing**: a specific summer event, not a vague "come back soon".
 4. **Reward the return** so the second visit is easy to say yes to.
 
 This is the final move in the [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).

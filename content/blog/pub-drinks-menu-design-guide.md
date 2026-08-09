@@ -98,13 +98,13 @@ If your highest-margin serve is buried at the bottom of a long list, you are lea
 
 Do not list every drink alphabetically. Group by occasion and experience, not by product category alone. Consider sections like:
 
-- **Something special** — your signature serves and seasonal features.
-- **Draught** — lagers, ales, ciders, and stout.
-- **Wines and fizz** — by the glass and by the bottle.
-- **Spirits and mixers** — organised by spirit type with recommended serves.
-- **Cocktails** — a short, achievable list.
-- **Soft drinks and alcohol-free** — given proper space, not an afterthought.
-- **Hot drinks** — coffee, tea, hot chocolate.
+- **Something special**: your signature serves and seasonal features.
+- **Draught**: lagers, ales, ciders, and stout.
+- **Wines and fizz**: by the glass and by the bottle.
+- **Spirits and mixers**: organised by spirit type with recommended serves.
+- **Cocktails**: a short, achievable list.
+- **Soft drinks and alcohol-free**: given proper space, not an afterthought.
+- **Hot drinks**: coffee, tea, hot chocolate.
 
 Each section heading tells the guest where they are and what to expect. It reduces the cognitive load of choosing from a flat list.
 
@@ -148,12 +148,12 @@ You do not need a speed rail, a library of bitters, or a Tom Cruise lookalike be
 
 Choose cocktails that use spirits you already stock and overlap on mixers and garnishes:
 
-- **Aperol Spritz** — Aperol, prosecco, soda, orange slice. Thirty seconds to make.
-- **Espresso Martini** — vodka, coffee liqueur, fresh espresso. Needs a shaker and a coffee machine.
-- **Gin Fizz** — gin, lemon juice, sugar syrup, soda. Shaken and poured.
-- **Rum Punch** — rum, fruit juice, grenadine, lime. Batched in advance for busy sessions.
-- **Whisky Sour** — whisky, lemon juice, sugar syrup, egg white (optional). Classic and simple.
-- **Pornstar Martini** — vodka, passion fruit liqueur, passion fruit puree, prosecco shot. Britain's most ordered cocktail for a reason.
+- **Aperol Spritz**: Aperol, prosecco, soda, orange slice. Thirty seconds to make.
+- **Espresso Martini**: vodka, coffee liqueur, fresh espresso. Needs a shaker and a coffee machine.
+- **Gin Fizz**: gin, lemon juice, sugar syrup, soda. Shaken and poured.
+- **Rum Punch**: rum, fruit juice, grenadine, lime. Batched in advance for busy sessions.
+- **Whisky Sour**: whisky, lemon juice, sugar syrup, egg white (optional). Classic and simple.
+- **Pornstar Martini**: vodka, passion fruit liqueur, passion fruit puree, prosecco shot. Britain's most ordered cocktail for a reason.
 
 Six cocktails, four base spirits, two shared garnish types, one syrup. Your bar team can learn them in an afternoon.
 
@@ -228,11 +228,11 @@ Around one in three UK adults now actively moderate their alcohol intake. Add in
 
 Replace generic post-mix with options that feel curated:
 
-- **Premium tonics and mixers** — Fever-Tree, Fentimans, Franklin & Sons. These serve double duty as cocktail and G&T mixers.
-- **Craft soft drinks** — Fentimans rose lemonade, Luscombe ginger beer, or local producers. Serve in a proper glass with ice and a garnish.
-- **Alcohol-free beer and cider** — stock at least two good ones. Peroni Libera, Lucky Saint, and BrewDog Punk AF all sell well.
-- **Alcohol-free spirits** — Seedlip, Lyre's, or CleanCo give you the base for zero-alcohol cocktails.
-- **Premium juice** — Cawston Press or similar, not a carton of Tropicana.
+- **Premium tonics and mixers**: Fever-Tree, Fentimans, Franklin & Sons. These serve double duty as cocktail and G&T mixers.
+- **Craft soft drinks**: Fentimans rose lemonade, Luscombe ginger beer, or local producers. Serve in a proper glass with ice and a garnish.
+- **Alcohol-free beer and cider**: stock at least two good ones. Peroni Libera, Lucky Saint, and BrewDog Punk AF all sell well.
+- **Alcohol-free spirits**: Seedlip, Lyre's, or CleanCo give you the base for zero-alcohol cocktails.
+- **Premium juice**: Cawston Press or similar, not a carton of Tropicana.
 
 ### Present them properly
 
@@ -249,7 +249,7 @@ A static menu breeds familiarity, which eventually breeds boredom. Seasonal rota
 - **Two or three featured cocktails** that change every six to eight weeks. Summer spritzes, autumn warmers, Christmas specials.
 - **A guest ale or cider** that rotates monthly.
 - **A featured wine** with a story or pairing suggestion.
-- **Seasonal soft drinks** — elderflower in summer, spiced apple in autumn, hot chocolate variations in winter.
+- **Seasonal soft drinks**: elderflower in summer, spiced apple in autumn, hot chocolate variations in winter.
 
 ### What to keep permanent
 
@@ -265,11 +265,11 @@ How your menu looks and feels matters. A grubby laminate with Comic Sans says so
 
 ### Format options
 
-- **A5 card** — single-sided or folded. Affordable to reprint, easy to update seasonally.
-- **Chalkboard** — works well for featured specials and rotating items. Needs neat handwriting or a stencil.
-- **Table talker** — a small tent card on each table highlighting two or three hero serves.
-- **Bar-top menu** — a larger format displayed at the bar for guests ordering at the counter.
-- **QR code to digital menu** — useful as a supplement, not a replacement. Some guests hate them.
+- **A5 card**: single-sided or folded. Affordable to reprint, easy to update seasonally.
+- **Chalkboard**: works well for featured specials and rotating items. Needs neat handwriting or a stencil.
+- **Table talker**: a small tent card on each table highlighting two or three hero serves.
+- **Bar-top menu**: a larger format displayed at the bar for guests ordering at the counter.
+- **QR code to digital menu**: useful as a supplement, not a replacement. Some guests hate them.
 
 The best approach is a combination: a printed menu at each table, a chalkboard for specials, and table talkers for your highest-margin feature.
 

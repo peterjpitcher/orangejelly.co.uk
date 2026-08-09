@@ -4,7 +4,7 @@ slug: "karaoke-night-101"
 publishedDate: 2025-10-23
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Turn Thursdays into high-energy karaoke shows with the right kit, rotation rules, and compliance guardrails."
-quickAnswer: "Set clear 3-minute song limits, track the rotation on-screen, and use TheMusicLicence plus consent signage so karaoke stays fun and compliant."
+quickAnswer: "Run karaoke with two wireless microphones, a wired backup, a mixer and a lyrics screen everyone can see. Cap songs at around three and a half minutes, display the running order so nobody feels skipped, alternate newcomers with regulars, and cover the night with TheMusicLicence from PPL PRS."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -49,7 +49,7 @@ Karaoke is still the cheapest way to pack a Thursday. Give regulars the mic, cap
 | Team karaoke | Corporate/community bookings | Groups compete with judges or crowd voting. |
 | Random wheel | Students/hen nights | Spin for surprise song; keep host ready with veto list. |
 
-Decide whether the host also sings to warm the room—great in quieter periods, less necessary when you’ve already got a queue.
+Decide whether the host also sings to warm the room: great in quieter periods, less necessary when you’ve already got a queue.
 
 ## Equipment and Sound
 
@@ -101,8 +101,8 @@ Before doors open, run a full soundcheck with your loudest backing tracks and qu
 
 - **Visuals:** neon typography, mic silhouettes, lyric overlays.
 - **Content ideas:** Reel of crowd chorus (with consent), “Song of the Week” poll, behind-the-scenes soundcheck snippet.
-- **Copy-ready caption:** “Karaoke Friday, 8pm. Free to sing, prizes for biggest crowd reaction. Book a table or just rock up—link in bio.”
-- **Cross-promo:** plug Music Bingo 101 for midweek fun and Quiz Night 101 for trivia lovers.
+- **Copy-ready caption:** “Karaoke Friday, 8pm. Free to sing, prizes for biggest crowd reaction. Book a table or just rock up. Link in bio.”
+- **Cross-promo:** plug [Music Bingo 101](/licensees-guide/music-bingo-101) for midweek fun and [Quiz Night 101](/licensees-guide/quiz-night-101) for trivia lovers.
 
 ## Budget Snapshot
 
@@ -116,7 +116,7 @@ Before doors open, run a full soundcheck with your loudest backing tracks and qu
 
 ## Compliance Corner: Music Licensing
 
-Karaoke involves both recorded backing tracks and live vocal performance. Most venues cover this via **TheMusicLicence** (PPL PRS), which bundles permissions from PRS for Music and PPL. Confirm your venue’s licence type covers karaoke/live events and keep evidence on file. More info: [PPL PRS live events](https://pplprs.co.uk/themusiclicence/sectors/live-events-festivals/).
+Karaoke involves both recorded backing tracks and live vocal performance. Most venues cover this via **TheMusicLicence** (PPL PRS), which bundles permissions from PRS for Music and PPL. Confirm your venue’s licence type covers karaoke/live events and keep evidence on file, as our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains. More info: [PPL PRS live events](https://pplprs.co.uk/themusiclicence/sectors/live-events-festivals/).
 
 ## FAQs
 
