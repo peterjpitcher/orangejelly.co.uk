@@ -76,7 +76,7 @@ export default function StickyCTA() {
                 Packages for every pub
               </Text>
               <Text size="xs" color="muted" className="mb-3">
-                Strategy, direction, and hands-on support — from a one-off fix to ongoing partner.
+                Strategy, direction, and hands-on support, from a one-off fix to ongoing partner.
               </Text>
               <TrackedButton
                 eventName="guide_cta_click"

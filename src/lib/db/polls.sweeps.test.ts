@@ -148,7 +148,7 @@ describe('sweepUnverifiedDrafts', () => {
   it('should re-assert the draft status on the delete, not only on the select', async () => {
     // A poll verified in the gap between the select and the delete would
     // otherwise be deleted out from under an organiser who had just brought it
-    // to life — silently.
+    // to life, silently.
     state.draftIds = [{ id: 'poll-1' }];
 
     await sweepUnverifiedDrafts();
@@ -193,8 +193,8 @@ describe('sweepUnverifiedDrafts', () => {
 
 describe('sweepRateLimitWindows', () => {
   it('should count before deleting, so the row count is measured and not assumed', async () => {
-    // poll_rate_limits has no surrogate key — its primary key is the composite
-    // (bucket, key, window_start) — so the select-ids-then-delete-by-id shape is
+    // poll_rate_limits has no surrogate key: its primary key is the composite
+    // (bucket, key, window_start), so the select-ids-then-delete-by-id shape is
     // unavailable and the bound is built out of an exact count instead.
     state.rateLimitCount = 12;
 

@@ -178,7 +178,7 @@ describe('bestOption', () => {
   });
 
   it('should return the earlier option by position when two options tie on yes and on if need be', () => {
-    // Both are badged — position orders the result, it does not exclude.
+    // Both are badged: position orders the result, it does not exclude.
     // Tallies arrive in position order from aggregateByOption.
     const result = bestOption([tally('a', 2, 1), tally('b', 2, 1)]);
 

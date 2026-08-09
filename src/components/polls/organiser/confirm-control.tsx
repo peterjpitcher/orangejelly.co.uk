@@ -14,7 +14,7 @@ import {
 import { confirmOption } from '@/app/actions/poll-organiser';
 
 /**
- * "Confirm this time" — and its dialogue, because confirming is irreversible.
+ * "Confirm this time", and its dialogue, because confirming is irreversible.
  *
  * A CLIENT COMPONENT, and one of only four on this screen. The matrix itself is
  * server-rendered; only the controls that need a dialogue and a pending state
@@ -22,7 +22,7 @@ import { confirmOption } from '@/app/actions/poll-organiser';
  *
  * NOTE WHAT DOES NOT CROSS THE BOUNDARY. `optionLabel` arrives as a finished
  * string, formatted on the server. No date formatter and no `option_kind` branch
- * ships to the browser — which matters because `formatSlotRangeInLondon` throws
+ * ships to the browser, which matters because `formatSlotRangeInLondon` throws
  * on a date-only value, and the branch that prevents that belongs in one place.
  * `@/lib/poll-tokens` is likewise never imported here: it pulls Node's crypto
  * shim into the browser bundle, which cost 317 kB last time.

@@ -10,7 +10,7 @@ import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
 /**
  * The magic-link landing page.
  *
- * The [token] is the `verify_token` — not the organiser token. Verification is a
+ * The [token] is the `verify_token`, not the organiser token. Verification is a
  * plain GET with no client boundary at all: there is nothing interactive here
  * beyond links, so zero client JS is the correct call and the poll goes live
  * with no hydration delay.
@@ -20,7 +20,7 @@ import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
  * organiser's own click then shows the "didn't work" outcome. That is the
  * accepted trade-off, and it is exactly why verification also emails the links:
  * they reach the organiser regardless of who or what clicked first. Do not "fix"
- * this by making the token reusable — a reusable magic link is a permanent
+ * this by making the token reusable: a reusable magic link is a permanent
  * capability sitting in an inbox.
  */
 
@@ -57,7 +57,7 @@ export default async function VerifyPage({ params }: VerifyPageProps): Promise<J
  *
  * The links are selectable text in a bordered box rather than a copy button:
  * there is no toast component, so a "copied!" confirmation has nowhere to live
- * without adding a client boundary — and these same links are already sitting in
+ * without adding a client boundary, and these same links are already sitting in
  * the organiser's inbox. `select-all` means one tap selects the whole URL on iOS.
  */
 function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
@@ -79,7 +79,7 @@ function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
         >
           <AlertTitle>Your poll is live</AlertTitle>
           <AlertDescription>
-            Share the link below with your team — they don&apos;t need an account, they just tap
+            Share the link below with your team. They don&apos;t need an account, they just tap
             three buttons and they&apos;re done.
           </AlertDescription>
         </Alert>
@@ -107,7 +107,7 @@ function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
           className="border border-border text-left break-all"
         >
           <Text size="sm" weight="semibold" className="mb-1">
-            Private — just for you
+            Private: just for you
           </Text>
           <Text size="sm" color="muted" className="mb-2">
             Keep this one. Anyone who has it can close the poll and confirm the time.

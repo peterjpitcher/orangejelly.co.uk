@@ -8,7 +8,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 /**
  * The error boundary for a genuine data-layer exception.
  *
- * An invalid, expired or consumed token is NOT this — that outcome is rendered
+ * An invalid, expired or consumed token is NOT this: that outcome is rendered
  * by the page, not thrown. This boundary only catches the database being
  * unreachable and similar. It deliberately says nothing about the token: the
  * poll may or may not have been published, and guessing either way in the copy

@@ -62,7 +62,7 @@ describe('toLocalIsoDate', () => {
   });
 });
 
-describe('formatDateInLondon — date-only options', () => {
+describe('formatDateInLondon: date-only options', () => {
   it('formats a date-only string without any timezone conversion', () => {
     // The critical case. A date-only option is a calendar date, not an instant.
     // Parsing '2026-07-04' as UTC midnight and rendering it in London is fine,
@@ -94,7 +94,7 @@ describe('formatDateInLondon — date-only options', () => {
   });
 });
 
-describe('formatSlotInLondon — timed options', () => {
+describe('formatSlotInLondon: timed options', () => {
   it('renders a UTC instant in BST during summer', () => {
     // 18:00 UTC in July is 19:00 in London.
     expect(formatSlotInLondon('2026-07-04T18:00:00Z')).toBe('Saturday, 4 July 2026 at 7:00pm');
@@ -125,7 +125,7 @@ describe('formatSlotInLondon — timed options', () => {
   it('rejects a date-only value rather than inventing a time for it', () => {
     // The guard must run BOTH ways. formatDateInLondon already refuses an
     // instant, but without this the reverse slipped through: '2026-07-04' parsed
-    // as UTC midnight and rendered in London as "4 July 2026 at 1:00am" — a time
+    // as UTC midnight and rendered in London as "4 July 2026 at 1:00am", a time
     // nobody chose, presented as fact. A date-only option carries no time, so
     // asking for its time is a caller bug, not a formatting question.
     expect(() => formatSlotInLondon('2026-07-04')).toThrow(/date-only/i);
@@ -170,7 +170,7 @@ describe('formatSlotRangeInLondon', () => {
   });
 });
 
-describe('londonWallClockToInstant — the DST trap', () => {
+describe('londonWallClockToInstant: the DST trap', () => {
   it('converts a summer wall-clock time to the correct UTC instant', () => {
     // An organiser typing "7pm on 4 July" means 19:00 BST, which is 18:00 UTC.
     expect(londonWallClockToInstant('2026-07-04', '19:00').toISOString()).toBe(
@@ -200,7 +200,7 @@ describe('londonWallClockToInstant — the DST trap', () => {
   });
 
   it('rejects a wall-clock time that does not exist, rather than inventing one', () => {
-    // 01:30 on 29 March 2026 never happens — the clock jumps 01:00 to 02:00.
+    // 01:30 on 29 March 2026 never happens: the clock jumps 01:00 to 02:00.
     // Silently coercing this is how a poll ends up an hour out.
     expect(() => londonWallClockToInstant('2026-03-29', '01:30')).toThrow(/does not exist/i);
   });

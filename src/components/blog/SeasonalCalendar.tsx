@@ -16,7 +16,7 @@ interface SeasonalCalendarProps {
  * Themed "at a glance" calendar for a seasonal hub. Replaces the plain markdown
  * table with a scannable, accessible grid of dated moments. Colour comes from the
  * season token set (var(--season-*)) selected by the static data-season attribute
- * on the wrapper — no hardcoded hex and no dynamically constructed Tailwind classes.
+ * on the wrapper: no hardcoded hex and no dynamically constructed Tailwind classes.
  *
  * Moments that carry an `href` render as a clickable card (whole card is the link)
  * with a visible "Read the guide" cue, so visitors can jump straight to the full
@@ -26,7 +26,7 @@ export default function SeasonalCalendar({
   entries,
   season,
   heading = 'At a glance',
-  subtitle = 'The dates worth blocking now — pick the two or three that fit your pub.',
+  subtitle = 'The dates worth blocking now: pick the two or three that fit your pub.',
 }: SeasonalCalendarProps) {
   if (!entries || entries.length === 0) return null;
 
@@ -63,7 +63,7 @@ export default function SeasonalCalendar({
 
             const cardContent = (
               <>
-                {/* Accent spine — colour-independent of the text content */}
+                {/* Accent spine: colour-independent of the text content */}
                 <span
                   aria-hidden="true"
                   className="absolute left-0 top-0 h-full w-1.5 rounded-l-xl"
@@ -104,7 +104,7 @@ export default function SeasonalCalendar({
                 <Link
                   key={`${entry.date}-${entry.moment}`}
                   href={entry.href}
-                  aria-label={`${entry.moment} — read the full guide`}
+                  aria-label={`${entry.moment}: read the full guide`}
                   className={`group block ${cardClassName} transition-shadow hover:shadow-md`}
                   style={cardStyle}
                 >
@@ -127,8 +127,8 @@ export default function SeasonalCalendar({
 
         {season === 'autumn' && (
           <Text color="muted" size="sm" className="mt-6 max-w-3xl italic">
-            International Champagne Day falls on the fourth Friday of October — Friday 23 October in
-            2026 — so we&rsquo;ve made it a weekend to keep the Saturday trade too.
+            International Champagne Day falls on the fourth Friday of October (Friday 23 October in
+            2026), so we&rsquo;ve made it a weekend to keep the Saturday trade too.
           </Text>
         )}
       </div>

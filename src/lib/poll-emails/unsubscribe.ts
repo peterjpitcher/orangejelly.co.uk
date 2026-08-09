@@ -2,7 +2,7 @@ import { getAbsoluteUrl } from '@/lib/site-config';
 import { PRIVACY_RIGHTS_EMAIL } from './privacyNotice';
 
 /**
- * List-Unsubscribe headers for the two recurring messages — the digest (§4.2)
+ * List-Unsubscribe headers for the two recurring messages: the digest (§4.2)
  * and the nudge (§4.5). The one-off emails (verify, links, confirmation) are
  * transactional and carry none.
  *

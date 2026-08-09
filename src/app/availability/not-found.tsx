@@ -11,7 +11,7 @@ import Button from '@/components/Button';
  * tokens are bearer credentials with no login behind them, so any difference
  * between "no such poll" and "that poll isn't live yet" is an oracle telling a
  * guesser they guessed right. There is deliberately nothing here to tell the
- * causes apart — not the copy, not the status code, not the page title.
+ * causes apart: not the copy, not the status code, not the page title.
  *
  * Reached via `notFound()` from the poll routes. It must be `notFound()` and not
  * inline error copy: rendering a message returns 200, which is a soft-404 that
@@ -43,7 +43,7 @@ export default function AvailabilityNotFound(): JSX.Element {
         </Text>
 
         <Text color="muted">
-          If someone sent you this link, ask them for a fresh one — they can see whether the poll is
+          If someone sent you this link, ask them for a fresh one. They can see whether the poll is
           still running.
         </Text>
 

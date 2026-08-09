@@ -36,7 +36,7 @@ export default function ResultsPage() {
             </Heading>
             <Text align="center" color="muted" className="mb-8 max-w-2xl mx-auto">
               We launched the-anchor.pub as an AI-optimised, search-led website in August 2025.
-              Google Search visibility is up 828% — and it&apos;s driving real bookings.
+              Google Search visibility is up 828%, and it&apos;s driving real bookings.
             </Text>
           </AnimatedItem>
 
@@ -50,7 +50,7 @@ export default function ResultsPage() {
                 className="w-full rounded-lg"
               />
               <Text size="sm" color="muted" align="center" className="mt-3">
-                Organic search traffic for the-anchor.pub — Google Search Console
+                Organic search traffic for the-anchor.pub: Google Search Console
               </Text>
             </Card>
           </AnimatedItem>
@@ -86,8 +86,8 @@ export default function ResultsPage() {
 
           <AnimatedItem animation="fade-in" delay={300}>
             <Text align="center" size="lg" className="mb-6 max-w-2xl mx-auto">
-              This is what happens when your website is built to be found — not just to look good.
-              We can do the same for your venue.
+              This is what happens when your website is built to be found, not just to look good. We
+              can do the same for your venue.
             </Text>
             <div className="text-center">
               <TrackedButton

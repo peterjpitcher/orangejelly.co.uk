@@ -19,7 +19,7 @@ interface SeasonalHubHeroProps {
  * Themed hero used ONLY for seasonal hub pages. Separate from BlogCategoryHero
  * (which other posts rely on) so the shared hero is never disturbed. The season
  * palette is applied via a static data-season attribute and the --season-hero
- * gradient token — no hardcoded hex and no dynamic Tailwind class construction.
+ * gradient token: no hardcoded hex and no dynamic Tailwind class construction.
  */
 export default function SeasonalHubHero({
   title,
@@ -36,7 +36,7 @@ export default function SeasonalHubHero({
 
   return (
     <section data-season={season} className="relative overflow-hidden" style={heroStyle}>
-      {/* Subtle diagonal stripe pattern overlay — CSS only, no images */}
+      {/* Subtle diagonal stripe pattern overlay: CSS only, no images */}
       <div
         className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{

@@ -57,7 +57,7 @@ export function getAllPostSlugs() {
     .map((fileName) => fileName.replace(/\.md$/, ''));
 }
 
-// Category mapping — resolves legacy and variant slugs to the 8-category taxonomy
+// Category mapping: resolves legacy and variant slugs to the 8-category taxonomy
 const categoryMapping: Record<string, string> = {
   // Revenue & Growth
   'revenue-growth': 'revenue-growth',

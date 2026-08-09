@@ -7,7 +7,7 @@ import type * as EmailModule from '@/lib/email';
 /**
  * Server action tests.
  *
- * Every external service is mocked — the repo's rule is that tests never reach a
+ * Every external service is mocked: the repo's rule is that tests never reach a
  * real one. The data layer is mocked too, so these prove the ACTION's ordering,
  * its gates and its failure copy; src/lib/db/polls.test.ts proves the queries.
  */
@@ -56,7 +56,7 @@ vi.mock('@/lib/rate-limit', () => ({
 vi.mock('next/headers', () => ({ headers: () => new Map() }));
 
 const FUTURE = '2099-07-04';
-const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars — a well-formed token shape.
+const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars, a well-formed token shape.
 const OTHER_TOKEN = 'bbbbbbbbbbbbbbbbbbbbbb';
 
 function validInput(overrides: Partial<CreatePollFormValues> = {}): CreatePollFormValues {
@@ -302,7 +302,7 @@ describe('createPoll', () => {
     const result = await createPoll(validInput());
 
     // The poll is stored. A failed notification must never turn a stored record
-    // into a user-facing error — and the resend token is the recovery route.
+    // into a user-facing error, and the resend token is the recovery route.
     expect(result.success).toBe(true);
     expect(result.resendToken).toBe('r-token');
   });
@@ -460,7 +460,7 @@ describe('resendVerification', () => {
     const unknown = await resendVerification(TOKEN);
     const live = await resendVerification(OTHER_TOKEN);
 
-    expect(unknown.error).toBe('That poll is already live — check your inbox for the links.');
+    expect(unknown.error).toBe('That poll is already live: check your inbox for the links.');
     expect(unknown.error).toBe(live.error);
     expect(sendPollEmail).not.toHaveBeenCalled();
   });
@@ -468,7 +468,7 @@ describe('resendVerification', () => {
   it('should refuse a malformed token with the same string', async () => {
     const result = await resendVerification('nope');
 
-    expect(result.error).toBe('That poll is already live — check your inbox for the links.');
+    expect(result.error).toBe('That poll is already live: check your inbox for the links.');
     expect(getResendTarget).not.toHaveBeenCalled();
   });
 

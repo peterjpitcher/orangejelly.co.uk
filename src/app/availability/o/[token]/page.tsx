@@ -23,7 +23,7 @@ import { getAbsoluteUrl } from '@/lib/site-config';
 import { getOrganiserResults } from '../organiser-data';
 
 /**
- * Screen 4 — the organiser's results.
+ * Screen 4: the organiser's results.
  *
  * A SERVER COMPONENT, and the matrix ships no JavaScript at all: at most 8
  * columns of read-only data does not need hydrating, and server-rendering means
@@ -45,7 +45,7 @@ export const fetchCache = 'force-no-store';
 
 /**
  * The confirm fan-out sends one email per recipient, paced at 600ms for Resend's
- * 2/second limit — about twelve seconds for a 20-person poll. Well inside the
+ * 2/second limit, about twelve seconds for a 20-person poll. Well inside the
  * default, but stated explicitly rather than left to depend on it.
  */
 export const maxDuration = 60;
@@ -116,12 +116,12 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
   const isConfirmed = poll.status === 'confirmed' && Boolean(confirmedOption);
 
   // `bestOption` returns [] when no option has a single yes or if-need-be. That
-  // is "no signal yet", not "no data" — and badging all eight as joint winners
+  // is "no signal yet", not "no data", and badging all eight as joint winners
   // would be worse than badging none.
   const showBest = hasReplies && best.length > 0 && !isConfirmed;
 
   // Everybody said no to everything. The tool does not pretend otherwise, and it
-  // does not overrule the organiser either — confirm stays available below.
+  // does not overrule the organiser either: confirm stays available below.
   const showNothingWorks = hasReplies && best.length === 0 && !isConfirmed;
 
   return (
@@ -170,8 +170,8 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
                   {poll.option_kind === 'slots'
                     ? `${optionFullLabel(confirmedOption, poll.option_kind)} UK time`
                     : optionFullLabel(confirmedOption, poll.option_kind)}
-                  . If it falls through, tell people yourself and build a fresh poll — we
-                  won&rsquo;t quietly move a date that&rsquo;s already in their calendar.
+                  . If it falls through, tell people yourself and build a fresh poll. We won&rsquo;t
+                  quietly move a date that&rsquo;s already in their calendar.
                 </AlertDescription>
               </Alert>
             )}
@@ -231,7 +231,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
         </div>
 
         <div className="mt-8 space-y-6">
-          {/* The share block renders above the matrix in EVERY state — the empty
+          {/* The share block renders above the matrix in EVERY state: the empty
             state is precisely when the organiser needs this link most. */}
           <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
 
@@ -278,7 +278,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               )}
             </>
           ) : (
-            // Never an empty <tbody> with sticky headers — that is a confusing
+            // Never an empty <tbody> with sticky headers: that is a confusing
             // artefact, not an empty state.
             <Card variant="bordered" padding="large" className="text-center">
               <Heading level={2} align="center" className="text-xl">

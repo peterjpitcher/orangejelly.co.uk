@@ -11,7 +11,7 @@ import {
 } from './polls';
 
 /**
- * Supabase is mocked throughout — the repo's rule is that tests never reach a
+ * Supabase is mocked throughout: the repo's rule is that tests never reach a
  * real service. The pure retention logic is tested directly; the storage paths
  * are tested through the mock to prove their guards and their clean-up.
  */
@@ -266,7 +266,7 @@ describe('createPoll', () => {
 describe('sweepExpiredPolls', () => {
   it('should never delete more than the sweep limit in one run', async () => {
     // The bound is the point. The first version issued an unqualified
-    // delete().lt('expires_at', now) — no limit, no ordering. Nothing called it,
+    // delete().lt('expires_at', now), no limit, no ordering. Nothing called it,
     // so it never fired, but Phase 5 wires this to an unattended cron, and the
     // workspace rules require approval for a bulk operation over 1,000 rows.
     // An unbounded delete of other people's data, running with nobody watching,
@@ -308,7 +308,7 @@ describe('updateResponse', () => {
   it('should never delete a response in order to replace it', async () => {
     // The bug this pins. The original implementation deleted every one of the
     // participant's answers and then inserted the replacements. A failure
-    // between the two lost their response entirely — they submitted a change
+    // between the two lost their response entirely: they submitted a change
     // and their answers vanished. There is a unique constraint on
     // (participant_id, option_id), so an upsert does the job in one atomic
     // statement and the delete was never needed.

@@ -13,7 +13,7 @@ import {
 } from '@/lib/poll-calendar';
 
 /**
- * How long each option runs — and, as a consequence, what kind of poll this is.
+ * How long each option runs, and, as a consequence, what kind of poll this is.
  *
  * The duration is the only control that decides between the two option kinds the
  * form emits: "All day" produces date-only options, everything else produces
@@ -21,8 +21,8 @@ import {
  * moving between "All day" and a timed length is the one change that discards
  * what has been picked.
  *
- * The row is labelled in the unit a person would say — "2 hours", not "120 min"
- * — while minutes stay the stored unit throughout. Same for the custom field:
+ * The row is labelled in the unit a person would say ("2 hours", not "120 min")
+ * while minutes stay the stored unit throughout. Same for the custom field:
  * type 5, pick hours, and the form still emits 300. One canonical unit in the
  * data, two ways to type it.
  *
@@ -111,7 +111,7 @@ export default function DurationSelector({
         that once the poll is out.
       </Text>
 
-      {/* Nine choices. They wrap rather than shrink — a tap target under 44px is
+      {/* Nine choices. They wrap rather than shrink: a tap target under 44px is
           not a smaller button, it is a button you miss. */}
       <div className="flex flex-wrap gap-2">
         {/* aria-label on every input, not left to the wrapping label. The visible

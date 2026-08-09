@@ -119,7 +119,7 @@ A great quiz night is about variety.
     expect(out).toContain('## Cluster 1');
   });
 
-  it('only strips a LEADING h1 — not h2s or later headings', () => {
+  it('only strips a LEADING h1, not h2s or later headings', () => {
     expect(preprocessMarkdown('## Section\nBody')).toContain('## Section');
     expect(preprocessMarkdown('Intro paragraph\n# Later H1')).toContain('# Later H1');
   });

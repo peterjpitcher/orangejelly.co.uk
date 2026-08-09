@@ -193,7 +193,7 @@ function WebsiteRebuildScope() {
               {separateItems.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-gray-400 mt-0.5 shrink-0" aria-hidden="true">
-                    &mdash;
+                    &ndash;
                   </span>
                   <Text size="sm" color="muted">
                     {item}

@@ -7,8 +7,8 @@ import { LONDON_TIME_ZONE, type IsoDate } from '@/lib/dateUtils';
  *
  * This module is deliberately pure and deliberately separate from the component.
  * The grid has to answer four questions that a component test cannot answer
- * honestly — what does this week span, where does this slot end, does this time
- * exist at all, and is it already gone — and every one of them has a DST edge
+ * honestly (what does this week span, where does this slot end, does this time
+ * exist at all, and is it already gone), and every one of them has a DST edge
  * that only a direct unit test will ever exercise.
  *
  * It is client-safe: it reaches only date-fns-tz and the type/zone constants from
@@ -19,7 +19,7 @@ import { LONDON_TIME_ZONE, type IsoDate } from '@/lib/dateUtils';
  * time inside the spring-forward gap. That is correct for a conversion and wrong
  * for a grid, which needs to ask "does 01:30 exist on this day?" about 700 cells
  * a render without a throw being the answer. So the round-trip check is
- * expressed here as a predicate rather than wrapped in a try/catch — swallowing
+ * expressed here as a predicate rather than wrapped in a try/catch. Swallowing
  * that throw is exactly how the gap stops being visible. The two are pinned
  * together by a test asserting they agree on the boundary.
  */
@@ -36,7 +36,7 @@ const HOUR_IN_MS = 60 * 60 * 1000;
  *
  * Minutes is the stored unit throughout; the row is *labelled* in hours once it
  * passes an hour (see `formatDurationLabel`). 3 and 4 hours are here because a
- * pub event runs long — Doodle stops at 2 hours, and that is a limitation rather
+ * pub event runs long: Doodle stops at 2 hours, and that is a limitation rather
  * than a decision worth copying.
  */
 export const DURATION_CHOICES = [15, 30, 60, 90, 120, 180, 240] as const;
@@ -53,7 +53,7 @@ export const MIN_CUSTOM_DURATION_MINUTES = 5;
  */
 export const MAX_CUSTOM_DURATION_MINUTES = 12 * 60;
 
-/** How a custom duration is being typed. A display unit only — never stored. */
+/** How a custom duration is being typed. A display unit only, never stored. */
 export type DurationUnit = 'minutes' | 'hours';
 
 /** All-day selection produces date-only options; every other choice is timed. */
@@ -202,7 +202,7 @@ export function londonZoneLabel(date: IsoDate): string {
   return `United Kingdom, London (${londonOffsetLabel(date)})`;
 }
 
-/** "Tuesday 14 July" — the day column heading, spelled out in full. */
+/** "Tuesday 14 July": the day column heading, spelled out in full. */
 export function formatDayLabel(date: IsoDate): string {
   return formatDateOnly(date, 'EEEE d MMMM');
 }
@@ -235,7 +235,7 @@ export type ParsedDuration =
  * Reads a custom duration typed in either unit and returns minutes.
  *
  * Minutes is the canonical unit; hours are a way of typing, not a way of
- * storing. Someone wanting five hours types 5 and picks hours — they are never
+ * storing. Someone wanting five hours types 5 and picks hours. They are never
  * made to work out 300.
  *
  * Fractional hours are accepted (1.5 → 90) but only when they land on a whole
@@ -276,7 +276,7 @@ export function parseDurationInput(raw: string, unit: DurationUnit): ParsedDurat
   return { minutes: rounded };
 }
 
-/** "Tue" / "14" — the two halves of the compact column heading. */
+/** "Tue" / "14": the two halves of the compact column heading. */
 export function formatWeekdayShort(date: IsoDate): string {
   return formatDateOnly(date, 'EEE');
 }
@@ -318,7 +318,7 @@ export function wallClockFromMinutes(minutes: number): string {
 /**
  * The row step for a given duration.
  *
- * A 15-minute duration wants quarter-hour rows — otherwise the choice is
+ * A 15-minute duration wants quarter-hour rows, otherwise the choice is
  * pointless. Anything an hour or longer sits on the hour, which is where people
  * actually start things.
  */
@@ -386,20 +386,20 @@ export function computeSlotEnd(
  *
  * Null is returned only for the spring-forward gap: on 29 March 2026 the clock
  * jumps 01:00 → 02:00, so 01:30 does not happen and there is no instant to
- * return. The round-trip below is what proves it — a wall clock that comes back
+ * return. The round-trip below is what proves it: a wall clock that comes back
  * different from the one asked for did not exist.
  *
  * The autumn overlap is the opposite case and is resolved the same way
  * `londonWallClockToInstant` resolves it: on 25 October 2026 01:30 happens
  * twice, and the earlier (BST) occurrence is the one taken. That is a decision
- * this codebase already made, and the grid must not quietly make the other one —
+ * this codebase already made, and the grid must not quietly make the other one:
  * a cell that disagrees with the value it goes on to submit is worse than either
  * choice on its own.
  *
  * This mirrors `londonWallClockToInstant`, which throws instead. See the module
  * header: a grid cannot use a throw as an answer, and catching it is how the gap
  * becomes invisible. `agrees with londonWallClockToInstant` in the test file
- * holds the two together — it is what caught this function returning the later
+ * holds the two together: it is what caught this function returning the later
  * of the two ambiguous instants when dateUtils returns the earlier.
  */
 export function londonWallClockInstantOrNull(date: IsoDate, time: string): Date | null {
@@ -441,7 +441,7 @@ export function isPastDate(date: IsoDate, today: IsoDate): boolean {
 /**
  * True when the slot has already started.
  *
- * A time that does not exist is not in the past — it is nowhere — so it reports
+ * A time that does not exist is not in the past (it is nowhere), so it reports
  * false here and is disabled by `londonWallClockExists` instead. Two reasons for
  * one cell being unavailable stay two reasons.
  */

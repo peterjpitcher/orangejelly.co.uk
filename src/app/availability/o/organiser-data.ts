@@ -16,7 +16,7 @@ import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll
  * `PollRow` does not declare them even though `select('*')` returns them.
  * Widening `PollRow` would ripple through every stream's fixtures for no gain.
  *
- * WHY THIS FILE EXISTS — `getOrganiserView` returns the matrix, but not three
+ * WHY THIS FILE EXISTS: `getOrganiserView` returns the matrix, but not three
  * things this screen needs:
  *   - `participant_token`, for the share block
  *   - `confirm_notify_failures`, for the "we couldn't reach n people" note
@@ -24,7 +24,7 @@ import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll
  * It also returns no per-option tallies, which the totals row needs.
  *
  * NOTE ON `organiser_token`: it is deliberately NOT read back or returned here.
- * The page already holds it — it is the URL segment — and a value that never
+ * The page already holds it (it is the URL segment) and a value that never
  * enters a props object cannot be handed to a client component by accident.
  */
 
@@ -34,7 +34,7 @@ export interface OrganiserParticipant {
   display_name: string;
   /**
    * Disambiguates duplicate display names in the row header's accessible name.
-   * Two people called Sarah is the expected case, not the edge case — there are
+   * Two people called Sarah is the expected case, not the edge case: there are
    * no accounts, so nothing stops it.
    */
   created_at: string;
@@ -44,7 +44,7 @@ export interface OrganiserParticipant {
 export interface OrganiserPollExtras {
   participant_token: string;
   /**
-   * How many confirmation emails the fan-out could not deliver. An INTEGER —
+   * How many confirmation emails the fan-out could not deliver. An INTEGER,
    * never a list of addresses. See `recordConfirmNotifyFailures`.
    */
   confirm_notify_failures: number;
@@ -70,7 +70,7 @@ export function answerKey(participantId: string, optionId: string): string {
 /**
  * Everything the organiser results screen renders.
  *
- * Returns null for an unknown token, an expired poll AND a draft — one outcome,
+ * Returns null for an unknown token, an expired poll AND a draft: one outcome,
  * so a token guesser learns nothing from the difference. Expiry is applied at
  * render rather than left to the periodic sweep, exactly as the vote screen does.
  */

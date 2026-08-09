@@ -5,7 +5,7 @@ import type { IsoDate } from '@/lib/dateUtils';
  * The calendar payload for a confirmed poll: an RFC 5545 VEVENT, plus the two
  * add-to-calendar URLs the email offers as a fallback.
  *
- * Pure by design — no I/O, no framework, no database. The caller reads the poll
+ * Pure by design: no I/O, no framework, no database. The caller reads the poll
  * and hands the fields in.
  *
  * WHY A LIBRARY. Line folding at 75 octets, CRLF endings, and comma/semicolon/
@@ -16,7 +16,7 @@ import type { IsoDate } from '@/lib/dateUtils';
  * THE TWO SHAPES ARE NOT INTERCHANGEABLE. A 'slots' option is an instant pair
  * and is emitted as a UTC instant with a trailing Z. A 'dates' option has no
  * clock reading at all, and pushing it through a zone conversion invents a time
- * nobody chose — dateUtils' central rule. It becomes an all-day VEVENT instead,
+ * nobody chose, dateUtils' central rule. It becomes an all-day VEVENT instead,
  * with no input/output type set, because setting 'utc' on a date-only value IS
  * the conversion the rule forbids.
  */
@@ -25,7 +25,7 @@ import type { IsoDate } from '@/lib/dateUtils';
 export type IcsOptionKind = 'dates' | 'slots';
 
 export interface PollIcsInput {
-  /** polls.id — the UID is keyed on the poll, never the option. See below. */
+  /** polls.id: the UID is keyed on the poll, never the option. See below. */
   pollId: string;
   optionKind: IcsOptionKind;
   /** poll_options.option_date. Non-null iff optionKind === 'dates'. */
@@ -83,7 +83,7 @@ function toIcsDateArray(date: IsoDate): [number, number, number] {
 /**
  * The day after `date`, arithmetically.
  *
- * DTEND on an all-day VEVENT is EXCLUSIVE per RFC 5545 — a single-day event on
+ * DTEND on an all-day VEVENT is EXCLUSIVE per RFC 5545: a single-day event on
  * the 4th ends on the 5th. Getting this wrong is a one-day-out bug, the
  * date-only twin of the one-hour-offset bug.
  *
@@ -105,7 +105,7 @@ export function nextCalendarDay(date: IsoDate): [number, number, number] {
  * agenda is genuinely load-bearing. `ics` handles the RFC 5545 folding and the
  * escaping of the newlines an agenda will contain.
  *
- * Raw, never escapeHtml'd — HTML entities in a calendar entry are a bug.
+ * Raw, never escapeHtml'd: HTML entities in a calendar entry are a bug.
  */
 function buildDescription(input: PollIcsInput): string {
   return [
@@ -126,7 +126,7 @@ function buildDescription(input: PollIcsInput): string {
  * reach it.
  *
  * The input/output types are optional because the all-day branch must NOT set
- * them — see `buildTiming`.
+ * them. See `buildTiming`.
  */
 interface IcsTiming {
   start: DateArray;
@@ -195,13 +195,13 @@ export function buildPollIcs(input: PollIcsInput): PollIcsResult {
       // mutable, and reopening a poll usually means picking a DIFFERENT time.
       // An option-keyed UID would mint a second event and leave the first one
       // sitting in everyone's calendar forever. Poll-keyed, plus a rising
-      // SEQUENCE, supersedes the previous entry — which is the entire point.
+      // SEQUENCE, supersedes the previous entry, which is the entire point.
       uid: `${input.pollId}@orangejelly.co.uk`,
       sequence: input.confirmSequence,
 
       // PUBLISH, NOT REQUEST. RFC 5546 §3.2.2 requires at least one ATTENDEE on
       // a VEVENT REQUEST; an attendee-less REQUEST is malformed iTIP and client
-      // behaviour on it is undefined — the same class of silent Outlook
+      // behaviour on it is undefined, the same class of silent Outlook
       // breakage the library is here to avoid. We are delivering an agreed
       // time, not managing RSVPs, and PUBLISH is precisely the method for that.
       method: 'PUBLISH',
@@ -236,7 +236,7 @@ function pad(value: number): string {
   return String(value).padStart(2, '0');
 }
 
-/** 'YYYYMMDDTHHMMSSZ' — Google's instant format. */
+/** 'YYYYMMDDTHHMMSSZ': Google's instant format. */
 function toGoogleInstant(instant: string): string {
   const date = new Date(instant);
   if (Number.isNaN(date.getTime())) {
@@ -249,7 +249,7 @@ function toGoogleInstant(instant: string): string {
   );
 }
 
-/** 'YYYYMMDD' — Google's all-day format. */
+/** 'YYYYMMDD': Google's all-day format. */
 function toGoogleDate(parts: [number, number, number]): string {
   return `${parts[0]}${pad(parts[1])}${pad(parts[2])}`;
 }
@@ -267,7 +267,7 @@ function toIsoDateString(parts: [number, number, number]): string {
  *
  * Every parameter goes through encodeURIComponent here. The assembled URL is
  * then escapeHtml'd by the template on the way into an href, because a bare `&`
- * in an attribute must be `&amp;` — that is required for the URL to survive a
+ * in an attribute must be `&amp;`: that is required for the URL to survive a
  * strict parser, not belt-and-braces.
  */
 export interface CalendarLinks {

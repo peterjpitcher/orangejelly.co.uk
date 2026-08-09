@@ -19,7 +19,7 @@ import { buildPrivacyNoticeText, PRIVACY_RIGHTS_EMAIL } from './privacyNotice';
  * the kind of drift nobody notices until someone asks.
  *
  * These tests read the page component as TEXT rather than rendering it. That is
- * deliberate — the point is to fail when someone edits one file and not the
+ * deliberate: the point is to fail when someone edits one file and not the
  * other, which is a source-level question, not a rendering one.
  */
 
@@ -74,7 +74,7 @@ describe('the privacy notice says the same thing on the page and in the email', 
 
   it('should give the same rights address in both, and never a privacy@ mailbox', () => {
     // Orange Jelly runs one mailbox. An earlier draft of the spec named
-    // privacy@orangejelly.co.uk, which does not exist and never will — a rights
+    // privacy@orangejelly.co.uk, which does not exist and never will. A rights
     // address that bounces is worse than naming none at all.
     expect(PRIVACY_RIGHTS_EMAIL).toBe('peter@orangejelly.co.uk');
     expect(emailNotice).toContain(PRIVACY_RIGHTS_EMAIL);

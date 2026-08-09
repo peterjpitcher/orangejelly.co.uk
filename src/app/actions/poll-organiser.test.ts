@@ -5,13 +5,13 @@ import { confirmOption, deletePoll, deleteResponse, setPollOpen } from './poll-o
 /**
  * Organiser action tests.
  *
- * Every external service is mocked — Supabase via the data layer, Resend via
+ * Every external service is mocked: Supabase via the data layer, Resend via
  * `sendPollEmails`. These prove the ACTION's ordering, its gates and its failure
  * copy; the data layer's own queries are the data layer's to prove.
  *
  * `@/lib/poll-ics` and `@/lib/poll-emails` are NOT mocked. Both are pure and
  * offline, and the thing most worth asserting here is that a real .ics reaches
- * the attachment with a real base64 body — a mock would assert only that this
+ * the attachment with a real base64 body. A mock would assert only that this
  * file calls a function.
  */
 
@@ -56,7 +56,7 @@ const revalidatePath = vi.fn();
 vi.mock('next/cache', () => ({ revalidatePath: (...args: unknown[]) => revalidatePath(...args) }));
 vi.mock('next/headers', () => ({ headers: () => new Map() }));
 
-const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars — a well-formed token shape.
+const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars: a well-formed token shape.
 const OPTION_ID = '22222222-2222-4222-8222-222222222222';
 const OTHER_OPTION_ID = '33333333-3333-4333-8333-333333333333';
 const PARTICIPANT_ID = '44444444-4444-4444-8444-444444444444';
@@ -147,7 +147,7 @@ describe('setPollOpen', () => {
     expect(closePoll).not.toHaveBeenCalled();
   });
 
-  it('should never send email when closing — nobody needs telling until a time is confirmed', async () => {
+  it('should never send email when closing: nobody needs telling until a time is confirmed', async () => {
     closePoll.mockResolvedValue({ stored: true });
 
     await setPollOpen(TOKEN, false);
@@ -234,7 +234,7 @@ describe('confirmOption', () => {
   describe('the double-tap guard', () => {
     it('should fan out nothing when the conditional update matched no row', async () => {
       // ALREADY_CONFIRMED is what the data layer returns when its
-      // `status in ('open','closed')` filter matched nothing — i.e. someone
+      // `status in ('open','closed')` filter matched nothing, i.e. someone
       // confirmed it a moment ago. Re-mailing here is the bug this prevents.
       storeConfirmOption.mockResolvedValue({ stored: false, error: 'ALREADY_CONFIRMED' });
 
@@ -347,7 +347,7 @@ describe('confirmOption', () => {
       await confirmOption(TOKEN, OPTION_ID);
 
       // Putting the group in a visible `to` would disclose participants'
-      // addresses to each other — which the privacy notice promises it will not.
+      // addresses to each other, which the privacy notice promises it will not.
       for (const message of sendPollEmails.mock.calls[0][0]) {
         expect(message.to).not.toContain(',');
       }
@@ -448,7 +448,7 @@ describe('confirmOption', () => {
     // These two drive the build failure through `ics`'s organizer.email
     // validation, which rejects an address containing a space. That exact input
     // is guarded upstream by zod on the create form, so the branch is
-    // DEFENSIVE rather than live — it exists because a calendar file that will
+    // DEFENSIVE rather than live: it exists because a calendar file that will
     // not build must never suppress the notification that the meeting is
     // happening, and the cost of being wrong about "unreachable" is that nobody
     // is told the meeting is on. `ics` is left unmocked so the branch is proven
@@ -466,7 +466,7 @@ describe('confirmOption', () => {
       // The copy must not promise an attachment that is not there.
       expect(message.text).not.toContain('calendar file attached');
       expect(message.text).toContain('Add it to your calendar');
-      // The time in words still goes out — that is the actual payload.
+      // The time in words still goes out. That is the actual payload.
       expect(message.text).toContain('4 July 2026');
     });
 
@@ -559,7 +559,7 @@ describe('confirmOption', () => {
       storeConfirmOption.mockResolvedValue(confirmedResult());
       sendPollEmails.mockRejectedValue(new Error('Resend exploded'));
 
-      // The poll is already confirmed and the page shows the time — that is the
+      // The poll is already confirmed and the page shows the time. That is the
       // durable record.
       await expect(confirmOption(TOKEN, OPTION_ID)).resolves.toEqual({ success: true });
     });
@@ -633,7 +633,7 @@ describe('confirmOption', () => {
       expect(sendPollEmails).not.toHaveBeenCalled();
     });
 
-    it('should confirm a closed poll — closing stops replies, it does not decide', async () => {
+    it('should confirm a closed poll: closing stops replies, it does not decide', async () => {
       storeConfirmOption.mockResolvedValue(confirmedResult());
 
       await expect(confirmOption(TOKEN, OPTION_ID)).resolves.toEqual({ success: true });
@@ -715,7 +715,7 @@ describe('deletePoll', () => {
     expect(storeDeletePoll).toHaveBeenCalledWith(TOKEN);
   });
 
-  it('should be allowed on a confirmed poll — erasure is not conditional on state', async () => {
+  it('should be allowed on a confirmed poll: erasure is not conditional on state', async () => {
     // This is the organiser's Article 17 route. Refusing it once a time is
     // confirmed would make the right conditional, which is indefensible.
     getOrganiserView.mockResolvedValue(view('confirmed'));

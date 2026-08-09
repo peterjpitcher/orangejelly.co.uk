@@ -41,7 +41,7 @@ vi.mock('next/headers', () => ({ headers: () => new Map() }));
 const revalidatePath = vi.fn();
 vi.mock('next/cache', () => ({ revalidatePath: (...args: unknown[]) => revalidatePath(...args) }));
 
-const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars — a well-formed token shape.
+const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars: a well-formed token shape.
 const EDIT_TOKEN = 'bbbbbbbbbbbbbbbbbbbbbb';
 const OPTION_A = '11111111-1111-4111-8111-111111111111';
 const OPTION_B = '22222222-2222-4222-8222-222222222222';
@@ -113,7 +113,7 @@ describe('submitResponse', () => {
     );
   });
 
-  it('should send the participant no email — the edit link is on screen only', async () => {
+  it('should send the participant no email: the edit link is on screen only', async () => {
     // Peter's decision, 16 July 2026. There is no participant email template and
     // nothing here may mail an address an anonymous caller typed into a form.
     // This test exists to fail loudly if a send is ever reinstated.
@@ -130,7 +130,7 @@ describe('submitResponse', () => {
 
   it('should refuse a blank email, because without one we cannot send the invite', async () => {
     // Was: "normalises an empty email to undefined". The address is required as
-    // of 17 July 2026 — an optional one bought a participant the right to answer
+    // of 17 July 2026, because an optional one bought a participant the right to answer
     // and then never hear the outcome, which is the one thing the tool exists to
     // tell them.
     const result = await submitResponse(TOKEN, submission({ email: '' }));
@@ -188,7 +188,7 @@ describe('submitResponse', () => {
   });
 
   it('should refuse once closes_at has passed, because nothing else enforces it', async () => {
-    // closes_at is advisory — no cron flips status — so the action is the only
+    // closes_at is advisory (no cron flips status), so the action is the only
     // thing making the organiser's deadline real.
     getParticipantView.mockResolvedValue(pollView({ closes_at: PAST }));
     const result = await submitResponse(TOKEN, submission());
@@ -225,7 +225,7 @@ describe('submitResponse', () => {
   it('should still accept the vote when the rate limiter itself is unavailable', async () => {
     // Voting fails OPEN, and this is the case that used to defeat it. An outage
     // and a genuine limit hit both arrived as `allowed: false`, so the action
-    // could not tell them apart and quietly failed CLOSED — on the one action
+    // could not tell them apart and quietly failed CLOSED, on the one action
     // the whole tool exists to make effortless. `reason` is what separates them.
     // The trade is asymmetric on purpose: a missed limit costs a few junk rows
     // the organiser can delete; a false block costs a real person their reply,
@@ -250,7 +250,7 @@ describe('submitResponse', () => {
     expect(storeResponse).not.toHaveBeenCalled();
   });
 
-  it('should allow the vote when the limiter is not configured — voting fails open', async () => {
+  it('should allow the vote when the limiter is not configured: voting fails open', async () => {
     // A limiter outage must never be the reason a licensee cannot answer.
     isRateLimitConfigured.mockReturnValue(false);
     const result = await submitResponse(TOKEN, submission());

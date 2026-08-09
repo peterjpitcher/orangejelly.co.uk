@@ -25,22 +25,22 @@ const faqs = [
   {
     question: 'Can an independent pub really compete with chains?',
     answer:
-      'Absolutely. Chains compete on price and scale. Independents win on personality, agility, community, and experience. We prove this every day at The Anchor — competing against a local Wetherspoons with higher average spend and better repeat visit rates.',
+      'Absolutely. Chains compete on price and scale. Independents win on personality, agility, community, and experience. We prove this every day at The Anchor, competing against a local Wetherspoons with higher average spend and better repeat visit rates.',
   },
   {
     question: 'How much does it cost to build a challenger strategy?',
     answer:
-      'A Growth Fix starts from £375 + VAT — 5 focused hours on your positioning and competitive advantage. For ongoing support building your independent brand, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
+      'A Growth Fix starts from £375 + VAT: 5 focused hours on your positioning and competitive advantage. For ongoing support building your independent brand, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
   },
   {
     question: 'How long does it take to see results?',
     answer:
-      'Positioning changes show up quickly — within 2-4 weeks you will notice different conversations with customers. Building a loyal community that chooses you over chains takes 2-3 months of consistent execution.',
+      'Positioning changes show up quickly: within 2-4 weeks you will notice different conversations with customers. Building a loyal community that chooses you over chains takes 2-3 months of consistent execution.',
   },
   {
     question: 'Do I need to change my whole pub?',
     answer:
-      'No. You need to identify and amplify what already makes you different. Most independents are already doing things chains cannot — they just are not promoting it.',
+      'No. You need to identify and amplify what already makes you different. Most independents are already doing things chains cannot. They just are not promoting it.',
   },
 ];
 
@@ -220,7 +220,7 @@ export default function CompeteWithPubChains() {
                   </Heading>
                   <Text color="muted" className="mb-4">
                     Growth Partner gives you ongoing strategy, events, social media, and community
-                    building — everything you need to become the independent pub of choice.
+                    building, everything you need to become the independent pub of choice.
                   </Text>
                   <FeatureList
                     items={[

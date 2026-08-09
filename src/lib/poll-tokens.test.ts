@@ -10,7 +10,7 @@ import {
 
 /**
  * These tokens are capability URLs: holding one IS the authorisation. There is no
- * login behind them, so a guessable token is a full compromise of a poll — read
+ * login behind them, so a guessable token is a full compromise of a poll: read
  * and write. The properties below are the security model, not style preferences.
  */
 

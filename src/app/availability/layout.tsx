@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
  * 1. **`not-found.tsx` needs a layout to be a boundary.** Without this file,
  *    `notFound()` thrown in `p/[token]/page.tsx` bubbled past
  *    `availability/not-found.tsx` to the root one, and a participant with a dead
- *    link got the marketing 404 — "Oops! This Page Got Lost" — instead of the
+ *    link got the marketing 404 ("Oops! This Page Got Lost") instead of the
  *    considered "This link isn't live" page. The status was correct throughout;
  *    only the words were wrong, which is exactly the kind of defect a test suite
  *    reports as green.

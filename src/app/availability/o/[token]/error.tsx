@@ -8,7 +8,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 /**
  * The error boundary for a genuine data-layer exception.
  *
- * An invalid, expired or unknown organiser token is NOT this — that outcome is a
+ * An invalid, expired or unknown organiser token is NOT this: that outcome is a
  * 404 from the page, not a throw. This boundary only catches the database being
  * unreachable and similar.
  *

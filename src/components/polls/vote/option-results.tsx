@@ -12,7 +12,7 @@ import {
  * The read-only list, for a poll that is closed or confirmed.
  *
  * NO RADIOS HERE, not even disabled ones. A disabled radio group with no value
- * selected says "you answered nothing" — but the shared participant link does
+ * selected says "you answered nothing", but the shared participant link does
  * not identify anybody, so the visitor has no answers for it to show. It would
  * be telling every reader they abstained. Totals only.
  *

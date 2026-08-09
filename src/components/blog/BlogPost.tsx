@@ -78,7 +78,7 @@ function getCategoryCTA(categorySlug: string): {
   if (acquisitionCategories.includes(categorySlug)) {
     return {
       heading: 'Need help putting this into practice?',
-      body: 'Our packages give you strategy, direction, and hands-on support — from a one-off Growth Fix to ongoing Growth Partner.',
+      body: 'Our packages give you strategy, direction, and hands-on support, from a one-off Growth Fix to ongoing Growth Partner.',
     };
   }
 
@@ -91,7 +91,7 @@ function getCategoryCTA(categorySlug: string): {
 
   return {
     heading: 'Want hands-on help?',
-    body: 'See our packages — clear pricing, real expertise, no agency overhead.',
+    body: 'See our packages: clear pricing, real expertise, no agency overhead.',
   };
 }
 
@@ -186,7 +186,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           </div>
         </header>
 
-        {/* Category hero handles the visual header — no featured image needed */}
+        {/* Category hero handles the visual header, no featured image needed */}
 
         {/* Quick Answer for featured snippets */}
         <QuickAnswer answer={quickAnswerText} className="mb-8" />

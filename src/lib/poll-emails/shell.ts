@@ -4,7 +4,7 @@ import { escapeHtml } from '@/lib/email';
  * The shared chrome every poll email sits inside, and the small helpers that
  * keep the HTML and plain-text parts honest.
  *
- * ON THE HEX LITERALS — a deliberate, narrow exception to the Definition of
+ * ON THE HEX LITERALS: a deliberate, narrow exception to the Definition of
  * Done's "no hardcoded hex" rule. Email clients cannot consume Tailwind; there
  * is no build step in an inbox. Every literal below is the canonical token value
  * from tailwind.config.js and no other value may appear here:
@@ -19,9 +19,9 @@ export const BRAND_CHARCOAL = '#1A2F49';
 export const BRAND_BLUE = '#01619E';
 export const BRAND_SURFACE = '#F2F8FC';
 
-/** Charcoal at 72% — the muted body tone used throughout. */
+/** Charcoal at 72%: the muted body tone used throughout. */
 export const MUTED = 'rgba(26,47,73,0.72)';
-/** Charcoal at 18% — hairline rules and table borders. */
+/** Charcoal at 18%: hairline rules and table borders. */
 export const HAIRLINE = 'rgba(26,47,73,0.18)';
 
 /**
@@ -46,7 +46,7 @@ export function sanitiseSubjectValue(value: string): string {
 /**
  * Wrap a body fragment in the shared shell.
  *
- * 'Open Sans' matches the site's body face. It will not load in an inbox — the
+ * 'Open Sans' matches the site's body face. It will not load in an inbox: the
  * Helvetica/Arial fallback is the point, and no webfont link may be added. The
  * 560px cap keeps a line readable on a phone without a media query, which many
  * clients ignore anyway.
@@ -85,8 +85,8 @@ export function primaryButton(url: string, label: string): string {
 /**
  * The full URL, written out.
  *
- * Every template that carries a button also carries the bare URL. Buttons fail —
- * a client strips the styles, or the reader is on a plain-text-only device — and
+ * Every template that carries a button also carries the bare URL. Buttons fail
+ * (a client strips the styles, or the reader is on a plain-text-only device) and
  * a capability URL the reader can see and paste is the fallback. It is also why
  * no link in this feature is ever shortened: a shortener hides the URL from the
  * person about to click it, and reads as spam to a filter besides.

@@ -1,7 +1,7 @@
 /**
  * Cloudflare Turnstile verification, server side.
  *
- * The widget rendering in the browser is not a control — anyone can skip a
+ * The widget rendering in the browser is not a control. Anyone can skip a
  * client. The control is this: POSTing the token the widget produced to
  * Cloudflare's siteverify endpoint and refusing the request unless Cloudflare
  * confirms it.
@@ -10,7 +10,7 @@
  * and a proxy pool defeats a per-IP limit outright. Turnstile is what makes the
  * IP bucket mean something.
  *
- * Gates poll creation only — no other form on the site uses it.
+ * Gates poll creation only: no other form on the site uses it.
  */
 
 const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
@@ -35,7 +35,7 @@ interface SiteverifyResponse {
  * Verifies a Turnstile token with Cloudflare.
  *
  * The token is single-use: Cloudflare rejects a replay, and we deliberately do
- * not cache the result — caching would turn a single-use token into a reusable
+ * not cache the result: caching would turn a single-use token into a reusable
  * one, which is the whole property Turnstile provides.
  *
  * Returns `{ success: false }` on an unset secret, a network error, a non-200, a
@@ -59,10 +59,10 @@ export async function verifyTurnstileToken(
     // on every Vercel deployment including previews, so this cannot be switched
     // on from the dashboard.
     if (process.env.NODE_ENV !== 'production') {
-      console.warn('[polls] Turnstile not configured — allowing in development.');
+      console.warn('[polls] Turnstile not configured, allowing in development.');
       return { success: true };
     }
-    console.error('[polls] Turnstile unavailable — refusing to create.');
+    console.error('[polls] Turnstile unavailable, refusing to create.');
     return { success: false };
   }
 
@@ -82,17 +82,17 @@ export async function verifyTurnstileToken(
     });
 
     if (!response.ok) {
-      console.error('[polls] Turnstile unavailable — refusing to create.', response.status);
+      console.error('[polls] Turnstile unavailable, refusing to create.', response.status);
       return { success: false };
     }
 
     const json: SiteverifyResponse = await response.json();
 
     // Strictly `=== true`. Cloudflare returns an object; anything other than a
-    // literal true — absent, truthy-but-not-true, an error payload — is a failure.
+    // literal true (absent, truthy-but-not-true, an error payload) is a failure.
     return { success: json.success === true };
   } catch (error) {
-    console.error('[polls] Turnstile unavailable — refusing to create.', error);
+    console.error('[polls] Turnstile unavailable, refusing to create.', error);
     return { success: false };
   }
 }

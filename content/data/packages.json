@@ -64,7 +64,7 @@
       {
         "step": 4,
         "title": "You decide",
-        "description": "Results speak — step up to Momentum Month if you want ongoing support"
+        "description": "Results speak. Step up to Momentum Month if you want ongoing support"
       }
     ],
     "paymentPlan": {
@@ -222,7 +222,7 @@
       {
         "step": 3,
         "title": "Ongoing accountability",
-        "description": "We track what matters — bookings, footfall, revenue"
+        "description": "We track what matters: bookings, footfall, revenue"
       },
       {
         "step": 4,
@@ -307,7 +307,7 @@
     ],
     "paymentPlan": {
       "available": true,
-      "copy": "Payment plans available — discuss with Peter",
+      "copy": "Payment plans available, discuss with Peter",
       "cardCopy": "Payment plans available"
     },
     "ctaWhatsApp": "Hi Peter, I'm interested in the Turnaround Intensive package.",

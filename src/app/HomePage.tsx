@@ -187,7 +187,7 @@ export default function HomePage({
 
       <ProblemCardsSection problems={displayProblems} title={sectionHeadings?.problemsHeading} />
 
-      {/* About Preview — Solutions overview */}
+      {/* About Preview: Solutions overview */}
       <Section>
         <AnimatedItem animation="slide-up" delay={200}>
           <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">

@@ -13,14 +13,14 @@ import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll
  *
  * These live here rather than in `src/lib/db/polls.ts` because this stream does
  * not own that file. Two of them would ideally move there once the streams are
- * integrated — see the handoff note.
+ * integrated, see the handoff note.
  *
- * WHY THIS FILE EXISTS AT ALL — `getParticipantView` collapses the tallies to
+ * WHY THIS FILE EXISTS AT ALL: `getParticipantView` collapses the tallies to
  * `Record<optionId, yesPlusIfNeedBe>`, which cannot render "4 yes · 1 if need be
  * · 2 no" (§1 P1.6, P3.1). The per-state breakdown needs the raw answers, which
  * that function reads and then discards. So the breakdown is read here and run
  * through `aggregateByOption`, whose `OptionTally` type deliberately carries no
- * participant identifier — it is handed to participants and must not be able to
+ * participant identifier: it is handed to participants and must not be able to
  * carry one.
  *
  * NOTHING HERE MAY RETURN WHO VOTED WHAT on the shared participant link. The
@@ -28,7 +28,7 @@ import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll
  * reached through their own edit token (`getEditView`).
  */
 
-/** What the vote screen renders. Aggregates only — never a name against a vote. */
+/** What the vote screen renders. Aggregates only, never a name against a vote. */
 export interface VoteView {
   poll: PollRow;
   options: PollOptionRow[];
@@ -77,7 +77,7 @@ export interface EditView extends ResolvedEditParticipant {
  * Reads the per-state breakdown for one poll.
  *
  * `participant_id` is selected because `aggregateByOption` needs it to count a
- * responder once per option and to dedupe. It never leaves this module — the
+ * responder once per option and to dedupe. It never leaves this module: the
  * `OptionTally[]` that comes back has no identity on it.
  */
 async function readTallies(
@@ -106,7 +106,7 @@ async function readTallies(
 /**
  * The vote screen's data.
  *
- * Returns null for an unknown token AND for a draft poll — `getParticipantView`
+ * Returns null for an unknown token AND for a draft poll. `getParticipantView`
  * makes no distinction, which is the point: a draft link is real but not live,
  * and saying so would confirm a guess (§1 E7).
  */

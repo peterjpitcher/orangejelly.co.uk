@@ -13,7 +13,7 @@ import {
 
 /**
  * Every one of the 16 ordered pairs over the 4 statuses is asserted by name:
- * 5 legal, 11 illegal. Deliberately verbose — a reviewer must be able to read
+ * 5 legal, 11 illegal. Deliberately verbose, so a reviewer must be able to read
  * the legal edge set off this file without opening the module. A loop over a
  * matrix derived from the implementation would only prove the code agrees with
  * itself.

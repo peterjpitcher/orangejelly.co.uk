@@ -30,12 +30,12 @@ const faqs = [
   {
     question: "What if I've tried everything and nothing works?",
     answer:
-      "We hear this a lot. The difference is we are licensees who have solved this exact problem. Our strategies are not theories — they are proven methods that transformed The Anchor's quiet nights into profitable evenings.",
+      "We hear this a lot. The difference is we are licensees who have solved this exact problem. Our strategies are not theories. They are proven methods that transformed The Anchor's quiet nights into profitable evenings.",
   },
   {
     question: 'How much does the empty pub recovery plan cost?',
     answer:
-      'A focused Growth Fix starts from just £375 + VAT — 5 hours on your biggest bottleneck. If you need ongoing monthly support, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
+      'A focused Growth Fix starts from just £375 + VAT: 5 hours on your biggest bottleneck. If you need ongoing monthly support, Growth Partner is £1,800 + VAT per month. Payment plans are available.',
   },
   {
     question: 'Do I need to spend money on advertising?',
@@ -62,7 +62,7 @@ export default function EmptyPubSolutions() {
             Full Houses in 30 Days.
           </>
         }
-        subtitle="A step-by-step footfall plan to fill quiet nights, boost midweek covers, and keep tables turning — proven at The Anchor"
+        subtitle="A step-by-step footfall plan to fill quiet nights, boost midweek covers, and keep tables turning, proven at The Anchor"
         secondaryAction={{
           text: 'See Our Packages',
           href: '/ways-to-work',
@@ -82,7 +82,7 @@ export default function EmptyPubSolutions() {
               Every Empty Table Costs You Money
             </Heading>
             <Text size="xl" color="muted" align="center" className="mb-8">
-              Empty chairs mean wasted overheads — rent, rates, and wages do not pause for quiet
+              Empty chairs mean wasted overheads: rent, rates, and wages do not pause for quiet
               nights. The upside is significant when you improve local discovery, give people a
               clear reason to visit, and fill those midweek gaps consistently.
             </Text>
@@ -134,8 +134,8 @@ export default function EmptyPubSolutions() {
                     One Clear Bottleneck?
                   </Heading>
                   <Text color="muted" className="mb-4">
-                    If your main issue is one thing — weak midweek events, low local visibility, or
-                    confusing offers — a Growth Fix solves it fast.
+                    If your main issue is one thing (weak midweek events, low local visibility, or
+                    confusing offers), a Growth Fix solves it fast.
                   </Text>
                   <FeatureList
                     items={[

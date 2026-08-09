@@ -21,7 +21,7 @@ function slotOption(overrides: Partial<DisplayOption> = {}): DisplayOption {
   return {
     id: 'option-2',
     option_date: null,
-    // 19:30 London on 4 July 2026 is 18:30Z — BST is UTC+1.
+    // 19:30 London on 4 July 2026 is 18:30Z: BST is UTC+1.
     starts_at: '2026-07-04T18:30:00.000Z',
     ends_at: '2026-07-04T20:00:00.000Z',
     position: 1,
@@ -41,7 +41,7 @@ describe('formatOptionLabel', () => {
   it('should not hand a date-only value to the slot formatter', () => {
     // The whole point of branching on option_kind. formatSlotRangeInLondon
     // throws on a date-only value by design, because a date carries no time and
-    // rendering '2026-07-04' as a slot produces "1:00am" — a time nobody chose,
+    // rendering '2026-07-04' as a slot produces "1:00am", a time nobody chose,
     // presented as fact. A 'dates' poll must never reach that path.
     expect(() => formatOptionLabel(dateOption(), 'dates')).not.toThrow();
   });
@@ -82,7 +82,7 @@ describe('formatTallyLine', () => {
 
 describe('formatReplyCount', () => {
   it('should invite the first responder rather than show a row of zeroes', () => {
-    expect(formatReplyCount(0)).toBe("Nobody's answered yet — you're first.");
+    expect(formatReplyCount(0)).toBe("Nobody's answered yet. You're first.");
   });
 
   it('should use the singular for one', () => {

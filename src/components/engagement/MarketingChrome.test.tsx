@@ -4,19 +4,19 @@ import { readFileSync } from 'fs';
 import path from 'path';
 
 /**
- * C4 — proof that no third-party request fires on a token route.
+ * C4: proof that no third-party request fires on a token route.
  *
  * Poll URLs carry a bearer token in the path. Vercel Analytics and GTM both report
  * the raw path, so an ungated third-party script on those routes hands the poll's
  * own access token to Google or Vercel, and anyone with analytics access could
- * then act as that poll's organiser. Referrer-Policy does not help — this
+ * then act as that poll's organiser. Referrer-Policy does not help, because this
  * JavaScript reads window.location directly.
  *
  * Two assertions, because they fail in different ways:
- *   1. BEHAVIOURAL — render the chrome on a token route and assert nothing
+ *   1. BEHAVIOURAL: render the chrome on a token route and assert nothing
  *      third-party reaches the DOM, while proving the same components DO render on
  *      a marketing route (so a gate that simply disabled everything would fail).
- *   2. STRUCTURAL — assert the root layout never imports a third-party script
+ *   2. STRUCTURAL: assert the root layout never imports a third-party script
  *      directly. This is the regression that would otherwise reappear silently:
  *      someone adds `<Analytics />` back to layout.tsx and every behavioural test
  *      here still passes, because they test a component the layout stopped using.
@@ -96,7 +96,7 @@ function renderAllLayoutChrome(): string {
 
 /**
  * This jsdom build has no localStorage, which CookieNotice reads on mount. Only
- * the marketing-route cases reach it — on a token route the gate stops it mounting
+ * the marketing-route cases reach it. On a token route the gate stops it mounting
  * at all, which is itself a small confirmation the gate works.
  */
 function stubLocalStorage(): void {
@@ -168,7 +168,7 @@ describe('third-party scripts on token routes', () => {
 describe('root layout third-party imports', () => {
   it('should not import any third-party script directly, so the gate cannot be bypassed', () => {
     // Structural, not behavioural. If someone re-adds `<Analytics />` to the root
-    // layout, every behavioural test above still passes — they would be testing a
+    // layout, every behavioural test above still passes; they would be testing a
     // component the layout no longer uses. This is the assertion that catches it.
     const layoutSource = readFileSync(path.resolve(__dirname, '../../app/layout.tsx'), 'utf8');
 

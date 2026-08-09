@@ -46,7 +46,7 @@ function applySecurityHeaders(response: NextResponse, pathname: string) {
   // Token routes get `no-referrer`; everything else keeps the site-wide default.
   //
   // `strict-origin-when-cross-origin` is fine for the rest of the site but is a
-  // leak here, because it sends the FULL URL — path and all — on same-origin
+  // leak here, because it sends the FULL URL, path and all, on same-origin
   // navigations, and on these routes the path IS the credential. Anything that
   // reads Referer (an outbound link, an embedded resource, a proxy, an error
   // reporter) would receive the whole capability, and whoever holds

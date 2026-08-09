@@ -64,14 +64,14 @@ export interface RateLimitResult {
    * WHY this answer, which is not the same question as whether it was allowed.
    *
    * Without this a caller cannot tell "you have hit the limit" from "the limiter
-   * is broken" — both arrived as `allowed: false`, so a fail-open caller had no
+   * is broken": both arrived as `allowed: false`, so a fail-open caller had no
    * way to fail open and voting was silently fail-closed. That is the wrong
    * default for the one action the whole tool exists to make effortless: a
    * limiter outage must never stop a licensee answering a poll.
    *
-   * - `ok`          — under the limit.
-   * - `limited`     — genuinely over the limit. Every caller denies.
-   * - `unavailable` — the limiter could not answer. Fail-CLOSED callers
+   * - `ok`:          under the limit.
+   * - `limited`:     genuinely over the limit. Every caller denies.
+   * - `unavailable`: the limiter could not answer. Fail-CLOSED callers
    *                   (createPoll, confirmOption) still deny: an outage must not
    *                   become a way to mint polls on our sending domain.
    *                   Fail-OPEN callers (voting) allow.
@@ -95,7 +95,7 @@ export function isRateLimitConfigured(): boolean {
  * Hashes an identifier before it becomes a rate-limit key.
  *
  * Applies to IP addresses AND email addresses. Both are personal data under the
- * UK GDPR, and an email address is the more identifying of the two — peppering
+ * UK GDPR, and an email address is the more identifying of the two: peppering
  * the IP while writing the address in clear would be theatre. A peppered SHA-256
  * is a stable key with no way back to the value, and the Phase 5 sweep deletes
  * the row once its window has passed.
@@ -125,7 +125,7 @@ export function hashKey(value: string): string {
  *
  * Falls back to 'unknown', which shares one bucket across every caller with no
  * forwarded-for header. On Vercel the header is always present, so this is a
- * local-development and misconfiguration path, not a production one — accepted,
+ * local-development and misconfiguration path, not a production one. Accepted,
  * and named here so nobody treats it as a bug.
  *
  * Structurally typed rather than `Headers`: on Next 14, `headers()` returns a
@@ -179,7 +179,7 @@ async function withTimeout<T>(promise: PromiseLike<T>): Promise<T> {
  * id, and making the hash explicit at the call site is what stops a raw value
  * reaching the database by accident.
  *
- * IMPORTANT — this function never fails closed on its own. On any failure it
+ * IMPORTANT: this function never fails closed on its own. On any failure it
  * returns `{ allowed: false }` so that a caller which does nothing gets the safe
  * outcome, but the fail-open callers (everything that does not send mail) must
  * check isRateLimitConfigured() / catch and allow explicitly. See SPEC §3.4.2.
@@ -200,7 +200,7 @@ export async function checkRateLimit(
     if (process.env.NODE_ENV !== 'production') {
       if (!developmentWarningLogged) {
         developmentWarningLogged = true;
-        console.warn('[polls] Rate limiter not configured — allowing in development.');
+        console.warn('[polls] Rate limiter not configured, allowing in development.');
       }
       return { allowed: true, retryAfterSeconds: 0, reason: 'ok' };
     }

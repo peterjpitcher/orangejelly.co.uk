@@ -14,7 +14,7 @@ import {
  * the meeting is missed. So these tests parse the generated output rather than
  * trusting that the library was called correctly.
  *
- * `ics` is not mocked. It is a pure, offline formatter with no I/O — mocking it
+ * `ics` is not mocked. It is a pure, offline formatter with no I/O, so mocking it
  * would leave the one thing worth asserting (that the emitted text is a valid,
  * correctly-timed VCALENDAR) untested.
  */
@@ -95,7 +95,7 @@ describe('buildPollIcs', () => {
     it('should emit DTSTART as a UTC instant with a trailing Z, never a floating local time', () => {
       const ics = buildPollIcs(SLOT_INPUT).value as string;
 
-      // 18:30Z — the stored instant, not the 19:30 London wall clock.
+      // 18:30Z: the stored instant, not the 19:30 London wall clock.
       expect(lineFor(ics, 'DTSTART')).toBe('DTSTART:20260704T183000Z');
     });
 
@@ -237,7 +237,7 @@ describe('buildPollIcs', () => {
       expect(lineFor(ics, 'SUMMARY')).toBe('SUMMARY:Planning\\, budget and staffing');
     });
 
-    it('should not HTML-escape the title — entities in a calendar entry are a bug', () => {
+    it('should not HTML-escape the title: entities in a calendar entry are a bug', () => {
       const ics = buildPollIcs({ ...SLOT_INPUT, title: 'Pete & Billy catch-up' }).value as string;
 
       expect(lineFor(ics, 'SUMMARY')).toContain('Pete & Billy');

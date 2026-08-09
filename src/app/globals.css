@@ -130,7 +130,7 @@
  * --------------------
  * Each season exposes the same token contract, selected via a STATIC
  * data-season attribute on a wrapper (e.g. <div data-season="autumn">).
- * Never construct Tailwind classes dynamically — components read these
+ * Never construct Tailwind classes dynamically: components read these
  * variables via inline style (var(--season-accent), etc.) so the theme
  * swaps with the attribute and no dynamic class names are ever built.
  *
@@ -144,7 +144,7 @@
  *   --season-hero-text     text colour on the hero
  */
 
-/* Autumn — warm brand-orange family (fully designed) */
+/* Autumn: warm brand-orange family (fully designed) */
 [data-season='autumn'] {
   --season-accent: #ea580c;
   --season-accent-strong: #c2410c;
@@ -156,7 +156,7 @@
   --season-hero-text: #ffffff;
 }
 
-/* Spring — placeholder: fresh green. Replace when the spring hub ships. */
+/* Spring, placeholder: fresh green. Replace when the spring hub ships. */
 [data-season='spring'] {
   --season-accent: #2f8f4e;
   --season-accent-strong: #246b3b;
@@ -168,7 +168,7 @@
   --season-hero-text: #ffffff;
 }
 
-/* Summer — warm golden amber (Summer Pub Playbook). Distinct from autumn's
+/* Summer: warm golden amber (Summer Pub Playbook). Distinct from autumn's
    red-orange; hero stops kept dark enough for white hero text to pass AA. */
 [data-season='summer'] {
   --season-accent: #d97706;
@@ -181,7 +181,7 @@
   --season-hero-text: #ffffff;
 }
 
-/* Winter — festive evergreen + midnight-pine (Christmas Pub Playbook). */
+/* Winter: festive evergreen + midnight-pine (Christmas Pub Playbook). */
 [data-season='winter'] {
   --season-accent: #0f7a52;
   --season-accent-strong: #0a5c3d;

@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'Can I really market my pub without spending money?',
     answer:
-      'Absolutely. The best pub marketing is often free — word of mouth, social media, community partnerships, and email marketing cost nothing but time. We built The Anchor using mostly free strategies before investing in paid advertising.',
+      'Absolutely. The best pub marketing is often free: word of mouth, social media, community partnerships, and email marketing cost nothing but time. We built The Anchor using mostly free strategies before investing in paid advertising.',
   },
   {
     question: 'What free marketing works best for pubs?',
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: 'What if I want professional help but my budget is tight?',
     answer:
-      'A Growth Fix starts from just £375 + VAT — 5 focused hours on your biggest marketing bottleneck. It is designed to be a low-friction entry point that delivers a clear win you can build on. Payment plans are also available.',
+      'A Growth Fix starts from just £375 + VAT: 5 focused hours on your biggest marketing bottleneck. It is designed to be a low-friction entry point that delivers a clear win you can build on. Payment plans are also available.',
   },
   {
     question: "What if I don't have time for marketing?",
@@ -109,7 +109,7 @@ export default function PubMarketingNoBudget() {
             No Problem.
           </>
         }
-        subtitle="Free strategies that help pubs build visibility and momentum without paid spend — and professional support from just £375 + VAT when you are ready"
+        subtitle="Free strategies that help pubs build visibility and momentum without paid spend, and professional support from just £375 + VAT when you are ready"
         secondaryAction={{
           text: 'See Growth Fix Package',
           href: '/ways-to-work/growth-fix',
@@ -216,7 +216,7 @@ export default function PubMarketingNoBudget() {
             </Heading>
             <Text size="lg" color="muted" align="center" className="mb-10">
               Even with a tight budget, a focused Growth Fix can deliver a clear win from just £375
-              + VAT. Five hours on your biggest bottleneck — with a clear action plan you can
+              + VAT. Five hours on your biggest bottleneck, with a clear action plan you can
               implement yourself.
             </Text>
 

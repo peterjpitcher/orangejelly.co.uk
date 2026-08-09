@@ -23,7 +23,7 @@ export interface PollResponseTally {
  *
  * There is deliberately no participant identifier and no display name on this
  * object: it is handed to participants, and it must not be able to carry one.
- * There is also no weighted `score` — see `bestOption`.
+ * There is also no weighted `score`, see `bestOption`.
  */
 export interface OptionTally {
   option_id: string;
@@ -63,7 +63,7 @@ export function aggregateByOption(
   for (const response of responses) {
     const perParticipant = answers.get(response.option_id);
     if (!perParticipant) {
-      // An answer for an option that is not on this poll — a deleted option, or
+      // An answer for an option that is not on this poll: a deleted option, or
       // a stale form post. It belongs to no tally, so it is dropped.
       continue;
     }
@@ -92,7 +92,7 @@ export function aggregateByOption(
  * How many distinct people have replied to this poll at all.
  *
  * The denominator for any proportion shown to the organiser. It counts
- * participants, not `poll_responses` rows — somebody who answered eight options
+ * participants, not `poll_responses` rows: somebody who answered eight options
  * is one person, not eight.
  */
 export function countResponders(responses: readonly PollResponseTally[]): number {
@@ -106,14 +106,14 @@ export function countResponders(responses: readonly PollResponseTally[]): number
  * score: two yes beats one yes with five if-need-bes, because a maybe is not
  * half a yes.
  *
- * Returns an array because every option tied at the top is badged — picking one
+ * Returns an array because every option tied at the top is badged: picking one
  * of them by `position` would be arbitrary, and `position` is the order the
  * organiser happened to type the options in, not a preference. `position`
  * therefore orders the result; it never excludes an option from it.
  *
  * Returns `[]` when no option has any yes or any if-need-be. Without that, every
  * option ties on zero, every option is badged, and the organiser is shown eight
- * winners — worse than showing none. It is the only suppression condition:
+ * winners, worse than showing none. It is the only suppression condition:
  * an empty result means "no signal yet", not "no data".
  */
 export function bestOption(tallies: readonly OptionTally[]): OptionTally[] {

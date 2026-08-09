@@ -99,7 +99,7 @@ export default function CookieNotice() {
           <div>
             <p className="font-semibold">Essential (always on)</p>
             <p className="text-cream/80">
-              Keeps navigation, forms, and security working. Served directly by Next.js—no third
+              Keeps navigation, forms, and security working. Served directly by Next.js, no third
               parties.
             </p>
           </div>

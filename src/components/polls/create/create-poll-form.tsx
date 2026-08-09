@@ -56,8 +56,8 @@ import TurnstileWidget from './turnstile-widget';
  * The create-poll form.
  *
  * A client component because it needs `useForm` and `useState` for the submitted
- * state. Mirrors the split in src/components/forms/contact-form.tsx in shape only
- * — that file imports the raw shadcn Button, whose `--primary` is charcoal rather
+ * state. Mirrors the split in src/components/forms/contact-form.tsx in shape only:
+ * that file imports the raw shadcn Button, whose `--primary` is charcoal rather
  * than brand orange and whose default size is under the 44px tap target. This one
  * uses the legacy Button.
  *
@@ -68,8 +68,8 @@ import TurnstileWidget from './turnstile-widget';
  *   - `optionKind: 'dates'` → `{ date }`
  *   - `optionKind: 'slots'` → `{ date, startTime, endTime, endsNextDay }`
  *
- * The duration is what decides between them — "All day" means whole days, any
- * length means times — so there is no separate kind toggle any more. The two
+ * The duration is what decides between them ("All day" means whole days, any
+ * length means times), so there is no separate kind toggle any more. The two
  * arrays stay in react-hook-form rather than in local state, so the schema, the
  * error messages and the server action all keep working unchanged.
  *
@@ -84,19 +84,19 @@ import TurnstileWidget from './turnstile-widget';
  * The organiser fields are PREFILLED but not fixed: Peter is the only organiser
  * this tool has, and making him retype his own details on his own tool is
  * friction with nothing on the other side of it. Both stay editable and fully
- * validated — creation is public by design, gated by email verification rather
+ * validated: creation is public by design, gated by email verification rather
  * than by a login, so a stranger must be able to type straight over them.
  *
  * Both values come from CONTACT rather than a literal. The address is already
  * the one the footer, the contact page and the privacy notice render, so a
- * second copy here is just a second thing to miss when it changes — and it
+ * second copy here is just a second thing to miss when it changes, and it
  * exposes nothing new, being public in three places already.
  *
  * It also fails safe. If a stranger did reach this form and left the defaults
  * alone, the verification email goes to Peter, who will not click it, and the
  * poll never opens. The prefill cannot be used to send mail in his name.
  *
- * `website` is the honeypot and MUST stay empty — prefilling it would make every
+ * `website` is the honeypot and MUST stay empty. Prefilling it would make every
  * real submission look like a bot to our own check.
  */
 // London's today, so the deadline picker never offers a date already gone. The
@@ -164,7 +164,7 @@ export default function CreatePollForm(): JSX.Element {
     const current = form.getValues('dates') ?? [];
     const selected = current.some((entry) => entry.date === date);
 
-    // Unpicking always works. Picking stops at the cap — the grid disables the
+    // Unpicking always works. Picking stops at the cap: the grid disables the
     // cell too, but the cap is a rule about the value, so it is enforced here as
     // well rather than trusted to the view.
     if (!selected && current.length >= MAX_POLL_OPTIONS) return;
@@ -198,7 +198,7 @@ export default function CreatePollForm(): JSX.Element {
    * Two different changes wear the same control. Moving between "All day" and a
    * timed length changes what kind of poll this is, and the two shapes cannot
    * hold each other's values, so the selection goes. Moving between two timed
-   * lengths keeps every start and simply recomputes where each one ends — there
+   * lengths keeps every start and simply recomputes where each one ends: there
    * is nothing to throw away, and throwing it away would be gratuitous.
    */
   function applyDuration(next: DurationChoice): void {
@@ -528,7 +528,7 @@ export default function CreatePollForm(): JSX.Element {
 
           {/* min-w-0 is load-bearing. A fieldset's UA style is
               `min-inline-size: min-content`, so it refuses to shrink below its
-              widest child — here, a 43rem grid. Without this it sits 690px wide
+              widest child (here, a 43rem grid). Without this it sits 690px wide
               inside a 375px screen, the scroll container inherits that width and
               therefore never scrolls, and the back half of the week becomes
               unreachable on a phone. */}
@@ -537,7 +537,7 @@ export default function CreatePollForm(): JSX.Element {
             <Text size="sm" color="muted">
               {allDay
                 ? 'Tap the days that work. Pick between two and eight.'
-                : 'Tap the times that work. Pick between two and eight — all times are London time.'}
+                : 'Tap the times that work. Pick between two and eight. All times are London time.'}
             </Text>
 
             <AvailabilityGrid
@@ -561,7 +561,7 @@ export default function CreatePollForm(): JSX.Element {
             )}
           </fieldset>
 
-          {/* Honeypot. Verbatim from contact-form.tsx — all five attributes. */}
+          {/* Honeypot. Verbatim from contact-form.tsx: all five attributes. */}
           <input
             type="text"
             tabIndex={-1}
@@ -651,11 +651,11 @@ export default function CreatePollForm(): JSX.Element {
 }
 
 /**
- * The success state. Replaces the form in place — no navigation, no redirect.
+ * The success state. Replaces the form in place: no navigation, no redirect.
  *
  * The poll is `status='draft'` here and the participant link does not work yet,
  * so no link is shown. The resend token is client state and never reaches a URL;
- * reloading loses it, and the control with it, which is correct — at that point
+ * reloading loses it, and the control with it, which is correct: at that point
  * the recovery route is a fresh poll, not an unbounded resend.
  */
 function SuccessState({
@@ -770,7 +770,7 @@ function SuccessState({
         <AlertTitle>We&apos;ve sent your links</AlertTitle>
         <AlertDescription>
           We&apos;ve emailed <strong>{email}</strong> a link to confirm your address. Tap it and
-          your poll goes live — then you&apos;ll get your team&apos;s link and your own private one.
+          your poll goes live, then you&apos;ll get your team&apos;s link and your own private one.
         </AlertDescription>
       </Alert>
 

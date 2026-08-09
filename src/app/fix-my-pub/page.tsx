@@ -14,7 +14,7 @@ import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components
 export const metadata = generateMeta({
   title: 'Fix My Pub: Emergency Turnaround Help From a Licensee',
   description:
-    'Pub in crisis or just struggling? I run one myself. Tell me what is wrong and I will show you the fastest fix — diagnosis, reset plan, and hands-on support. Packages from £375 + VAT.',
+    'Pub in crisis or just struggling? I run one myself. Tell me what is wrong and I will show you the fastest fix: diagnosis, reset plan, and hands-on support. Packages from £375 + VAT.',
   path: '/fix-my-pub',
   ogType: 'website',
 });
@@ -44,7 +44,7 @@ export default function FixMyPubPage() {
 
       <Hero
         title="Pub Struggling? Let's Fix It."
-        subtitle="Whether your pub is in crisis or just needs a reset, tell me what is broken. I run The Anchor myself — I know what it takes to turn things around under real trading pressure."
+        subtitle="Whether your pub is in crisis or just needs a reset, tell me what is broken. I run The Anchor myself. I know what it takes to turn things around under real trading pressure."
         secondaryAction={{
           text: 'See Turnaround Package',
           href: '/ways-to-work/turnaround-intensive',
@@ -69,7 +69,7 @@ export default function FixMyPubPage() {
             </Text>
             <Text size="lg" color="muted" align="center" className="mb-8">
               What works is a focused diagnosis, a clear plan, and disciplined execution. That is
-              exactly what we deliver — because we have done it ourselves at The Anchor.
+              exactly what we deliver, because we have done it ourselves at The Anchor.
             </Text>
           </div>
         </AnimatedItem>
@@ -113,8 +113,8 @@ export default function FixMyPubPage() {
                     Full Turnaround Needed?
                   </Heading>
                   <Text color="muted" className="mb-4">
-                    If your pub needs a complete commercial reset — offer, messaging, events, local
-                    visibility, and potentially a website rebuild — the Turnaround Intensive is a
+                    If your pub needs a complete commercial reset (offer, messaging, events, local
+                    visibility, and potentially a website rebuild), the Turnaround Intensive is a
                     30-day sprint with deep founder involvement.
                   </Text>
                   <FeatureList
@@ -138,8 +138,8 @@ export default function FixMyPubPage() {
                     Just Need a Focused Fix?
                   </Heading>
                   <Text color="muted" className="mb-4">
-                    If your pub has one clear bottleneck — quiet midweek, weak events, low local
-                    visibility — a Growth Fix solves one problem fast with a clear action plan.
+                    If your pub has one clear bottleneck (quiet midweek, weak events, low local
+                    visibility), a Growth Fix solves one problem fast with a clear action plan.
                   </Text>
                   <FeatureList
                     items={[

@@ -8,7 +8,7 @@ import { setPollOpen } from '@/app/actions/poll-organiser';
 /**
  * Close the poll, or reopen it.
  *
- * NO DIALOGUE, DELIBERATELY — and this is the one control here that does not get
+ * NO DIALOGUE, DELIBERATELY, and this is the one control here that does not get
  * one. Closing destroys nothing and sends nothing; it stops replies, and the
  * button directly beside it puts them back. A confirmation on a reversible
  * action trains people to click through the confirmations that matter, and the

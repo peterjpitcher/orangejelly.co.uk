@@ -33,12 +33,12 @@ export interface ConfirmEmailInput {
   whenShort: string;
   /** The poll page. Poll-level, so loop-invariant across the fan-out. */
   participantUrl: string;
-  /** Built by the caller. No shorteners — a full www.orangejelly.co.uk URL. */
+  /** Built by the caller. No shorteners: a full www.orangejelly.co.uk URL. */
   googleUrl: string;
   outlookUrl: string;
   /**
    * False when the .ics build failed. The copy must not promise an attachment
-   * that is not there — a calendar file that will not build must never suppress
+   * that is not there: a calendar file that will not build must never suppress
    * the notification that the meeting is happening.
    */
   icsAttached: boolean;
@@ -51,14 +51,14 @@ export interface ConfirmEmailInput {
 }
 
 /**
- * "It's confirmed" — the only email a participant ever gets.
+ * "It's confirmed": the only email a participant ever gets.
  *
  * It fires only after a verified organiser confirms a time, and every address in
  * the set was typed by the person who owns it. Reply-to is the organiser: a
  * "can't make it after all" needs to reach a human, and they are the only human
  * involved.
  *
- * The time is rendered three times over — short in the subject, as full prose
+ * The time is rendered three times over: short in the subject, as full prose
  * with the zone named in the body, and as machine data in the .ics. That
  * redundancy is deliberate: the .ics is the thing that silently goes wrong, and
  * the words are what a person can sanity-check it against.
@@ -79,14 +79,14 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
     isOrganiserCopy = false,
   } = input;
 
-  const subject = `Confirmed: "${sanitiseSubjectValue(pollTitle)}" — ${whenShort}`;
+  const subject = `Confirmed: "${sanitiseSubjectValue(pollTitle)}", ${whenShort}`;
 
   const opening = isOrganiserCopy
     ? "You've confirmed the time. Everyone who gave us an email address has been told."
     : "It's confirmed.";
 
   const calendarLead = icsAttached
-    ? "There's a calendar file attached — open it and the time drops into your diary.\nOr use one of these:"
+    ? "There's a calendar file attached. Open it and the time drops into your diary.\nOr use one of these:"
     : 'Add it to your calendar:';
 
   const textParts = [
@@ -123,7 +123,7 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
 
   const htmlCalendarLead = icsAttached
     ? `<p style="margin:0 0 16px;">
-    There&rsquo;s a calendar file attached &mdash; open it and the time drops into
+    There&rsquo;s a calendar file attached. Open it and the time drops into
     your diary. Or use one of these:
   </p>`
     : `<p style="margin:0 0 16px;">Add it to your calendar:</p>`;

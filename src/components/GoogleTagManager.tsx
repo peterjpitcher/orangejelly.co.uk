@@ -7,7 +7,7 @@ import { isPollRoute } from '@/lib/token-routes';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 /**
- * GTM must not load on poll routes — those URLs carry a bearer token in the path,
+ * GTM must not load on poll routes: those URLs carry a bearer token in the path,
  * and GTM reports the raw path to Google. Loading it there would hand a poll's own
  * access token to a third party, letting anyone with analytics access act as that
  * poll's organiser. Referrer-Policy does not help: GTM reads window.location
@@ -25,7 +25,7 @@ export function GoogleTagManager() {
 
   return (
     <>
-      {/* Consent Mode v2 defaults — must run before GTM loads */}
+      {/* Consent Mode v2 defaults, must run before GTM loads */}
       <Script
         id="gtm-consent-defaults"
         strategy="beforeInteractive"

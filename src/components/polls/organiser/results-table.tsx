@@ -25,14 +25,14 @@ import {
  * instant the page paints.
  *
  * A REAL SEMANTIC <table>, NOT role="grid". A grid is an interactive widget and
- * carries obligations — roving tabindex, arrow-key navigation, aria-colindex on
+ * carries obligations: roving tabindex, arrow-key navigation, aria-colindex on
  * every cell. Half-implementing it makes the cells INVISIBLE to a screen reader
  * rather than merely awkward, which is strictly worse than the plain table this
  * read-only data actually wants. `<table>` with real headers is correct here.
  *
  * The markup is hand-rolled rather than built on `src/components/ui/table.tsx`:
  * that component hard-wraps the table in its own bare `overflow-auto` div and
- * routes `className` to the `<table>`, leaving the wrapper unreachable — so the
+ * routes `className` to the `<table>`, leaving the wrapper unreachable, so the
  * scroll region cannot be given `tabIndex`, `role` or an accessible name, and
  * the sticky offsets have nothing to attach to.
  */
@@ -52,7 +52,7 @@ export interface ResultsTableProps {
    */
   attendance: Record<string, AttendanceMode>;
   tallies: OptionTally[];
-  /** Highlighted column. Never by colour alone — the header carries sr-only text. */
+  /** Highlighted column. Never by colour alone: the header carries sr-only text. */
   confirmedOptionId: string | null;
 }
 
@@ -63,7 +63,7 @@ function TotalsBar({ tally }: { tally: OptionTally }): JSX.Element | null {
 
   // A plain three-div flex bar. `src/components/ui/progress.tsx` cannot do this:
   // it takes one value and hardcodes `bg-primary`, so it physically cannot show
-  // three shares. `bg-chart-1` is also not an option — tailwind.config.js has no
+  // three shares. `bg-chart-1` is also not an option: tailwind.config.js has no
   // `chart` colour key, so the class compiles to nothing at all. Inline
   // `hsl(var(--chart-N))` reads the tokens that do exist in globals.css.
   const shares: Array<{ count: number; colour: string }> = [
@@ -118,7 +118,7 @@ export default function ResultsTable({
     >
       <table className="w-full min-w-[640px] border-collapse text-sm">
         {/* Supplies both the region's accessible name and an explanation of the
-            axes — a matrix whose rows and columns are unnamed is a puzzle. */}
+            axes: a matrix whose rows and columns are unnamed is a puzzle. */}
         <caption id="results-table-caption" className="sr-only">
           Who can make each option. Rows are people, columns are the options you put up.
         </caption>
@@ -210,7 +210,7 @@ export default function ResultsTable({
                       {needsLink && (
                         <span className="mt-1 block text-xs font-medium text-teal">
                           <span aria-hidden="true">▶ </span>video
-                          <span className="sr-only"> — would join by video or dial-in</span>
+                          <span className="sr-only">: would join by video or dial-in</span>
                         </span>
                       )}
                     </td>

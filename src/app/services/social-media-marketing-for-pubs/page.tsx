@@ -80,7 +80,7 @@ export default function SocialMediaMarketingForPubsPage() {
                 'Phone-first content wins for pubs because it feels real and authentic',
                 'Batch content in one session per week using AI assistance',
                 'Focus on posts that sell a specific night, not generic pub photos',
-                'You do not need to post every day — consistency beats frequency',
+                'You do not need to post every day: consistency beats frequency',
               ]}
               icon="check"
               iconColor="green"

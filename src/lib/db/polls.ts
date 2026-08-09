@@ -6,15 +6,15 @@ import { LONDON_TIME_ZONE, londonWallClockToInstant, type IsoDate } from '@/lib/
 /**
  * Data access for availability polls.
  *
- * Supabase-only, deliberately. `leads.ts` writes every query twice — once
- * against Supabase, once against raw Postgres via DATABASE_URL — and picks at
+ * Supabase-only, deliberately. `leads.ts` writes every query twice (once
+ * against Supabase, once against raw Postgres via DATABASE_URL) and picks at
  * runtime. That fallback has never run for polls (DATABASE_URL is unset), and
  * duplicating a dozen relational queries for an unexercised path doubles the
  * surface area where untested bugs live. Polls take the Supabase path only and
  * fail loudly if it is not configured.
  *
  * Every function here uses the service-role client. The poll tables have RLS
- * enabled with no policies, so this is the only route to the data — matching the
+ * enabled with no policies, so this is the only route to the data, matching the
  * posture of the lead-data layer.
  */
 
@@ -108,7 +108,7 @@ export interface PollRow {
  * Note what is absent: no per-person votes. Only aggregate counts. An analysis
  * of 14M Doodle votes found that showing who voted for what pushes responders
  * toward very popular and very unpopular slots and starves the intermediate
- * ones — which are often the best answer. The shape of this type enforces that.
+ * ones, which are often the best answer. The shape of this type enforces that.
  */
 export interface ParticipantPollView {
   poll: PollRow;
@@ -161,7 +161,7 @@ export function calculateExpiresAt(options: PollOptionInput[], from: Date = new 
       //
       // `${date}T23:59:59Z` was the obvious version and it is wrong for half
       // the year: during BST it resolves to 00:59 the following morning. The
-      // drift is an hour on a 60-day window, so nothing breaks — but this is
+      // drift is an hour on a 60-day window, so nothing breaks, but this is
       // exactly the class of error dateUtils exists to stop, and a codebase
       // that keeps a hand-rolled UTC anchor next to a library built to prevent
       // hand-rolled UTC anchors teaches the wrong lesson to whoever reads it
@@ -260,7 +260,7 @@ export interface VerifyTokensResult {
 }
 
 /**
- * What verification hands back — the two links the organiser needs, and the
+ * What verification hands back: the two links the organiser needs, and the
  * fields the "your poll is live" email interpolates.
  *
  * Deliberately not PollRow: PollRow carries no tokens, and this is the one call
@@ -289,13 +289,13 @@ export interface ResendTargetResult {
  * Issues a draft poll's verify and resend tokens.
  *
  * Separate from createPoll on purpose. createPoll is shipped, green and shared
- * with other callers, and its CreatePollInput takes no tokens — so the verify
+ * with other callers, and its CreatePollInput takes no tokens, so the verify
  * columns are set in a second statement rather than by reworking a working
  * function. The window between the two is harmless: a draft with no verify token
  * is unreachable by anyone, and the caller deletes the poll if this fails.
  *
  * Each token is an independent CSPRNG draw. Nothing is derived from the poll id
- * and nothing is derived from the organiser token — the verify link travels in
+ * and nothing is derived from the organiser token: the verify link travels in
  * the most forwardable email this feature sends, so it must not be a capability.
  */
 export async function issueVerifyToken(pollId: string): Promise<StoredResult<VerifyTokensResult>> {
@@ -337,7 +337,7 @@ export async function issueVerifyToken(pollId: string): Promise<StoredResult<Ver
  * One statement, guarded and single-use: `status = 'draft'` and an unexpired
  * `verify_token_expires_at` are part of the WHERE, so a consumed, expired or
  * already-open poll simply matches zero rows and the caller cannot tell those
- * cases apart. All three token columns are nulled in the same update — once the
+ * cases apart. All three token columns are nulled in the same update. Once the
  * poll is live there is nothing left to verify or re-send, and a capability with
  * no job left is a capability to delete.
  */
@@ -417,7 +417,7 @@ export async function getResendTarget(resendToken: string): Promise<ResendTarget
  *
  * A read-then-write would race: two taps a millisecond apart would both see an
  * old `resend_last_sent_at` and both send. The cooldown is therefore the WHERE
- * clause of the update that records it — the second caller matches zero rows and
+ * clause of the update that records it. The second caller matches zero rows and
  * is refused. Returns true when the slot was claimed.
  *
  * The slot is claimed before the mail is sent, so a send that then fails still
@@ -488,7 +488,7 @@ async function fetchPollByToken(
 /**
  * The participant's view: options plus aggregate counts, never per-person votes.
  *
- * A draft poll is treated as absent — it is not live until verified, and leaking
+ * A draft poll is treated as absent: it is not live until verified, and leaking
  * its existence would tell a token-guesser they had guessed correctly.
  */
 export async function getParticipantView(
@@ -578,7 +578,7 @@ export async function getOrganiserView(organiserToken: string): Promise<Organise
  * That is accepted, not solved. Engineering identity into an account-free tool
  * means adding accounts, which is the one thing this tool exists not to do. The
  * mitigation is the edit link, shown on screen and emailed when we have an
- * address — which also fixes the single most-cited complaint about every
+ * address, which also fixes the single most-cited complaint about every
  * comparable tool: that you cannot correct your own entry.
  */
 export async function submitResponse(input: {
@@ -673,8 +673,8 @@ export async function updateResponse(input: {
     // Upsert, never delete-then-insert.
     //
     // The original version deleted every one of the participant's answers and
-    // then inserted the replacements. Anything failing between the two — a
-    // dropped connection, a rejected row — left them with no response at all:
+    // then inserted the replacements. Anything failing between the two (a
+    // dropped connection, a rejected row) left them with no response at all:
     // they submitted a change and their answers vanished, with an error message
     // that did not mention it. Editing your own response is the feature this
     // tool is meant to get right, so silently destroying it is the worst
@@ -687,7 +687,7 @@ export async function updateResponse(input: {
     //
     // supabase-js builds its upsert as `on conflict do update set` across EVERY
     // column in the payload, `id` included. Handing it a fresh randomUUID() on
-    // an edit therefore rewrites the primary key of a row that already exists —
+    // an edit therefore rewrites the primary key of a row that already exists:
     // the row keeps its answer but changes identity every time its owner
     // changes their mind. Nothing references that id today, so nothing breaks;
     // it is churn, not corruption. But a surrogate key that moves is a trap
@@ -794,14 +794,14 @@ export interface ConfirmedPollResult {
   option: PollOptionRow;
   /** polls.confirm_sequence AFTER the bump. The iCalendar SEQUENCE. */
   confirmSequence: number;
-  /** polls.participant_token — the poll link the confirmation email carries. */
+  /** polls.participant_token: the poll link the confirmation email carries. */
   participantToken: string;
 }
 
 /**
  * Picks the winning option and locks the poll.
  *
- * Permitted from 'open' or 'closed' — an organiser who closed a poll to stop
+ * Permitted from 'open' or 'closed': an organiser who closed a poll to stop
  * late votes must still be able to confirm one.
  *
  * THE STATUS FILTER ON THE UPDATE IS THE DOUBLE-TAP GUARD, and it is the reason
@@ -810,7 +810,7 @@ export interface ConfirmedPollResult {
  * because the first sets `status = 'confirmed'` and the second's
  * `.in('status', ['open','closed'])` then matches zero rows. A caller that fans
  * out only when a row came back therefore mails twenty people exactly once. Do
- * not "simplify" this to `.eq('id', poll.id)` — that re-matches a confirmed poll
+ * not "simplify" this to `.eq('id', poll.id)`. That re-matches a confirmed poll
  * and re-fires the fan-out.
  *
  * `closes_at` keeps its original value when there is one: a poll confirmed from
@@ -829,7 +829,7 @@ export async function confirmOption(
       return { stored: false, error: 'This poll cannot be confirmed.' };
     }
 
-    // This check is the ONLY control on the option's parentage — do not remove it
+    // This check is the ONLY control on the option's parentage. Do not remove it
     // believing the database has your back. `polls_confirmed_option_fk` is a
     // simple FK to poll_options(id), so it accepts an option belonging to any
     // poll. The composite FKs on poll_responses do guard votes; nothing guards
@@ -894,7 +894,7 @@ export async function confirmOption(
  *
  * Grouped rather than UNIONed with the organiser. `UNION` deduplicates on the
  * whole row, and nothing constrains `polls.organiser_name` to equal the
- * `display_name` the organiser voted under — so a UNION keeps both rows and
+ * `display_name` the organiser voted under, so a UNION keeps both rows and
  * emails the organiser twice about their own meeting. The caller seeds a Map
  * with the organiser and lets these fill in the rest.
  *
@@ -938,7 +938,7 @@ export async function getConfirmRecipients(
  * A COUNT, NEVER AN ADDRESS. The column is `integer not null default 0`
  * (migration 20260716180000). It was briefly jsonb holding the addresses that
  * failed; that shape is gone and must not come back. The organiser's note says
- * "we couldn't reach 2 people" — a count is everything that note needs, and
+ * "we couldn't reach 2 people": a count is everything that note needs, and
  * keeping the addresses would be retaining personal data for a purpose we
  * cannot state, with no retention rule of its own.
  *
@@ -997,11 +997,11 @@ export const SWEEP_LIMIT = 500;
  * Deletes polls past their retention deadline. Driven by the Phase 5 cron.
  *
  * This is the retention promise made in the privacy notice, so it must actually
- * run — an unkept retention promise is worse than none.
+ * run: an unkept retention promise is worse than none.
  *
  * **Bounded on purpose.** The first version issued an unqualified
  * `delete().lt('expires_at', now)`: no limit, no ordering, no batching. Nothing
- * called it, so it never fired — but Phase 5 wires this to a cron with no human
+ * called it, so it never fired, but Phase 5 wires this to a cron with no human
  * watching, and the workspace rules require approval for any bulk operation
  * touching more than 1,000 rows. An unbounded delete of other people's data,
  * running unattended, is exactly what that rule exists to stop. Selecting the
@@ -1056,7 +1056,7 @@ export const UNVERIFIED_DRAFT_TTL_HOURS = 24;
  * no purpose, which is precisely the thing a retention promise is about. The TTL
  * matches VERIFY_TOKEN_TTL_MS, so nothing is removed while its link still works.
  *
- * **Bounded like sweepExpiredPolls, and for the same reason** — this one needs it
+ * **Bounded like sweepExpiredPolls, and for the same reason**: this one needs it
  * more, not less. The retention sweep leans on `expires_at`, which is set at
  * creation and pushed forward as a poll is used, so its due set is naturally
  * self-limiting. A draft has no such column: every draft older than a day is due,
@@ -1204,7 +1204,7 @@ export const RATE_LIMIT_RETENTION_DAYS = 2;
  * to people, and a counter whose window shut yesterday has no reason to exist.
  *
  * **Why this is not the select-ids-then-delete-by-id shape used above.**
- * `poll_rate_limits` has no surrogate key — its primary key is the composite
+ * `poll_rate_limits` has no surrogate key: its primary key is the composite
  * (bucket, key, window_start), so there is no id list to delete by, and PostgREST
  * cannot express a composite `in`. Building one out of `.or()` terms would mean
  * URL-encoding a timestamptz by hand into a filter string, where a `+00:00`
@@ -1213,7 +1213,7 @@ export const RATE_LIMIT_RETENTION_DAYS = 2;
  *
  *  - Count the due rows first. The count is exact and costs one head request.
  *  - If it is within the limit, one predicate delete removes them all, and the
- *    row count is bounded *because it has just been measured* — not assumed.
+ *    row count is bounded *because it has just been measured*, not assumed.
  *  - If it exceeds the limit, delete a bounded slice: take the window_start of
  *    the limit-th oldest due row and delete strictly below it. By construction
  *    fewer than `limit` rows sit below that boundary, so the run stays inside the
@@ -1266,7 +1266,7 @@ export async function sweepRateLimitWindows(
     // A zero here is not a no-op to shrug at: it means every one of the oldest
     // `limit` due rows shares a single window_start, so nothing sits strictly
     // below the boundary and the slice cannot advance. That needs one distinct
-    // window to hold 500+ counters — 500 distinct IPs inside one hour, which this
+    // window to hold 500+ counters: 500 distinct IPs inside one hour, which this
     // site's volume does not reach. If it ever does, the sweep stalls rather than
     // exceeding its bound, and `remaining: -1` is what makes the stall visible.
     return { stored: true, data: { deleted: deletedCount ?? 0, remaining: -1 } };

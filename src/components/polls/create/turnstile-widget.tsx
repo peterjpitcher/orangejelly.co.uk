@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react';
  * request, and a token page's URL is itself the secret.
  *
  * The token this produces is single-use and short-lived. When it expires or
- * errors, the parent's token state is cleared rather than kept — a stale token
+ * errors, the parent's token state is cleared rather than kept. A stale token
  * fails `siteverify` server-side anyway, and clearing it means the form asks the
  * user to try again instead of failing at submit for no visible reason.
  */
@@ -100,7 +100,7 @@ export default function TurnstileWidget({ onToken }: TurnstileWidgetProps): JSX.
   }, [siteKey]);
 
   // Without a site key there is nothing to render. The server still decides
-  // whether a poll may be created — it fails closed in production — so this is a
+  // whether a poll may be created (it fails closed in production), so this is a
   // local-development path, not a way to skip the check.
   if (!siteKey) return null;
 

@@ -12,7 +12,7 @@ import { formatInTimeZone, fromZonedTime } from 'date-fns-tz';
  * and behave completely differently:
  *
  *   - A **date-only** value ('2026-07-04') is a calendar date. "Saturday the 4th"
- *     is Saturday the 4th everywhere. It must NEVER be converted between zones —
+ *     is Saturday the 4th everywhere. It must NEVER be converted between zones:
  *     doing so is what turns it into Friday the 3rd at 23:00.
  *   - A **slot** value is an instant in time, stored as a UTC `timestamptz`.
  *     It must ALWAYS be rendered through a zone to be meaningful.
@@ -66,7 +66,7 @@ function assertIsoDate(value: unknown, label = 'date'): asserts value is IsoDate
     if (typeof value === 'string' && value.includes('T')) {
       throw new Error(
         `Expected a date-only value as YYYY-MM-DD but received an instant: "${value}". ` +
-          'Date-only options must not carry a time — use formatSlotInLondon for instants.'
+          'Date-only options must not carry a time: use formatSlotInLondon for instants.'
       );
     }
     throw new Error(`Invalid ${label}: "${value}". Expected YYYY-MM-DD.`);
@@ -98,7 +98,7 @@ export function formatDateInLondon(date: IsoDate, style: 'long' | 'short' = 'lon
  * rather than papered over:
  *
  *   - **A date-only string.** '2026-07-04' parses happily as UTC midnight and
- *     renders in London as "4 July 2026 at 1:00am" — a time nobody chose,
+ *     renders in London as "4 July 2026 at 1:00am", a time nobody chose,
  *     presented as fact. A date-only option has no time; asking for one is a
  *     caller bug.
  *   - **A timestamp with no zone.** '2026-07-04T19:00:00' is parsed as *local*
@@ -111,7 +111,7 @@ function resolveInstant(instant: Instant, label = 'instant'): Date {
     if (ISO_DATE_PATTERN.test(instant)) {
       throw new Error(
         `Received a date-only value where an ${label} was expected: "${instant}". ` +
-          'A date-only option carries no time — use formatDateInLondon instead.'
+          'A date-only option carries no time: use formatDateInLondon instead.'
       );
     }
 
@@ -150,7 +150,7 @@ export function getTodayIsoDate(): IsoDate {
 /**
  * Renders an instant as a London wall-clock date and time.
  *
- * Refuses a date-only value. See `resolveInstant` — a date has no time, and
+ * Refuses a date-only value. See `resolveInstant`: a date has no time, and
  * inventing one is how "Saturday the 4th" becomes "Saturday the 4th at 1:00am".
  */
 export function formatSlotInLondon(instant: Instant): string {
@@ -165,7 +165,7 @@ export function formatSlotInLondon(instant: Instant): string {
  * Renders a start and end instant as a single London range.
  *
  * Collapses to one date when both ends fall on the same London day, and spells
- * both dates out when the range crosses midnight — otherwise "11:00pm – 12:30am"
+ * both dates out when the range crosses midnight, otherwise "11:00pm – 12:30am"
  * reads as a range running backwards.
  */
 export function formatSlotRangeInLondon(start: Instant, end: Instant): string {
@@ -215,7 +215,7 @@ export function londonWallClockToInstant(date: IsoDate, time: string): Date {
   const roundTripped = formatInTimeZone(candidate, LONDON_TIME_ZONE, "yyyy-MM-dd'T'HH:mm:ss");
   if (roundTripped !== wallClock) {
     throw new Error(
-      `${time} does not exist on ${date} in ${LONDON_TIME_ZONE} — the clocks go forward ` +
+      `${time} does not exist on ${date} in ${LONDON_TIME_ZONE}: the clocks go forward ` +
         'and that hour is skipped. Choose a different time.'
     );
   }

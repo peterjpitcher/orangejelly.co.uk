@@ -71,7 +71,7 @@ export async function submitContactForm(
   // unconfigured notification must never turn a stored lead into a user-facing error.
   try {
     const notification = await sendLeadNotification({
-      subject: `New pub enquiry — ${data.pubName.replace(/[\r\n]+/g, ' ').trim()}`,
+      subject: `New pub enquiry: ${data.pubName.replace(/[\r\n]+/g, ' ').trim()}`,
       html: buildLeadNotificationHtml(data),
       text: buildLeadNotificationText(data),
       replyTo: data.email,

@@ -10,12 +10,12 @@ import { runPollSweep } from '@/lib/poll-sweep';
  * and cannot invoke a server action.
  *
  * This is the only endpoint in the feature that deletes without a human asking
- * it to, and the only authentication here that is not a capability token — hence
+ * it to, and the only authentication here that is not a capability token, hence
  * the fail-closed secret check below. Compare src/app/api/events/route.ts, which
  * is an unauthenticated public POST: that is the pattern this route must NOT
  * follow.
  *
- * No CSP applies and none is needed — nothing renders.
+ * No CSP applies and none is needed: nothing renders.
  */
 
 export const runtime = 'nodejs';
@@ -35,7 +35,7 @@ export const maxDuration = 60;
  * so the time it takes leaks how much of a guess was right, and an attacker can
  * walk the secret out one byte at a time. timingSafeEqual does not short-circuit.
  *
- * The length guard is required, not incidental — timingSafeEqual THROWS on
+ * The length guard is required, not incidental: timingSafeEqual THROWS on
  * buffers of different lengths, so an unguarded call would turn a wrong-length
  * guess into a 500 and confirm the route exists. Length is the one thing this
  * does leak, which is not a useful fact about a random secret.
@@ -52,10 +52,10 @@ function secretMatches(provided: string, expected: string): boolean {
 export async function GET(request: Request): Promise<NextResponse> {
   const secret = process.env.CRON_SECRET;
 
-  // Fail closed. An unset secret must never mean an open delete endpoint — this
+  // Fail closed. An unset secret must never mean an open delete endpoint: this
   // route removes other people's data and answers to nobody.
   if (!secret) {
-    console.error('[polls] Sweep refused — CRON_SECRET is not set.');
+    console.error('[polls] Sweep refused: CRON_SECRET is not set.');
     return NextResponse.json({ error: 'Not configured.' }, { status: 503 });
   }
 
@@ -70,7 +70,7 @@ export async function GET(request: Request): Promise<NextResponse> {
   //
   // A silent 200 on a failed retention run is worse than a 500: it means the
   // deletion promise quietly stopped being kept and nobody knew. Vercel does not
-  // retry a failed cron, so the work waits for tomorrow — and the non-200 in the
+  // retry a failed cron, so the work waits for tomorrow, and the non-200 in the
   // dashboard is the whole of our alerting. A cron that always returns 200 is a
   // cron nobody ever looks at.
   //

@@ -55,7 +55,7 @@ export function PreloadResources() {
   const pathname = usePathname();
 
   // A preconnect opens a real TCP/TLS connection to a third party. It carries no
-  // path, so it does not leak the token by itself — but on a poll route the
+  // path, so it does not leak the token by itself, but on a poll route the
   // analytics it warms up never load (see MarketingChrome), so the connection is
   // pointless as well as unwanted. Keeping it would also make "no third-party
   // request fires on a token route" untrue, and that property is worth being able

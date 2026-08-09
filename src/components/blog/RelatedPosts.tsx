@@ -34,7 +34,7 @@ interface RelatedPostsProps {
 }
 
 export default function RelatedPosts({ posts, currentPostSlug }: RelatedPostsProps) {
-  // Filter out current post and limit to 3 — one clean row at the 3-wide card standard.
+  // Filter out current post and limit to 3: one clean row at the 3-wide card standard.
   const relatedPosts = posts.filter((post) => post.slug !== currentPostSlug).slice(0, 3);
 
   if (relatedPosts.length === 0) return null;

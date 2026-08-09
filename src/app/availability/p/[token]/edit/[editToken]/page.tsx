@@ -8,10 +8,10 @@ import Text from '@/components/Text';
 import { canEditResponse } from '@/lib/poll-state';
 
 /**
- * Screen 3b — change my answers.
+ * Screen 3b: change my answers.
  *
  * TOKEN PRECEDENCE, AND IT IS THE THING TO GET RIGHT: the poll is resolved from
- * `[editToken]` ALONE (§1 P2.5). The `[token]` segment is decoration on the URL —
+ * `[editToken]` ALONE (§1 P2.5). The `[token]` segment is decoration on the URL,
  * not compared, not looked up, not trusted. If the two disagree the page still
  * renders from the edit token, because only one of them is load-bearing and
  * there is no mismatch to detect once that is true.
@@ -20,7 +20,7 @@ import { canEditResponse } from '@/lib/poll-state';
  * `src/lib/token-routes.ts` matches `^/availability/(p|o|verify)/` and is what
  * drives `Referrer-Policy: no-referrer` in `src/middleware.ts` and the
  * third-party script gate. An `/availability/e/` route would match neither, so
- * the edit token would ride out in the Referer header on every outbound click —
+ * the edit token would ride out in the Referer header on every outbound click,
  * the exact leak that file exists to prevent. Both files are outside this
  * stream's ownership, so the route moved to where the protection already is.
  */
@@ -102,7 +102,7 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
           </div>
         )}
 
-        {/* Locked or not, the same component renders the same answers — the
+        {/* Locked or not, the same component renders the same answers: the
             read-only mode simply offers no way to change them, and drops the
             Update control entirely rather than disabling it (§1 P2.6).
             `updateResponse` re-reads `status` server-side regardless: a missing

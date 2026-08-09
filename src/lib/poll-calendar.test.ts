@@ -187,7 +187,7 @@ describe('monthGridWeeks', () => {
   });
 
   it('handles a February that starts on a Sunday', () => {
-    // 1 February 2026 is a Sunday — the worst case for a leading row.
+    // 1 February 2026 is a Sunday, the worst case for a leading row.
     const weeks = monthGridWeeks('2026-02-01');
     expect(weeks[0]).toContain('2026-02-01');
     expect(weeks.flat().filter((day) => day.startsWith('2026-02'))).toHaveLength(28);
@@ -244,7 +244,7 @@ describe('londonZoneLabel', () => {
     expect(londonZoneLabel('2026-01-15')).toBe('United Kingdom, London (GMT)');
   });
 
-  it('never hardcodes an offset — the same label differs across the year', () => {
+  it('never hardcodes an offset: the same label differs across the year', () => {
     // The bug this guards: shipping "(GMT+1)" as a constant, which is wrong for
     // roughly half the year in a tool whose only job is being right about time.
     expect(londonZoneLabel('2026-01-15')).not.toBe(londonZoneLabel('2026-07-14'));
@@ -317,7 +317,7 @@ describe('buildTimeRows', () => {
     expect(rows[rows.length - 1]).toBe(`${DEFAULT_LAST_HOUR}:00`);
   });
 
-  it('offers 23:00 — the start of the overnight case Peter asked for', () => {
+  it('offers 23:00, the start of the overnight case Peter asked for', () => {
     expect(buildTimeRows(120)).toContain('23:00');
   });
 
@@ -375,7 +375,7 @@ describe('computeSlotEnd', () => {
   });
 
   it('treats an end of exactly midnight as the next day', () => {
-    // 23:00 + 60 min ends at 00:00 — which is tomorrow's midnight, not today's.
+    // 23:00 + 60 min ends at 00:00, which is tomorrow's midnight, not today's.
     // Getting this wrong makes the slot run backwards by 23 hours.
     expect(computeSlotEnd('2026-07-14', '23:00', 60)).toEqual({
       date: '2026-07-14',
@@ -454,7 +454,7 @@ describe('DURATION_CHOICES', () => {
     expect([...DURATION_CHOICES]).toEqual([15, 30, 60, 90, 120, 180, 240]);
   });
 
-  it('holds minutes, not hours — minutes is the stored unit throughout', () => {
+  it('holds minutes, not hours: minutes is the stored unit throughout', () => {
     for (const choice of DURATION_CHOICES) {
       expect(Number.isInteger(choice)).toBe(true);
     }
@@ -609,7 +609,7 @@ describe('londonWallClockInstantOrNull', () => {
 
   it('picks the earlier of two ambiguous autumn instants, as dateUtils does', () => {
     // 01:30 on 25 October is 00:30 UTC (BST) and again 01:30 UTC (GMT). dateUtils
-    // takes the earlier and so must this — a grid that offers one instant and
+    // takes the earlier and so must this: a grid that offers one instant and
     // submits the other is an hour wrong with no way for the user to tell.
     expect(londonWallClockInstantOrNull(AUTUMN_BACK, '01:30')?.toISOString()).toBe(
       '2026-10-25T00:30:00.000Z'

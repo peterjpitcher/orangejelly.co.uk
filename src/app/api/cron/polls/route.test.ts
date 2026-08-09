@@ -45,7 +45,7 @@ afterEach(() => {
   delete process.env.CRON_SECRET;
 });
 
-describe('GET /api/cron/polls — authentication', () => {
+describe('GET /api/cron/polls: authentication', () => {
   it('should fail closed with 503 when CRON_SECRET is not set', async () => {
     // An unset secret must never mean an open delete endpoint. Refusing is the
     // only safe reading: the alternative is that a missing env var silently
@@ -75,8 +75,8 @@ describe('GET /api/cron/polls — authentication', () => {
   it('should reject a wrong secret of identical length without throwing', async () => {
     // The length guard exists because timingSafeEqual THROWS on a length
     // mismatch; this is the case that reaches the comparison itself. A secret
-    // the same length as the real one must still be refused, and must not 500 —
-    // a 500 here would confirm the route exists.
+    // the same length as the real one must still be refused, and must not 500.
+    // A 500 here would confirm the route exists.
     const sameLength = 'b'.repeat(SECRET.length);
 
     const response = await get(`Bearer ${sameLength}`);
@@ -99,7 +99,7 @@ describe('GET /api/cron/polls — authentication', () => {
   });
 });
 
-describe('GET /api/cron/polls — reporting', () => {
+describe('GET /api/cron/polls: reporting', () => {
   it('should return 200 and the per-pass counts when every pass succeeded', async () => {
     const response = await get(`Bearer ${SECRET}`);
 

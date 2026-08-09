@@ -15,14 +15,14 @@ import {
 /**
  * One option, one card. NEVER a matrix.
  *
- * This is the entire reason the tool exists. A drag-select grid — When2Meet's
- * design, and Doodle's on a narrow screen — registers a drag as a scroll on iOS
+ * This is the entire reason the tool exists. A drag-select grid (When2Meet's
+ * design, and Doodle's on a narrow screen) registers a drag as a scroll on iOS
  * Safari and silently deselects answers already given. The person does not find
  * out. Vertical scroll is the only gesture a phone does reliably, so the list is
  * vertical and stays vertical: at desktop it stays a single column rather than
  * widening into a grid, which would reintroduce the matrix by the back door.
  *
- * The card IS the `<fieldset>` (§1 P1.3) — not a `<div>` wrapping one. The
+ * The card IS the `<fieldset>` (§1 P1.3), not a `<div>` wrapping one. The
  * `<legend>` is the option's full label, which gives the radio group its
  * accessible name natively, with no ARIA to hand-roll and get wrong.
  */
@@ -131,7 +131,7 @@ export default function OptionCard({
       )}
 
       {invalid && (
-        // Text plus the red border — colour is never the only signal.
+        // Text plus the red border: colour is never the only signal.
         <p id={errorId} className="mt-2 text-sm font-medium text-destructive">
           Pick one of the three.
         </p>

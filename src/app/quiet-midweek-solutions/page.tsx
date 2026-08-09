@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'How quickly will I see midweek improvements?',
     answer:
-      'Growth Fix clients typically see their first win within 2 weeks. We focus on one high-impact change first — a midweek event, a targeted offer, or a local visibility fix — then build from there.',
+      'Growth Fix clients typically see their first win within 2 weeks. We focus on one high-impact change first, a midweek event, a targeted offer, or a local visibility fix, then build from there.',
   },
   {
     question: 'What midweek events actually work?',
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: 'Do I need a big budget to fix midweek trade?',
     answer:
-      'No. A Growth Fix starts from just £375 + VAT — 5 focused hours on your biggest midweek bottleneck. Many of the best midweek strategies cost nothing to implement.',
+      'No. A Growth Fix starts from just £375 + VAT: 5 focused hours on your biggest midweek bottleneck. Many of the best midweek strategies cost nothing to implement.',
   },
   {
     question: 'What if I have tried events before and they did not work?',
@@ -51,7 +51,7 @@ export default function QuietMidweekSolutions() {
 
       <Hero
         title="Turn Quiet Midweek Nights Into Your Best Trade"
-        subtitle="Proven systems to fill Tuesday and Wednesday nights with consistent bookings — tested at The Anchor, delivered for your venue"
+        subtitle="Proven systems to fill Tuesday and Wednesday nights with consistent bookings, tested at The Anchor, delivered for your venue"
         secondaryAction={{
           text: 'See Growth Fix Package',
           href: '/ways-to-work/growth-fix',
@@ -173,9 +173,9 @@ export default function QuietMidweekSolutions() {
                 </Heading>
                 <FeatureList
                   items={[
-                    'Quiz Night 2.0 — fast-paced, phone-friendly',
-                    'Taco Tuesday — simple menu, strong margins',
-                    'Open Mic — performers bring their audience',
+                    'Quiz Night 2.0: fast-paced, phone-friendly',
+                    'Taco Tuesday: simple menu, strong margins',
+                    'Open Mic: performers bring their audience',
                   ]}
                   icon="check"
                   iconColor="green"
@@ -188,9 +188,9 @@ export default function QuietMidweekSolutions() {
                 </Heading>
                 <FeatureList
                   items={[
-                    'Steak Night — set-price deal, books out weekly',
-                    'Wing Wednesday — lifts drinks spend and dwell time',
-                    'Wine and Paint — ticketed, predictable attendance',
+                    'Steak Night: set-price deal, books out weekly',
+                    'Wing Wednesday: lifts drinks spend and dwell time',
+                    'Wine and Paint: ticketed, predictable attendance',
                   ]}
                   icon="check"
                   iconColor="green"
@@ -203,9 +203,9 @@ export default function QuietMidweekSolutions() {
                 </Heading>
                 <FeatureList
                   items={[
-                    'Curry Club — set menu, efficient prep',
-                    'Speed Dating — brings a new crowd',
-                    'Cocktail Masterclass — premium upsell potential',
+                    'Curry Club: set menu, efficient prep',
+                    'Speed Dating: brings a new crowd',
+                    'Cocktail Masterclass: premium upsell potential',
                   ]}
                   icon="check"
                   iconColor="green"
@@ -226,7 +226,7 @@ export default function QuietMidweekSolutions() {
             </Heading>
             <Text size="lg" color="muted" align="center" className="mb-10">
               Five focused hours on your biggest midweek bottleneck. Diagnosis, action plan, and one
-              clear intervention — from just £375 + VAT.
+              clear intervention, from just £375 + VAT.
             </Text>
 
             <div className="max-w-md mx-auto">

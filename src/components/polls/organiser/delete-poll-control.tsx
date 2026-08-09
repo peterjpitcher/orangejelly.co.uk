@@ -17,17 +17,17 @@ import {
 import { deletePoll } from '@/app/actions/poll-organiser';
 
 /**
- * "Delete this poll" — the organiser's Article 17 route, and the only
+ * "Delete this poll": the organiser's Article 17 route, and the only
  * self-service erasure path in the feature.
  *
- * TYPING THE TITLE IS MANDATORY, not theatre. This destroys THIRD-PARTY data —
- * every participant's name, address and availability — not only the organiser's
+ * TYPING THE TITLE IS MANDATORY, not theatre. This destroys THIRD-PARTY data,
+ * every participant's name, address and availability, not only the organiser's
  * own. A click is too cheap for that: a mis-tap on a phone should not be able to
  * erase eleven other people's answers. Typing the title is the cheapest control
  * that makes the action deliberate.
  *
  * Uses `ui/dialog.tsx`, which exists. There is no `alert-dialog.tsx` in this
- * repo — do not import one.
+ * repo, so do not import one.
  *
  * Allowed in EVERY status, including 'confirmed'. Refusing erasure on a
  * confirmed poll would make it conditional on the poll's state, which is not a

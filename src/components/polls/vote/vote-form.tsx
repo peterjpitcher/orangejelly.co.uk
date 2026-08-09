@@ -117,7 +117,7 @@ export default function VoteForm({
       }
 
       // A honeypot hit returns `{ success: true }` with no editUrl. Nothing was
-      // written and nothing should be shown — a bot gets a plain thank-you.
+      // written and nothing should be shown: a bot gets a plain thank-you.
       setEditUrl('');
     } catch {
       setError('Your answer was not recorded. Please try again.');
@@ -203,7 +203,7 @@ export default function VoteForm({
         </div>
 
         {/* Honeypot. Hidden from people, irresistible to bots. Not `display:none`
-            on the field alone — some bots skip those — and never tab-reachable. */}
+            on the field alone (some bots skip those), and never tab-reachable. */}
         <div
           aria-hidden="true"
           className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"

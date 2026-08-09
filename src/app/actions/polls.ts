@@ -32,7 +32,7 @@ import { resendVerificationSchema, verifyOrganiserEmailSchema } from '@/lib/vali
  * Server actions for availability polls: build one, prove the organiser's
  * address, and re-send that proof when it goes astray.
  *
- * Shape follows src/app/actions/contact.ts — `'use server'`, an explicit
+ * Shape follows src/app/actions/contact.ts: `'use server'`, an explicit
  * `{ success?: boolean; error?: string }` return, the honeypot short-circuiting
  * before anything else, and a store-then-notify order where a failed
  * notification never turns a stored record into a user-facing error.
@@ -83,7 +83,7 @@ export interface PollLinks {
 /**
  * Verification's result.
  *
- * This one DOES carry poll capabilities, unlike createPoll's — and the
+ * This one DOES carry poll capabilities, unlike createPoll's, and the
  * distinction is the whole point of the feature. Holding an unexpired verify
  * token is proof the caller owns the organiser's inbox, so the links are exactly
  * what they have earned. createPoll has no such proof, which is why it returns
@@ -109,7 +109,7 @@ const TURNSTILE_FAILED = 'Please complete the verification check.';
  * Four causes, one sentence. Different copy per cause would make this endpoint
  * an oracle: a caller could walk tokens and learn which polls exist.
  */
-const RESEND_NOT_PENDING = 'That poll is already live — check your inbox for the links.';
+const RESEND_NOT_PENDING = 'That poll is already live: check your inbox for the links.';
 const RESEND_MAIL_FAILED = 'We could not send that email. Please message Peter on WhatsApp.';
 const RESEND_UNAVAILABLE = 'Sending is unavailable right now. Please try again shortly.';
 
@@ -141,7 +141,7 @@ export type CreatePollInput = CreatePollFormValues & { adminToken?: string };
 
 export async function createPoll(input: CreatePollInput): Promise<PollActionResult> {
   // Honeypot first, before parsing. A bot gets a fake success: no write, no
-  // mail, and no resendToken — so the fake success cannot be used to mail
+  // mail, and no resendToken, so the fake success cannot be used to mail
   // anyone. Mirrors contact.ts.
   if (input.website) {
     return { success: true };
@@ -159,7 +159,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   // defeats a per-IP limit outright. Turnstile is what makes the IP bucket mean
   // something.
   if (!isTurnstileConfigured() && process.env.NODE_ENV === 'production') {
-    console.error('[polls] Turnstile unavailable — refusing to create.');
+    console.error('[polls] Turnstile unavailable; refusing to create.');
     return { error: UNAVAILABLE };
   }
 
@@ -172,7 +172,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   // returns { allowed: false } on failure, but it cannot tell a caller that must
   // fail closed from one that must fail open, so the check is explicit here.
   if (!isRateLimitConfigured() && process.env.NODE_ENV === 'production') {
-    console.error('[polls] Rate limiter unavailable — refusing to create.');
+    console.error('[polls] Rate limiter unavailable; refusing to create.');
     return { error: UNAVAILABLE };
   }
 
@@ -183,7 +183,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     const byEmail = await checkRateLimit('poll_create_email', hashKey(data.organiserEmail));
     if (!byEmail.allowed) return { error: VALIDATION_MESSAGES.poll.rateLimited };
   } catch (error) {
-    console.error('[polls] Rate limiter threw — refusing to create:', error);
+    console.error('[polls] Rate limiter threw; refusing to create:', error);
     return { error: UNAVAILABLE };
   }
 
@@ -246,7 +246,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
 
   const { pollId, participantToken, organiserToken } = stored.data;
 
-  // A draft with no verify token is unreachable by anyone — it can never be
+  // A draft with no verify token is unreachable by anyone: it can never be
   // published and never be re-sent. Delete it rather than leave it for the
   // sweep to find in 60 days.
   const tokens = await issueVerifyToken(pollId);
@@ -311,7 +311,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   // Without this the feature cannot be exercised locally at all, and the reason
   // is a pincer between two things that are each individually correct.
   // sendPollEmail refuses to send unless the base URL is the production host,
-  // which is right — a preview deploy must never mail a licensee. But
+  // which is right, a preview deploy must never mail a licensee. But
   // getBaseUrl() falls back to the production host when NEXT_PUBLIC_BASE_URL is
   // unset, so a local run either sends a real email whose link points at
   // production (where the poll does not exist), or sets the base URL to
@@ -319,11 +319,11 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   //
   // Printing the link is the standard escape and it leaks nothing: the token is
   // already in this process, and the gate is NODE_ENV, which is 'production' on
-  // every Vercel deployment including previews — so this cannot be switched on
+  // every Vercel deployment including previews, so this cannot be switched on
   // from the dashboard.
   if (process.env.NODE_ENV !== 'production') {
     console.info(
-      `\n[polls] DEV ONLY — verification link for "${data.title}":\n  ${verifyUrl}\n  (printed because poll mail does not send outside production)\n`
+      `\n[polls] DEV ONLY, verification link for "${data.title}":\n  ${verifyUrl}\n  (printed because poll mail does not send outside production)\n`
     );
   }
 
@@ -356,7 +356,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
 /**
  * Publishes a poll once the organiser has proved the address.
  *
- * The token is a `verify_token` — never the organiser token. The verify link is
+ * The token is a `verify_token`, never the organiser token. The verify link is
  * single-use and expires in 24 hours; `resendVerification` is the recovery path
  * when it lapses.
  */
@@ -376,7 +376,7 @@ export async function verifyOrganiserEmail(token: string): Promise<VerifyActionR
       return { error: VALIDATION_MESSAGES.poll.rateLimited };
     }
   } catch (error) {
-    console.error('[polls] Rate limiter threw on verify — allowing:', error);
+    console.error('[polls] Rate limiter threw on verify; allowing:', error);
   }
 
   const result = await verifyAndOpenPoll(parsed.data.token);
@@ -420,7 +420,7 @@ export async function verifyOrganiserEmail(token: string): Promise<VerifyActionR
  * Re-sends the verify email for one draft poll.
  *
  * It never takes an address. The recipient is the one already stored on the row,
- * so there is no path here to mail an address the caller supplies — which is
+ * so there is no path here to mail an address the caller supplies, which is
  * what keeps this off the relay surface. It exists because the alternative,
  * asking for the email address again, is an address-enumeration oracle.
  */
@@ -444,7 +444,7 @@ export async function resendVerification(resendToken: string): Promise<PollActio
 
   // Fail closed: this path sends mail.
   if (!isRateLimitConfigured() && process.env.NODE_ENV === 'production') {
-    console.error('[polls] Rate limiter unavailable — refusing to re-send.');
+    console.error('[polls] Rate limiter unavailable; refusing to re-send.');
     return { error: RESEND_UNAVAILABLE };
   }
 
@@ -452,7 +452,7 @@ export async function resendVerification(resendToken: string): Promise<PollActio
     const limited = await checkRateLimit('poll_resend_poll', hashKey(target.id));
     if (!limited.allowed) return { error: VALIDATION_MESSAGES.poll.rateLimited };
   } catch (error) {
-    console.error('[polls] Rate limiter threw on re-send — refusing:', error);
+    console.error('[polls] Rate limiter threw on re-send; refusing:', error);
     return { error: RESEND_UNAVAILABLE };
   }
 

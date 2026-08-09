@@ -50,7 +50,7 @@ Print this sheet or duplicate it in Notion/Sheets so the whole team can see what
 
 - Add run-sheet links in a shared WhatsApp or Slack group.
 - Nominate a content captain each week to collect assets and update the planner.
-- Keep a running list of prompts that landed well — reuse, don’t rewrite.
+- Keep a running list of prompts that landed well: reuse, don’t rewrite.
 
 ---
 

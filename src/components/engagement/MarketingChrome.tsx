@@ -14,14 +14,14 @@ import MobileScrollPrompt from './MobileScrollPrompt';
  * Every analytics and marketing component that the root layout used to render
  * unconditionally, now gated on the pathname.
  *
- * WHY THIS EXISTS — it is a credential leak, not a tidiness measure.
+ * WHY THIS EXISTS: it is a credential leak, not a tidiness measure.
  * Poll URLs carry a bearer token in the path (/availability/o/<token>). Vercel
  * Analytics and GTM both report the raw path, so before this gate existed,
  * opening a poll handed that poll's own access token to Google and to Vercel, and
  * anyone with analytics access could then act as the poll's organiser.
  * Referrer-Policy does NOT help: this JavaScript reads window.location directly.
  *
- * The marketing overlays are dropped on the same routes for their own sake too —
+ * The marketing overlays are dropped on the same routes for their own sake too:
  * an exit-intent modal over someone's ballot is a bug regardless of the leak.
  *
  * These are collected into one component rather than guarded one-by-one so that

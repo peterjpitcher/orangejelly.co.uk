@@ -15,9 +15,9 @@
 /**
  * Routes whose path contains a bearer token.
  *
- * `/availability/p/<token>`      — a participant's ballot and edit capability
- * `/availability/o/<token>`      — the organiser's full control of the poll
- * `/availability/verify/<token>` — the magic link, equally a capability
+ * `/availability/p/<token>`:      a participant's ballot and edit capability
+ * `/availability/o/<token>`:      the organiser's full control of the poll
+ * `/availability/verify/<token>`: the magic link, equally a capability
  *
  * Anyone holding one of these URLs *is* the person it was issued to, permanently.
  * There is no login to fall back on.
@@ -25,7 +25,7 @@
 export const TOKEN_PATH_PATTERN = /^\/availability\/(p|o|verify)\//;
 
 /**
- * The whole poll feature, token-bearing or not — including `/availability/new`.
+ * The whole poll feature, token-bearing or not, including `/availability/new`.
  *
  * Broader than TOKEN_PATH_PATTERN on purpose. The two are used for different jobs:
  * the narrow one for Referrer-Policy (where the token is the thing at risk), the
@@ -39,7 +39,7 @@ export const POLL_PATH_PATTERN = /^\/availability(\/|$)/;
  *
  * Drives `Referrer-Policy: no-referrer`. The site-wide default,
  * `strict-origin-when-cross-origin`, sends the FULL URL on same-origin
- * navigations — and the token is in the path, so the default is a leak here.
+ * navigations, and the token is in the path, so the default is a leak here.
  */
 export function isTokenRoute(pathname: string): boolean {
   return TOKEN_PATH_PATTERN.test(pathname);
@@ -50,7 +50,7 @@ export function isTokenRoute(pathname: string): boolean {
  *
  * Drives the third-party script gate. Being a superset of isTokenRoute() means a
  * token route can never be gated for referrer purposes but missed by the script
- * gate — which is the failure that would actually leak the token.
+ * gate, which is the failure that would actually leak the token.
  */
 export function isPollRoute(pathname: string): boolean {
   return POLL_PATH_PATTERN.test(pathname);

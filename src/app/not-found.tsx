@@ -90,8 +90,8 @@ export default function NotFound() {
                   What We Can Help With?
                 </Heading>
                 <Text className="mb-4">
-                  Social media, events, local visibility, paid ads, content, and more — tested at
-                  The Anchor.
+                  Social media, events, local visibility, paid ads, content, and more, tested at The
+                  Anchor.
                 </Text>
                 <Button href="/capabilities" variant="ghost" size="medium">
                   See Capabilities →
@@ -103,8 +103,8 @@ export default function NotFound() {
                   Pub Marketing Guide?
                 </Heading>
                 <Text className="mb-4">
-                  The complete pub marketing guide — social media, events, email, local SEO, and
-                  menu engineering.
+                  The complete pub marketing guide: social media, events, email, local SEO, and menu
+                  engineering.
                 </Text>
                 <Button href="/pub-marketing" variant="ghost" size="medium">
                   Read the Guide →

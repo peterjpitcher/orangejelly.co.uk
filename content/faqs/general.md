@@ -14,7 +14,7 @@ Every strategy has been proven at The Anchor where we've been implementing AI so
 
 ## Can Orange Jelly help if my pub is losing money?
 
-Absolutely. At The Anchor we used AI to grow food revenue by 98% in three months, increase table bookings by 403%, and cut booking no-shows by 89% — while reclaiming time and cutting waste across supplier, rota, and energy decisions. We'll stay hands-on through the first month to make sure the plan is working for you.
+Absolutely. At The Anchor we used AI to grow food revenue by 98% in three months, increase table bookings by 403%, and cut booking no-shows by 89%, while reclaiming time and cutting waste across supplier, rota, and energy decisions. We'll stay hands-on through the first month to make sure the plan is working for you.
 
 ## How quickly can Orange Jelly help fill my empty pub?
 

@@ -21,13 +21,13 @@ import {
  *
  * Differs from <VoteForm /> in exactly three ways, per §2.3.1: it mounts with
  * each answer pre-selected from the existing response, its submit calls
- * `updateResponse`, and its button reads "Update my answers". Everything else —
- * the cards, the control, the glyphs, the sticky bar — is the same component.
+ * `updateResponse`, and its button reads "Update my answers". Everything else
+ * (the cards, the control, the glyphs, the sticky bar) is the same component.
  *
  * NO EMAIL FIELD, deliberately. `updateResponse` never writes
  * `poll_participants.email` (§3.6.4), so an editable box would take input and
  * silently discard it, and a pre-filled disabled box would be a control that
- * says "changeable" and then is not — while putting the address back on screen
+ * says "changeable" and then is not, while putting the address back on screen
  * on a link that may be open on a shared device. §1 P2.3 and §2.3.1 both say
  * "pre-filled and editable"; that text is contradicted by §3.6.4 and by the
  * shipped data layer, neither of which can write it. Flagged in the handoff.

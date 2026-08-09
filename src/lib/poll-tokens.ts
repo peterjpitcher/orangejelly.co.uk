@@ -3,7 +3,7 @@ import { randomBytes } from 'crypto';
 /**
  * Capability tokens for availability polls.
  *
- * There is no login anywhere in this feature — holding a token IS the
+ * There is no login anywhere in this feature: holding a token IS the
  * authorisation. That makes these tokens the entire access-control model, and a
  * guessable one is a full compromise of a poll, read and write.
  *
@@ -38,7 +38,7 @@ const TOKEN_PATTERN = new RegExp(`^[A-Za-z0-9_-]{${TOKEN_LENGTH}}$`);
  * Matches a token-shaped run in a string, for log scrubbing.
  *
  * The lookarounds are load-bearing. Without them the pattern matches a 22-char
- * window *inside* any longer run of the same alphabet — and a uuid is a 36-char
+ * window *inside* any longer run of the same alphabet, and a uuid is a 36-char
  * run of exactly that alphabet, so `poll_id=<uuid>` came back as
  * `poll_id=[token]c-0305e82c3301`, destroying the one identifier worth having in
  * a log. Only free-standing runs of exactly TOKEN_LENGTH are scrubbed.
@@ -85,7 +85,7 @@ export function generatePollTokens(): PollTokens {
 /**
  * True if the value could be one of our tokens.
  *
- * A shape check, not an authorisation check — it says nothing about whether the
+ * A shape check, not an authorisation check: it says nothing about whether the
  * token exists. Its job is to let a route reject obvious junk without a database
  * round-trip, and to keep traversal attempts out of a query.
  */
@@ -101,7 +101,7 @@ export function isWellFormedToken(value: unknown): value is string {
  *
  * Deliberately shape-based rather than context-based: it catches a token
  * wherever it appears, including inside a URL or an error message. Uuids do not
- * match — they are not secrets and are useful in logs.
+ * match: they are not secrets and are useful in logs.
  */
 export function scrubTokens(text: string): string {
   return text.replace(TOKEN_IN_TEXT_PATTERN, '[token]');

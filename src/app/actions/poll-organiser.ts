@@ -39,7 +39,7 @@ import type { PollActionResult } from './polls';
  * The organiser's four controls: stop the voting, pick the time, remove one
  * person's answers, and delete the poll outright.
  *
- * Shape follows `src/app/actions/polls.ts` — `'use server'`, a zod parse first,
+ * Shape follows `src/app/actions/polls.ts`: `'use server'`, a zod parse first,
  * an explicit `PollActionResult`, and a store-then-notify order where a failed
  * notification never turns a stored write into a user-facing error.
  *
@@ -100,7 +100,7 @@ function clientIp(): string {
 /**
  * The per-organiser-IP gate, shared by the three non-mailing actions.
  *
- * Returns an error string to surface, or null to proceed. Fails OPEN — see the
+ * Returns an error string to surface, or null to proceed. Fails OPEN: see the
  * module header.
  */
 async function checkOrganiserLimit(): Promise<string | null> {
@@ -110,7 +110,7 @@ async function checkOrganiserLimit(): Promise<string | null> {
   } catch (error) {
     // Fail open. The action mutates one poll the caller already holds the link
     // to and sends nothing.
-    console.error('[polls] Organiser rate limiter threw — allowing:', scrubTokens(String(error)));
+    console.error('[polls] Organiser rate limiter threw, allowing:', scrubTokens(String(error)));
     return null;
   }
 }
@@ -120,7 +120,7 @@ async function checkOrganiserLimit(): Promise<string | null> {
  *
  * Both routes are `force-dynamic`, so this is belt-and-braces today. It is
  * called anyway because the behaviour must not depend on a single `dynamic`
- * export surviving a future refactor — the failure mode if it does not is an
+ * export surviving a future refactor: the failure mode if it does not is an
  * organiser staring at a stale matrix, which reads as "the click did nothing".
  */
 function revalidatePoll(organiserToken: string, participantToken?: string): void {
@@ -133,7 +133,7 @@ function revalidatePoll(organiserToken: string, participantToken?: string): void
 /**
  * Reads the poll's status so a no-op can be told from a refusal.
  *
- * Only called after a conditional update matched nothing — which means either
+ * Only called after a conditional update matched nothing, which means either
  * "already in that state" (idempotent success) or "in a state that forbids it".
  */
 async function readStatus(organiserToken: string): Promise<string | null> {
@@ -144,7 +144,7 @@ async function readStatus(organiserToken: string): Promise<string | null> {
 /**
  * Stops or restarts the voting.
  *
- * CLOSING IS REVERSIBLE AND CONFIRMING IS NOT — that asymmetry is the whole
+ * CLOSING IS REVERSIBLE AND CONFIRMING IS NOT. That asymmetry is the whole
  * reason this replaces the one-way `closePoll` the scope originally specified.
  * Closing only stops replies; it does not make the decision, does not delete
  * anything and does not send mail. The organiser knows they clicked it, and
@@ -231,7 +231,7 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
   };
 
   // Branches on option_kind. formatSlotRangeInLondon THROWS on a date-only
-  // value, and formatDateInLondon on an instant — the branch lives inside
+  // value, and formatDateInLondon on an instant: the branch lives inside
   // formatOptionForEmail, which is why this calls it rather than a formatter.
   const whenInWords = formatOptionForEmail(optionForEmail);
   const whenShort = formatOptionShortForSubject(optionForEmail);
@@ -259,7 +259,7 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
   if (icsError) {
     // A calendar file that will not build must never suppress the notification
     // that the meeting is happening. Drop the attachment, drop the sentence
-    // promising it, and send the words — which are the actual payload.
+    // promising it, and send the words, which are the actual payload.
     console.error(
       `[poll-email] .ics build failed for poll ${poll.id}:`,
       scrubTokens(String(icsError))
@@ -297,11 +297,11 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
  * `poll_participants` row exists only because someone voted, and an address is
  * on it only because that person typed it in. Someone who was sent the link and
  * never voted gets nothing, because we have never held their address. That is a
- * property of the design, not a gap in it — an address book is the open relay.
+ * property of the design, not a gap in it: an address book is the open relay.
  *
  * The organiser is seeded FIRST so their `organiser_name` wins over whatever
  * `display_name` they happened to vote under, and so the dedupe is on the
- * address alone — the only thing that decides who gets an email.
+ * address alone, the only thing that decides who gets an email.
  */
 async function buildRecipients(
   pollId: string,
@@ -343,7 +343,7 @@ async function buildRecipients(
  *
  * MAIL FAILING MUST NOT UN-CONFIRM THE POLL. The fan-out sits in a try/catch
  * after the write commits, and the poll URL stays live showing the confirmed
- * time — that is the durable record. The failure COUNT is written back so the
+ * time. That is the durable record. The failure COUNT is written back so the
  * organiser can be told plainly that some people still need telling by hand.
  */
 export async function confirmOption(
@@ -359,7 +359,7 @@ export async function confirmOption(
   // { allowed: false } on failure, but it cannot tell a caller that must fail
   // closed from one that must fail open, so the check is explicit.
   if (!isRateLimitConfigured() && process.env.NODE_ENV === 'production') {
-    console.error('[polls] Rate limiter unavailable — refusing to confirm.');
+    console.error('[polls] Rate limiter unavailable, refusing to confirm.');
     return { error: CONFIRM_UNAVAILABLE };
   }
 
@@ -367,7 +367,7 @@ export async function confirmOption(
     const limit = await checkRateLimit('poll_organiser_ip', hashKey(clientIp()));
     if (!limit.allowed) return { error: VALIDATION_MESSAGES.poll.rateLimited };
   } catch (error) {
-    console.error('[polls] Rate limiter threw — refusing to confirm:', scrubTokens(String(error)));
+    console.error('[polls] Rate limiter threw, refusing to confirm:', scrubTokens(String(error)));
     return { error: CONFIRM_UNAVAILABLE };
   }
 
@@ -426,7 +426,7 @@ async function fanOutConfirmation(confirmed: ConfirmedPollResult): Promise<void>
   // Per §3.4 every send is gated on the per-poll fan-out bucket. The tokens are
   // taken here, before the loop, rather than interleaved with it: the bucket is
   // keyed on the poll and bounds total sends per poll per day, so consuming n
-  // tokens up front and dropping the refused recipients is equivalent — and it
+  // tokens up front and dropping the refused recipients is equivalent, and it
   // keeps the send loop as `sendPollEmails`, which already paces at 600ms for
   // Resend's 2/second limit. Hand-rolling a second paced loop here to interleave
   // the check would duplicate that pacing and is how 429s get in.
@@ -480,7 +480,7 @@ async function fanOutConfirmation(confirmed: ConfirmedPollResult): Promise<void>
   // NO List-Unsubscribe on this email, and that is not an oversight:
   // buildUnsubscribeHeaders embeds the ORGANISER token in its URL, and this is
   // the one template that reaches participants. The confirmation is a one-off
-  // transactional message, so it carries none — exactly as the verify and links
+  // transactional message, so it carries none, exactly as the verify and links
   // emails do.
   if (messages.length > 0) {
     const { failed } = await sendPollEmails(messages);
@@ -511,7 +511,7 @@ async function fanOutConfirmation(confirmed: ConfirmedPollResult): Promise<void>
  * THE POLL SCOPE IS LOAD-BEARING. `deleteParticipant` filters on
  * `poll_id = <the token's poll>`; without it, an organiser of poll A deletes a
  * participant of poll B by pasting an id. The composite FK on `poll_responses`
- * cascades the votes automatically — never delete them by hand.
+ * cascades the votes automatically. Never delete them by hand.
  */
 export async function deleteResponse(
   organiserToken: string,
@@ -553,7 +553,7 @@ export async function deleteResponse(
  * refusing it on a confirmed poll would make erasure conditional on the poll's
  * state, which is not a defensible position.
  *
- * Irreversible, and it destroys THIRD-PARTY data — every participant's name,
+ * Irreversible, and it destroys THIRD-PARTY data: every participant's name,
  * address and availability, not only the organiser's own. The UI therefore
  * requires the poll title to be typed, not just a click.
  */

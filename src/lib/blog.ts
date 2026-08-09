@@ -92,7 +92,7 @@ export const defaultAuthor: Author = {
   image: '/images/peter-pitcher.jpg',
 };
 
-// Blog categories — simplified 8-category taxonomy
+// Blog categories: simplified 8-category taxonomy
 export const blogCategories: Category[] = [
   {
     slug: 'revenue-growth',

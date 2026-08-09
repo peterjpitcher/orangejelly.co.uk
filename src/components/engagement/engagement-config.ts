@@ -32,7 +32,7 @@ export function getStickyBarConfig(pathname: string): StickyBarConfig {
   // Exact match: homepage
   if (pathname === '/') {
     return {
-      message: 'Packages from \u00A3375 + VAT \u2014 no retainer',
+      message: 'Packages from \u00A3375 + VAT, no retainer',
       ctaText: 'See Packages',
       ctaLink: '/ways-to-work',
       ctaType: 'link',
@@ -142,7 +142,7 @@ export const PROBLEM_OPTIONS: ProblemOption[] = [
     href: '/ways-to-work/growth-partner',
   },
   {
-    text: "I don't have time to sort marketing \u2014 I'm too busy running the pub",
+    text: "I don't have time to sort marketing. I'm too busy running the pub",
     href: '/ways-to-work/momentum-month',
   },
   {

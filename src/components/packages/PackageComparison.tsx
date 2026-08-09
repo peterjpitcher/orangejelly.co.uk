@@ -12,7 +12,9 @@ const levelConfig: Record<SupportLevel, { label: string; color: string; icon: st
   included: { label: 'Included', color: 'text-green-600', icon: '\u2713' },
   'light-touch': { label: 'Light-touch', color: 'text-amber-500', icon: '\u25CF' },
   'add-on': { label: 'Add-on', color: 'text-gray-400', icon: '+' },
-  'not-included': { label: '\u2014', color: 'text-gray-300', icon: '\u2014' },
+  // Label was an em dash, which rendered as two dashes beside the icon and told a
+  // screen reader nothing. Its siblings all carry a real label, so this now does too.
+  'not-included': { label: 'Not included', color: 'text-gray-300', icon: '\u2013' },
 };
 
 function SupportBadge({ level }: { level: SupportLevel }): React.ReactElement {

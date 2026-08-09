@@ -256,7 +256,7 @@ export default function PubMarketingLocationLandingPage({
               />
             </div>
             <Text size="sm" color="white" className="opacity-70 mt-4">
-              Packages from £375 + VAT — no lock-in contracts
+              Packages from £375 + VAT, no lock-in contracts
             </Text>
           </div>
         </Container>

@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Do you work with pubs outside London and the South East?',
     answer:
-      'Yes. Most of our work is remote — WhatsApp, video calls, and shared templates. We prioritise pubs across London, Surrey, Berkshire, and the wider South East for in-person visits, but the systems work anywhere in the UK.',
+      'Yes. Most of our work is remote: WhatsApp, video calls, and shared templates. We prioritise pubs across London, Surrey, Berkshire, and the wider South East for in-person visits, but the systems work anywhere in the UK.',
   },
   {
     question: 'How much does a hospitality marketing agency cost?',
@@ -41,7 +41,7 @@ const faqs = [
       'We offer four clear packages starting from £375 + VAT for a focused Growth Fix. Monthly support starts from £900 + VAT. No hidden fees, no lock-in contracts. Payment plans are available.',
   },
   {
-    question: 'Can you help with social media, events, and menus — or just one thing?',
+    question: 'Can you help with social media, events, and menus, or just one thing?',
     answer:
       'All of it. Social media, event strategy, menu engineering, email marketing, Google Business Profile, and AI-powered automation. Our packages cover different combinations depending on your needs.',
   },
@@ -57,10 +57,10 @@ export default function PubMarketingAgencyPage() {
     <>
       <FAQSchema faqs={faqs} />
 
-      {/* Hero — preserves "hospitality marketing agency" keyword */}
+      {/* Hero: preserves "hospitality marketing agency" keyword */}
       <Hero
         title="A Hospitality Marketing Agency That Actually Runs a Pub"
-        subtitle="We are not pitching from an office. We built these systems behind the bar at The Anchor — and they work. Clear packages, honest pricing, and a founder who understands your trading reality."
+        subtitle="We are not pitching from an office. We built these systems behind the bar at The Anchor, and they work. Clear packages, honest pricing, and a founder who understands your trading reality."
         secondaryAction={{
           text: 'See Our Packages',
           href: '/ways-to-work',
@@ -88,7 +88,7 @@ export default function PubMarketingAgencyPage() {
             <Text size="lg" className="text-charcoal/80">
               The problem? They have never pulled a pint, managed a kitchen GP, or tried to fill a
               Tuesday night in January. They do not understand that your budget is tight, your time
-              is tighter, and you need results you can see on the till — not in a dashboard.
+              is tighter, and you need results you can see on the till, not in a dashboard.
             </Text>
             <Text size="lg" className="text-charcoal/80">
               Orange Jelly is different. Peter Pitcher runs The Anchor in Stanwell Moor as a Greene
@@ -145,7 +145,7 @@ export default function PubMarketingAgencyPage() {
             align="center"
             className="opacity-90 mb-10 max-w-3xl mx-auto"
           >
-            These are results from The Anchor — not projections, not estimates. The same systems we
+            These are results from The Anchor, not projections, not estimates. The same systems we
             deliver for clients.
           </Text>
           <Grid columns={{ default: 1, md: 3 }} gap="large">
@@ -244,7 +244,7 @@ export default function PubMarketingAgencyPage() {
                 {
                   step: '2',
                   title: 'Right package',
-                  desc: 'We recommend the package that fits your situation — no upselling, just the right fit.',
+                  desc: 'We recommend the package that fits your situation, with no upselling, just the right fit.',
                 },
                 {
                   step: '3',
@@ -254,7 +254,7 @@ export default function PubMarketingAgencyPage() {
                 {
                   step: '4',
                   title: 'Measure and build',
-                  desc: 'We track what matters — covers, bookings, revenue — and adjust as your venue develops.',
+                  desc: 'We track what matters (covers, bookings, revenue) and adjust as your venue develops.',
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center">

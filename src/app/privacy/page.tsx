@@ -11,13 +11,13 @@ import { generateStaticMetadata } from '@/lib/metadata';
  * notice, and a notice that links to nothing is not defensible (§1 P1.13,
  * Peter's decision, 16 July 2026).
  *
- * The on-page poll notice is self-sufficient — it delegates no required
+ * The on-page poll notice is self-sufficient: it delegates no required
  * disclosure to this page. This page is the fuller picture for the whole site.
  *
  * Everything here is deliberately limited to what the code actually does. The
  * processors named are the ones this repo genuinely calls: Supabase
  * (`src/lib/db`), Resend (`src/lib/email.ts`), Vercel (the host), Cloudflare
- * Turnstile (the poll-create bot check only — see the CSP note in
+ * Turnstile (the poll-create bot check only, see the CSP note in
  * `src/middleware.ts`) and Google Tag Manager (site analytics, which
  * `src/components/GoogleTagManager.tsx` switches off entirely on poll routes).
  * Do not add a processor here that the code does not use, and do not drop one it
@@ -86,7 +86,7 @@ export default function PrivacyPage(): JSX.Element {
           <Text weight="semibold">When you answer someone&rsquo;s availability poll</Text>
           <Text>
             We hold the name you type, your answers, and your email address if you choose to give
-            one. You give us all of this yourself, directly, by typing it into the form — nobody
+            one. You give us all of this yourself, directly, by typing it into the form. Nobody
             hands us a list of invitees, and we have no address book. Your name and answers are
             visible to the person who set the poll up. Everyone else answering sees the totals only,
             never who answered what. Your email address is used for exactly one thing: telling you
@@ -111,35 +111,35 @@ export default function PrivacyPage(): JSX.Element {
           <ul className="list-disc space-y-2 pl-6">
             <li>
               <Text as="span">
-                <strong>Supabase</strong> — stores enquiries, polls, answers and email addresses.
+                <strong>Supabase</strong>: stores enquiries, polls, answers and email addresses.
               </Text>
             </li>
             <li>
               <Text as="span">
-                <strong>Vercel</strong> — runs and serves the site.
+                <strong>Vercel</strong>: runs and serves the site.
               </Text>
             </li>
             <li>
               <Text as="span">
-                <strong>Resend</strong> — delivers the emails we send you.
+                <strong>Resend</strong>: delivers the emails we send you.
               </Text>
             </li>
             <li>
               <Text as="span">
-                <strong>Cloudflare</strong> — its Turnstile check confirms a person, not a bot, is
+                <strong>Cloudflare</strong>: its Turnstile check confirms a person, not a bot, is
                 setting up a poll. It runs on the poll set-up form only, and never on the page where
                 you answer a poll.
               </Text>
             </li>
             <li>
               <Text as="span">
-                <strong>Google</strong> — analytics on the marketing pages, never on poll pages.
+                <strong>Google</strong>: analytics on the marketing pages, never on poll pages.
               </Text>
             </li>
           </ul>
           <Text>
             Some of these process data outside the UK, including in the United States. Where they
-            do, the transfer is covered by the standard protections in our contracts with them — the
+            do, the transfer is covered by the standard protections in our contracts with them: the
             UK International Data Transfer Agreement or the EU Standard Contractual Clauses, as
             applicable.
           </Text>
@@ -147,12 +147,12 @@ export default function PrivacyPage(): JSX.Element {
 
         <Section title="How long we keep it">
           <Text>
-            <strong>Availability polls</strong> — we delete the whole poll, including every answer,
+            <strong>Availability polls</strong>: we delete the whole poll, including every answer,
             every name and every email address on it, 60 days after the last answer or the last
             proposed date, whichever is later. That deletion runs automatically.
           </Text>
           <Text>
-            <strong>Enquiries</strong> — we keep these for as long as we may need them for the
+            <strong>Enquiries</strong>: we keep these for as long as we may need them for the
             conversation and any work that follows, and no longer than is useful. Ask us to remove
             yours and we will.
           </Text>
@@ -169,7 +169,7 @@ export default function PrivacyPage(): JSX.Element {
           </Text>
           <Text>
             If you have answered someone&rsquo;s poll, please do not reply to the confirmation email
-            to make that request — replies to it go to the organiser, who is a different person with
+            to make that request: replies to it go to the organiser, who is a different person with
             no obligation to action it, and it would hand them your message. Write to us directly at
             the address above.
           </Text>

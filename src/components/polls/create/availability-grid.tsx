@@ -80,7 +80,7 @@ type CellBlock = 'past' | 'missing' | 'cap' | null;
 const BLOCK_REASON: Record<Exclude<CellBlock, null>, string> = {
   past: 'already gone',
   // The spring-forward gap. The clocks go forward and the hour is skipped, so
-  // there is no such time to offer — see londonWallClockToInstant.
+  // there is no such time to offer. See londonWallClockToInstant.
   missing: 'the clocks go forward, so this hour does not exist',
   cap: `you have already picked ${MAX_POLL_OPTIONS}`,
 };
@@ -318,7 +318,7 @@ export default function AvailabilityGrid({
         </Text>
         {atCap && (
           <Text size="sm" color="muted">
-            That&apos;s the maximum. Unpick one to pick another — a long list makes people skim and
+            That&apos;s the maximum. Unpick one to pick another. A long list makes people skim and
             leave out times they could actually do.
           </Text>
         )}
@@ -375,7 +375,7 @@ function TimeRow({
  * One cell.
  *
  * A real button with aria-pressed, and selection shown by a tick and a border as
- * well as the fill — colour alone fails WCAG 1.4.1 and fails the person the
+ * well as the fill: colour alone fails WCAG 1.4.1 and fails the person the
  * grid is hardest for.
  */
 function GridCell({
@@ -392,14 +392,14 @@ function GridCell({
   onClick: () => void;
 }): JSX.Element {
   const blocked = block !== null;
-  const accessibleName = blocked ? `${label}, unavailable — ${BLOCK_REASON[block]}` : label;
+  const accessibleName = blocked ? `${label}, unavailable: ${BLOCK_REASON[block]}` : label;
 
   return (
     <button
       type="button"
       aria-pressed={selected}
       aria-label={accessibleName}
-      title={blocked ? `Unavailable — ${BLOCK_REASON[block]}` : undefined}
+      title={blocked ? `Unavailable: ${BLOCK_REASON[block]}` : undefined}
       disabled={disabled || blocked}
       onClick={onClick}
       className={cn(
@@ -463,7 +463,7 @@ function MonthGrid({
             aria-pressed={selected}
             aria-label={
               blocked
-                ? `${describeDateCell(date, selected)}, unavailable — ${BLOCK_REASON[block]}`
+                ? `${describeDateCell(date, selected)}, unavailable: ${BLOCK_REASON[block]}`
                 : describeDateCell(date, selected)
             }
             disabled={disabled || blocked}
@@ -490,7 +490,7 @@ function MonthGrid({
   );
 }
 
-/** Icon-only navigation. Always named — an arrow is not a label. */
+/** Icon-only navigation. Always named: an arrow is not a label. */
 function NavButton({
   label,
   glyph,

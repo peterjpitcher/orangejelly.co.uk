@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 import { middleware } from './middleware';
 
 /**
- * C3 — Referrer-Policy on token routes.
+ * C3: Referrer-Policy on token routes.
  *
  * Poll tokens are capability URLs carried in the path. The site-wide default,
  * `strict-origin-when-cross-origin`, sends the FULL URL on same-origin

@@ -165,7 +165,7 @@ export const SEASON_HUBS: SeasonalHub[] = [
       {
         date: 'All December',
         moment: 'Christmas party season',
-        opportunity: 'Set menus, pre-orders, deposits — the diary fills early',
+        opportunity: 'Set menus, pre-orders, deposits: the diary fills early',
         href: '/licensees-guide/pub-christmas-bookings-fill-december',
       },
       {

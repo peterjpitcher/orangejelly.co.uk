@@ -17,7 +17,7 @@ import { deleteResponse } from '@/app/actions/poll-organiser';
  * "Remove" one person's answers.
  *
  * Data destruction, so the dialogue NAMES the participant. "Are you sure?" over
- * a list of eight people is not a confirmation — it is a coin toss, and the
+ * a list of eight people is not a confirmation: it is a coin toss, and the
  * organiser finds out which one they removed afterwards.
  *
  * The participant id is passed to the action, but the action never trusts it:

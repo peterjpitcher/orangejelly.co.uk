@@ -76,7 +76,7 @@ export const MESSAGES = {
   },
 } as const;
 
-// Success Metrics (from The Anchor — see /CLAIMS.md, the single source of truth)
+// Success Metrics (from The Anchor, see /CLAIMS.md, the single source of truth)
 export const SUCCESS_METRICS = {
   searchVisibility: {
     value: '+828%',

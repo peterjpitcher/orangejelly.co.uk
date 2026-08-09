@@ -31,7 +31,7 @@ export async function generateMetadata() {
   return generateStaticMetadata({
     title: 'Hospitality Marketing That Fills Seats | Orange Jelly',
     description:
-      'Hospitality marketing packages from a working pub. Strategy, events, social, local visibility — tested at The Anchor, delivered for your venue. Packages from £375 + VAT.',
+      'Hospitality marketing packages from a working pub. Strategy, events, social, local visibility, tested at The Anchor, delivered for your venue. Packages from £375 + VAT.',
     path: '/',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
@@ -154,7 +154,7 @@ export default function Home() {
       {/* Hero */}
       <Hero
         title="Hospitality marketing from a working pub. Proven packages that fill seats."
-        subtitle="Orange Jelly delivers hospitality marketing that works for pubs, bars, and venues. Clear packages built on systems proven at The Anchor — strategy, events, social, and local visibility that drive bookings, footfall, and revenue."
+        subtitle="Orange Jelly delivers hospitality marketing that works for pubs, bars, and venues. Clear packages built on systems proven at The Anchor: strategy, events, social, and local visibility that drive bookings, footfall, and revenue."
         secondaryAction={{
           text: 'See Our Packages',
           href: '/ways-to-work',
@@ -170,7 +170,7 @@ export default function Home() {
       <SeasonalPlaybooksBand
         highlightInSeason
         background="cream"
-        subtitle="Ready-to-run guides for the moments that matter each season — built and tested at The Anchor. Pick the playbook that fits the calendar ahead."
+        subtitle="Ready-to-run guides for the moments that matter each season, built and tested at The Anchor. Pick the playbook that fits the calendar ahead."
       />
 
       {/* Where Growth Gets Stuck */}

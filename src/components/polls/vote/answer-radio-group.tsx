@@ -16,7 +16,7 @@ import type { AvailabilityAnswer } from '@/lib/validation/poll-responses';
  * NO ARIA GROUPING HERE. The caller wraps this in a `<fieldset>` with a
  * `<legend>` naming the option in full (§1 P1.3), which is native grouping and
  * needs no `role="radiogroup"`. §1 is authoritative over the §2.3 draft that
- * called for hand-rolled ARIA — and hand-rolled ARIA grouping is the version
+ * called for hand-rolled ARIA, and hand-rolled ARIA grouping is the version
  * that breaks.
  *
  * EVERY STATE CARRIES A GLYPH AND A WORD. Colour is never the sole indicator
@@ -34,7 +34,7 @@ interface AnswerOption {
 
 /**
  * Wire values are fixed by `poll_responses.availability`'s CHECK constraint.
- * 'if_need_be' — never 'if_needed'. The database rejects anything else.
+ * 'if_need_be', never 'if_needed'. The database rejects anything else.
  */
 const ANSWERS: readonly AnswerOption[] = [
   { value: 'yes', label: 'Yes', glyph: '✓', selected: 'border-orange bg-orange text-white' },
@@ -53,7 +53,7 @@ const ANSWERS: readonly AnswerOption[] = [
 ];
 
 export interface AnswerRadioGroupProps {
-  /** `poll_options.id` — becomes the radio `name`, so the group is unique per card. */
+  /** `poll_options.id`: becomes the radio `name`, so the group is unique per card. */
   optionId: string;
   /** No answer is preselected. `null` means genuinely unanswered, and stays that way. */
   value: AvailabilityAnswer | null;

@@ -19,7 +19,7 @@ const KNOWN_STATUSES: readonly PollStatus[] = ['draft', 'open', 'closed', 'confi
  * `confirmed` appears only as a destination: it is terminal. There is no route
  * back because twenty people already hold the date, and quietly unwinding that
  * is worse than the problem re-opening would solve. A second `confirmed` is
- * illegal rather than idempotent — it would refire the fan-out and mail
+ * illegal rather than idempotent: it would refire the fan-out and mail
  * everyone twice.
  *
  * `draft` appears only as a source: an unverified poll must not reach `closed`
@@ -43,7 +43,7 @@ export type TransitionResult =
   | { readonly ok: false; readonly reason: string };
 
 /**
- * Guards the boundary where a status arrives from outside TypeScript's reach —
+ * Guards the boundary where a status arrives from outside TypeScript's reach:
  * a database row, a form field, a JSON body. The static type is a promise, not
  * a runtime fact.
  */
@@ -86,7 +86,7 @@ export function checkTransition(from: PollStatus, to: PollStatus): TransitionRes
  * Voting is live only while the poll is open.
  *
  * `draft` has not verified the organiser, `closed` has stopped replies, and
- * `confirmed` has a decision. Hiding the form is not enough — the actions
+ * `confirmed` has a decision. Hiding the form is not enough. The actions
  * re-check this server-side, because a request can arrive from anywhere.
  */
 export function canVote(status: PollStatus): boolean {
@@ -102,7 +102,7 @@ export function canEditResponse(status: PollStatus): boolean {
  * An organiser may pick a time from an open poll or a closed one.
  *
  * Closed still permits it because closing only stops replies; it does not make
- * the decision. This stays true even when every answer is a no — the organiser
+ * the decision. This stays true even when every answer is a no, the organiser
  * may need a time regardless, and the tool does not overrule them.
  */
 export function canConfirm(status: PollStatus): boolean {

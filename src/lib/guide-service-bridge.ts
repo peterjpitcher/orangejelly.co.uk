@@ -3,8 +3,8 @@
  *
  * Each blog (guide) category maps to the single most relevant commercial page,
  * so every guide carries one contextual, on-brand link to the service most
- * likely to help a reader who has just finished that guide. This complements
- * — and does not replace — the sitewide footer links.
+ * likely to help a reader who has just finished that guide. This complements,
+ * and does not replace, the sitewide footer links.
  *
  * Category slugs are the canonical 8-category taxonomy defined in
  * `src/lib/blog.ts` (`blogCategories`) / `content/data/categories.json`:

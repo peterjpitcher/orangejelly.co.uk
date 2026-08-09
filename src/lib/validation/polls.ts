@@ -13,7 +13,7 @@ import type { PollOptionInput } from '@/lib/db/polls';
  *
  * These schemas run on both sides of the wire: the create form drives
  * `useForm` with `createPollSchema`, and the server action re-parses the same
- * schema. One definition is the point — a form that caps at 500 against a
+ * schema. One definition is the point: a form that caps at 500 against a
  * server that allows 1,000 is not a stricter client, it is a different product
  * (SPEC §3.6.1).
  *
@@ -21,7 +21,7 @@ import type { PollOptionInput } from '@/lib/db/polls';
  * anything it reaches ships to the browser. In particular it must never import
  * `@/lib/poll-tokens`, which imports Node's `crypto` at module scope and drags a
  * 317 KB browserified shim into the bundle with it. The token schemas live in
- * ./poll-tokens.ts for exactly that reason — see the note there before moving
+ * ./poll-tokens.ts for exactly that reason, so see the note there before moving
  * one back.
  *
  * Copy lives in `VALIDATION_MESSAGES.poll.*` where a key exists for it. The
@@ -53,7 +53,7 @@ export const optionKindSchema = z.enum(['dates', 'slots'], {
 });
 
 /**
- * A calendar date. Never converted between zones — see the header of
+ * A calendar date. Never converted between zones: see the header of
  * src/lib/dateUtils.ts.
  *
  * superRefine with an early return, NOT two chained .refine() calls. Zod runs
@@ -87,7 +87,7 @@ export const wallClockTimeSchema = z
  * on the 4th", and the conversion to an instant is a London-timezone decision
  * that belongs on the server where it cannot be faked or skewed by a client
  * clock. `endsNextDay` only means anything as a wall-clock concept, and it is
- * never inferred from `endTime < startTime` — an inferred flag turns a mistyped
+ * never inferred from `endTime < startTime`, because an inferred flag turns a mistyped
  * time into a silent all-night event.
  */
 export const slotInputSchema = z.object({
@@ -180,7 +180,7 @@ export const createPollSchema = z
       .regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Enter the deadline time as HH:mm.')
       .optional()
       .or(z.literal('')),
-    /** Cloudflare Turnstile. See SPEC §3.4.3 — the keys exist; this is not optional. */
+    /** Cloudflare Turnstile. See SPEC §3.4.3: the keys exist; this is not optional. */
     turnstileToken: z.string().min(1, 'Please complete the verification check.'),
     /** Honeypot. Mirrors contact-form.tsx. */
     website: z.string().optional(),
@@ -215,12 +215,12 @@ export const createPollSchema = z
 
     // Duplicate options make the results matrix nonsense.
     //
-    // The key is the START, not the full range — SPEC §3.6.1 and §1 O1.8. Two
+    // The key is the START, not the full range: SPEC §3.6.1 and §1 O1.8. Two
     // slots that begin at the same instant and differ only in length are not two
     // choices a human can meaningfully vote between; they are a mis-entry. For
     // 'dates' the date IS the start, so one rule covers both kinds. There is no
-    // database constraint behind this — poll_options has no unique key on
-    // starts_at — so this check is the only control.
+    // database constraint behind this (poll_options has no unique key on
+    // starts_at), so this check is the only control.
     //
     // Keyed on the wall clock rather than the converted instant on purpose: the
     // conversion can throw, and a validation schema must never throw.
@@ -257,7 +257,7 @@ export type BuildOptionsResult =
  *
  * This is where wall clock becomes instant, and it is the only place that
  * happens. `londonWallClockToInstant` THROWS on a time inside the spring-forward
- * gap — 01:30 does not exist on the day the clocks go forward — and its message
+ * gap (01:30 does not exist on the day the clocks go forward), and its message
  * is already the exact user-facing sentence, so it is caught and returned rather
  * than reworded or allowed to 500 the action.
  *

@@ -18,7 +18,7 @@ import pubMarketingData from '../../../content/data/pub-marketing.json';
 export const metadata = generateMetadata({
   title: 'Pub Marketing: The Complete Guide for UK Licensees',
   description:
-    'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering — all tested at The Anchor. Packages from £375 + VAT.',
+    'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering, all tested at The Anchor. Packages from £375 + VAT.',
   path: '/pub-marketing',
   ogType: 'website',
 });
@@ -59,7 +59,7 @@ export default function PubMarketingPage() {
 
       <Hero
         title="Pub Marketing: The Complete Guide for UK Licensees"
-        subtitle="Everything you need to fill tables, build regulars, and grow profit — tested at a real pub, not an agency desk. Social media, events, email, local SEO, and more."
+        subtitle="Everything you need to fill tables, build regulars, and grow profit, tested at a real pub, not an agency desk. Social media, events, email, local SEO, and more."
         showCTA
         ctaText={pubMarketingData.hero.ctaText}
         bottomText={pubMarketingData.hero.bottomText}
@@ -77,7 +77,7 @@ export default function PubMarketingPage() {
             <Text size="lg" className="text-charcoal/80">
               Most small business marketing advice does not work for pubs. You cannot A/B test a
               Tuesday night. Your product is an experience, not a widget. And your competition
-              includes chains with six-figure marketing budgets — here is{' '}
+              includes chains with six-figure marketing budgets. Here is{' '}
               <Link
                 href="/compete-with-pub-chains"
                 className="text-teal underline hover:text-orange"
@@ -130,7 +130,7 @@ export default function PubMarketingPage() {
             Social Media Marketing for Pubs
           </Heading>
           <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
-            Social media should make locals think &ldquo;I need to go there this week&rdquo; — not
+            Social media should make locals think &ldquo;I need to go there this week&rdquo;, not
             just scroll past another stock photo.
           </Text>
 
@@ -146,7 +146,7 @@ export default function PubMarketingPage() {
               <FeatureList
                 items={[
                   'Post 3-5 times per week with a mix of events, food, and behind-the-scenes',
-                  'Use Facebook Events for every recurring night — they show up in local searches',
+                  'Use Facebook Events for every recurring night: they show up in local searches',
                   'Share to local community groups (ask first, follow their rules)',
                   'Respond to every comment within 2 hours during trading',
                 ]}
@@ -174,7 +174,7 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Post your best dishes and drinks — natural light, no filters needed',
+                  'Post your best dishes and drinks: natural light, no filters needed',
                   'Use Stories for daily specials, countdowns, and behind-the-scenes',
                   'Reels of 15-30 seconds get 3-5x more reach than static posts',
                   'Tag your location on everything to appear in local discovery',
@@ -201,7 +201,7 @@ export default function PubMarketingPage() {
               </Text>
               <Text color="muted">
                 We batch-create a week of posts in under an hour using AI tools. Templates,
-                captions, and scheduling — all systematised so it runs without daily effort.
+                captions, and scheduling, all systematised so it runs without daily effort.
               </Text>
               <div className="mt-4">
                 <Link
@@ -314,10 +314,10 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Wi-Fi captive portal — guests give email for internet access',
-                  'Booking confirmation — capture details from every reservation',
-                  'Event sign-ups — quiz teams, tastings, and functions',
-                  'Loyalty programme — reward regulars for sharing their details',
+                  'Wi-Fi captive portal: guests give email for internet access',
+                  'Booking confirmation: capture details from every reservation',
+                  'Event sign-ups: quiz teams, tastings, and functions',
+                  'Loyalty programme: reward regulars for sharing their details',
                 ]}
                 icon="check"
                 iconColor="green"
@@ -338,7 +338,7 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Weekly "What\'s On" roundup — events, specials, live music',
+                  'Weekly "What\'s On" roundup: events, specials, live music',
                   'Seasonal menus and new dish announcements',
                   'Exclusive offers for database members (makes them feel valued)',
                   'Last-minute table availability on quiet nights',
@@ -382,7 +382,7 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Complete every field — hours, menu link, booking link, attributes',
+                  'Complete every field: hours, menu link, booking link, attributes',
                   'Add 10+ high-quality photos (food, interior, garden, events)',
                   'Post weekly updates with events and specials',
                   'Respond to every review within 24 hours (positive and negative)',
@@ -403,10 +403,10 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Ask every happy table to leave a review — a simple card works',
+                  'Ask every happy table to leave a review: a simple card works',
                   'Train staff to mention reviews naturally at the end of a meal',
                   'Respond to negative reviews calmly and professionally',
-                  'Never buy fake reviews — Google catches them and penalises you',
+                  'Never buy fake reviews: Google catches them and penalises you',
                 ]}
                 icon="check"
                 iconColor="green"
@@ -435,7 +435,7 @@ export default function PubMarketingPage() {
               </Heading>
               <Text size="sm" color="muted">
                 Place high-margin dishes in the top-right of each section. Use boxes or borders to
-                draw attention. Remove pound signs — they make people think about cost.
+                draw attention. Remove pound signs: they make people think about cost.
               </Text>
             </Card>
             <Card variant="bordered" padding="large">
@@ -494,7 +494,7 @@ export default function PubMarketingPage() {
             align="center"
             className="opacity-90 mb-12 max-w-3xl mx-auto"
           >
-            Real numbers from The Anchor — the same systems we set up for clients.
+            Real numbers from The Anchor, the same systems we set up for clients.
           </Text>
 
           <Grid columns={{ default: 2, md: 4 }} gap="medium">
@@ -740,7 +740,7 @@ export default function PubMarketingPage() {
               </Button>
             </div>
             <Text size="sm" color="muted" className="mt-4">
-              Packages from £375 + VAT — no lock-in — payment plans available
+              Packages from £375 + VAT, no lock-in, payment plans available
             </Text>
           </div>
         </Container>

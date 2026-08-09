@@ -55,7 +55,7 @@ describe('isPollRoute', () => {
 
   it('should be true for every path that isTokenRoute accepts', () => {
     // The script gate must be a superset of the referrer gate. If it were not, a
-    // route could be referrer-protected but still load GTM — which is the failure
+    // route could be referrer-protected but still load GTM, which is the failure
     // that actually leaks the token.
     for (const pathname of [
       `/availability/o/${TOKEN}`,

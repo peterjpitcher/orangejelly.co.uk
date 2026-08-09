@@ -18,7 +18,7 @@ export function escapeHtml(value: string): string {
 interface LeadNotification {
   subject: string;
   html: string;
-  /** Plain-text alternative — improves deliverability and avoids spam filters. */
+  /** Plain-text alternative: improves deliverability and avoids spam filters. */
   text?: string;
   /** The enquirer's address, so a reply goes straight back to them. */
   replyTo?: string;
@@ -28,9 +28,9 @@ interface LeadNotification {
  * Send a lead-notification email via Resend.
  *
  * Configuration comes from environment variables (see .env.example):
- *   RESEND_API_KEY             — Resend API key
- *   CONTACT_NOTIFICATION_EMAIL — where enquiries are delivered (defaults to peter@orangejelly.co.uk)
- *   CONTACT_FROM_EMAIL         — verified Resend sender (required to actually send)
+ *   RESEND_API_KEY:             Resend API key
+ *   CONTACT_NOTIFICATION_EMAIL: where enquiries are delivered (defaults to peter@orangejelly.co.uk)
+ *   CONTACT_FROM_EMAIL:         verified Resend sender (required to actually send)
  *
  * Returns `{ error }` (and logs) when delivery is not configured or fails. Callers treat
  * this as best-effort: the lead is already stored in Supabase, so a failed notification
@@ -47,12 +47,12 @@ export async function sendLeadNotification({
   const from = process.env.CONTACT_FROM_EMAIL;
 
   if (!apiKey) {
-    console.error('[email] Lead notification NOT sent — RESEND_API_KEY is not set.');
+    console.error('[email] Lead notification NOT sent: RESEND_API_KEY is not set.');
     return { error: 'Email delivery is not configured (no API key).' };
   }
   if (!from) {
     console.error(
-      '[email] Lead notification NOT sent — CONTACT_FROM_EMAIL is not set. It must be a sender on a Resend-verified domain.'
+      '[email] Lead notification NOT sent: CONTACT_FROM_EMAIL is not set. It must be a sender on a Resend-verified domain.'
     );
     return { error: 'Email delivery is not configured (no from address).' };
   }
@@ -77,7 +77,7 @@ export async function sendLeadNotification({
  *
  * Kept separate from sendLeadNotification rather than folded into it. That
  * function resolves its recipient from CONTACT_NOTIFICATION_EMAIL and takes no
- * `to` at all — correct for a notification that only ever reaches Peter, and
+ * `to` at all, correct for a notification that only ever reaches Peter, and
  * exactly wrong for mail addressed to a third party. It also passes neither
  * attachments nor headers, both of which poll mail needs.
  * ------------------------------------------------------------------------- */
@@ -89,7 +89,7 @@ const PRODUCTION_BASE_URL = 'https://www.orangejelly.co.uk';
 const FROM_DISPLAY_NAME = 'Orange Jelly';
 
 export interface PollEmail {
-  /** Required, unlike LeadNotification — poll mail is addressed, never routed by env. */
+  /** Required, unlike LeadNotification: poll mail is addressed, never routed by env. */
   to: string;
   subject: string;
   html: string;
@@ -111,7 +111,7 @@ export interface PollEmail {
  *
  * POLL_FROM_EMAIL exists so poll mail can be moved to its own verified domain
  * with one Vercel setting and no code change. It is unset in production, and
- * the CONTACT_FROM_EMAIL fallback — noreply@auth.orangejelly.co.uk — is the
+ * the CONTACT_FROM_EMAIL fallback (noreply@auth.orangejelly.co.uk) is the
  * intended path, not a degraded one.
  *
  * A bare address reads as machine mail to both filters and people, so one is
@@ -132,9 +132,9 @@ function resolvePollSender(): string | undefined {
  * logs. It must never throw and never undo a write.
  *
  * Configuration (see .env.example):
- *   RESEND_API_KEY     — Resend API key
- *   POLL_FROM_EMAIL    — optional; defaults to CONTACT_FROM_EMAIL
- *   CONTACT_FROM_EMAIL — the verified sender on auth.orangejelly.co.uk
+ *   RESEND_API_KEY:     Resend API key
+ *   POLL_FROM_EMAIL:    optional; defaults to CONTACT_FROM_EMAIL
+ *   CONTACT_FROM_EMAIL: the verified sender on auth.orangejelly.co.uk
  *
  * Every log line is scrubbed: the html and text bodies carry capability URLs,
  * and Resend echoes request detail back in its errors. An unscrubbed dump of one
@@ -153,24 +153,24 @@ export async function sendPollEmail({
   const from = resolvePollSender();
 
   if (!apiKey) {
-    console.error('[poll-email] Not sent — RESEND_API_KEY is not set.');
+    console.error('[poll-email] Not sent: RESEND_API_KEY is not set.');
     return { error: 'Email delivery is not configured (no API key).' };
   }
   if (!from) {
     console.error(
-      '[poll-email] Not sent — neither POLL_FROM_EMAIL nor CONTACT_FROM_EMAIL is set. It must be a sender on the Resend-verified auth.orangejelly.co.uk subdomain, or DKIM alignment fails and the mail lands in junk.'
+      '[poll-email] Not sent: neither POLL_FROM_EMAIL nor CONTACT_FROM_EMAIL is set. It must be a sender on the Resend-verified auth.orangejelly.co.uk subdomain, or DKIM alignment fails and the mail lands in junk.'
     );
     return { error: 'Email delivery is not configured (no from address).' };
   }
 
   // PRODUCTION_ONLY_REASON: every link in the body is built by getAbsoluteUrl(),
-  // which honours NEXT_PUBLIC_BASE_URL — localhost in dev, a preview host on a
+  // which honours NEXT_PUBLIC_BASE_URL: localhost in dev, a preview host on a
   // branch deployment. A preview build must never put a preview link in a third
   // party's inbox, where it would be dead on arrival or worse. Refuse before
   // calling Resend rather than trusting that preview happens to lack a key.
   if (getBaseUrl() !== PRODUCTION_BASE_URL) {
     console.error(
-      `[poll-email] Not sent — base URL is "${getBaseUrl()}", not the production host. Poll links would be unusable.`
+      `[poll-email] Not sent: base URL is "${getBaseUrl()}", not the production host. Poll links would be unusable.`
     );
     return { error: 'Refusing to send: base URL is not the production host.' };
   }
@@ -223,7 +223,7 @@ function sleep(ms: number): Promise<void> {
  * concurrently hits Resend's rate limit, and a 429 half-delivers the one email
  * that tells people the meeting is happening.
  *
- * One send per recipient, never one send with everyone in `to` — that would
+ * One send per recipient, never one send with everyone in `to`, because that would
  * disclose participants' addresses to each other. There is no bcc passthrough by
  * design.
  *
@@ -252,7 +252,7 @@ export async function sendPollEmails(
       console.error('[poll-email] Fan-out send threw:', scrubTokens(String(err)));
     }
 
-    // No trailing delay after the last send — it would only add latency.
+    // No trailing delay after the last send, it would only add latency.
     if (index < messages.length - 1) {
       await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
     }

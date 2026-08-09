@@ -28,7 +28,7 @@ import type { IsoDate } from '@/lib/dateUtils';
  *
  * Split out of the route handler because a route handler that also contains the
  * work cannot be tested without a request, and this is the one unattended job in
- * the feature — the part most worth testing is the part nobody watches.
+ * the feature: the part most worth testing is the part nobody watches.
  *
  * THE ORDER IS NOT ARBITRARY. The three deletes run first because they are the
  * retention promise made in the privacy notice; the digest and the nudge are
@@ -37,12 +37,12 @@ import type { IsoDate } from '@/lib/dateUtils';
  *
  * EVERY PASS FAILS ALONE. Each sits in its own try/catch and pushes a scrubbed
  * message onto `errors`. One pass throwing must never stop the retention delete
- * from running — the whole point of ordering them is lost if the first failure
+ * from running. The whole point of ordering them is lost if the first failure
  * aborts the job.
  *
  * VERCEL DOES NOT RETRY A FAILED CRON. There is no backoff and no second
  * attempt: a failure means the work waits until tomorrow. That is why the report
- * has to be honest rather than reassuring — the non-200 in the Vercel dashboard
+ * has to be honest rather than reassuring: the non-200 in the Vercel dashboard
  * is the entirety of our alerting, and a pass that fails silently is a promise
  * that quietly stopped being kept.
  */
@@ -155,7 +155,7 @@ function labelFor(option: OptionRow, optionKind: OptionKind): string {
 }
 
 /**
- * Pass 1 — the retention delete. The GDPR promise; everything else is optional.
+ * Pass 1, the retention delete. The GDPR promise; everything else is optional.
  *
  * sweepExpiredPolls is already shipped and already bounded at SWEEP_LIMIT, and
  * enforces that cap on its own callers. It is called, never reimplemented.
@@ -166,40 +166,40 @@ async function runRetentionPass(): Promise<SweepDeleteResult> {
 
   const backlog = result.data?.remaining === -1;
   if (backlog) {
-    console.warn('[polls] Retention backlog — a full batch was deleted; more remain.');
+    console.warn('[polls] Retention backlog: a full batch was deleted; more remain.');
   }
 
   return { deleted: result.data?.deleted ?? 0, backlog };
 }
 
-/** Pass 2 — drafts whose organiser never verified. Bounded; see sweepUnverifiedDrafts. */
+/** Pass 2, drafts whose organiser never verified. Bounded; see sweepUnverifiedDrafts. */
 async function runDraftPass(): Promise<SweepDeleteResult> {
   const result = await sweepUnverifiedDrafts({ limit: SWEEP_LIMIT });
   if (!result.stored) throw new Error(result.error ?? 'The unverified-draft sweep failed.');
 
   const backlog = result.data?.remaining === -1;
   if (backlog) {
-    console.warn('[polls] Unverified-draft backlog — a full batch was deleted; more remain.');
+    console.warn('[polls] Unverified-draft backlog: a full batch was deleted; more remain.');
   }
 
   return { deleted: result.data?.deleted ?? 0, backlog };
 }
 
-/** Pass 3 — rate-limit counters past their window. A pass here, never a second cron. */
+/** Pass 3, rate-limit counters past their window. A pass here, never a second cron. */
 async function runRateLimitPass(): Promise<SweepDeleteResult> {
   const result = await sweepRateLimitWindows({ limit: SWEEP_LIMIT });
   if (!result.stored) throw new Error(result.error ?? 'The rate-limit sweep failed.');
 
   const backlog = result.data?.remaining === -1;
   if (backlog) {
-    console.warn('[polls] Rate-limit backlog — a bounded slice was deleted; more remain.');
+    console.warn('[polls] Rate-limit backlog: a bounded slice was deleted; more remain.');
   }
 
   return { deleted: result.data?.deleted ?? 0, backlog };
 }
 
 /**
- * Pass 4 — the digest flush, which closes the last-vote gap (§4.2).
+ * Pass 4, the digest flush, which closes the last-vote gap (§4.2).
  *
  * The digest normally fires lazily off a response. That cannot fire on the LAST
  * response: if nobody else answers, `digest_pending_since` stays set and the
@@ -250,7 +250,7 @@ async function runDigestPass(): Promise<SweepEmailResult> {
 
     // Count from poll_responses.updated_at, NOT poll_participants.created_at.
     // An edit mutates a response for a participant who already exists, so their
-    // created_at never moves — counting participants would send a digest reading
+    // created_at never moves; counting participants would send a digest reading
     // "0 new responses" above an empty list every time somebody changed their mind.
     const movedIds = new Set(
       responseRows.filter((row) => row.updated_at > since).map((row) => row.participant_id)
@@ -262,7 +262,7 @@ async function runDigestPass(): Promise<SweepEmailResult> {
       .sort((a, b) => a.localeCompare(b, 'en-GB'));
 
     if (newNames.length === 0) {
-      // Nothing to report — a concurrent lazy send already covered this window.
+      // Nothing to report: a concurrent lazy send already covered this window.
       // Clear the marker so the poll stops appearing in this pass, and send no
       // mail: a digest saying "0 new responses" is worse than no digest.
       await supabase.from('polls').update({ digest_pending_since: null }).eq('id', poll.id);
@@ -301,7 +301,7 @@ async function runDigestPass(): Promise<SweepEmailResult> {
 
     if (result.error) {
       // Leave digest_pending_since set so tomorrow's pass retries. The address
-      // is not logged — §4.3 promises it is disclosed to nobody, and a log line
+      // is not logged. §4.3 promises it is disclosed to nobody, and a log line
       // naming it undoes that.
       failed++;
       console.error(
@@ -322,13 +322,13 @@ async function runDigestPass(): Promise<SweepEmailResult> {
 }
 
 /**
- * Pass 5 — the nudge. TO THE ORGANISER, never to participants.
+ * Pass 5, the nudge. TO THE ORGANISER, never to participants.
  *
  * The briefed email was meant to chase non-responders and cannot exist: a
  * poll_participants row only comes into being once somebody has responded, so
  * "participants who have not responded" is an empty set at the schema level. The
  * only way to nudge participants would be an invitee list of addresses typed in
- * by the organiser — an address book of unverified third parties on our sending
+ * by the organiser, an address book of unverified third parties on our sending
  * domain, which is the open-relay risk this whole design exists to avoid. So the
  * nudge goes to the one person who has verified their address and can chase
  * people through channels they already have.
@@ -372,7 +372,7 @@ async function runNudgePass(): Promise<SweepEmailResult> {
     const responseRows = (responses ?? []) as ResponseRow[];
 
     // The "quiet for a week" test. PostgREST has no NOT EXISTS, so the recency
-    // check happens here rather than in the query — a poll with any activity in
+    // check happens here rather than in the query: a poll with any activity in
     // the window is simply not quiet, and is skipped without touching a column.
     if (responseRows.some((row) => row.updated_at > quietSince)) continue;
 

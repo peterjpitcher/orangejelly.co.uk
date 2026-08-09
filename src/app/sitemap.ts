@@ -9,7 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Landing pages are handled as static pages
 
   // Individual service pages that render their own self-canonical content.
-  // (instagram/facebook are intentionally excluded — they 301 to the social hub.)
+  // (instagram/facebook are intentionally excluded: they 301 to the social hub.)
   const serviceRoutes = [
     'social-media-marketing-for-pubs',
     'paid-social-for-pubs',

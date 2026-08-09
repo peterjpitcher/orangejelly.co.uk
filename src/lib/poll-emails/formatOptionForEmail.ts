@@ -8,7 +8,7 @@ import {
 /**
  * NOTE ON SHAPE: `option_kind` is a column on `polls`, NOT on `poll_options`.
  * A `select *` from `poll_options` will not contain it. The caller must read it
- * from the parent poll and pass it in explicitly — this type is a view over a
+ * from the parent poll and pass it in explicitly: this type is a view over a
  * join, not a table row.
  */
 export interface OptionForEmail {
@@ -29,7 +29,7 @@ export interface OptionForEmail {
  * split is dateUtils' central rule, and this function is the branch point for it.
  *
  * dateUtils throws on bad input, and callers must let it. A malformed option is
- * a data bug that belongs at build-payload time, before any send is attempted —
+ * a data bug that belongs at build-payload time, before any send is attempted,
  * not something for a send's try/catch to swallow.
  */
 export function formatOptionForEmail(option: OptionForEmail): string {
@@ -40,7 +40,7 @@ export function formatOptionForEmail(option: OptionForEmail): string {
     if (!option.optionDate) {
       throw new Error('A dates option must carry option_date.');
     }
-    // 'Saturday, 4 July 2026' — no time, so no zone label. Adding one would be
+    // 'Saturday, 4 July 2026', no time, so no zone label. Adding one would be
     // a lie: a date-only option has no clock reading to sit in a zone.
     return formatDateInLondon(option.optionDate, 'long');
   }

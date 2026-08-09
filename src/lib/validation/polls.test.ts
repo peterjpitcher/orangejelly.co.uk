@@ -12,7 +12,7 @@ import { getTodayIsoDate } from '@/lib/dateUtils';
 /**
  * Schema tests.
  *
- * No DST arithmetic is tested here — src/lib/dateUtils.test.ts already holds 47
+ * No DST arithmetic is tested here: src/lib/dateUtils.test.ts already holds 47
  * passing tests covering both boundaries. These prove the poll code *calls*
  * dateUtils correctly and, above all, that a malformed value produces a
  * validation error rather than an exception.
@@ -169,7 +169,7 @@ describe('buildPollOptions', () => {
     );
 
     // July is BST (UTC+1), so 19:30 London is 18:30Z. If this ever reads 19:30Z
-    // the wall clock is being treated as UTC — the exact bug the instant
+    // the wall clock is being treated as UTC, the exact bug the instant
     // conversion exists to prevent.
     expect(result.options?.[0].startsAt?.toISOString()).toBe('2026-07-04T18:30:00.000Z');
     expect(result.options?.[0].endsAt?.toISOString()).toBe('2026-07-04T20:00:00.000Z');

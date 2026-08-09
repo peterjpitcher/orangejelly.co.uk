@@ -5,11 +5,11 @@ import { CONTACT } from '@/lib/constants';
 /**
  * The Article 13 privacy notice, shown on the vote screen before you submit.
  *
- * ARTICLE 13, NOT ARTICLE 14 — and the distinction is the whole point.
+ * ARTICLE 13, NOT ARTICLE 14. The distinction is the whole point.
  * Article 14 covers data obtained from someone OTHER than the data subject, and
  * its notice says "here is where we got your details". We have no invitee list
  * and no address book: a participant opens a shared link and types their own
- * name, their own answers and — if they choose — their own email into our form.
+ * name, their own answers and, if they choose, their own email into our form.
  * That is direct collection from the data subject, which is Article 13. Any
  * wording claiming the organiser supplied their details is a false statement
  * about our own processing, made to a third party. It must never appear.
@@ -52,7 +52,7 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
 
         <Text size="sm" color="muted">
           Your name and your answers are visible to {organiserName}, who set this poll up. Other
-          people answering see the totals only — never who answered what. Your email address is not
+          people answering see the totals only, never who answered what. Your email address is not
           shown to anyone else, and it is used for exactly one thing: telling you the time once it
           is picked. Nothing else emails you.
         </Text>

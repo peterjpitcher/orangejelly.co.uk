@@ -32,14 +32,14 @@ export default function ExitIntentModal(): React.ReactElement | null {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [open, dismiss]);
 
-  // Focus trap — focus modal when it opens
+  // Focus trap: focus modal when it opens
   useEffect(() => {
     if (open && modalRef.current) {
       modalRef.current.focus();
     }
   }, [open]);
 
-  // Exit-intent detection (desktop only — mouseleave at top of viewport)
+  // Exit-intent detection (desktop only: mouseleave at top of viewport)
   useEffect(() => {
     // Check excluded paths
     const isExcluded = EXIT_INTENT_EXCLUDED_PATHS.some(

@@ -17,7 +17,7 @@ export interface NudgeEmailInput {
   /**
    * The leading option as prose, from formatOptionForEmail(), with its yes
    * count. Null when nobody has responded, or when no option has any yes or
-   * if-need-be — "the best option right now is <undefined>" is the obvious crash
+   * if-need-be: "the best option right now is <undefined>" is the obvious crash
    * and this is where it is prevented.
    */
   bestOption: { label: string; yesCount: number } | null;
@@ -26,13 +26,13 @@ export interface NudgeEmailInput {
 }
 
 /**
- * "A quick nudge" — sent to the ORGANISER, never to participants.
+ * "A quick nudge", sent to the ORGANISER, never to participants.
  *
  * WHY THE ORGANISER. The briefed email was meant to chase non-responders, and it
  * cannot exist: a poll_participants row only comes into being once someone has
  * responded, so "participants who have not responded" is an empty set at the
- * schema level. The alternative — an invitee list of addresses the organiser
- * types in — is the address book that turns this tool into an open relay. So the
+ * schema level. The alternative, an invitee list of addresses the organiser
+ * types in, is the address book that turns this tool into an open relay. So the
  * nudge goes to the one person who has verified their address and can chase
  * people through channels they already have.
  *
@@ -43,7 +43,7 @@ export function buildNudgeEmail(input: NudgeEmailInput): BuiltEmail {
   const { organiserName, pollTitle, responderCount, bestOption, participantUrl, organiserUrl } =
     input;
 
-  const subject = `A quick nudge — "${sanitiseSubjectValue(pollTitle)}" is still open`;
+  const subject = `A quick nudge: "${sanitiseSubjectValue(pollTitle)}" is still open`;
 
   const standingText =
     responderCount === 0 || !bestOption
@@ -86,7 +86,7 @@ This is the only nudge we'll send about this poll.`);
   <p style="margin:0 0 8px;font-weight:700;">Send this to the people you&rsquo;re inviting</p>
   ${fallbackLink(participantUrl, 'Still waiting on people? This is the link to send them:')}
 
-  <p style="margin:24px 0 8px;font-weight:700;">Private &mdash; just for you</p>
+  <p style="margin:24px 0 8px;font-weight:700;">Private: just for you</p>
   <p style="margin:0 0 16px;">Happy with what you&rsquo;ve got? Confirm the time and everyone gets told.</p>
   ${primaryButton(organiserUrl, 'Confirm the time')}
   ${fallbackLink(organiserUrl, 'Or paste this into your browser:')}

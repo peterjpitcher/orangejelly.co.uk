@@ -10,7 +10,7 @@ import Text from '@/components/Text';
 import { canVote } from '@/lib/poll-state';
 
 /**
- * Screen 3 — the participant vote.
+ * Screen 3: the participant vote.
  *
  * Server Component. Resolves the token, renders the header and the privacy
  * notice, and hands the options and tallies to <VoteForm />, which owns the
@@ -49,7 +49,7 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
   const view = await getVoteView(params.token);
 
   // ONE outcome for unknown, expired, deleted and draft alike. `notFound()`
-  // renders `src/app/availability/not-found.tsx` with a real 404 — rendering
+  // renders `src/app/availability/not-found.tsx` with a real 404. Rendering
   // error copy inline would return 200 and make a soft-404 that tells a token
   // guesser they guessed right.
   if (!view) {
@@ -63,7 +63,7 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
     tallyMap[tally.option_id] = { yes: tally.yes, if_need_be: tally.if_need_be, no: tally.no };
   }
 
-  // `closes_at` is advisory — nothing flips `status` when it passes — so the
+  // `closes_at` is advisory (nothing flips `status` when it passes) so the
   // page has to apply the deadline itself, exactly as `submitResponse` does.
   const pastDeadline = Boolean(poll.closes_at && new Date(poll.closes_at).getTime() <= Date.now());
   const open = canVote(poll.status) && !pastDeadline;

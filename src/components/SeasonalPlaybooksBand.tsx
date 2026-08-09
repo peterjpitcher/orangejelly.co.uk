@@ -18,7 +18,7 @@ interface SeasonalPlaybooksBandProps {
 }
 
 const DEFAULT_SUBTITLE =
-  'Curated, ready-to-run guides for the moments that matter each season — pick the playbook that fits the calendar ahead.';
+  'Curated, ready-to-run guides for the moments that matter each season. Pick the playbook that fits the calendar ahead.';
 
 /**
  * Renders a card per seasonal hub from SEASON_HUBS, linking to each hub page.

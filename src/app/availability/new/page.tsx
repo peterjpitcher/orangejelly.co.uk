@@ -10,7 +10,7 @@ import AuthedNav from '@/components/admin/AuthedNav';
  *
  * A Server Component holding the static chrome; the form is the only client
  * boundary. Nothing on this page is fetched, so there is no loading state to
- * stream — the form handles its own submitting state.
+ * stream: the form handles its own submitting state.
  */
 
 export const metadata: Metadata = {

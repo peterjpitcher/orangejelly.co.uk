@@ -24,7 +24,7 @@ export interface DigestEmailInput {
   pollTitle: string;
   /**
    * Display names of everyone whose response is new OR edited since the last
-   * digest. Never their email addresses — the organiser sees names and answers,
+   * digest. Never their email addresses: the organiser sees names and answers,
    * and §4.3 promises addresses are shown to nobody.
    */
   newNames: string[];
@@ -35,7 +35,7 @@ export interface DigestEmailInput {
 }
 
 /**
- * "You have new responses" — the batched digest.
+ * "You have new responses": the batched digest.
  *
  * ON THE WORDING "New or updated since we last wrote". The count comes from
  * poll_responses.updated_at, so an edit legitimately trips it. Copy claiming
@@ -83,11 +83,11 @@ See the full picture and confirm a time:
 That link is private to you. Anyone who has it can confirm the time, close the
 poll and delete responses.
 
-We batch these — you'll get at most one an hour, however many people respond.`);
+We batch these, so you'll get at most one an hour, however many people respond.`);
 
   // Every count carries a glyph AND a word ("✓ Yes 4"), never a colour swatch
   // alone. Email clients strip CSS unpredictably, so a count that only reads as
-  // green fails for anyone whose client blocks styles — the same WCAG 1.4.1
+  // green fails for anyone whose client blocks styles, the same WCAG 1.4.1
   // reasoning that governs the poll page itself.
   const htmlTallies = tallies
     .map(
@@ -126,7 +126,7 @@ ${htmlTallies}
     poll and delete responses.
   </p>
   <p style="margin:0 0 16px;font-size:14px;color:${MUTED};">
-    We batch these &mdash; you&rsquo;ll get at most one an hour, however many people respond.
+    We batch these, so you&rsquo;ll get at most one an hour, however many people respond.
   </p>`);
 
   return { subject, html, text };

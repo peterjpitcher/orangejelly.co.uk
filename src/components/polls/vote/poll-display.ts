@@ -24,7 +24,7 @@ export interface DisplayOption {
 /**
  * Renders one option as a full, unambiguous label.
  *
- * BRANCH ON `option_kind` — THIS IS THE BIT THAT THROWS IF YOU GET IT WRONG.
+ * BRANCH ON `option_kind`: THIS IS THE BIT THAT THROWS IF YOU GET IT WRONG.
  * `poll_options_shape_chk` guarantees the two shapes are mutually exclusive:
  *   - 'slots' rows have `starts_at`/`ends_at` and a NULL `option_date`
  *   - 'dates' rows have `option_date` and NULL `starts_at`/`ends_at`
@@ -32,7 +32,7 @@ export interface DisplayOption {
  * `formatSlotInLondon` and `formatSlotRangeInLondon` deliberately THROW on a
  * date-only value, because a date carries no time and rendering one as "1:00am"
  * presents a time nobody chose as fact. That guard is correct. Never weaken it
- * to make a call site compile — branch here instead.
+ * to make a call site compile. Branch here instead.
  *
  * The label is the option's accessible name (it goes in the `<legend>`), so it
  * spells the date out in full rather than relying on nearby context.
@@ -60,7 +60,7 @@ export interface TallyCounts {
 /**
  * "4 yes · 1 if need be · 2 no".
  *
- * Counts only. Never a name against an answer — who voted what is the
+ * Counts only. Never a name against an answer: who voted what is the
  * organiser's view alone (§1 P1.6, binding per R11).
  */
 export function formatTallyLine(tally: TallyCounts): string {
@@ -72,11 +72,11 @@ export function formatTallyLine(tally: TallyCounts): string {
  *
  * There is no invitee or headcount column in the schema, so "{n} of {m}" is not
  * computable and must not be invented. At zero this replaces the tally line
- * entirely — "0 yes · 0 if need be · 0 no" reads as a dead poll rather than a
+ * entirely, because "0 yes · 0 if need be · 0 no" reads as a dead poll rather than a
  * new one (§1 P3.3).
  */
 export function formatReplyCount(responderCount: number): string {
-  if (responderCount === 0) return "Nobody's answered yet — you're first.";
+  if (responderCount === 0) return "Nobody's answered yet. You're first.";
   if (responderCount === 1) return 'One person has replied so far.';
   return `${responderCount} people have replied so far.`;
 }

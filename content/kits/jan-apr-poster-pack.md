@@ -10,7 +10,7 @@ Drop these copy blocks straight into Canva templates. Each event includes an A4 
 
 ## Dry January / AF Takeover (Week 1)
 
-- **Headline:** “Dry Doesn’t Mean Dull — AF Tap Takeover”
+- **Headline:** “Dry Doesn’t Mean Dull: AF Tap Takeover”
 - **Bullets:** “Guest AF beer each week · Zero-proof cocktails on tap · Stamp five sips, get the sixth free”
 - **QR label:** “Grab the AF passport”
 - **Caption:** “15.5m Brits are going dry this Jan. We’re ready with tasting paddles, zero-proof cocktails, and a loyalty stamp that unlocks a free treat on visit six. Tap the QR to reserve your table.”
@@ -26,7 +26,7 @@ Drop these copy blocks straight into Canva templates. Each event includes an A4 
 
 - **Headline:** “Mates’ Dates & Early Love-Ins”
 - **Bullets:** “Share boards for two · DIY card bar · Free Polaroid print with every booking”
-- **QR label:** “Save your cosy corner”
+- **QR label:** “Claim your cosy corner”
 - **Caption:** “Skip the clichés. We’re pouring spritzes, plating sharing boards, and opening the DIY card bar all week. Scan to book before the 14 Feb rush.”
 
 ## Mother’s Day (Week 4)
@@ -38,7 +38,7 @@ Drop these copy blocks straight into Canva templates. Each event includes an A4 
 
 ## St Patrick’s Week (Week 5)
 
-- **Headline:** “Stout, Stories & Green Glory — 17 March”
+- **Headline:** “Stout, Stories & Green Glory: 17 March”
 - **Bullets:** “Irish playlist hour · Stout sampling flight · Prize for best green outfit”
 - **QR label:** “Join the craic”
 - **Caption:** “We’re lining up mini stout flights and a playlist battle judged by the crowd. Book via QR and tell us how many shamrock hats you’re bringing.”

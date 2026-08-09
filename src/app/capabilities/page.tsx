@@ -30,7 +30,7 @@ export default function CapabilitiesPage() {
       {/* Hero */}
       <Hero
         title="Everything we can help with"
-        subtitle="From social media strategy to event marketing, local visibility to paid ads — this is our full digital capability stack, tested at The Anchor and delivered for your venue."
+        subtitle="From social media strategy to event marketing, local visibility to paid ads, this is our full digital capability stack, tested at The Anchor and delivered for your venue."
         showCTA={false}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Capabilities' }]}
         breadcrumbEmitJsonLd={false}
@@ -58,7 +58,7 @@ export default function CapabilitiesPage() {
         <Container>
           <div className="text-center mb-8">
             <Heading level={2} align="center" color="charcoal">
-              Content Creation — What Is and Is Not Included
+              Content Creation: What Is and Is Not Included
             </Heading>
             <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
               We believe in being upfront about what you get. Here is how content creation works

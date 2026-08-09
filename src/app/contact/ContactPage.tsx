@@ -29,7 +29,7 @@ interface ContactPageProps {
   // No props needed - using local data
 }
 
-// Contact FAQs — kept to the 5 most useful for prospective partners
+// Contact FAQs, kept to the 5 most useful for prospective partners
 const fallbackFAQs = [
   {
     question: 'How quickly can we get started?',
@@ -200,7 +200,7 @@ export default function ContactPage({}: ContactPageProps) {
                     trustText=""
                   />
                   <Text size="sm" color="muted" className="mt-2">
-                    Peter responds within 24 hours — no sales pitch
+                    Peter responds within 24 hours, no sales pitch
                   </Text>
                 </div>
               </Card>
@@ -370,7 +370,7 @@ export default function ContactPage({}: ContactPageProps) {
                       'No call centre or junior handoff',
                       'Clear priorities and action-first plans',
                       'Modern tools, practical execution',
-                      'Clear packages from £375 + VAT — payment plans available',
+                      'Clear packages from £375 + VAT, payment plans available',
                       'No pushy sales process',
                     ]}
                     icon="check"

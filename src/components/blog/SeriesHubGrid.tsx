@@ -39,14 +39,14 @@ interface SeriesHubGridProps {
 /**
  * Curated grid of the guides in a content series (the "spokes"), shown on the
  * series hub/pillar page. Renders an ItemList JSON-LD so search engines and AI
- * answer engines see the hub-and-spoke set explicitly. Additive only — the route
+ * answer engines see the hub-and-spoke set explicitly. Additive only: the route
  * renders this exclusively on the hub page, so other posts are unaffected.
  */
 export default function SeriesHubGrid({
   posts,
   baseUrl,
   heading = 'The full Autumn Pub Playbook',
-  subtitle = 'Practical guides — pick the moments that fit your pub.',
+  subtitle = 'Practical guides: pick the moments that fit your pub.',
   listName = 'The Autumn Pub Playbook',
 }: SeriesHubGridProps) {
   if (!posts || posts.length === 0) return null;

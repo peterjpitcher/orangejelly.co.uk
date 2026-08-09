@@ -129,7 +129,7 @@ export default function WaysToWorkPage() {
       {/* Hero */}
       <Hero
         title="Clear packages. Honest pricing. Real hospitality expertise."
-        subtitle="Four ways to work with Orange Jelly — from a focused one-off fix to full ongoing partnership. Pick the level that fits your venue today."
+        subtitle="Four ways to work with Orange Jelly, from a focused one-off fix to full ongoing partnership. Pick the level that fits your venue today."
         showCTA={false}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Ways to Work' }]}
         breadcrumbEmitJsonLd={false}
@@ -144,7 +144,7 @@ export default function WaysToWorkPage() {
               Our Packages
             </Heading>
             <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
-              Every package is built around real hospitality experience. No filler, no fluff — just
+              Every package is built around real hospitality experience. No filler, no fluff, just
               practical support that moves the needle.
             </Text>
             <Text size="base" color="muted" className="mt-4 max-w-2xl mx-auto">

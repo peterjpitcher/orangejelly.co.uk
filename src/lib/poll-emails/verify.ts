@@ -14,14 +14,14 @@ export interface VerifyEmailInput {
   pollTitle: string;
   /**
    * Built by getAbsoluteUrl() at the call site and never concatenated from a
-   * request header — a Host header is attacker-controlled, and this URL is the
+   * request header: a Host header is attacker-controlled, and this URL is the
    * one that decides whether a poll goes live.
    */
   verifyUrl: string;
 }
 
 /**
- * "Confirm your email to publish" — the first email a poll sends.
+ * "Confirm your email to publish": the first email a poll sends.
  *
  * It carries the verify link and nothing else. No participant link, no
  * organiser link: neither exists to the user until the poll is live, and the
@@ -85,7 +85,7 @@ export interface LinksEmailInput {
 }
 
 /**
- * "Your poll is live" — sent the moment verification succeeds.
+ * "Your poll is live": sent the moment verification succeeds.
  *
  * The verify link is consumed on first use, so if the organiser's own click was
  * not the one that consumed it, this email is their only route back to the
@@ -100,7 +100,7 @@ export interface LinksEmailInput {
 export function buildLinksEmail(input: LinksEmailInput): BuiltEmail {
   const { organiserName, pollTitle, participantUrl, organiserUrl } = input;
 
-  const subject = `Your poll is live — "${sanitiseSubjectValue(pollTitle)}"`;
+  const subject = `Your poll is live: "${sanitiseSubjectValue(pollTitle)}"`;
 
   const text = wrapText(`Hi ${organiserName},
 
@@ -113,15 +113,15 @@ Send this to the people you're inviting
 
   ${participantUrl}
 
-Private — just for you
-----------------------
+Private: just for you
+---------------------
 
   ${organiserUrl}
 
 Anyone you send the private link to can close the poll, delete responses and
 confirm the time. Keep it to yourself.
 
-We'll email you when people respond — at most one message an hour, however
+We'll email you when people respond, at most one message an hour, however
 many people answer.
 
 Keep this email. The private link is not recoverable from anywhere else.`);
@@ -133,7 +133,7 @@ Keep this email. The private link is not recoverable from anywhere else.`);
   <p style="margin:0 0 8px;font-weight:700;">Send this to the people you&rsquo;re inviting</p>
   ${fallbackLink(participantUrl, 'Share this link however you normally would:')}
 
-  <p style="margin:24px 0 8px;font-weight:700;">Private &mdash; just for you</p>
+  <p style="margin:24px 0 8px;font-weight:700;">Private: just for you</p>
   ${primaryButton(organiserUrl, 'See the results')}
   ${fallbackLink(organiserUrl, 'Or paste this into your browser:')}
   <p style="margin:0 0 16px;font-size:14px;">
@@ -141,7 +141,7 @@ Keep this email. The private link is not recoverable from anywhere else.`);
     confirm the time. Keep it to yourself.
   </p>
   <p style="margin:0 0 16px;font-size:14px;color:${MUTED};">
-    We&rsquo;ll email you when people respond &mdash; at most one message an hour,
+    We&rsquo;ll email you when people respond, at most one message an hour,
     however many people answer.
   </p>
   <p style="margin:0 0 16px;font-size:13px;color:${MUTED};">

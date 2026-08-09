@@ -9,7 +9,7 @@ import Button from '@/components/Button';
  * The cause was one word. The button's base class list is
  * `inline-flex items-center justify-center`, and that `items-center` is the only
  * thing centring the label vertically. `fullWidth` used to add `block`, which
- * switched the element away from being a flex container — at which point
+ * switched the element away from being a flex container, at which point
  * `align-items` does nothing whatsoever. It is not ignored loudly; it simply has
  * no meaning on a block box. The label then landed wherever line-height put it
  * inside a box padded out to min-h-[44px], which is why full-width buttons sat a

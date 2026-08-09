@@ -4,7 +4,7 @@ import type { DisplayOption, OptionKind } from '@/components/polls/vote/poll-dis
 /**
  * Display helpers for the organiser results matrix.
  *
- * Pure. No I/O, no framework — every one of these is a string function, so the
+ * Pure. No I/O, no framework: every one of these is a string function, so the
  * page can render the whole matrix on the server and ship no JavaScript for it.
  *
  * The option shape is reused from the vote screen's `poll-display`, which
@@ -14,7 +14,7 @@ import type { DisplayOption, OptionKind } from '@/components/polls/vote/poll-dis
  */
 
 /**
- * A cell's state. `null` IS a state — "not answered".
+ * A cell's state. `null` IS a state: "not answered".
  *
  * There is no 'not_answered' value in the `availability` enum, and there must
  * not be one: a participant who never answered an option has no `poll_responses`
@@ -26,7 +26,7 @@ export type CellState = 'yes' | 'if_need_be' | 'no' | null;
  * The glyph for each state.
  *
  * A GLYPH, NOT A COLOUR. WCAG 1.4.1: colour must never be the only indicator of
- * state. The fill behind these is decorative reinforcement — this is the signal.
+ * state. The fill behind these is decorative reinforcement. This is the signal.
  * At 375px the visible word is hidden to keep the columns narrow, and the glyph
  * is what survives.
  */
@@ -76,7 +76,7 @@ export function cellClass(state: CellState): string {
  *
  * BRANCHES ON option_kind, AND THIS IS THE BIT THAT THROWS IF YOU GET IT WRONG.
  * On a 'dates' poll `starts_at` is NULL, and `formatSlotRangeInLondon` throws on
- * a date-only value by design — it will not render a date nobody gave a time to
+ * a date-only value by design: it will not render a date nobody gave a time to
  * as "1:00am". Never weaken that guard to make a call site compile; branch here.
  *
  * There is no `option.date` field on either shape. The columns are
@@ -172,7 +172,7 @@ export function cellAccessibleName(
   return `${participantName}, ${optionLabel}, ${answerLabel(state).toLowerCase()}`;
 }
 
-/** "4 yes · 1 if need be · 2 no" — the totals row, as text, before any bar. */
+/** "4 yes · 1 if need be · 2 no": the totals row, as text, before any bar. */
 export function totalsLine(tally: { yes: number; if_need_be: number; no: number }): string {
   return `${tally.yes} yes · ${tally.if_need_be} if need be · ${tally.no} no`;
 }
@@ -193,7 +193,7 @@ export function replyCountLine(responderCount: number): string {
  * A percentage of those who replied.
  *
  * Proportions are presented as percentages, per the standing rule. The
- * denominator is the number of people who replied to this poll — not the number
+ * denominator is the number of people who replied to this poll, not the number
  * of `poll_responses` rows, which would count one person eight times.
  */
 export function percentOf(count: number, responderCount: number): number {

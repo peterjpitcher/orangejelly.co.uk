@@ -5,7 +5,7 @@ import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
  * Validation for participant answers.
  *
  * The wire values are fixed by `poll_responses.availability`'s CHECK constraint:
- * 'yes', 'if_need_be', 'no'. Not 'if_needed' — the database rejects anything
+ * 'yes', 'if_need_be', 'no'. Not 'if_needed': the database rejects anything
  * else, so a typo here is not a cosmetic bug, it is every vote failing.
  *
  * Name rules reuse VALIDATION_MESSAGES.name rather than inventing a second cap
@@ -33,7 +33,7 @@ export type AttendanceAnswer = z.infer<typeof attendanceSchema>;
  * One answer per option.
  *
  * `.min(1)` and the duplicate refinement are structural only. They do not prove
- * the set is complete — the option ids belong to the poll and only the server
+ * the set is complete: the option ids belong to the poll and only the server
  * knows them, so set-equality is checked in the action against the database.
  */
 const votesSchema = z
@@ -97,7 +97,7 @@ export const submitResponseSchema = z.object({
  *
  * `updateResponse` never writes `poll_participants.email` (§3.6.4), so an email
  * field here would be a control that accepts input and silently discards it.
- * The edit screen therefore renders no email input at all — not an editable one
+ * The edit screen therefore renders no email input at all, not an editable one
  * and not a pre-filled disabled one.
  */
 export const updateResponseSchema = z.object({
@@ -120,7 +120,7 @@ export function normaliseOptionalEmail(email: string | undefined): string | null
 }
 
 /**
- * Proves the answered set is exactly the poll's option set — both directions.
+ * Proves the answered set is exactly the poll's option set, in both directions.
  *
  * Both directions matter, and for different reasons:
  *   - An **unknown** option id means a vote aimed at another poll. The composite

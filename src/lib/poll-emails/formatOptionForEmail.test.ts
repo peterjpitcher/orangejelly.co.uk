@@ -73,7 +73,7 @@ describe('formatOptionForEmail', () => {
 
   it('should throw rather than invent a time when a date-only value reaches the slot arm', () => {
     // The guard in dateUtils exists because '2026-07-04' rendered as a slot
-    // produced "4 July 2026 at 1:00am" — a time nobody chose. Prove it holds.
+    // produced "4 July 2026 at 1:00am", a time nobody chose. Prove it holds.
     expect(() =>
       formatOptionForEmail({
         optionKind: 'slots',

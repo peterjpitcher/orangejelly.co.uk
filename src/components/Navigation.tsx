@@ -165,7 +165,7 @@ export default function Navigation({ navigation }: NavigationProps) {
         </div>
         {/* Mobile controls container - WhatsApp and Hamburger */}
         <div className="flex items-center gap-2 md:hidden">
-          {/* WhatsApp button for mobile — icon only to avoid overlap */}
+          {/* WhatsApp button for mobile: icon only to avoid overlap */}
           {whatsappCta.enabled && whatsappCta.showInMobile && (
             <a
               href={`https://wa.me/${whatsappCta.phoneNumber}?text=${encodeURIComponent(whatsappCta.text)}`}

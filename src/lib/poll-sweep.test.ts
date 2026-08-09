@@ -8,10 +8,10 @@ import type * as EmailModule from './email';
 /**
  * The passes behind the daily cron.
  *
- * Supabase and Resend are both mocked — the repo's rule is that a test never
+ * Supabase and Resend are both mocked: the repo's rule is that a test never
  * reaches a real service, and this one deletes data and sends mail. The email
  * BUILDERS are deliberately not mocked: they are internal pure functions, and
- * mocking them would hide the thing most worth asserting here — that the nudge
+ * mocking them would hide the thing most worth asserting here: that the nudge
  * is addressed to the organiser and to nobody else.
  */
 
@@ -31,8 +31,8 @@ let adminConfigured = true;
 let tableRows: Record<string, unknown[]> = {};
 
 /**
- * `polls.select()` is issued twice per run — once by the digest pass, once by
- * the nudge pass — so a single rows fixture cannot serve both. They are queued
+ * `polls.select()` is issued twice per run (once by the digest pass, once by
+ * the nudge pass), so a single rows fixture cannot serve both. They are queued
  * in pass order instead.
  */
 let pollSelectQueue: unknown[][] = [];
@@ -155,7 +155,7 @@ beforeEach(() => {
   sendPollEmail.mockResolvedValue({ success: true });
 });
 
-describe('runPollSweep — the passes and their order', () => {
+describe('runPollSweep: the passes and their order', () => {
   it('should run the three deletes before either mail pass', async () => {
     // The order is the guarantee: the deletes are the retention promise made in
     // the privacy notice, the mail is a courtesy. If the function times out
@@ -247,7 +247,7 @@ describe('runPollSweep — the passes and their order', () => {
   });
 });
 
-describe('runPollSweep — a failed pass never takes the others with it', () => {
+describe('runPollSweep: a failed pass never takes the others with it', () => {
   it('should carry on to every later pass when the retention delete fails', async () => {
     sweepExpiredPolls.mockResolvedValue({ stored: false, error: 'connection refused' });
 
@@ -293,7 +293,7 @@ describe('runPollSweep — a failed pass never takes the others with it', () => 
 
     const report = await runPollSweep();
 
-    // Both mail passes read `polls`, so both fail here — the assertion that
+    // Both mail passes read `polls`, so both fail here. The assertion that
     // matters is that the deletes were untouched and each failure is its own.
     expect(report.errors).toEqual([
       'digest flush: digest query failed',
@@ -313,7 +313,7 @@ describe('runPollSweep — a failed pass never takes the others with it', () => 
   });
 });
 
-describe('runPollSweep — backlog reporting', () => {
+describe('runPollSweep: backlog reporting', () => {
   it('should report a backlog when a delete hit its bound, without calling it an error', async () => {
     // A backlog is the bound working as designed, not a fault. It is surfaced so
     // it is visible rather than silently accruing night after night.
@@ -340,7 +340,7 @@ describe('runPollSweep — backlog reporting', () => {
   });
 });
 
-describe('runPollSweep — the digest flush', () => {
+describe('runPollSweep: the digest flush', () => {
   beforeEach(() => {
     pollSelectQueue = [[openPoll], []];
     tableRows = {
@@ -374,7 +374,7 @@ describe('runPollSweep — the digest flush', () => {
 
   it('should count new AND edited responses, keyed off the response timestamp', async () => {
     // The obvious version counts poll_participants.created_at, which never moves
-    // when somebody edits an answer — so an edit would trip the window and send
+    // when somebody edits an answer, so an edit would trip the window and send
     // a digest reading "0 new responses" above an empty list.
     await runPollSweep();
 
@@ -400,13 +400,13 @@ describe('runPollSweep — the digest flush', () => {
 
     expect(report.digests).toEqual({ sent: 0, failed: 1, backlog: false });
     expect(updates).toEqual([]);
-    // A failed send is a per-poll fault, not a failed pass — the cron must not
+    // A failed send is a per-poll fault, not a failed pass: the cron must not
     // 500 because one organiser's address bounced.
     expect(report.errors).toEqual([]);
   });
 });
 
-describe('runPollSweep — the nudge', () => {
+describe('runPollSweep: the nudge', () => {
   beforeEach(() => {
     pollSelectQueue = [[], [openPoll]];
     tableRows = { poll_options: options, poll_responses: [] };

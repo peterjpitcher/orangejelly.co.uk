@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
  *
  * There is no edit-link email (Peter's decision, 16 July 2026). That email would
  * have gone to an address an anonymous caller typed into a public form, carrying
- * attacker-influenced text — the whole of this feature's relay surface — in
+ * attacker-influenced text (the whole of this feature's relay surface) in
  * exchange for a capability the screen already gives. So the link is shown here
  * and nowhere else. Do not reinstate the email because "an on-screen link is easy
  * to lose": losing it costs one re-vote, which is a trade taken deliberately.
@@ -34,7 +34,7 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
       setCopied(true);
       window.setTimeout(() => setCopied(false), 4000);
     } catch {
-      // Clipboard access is refused in plenty of ordinary situations — an
+      // Clipboard access is refused in plenty of ordinary situations: an
       // insecure context, a locked-down browser, a webview. The link is on
       // screen as selectable text and as a working anchor either way, so this
       // failure costs nothing and must not raise an error at someone who has
@@ -54,7 +54,7 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
         tabIndex={-1}
         className="text-xl font-semibold text-charcoal focus-visible:outline-none"
       >
-        That&rsquo;s your answer in — thank you
+        That&rsquo;s your answer in, thank you
       </h2>
 
       {editUrl === '' ? (
@@ -64,7 +64,7 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
       ) : (
         <>
           <Text className="mt-2" color="charcoal">
-            Keep this link if you need to change your answer. It&rsquo;s the only copy — if you lose
+            Keep this link if you need to change your answer. It&rsquo;s the only copy: if you lose
             it, just answer again and let the organiser know.
           </Text>
 

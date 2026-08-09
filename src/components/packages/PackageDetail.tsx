@@ -145,7 +145,9 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
             <ul className="space-y-2">
               {pkg.notIncluded.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-gray-300 mt-0.5 shrink-0">&mdash;</span>
+                  <span className="text-gray-300 mt-0.5 shrink-0" aria-hidden="true">
+                    &ndash;
+                  </span>
                   <Text color="muted">{item}</Text>
                 </li>
               ))}
@@ -204,7 +206,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
             Ready to get started?
           </Heading>
           <Text align="center" color="white" className="mb-8 max-w-2xl mx-auto">
-            Message Peter directly or send an enquiry. No obligation, no sales pitch — just a
+            Message Peter directly or send an enquiry. No obligation, no sales pitch, just a
             conversation about what your venue needs.
           </Text>
           <PackageCTA packageId={pkg.id} />

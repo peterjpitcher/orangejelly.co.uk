@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 /**
  * Resend is mocked at the module boundary. These tests must never reach the real
- * API — a test suite that sends mail is a test suite nobody dares run.
+ * API: a test suite that sends mail is a test suite nobody dares run.
  */
 const sendMock = vi.fn();
 
@@ -30,7 +30,7 @@ function resetEnv(): void {
 
 const message: PollEmail = {
   to: 'billy@example.com',
-  subject: 'Confirmed: "July planning call" — Sat 4 Jul',
+  subject: 'Confirmed: "July planning call", Sat 4 Jul',
   html: '<p>It is confirmed.</p>',
   text: 'It is confirmed.',
 };

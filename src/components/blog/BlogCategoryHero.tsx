@@ -26,7 +26,7 @@ export default function BlogCategoryHero({
 
   return (
     <section className="relative overflow-hidden" style={{ background: gradient }}>
-      {/* Subtle diagonal stripe pattern overlay — CSS only, no images */}
+      {/* Subtle diagonal stripe pattern overlay: CSS only, no images */}
       <div
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
@@ -38,7 +38,7 @@ export default function BlogCategoryHero({
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-        {/* Breadcrumbs — light variant for dark backgrounds */}
+        {/* Breadcrumbs: light variant for dark backgrounds */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <div className="mb-6">
             {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}

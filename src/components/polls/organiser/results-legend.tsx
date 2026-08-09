@@ -6,7 +6,7 @@ import { answerGlyph, answerLabel, cellClass, type CellState } from './results-d
  *
  * Rendered directly below the table, deliberately: a key that requires scrolling
  * back up to make sense of a cell is not a key. It restates the exact chip the
- * matrix uses — same glyph, same fill, same word — so the mapping is verifiable
+ * matrix uses, same glyph, same fill, same word, so the mapping is verifiable
  * by looking rather than by remembering.
  */
 

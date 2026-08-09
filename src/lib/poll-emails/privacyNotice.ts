@@ -8,7 +8,7 @@ import { BRAND_BLUE, HAIRLINE, MUTED } from './shell';
  * Article 14 covers data obtained from someone other than the data subject, and
  * its notice says "here is where we got your details". We have no invitee list
  * and no address book: a participant opens the shared poll link and types their
- * own name, their own answers and — optionally — their own email address into
+ * own name, their own answers and, optionally, their own email address into
  * our form. That is direct collection from the data subject. Any wording
  * claiming the organiser supplied their details is a false statement about our
  * own processing, shipped to a third party's inbox.
@@ -23,7 +23,7 @@ import { BRAND_BLUE, HAIRLINE, MUTED } from './shell';
  * worse than one naming no address.
  *
  * ON THE REPLY-TO WARNING, which is not padding. The confirmation email sets
- * Reply-to: polls.organiser_email. A reply reaches the ORGANISER — a third party
+ * Reply-to: polls.organiser_email. A reply reaches the ORGANISER, a third party
  * with no obligation to action a subject-access request, and who would then hold
  * the data subject's message and address. This notice names Orange Jelly Limited
  * as controller two paragraphs earlier, so "just reply" would route a reader's
@@ -36,7 +36,7 @@ export const PRIVACY_RIGHTS_EMAIL = 'peter@orangejelly.co.uk';
 export const PRIVACY_POLICY_URL = 'https://www.orangejelly.co.uk/privacy';
 
 export interface PrivacyNoticeInput {
-  /** polls.organiser_name — the person whose reply-to a reply would reach. */
+  /** polls.organiser_name: the person whose reply-to a reply would reach. */
   organiserName: string;
 }
 
@@ -46,7 +46,7 @@ export const PRIVACY_NOTICE_HEADING = 'How we handle your details';
  * The wording itself. Paragraph by paragraph, plain strings, no markup.
  *
  * Both renderers below build from this array and nothing else. That is the
- * mechanism that stops the two parts drifting — there is no second copy to
+ * mechanism that stops the two parts drifting: there is no second copy to
  * forget to update.
  */
 function privacyNoticeParagraphs({ organiserName }: PrivacyNoticeInput): string[] {
@@ -77,7 +77,7 @@ export function buildPrivacyNoticeText(input: PrivacyNoticeInput): string {
  *
  * The last two paragraphs are merged and their addresses linked, so the reader
  * can act on them in one tap. The wording is byte-identical to the text part
- * either side of the anchors — the links add affordance, never meaning.
+ * either side of the anchors: the links add affordance, never meaning.
  */
 export function buildPrivacyNoticeHtml(input: PrivacyNoticeInput): string {
   const paragraphs = privacyNoticeParagraphs(input);

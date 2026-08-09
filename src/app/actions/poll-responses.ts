@@ -31,7 +31,7 @@ import { resolveEditParticipant } from '@/app/availability/p/poll-data';
 /**
  * Participant-facing server actions: answer a poll, and change your answer.
  *
- * Follows the `contact.ts` shape — honeypot first, validate server-side, call the
+ * Follows the `contact.ts` shape: honeypot first, validate server-side, call the
  * data layer, return `{ success }` or `{ error }`. Never throw at the caller: a
  * thrown server action renders a generic error boundary, and this form is the
  * one screen that has to work on a phone in a pub car park.
@@ -67,7 +67,7 @@ const LINK_NOT_VALID = VALIDATION_MESSAGES.poll.linkNotValid;
  * `reason` is what makes that possible. It reports WHY, which is a different
  * question from whether the hit was allowed: an outage and a genuine limit hit
  * both arrive as `allowed: false`, so without it this function could not tell
- * them apart and voting was silently fail-CLOSED — the opposite of the intent
+ * them apart and voting was silently fail-CLOSED, the opposite of the intent
  * above, and on the one action the whole tool exists to make effortless.
  * `unavailable` therefore allows here, while `limited` denies.
  */
@@ -101,7 +101,7 @@ function revalidateParticipantPaths(participantToken: string): void {
  *
  * Insert-only. There is no conflict target for someone with no identity, so a
  * returning participant who does not use their edit link creates a second row.
- * That is accepted, not solved — engineering identity into an account-free tool
+ * That is accepted, not solved: engineering identity into an account-free tool
  * means adding accounts, which is the one thing this tool exists not to do.
  */
 export async function submitResponse(
@@ -149,7 +149,7 @@ export async function submitResponse(
     return { error: VALIDATION_MESSAGES.poll.votingClosed };
   }
 
-  // `closes_at` is advisory — nothing flips `status` when it passes — so this
+  // `closes_at` is advisory (nothing flips `status` when it passes), so this
   // check is what makes the organiser's deadline real without a cron.
   if (view.poll.closes_at && new Date(view.poll.closes_at).getTime() <= Date.now()) {
     return { error: VALIDATION_MESSAGES.poll.votingClosed };
@@ -185,7 +185,7 @@ export async function submitResponse(
   revalidateParticipantPaths(participantToken);
 
   // The edit link is returned for the screen and delivered nowhere else. There
-  // is no participant email — dropped deliberately (Peter, 16 July 2026),
+  // is no participant email, dropped deliberately (Peter, 16 July 2026),
   // because it would have mailed an address that an anonymous caller typed into
   // a public form, and the screen already carries the link.
   return {
@@ -241,7 +241,7 @@ export async function updateResponse(
   }
 
   // The set-equality check and the upsert are a pair. `updateResponse` in the
-  // data layer never prunes — it overwrites the rows it is given and leaves any
+  // data layer never prunes: it overwrites the rows it is given and leaves any
   // option it is not given alone. That is safe ONLY because this check has
   // already proven the payload is the complete option set. Remove this check and
   // the upsert silently becomes a partial update.

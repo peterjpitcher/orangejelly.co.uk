@@ -46,9 +46,9 @@ status: "draft"
 | Time | Action | Script prompts |
 | --- | --- | --- |
 | 00:00 | Welcome + explain format | “Pens up, phones down, QR at the bar if you want bundle deals.” |
-| 00:05 | Round 1 start | “Local Legends to kick off — you’ll only know these if you’ve spent time on our high street.” |
-| 00:30 | Break / upsell | “Grab the Quiz Bundle: entry, AF pint, and fries for £10 — shout if you need gluten-free.” |
-| 00:40 | Round 2 start | “Mystery Sound round — close your eyes and tell me what’s happening behind the scenes.” |
+| 00:05 | Round 1 start | “Local Legends to kick off: you’ll only know these if you’ve spent time on our high street.” |
+| 00:30 | Break / upsell | “Grab the Quiz Bundle: entry, AF pint, and fries for £10. Shout if you need gluten-free.” |
+| 00:40 | Round 2 start | “Mystery Sound round: close your eyes and tell me what’s happening behind the scenes.” |
 | 01:10 | Scores & finale | “Top three teams, collect your prizes. Everyone else, scan the QR to pre-book next week.” |
 
 ## Print-ready assets (edit in Canva)

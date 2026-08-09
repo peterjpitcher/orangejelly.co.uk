@@ -94,7 +94,7 @@ describe('every poll email template', () => {
   });
 
   it.each(allTemplates)('should not shout in the subject ($name)', ({ build }) => {
-    // No all-caps and no exclamation stacking — §4.6 hygiene, mandatory because
+    // No all-caps and no exclamation stacking: §4.6 hygiene, mandatory because
     // the sending domain is shared.
     const { subject } = build();
     expect(subject).not.toMatch(/\b[A-Z]{4,}\b/);
@@ -157,7 +157,7 @@ describe('buildVerifyEmail', () => {
     expect(email.html).toContain('24 hours and once only');
   });
 
-  it('should carry no participant or organiser link — neither exists yet', () => {
+  it('should carry no participant or organiser link: neither exists yet', () => {
     const email = buildVerifyEmail(verifyInput);
     expect(email.html).not.toContain('/availability/p/');
     expect(email.html).not.toContain('/availability/o/');
@@ -186,7 +186,7 @@ describe('buildLinksEmail', () => {
     // the wrong link.
     const { html } = buildLinksEmail(linksInput);
     expect(html).toContain('Send this to the people you&rsquo;re inviting');
-    expect(html).toContain('Private &mdash; just for you');
+    expect(html).toContain('Private: just for you');
   });
 });
 
@@ -226,7 +226,7 @@ describe('buildDigestEmail', () => {
 
   it('should render every tally with a word beside the glyph, not colour alone', () => {
     // Email clients strip CSS unpredictably. A count that only reads as green
-    // fails for anyone whose client blocks styles — WCAG 1.4.1.
+    // fails for anyone whose client blocks styles: WCAG 1.4.1.
     const { html } = buildDigestEmail(digestInput);
     expect(html).toContain('Yes 4');
     expect(html).toContain('If need be 1');
@@ -249,12 +249,12 @@ describe('buildDigestEmail', () => {
 describe('buildConfirmEmail', () => {
   it('should put the title and short date in the subject', () => {
     expect(buildConfirmEmail(confirmInput).subject).toBe(
-      'Confirmed: "July planning call" — Sat 4 Jul'
+      'Confirmed: "July planning call", Sat 4 Jul'
     );
   });
 
   it('should never carry an organiser token, whatever the caller passes', () => {
-    // ConfirmEmailInput has no organiserToken field — the type makes the mistake
+    // ConfirmEmailInput has no organiserToken field: the type makes the mistake
     // unrepresentable. This proves it with a real token, and fails loudly if
     // someone widens the input type later.
     const organiserToken = generateToken();
@@ -279,7 +279,7 @@ describe('buildConfirmEmail', () => {
 
   it('should not promise an attachment that is not there when the .ics failed', () => {
     // A calendar file that will not build must never suppress the notification
-    // that the meeting is happening — but the copy must not lie about it either.
+    // that the meeting is happening, but the copy must not lie about it either.
     const email = buildConfirmEmail({ ...confirmInput, icsAttached: false });
     expect(email.text).not.toContain('attached');
     expect(email.html).not.toContain('attached');
@@ -295,7 +295,7 @@ describe('buildConfirmEmail', () => {
 
   it('should escape the ampersands in a calendar URL bound for an href', () => {
     // A bare & in an attribute must be &amp; for the URL to survive a strict
-    // parser. Not belt-and-braces — required.
+    // parser. Not belt-and-braces, required.
     const { html } = buildConfirmEmail(confirmInput);
     expect(html).toContain('action=TEMPLATE&amp;text=July');
   });
@@ -347,7 +347,7 @@ describe('buildConfirmEmail', () => {
 describe('buildNudgeEmail', () => {
   it('should name the poll in the subject without shouting', () => {
     expect(buildNudgeEmail(nudgeInput).subject).toBe(
-      'A quick nudge — "July planning call" is still open'
+      'A quick nudge: "July planning call" is still open'
     );
   });
 
@@ -391,7 +391,7 @@ describe('buildNudgeEmail', () => {
   it('should carry both links under separate headings', () => {
     const email = buildNudgeEmail(nudgeInput);
     expect(email.html).toContain('Send this to the people you&rsquo;re inviting');
-    expect(email.html).toContain('Private &mdash; just for you');
+    expect(email.html).toContain('Private: just for you');
     expect(email.text).toContain(nudgeInput.participantUrl);
     expect(email.text).toContain(nudgeInput.organiserUrl);
   });
@@ -411,7 +411,7 @@ describe('buildPrivacyNotice', () => {
     expect(buildPrivacyNoticeHtml(input)).toContain('Orange Jelly Limited');
   });
 
-  it('should say the data came from the reader — Article 13, not Article 14', () => {
+  it('should say the data came from the reader: Article 13, not Article 14', () => {
     // We have no invitee list. A participant types their own details into our
     // form. Any wording claiming the organiser supplied them is a false
     // statement about our own processing.

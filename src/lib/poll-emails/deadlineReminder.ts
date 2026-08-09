@@ -73,7 +73,7 @@ close it, so there's no rush if you'd rather wait for a few more answers.`);
 
   <p style="margin:0 0 24px;">
     ${escapeHtml(respondedPhrase)}. Nothing has gone out to anyone yet. When you&rsquo;re
-    ready, open the poll, pick the time that works best, and confirm it &mdash; everyone who
+    ready, open the poll, pick the time that works best, and confirm it. Everyone who
     answered then gets the calendar invite.
   </p>
 

@@ -64,7 +64,7 @@ export default function Results() {
         },
         datePublished: '2025-08-15',
         articleBody:
-          'We launched the-anchor.pub as an AI-optimised, search-led website in August 2025. Built around what locals actually search for, Google Search visibility grew 828% — and the people finding us are booking tables...',
+          'We launched the-anchor.pub as an AI-optimised, search-led website in August 2025. Built around what locals actually search for, Google Search visibility grew 828%, and the people finding us are booking tables...',
       },
       {
         '@type': 'Article',
