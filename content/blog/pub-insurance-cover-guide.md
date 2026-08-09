@@ -3,7 +3,7 @@ title: "Pub Insurance: What Cover You Need and What It Costs"
 slug: "pub-insurance-cover-guide"
 publishedDate: 2025-08-04
 excerpt: "A practical guide to the insurance every pub needs. Public liability, employers liability, buildings, contents, business interruption, and realistic cost ranges."
-quickAnswer: "Every pub needs public liability insurance (minimum 5 million pounds), employers liability insurance (10 million pounds, legally required if you have staff), buildings and contents cover, and business interruption insurance. A typical small pub pays 2,000 to 5,000 pounds per year for a combined policy. Specialist brokers who understand licensed premises will get you better cover and better prices than high street insurers."
+quickAnswer: "Every pub needs public liability cover (5 million pounds minimum), employers liability (10 million pounds, legally required if you have staff), buildings and contents, and business interruption. A typical small pub pays 2,000 to 5,000 pounds a year for a combined policy. Use a specialist licensed-trade broker rather than a high street insurer."
 author: "Peter Pitcher"
 category: "operations"
 featuredImage: "/images/blog/pub-insurance-cover-guide.svg"

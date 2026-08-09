@@ -32,7 +32,7 @@ faqs:
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: false
-localSEO: {"localModifiers":["near me","local"],"nearbyLandmarks":["Manchester","Salford Quays","MediaCity"],"targetLocation":"Greater Manchester"}
+localSEO: {"localModifiers":["near me","local"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
   - "How do I run a saturday theme hour in my pub"
   - "What is a power hour promotion"

@@ -25,7 +25,7 @@ keywords:
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: false
-localSEO: {"localModifiers":["turnaround","plan","UK"],"nearbyLandmarks":["Bournemouth","Poole","Southampton"],"targetLocation":"South Coast"}
+localSEO: {"localModifiers":["turnaround","plan","UK"],"nearbyLandmarks":["London","Surrey","Staines"],"targetLocation":"United Kingdom"}
 voiceSearchQueries:
   - "30 day plan to turn around a pub"
   - "Action checklist for struggling bar"

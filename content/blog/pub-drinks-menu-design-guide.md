@@ -3,7 +3,7 @@ title: "Pub Drinks Menu: How to Design a Menu That Grows Revenue"
 slug: "pub-drinks-menu-design-guide"
 publishedDate: 2025-10-27
 excerpt: "How to design a pub drinks menu that sells your most profitable lines. Layout psychology, pricing strategy, cocktails without a cocktail bar, and the soft drinks opportunity."
-quickAnswer: "A well-designed pub drinks menu highlights high-margin lines where the eye lands first, uses pricing anchors to steer choices, and groups options so guests trade up naturally. Add a short cocktail list built from shared base spirits, curate a wine list of six to eight bottles with tasting notes in plain English, and give premium soft drinks proper billing. Review and rotate seasonally."
+quickAnswer: "A well-designed pub drinks menu puts high-margin lines where the eye lands first, uses pricing anchors to steer choices, and groups options so guests trade up naturally. Add a short cocktail list built from shared base spirits, six to eight wines with plain-English tasting notes, and give premium soft drinks proper billing."
 author: "Peter Pitcher"
 category: "food-drink"
 featuredImage: "/images/blog/pub-drinks-menu-design-guide.svg"
