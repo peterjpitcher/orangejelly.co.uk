@@ -17,77 +17,80 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
   const servicePages = serviceRoutes.map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
-    lastModified: '2026-07-07',
+    lastModified: '2026-08-09',
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }));
 
-  // Define static pages with meaningful last-modified dates
-  // reflecting when content was actually updated
+  // Static pages carry hand-maintained last-modified dates, so they must be bumped
+  // whenever a page's rendered output changes. Every entry below was set to 2026-08-09
+  // when titles, meta descriptions and body copy were rewritten across the site; leaving
+  // them stale would have told Google there was nothing new to recrawl on exactly the
+  // pages whose snippets had just been rewritten to earn more clicks.
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/ways-to-work`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/ways-to-work/growth-fix`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/ways-to-work/momentum-month`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/ways-to-work/growth-partner`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/ways-to-work/turnaround-intensive`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/capabilities`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/results`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: '2026-02-15',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: '2026-04-05',
+      lastModified: '2026-08-09',
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/licensees-guide`,
-      lastModified: '2026-03-17',
+      lastModified: '2026-08-09',
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
@@ -113,7 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const marketingPages = marketingRoutes.map((route) => ({
     url: `${baseUrl}/${route.slug}`,
-    lastModified: '2026-03-17',
+    lastModified: '2026-08-09',
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
@@ -135,7 +138,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Dynamically get all categories
   const categoryPages = blogCategories.map((category) => ({
     url: `${baseUrl}/licensees-guide/category/${category.slug}`,
-    lastModified: '2026-03-17',
+    lastModified: '2026-08-09',
     changeFrequency: 'weekly' as const,
     priority: 0.5,
   }));
