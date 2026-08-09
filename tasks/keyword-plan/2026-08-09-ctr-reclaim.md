@@ -167,6 +167,41 @@ These need content depth and internal links, which is a separate piece of work.
 
 ---
 
+## What shipped on 2026-08-09
+
+Deployed to production and verified live. Commits `792a8b07`, `bd484bba`, `fe4bc8a6`, `cb29832d`,
+`05ed1376`, `55dde89f`, merged as `612625b4`.
+
+| Area | Before | After |
+|---|---|---|
+| Rendered titles over 60 chars | 19 | 0 |
+| Meta descriptions over 155 chars | 20 | 0 (3 remain on noindex or redirect stubs) |
+| Guides with a 404 og:image | 23 | 0 |
+| Guides with an unrenderable SVG og:image | 15 | 0 |
+| Guides with `image` on BlogPosting schema | 0 | 105 |
+| Pages with duplicate BreadcrumbList | 144 | 9 (category pages and the guide hub) |
+| Em dashes in visible rendered text | 308 across 132 pages | 0 |
+| Em dashes in the repo (all forms) | 1,764 | 0 |
+| Guides with no internal links | 36 | 0 |
+| quickAnswers outside the 40 to 60 word rule | 45 | 0 |
+| Internal links resolving only via a redirect | 7 | 0 |
+| American spellings in content | 10 | 0 |
+| Banned brand-language instances | 8 | 0 |
+
+Both content guards were found to be defective and were repaired. `check-growth-language.mjs` had an
+optional-suffix group in the wrong place, so its pattern expanded to the base verb, its past tense,
+its third person, and a misspelling that does not exist in English. The gerund, the form that
+actually appears in copy, was never matched. `check-british-english.mjs` covered only six words;
+eleven spelling rules were added.
+
+Note that this very document trips the repaired growth-language guard if it quotes the offending
+words directly, which is a useful demonstration that the fix works.
+
+`profitable-pub-food-menu-ideas` went from 348 words to a full guide with a VAT-correct costing
+worked example, a menu engineering grid, and a dated action plan. Adversarial review before
+publication caught an unsafe overnight-cooking recommendation, an incorrect claim that price rises
+drop 100% to gross profit (VAT makes it about 83%), and an internally inconsistent worked example.
+
 ## Next steps
 
 1. Deploy and leave for 28 days, then re-export GSC and compare CTR on the eight rewritten pages.
