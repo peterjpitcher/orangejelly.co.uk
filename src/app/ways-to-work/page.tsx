@@ -19,7 +19,7 @@ import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 
 export function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Pub Marketing Packages — Clear Pricing, Real Expertise',
+    title: 'Pub Marketing Packages: Clear Pricing, Real Expertise',
     description:
       'Four clear packages for pub and hospitality marketing. From a one-off Growth Fix to ongoing Growth Partner support. Payment plans available. No hidden fees.',
     path: '/ways-to-work',

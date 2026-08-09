@@ -134,14 +134,21 @@ per category, and a worked example.
 | `/results` | 159 | 7.5 | 0 |
 
 At position 2 to 3 a normal page earns 10% to 15%. Zero clicks across ~460 impressions is not
-explainable by weak titles alone. Two contributing factors are visible in the codebase:
-`instagram-services-for-pubs` and `facebook-services-for-pubs` are 301 redirects (both in
-`next.config` and as `permanentRedirect` page components) yet Google still indexes and ranks them as
-separate URLs, so link equity and clicks are split across a redirect.
+explainable by weak titles alone.
 
-**Recommended:** confirm in GSC's URL Inspection tool what Google has indexed for those two URLs, and
-whether the redirect has been recognised. This needs live GSC access, so it is flagged rather than
-fixed.
+**Cause found, and already fixed.** The June 2026 audit recorded a defect where
+`/services/instagram-services-for-pubs` and its Facebook sibling ranked at position 6 to 7 but served
+a 200 with a canonical pointing at the homepage, because a page-level `permanentRedirect()` no-ops on
+Vercel's static route. That is what produced the zero clicks: the result ranked, but clicking it did
+not land anyone on a relevant page.
+
+Verified live on 2026-08-09: both URLs now return a clean **308** to
+`/services/social-media-marketing-for-pubs`, and that target self-canonicalises correctly. The
+`next.config` redirect resolved it. The 12-month GSC window still contains the broken period, so the
+zero-click history is expected and should not be read as a live problem.
+
+**Recommended:** no action. Re-check these four pages in the next 28-day export. If clicks are still
+zero once the fixed redirect has been live for a full window, investigate then.
 
 ### 3. Consumer traffic on drinks-day content
 

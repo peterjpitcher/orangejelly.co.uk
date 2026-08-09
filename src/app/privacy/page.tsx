@@ -27,7 +27,7 @@ import { generateStaticMetadata } from '@/lib/metadata';
 export const metadata = generateStaticMetadata({
   title: 'Privacy Policy',
   description:
-    'How Orange Jelly Limited handles your personal data — what we collect, why, who processes it, how long we keep it, and your rights.',
+    'How Orange Jelly Limited handles your personal data: what we collect, why, who processes it, how long we keep it, and your rights.',
   path: '/privacy',
 });
 

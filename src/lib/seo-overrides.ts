@@ -774,4 +774,107 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'Fill your pub for the November 2026 autumn internationals: fixtures, table bookings, match platters and a screen and sound checklist for licensees.',
   },
+  // --- 2026-08-09 truncation fix: pages with no override had "| Orange Jelly"
+  // appended, pushing the rendered title past the ~60-char SERP limit (and repeating
+  // the brand twice on /about). An override is used verbatim, with no suffix. ---
+  '/about': {
+    title: 'Hospitality Consultant: Meet the Team Behind Orange Jelly',
+    description:
+      'Meet Peter Pitcher, hospitality consultant and founder, who runs The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs.',
+  },
+  '/fix-my-pub': {
+    title: 'Fix My Pub: Emergency Turnaround Help From a Licensee',
+    description:
+      'Pub in crisis or just struggling? I run one myself. Tell me what is wrong and I will show you the fastest fix. Packages from £375 + VAT.',
+  },
+  '/compete-with-pub-chains': {
+    title: 'Compete With Pub Chains: a Challenger Strategy',
+    description:
+      'How independent pubs win against the chains: pick the ground you can own, price with intent, and build the things a chain cannot copy.',
+  },
+  '/pub-marketing-no-budget': {
+    title: 'No-Budget Pub Marketing: Practical Free Strategies',
+    description:
+      'Pub marketing when there is no budget: the free levers that actually move trade, in the order to pull them. From a working licensee.',
+  },
+  '/services/social-media-marketing-for-pubs': {
+    title: 'Social Media Marketing for Pubs: Instagram and Facebook',
+    description:
+      'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates and an execution rhythm that drives bookings.',
+  },
+  '/services/content-creation-for-pubs': {
+    title: 'Content Creation for Pubs: Phone-First, Done in Hours',
+    description:
+      'Photos, Reels, captions and a batching system so you create a week of pub content in one session. Phone-first, no editing skills needed.',
+  },
+  '/services/paid-social-for-pubs': {
+    title: 'Paid Social for Pubs: Meta Ads That Fill Quiet Nights',
+    description:
+      'Facebook and Instagram ads that sell one specific night: your quiet Tuesday, Sunday lunch or event. Locally targeted, measured on real bookings.',
+  },
+  '/pub-marketing-london': {
+    title: 'Pub Marketing in London: Fill Seats in a Busy City',
+    description:
+      'Pub marketing for London venues: stand out in a crowded market with local visibility, events and social that bring people through the door.',
+  },
+  '/pub-marketing-surrey': {
+    title: 'Pub Marketing for Surrey Pubs: Practical, Proven Help',
+    description:
+      'Pub marketing for Surrey venues from a licensee who runs one nearby. Local visibility, events and social that fill tables. From £375 + VAT.',
+  },
+  '/pub-marketing-hampshire': {
+    title: 'Pub Marketing in Hampshire: Results-Driven Help',
+    description:
+      'Pub marketing for Hampshire venues: local visibility, events and social media that turn quiet nights into reliable trade. From £375 + VAT.',
+  },
+  '/pub-marketing-berkshire': {
+    title: 'Pub Marketing for Berkshire Pubs: Proven Systems',
+    description:
+      'Pub marketing for Berkshire venues: the local visibility, events and social systems that fill tables, run by a working licensee.',
+  },
+  '/pub-marketing-oxfordshire': {
+    title: 'Pub Marketing in Oxfordshire: More Covers, Less Stress',
+    description:
+      'Pub marketing for Oxfordshire venues: practical systems for local visibility, events and social that lift covers without adding hours.',
+  },
+  '/pub-marketing-hertfordshire': {
+    title: 'Pub Marketing in Hertfordshire: Build Repeat Trade',
+    description:
+      'Pub marketing for Hertfordshire venues: local visibility, events and social media that turn first visits into regulars. From £375 + VAT.',
+  },
+  '/pub-marketing-buckinghamshire': {
+    title: 'Pub Marketing in Buckinghamshire: Grow Your Trade',
+    description:
+      'Pub marketing for Buckinghamshire venues: local visibility, events and social that grow covers and repeat trade. From £375 + VAT.',
+  },
+  '/licensees-guide/pub-event-ideas': {
+    title: 'Pub Event Ideas: A Year-Round Guide to Quiet Nights',
+    description:
+      'Pub event ideas for every month: quiz, bingo, music, sport and seasonal formats, with what each one costs to run and what it should return.',
+  },
+  '/licensees-guide/christmas-pub-event-ideas': {
+    title: 'Christmas Pub Event Ideas: How to Fill December',
+    description:
+      'Christmas pub event ideas that fill December and carry into January: party nights, set menus, deposits and a promotion timeline that works.',
+  },
+  '/licensees-guide/summer-pub-marketing': {
+    title: 'Summer Pub Marketing: Turn Footfall Into Revenue',
+    description:
+      'Summer pub marketing that converts good weather into takings: garden trade, event hooks, menu tweaks and the promotion that pulls people in.',
+  },
+  '/licensees-guide/autumn-pub-event-ideas': {
+    title: 'Autumn Pub Event Ideas: A September to November Plan',
+    description:
+      'Autumn pub event ideas that fill tables: cask, low and no, wine, Halloween, rugby and gifting, with a month-by-month plan for running each one.',
+  },
+  '/licensees-guide/black-friday-pub-ideas': {
+    title: 'Black Friday Pub Ideas That Build December Trade',
+    description:
+      'Black Friday ideas for pubs that build December: take party deposits and pre-orders, sell gift cards, and run a January bounce-back. No discount war.',
+  },
+  '/licensees-guide/sober-october-low-no-alcohol-pubs': {
+    title: 'Sober October: Low and No Alcohol Drinks That Sell',
+    description:
+      'Build a low and no alcohol range that actually sells: non alcoholic beer worth stocking, a small alcohol free bar, and Sober October done properly.',
+  },
 };

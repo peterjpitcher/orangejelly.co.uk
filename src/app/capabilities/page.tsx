@@ -10,7 +10,7 @@ import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 
 export function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Pub Marketing Capabilities — Social Media, Events, SEO & More',
+    title: 'Pub Marketing Capabilities: Social, Events, SEO and More',
     description:
       'Full-stack pub marketing support: social media, events, paid ads, local visibility, content, website optimisation, and more. See what is included in each package.',
     path: '/capabilities',

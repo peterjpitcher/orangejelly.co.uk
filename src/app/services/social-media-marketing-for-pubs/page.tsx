@@ -10,7 +10,7 @@ import FeatureList from '@/components/FeatureList';
 import socialMediaData from '../../../../content/data/services/social-media-marketing-for-pubs.json';
 
 export const metadata = generateMeta({
-  title: 'Social Media Marketing for Pubs — Instagram, Facebook and More',
+  title: 'Social Media Marketing for Pubs: Instagram and Facebook',
   description:
     'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates, and execution rhythm that drives bookings and footfall. Packages from £375 + VAT.',
   path: '/services/social-media-marketing-for-pubs',
