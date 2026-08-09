@@ -118,7 +118,7 @@ The New Kitchen Team
 By 8:30pm:
 - Off-duty chef from nearby pub
 - Retired chef regular customer
-- Catering student neighbor
+- Catering student neighbour
 - Original barman
 - Me on prep
 
@@ -260,7 +260,7 @@ The Life Balance
 Burnout = walkout:
 - Two days off weekly (consecutive)
 - Holidays honored
-- Split shifts minimized
+- Split shifts minimised
 - Help during rush
 - Realistic expectations
 

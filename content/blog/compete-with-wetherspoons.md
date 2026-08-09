@@ -113,7 +113,7 @@ Whilst Spoons serves acceptable food and drink at low prices, you can offer exce
 
 Instead of competing on price, position yourself as everything Wetherspoons isn't:
 
-**"a typical neighborhood pub Living Room"**
+**"a typical neighbourhood pub Living Room"**
 
 - Comfortable seating, not plastic chairs
 

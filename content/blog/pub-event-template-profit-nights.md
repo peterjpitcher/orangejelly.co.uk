@@ -66,7 +66,7 @@ Use this as your standard run sheet for any event.
 
 Use a simple formula to protect margin:
 
-`(cost of goods + labor uplift + overhead buffer) / target GP = ticket price`
+`(cost of goods + labour uplift + overhead buffer) / target GP = ticket price`
 
 Add a small buffer for no-shows or late changes.
 

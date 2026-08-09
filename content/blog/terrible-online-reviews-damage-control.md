@@ -136,7 +136,7 @@ Google Reviews (Most Important)
 - Always invite them back
 
 TripAdvisor (For Food-Led Pubs)
-- Focus on traveler-friendly information in responses
+- Focus on traveller-friendly information in responses
 - Mention parking, accessibility, dietary options
 - Update photos quarterly
 - Claim your listing properly
