@@ -231,12 +231,17 @@ export default async function LicenseesGuidePage() {
         />
       )}
 
+      {/*
+        breadcrumbEmitJsonLd is false because CollectionPageSchema above already nests
+        the trail under CollectionPage.breadcrumb, the schema.org-preferred association.
+      */}
       <Hero
         title="The Licensee's Guide"
         subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
         showCTA={false}
         breadcrumbs={breadcrumbPaths.licenseesGuide}
         backgroundImage="/images/headers/licensees-guide.png"
+        breadcrumbEmitJsonLd={false}
       />
 
       <SeasonalPlaybooksBand background="cream" />

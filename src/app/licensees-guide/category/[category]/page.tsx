@@ -8,7 +8,6 @@ import CategoryList from '@/components/blog/CategoryList';
 import { getAllPosts, getCategories, resolveCategorySlug } from '@/lib/blog-md';
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
 import { breadcrumbPaths } from '@/components/Breadcrumb';
-import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 import { getCategoryBySlug } from '@/lib/blog';
 import { generateMetadata as generateMeta } from '@/lib/metadata';
 
@@ -118,13 +117,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           { name: categoryTitle, url: `/licensees-guide/category/${canonicalCategorySlug}` },
         ]}
       />
-      <BreadcrumbJsonLd
-        items={[
-          { name: 'Home', url: '/' },
-          { name: "The Licensee's Guide", url: '/licensees-guide' },
-          { name: categoryTitle, url: `/licensees-guide/category/${canonicalCategorySlug}` },
-        ]}
-      />
+      {/*
+        No standalone BreadcrumbJsonLd here. CollectionPageSchema above carries the
+        identical trail nested under CollectionPage.breadcrumb, which is the
+        schema.org-preferred association, and emitting both gave Google two competing
+        BreadcrumbLists for the same page.
+      */}
       <Hero
         title={categoryTitle}
         subtitle={categoryDescription}
