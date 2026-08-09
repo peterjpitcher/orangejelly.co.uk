@@ -7,7 +7,7 @@ export type SeoOverride = {
 
 export const seoOverrides: Record<string, SeoOverride> = {
   '/': {
-    title: 'Hospitality Marketing That Fills Seats | From a Real Publican',
+    title: 'Hospitality Marketing From a Real Publican | Orange Jelly',
     description:
       'Hospitality marketing proven at a real pub. We grew table bookings 403% and food revenue 98% at The Anchor. Packages from £375 + VAT.',
     keywords: [
@@ -19,74 +19,74 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/ways-to-work': {
-    title: 'Pub Marketing Packages — Clear Pricing, Real Expertise | Orange Jelly',
+    title: 'Pub Marketing Packages and Prices From £375 + VAT',
     description:
-      'Four clear packages for pub and hospitality marketing. From a one-off Growth Fix to ongoing Growth Partner support. Payment plans available. No hidden fees.',
+      'Four clear pub marketing packages, from a one-off Growth Fix to ongoing partner support. Transparent pricing, payment plans available, no hidden fees.',
   },
   '/ways-to-work/growth-fix': {
-    title: 'Growth Fix — Solve One Pub Problem Fast | From £375 + VAT',
+    title: 'Growth Fix: Solve One Pub Problem Fast From £375 + VAT',
     description:
       'Solve one clear pub problem fast. The Growth Fix gives you a focused action plan and one targeted intervention in just 5 hours. From £375 + VAT.',
   },
   '/ways-to-work/momentum-month': {
-    title: 'Momentum Month — Ongoing Pub Marketing Support | £900/mo + VAT',
+    title: 'Momentum Month: Ongoing Pub Marketing, £900/mo + VAT',
     description:
       'Monthly pub marketing support that builds real momentum. Strategy, content planning, and hands-on execution. £900/mo + VAT.',
   },
   '/ways-to-work/growth-partner': {
-    title: 'Growth Partner — Full Pub Marketing Support | Orange Jelly',
+    title: 'Growth Partner: Full Pub Marketing Support | Orange Jelly',
     description:
       'Full-service pub marketing partnership. Strategy, execution, and continuous optimisation to grow your venue. From £1,800/mo + VAT.',
   },
   '/ways-to-work/turnaround-intensive': {
-    title: 'Pub Turnaround Intensive — 30-Day Commercial Reset | Orange Jelly',
+    title: 'Pub Turnaround Intensive: a 30-Day Commercial Reset',
     description:
       'A 30-day intensive to reset your pub commercially. Full diagnostic, action plan, website rebuild, and hands-on support.',
   },
   '/capabilities': {
-    title: 'Pub Marketing Capabilities — Social Media, Events, SEO & More | Orange Jelly',
+    title: 'Pub Marketing Capabilities: Social, Events, SEO and More',
     description:
-      'Full-stack pub marketing support: social media, events, paid ads, local visibility, content, website optimisation, and more. See what is included in each package.',
+      'Full-stack pub marketing: social media, events, paid ads, local visibility, content and website work. See what is included in each package.',
   },
   '/pub-marketing': {
-    title: 'Pub Marketing — Proven Systems From a Working Licensee',
+    title: 'Pub Marketing: Proven Systems From a Working Licensee',
     description:
-      'Pub marketing that fills tables, run by a licensee who does it daily at The Anchor: strategy, social, events, and local visibility. Packages from £375 + VAT.',
+      'Pub marketing that fills tables, run by a licensee who does it daily: strategy, social, events and local visibility. Packages from £375 + VAT.',
   },
   '/pub-marketing-agency': {
     title: 'Pub Marketing Agency for Independent Pubs & Bars',
     description:
-      'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads, and local SEO built for independent pubs. Packages from £375 + VAT.',
+      'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads and local SEO for independent pubs. From £375 + VAT.',
   },
   '/pub-rescue': {
-    title: 'Pub Rescue — Fast Turnaround Help From a Working Licensee',
+    title: 'Pub Rescue: Fast Turnaround Help From a Working Licensee',
     description:
       'Pub in trouble? Get a fast, practical rescue plan from a licensee who has done it. We fix the highest-impact problem first. Packages from £375 + VAT.',
   },
   '/empty-pub-solutions': {
     title: 'Empty Pub? A Proven Plan to Fill Tables Again',
     description:
-      'An empty pub is a fixable problem. A practical plan to bring footfall back — events, offers, and local visibility — from a working licensee. Packages from £375 + VAT.',
+      'An empty pub is a fixable problem. A practical plan to bring footfall back: events, offers and local visibility, from a working licensee. From £375 + VAT.',
   },
   '/quiet-midweek-solutions': {
     title: 'Quiet Midweek? Fill Tuesday & Wednesday Nights',
     description:
-      'Turn dead midweek nights into reliable trade with proven Tuesday and Wednesday formats tested at The Anchor, tailored to your pub. Packages from £375 + VAT.',
+      'Turn dead midweek nights into reliable trade with Tuesday and Wednesday formats tested at The Anchor, tailored to your pub. From £375 + VAT.',
   },
   '/licensees-guide/profitable-pub-food-menu-ideas': {
-    title: 'Profitable Pub Food Menu Ideas (High-Margin Picks)',
+    title: 'Profitable Pub Food: The Highest-Margin Menu Items',
     description:
-      'High-margin pub menu ideas and simple menu engineering that grow food revenue — we nearly doubled ours (+98%). Practical picks from a working pub.',
+      'The pub menu items with the best margins, plus the menu engineering that grew our food revenue by 98% in three months. Tested in a working kitchen.',
   },
   '/licensees-guide/social-media-strategy-for-pubs': {
-    title: 'Social Media Strategy for Pubs (Weekly System)',
+    title: 'Social Media for Pubs: The Weekly Plan That Fills Tables',
     description:
-      'A weekly social media plan for pubs: what to post, when, and how to turn views into footfall. The system behind our 828% Google Search visibility growth.',
+      'A weekly social media plan for pubs: what to post, when, and how to turn views into bookings. The system behind our 828% search visibility growth.',
   },
   '/licensees-guide/summer-pub-event-ideas': {
     title: 'Pub Event Ideas for Summer: 35 That Make Money',
     description:
-      '35 summer pub event ideas you can actually run — themes, timelines, and promotion that drive bookings and repeat visits. From a working pub.',
+      '35 summer pub event ideas you can actually run: themes, timelines and promotion that drive bookings and repeat visits. From a working pub.',
   },
   '/licensees-guide/pub-empty-tuesday-nights': {
     title: 'How to Fill an Empty Tuesday Night at Your Pub',
@@ -99,9 +99,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'A simple Facebook plan for pubs: community posts, event promotion, reviews, and local reach without wasting hours. Built for pub life.',
   },
   '/licensees-guide/quiz-night-101': {
-    title: 'Quiz Night 101: How to Run a Pub Quiz That Fills Tables',
+    title: 'How to Run a Pub Quiz: Format, Rounds, Scoring and Prizes',
     description:
-      'A practical pub quiz guide: formats, pacing, promotion, prizes, and templates to build regular teams and consistent midweek trade.',
+      'How to run a pub quiz that builds regular teams: format, round structure, scoring, timings, prizes and promotion. Tested weekly in a working pub.',
   },
   '/licensees-guide/recession-proof-pub-strategies': {
     title: 'Recession-Proof Pub Strategies (Keep Trade Up)',
@@ -109,9 +109,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'Practical ways to protect pub trade when money is tight: offers that work, messaging, regulars, and simple systems that keep covers up.',
   },
   '/licensees-guide/cash-bingo-101': {
-    title: 'Cash Bingo 101: How to Run It in Your Pub',
+    title: 'Pub Bingo: How to Run a Cash Bingo Night That Pays',
     description:
-      'A simple cash bingo guide for pubs: how it works, how to run the night, promotion ideas, and tips to keep it profitable.',
+      'How to run bingo in a pub: 90-ball format, the compliance position, kit and setup, payout models and a run-of-show that fills a quiet midweek night.',
   },
   // --- Sprint 2: Top 20 blog post SEO overrides ---
   '/licensees-guide/quiz-night-ideas': {
@@ -155,9 +155,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'What to post and when: a simple content plan for pubs. Weekly templates, real examples, and ideas that turn social media views into bookings.',
   },
   '/licensees-guide/instagram-marketing-for-pubs': {
-    title: 'Instagram Marketing for Pubs (What to Post)',
+    title: 'Instagram for Pubs: What to Post and When to Post It',
     description:
-      'Instagram marketing for pubs: what to post, when to post, and how to turn food photos into foot traffic. Simple system from a working pub.',
+      'Instagram for pubs without the guesswork: what to post, the best times to post, and how to turn food photos into bookings. A simple weekly system.',
   },
   '/licensees-guide/christmas-pub-promotion-ideas': {
     title: 'Christmas Pub Promotion Ideas That Drive Revenue',
@@ -195,9 +195,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'Practical ways to attract families to your pub without alienating regulars. Menus, events, and simple changes that fill tables on quiet days.',
   },
   '/licensees-guide/pub-health-check-essential-fundamentals-licensee-success': {
-    title: "How to Run a Pub: The Licensee's Essential Guide",
+    title: 'How to Run a Pub: The Fundamentals That Actually Matter',
     description:
-      'Running a pub is relentless. The essentials that actually matter — licensing, money, staff, marketing, and filling tables — from a working publican.',
+      'Running a pub is relentless. The fundamentals that actually matter: licensing, money, staff, marketing and filling tables, from a working publican.',
     keywords: [
       'how to run a pub',
       'running a pub',
@@ -278,7 +278,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'Run 90-minute music bingo nights at your pub. Playlists, Canva card templates, MC tips, and compliance notes for a midweek crowd-filler.',
   },
   '/licensees-guide/partnering-local-brands-share-marketing': {
-    title: 'Pub Brand Partnerships & Co-Branding to Cut Marketing Costs',
+    title: 'Pub Co-Branding: Partner With Local Brands and Share Costs',
     description:
       'Share pub marketing costs by partnering with local brands. Co-branded campaigns, contract templates, and distribution swaps that fill both calendars.',
   },
@@ -385,7 +385,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pop-up-events-for-pubs': {
     title: 'Pop-Up Events for Pubs: Formats That Fill Quiet Nights',
     description:
-      'Pop-up events for pubs that fill quiet nights: street food, guest chefs, makers markets and themed takeovers, plus how to plan, price, promote and run them.',
+      'Pop-up events that fill quiet nights: street food, guest chefs, makers markets and themed takeovers, plus how to plan, price and promote them.',
   },
   // --- Sprint 4: Newly published draft posts ---
   '/licensees-guide/brewery-tie-improve-your-deal': {
@@ -436,7 +436,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/buying-a-pub-complete-guide': {
     title: 'Buying a Pub: Complete UK Guide for First-Time Buyers',
     description:
-      'Thinking of buying a pub? Freehold vs leasehold, the real costs, due-diligence traps, and a 90-day plan — honest guidance from someone who runs one.',
+      'Thinking of buying a pub? Freehold vs leasehold, the real costs, due-diligence traps and a 90-day plan. Honest guidance from someone who runs one.',
     keywords: [
       'buying a pub',
       'how to start a pub',
@@ -448,7 +448,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-recruitment-hiring-bar-staff': {
     title: 'Pub Recruitment: How to Hire (and Keep) Great Bar Staff',
     description:
-      'How to hire and keep great pub staff. Where to find candidates, job ad templates, interview red flags, onboarding plans, and retention strategies from a working licensee.',
+      'How to hire and keep good pub staff: where to find candidates, job ad templates, interview red flags, onboarding and retention that actually works.',
     keywords: [
       'hospitality recruitment',
       'hiring bar staff',
@@ -460,7 +460,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/food-hygiene-rating-five-star-guide': {
     title: 'How to Get a 5-Star Food Hygiene Rating (Pub Guide)',
     description:
-      'Everything pub landlords need to score 5 on food hygiene. What EHO inspectors assess, how to prepare, common failures, re-inspection process, and daily routines that keep your stars.',
+      'How to score 5 on food hygiene: what EHO inspectors assess, how to prepare, the common failures, re-inspection, and the daily routines that hold it.',
     keywords: [
       'food hygiene rating',
       'how to improve food hygiene rating',
@@ -472,7 +472,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-business-plan-template-guide': {
     title: 'Pub Business Plan: Free Template & Step-by-Step Guide',
     description:
-      'Write a pub business plan that gets approved. Step-by-step guide covering financials, market analysis, operations, and marketing. Free template from a working licensee.',
+      'Write a pub business plan that gets approved: financials, market analysis, operations and marketing. Free template from a working licensee.',
     keywords: [
       'pub business plan',
       'pub business plan template',
@@ -483,7 +483,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-insurance-cover-guide': {
     title: 'Pub Insurance: What Cover You Need and What It Costs',
     description:
-      'What insurance does a pub need? Public liability, employers liability, buildings, contents, and business interruption explained with realistic UK costs and an annual review checklist.',
+      'What insurance does a pub need? Public and employers liability, buildings, contents and business interruption, with realistic UK costs.',
     keywords: [
       'pub insurance',
       'pub liability insurance',
@@ -496,7 +496,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/prs-ppl-music-licensing-pubs': {
     title: 'PRS and PPL Music Licensing for Pubs: What You Actually Pay',
     description:
-      'TheMusicLicence for pubs explained. What PRS and PPL cover, how fees work by venue size, what is included, and penalties for non-compliance. Written by a working licensee.',
+      'TheMusicLicence explained: what PRS and PPL actually cover, how fees work by venue size, and the penalties for getting it wrong. Written by a licensee.',
     keywords: [
       'pub background music',
       'PRS licence pub',
@@ -509,7 +509,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-health-safety-checklist': {
     title: "Pub Health and Safety: The Licensee's Practical Checklist",
     description:
-      'A practical health and safety checklist for pub licensees. Risk assessments, fire safety, COSHH, cellar safety, noise management, and inspection prep from a working publican.',
+      'A practical health and safety checklist for licensees: risk assessments, fire safety, COSHH, cellar safety, noise and inspection prep.',
     keywords: [
       'pub health and safety',
       'fire safety pub',
@@ -532,7 +532,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/licensees-guide/pub-wages-labour-costs-guide': {
-    title: 'Pub Wages and Labour Costs: What to Pay and How to Control Costs',
+    title: 'Pub Wages and Labour Costs: What to Pay, How to Control It',
     description:
       'What to pay pub staff in the UK and how to keep labour costs under 30%. Realistic rates by role, rota tips, and benchmarks from a working licensee.',
     keywords: [
@@ -546,7 +546,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-christmas-bookings-fill-december': {
     title: 'Pub Christmas Bookings: How to Fill Your December Calendar',
     description:
-      'Fill your pub December calendar with Christmas bookings. Pricing strategies, deposit policies, set menus, entertainment ideas, and a 12-week promotion timeline from a working licensee.',
+      'Fill December with Christmas bookings: pricing, deposit policies, set menus, entertainment and a 12-week promotion timeline from a working pub.',
     keywords: [
       'pub christmas party booking',
       'pub christmas ideas',
@@ -556,7 +556,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/licensees-guide/pub-licensing-premises-personal-licence-guide': {
-    title: 'Pub Licensing Explained: Premises Licences, Personal Licences & TENs',
+    title: 'Pub Licensing Explained: Premises, Personal and TENs',
     description:
       'Every licence a pub landlord needs explained in plain English. Premises licences, personal licences, TENs, costs, timelines, and common mistakes to avoid.',
     keywords: [
@@ -572,7 +572,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/how-to-respond-bad-pub-reviews': {
     title: 'How to Respond to Bad Pub Reviews (Without Making It Worse)',
     description:
-      'Real response templates for 1-star pub reviews. The 3 golden rules, what never to say, and a systematic approach to generating more positive reviews for your pub.',
+      'Response templates for 1-star pub reviews: the three golden rules, what never to say, and how to generate more positive reviews.',
     keywords: [
       'how to respond to bad pub reviews',
       'pub reputation management',
@@ -584,7 +584,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/google-business-profile-pub-guide': {
     title: 'Google Business Profile for Pubs: The Complete Setup Guide',
     description:
-      'Step-by-step guide to setting up and optimising your pub Google Business Profile. Get into the local 3-pack, manage reviews, and turn searches into customers.',
+      'Set up and optimise your pub Google Business Profile: get into the local 3-pack, manage reviews and turn searches into customers.',
     keywords: [
       'pub google maps',
       'google business profile pub',
@@ -594,9 +594,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/licensees-guide/cellar-management-beer-quality-guide': {
-    title: 'Cellar Management: Keep Beer Perfect, Waste Low',
+    title: 'Pub Cellar Management: Keep Beer Fresh and Cut Wastage',
     description:
-      'Flat pints and wastage quietly kill your GP. The cellar routine — temperature, line cleaning, stock rotation — that keeps beer perfect and protects your margin.',
+      'Flat pints and ullage quietly wreck your GP. The cellar routine that protects margin: temperature, line cleaning, FIFO stock rotation and wastage tracking.',
     keywords: [
       'cellar management',
       'pub stock take',
@@ -610,7 +610,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-halloween-bonfire-night-events': {
     title: 'Pub Bonfire Night & Halloween: Events That Actually Work',
     description:
-      'Practical Halloween and Bonfire Night event ideas for pubs. Themed quizzes, family daytime events, ticketed fireworks, and seasonal menus that drive real autumn revenue.',
+      'Halloween and Bonfire Night ideas for pubs: themed quizzes, family daytime events, ticketed fireworks and seasonal menus that drive autumn trade.',
     keywords: [
       'pub halloween party',
       'pub bonfire night',
@@ -622,7 +622,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-accessibility-welcoming-guide': {
     title: 'Pub Accessibility: Making Your Venue Welcoming for Everyone',
     description:
-      'Make your pub accessible, dog friendly, and family friendly. Equality Act 2010 requirements, practical improvements, and the business case for welcoming everyone.',
+      'Make your pub accessible, dog friendly and family friendly: Equality Act 2010 duties, practical improvements and the business case for it.',
     keywords: [
       'disabled access',
       'pub dog friendly',
@@ -633,9 +633,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/licensees-guide/pub-vat-accounting-guide': {
-    title: "Pub VAT and Accounting: The Landlord's Plain-English Guide",
+    title: 'Pub VAT Explained: What to Reclaim and When to Register',
     description:
-      'Plain-English guide to pub VAT, bookkeeping, and common tax mistakes. Know what to reclaim, when to register, and how to choose a hospitality accountant.',
+      'Plain-English pub VAT and bookkeeping: what you can reclaim, when to register, the mistakes that cost you, and how to pick a hospitality accountant.',
     keywords: [
       'pub vat',
       'vat on pub food',
@@ -648,7 +648,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-drinks-menu-design-guide': {
     title: 'Pub Drinks Menu: Design a Menu That Grows Revenue',
     description:
-      'How to design a pub drinks menu that sells high-margin lines. Layout psychology, pricing ladders, cocktail lists, wine for non-experts, and premium soft drinks. From a working licensee.',
+      'Design a pub drinks menu that sells high-margin lines: layout psychology, pricing ladders, cocktails, wine for non-experts and premium softs.',
     keywords: [
       'pub drinks menu',
       'pub cocktail list',
@@ -659,9 +659,9 @@ export const seoOverrides: Record<string, SeoOverride> = {
     ],
   },
   '/licensees-guide/pub-toilet-refurbishment-budget-guide': {
-    title: 'Pub Toilet Refurbishment: Make a Great Impression on a Budget',
+    title: 'Pub Toilet Refurbishment on a Budget: Make an Impression',
     description:
-      'Budget pub toilet refurbishment guide. Prioritise paint, lighting, mirrors, and hand drying for under £1,000. Maintenance schedule and cost breakdowns from a working licensee.',
+      'Budget pub toilet refurbishment: prioritise paint, lighting, mirrors and hand drying for under £1,000. Maintenance schedule and real costs.',
     keywords: [
       'pub toilet refurbishment',
       'pub lighting ideas',
@@ -673,7 +673,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-new-years-eve-planning-guide': {
     title: "New Year's Eve for Pubs: Planning, Pricing & Promotion",
     description:
-      "Plan a profitable pub New Year's Eve. Ticketing vs walk-in, pricing psychology, menu planning, entertainment, staffing, and how to convert NYE visitors into January regulars.",
+      "Plan a profitable pub New Year's Eve: ticketing vs walk-in, pricing, menus, entertainment, staffing and turning NYE visitors into January regulars.",
     keywords: [
       'pub new year menu',
       'pub valentines menu',
@@ -685,7 +685,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-chalkboard-a-board-ideas': {
     title: 'Pub Chalkboard & A-Board Ideas That Actually Drive Footfall',
     description:
-      'Practical pub chalkboard and A-board ideas that turn passers-by into customers. What to write, design tips, seasonal messages, legal rules, and social media amplification.',
+      'Pub chalkboard and A-board ideas that turn passers-by into customers: what to write, design tips, seasonal messages and the legal rules.',
     keywords: [
       'pub chalkboard ideas',
       'pub a-board signs',
@@ -710,7 +710,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   '/licensees-guide/pub-six-nations-rugby-marketing': {
     title: 'Six Nations 2026: How to Make the Most of Rugby in Your Pub',
     description:
-      'How to screen Six Nations rugby in your pub. Setup, food and drink deals, booking systems, social media promotion, and converting match-day visitors into regulars.',
+      'How to screen Six Nations rugby in your pub: setup, food and drink deals, bookings, promotion and turning match-day crowds into regulars.',
     keywords: ['pub Six Nations', 'pub sporting events', 'screening rugby in pub', 'pub match day'],
   },
   '/licensees-guide/wet-led-vs-food-led-pubs': {
@@ -735,5 +735,43 @@ export const seoOverrides: Record<string, SeoOverride> = {
       'pub promotion ideas',
       'pub events calendar',
     ],
+  },
+  // --- 2026-08-09 CTR reclaim: pages earning impressions well below the click-through
+  // rate expected for their position. Evidence: GSC 12-month export, see
+  // tasks/keyword-plan/2026-08-09-ctr-reclaim.md ---
+  '/services': {
+    title: 'Pub Marketing Services: Social, Events, Menus and Local SEO',
+    description:
+      'Pub marketing services from a working licensee: social media, events, menu engineering and local visibility. Packages from £375 + VAT.',
+  },
+  '/licensees-guide': {
+    title: "The Licensee's Guide: 100+ Practical Guides for UK Pubs",
+    description:
+      'Over 100 practical guides for UK licensees: filling tables, running events, menu margins, staffing, compliance and marketing. From a working publican.',
+  },
+  '/results': {
+    title: 'Pub Marketing Results: What Actually Moved the Numbers',
+    description:
+      'Real results from The Anchor: Google Search visibility up 828%, table bookings up 403% and food revenue up 98%. The work behind each number.',
+  },
+  '/licensees-guide/national-drinks-days-pub-guide': {
+    title: 'National Drinks Days 2026: A Pub Promotion Calendar',
+    description:
+      'Every national drinks day worth running in 2026, with dates, serves, pricing and promotion you can set up in a single shift. Built for licensees.',
+  },
+  '/licensees-guide/cask-ale-week-pub-guide': {
+    title: 'Cask Ale Week 2026: A 10-Day Beer Festival Plan',
+    description:
+      'Run Cask Ale Week 2026 as your own beer festival: a 10-day plan with featured casks, a beer passport, tasting paddles and plain-English tasting notes.',
+  },
+  '/licensees-guide/macmillan-coffee-morning-pub-guide': {
+    title: 'Pub Coffee Morning Ideas: Fill a Quiet Daytime',
+    description:
+      'Coffee morning ideas for pubs: a run-sheet, raffle and local-group tie-in that fill a dead daytime and raise money. Includes the Macmillan 2026 date.',
+  },
+  '/licensees-guide/autumn-rugby-nations-championship-pubs': {
+    title: 'Autumn Internationals 2026: Fill Your Pub for the Rugby',
+    description:
+      'Fill your pub for the November 2026 autumn internationals: fixtures, table bookings, match platters and a screen and sound checklist for licensees.',
   },
 };
