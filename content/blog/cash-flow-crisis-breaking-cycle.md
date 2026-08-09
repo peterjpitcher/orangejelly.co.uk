@@ -3,7 +3,7 @@ title: "Cash Flow Crisis Every Month? Breaking the Feast-or-Famine Cycle"
 slug: "cash-flow-crisis-breaking-cycle"
 publishedDate: 2025-03-24
 excerpt: "Stop the monthly panic of making rent. Build predictable income, manage seasonal swings, and create the cash buffer that lets you sleep at night."
-quickAnswer: "Break the cycle by creating recurring revenue streams: regular events, monthly quiz nights, function bookings, and loyalty schemes. Build a 3-month cash buffer by saving £100 weekly from improved margins. Track daily cash position and extend supplier payment terms where possible."
+quickAnswer: "Break the feast-or-famine cycle by building a repeatable cash rhythm rather than chasing one big week. Add two reliable midweek anchors, align payment dates with your strongest inflows, protect gross profit, and pull cash forward with deposits. Build a buffer worth one week of fixed costs from a fixed share of weekly profit."
 author: "Peter Pitcher"
 category: "revenue-growth"
 featuredImage: "/images/blog/cash-flow-crisis-breaking-cycle.png"
@@ -33,7 +33,7 @@ faqs:
   - question: "How much cash reserve should a pub keep?"
     answer: "Aim for a buffer equal to one week of fixed costs as a starting point. Build it slowly by setting aside a fixed percentage of weekly profit. Even a small buffer stops you making panic decisions when a quiet week hits."
   - question: "What recurring revenue streams work for pubs?"
-    answer: "Regular weekly events like quiz nights, set menu evenings, and loyalty schemes all create predictable midweek income. Function bookings with deposits also bring cash forward. The key is consistency — two reliable midweek anchors reduce your dependence on weekend spikes."
+    answer: "Regular weekly events like quiz nights, set menu evenings, and loyalty schemes all create predictable midweek income. Function bookings with deposits also bring cash forward. The key is consistency: two reliable midweek anchors reduce your dependence on weekend spikes."
   - question: "Should I ask suppliers for extended payment terms?"
     answer: "Yes, if it helps smooth your cash flow. Most suppliers would rather adjust terms than lose a customer. Approach them with a clear repayment plan rather than waiting until you're overdue. Fortnightly terms or split payments can make a real difference."
 ---
@@ -46,11 +46,11 @@ Here is a tighter, less chaotic system that builds a buffer over 90 days.
 
 ## Step 1: Build a weekly income architecture
 
-Most pubs rely on weekend spikes. That creates risk. Build at least two reliable midweek anchors such as a set menu night and a recurring event. Predictability is more valuable than occasional peaks.
+Most pubs rely on weekend spikes. That creates risk. Build at least two reliable [midweek anchors that actually pay](/licensees-guide/midweek-pub-offers-that-work) such as a set menu night and a recurring event. Predictability is more valuable than occasional peaks.
 
 ## Step 2: Reset payment timing
 
-Where possible, align major outflows with your strongest inflows. Even small shifts in payment dates can smooth the month.
+Where possible, align major outflows with your strongest inflows. Even small shifts in payment dates can smooth the month, and [a straight conversation about rent and supplier terms](/licensees-guide/rent-supplier-negotiations-cash-tight) usually buys more room than you expect.
 
 - Ask suppliers for fortnightly terms.
 - Split rent into two smaller payments.
@@ -64,7 +64,7 @@ It does not need to be huge. It needs to be consistent.
 
 ## Step 4: Protect gross profit relentlessly
 
-When cash is tight, GP is everything. Audit top sellers, remove low-margin items, and train staff on upsells that protect margin.
+When cash is tight, GP is everything. Audit top sellers, remove low-margin items, and train staff on [upsells that protect margin](/licensees-guide/upselling-secrets-training-scripts).
 
 ## Step 5: Turn future demand into current cash
 

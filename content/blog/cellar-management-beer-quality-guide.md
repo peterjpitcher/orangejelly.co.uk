@@ -41,7 +41,7 @@ faqs:
   - question: "What does FIFO mean in pub stock management?"
     answer: "FIFO stands for first in, first out. It means the oldest stock is always used before newer deliveries. In a pub cellar, this means placing new casks and kegs behind existing stock so the oldest product is connected and served first. FIFO prevents beer going out of date, reduces ullage, and ensures consistent quality for customers."
   - question: "How do I track ullage and wastage in my pub?"
-    answer: "Create a simple ullage log in your cellar. Every time a cask is returned part-full, a keg blows mid-service, or beer is wasted during line cleaning, record the product, volume, date, and reason. Review this log weekly alongside your stock take figures. Patterns in wastage — such as consistently high ullage on a slow-selling cask ale — tell you exactly where to make changes."
+    answer: "Create a simple ullage log in your cellar. Every time a cask is returned part-full, a keg blows mid-service, or beer is wasted during line cleaning, record the product, volume, date, and reason. Review this log weekly alongside your stock take figures. Patterns in wastage, such as consistently high ullage on a slow-selling cask ale, tell you exactly where to make changes."
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Tightening Your Operations?"
@@ -54,9 +54,9 @@ schema:
 
 # Cellar Management: How to Keep Your Beer Perfect and Your Waste Low
 
-You could have the best pub in the country — great food, brilliant staff, a cracking quiz night — but if the beer tastes off, people stop coming back. They do not always tell you either. They just quietly switch to the pub down the road where the Doom Bar actually tastes like Doom Bar.
+You could have the best pub in the country (great food, brilliant staff, a cracking quiz night), but if the beer tastes off, people stop coming back. They do not always tell you either. They just quietly switch to the pub down the road where the Doom Bar actually tastes like Doom Bar.
 
-The frustrating part is that cellar management is not complicated. It is a set of routines, done consistently, week in, week out. But when things slip — and they always slip when you are busy, short-staffed, or distracted — your beer quality drops, your wastage climbs, and your gross profit takes a hit you might not even notice until the stock take lands.
+The frustrating part is that cellar management is not complicated. It is a set of routines, done consistently, week in, week out. But when things slip (and they always slip when you are busy, short-staffed, or distracted), your beer quality drops, your wastage climbs, and your gross profit takes a hit you might not even notice until the stock take lands.
 
 This guide covers everything you need to get right in your cellar: temperature, line cleaning, stock rotation, cask versus keg management, wastage tracking, safety, and the weekly and monthly routines that hold it all together. If you are already solid on the basics, jump to the routines section at the end. If your cellar has been neglected, start from the top.
 
@@ -66,9 +66,9 @@ Cellar management is not a back-of-house afterthought. It directly affects three
 
 **Beer quality.** Customers judge your pub on the first sip. A pint that tastes stale, yeasty, or warm tells them everything they need to know about how you run the place. One bad pint can lose a regular.
 
-**Gross profit.** At The Anchor, disciplined management of our food margins grew food revenue by 98% in three months. The same principle applies to wet sales. Every pint lost to poor storage, fobbing, or ullage is money that never reaches your till. A cellar running at 5 percent wastage instead of 2 percent on a pub turning over 5,000 pounds a week in wet sales is losing 150 pounds a week — nearly 8,000 pounds a year.
+**Gross profit.** At The Anchor, disciplined management of our food margins grew food revenue by 98% in three months. The same principle applies to wet sales. Every pint lost to poor storage, fobbing, or ullage is money that never reaches your till. A cellar running at 5 percent wastage instead of 2 percent on a pub turning over 5,000 pounds a week in wet sales is losing 150 pounds a week, nearly 8,000 pounds a year.
 
-**Compliance.** Environmental Health Officers inspect cellars. Brewery area managers inspect cellars. If you are a tenant — as I am with Greene King — your cellar condition reflects on your tenancy performance. A dirty cellar with inconsistent temperatures is a red flag that invites deeper scrutiny of your operation.
+**Compliance.** Environmental Health Officers inspect cellars. Brewery area managers inspect cellars. If you are a tenant, as I am with Greene King, your cellar condition reflects on your tenancy performance. A dirty cellar with inconsistent temperatures is a red flag that invites deeper scrutiny of your operation.
 
 ## Temperature control: the foundation of everything
 
@@ -83,7 +83,7 @@ Temperature is the single most important factor in cellar management. Get it wro
 | Keg ale and stout | 11-13°C (cellar) | 5-8°C (chilled at the font) |
 | Bottled beer | 11-13°C (cellar) | Varies by style |
 
-Cask ale is the most sensitive. Below 10 degrees and the yeast goes dormant — the beer will not condition properly and will taste flat. Above 14 degrees and the yeast works too fast, producing excess CO2 that causes fobbing, haze, and shortened shelf life.
+Cask ale is the most sensitive. Below 10 degrees and the yeast goes dormant. The beer will not condition properly and will taste flat. Above 14 degrees and the yeast works too fast, producing excess CO2 that causes fobbing, haze, and shortened shelf life.
 
 ### Maintaining stable temperature
 
@@ -125,7 +125,7 @@ A pub with twelve beer lines that skips cleaning for two weeks will typically se
 
 ## Stock rotation: FIFO every time
 
-FIFO — first in, first out — is the golden rule of stock rotation. The oldest product is always used before newer deliveries.
+FIFO (first in, first out) is the golden rule of stock rotation. The oldest product is always used before newer deliveries.
 
 ### How to implement FIFO in your cellar
 
@@ -133,7 +133,7 @@ FIFO — first in, first out — is the golden rule of stock rotation. The oldes
 
 **Mark delivery dates on casks and kegs.** A simple chalk mark or sticker with the date is enough. When you glance at the cellar, you should be able to see at a glance which stock is oldest.
 
-**Check use-by dates weekly.** Keg beer typically has a shelf life of 8 to 12 weeks from production. Cask ale is much shorter — usually 6 to 8 weeks. If a product is approaching its date and not yet tapped, either put it on as your next barrel or speak to your supplier about a return or credit.
+**Check use-by dates weekly.** Keg beer typically has a shelf life of 8 to 12 weeks from production. Cask ale is much shorter, usually 6 to 8 weeks. If a product is approaching its date and not yet tapped, either put it on as your next barrel or speak to your supplier about a return or credit.
 
 **Match your order to your sales.** The most common cause of stock going out of date is over-ordering. If you sell two casks of Best Bitter a week, do not order four because the delivery driver offered a deal. Dead stock is dead money.
 
@@ -155,7 +155,7 @@ Cask ale is a living product. It continues to condition in the cask, which is wh
 
 **Track shelf life from the moment you tap.** Once tapped, cask ale should ideally be sold within three days. After that, quality drops noticeably. If a cask is taking longer than three days to sell, you either have the wrong product or you are selling too many cask lines for your volume.
 
-**Know when to return.** If a cask is bad on arrival — excessively hazy, smells of vinegar, or tastes clearly off — contact your supplier immediately. Every brewery has a process for returns. Do not try to sell bad beer. Your reputation is worth more than the cost of one cask.
+**Know when to return.** If a cask is bad on arrival (excessively hazy, smells of vinegar, or tastes clearly off), contact your supplier immediately. Every brewery has a process for returns. Do not try to sell bad beer. Your reputation is worth more than the cost of one cask.
 
 ### Keg beer
 
@@ -169,14 +169,14 @@ Kegs are pressurised, pasteurised (usually), and less labour-intensive than cask
 
 ## Ullage and wastage tracking
 
-If you are not tracking your wastage, you have no idea how much beer you are losing — and therefore no idea what your actual wet GP looks like.
+If you are not tracking your wastage, you have no idea how much beer you are losing, and therefore no idea what your actual wet GP looks like.
 
 ### Setting up a wastage log
 
 Keep a simple log in the cellar. A clipboard and a printed sheet work perfectly. Record:
 
 - **Date**
-- **Product** (brand and format — cask, keg, bottle)
+- **Product** (brand and format: cask, keg, bottle)
 - **Volume lost** (pints or litres)
 - **Reason** (ullage/end of cask, line cleaning, fobbing, spillage, out of date, quality return)
 
@@ -184,11 +184,11 @@ Keep a simple log in the cellar. A clipboard and a printed sheet work perfectly.
 
 | Source | Acceptable range | Red flag |
 |--------|-----------------|----------|
-| Line cleaning waste | 0.5-1% of total volume | Over 1.5% — check procedure |
-| Cask ullage | 1-2% of cask volume | Over 3% — selling too slowly |
-| Fobbing and spillage | Under 0.5% | Over 1% — gas or line issue |
-| Out-of-date stock | 0% | Any — ordering problem |
-| **Total wastage** | **2-3%** | **Over 4% — investigate** |
+| Line cleaning waste | 0.5-1% of total volume | Over 1.5%: check procedure |
+| Cask ullage | 1-2% of cask volume | Over 3%: selling too slowly |
+| Fobbing and spillage | Under 0.5% | Over 1%: gas or line issue |
+| Out-of-date stock | 0% | Any: ordering problem |
+| **Total wastage** | **2-3%** | **Over 4%: investigate** |
 
 ### Using wastage data
 
@@ -210,7 +210,7 @@ A pub cellar is a workplace. It carries real risks, and you have a legal duty to
 
 **Slippery floors.** Cellar floors get wet from condensation, spillage, and cleaning. Use non-slip mats at the base of cellar stairs and in working areas. Clean up spills immediately.
 
-**CO2 and mixed gas.** Cellars use compressed gas cylinders. A CO2 leak in an enclosed cellar can displace oxygen and create a life-threatening atmosphere in minutes. Install a CO2 detector with an audible alarm. Check gas connections for leaks regularly using soapy water on joints. Never enter a cellar if the CO2 alarm is sounding — ventilate first.
+**CO2 and mixed gas.** Cellars use compressed gas cylinders. A CO2 leak in an enclosed cellar can displace oxygen and create a life-threatening atmosphere in minutes. Install a CO2 detector with an audible alarm. Check gas connections for leaks regularly using soapy water on joints. Never enter a cellar if the CO2 alarm is sounding. Ventilate first.
 
 **Cellar stairs.** Falls on cellar stairs are one of the most common pub injuries. Ensure stairs are well-lit, free of obstructions, and have a sturdy handrail. Never carry heavy items down cellar stairs if there is a cellar drop hatch available.
 
@@ -239,7 +239,7 @@ Once a month, go deeper:
 - Review your product range. Is every line earning its place? If a product is not selling, it is costing you in wastage, tied capital, and lost opportunity for something that would sell.
 - Compare your wet GP month on month. A downward trend needs investigating immediately.
 
-If you want to explore how [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) principles apply to your drinks list — not just food — that guide walks through the layout and pricing psychology that lifts average spend.
+If you want to explore how [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) principles apply to your drinks list, not just food, that guide walks through the layout and pricing psychology that lifts average spend.
 
 ## Weekly and monthly cellar routines
 
@@ -267,7 +267,7 @@ Consistency is everything. Pin these routines to your cellar wall.
 
 - Deep clean cellar walls, floor, and shelving
 - Review wet GP against target
-- Audit stock range — drop slow sellers, trial new lines
+- Audit stock range: drop slow sellers, trial new lines
 - Check all gas connections for leaks
 - Review and reorder cleaning chemicals and sundries
 - Inspect manual handling equipment (trolleys, barrel rollers)
@@ -276,7 +276,7 @@ Consistency is everything. Pin these routines to your cellar wall.
 ### Quarterly
 
 - Service cellar cooling unit (arrange with your refrigeration contractor)
-- Review beer line condition — replace any lines showing wear or discolouration
+- Review beer line condition: replace any lines showing wear or discolouration
 - Full gas system inspection
 - Update COSHH sheets if chemicals have changed
 
@@ -309,11 +309,11 @@ If your cellar management has slipped, here is how to get back on track.
 
 **"I do not have time for all this."** A daily cellar check takes five minutes. A weekly line clean takes 30 to 45 minutes. A stock take takes an hour. That is less than two hours a week to protect thousands of pounds in gross profit. You cannot afford not to do it.
 
-**"My staff do not know how to do this."** Then train them. Walk them through each routine once, supervise them twice, then let them own it. Cellar management is not brain surgery — it is discipline and consistency.
+**"My staff do not know how to do this."** Then train them. Walk them through each routine once, supervise them twice, then let them own it. Cellar management is not brain surgery. It is discipline and consistency.
 
 **"Cask ale is too much hassle. I am thinking of going all keg."** Cask ale drinkers are loyal, high-frequency customers. CAMRA members actively seek out pubs with good cask. Before you drop it, make sure the problem is genuinely cask management and not just poor rotation or over-ranging. One or two well-kept cask lines will serve most community pubs better than six neglected ones.
 
-**"My wastage is fine — I do not need to track it."** If you are not tracking it, you do not know whether it is fine. Every pub I have worked with that started tracking wastage properly has found margin gains they did not know existed.
+**"My wastage is fine. I do not need to track it."** If you are not tracking it, you do not know whether it is fine. Every pub I have worked with that started tracking wastage properly has found margin gains they did not know existed.
 
 ## The bottom line
 
@@ -323,4 +323,4 @@ The routines in this guide are not aspirational. They are the baseline. Every we
 
 Get your cellar right, and you protect your GP, your reputation, and your customers' experience. That is worth an hour or two a week of your time.
 
-If you want help tightening up your operations — cellar, stock, pricing, the lot — [get in touch with Orange Jelly](/contact). We work with licensees across the UK to turn good pubs into profitable ones.
+If you want help tightening up your operations (cellar, stock, pricing, the lot), [get in touch with Orange Jelly](/contact). We work with licensees across the UK to turn good pubs into profitable ones.

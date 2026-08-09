@@ -4,7 +4,7 @@ slug: "survive-off-season-revenue-packages"
 publishedDate: 2025-07-24
 updatedDate: "2026-01-26T00:00:00.000Z"
 excerpt: "Build shoulder-season packages that convert corporate, community, and staycation guests when tourist footfall disappears."
-quickAnswer: "Bundle space hire, F&B, and hosted experiences into ready-to-buy packages aimed at three segments: local businesses, family celebrations, and hobby groups."
+quickAnswer: "Pick three segments you can genuinely serve, usually local businesses, community groups and families or clubs, then build two or three plug-and-play packages priced for margin: a team lunch with room hire, a community night with buffet and quiz, a family Sunday roast. Sell them with one-page collateral and direct outreach."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -45,7 +45,7 @@ faqs:
 
 # Survive the Off-Season: Packages That Keep Revenue Coming
 
-When tourist footfall drops, you need locally anchored packages that give people a reason to book. Packages work because they are easy to say yes to and easy to sell.
+When tourist footfall drops and [trade slows across the whole week](/licensees-guide/cashflow-fixes-when-trade-drops), you need locally anchored packages that give people a reason to book. Packages work because they are easy to say yes to and easy to sell.
 
 Here is a simple structure that keeps revenue coming in the quiet months.
 
@@ -60,7 +60,7 @@ Do not try to serve everyone.
 
 ## Step 2: Build plug-and-play packages
 
-Keep packages simple and priced for margin.
+Keep packages simple and priced for margin, the same way you would build a [repeatable profit night](/licensees-guide/pub-event-template-profit-nights).
 
 Examples:
 - "Team lunch" package: fixed menu plus room hire.
@@ -73,7 +73,7 @@ A one-page PDF and a short message template are enough. The goal is clarity, not
 
 ## Step 4: Prospect proactively
 
-Reach out directly to local businesses and groups. One phone call can fill a quiet week.
+Reach out directly to local businesses and the [community groups on your doorstep](/licensees-guide/community-outreach-reintroduce-pub). One phone call can fill a quiet week.
 
 ## Step 5: Overdeliver and upsell
 

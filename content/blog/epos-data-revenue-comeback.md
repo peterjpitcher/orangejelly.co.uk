@@ -4,7 +4,7 @@ slug: "epos-data-revenue-comeback"
 publishedDate: 2025-11-14
 updatedDate: "2026-04-06T00:00:00.000Z"
 excerpt: "Transform EPOS reports into weekly action plans that boost covers, spend per head, and labour productivity."
-quickAnswer: "Track four metrics (covers, average spend, product mix, labour cost) and run one experiment per week based on what the data reveals."
+quickAnswer: "Track four numbers every week: covers by day and time, average spend per head, gross profit by category, and labour percentage by shift. Put them on a one-page dashboard the whole team can see, then run one experiment a week off what the data shows. Change one thing, measure it, and drop the slow movers."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -70,7 +70,7 @@ Example sections:
 Treat each week as a small test. Change one thing and measure the result.
 
 Examples:
-- Move a high-margin item to the top of the menu.
+- [Move a high-margin item to the top of the menu](/licensees-guide/menu-engineering-lift-average-spend).
 - Bundle a drink with a midweek dish.
 - Change a price point by one pound and track units.
 
@@ -92,7 +92,7 @@ Numbers are useless if only one person sees them. Share the weekly dashboard and
 
 - Tracking too many metrics.
 - Making changes without measuring.
-- Ignoring labour cost by shift.
+- Ignoring [labour cost by shift](/licensees-guide/pub-wages-labour-costs-guide).
 - Leaving slow movers on the menu for months.
 
 ## Quick checklist
@@ -105,7 +105,7 @@ Numbers are useless if only one person sees them. Share the weekly dashboard and
 ## Mini FAQ
 
 **Do I need complex software?**
-No. A spreadsheet and your EPOS exports are enough.
+No. A spreadsheet and [the exports from your existing EPOS system](/licensees-guide/pub-epos-system-guide) are enough.
 
 **How fast can data improve revenue?**
 Often within two weeks if you focus on one lever at a time.

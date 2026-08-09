@@ -31,7 +31,7 @@ voiceSearchQueries:
   - "how do I turn my village pub into a destination venue?"
 faqs:
   - question: "How do I attract customers from outside my village?"
-    answer: "Become a destination by offering something worth the drive — exceptional food, unique events, or beautiful surroundings. Invest in your online presence so people searching for 'Sunday lunch near me' or 'country pub walks' find you. A 15-minute drive catchment can multiply your potential audience tenfold."
+    answer: "Become a destination by offering something worth the drive: exceptional food, unique events, or beautiful surroundings. Invest in your online presence so people searching for 'Sunday lunch near me' or 'country pub walks' find you. A 15-minute drive catchment can multiply your potential audience tenfold."
   - question: "Should I diversify my village pub beyond just being a pub?"
     answer: "Yes, and many successful rural pubs do exactly this. Consider daytime coffee trade, a community shop counter, private dining and function hire, or hosting local groups and clubs. Each additional use brings footfall and revenue without conflicting with your evening trade."
   - question: "Is it worth investing in a village pub with a declining population?"

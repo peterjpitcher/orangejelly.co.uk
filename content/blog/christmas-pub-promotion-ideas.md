@@ -92,7 +92,7 @@ Daytime events fill gaps and add incremental revenue.
 **November**: final push and confirmation.
 **December**: execute and capture reviews.
 
-If you want professional support getting your Christmas marketing right, take a look at our [pub marketing services](/services) — we can help with everything from social media to event promotion.
+If you want professional support getting your Christmas marketing right, take a look at our [pub marketing services](/services). We can help with everything from social media to event promotion.
 
 ## Common mistakes
 

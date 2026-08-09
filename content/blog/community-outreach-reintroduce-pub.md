@@ -4,7 +4,7 @@ slug: "community-outreach-reintroduce-pub"
 publishedDate: 2025-09-19
 updatedDate: "2026-04-13T00:00:00.000Z"
 excerpt: "Reconnect with residents, schools, and clubs through purposeful outreach that turns goodwill into bookings."
-quickAnswer: "Host helpful events, volunteer visibly, and provide space for local causes so the community champions your business again."
+quickAnswer: "Reintroduce your pub in three layers. First show up where locals already are: post weekly in local Facebook groups, offer your space to one group, and keep a community noticeboard current. Then collaborate with two local partners such as schools or clubs. Finally turn one outreach idea into a repeating monthly ritual."
 author: "Peter Pitcher"
 category: "turnaround"
 tags:
@@ -32,7 +32,7 @@ voiceSearchQueries:
   - "CSR ideas hospitality"
 faqs:
   - question: "How do I get my local community back into my pub?"
-    answer: "Start by showing up where locals already are — post in local Facebook groups, offer your space for community meetings, and put up a noticeboard. Then collaborate with schools, sports clubs, or charities on shared events. Consistent visibility rebuilds trust over time."
+    answer: "Start by showing up where locals already are: post in local Facebook groups, offer your space for community meetings, and put up a noticeboard. Then collaborate with schools, sports clubs, or charities on shared events. Consistent visibility rebuilds trust over time."
   - question: "What community events work best for pubs?"
     answer: "School fundraisers, local maker markets, charity quiz nights, and community group meetings all drive footfall and goodwill. Choose events that match your space and strengths. The goal is giving people a reason to visit regularly, not one-off stunts."
   - question: "Does community outreach actually increase pub revenue?"
@@ -49,7 +49,7 @@ Use this as a simple, three-layer plan: show up, collaborate, then become essent
 
 Start with low-effort presence. The goal is to make your pub feel present in daily community life.
 
-- Post a weekly update in local Facebook groups.
+- Post a weekly update in local Facebook groups, following [the same rules that make Facebook marketing work for pubs](/licensees-guide/facebook-marketing-local-pubs).
 - Offer your space as a meeting room for one local group.
 - Put a community noticeboard near the bar and keep it updated.
 
@@ -57,7 +57,7 @@ This layer is visibility. It is not glamorous, but it is powerful.
 
 ## Layer 2: Collaborate with local partners
 
-Pick two partners and build a simple shared offer. Look for groups with real reach: schools, sports clubs, charities, or local makers.
+Pick two partners and build a simple shared offer, much like [partnering with local brands to share the marketing effort](/licensees-guide/partnering-local-brands-share-marketing). Look for groups with real reach: schools, sports clubs, charities, or local makers.
 
 Example collaborations:
 - A school fundraiser with a fixed percentage of takings.
@@ -89,7 +89,7 @@ If it fails any of these, skip it.
 
 **Month 1**: Launch a community noticeboard and host one free meeting.
 **Month 2**: Partner with one local group for a co-branded event.
-**Month 3**: Create a repeating monthly ritual and promote it as a local tradition.
+**Month 3**: Create a repeating monthly ritual, using [the run sheet behind a successful pub event](/licensees-guide/how-to-run-successful-pub-events), and promote it as a local tradition.
 
 ## Common mistakes
 

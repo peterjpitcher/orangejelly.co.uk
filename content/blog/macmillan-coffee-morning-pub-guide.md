@@ -4,7 +4,7 @@ slug: "macmillan-coffee-morning-pub-guide"
 publishedDate: 2026-05-25
 updatedDate: 2026-05-31
 excerpt: "Coffee morning ideas that fill a quiet daytime and raise money: a simple run-sheet, a raffle, a local-group tie-in, and how to make a Macmillan Coffee Morning pay for a wet-led pub."
-quickAnswer: "The best coffee morning ideas for pubs are the simple ones: put on coffee and cake with a donation jar, add a raffle, and tie in a local group to bring a crowd. It's one of the easiest charity fundraising ideas going — it fills a quiet daytime, lifts food and drink spend, and earns real goodwill. For the September date, sign up for the free Macmillan pack at macmillan.org.uk/coffee-morning."
+quickAnswer: "The simplest coffee morning ideas work best: coffee and cake on a suggested donation, a raffle with local prizes, a donation jar with a QR code, and a local group invited in to make a crowd. It fills a dead daytime, lifts lunch trade and builds goodwill. Macmillan's 2026 date is Friday 25 September."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/macmillan-coffee-morning-pub-guide.svg"
@@ -56,7 +56,7 @@ schema:
 
 # Coffee Morning Ideas for Pubs: Fundraising That Works
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 Most pubs treat the daytime as a write-off. The doors are open, the lights are on, a member of staff is leaning on the bar, and barely anyone comes in until lunch. That quiet stretch between opening and the first proper rush is where a surprising amount of money quietly leaks away every single week.
 
@@ -66,17 +66,17 @@ At The Anchor in Stanwell Moor, the daytime sessions we've turned around have al
 
 ## The date, and why it doesn't have to box you in
 
-The World's Biggest Coffee Morning 2026 is **Friday 25 September 2026** — the last Friday of the month. That's your headline date, the one with the national push behind it, and there's real value in riding that wave: when Macmillan are all over the radio and social feeds, you're tapping into something people are already thinking about rather than trying to start a conversation from scratch.
+The World's Biggest Coffee Morning 2026 is **Friday 25 September 2026**, the last Friday of the month. That's your headline date, the one with the national push behind it, and there's real value in riding that wave: when Macmillan are all over the radio and social feeds, you're tapping into something people are already thinking about rather than trying to start a conversation from scratch.
 
-But here's the bit a lot of licensees miss. Macmillan are completely clear that you can host on **any day that suits you**. If a Friday is one of your busier daytimes anyway, or you'd rather not compete with every café in town on the same morning, move it. A quiet Tuesday or Wednesday in late September or early October works just as well — arguably better, because you're adding trade to a genuinely dead session rather than a half-decent one.
+But here's the bit a lot of licensees miss. Macmillan are completely clear that you can host on **any day that suits you**. If a Friday is one of your busier daytimes anyway, or you'd rather not compete with every café in town on the same morning, move it. A quiet Tuesday or Wednesday in late September or early October works just as well, arguably better, because you're adding trade to a genuinely dead session rather than a half-decent one.
 
 So treat the 25th as the anchor and the option, not the rule. Pick the slot in your week that's flattest, and put the coffee morning there.
 
 ## Coffee morning ideas: a simple run-sheet you can lift straight away
 
-You don't need to overthink this. The whole point is that it's low-effort and low-risk. The good coffee morning ideas are nearly always the plain ones — coffee, cake, a raffle and a reason for a crowd to turn up together. Here's the shape of it.
+You don't need to overthink this. The whole point is that it's low-effort and low-risk. The good coffee morning ideas are nearly always the plain ones: coffee, cake, a raffle and a reason for a crowd to turn up together. Here's the shape of it.
 
-### Coffee and cake — the core
+### Coffee and cake: the core
 
 This is the event. Put on a proper coffee and tea offer and a table of cakes, and you're 80% of the way there.
 
@@ -86,28 +86,28 @@ This is the event. Put on a proper coffee and tea offer and a table of cakes, an
 
 ### A raffle
 
-A raffle is the single biggest lift you can add for the least effort. Ask local businesses for prizes — the butcher, the florist, the hairdresser, a nearby attraction. Most will happily donate a voucher for the goodwill and the mention. Sell strips on the day, draw it at a set time so people stay for it, and you've turned a quiet hour into a reason to linger.
+A raffle is the single biggest lift you can add for the least effort. Ask local businesses for prizes: the butcher, the florist, the hairdresser, a nearby attraction. Most will happily donate a voucher for the goodwill and the mention. Sell strips on the day, draw it at a set time so people stay for it, and you've turned a quiet hour into a reason to linger.
 
 ### A donation jar (and a card option)
 
-Have a clearly labelled jar on the bar, but don't rely on cash alone — fewer people carry it now. Macmillan's pack and website cover online giving and QR-code options, so set one up and stick the code on every table. Make it effortless to give.
+Have a clearly labelled jar on the bar, but don't rely on cash alone: fewer people carry it now. Macmillan's pack and website cover online giving and QR-code options, so set one up and stick the code on every table. Make it effortless to give.
 
 ### A local-group tie-in
 
-This is what turns a quiet coffee morning into a busy one. Invite a local group to make your pub their home for the morning — the WI, a baby-and-toddler group, a walking club, the local history society, a knit-and-natter. They get a warm room and a focus; you get a crowd that arrives together, stays a while, and brings people who've never set foot in your pub before. Pick a group whose timing suits a daytime and whose members are exactly the kind of new faces you'd love to see again.
+This is what turns a quiet coffee morning into a busy one. Invite a local group to make your pub their home for the morning: the WI, a baby-and-toddler group, a walking club, the local history society, a knit-and-natter. They get a warm room and a focus; you get a crowd that arrives together, stays a while, and brings people who've never set foot in your pub before. Pick a group whose timing suits a daytime and whose members are exactly the kind of new faces you'd love to see again.
 
-For more on the mechanics that apply to any event like this — hosting it properly, running a clean run-sheet, promoting it early — our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events) is worth a read alongside this one.
+For more on the mechanics that apply to any event like this (hosting it properly, running a clean run-sheet, promoting it early), our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events) is worth a read alongside this one.
 
 ## Beyond the coffee morning: charity event ideas for pubs
 
-A coffee morning is the easiest way in, but it's not the only one. Once you've run one, you'll spot how the same four moves — pick a cause, make giving effortless, give people a reason to gather, draw a raffle — power almost every fundraiser. A few charity event ideas for pubs that use exactly that engine:
+A coffee morning is the easiest way in, but it's not the only one. Once you've run one, you'll spot how the same four moves (pick a cause, make giving effortless, give people a reason to gather, draw a raffle) power almost every fundraiser. A few charity event ideas for pubs that use exactly that engine:
 
 - **A charity quiz night.** Run your normal quiz and donate the entry fee, or add a £1-a-head charity round. You're already pulling a crowd; you're just pointing the goodwill somewhere.
 - **A raffle or auction of local prizes.** The butcher's hamper, a meal for two, a signed shirt from the club down the road. Local businesses give gladly for the mention, and people bid higher when it's for a cause.
 - **A themed food night with a donation per cover.** A curry night, a pie night, a Sunday with a quid from every roast going to the pot. It lifts covers and does some good.
 - **A sponsored effort.** A staff head-shave, a darts marathon, a sponsored walk that starts and finishes at the bar. Daft, memorable, and people turn out to watch.
 
-The point isn't to do all of these. It's to see that fundraising ideas for pubs nearly always come back to the same simple recipe — and a coffee morning is the gentlest place to learn it.
+The point isn't to do all of these. It's to see that fundraising ideas for pubs nearly always come back to the same simple recipe, and a coffee morning is the gentlest place to learn it.
 
 ## How it actually pays for a wet-led pub
 
@@ -115,19 +115,19 @@ Let's be straight about the money, because that's the bit that makes a coffee mo
 
 The donations go to Macmillan. That's the whole point, and it should be. But the **trade is yours**, and for a wet-led pub the trade is where the return sits.
 
-**Footfall on a dead session.** You're filling a slot that was earning you next to nothing. Every person in the room is incremental — you're adding custom, not shuffling it from another part of the day. That's the most valuable kind of footfall there is.
+**Footfall on a dead session.** You're filling a slot that was earning you next to nothing. Every person in the room is incremental: you're adding custom, not shuffling it from another part of the day. That's the most valuable kind of footfall there is.
 
 **Food and drink attach.** People who come for coffee and cake don't all leave at noon. A good chunk stay for lunch, order a pot of tea and a sandwich, or settle in for the afternoon. Have your lunch menu visible and your specials board ready, and let the coffee morning roll naturally into your daytime food trade. If you don't do food, a strong line in cakes, pastries and good coffee still lifts the average spend of a session that had none.
 
 **Regulars' goodwill.** This one's harder to put a number on but it's real. When your locals see you putting your room, your team and your effort behind a cause that's touched almost every family in the country, it deepens their relationship with the pub. People drink where they feel something. A pub that shows up for its community gets that back in loyalty, in word of mouth, and in the bookings that follow.
 
-**New faces you can keep.** Every person who discovers your pub through a coffee morning is someone you can win as a regular if the welcome's right. That's the real long game — not the morning itself, but the visits it leads to.
+**New faces you can keep.** Every person who discovers your pub through a coffee morning is someone you can win as a regular if the welcome's right. That's the real long game: not the morning itself, but the visits it leads to.
 
 ## Promoting it so people actually turn up
 
-A coffee morning with no one in it helps no one. Promotion is where most well-meaning events quietly fall over, so give it the same care you'd give a quiz launch. You don't need six weeks for this one — two to three is plenty — but you do need to be consistent rather than posting once and hoping.
+A coffee morning with no one in it helps no one. Promotion is where most well-meaning events quietly fall over, so give it the same care you'd give a quiz launch. You don't need six weeks for this one (two to three is plenty), but you do need to be consistent rather than posting once and hoping.
 
-**Lean on local groups and pages.** Community Facebook groups, the village or town noticeboard, the local WhatsApp, the parish newsletter — these are where daytime, local audiences actually live. One genuine post in the right community group will do more than a week of generic socials.
+**Lean on local groups and pages.** Community Facebook groups, the village or town noticeboard, the local WhatsApp, the parish newsletter. These are where daytime, local audiences actually live. One genuine post in the right community group will do more than a week of generic socials.
 
 **Use your own socials properly.** Announce the date, then build to it. A shot of the cake table being planned, a "we're raffling a hamper from the butcher", a reminder the day before. Tag Macmillan and use the campaign's hashtags so you ride the national push.
 
@@ -135,25 +135,25 @@ A coffee morning with no one in it helps no one. Promotion is where most well-me
 
 **Tell your regulars in person.** The oldest channel and still the best. A word over the bar in the run-up does more than you'd think, especially for a daytime crowd who aren't always glued to a feed.
 
-If posting consistently across all this feels like one more job you don't have time for, that's exactly the kind of thing we help with — see [how we work with pubs](/ways-to-work).
+If posting consistently across all this feels like one more job you don't have time for, that's exactly the kind of thing we help with. See [how we work with pubs](/ways-to-work).
 
 ## Turning it into a fixture, not a one-off
 
 The first coffee morning is the hard one. By the second or third, people know what it is, the local group has it in the diary, and the cakes turn up without you having to chase. That's when it stops being an event and becomes part of your week.
 
-You don't have to wait a full year between them, either. The Macmillan morning in September is a brilliant launchpad, but the format works any month. A monthly or seasonal coffee morning — tied to a different local group each time, or to a seasonal moment — keeps that quiet daytime working for you all year round and gives a whole crowd of people a standing reason to choose your pub before lunch.
+You don't have to wait a full year between them, either. The Macmillan morning in September is a brilliant launchpad, but the format works any month. A monthly or seasonal coffee morning (tied to a different local group each time, or to a seasonal moment) keeps that quiet daytime working for you all year round and gives a whole crowd of people a standing reason to choose your pub before lunch.
 
 It also slots neatly into a wider plan. A late-September coffee morning is the gentle opener; a few weeks later your [Halloween and Bonfire Night events](/licensees-guide/pub-halloween-bonfire-night-events) bring the louder, family-and-evening trade, and the two together carry a quiet autumn from daytime right through to the dark nights. If you want to build out the rest of your autumn around it, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) maps out a September-to-November calendar you can drop a coffee morning straight into.
 
 ## A quick word on doing it properly
 
-This is about as low-risk as pub events get, but two sensible habits apply. Keep serving responsibly — Challenge 25 doesn't clock off for a daytime event. And if anything about your plan steps outside your normal licensed hours or licensed area — say you wanted to spill into a part of the car park, or run later than usual — check your premises licence and speak to your council about a Temporary Event Notice well ahead of the day. For a standard coffee morning inside your normal hours and footprint, you've nothing extra to sort.
+This is about as low-risk as pub events get, but two sensible habits apply. Keep serving responsibly: Challenge 25 doesn't clock off for a daytime event. And if anything about your plan steps outside your normal licensed hours or licensed area (say you wanted to spill into a part of the car park, or run later than usual), check your premises licence and speak to your council about a Temporary Event Notice well ahead of the day. For a standard coffee morning inside your normal hours and footprint, you've nothing extra to sort.
 
 ## Your first move
 
 Don't plan a campaign. Plan one morning.
 
-1. Pick your flattest daytime in late September — the 25th if it suits, any day that week if it doesn't.
+1. Pick your flattest daytime in late September: the 25th if it suits, any day that week if it doesn't.
 2. Sign up for the free fundraising pack at [macmillan.org.uk/coffee-morning](https://www.macmillan.org.uk/coffee-morning) so the posters, bunting and giving options arrive ready to go.
 3. Invite one local group to make your pub their home for the morning, and ask your regulars to bake.
 4. Promote it for two to three weeks across your community groups, socials and Google Business Profile.
@@ -161,7 +161,7 @@ Don't plan a campaign. Plan one morning.
 
 Do that once and you'll have a quiet daytime working harder, a community that feels closer to your pub, and a cause worth backing all in a single morning. Then do it again.
 
-If you'd like a hand filling your quiet daytimes — picking the right format, getting the promotion right, and turning one-off events into fixtures — that's exactly what we do at Orange Jelly.
+If you'd like a hand filling your quiet daytimes (picking the right format, getting the promotion right, and turning one-off events into fixtures), that's exactly what we do at Orange Jelly.
 
 ## FAQs
 
@@ -169,7 +169,7 @@ If you'd like a hand filling your quiet daytimes — picking the right format, g
 Keep it simple. Coffee and cake on a suggested donation, a raffle with prizes from local businesses, a donation jar with a QR code for card giving, and a local group invited in to make a crowd. Those four coffee morning ideas do the heavy lifting. Tie it to Macmillan's September date for the national push, or run your own any month of the year.
 
 **When is the Macmillan Coffee Morning 2026?**
-Macmillan's World's Biggest Coffee Morning falls on Friday 25 September 2026, the last Friday of the month. You don't have to use that date, though — Macmillan are clear you can host on any day that suits your pub and your week.
+Macmillan's World's Biggest Coffee Morning falls on Friday 25 September 2026, the last Friday of the month. You don't have to use that date, though. Macmillan are clear you can host on any day that suits your pub and your week.
 
 **What are good charity fundraising ideas for pubs beyond a coffee morning?**
 A coffee morning is the easiest place to start, but the same playbook powers most fundraising ideas for pubs: a raffle, a quiz night with the entry fee donated, a sponsored event, an auction of local prizes, or a themed food night with a fixed donation per cover. Pick one cause, make giving effortless with a jar and a QR code, and let your regulars rally round it.

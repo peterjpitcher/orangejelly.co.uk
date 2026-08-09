@@ -10,9 +10,21 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
   className?: string;
   variant?: 'light' | 'dark';
+  /**
+   * Set false on pages that already render <BreadcrumbJsonLd />. Those pages know
+   * their full hierarchy (including seasonal hub levels) and emit a richer trail,
+   * so letting this component emit a second BreadcrumbList just gives Google two
+   * competing answers for the same page.
+   */
+  emitJsonLd?: boolean;
 }
 
-export default function Breadcrumb({ items, className = '', variant = 'dark' }: BreadcrumbProps) {
+export default function Breadcrumb({
+  items,
+  className = '',
+  variant = 'dark',
+  emitJsonLd = true,
+}: BreadcrumbProps) {
   // Generate breadcrumb schema
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -32,10 +44,12 @@ export default function Breadcrumb({ items, className = '', variant = 'dark' }: 
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      {emitJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       <nav aria-label="Breadcrumb" className={`text-sm ${className}`}>
         <ol className="flex items-baseline flex-wrap">
           {items.map((item, index) => (

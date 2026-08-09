@@ -3,6 +3,7 @@ title: "Summer Moments, Simple Campaigns: an inspiring idea bank for pub teams (
 slug: "summer-moments-simple-campaigns"
 publishedAt: "2026-01-28"
 description: "Summer is not one long season. It is a chain of moments. A guide to winning summer with simple, effective campaigns."
+quickAnswer: "Treat summer as a chain of moments, not one long season. Pick three you want to own between May and August, such as a bank holiday garden party, Father's Day, a cider weekender or a wine tasting night, then give each one a simple promise, a hero serve, a food anchor and one ritual guests can join instantly."
 category: "events"
 tags: ["summer", "campaigns", "events", "marketing"]
 seasons:
@@ -16,11 +17,11 @@ voiceSearchQueries:
   - "what are the best summer moments to promote in a pub?"
 faqs:
   - question: "How many summer campaigns should a pub run?"
-    answer: "Focus on one clear campaign per fortnight rather than trying to fill every day. Pick the moments that naturally draw people out — bank holidays, sunny weekends, Father's Day, sports finals — and build a simple, repeatable format around each one. Quality and clarity beat quantity."
+    answer: "Focus on one clear campaign per fortnight rather than trying to fill every day. Pick the moments that naturally draw people out (bank holidays, sunny weekends, Father's Day, sports finals) and build a simple, repeatable format around each one. Quality and clarity beat quantity."
   - question: "Do I need a beer garden to run summer pub campaigns?"
     answer: "No. Pubs without gardens can still win summer by creating a bright, airy indoor atmosphere, offering seasonal drinks and food specials, and running events that celebrate the season. Open windows, fresh flowers, and a summer playlist can transform the feel of an indoor space."
   - question: "What's the easiest summer campaign for a pub with limited staff?"
-    answer: "A weekly summer drinks special with a simple food pairing — for example, a featured cocktail or spritz with a sharing platter. It needs no extra staff, minimal prep, and gives you something fresh to post about on social media every week."
+    answer: "A weekly summer drinks special with a simple food pairing, for example, a featured cocktail or spritz with a sharing platter. It needs no extra staff, minimal prep, and gives you something fresh to post about on social media every week."
 ---
 
 Summer is not one long season. It is a chain of moments.
@@ -29,7 +30,7 @@ A long weekend where the town feels lighter. A sunny Friday when everyone wants 
 
 The pubs that win summer do not necessarily do the biggest things. They do the clearest things.
 
-They give people a reason to choose them, today, with an experience that feels effortless to join and simple to deliver. This page is designed to help you do exactly that: a big, inspiring bank of formats, twists, prompts, and thought starters you can turn into your own plug-and-play calendar.
+They give people a reason to choose them, today, with an experience that feels effortless to join and simple to deliver. This page is designed to help you do exactly that: a big, inspiring bank of formats, twists, prompts, and thought starters you can turn into your own [plug-and-play seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar).
 
 You do not need perfection. You need momentum.
 
@@ -483,7 +484,7 @@ Skip anything that feels like gambling. Keep it playful.
 
 ![Wine Tasting](/images/blog/wine-tasting.png)
 
-A wine tasting night does not need expertise. It needs clarity, warmth, and structure.
+A [wine tasting night](/licensees-guide/wine-tasting-evenings-for-pubs) does not need expertise. It needs clarity, warmth, and structure.
 
 Your audience is not wine obsessives. It is guests who want to learn a little and enjoy a social evening.
 
@@ -558,7 +559,7 @@ At the end:
 
 ## Bonus: turn “national drink days” into micro-moments without overwhelm
 
-There are lots of “days”. You do not need to chase them all. The trick is to use them as a reason to refresh your message.
+There are lots of [national drink days](/licensees-guide/national-drinks-days-pub-guide). You do not need to chase them all. The trick is to use them as a reason to refresh your message.
 
 ### The hero serve strategy
 

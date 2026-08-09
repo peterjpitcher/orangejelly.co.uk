@@ -43,7 +43,7 @@ faqs:
 
 # How to Differentiate Your Pub: 15 Unique Ideas That Actually Work
 
-Differentiation is not about gimmicks. It is about choosing one or two things you do better than anyone nearby and then making that obvious to guests. If chain competition is your main concern, our guides on [competing with Wetherspoons](/licensees-guide/compete-with-wetherspoons) and [beating chain pubs](/licensees-guide/beat-chain-pubs) go deeper on that specific challenge.
+Differentiation is not about gimmicks. It is about choosing one or two things you do better than anyone nearby and then making that obvious to guests. If chain competition is your main concern, our guide on [competing with Wetherspoons](/licensees-guide/compete-with-wetherspoons) goes deeper on that specific challenge.
 
 Instead of a long list, use these five themes and pick one to own.
 
@@ -71,7 +71,7 @@ Instead of a long list, use these five themes and pick one to own.
 
 - Turn a side room into a clear use case: coworking, private dining, or gaming.
 
-Differentiation is also your single best answer to chain competition: when you own one thing locally, price stops being the comparison. If a nearby chain is your real worry, this is the heart of [how an independent pub competes with the pub chains](/compete-with-pub-chains) — you stop fighting on their terms and start winning on yours.
+Differentiation is also your single best answer to chain competition: when you own one thing locally, price stops being the comparison. If a nearby chain is your real worry, this is the heart of [how an independent pub competes with the pub chains](/compete-with-pub-chains). You stop fighting on their terms and start winning on yours.
 
 ## How to choose your differentiation
 

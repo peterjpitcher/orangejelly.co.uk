@@ -31,7 +31,7 @@ voiceSearchQueries:
   - "what's the best way to manage table reservations in a small pub?"
 faqs:
   - question: "How many tables should I keep for walk-ins versus bookings?"
-    answer: "Keep around 60-70% of tables bookable and leave the rest for walk-ins. On quieter days, make more bookable; on busier nights, hold more for walk-ins. Never book out completely — an empty-looking pub kills atmosphere."
+    answer: "Keep around 60-70% of tables bookable and leave the rest for walk-ins. On quieter days, make more bookable; on busier nights, hold more for walk-ins. Never book out completely: an empty-looking pub kills atmosphere."
   - question: "How do I reduce no-shows at my pub?"
     answer: "Send a confirmation text when the booking is made, a reminder 24 hours before, and a final check 2 hours before. Take phone numbers for every booking and consider deposits for groups of 8 or more. This system alone can cut no-shows dramatically."
   - question: "Should I use a booking system or just take phone calls?"
@@ -52,7 +52,7 @@ Sound familiar? Here's how we fixed our booking chaos and increased covers witho
 
 - Too few bookings = anxious about covers
 
-The solution isn't choosing one or the other - it's mastering both.
+The solution isn't choosing one or the other - it's mastering both, and it works alongside every other lever you pull to [fill empty tables](/licensees-guide/fill-empty-pub-tables).
 
 ## The Golden Ratio
 
@@ -189,7 +189,7 @@ Sunday: Traditional
 ## Special Events Management
 
 The Pre-Book Strategy
-Big matches, holidays, local events:
+Big matches, holidays, and [the events you run yourself](/licensees-guide/how-to-run-successful-pub-events):
 - Open bookings 4 weeks prior
 - Deposits for all bookings
 - Clear timing expectations
@@ -333,7 +333,7 @@ December Madness
 
 - Increased revenue per table
 
-The truth? Modern diners want both flexibility and certainty. Give them options, manage expectations, and never let a table sit empty because of rigid rules.
+The truth? Modern diners want both flexibility and certainty. Give them options, manage expectations, and never let a table sit empty because of rigid rules, the same discipline that [fills your December diary](/licensees-guide/pub-christmas-bookings-fill-december) when the pressure is on.
 
 Remember: Every empty chair is money lost, but every overcrowded service is reputation damaged. Find your balance.
 

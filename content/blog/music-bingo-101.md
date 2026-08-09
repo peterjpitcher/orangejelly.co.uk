@@ -4,7 +4,7 @@ slug: "music-bingo-101"
 publishedDate: 2025-10-30
 updatedDate: "2025-11-06T00:00:00.000Z"
 excerpt: "Hybrid quiz/karaoke toolkit with playlists, Canva cards, and MC tips so you can run 90-minute music bingo nights without marking."
-quickAnswer: "Print 24-track bingo cards, keep each clip to 30 seconds, and rotate themes weekly so music bingo stays fresh and fast."
+quickAnswer: "Guests mark off song titles instead of numbers, so staff do no marking. Build a 60 to 80 track playlist, print 40 to 60 unique 5x5 cards, and keep each clip to 15 to 25 seconds. Run three games over 90 minutes, and rotate the theme every fortnight."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -53,7 +53,7 @@ Rotate the headline theme every fortnight but keep a consistent night/time so re
 
 ## Card Creation (Analogue and Digital)
 
-Most venues keep it tactile with printed cards—simple 5×5 grids containing song titles or artists. Aim for 40–60 unique cards per theme so neighbouring tables don’t duplicate.
+Most venues keep it tactile with printed cards: simple 5×5 grids containing song titles or artists. Aim for 40–60 unique cards per theme so neighbouring tables don’t duplicate.
 
 1. Build a master tracklist of 60–80 songs in a spreadsheet.
 2. Randomise the order using `=RAND()` and distribute evenly across grids.
@@ -64,9 +64,9 @@ Most venues keep it tactile with printed cards—simple 5×5 grids containing so
 
 ## Playlist and Cue Crafting
 
-- **Clip length:** 15–25 seconds is plenty—long enough for recognition, short enough to keep momentum.
+- **Clip length:** 15–25 seconds is plenty, long enough for recognition, short enough to keep momentum.
 - **Transitions:** preload the playlist in Spotify/Apple Music/DJ software with 2-second crossfades to avoid dead air.
-- **Host cues:** before each clip ask, “Markers ready?” and after each track state “That was *Freed from Desire* by Gala—mark it if it’s on your card.” This helps guests who didn’t recognise the song by ear.
+- **Host cues:** before each clip ask, “Markers ready?” and after each track state “That was *Freed from Desire* by Gala. Mark it if it’s on your card.” This helps guests who didn’t recognise the song by ear.
 
 ### Theme rotation idea
 
@@ -85,7 +85,7 @@ A standard night runs three games of increasing stakes:
 2. **Game 2:** Two lines. Slightly larger prize.
 3. **Game 3:** Full house. Main prize.
 
-Winners shout “BINGO!”—host pauses music, verifies card versus the master list, and restarts after a quick photo.
+When winners shout “BINGO!” the host pauses music, verifies card versus the master list, and restarts after a quick photo.
 
 **Tie-break suggestion:** keep a spare “guess the intro” clip. First player to name artist and title wins.
 
@@ -125,7 +125,7 @@ Winners shout “BINGO!”—host pauses music, verifies card versus the master 
 - **Copy-ready caption:** “Music Bingo drops Thursday 7.30pm 🎶 Free to play, prizes every round, bookings recommended 👉 [link].”
 - **Day-of stories:** show card stacks, dabbers lined up, playlist screenshot.
 
-Cross-link to your Quiz Night 101 article for guests who also love trivia, and to Karaoke Night 101 for those chasing mic time.
+Cross-link to your [quiz night launch guide](/licensees-guide/quiz-night-101) for guests who also love trivia, and to [everything you need to run a karaoke night](/licensees-guide/karaoke-night-101) for those chasing mic time.
 
 ## Accessibility and Inclusion
 
@@ -135,7 +135,7 @@ Cross-link to your Quiz Night 101 article for guests who also love trivia, and t
 
 ## Compliance Corner
 
-Music bingo uses recorded tracks, so ensure your venue holds **TheMusicLicence** (PPL PRS) covering public performance of recorded music. If you charge for entry or offer cash-equivalent prizes, check local licensing guidance to confirm you’re running a promotional activity rather than regulated gambling. Useful starting points: [PPL PRS](https://pplprs.co.uk/themusiclicence/) and [Gambling Commission guidance](https://www.gamblingcommission.gov.uk/guidance/guidance-to-licensing-authorities/part-18-bingo-in-clubs-and-alcohol-licensed-premises).
+Music bingo uses recorded tracks, so ensure your venue holds **TheMusicLicence** (PPL PRS) covering public performance of recorded music, which our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains in full. If you charge for entry or offer cash-equivalent prizes, check local licensing guidance to confirm you’re running a promotional activity rather than regulated gambling. Useful starting points: [PPL PRS](https://pplprs.co.uk/themusiclicence/) and [Gambling Commission guidance](https://www.gamblingcommission.gov.uk/guidance/guidance-to-licensing-authorities/part-18-bingo-in-clubs-and-alcohol-licensed-premises).
 
 ## Metrics to Track
 

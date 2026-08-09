@@ -79,12 +79,12 @@ Keep it simple. Nobody is browsing your pub website for entertainment. They want
 
 **The essentials:**
 
-- **Opening hours** — updated and accurate, including bank holidays
-- **Menu** — a readable page, not a PDF that takes thirty seconds to download on mobile
-- **Location and directions** — an embedded Google Map, your full address, nearest station or car park
-- **Contact details** — phone number and email, clearly visible
-- **Booking** — whether that is an online form, a link to your booking system, or simply your phone number with "call to book"
-- **Events calendar** — what is on this week, updated regularly
+- **Opening hours**: updated and accurate, including bank holidays
+- **Menu**: a readable page, not a PDF that takes thirty seconds to download on mobile
+- **Location and directions**: an embedded Google Map, your full address, nearest station or car park
+- **Contact details**: phone number and email, clearly visible
+- **Booking**: whether that is an online form, a link to your booking system, or simply your phone number with "call to book"
+- **Events calendar**: what is on this week, updated regularly
 
 **Nice to have but not critical:**
 
@@ -99,16 +99,16 @@ The number one rule: every page should make it obvious how to visit you. Address
 
 If you do one thing after reading this article, make it this: claim, verify, and properly optimise your Google Business Profile.
 
-When someone searches "pubs in [your town]" or "pub near me," the map results that appear at the top of Google — that box with three listings and a map — are pulled from Google Business Profile. Not from websites. Not from Facebook.
+When someone searches "pubs in [your town]" or "pub near me," the map results that appear at the top of Google (that box with three listings and a map) are pulled from Google Business Profile. Not from websites. Not from Facebook.
 
 **How to optimise your Google Business Profile:**
 
 1. **Claim and verify** your listing at business.google.com
-2. **Complete every section** — hours, address, phone, website, category (set it to "Pub"), attributes (dog friendly, beer garden, live music, etc.)
-3. **Upload photos regularly** — aim for new photos every week or two. Food, drinks, events, the beer garden, staff. Google rewards active profiles.
-4. **Respond to every review** — every single one, good or bad. Thank people for positive reviews. Address negatives professionally. If you need help with review management, our guide on [handling negative reviews](/licensees-guide/terrible-online-reviews-damage-control) covers the full playbook.
-5. **Post updates** — Google Business Profile has a "posts" feature. Use it for events, specials, and seasonal offers. It is free and it signals to Google that your business is active.
-6. **Keep hours accurate** — especially bank holidays, Christmas, and any temporary changes. Wrong hours are one of the fastest ways to lose trust.
+2. **Complete every section**: hours, address, phone, website, category (set it to "Pub"), attributes (dog friendly, beer garden, live music, etc.)
+3. **Upload photos regularly**: aim for new photos every week or two. Food, drinks, events, the beer garden, staff. Google rewards active profiles.
+4. **Respond to every review**: every single one, good or bad. Thank people for positive reviews. Address negatives professionally. If you need help with review management, our guide on [handling negative reviews](/licensees-guide/terrible-online-reviews-damage-control) covers the full playbook.
+5. **Post updates**: Google Business Profile has a "posts" feature. Use it for events, specials, and seasonal offers. It is free and it signals to Google that your business is active.
+6. **Keep hours accurate**: especially bank holidays, Christmas, and any temporary changes. Wrong hours are one of the fastest ways to lose trust.
 
 A well-maintained Google Business Profile with strong reviews will do more for your visibility than a beautifully designed website that nobody finds.
 
@@ -116,15 +116,15 @@ A well-maintained Google Business Profile with strong reviews will do more for y
 
 Local SEO is just the practice of making sure your pub shows up when people search for things in your area. It sounds technical, but the basics are straightforward.
 
-**NAP consistency** — your Name, Address, and Phone number should be identical everywhere: your website, Google Business Profile, Facebook, TripAdvisor, Yelp, Yell.com, any directories you are listed in. Mismatches confuse Google and can hurt your ranking.
+**NAP consistency**: your Name, Address, and Phone number should be identical everywhere, including your website, Google Business Profile, Facebook, TripAdvisor, Yelp, Yell.com, and any directories you are listed in. Mismatches confuse Google and can hurt your ranking.
 
-**Local keywords** — if you have a website, mention your location naturally. "The Anchor is a family-friendly pub in Stanwell Moor, near Staines" is better than just "we are a pub." Think about what people actually search for: "pub with beer garden Staines," "Sunday roast near Heathrow," "quiz night Stanwell."
+**Local keywords**: if you have a website, mention your location naturally. "The Anchor is a family-friendly pub in Stanwell Moor, near Staines" is better than just "we are a pub." Think about what people actually search for: "pub with beer garden Staines," "Sunday roast near Heathrow," "quiz night Stanwell."
 
-**Reviews matter** — the number of Google reviews you have, your average rating, and whether you respond to them all affect where you appear in local results. Encourage happy customers to leave a review. A simple card on tables or a follow-up message works well.
+**Reviews matter**: the number of Google reviews you have, your average rating, and whether you respond to them all affect where you appear in local results. Encourage happy customers to leave a review. A simple card on tables or a follow-up message works well.
 
-**Mobile first** — the vast majority of "near me" searches happen on phones. If your website is slow or hard to read on mobile, people leave. Google notices that too.
+**Mobile first**: the vast majority of "near me" searches happen on phones. If your website is slow or hard to read on mobile, people leave. Google notices that too.
 
-For a deeper dive into local strategies, our [local pub marketing guide](/licensees-guide/local-pub-marketing) covers the community-building side of things.
+For a deeper dive into local strategies, our [pub marketing guide](/pub-marketing) covers the community-building side of things.
 
 ## Social Media vs Website: They Do Different Jobs
 
@@ -132,7 +132,7 @@ This is where a lot of pub owners get confused. Social media and a website are n
 
 **Social media is for people who already know you.** It keeps you in their feed, reminds them you exist, and builds that sense of community and FOMO that makes someone say, "Let's go to the pub tonight." It is brilliant for events, specials, and behind-the-scenes content. Our [social media strategy guide](/licensees-guide/social-media-strategy-for-pubs) has a weekly system you can follow.
 
-**Your website is for people who do not know you yet.** It is where someone lands after searching Google. They are already interested — they are looking for a pub. Your job is to give them what they need (hours, menu, how to get there) so they convert from a searcher into a visitor.
+**Your website is for people who do not know you yet.** It is where someone lands after searching Google. They are already interested: they are looking for a pub. Your job is to give them what they need (hours, menu, how to get there) so they convert from a searcher into a visitor.
 
 **The risk of relying only on social media:**
 
@@ -148,9 +148,9 @@ Let us be realistic about budget. A pub website does not need to be a custom-bui
 
 **Realistic budget ranges:**
 
-- **DIY with Squarespace or Wix** — from around 12 to 30 pounds a month. Good templates, easy to update menus and hours yourself. Total first-year cost: 150 to 400 pounds.
-- **WordPress with a freelancer** — 500 to 1,500 pounds for setup, then 10 to 30 pounds a month for hosting. More flexible, but you need someone to maintain it.
-- **Professional agency build** — 1,500 to 3,000 pounds for a solid pub site. Anything above that for a single-site pub is probably overkill.
+- **DIY with Squarespace or Wix**: from around 12 to 30 pounds a month. Good templates, easy to update menus and hours yourself. Total first-year cost: 150 to 400 pounds.
+- **WordPress with a freelancer**: 500 to 1,500 pounds for setup, then 10 to 30 pounds a month for hosting. More flexible, but you need someone to maintain it.
+- **Professional agency build**: 1,500 to 3,000 pounds for a solid pub site. Anything above that for a single-site pub is probably overkill.
 
 **Red flags to watch for:**
 
@@ -179,9 +179,9 @@ The most important thing is not how much you spend. It is whether you can keep t
 
 **Platforms worth considering for DIY:**
 
-- **Squarespace** — beautiful templates, easy to use, good for pubs that want to showcase food and atmosphere
-- **Wix** — more flexible, wider range of features, restaurant-specific templates
-- **WordPress** — most flexible, but needs more technical knowledge or a freelancer for setup
+- **Squarespace**: beautiful templates, easy to use, good for pubs that want to showcase food and atmosphere
+- **Wix**: more flexible, wider range of features, restaurant-specific templates
+- **WordPress**: most flexible, but needs more technical knowledge or a freelancer for setup
 
 Whichever route you choose, make sure you own your domain name (yourpubname.co.uk) and can take your content with you if you switch platforms.
 
@@ -195,7 +195,7 @@ Every page on your site should answer one question for the visitor: "What do I d
 
 - On the homepage: "See our menu" and "Book a table"
 - On the menu page: "Book a table" and "Find us"
-- On the events page: "Book tickets" or "See you there — here's how to find us"
+- On the events page: "Book tickets" or "See you there: here's how to find us"
 - On every page: your phone number and address in the footer
 
 Think about the last time you searched for a restaurant on your phone. You wanted to know if it looked good, check the menu, and figure out if you could get a table. If any of those steps took more than a few seconds, you probably moved on. Your customers are no different.

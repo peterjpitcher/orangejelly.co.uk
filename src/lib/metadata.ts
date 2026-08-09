@@ -127,9 +127,9 @@ export const pageMetadata = {
       'See hospitality marketing results proven at The Anchor, then adapted for partners. Real numbers, real strategies, measurable growth.',
   },
   about: {
-    title: 'Hospitality Consultant — Meet the Team Behind Orange Jelly',
+    title: 'Hospitality Consultant: Meet the Team Behind Orange Jelly',
     description:
-      'Meet Peter Pitcher, hospitality consultant and pub consultancy founder. Real experience running The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs and venues.',
+      'Meet Peter Pitcher, hospitality consultant and founder, who runs The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs and venues.',
   },
   contact: {
     title: 'Contact Us - Speak Directly with Peter',

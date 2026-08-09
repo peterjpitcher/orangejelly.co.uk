@@ -1,9 +1,9 @@
 # FAQs Content
 
-This directory contains markdown files for frequently asked questions organized by topic or service area.
+This directory contains markdown files for frequently asked questions organised by topic or service area.
 
 ## Structure
-- FAQ files should be organized by category (e.g., `general.md`, `services.md`, `pricing.md`)
+- FAQ files should be organised by category (e.g., `general.md`, `services.md`, `pricing.md`)
 - Each file contains related FAQs for easier management and faster loading
 - Cross-references between FAQ categories should use relative links
 

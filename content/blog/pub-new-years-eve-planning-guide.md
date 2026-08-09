@@ -109,13 +109,13 @@ Here is where most pubs get it wrong. They price NYE based on what things cost, 
 
 Your kitchen is under more pressure on NYE than any other night. This is not the time for an ambitious new menu.
 
-**Keep it tight.** Three starters, four mains, three desserts maximum. A limited menu means faster service, less waste, and fewer things to go wrong. Your regulars understand — they are not expecting a la carte on the busiest night of the year.
+**Keep it tight.** Three starters, four mains, three desserts maximum. A limited menu means faster service, less waste, and fewer things to go wrong. Your regulars understand. They are not expecting a la carte on the busiest night of the year.
 
 **Prep as much as possible in advance.** Slow-cooked mains, assembled desserts, pre-portioned starters. Anything that reduces the pressure between 7pm and 10pm is worth the effort.
 
 **Consider a set menu.** A fixed three-course menu at a set price simplifies everything. Customers know what they are getting and what it costs, your kitchen has predictable volume, and your GP is locked in because you control the portions.
 
-**Price for the occasion.** People expect to pay more on NYE. A set menu at 35 to 45 pounds per head that would normally be 25 to 30 pounds is entirely acceptable if the food is good and the atmosphere is right. This is not profiteering — it reflects the premium staffing costs and extended hours you are covering.
+**Price for the occasion.** People expect to pay more on NYE. A set menu at 35 to 45 pounds per head that would normally be 25 to 30 pounds is entirely acceptable if the food is good and the atmosphere is right. This is not profiteering. It reflects the premium staffing costs and extended hours you are covering.
 
 **Do not forget the bar food.** Not everyone wants a sit-down meal. A simple bar snack menu (loaded fries, sharing boards, sliders) gives non-diners something to eat and protects your duty of care on a long drinking night.
 
@@ -125,7 +125,7 @@ For more on menu pricing and layout, our guide on [menu engineering to lift aver
 
 The entertainment sets the tone for the entire night. Match it to your audience, not to what you think NYE should look like.
 
-**Live band or DJ.** The most popular option, and it works in most venues. Book early. Good acts for NYE are locked in by October at the latest. Expect to pay a premium — 300 to 800 pounds for a decent pub band, 150 to 400 for a DJ. Worth every penny if they keep the room dancing until 1am.
+**Live band or DJ.** The most popular option, and it works in most venues. Book early. Good acts for NYE are locked in by October at the latest. Expect to pay a premium: 300 to 800 pounds for a decent pub band, 150 to 400 for a DJ. Worth every penny if they keep the room dancing until 1am.
 
 **Hosted party night.** If your pub is more community than nightclub, a hosted evening with [music bingo](/licensees-guide/music-bingo-101), a countdown quiz, or karaoke can be more fun than a DJ that nobody dances to. A good host keeps the energy up and involves the whole room.
 
@@ -165,9 +165,9 @@ Here is the real prize. NYE brings people into your pub who might not normally v
 
 **Collect contact details.** Ticket registrations, a prize draw on the night, a loyalty card sign-up at the bar. Get an email address or phone number from as many people as possible. Even 30 new contacts from NYE is valuable.
 
-**Follow up within 48 hours.** A thank you message with a photo from the night and an invitation to your next event. Keep it warm, not salesy. People are checking their phones on New Year's Day — be in their inbox.
+**Follow up within 48 hours.** A thank you message with a photo from the night and an invitation to your next event. Keep it warm, not salesy. People are checking their phones on New Year's Day. Be in their inbox.
 
-**Give them a reason to return in January.** January is the quietest month in hospitality. A specific offer — a free drink with their next meal, a discounted table for Burns Night, an invitation to your first quiz of the year — gives people a reason to come back before they forget you exist.
+**Give them a reason to return in January.** January is the quietest month in hospitality. A specific offer gives people a reason to come back before they forget you exist: a free drink with their next meal, a discounted table for Burns Night, an invitation to your first quiz of the year.
 
 **Promote your January calendar on NYE.** A poster in the toilets, a mention from the DJ, a flyer on the table with their bill. Plant the seed while they are having a great time in your pub.
 
@@ -217,8 +217,8 @@ For more ideas on building a year-round events programme, our [Christmas promoti
 
 ## The bottom line
 
-New Year's Eve is not just a party — it is a commercial opportunity. A well-planned NYE can generate serious revenue, introduce your pub to new customers, and set the tone for the year ahead. A badly planned one wastes money, burns out staff, and delivers nothing lasting.
+New Year's Eve is not just a party. It is a commercial opportunity. A well-planned NYE can generate serious revenue, introduce your pub to new customers, and set the tone for the year ahead. A badly planned one wastes money, burns out staff, and delivers nothing lasting.
 
 Start early, plan thoroughly, price confidently, staff generously, and follow up relentlessly. That is the formula.
 
-And if you want help putting it all together — the pricing, the promotion, the plan — [get in touch with Orange Jelly](/contact). We have planned and delivered these nights at The Anchor. We know what works.
+And if you want help putting it all together (the pricing, the promotion, the plan), [get in touch with Orange Jelly](/contact). We have planned and delivered these nights at The Anchor. We know what works.

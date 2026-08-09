@@ -4,7 +4,7 @@ slug: "live-music-events-for-pubs"
 publishedDate: 2025-01-09
 updatedDate: "2025-06-09T00:00:00.000Z"
 excerpt: "Turn your pub into a thriving music venue. From open mics to ticketed shows, learn how to book acts, manage sound, and create profitable live music events."
-quickAnswer: "Start with open mic nights (£200-500 PA investment) to build reputation, then book acoustic acts. Successful music nights can triple Friday revenue from £320 to £1,800. Focus on sound quality, artist payments (£200-500), and creating the right atmosphere for your audience."
+quickAnswer: "Check first that your locals want live music, your room can handle the sound, and your team can cope with the extra flow. Then start with open mic nights, which carry the lowest risk, and only book paid acts once demand is proven. Control volume, track spend per head, and add a ticket or deposit for premium tables."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/live-music-events-for-pubs.png"
@@ -43,7 +43,7 @@ faqs:
 
 # Live Music Events for Pubs: The Complete Guide to Booking, Hosting and Profiting
 
-Live music can transform a quiet night into a destination. It can also annoy regulars and crush margins if it is unmanaged. The difference is a clear progression: start small, prove demand, then scale.
+Live music can transform a quiet night into a destination. It can also annoy regulars and crush margins if it is unmanaged. The difference is a clear progression that applies to [any successful pub event](/licensees-guide/how-to-run-successful-pub-events): start small, prove demand, then scale.
 
 ## Step 1: Decide if live music fits your pub
 
@@ -56,7 +56,7 @@ If the answer is yes, start simple.
 
 ## Step 2: Start with open mic or acoustic sets
 
-Open mic nights are the lowest-risk option. They build a music reputation without large fees. Keep strict time slots and a confident host to prevent chaos.
+Open mic nights are the lowest-risk option. They build a music reputation without large fees, much as a [karaoke night](/licensees-guide/karaoke-night-101) builds a singalong crowd. Keep strict time slots and a confident host to prevent chaos.
 
 ## Step 3: Move to paid acts
 
@@ -88,7 +88,7 @@ Poor sound ruins music nights. Invest in basic equipment and set volume standard
 ## Mini FAQ
 
 **Do I need music licences?**
-Yes. Check PRS and PPL requirements before hosting live music.
+Yes. Check the [PRS and PPL music licensing requirements for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) before hosting live music.
 
 **How do I stop regulars complaining?**
 Keep volume controlled and give them advance notice of music nights.

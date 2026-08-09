@@ -45,12 +45,64 @@ const COMMON_RULES = [
     pattern: /\brecogniz(e|ed|ing|able)\b/gi,
     message: 'Use British spelling: recognise / recognised / recognising / recognisable.',
   },
+  // Added after an audit found nine American spellings in published guides that
+  // this check was passing, including one in a rendered quickAnswer and one in
+  // content/data/about.json.
+  {
+    pattern: /\bprioritiz(e|ed|ing|ation)\b/gi,
+    message: 'Use British spelling: prioritise / prioritised / prioritising / prioritisation.',
+  },
+  {
+    pattern: /\bminimiz(e|ed|ing|ation)\b/gi,
+    message: 'Use British spelling: minimise / minimised / minimising / minimisation.',
+  },
+  {
+    pattern: /\borganiz(e|ed|ing|ation|ations|er|ers)\b/gi,
+    message: 'Use British spelling: organise / organised / organising / organisation.',
+  },
+  {
+    pattern: /\brealiz(e|ed|ing)\b/gi,
+    message: 'Use British spelling: realise / realised / realising.',
+  },
+  {
+    pattern: /\bapologiz(e|ed|ing)\b/gi,
+    message: 'Use British spelling: apologise / apologised / apologising.',
+  },
+  {
+    pattern: /\bflavor(s|ed|ing)?\b/gi,
+    message: 'Use British spelling: flavour / flavours / flavoured.',
+  },
+  {
+    pattern: /\bneighbor(s|hood|hoods|ing)?\b/gi,
+    message: 'Use British spelling: neighbour / neighbours / neighbourhood.',
+  },
+  {
+    pattern: /\bdefense\b/gi,
+    message: 'Use British spelling: defence.',
+  },
+  {
+    pattern: /\bspecialt(y|ies)\b/gi,
+    message: 'Use British spelling: speciality / specialities.',
+  },
+  {
+    pattern: /\btravel(ed|ing|er|ers)\b/gi,
+    message: 'Use British spelling: travelled / travelling / traveller / travellers.',
+  },
+  {
+    pattern: /\bcancel(ed|ing)\b/gi,
+    message: 'Use British spelling: cancelled / cancelling.',
+  },
 ];
 
 const CONTENT_RULES = [
   {
     pattern: /\bcenter(s)?\b/gi,
     message: 'Use British spelling: centre / centres.',
+  },
+  // Content-only, because "labor" can legitimately appear in code identifiers.
+  {
+    pattern: /\blabor(s|ed|ing)?\b/gi,
+    message: 'Use British spelling: labour / labours / laboured.',
   },
 ];
 

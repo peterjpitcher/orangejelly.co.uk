@@ -19,7 +19,7 @@ import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 
 export function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Pub Marketing Packages — Clear Pricing, Real Expertise',
+    title: 'Pub Marketing Packages: Clear Pricing, Real Expertise',
     description:
       'Four clear packages for pub and hospitality marketing. From a one-off Growth Fix to ongoing Growth Partner support. Payment plans available. No hidden fees.',
     path: '/ways-to-work',
@@ -132,6 +132,7 @@ export default function WaysToWorkPage() {
         subtitle="Four ways to work with Orange Jelly — from a focused one-off fix to full ongoing partnership. Pick the level that fits your venue today."
         showCTA={false}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Ways to Work' }]}
+        breadcrumbEmitJsonLd={false}
         backgroundImage="/images/headers/ways-to-work.png"
       />
 

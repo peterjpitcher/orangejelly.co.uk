@@ -256,7 +256,7 @@ You spend 15,000 on a kitchen refit and forget to tell your insurer. Three month
 
 ### Assuming the pubco covers everything
 
-If you are a tenant, your pubco insures the building. But your stock, your equipment, your fittings, your loss of income — that is all on you. Do not assume you are covered. Check your tenancy agreement and take out your own contents and business interruption policy.
+If you are a tenant, your pubco insures the building. But your stock, your equipment, your fittings, your loss of income: that is all on you. Do not assume you are covered. Check your tenancy agreement and take out your own contents and business interruption policy.
 
 ### Not disclosing changes
 
@@ -264,7 +264,7 @@ Started hosting live music? Installed a bouncy castle in the garden for family d
 
 ### Choosing price over cover
 
-The cheapest quote is rarely the best. A policy that is 500 pounds cheaper but has a 2,500 pound excess on every claim type is not actually saving you money. Compare policies on cover, not just premium.
+The cheapest quote is rarely the best. A policy that is 500 pounds cheaper but has a 2,500 pound excess on every claim type does not actually leave you better off. Compare policies on cover, not just premium.
 
 ## Annual insurance review checklist
 
@@ -283,7 +283,7 @@ Use this once a year, ideally a month before your renewal date.
 
 ## Getting the right advice
 
-Insurance is one of those areas where getting it wrong costs you nothing until it costs you everything. A 500-pound saving on your premium means nothing if a claim gets rejected because you were underinsured or an activity was not disclosed.
+Insurance is one of those areas where getting it wrong costs you nothing until it costs you everything. A 500-pound cut in your premium means nothing if a claim gets rejected because you were underinsured or an activity was not disclosed.
 
 If you are [buying a pub](/licensees-guide/buying-a-pub-complete-guide), factor insurance into your startup costs from day one. It is not an afterthought; it is a core operating expense.
 

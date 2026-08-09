@@ -51,7 +51,7 @@ This guide is the overview: the formats that actually work, organised by type an
 
 A good pub event isn't about novelty. It's about three things: it fits a gap in your week, it suits the people you already serve, and it runs on a rhythm people can rely on. The single biggest mistake is scattering one-off events and wondering why none of them stick. Pick one format, run it the same night every week or month, and let the habit build. The first one might be quiet. By the third or fourth, you've got a fixture.
 
-At The Anchor in Stanwell Moor, a consistent quiz — same night, same time, every week — was part of what grew our table bookings by 403%, simply because it became part of people's routine.
+At The Anchor in Stanwell Moor, a consistent quiz (same night, same time, every week) was part of what grew our table bookings by 403%, simply because it became part of people's routine.
 
 ## Event ideas by type
 
@@ -65,11 +65,11 @@ Music draws people in and keeps them longer, which means more rounds. It ranges 
 
 ### Pop-ups and street food
 
-A short, one-off takeover — a street-food trader, a guest chef, a makers' market — that borrows another following alongside yours. Low-risk, no permanent kitchen overhaul, and ideal for a quiet Friday handover. The full playbook is in [pop-up events for pubs](/licensees-guide/pop-up-events-for-pubs).
+A short, one-off takeover (a street-food trader, a guest chef, a makers' market) that borrows another following alongside yours. Low-risk, no permanent kitchen overhaul, and ideal for a quiet Friday handover. The full playbook is in [pop-up events for pubs](/licensees-guide/pop-up-events-for-pubs).
 
 ### Family days and kids' activities
 
-Daytime sessions — craft hours, school-holiday programmes, family quizzes — fill the quiet 10am–2pm window and bring in spend from a crowd that's loyal once they trust you. Two guides cover this: [how to attract families to your pub](/licensees-guide/how-to-attract-families-to-your-pub) for the strategy, and [family craft hour](/licensees-guide/family-craft-hour-101) for running a specific session.
+Daytime sessions (craft hours, school-holiday programmes, family quizzes) fill the quiet 10am–2pm window and bring in spend from a crowd that's loyal once they trust you. Two guides cover this: [how to attract families to your pub](/licensees-guide/how-to-attract-families-to-your-pub) for the strategy, and [family craft hour](/licensees-guide/family-craft-hour-101) for running a specific session.
 
 ### Competitive socialising and games nights
 
@@ -77,11 +77,11 @@ Darts leagues, card tournaments, board-game nights, bingo. Cheap to set up, they
 
 ### Tastings and supplier nights
 
-Beer, gin or wine tastings — often part-funded by a supplier who wants the exposure. They lift spend per head and position your pub as somewhere worth making an effort for. Ask your reps; many will provide stock, glassware and point-of-sale in exchange for a tag on social.
+Beer, gin or wine tastings, often part-funded by a supplier who wants the exposure. They lift spend per head and position your pub as somewhere worth making an effort for. Ask your reps; many will provide stock, glassware and point-of-sale in exchange for a tag on social.
 
 ### Community and seasonal events
 
-Charity nights, local-group meetups, and the calendar moments everyone expects — these build the goodwill that turns occasional visitors into regulars. Which brings us to timing.
+Charity nights, local-group meetups, and the calendar moments everyone expects. These build the goodwill that turns occasional visitors into regulars. Which brings us to timing.
 
 ## Event ideas by season
 
@@ -90,7 +90,7 @@ You don't need a different event every week. You need a rough calendar so you're
 - **Spring:** Mother's Day, Easter family events, the start of beer-garden season.
 - **Summer:** garden sessions, BBQs, sport, and food-led pop-ups. Our deep-dive on [summer pub event ideas](/licensees-guide/summer-pub-event-ideas) has 35 to choose from.
 - **Autumn:** Halloween, Bonfire Night, quiz leagues restarting as nights draw in. See our [autumn pub event ideas](/licensees-guide/autumn-pub-event-ideas) for a full September-to-November plan.
-- **Winter:** the Christmas season (plan it early — see [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas)), then events that carry you through a quiet January.
+- **Winter:** the Christmas season (plan it early: see [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas)), then events that carry you through a quiet January.
 
 For a month-by-month framework you can reuse every year, use our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar).
 
@@ -108,7 +108,7 @@ Pick one. Commit to a season of it before you judge it.
 
 The format matters less than the execution. Whatever you choose, the running and promotion follow the same pattern, covered in full in our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events): a single host or owner, a clear run-sheet, and a three-to-four-week promotion build-up rather than one post the day before.
 
-Promotion is where most events quietly fail. Lean on the channels your customers actually use — your own social, local community groups, a database message — and start early. If posting consistently feels like a chore, our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) lays out a weekly system.
+Promotion is where most events quietly fail. Lean on the channels your customers actually use (your own social, local community groups, a database message) and start early. If posting consistently feels like a chore, our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) lays out a weekly system.
 
 ## Your first move
 
@@ -119,17 +119,17 @@ Don't plan a calendar. Plan one event.
 3. Promote it for three weeks across the channels your locals use.
 4. Run it, note what worked, and put the next date in the diary before everyone leaves.
 
-Do that for one format until it becomes a fixture, then add a second. That's how a quiet week turns into a full one — not with a grand plan, but with one reliable reason to come.
+Do that for one format until it becomes a fixture, then add a second. That's how a quiet week turns into a full one, not with a grand plan, but with one reliable reason to come.
 
-If you'd like a hand choosing the right format for your pub or building the promotion around it, that's the kind of thing we help with at Orange Jelly — see [how we work with pubs](/ways-to-work).
+If you'd like a hand choosing the right format for your pub or building the promotion around it, that's the kind of thing we help with at Orange Jelly. See [how we work with pubs](/ways-to-work).
 
 ## FAQs
 
 **What pub events make the most money?**
-Rarely the event itself — it's the food and drink spend it brings in on an otherwise quiet night. Quizzes, food-led pop-ups and tastings tend to deliver the strongest spend per head because people stay longer.
+Rarely the event itself. It's the food and drink spend it brings in on an otherwise quiet night. Quizzes, food-led pop-ups and tastings tend to deliver the strongest spend per head because people stay longer.
 
 **How often should I run events?**
-Pick one format and run it on a predictable rhythm — a weekly quiz, a monthly pop-up — rather than scattering one-offs. Consistency turns an event into a habit. Start with one fixture before adding more.
+Pick one format and run it on a predictable rhythm (a weekly quiz, a monthly pop-up) rather than scattering one-offs. Consistency turns an event into a habit. Start with one fixture before adding more.
 
 **How do I choose the right event?**
 Start with your quietest session and your actual customers, not the event you fancy. Match the format to the gap in your week and the people you already serve.

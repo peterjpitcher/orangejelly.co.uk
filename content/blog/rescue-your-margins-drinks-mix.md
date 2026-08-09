@@ -4,7 +4,7 @@ slug: "rescue-your-margins-drinks-mix"
 publishedDate: 2025-05-29
 updatedDate: "2025-12-22T00:00:00.000Z"
 excerpt: "Engineer a drinks range that delights guests while defending gross profit, even when supplier prices climb."
-quickAnswer: "Balance three tiers of pours, spotlight limited releases, and train the bar team on round-building so every tray balances volume and premium spend."
+quickAnswer: "Pull a sales report, split every drink into three tiers, and drop the lines that are low margin and low volume. Build an entry, mid and premium ladder in each category, reprice high-volume items carefully, then train the bar team on three upsell swaps and put premium options where eyes land."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -32,9 +32,9 @@ voiceSearchQueries:
   - "How to price drinks ladder"
 faqs:
   - question: "What GP should I aim for on drinks in my pub?"
-    answer: "Target 60-65% GP on your overall wet mix. Draught lager and ale should deliver 65%+, wines 70%+, and spirits 75%+. If your blended wet GP is below 58%, you likely have lines that are losing money or heavy over-pouring — audit your top 10 sellers first."
+    answer: "Target 60-65% GP on your overall wet mix. Draught lager and ale should deliver 65%+, wines 70%+, and spirits 75%+. If your blended wet GP is below 58%, you likely have lines that are losing money or heavy over-pouring. Audit your top 10 sellers first."
   - question: "How do I get customers to trade up to higher-margin drinks?"
-    answer: "Use a three-tier pricing ladder: a value option, a mid-range default, and a premium choice. Train staff to recommend the middle tier naturally — 'Would you like the house gin or our featured Cotswolds gin?' Most customers pick the middle option, which should be your best margin line."
+    answer: "Use a three-tier pricing ladder: a value option, a mid-range default, and a premium choice. Train staff to recommend the middle tier naturally: 'Would you like the house gin or our featured Cotswolds gin?' Most customers pick the middle option, which should be your best margin line."
   - question: "Should I cut slow-selling drinks from my menu?"
     answer: "Yes. Dead stock ties up cash and takes up tap or shelf space that could earn more. If a product sells fewer than 5 units a week, consider dropping it unless it serves a specific customer need. A tighter range with faster turnover protects your cash flow and reduces waste."
 ---
@@ -69,7 +69,7 @@ Check your GP targets and reset pricing where necessary. Small increases on high
 
 ## Step 4: Train the team on round crafting
 
-Script three swaps that lift margin:
+Script three swaps that lift margin, the kind covered in our guide to [upselling scripts for bar teams](/licensees-guide/upselling-secrets-training-scripts):
 - House gin to premium gin.
 - Standard lager to local craft.
 - Single to double with a mixer.
@@ -78,11 +78,11 @@ Practice these daily for one week.
 
 ## Step 5: Partner with suppliers smartly
 
-Ask for training, POS material, or a small activation in return for range commitment. Suppliers want you to sell more and will support if you ask.
+Ask for training, POS material, or a small activation in return for range commitment, and apply the same leverage when you [improve your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal). Suppliers want you to sell more and will support if you ask.
 
 ## Step 6: Design menus that sell for you
 
-Put premium options where eyes land. Use short descriptors. People buy the story as much as the drink.
+Put premium options where eyes land, following the [drinks menu design principles](/licensees-guide/pub-drinks-menu-design-guide) that make people trade up. Use short descriptors. People buy the story as much as the drink.
 
 ## Common mistakes
 

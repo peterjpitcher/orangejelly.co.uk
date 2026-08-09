@@ -87,9 +87,9 @@ Before you can optimise anything, you need to own your listing.
 
 Google will verify you are the real owner. This usually happens one of three ways:
 
-- **Postcard verification** — Google sends a postcard with a PIN to your pub address. Takes five to fourteen days.
-- **Phone verification** — an automated call or text to the number listed for the business.
-- **Email verification** — available if Google can confirm your email is associated with the business.
+- **Postcard verification**: Google sends a postcard with a PIN to your pub address. Takes five to fourteen days.
+- **Phone verification**: an automated call or text to the number listed for the business.
+- **Email verification**: available if Google can confirm your email is associated with the business.
 
 ### If your pub does not appear on Google Maps
 
@@ -120,12 +120,12 @@ Your primary category should be **Pub**. Not "Bar," not "Restaurant," not "Briti
 
 Add every category that genuinely describes what you offer. Relevant options include:
 
-- **Restaurant** — if you serve food (even a limited menu)
-- **Bar** — if you have a dedicated bar area or cocktail offering
-- **Live Music Venue** — if you host regular live music
-- **Event Venue** — if you host private events, functions, or parties
-- **Beer Garden** — if you have outdoor seating
-- **Sports Bar** — if you show live sport regularly
+- **Restaurant**: if you serve food (even a limited menu)
+- **Bar**: if you have a dedicated bar area or cocktail offering
+- **Live Music Venue**: if you host regular live music
+- **Event Venue**: if you host private events, functions, or parties
+- **Beer Garden**: if you have outdoor seating
+- **Sports Bar**: if you show live sport regularly
 
 Do not add categories that do not apply. Adding "Nightclub" because you stay open late on Saturdays will not help. Google penalises mismatched categories because they lead to poor user experiences.
 
@@ -191,13 +191,13 @@ Photos are the single biggest factor in whether someone clicks on your listing o
 
 Prioritise these in order:
 
-1. **Your exterior** — the front of the pub in daylight, clearly showing the name. This helps people recognise you when they arrive.
-2. **Your bar** — clean, well-stocked, well-lit. This is what people picture when they think about coming in for a drink.
-3. **Your food** — your best dishes, plated properly, shot in natural light where possible. No flash photography of a sad pie.
-4. **Your beer garden or outdoor area** — on a sunny day, with people if possible.
-5. **Events in action** — quiz night, live music, Sunday lunch service. Show the atmosphere.
-6. **Interior details** — the fireplace, the booths, the chalkboard specials, the hand pumps.
-7. **Your team** — people like seeing the faces behind the bar.
+1. **Your exterior**: the front of the pub in daylight, clearly showing the name. This helps people recognise you when they arrive.
+2. **Your bar**: clean, well-stocked, well-lit. This is what people picture when they think about coming in for a drink.
+3. **Your food**: your best dishes, plated properly, shot in natural light where possible. No flash photography of a sad pie.
+4. **Your beer garden or outdoor area**: on a sunny day, with people if possible.
+5. **Events in action**: quiz night, live music, Sunday lunch service. Show the atmosphere.
+6. **Interior details**: the fireplace, the booths, the chalkboard specials, the hand pumps.
+7. **Your team**: people like seeing the faces behind the bar.
 
 ### How many photos
 
@@ -208,7 +208,7 @@ Start with at least 20. Google prefers profiles with a large, varied photo libra
 - Landscape orientation works better than portrait on Google Maps.
 - Natural light beats flash every time.
 - Show real moments, not staged stock-photo setups.
-- Include people where appropriate — empty pubs look empty.
+- Include people where appropriate: empty pubs look empty.
 - Make sure your exterior photo is taken from the angle most customers approach from.
 
 ### Remove bad photos
@@ -231,12 +231,12 @@ How close is the searcher to your pub? You cannot change your location, but you 
 
 How well-known and well-regarded is your pub online? This is influenced by:
 
-- **Review count and score** — more reviews and higher ratings help.
-- **Review recency** — a steady stream of recent reviews beats 200 reviews from 2021.
-- **NAP consistency** — your Name, Address, and Phone number must be identical across every directory, website, and social profile.
-- **Website authority** — links to your website from local directories, news sites, and community pages.
-- **Google Posts activity** — regular posting signals an active business.
-- **Photo uploads** — frequent new photos boost engagement signals.
+- **Review count and score**: more reviews and higher ratings help.
+- **Review recency**: a steady stream of recent reviews beats 200 reviews from 2021.
+- **NAP consistency**: your Name, Address, and Phone number must be identical across every directory, website, and social profile.
+- **Website authority**: links to your website from local directories, news sites, and community pages.
+- **Google Posts activity**: regular posting signals an active business.
+- **Photo uploads**: frequent new photos boost engagement signals.
 
 ### NAP consistency matters
 
@@ -253,7 +253,7 @@ NAP stands for Name, Address, Phone number. These three details must be exactly 
 
 Even small differences matter. "The Anchor, 1 High St" versus "The Anchor, 1 High Street" can confuse search engines. Pick one format and use it everywhere.
 
-For a broader view of local marketing strategies that complement your Google profile, see our [local pub marketing guide](/licensees-guide/local-pub-marketing).
+For a broader view of local marketing strategies that complement your Google profile, see our [pub marketing guide](/pub-marketing).
 
 ## Step 6: Write Google Posts that work
 
@@ -261,24 +261,24 @@ Google Posts are short updates that appear on your profile. They expire after se
 
 ### Types of posts
 
-- **What's new** — general updates, new menu items, refurbishment news.
-- **Events** — upcoming events with date, time, and description. These show prominently.
-- **Offers** — promotions, discounts, special deals with start and end dates.
+- **What's new**: general updates, new menu items, refurbishment news.
+- **Events**: upcoming events with date, time, and description. These show prominently.
+- **Offers**: promotions, discounts, special deals with start and end dates.
 
 ### What makes a good Google Post
 
-1. **A strong photo** — posts with images get significantly more engagement.
-2. **A clear headline** — "Quiz Night Every Wednesday" not "Come along to our thing."
-3. **Useful detail** — time, price, what to expect.
-4. **A call to action** — "Book a table," "Learn more," "Call now." Google gives you a button, use it.
+1. **A strong photo**: posts with images get significantly more engagement.
+2. **A clear headline**: "Quiz Night Every Wednesday" not "Come along to our thing."
+3. **Useful detail**: time, price, what to expect.
+4. **A call to action**: "Book a table," "Learn more," "Call now." Google gives you a button, use it.
 
 ### Weekly posting rhythm
 
 Here is a simple rhythm that works:
 
-- **Monday** — post your week's events and specials.
-- **Thursday** — post a weekend preview (live music, food specials, sport on TV).
-- **After an event** — post a photo recap to show what people missed.
+- **Monday**: post your week's events and specials.
+- **Thursday**: post a weekend preview (live music, food specials, sport on TV).
+- **After an event**: post a photo recap to show what people missed.
 
 This takes ten minutes a week and keeps your profile active. There is no excuse for not doing it.
 
@@ -352,11 +352,11 @@ Google Business Profile provides analytics that show you how people find and int
 
 ### Key metrics to watch
 
-- **Search queries** — what people typed to find you. This tells you what terms to focus on.
-- **Views** — how many people saw your listing in search and on maps.
-- **Actions** — how many people clicked to call, get directions, or visit your website.
-- **Photo views** — how your photos compare to similar businesses.
-- **Popular times** — when people visit based on Google location data.
+- **Search queries**: what people typed to find you. This tells you what terms to focus on.
+- **Views**: how many people saw your listing in search and on maps.
+- **Actions**: how many people clicked to call, get directions, or visit your website.
+- **Photo views**: how your photos compare to similar businesses.
+- **Popular times**: when people visit based on Google location data.
 
 ### What to do with this data
 
@@ -405,7 +405,7 @@ This is not a one-off project. The pubs that dominate local search are the ones 
 
 Your profile is only as good as the last time you touched it. Going into summer, run a five-minute check: update your **opening hours** (including later closes and bank holidays), confirm **food service times**, add **fresh photos** of the garden in full swing, reply to every recent **review**, and make sure your **booking link** still works. Then publish your summer events as Google Posts so they show on the profile.
 
-A listing that looks current and active builds confidence before anyone visits — it is the front door to all five summer moves. See the full [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
+A listing that looks current and active builds confidence before anyone visits. It is the front door to all five summer moves. See the full [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
 
 ## Common mistakes to avoid
 

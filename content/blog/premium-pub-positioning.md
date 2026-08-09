@@ -33,7 +33,7 @@ faqs:
   - question: "How much does it cost to reposition a pub as premium?"
     answer: "You don't need a fortune. Start with lighting upgrades, better glassware, a curated drinks menu, and staff training on product knowledge. Many pubs achieve a noticeable shift for under £3,000 by focusing on perception and experience rather than fixtures."
   - question: "Will I lose regulars if I go upmarket?"
-    answer: "Some price-sensitive drinkers may visit less often, but premium customers spend more per visit and tend to be more loyal. The key is elevating the experience gradually — keep your warmth and character while improving quality. Most regulars appreciate the upgrade."
+    answer: "Some price-sensitive drinkers may visit less often, but premium customers spend more per visit and tend to be more loyal. The key is elevating the experience gradually: keep your warmth and character while improving quality. Most regulars appreciate the upgrade."
   - question: "What's the easiest way to start charging more at my pub?"
     answer: "Introduce a premium tier alongside your standard range. Add two or three craft beers, a signature cocktail, and a premium spirit shelf. Train staff to recommend them naturally. Customers self-select into the tier that suits them, and your average spend rises without forcing anyone out."
 ---

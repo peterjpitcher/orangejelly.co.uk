@@ -26,7 +26,9 @@ const ALLOWED_EXTENSIONS = new Set(['.json', '.md', '.ts', '.tsx']);
 
 const BANNED_RULES = [
   {
-    pattern: /\bsave(?:d|s|ing)?\b/gi,
+    // Was /\bsave(?:d|s|ing)?\b/ which expands to save|saved|saves|saveing, so the
+    // gerund "saving" was never caught and seven instances reached published guides.
+    pattern: /\bsav(?:e|es|ed|ing)\b/gi,
     message:
       'Replace savings language with growth language (for example: transform, accelerate, disrupt).',
   },

@@ -4,7 +4,7 @@ slug: "content-marketing-ideas-pubs"
 publishedDate: 2025-10-03
 updatedDate: "2025-05-19T00:00:00.000Z"
 excerpt: "A week-by-week content plan for pubs: exactly what to post on Facebook and Instagram, when to post it, and how to turn views into actual bookings."
-quickAnswer: "Share behind-the-scenes kitchen videos, customer stories, and local history. Post consistently across Facebook, Instagram, and local community groups. Focus on storytelling that builds emotional connection rather than just promoting opening hours and menu items."
+quickAnswer: "Post across four pillars: your story and identity, proof that other guests are enjoying the place, useful practical information, and clear offers or events. Run a simple weekly rhythm, what is on this week on Monday, a story on Wednesday, social proof on Friday, and a teaser on Sunday. Three to four consistent posts beat perfect ones."
 author: "Peter Pitcher"
 category: "marketing"
 featuredImage: "/images/blog/content-marketing-ideas-pubs.png"

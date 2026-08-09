@@ -35,12 +35,12 @@ faqs:
   - question: "Do I need written consent to collect customer email addresses?"
     answer: "Yes. Under GDPR you need clear, affirmative consent before adding anyone to a mailing list. Use a simple sign-up form that explains what you will send and how often. Never add emails without permission, even if someone left a business card."
   - question: "What happens if a customer has an allergic reaction in my pub?"
-    answer: "Call emergency services immediately if severe. Record everything: what was ordered, what was served, and the allergen information provided. Contact your insurer and local authority. Prevention is key — train every team member to say 'let me check' rather than guessing."
+    answer: "Call emergency services immediately if severe. Record everything: what was ordered, what was served, and the allergen information provided. Contact your insurer and local authority. Prevention is key: train every team member to say 'let me check' rather than guessing."
 ---
 
 # Food Allergies and GDPR: The Compliance Nightmares That Could Close You Down
 
-Compliance is not exciting, but it is non-negotiable. Allergen mistakes and data breaches can shut a pub down. The good news is that simple systems prevent most problems.
+Compliance is not exciting, but it is non-negotiable. Allergen mistakes and data breaches can shut a pub down, just as a weak [health and safety routine](/licensees-guide/pub-health-safety-checklist) can. The good news is that simple systems prevent most problems.
 
 This guide is practical, not legal advice. Always check the latest guidance and regulations.
 
@@ -56,12 +56,12 @@ Keep supplier spec sheets and product labels in one folder. Date each update.
 Train staff to say: "Let me check." No guessing. Use a simple flow: order, check matrix, confirm with the kitchen, then confirm with the guest.
 
 **4) Control cross-contamination**
-Use separate boards and clear labeling for allergen-free prep. This is basic but vital.
+Use separate boards and clear labeling for allergen-free prep. This is basic but vital, and it is exactly what an inspector checks when setting [your food hygiene rating](/licensees-guide/food-hygiene-rating-five-star-guide).
 
 ## Part 2: GDPR basics for pubs
 
 **1) Collect consent properly**
-If you collect emails or phone numbers, you need clear opt-in. Avoid pre-ticked boxes.
+If you collect emails or phone numbers for [email marketing that keeps regulars coming back](/licensees-guide/email-marketing-pub-retention), you need clear opt-in. Avoid pre-ticked boxes.
 
 **2) Store data securely**
 Use password-protected systems. Limit who can access the list.

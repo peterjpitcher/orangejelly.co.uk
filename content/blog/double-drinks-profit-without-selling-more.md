@@ -16,7 +16,7 @@ tags:
   - Premium Products
   - Coffee Sales
   - Cocktails
-quickAnswer: "Focus on premium drinks with healthier margins instead of standard lagers. Add coffee, cocktails, and premium spirits. Train staff to suggest specific drinks, not ask 'what would you like?' One premium sale can outperform multiple pints."
+quickAnswer: "Stop chasing volume and shift the mix towards premium. Add bean-to-cup coffee, five well made cocktails, premium mixers, and a premium spirit shelf. Train the team to suggest a specific drink rather than asking what they would like, and offer premium serves in addition to the usual round, not instead of it."
 voiceSearchQueries:
   - "how to increase pub drink profits"
   - "what drinks make most profit in pubs"
@@ -36,7 +36,7 @@ faqs:
   - question: "Do I need expensive equipment for premium drinks?"
     answer: "No. Start with a reliable bean-to-cup machine, master a handful of classic cocktails with existing spirits, and stock premium soft drinks. Keep the setup lean and build from there."
   - question: "Will regular customers resist premium drinks?"
-    answer: "Not if positioned correctly. Don't remove favourites - add options. Offer tasting nights with strong repeat attendance, samples with meals, and educate staff on flavor profiles. Most resistance is fear of the unknown."
+    answer: "Not if positioned correctly. Don't remove favourites - add options. Offer tasting nights with strong repeat attendance, samples with meals, and educate staff on flavour profiles. Most resistance is fear of the unknown."
   - question: "How do I train staff to sell premium drinks?"
     answer: "Replace 'What would you like to drink?' with specific suggestions: 'Our new IPA pairs perfectly with that burger' or 'Can I tempt you with our salted caramel espresso martini?' Role-play for 10 minutes before each shift."
 localSEO:
@@ -69,7 +69,7 @@ Here's the painful truth: if you're focusing on shifting more pints to increase 
 
 **Your drinks menu is stuck in 1995 while your costs are firmly in 2025.**
 
-Standard lager runs on thinner margins than most people realise. After wage and tax rises, that margin can shrink to almost nothing. You can't raise pint prices much more - customers are already sensitive. You can't cut costs further without compromising quality.
+Standard lager runs on [thinner margins than most people realise](/licensees-guide/rescue-your-margins-drinks-mix). After wage and tax rises, that margin can shrink to almost nothing. You can't raise pint prices much more - customers are already sensitive. You can't cut costs further without compromising quality.
 
 But here's what nobody talks about: while you're battling over pint prices, Wetherspoons quietly sells 50 million coffees a year. While you're discounting lager to compete, the gastropub down the road makes £15 profit on every cocktail. While you're worried about losing regulars, they're already buying premium drinks elsewhere.
 
@@ -163,7 +163,7 @@ This isn't upselling. It's offering experiences. The couple having a meal and tw
 - Monday: Order coffee machine (or arrange lease)
 - Tuesday: Stock 5 premium soft drinks
 - Wednesday: Train staff on coffee (supplier usually does this free)
-- Thursday: Create simple drinks menu cards
+- Thursday: Create simple [drinks menu cards that sell the premium range](/licensees-guide/pub-drinks-menu-design-guide)
 - Friday: Launch with free coffee samples (9-11am)
 - Weekend: Track every premium sale
 
@@ -171,7 +171,7 @@ This isn't upselling. It's offering experiences. The couple having a meal and tw
 - Add cocktail ingredients for your five classics
 - Run staff tasting session (they sell what they know)
 - Create table talkers about new drinks
-- Start suggesting specific drinks, not asking "what would you like?"
+- Start [suggesting specific drinks with a short serving script](/licensees-guide/upselling-secrets-training-scripts), not asking "what would you like?"
 - Introduce "Coffee & Cake" afternoon deal
 
 ### Week 3: Expansion

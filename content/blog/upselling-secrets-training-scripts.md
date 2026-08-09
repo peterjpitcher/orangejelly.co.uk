@@ -4,7 +4,7 @@ slug: "upselling-secrets-training-scripts"
 publishedDate: 2025-08-21
 updatedDate: "2026-03-16T00:00:00.000Z"
 excerpt: "Teach the team to recommend higher-value items with confidence and warmth so guests feel guided, not hustled."
-quickAnswer: "Use needs-based questions, offer two options, and script conversational bridges that make upgrades feel natural."
+quickAnswer: "Ask one preference question first, such as crisp or hoppy, then offer two curated options instead of an open sell. Bridge the upgrade to what the guest actually wants, for example pairing a beer with their food. Drill it for two minutes before every shift and pick one focus each week."
 author: "Peter Pitcher"
 category: "revenue-growth"
 tags:
@@ -43,7 +43,7 @@ faqs:
 
 # Upselling Secrets: Training Scripts That Do Not Sound Pushy
 
-Upselling is not about pressure. It is about guiding guests to something better. The right scripts feel helpful, not salesy, and they lift spend per head immediately.
+Upselling is not about pressure. It is about guiding guests to something better. The right scripts feel helpful, not salesy, and they lift spend per head immediately, working hand in hand with the [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend).
 
 Use this structure to train your team in short, repeatable sessions.
 
@@ -57,7 +57,7 @@ Examples:
 
 ## Step 2: Offer two curated options
 
-Give a clear choice. It feels supportive and speeds decisions.
+Give a clear choice. It feels supportive and speeds decisions, especially when your [drinks menu is designed to guide the eye](/licensees-guide/pub-drinks-menu-design-guide).
 
 Example:
 "You could go for the house gin, or our local small-batch gin. The local one is a little smoother."
@@ -76,7 +76,7 @@ Run a two-minute role play before service. Focus on one category at a time: beer
 
 ## Step 5: Track and celebrate
 
-Pick one upsell focus each week and celebrate wins publicly. Recognition makes the habit stick.
+Pick one upsell focus each week and celebrate wins publicly. Recognition makes the habit stick, and it sits neatly with the other [ways to motivate staff without a pay rise](/licensees-guide/staff-motivation-hacks-no-pay-rise).
 
 ## Scripts by category
 

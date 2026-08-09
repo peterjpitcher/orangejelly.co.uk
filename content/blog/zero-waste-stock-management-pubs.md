@@ -4,7 +4,7 @@ slug: "zero-waste-stock-management-pubs"
 publishedDate: 2025-09-25
 updatedDate: "2026-01-05T00:00:00.000Z"
 excerpt: "Use disciplined stock processes to protect every pound of GP when cash is tight and bins are overflowing."
-quickAnswer: "Count little and often, engineer menus around shared ingredients, and give chefs as well as bartenders clear waste KPIs so shrinkage drops fast."
+quickAnswer: "Count weekly rather than monthly, build a menu where each ingredient appears in at least three dishes, and standardise portions with scoops and scales. Enforce visible FIFO labelling, turn surplus into a weekly rescue special, and share waste KPIs with the whole team. Fix habits before you buy any stock system."
 author: "Peter Pitcher"
 category: "operations"
 tags:
@@ -32,9 +32,9 @@ voiceSearchQueries:
   - "Stop throwing food away in pub"
 faqs:
   - question: "How much waste is acceptable in a pub kitchen?"
-    answer: "Aim for less than 3% of food cost as waste. Anything above 5% signals a problem — either over-ordering, poor portion control, or a menu that's too wide for your volume. Track waste daily in a simple log and review it weekly with your chef."
+    answer: "Aim for less than 3% of food cost as waste. Anything above 5% signals a problem: either over-ordering, poor portion control, or a menu that's too wide for your volume. Track waste daily in a simple log and review it weekly with your chef."
   - question: "What's the best way to reduce drink waste behind the bar?"
-    answer: "Measure every pour using spirit measures and correct glass sizes, check line yields against expected output, and train staff on proper cellar management. Even small improvements — reducing a 5% variance to 2% — can free up hundreds of pounds per month on a busy bar."
+    answer: "Measure every pour using spirit measures and correct glass sizes, check line yields against expected output, and train staff on proper cellar management. Even small improvements (reducing a 5% variance to 2%) can free up hundreds of pounds per month on a busy bar."
   - question: "Should I reduce my pub menu to cut waste?"
     answer: "Often yes. A tighter menu with shared base ingredients means faster turnover, less spoilage, and easier prep. If you can serve 80% of your dishes from 20 core ingredients, your ordering becomes simpler, your waste drops, and your kitchen runs more efficiently."
 ---
@@ -49,11 +49,11 @@ Weekly counts beat monthly deep dives. Short, regular checks surface problems ea
 
 ## Step 2: Engineer menus around shared ingredients
 
-Build a menu where one ingredient appears in at least three dishes. Cross-use reduces waste and makes prep easier.
+Build a menu where one ingredient appears in at least three dishes. Cross-use reduces waste, makes prep easier, and sits neatly alongside [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend).
 
 ## Step 3: Portion control is culture
 
-If portions vary, margins vanish. Use scoops, scales, and standard builds so every plate costs the same.
+If portions vary, margins vanish. Use scoops, scales, and standard builds so every plate costs the same, and apply the same discipline behind the bar with [a cellar routine that protects beer quality and yield](/licensees-guide/cellar-management-beer-quality-guide).
 
 ## Step 4: FIFO is not optional
 
@@ -69,7 +69,7 @@ Track waste weight or value each week and share it with the team. Visibility cre
 
 ## Step 7: Train before you buy tech
 
-Systems fail when people do not follow them. Fix habits first, then add tools if needed.
+Systems fail when people do not follow them. Fix habits first, then add tools such as [an EPOS system that tracks stock properly](/licensees-guide/pub-epos-system-guide) if needed.
 
 ## Common mistakes
 

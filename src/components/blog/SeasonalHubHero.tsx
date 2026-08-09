@@ -49,7 +49,8 @@ export default function SeasonalHubHero({
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
         {breadcrumbs && breadcrumbs.length > 0 && (
           <div className="mb-6">
-            <Breadcrumb items={breadcrumbs} variant="light" />
+            {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
+            <Breadcrumb items={breadcrumbs} variant="light" emitJsonLd={false} />
           </div>
         )}
 

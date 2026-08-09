@@ -4,7 +4,7 @@ slug: "wine-tasting-evenings-for-pubs"
 publishedDate: 2026-05-25
 updatedDate: 2026-05-31
 excerpt: "A plain-English guide to running a wine and cheese evening in your pub, from a simple £10 flight and pairing board to local cheese, staff crib notes and repeat bookings."
-quickAnswer: "A wine and cheese night pairs three small wine tastes with a simple cheese and charcuterie board for around £10 to £15 a head, ideally part-funded by your wine supplier. Keep it informal, give guests a scorecard, match each wine to a cheese, and take the next booking before they leave. You do not need a sommelier, just a clear running order, a decent board and confident staff."
+quickAnswer: "A wine and cheese night pairs three small wine tastes, served as a flight, with a cheese and charcuterie board, priced around £10 to £15 a head. Ask your wine supplier to part-fund the stock, give every guest a scorecard, match each wine to one cheese, and take the next booking before the room empties."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/wine-tasting-evenings-for-pubs.svg"
@@ -57,7 +57,7 @@ schema:
 
 # Wine & Cheese Evening: How to Run One in Your Pub
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 A wine and cheese evening is one of the easiest ways to lift spend per head, fill a quiet midweek, and turn wine from the dusty afterthought behind your bar into something your regulars actually look forward to. Put a few good wines next to a proper cheese board, charge a fair ticket, and you've got a cheese and wine night that feels like an occasion without costing you a fortune to put on. And no, you don't need a sommelier, a white tablecloth, or a single bit of jargon.
 
@@ -71,7 +71,7 @@ Two things hold pub wine back, and neither is the wine itself.
 
 The first is that it feels formal. Drinkers worry they'll pick "wrong", mispronounce something, or look daft in front of their mates, so they default to the house red and never trade up. The second is that the list is invisible. It's buried in a menu, printed too small, or stuck on a shelf nobody reads. If people can't see it and don't feel confident choosing from it, they won't.
 
-Adding cheese fixes both, and adds a third pull on top. Cheese makes the night social and a bit indulgent, so the fear drops away. It puts your range right in front of people in a way they can taste, not just squint at. And it gives you a second thing to sell — a board people will happily pay for, on a night they'd otherwise be at home.
+Adding cheese fixes both, and adds a third pull on top. Cheese makes the night social and a bit indulgent, so the fear drops away. It puts your range right in front of people in a way they can taste, not just squint at. And it gives you a second thing to sell: a board people will happily pay for, on a night they'd otherwise be at home.
 
 There's a tailwind here too. The themes coming out of the London Wine Fair in May 2026, as reported by the Morning Advertiser, were all about lighter reds, rosé, cans and kegged wine, English wine, and local, sustainable sourcing, with "taste before you buy" running through the lot. Low and no wine is a growing category as well. In other words, drinkers want to try before they commit, and they're curious about what's in the glass. A wine and cheese evening is exactly that instinct made into an event.
 
@@ -96,7 +96,7 @@ Get these basics right and your wine sales lift before you've even sold a ticket
 
 Here's the format we'd point any pub towards. It's deliberately simple, because the simple version is the one you'll actually run twice. This is the wine half of the evening; the cheese board comes next, and the two run together.
 
-**The format.** Three small tastes, served as a flight, plus a scorecard. Pour around 50ml of each so people can compare them side by side without anyone falling off their stool. A flight of three contrasting wines, say a crisp white, a light red and something fuller, gives guests an easy story to follow — and a natural order to pair cheeses against.
+**The format.** Three small tastes, served as a flight, plus a scorecard. Pour around 50ml of each so people can compare them side by side without anyone falling off their stool. A flight of three contrasting wines, say a crisp white, a light red and something fuller, gives guests an easy story to follow, and a natural order to pair cheeses against.
 
 **The scorecard.** A single printed sheet with space to mark each wine out of five and scribble a word or two. It does three jobs: it gives people something to do, it sparks chat between tables, and it quietly tells you which wines to push afterwards.
 
@@ -116,7 +116,7 @@ A responsible word while we're here: run your Challenge 25 policy exactly as any
 
 ## Build a simple cheese pairing board
 
-The cheese is what turns a tasting into an evening. You don't need a cheesemonger's counter or anything clever — three or four cheeses, a bit of charcuterie, and a few bits to go alongside. The job is to give each wine a partner that makes both taste better.
+The cheese is what turns a tasting into an evening. You don't need a cheesemonger's counter or anything clever: three or four cheeses, a bit of charcuterie, and a few bits to go alongside. The job is to give each wine a partner that makes both taste better.
 
 The trick is matching weight with weight. A delicate wine gets a delicate cheese; a big wine gets something strong enough to stand up to it. Run them lightest to heaviest, the same order as your wine flight, and the pairings tell a little story as the night goes on.
 
@@ -128,7 +128,7 @@ A board that mirrors a classic three-wine flight:
 
 Round it out with crackers, a few grapes, some chutney or quince, and oatcakes for anyone avoiding wheat. Lay it out generously and it photographs beautifully, which does half your marketing for the next one.
 
-**Go local where you can.** A British cheese from a maker down the road is a genuine selling point and a story your staff can tell. "This blue's from a farm twenty minutes away" beats any label. Local cheese ties in neatly with the English wine your customers are already curious about, and it's the kind of detail the chain down the road simply can't be bothered with. Your regular wholesaler will carry plenty, but it's worth a call to a nearby dairy or farm shop — many will do a trade price and some will happily send someone along to talk about the cheese, the same way a wine rep would.
+**Go local where you can.** A British cheese from a maker down the road is a genuine selling point and a story your staff can tell. "This blue's from a farm twenty minutes away" beats any label. Local cheese ties in neatly with the English wine your customers are already curious about, and it's the kind of detail the chain down the road simply can't be bothered with. Your regular wholesaler will carry plenty, but it's worth a call to a nearby dairy or farm shop: many will do a trade price and some will happily send someone along to talk about the cheese, the same way a wine rep would.
 
 **How to price the cheese.** Keep the maths simple. Work out what the board costs you per head, treble it, and you're in roughly the right place for a healthy margin (cheese and charcuterie carry well, so don't undersell it). You've got two easy ways to charge:
 
@@ -151,13 +151,13 @@ The golden rule: if a customer asks what a wine's like, answer in food. "It's gr
 
 ## Other premium serve moments
 
-A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening. These are the [national drinks days](/licensees-guide/national-drinks-days-pub-guide) worth a look — each one a single featured serve rather than a whole event:
+A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening. These are the [national drinks days](/licensees-guide/national-drinks-days-pub-guide) worth a look, each one a single featured serve rather than a whole event:
 
 - **National Vodka Day** (4 October) for a small batch of proper martinis or a signature serve
-- **A gin tasting evening** around International Gin & Tonic Day (19 October) — a perfect-serve flight is gin's answer to the wine flight, and it runs on exactly the same format: three contrasting gins, a scorecard, a garnish each, and a supplier glad to part-fund it
+- **A gin tasting evening** around International Gin & Tonic Day (19 October). A perfect-serve flight is gin's answer to the wine flight, and it runs on exactly the same format: three contrasting gins, a scorecard, a garnish each, and a supplier glad to part-fund it
 - **Champagne Friday or a Fizz Weekend** heading into party-booking season, when people are already in the mood to treat themselves
 
-And don't forget the ones drinking less. A good alcohol-free pour deserves the same care as a fine wine, so it's worth reading your wine evening alongside our [Sober October low-and-no guide](/licensees-guide/sober-october-low-no-alcohol-pubs) — a confident no/low option means nobody at the table feels left out of the occasion. You'll find the full calendar of all this in [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
+And don't forget the ones drinking less. A good alcohol-free pour deserves the same care as a fine wine, so it's worth reading your wine evening alongside our [Sober October low-and-no guide](/licensees-guide/sober-october-low-no-alcohol-pubs). A confident no/low option means nobody at the table feels left out of the occasion. You'll find the full calendar of all this in [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
 
 ## Turning a tasting into repeat bookings
 

@@ -12,10 +12,10 @@ import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
 
 // Metadata titles per slug (from spec)
 const metaTitles: Record<string, string> = {
-  'growth-fix': 'Growth Fix — Solve One Pub Problem Fast | From £375 + VAT',
-  'momentum-month': 'Momentum Month — Ongoing Pub Marketing Support | £900/mo + VAT',
-  'growth-partner': 'Growth Partner — Full Pub Marketing Support | Orange Jelly',
-  'turnaround-intensive': 'Pub Turnaround Intensive — 30-Day Commercial Reset | Orange Jelly',
+  'growth-fix': 'Growth Fix: Solve One Pub Problem Fast From £375 + VAT',
+  'momentum-month': 'Momentum Month: Ongoing Pub Marketing, £900/mo + VAT',
+  'growth-partner': 'Growth Partner: Full Pub Marketing Support',
+  'turnaround-intensive': 'Pub Turnaround Intensive: a 30-Day Commercial Reset',
 };
 
 const metaDescriptions: Record<string, string> = {
@@ -24,7 +24,7 @@ const metaDescriptions: Record<string, string> = {
   'momentum-month':
     'Ongoing monthly pub marketing support. One clear objective, weekly priorities, and hands-on help for £900/mo + VAT. Build consistent momentum.',
   'growth-partner':
-    'Full pub marketing support — strategy, events, social, local visibility, and accountability. The strongest ongoing package from Orange Jelly.',
+    'Full pub marketing support: strategy, events, social, local visibility and accountability. The strongest ongoing package from Orange Jelly.',
   'turnaround-intensive':
     'A 30-day commercial reset for pubs needing a complete turnaround. Deep diagnostic, offer reset, lean website rebuild, and stabilisation playbooks.',
 };

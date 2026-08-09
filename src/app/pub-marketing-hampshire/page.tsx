@@ -3,7 +3,7 @@ import PubMarketingLocationLandingPage from '@/components/PubMarketingLocationLa
 import hampshireData from '../../../content/data/pub-marketing-hampshire.json';
 
 export const metadata = generateMetadata({
-  title: 'Pub Marketing in Hampshire — Results-Driven Help',
+  title: 'Pub Marketing in Hampshire: Results-Driven Help',
   description:
     'Pub marketing for Hampshire pubs in Winchester, Southampton, Portsmouth, and beyond. Proven systems from a working licensee. Packages from £375 + VAT.',
   path: '/pub-marketing-hampshire',

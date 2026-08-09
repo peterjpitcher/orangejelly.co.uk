@@ -4,7 +4,7 @@ slug: "autumn-rugby-nations-championship-pubs"
 publishedDate: 2026-05-25
 updatedDate: 2026-05-31
 excerpt: "Your operator's guide to filling the pub for the autumn internationals in November 2026. Where to watch rugby, table bookings, match platters and a screen checklist."
-quickAnswer: "The autumn internationals are the home nations' November rugby window, and in 2026 they run inside the new Nations Championship. There's a marquee home-nation game most weekends from 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. If you show rugby in your pub, take table bookings before kick-off, build a simple match-day package, and check your screens and sound work before the room fills."
+quickAnswer: "The autumn internationals are the home nations' November rugby fixtures, and in 2026 they sit inside the new Nations Championship. The pool window runs 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. Take table bookings before kick-off, sell a fixed match-day package, and test screens and sound early."
 author: "Peter Pitcher"
 category: "events"
 featuredImage: "/images/blog/autumn-rugby-nations-championship-pubs.svg"
@@ -53,11 +53,11 @@ schema:
 
 # Autumn Internationals 2026: Fill Your Pub for the Rugby
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) — a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
-November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But the **autumn internationals** change that. If you show rugby in your pub, this is quietly one of the best trading months you've got, because a big game gives people a fixed reason to be out — in a warm room, on a big screen, with a pint in hand.
+November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But the **autumn internationals** change that. If you show rugby in your pub, this is quietly one of the best trading months you've got, because a big game gives people a fixed reason to be out: in a warm room, on a big screen, with a pint in hand.
 
-This year it gets bigger. The November window — the **autumn internationals rugby** most of your customers already know by name — now sits inside the new **Nations Championship**. Instead of a loose run of friendlies, you've got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.
+This year it gets bigger. The November window, the **autumn internationals rugby** most of your customers already know by name, now sits inside the new **Nations Championship**. Instead of a loose run of friendlies, you've got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.
 
 This guide is the practical version. What's on, how to take the bookings, what to put on a plate, and how to make sure the big screen and sound actually deliver when the room's full. It sits alongside [our year-round pub rugby playbook](/licensees-guide/pub-six-nations-rugby-marketing), which covers the Six Nations and the long game; this one is about nailing this November.
 
@@ -65,28 +65,28 @@ This guide is the practical version. What's on, how to take the bookings, what t
 
 The new format does you a favour. Where the old autumn internationals could feel like a scattering of one-off games, sitting them inside the Nations Championship gives the month a shape. There's a marquee fixture nearly every weekend in the pool window, the placement matches build toward Finals Weekend, and people who came in for one game have a reason to plan the next.
 
-That rhythm is exactly what fills a pub. The same logic that makes a weekly quiz work makes a run of rugby weekends work: people learn there's something on, they get into the habit, and they bring others. And plenty of them are simply searching for where to watch the rugby with a decent screen and a proper pint — so be the obvious answer. Your job is to make sure every fixture is in their diary and yours, not left to chance on the day.
+That rhythm is exactly what fills a pub. The same logic that makes a weekly quiz work makes a run of rugby weekends work: people learn there's something on, they get into the habit, and they bring others. And plenty of them are simply searching for where to watch the rugby with a decent screen and a proper pint, so be the obvious answer. Your job is to make sure every fixture is in their diary and yours, not left to chance on the day.
 
 ## The autumn internationals fixtures: November 2026
 
-Here's the home-nation grid for the pool window and the finale. Block these out now, decide which ones you'll build an event around — and which you'll just have on the big screen — and get them on your wall planner.
+Here's the home-nation grid for the pool window and the finale. Block these out now, decide which ones you'll build an event around (and which you'll just have on the big screen), and get them on your wall planner.
 
 *Provisional and correct at the time of writing (last checked 30 May 2026). Match-ups, kick-off times and TV listings can still move, so confirm each fixture against the official listings nearer the date before you promote it.*
 
 **Pool window (6–21 November)**
 
-- **Fri 6 Nov** — Ireland v Argentina (Aviva)
-- **Sat 7 Nov** — Scotland v New Zealand (Murrayfield); Wales v Japan (Principality)
-- **Sun 8 Nov** — England v Australia (Twickenham)
-- **Sat 14 Nov** — Wales v New Zealand; England v Japan; Ireland v Fiji
-- **Sun 15 Nov** — Scotland v Australia
-- **Sat 21 Nov** — England v New Zealand; Ireland v South Africa; Scotland v Japan; Wales v Australia
+- **Fri 6 Nov**: Ireland v Argentina (Aviva)
+- **Sat 7 Nov**: Scotland v New Zealand (Murrayfield); Wales v Japan (Principality)
+- **Sun 8 Nov**: England v Australia (Twickenham)
+- **Sat 14 Nov**: Wales v New Zealand; England v Japan; Ireland v Fiji
+- **Sun 15 Nov**: Scotland v Australia
+- **Sat 21 Nov**: England v New Zealand; Ireland v South Africa; Scotland v Japan; Wales v Australia
 
 **Finals Weekend**
 
-- **Fri 27–Sun 29 Nov** — Finals Weekend, Twickenham (every nation plays a placement match)
+- **Fri 27–Sun 29 Nov**: Finals Weekend, Twickenham (every nation plays a placement match)
 
-You don't have to make every game an event. Pick the ones that suit your crowd — for most English pubs, England v Australia on the Sunday and England v New Zealand on the 21st are the obvious anchors — and treat the rest as a reason to have the screens on and the bar staffed.
+You don't have to make every game an event. Pick the ones that suit your crowd (for most English pubs, England v Australia on the Sunday and England v New Zealand on the 21st are the obvious anchors) and treat the rest as a reason to have the screens on and the bar staffed.
 
 ## Take table bookings before kick-off
 
@@ -101,7 +101,7 @@ If you don't currently take bookings well, or you're not sure people still want 
 Rugby crowds settle in for the duration, which is exactly what you want. The trick is to make food easy to order without anyone leaving their seat or missing a try.
 
 - **Build a fixed match-day package.** A reserved table plus a sharing platter at a set price. It's an easy yes for the customer, it protects your margin, and it makes prep predictable. Sell it by the game.
-- **Lean on sharing platters.** Loaded nachos, wings, sliders, a mixed grazing board — food built for a table of four watching a screen, not a knife-and-fork affair. High margin, fast to fire, easy to eat one-handed.
+- **Lean on sharing platters.** Loaded nachos, wings, sliders, a mixed grazing board: food built for a table of four watching a screen, not a knife-and-fork affair. High margin, fast to fire, easy to eat one-handed.
 - **Pre-order at the table or at booking.** Take the food order when they book, or the moment they sit, so the kitchen runs ahead of kick-off rather than drowning at half-time.
 - **Keep drinks moving.** A jug or a "round board" for the table means fewer trips to the bar and more spend. Have the bar fully staffed for the rush right before kick-off and at the break.
 
@@ -113,23 +113,23 @@ A quick word on the obvious: big match days mean busy bars and a lively room. Ke
 
 Nothing kills a rugby afternoon faster than a screen that buffers or sound that cuts out. Run through this in the quiet days before, not five minutes before kick-off.
 
-- **Confirm the game is actually on your subscription.** Check exactly which fixtures your commercial sports package carries, well ahead of the date. Rights can shift between seasons — don't assume.
+- **Confirm the game is actually on your subscription.** Check exactly which fixtures your commercial sports package carries, well ahead of the date. Rights can shift between seasons. Don't assume.
 - **Test every screen.** Picture, channel, and the right input on each one. Walk the room and look at the worst seat in the house: can they see a screen clearly?
 - **Get the sound right.** One screen with commentary up, the rest muted, so the room has a focal point without a wall of noise. Check the volume reaches the back without distorting.
-- **Have a backup plan.** Know what you'll switch to if your main feed drops — a second provider, a different screen, anything that keeps the game on.
+- **Have a backup plan.** Know what you'll switch to if your main feed drops: a second provider, a different screen, anything that keeps the game on.
 - **Sort the basics.** Reliable wifi for card payments under load, enough glassware clean and ready, and a plan for where the overflow goes if it's heaving.
 
 Do this once, properly, and the whole month runs smoother.
 
 ## The Finals Weekend angle
 
-Finals Weekend at Twickenham, Friday 27 to Sunday 29 November, is your big one — and it lands beautifully. Every nation plays a placement match, so there's meaningful rugby across all three days, and it falls right at the point where Christmas is suddenly on everyone's mind.
+Finals Weekend at Twickenham, Friday 27 to Sunday 29 November, is your big one, and it lands beautifully. Every nation plays a placement match, so there's meaningful rugby across all three days, and it falls right at the point where Christmas is suddenly on everyone's mind.
 
 Treat it as a mini-festival, not a single fixture. Promote the whole weekend as a block, take bookings across all three days, and run your match-day package right through. It's the natural high point of the run you've built since the 6th, and a packed Finals Weekend is the best possible advert for whatever you put on next.
 
 ## Turning rugby crowds into Christmas bookings
 
-Here's the bit most pubs miss. The people filling your room for the rugby in November are the exact same people deciding where to have their Christmas drinks in December. You've got them in front of you, in a good mood, with their mates — so ask.
+Here's the bit most pubs miss. The people filling your room for the rugby in November are the exact same people deciding where to have their Christmas drinks in December. You've got them in front of you, in a good mood, with their mates. So ask.
 
 Have the Christmas message ready while the rugby crowd is in. A table tent, a line from the bar, a card with the booking details. Capture the table that's clearly a work crowd or a group of friends, and invite them back. A run of full rugby weekends is the perfect on-ramp to a full December, if you join the dots.
 
@@ -144,9 +144,9 @@ Don't try to plan all six weekends at once. Plan the first game.
 3. Run your screen and sound checklist this week, while it's quiet.
 4. Promote the first fixture, then have the Christmas message ready for the crowd it brings.
 
-Get one rugby weekend right and the rest follow the same pattern — same package, same prep, same booking system, new fixture. That's how November stops being a month you survive and starts being one you look forward to.
+Get one rugby weekend right and the rest follow the same pattern: same package, same prep, same booking system, new fixture. That's how November stops being a month you survive and starts being one you look forward to.
 
-If you'd like a hand setting up the bookings, the package and the promotion so your screens are booked out all month, that's exactly the kind of thing we help with — see [how we work with pubs](/ways-to-work).
+If you'd like a hand setting up the bookings, the package and the promotion so your screens are booked out all month, that's exactly the kind of thing we help with. See [how we work with pubs](/ways-to-work).
 
 ## FAQs
 
@@ -157,7 +157,7 @@ The autumn internationals are the home nations' run of November rugby fixtures a
 The pool window runs from Friday 6 to Saturday 21 November, with a marquee home-nation game most weekends, followed by Finals Weekend at Twickenham from Friday 27 to Sunday 29 November. Confirm kick-off times and TV listings nearer the date, as they can move.
 
 **How do I get bookings for the rugby?**
-Take table bookings before kick-off rather than leaving it to walk-ins. Promote a fixed match-day package — a table plus a platter — and open the diary three to four weeks ahead. A small deposit or pre-order cuts no-shows and tells you how much food to prep.
+Take table bookings before kick-off rather than leaving it to walk-ins. Promote a fixed match-day package (a table plus a platter) and open the diary three to four weeks ahead. A small deposit or pre-order cuts no-shows and tells you how much food to prep.
 
 **What do I need to show rugby in my pub?**
 A commercial sports subscription that carries the rugby and the right licence to show it publicly. Channels and rights can change between seasons, so check exactly which games are covered with your provider well before the first fixture.

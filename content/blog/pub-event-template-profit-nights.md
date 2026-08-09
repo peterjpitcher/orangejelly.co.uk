@@ -4,7 +4,7 @@ slug: "pub-event-template-profit-nights"
 publishedDate: 2025-04-03
 updatedDate: "2026-02-23T00:00:00.000Z"
 excerpt: "Reusable event blueprint covering planning, promotion, pricing, and post-event upsells so every activation hits profit targets."
-quickAnswer: "Use a six-week timeline, pre-sell most of the tickets, lock in sponsors, and gather content plus rebookings on the night."
+quickAnswer: "Run every pub event to a six-week template. Use weeks six to four to fix the theme, capacity and ticket price, weeks four to two to open bookings with a deposit and promote hard, and the final fortnight to brief the team. On the night, upsell one add-on and tease the next event."
 author: "Peter Pitcher"
 category: "events"
 tags:
@@ -41,14 +41,14 @@ faqs:
 
 # The Ultimate Pub Event Template for Guaranteed Profit Nights
 
-Events only work when they are structured. This template turns any activation into a repeatable profit night by locking in pricing, staffing, marketing, and post-event follow up.
+Events only work when they are structured, and [running a pub event well](/licensees-guide/how-to-run-successful-pub-events) starts long before the doors open. This template turns any activation into a repeatable profit night by locking in pricing, staffing, marketing, and post-event follow up.
 
 Use this as your standard run sheet for any event.
 
 ## Six-week timeline
 
 **Week 6-4: Confirm the concept**
-- Choose one clear theme.
+- Choose one clear theme from your [pub event ideas](/licensees-guide/pub-event-ideas) shortlist.
 - Set capacity and price.
 - Build the offer and the run time.
 
@@ -66,7 +66,7 @@ Use this as your standard run sheet for any event.
 
 Use a simple formula to protect margin:
 
-`(cost of goods + labor uplift + overhead buffer) / target GP = ticket price`
+`(cost of goods + labour uplift + overhead buffer) / target GP = ticket price`
 
 Add a small buffer for no-shows or late changes.
 
@@ -87,7 +87,7 @@ Add a small buffer for no-shows or late changes.
 
 - Welcome and explain the flow.
 - Collect content early.
-- Upsell one add-on (dessert, premium pour, or merch).
+- Upsell one add-on (dessert, premium pour, or merch) using your [upselling scripts](/licensees-guide/upselling-secrets-training-scripts).
 - Close with a clear next-event teaser.
 
 ## Post-event

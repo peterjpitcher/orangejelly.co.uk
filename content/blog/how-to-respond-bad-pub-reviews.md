@@ -90,23 +90,31 @@ These are based on real scenarios I have dealt with. Adapt the tone and details 
 
 ### Template 1: The food complaint
 
-> Thank you for taking the time to leave feedback. I'm sorry your meal didn't meet the standard we aim for. We take food quality seriously and I've spoken to our kitchen team about your comments. I'd love the chance to put this right. Please drop me an email at peter@theanchor.pub and I'll arrange for you to come back as my guest. — Peter, Licensee
+> Thank you for taking the time to leave feedback. I'm sorry your meal didn't meet the standard we aim for. We take food quality seriously and I've spoken to our kitchen team about your comments. I'd love the chance to put this right. Please drop me an email at peter@theanchor.pub and I'll arrange for you to come back as my guest.
+>
+> Peter, Licensee
 
 ### Template 2: The service complaint
 
-> I appreciate you sharing this and I'm sorry the service fell short on your visit. That's not the experience we want anyone to have. I've reviewed the evening with our team to understand what went wrong. If you're willing to give us another chance, please contact me directly and I'll make sure your next visit is a good one. — Peter
+> I appreciate you sharing this and I'm sorry the service fell short on your visit. That's not the experience we want anyone to have. I've reviewed the evening with our team to understand what went wrong. If you're willing to give us another chance, please contact me directly and I'll make sure your next visit is a good one.
+>
+> Peter
 
 ### Template 3: The vague or emotional review
 
 Sometimes you get a review that is all feeling and no detail. "Terrible. Would not go back. Avoid." No specifics. It is tempting to ignore these or ask for details publicly.
 
-> I'm sorry to hear you had a bad experience. Without knowing the specifics, it's hard for me to address what went wrong, but I'd genuinely like to. If you're able to share more details via email, I'll look into it personally. We're always working to improve and feedback, even tough feedback, helps. — Peter
+> I'm sorry to hear you had a bad experience. Without knowing the specifics, it's hard for me to address what went wrong, but I'd genuinely like to. If you're able to share more details via email, I'll look into it personally. We're always working to improve and feedback, even tough feedback, helps.
+>
+> Peter
 
 ### Template 4: The unfair or exaggerated review
 
 This is the hardest one. You know the review is misleading. Maybe the customer was asked to leave for being aggressive. Maybe they are confusing you with another pub.
 
-> Thank you for your feedback. I take all reviews seriously, though I don't fully recognise the experience you've described. I've checked with the team who were working that evening and their account differs. I'd welcome the opportunity to discuss this directly. Please feel free to email me so we can get to the bottom of it. — Peter
+> Thank you for your feedback. I take all reviews seriously, though I don't fully recognise the experience you've described. I've checked with the team who were working that evening and their account differs. I'd welcome the opportunity to discuss this directly. Please feel free to email me so we can get to the bottom of it.
+>
+> Peter
 
 Notice what that response does. It gently challenges the account without calling the reviewer a liar. It invites private contact. And it shows future readers that the pub is well-managed.
 

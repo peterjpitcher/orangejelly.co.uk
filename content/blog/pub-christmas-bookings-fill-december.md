@@ -60,7 +60,7 @@ schema:
 
 It is September. The sun is still out, the beer garden is getting its last hurrah, and the word Christmas feels premature. But here is the reality: the pubs that have a packed December are the ones that started selling it three months ago.
 
-If you are reading this thinking you have plenty of time, you do not. Corporate bookers, office managers, and the person in every friend group who organises the Christmas do — they are already searching. Right now. And if your pub does not have a Christmas page, a menu, and a booking system ready, they will book somewhere else.
+If you are reading this thinking you have plenty of time, you do not. Corporate bookers, office managers, and the person in every friend group who organises the Christmas do: they are already searching. Right now. And if your pub does not have a Christmas page, a menu, and a booking system ready, they will book somewhere else.
 
 I have run Christmas at The Anchor for several years now as a Greene King tenant. Some Decembers have been brilliant. One or two early on were not. The difference was never the food or the decorations. It was how early we started and how well we planned the whole month, not just the weekends.
 
@@ -70,7 +70,7 @@ This guide covers everything you need to fill your December calendar: what to of
 
 December has roughly 22 trading evenings. The Friday and Saturday nights will fill themselves if your pub has any kind of reputation. That gives you maybe eight to ten premium evening slots.
 
-But the real money in December is midweek. Tuesday, Wednesday, and Thursday nights that are normally quiet can become your highest-revenue evenings of the year — if you fill them with Christmas parties.
+But the real money in December is midweek. Tuesday, Wednesday, and Thursday nights that are normally quiet can become your highest-revenue evenings of the year, if you fill them with Christmas parties.
 
 The catch is that office Christmas parties and larger group bookings get organised early. HR departments and office social committees start planning in September. Friend groups with 10 or more people start WhatsApp threads about Christmas in early October. By November, most groups have already committed somewhere.
 
@@ -86,11 +86,11 @@ A la carte Christmas dining sounds flexible, but it creates chaos in the kitchen
 
 Build two or three tiers:
 
-**Classic Christmas menu — your entry point.** Three courses using your strongest dishes with a festive twist. Price this to deliver your target GP while being competitive locally. For most pubs outside central London, that means 25 to 35 pounds per head.
+**Classic Christmas menu: your entry point.** Three courses using your strongest dishes with a festive twist. Price this to deliver your target GP while being competitive locally. For most pubs outside central London, that means 25 to 35 pounds per head.
 
-**Premium Christmas menu — your upsell.** Everything in the classic tier plus extras: prosecco on arrival, an upgraded main (think beef wellington or whole sea bass), a cheese board to finish. Price this 10 to 15 pounds above your classic tier.
+**Premium Christmas menu: your upsell.** Everything in the classic tier plus extras: prosecco on arrival, an upgraded main (think beef wellington or whole sea bass), a cheese board to finish. Price this 10 to 15 pounds above your classic tier.
 
-**Party package — your midweek filler.** Two courses plus a drink on arrival, designed specifically for office groups of 10 or more on Tuesday to Thursday. Price this competitively because the real margin comes from what they spend at the bar. For most pubs, 22 to 30 pounds per head works.
+**Party package: your midweek filler.** Two courses plus a drink on arrival, designed specifically for office groups of 10 or more on Tuesday to Thursday. Price this competitively because the real margin comes from what they spend at the bar. For most pubs, 22 to 30 pounds per head works.
 
 Always have vegetarian, vegan, and gluten-free alternatives available across all tiers. Do not make people with dietary requirements feel like an afterthought.
 
@@ -98,7 +98,7 @@ Always have vegetarian, vegan, and gluten-free alternatives available across all
 
 Require menu choices at least two weeks before the booking date. This is non-negotiable for groups of eight or more. It transforms your kitchen operation from chaos to predictable prep.
 
-Send a simple form — a PDF or online form works — with every booking confirmation. Chase it at three weeks and again at two weeks. Groups that have not returned their choices by the deadline get a polite but firm reminder that their booking cannot be guaranteed without pre-orders.
+Send a simple form (a PDF or online form works) with every booking confirmation. Chase it at three weeks and again at two weeks. Groups that have not returned their choices by the deadline get a polite but firm reminder that their booking cannot be guaranteed without pre-orders.
 
 This sounds strict, but every experienced licensee will tell you the same thing: pre-orders are what make December manageable.
 
@@ -108,13 +108,13 @@ Christmas is not the time to discount. It is the time to demonstrate value.
 
 ### Know your food GP target
 
-If you are running food at a 65 to 71 percent GP (which is where you should be — getting our food right at The Anchor is what grew our food revenue by 98% in three months), your set menu pricing needs to reflect that. Cost every dish on your Christmas menu individually, then price the package to hit your target.
+If you are running food at a 65 to 71 percent GP (which is where you should be; getting our food right at The Anchor is what grew our food revenue by 98% in three months), your set menu pricing needs to reflect that. Cost every dish on your Christmas menu individually, then price the package to hit your target.
 
 ### The drinks margin multiplier
 
 Here is where December gets really profitable. A table of 10 on a Christmas night out will spend significantly more at the bar than the same 10 people on a normal Tuesday. Your food package gets them through the door. Your drinks margin is where the real profit sits.
 
-This is why the party package — the competitively priced midweek option — makes sense even at a slightly lower food margin. You are buying bar spend.
+This is why the party package, the competitively priced midweek option, makes sense even at a slightly lower food margin. You are buying bar spend.
 
 ### Deposit and cancellation policy
 
@@ -166,7 +166,7 @@ A Christmas pub quiz works because:
 - It fills a midweek slot (typically Tuesday or Wednesday) that food bookings alone will not.
 - Teams book tables to eat before or during the quiz, so you get food and drink revenue.
 - It creates atmosphere and social media content.
-- It is low cost to run — your quizmaster, some Christmas-themed rounds, maybe a hamper as the prize.
+- It is low cost to run: your quizmaster, some Christmas-themed rounds, maybe a hamper as the prize.
 
 Running our quiz night consistently at The Anchor was part of what grew our table bookings by 403%. In December, that number swells because groups come as a Christmas outing. Make sure you take bookings for the Christmas quiz specials because demand will exceed your normal capacity.
 
@@ -178,7 +178,7 @@ For ideas on quiz formats and logistics, see our guide on [how to run successful
 
 **A DJ** makes sense for larger parties later in the evening, particularly if you have a separate bar area. This suits the office party crowd on Thursday and Friday nights.
 
-**Karaoke** fills a specific niche — the fun, boozy Christmas party that is more about the night out than the food. Consider running this on a quieter night like a Monday or Tuesday in December.
+**Karaoke** fills a specific niche: the fun, boozy Christmas party that is more about the night out than the food. Consider running this on a quieter night like a Monday or Tuesday in December.
 
 The key with entertainment is matching it to the night and the audience. A solo acoustic act on a Tuesday for 15 diners is perfect. A DJ on the same night is overkill and expensive.
 
@@ -186,9 +186,9 @@ The key with entertainment is matching it to the night and the audience. A solo 
 
 Beyond the standard Christmas party offering, themed nights create extra reasons to visit:
 
-- **Christmas jumper night** — free drink for anyone wearing a Christmas jumper. Simple, fun, and generates social media content.
-- **Mulled wine and mince pie evening** — a low-key midweek event that suits older demographics and couples.
-- **New Year's Eve preview** — a ticketed tasting menu in the last week of December that doubles as your NYE rehearsal run.
+- **Christmas jumper night**: free drink for anyone wearing a Christmas jumper. Simple, fun, and generates social media content.
+- **Mulled wine and mince pie evening**: a low-key midweek event that suits older demographics and couples.
+- **New Year's Eve preview**: a ticketed tasting menu in the last week of December that doubles as your NYE rehearsal run.
 
 For a full breakdown of seasonal event ideas, see our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar) and our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) guide.
 
@@ -204,7 +204,7 @@ Marketing Christmas is not a single post. It is a campaign that builds urgency o
 
 ### October: build urgency
 
-- **Week 5-6:** "Friday nights in December are filling up. If you want a prime slot, book this week." Share a screenshot of your booking calendar with dates crossed out (even if only a few are gone — it creates urgency).
+- **Week 5-6:** "Friday nights in December are filling up. If you want a prime slot, book this week." Share a screenshot of your booking calendar with dates crossed out (even if only a few are gone, it creates urgency).
 - **Week 7-8:** Promote the midweek party packages specifically to offices and local businesses. Tag local companies, share in community Facebook groups, put flyers in nearby offices.
 
 ### November: create scarcity
@@ -220,7 +220,7 @@ Throughout this entire timeline, make sure every post includes a clear call to a
 
 ### Email marketing
 
-If you have a customer database — and you should, even a modest one — email is your most powerful Christmas tool.
+If you have a customer database (and you should, even a modest one), email is your most powerful Christmas tool.
 
 - **September:** One email announcing Christmas bookings are open, with a link to the menu and booking form.
 - **October:** One email highlighting what is already booked and what is still available. Include the midweek party packages.
@@ -239,7 +239,7 @@ Your Christmas booking form should capture name, email, and phone number. That i
 
 ### The January bounce-back offer
 
-Hand every Christmas party a card with their bill: "Thank you for celebrating with us. Enjoy 20 percent off food in January — just show this card." Or offer a free bottle of prosecco for tables of 6 or more in January.
+Hand every Christmas party a card with their bill: "Thank you for celebrating with us. Enjoy 20 percent off food in January, just show this card." Or offer a free bottle of prosecco for tables of 6 or more in January.
 
 The specific offer matters less than having one. January is traditionally quiet for pubs. A bounce-back offer gives people a reason to return when they would otherwise stay home.
 
@@ -251,7 +251,7 @@ In the first week of January, email your entire December guest list:
 - Share your January events calendar (quiz nights, live music, themed food nights).
 - Include the bounce-back offer as a reminder.
 
-The pubs that treat December purely as a revenue month miss the bigger picture. December is when you build the database and create the impressions that drive trade for the rest of the year. Building our contact list at The Anchor pays dividends every month — not just in December.
+The pubs that treat December purely as a revenue month miss the bigger picture. December is when you build the database and create the impressions that drive trade for the rest of the year. Building our contact list at The Anchor pays dividends every month, not just in December.
 
 ## Your action plan
 
@@ -274,7 +274,7 @@ The pubs that treat December purely as a revenue month miss the bigger picture. 
 - Push midweek party packages to local businesses.
 - Start your social media urgency campaign.
 - Review early bookings and adjust your midweek pricing if uptake is slow.
-- Confirm staffing for December — you will likely need extra covers.
+- Confirm staffing for December: you will likely need extra covers.
 
 ### November
 
@@ -293,7 +293,7 @@ The pubs that treat December purely as a revenue month miss the bigger picture. 
 
 **"It is too early to talk about Christmas in September."** It is too early for customers to feel Christmassy, yes. But it is not too early for the person booking the office party, the friend organising the group dinner, or the couple planning their Christmas Eve meal. You are not selling Christmas spirit in September. You are selling convenience and availability.
 
-**"We do not have a big enough kitchen for set menus and normal service."** Then do not run both. On your busiest December evenings, run Christmas set menus only. Your regular customers will understand — and many of them will book a Christmas dinner themselves.
+**"We do not have a big enough kitchen for set menus and normal service."** Then do not run both. On your busiest December evenings, run Christmas set menus only. Your regular customers will understand, and many of them will book a Christmas dinner themselves.
 
 **"Deposits put people off."** Some people, maybe. But the kind of customers who refuse a 10-pound deposit on a Christmas dinner booking are often the kind who cancel without notice. A reasonable deposit policy filters for committed bookers and protects your revenue.
 

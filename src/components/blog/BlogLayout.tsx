@@ -22,7 +22,8 @@ export default function BlogLayout({ children, breadcrumbs, sidebar }: BlogLayou
     <>
       <Section background="white" padding="small">
         <div className="max-w-6xl mx-auto">
-          <Breadcrumb items={finalBreadcrumbs} />
+          {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
+          <Breadcrumb items={finalBreadcrumbs} emitJsonLd={false} />
         </div>
       </Section>
 

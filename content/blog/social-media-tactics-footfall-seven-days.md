@@ -4,7 +4,7 @@ slug: "social-media-tactics-footfall-seven-days"
 publishedDate: 2025-07-03
 updatedDate: "2026-01-12T00:00:00.000Z"
 excerpt: "A one-week sprint plan to turn Instagram, Facebook, and TikTok into actual bookings instead of vanity metrics."
-quickAnswer: "Run a themed content sprint, collect ten pieces of proof daily, retarget warm audiences with £5 ads, and layer direct invites so phones start ringing within the week."
+quickAnswer: "Pick one event or offer, then run a seven-day sprint. Capture ten photos and five short clips in one hour, post proof with a booking link on days one and two, spotlight staff and regulars midweek, add a small local ad on day five, and close with a countdown."
 author: "Peter Pitcher"
 category: "marketing"
 tags:
@@ -32,9 +32,9 @@ voiceSearchQueries:
   - "Seven day plan to boost bar visits"
 faqs:
   - question: "How often should a pub post on social media?"
-    answer: "At least once a day on your main platform (usually Instagram or Facebook). Mix content types — behind-the-scenes prep, menu highlights, customer moments, and event teasers. Consistency matters more than perfection. A quick phone photo posted daily beats a polished post once a week."
+    answer: "At least once a day on your main platform (usually Instagram or Facebook). Mix content types: behind-the-scenes prep, menu highlights, customer moments, and event teasers. Consistency matters more than perfection. A quick phone photo posted daily beats a polished post once a week."
   - question: "Do Facebook ads actually work for pubs?"
-    answer: "Yes, when targeted correctly. Even £5 per day aimed at people within a 5-mile radius can drive measurable bookings. Boost posts that show your best food, busiest nights, or upcoming events. Always include a clear call to action — 'Book your table' or 'Message us to reserve.'"
+    answer: "Yes, when targeted correctly. Even £5 per day aimed at people within a 5-mile radius can drive measurable bookings. Boost posts that show your best food, busiest nights, or upcoming events. Always include a clear call to action: 'Book your table' or 'Message us to reserve.'"
   - question: "What's the best social media platform for a pub?"
     answer: "Facebook for the over-35 crowd and local community groups. Instagram for food-led content, atmosphere shots, and reaching under-40s. TikTok for viral reach if you have a fun, visual format. Most pubs get the best return from Facebook and Instagram combined."
 ---
@@ -43,7 +43,7 @@ faqs:
 
 A single pretty post rarely changes trade. A short, tight sprint can. The goal is to fill specific seats on specific nights, not to chase likes.
 
-This seven-day plan gives you a repeatable burst that turns social posts into bookings.
+This seven-day plan gives you a repeatable burst that turns social posts into bookings, and it sits neatly on top of your [everyday social media strategy](/licensees-guide/social-media-strategy-for-pubs).
 
 ## Day 0: Prep
 
@@ -65,11 +65,11 @@ People show up for people. Share a short story, a regular quote, or a behind-the
 
 ## Day 5: Paid push
 
-Spend a small amount on a targeted local ad. Even 20 pounds can move bookings if the offer is clear.
+Spend a small amount on a [targeted local Facebook ad](/licensees-guide/facebook-marketing-local-pubs). Even 20 pounds can move bookings if the offer is clear.
 
 ## Day 6: Partner or swap
 
-Ask a local business to share your post. Swap posts or co-host. This adds reach without extra spend.
+Ask a [local brand you already work with](/licensees-guide/partnering-local-brands-share-marketing) to share your post. Swap posts or co-host. This adds reach without extra spend.
 
 ## Day 7: Countdown and close
 

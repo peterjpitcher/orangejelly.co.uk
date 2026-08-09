@@ -4,7 +4,7 @@ slug: "turnaround-playbook-independent-bars"
 publishedDate: 2025-08-14
 updatedDate: "2025-11-24T00:00:00.000Z"
 excerpt: "A four-phase turnaround plan for publicans who need to stop the bleed, regain confidence, and relaunch a stronger, leaner business."
-quickAnswer: "Stabilise cash, reset the offer, relaunch with proof, then scale the winning habits. Work in four-week sprints so the team sees progress and creditors see intent."
+quickAnswer: "Work through four phases. Stabilise cash in week one with a 13-week cashflow and triaged costs. Reset the offer in weeks two to four around one hero food offer and one drinks focus. Relaunch with an event and reviews in weeks five to eight, then scale the habits that worked."
 author: "Peter Pitcher"
 category: "turnaround"
 tags:

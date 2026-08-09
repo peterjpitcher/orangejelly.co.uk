@@ -14,7 +14,7 @@ import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: 'Fill Empty Pub Tables — 30-Day Footfall Recovery Plan',
+    title: 'Fill Empty Pub Tables: a 30-Day Footfall Recovery Plan',
     description:
       'Quiet midweek nights and empty tables? A practical plan to increase footfall and fill seats consistently. Proven at The Anchor. Packages from £375 + VAT.',
     path: '/empty-pub-solutions',

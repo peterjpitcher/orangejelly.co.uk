@@ -16,7 +16,7 @@ import { ProofStrip, PackageCard, PackageCTA, CaseStudyCard } from '@/components
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: 'Hospitality Marketing Agency — Why Choose Orange Jelly',
+    title: 'Hospitality Marketing Agency: Why Choose Orange Jelly',
     description:
       'Hospitality marketing agency run by a licensee, not a desk. Clear packages from £375 + VAT. We grew Google Search visibility 828% and table bookings 403% at The Anchor.',
     path: '/pub-marketing-agency',

@@ -19,6 +19,11 @@ interface HeroProps {
   bottomText?: string;
   headingLevel?: 1 | 2; // Prevent multiple h1s on a page
   breadcrumbs?: BreadcrumbItem[]; // Optional breadcrumbs
+  /**
+   * Set false on pages that already render <BreadcrumbJsonLd />, so the page emits
+   * exactly one BreadcrumbList rather than two competing copies of the same trail.
+   */
+  breadcrumbEmitJsonLd?: boolean;
 }
 
 export default function Hero({
@@ -32,6 +37,7 @@ export default function Hero({
   bottomText,
   headingLevel = 1,
   breadcrumbs,
+  breadcrumbEmitJsonLd = true,
   backgroundImage,
 }: HeroProps & { backgroundImage?: string }) {
   const isImageBackground = !!backgroundImage;
@@ -79,7 +85,11 @@ export default function Hero({
           <div
             className={isImageBackground ? 'max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-2' : 'pt-4 pb-2'}
           >
-            <Breadcrumb items={breadcrumbs} variant={isImageBackground ? 'light' : 'dark'} />
+            <Breadcrumb
+              items={breadcrumbs}
+              variant={isImageBackground ? 'light' : 'dark'}
+              emitJsonLd={breadcrumbEmitJsonLd}
+            />
           </div>
         )}
 

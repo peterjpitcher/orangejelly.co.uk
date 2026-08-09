@@ -3,7 +3,7 @@ import PubServiceLandingPage from '@/components/PubServiceLandingPage';
 import contentCreationData from '../../../../content/data/services/content-creation-for-pubs.json';
 
 export const metadata = generateMetadata({
-  title: 'Content Creation for Pubs — Phone-First, Done in Hours',
+  title: 'Content Creation for Pubs: Phone-First, Done in Hours',
   description:
     'Photos, Reels, captions, and a batching system so you create a week of pub content in one session. Phone-first and no editing skills needed. Packages from £375 + VAT.',
   path: '/services/content-creation-for-pubs',

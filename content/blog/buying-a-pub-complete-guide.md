@@ -131,10 +131,10 @@ Do not fall in love with the first pub you see. Treat this like any major purcha
 
 The pub property market has dedicated agents who understand the sector. The main ones are:
 
-- **Fleurets** — the largest specialist pub and bar property agent in the UK. Strong London and south-east coverage.
-- **Christie and Co** — handle pubs, hotels, and leisure businesses across the country. Good data and market reports.
-- **Sidney Phillips** — particularly strong in the regions and well-known for tenancy and leasehold opportunities.
-- **Guy Simmonds** — long-established, good range of freehold and leasehold pubs.
+- **Fleurets**: the largest specialist pub and bar property agent in the UK. Strong London and south-east coverage.
+- **Christie and Co**: handle pubs, hotels, and leisure businesses across the country. Good data and market reports.
+- **Sidney Phillips**: particularly strong in the regions and well-known for tenancy and leasehold opportunities.
+- **Guy Simmonds**: long-established, good range of freehold and leasehold pubs.
 
 Register with all of them. Set up email alerts for your target area and price range.
 
@@ -223,7 +223,7 @@ Every funding route requires a business plan. At minimum it should cover:
 - Capital expenditure requirements.
 - Cash flow forecast showing when you expect to break even.
 
-Be conservative with revenue projections and generous with costs. If the plan only works when everything goes perfectly, it is not a plan — it is a wish.
+Be conservative with revenue projections and generous with costs. If the plan only works when everything goes perfectly, it is not a plan. It is a wish.
 
 ## The legal process
 
@@ -318,19 +318,19 @@ You do not have to figure everything out yourself. Knowing when to ask for help 
 
 We work with licensees and new pub owners across the UK, providing practical, hands-on support. That includes:
 
-- **Pre-purchase due diligence** — reviewing accounts, lease terms, and operational readiness before you commit.
-- **Business planning** — building a realistic business plan that satisfies lenders and gives you a genuine roadmap.
-- **First 90-day support** — working alongside you through the critical launch period with weekly check-ins, marketing setup, and operational guidance.
-- **Ongoing consultancy** — from menu engineering to event planning, social media to supplier negotiation. We help you build sustainable trade.
+- **Pre-purchase due diligence**: reviewing accounts, lease terms, and operational readiness before you commit.
+- **Business planning**: building a realistic business plan that satisfies lenders and gives you a genuine roadmap.
+- **First 90-day support**: working alongside you through the critical launch period with weekly check-ins, marketing setup, and operational guidance.
+- **Ongoing consultancy**: from menu engineering to event planning, social media to supplier negotiation. We help you build sustainable trade.
 
 Everything we do is grounded in real pub experience. I run The Anchor in Stanwell Moor as a Greene King tenant. When I advise you on something, it is because I have done it myself.
 
 ### Other sources of support
 
-- **BII (British Institute of Innkeeping)** — industry body with training, mentoring, and legal advice for members.
-- **Licensed Trade Charity** — free and confidential support for anyone in the licensed trade, including financial hardship and mental health.
-- **Your pubco or brewery BDM** — if you go the tenancy route, build a strong relationship with your Business Development Manager. They can unlock support you did not know existed.
-- **CAMRA** — while primarily a consumer organisation, local CAMRA branches can be powerful allies for community pubs.
+- **BII (British Institute of Innkeeping)**: industry body with training, mentoring, and legal advice for members.
+- **Licensed Trade Charity**: free and confidential support for anyone in the licensed trade, including financial hardship and mental health.
+- **Your pubco or brewery BDM**: if you go the tenancy route, build a strong relationship with your Business Development Manager. They can unlock support you did not know existed.
+- **CAMRA**: while primarily a consumer organisation, local CAMRA branches can be powerful allies for community pubs.
 
 ## The bottom line
 

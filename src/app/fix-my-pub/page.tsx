@@ -12,7 +12,7 @@ import { FAQSchema } from '@/components/StructuredData';
 import { PackageCard, CaseStudyCard, ProofStrip, PackageCTA } from '@/components/packages';
 
 export const metadata = generateMeta({
-  title: 'Fix My Pub — Emergency Turnaround Help From a Working Licensee',
+  title: 'Fix My Pub: Emergency Turnaround Help From a Licensee',
   description:
     'Pub in crisis or just struggling? I run one myself. Tell me what is wrong and I will show you the fastest fix — diagnosis, reset plan, and hands-on support. Packages from £375 + VAT.',
   path: '/fix-my-pub',

@@ -43,7 +43,7 @@ faqs:
   - question: "What percentage should pub labour costs be?"
     answer: "Labour costs should sit between 25% and 30% of turnover for most pubs. Below 25% and you are probably understaffed, which hurts service and trade. Above 30% and wages are eating your profit. Food-led pubs tend to run higher labour costs because of kitchen staff, so aim for the lower end on wet-led and accept the higher end if food is a major revenue stream."
   - question: "Why is my pub not making money?"
-    answer: "The most common reasons are poor gross profit margins on drinks or food, labour costs that are too high relative to turnover, excessive waste and stock shrinkage, underpricing, and failing to track the numbers weekly. Most pubs that struggle are not short of customers — they are short of margin. Start by measuring your GP on drinks and food separately, then work through this guide to find where the leaks are."
+    answer: "The most common reasons are poor gross profit margins on drinks or food, labour costs that are too high relative to turnover, excessive waste and stock shrinkage, underpricing, and failing to track the numbers weekly. Most pubs that struggle are not short of customers. They are short of margin. Start by measuring your GP on drinks and food separately, then work through this guide to find where the leaks are."
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Not Sure Where Your Profit Is Going?"
@@ -70,10 +70,10 @@ Here are realistic ranges for 2026:
 
 | Pub type | Annual turnover range | Typical weekly take |
 |----------|----------------------|-------------------|
-| Small wet-led village pub | £150K — £250K | £3,000 — £5,000 |
-| Community local (wet + food) | £400K — £700K | £8,000 — £13,500 |
-| Food-led destination pub | £700K — £1.2M | £13,500 — £23,000 |
-| High-street or town-centre pub | £300K — £600K | £6,000 — £11,500 |
+| Small wet-led village pub | £150K to £250K | £3,000 to £5,000 |
+| Community local (wet + food) | £400K to £700K | £8,000 to £13,500 |
+| Food-led destination pub | £700K to £1.2M | £13,500 to £23,000 |
+| High-street or town-centre pub | £300K to £600K | £6,000 to £11,500 |
 
 These are not aspirational numbers. They are the ranges I see across the pubs I work with and the industry data that is publicly available. Your turnover depends on your catchment, your offer, your opening hours, and how hard you work the opportunity.
 
@@ -91,18 +91,18 @@ Your wet gross profit should sit between **60% and 65%**. Here is what that look
 
 | Drink category | Typical cost price | Selling price | GP % |
 |---------------|-------------------|--------------|------|
-| Draught lager (pint) | £1.50 — £2.00 | £4.80 — £5.80 | 60 — 68% |
-| Cask ale (pint) | £1.20 — £1.60 | £4.50 — £5.30 | 64 — 70% |
-| House wine (175ml) | £1.00 — £1.40 | £4.50 — £6.00 | 69 — 77% |
-| Premium spirits (25ml) | £0.70 — £1.20 | £3.50 — £5.00 | 66 — 80% |
-| Soft drinks | £0.30 — £0.60 | £2.50 — £3.50 | 76 — 88% |
+| Draught lager (pint) | £1.50 to £2.00 | £4.80 to £5.80 | 60 to 68% |
+| Cask ale (pint) | £1.20 to £1.60 | £4.50 to £5.30 | 64 to 70% |
+| House wine (175ml) | £1.00 to £1.40 | £4.50 to £6.00 | 69 to 77% |
+| Premium spirits (25ml) | £0.70 to £1.20 | £3.50 to £5.00 | 66 to 80% |
+| Soft drinks | £0.30 to £0.60 | £2.50 to £3.50 | 76 to 88% |
 
 If your blended wet GP is below 58%, you have a problem. The usual culprits are:
 
-- **Over-pouring** — staff giving away an extra splash on every pour adds up fast
-- **Wastage** — poor cellar management, out-of-date stock, line cleaning losses not accounted for
-- **Wrong pricing** — not reviewing prices when suppliers increase theirs
-- **Tied pricing** — if you are a tied tenant, your buy prices are higher than open market, so your selling prices need to reflect that
+- **Over-pouring**: staff giving away an extra splash on every pour adds up fast
+- **Wastage**: poor cellar management, out-of-date stock, line cleaning losses not accounted for
+- **Wrong pricing**: not reviewing prices when suppliers increase theirs
+- **Tied pricing**: if you are a tied tenant, your buy prices are higher than open market, so your selling prices need to reflect that
 
 For a deeper look at how to restructure your drinks range for better margins, read our guide on [rescuing your margins through a better drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
 
@@ -116,11 +116,11 @@ A solid food GP improvement drops straight to the bottom line. No extra customer
 
 The most common food GP killers are:
 
-- **No recipe costing** — if you do not know exactly what each dish costs, you cannot price it properly
-- **Specials that lose money** — chefs love running specials. Some of them are GP disasters
-- **Portion creep** — over time, portions get bigger and nobody notices until the GP report arrives
-- **Waste** — prep waste, plate waste, and expired stock that gets binned
-- **Supplier drift** — prices creep up quarterly and nobody renegotiates
+- **No recipe costing**: if you do not know exactly what each dish costs, you cannot price it properly
+- **Specials that lose money**: chefs love running specials. Some of them are GP disasters
+- **Portion creep**: over time, portions get bigger and nobody notices until the GP report arrives
+- **Waste**: prep waste, plate waste, and expired stock that gets binned
+- **Supplier drift**: prices creep up quarterly and nobody renegotiates
 
 If your food GP is below 62%, that is your single biggest lever for improving profit. Fix it before you spend a penny on marketing.
 
@@ -128,15 +128,15 @@ If your food GP is below 62%, that is your single biggest lever for improving pr
 
 Once you have your gross profit, everything else comes out of it. Here are the major cost categories and what percentage of turnover they should represent.
 
-### Labour costs: 25 — 30% of turnover
+### Labour costs: 25 to 30% of turnover
 
 This is your biggest controllable cost after stock. It includes all wages, employer's NI, pensions, and any agency or casual staff costs.
 
 | Pub type | Target labour % |
 |----------|----------------|
-| Wet-led (no kitchen) | 20 — 25% |
-| Community pub (bar + food) | 25 — 30% |
-| Food-led destination | 28 — 33% |
+| Wet-led (no kitchen) | 20 to 25% |
+| Community pub (bar + food) | 25 to 30% |
+| Food-led destination | 28 to 33% |
 
 If you are above 30% and you are not running a serious food operation, your rota needs work. Common labour cost problems include:
 
@@ -147,13 +147,13 @@ If you are above 30% and you are not running a serious food operation, your rota
 
 For more on controlling staffing costs, see our guide on [pub wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide).
 
-### Rent: 10 — 15% of turnover
+### Rent: 10 to 15% of turnover
 
 If you are a tenant or leaseholder, rent is typically your largest fixed cost. Industry guidelines suggest rent should not exceed 15% of turnover. If it is creeping above that, either your turnover needs to grow or your rent is too high for the site.
 
 For tied tenants, remember that the tie effectively adds to your rent. Your buy prices are higher than open market, and that premium is a hidden cost on top of your headline rent. Factor this in when assessing whether your agreement is sustainable.
 
-### Rates and utilities: 5 — 8% of turnover
+### Rates and utilities: 5 to 8% of turnover
 
 Business rates, electricity, gas, water, and waste collection. Energy costs have risen sharply since 2022 and have not fully come back down. If your energy bill is above 6% of turnover, investigate:
 
@@ -162,7 +162,7 @@ Business rates, electricity, gas, water, and waste collection. Energy costs have
 - Timer controls on heating and equipment
 - Cellar cooling efficiency
 
-### Other overheads: 5 — 10% of turnover
+### Other overheads: 5 to 10% of turnover
 
 This covers everything else: insurance, accountancy, PRS and PPL music licences, broadband, cleaning supplies, repairs and maintenance, marketing, and the dozen other costs that nibble away at your profit.
 
@@ -249,7 +249,7 @@ In my experience working with pubs through Orange Jelly, these are the five area
 
 ### 1. Unmanaged food cost
 
-If you are not costing every dish on your menu, you are guessing. And guessing always costs you money. I have seen pubs where a single popular dish was running at 45% food cost and nobody knew because nobody had done the maths. At The Anchor, tightening food cost was the single most impactful change we made — it is what grew our food revenue by 98% in three months.
+If you are not costing every dish on your menu, you are guessing. And guessing always costs you money. I have seen pubs where a single popular dish was running at 45% food cost and nobody knew because nobody had done the maths. At The Anchor, tightening food cost was the single most impactful change we made. It is what grew our food revenue by 98% in three months.
 
 ### 2. Overstaffing quiet sessions
 

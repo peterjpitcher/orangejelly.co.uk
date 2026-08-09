@@ -4,7 +4,7 @@ slug: "win-back-locals-after-slow-trade"
 publishedDate: 2025-09-11
 updatedDate: "2025-12-29T00:00:00.000Z"
 excerpt: "A reconnection plan for publicans who lost momentum and need to bring the neighbourhood back through the door."
-quickAnswer: "Own the narrative, invite lapsed regulars personally, and create a 30-day sequence of reasons to return so trust rebuilds faster than rumours spread."
+quickAnswer: "Share an honest update on what has changed, then build a lapsed regulars list from booking notes, old emails and staff memory. Send short personal invitations to a named night rather than a generic post. Back it with four weeks of visible activity, and make every returning local feel welcomed."
 author: "Peter Pitcher"
 category: "marketing"
 tags:
@@ -32,11 +32,11 @@ voiceSearchQueries:
   - "Reintroduce my bar to community"
 faqs:
   - question: "How do I get lapsed regulars to come back to my pub?"
-    answer: "Reach out personally — a text, a phone call, or a handwritten note. Invite them to a specific occasion rather than a vague 'pop in sometime.' People drift away quietly and often just need a warm reminder that they're missed. A personal touch beats a mass social media post every time."
+    answer: "Reach out personally: a text, a phone call, or a handwritten note. Invite them to a specific occasion rather than a vague 'pop in sometime.' People drift away quietly and often just need a warm reminder that they're missed. A personal touch beats a mass social media post every time."
   - question: "How long does it take to rebuild a pub's local reputation?"
     answer: "Expect 30-60 days of consistent effort before momentum builds. The first two weeks are about visibility and direct invitations. Weeks three and four bring back the first wave. By month two, word of mouth kicks in if the experience matches the promise. Don't give up after one quiet relaunch event."
   - question: "Should I offer discounts to win back lost customers?"
-    answer: "Be cautious with blanket discounts — they can devalue your offer and attract deal-seekers rather than loyal regulars. Instead, offer a personal incentive: a free drink on their return, a priority booking for a special event, or a tasting invitation. Make it feel like a welcome back, not a desperate plea."
+    answer: "Be cautious with blanket discounts. They can devalue your offer and attract deal-seekers rather than loyal regulars. Instead, offer a personal incentive: a free drink on their return, a priority booking for a special event, or a tasting invitation. Make it feel like a welcome back, not a desperate plea."
 ---
 
 # How to Win Back Locals After Months of Slow Trade
@@ -52,7 +52,7 @@ Example:
 
 ## Step 2: Build a lapsed regulars list
 
-Use booking notes, old email lists, and staff memory. Keep it simple and personal.
+Use booking notes, old email lists, and staff memory. Keep it simple and personal, and treat it as the start of proper [email marketing built on retention](/licensees-guide/email-marketing-pub-retention).
 
 ## Step 3: Send personal invitations
 
@@ -65,7 +65,7 @@ Example:
 
 Plan four weeks of visible activity:
 - One locals night.
-- One community collaboration.
+- One [community collaboration that reintroduces the pub](/licensees-guide/community-outreach-reintroduce-pub).
 - One new menu highlight.
 - One small event.
 
@@ -77,7 +77,7 @@ Make returning locals feel seen. A simple welcome, a reserved table, or a small 
 
 ## Step 6: Keep the loop alive
 
-After they return, invite them again. Consistency is the real win-back strategy.
+After they return, invite them again, and give the habit somewhere to land with a [simple loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub). Consistency is the real win-back strategy.
 
 ## Common mistakes
 

@@ -4,7 +4,7 @@ slug: "partnering-local-brands-share-marketing"
 publishedDate: 2025-02-27
 updatedDate: "2026-03-23T00:00:00.000Z"
 excerpt: "Reduce marketing spend by teaming up with local makers, gyms, and creatives for co-branded campaigns that fill both calendars."
-quickAnswer: "Pick partners with matching audiences, co-create a hook, split costs in writing, and share distribution lists so everyone wins."
+quickAnswer: "Pick a local business that already reaches the audience you want, gyms, bakers, florists, breweries or clubs, then co-create one simple, time-bound offer. Agree who pays for what, the revenue split and who owns the guest list on a single page, share one asset pack, and review bookings and spend per head afterwards."
 author: "Peter Pitcher"
 category: "marketing"
 tags:
@@ -32,7 +32,7 @@ voiceSearchQueries:
   - "what kind of brand collaborations work for pubs?"
 faqs:
   - question: "What types of local businesses make good marketing partners for a pub?"
-    answer: "Gyms, bakeries, florists, independent breweries, and community clubs work well because they serve similar local audiences without competing directly. Look for businesses with active social media followings and regular customer contact — they bring reach you don't have to pay for."
+    answer: "Gyms, bakeries, florists, independent breweries, and community clubs work well because they serve similar local audiences without competing directly. Look for businesses with active social media followings and regular customer contact: they bring reach you don't have to pay for."
   - question: "How do I split costs fairly in a pub partnership?"
     answer: "Put it in writing, even if it's just a one-page agreement. Common splits include 50/50 on print and social promotion, each party covering their own product costs, and shared ownership of the guest list. The key is clarity upfront so nobody feels short-changed afterwards."
   - question: "How do I measure whether a brand partnership actually worked?"
@@ -41,7 +41,7 @@ faqs:
 
 # Partnering with Local Brands to Share Marketing Costs
 
-Good partnerships stretch your budget and make your pub feel more connected. The key is to choose partners with real audience overlap and to build a clear, shared offer.
+Good partnerships stretch your budget, much like the other [low-budget marketing ideas](/licensees-guide/low-budget-pub-marketing-ideas) worth running, and make your pub feel more connected. The key is to choose partners with real audience overlap and to build a clear, shared offer.
 
 Use this framework to collaborate without headaches.
 
@@ -51,7 +51,7 @@ Who do you want more of? Families, remote workers, young professionals, or foodi
 
 ## Step 2: Shortlist and pitch
 
-Look for local businesses with active communities: gyms, bakers, florists, breweries, or clubs. Send a short, specific pitch.
+Look for local businesses with active communities: gyms, bakers, florists, breweries, or clubs, the same names worth knowing when you [reintroduce your pub to the community](/licensees-guide/community-outreach-reintroduce-pub). Send a short, specific pitch.
 
 Example pitch:
 "We want to run a Friday local makers night. Your customers match our target. Would you like to co-host and split promotion?"
@@ -77,7 +77,7 @@ Even a one-page agreement avoids confusion. Include:
 
 ## Step 5: Share marketing assets
 
-Create one shared asset pack: photo, caption, and a booking link. If you make it easy, partners will actually post.
+Create one shared asset pack: photo, caption, and a booking link that slots into your [social media strategy](/licensees-guide/social-media-strategy-for-pubs). If you make it easy, partners will actually post.
 
 ## Step 6: Measure and debrief
 

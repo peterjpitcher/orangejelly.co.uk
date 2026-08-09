@@ -52,7 +52,7 @@ schema:
 
 # The Complete Guide to Pub EPOS Systems in 2026
 
-Your EPOS system is the single most important piece of technology in your pub. It processes every transaction, tracks every pint, and — if you let it — tells you exactly where your money is going and where more of it could come from.
+Your EPOS system is the single most important piece of technology in your pub. It processes every transaction, tracks every pint, and, if you let it, tells you exactly where your money is going and where more of it could come from.
 
 Yet most licensees I speak to treat their till like a cash register with a touchscreen. They ring up sales, print a Z reading at the end of the night, and never look at the data sitting underneath. That is like having a full-time analyst working for you and never reading their reports.
 
@@ -68,7 +68,7 @@ A bad EPOS system does not just slow down service. It costs you money in ways yo
 
 **Staff accountability disappears.** When you cannot see who sold what, when, and at what price, you lose the ability to coach, reward, or challenge your team based on real performance.
 
-**Decision-making becomes guesswork.** Without reliable data on covers, average spend, peak hours, and product mix, every operational decision — from staffing levels to menu changes — is based on gut feeling rather than evidence.
+**Decision-making becomes guesswork.** Without reliable data on covers, average spend, peak hours, and product mix, every operational decision, from staffing levels to menu changes, is based on gut feeling rather than evidence.
 
 The right EPOS system pays for itself many times over. The wrong one just processes payments.
 
@@ -80,7 +80,7 @@ Every EPOS vendor will throw a feature list at you that runs to three pages. Her
 
 This is the feature that separates a useful system from an expensive cash register.
 
-Your EPOS should track stock at product level, calculate theoretical versus actual stock, and give you a gross profit figure by department — wet, dry, and other — without you having to export data to a spreadsheet.
+Your EPOS should track stock at product level, calculate theoretical versus actual stock, and give you a gross profit figure by department (wet, dry, and other) without you having to export data to a spreadsheet.
 
 At The Anchor, switching to proper EPOS-driven stock management was one of the biggest factors behind growing our food revenue by 98% in three months. When you can see exactly which dishes are underperforming on margin, you can fix pricing, portion sizes, or supplier costs with precision instead of guessing.
 
@@ -92,11 +92,11 @@ End-of-day Z readings are not enough. You need to see what is happening right no
 
 A good pub EPOS system gives you:
 
-- **Live sales dashboards** — total sales, covers, and average spend updating in real time.
-- **Hourly breakdowns** — so you can see exactly when trade picks up and dies off.
-- **Comparison reporting** — this week versus last week, this month versus last year.
-- **Department splits** — wet versus dry sales at a glance.
-- **Staff performance** — who is selling, who is upselling, who is not.
+- **Live sales dashboards**: total sales, covers, and average spend updating in real time.
+- **Hourly breakdowns**: so you can see exactly when trade picks up and dies off.
+- **Comparison reporting**: this week versus last week, this month versus last year.
+- **Department splits**: wet versus dry sales at a glance.
+- **Staff performance**: who is selling, who is upselling, who is not.
 
 The best systems let you access these reports from your phone. That means you can check how Saturday night is going from your living room, or review last week's numbers over Monday morning coffee without driving to the pub.
 
@@ -115,11 +115,11 @@ Poor table management in your EPOS creates bottlenecks in the kitchen, frustrate
 
 Your EPOS should not exist in isolation. The systems it needs to talk to include:
 
-- **Accounting software** — Xero, QuickBooks, or Sage. Automatic sales data export eliminates hours of manual bookkeeping.
-- **Booking platforms** — if you take reservations through an online system, it should sync with your table plan.
-- **Card payment terminals** — integrated payments mean no manual keying of amounts, fewer errors, and faster reconciliation.
-- **Supplier ordering** — some systems let you generate purchase orders directly from stock-level data.
-- **Loyalty and CRM tools** — if you are building a customer database (and you should be), your EPOS can feed it.
+- **Accounting software**: Xero, QuickBooks, or Sage. Automatic sales data export eliminates hours of manual bookkeeping.
+- **Booking platforms**: if you take reservations through an online system, it should sync with your table plan.
+- **Card payment terminals**: integrated payments mean no manual keying of amounts, fewer errors, and faster reconciliation.
+- **Supplier ordering**: some systems let you generate purchase orders directly from stock-level data.
+- **Loyalty and CRM tools**: if you are building a customer database (and you should be), your EPOS can feed it.
 
 Every manual data transfer between systems is a chance for errors and a drain on your time. The more your EPOS integrates, the less admin you do.
 
@@ -157,12 +157,12 @@ A vendor who cannot provide references from pubs like yours is a vendor you shou
 
 The monthly subscription is just the start. Get a full breakdown of:
 
-- **Hardware costs** — terminals, printers, card machines, kitchen screens.
-- **Installation and setup fees** — including menu programming and data migration.
-- **Training costs** — initial and ongoing.
-- **Card processing fees** — these vary and they add up.
-- **Contract length and exit terms** — avoid anything longer than 24 months unless the discount is substantial.
-- **Support costs** — is telephone support included or an extra charge?
+- **Hardware costs**: terminals, printers, card machines, kitchen screens.
+- **Installation and setup fees**: including menu programming and data migration.
+- **Training costs**: initial and ongoing.
+- **Card processing fees**: these vary and they add up.
+- **Contract length and exit terms**: avoid anything longer than 24 months unless the discount is substantial.
+- **Support costs**: is telephone support included or an extra charge?
 
 A system that costs 80 pounds per month but charges 2.5 percent on card transactions will cost you significantly more than one at 120 pounds per month with 1.5 percent processing fees. Do the maths on your actual transaction volumes.
 
@@ -217,13 +217,13 @@ Whether you are choosing a new system or getting more from your existing one, he
 
 ### Week 1: Audit what you have
 
-If you already have an EPOS, log in to the back office and find out what reports are available. Most licensees are using less than 20 percent of their system's capability. You might not need a new system — you might just need to use the one you have.
+If you already have an EPOS, log in to the back office and find out what reports are available. Most licensees are using less than 20 percent of their system's capability. You might not need a new system. You might just need to use the one you have.
 
 If you are on a basic cash register or a system that is more than five years old, start researching alternatives.
 
 ### Week 2: Define your requirements
 
-Write down your must-have features based on your actual pain points. Separate them from nice-to-haves. Share this list with your team — they use the system every shift and will flag things you miss.
+Write down your must-have features based on your actual pain points. Separate them from nice-to-haves. Share this list with your team. They use the system every shift and will flag things you miss.
 
 ### Week 3: Research and shortlist
 
@@ -241,11 +241,11 @@ Once installed, commit to the Monday morning data review. Thirty minutes a week 
 
 **"My current system works fine."** Does it? Or are you just used to it? If you cannot pull a GP report by department, see average spend per head, or check last night's sales from your phone, your system is holding you back.
 
-**"EPOS systems are too expensive."** A system that helps you identify even 500 pounds per month in stock shrinkage or pricing errors pays for itself several times over. The question is not whether you can afford a good EPOS — it is whether you can afford not to have one.
+**"EPOS systems are too expensive."** A system that helps you identify even 500 pounds per month in stock shrinkage or pricing errors pays for itself several times over. The question is not whether you can afford a good EPOS. It is whether you can afford not to have one.
 
 **"My staff will not use it properly."** That is a training issue, not a technology issue. A well-designed system with proper onboarding takes 30 minutes to learn for basic operations. If your team cannot use it after a week, the system is wrong for your venue.
 
-**"I do not have time to look at reports."** You do not have time not to. Thirty minutes a week reviewing your data is the highest-return activity in your entire operation. Everything else — events, marketing, menu changes — works better when it is informed by real numbers.
+**"I do not have time to look at reports."** You do not have time not to. Thirty minutes a week reviewing your data is the highest-return activity in your entire operation. Everything else (events, marketing, menu changes) works better when it is informed by real numbers.
 
 ## The bottom line
 

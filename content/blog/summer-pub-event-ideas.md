@@ -3,7 +3,7 @@ title: "35 Summer Pub Events That Actually Make Money (Not Just Noise)"
 slug: "summer-pub-event-ideas"
 publishedDate: 2025-07-17
 updatedDate: "2026-06-01T00:00:00.000Z"
-excerpt: "Most summer events cost more than they earn. These 35 ideas are costed, tested, and ranked by profit — so you fill your garden without burning your margin."
+excerpt: "Most summer events cost more than they earn. These 35 ideas are costed, tested, and ranked by profit, so you fill your garden without burning your margin."
 quickAnswer: "Host beer garden BBQs (low setup, strong ROI), outdoor quiz nights with prizes, family fun days with bouncy castles, live acoustic music sessions, and themed festivals. Focus on events that utilize your outdoor space and encourage longer stays."
 author: "Peter Pitcher"
 category: "turnaround"
@@ -37,7 +37,7 @@ faqs:
   - question: "What's the most profitable summer pub event?"
     answer: "BBQ events and outdoor food specials consistently deliver the best margins because food costs are low and customers stay longer. A simple burger-and-drink bundle can hit 70%+ GP. Add a modest entry fee or minimum spend for themed festivals and your profit per head climbs further."
   - question: "How do I deal with bad weather ruining outdoor events?"
-    answer: "Always have a wet weather plan. Invest in a gazebo or pop-up canopy, and frame the event so it can move indoors if needed. Avoid committing big spend to a single outdoor-only date — run weekly formats instead so one washout doesn't sink your calendar."
+    answer: "Always have a wet weather plan. Invest in a gazebo or pop-up canopy, and frame the event so it can move indoors if needed. Avoid committing big spend to a single outdoor-only date. Run weekly formats instead so one washout doesn't sink your calendar."
 ---
 
 # Summer Pub Event Ideas: 35 Profitable Outdoor Promotions That Pack Your Garden

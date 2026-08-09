@@ -113,7 +113,7 @@ Whilst Spoons serves acceptable food and drink at low prices, you can offer exce
 
 Instead of competing on price, position yourself as everything Wetherspoons isn't:
 
-**"a typical neighborhood pub Living Room"**
+**"a typical neighbourhood pub Living Room"**
 
 - Comfortable seating, not plastic chairs
 
@@ -155,7 +155,7 @@ Create switching costs that make leaving for Spoons feel like a loss:
 
 Wetherspoons sells drinks. You sell experiences:
 
-- **Weekly pub quiz** (with personality, not a generic app) — see our [quiz night ideas](/licensees-guide/quiz-night-ideas)
+- **Weekly pub quiz** (with personality, not a generic app). See our [quiz night ideas](/licensees-guide/quiz-night-ideas)
 
 - **Live music** (local bands Spoons won't book)
 
@@ -313,7 +313,7 @@ Wetherspoons might have buying power, but you have something more valuable: the 
 
 Your pub isn't just a place to drink – it's a cornerstone of the community. That's something no chain can replicate, no matter how cheap their pints. Focus on what makes you irreplaceable, and you'll find that competing with Wetherspoons isn't about beating them at their game – it's about playing a completely different sport.
 
-Remember: Wetherspoons sells beverages. You sell belonging. There's room for both, but only one creates customers for life. For a practical action plan you can start today, see our guide to [beating chain pubs](/licensees-guide/beat-chain-pubs).
+Remember: Wetherspoons sells beverages. You sell belonging. There's room for both, but only one creates customers for life. If you want to go further on carving out your own position, see our guide to [pub differentiation strategies](/licensees-guide/pub-differentiation-strategies).
 
 ## Frequently Asked Questions
 

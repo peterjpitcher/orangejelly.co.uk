@@ -3,7 +3,7 @@ import AboutPage from './AboutPage';
 
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: 'Hospitality Consultant — Meet the Team Behind Orange Jelly',
+    title: 'Hospitality Consultant: Meet the Team Behind Orange Jelly',
     description:
       'Meet Peter Pitcher, hospitality consultant and pub consultancy founder. Real experience running The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs and venues.',
     path: '/about',
