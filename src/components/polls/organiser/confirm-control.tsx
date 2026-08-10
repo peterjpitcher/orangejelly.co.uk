@@ -106,7 +106,7 @@ export default function ConfirmControl({
             </DialogDescription>
           </DialogHeader>
 
-          <p className="text-sm text-charcoal">
+          <p className="text-sm text-brand-base">
             This locks the poll. You can&rsquo;t undo it from here.
           </p>
 

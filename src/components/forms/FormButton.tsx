@@ -21,19 +21,19 @@ export default function FormButton({
   ...props
 }: FormButtonProps) {
   const sizeClasses = {
-    sm: 'px-4 py-2.5 text-sm min-h-[44px]',
-    md: 'px-6 py-3 text-base min-h-[44px]',
-    lg: 'px-8 py-4 text-lg min-h-[48px]',
+    sm: 'px-4 py-2.5 text-sm min-h-tap',
+    md: 'px-6 py-3 text-base min-h-tap',
+    lg: 'px-8 py-4 text-lg min-h-control',
   };
 
   const variantClasses = {
-    primary: 'bg-orange text-white hover:bg-orange-dark focus:ring-orange/50',
-    secondary: 'bg-teal text-white hover:bg-teal-dark focus:ring-teal/50',
+    primary: 'bg-orange text-brand-base hover:text-brand-base-dark focus:ring-orange/50',
+    secondary: 'bg-blue-support text-white hover:bg-brand-base focus:ring-blue-support/50',
     outline:
-      'bg-transparent text-orange border-2 border-orange hover:bg-orange hover:text-white focus:ring-orange/50',
-    base: 'bg-charcoal text-white hover:bg-charcoal-light focus:ring-charcoal/50',
-    support: 'bg-teal text-white hover:bg-teal-dark focus:ring-teal/50',
-    accent: 'bg-orange text-white hover:bg-orange-dark focus:ring-orange/50',
+      'bg-transparent text-orange-dark border-2 border-orange-dark hover:bg-orange hover:text-brand-base focus:ring-orange/50',
+    base: 'bg-brand-base text-white hover:bg-brand-base-light focus:ring-brand-base/50',
+    support: 'bg-blue-support text-white hover:bg-brand-base focus:ring-blue-support/50',
+    accent: 'bg-orange text-brand-base hover:text-brand-base-dark focus:ring-orange/50',
   };
 
   const buttonClasses = `

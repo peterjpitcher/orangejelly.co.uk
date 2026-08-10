@@ -3,7 +3,12 @@ import { memo } from 'react';
 interface FeatureListProps {
   items: string[];
   icon?: 'check' | 'cross' | 'arrow' | 'star' | 'bullet';
-  iconColor?: 'orange' | 'green' | 'red' | 'teal';
+  /**
+   * `orange` is the light-surface accent. Use `orange-on-dark` inside a navy band:
+   * the brand orange is 2.79:1 on cream but 4.55:1 on navy, and orange-dark is the
+   * reverse, so the correct value depends on what the list is sitting on.
+   */
+  iconColor?: 'orange' | 'orange-on-dark' | 'green' | 'red' | 'blue-support';
   spacing?: 'tight' | 'normal' | 'loose';
   columns?: 1 | 2 | 3;
   className?: string;
@@ -26,10 +31,12 @@ function FeatureList({
   };
 
   const colors = {
-    orange: 'text-orange',
-    green: 'text-green-600',
+    // green-700, not green-600: 3.08:1 on cream and 3.30:1 on white, both under AA.
+    orange: 'text-orange-dark',
+    'orange-on-dark': 'text-orange',
+    green: 'text-green-700',
     red: 'text-red-600',
-    teal: 'text-teal',
+    'blue-support': 'text-blue-support',
   };
 
   const spacings = {

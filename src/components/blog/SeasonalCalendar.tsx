@@ -47,7 +47,7 @@ export default function SeasonalCalendar({
 
   return (
     <section data-season={season} aria-label={heading} className="py-12 md:py-16" style={tintStyle}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="page-shell">
         <div className="mb-8 max-w-3xl">
           <Heading level={2} className="mb-2">
             {heading}
@@ -78,7 +78,7 @@ export default function SeasonalCalendar({
                 <Heading level={3} className="mt-3 mb-1 text-lg">
                   {entry.moment}
                 </Heading>
-                <Text color="charcoal" size="sm">
+                <Text color="brand-base" size="sm">
                   {entry.opportunity}
                 </Text>
                 {entry.href && (

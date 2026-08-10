@@ -24,9 +24,9 @@ export default function OrganiserError({
   reset: () => void;
 }): JSX.Element {
   return (
-    <Section background="cream" padding="large">
+    <Section background="surface" padding="large">
       <div className="mx-auto max-w-md space-y-6 text-center">
-        <Heading level={1} align="center" color="charcoal">
+        <Heading level={1} align="center" color="brand-base">
           Something went wrong
         </Heading>
         <Alert variant="destructive" className="text-left">

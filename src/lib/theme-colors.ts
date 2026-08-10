@@ -10,7 +10,7 @@ export const THEME_COLORS = {
   // Canonical brand colors
   base: '#1A2F49',
   blueSupport: '#01619E',
-  accent: '#F65403',
+  accent: '#F16F23',
   accentSecondary: '#FF8901',
   highlight: '#FFBD28',
   grounded: '#736F26',
@@ -19,16 +19,12 @@ export const THEME_COLORS = {
   text: '#1A2F49',
   white: '#FFFFFF',
 
-  // Backward-compatible aliases
-  orange: '#F65403',
-  orangeLight: '#FFF2D4',
-  orangeDark: '#FF8901',
-  teal: '#01619E',
-  tealLight: '#2B84B9',
-  tealDark: '#1A2F49',
-  cream: '#F2F8FC',
-  charcoal: '#1A2F49',
-  charcoalLight: '#324A68',
+  // The backward-compatible aliases that used to sit here (orange, orangeLight,
+  // orangeDark, teal, tealLight, tealDark, cream, charcoal, charcoalLight) are gone.
+  // Only THEME_COLORS.base was ever read, by app/icon.tsx and app/apple-icon.tsx, so
+  // the rest was dead weight, and orangeDark had drifted to #FF8901 while the real
+  // token moved down the ramp. A dead alias holding a stale value is worse than no
+  // alias: the next person to reach for it gets a colour the site stopped using.
 
   // External Brand Colors
   whatsapp: '#25D366',

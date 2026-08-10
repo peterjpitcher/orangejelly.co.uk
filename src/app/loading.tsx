@@ -3,7 +3,7 @@ import Text from '@/components/Text';
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 bg-cream flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-surface flex items-center justify-center z-50">
       <div className="text-center">
         <div className="relative inline-block">
           {/* Animated logo */}
@@ -20,7 +20,7 @@ export default function Loading() {
           <div className="absolute inset-0 bg-orange/30 rounded-lg blur-2xl animate-pulse"></div>
         </div>
 
-        <Text className="mt-6 text-charcoal font-semibold animate-fade-in">
+        <Text className="mt-6 text-brand-base font-semibold animate-fade-in">
           Loading Orange Jelly...
         </Text>
 

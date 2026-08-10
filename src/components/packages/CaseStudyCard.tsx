@@ -39,7 +39,7 @@ export function CaseStudyCard({
           {caseStudy.metrics.map((metricId) => (
             <span
               key={metricId}
-              className="inline-block bg-orange/10 text-orange px-3 py-1 rounded-full text-sm font-medium"
+              className="inline-block bg-orange/10 text-orange-darker px-3 py-1 rounded-full text-sm font-medium"
             >
               <Claim id={metricId} variant="short" />
             </span>
@@ -78,7 +78,7 @@ export function CaseStudyCard({
         {caseStudy.metrics.map((metricId) => (
           <span
             key={metricId}
-            className="inline-block bg-orange/10 text-orange px-3 py-1 rounded-full text-sm font-medium"
+            className="inline-block bg-orange/10 text-orange-darker px-3 py-1 rounded-full text-sm font-medium"
           >
             <Claim id={metricId} variant="short" />
           </span>

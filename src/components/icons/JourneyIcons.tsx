@@ -44,10 +44,10 @@ export const DiscoveryIcon = memo(() => (
       width="40"
       height="28"
       rx="2"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
     />
-    <path d="M32 28L38 34L26 34L32 28Z" fill="var(--color-teal-light)" />
+    <path d="M32 28L38 34L26 34L32 28Z" fill="var(--color-blue-support-light)" />
     <circle cx="48" cy="14" r="8" fill="var(--color-warning)" />
     <path
       d="M45 14L47 16L51 11"
@@ -71,13 +71,13 @@ export const TransformationIcon = memo(() => (
   >
     <path
       d="M16 32C16 23.163 23.163 16 32 16C40.837 16 48 23.163 48 32C48 40.837 40.837 48 32 48"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
     />
     <path
       d="M32 16V32L40 40"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -104,14 +104,14 @@ export const GrowthIcon = memo(() => (
   >
     <path
       d="M12 52L24 40L32 48L52 28"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M44 28H52V36"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -134,7 +134,7 @@ export const HandshakeIcon = memo(() => (
   >
     <path
       d="M20 32L28 24L36 32L44 24"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -146,8 +146,8 @@ export const HandshakeIcon = memo(() => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <circle cx="26" cy="32" r="2" fill="var(--color-teal-light)" />
-    <circle cx="38" cy="32" r="2" fill="var(--color-teal-light)" />
+    <circle cx="26" cy="32" r="2" fill="var(--color-blue-support-light)" />
+    <circle cx="38" cy="32" r="2" fill="var(--color-blue-support-light)" />
   </svg>
 ));
 HandshakeIcon.displayName = 'HandshakeIcon';
@@ -177,7 +177,7 @@ export const IdeaIcon = memo(() => (
     />
     <path
       d="M32 18V26L36 30"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -201,12 +201,12 @@ export const SupportIcon = memo(() => (
       width="32"
       height="24"
       rx="4"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
     />
     <path
       d="M24 28H40M24 36H36"
-      stroke="var(--color-teal-light)"
+      stroke="var(--color-blue-support-light)"
       strokeWidth="2"
       strokeLinecap="round"
     />

@@ -36,7 +36,7 @@ export default function ShareButtons({ url, title, variant = 'inline' }: ShareBu
   const buttonClass =
     variant === 'floating'
       ? 'p-3 rounded-full shadow-lg hover:shadow-xl transition-all'
-      : 'p-2 rounded-lg hover:bg-charcoal/5 transition-colors';
+      : 'p-2 rounded-lg hover:bg-brand-base/5 transition-colors';
 
   const ShareButton = ({
     href,
@@ -99,7 +99,7 @@ export default function ShareButtons({ url, title, variant = 'inline' }: ShareBu
       >
         {copied ? (
           <svg
-            className="w-5 h-5 text-green-600"
+            className="w-5 h-5 text-green-700"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -129,9 +129,9 @@ export default function ShareButtons({ url, title, variant = 'inline' }: ShareBu
         </div>
 
         {/* Mobile - sticky top bar */}
-        <div className="lg:hidden fixed top-[64px] left-0 right-0 bg-white border-b border-cream z-30">
+        <div className="lg:hidden fixed top-[64px] left-0 right-0 bg-white border-b border-surface z-30">
           <div className="flex items-center justify-center gap-4 py-2">
-            <span className="text-sm font-medium text-charcoal/60">Share:</span>
+            <span className="text-sm font-medium text-brand-base/75">Share:</span>
             <div className="flex items-center gap-3">{buttons}</div>
           </div>
         </div>

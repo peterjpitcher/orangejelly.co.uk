@@ -90,11 +90,7 @@ export function NewsletterForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input
-                  placeholder={PLACEHOLDERS.email.default}
-                  {...field}
-                  className="min-h-[44px]"
-                />
+                <Input placeholder={PLACEHOLDERS.email.default} {...field} className="min-h-tap" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -105,7 +101,7 @@ export function NewsletterForm() {
             Something went wrong. Please try again later.
           </p>
         )}
-        <Button type="submit" className="min-h-[44px]" disabled={submitStatus === 'submitting'}>
+        <Button type="submit" className="min-h-tap" disabled={submitStatus === 'submitting'}>
           {submitStatus === 'submitting' ? 'Subscribing...' : 'Subscribe'}
         </Button>
       </form>

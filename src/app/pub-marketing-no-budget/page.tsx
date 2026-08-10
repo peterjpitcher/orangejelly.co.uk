@@ -124,7 +124,7 @@ export default function PubMarketingNoBudget() {
       {/* The Truth */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} className="mb-6">
               The Best Pub Marketing Costs Nothing
             </Heading>
@@ -134,19 +134,19 @@ export default function PubMarketingNoBudget() {
             </Text>
             <Grid columns={{ default: 1, md: 3 }} gap="medium">
               <Card variant="bordered" padding="medium" className="text-center">
-                <Text size="2xl" weight="bold" className="text-orange mb-2">
+                <Text size="2xl" weight="bold" className="text-orange-dark mb-2">
                   +828%
                 </Text>
                 <Text size="sm">Google Search visibility</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
-                <Text size="2xl" weight="bold" className="text-teal mb-2">
+                <Text size="2xl" weight="bold" className="text-blue-support mb-2">
                   +98%
                 </Text>
                 <Text size="sm">Food revenue in three months</Text>
               </Card>
               <Card variant="bordered" padding="medium" className="text-center">
-                <Text size="2xl" weight="bold" className="text-green-600 mb-2">
+                <Text size="2xl" weight="bold" className="text-green-700 mb-2">
                   +403%
                 </Text>
                 <Text size="sm">Table bookings</Text>
@@ -157,7 +157,7 @@ export default function PubMarketingNoBudget() {
       </Section>
 
       {/* Free Strategies */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="slide-up">
           <Heading level={2} align="center" color="white" className="mb-12">
             The 4 Free Strategies That Actually Work
@@ -166,14 +166,14 @@ export default function PubMarketingNoBudget() {
             {freeStrategies.map((item, index) => (
               <Card key={index} background="white" padding="large">
                 <div className="flex justify-between items-start mb-4">
-                  <Heading level={3} color="teal">
+                  <Heading level={3} color="blue-support">
                     {item.title}
                   </Heading>
                   <Text size="sm" color="muted">
                     {item.effort}
                   </Text>
                 </div>
-                <Text weight="semibold" className="text-green-600 mb-4">
+                <Text weight="semibold" className="text-green-700 mb-4">
                   Result: {item.impact}
                 </Text>
                 <FeatureList
@@ -191,7 +191,7 @@ export default function PubMarketingNoBudget() {
       {/* Results Proof */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} className="mb-4">
               What Happens When You Get the Basics Right
             </Heading>
@@ -208,9 +208,9 @@ export default function PubMarketingNoBudget() {
       </Section>
 
       {/* When You Are Ready for Professional Help */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               When You Are Ready for Professional Help
             </Heading>
@@ -260,7 +260,7 @@ export default function PubMarketingNoBudget() {
         <Heading level={2} className="text-center mb-8">
           Common Questions About Free Pub Marketing
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -269,7 +269,7 @@ export default function PubMarketingNoBudget() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} align="center" className="mb-4">
             No Budget Does Not Mean No Progress
           </Heading>

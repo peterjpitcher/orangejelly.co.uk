@@ -64,12 +64,12 @@ export default function SeriesHubGrid({
   };
 
   return (
-    <section className="py-12 border-t border-charcoal/10">
+    <section className="py-12 border-t border-brand-base/10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
-      <div className="max-w-4xl mx-auto">
+      <div className="measure">
         <Heading level={2} className="mb-2">
           {heading}
         </Heading>

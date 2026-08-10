@@ -77,18 +77,18 @@ export default function ServicesPage() {
 
       {/* Service landing pages (Search Console intent pages) */}
       {serviceLandingSection && serviceLandingCards.length > 0 && (
-        <Section background="cream" padding="large">
-          <Container maxWidth="6xl">
+        <Section background="surface" padding="large">
+          <Container>
             <div className="text-center mb-10">
               <Heading level={2} className="mb-3">
                 {serviceLandingSection.heading}
               </Heading>
-              <Text size="lg" color="muted" className="max-w-4xl mx-auto">
+              <Text size="lg" color="muted" className="measure">
                 {serviceLandingSection.description}
               </Text>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceLandingCards.map((card) => (
                 <Card
                   key={card.href}
@@ -119,26 +119,26 @@ export default function ServicesPage() {
 
       {/* Real Solutions, Not Theory Section */}
       <Section background="white" padding="medium">
-        <Container maxWidth="6xl">
+        <Container>
           <div className="text-center mb-8">
             <Heading level={2} className="mb-3">
               {realSolutions.heading}
             </Heading>
-            <Text size="lg" color="muted" className="max-w-4xl mx-auto">
+            <Text size="lg" color="muted" className="measure">
               {realSolutions.description}
             </Text>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 measure-wide">
             {realSolutionMetrics.map((metric) => (
               <Card key={metric.number} variant="bordered" padding="medium" className="text-center">
-                <div className="w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
+                <div className="w-10 h-10 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
                   {metric.number}
                 </div>
                 <Text size="sm" weight="semibold" color="muted" className="mb-2">
                   {metric.title}
                 </Text>
-                <Heading level={3} className="mb-2 text-orange">
+                <Heading level={3} className="mb-2 text-orange-dark">
                   {metric.value}
                 </Heading>
                 <Text size="sm" color="muted">
@@ -151,8 +151,8 @@ export default function ServicesPage() {
       </Section>
 
       {/* Services Grid - 2 columns max on desktop, 1 on mobile */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="4xl">
+      <Section background="surface" padding="large">
+        <Container width="measure-wide">
           <Text size="sm" color="muted" align="center" className="mb-8">
             These are proven ways we can help. Clear packages from £375 + VAT, tailored to whatever
             your hospitality business needs right now. Payment plans available.
@@ -167,7 +167,7 @@ export default function ServicesPage() {
 
       {/* Simple, Honest Process */}
       <Section background="white" padding="large">
-        <Container maxWidth="6xl">
+        <Container>
           <Heading level={2} align="center" className="mb-12">
             {process.heading}
           </Heading>
@@ -175,7 +175,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                <div className="w-12 h-12 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                   {step.number}
                 </div>
                 <Heading level={4} className="mb-3">
@@ -199,8 +199,8 @@ export default function ServicesPage() {
       </Section>
 
       {/* Guarantee */}
-      <Section background="teal" padding="large">
-        <Container maxWidth="3xl">
+      <Section background="blue-support" padding="large">
+        <Container width="measure">
           <div className="text-center">
             <Heading level={2} color="white" className="mb-6">
               {servicesData.guaranteeSection.heading}
@@ -227,7 +227,7 @@ export default function ServicesPage() {
 
       {/* FAQ Section - Expandable */}
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-12">
             {servicesData.faqSection.heading}
           </Heading>
@@ -258,12 +258,12 @@ export default function ServicesPage() {
 
       {/* Final CTA Section */}
       <Section background="orange-light" padding="large">
-        <Container maxWidth="3xl">
+        <Container width="measure">
           <div className="text-center">
             <Heading level={2} className="mb-4">
               {servicesData.ctaSection.title}
             </Heading>
-            <Text size="lg" className="mb-8 max-w-2xl mx-auto">
+            <Text size="lg" className="mb-8 measure">
               {servicesData.ctaSection.subtitle}
             </Text>
             <WhatsAppButton

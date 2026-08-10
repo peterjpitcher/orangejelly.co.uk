@@ -16,7 +16,7 @@ interface ResultCardProps {
 function ResultCard({ pub, before, after, timeframe, className = '' }: ResultCardProps) {
   return (
     <Card variant="bordered" padding="large" className={className}>
-      <Heading level={3} color="teal" className="mb-4">
+      <Heading level={3} color="blue-support" className="mb-4">
         {pub}
       </Heading>
       <Grid columns={{ default: 1, md: 3 }} gap="medium" className="text-center">
@@ -32,7 +32,7 @@ function ResultCard({ pub, before, after, timeframe, className = '' }: ResultCar
           <Text size="sm" color="muted" align="center" className="mb-1">
             After
           </Text>
-          <Text weight="semibold" className="text-green-600" align="center">
+          <Text weight="semibold" className="text-green-700" align="center">
             {after}
           </Text>
         </div>

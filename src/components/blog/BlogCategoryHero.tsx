@@ -37,37 +37,47 @@ export default function BlogCategoryHero({
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-        {/* Breadcrumbs: light variant for dark backgrounds */}
-        {breadcrumbs && breadcrumbs.length > 0 && (
-          <div className="mb-6">
-            {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
-            <Breadcrumb items={breadcrumbs} variant="light" emitJsonLd={false} />
-          </div>
-        )}
+      <div className="relative z-10 page-shell py-12 md:py-20">
+        {/*
+          One measure for the whole hero, matching the article beneath it.
+          The breadcrumb, pill, title and standfirst are article content, not site
+          chrome, so they belong on the same spine as the body copy. Before this
+          they sat flush to the shell at 416 while the article sat in a centred
+          measure at 576, a visible 160px step on all 104 guide pages.
+          The text stays left-aligned; it is the COLUMN that is centred.
+        */}
+        <div className="measure">
+          {/* Breadcrumbs: light variant for dark backgrounds */}
+          {breadcrumbs && breadcrumbs.length > 0 && (
+            <div className="mb-6">
+              {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
+              <Breadcrumb items={breadcrumbs} variant="light" emitJsonLd={false} />
+            </div>
+          )}
 
-        {/* Category pill */}
-        <span
-          className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-4 border border-white/20"
-          style={{
-            backgroundColor: 'rgba(255,255,255,0.15)',
-            color: '#fff',
-          }}
-        >
-          {categoryLabel}
-        </span>
+          {/* Category pill */}
+          <span
+            className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-4 border border-white/20"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.15)',
+              color: '#fff',
+            }}
+          >
+            {categoryLabel}
+          </span>
 
-        {/* Title */}
-        <Heading level={1} color="white" className="text-3xl md:text-5xl mb-4 max-w-4xl">
-          {title}
-        </Heading>
+          {/* Title. No max-w: the measure above already sets the column. */}
+          <Heading level={1} color="white" className="text-3xl md:text-5xl mb-4">
+            {title}
+          </Heading>
 
-        {/* Excerpt */}
-        {excerpt && (
-          <Text size="lg" className="max-w-3xl text-white/70">
-            {excerpt}
-          </Text>
-        )}
+          {/* Excerpt */}
+          {excerpt && (
+            <Text size="lg" className="text-white/70">
+              {excerpt}
+            </Text>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -151,13 +151,13 @@ function WebsiteRebuildScope() {
   ];
 
   return (
-    <Section background="cream" padding="large">
-      <Container maxWidth="4xl">
+    <Section background="surface" padding="large">
+      <Container width="measure-wide">
         <div className="text-center mb-8">
-          <Heading level={2} align="center" color="charcoal">
+          <Heading level={2} align="center" color="brand-base">
             Website Rebuild Scope
           </Heading>
-          <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+          <Text size="lg" color="muted" className="mt-4 measure">
             The Turnaround Intensive includes a lean website rebuild to support your commercial
             reset.
           </Text>
@@ -165,16 +165,16 @@ function WebsiteRebuildScope() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card className="p-6">
-            <Heading level={3} color="teal">
+            <Heading level={3} color="blue-support">
               Included in Package
             </Heading>
             <ul className="mt-4 space-y-2">
               {includedItems.map((item) => (
                 <li key={item} className="flex items-start gap-2">
-                  <span className="text-green-600 mt-0.5 shrink-0" aria-hidden="true">
+                  <span className="text-green-700 mt-0.5 shrink-0" aria-hidden="true">
                     &#10003;
                   </span>
-                  <Text size="sm" color="charcoal">
+                  <Text size="sm" color="brand-base">
                     {item}
                   </Text>
                 </li>
@@ -183,7 +183,7 @@ function WebsiteRebuildScope() {
           </Card>
 
           <Card className="p-6">
-            <Heading level={3} color="charcoal">
+            <Heading level={3} color="brand-base">
               Separate Scope
             </Heading>
             <Text size="sm" color="muted" className="mt-1">

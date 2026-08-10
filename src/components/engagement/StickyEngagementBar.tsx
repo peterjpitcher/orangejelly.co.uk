@@ -73,17 +73,41 @@ export default function StickyEngagementBar(): React.ReactElement | null {
   return (
     <div
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-40 bg-orange text-white transition-transform duration-300',
+        'fixed bottom-0 left-0 right-0 z-40 bg-orange text-brand-base transition-transform duration-300',
         visible ? 'translate-y-0' : 'translate-y-full'
       )}
       role="complementary"
       aria-label="Engagement bar"
     >
-      <div className="relative mx-auto flex max-w-5xl items-center justify-center gap-3 px-4 py-2 pr-12">
+      {/*
+       * The dismiss button is a flex child, not absolutely positioned.
+       *
+       * It used to be `absolute right-3` against this container, with `pr-12` here
+       * reserving the space. That only lines up while the container is about as
+       * wide as the viewport. Once the viewport passes max-w-5xl the container edge
+       * becomes an invisible line, and at 1920px the button sat 237px right of the
+       * buttons and still 460px short of the bar's own edge: floating in the gap,
+       * attached to neither.
+       *
+       * In the flow it stays with the cluster it belongs to at every width.
+       */}
+      <div className="page-shell flex items-center justify-center gap-3 py-2">
         {/* Rotating problem statement */}
         <p
           className={cn(
-            'text-sm text-white/90 transition-opacity duration-300 text-center',
+            // Navy, not white. This bar is filled with the brand orange, where
+            // white is 2.98:1 and navy is 4.55:1.
+            'text-sm text-brand-base transition-opacity duration-300 text-center',
+            /*
+             * Hidden below md, and never allowed to wrap above it.
+             *
+             * The two CTAs are a fixed 241px and the dismiss button another 16px,
+             * so at 375px this paragraph was left with 75px to work in. The longest
+             * statement wrapped to six lines and pushed the bar to 136px tall,
+             * covering a sixth of the screen. It is a nice-to-have message, so it
+             * waits until there is room to read it on one line.
+             */
+            'hidden min-w-0 truncate md:block',
             fading ? 'opacity-0' : 'opacity-100'
           )}
         >
@@ -94,7 +118,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/ways-to-work"
-            className="rounded-full bg-charcoal px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-charcoal/90 whitespace-nowrap min-h-0"
+            className="rounded-full bg-brand-base px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-brand-base/90 whitespace-nowrap min-h-0"
             onClick={() =>
               trackClientEvent('package_cta_click', {
                 properties: {
@@ -110,7 +134,10 @@ export default function StickyEngagementBar(): React.ReactElement | null {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-green-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-700 whitespace-nowrap min-h-0"
+            // green-700, not green-600: white on green-600 is 3.30:1, and this
+            // label is 12px, so it needs 4.5:1. green-700 gives 5.02:1 and the
+            // hover moves to green-800 at 7.13:1.
+            className="whitespace-nowrap rounded-full bg-green-700 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-green-800 min-h-0"
             onClick={() =>
               trackClientEvent('whatsapp_click', {
                 properties: {
@@ -128,7 +155,7 @@ export default function StickyEngagementBar(): React.ReactElement | null {
         <button
           type="button"
           onClick={handleDismiss}
-          className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 transition-colors hover:text-white min-h-0 min-w-0"
+          className="ml-1 flex shrink-0 items-center justify-center text-brand-base/80 transition-colors hover:text-brand-base-dark min-h-0 min-w-0"
           aria-label="Dismiss"
         >
           <svg

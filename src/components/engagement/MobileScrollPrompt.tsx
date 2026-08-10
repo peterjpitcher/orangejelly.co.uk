@@ -56,13 +56,13 @@ export default function MobileScrollPrompt(): React.ReactElement | null {
       role="complementary"
       aria-label="Help prompt"
     >
-      <div className="rounded-xl bg-white p-4 shadow-lg ring-1 ring-charcoal/10">
+      <div className="rounded-xl bg-white p-4 shadow-lg ring-1 ring-brand-base/10">
         <div className="flex items-start justify-between">
-          <p className="pr-3 text-sm font-medium text-charcoal">Need hands-on help with this?</p>
+          <p className="pr-3 text-sm font-medium text-brand-base">Need hands-on help with this?</p>
           <button
             type="button"
             onClick={handleDismiss}
-            className="shrink-0 text-charcoal/40 transition-colors hover:text-charcoal"
+            className="shrink-0 text-brand-base/75 transition-colors hover:text-brand-base"
             aria-label="Dismiss prompt"
           >
             <svg
@@ -86,7 +86,8 @@ export default function MobileScrollPrompt(): React.ReactElement | null {
           href={whatsAppUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-green-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
+          // See StickyEngagementBar: white on green-600 is 3.30:1, under AA.
+          className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-green-700 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-800"
           onClick={() =>
             trackClientEvent('whatsapp_click', {
               properties: {

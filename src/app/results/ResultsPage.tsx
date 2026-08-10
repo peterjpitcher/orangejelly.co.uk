@@ -29,12 +29,12 @@ export default function ResultsPage() {
 
       {/* Organic Traffic Growth */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto">
+        <div className="measure">
           <AnimatedItem animation="fade-in">
             <Heading level={2} align="center" className="mb-4">
               Search Optimisation That Drives Real Revenue
             </Heading>
-            <Text align="center" color="muted" className="mb-8 max-w-2xl mx-auto">
+            <Text align="center" color="muted" className="mb-8 measure">
               We launched the-anchor.pub as an AI-optimised, search-led website in August 2025.
               Google Search visibility is up 828%, and it&apos;s driving real bookings.
             </Text>
@@ -58,7 +58,7 @@ export default function ResultsPage() {
           <AnimatedItem animation="slide-up" delay={200}>
             <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
               <Card variant="bordered" className="text-center p-6">
-                <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                   More Bookings
                 </Text>
                 <Text size="sm" color="muted">
@@ -66,7 +66,7 @@ export default function ResultsPage() {
                 </Text>
               </Card>
               <Card variant="bordered" className="text-center p-6">
-                <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                   Private Events
                 </Text>
                 <Text size="sm" color="muted">
@@ -74,7 +74,7 @@ export default function ResultsPage() {
                 </Text>
               </Card>
               <Card variant="bordered" className="text-center p-6">
-                <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                   Real Revenue
                 </Text>
                 <Text size="sm" color="muted">
@@ -85,7 +85,7 @@ export default function ResultsPage() {
           </AnimatedItem>
 
           <AnimatedItem animation="fade-in" delay={300}>
-            <Text align="center" size="lg" className="mb-6 max-w-2xl mx-auto">
+            <Text align="center" size="lg" className="mb-6 measure">
               This is what happens when your website is built to be found, not just to look good. We
               can do the same for your venue.
             </Text>
@@ -112,8 +112,8 @@ export default function ResultsPage() {
       </Section>
 
       {/* Percentage-based proof section */}
-      <Section background="cream" padding="large">
-        <div className="max-w-4xl mx-auto">
+      <Section background="surface" padding="large">
+        <div className="measure">
           <Heading level={2} align="center" className="mb-4">
             The Numbers Don&apos;t Lie
           </Heading>
@@ -122,7 +122,7 @@ export default function ResultsPage() {
           </Text>
           <Grid columns={{ default: 2, md: 4 }} gap="medium">
             <Card variant="bordered" className="text-center p-6">
-              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+              <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                 +403%
               </Text>
               <Text size="sm" color="muted">
@@ -130,7 +130,7 @@ export default function ResultsPage() {
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
-              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+              <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                 +567%
               </Text>
               <Text size="sm" color="muted">
@@ -138,7 +138,7 @@ export default function ResultsPage() {
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
-              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+              <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                 +98%
               </Text>
               <Text size="sm" color="muted">
@@ -146,7 +146,7 @@ export default function ResultsPage() {
               </Text>
             </Card>
             <Card variant="bordered" className="text-center p-6">
-              <Text size="2xl" weight="bold" className="text-orange block mb-1">
+              <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                 -89%
               </Text>
               <Text size="sm" color="muted">
@@ -159,7 +159,7 @@ export default function ResultsPage() {
 
       {/* Case Studies with CaseStudyCard */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto">
+        <div className="measure">
           <Heading level={2} align="center" className="mb-4">
             How We Did It
           </Heading>
@@ -213,7 +213,7 @@ export default function ResultsPage() {
               </Heading>
               <Grid columns={{ default: 2 }} gap="medium">
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                  <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                     Get Found
                   </Text>
                   <Text size="sm" color="muted">
@@ -221,7 +221,7 @@ export default function ResultsPage() {
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                  <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                     Get Booked
                   </Text>
                   <Text size="sm" color="muted">
@@ -229,7 +229,7 @@ export default function ResultsPage() {
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                  <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                     Fill Quiet Sessions
                   </Text>
                   <Text size="sm" color="muted">
@@ -237,7 +237,7 @@ export default function ResultsPage() {
                   </Text>
                 </div>
                 <div className="text-center">
-                  <Text size="2xl" weight="bold" className="text-orange block mb-1">
+                  <Text size="2xl" weight="bold" className="text-orange-dark block mb-1">
                     Grow Revenue
                   </Text>
                   <Text size="sm" color="muted">

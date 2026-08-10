@@ -218,7 +218,7 @@ export default function HomePage({
                 variant="colored"
                 background="white"
                 padding="large"
-                className="!bg-teal text-center relative overflow-hidden transition-opacity hover:opacity-95"
+                className="!bg-blue-support text-center relative overflow-hidden transition-opacity hover:opacity-95"
               >
                 <Text size="xs" color="white" align="center" className="mb-4 opacity-90">
                   {sectionHeadings?.aboutCardLabel || 'Proven Daily At'}
@@ -253,7 +253,7 @@ export default function HomePage({
           <Heading level={2} align="center" className="mb-4">
             Latest Pub Marketing Guides
           </Heading>
-          <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+          <Text size="lg" color="muted" align="center" className="mb-10 measure">
             Practical advice from a working licensee. Every guide is tested at The Anchor first.
           </Text>
           <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="large">
@@ -264,7 +264,10 @@ export default function HomePage({
                     variant="bordered"
                     className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
                   >
-                    <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                    <Heading
+                      level={3}
+                      className="mb-2 group-hover:text-orange-dark transition-colors"
+                    >
                       {post.title}
                     </Heading>
                     <Text color="muted" className="mb-4 line-clamp-2">
@@ -288,11 +291,11 @@ export default function HomePage({
 
       {/* Areas We Cover. County landing pages were consolidated into /pub-marketing, so
           the counties are named here as plain text rather than eight competing links. */}
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-4">
           Where We Work
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-6 max-w-2xl mx-auto">
+        <Text size="lg" color="muted" align="center" className="mb-6 measure">
           We work with pubs anywhere in the UK. Peter runs The Anchor in Stanwell Moor, so if you
           are in Surrey, London, Berkshire, Buckinghamshire, Hampshire, Hertfordshire, Kent or
           Oxfordshire he can get to you in person. Everywhere else works just as well remotely.
@@ -304,7 +307,7 @@ export default function HomePage({
                 variant="bordered"
                 className="!px-6 !py-4 text-center transition-all hover:shadow-lg hover:-translate-y-1"
               >
-                <Heading level={3} className="group-hover:text-orange transition-colors">
+                <Heading level={3} className="group-hover:text-orange-dark transition-colors">
                   Pub Marketing
                 </Heading>
                 <Text size="sm" color="muted" className="mt-1">
@@ -337,11 +340,11 @@ export default function HomePage({
       {/* Free Chat Banner */}
       <Section background="orange-light" padding="small">
         <AnimatedItem animation="scale" delay={300}>
-          <Container maxWidth="3xl" center className="text-center">
+          <Container width="measure" center className="text-center">
             <Heading level={3} align="center" className="mb-4">
               {sectionHeadings?.ctaBannerHeading || 'Less Talk. More Traction.'}
             </Heading>
-            <Text size="lg" align="center" className="mb-6 max-w-2xl mx-auto">
+            <Text size="lg" align="center" className="mb-6 measure">
               {sectionHeadings?.ctaBannerText ||
                 "Tell me where performance is stuck. I'll share the highest-impact next steps we use at The Anchor to create measurable movement."}
             </Text>
@@ -356,11 +359,11 @@ export default function HomePage({
 
       {/* FAQ Section */}
       {displayFAQs.length > 0 && (
-        <Section background="cream">
+        <Section background="surface">
           <Heading level={2} className="text-center mb-8">
             {sectionHeadings?.faqHeading || 'Frequently Asked Questions'}
           </Heading>
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="measure space-y-4">
             {displayFAQs.map((faq, index) => (
               <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}

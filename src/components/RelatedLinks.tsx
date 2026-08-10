@@ -46,7 +46,7 @@ export default function RelatedLinks({
             {title}
           </Heading>
           {subtitle && (
-            <Text size="lg" className="text-charcoal/70 mb-6">
+            <Text size="lg" className="text-brand-base/70 mb-6">
               {subtitle}
             </Text>
           )}
@@ -64,11 +64,11 @@ export default function RelatedLinks({
                     <div className="flex-1 min-w-0">
                       <Heading
                         level={4}
-                        className="font-semibold text-charcoal mb-2 group-hover:text-orange transition-colors"
+                        className="font-semibold text-brand-base mb-2 group-hover:text-orange-dark transition-colors"
                       >
                         {link.title}
                       </Heading>
-                      <Text size="sm" className="text-charcoal/70">
+                      <Text size="sm" className="text-brand-base/70">
                         {link.description}
                       </Text>
                     </div>
@@ -85,29 +85,29 @@ export default function RelatedLinks({
   // Inline variant - for contextual links within content
   if (variant === 'inline') {
     return (
-      <div className={`my-8 p-6 bg-cream rounded-lg ${centered ? 'text-center' : ''}`}>
+      <div className={`my-8 p-6 bg-surface rounded-lg ${centered ? 'text-center' : ''}`}>
         <Heading
           level={4}
-          className={`font-semibold text-charcoal mb-4 ${centered ? 'text-center' : ''}`}
+          className={`font-semibold text-brand-base mb-4 ${centered ? 'text-center' : ''}`}
         >
           {title}
         </Heading>
-        <ul className={`space-y-3 ${centered ? 'max-w-2xl mx-auto' : ''}`}>
+        <ul className={`space-y-3 ${centered ? 'measure' : ''}`}>
           {links.map((link, index) => (
             <li
               key={index}
               className={`flex items-start gap-2 ${centered ? 'justify-center' : ''}`}
             >
-              <span className="text-orange mt-0.5">→</span>
+              <span className="text-orange-dark mt-0.5">→</span>
               <div className={centered ? 'text-left' : ''}>
                 <Link
                   href={link.href}
-                  className="font-medium text-charcoal hover:text-orange transition-colors"
+                  className="font-medium text-brand-base hover:text-orange-dark transition-colors"
                 >
                   {link.title}
                 </Link>
                 {link.description && (
-                  <Text size="sm" className="text-charcoal/70 mt-1">
+                  <Text size="sm" className="text-brand-base/70 mt-1">
                     {link.description}
                   </Text>
                 )}
@@ -124,7 +124,7 @@ export default function RelatedLinks({
     <div className="space-y-2">
       <Heading
         level={4}
-        className="font-semibold text-sm uppercase tracking-wider text-charcoal/60 mb-3"
+        className="font-semibold text-sm uppercase tracking-wider text-brand-base/75 mb-3"
       >
         {title}
       </Heading>
@@ -133,7 +133,7 @@ export default function RelatedLinks({
           <li key={index}>
             <Link
               href={link.href}
-              className="text-sm text-charcoal/80 hover:text-orange transition-colors flex items-center gap-2"
+              className="text-sm text-brand-base/80 hover:text-orange-dark transition-colors flex items-center gap-2"
             >
               {link.emoji && <span aria-hidden="true">{link.emoji}</span>}
               {link.title}

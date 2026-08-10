@@ -73,7 +73,7 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
     : undefined;
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 py-8">
+    <main className="w-full measure px-4 py-8">
       <div className="space-y-6">
         <PollHeader
           title={poll.title}
@@ -85,10 +85,10 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
 
         {poll.status === 'confirmed' && confirmedOption && (
           <div className="rounded-lg border-2 border-orange bg-orange-light p-4" role="status">
-            <h2 className="text-lg font-semibold text-charcoal">
+            <h2 className="text-lg font-semibold text-brand-base">
               Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
             </h2>
-            <Text size="sm" color="charcoal" className="mt-1">
+            <Text size="sm" color="brand-base" className="mt-1">
               This time is confirmed. The voting is done.
             </Text>
           </div>
@@ -98,9 +98,9 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
             are over and the organiser is deciding. The distinction between the two
             is the organiser's, and it is not this screen's to explain. */}
         {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
-          <div className="rounded-lg border-2 border-charcoal bg-surface-alt p-4" role="status">
-            <h2 className="text-lg font-semibold text-charcoal">Voting has closed</h2>
-            <Text size="sm" color="charcoal" className="mt-1">
+          <div className="rounded-lg border-2 border-brand-base bg-surface-alt p-4" role="status">
+            <h2 className="text-lg font-semibold text-brand-base">Voting has closed</h2>
+            <Text size="sm" color="brand-base" className="mt-1">
               {poll.organiser_name} is picking a time.
             </Text>
           </div>

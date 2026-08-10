@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function AvailabilityNotFound(): JSX.Element {
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 py-16">
+    <main className="w-full measure px-4 py-16">
       <div className="space-y-4">
         <Heading level={1}>This link isn&rsquo;t live</Heading>
 

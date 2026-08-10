@@ -59,7 +59,7 @@ export default function FixMyPubPage() {
       {/* The Problem */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} align="center" className="mb-6">
               Most Pubs Do Not Need More Ideas. They Need One Clear Priority.
             </Heading>
@@ -76,9 +76,9 @@ export default function FixMyPubPage() {
       </Section>
 
       {/* What We Did at The Anchor */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} color="white" className="mb-4">
               How We Turned The Anchor Around
             </Heading>
@@ -97,7 +97,7 @@ export default function FixMyPubPage() {
       {/* The Solution */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               The Right Package for Your Situation
             </Heading>
@@ -133,7 +133,7 @@ export default function FixMyPubPage() {
                 <PackageCard packageId="turnaround-intensive" highlighted />
               </div>
               <div>
-                <Card background="cream" padding="large" className="mb-4">
+                <Card background="surface" padding="large" className="mb-4">
                   <Heading level={3} className="mb-3">
                     Just Need a Focused Fix?
                   </Heading>
@@ -161,11 +161,11 @@ export default function FixMyPubPage() {
       </Section>
 
       {/* FAQ */}
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-8">
           Common Questions
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -174,7 +174,7 @@ export default function FixMyPubPage() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} align="center" className="mb-4">
             Ready to Fix What Is Holding Your Pub Back?
           </Heading>

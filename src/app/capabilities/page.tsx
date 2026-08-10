@@ -44,7 +44,7 @@ export default function CapabilitiesPage() {
           <div className="mt-8 text-center">
             <Text size="base" color="muted">
               Support depth varies by package.{' '}
-              <Link href="/ways-to-work" className="text-teal underline hover:no-underline">
+              <Link href="/ways-to-work" className="text-blue-support underline hover:no-underline">
                 See our packages
               </Link>{' '}
               to find the right fit.
@@ -54,13 +54,13 @@ export default function CapabilitiesPage() {
       </Section>
 
       {/* Content Boundaries */}
-      <Section background="cream" padding="large">
+      <Section background="surface" padding="large">
         <Container>
           <div className="text-center mb-8">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Content Creation: What Is and Is Not Included
             </Heading>
-            <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="lg" color="muted" className="mt-4 measure">
               We believe in being upfront about what you get. Here is how content creation works
               across our packages.
             </Text>
@@ -73,10 +73,10 @@ export default function CapabilitiesPage() {
       <Section background="white" padding="large">
         <Container>
           <div className="text-center mb-8">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Find the Right Package
             </Heading>
-            <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="lg" color="muted" className="mt-4 measure">
               Every capability above is delivered through one of our four packages. Find the level
               that fits your venue.
             </Text>

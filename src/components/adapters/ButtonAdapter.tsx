@@ -51,22 +51,22 @@ const sizeMap = {
 } as const;
 
 const legacyVariantClasses: Record<NonNullable<LegacyButtonProps['variant']>, string> = {
-  primary: 'bg-orange text-white hover:bg-orange-dark',
-  secondary: 'bg-teal text-white hover:bg-teal-dark',
-  outline: 'border-2 border-orange text-orange hover:bg-orange hover:text-white',
-  ghost: 'text-orange hover:bg-orange/10',
+  primary: 'bg-orange text-brand-base hover:text-brand-base-dark',
+  secondary: 'bg-blue-support text-white hover:bg-brand-base',
+  outline: 'border-2 border-orange-dark text-orange-dark hover:bg-orange hover:text-brand-base',
+  ghost: 'text-orange-dark hover:bg-orange/10',
   custom: '',
   'outline-white':
-    'border-2 border-white bg-transparent text-white hover:bg-white hover:text-charcoal',
-  base: 'bg-charcoal text-white hover:bg-charcoal-light',
-  support: 'bg-teal text-white hover:bg-teal-dark',
-  accent: 'bg-orange text-white hover:bg-orange-dark',
+    'border-2 border-white bg-transparent text-white hover:bg-white hover:text-brand-base',
+  base: 'bg-brand-base text-white hover:bg-brand-base-light',
+  support: 'bg-blue-support text-white hover:bg-brand-base',
+  accent: 'bg-orange text-brand-base hover:text-brand-base-dark',
 };
 
 const legacySizeClasses: Record<NonNullable<LegacyButtonProps['size']>, string> = {
-  small: 'px-4 py-2.5 text-sm min-h-[44px]',
-  medium: 'px-6 py-3 text-base min-h-[44px]',
-  large: 'px-8 py-4 text-lg min-h-[48px]',
+  small: 'px-4 py-2.5 text-sm min-h-tap',
+  medium: 'px-6 py-3 text-base min-h-tap',
+  large: 'px-8 py-4 text-lg min-h-control',
 };
 
 export default function ButtonAdapter({
@@ -96,11 +96,11 @@ export default function ButtonAdapter({
     // `block` here silently switched display away from flex, at which point
     // align-items does nothing at all: it is not a flex container any more.
     // The label then landed wherever line-height put it inside a box padded to
-    // min-h-[44px], which is why full-width buttons sat a few pixels off centre
+    // min-h-tap, which is why full-width buttons sat a few pixels off centre
     // while inline ones looked fine. `flex` is block-level like `block` was, so
     // w-full still behaves, and the centring survives.
     fullWidth && 'w-full flex',
-    whatsapp && '!bg-[var(--color-whatsapp)] hover:!bg-[var(--color-whatsapp-hover)] text-white',
+    whatsapp && '!bg-whatsapp hover:!bg-whatsapp-dark text-white',
     legacyVariantClasses[variant],
     legacySizeClasses[size],
     className

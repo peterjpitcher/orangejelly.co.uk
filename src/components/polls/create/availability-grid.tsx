@@ -167,8 +167,8 @@ export default function AvailabilityGrid({
               onClick={() => setView(mode)}
               disabled={disabled}
               className={cn(
-                'min-h-[44px] rounded px-4 text-sm font-medium capitalize transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2',
-                view === mode ? 'bg-orange text-white' : 'text-charcoal hover:bg-orange/10'
+                'min-h-tap rounded px-4 text-sm font-medium capitalize transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2',
+                view === mode ? 'bg-orange text-brand-base' : 'text-brand-base hover:bg-orange/10'
               )}
             >
               {mode}
@@ -205,7 +205,7 @@ export default function AvailabilityGrid({
             Today
           </Button>
           {/* Announced, because moving the week changes everything below it. */}
-          <p className="text-base font-medium text-charcoal" aria-live="polite">
+          <p className="text-base font-medium text-brand-base" aria-live="polite">
             {rangeLabel}
           </p>
         </div>
@@ -252,10 +252,10 @@ export default function AvailabilityGrid({
                   date === today && 'bg-orange-light'
                 )}
               >
-                <div className="text-xs uppercase text-charcoal-light">
+                <div className="text-xs uppercase text-brand-base-light">
                   {formatWeekdayShort(date)}
                 </div>
-                <div className="text-base font-semibold text-charcoal">
+                <div className="text-base font-semibold text-brand-base">
                   {formatDayOfMonth(date)}
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function AvailabilityGrid({
             {allDay ? (
               // One row: the whole day, per day.
               <>
-                <div className="sticky left-0 z-10 flex items-center justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-charcoal-light">
+                <div className="sticky left-0 z-10 flex items-center justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-brand-base-light">
                   All day
                 </div>
                 {weekDays.map((date) => {
@@ -305,7 +305,7 @@ export default function AvailabilityGrid({
           type="button"
           onClick={() => setExpanded((value) => !value)}
           disabled={disabled}
-          className="min-h-[44px] text-sm font-medium text-orange underline underline-offset-2 hover:text-orange-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+          className="min-h-tap text-sm font-medium text-orange-dark underline underline-offset-2 hover:text-orange-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
         >
           {expanded ? 'Show 8am to 11pm only' : 'Show every hour of the day'}
         </button>
@@ -347,7 +347,7 @@ function TimeRow({
 }): JSX.Element {
   return (
     <>
-      <div className="sticky left-0 z-10 flex items-start justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-charcoal-light">
+      <div className="sticky left-0 z-10 flex items-start justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-brand-base-light">
         {formatWallClockLabel(time)}
       </div>
       {weekDays.map((date) => {
@@ -403,11 +403,11 @@ function GridCell({
       disabled={disabled || blocked}
       onClick={onClick}
       className={cn(
-        'relative m-0.5 flex min-h-[44px] items-center justify-center rounded border text-sm transition-colors',
+        'relative m-0.5 flex min-h-tap items-center justify-center rounded border text-sm transition-colors',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-1',
         selected
-          ? 'border-2 border-orange-dark bg-orange font-semibold text-white'
-          : 'border-border bg-cream-light hover:border-orange hover:bg-orange-light',
+          ? 'border-2 border-orange-darker bg-orange font-semibold text-brand-base'
+          : 'border-border bg-surface-bright hover:border-orange hover:bg-orange-light',
         blocked &&
           !selected &&
           'cursor-not-allowed border-dashed bg-transparent hover:border-border hover:bg-transparent',
@@ -444,7 +444,7 @@ function MonthGrid({
       {weeks[0].map((date) => (
         <div
           key={`head-${date}`}
-          className="py-2 text-center text-xs uppercase text-charcoal-light"
+          className="py-2 text-center text-xs uppercase text-brand-base-light"
         >
           {formatWeekdayShort(date)}
         </div>
@@ -469,15 +469,15 @@ function MonthGrid({
             disabled={disabled || blocked}
             onClick={() => onToggleDate(date)}
             className={cn(
-              'flex min-h-[44px] items-center justify-center gap-1 rounded border text-sm transition-colors',
+              'flex min-h-tap items-center justify-center gap-1 rounded border text-sm transition-colors',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-1',
               selected
-                ? 'border-2 border-orange-dark bg-orange font-semibold text-white'
-                : 'border-border bg-cream-light hover:border-orange hover:bg-orange-light',
+                ? 'border-2 border-orange-darker bg-orange font-semibold text-brand-base'
+                : 'border-border bg-surface-bright hover:border-orange hover:bg-orange-light',
               blocked && !selected && 'cursor-not-allowed border-dashed bg-transparent',
               // Matches the week grid: a day that has been and gone reads as spent.
               block === 'past' && 'opacity-40',
-              outside && !selected && 'text-charcoal-light opacity-60',
+              outside && !selected && 'text-brand-base-light opacity-60',
               date === today && !selected && 'border-orange'
             )}
           >
@@ -508,7 +508,7 @@ function NavButton({
       aria-label={label}
       onClick={onClick}
       disabled={disabled}
-      className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-white text-charcoal transition-colors hover:border-orange hover:text-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 disabled:opacity-50"
+      className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-white text-brand-base transition-colors hover:border-orange hover:text-orange-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 disabled:opacity-50"
     >
       <span aria-hidden="true">{glyph}</span>
     </button>

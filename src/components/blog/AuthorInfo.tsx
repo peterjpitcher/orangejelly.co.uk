@@ -54,12 +54,15 @@ function AuthorInfo({ author, variant = 'full' }: AuthorInfoProps) {
           <Heading level={3} className="mb-1">
             {author.name}
           </Heading>
-          <Text className="text-orange mb-3">{author.role}</Text>
+          <Text className="text-orange-dark mb-3">{author.role}</Text>
           <Text color="muted" className="mb-4">
             {author.bio}
           </Text>
 
-          <Link href="/about" className="text-orange hover:text-orange-dark font-medium text-sm">
+          <Link
+            href="/about"
+            className="text-orange-dark hover:text-orange-darker font-medium text-sm"
+          >
             Learn more about Peter →
           </Link>
         </div>

@@ -134,8 +134,11 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
   return (
     <>
       {/* Reading progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-cream z-50">
-        <div id="reading-progress" className="h-full bg-teal transition-all duration-100 w-0" />
+      <div className="fixed top-0 left-0 right-0 h-1 bg-surface z-50">
+        <div
+          id="reading-progress"
+          className="h-full bg-blue-support transition-all duration-100 w-0"
+        />
       </div>
 
       {/* Share buttons (floating on desktop) */}
@@ -144,15 +147,15 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       {/* Sticky CTA */}
       <StickyCTA />
 
-      <article id="blog-article" className="max-w-4xl mx-auto">
+      <article id="blog-article" className="measure">
         {/* Post metadata */}
-        <header className="mb-8 max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-charcoal/60 mb-6">
+        <header className="mb-8">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-brand-base/75 mb-6">
             <Button
               href={`/licensees-guide/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
               variant="ghost"
               size="small"
-              className="text-teal hover:text-charcoal font-medium text-sm p-0"
+              className="text-blue-support hover:text-brand-base font-medium text-sm p-0"
             >
               {typeof post.category === 'string' ? post.category : post.category.name}
             </Button>
@@ -206,19 +209,19 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           ) : (
             // Use server-processed HTML (no client fallback)
             <div
-              className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-charcoal prose-p:text-charcoal prose-li:text-charcoal prose-strong:text-charcoal prose-a:text-orange prose-a:underline hover:prose-a:text-orange-dark prose-blockquote:border-orange prose-blockquote:text-charcoal/80 prose-code:bg-gray-100 prose-code:text-charcoal prose-pre:bg-gray-100"
+              className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-brand-base prose-p:text-brand-base prose-li:text-brand-base prose-strong:text-brand-base prose-a:text-orange-dark prose-a:underline hover:prose-a:text-orange-dark prose-blockquote:border-orange prose-blockquote:text-brand-base/80 prose-code:bg-gray-100 prose-code:text-brand-base prose-pre:bg-gray-100"
               dangerouslySetInnerHTML={{ __html: post.contentHtml! }}
             />
           )}
         </div>
 
         {/* Call to action */}
-        <Card variant="bordered" className="bg-charcoal mb-12">
+        <Card variant="bordered" className="bg-brand-base mb-12">
           <div className="text-center">
             <Heading level={3} align="center" color="white" className="mb-4">
               {categoryCTA.heading}
             </Heading>
-            <Text align="center" color="white" className="mb-6 max-w-2xl mx-auto">
+            <Text align="center" color="white" className="mb-6">
               {categoryCTA.body}
             </Text>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -246,7 +249,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
                 variant="secondary"
                 size="large"
                 external
-                className="!bg-white !text-charcoal hover:!bg-cream"
+                className="!bg-white !text-brand-base hover:!bg-surface"
               >
                 Message Peter on WhatsApp
               </TrackedButton>
@@ -259,7 +262,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
             <Heading level={3} align="center" className="mb-4">
               How we can help
             </Heading>
-            <Text align="center" color="muted" className="mb-6 max-w-2xl mx-auto">
+            <Text align="center" color="muted" className="mb-6">
               If you&apos;d rather copy a proven system than figure it out alone, see how we work
               with pubs like yours.
             </Text>
@@ -348,7 +351,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         </Card>
 
         {/* Guide → service bridge: one relevant link per guide, by category */}
-        <div className="mb-12 rounded-lg border border-charcoal/10 bg-cream px-6 py-5 text-center">
+        <div className="mb-12 rounded-lg border border-brand-base/10 bg-surface px-6 py-5 text-center">
           <Text className="mb-3">Running a pub and want a hand putting this into practice?</Text>
           <TrackedButton
             eventName="guide_cta_click"
@@ -385,11 +388,11 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
 
         {/* Tags */}
         {post.tags.length > 0 && (
-          <div className="mt-8 pt-8 border-t border-charcoal/10">
+          <div className="mt-8 pt-8 border-t border-brand-base/10">
             <div className="flex flex-wrap gap-2">
-              <span className="text-sm font-medium text-charcoal/60">Tagged:</span>
+              <span className="text-sm font-medium text-brand-base/75">Tagged:</span>
               {post.tags.map((tag) => (
-                <span key={tag} className="px-3 py-1 bg-cream rounded-full text-sm">
+                <span key={tag} className="px-3 py-1 bg-surface rounded-full text-sm">
                   {tag}
                 </span>
               ))}

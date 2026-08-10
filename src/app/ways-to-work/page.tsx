@@ -140,22 +140,25 @@ export default function WaysToWorkPage() {
       <Section background="white" padding="large">
         <Container>
           <div className="text-center mb-12">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Our Packages
             </Heading>
-            <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="lg" color="muted" className="mt-4 measure">
               Every package is built around real hospitality experience. No filler, no fluff, just
               practical support that moves the needle.
             </Text>
-            <Text size="base" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="base" color="muted" className="mt-4 measure">
               New to working with us? See{' '}
-              <Link href="/pub-marketing-agency" className="text-teal underline hover:text-orange">
+              <Link
+                href="/pub-marketing-agency"
+                className="text-blue-support underline hover:text-orange-dark"
+              >
                 why pubs choose Orange Jelly over a traditional marketing agency
               </Link>
               , or read how we help an independent pub{' '}
               <Link
                 href="/compete-with-pub-chains"
-                className="text-teal underline hover:text-orange"
+                className="text-blue-support underline hover:text-orange-dark"
               >
                 compete with the pub chains
               </Link>{' '}
@@ -172,13 +175,13 @@ export default function WaysToWorkPage() {
       </Section>
 
       {/* Comparison */}
-      <Section background="cream" padding="large">
+      <Section background="surface" padding="large">
         <Container>
           <div className="text-center mb-8">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Compare Packages
             </Heading>
-            <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="lg" color="muted" className="mt-4 measure">
               See exactly what is included at each level. No hidden extras.
             </Text>
           </div>
@@ -190,10 +193,10 @@ export default function WaysToWorkPage() {
       <Section background="white" padding="large">
         <Container>
           <div className="text-center mb-8">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Add-ons
             </Heading>
-            <Text size="lg" color="muted" className="mt-4 max-w-2xl mx-auto">
+            <Text size="lg" color="muted" className="mt-4 measure">
               Need something extra? These can be added to any package.
             </Text>
           </div>
@@ -206,9 +209,9 @@ export default function WaysToWorkPage() {
 
       {/* FAQs */}
       <Section background="white" padding="large">
-        <Container maxWidth="3xl">
+        <Container width="measure">
           <div className="text-center mb-8">
-            <Heading level={2} align="center" color="charcoal">
+            <Heading level={2} align="center" color="brand-base">
               Frequently Asked Questions
             </Heading>
           </div>
@@ -217,7 +220,7 @@ export default function WaysToWorkPage() {
       </Section>
 
       {/* CTA */}
-      <Section background="cream" padding="large">
+      <Section background="surface" padding="large">
         <Container>
           <PackageCTA />
         </Container>

@@ -95,13 +95,13 @@ export default function PubServiceLandingPage({
       />
 
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-6">
             {data.intro.heading}
           </Heading>
-          <div className="space-y-4 max-w-3xl mx-auto">
+          <div className="space-y-4 measure">
             {data.intro.paragraphs.map((paragraph) => (
-              <Text key={paragraph} size="lg" className="text-charcoal/80">
+              <Text key={paragraph} size="lg" className="text-brand-base/80">
                 {paragraph}
               </Text>
             ))}
@@ -109,12 +109,12 @@ export default function PubServiceLandingPage({
         </Container>
       </Section>
 
-      <Section background="cream" padding="large">
-        <Container maxWidth="6xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-10">
             {data.deliverables.heading}
           </Heading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {data.deliverables.items.map((item) => (
               <Card key={item.title} variant="bordered" padding="large">
                 <Heading level={3} className="mb-3">
@@ -128,14 +128,14 @@ export default function PubServiceLandingPage({
       </Section>
 
       <Section background="white" padding="large">
-        <Container maxWidth="6xl">
+        <Container>
           <Heading level={2} align="center" className="mb-12">
             {data.process.heading}
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {data.process.steps.map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                <div className="w-12 h-12 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                   {step.number}
                 </div>
                 <Heading level={4} className="mb-3">
@@ -150,8 +150,8 @@ export default function PubServiceLandingPage({
         </Container>
       </Section>
 
-      <Section background="charcoal" padding="medium">
-        <Container maxWidth="5xl">
+      <Section background="brand-base" padding="medium">
+        <Container>
           <Heading level={2} align="center" color="white" className="mb-8">
             Real Results from The Anchor
           </Heading>
@@ -192,13 +192,13 @@ export default function PubServiceLandingPage({
         </Container>
       </Section>
 
-      <Section background="teal" padding="large">
-        <Container maxWidth="3xl">
+      <Section background="blue-support" padding="large">
+        <Container width="measure">
           <div className="text-center">
             <Heading level={2} color="white" className="mb-4">
               {data.cta.title}
             </Heading>
-            <Text size="lg" color="white" className="opacity-90 mb-8 max-w-2xl mx-auto">
+            <Text size="lg" color="white" className="opacity-90 mb-8 measure">
               {data.cta.subtitle}
             </Text>
             <WhatsAppButton
@@ -206,7 +206,7 @@ export default function PubServiceLandingPage({
               label="Message Peter on WhatsApp"
               size="large"
               variant="secondary"
-              className="!bg-white !text-charcoal hover:!bg-cream"
+              className="!bg-white !text-brand-base hover:!bg-surface"
               showPhone={false}
             />
           </div>
@@ -214,7 +214,7 @@ export default function PubServiceLandingPage({
       </Section>
 
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-12">
             Common Questions
           </Heading>

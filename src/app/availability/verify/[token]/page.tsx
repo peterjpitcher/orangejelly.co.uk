@@ -62,20 +62,20 @@ export default async function VerifyPage({ params }: VerifyPageProps): Promise<J
  */
 function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
   return (
-    <Section background="cream" padding="large">
+    <Section background="surface" padding="large">
       <div className="max-w-md mx-auto text-center space-y-6">
         {/* The meaning is carried by the H1; the glyph is decoration. */}
         <span aria-hidden="true" className="block text-4xl">
           ✓
         </span>
-        <Heading level={1} align="center" color="charcoal">
+        <Heading level={1} align="center" color="brand-base">
           You&apos;re all set
         </Heading>
 
         <Alert
           variant="default"
           role="status"
-          className="border-orange bg-orange-light text-charcoal text-left"
+          className="border-orange bg-orange-light text-brand-base text-left"
         >
           <AlertTitle>Your poll is live</AlertTitle>
           <AlertDescription>
@@ -139,12 +139,12 @@ function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
  */
 function InvalidOutcome(): JSX.Element {
   return (
-    <Section background="cream" padding="large">
+    <Section background="surface" padding="large">
       <div className="max-w-md mx-auto text-center space-y-6">
         <span aria-hidden="true" className="block text-4xl">
           ✕
         </span>
-        <Heading level={1} align="center" color="charcoal">
+        <Heading level={1} align="center" color="brand-base">
           That link didn&apos;t work
         </Heading>
 

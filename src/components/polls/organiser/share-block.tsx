@@ -31,15 +31,15 @@ export default function ShareBlock({
   return (
     <section
       aria-labelledby="share-heading"
-      className="rounded-lg border border-charcoal/15 bg-surface p-4"
+      className="rounded-lg border border-brand-base/15 bg-surface p-4"
     >
-      <h2 id="share-heading" className="mb-1 text-base font-semibold text-charcoal">
+      <h2 id="share-heading" className="mb-1 text-base font-semibold text-brand-base">
         Your team&rsquo;s link
       </h2>
       <Text size="sm" color="muted" className="mb-3">
         Send this to anyone you still need an answer from.
       </Text>
-      <p className="select-all break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
+      <p className="select-all break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
         {participantUrl}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">

@@ -119,7 +119,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             <Text align="center" color="muted" className="mb-6">
               {errorMessage}
               {retryCount > 0 && (
-                <Text size="sm" className="mt-2 text-orange">
+                <Text size="sm" className="mt-2 text-orange-dark">
                   Retry attempt: {retryCount}
                 </Text>
               )}
@@ -144,10 +144,10 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
             {process.env.NODE_ENV === 'development' && error && (
               <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-charcoal/60">
+                <summary className="cursor-pointer text-sm text-brand-base/75">
                   Error details (development only)
                 </summary>
-                <div className="mt-2 text-xs bg-charcoal/5 p-2 rounded overflow-auto space-y-2">
+                <div className="mt-2 text-xs bg-brand-base/5 p-2 rounded overflow-auto space-y-2">
                   <div>
                     <strong>Error:</strong> {error.toString()}
                   </div>

@@ -42,15 +42,15 @@ function CategoryList({
               <Card
                 variant="bordered"
                 className={`
-                  text-center hover:border-teal transition-colors
-                  ${currentCategory === category.slug ? 'border-teal' : ''}
+                  text-center hover:border-blue-support transition-colors
+                  ${currentCategory === category.slug ? 'border-blue-support' : ''}
                 `}
               >
-                <Heading level={4} className="mb-1 group-hover:text-teal transition-colors">
+                <Heading level={4} className="mb-1 group-hover:text-blue-support transition-colors">
                   {category.name}
                 </Heading>
                 {category.postCount !== undefined && (
-                  <p className="text-sm text-charcoal/60">
+                  <p className="text-sm text-brand-base/75">
                     {category.postCount} {category.postCount === 1 ? 'article' : 'articles'}
                   </p>
                 )}
@@ -60,8 +60,8 @@ function CategoryList({
         </div>
 
         {hiddenCategories.length > 0 && (
-          <details className="group rounded-xl border border-charcoal/10 bg-cream p-4">
-            <summary className="cursor-pointer text-sm font-semibold text-charcoal/70 transition-colors hover:text-charcoal">
+          <details className="group rounded-xl border border-brand-base/10 bg-surface p-4">
+            <summary className="cursor-pointer text-sm font-semibold text-brand-base/70 transition-colors hover:text-brand-base">
               See all topics ({categories.length})
             </summary>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -73,14 +73,14 @@ function CategoryList({
                     inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors
                     ${
                       currentCategory === category.slug
-                        ? 'border-teal bg-teal/10 text-teal'
-                        : 'border-charcoal/10 text-charcoal/70 hover:border-teal/50 hover:text-teal'
+                        ? 'border-blue-support bg-blue-support/10 text-blue-support'
+                        : 'border-brand-base/10 text-brand-base/70 hover:border-blue-support/50 hover:text-blue-support'
                     }
                   `}
                 >
                   <span>{category.name}</span>
                   {category.postCount !== undefined && (
-                    <span className="text-[10px] text-charcoal/50">{category.postCount}</span>
+                    <span className="text-[10px] text-brand-base/75">{category.postCount}</span>
                   )}
                 </Link>
               ))}
@@ -102,7 +102,7 @@ function CategoryList({
             href="/licensees-guide"
             className={`
               block py-2 px-3 rounded-lg transition-colors text-sm
-              ${!currentCategory ? 'bg-teal text-white' : 'hover:bg-teal/10 text-charcoal'}
+              ${!currentCategory ? 'bg-blue-support text-white' : 'hover:bg-blue-support/10 text-brand-base'}
             `}
           >
             All Articles
@@ -116,8 +116,8 @@ function CategoryList({
                 block py-2 px-3 rounded-lg transition-colors text-sm
                 ${
                   currentCategory === category.slug
-                    ? 'bg-teal text-white'
-                    : 'hover:bg-teal/10 text-charcoal'
+                    ? 'bg-blue-support text-white'
+                    : 'hover:bg-blue-support/10 text-brand-base'
                 }
               `}
             >
@@ -127,7 +127,7 @@ function CategoryList({
                   <span
                     className={`
                     text-xs
-                    ${currentCategory === category.slug ? 'text-white/80' : 'text-charcoal/60'}
+                    ${currentCategory === category.slug ? 'text-white/80' : 'text-brand-base/75'}
                   `}
                   >
                     {category.postCount}

@@ -57,16 +57,16 @@ export default function OptionResults({
               className={
                 isConfirmed
                   ? 'rounded-lg border-2 border-orange bg-orange-light p-4'
-                  : 'rounded-lg border-2 border-charcoal/15 bg-white p-4'
+                  : 'rounded-lg border-2 border-brand-base/15 bg-white p-4'
               }
             >
-              <p className="text-lg font-semibold text-charcoal">
+              <p className="text-lg font-semibold text-brand-base">
                 {formatOptionLabel(option, optionKind)}
               </p>
 
               {isConfirmed && (
                 // Word plus colour, never colour alone.
-                <p className="mt-1 text-sm font-semibold text-charcoal">✓ This is the time</p>
+                <p className="mt-1 text-sm font-semibold text-brand-base">✓ This is the time</p>
               )}
 
               {responderCount > 0 && (

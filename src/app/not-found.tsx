@@ -44,12 +44,12 @@ export default function NotFound() {
 
       <LandmarkMain>
         <Section>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} className="mb-6">
               404 - Page Not Found
             </Heading>
 
-            <Text size="lg" className="mb-8 max-w-2xl mx-auto">
+            <Text size="lg" className="mb-8 measure">
               The page you're looking for is not here anymore. No problem, here are the fastest
               routes to the right section.
             </Text>
@@ -65,8 +65,8 @@ export default function NotFound() {
           </div>
         </Section>
 
-        <Section background="cream">
-          <div className="max-w-4xl mx-auto">
+        <Section background="surface">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-8">
               Were You Looking For...
             </Heading>
@@ -127,7 +127,7 @@ export default function NotFound() {
         </Section>
 
         <Section>
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} className="mb-6">
               Still Can't Find What You Need?
             </Heading>

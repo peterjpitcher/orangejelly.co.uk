@@ -26,7 +26,7 @@ export default function BadgeAdapter({ variant = 'inline', size = 'medium' }: Le
       className={cn('group', floatingClasses)}
       title="See our results at The Anchor"
     >
-      <Card className="bg-teal rounded-lg p-3 shadow-lg hover:shadow-xl transition-normal hover:scale-105">
+      <Card className="bg-blue-support rounded-lg p-3 shadow-lg hover:shadow-xl transition-normal hover:scale-105">
         <Text
           size="xs"
           color="white"

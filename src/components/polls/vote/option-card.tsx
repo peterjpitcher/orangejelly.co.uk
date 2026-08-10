@@ -62,11 +62,11 @@ export default function OptionCard({
     <fieldset
       className={cn(
         'rounded-lg border-2 bg-white p-4',
-        invalid ? 'border-destructive' : 'border-charcoal/15'
+        invalid ? 'border-destructive' : 'border-brand-base/15'
       )}
       aria-describedby={invalid ? errorId : undefined}
     >
-      <legend className="px-1 text-lg font-semibold text-charcoal">{label}</legend>
+      <legend className="px-1 text-lg font-semibold text-brand-base">{label}</legend>
 
       <div className="mt-2">
         <AnswerRadioGroup
@@ -89,7 +89,7 @@ export default function OptionCard({
           role="group"
           aria-label="How would you join?"
         >
-          <span className="text-sm text-charcoal/70">Joining:</span>
+          <span className="text-sm text-brand-base/70">Joining:</span>
           {(
             [
               { mode: 'in_person', label: 'In person' },
@@ -101,11 +101,11 @@ export default function OptionCard({
               <label
                 key={mode}
                 className={cn(
-                  'flex min-h-[44px] cursor-pointer select-none items-center rounded-md border-2 px-3 text-sm font-medium transition-colors',
-                  'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-charcoal',
+                  'flex min-h-tap cursor-pointer select-none items-center rounded-md border-2 px-3 text-sm font-medium transition-colors',
+                  'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand-base',
                   selected
-                    ? 'border-teal bg-teal text-white'
-                    : 'border-charcoal/25 bg-white text-charcoal hover:border-charcoal/50',
+                    ? 'border-blue-support bg-blue-support text-white'
+                    : 'border-brand-base/25 bg-white text-brand-base hover:border-brand-base/50',
                   disabled && 'cursor-default opacity-90'
                 )}
               >

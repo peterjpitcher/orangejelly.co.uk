@@ -17,7 +17,7 @@ interface Partner {
 
 interface PartnershipsProps {
   variant?: 'full' | 'compact' | 'minimal';
-  background?: 'white' | 'cream' | 'orange-light' | 'teal-dark';
+  background?: 'white' | 'surface' | 'orange-light' | 'brand-base';
   showDescription?: boolean;
   className?: string;
   partners?: Partner[];
@@ -118,7 +118,7 @@ export default function Partnerships({
                 <Text
                   size="base"
                   align="center"
-                  className="font-bold mb-2 group-hover:text-orange transition-colors"
+                  className="font-bold mb-2 group-hover:text-orange-dark transition-colors"
                 >
                   {partner.name}
                 </Text>
@@ -143,7 +143,7 @@ export default function Partnerships({
         </Heading>
 
         <div
-          className={`grid grid-cols-1 ${partners.length === 1 ? 'md:grid-cols-1 max-w-sm' : partners.length === 2 ? 'md:grid-cols-2 max-w-2xl' : partners.length === 3 ? 'md:grid-cols-3 max-w-4xl' : 'md:grid-cols-4'} gap-8 mx-auto`}
+          className={`grid grid-cols-1 ${partners.length === 1 ? 'md:grid-cols-1 max-w-sm' : partners.length === 2 ? 'md:grid-cols-2 measure' : partners.length === 3 ? 'md:grid-cols-3 measure-wide' : 'md:grid-cols-4'} gap-8`}
         >
           {partners.map((partner) => (
             <div key={partner.name} className="text-center">
@@ -171,7 +171,7 @@ export default function Partnerships({
                 <Heading
                   level={3}
                   align="center"
-                  className="mb-3 text-xl md:text-2xl group-hover:text-orange transition-colors"
+                  className="mb-3 text-xl md:text-2xl group-hover:text-orange-dark transition-colors"
                 >
                   {partner.name}
                 </Heading>

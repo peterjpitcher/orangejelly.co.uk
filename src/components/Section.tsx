@@ -4,14 +4,12 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   background?:
-    | 'cream'
+    | 'surface'
     | 'white'
     | 'orange-light'
-    | 'teal'
-    | 'charcoal'
-    | 'base'
     | 'blue-support'
-    | 'surface'
+    | 'brand-base'
+    | 'base'
     | 'highlight'
     | 'grounded';
   padding?: 'small' | 'medium' | 'large';
@@ -20,19 +18,22 @@ interface SectionProps {
 function Section({
   children,
   className = '',
-  background = 'cream',
+  background = 'surface',
   padding = 'medium',
 }: SectionProps) {
+  // This map used to carry both vocabularies at once: cream/teal/charcoal beside
+  // surface/blue-support/base. The alias entries have gone now the names they
+  // aliased have. The one place the two disagreed was the blue background, where
+  // `teal` set text-surface (#F2F8FC) and `blue-support` set text-white; both are
+  // unified on white, which is the marginally higher contrast of the two at 6.55:1.
   const bgClasses = {
-    cream: 'bg-cream',
+    surface: 'bg-surface',
     white: 'bg-white',
     'orange-light': 'bg-orange/10',
-    teal: 'bg-teal text-cream',
-    charcoal: 'bg-charcoal text-cream',
-    base: 'bg-charcoal text-cream',
-    'blue-support': 'bg-teal text-white',
-    surface: 'bg-cream',
-    highlight: 'bg-brand-highlight text-charcoal',
+    'blue-support': 'bg-blue-support text-white',
+    'brand-base': 'bg-brand-base text-surface',
+    base: 'bg-brand-base text-surface',
+    highlight: 'bg-brand-highlight text-brand-base',
     grounded: 'bg-brand-grounded text-white',
   };
 
@@ -46,7 +47,7 @@ function Section({
     <section
       className={`${bgClasses[background]} ${paddingClasses[padding]} overflow-hidden ${className}`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">{children}</div>
+      <div className="page-shell">{children}</div>
     </section>
   );
 }

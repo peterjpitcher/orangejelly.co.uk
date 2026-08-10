@@ -78,10 +78,10 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
   return (
     <nav aria-label="Table of contents" className="space-y-4">
       <div>
-        <p className="text-xs font-semibold tracking-wide text-charcoal/70 uppercase">
+        <p className="text-xs font-semibold tracking-wide text-brand-base/70 uppercase">
           On this page
         </p>
-        <p className="text-sm text-charcoal/70">
+        <p className="text-sm text-brand-base/70">
           Jump to the sections licensees ask about most and find what you need faster.
         </p>
       </div>
@@ -91,18 +91,18 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
             key={heading.id}
             className={clsx(
               'transition-all',
-              heading.level === 3 ? 'pl-4 border-l border-cream' : ''
+              heading.level === 3 ? 'pl-4 border-l border-surface' : ''
             )}
           >
             <a
               href={`#${heading.id}`}
               onClick={(event) => handleClick(event, heading.id)}
               className={clsx(
-                'inline-flex items-center gap-2 rounded px-2 py-1 text-left leading-snug text-charcoal/80 hover:text-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
-                activeId === heading.id ? 'bg-cream text-charcoal font-semibold' : ''
+                'inline-flex items-center gap-2 rounded px-2 py-1 text-left leading-snug text-brand-base/80 hover:text-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange',
+                activeId === heading.id ? 'bg-surface text-brand-base font-semibold' : ''
               )}
             >
-              {heading.level === 3 && <span className="text-xs text-orange">•</span>}
+              {heading.level === 3 && <span className="text-xs text-orange-dark">•</span>}
               <span>{heading.title}</span>
             </a>
           </li>
@@ -111,7 +111,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       <button
         type="button"
         onClick={scrollToTop}
-        className="text-sm font-semibold text-orange hover:text-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
+        className="text-sm font-semibold text-orange-dark hover:text-orange-darker focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange"
       >
         Back to top ↑
       </button>

@@ -98,11 +98,11 @@ export default function CaseStudySelector({
 
       {/* Active Case Study */}
       <AnimatedItem animation="slide-up" delay={100}>
-        <div className="max-w-4xl mx-auto">
+        <div className="measure">
           <Heading level={2} className="mb-2">
             {activeStudyData.title}
           </Heading>
-          <Text className="text-xl text-charcoal/80 mb-8">{activeStudyData.subtitle}</Text>
+          <Text className="text-xl text-brand-base/80 mb-8">{activeStudyData.subtitle}</Text>
 
           {/* The Problem */}
           <div className="mb-8">
@@ -119,7 +119,7 @@ export default function CaseStudySelector({
 
           {/* What Failed */}
           <Card variant="bordered" className="mb-8 border-orange/20">
-            <Heading level={3} className="mb-4 text-orange">
+            <Heading level={3} className="mb-4 text-orange-dark">
               What We Tried First (Failed!)
             </Heading>
             <FeatureList
@@ -131,14 +131,14 @@ export default function CaseStudySelector({
           </Card>
 
           {/* The Solution */}
-          <Card variant="bordered" className="mb-8 border-teal/20">
-            <Heading level={3} className="mb-4 text-teal-dark">
+          <Card variant="bordered" className="mb-8 border-blue-support/20">
+            <Heading level={3} className="mb-4 text-brand-base">
               What Actually Worked
             </Heading>
             <FeatureList
               items={activeStudyData.solution}
               icon="check"
-              iconColor="teal"
+              iconColor="blue-support"
               spacing="normal"
             />
           </Card>
@@ -158,8 +158,8 @@ export default function CaseStudySelector({
             <Grid columns={{ default: 1, md: 2 }} gap="small">
               {activeStudyData.results.map((result, index) => (
                 <Card key={index} variant="bordered" padding="small" className="border-orange/20">
-                  <Text className="text-sm text-charcoal/60">{result.metric}</Text>
-                  <Text className="text-xl font-bold text-charcoal">{result.value}</Text>
+                  <Text className="text-sm text-brand-base/75">{result.metric}</Text>
+                  <Text className="text-xl font-bold text-brand-base">{result.value}</Text>
                 </Card>
               ))}
             </Grid>
@@ -174,19 +174,19 @@ export default function CaseStudySelector({
               items={activeStudyData.timeInvestment}
               icon="bullet"
               spacing="tight"
-              className="text-charcoal/80"
+              className="text-brand-base/80"
             />
           </div>
 
           {/* Key Learnings */}
-          <Card background="cream" padding="large">
+          <Card background="surface" padding="large">
             <Heading level={3} className="mb-4">
               What We Learned
             </Heading>
             <ul className="space-y-2">
               {activeStudyData.learnings.map((item, index) => (
-                <li key={index} className="flex items-start text-charcoal">
-                  <span className="text-orange mr-2 mt-1">•</span>
+                <li key={index} className="flex items-start text-brand-base">
+                  <span className="text-orange-dark mr-2 mt-1">•</span>
                   <span>{item}</span>
                 </li>
               ))}

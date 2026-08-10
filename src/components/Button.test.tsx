@@ -35,17 +35,17 @@ describe('Button', () => {
     expect(screen.getByRole('button').className).toContain('bg-orange');
 
     rerender(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button').className).toContain('bg-teal');
+    expect(screen.getByRole('button').className).toContain('bg-blue-support');
 
     rerender(<Button variant="ghost">Ghost</Button>);
     expect(screen.getByRole('button').className).toContain('text-orange');
     expect(screen.getByRole('button').className).toContain('hover:bg-orange/10');
 
     rerender(<Button variant="base">Base</Button>);
-    expect(screen.getByRole('button').className).toContain('bg-charcoal');
+    expect(screen.getByRole('button').className).toContain('bg-brand-base');
 
     rerender(<Button variant="support">Support</Button>);
-    expect(screen.getByRole('button').className).toContain('bg-teal');
+    expect(screen.getByRole('button').className).toContain('bg-blue-support');
 
     rerender(<Button variant="accent">Accent</Button>);
     expect(screen.getByRole('button').className).toContain('bg-orange');

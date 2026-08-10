@@ -33,11 +33,11 @@ export default function PollHeader({
 
       <Text color="muted">{subline ?? `${organiserName} wants to find a time that works.`}</Text>
 
-      {description && <Text color="charcoal">{description}</Text>}
+      {description && <Text color="brand-base">{description}</Text>}
 
       {agenda && (
         <div>
-          <Text size="sm" weight="semibold" color="charcoal">
+          <Text size="sm" weight="semibold" color="brand-base">
             What it&rsquo;s about
           </Text>
           <Text size="sm" color="muted">
@@ -48,7 +48,7 @@ export default function PollHeader({
 
       {location && (
         <div>
-          <Text size="sm" weight="semibold" color="charcoal">
+          <Text size="sm" weight="semibold" color="brand-base">
             Where
           </Text>
           <Text size="sm" color="muted">

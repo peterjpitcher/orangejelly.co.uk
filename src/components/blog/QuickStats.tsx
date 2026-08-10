@@ -19,10 +19,10 @@ function QuickStats({ stats, className = '' }: QuickStatsProps) {
   if (!stats || stats.length === 0) return null;
 
   return (
-    <Card variant="bordered" className={`bg-teal-light ${className}`}>
+    <Card variant="bordered" className={`bg-blue-support-light ${className}`}>
       <div className="flex items-start gap-3 mb-4">
         <div className="flex-shrink-0 text-2xl">📊</div>
-        <Heading level={4} className="text-teal-dark">
+        <Heading level={4} className="text-brand-base">
           Key Metrics
         </Heading>
       </div>
@@ -32,13 +32,13 @@ function QuickStats({ stats, className = '' }: QuickStatsProps) {
           <div
             key={index}
             className={`text-center p-3 rounded-lg ${
-              stat.highlight ? 'bg-white border-2 border-teal shadow-sm' : 'bg-white/50'
+              stat.highlight ? 'bg-white border-2 border-blue-support shadow-sm' : 'bg-white/50'
             }`}
           >
             <Text
               size="2xl"
               weight="bold"
-              className={stat.highlight ? 'text-teal' : 'text-charcoal'}
+              className={stat.highlight ? 'text-blue-support' : 'text-brand-base'}
             >
               {stat.value}
             </Text>

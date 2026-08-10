@@ -473,11 +473,11 @@ export default function CreatePollForm(): JSX.Element {
             invite always waits for you to choose, because a tie or a thin
             turnout is a judgement, not a sum.
           */}
-          <fieldset className="rounded-lg border border-charcoal/15 p-4">
-            <legend className="px-1 text-sm font-medium text-charcoal">
+          <fieldset className="rounded-lg border border-brand-base/15 p-4">
+            <legend className="px-1 text-sm font-medium text-brand-base">
               Close entries automatically (optional)
             </legend>
-            <p className="mb-3 text-sm text-charcoal/60">
+            <p className="mb-3 text-sm text-brand-base/75">
               We&rsquo;ll email you when this passes so you can pick a time. We never send the
               invite for you.
             </p>
@@ -533,7 +533,7 @@ export default function CreatePollForm(): JSX.Element {
               therefore never scrolls, and the back half of the week becomes
               unreachable on a phone. */}
           <fieldset className="min-w-0 space-y-3">
-            <legend className="text-base font-medium text-charcoal">Your options</legend>
+            <legend className="text-base font-medium text-brand-base">Your options</legend>
             <Text size="sm" color="muted">
               {allDay
                 ? 'Tap the days that work. Pick between two and eight.'
@@ -694,14 +694,14 @@ function SuccessState({
   if (links) {
     return (
       <div className="max-w-2xl mt-8">
-        <Heading level={1} color="charcoal">
+        <Heading level={1} color="brand-base">
           Your poll is live
         </Heading>
 
         <Alert
           variant="default"
           role="status"
-          className="mt-4 border-orange bg-orange-light text-charcoal"
+          className="mt-4 border-orange bg-orange-light text-brand-base"
         >
           <AlertTitle>No email needed</AlertTitle>
           <AlertDescription>
@@ -712,26 +712,26 @@ function SuccessState({
 
         <div className="mt-6 space-y-6">
           <div>
-            <Text weight="semibold" color="charcoal">
+            <Text weight="semibold" color="brand-base">
               Send this one to your guests
             </Text>
             <Text size="sm" color="muted" className="mt-1">
               Anyone with it can answer. They will not need an account.
             </Text>
-            <p className="mt-2 break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
+            <p className="mt-2 break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
               {links.participantUrl}
             </p>
           </div>
 
           <div>
-            <Text weight="semibold" color="charcoal">
+            <Text weight="semibold" color="brand-base">
               Keep this one to yourself
             </Text>
             <Text size="sm" color="muted" className="mt-1">
               It shows who said what, and it can close the poll and confirm the time. Anyone you
               forward it to can do the same, so do not send it round with the other one.
             </Text>
-            <p className="mt-2 break-all rounded-md border border-charcoal/15 bg-white p-3 font-mono text-sm text-charcoal">
+            <p className="mt-2 break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
               {links.organiserUrl}
             </p>
           </div>
@@ -756,7 +756,7 @@ function SuccessState({
 
   return (
     <div className="max-w-2xl mt-8">
-      <Heading level={1} color="charcoal">
+      <Heading level={1} color="brand-base">
         Check your inbox
       </Heading>
 
@@ -765,7 +765,7 @@ function SuccessState({
       <Alert
         variant="default"
         role="status"
-        className="mt-4 border-orange bg-orange-light text-charcoal"
+        className="mt-4 border-orange bg-orange-light text-brand-base"
       >
         <AlertTitle>We&apos;ve sent your links</AlertTitle>
         <AlertDescription>

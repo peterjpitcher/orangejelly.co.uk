@@ -72,7 +72,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       {/* The Story */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <Container maxWidth="4xl">
+          <Container width="measure-wide">
             <Heading level={2} className="mb-6">
               The Real Story Behind Orange Jelly
             </Heading>
@@ -92,9 +92,9 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       </Section>
 
       {/* Quick Facts */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Card variant="colored" background="orange-light" padding="large">
               <Heading level={3} className="mb-4">
                 {aboutData.quickFacts.title}
@@ -106,13 +106,13 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       </Section>
 
       {/* Journey Timeline */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="slide-up">
           <Heading level={2} align="center" className="mb-12">
             Our Journey in Hospitality
           </Heading>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <div className="space-y-8">
               {aboutData.timeline.map((event, index) => (
                 <div
@@ -120,15 +120,15 @@ export default function AboutPage({ faqs }: AboutPageProps) {
                   className={`flex items-start gap-4 ${event.highlight ? 'scale-105' : ''}`}
                 >
                   <div
-                    className={`w-24 flex-shrink-0 text-right ${event.highlight ? 'font-bold text-orange' : 'text-charcoal/60'}`}
+                    className={`w-24 flex-shrink-0 text-right ${event.highlight ? 'font-bold text-orange-dark' : 'text-brand-base/75'}`}
                   >
                     {event.date}
                   </div>
                   <div
-                    className={`w-4 h-4 rounded-full flex-shrink-0 mt-1 ${event.highlight ? 'bg-orange' : 'bg-charcoal/30'}`}
+                    className={`w-4 h-4 rounded-full flex-shrink-0 mt-1 ${event.highlight ? 'bg-orange' : 'bg-brand-base/30'}`}
                   />
                   <div className="flex-grow">
-                    <Heading level={4} className={event.highlight ? 'text-orange' : ''}>
+                    <Heading level={4} className={event.highlight ? 'text-orange-dark' : ''}>
                       {event.title}
                     </Heading>
                     {event.description && <Text color="muted">{event.description}</Text>}
@@ -172,8 +172,8 @@ export default function AboutPage({ faqs }: AboutPageProps) {
                 ))}
               </div>
 
-              <Card variant="colored" background="cream" padding="medium">
-                <Text size="lg" className="italic text-charcoal">
+              <Card variant="colored" background="surface" padding="medium">
+                <Text size="lg" className="italic text-brand-base">
                   "{aboutData.founderSection.quote}"
                 </Text>
               </Card>
@@ -214,7 +214,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       {/* Why Orange Jelly */}
       <Section>
         <AnimatedItem animation="fade-in" delay={300}>
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} align="center" className="mb-6">
               {aboutData.whyOrangeJelly.title}
             </Heading>
@@ -230,14 +230,14 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       </Section>
 
       {/* FAQs */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="fade-in" delay={400}>
           <Heading level={2} align="center" className="mb-12">
             Your Questions Answered
           </Heading>
 
           {aboutFAQs.length > 0 && (
-            <div className="max-w-3xl mx-auto space-y-6">
+            <div className="measure space-y-6">
               {aboutFAQs.map((faq, index) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
@@ -261,16 +261,16 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       />
 
       {/* Visit CTA */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="scale" delay={500}>
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} color="white" className="mb-6">
               {aboutData.visitCTA.title}
             </Heading>
             <Text size="lg" color="white" className="mb-8">
               {aboutData.visitCTA.subtitle}
             </Text>
-            <div className="max-w-2xl mx-auto mb-8">
+            <div className="measure mb-8">
               <Link
                 href={aboutData.visitCTA.mapUrl}
                 target="_blank"
@@ -292,7 +292,7 @@ export default function AboutPage({ faqs }: AboutPageProps) {
       </Section>
 
       {/* Related Links */}
-      <Section background="cream" padding="medium">
+      <Section background="surface" padding="medium">
         <RelatedLinks
           title="See How We Can Help"
           subtitle="Choose where to start based on where momentum is stuck"

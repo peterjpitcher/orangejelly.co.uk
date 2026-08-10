@@ -61,13 +61,13 @@ export function answerLabel(state: CellState): string {
 export function cellClass(state: CellState): string {
   switch (state) {
     case 'yes':
-      return 'bg-orange-light text-charcoal';
+      return 'bg-orange-light text-brand-base';
     case 'if_need_be':
-      return 'bg-surface-alt text-charcoal';
+      return 'bg-surface-alt text-brand-base';
     case 'no':
-      return 'bg-surface text-charcoal-light';
+      return 'bg-surface text-brand-base-light';
     default:
-      return 'text-charcoal-light';
+      return 'text-brand-base-light';
   }
 }
 

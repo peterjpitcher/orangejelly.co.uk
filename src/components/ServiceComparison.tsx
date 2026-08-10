@@ -99,23 +99,23 @@ export default function ServiceComparison() {
       <div className="hidden md:block">
         <Table>
           <TableHeader>
-            <TableRow className="border-b-2 border-teal/25">
+            <TableRow className="border-b-2 border-blue-support/25">
               <TableHead className="text-left py-4"></TableHead>
               {Object.entries(services).map(([key, service]) => (
                 <TableHead key={key} className="text-center px-4 py-4">
                   <div className={service.highlight ? 'relative' : ''}>
                     {service.highlight && (
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-teal text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-blue-support text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                         MOST POPULAR
                       </div>
                     )}
                     <Heading level={3} className="mb-2">
                       {service.name}
                     </Heading>
-                    <Text size="2xl" weight="bold" className="text-orange">
+                    <Text size="2xl" weight="bold" className="text-orange-dark">
                       {service.price}
                     </Text>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       {service.timeline}
                     </Text>
                   </div>
@@ -139,7 +139,7 @@ export default function ServiceComparison() {
                   <ul className="space-y-2">
                     {service.includes.map((item, index) => (
                       <li key={index} className="flex items-start text-sm">
-                        <span className="text-teal mr-2 mt-0.5">✓</span>
+                        <span className="text-blue-support mr-2 mt-0.5">✓</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -169,11 +169,11 @@ export default function ServiceComparison() {
           <div
             key={key}
             className={`${selectedService === key ? 'block' : 'hidden'} ${
-              service.highlight ? 'ring-2 ring-teal' : ''
+              service.highlight ? 'ring-2 ring-blue-support' : ''
             } rounded-lg p-6`}
           >
             {service.highlight && (
-              <div className="bg-teal text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
+              <div className="bg-blue-support text-white px-4 py-1 rounded-full text-sm font-semibold inline-block mb-4">
                 MOST POPULAR
               </div>
             )}
@@ -181,10 +181,10 @@ export default function ServiceComparison() {
             <Heading level={3} className="mb-2">
               {service.name}
             </Heading>
-            <Text size="2xl" weight="bold" className="text-orange mb-1">
+            <Text size="2xl" weight="bold" className="text-orange-dark mb-1">
               {service.price}
             </Text>
-            <Text size="sm" className="text-charcoal/60 mb-4">
+            <Text size="sm" className="text-brand-base/75 mb-4">
               {service.timeline}
             </Text>
 
@@ -192,7 +192,7 @@ export default function ServiceComparison() {
               <Text weight="semibold" className="mb-2">
                 Perfect for:
               </Text>
-              <Text className="text-charcoal/80">{service.perfect}</Text>
+              <Text className="text-brand-base/80">{service.perfect}</Text>
             </div>
 
             <div className="mb-6">
@@ -202,7 +202,7 @@ export default function ServiceComparison() {
               <ul className="space-y-2">
                 {service.includes.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-teal mr-2 mt-0.5">✓</span>
+                    <span className="text-blue-support mr-2 mt-0.5">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -215,12 +215,12 @@ export default function ServiceComparison() {
       </div>
 
       {/* Bottom comparison note */}
-      <Card background="cream" padding="small" className="mt-8 text-center">
-        <Text size="sm" className="text-charcoal/80 mb-2">
+      <Card background="surface" padding="small" className="mt-8 text-center">
+        <Text size="sm" className="text-brand-base/80 mb-2">
           <strong>Not sure where to start?</strong> Most partners begin with Transformational
           Marketing to set direction, then add the other offers as momentum builds.
         </Text>
-        <Text size="xs" className="text-charcoal/60">
+        <Text size="xs" className="text-brand-base/75">
           {COMPANY.vatStatus}
         </Text>
       </Card>

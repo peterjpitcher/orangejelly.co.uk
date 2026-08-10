@@ -51,7 +51,7 @@ export function CapabilityGrid({
         return (
           <div key={cap.id} className="flex items-start gap-3">
             <div className="shrink-0 w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center">
-              <IconComponent className="w-5 h-5 text-orange" />
+              <IconComponent className="w-5 h-5 text-orange-dark" />
             </div>
             <div>
               <Text weight="semibold" size="sm" className="block">

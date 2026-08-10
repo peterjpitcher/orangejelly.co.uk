@@ -37,10 +37,13 @@ export default function Breadcrumb({
     })),
   };
 
-  const textColor = variant === 'light' ? 'text-white/70' : 'text-charcoal/70';
-  const activeColor = variant === 'light' ? 'text-white font-medium' : 'text-charcoal font-medium';
-  const separatorColor = variant === 'light' ? 'text-white/40' : 'text-charcoal/40';
-  const hoverColor = variant === 'light' ? 'hover:text-white' : 'hover:text-orange';
+  const textColor = variant === 'light' ? 'text-white/70' : 'text-brand-base/70';
+  const activeColor =
+    variant === 'light' ? 'text-white font-medium' : 'text-brand-base font-medium';
+  // /60, not /40. These separators are text, so they need 4.5:1: white/40 on the
+  // navy hero measured 3.48:1 and brand-base/40 on cream only 2.26:1.
+  const separatorColor = variant === 'light' ? 'text-white/60' : 'text-brand-base/70';
+  const hoverColor = variant === 'light' ? 'hover:text-white' : 'hover:text-orange-dark';
 
   return (
     <>

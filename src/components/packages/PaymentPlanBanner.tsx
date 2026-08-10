@@ -11,9 +11,9 @@ interface PaymentPlanBannerProps {
 
 export function PaymentPlanBanner({ className }: PaymentPlanBannerProps): React.ReactElement {
   return (
-    <Section className={`bg-teal/5 py-12 ${className || ''}`}>
+    <Section className={`bg-blue-support/5 py-12 ${className || ''}`}>
       <Container>
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center measure">
           <Heading level={3} className="mb-3">
             Flexible payment options available
           </Heading>

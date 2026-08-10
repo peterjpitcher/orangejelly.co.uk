@@ -22,7 +22,7 @@ function ProblemCard({ emoji, problem, solution, linkText, linkHref }: ProblemCa
       <Heading level={3} align="center" className="mb-3 text-xl">
         {problem}
       </Heading>
-      <p className="text-charcoal/80 mb-4">{solution}</p>
+      <p className="text-brand-base/80 mb-4">{solution}</p>
       <Button href={linkHref} variant="ghost" className="font-semibold">
         {linkText} →
       </Button>

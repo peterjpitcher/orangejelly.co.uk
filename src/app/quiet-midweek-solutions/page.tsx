@@ -66,7 +66,7 @@ export default function QuietMidweekSolutions() {
       {/* The Problem */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} align="center" className="mb-6">
               Every Quiet Tuesday and Wednesday Has a Cost
             </Heading>
@@ -83,9 +83,9 @@ export default function QuietMidweekSolutions() {
       </Section>
 
       {/* How We Did It */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} color="white" className="mb-4">
               How We Built Midweek Momentum at The Anchor
             </Heading>
@@ -95,26 +95,26 @@ export default function QuietMidweekSolutions() {
 
             <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
               <Card background="white" padding="large">
-                <Heading level={3} className="mb-4 text-teal">
+                <Heading level={3} className="mb-4 text-blue-support">
                   Tuesday Quiz Night
                 </Heading>
                 <div className="space-y-4">
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       Before:
                     </Text>
                     <Text weight="semibold">Sparse attendance, losing money</Text>
                   </div>
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       After:
                     </Text>
-                    <Text weight="semibold" className="text-green-600">
+                    <Text weight="semibold" className="text-green-700">
                       Table bookings up 403%, stronger takings
                     </Text>
                   </div>
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       How:
                     </Text>
                     <Text>WhatsApp quiz group + weekly reminders + consistent format</Text>
@@ -123,26 +123,26 @@ export default function QuietMidweekSolutions() {
               </Card>
 
               <Card background="white" padding="large">
-                <Heading level={3} className="mb-4 text-teal">
+                <Heading level={3} className="mb-4 text-blue-support">
                   Tasting Events
                 </Heading>
                 <div className="space-y-4">
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       Before:
                     </Text>
                     <Text weight="semibold">No midweek events beyond quiz</Text>
                   </div>
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       After:
                     </Text>
-                    <Text weight="semibold" className="text-green-600">
+                    <Text weight="semibold" className="text-green-700">
                       Private hire bookings up 567%
                     </Text>
                   </div>
                   <div>
-                    <Text size="sm" className="text-charcoal/60">
+                    <Text size="sm" className="text-brand-base/75">
                       How:
                     </Text>
                     <Text>Ticketed format + social proof + database marketing</Text>
@@ -157,9 +157,9 @@ export default function QuietMidweekSolutions() {
       </Section>
 
       {/* Proven Event Formats */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               Proven Midweek Event Formats
             </Heading>
@@ -220,7 +220,7 @@ export default function QuietMidweekSolutions() {
       {/* The Solution */}
       <Section>
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               A Growth Fix for Your Midweek
             </Heading>
@@ -233,7 +233,7 @@ export default function QuietMidweekSolutions() {
               <PackageCard packageId="growth-fix" highlighted />
             </div>
 
-            <Card background="cream" padding="large" className="mt-8 text-center">
+            <Card background="surface" padding="large" className="mt-8 text-center">
               <Text size="lg" className="mb-2">
                 Need ongoing midweek support?
               </Text>
@@ -255,7 +255,7 @@ export default function QuietMidweekSolutions() {
         <Heading level={2} align="center" className="mb-8">
           Common Questions About Fixing Quiet Midweek Nights
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -264,7 +264,7 @@ export default function QuietMidweekSolutions() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} align="center" className="mb-4">
             Your Midweek Momentum Starts Now
           </Heading>

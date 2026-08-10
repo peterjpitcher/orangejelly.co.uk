@@ -120,7 +120,7 @@ export default function ROICalculator() {
                   step={step}
                   value={value}
                   onChange={(e) => handleChange(Number(e.target.value))}
-                  className="flex-1 accent-orange min-h-[44px] cursor-pointer"
+                  className="flex-1 accent-orange min-h-tap cursor-pointer"
                   aria-describedby={helperId}
                 />
                 <input
@@ -131,7 +131,7 @@ export default function ROICalculator() {
                   step={step}
                   value={value}
                   onChange={(e) => handleChange(Number(e.target.value))}
-                  className="w-full md:w-28 border border-charcoal/20 rounded-md px-3 py-2 min-h-[44px] text-base"
+                  className="w-full md:w-28 border border-brand-base/20 rounded-md px-3 py-2 min-h-tap text-base"
                   aria-label={`${label} - enter exact value`}
                   aria-describedby={helperId}
                 />
@@ -152,39 +152,39 @@ export default function ROICalculator() {
 
         <div className="grid md:grid-cols-3 gap-4 text-center mb-6">
           <div>
-            <Text size="2xl" weight="bold" className="text-orange">
+            <Text size="2xl" weight="bold" className="text-orange-dark">
               {totalHoursSaved}h
             </Text>
-            <Text size="sm" className="text-charcoal/70">
+            <Text size="sm" className="text-brand-base/70">
               Growth hours per week
             </Text>
           </div>
           <div>
-            <Text size="2xl" weight="bold" className="text-orange">
+            <Text size="2xl" weight="bold" className="text-orange-dark">
               £{moneySaved}
             </Text>
-            <Text size="sm" className="text-charcoal/70">
+            <Text size="sm" className="text-brand-base/70">
               Time value per week
             </Text>
           </div>
           <div>
-            <Text size="2xl" weight="bold" className="text-orange">
+            <Text size="2xl" weight="bold" className="text-orange-dark">
               £{menuRevenue}
             </Text>
-            <Text size="sm" className="text-charcoal/70">
+            <Text size="sm" className="text-brand-base/70">
               Extra revenue per week
             </Text>
           </div>
         </div>
 
         <div className="text-center border-t pt-4">
-          <Text size="sm" className="text-charcoal/70 mb-2">
+          <Text size="sm" className="text-brand-base/70 mb-2">
             Total weekly benefit:
           </Text>
-          <Text size="2xl" weight="bold" className="text-orange mb-4">
+          <Text size="2xl" weight="bold" className="text-orange-dark mb-4">
             £{totalBenefit}
           </Text>
-          <Text size="xs" className="text-charcoal/60 mb-6" aria-live="polite">
+          <Text size="xs" className="text-brand-base/75 mb-6" aria-live="polite">
             That's £{Math.round((totalBenefit * 52) / 1000)}k per year!
           </Text>
 
@@ -197,7 +197,7 @@ export default function ROICalculator() {
         </div>
       </Card>
 
-      <Text size="xs" align="center" className="mt-4 text-charcoal/60">
+      <Text size="xs" align="center" className="mt-4 text-brand-base/75">
         * Calculations assume a 50-cover baseline, 15% menu uplift and conservative hourly value of
         £25 based on real results from The Anchor.
       </Text>

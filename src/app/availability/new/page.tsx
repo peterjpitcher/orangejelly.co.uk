@@ -28,8 +28,8 @@ export default function NewPollPage(): JSX.Element {
       {/* Only visible when you are signed in, so you can move back to your polls
           or the dashboard. A guest creating a poll sees no organiser chrome. */}
       <AuthedNav />
-      <Section background="cream" padding="large">
-        <Heading level={1} align="left" color="charcoal">
+      <Section background="surface" padding="large">
+        <Heading level={1} align="left" color="brand-base">
           Find a time that works
         </Heading>
         <Text size="lg" color="muted" className="mt-4 max-w-2xl">

@@ -42,8 +42,11 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function PrivacyPage(): JSX.Element {
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-12">
-      <div className="space-y-8">
+    // Shell for the gutter, measure for the width. This page is not inside a
+    // Section, so nothing above it has applied the gutter, but putting the gutter
+    // on the measure itself would inset the text within its own 768px.
+    <main className="page-shell py-12">
+      <div className="measure space-y-8">
         <div className="space-y-3">
           <Heading level={1}>Privacy policy</Heading>
           <Text color="muted">Last updated: 16 July 2026</Text>

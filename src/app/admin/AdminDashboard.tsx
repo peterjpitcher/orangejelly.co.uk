@@ -72,26 +72,26 @@ function formatDate(value: string): string {
 
 function StatCard({ label, value, sub }: { label: string; value: number; sub: string }) {
   return (
-    <div className="rounded-lg border border-charcoal/10 bg-white p-5">
-      <p className="text-sm text-charcoal/60">{label}</p>
-      <p className="mt-2 text-3xl font-bold text-charcoal">{value}</p>
-      <p className="mt-1 text-xs text-charcoal/50">{sub}</p>
+    <div className="rounded-lg border border-brand-base/10 bg-white p-5">
+      <p className="text-sm text-brand-base/75">{label}</p>
+      <p className="mt-2 text-3xl font-bold text-brand-base">{value}</p>
+      <p className="mt-1 text-xs text-brand-base/75">{sub}</p>
     </div>
   );
 }
 
 function CountList({ title, rows }: { title: string; rows: CountRow[] }) {
   return (
-    <section className="rounded-lg border border-charcoal/10 bg-white p-5">
-      <h2 className="text-lg font-semibold text-charcoal">{title}</h2>
+    <section className="rounded-lg border border-brand-base/10 bg-white p-5">
+      <h2 className="text-lg font-semibold text-brand-base">{title}</h2>
       <div className="mt-4 space-y-3">
         {rows.length === 0 ? (
-          <p className="text-sm text-charcoal/60">No data yet.</p>
+          <p className="text-sm text-brand-base/75">No data yet.</p>
         ) : (
           rows.map((row) => (
             <div key={row.label} className="flex items-center justify-between gap-4 text-sm">
-              <span className="truncate text-charcoal/75">{row.label}</span>
-              <span className="rounded bg-cream px-2 py-1 font-medium text-charcoal">
+              <span className="truncate text-brand-base/75">{row.label}</span>
+              <span className="rounded bg-surface px-2 py-1 font-medium text-brand-base">
                 {row.count}
               </span>
             </div>
@@ -207,12 +207,12 @@ export default function AdminDashboard() {
 
   if (!session) {
     return (
-      <main className="min-h-screen bg-cream px-4 py-12">
-        <div className="mx-auto max-w-md rounded-lg border border-charcoal/10 bg-white p-6 shadow-sm">
-          <h1 className="text-2xl font-bold text-charcoal">Orange Jelly admin</h1>
+      <main className="min-h-screen bg-surface px-4 py-12">
+        <div className="mx-auto max-w-md rounded-lg border border-brand-base/10 bg-white p-6 shadow-sm">
+          <h1 className="text-2xl font-bold text-brand-base">Orange Jelly admin</h1>
           <form onSubmit={handleLogin} className="mt-6 space-y-4">
             <div>
-              <label htmlFor="email" className="text-sm font-medium text-charcoal">
+              <label htmlFor="email" className="text-sm font-medium text-brand-base">
                 Email
               </label>
               <input
@@ -220,13 +220,13 @@ export default function AdminDashboard() {
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="mt-1 w-full rounded-md border border-charcoal/20 px-3 py-2"
+                className="mt-1 w-full rounded-md border border-brand-base/20 px-3 py-2"
                 autoComplete="email"
                 required
               />
             </div>
             <div>
-              <label htmlFor="password" className="text-sm font-medium text-charcoal">
+              <label htmlFor="password" className="text-sm font-medium text-brand-base">
                 Password
               </label>
               <input
@@ -234,7 +234,7 @@ export default function AdminDashboard() {
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-                className="mt-1 w-full rounded-md border border-charcoal/20 px-3 py-2"
+                className="mt-1 w-full rounded-md border border-brand-base/20 px-3 py-2"
                 autoComplete="current-password"
                 required
               />
@@ -243,7 +243,7 @@ export default function AdminDashboard() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-md bg-orange px-4 py-2 font-medium text-white disabled:opacity-60"
+              className="w-full rounded-md bg-orange px-4 py-2 font-medium text-brand-base disabled:opacity-60"
             >
               {loading ? 'Signing in...' : 'Sign in'}
             </button>
@@ -259,12 +259,12 @@ export default function AdminDashboard() {
           It also carries the create-poll link that used to live in this header,
           so the poll tool is reachable without editing the URL. */}
       <AuthedNav />
-      <main className="min-h-screen bg-cream px-4 py-8">
+      <main className="min-h-screen bg-surface px-4 py-8">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col gap-4 border-b border-charcoal/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 border-b border-brand-base/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-charcoal">Admin dashboard</h1>
-              <p className="mt-1 text-sm text-charcoal/60">
+              <h1 className="text-3xl font-bold text-brand-base">Admin dashboard</h1>
+              <p className="mt-1 text-sm text-brand-base/75">
                 Leads, signups, and tracked conversion events.
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function AdminDashboard() {
             <button
               type="button"
               onClick={() => loadStats()}
-              className="inline-flex items-center justify-center self-start rounded-md border border-charcoal/20 bg-white px-4 py-2 text-sm font-medium text-charcoal transition-colors hover:bg-charcoal/5"
+              className="inline-flex items-center justify-center self-start rounded-md border border-brand-base/20 bg-white px-4 py-2 text-sm font-medium text-brand-base transition-colors hover:bg-brand-base/5"
             >
               Refresh
             </button>
@@ -285,7 +285,7 @@ export default function AdminDashboard() {
           )}
 
           {loading && !stats ? (
-            <p className="mt-8 text-charcoal/60">Loading dashboard...</p>
+            <p className="mt-8 text-brand-base/75">Loading dashboard...</p>
           ) : stats ? (
             <>
               <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -313,11 +313,11 @@ export default function AdminDashboard() {
                 <CountList title="Campaigns" rows={stats.campaigns} />
               </div>
 
-              <section className="mt-6 rounded-lg border border-charcoal/10 bg-white p-5">
-                <h2 className="text-lg font-semibold text-charcoal">Recent contacts</h2>
+              <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
+                <h2 className="text-lg font-semibold text-brand-base">Recent contacts</h2>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full text-left text-sm">
-                    <thead className="text-charcoal/60">
+                    <thead className="text-brand-base/75">
                       <tr>
                         <th className="py-2 pr-4 align-top">When</th>
                         <th className="py-2 pr-4 align-top">Contact</th>
@@ -329,19 +329,19 @@ export default function AdminDashboard() {
                     </thead>
                     <tbody>
                       {stats.recentContacts.map((contact) => (
-                        <tr key={contact.id} className="border-t border-charcoal/10 align-top">
+                        <tr key={contact.id} className="border-t border-brand-base/10 align-top">
                           <td className="whitespace-nowrap py-3 pr-4">
                             {formatDate(contact.created_at)}
                           </td>
                           <td className="py-3 pr-4">
                             <div className="font-medium">{contact.name}</div>
-                            <div className="text-charcoal/50">
+                            <div className="text-brand-base/75">
                               <a href={`mailto:${contact.email}`} className="hover:underline">
                                 {contact.email}
                               </a>
                             </div>
                             {contact.phone && (
-                              <div className="text-charcoal/50">
+                              <div className="text-brand-base/75">
                                 <a href={`tel:${contact.phone}`} className="hover:underline">
                                   {contact.phone}
                                 </a>
@@ -363,11 +363,11 @@ export default function AdminDashboard() {
                 </div>
               </section>
 
-              <section className="mt-6 rounded-lg border border-charcoal/10 bg-white p-5">
-                <h2 className="text-lg font-semibold text-charcoal">Recent newsletter signups</h2>
+              <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
+                <h2 className="text-lg font-semibold text-brand-base">Recent newsletter signups</h2>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full text-left text-sm">
-                    <thead className="text-charcoal/60">
+                    <thead className="text-brand-base/75">
                       <tr>
                         <th className="py-2 pr-4">When</th>
                         <th className="py-2 pr-4">Email</th>
@@ -377,7 +377,7 @@ export default function AdminDashboard() {
                     </thead>
                     <tbody>
                       {stats.recentSubscribers.map((subscriber) => (
-                        <tr key={subscriber.id} className="border-t border-charcoal/10">
+                        <tr key={subscriber.id} className="border-t border-brand-base/10">
                           <td className="py-3 pr-4">{formatDate(subscriber.created_at)}</td>
                           <td className="py-3 pr-4">{subscriber.email}</td>
                           <td className="py-3 pr-4">{subscriber.status}</td>
@@ -391,7 +391,7 @@ export default function AdminDashboard() {
                 </div>
               </section>
 
-              <p className="mt-4 text-xs text-charcoal/50">
+              <p className="mt-4 text-xs text-brand-base/75">
                 Last updated {formatDate(stats.generatedAt)}.
               </p>
             </>

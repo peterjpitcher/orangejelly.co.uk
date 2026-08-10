@@ -37,6 +37,64 @@
   }
 }
 
+@layer components {
+  /*
+   * The page shell: one width and one gutter, defined together.
+   *
+   * They were separate before, and they drifted apart exactly as you would
+   * expect. Measured at 1440px on the homepage there were nine distinct content
+   * left edges: the header ran max-w-7xl with a 32px gutter and started at 112px,
+   * while every section ran max-w-6xl with a 24px gutter and started at 168px, so
+   * the logo sat 56px to the left of the copy underneath it. max-w-6xl itself
+   * appeared at both 160px and 168px depending on whether the author remembered
+   * the sm: step.
+   *
+   * A shell is a width AND a gutter. Bundling them is what stops one being
+   * changed without the other. Use this class for anything that spans the page:
+   * headers, footers, section interiors, full-bleed bands.
+   *
+   * Inner blocks must NOT add their own horizontal padding on top of it. The
+   * shell has already inset the content; a nested px-4 just moves that block out
+   * of alignment with its neighbours. Constrain reading width with `.measure` or
+   * `.measure-wide` below, never with a raw max-w-* and mx-auto.
+   */
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /*
+   * The two inner widths, and there are deliberately only two.
+   *
+   * Before this there were eighteen different max-w values in play, and three of
+   * them did the same job: centred body copy appeared at 672px, 768px and 896px
+   * more or less interchangeably, 136 times. That is what made the pages look
+   * unrelated to each other. The width of a paragraph is not a per-page decision.
+   *
+   * Pick by what the block IS, not by how wide it happens to look:
+   *
+   *   .measure       Prose. Any run of body copy, intro paragraph or subtitle.
+   *                  This is the default; reach for it first.
+   *   .measure-wide  Blocks that are not prose and want the extra room: grids,
+   *                  media, comparison tables.
+   *
+   * Both are currently set to --measure-max, the shell width, so page content
+   * lines up with the header. See the note on that token before changing either.
+   *
+   * Forms and single cards keep their own component widths (max-w-md and friends);
+   * those size a control, not a page measure. Neither class carries padding: the
+   * shell already applied the gutter.
+   */
+  .measure {
+    @apply mx-auto w-full;
+    max-width: var(--measure-max);
+  }
+
+  .measure-wide {
+    @apply mx-auto w-full;
+    max-width: var(--measure-wide-max);
+  }
+}
+
 /* Base heading styles for better SEO and accessibility */
 @layer base {
   h1,
@@ -71,6 +129,26 @@
 :root {
   /* Layout variables */
   --tap-target-size: 44px;
+
+  /*
+   * How wide content runs inside the page shell. ONE decision, in one place.
+   *
+   * Both are 72rem, the same as the shell's own max-w-6xl, so every block lines
+   * up with the header and footer instead of sitting in a narrower column. That
+   * was a deliberate call: a 768px reading column left the pages looking thin
+   * beside a 1152px header.
+   *
+   * The trade-off, so the next person changing this knows what they are choosing:
+   * at 1920px the shell gives 1088px of content, which is roughly 150 characters
+   * per line for body copy. Typographic guidance is 45 to 75. That is fine for
+   * marketing sections, grids and cards, and long for the guide articles.
+   *
+   * To give long-form prose a narrower column again, change --measure-max here
+   * and nothing else: every measure on the site is driven by it. 48rem (768px)
+   * was the previous value.
+   */
+  --measure-max: 72rem;
+  --measure-wide-max: 72rem;
   --safe-area-inset-top: env(safe-area-inset-top, 0);
   --safe-area-inset-right: env(safe-area-inset-right, 0);
   --safe-area-inset-bottom: env(safe-area-inset-bottom, 0);
@@ -81,7 +159,7 @@
   /* Canonical Brand Colors */
   --color-base: #1a2f49;
   --color-blue-support: #01619e;
-  --color-accent: #f65403;
+  --color-accent: #f16f23;
   --color-accent-secondary: #ff8901;
   --color-highlight: #ffbd28;
   --color-grounded: #736f26;
@@ -92,24 +170,44 @@
   --color-border: rgba(26, 47, 73, 0.18);
   --color-white: #ffffff;
 
-  /* Backward-compatible aliases */
+  /*
+   * Orange ramp. Mirrors colors.orange in tailwind.config.js; see the long note
+   * there for what each step is for and which surface it belongs on.
+   */
   --color-orange: var(--color-accent);
   --color-orange-light: #fff2d4;
-  --color-orange-dark: var(--color-accent-secondary);
-  --color-teal: var(--color-blue-support);
-  --color-teal-light: #2b84b9;
-  --color-teal-dark: var(--color-base);
-  --color-cream: var(--color-surface);
-  --color-charcoal: var(--color-base);
-  --color-charcoal-light: #324a68;
+  --color-orange-dark: #ad460b;
+  --color-orange-darker: #903b09;
+
+  /*
+   * The charcoal/cream/teal aliases that used to sit here are gone with the
+   * Tailwind tokens of the same names. Only the two shades that had no canonical
+   * equivalent remain, and they now hang off the canonical names.
+   */
+  --color-blue-support-light: #2b84b9;
+  --color-brand-base-light: #324a68;
+  --color-surface-bright: #fafcfe;
 
   /* Semantic Colors */
   --color-primary: var(--color-base);
   --color-primary-hover: var(--color-blue-support);
   --color-secondary: var(--color-blue-support);
   --color-secondary-hover: var(--color-base);
-  --color-background: var(--color-cream);
-  --color-focus-ring: var(--color-accent-secondary);
+  --color-background: var(--color-surface);
+  /*
+   * The focus ring gets its own step in the orange ramp, and it is the only token
+   * here that cannot simply reuse the brand colour.
+   *
+   * The ring appears on two surfaces with opposite polarity: the cream page and
+   * the navy header. WCAG 1.4.11 wants 3:1 on both, and the brand orange manages
+   * only 2.79:1 on cream while orange-dark manages only 2.80:1 on navy. This is
+   * the one lightness in the family that clears both, at 3.84:1 on cream and
+   * 3.30:1 on navy. hsl(22 88% 44%), same hue and saturation as the brand.
+   *
+   * Do not point this at --color-accent or --color-orange-dark. The contrast test
+   * checks both surfaces and will fail the build.
+   */
+  --color-focus-ring: #d3560d;
 
   /* External Brand Colors */
   --color-whatsapp: #25d366;
@@ -214,17 +312,50 @@ body {
   box-sizing: border-box;
 }
 
-/* Ensure all interactive elements are thumb-friendly */
-a,
-button,
-input,
-select,
-textarea,
-[role='button'],
-[tabindex]:not([tabindex='-1']) {
+/*
+ * Thumb-friendly tap targets.
+ *
+ * This was a blanket min-height + min-width on every a, button, input, select,
+ * textarea, [role='button'] and [tabindex]. Two things went wrong with that.
+ *
+ * min-width forced anything narrow out to 44px whether or not width was ever the
+ * failing dimension. It caught Radix's visually-hidden 1x1 spans, which became
+ * real 44x44 boxes sitting in the layout over the header nav.
+ *
+ * min-height on a box that is not a flex container cannot be redistributed, so
+ * the label stayed where line-height put it at the top and every spare pixel
+ * pooled underneath. That is the header "Chat on WhatsApp" bug (measured 10px
+ * above the label, 14px below), and the same bug had already been found and
+ * fixed by hand once in ButtonAdapter.
+ *
+ * Height is the dimension that actually fails under a thumb, so height is all we
+ * set now. align-content centres in-flow content inside the space min-height
+ * adds, which fixes that whole class of bug for block and inline-block controls
+ * instead of one instance at a time. Browsers without align-content on block
+ * containers simply keep the old top-aligned behaviour, so it degrades quietly.
+ *
+ * BOTH halves of this selector have to sit inside :where(), and that is not a
+ * stylistic preference. :where() contributes no specificity, but :not() does: it
+ * takes the specificity of its most specific argument, so a bare
+ * `:not(.sr-only, [aria-hidden='true'])` scores (0,1,0), exactly the same as
+ * `.absolute` or `.min-h-0`. On a tie the later rule wins, and this file is
+ * emitted after Tailwind's utilities, so it quietly beat them. The dismiss button
+ * on the sticky bar carried `absolute min-h-0` and rendered as a 44px-tall
+ * relatively-positioned box, 22px out of line, and every other positioned or
+ * short control on the site was being overridden the same way.
+ *
+ * Wrapping the :not() in :where() puts the whole selector back to (0,0,0), so any
+ * component class beats it without needing !important. Verify with:
+ *   getComputedStyle($0).position on a button classed `absolute`
+ *
+ * Visually-hidden elements are excluded so they stay 1x1 and out of the layout.
+ */
+:where(a, button, input:not([type='hidden']), select, textarea, [role='button']):where(
+  :not(.sr-only, [aria-hidden='true'])
+) {
   min-height: var(--tap-target-size);
-  min-width: var(--tap-target-size);
-  @apply relative;
+  align-content: center;
+  position: relative;
 }
 
 /* Mobile tap highlight color */
@@ -371,7 +502,9 @@ button {
 
 /* Smooth scroll */
 html {
-  background-color: var(--color-base);
+  /* Matches body. Painting html navy while body was cream meant overscroll on
+     iOS and macOS flashed a dark band above and below the page. */
+  background-color: var(--color-background);
   scroll-behavior: smooth;
 }
 
@@ -381,7 +514,10 @@ html {
 }
 
 *:focus-visible {
-  outline: 2px solid var(--color-focus-ring);
+  /* 3px rather than 2px. The ring clears 3:1 against both the cream page and the
+     navy header, but not by a wide margin, so the extra pixel does the rest of
+     the work of making focus obvious. */
+  outline: 3px solid var(--color-focus-ring);
   outline-offset: 2px;
 }
 
@@ -415,9 +551,11 @@ select:focus-visible {
   }
 }
 
-/* Skip to main content link for keyboard navigation */
+/* Skip to main content link for keyboard navigation.
+   Sets its own tap height because .sr-only is excluded from the global rule, and
+   this link is a real target the moment it takes focus. */
 .skip-to-main {
-  @apply absolute left-0 top-0 bg-orange text-white px-4 py-2 rounded-br-lg transform -translate-y-full focus:translate-y-0 transition-transform duration-200 z-50;
+  @apply absolute left-0 top-0 min-h-tap inline-flex items-center bg-orange text-brand-base px-4 py-2 rounded-br-lg transform -translate-y-full focus:translate-y-0 transition-transform duration-200 z-50;
 }
 
 /* Mobile-specific optimizations */
@@ -520,34 +658,11 @@ select:focus-visible {
   }
 }
 
-/* Accordion animations for shadcn demo */
-@keyframes accordion-down {
-  from {
-    height: 0;
-  }
-
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
-
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-
-  to {
-    height: 0;
-  }
-}
-
-.animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
-}
-
-.animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
-}
+/* Accordion animation lives in tailwind.config.js under theme.extend.keyframes
+   and theme.extend.animation, which already generates .animate-accordion-down and
+   .animate-accordion-up. The duplicate hand-written copy that used to sit here
+   defined the same two keyframe sets and utilities a second time, so the two
+   could drift apart silently. */
 
 /* shadcn/ui CSS Variables with Orange Jelly Theme */
 @layer base {
@@ -585,8 +700,9 @@ select:focus-visible {
 
     --border: 213 28% 84%;
     --input: 213 28% 84%;
-    --ring: 32 100% 50%;
-    /* accentSecondary #FF8901 */
+    --ring: 22 88% 44%;
+    /* #D3560D, the same value as --color-focus-ring above. Keep the two in step:
+       shadcn components ring off this one, everything else off the custom property. */
 
     --radius: 0.5rem;
 

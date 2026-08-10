@@ -13,13 +13,11 @@ type RelatedLinkCluster = Record<string, { links: RelatedLink[] }>;
 interface SectionWrapperProps {
   background?:
     | 'white'
-    | 'cream'
-    | 'teal'
-    | 'orange-light'
-    | 'charcoal'
-    | 'base'
-    | 'blue-support'
     | 'surface'
+    | 'blue-support'
+    | 'orange-light'
+    | 'brand-base'
+    | 'base'
     | 'highlight'
     | 'grounded';
   padding?: 'small' | 'medium' | 'large';
@@ -42,7 +40,7 @@ function SectionWrapper({
 // Working With Industry Leaders Section
 interface IndustryLeadersSectionProps {
   variant?: 'full' | 'compact' | 'minimal';
-  background?: 'white' | 'cream' | 'surface';
+  background?: 'white' | 'surface';
 }
 
 export function IndustryLeadersSection({
@@ -52,7 +50,7 @@ export function IndustryLeadersSection({
   return (
     <SectionWrapper background={background} padding="medium">
       <div className="text-center mb-8">
-        <p className="text-sm text-charcoal/60 font-medium uppercase tracking-wider">
+        <p className="text-sm text-brand-base/75 font-medium uppercase tracking-wider">
           Working with Industry Leaders
         </p>
       </div>
@@ -67,7 +65,7 @@ interface HelpSectionProps {
   subtitle?: string;
   links?: RelatedLink[];
   linkCluster?: string; // Cluster ID for related links
-  background?: 'white' | 'cream' | 'surface';
+  background?: 'white' | 'surface';
   columns?: {
     default?: 1 | 2 | 3 | 4;
     sm?: 1 | 2 | 3 | 4;
@@ -81,7 +79,7 @@ export function HelpSection({
   subtitle = 'Choose where to start based on your biggest challenge',
   links,
   linkCluster,
-  background = 'cream',
+  background = 'surface',
   columns = { default: 1, md: 2, lg: 3 },
 }: HelpSectionProps) {
   // If links are provided directly, use them
@@ -130,8 +128,8 @@ interface StandardCTASectionProps {
   bottomText?: string;
   variant?:
     | 'orange'
-    | 'teal'
-    | 'charcoal'
+    | 'blue-support'
+    | 'brand-base'
     | 'base'
     | 'support'
     | 'accent'
@@ -164,14 +162,14 @@ interface TrustCredibilitySectionProps {
   showBadges?: boolean;
   showPartnerships?: boolean;
   partnershipsVariant?: 'full' | 'compact' | 'minimal';
-  background?: 'white' | 'cream' | 'surface';
+  background?: 'white' | 'surface';
 }
 
 export function TrustCredibilitySection({
   showBadges = true,
   showPartnerships = true,
   partnershipsVariant = 'compact',
-  background = 'cream',
+  background = 'surface',
 }: TrustCredibilitySectionProps) {
   return (
     <SectionWrapper background={background} padding="large">
@@ -184,7 +182,7 @@ export function TrustCredibilitySection({
       {showPartnerships && (
         <div>
           <div className="text-center mb-8">
-            <p className="text-sm text-charcoal/60 font-medium uppercase tracking-wider">
+            <p className="text-sm text-brand-base/75 font-medium uppercase tracking-wider">
               Proud to Work With
             </p>
           </div>
@@ -202,8 +200,8 @@ interface MetricsBarProps {
     label: string;
     highlight?: boolean;
   }>;
-  background?: 'orange' | 'teal' | 'charcoal' | 'base' | 'blue-support' | 'highlight' | 'grounded';
-  textColor?: 'white' | 'charcoal';
+  background?: 'orange' | 'blue-support' | 'brand-base' | 'base' | 'highlight' | 'grounded';
+  textColor?: 'white' | 'brand-base';
 }
 
 export function MetricsBar({
@@ -213,28 +211,43 @@ export function MetricsBar({
     { value: '30 Days', label: 'To lock in progress' },
   ],
   background = 'orange',
-  textColor = 'white',
+  textColor,
 }: MetricsBarProps) {
-  const bgClass = {
-    orange: 'bg-orange',
-    teal: 'bg-teal',
-    charcoal: 'bg-charcoal',
-    base: 'bg-charcoal',
-    'blue-support': 'bg-teal',
-    highlight: 'bg-brand-highlight',
-    grounded: 'bg-brand-grounded',
+  /*
+   * Fill and label together, because which one is legible depends on the other.
+   * The orange and highlight fills are light and need navy; the navy and blue
+   * fills need white. `textColor` still overrides, but it no longer has to be
+   * remembered for the common case.
+   */
+  const bar = {
+    orange: { bg: 'bg-orange', text: 'text-brand-base', accent: 'text-brand-base-dark' },
+    highlight: {
+      bg: 'bg-brand-highlight',
+      text: 'text-brand-base',
+      accent: 'text-brand-base-dark',
+    },
+    'brand-base': { bg: 'bg-brand-base', text: 'text-white', accent: 'text-brand-highlight' },
+    base: { bg: 'bg-brand-base', text: 'text-white', accent: 'text-brand-highlight' },
+    'blue-support': { bg: 'bg-blue-support', text: 'text-white', accent: 'text-brand-highlight' },
+    grounded: { bg: 'bg-brand-grounded', text: 'text-white', accent: 'text-brand-highlight' },
   }[background];
 
-  const textClass = textColor === 'white' ? 'text-white' : 'text-charcoal';
+  const textClass = textColor
+    ? textColor === 'white'
+      ? 'text-white'
+      : 'text-brand-base'
+    : bar.text;
 
   return (
-    <div className={`${bgClass} ${textClass} py-4`}>
-      <div className="container mx-auto px-4">
+    <div className={`${bar.bg} ${textClass} py-4`}>
+      <div className="page-shell">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
+              {/* The highlighted figure used a fixed yellow, which is unreadable on
+                  the light fills. It now takes an accent chosen for the surface. */}
               <div
-                className={`text-2xl md:text-3xl font-bold ${metric.highlight ? 'text-yellow-300' : ''}`}
+                className={`text-2xl md:text-3xl font-bold ${metric.highlight ? bar.accent : ''}`}
               >
                 {metric.value}
               </div>

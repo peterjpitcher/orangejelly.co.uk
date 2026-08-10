@@ -27,7 +27,7 @@ export function AddOnList({ packageId, className }: AddOnListProps): React.React
             {addOn.priceNote}
           </Text>
           {addOn.includedNote && (
-            <Text size="xs" className="mt-2 text-teal font-medium">
+            <Text size="xs" className="mt-2 text-blue-support font-medium">
               {addOn.includedNote}
             </Text>
           )}

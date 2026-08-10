@@ -52,25 +52,25 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
       <h2
         ref={headingRef}
         tabIndex={-1}
-        className="text-xl font-semibold text-charcoal focus-visible:outline-none"
+        className="text-xl font-semibold text-brand-base focus-visible:outline-none"
       >
         That&rsquo;s your answer in, thank you
       </h2>
 
       {editUrl === '' ? (
-        <Text className="mt-2" color="charcoal">
+        <Text className="mt-2" color="brand-base">
           Thanks for answering.
         </Text>
       ) : (
         <>
-          <Text className="mt-2" color="charcoal">
+          <Text className="mt-2" color="brand-base">
             Keep this link if you need to change your answer. It&rsquo;s the only copy: if you lose
             it, just answer again and let the organiser know.
           </Text>
 
-          <div className="mt-4 rounded-md border border-charcoal/20 bg-white p-3">
+          <div className="mt-4 rounded-md border border-brand-base/20 bg-white p-3">
             <a
-              className="block break-all text-sm font-medium text-charcoal underline hover:no-underline"
+              className="block break-all text-sm font-medium text-brand-base underline hover:no-underline"
               href={editUrl}
             >
               {editUrl}
@@ -81,13 +81,13 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
             type="button"
             onClick={copy}
             className={cn(
-              'mt-3 inline-flex min-h-[44px] items-center justify-center rounded-md border-2 px-4 py-2',
+              'mt-3 inline-flex min-h-tap items-center justify-center rounded-md border-2 px-4 py-2',
               'text-sm font-semibold transition-colors',
               'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-              'focus-visible:outline-charcoal',
+              'focus-visible:outline-brand-base',
               copied
-                ? 'border-charcoal bg-surface-alt text-charcoal'
-                : 'border-charcoal bg-white text-charcoal hover:bg-surface'
+                ? 'border-brand-base bg-surface-alt text-brand-base'
+                : 'border-brand-base bg-white text-brand-base hover:bg-surface'
             )}
           >
             {copied ? '✓ Link copied' : 'Copy link'}

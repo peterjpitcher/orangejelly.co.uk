@@ -32,9 +32,9 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
   return (
     <section
       aria-labelledby="poll-privacy-heading"
-      className="rounded-lg border border-charcoal/15 bg-surface p-4"
+      className="rounded-lg border border-brand-base/15 bg-surface p-4"
     >
-      <h2 id="poll-privacy-heading" className="mb-2 text-base font-semibold text-charcoal">
+      <h2 id="poll-privacy-heading" className="mb-2 text-base font-semibold text-brand-base">
         How we handle your details
       </h2>
 

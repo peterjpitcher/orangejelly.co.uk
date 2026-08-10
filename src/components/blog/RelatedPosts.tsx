@@ -40,7 +40,7 @@ export default function RelatedPosts({ posts, currentPostSlug }: RelatedPostsPro
   if (relatedPosts.length === 0) return null;
 
   return (
-    <section className="py-12 border-t border-charcoal/10">
+    <section className="py-12 border-t border-brand-base/10">
       <Heading level={2} className="mb-2">
         Keep reading
       </Heading>

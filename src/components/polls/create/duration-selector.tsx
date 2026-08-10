@@ -41,7 +41,7 @@ interface DurationSelectorProps {
 }
 
 const CHOICE_CLASSES =
-  'flex min-h-[44px] cursor-pointer items-center justify-center rounded-md border border-border bg-white px-3 py-2 text-center text-sm font-medium text-charcoal transition-colors hover:border-orange peer-checked:border-orange peer-checked:bg-orange peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-orange peer-focus-visible:ring-offset-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-50';
+  'flex min-h-tap cursor-pointer items-center justify-center rounded-md border border-border bg-white px-3 py-2 text-center text-sm font-medium text-brand-base transition-colors hover:border-orange peer-checked:border-orange peer-checked:bg-orange peer-checked:text-brand-base peer-focus-visible:ring-2 peer-focus-visible:ring-orange peer-focus-visible:ring-offset-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-50';
 
 /** Renders a length in the given unit, for seeding the field when the unit flips. */
 function toUnit(minutes: number, unit: DurationUnit): string {
@@ -105,7 +105,7 @@ export default function DurationSelector({
 
   return (
     <fieldset className="min-w-0 space-y-3">
-      <legend className="text-base font-medium text-charcoal">How long is each option?</legend>
+      <legend className="text-base font-medium text-brand-base">How long is each option?</legend>
       <Text size="sm" color="muted">
         Pick &lsquo;All day&rsquo; to ask about whole days instead of times. You can&apos;t change
         that once the poll is out.
@@ -165,7 +165,7 @@ export default function DurationSelector({
       {customOpen && (
         <div className="space-y-2">
           <div className="flex flex-wrap items-center gap-3">
-            <label htmlFor="customDuration" className="text-sm font-medium text-charcoal">
+            <label htmlFor="customDuration" className="text-sm font-medium text-brand-base">
               Each option runs
             </label>
             <input
@@ -177,7 +177,7 @@ export default function DurationSelector({
               aria-invalid={error !== null}
               aria-describedby={error ? 'customDurationError' : undefined}
               onChange={(event) => commit(event.target.value, unit)}
-              className="h-11 w-24 rounded-md border border-border bg-white px-3 text-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+              className="h-11 w-24 rounded-md border border-border bg-white px-3 text-brand-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
             />
             <label htmlFor="customDurationUnit" className="sr-only">
               Unit
@@ -187,7 +187,7 @@ export default function DurationSelector({
               value={unit}
               disabled={disabled}
               onChange={(event) => changeUnit(event.target.value as DurationUnit)}
-              className="h-11 rounded-md border border-border bg-white px-3 text-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+              className="h-11 rounded-md border border-border bg-white px-3 text-brand-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
             >
               <option value="minutes">minutes</option>
               <option value="hours">hours</option>

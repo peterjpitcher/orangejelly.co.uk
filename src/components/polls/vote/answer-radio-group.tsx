@@ -37,18 +37,18 @@ interface AnswerOption {
  * 'if_need_be', never 'if_needed'. The database rejects anything else.
  */
 const ANSWERS: readonly AnswerOption[] = [
-  { value: 'yes', label: 'Yes', glyph: '✓', selected: 'border-orange bg-orange text-white' },
+  { value: 'yes', label: 'Yes', glyph: '✓', selected: 'border-orange bg-orange text-brand-base' },
   {
     value: 'if_need_be',
     label: 'If need be',
     glyph: '~',
-    selected: 'border-brand-highlight bg-brand-highlight text-charcoal',
+    selected: 'border-brand-highlight bg-brand-highlight text-brand-base',
   },
   {
     value: 'no',
     label: 'No',
     glyph: '✗',
-    selected: 'border-charcoal bg-surface-alt text-charcoal',
+    selected: 'border-brand-base bg-surface-alt text-brand-base',
   },
 ];
 
@@ -78,13 +78,13 @@ export default function AnswerRadioGroup({
             className={cn(
               // 56px, comfortably over the 44px floor. These are the only
               // controls on the screen, so thumb accuracy beats density.
-              'relative flex min-h-[56px] select-none flex-col items-center justify-center gap-1',
+              'relative flex min-h-control-lg select-none flex-col items-center justify-center gap-1',
               'rounded-md border-2 px-2 py-3 text-sm font-semibold transition-colors',
               'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2',
-              'focus-within:outline-charcoal',
+              'focus-within:outline-brand-base',
               disabled ? 'cursor-default opacity-90' : 'cursor-pointer',
-              isSelected ? answer.selected : 'border-charcoal/25 bg-white text-charcoal',
-              !isSelected && !disabled && 'hover:border-charcoal/50'
+              isSelected ? answer.selected : 'border-brand-base/25 bg-white text-brand-base',
+              !isSelected && !disabled && 'hover:border-brand-base/50'
             )}
           >
             <input

@@ -46,7 +46,7 @@ export default function Hero({
   return (
     <section
       className={`relative overflow-hidden ${
-        isImageBackground ? 'bg-charcoal' : 'bg-gradient-to-b from-cream to-white'
+        isImageBackground ? 'bg-brand-base' : 'bg-gradient-to-b from-surface to-white'
       }`}
     >
       {/* Background Image with Overlay */}
@@ -59,7 +59,7 @@ export default function Hero({
             className="object-cover brightness-[0.34] contrast-110 saturate-75"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-dark/78 via-charcoal/74 to-charcoal-dark/84" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-base-dark/78 via-brand-base/74 to-brand-base-dark/84" />
           <div className="absolute inset-0 bg-black/22" />
         </div>
       )}
@@ -79,12 +79,10 @@ export default function Hero({
         </div>
       )}
 
-      <div className={`relative z-10 ${isImageBackground ? '' : 'max-w-6xl mx-auto px-4 sm:px-6'}`}>
+      <div className={`relative z-10 ${isImageBackground ? '' : 'page-shell'}`}>
         {/* Breadcrumbs at top of hero */}
         {breadcrumbs && (
-          <div
-            className={isImageBackground ? 'max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-2' : 'pt-4 pb-2'}
-          >
+          <div className={isImageBackground ? 'page-shell pt-4 pb-2' : 'pt-4 pb-2'}>
             <Breadcrumb
               items={breadcrumbs}
               variant={isImageBackground ? 'light' : 'dark'}
@@ -94,15 +92,17 @@ export default function Hero({
         )}
 
         <div className={isImageBackground ? 'w-full' : ''}>
-          <div
-            className={`text-center py-12 md:py-20 ${
-              isImageBackground ? 'mx-auto max-w-5xl px-6 sm:px-8 md:px-10' : ''
-            }`}
-          >
+          {/*
+            The shell, same as the breadcrumb above and every section below.
+            This branch used to be `mx-auto max-w-5xl px-6 sm:px-8 md:px-10`, a
+            narrower width with its own gutter, so on an image hero the title
+            started 72px right of the breadcrumb sitting directly above it.
+          */}
+          <div className={`text-center py-12 md:py-20 ${isImageBackground ? 'page-shell' : ''}`}>
             <Heading
               level={headingLevel}
               align="center"
-              color={isImageBackground ? 'white' : 'charcoal'}
+              color={isImageBackground ? 'white' : 'brand-base'}
               className="text-4xl md:text-6xl mb-6"
             >
               {title}
@@ -113,7 +113,7 @@ export default function Hero({
                 size="lg"
                 color={isImageBackground ? 'white' : 'muted'}
                 align="center"
-                className={`md:text-2xl mb-8 max-w-3xl mx-auto ${isImageBackground ? 'text-white' : ''}`}
+                className={`md:text-2xl mb-8 measure ${isImageBackground ? 'text-white' : ''}`}
               >
                 {subtitle}
               </Text>
@@ -134,7 +134,7 @@ export default function Hero({
                     href={secondaryAction.href}
                     variant={isImageBackground ? 'outline-white' : 'outline'}
                     size="large"
-                    className="min-h-[56px]"
+                    className="min-h-control-lg"
                   >
                     {secondaryAction.text}
                   </Button>
@@ -145,7 +145,7 @@ export default function Hero({
             {bottomText && (
               <Text
                 size="sm"
-                className={`${isImageBackground ? 'text-white font-medium' : 'text-charcoal/70'} text-center`}
+                className={`${isImageBackground ? 'text-white font-medium' : 'text-brand-base/70'} text-center`}
               >
                 {bottomText}
               </Text>

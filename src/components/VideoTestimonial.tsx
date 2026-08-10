@@ -30,11 +30,11 @@ export default function VideoTestimonial({
       className="bg-gradient-to-br from-orange/10 to-orange/5 overflow-hidden shadow-xl"
     >
       {/* Video/Thumbnail Section */}
-      <div className="relative aspect-video bg-charcoal">
+      <div className="relative aspect-video bg-brand-base">
         {!isPlaying ? (
           <div className="relative w-full h-full">
             {/* Placeholder for video thumbnail */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-charcoal to-charcoal-dark">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-base to-brand-base-dark">
               <div className="text-center text-white">
                 <div className="mb-4">
                   <OptimizedImage
@@ -46,7 +46,7 @@ export default function VideoTestimonial({
                   />
                 </div>
                 <Text className="text-xl font-semibold mb-2 text-white">{title}</Text>
-                <Text className="text-cream/80">{subtitle}</Text>
+                <Text className="text-surface/80">{subtitle}</Text>
               </div>
             </div>
 
@@ -57,7 +57,7 @@ export default function VideoTestimonial({
               className="absolute inset-0 flex items-center justify-center group"
               aria-label="Play video"
             >
-              <div className="bg-orange text-white rounded-full p-6 shadow-lg group-hover:scale-110 transition-normal">
+              <div className="bg-orange text-brand-base rounded-full p-6 shadow-lg group-hover:scale-110 transition-normal">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -65,12 +65,12 @@ export default function VideoTestimonial({
             </Button>
 
             {/* Coming Soon Badge */}
-            <div className="absolute top-4 right-4 bg-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
+            <div className="absolute top-4 right-4 bg-orange text-brand-base px-3 py-1 rounded-full text-sm font-semibold">
               Video Coming Soon
             </div>
           </div>
         ) : (
-          <div className="w-full h-full bg-charcoal flex items-center justify-center">
+          <div className="w-full h-full bg-brand-base flex items-center justify-center">
             <Text className="text-white">Video player would go here</Text>
           </div>
         )}
@@ -78,15 +78,15 @@ export default function VideoTestimonial({
 
       {/* Testimonial Text */}
       <div className="p-8">
-        <blockquote className="text-lg italic text-charcoal/80 mb-4">
+        <blockquote className="text-lg italic text-brand-base/80 mb-4">
           "{testimonialText}"
         </blockquote>
 
         <div className="flex items-center justify-between">
           <div>
-            <Text className="font-semibold text-charcoal">{author}</Text>
+            <Text className="font-semibold text-brand-base">{author}</Text>
             {result && (
-              <Text size="sm" className="text-orange font-medium">
+              <Text size="sm" className="text-orange-dark font-medium">
                 {result}
               </Text>
             )}
@@ -140,11 +140,11 @@ export function VideoTestimonialGrid() {
           <Heading level={4} className="font-bold mb-2">
             {testimonial.title}
           </Heading>
-          <Text size="sm" className="text-charcoal/60 mb-4">
+          <Text size="sm" className="text-brand-base/75 mb-4">
             {testimonial.subtitle}
           </Text>
 
-          <blockquote className="text-charcoal/80 italic mb-4">
+          <blockquote className="text-brand-base/80 italic mb-4">
             "{testimonial.testimonialText}"
           </blockquote>
 
@@ -152,7 +152,7 @@ export function VideoTestimonialGrid() {
             <Text size="sm" className="font-semibold">
               {testimonial.author}
             </Text>
-            <Text className="text-orange font-bold">{testimonial.result}</Text>
+            <Text className="text-orange-dark font-bold">{testimonial.result}</Text>
           </div>
         </Card>
       ))}

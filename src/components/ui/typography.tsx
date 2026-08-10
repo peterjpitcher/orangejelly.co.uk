@@ -15,26 +15,48 @@ const headingVariants = cva('font-display font-bold tracking-tight scroll-m-20',
     },
     color: {
       default: 'text-foreground',
-      base: 'text-charcoal',
-      support: 'text-teal',
-      accent: 'text-orange',
+      base: 'text-brand-base',
+      support: 'text-blue-support',
+      accent: 'text-orange-dark',
       highlight: 'text-brand-highlight',
       grounded: 'text-brand-grounded',
-      charcoal: 'text-charcoal',
-      orange: 'text-orange',
-      teal: 'text-secondary',
+      orange: 'text-orange-dark',
+      /*
+       * The accent orange for navy surfaces.
+       *
+       * `orange` above resolves to orange-dark because the brand orange is only
+       * 2.79:1 on the cream page, which fails even the 3:1 large-text bar. On navy
+       * the ramp runs the other way: orange-dark is 2.80:1 there, the brand orange
+       * is 4.55:1. One name per surface, because one value cannot serve both.
+       */
+      'orange-on-dark': 'text-orange',
       white: 'text-white',
+      /*
+       * `inherit` emits no colour at all, so the heading takes its container's.
+       *
+       * On the page background that resolves to the same navy `base` would have
+       * set, because body carries text-foreground. The difference shows inside a
+       * container that sets its own light text: a navy fill, a blue panel, an
+       * orange CTA band. Forcing a colour there fought the container and produced
+       * navy-on-blue at 1.65:1.
+       */
+      inherit: '',
+      // `charcoal` and `teal` used to sit here as extra variants resolving to
+      // text-brand-base and text-secondary, which is to say they duplicated `base`
+      // and `support` under names that described neither colour accurately.
     },
     align: {
       left: 'text-left',
       center: 'text-center',
       right: 'text-right',
+      // Emits nothing, so a parent's text-center reaches this element.
+      inherit: '',
     },
   },
   defaultVariants: {
     level: 2,
     color: 'default',
-    align: 'left',
+    align: 'inherit',
   },
 });
 
@@ -78,16 +100,19 @@ const textVariants = cva('leading-7', {
     },
     color: {
       default: 'text-foreground',
-      base: 'text-charcoal',
-      support: 'text-teal',
-      accent: 'text-orange',
+      base: 'text-brand-base',
+      support: 'text-blue-support',
+      accent: 'text-orange-dark',
       highlight: 'text-brand-highlight',
       grounded: 'text-brand-grounded',
-      charcoal: 'text-charcoal',
       muted: 'text-muted-foreground',
       white: 'text-white',
-      orange: 'text-orange',
+      orange: 'text-orange-dark',
+      // See the Heading variant: one accent name per surface.
+      'orange-on-dark': 'text-orange',
       error: 'text-destructive',
+      // See the Heading variant above: no colour, so the container's wins.
+      inherit: '',
     },
     weight: {
       normal: 'font-normal',
@@ -100,13 +125,15 @@ const textVariants = cva('leading-7', {
       center: 'text-center',
       right: 'text-right',
       justify: 'text-justify',
+      // Emits nothing, so a parent's text-center reaches this element.
+      inherit: '',
     },
   },
   defaultVariants: {
     size: 'base',
     color: 'default',
     weight: 'normal',
-    align: 'left',
+    align: 'inherit',
   },
 });
 

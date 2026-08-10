@@ -16,7 +16,10 @@ export default function ResultsLegend(): JSX.Element {
   return (
     <ul className="mt-4 flex flex-wrap gap-4" aria-label="What each mark means">
       {STATES.map((state) => (
-        <li key={state ?? 'not_answered'} className="flex items-center gap-2 text-sm text-charcoal">
+        <li
+          key={state ?? 'not_answered'}
+          className="flex items-center gap-2 text-sm text-brand-base"
+        >
           <span
             aria-hidden="true"
             className={cn(

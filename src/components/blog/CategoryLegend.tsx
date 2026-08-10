@@ -31,7 +31,7 @@ export default function CategoryLegend({ className = '' }: CategoryLegendProps) 
           <Text
             size="xs"
             color="muted"
-            className="whitespace-nowrap group-hover:text-charcoal transition-colors"
+            className="whitespace-nowrap group-hover:text-brand-base transition-colors"
           >
             {cat.label}
           </Text>

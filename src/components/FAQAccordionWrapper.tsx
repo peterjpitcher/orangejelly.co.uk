@@ -48,7 +48,7 @@ export default function FAQAccordionWrapper({
             </span>
           </AccordionTrigger>
           <AccordionContent className="px-6 pb-4">
-            <div className="text-charcoal/80 pt-2">
+            <div className="text-brand-base/80 pt-2">
               {typeof item.answer === 'string' ? <Text>{item.answer}</Text> : item.answer}
             </div>
           </AccordionContent>

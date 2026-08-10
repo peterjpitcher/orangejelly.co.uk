@@ -71,7 +71,7 @@ export default function Navigation({ navigation }: NavigationProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-brand-base text-white" role="banner">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 md:h-16 items-center justify-between">
+      <div className="page-shell flex h-14 md:h-16 items-center justify-between">
         {/* Mobile logo */}
         <Link href="/" className="flex md:hidden items-center space-x-2">
           <OptimizedImage
@@ -116,7 +116,9 @@ export default function Navigation({ navigation }: NavigationProps) {
                         className={cn(
                           'h-12 py-3',
                           'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
-                          isActive && 'bg-brand text-white hover:bg-brand/90'
+                          // orange-dark, not the brand orange: white on the brand orange is 2.98:1,
+                          // and these nav labels are 14px, so they need 4.5:1. orange-dark gives 5.28:1.
+                          isActive && 'bg-orange text-brand-base hover:text-brand-base-dark'
                         )}
                       >
                         {link.label}
@@ -128,8 +130,8 @@ export default function Navigation({ navigation }: NavigationProps) {
                               <Link href={child.href} legacyBehavior passHref>
                                 <NavigationMenuLink
                                   className={cn(
-                                    'block select-none rounded-md px-3 py-2 text-sm font-medium leading-none text-charcoal no-underline outline-none transition-colors hover:bg-teal/10 hover:text-teal focus:bg-teal/10 focus:text-teal',
-                                    pathname === child.href && 'bg-accent text-teal'
+                                    'block select-none rounded-md px-3 py-2 text-sm font-medium leading-none text-brand-base no-underline outline-none transition-colors hover:bg-blue-support/10 hover:text-blue-support focus:bg-blue-support/10 focus:text-blue-support',
+                                    pathname === child.href && 'bg-accent text-blue-support'
                                   )}
                                 >
                                   {child.label}
@@ -151,7 +153,9 @@ export default function Navigation({ navigation }: NavigationProps) {
                           navigationMenuTriggerStyle(),
                           'h-12 py-3',
                           'bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10',
-                          isActive && 'bg-brand text-white hover:bg-brand/90'
+                          // orange-dark, not the brand orange: white on the brand orange is 2.98:1,
+                          // and these nav labels are 14px, so they need 4.5:1. orange-dark gives 5.28:1.
+                          isActive && 'bg-orange text-brand-base hover:text-brand-base-dark'
                         )}
                       >
                         {link.label}
@@ -171,7 +175,7 @@ export default function Navigation({ navigation }: NavigationProps) {
               href={`https://wa.me/${whatsappCta.phoneNumber}?text=${encodeURIComponent(whatsappCta.text)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center min-h-[44px] min-w-[44px] h-10 w-10 rounded-lg bg-[#25D366] text-white hover:bg-[#20bd5a] transition-colors"
+              className="inline-flex h-tap w-tap items-center justify-center rounded-lg bg-whatsapp text-white transition-colors hover:bg-whatsapp-dark"
               aria-label="Chat on WhatsApp"
               onClick={() =>
                 trackClientEvent('whatsapp_click', {
@@ -193,7 +197,7 @@ export default function Navigation({ navigation }: NavigationProps) {
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 disabled:pointer-events-none disabled:opacity-50 hover:bg-white/10 hover:text-white min-h-[44px] min-w-[44px] h-11 w-11"
+                className="inline-flex h-tap w-tap items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 disabled:pointer-events-none disabled:opacity-50"
                 aria-label="Open navigation menu"
               >
                 <svg
@@ -228,7 +232,7 @@ export default function Navigation({ navigation }: NavigationProps) {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-cream">
+            <SheetContent side="left" className="bg-surface">
               <Link href="/" className="flex items-center">
                 <OptimizedImage
                   src="/logo.png"
@@ -249,7 +253,7 @@ export default function Navigation({ navigation }: NavigationProps) {
                         <Link
                           href={link.href}
                           className={cn(
-                            'block py-3 px-4 min-h-[44px] flex items-center text-charcoal hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
+                            'block py-3 px-4 min-h-tap flex items-center text-brand-base hover:text-blue-support hover:bg-blue-support/10 rounded-lg transition-quick',
                             pathname === link.href && 'bg-accent'
                           )}
                         >
@@ -257,14 +261,14 @@ export default function Navigation({ navigation }: NavigationProps) {
                         </Link>
                       </SheetClose>
                       {children.length > 0 && (
-                        <div className="ml-4 border-l border-charcoal/10 pl-2">
+                        <div className="ml-4 border-l border-brand-base/10 pl-2">
                           {children.map((child) => (
                             <SheetClose key={child.href} asChild>
                               <Link
                                 href={child.href}
                                 className={cn(
-                                  'block py-2.5 px-4 min-h-[44px] flex items-center text-sm text-charcoal/80 hover:text-teal hover:bg-teal/10 rounded-lg transition-quick',
-                                  pathname === child.href && 'bg-accent text-teal'
+                                  'block py-2.5 px-4 min-h-tap flex items-center text-sm text-brand-base/80 hover:text-blue-support hover:bg-blue-support/10 rounded-lg transition-quick',
+                                  pathname === child.href && 'bg-accent text-blue-support'
                                 )}
                               >
                                 {child.label}

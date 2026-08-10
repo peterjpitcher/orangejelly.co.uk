@@ -58,11 +58,11 @@ function Logo({
               priority
             />
             <div>
-              <Heading level={3} className={`font-bold ${currentSize.text} text-charcoal`}>
+              <Heading level={3} className={`font-bold ${currentSize.text} text-brand-base`}>
                 Orange Jelly
               </Heading>
               {showTagline && (
-                <Text size="xs" className="text-charcoal/60">
+                <Text size="xs" className="text-brand-base/75">
                   Transformative Hospitality Marketing
                 </Text>
               )}
@@ -81,11 +81,11 @@ function Logo({
               className="rounded-lg mx-auto mb-2"
               priority
             />
-            <Heading level={3} className={`font-bold ${currentSize.text} text-charcoal`}>
+            <Heading level={3} className={`font-bold ${currentSize.text} text-brand-base`}>
               Orange Jelly
             </Heading>
             {showTagline && (
-              <Text size="sm" className="text-charcoal/60 mt-1">
+              <Text size="sm" className="text-brand-base/75 mt-1">
                 Transformative Hospitality Marketing
               </Text>
             )}

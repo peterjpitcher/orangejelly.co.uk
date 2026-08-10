@@ -230,7 +230,7 @@ export function ContactForm() {
         />
         <Button
           type="submit"
-          className="w-full sm:w-auto min-h-[44px]"
+          className="w-full sm:w-auto min-h-tap"
           disabled={submitStatus === 'submitting'}
         >
           {submitStatus === 'submitting' ? 'Sending...' : 'Send Message'}

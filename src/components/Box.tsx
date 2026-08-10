@@ -9,14 +9,12 @@ interface BoxProps {
   margin?: 'none' | 'small' | 'medium' | 'large' | 'xlarge';
   background?:
     | 'white'
-    | 'cream'
-    | 'orange'
-    | 'teal'
-    | 'orange-light'
-    | 'teal-dark'
-    | 'base'
-    | 'blue-support'
     | 'surface'
+    | 'orange'
+    | 'blue-support'
+    | 'orange-light'
+    | 'brand-base'
+    | 'base'
     | 'highlight'
     | 'grounded'
     | 'transparent';
@@ -56,14 +54,12 @@ export default function Box({
 
   const backgroundClasses = {
     white: 'bg-white',
-    cream: 'bg-cream',
     orange: 'bg-orange',
-    teal: 'bg-teal',
     'orange-light': 'bg-orange-light',
-    'teal-dark': 'bg-teal-dark',
-    base: 'bg-charcoal',
-    'blue-support': 'bg-teal',
-    surface: 'bg-cream',
+    'brand-base': 'bg-brand-base',
+    base: 'bg-brand-base',
+    'blue-support': 'bg-blue-support',
+    surface: 'bg-surface',
     highlight: 'bg-brand-highlight',
     grounded: 'bg-brand-grounded',
     transparent: 'bg-transparent',

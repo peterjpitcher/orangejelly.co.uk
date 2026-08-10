@@ -36,7 +36,7 @@ export default function StickyCTA() {
           {isMinimized ? (
             <button
               onClick={() => setIsMinimized(false)}
-              className="w-full h-16 flex items-center justify-center text-orange hover:bg-orange hover:text-white transition-colors rounded-lg"
+              className="w-full h-16 flex items-center justify-center text-orange-dark hover:bg-orange hover:text-brand-base transition-colors rounded-lg"
               aria-label="Expand help offer"
             >
               <svg
@@ -58,7 +58,7 @@ export default function StickyCTA() {
             <div className="p-4">
               <button
                 onClick={() => setIsMinimized(true)}
-                className="absolute top-2 right-2 text-charcoal/40 hover:text-charcoal"
+                className="absolute top-2 right-2 text-brand-base/75 hover:text-brand-base"
                 aria-label="Minimize"
               >
                 <svg
@@ -111,7 +111,7 @@ export default function StickyCTA() {
           isVisible ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        <div className="bg-orange text-white p-3 shadow-lg">
+        <div className="bg-orange text-brand-base p-3 shadow-lg">
           <div className="flex items-center justify-between gap-3">
             <div className="flex-1">
               <Text size="sm" className="font-semibold text-white">
@@ -127,7 +127,7 @@ export default function StickyCTA() {
               href="/ways-to-work"
               variant="secondary"
               size="small"
-              className="!bg-white !text-orange hover:!bg-cream whitespace-nowrap"
+              className="!bg-white !text-orange-dark hover:!bg-surface whitespace-nowrap"
             >
               See Packages
             </TrackedButton>

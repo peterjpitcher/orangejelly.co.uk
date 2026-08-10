@@ -4,7 +4,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 /** The streamed shell while verification runs. */
 export default function VerifyLoading(): JSX.Element {
   return (
-    <Section background="cream" padding="large">
+    <Section background="surface" padding="large">
       <div className="max-w-md mx-auto space-y-4">
         <Skeleton className="h-10 w-3/4" />
         <Skeleton className="h-4 w-full" />

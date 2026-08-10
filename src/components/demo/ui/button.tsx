@@ -8,12 +8,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-orange text-white hover:bg-orange-dark',
+        default: 'bg-orange text-brand-base hover:text-brand-base-dark',
         destructive: 'bg-red-500 text-white hover:bg-red-600',
-        outline: 'border border-orange bg-transparent text-orange hover:bg-orange hover:text-white',
-        secondary: 'bg-teal text-white hover:bg-teal-dark',
-        ghost: 'text-orange hover:bg-orange/10',
-        link: 'text-orange underline-offset-4 hover:underline',
+        outline:
+          'border border-orange-dark bg-transparent text-orange-dark hover:bg-orange hover:text-brand-base',
+        secondary: 'bg-blue-support text-white hover:bg-brand-base',
+        ghost: 'text-orange-dark hover:bg-orange/10',
+        link: 'text-orange-dark underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-10 px-4 py-2',

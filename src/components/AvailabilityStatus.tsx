@@ -21,7 +21,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'busy',
         message: "It's service time at The Anchor - I'll reply after 10pm",
-        color: 'text-orange',
+        color: 'text-orange-dark',
       };
     }
 
@@ -30,7 +30,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'busy',
         message: "Friday service at The Anchor - I'll reply after 10pm",
-        color: 'text-orange',
+        color: 'text-orange-dark',
       };
     }
 
@@ -39,7 +39,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'busy',
         message: "Saturday service all day - WhatsApp me, I'll reply when I can",
-        color: 'text-orange',
+        color: 'text-orange-dark',
       };
     }
 
@@ -48,7 +48,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'busy',
         message: "Sunday service at The Anchor - I'll reply after 10pm",
-        color: 'text-orange',
+        color: 'text-orange-dark',
       };
     }
 
@@ -57,7 +57,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'available',
         message: 'Perfect time to call - usually free now!',
-        color: 'text-green-600',
+        color: 'text-green-700',
       };
     }
 
@@ -66,7 +66,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'available',
         message: 'Good time to chat before service starts',
-        color: 'text-green-600',
+        color: 'text-green-700',
       };
     }
 
@@ -75,7 +75,7 @@ export default function AvailabilityStatus() {
       return {
         status: 'maybe',
         message: 'Might be doing bedtime routine, but WhatsApp always works',
-        color: 'text-teal',
+        color: 'text-blue-support',
       };
     }
 
@@ -84,14 +84,14 @@ export default function AvailabilityStatus() {
       status: 'normal',
       message:
         "Message me anytime - I'll get back as quickly as I can, but bear with me if I'm in service.",
-      color: 'text-charcoal',
+      color: 'text-brand-base',
     };
   };
 
   const availability = getAvailabilityStatus();
 
   return (
-    <Card background="cream" className="mb-6">
+    <Card background="surface" className="mb-6">
       <Heading level={3} className="mb-2">
         Right Now:
       </Heading>

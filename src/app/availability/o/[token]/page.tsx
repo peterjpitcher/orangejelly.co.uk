@@ -132,7 +132,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
       <AuthedNav />
       {/* Rendered outside <Section>: Section.tsx applies `overflow-hidden`, which
           would clip the sticky headers and kill the horizontal scroll. */}
-      <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
+      <main className="page-shell py-8">
         {/*
         One column, in flow. This was a 2fr/1fr grid with the card in the right
         column, which floated it as an island beside a near-empty header column:
@@ -151,7 +151,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               <Alert
                 variant="default"
                 role="status"
-                className="mt-4 border-charcoal bg-surface-alt"
+                className="mt-4 border-brand-base bg-surface-alt"
               >
                 <AlertTitle>Closed</AlertTitle>
                 <AlertDescription>Nobody can vote or change their answer.</AlertDescription>
@@ -162,7 +162,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               <Alert
                 variant="default"
                 role="status"
-                className="mt-4 border-orange bg-orange-light text-charcoal"
+                className="mt-4 border-orange bg-orange-light text-brand-base"
               >
                 <AlertTitle>You&rsquo;ve picked a time</AlertTitle>
                 <AlertDescription>
@@ -184,7 +184,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               <Alert
                 variant="default"
                 role="status"
-                className="mt-4 border-charcoal bg-surface-alt"
+                className="mt-4 border-brand-base bg-surface-alt"
               >
                 <AlertDescription>
                   We couldn&rsquo;t reach {poll.confirm_notify_failures}{' '}
@@ -198,7 +198,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               <Alert
                 variant="default"
                 role="status"
-                className="mt-4 border-charcoal bg-surface-alt"
+                className="mt-4 border-brand-base bg-surface-alt"
               >
                 <AlertTitle>Nothing here works for anyone</AlertTitle>
                 <AlertDescription>Build a fresh poll with different times.</AlertDescription>
@@ -252,7 +252,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
                 from that point, and `deleteResponse` refuses server-side too. */}
               {!isConfirmed && (
                 <section aria-labelledby="remove-heading" className="border-t border-border pt-6">
-                  <h2 id="remove-heading" className="text-base font-semibold text-charcoal">
+                  <h2 id="remove-heading" className="text-base font-semibold text-brand-base">
                     Remove someone&rsquo;s answers
                   </h2>
                   <Text size="sm" color="muted" className="mt-1">
@@ -263,9 +263,9 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
                     {participants.map((participant) => (
                       <li
                         key={participant.id}
-                        className="flex items-center gap-1 rounded-md border border-charcoal/15 px-2"
+                        className="flex items-center gap-1 rounded-md border border-brand-base/15 px-2"
                       >
-                        <span className="text-sm text-charcoal">{participant.display_name}</span>
+                        <span className="text-sm text-brand-base">{participant.display_name}</span>
                         <DeleteResponseControl
                           organiserToken={params.token}
                           participantId={participant.id}

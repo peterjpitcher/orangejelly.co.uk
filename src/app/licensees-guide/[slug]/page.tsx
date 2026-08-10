@@ -737,7 +737,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         )}
         <Section background="white">
-          <div className="max-w-4xl mx-auto">
+          <div>
             <BlogPostClient
               post={postWithFaqs}
               relatedPosts={isHub ? [] : relatedPosts}

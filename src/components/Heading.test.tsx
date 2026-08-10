@@ -22,7 +22,22 @@ describe('Heading Component', () => {
       </Heading>
     );
     const heading = container.querySelector('h1');
+    // `orange` resolves to orange-dark, not the raw brand orange. The brand orange
+    // is 2.79:1 on the cream page background, which fails even the 3:1 large-text
+    // bar, so it cannot be heading text on a light surface. Headings on navy ask
+    // for `orange-on-dark` instead, which is where the brand orange does work.
+    expect(heading).toHaveClass('text-orange-dark');
+  });
+
+  it('uses the brand orange only for headings on dark surfaces', () => {
+    const { container } = render(
+      <Heading level={1} color="orange-on-dark">
+        Orange Heading
+      </Heading>
+    );
+    const heading = container.querySelector('h1');
     expect(heading).toHaveClass('text-orange');
+    expect(heading).not.toHaveClass('text-orange-dark');
   });
 
   it('applies correct alignment', () => {

@@ -49,7 +49,7 @@ export default function ClosePollControl({
       </Button>
 
       {isOpen && (
-        <p className="mt-2 text-sm text-charcoal-light">
+        <p className="mt-2 text-sm text-brand-base-light">
           Stops replies. You can reopen it whenever you like.
         </p>
       )}

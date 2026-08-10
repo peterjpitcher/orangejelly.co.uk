@@ -56,16 +56,16 @@ export default function PubRescue() {
               🚨
             </Text>
           </div>
-          <Text size="lg" className="mb-6 max-w-3xl mx-auto">
+          <Text size="lg" className="mb-6 measure">
             {pubRescueData.emergencyBanner.description}
           </Text>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton
               text={pubRescueData.emergencyBanner.ctaText}
               size="large"
-              className="!bg-orange hover:!bg-orange-dark !text-white"
+              className="!bg-orange !text-brand-base hover:!text-brand-base-dark"
             />
-            <Text size="sm" className="text-charcoal/60">
+            <Text size="sm" className="text-brand-base/75">
               {pubRescueData.emergencyBanner.supportText}
             </Text>
           </div>
@@ -78,7 +78,7 @@ export default function PubRescue() {
           <Heading level={2} align="center" className="mb-4">
             What's Your Biggest Growth Bottleneck Right Now?
           </Heading>
-          <Text size="lg" align="center" className="mb-12 max-w-3xl mx-auto">
+          <Text size="lg" align="center" className="mb-12 measure">
             Pick the issue slowing performance most. We'll share how we solved similar challenges at
             The Anchor and build a practical action plan.
           </Text>
@@ -97,7 +97,7 @@ export default function PubRescue() {
                     <Heading level={3} className="mb-2">
                       {category.title}
                     </Heading>
-                    <Text size="sm" className="mb-2 text-charcoal/80">
+                    <Text size="sm" className="mb-2 text-brand-base/80">
                       {category.description}
                     </Text>
                     {category.impact && (
@@ -105,8 +105,10 @@ export default function PubRescue() {
                         Impact: {category.impact}
                       </Text>
                     )}
+                    {/* text-blue-support, not text-teal-600: Tailwind's numeric teal
+                        is not in this palette and rendered nothing here. */}
                     {category.solution && (
-                      <Text size="sm" className="text-teal-600">
+                      <Text size="sm" className="text-blue-support">
                         Solution: {category.solution}
                       </Text>
                     )}
@@ -117,23 +119,23 @@ export default function PubRescue() {
                   text={`Help with ${category.title}`}
                   fullWidth
                   size="medium"
-                  className="!bg-orange hover:!bg-orange-dark"
+                  className="!bg-orange !text-brand-base hover:!text-brand-base-dark"
                 />
               </div>
             ))}
           </div>
 
           {/* Our Story Box */}
-          <div className="bg-teal text-white rounded-lg p-8 mb-12">
+          <div className="bg-blue-support text-white rounded-lg p-8 mb-12">
             <Heading level={3} align="center" className="mb-6">
               We've Been Where You Are Now
             </Heading>
-            <Text size="lg" align="center" className="mb-6 text-cream/90 max-w-3xl mx-auto">
+            <Text size="lg" align="center" className="mb-6 text-surface/90 measure">
               When we took over The Anchor, performance was flat and midweek trade was weak. Sound
               familiar?
             </Text>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-teal-dark/30 rounded-lg p-4">
+              <div className="bg-brand-base/30 rounded-lg p-4">
                 <Heading level={4} className="mb-2">
                   Our Tuesday Nights
                 </Heading>
@@ -144,7 +146,7 @@ export default function PubRescue() {
                   Now: table bookings up 403%, good atmosphere
                 </Text>
               </div>
-              <div className="bg-teal-dark/30 rounded-lg p-4">
+              <div className="bg-brand-base/30 rounded-lg p-4">
                 <Heading level={4} className="mb-2">
                   Our Sunday Roasts
                 </Heading>
@@ -155,7 +157,7 @@ export default function PubRescue() {
                   Now: booking no-shows down 89% with pre-orders
                 </Text>
               </div>
-              <div className="bg-teal-dark/30 rounded-lg p-4">
+              <div className="bg-brand-base/30 rounded-lg p-4">
                 <Heading level={4} className="mb-2">
                   Our Time
                 </Heading>
@@ -209,8 +211,8 @@ export default function PubRescue() {
       )}
 
       {/* Crisis Calculator */}
-      <Section background="cream" padding="small">
-        <div className="text-center max-w-3xl mx-auto">
+      <Section background="surface" padding="small">
+        <div className="text-center measure">
           <Heading level={3} className="mb-4">
             Delays Have A Cost
           </Heading>
@@ -232,7 +234,7 @@ export default function PubRescue() {
                 <Text size="sm">Every empty night compounds the gap</Text>
               </div>
             </div>
-            <Text size="sm" className="text-charcoal/70 mb-4">
+            <Text size="sm" className="text-brand-base/70 mb-4">
               Most pubs see meaningful progress inside 30 days
             </Text>
             <WhatsAppButton text="Help me assess the gap" size="medium" />
@@ -243,12 +245,12 @@ export default function PubRescue() {
       {/* Our Rescue Methodology */}
       <Section background="white">
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-12">
               The Orange Jelly Recovery Method
             </Heading>
 
-            <Text size="lg" align="center" className="mb-12 text-charcoal/70 max-w-3xl mx-auto">
+            <Text size="lg" align="center" className="mb-12 text-brand-base/70 measure">
               We don't guess. We use a proven process that created a step-change at The Anchor. Here
               is how we rebuild momentum:
             </Text>
@@ -315,7 +317,7 @@ export default function PubRescue() {
                     'Create systems so it runs without you',
                   ]}
                   icon="check"
-                  iconColor="teal"
+                  iconColor="blue-support"
                   spacing="tight"
                 />
               </Card>
@@ -360,12 +362,12 @@ export default function PubRescue() {
                     <Grid columns={{ default: 1, md: mdCols }} gap="medium">
                       {successMetrics.metrics.map((metric) => (
                         <div key={metric._key} className="text-center">
-                          <Text size="2xl" weight="bold" className="text-orange">
+                          <Text size="2xl" weight="bold" className="text-orange-dark">
                             {metric.value}
                           </Text>
                           <Text size="sm">{metric.label}</Text>
                           {metric.description && (
-                            <Text size="xs" className="text-charcoal/60 mt-1">
+                            <Text size="xs" className="text-brand-base/75 mt-1">
                               {metric.description}
                             </Text>
                           )}
@@ -381,9 +383,9 @@ export default function PubRescue() {
       </Section>
 
       {/* Why Pubs Plateau Section */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-12">
               Why Good Pubs Plateau (And How We Reset Momentum)
             </Heading>
@@ -399,7 +401,7 @@ export default function PubRescue() {
                       You're behind the bar most of the week. No time to plan campaigns, update
                       channels, or analyse what is working. Delivery crowds out growth.
                     </Text>
-                    <Text weight="semibold" className="text-green-600">
+                    <Text weight="semibold" className="text-green-700">
                       We Fix This: AI handles the boring bits. Marketing runs itself. You get
                       evenings back to think strategically (or just rest).
                     </Text>
@@ -419,7 +421,7 @@ export default function PubRescue() {
                       You can't beat chains on price. Trying to be the cheapest is a race to the
                       bottom that erodes your margins and attracts the wrong customers.
                     </Text>
-                    <Text weight="semibold" className="text-green-600">
+                    <Text weight="semibold" className="text-green-700">
                       We Fix This: Position your pub as THE place for something specific. Quiz
                       nights, Sunday roasts, craft beer - own your niche and charge accordingly.
                     </Text>
@@ -437,7 +439,7 @@ export default function PubRescue() {
                       "Summer will be busier." "Once the roadworks finish." "When the economy
                       improves." Waiting isn't a strategy, and delay has a cost.
                     </Text>
-                    <Text weight="semibold" className="text-green-600">
+                    <Text weight="semibold" className="text-green-700">
                       We Fix This: Take action this week. Our quick wins create early movement, then
                       we build consistency month by month.
                     </Text>
@@ -451,7 +453,7 @@ export default function PubRescue() {
               <Heading level={3} className="mb-6">
                 Your Pub Can Move Faster Than the Market
               </Heading>
-              <Text size="lg" className="mb-8 text-charcoal/70 max-w-2xl mx-auto">
+              <Text size="lg" className="mb-8 text-brand-base/70 measure">
                 Trading conditions are tough, but proactive, modern execution still wins. Start with
                 the biggest bottleneck and build momentum from there.
               </Text>
@@ -464,7 +466,7 @@ export default function PubRescue() {
       {/* What You Get Section */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-12">
               What You Get With Pub Recovery Support
             </Heading>
@@ -488,7 +490,7 @@ export default function PubRescue() {
                 />
               </Card>
 
-              <Card background="teal-dark" padding="large">
+              <Card background="brand-base" padding="large">
                 <Heading level={3} color="white" className="mb-6">
                   30-Day Momentum Sprint
                 </Heading>
@@ -502,6 +504,7 @@ export default function PubRescue() {
                       'Staff training resources',
                     ]}
                     icon="bullet"
+                    iconColor="orange-on-dark"
                     spacing="normal"
                   />
                 </div>
@@ -529,8 +532,7 @@ export default function PubRescue() {
                     Profit Analysis Tools
                   </Heading>
                   <Text size="sm">
-                    Find where you're losing money and where the biggest margin gains are
-                    hiding.
+                    Find where you're losing money and where the biggest margin gains are hiding.
                   </Text>
                 </div>
                 <div className="text-center">
@@ -549,7 +551,7 @@ export default function PubRescue() {
               <Text size="lg" className="mb-2">
                 Investment is simple and transparent
               </Text>
-              <Text size="2xl" weight="bold" className="text-orange mb-4">
+              <Text size="2xl" weight="bold" className="text-orange-dark mb-4">
                 Packages from £375 + VAT
               </Text>
               <Text size="sm" color="muted" className="mb-8">
@@ -564,7 +566,7 @@ export default function PubRescue() {
       {faqs.length > 0 && (
         <Section background="white">
           <AnimatedItem animation="slide-up">
-            <div className="max-w-3xl mx-auto">
+            <div className="measure">
               <Heading level={2} align="center" className="mb-12">
                 Common Questions From Hospitality Partners
               </Heading>
@@ -580,8 +582,8 @@ export default function PubRescue() {
       )}
 
       {/* Related Links */}
-      <Section background="cream">
-        <div className="max-w-4xl mx-auto">
+      <Section background="surface">
+        <div className="measure">
           <RelatedLinks
             title="Choose Your Recovery Focus"
             subtitle="Pick the issue that is slowing growth most and we'll tailor the support"

@@ -21,14 +21,14 @@ export default function BlogLayout({ children, breadcrumbs, sidebar }: BlogLayou
   return (
     <>
       <Section background="white" padding="small">
-        <div className="max-w-6xl mx-auto">
+        <div className="">
           {/* Guide routes emit the canonical trail via <BreadcrumbJsonLd />. */}
           <Breadcrumb items={finalBreadcrumbs} emitJsonLd={false} />
         </div>
       </Section>
 
       <Section background="white" padding="small">
-        <div className="max-w-6xl mx-auto">
+        <div className="">
           {sidebar ? (
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
               <main>{children}</main>

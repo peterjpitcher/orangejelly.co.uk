@@ -8,13 +8,26 @@ import { escapeHtml } from '@/lib/email';
  * Done's "no hardcoded hex" rule. Email clients cannot consume Tailwind; there
  * is no build step in an inbox. Every literal below is the canonical token value
  * from tailwind.config.js and no other value may appear here:
- *   #F65403  brand.DEFAULT
- *   #1A2F49  brand-base.DEFAULT / charcoal.DEFAULT
- *   #01619E  blue-support.DEFAULT / teal.DEFAULT
- *   #F2F8FC  surface.DEFAULT / cream.DEFAULT
+ *   #F16F23  brand.DEFAULT / orange.DEFAULT
+ *   #AD460B  orange.dark
+ *   #1A2F49  brand-base.DEFAULT
+ *   #01619E  blue-support.DEFAULT
+ *   #F2F8FC  surface.DEFAULT
+ *
+ * These are asserted against tailwind.config.js by
+ * src/test/design-tokens.contrast.test.ts, so a palette change that forgets this
+ * file fails the build rather than silently shipping an off-brand email.
  */
 
-export const BRAND_ORANGE = '#F65403';
+export const BRAND_ORANGE = '#F16F23';
+/**
+ * The interactive orange, for anything carrying white text.
+ *
+ * The brand orange is 2.98:1 under white, so the CTA button below cannot use it.
+ * Inboxes have no hover state and no media queries worth relying on, so the
+ * resting colour is the only chance to get this right.
+ */
+export const BRAND_ORANGE_DARK = '#AD460B';
 export const BRAND_CHARCOAL = '#1A2F49';
 export const BRAND_BLUE = '#01619E';
 export const BRAND_SURFACE = '#F2F8FC';
@@ -75,7 +88,7 @@ export function wrapText(body: string): string {
 export function primaryButton(url: string, label: string): string {
   return `<p style="margin:0 0 24px;">
     <a href="${escapeHtml(url)}"
-       style="display:inline-block;background:${BRAND_ORANGE};color:#ffffff;text-decoration:none;
+       style="display:inline-block;background:${BRAND_ORANGE_DARK};color:#ffffff;text-decoration:none;
               padding:14px 28px;border-radius:6px;font-weight:700;min-height:44px;line-height:20px;">
       ${label}
     </a>

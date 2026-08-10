@@ -50,22 +50,22 @@ function PostCard({ label, post, align, highlight = false }: PostCardProps) {
       variant="bordered"
       className={clsx(
         'flex h-full flex-col gap-3 border',
-        highlight ? 'border-orange/40 bg-cream/60' : 'border-charcoal/10'
+        highlight ? 'border-orange/40 bg-surface/60' : 'border-brand-base/10'
       )}
     >
-      <p className="text-xs font-semibold uppercase tracking-wide text-charcoal/60">{label}</p>
-      <Text className="text-xs font-medium text-orange">
+      <p className="text-xs font-semibold uppercase tracking-wide text-brand-base/75">{label}</p>
+      <Text className="text-xs font-medium text-orange-dark">
         {post.category.name} •{' '}
         {post.publishedDate ? formatDate(post.publishedDate) : 'Fresh from the guide'}
       </Text>
       <Heading level={4} className="text-lg leading-snug">
         {post.title}
       </Heading>
-      <Text className="text-sm text-charcoal/70">{post.excerpt}</Text>
+      <Text className="text-sm text-brand-base/70">{post.excerpt}</Text>
       <Button
         href={`/licensees-guide/${post.slug}`}
         variant="ghost"
-        className={clsx('mt-auto text-sm font-semibold text-orange', alignmentClass)}
+        className={clsx('mt-auto text-sm font-semibold text-orange-dark', alignmentClass)}
       >
         Read article
       </Button>

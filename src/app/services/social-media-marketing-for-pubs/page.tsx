@@ -30,12 +30,12 @@ export default function SocialMediaMarketingForPubsPage() {
       />
 
       {/* Instagram for Pubs Section */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="6xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Instagram for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/80">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/80">
             Instagram builds awareness and vibe. Most pub accounts fail because they post random
             content with no plan, then give up when it does not move the needle. Here is what
             actually works.
@@ -71,7 +71,7 @@ export default function SocialMediaMarketingForPubsPage() {
             </Card>
           </Grid>
 
-          <div className="mt-8 max-w-3xl mx-auto">
+          <div className="mt-8 measure">
             <Heading level={3} className="mb-4">
               Instagram tips for busy licensees
             </Heading>
@@ -92,11 +92,11 @@ export default function SocialMediaMarketingForPubsPage() {
 
       {/* Facebook for Pubs Section */}
       <Section background="white" padding="large">
-        <Container maxWidth="6xl">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Facebook for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/80">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/80">
             For pubs, Facebook is often more valuable than Instagram because it reaches locals,
             families, and community groups that actually decide where to go. The wins come from
             events, groups, reviews, and a repeatable weekly rhythm.
@@ -132,7 +132,7 @@ export default function SocialMediaMarketingForPubsPage() {
             </Card>
           </Grid>
 
-          <div className="mt-8 max-w-3xl mx-auto">
+          <div className="mt-8 measure">
             <Heading level={3} className="mb-4">
               Why Facebook still matters for pubs
             </Heading>

@@ -61,13 +61,13 @@ export default function AuthedNav(): JSX.Element | null {
   }
 
   return (
-    <nav aria-label="Organiser navigation" className="bg-charcoal">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+    <nav aria-label="Organiser navigation" className="bg-brand-base">
+      <div className="page-shell flex flex-wrap items-center justify-between gap-3 py-3">
         <Link
           href="/availability"
           className="flex items-center gap-2 font-heading text-lg font-bold text-white"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-sm text-white">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-sm text-brand-base">
             OJ
           </span>
           <span className="hidden sm:inline">Orange Jelly</span>

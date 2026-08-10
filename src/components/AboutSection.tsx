@@ -28,10 +28,10 @@ function AboutSection({
 }: AboutSectionProps) {
   return (
     <section className={`bg-white py-16 ${className}`}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="page-shell">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Heading level={2} color="charcoal" className="mb-6">
+            <Heading level={2} color="brand-base" className="mb-6">
               {title}
             </Heading>
             {content.map((paragraph, index) => (
@@ -45,7 +45,7 @@ function AboutSection({
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-orange/10 to-teal/10 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-orange/10 to-blue-support/10 rounded-2xl p-8">
               <OptimizedImage
                 src={imageUrl}
                 alt={imageAlt}
@@ -54,10 +54,10 @@ function AboutSection({
                 className="rounded-lg shadow-lg mx-auto"
               />
               <div className="text-center mt-4">
-                <Text size="sm" weight="semibold" color="charcoal">
+                <Text size="sm" weight="semibold" color="brand-base">
                   Proven Daily At
                 </Text>
-                <Text size="2xl" weight="bold" className="text-orange">
+                <Text size="2xl" weight="bold" className="text-orange-dark">
                   The Anchor
                 </Text>
               </div>
@@ -69,7 +69,7 @@ function AboutSection({
           <Text size="lg" color="muted" className="mb-2">
             Real hospitality experience + practical execution =
           </Text>
-          <Heading level={3} className="text-orange">
+          <Heading level={3} className="text-orange-dark">
             Orange Jelly
           </Heading>
         </div>

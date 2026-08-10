@@ -16,9 +16,9 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
  */
 export default function VerifyError({ reset }: { error: Error; reset: () => void }): JSX.Element {
   return (
-    <Section background="cream" padding="large">
+    <Section background="surface" padding="large">
       <div className="max-w-md mx-auto text-center space-y-6">
-        <Heading level={1} align="center" color="charcoal">
+        <Heading level={1} align="center" color="brand-base">
           Something went wrong
         </Heading>
         <Alert variant="destructive" className="text-left">

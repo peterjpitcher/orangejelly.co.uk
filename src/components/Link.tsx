@@ -11,8 +11,9 @@ interface LinkProps {
   size?: 'sm' | 'md' | 'lg';
   color?:
     | 'orange'
-    | 'teal'
-    | 'charcoal'
+    | 'orange-on-dark'
+    | 'blue-support'
+    | 'brand-base'
     | 'white'
     | 'inherit'
     | 'base'
@@ -47,16 +48,29 @@ function Link({
   };
 
   // Color classes
+  /*
+   * Two orange link colours, because contrast runs in opposite directions on the
+   * two surfaces this site uses.
+   *
+   * `orange` is for light surfaces. The brand orange is 3.17:1 as body text on
+   * cream, so link text uses orange-dark at 4.84:1 and darkens further on hover.
+   *
+   * `orange-on-dark` is for the navy footer and navy bands, where going darker
+   * makes things worse: orange-dark on navy is 2.80:1. The brand orange itself is
+   * 4.55:1 there, so dark surfaces get the actual brand colour and lighten further
+   * to brand.highlight on hover (8.12:1).
+   */
   const colorClasses = {
-    orange: 'text-orange hover:text-orange-dark',
-    teal: 'text-teal hover:text-teal-dark',
-    charcoal: 'text-charcoal hover:text-charcoal/80',
-    white: 'text-white hover:text-cream',
-    base: 'text-charcoal hover:text-teal',
-    support: 'text-teal hover:text-teal-light',
-    accent: 'text-orange hover:text-orange-dark',
-    highlight: 'text-brand-grounded hover:text-charcoal',
-    grounded: 'text-brand-grounded hover:text-charcoal',
+    orange: 'text-orange-dark hover:text-orange-darker',
+    'orange-on-dark': 'text-orange hover:text-brand-highlight',
+    'blue-support': 'text-blue-support hover:text-brand-base',
+    'brand-base': 'text-brand-base hover:text-brand-base/80',
+    white: 'text-white hover:text-surface',
+    base: 'text-brand-base hover:text-blue-support',
+    support: 'text-blue-support hover:text-blue-support-light',
+    accent: 'text-orange-dark hover:text-orange-darker',
+    highlight: 'text-brand-grounded hover:text-brand-base',
+    grounded: 'text-brand-grounded hover:text-brand-base',
     inherit: '',
   };
 
@@ -65,17 +79,17 @@ function Link({
     default: `${colorClasses[color]} transition-colors`,
     button: `inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all ${
       ['orange', 'accent'].includes(color)
-        ? 'bg-orange text-white hover:bg-orange-dark'
-        : ['teal', 'support'].includes(color)
-          ? 'bg-teal text-white hover:bg-teal-dark'
-          : ['base', 'charcoal'].includes(color)
-            ? 'bg-charcoal text-white hover:bg-charcoal-light'
+        ? 'bg-orange text-brand-base hover:text-brand-base-dark'
+        : ['blue-support', 'support'].includes(color)
+          ? 'bg-blue-support text-white hover:bg-brand-base'
+          : ['base', 'brand-base'].includes(color)
+            ? 'bg-brand-base text-white hover:bg-brand-base-light'
             : ['highlight', 'grounded'].includes(color)
-              ? 'bg-brand-grounded text-white hover:bg-charcoal'
-              : 'bg-teal text-white hover:bg-teal-dark'
+              ? 'bg-brand-grounded text-white hover:bg-brand-base'
+              : 'bg-blue-support text-white hover:bg-brand-base'
     }`,
     underline: `${colorClasses[color]} underline hover:no-underline transition`,
-    nav: `text-charcoal hover:text-orange transition-colors font-medium`,
+    nav: `text-brand-base hover:text-orange-dark transition-colors font-medium`,
   };
 
   const baseClasses = `${sizeClasses[size]} ${variantClasses[variant]} ${className}`;

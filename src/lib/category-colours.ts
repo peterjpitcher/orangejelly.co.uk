@@ -1,7 +1,15 @@
 /**
  * Category colour mapping for the 8-category blog taxonomy.
  * Each category gets a unique background colour and gradient.
- * All primary colours pass WCAG AA contrast for white text.
+ *
+ * Every primary carries white text at 4.5:1 or better, and
+ * src/test/design-tokens.contrast.test.ts asserts it rather than taking this
+ * comment's word for it. That check was added after this header turned out to be
+ * wrong about two of the nine: Marketing was 3.56:1 and Events 2.29:1, and the
+ * Events gradient ended on a stop that was worse than either.
+ *
+ * Gradient end stops need the same treatment, since white text sits over the
+ * whole sweep, not just the start of it.
  */
 
 export interface CategoryColourConfig {
@@ -27,14 +35,14 @@ const CATEGORY_CONFIGS: CategoryColourConfig[] = [
   {
     slug: 'marketing',
     label: 'Marketing',
-    primary: '#EA580C',
-    gradient: 'linear-gradient(135deg, #EA580C 0%, #C62828 100%)',
+    primary: '#BF360C',
+    gradient: 'linear-gradient(135deg, #BF360C 0%, #9A2020 100%)',
   },
   {
     slug: 'events',
     label: 'Events',
-    primary: '#FF8F00',
-    gradient: 'linear-gradient(135deg, #FF8F00 0%, #E65100 100%)',
+    primary: '#A85D00',
+    gradient: 'linear-gradient(135deg, #A85D00 0%, #7A3E00 100%)',
   },
   {
     slug: 'food-drink',

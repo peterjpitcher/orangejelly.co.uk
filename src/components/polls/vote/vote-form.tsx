@@ -133,7 +133,7 @@ export default function VoteForm({
 
   if (emptyPoll) {
     return (
-      <div className="rounded-lg border-2 border-charcoal/15 bg-white p-6" role="status">
+      <div className="rounded-lg border-2 border-brand-base/15 bg-white p-6" role="status">
         <Text color="muted">
           This poll has no times on it yet. {organiserName} will need to add some before you can
           answer.
@@ -165,7 +165,7 @@ export default function VoteForm({
         ))}
       </div>
 
-      <div className="space-y-4 rounded-lg border-2 border-charcoal/15 bg-white p-4">
+      <div className="space-y-4 rounded-lg border-2 border-brand-base/15 bg-white p-4">
         <div>
           <Label htmlFor="poll-name">
             Your name <span aria-hidden="true">*</span>
@@ -238,7 +238,7 @@ export default function VoteForm({
       </div>
 
       <div
-        className="sticky bottom-0 z-50 -mx-4 border-t border-charcoal/15 bg-white/95 px-4 pt-3 backdrop-blur"
+        className="sticky bottom-0 z-50 -mx-4 border-t border-brand-base/15 bg-white/95 px-4 pt-3 backdrop-blur"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <Button type="submit" variant="primary" size="large" fullWidth loading={submitting}>

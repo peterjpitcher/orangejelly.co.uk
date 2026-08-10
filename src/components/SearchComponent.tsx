@@ -146,7 +146,7 @@ export default function SearchComponent({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-3 min-h-[44px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-base"
+          className="w-full pl-10 pr-4 py-3 min-h-tap border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent text-base"
           disabled={!isIndexLoaded}
           aria-autocomplete="list"
           aria-controls={resultsListId}
@@ -156,7 +156,7 @@ export default function SearchComponent({
         />
         {isLoading && (
           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-orange-500"></div>
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-orange"></div>
           </div>
         )}
       </div>
@@ -215,7 +215,7 @@ function SearchResultItem({ result, query, isLast }: SearchResultItemProps) {
     <li
       role="option"
       aria-selected="false"
-      className={`p-4 min-h-[44px] transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
+      className={`p-4 min-h-tap transition-colors ${!isLast ? 'border-b border-gray-100' : ''}`}
     >
       <a
         href={item.url}
@@ -238,10 +238,12 @@ function SearchResultItem({ result, query, isLast }: SearchResultItemProps) {
           {item.excerpt}
         </Text>
         <div className="mt-1 flex items-center flex-wrap gap-2">
+          {/* orange-100/800 are not in this palette, so this category chip
+              rendered with no background and inherited text until now. */}
           <Text
             size="xs"
             weight="medium"
-            className="inline-flex items-center px-2 py-0.5 rounded bg-orange-100 text-orange-800"
+            className="inline-flex items-center rounded bg-orange-light px-2 py-0.5 text-orange-darker"
           >
             {item.category}
           </Text>

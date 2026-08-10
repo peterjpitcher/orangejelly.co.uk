@@ -50,7 +50,7 @@ function ServiceCard({
       >
         {/* Most Popular Badge */}
         {highlight && (
-          <div className="absolute top-0 right-0 bg-orange text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+          <div className="absolute top-0 right-0 bg-orange text-brand-base text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
             MOST POPULAR
           </div>
         )}
@@ -79,13 +79,13 @@ function ServiceCard({
         </Heading>
 
         {problem && (
-          <Text size="sm" className="text-orange font-semibold mb-2">
+          <Text size="sm" className="text-orange-dark font-semibold mb-2">
             {problem}
           </Text>
         )}
 
         {deliverable && (
-          <Text size="sm" className="text-teal font-semibold mb-3">
+          <Text size="sm" className="text-blue-support font-semibold mb-3">
             {deliverable}
           </Text>
         )}
@@ -102,7 +102,7 @@ function ServiceCard({
             <ul className="mb-4 space-y-1">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <span className="text-orange text-sm">✓</span>
+                  <span className="text-orange-dark text-sm">✓</span>
                   <Text size="xs" className="leading-tight">
                     {feature}
                   </Text>
@@ -113,7 +113,7 @@ function ServiceCard({
         )}
 
         {example && (
-          <Card background="cream" padding="small" className="mb-4 mt-auto">
+          <Card background="surface" padding="small" className="mb-4 mt-auto">
             <Text size="xs" weight="semibold" className="mb-2">
               Real example:
             </Text>
@@ -128,7 +128,7 @@ function ServiceCard({
               </Text>
             )}
             {example.result && (
-              <Text size="xs" className="font-semibold text-orange mt-2">
+              <Text size="xs" className="font-semibold text-orange-dark mt-2">
                 Result: {example.result}
               </Text>
             )}

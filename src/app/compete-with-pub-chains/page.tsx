@@ -66,7 +66,7 @@ export default function CompeteWithPubChains() {
       {/* The Problem */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} align="center" className="mb-6">
               You Cannot Out-Spend a Chain. But You Can Out-Care One.
             </Heading>
@@ -83,9 +83,9 @@ export default function CompeteWithPubChains() {
       </Section>
 
       {/* How We Compete */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} color="white" className="mb-4">
               How We Compete With Our Local Wetherspoons
             </Heading>
@@ -112,7 +112,7 @@ export default function CompeteWithPubChains() {
                 />
               </Card>
               <Card background="white" padding="large">
-                <Heading level={3} className="mb-4 text-green-600">
+                <Heading level={3} className="mb-4 text-green-700">
                   We Have
                 </Heading>
                 <FeatureList
@@ -135,9 +135,9 @@ export default function CompeteWithPubChains() {
       </Section>
 
       {/* Your Advantages */}
-      <Section background="cream">
+      <Section background="surface">
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               Your Practical Advantages Over Chain Pubs
             </Heading>
@@ -180,7 +180,7 @@ export default function CompeteWithPubChains() {
       {/* The Solution */}
       <Section>
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               The Right Package to Build Your Challenger Position
             </Heading>
@@ -191,7 +191,7 @@ export default function CompeteWithPubChains() {
 
             <Grid columns={{ default: 1, md: 2 }} gap="large">
               <div>
-                <Card background="cream" padding="large" className="mb-4">
+                <Card background="surface" padding="large" className="mb-4">
                   <Heading level={3} className="mb-3">
                     Find Your Competitive Angle
                   </Heading>
@@ -246,7 +246,7 @@ export default function CompeteWithPubChains() {
         <Heading level={2} align="center" className="mb-8">
           Common Questions About Competing With Chain Pubs
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -255,7 +255,7 @@ export default function CompeteWithPubChains() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} align="center" className="mb-4">
             Ready to Build a Stronger Independent Position?
           </Heading>

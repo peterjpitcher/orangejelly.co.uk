@@ -69,30 +69,30 @@ export default function PubMarketingPage() {
 
       {/* Intro */}
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-6">
             Why Pub Marketing Is Different From Every Other Business
           </Heading>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            <Text size="lg" className="text-charcoal/80">
+          <div className="space-y-4 measure">
+            <Text size="lg" className="text-brand-base/80">
               Most small business marketing advice does not work for pubs. You cannot A/B test a
               Tuesday night. Your product is an experience, not a widget. And your competition
               includes chains with six-figure marketing budgets. Here is{' '}
               <Link
                 href="/compete-with-pub-chains"
-                className="text-teal underline hover:text-orange"
+                className="text-blue-support underline hover:text-orange-dark"
               >
                 how an independent pub competes with pub chains
               </Link>{' '}
               without trying to outspend them.
             </Text>
-            <Text size="lg" className="text-charcoal/80">
+            <Text size="lg" className="text-brand-base/80">
               Effective pub marketing focuses on three things: getting found by people already
               looking for somewhere to go, giving them a reason to choose you, and turning
               first-timers into regulars. Everything on this page is built around those three
               objectives.
             </Text>
-            <Text size="lg" className="text-charcoal/80">
+            <Text size="lg" className="text-brand-base/80">
               I run The Anchor in Stanwell Moor and built these systems to solve my own problems.
               Food revenue grew 98% in three months. Google Search visibility climbed 828%. Table
               bookings grew 403%. If it works behind our bar, it goes on this page.
@@ -102,15 +102,15 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* Quick wins */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="6xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             {pubMarketingData.focusAreas.heading}
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             These are the four areas that move the needle fastest for most pubs.
           </Text>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {focusAreas.map((item) => (
               <Card key={item.title} variant="bordered" padding="large">
                 <Heading level={3} className="mb-3">
@@ -125,11 +125,11 @@ export default function PubMarketingPage() {
 
       {/* === PILLAR SECTION: Social Media === */}
       <Section background="white" padding="large">
-        <Container maxWidth="5xl">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Social Media Marketing for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             Social media should make locals think &ldquo;I need to go there this week&rdquo;, not
             just scroll past another stock photo.
           </Text>
@@ -157,7 +157,7 @@ export default function PubMarketingPage() {
               <div className="mt-4">
                 <Link
                   href="/licensees-guide/facebook-marketing-local-pubs"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Read: Facebook marketing for local pubs →
                 </Link>
@@ -186,7 +186,7 @@ export default function PubMarketingPage() {
               <div className="mt-4">
                 <Link
                   href="/licensees-guide/instagram-marketing-for-pubs"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Read: Instagram marketing for pubs →
                 </Link>
@@ -206,7 +206,7 @@ export default function PubMarketingPage() {
               <div className="mt-4">
                 <Link
                   href="/licensees-guide/social-media-strategy-for-pubs"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Read: Complete social media strategy for pubs →
                 </Link>
@@ -217,12 +217,12 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* === PILLAR SECTION: Events === */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="5xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Event Marketing for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             One strong weekly event can transform your midweek. The key is consistency, not
             spectacle.
           </Text>
@@ -236,13 +236,13 @@ export default function PubMarketingPage() {
                 The most reliable midweek event for any pub. Low cost, high retention, builds a
                 community of regulars who come every week.
               </Text>
-              <Text size="sm" weight="semibold" className="text-teal">
+              <Text size="sm" weight="semibold" className="text-blue-support">
                 Our result: table bookings up 403%
               </Text>
               <div className="mt-3">
                 <Link
                   href="/licensees-guide/quiz-night-ideas"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Quiz night ideas →
                 </Link>
@@ -257,7 +257,7 @@ export default function PubMarketingPage() {
                 Wine, gin, whisky, or craft beer tastings attract a different crowd and command
                 premium pricing. Partner with suppliers for stock and expertise.
               </Text>
-              <Text size="sm" weight="semibold" className="text-teal">
+              <Text size="sm" weight="semibold" className="text-blue-support">
                 Our result: private hire bookings up 567%
               </Text>
             </Card>
@@ -273,7 +273,7 @@ export default function PubMarketingPage() {
               <div className="mt-3">
                 <Link
                   href="/licensees-guide/live-music-events-for-pubs"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Live music guide →
                 </Link>
@@ -284,7 +284,7 @@ export default function PubMarketingPage() {
           <div className="text-center">
             <Link
               href="/licensees-guide/how-to-run-successful-pub-events"
-              className="text-orange hover:text-orange-dark font-medium"
+              className="text-orange-dark hover:text-orange-darker font-medium"
             >
               Read the complete guide: How to run successful pub events →
             </Link>
@@ -294,11 +294,11 @@ export default function PubMarketingPage() {
 
       {/* === PILLAR SECTION: Email Marketing === */}
       <Section background="white" padding="large">
-        <Container maxWidth="5xl">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Email Marketing for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             Your customer database is the one marketing asset you own. Social platforms change their
             algorithms. Your email list is yours forever.
           </Text>
@@ -323,7 +323,7 @@ export default function PubMarketingPage() {
                 iconColor="green"
                 spacing="tight"
               />
-              <Text size="sm" weight="semibold" className="text-teal mt-4">
+              <Text size="sm" weight="semibold" className="text-blue-support mt-4">
                 We built a genuine local following using these methods at The Anchor
               </Text>
             </div>
@@ -338,7 +338,7 @@ export default function PubMarketingPage() {
               </Text>
               <FeatureList
                 items={[
-                  'Weekly "What\'s On" roundup: events, specials, live music',
+                  'Weekly"What\'s On" roundup: events, specials, live music',
                   'Seasonal menus and new dish announcements',
                   'Exclusive offers for database members (makes them feel valued)',
                   'Last-minute table availability on quiet nights',
@@ -350,7 +350,7 @@ export default function PubMarketingPage() {
               <div className="mt-4">
                 <Link
                   href="/licensees-guide/email-marketing-pub-retention"
-                  className="text-orange hover:text-orange-dark font-medium text-sm"
+                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
                 >
                   Read: Email marketing for pub retention →
                 </Link>
@@ -361,12 +361,12 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* === PILLAR SECTION: Local SEO === */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="5xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Local SEO for Pubs
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             When someone searches &ldquo;pub near me&rdquo; or &ldquo;Sunday roast [your
             town],&rdquo; you need to appear. This is often the fastest win for any pub.
           </Text>
@@ -419,11 +419,11 @@ export default function PubMarketingPage() {
 
       {/* === PILLAR SECTION: Menu Engineering === */}
       <Section background="white" padding="large">
-        <Container maxWidth="5xl">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Menu Engineering and Profit Growth
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             Your menu is your biggest profit lever. Small changes to layout, descriptions, and
             pricing can shift gross profit by double digits.
           </Text>
@@ -462,19 +462,19 @@ export default function PubMarketingPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/licensees-guide/menu-engineering-lift-average-spend"
-              className="text-orange hover:text-orange-dark font-medium text-sm"
+              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
             >
               Menu engineering guide →
             </Link>
             <Link
               href="/licensees-guide/upselling-secrets-training-scripts"
-              className="text-orange hover:text-orange-dark font-medium text-sm"
+              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
             >
               Upselling training scripts →
             </Link>
             <Link
               href="/licensees-guide/profitable-pub-food-menu-ideas"
-              className="text-orange hover:text-orange-dark font-medium text-sm"
+              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
             >
               Profitable food menu ideas →
             </Link>
@@ -483,17 +483,12 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* Results */}
-      <Section background="teal" padding="large">
-        <Container maxWidth="5xl">
+      <Section background="blue-support" padding="large">
+        <Container>
           <Heading level={2} color="white" align="center" className="mb-4">
             What Pub Marketing Actually Delivers
           </Heading>
-          <Text
-            size="lg"
-            color="white"
-            align="center"
-            className="opacity-90 mb-12 max-w-3xl mx-auto"
-          >
+          <Text size="lg" color="white" align="center" className="opacity-90 mb-12 measure">
             Real numbers from The Anchor, the same systems we set up for clients.
           </Text>
 
@@ -536,14 +531,14 @@ export default function PubMarketingPage() {
 
       {/* Solutions */}
       <Section background="white" padding="large">
-        <Container maxWidth="6xl">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             {pubMarketingData.solutions.heading}
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             Pick the issue that is costing you the most. We will start there.
           </Text>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {solutionCards.map((card) => (
               <Card key={card.href} variant="bordered" padding="large" className="flex flex-col">
                 <div className="flex-1">
@@ -566,12 +561,12 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* More reading */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="5xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             More Pub Marketing Guides
           </Heading>
-          <Text size="lg" align="center" className="mb-10 max-w-3xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
             Deep dives into specific pub marketing challenges, written by a licensee who has solved
             them.
           </Text>
@@ -615,7 +610,10 @@ export default function PubMarketingPage() {
                   padding="large"
                   className="h-full group-hover:border-orange transition-colors"
                 >
-                  <Heading level={4} className="mb-2 group-hover:text-orange transition-colors">
+                  <Heading
+                    level={4}
+                    className="mb-2 group-hover:text-orange-dark transition-colors"
+                  >
                     {guide.title}
                   </Heading>
                   <Text size="sm" color="muted">
@@ -629,8 +627,8 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* Locations */}
-      <Section background="teal" padding="large">
-        <Container maxWidth="4xl">
+      <Section background="blue-support" padding="large">
+        <Container width="measure-wide">
           <div className="text-center">
             <Heading level={2} color="white" className="mb-4">
               {pubMarketingData.locations.heading}
@@ -658,7 +656,7 @@ export default function PubMarketingPage() {
 
       {/* Process */}
       <Section background="white" padding="large">
-        <Container maxWidth="6xl">
+        <Container>
           <Heading level={2} align="center" className="mb-12">
             {pubMarketingData.process.heading}
           </Heading>
@@ -671,7 +669,7 @@ export default function PubMarketingPage() {
               }>
             ).map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                <div className="w-12 h-12 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                   {step.number}
                 </div>
                 <Heading level={4} className="mb-3">
@@ -687,8 +685,8 @@ export default function PubMarketingPage() {
       </Section>
 
       {/* FAQ */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="4xl">
+      <Section background="surface" padding="large">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-12">
             Pub Marketing Questions Answered
           </Heading>
@@ -702,12 +700,12 @@ export default function PubMarketingPage() {
 
       {/* CTA */}
       <Section background="orange-light" padding="large">
-        <Container maxWidth="3xl">
+        <Container width="measure">
           <div className="text-center">
             <Heading level={2} className="mb-4">
               {pubMarketingData.cta.title}
             </Heading>
-            <Text size="lg" className="mb-8 max-w-2xl mx-auto">
+            <Text size="lg" className="mb-8 measure">
               {pubMarketingData.cta.subtitle}
             </Text>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">

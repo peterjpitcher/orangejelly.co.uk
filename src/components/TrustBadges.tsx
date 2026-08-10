@@ -106,13 +106,13 @@ export default function TrustBadges({
           key={index}
           variant="shadowed"
           padding="small"
-          className="text-center bg-gradient-to-br from-white to-cream hover:shadow-lg transition-normal hover:-translate-y-1"
+          className="text-center bg-gradient-to-br from-white to-surface hover:shadow-lg transition-normal hover:-translate-y-1"
         >
           <div className="text-4xl mb-2">{badge.icon}</div>
-          <Heading level={4} align="center" className="text-charcoal">
+          <Heading level={4} align="center" className="text-brand-base">
             {badge.title}
           </Heading>
-          <Text size="xs" align="center" className="text-charcoal/60 mt-1">
+          <Text size="xs" align="center" className="text-brand-base/75 mt-1">
             {badge.subtitle}
           </Text>
         </Card>
@@ -153,7 +153,7 @@ export function FloatingTrustBadge({ claims }: { claims?: TrustBadgeClaims }) {
             <Text size="sm" weight="bold">
               {claims.noAgencyFees?.claim || 'No Agency Fees'}
             </Text>
-            <Text size="xs" className="text-charcoal/60">
+            <Text size="xs" className="text-brand-base/75">
               {claims.noAgencyFees?.context || 'Honest hourly pricing'}
             </Text>
           </div>
@@ -168,7 +168,7 @@ export function FloatingTrustBadge({ claims }: { claims?: TrustBadgeClaims }) {
             height={24}
             className="rounded"
           />
-          <span className="text-xs text-charcoal/60">Verified Promise</span>
+          <span className="text-xs text-brand-base/75">Verified Promise</span>
         </div>
       </Card>
     </div>

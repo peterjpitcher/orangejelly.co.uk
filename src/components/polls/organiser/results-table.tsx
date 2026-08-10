@@ -128,7 +128,7 @@ export default function ResultsTable({
             {/* z-20: the corner cell sits above both sticky edges. */}
             <th
               scope="col"
-              className="sticky left-0 top-0 z-20 bg-white p-3 text-left font-semibold text-charcoal"
+              className="sticky left-0 top-0 z-20 bg-white p-3 text-left font-semibold text-brand-base"
             >
               Name
             </th>
@@ -141,7 +141,7 @@ export default function ResultsTable({
                   key={option.id}
                   scope="col"
                   className={cn(
-                    'sticky top-0 z-10 min-w-[8rem] p-3 text-left font-semibold text-charcoal',
+                    'sticky top-0 z-10 min-w-[8rem] p-3 text-left font-semibold text-brand-base',
                     // Sticky needs a non-transparent background or the rows
                     // scroll visibly underneath it.
                     isConfirmed ? 'bg-orange-light' : 'bg-white'
@@ -151,7 +151,7 @@ export default function ResultsTable({
                   {isConfirmed && <span className="sr-only">Chosen option. </span>}
                   <span className="block">{dateLine}</span>
                   {timeLine && (
-                    <span className="block font-normal text-charcoal-light">{timeLine}</span>
+                    <span className="block font-normal text-brand-base-light">{timeLine}</span>
                   )}
                 </th>
               );
@@ -171,7 +171,7 @@ export default function ResultsTable({
               <tr key={participant.id} className="border-t border-border">
                 <th
                   scope="row"
-                  className="sticky left-0 z-10 bg-white p-3 text-left font-medium text-charcoal"
+                  className="sticky left-0 z-10 bg-white p-3 text-left font-medium text-brand-base"
                 >
                   {/* The visible name stays short; the accessible name carries
                       the disambiguator when two people share it. */}
@@ -208,7 +208,7 @@ export default function ResultsTable({
                         </span>
                       </span>
                       {needsLink && (
-                        <span className="mt-1 block text-xs font-medium text-teal">
+                        <span className="mt-1 block text-xs font-medium text-blue-support">
                           <span aria-hidden="true">▶ </span>video
                           <span className="sr-only">: would join by video or dial-in</span>
                         </span>
@@ -222,10 +222,10 @@ export default function ResultsTable({
         </tbody>
 
         <tfoot>
-          <tr className="border-t-2 border-charcoal/20">
+          <tr className="border-t-2 border-brand-base/20">
             <th
               scope="row"
-              className="sticky left-0 z-10 bg-white p-3 text-left font-semibold text-charcoal"
+              className="sticky left-0 z-10 bg-white p-3 text-left font-semibold text-brand-base"
             >
               Totals
             </th>
@@ -244,7 +244,7 @@ export default function ResultsTable({
                   {/* COUNTS AS TEXT FIRST, then the bar. The summary card above
                       uses percentages; the foot uses counts, because a per-cell
                       percentage next to a per-cell count is noise. */}
-                  <span className="block text-charcoal">{totalsLine(counts)}</span>
+                  <span className="block text-brand-base">{totalsLine(counts)}</span>
                   {tally && <TotalsBar tally={tally} />}
                 </td>
               );

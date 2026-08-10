@@ -199,7 +199,7 @@ export default async function LicenseesGuidePage() {
           showCTA={false}
         />
         <Section background="white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+          <div className="measure py-12">
             <Text className="text-red-600 text-center">
               Error loading blog posts. Please try refreshing the page.
             </Text>
@@ -244,41 +244,41 @@ export default async function LicenseesGuidePage() {
         breadcrumbEmitJsonLd={false}
       />
 
-      <SeasonalPlaybooksBand background="cream" />
+      <SeasonalPlaybooksBand background="surface" />
 
       <Section background="white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+        <div className="measure py-12">
           {/* Lead paragraph */}
-          <Text size="lg" align="center" className="max-w-4xl mx-auto mb-8 text-charcoal/70">
+          <Text size="lg" align="center" className="mb-8 text-brand-base/70">
             Essential guides for modern pub management, with ideas you can adapt for restaurants and
             bars. From filling empty venues to competing with chains, discover practical advice that
             actually works.
           </Text>
 
           {/* Key Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">+403%</div>
-              <Text size="sm" className="text-charcoal/70">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 measure-wide mb-12">
+            <div className="text-center p-6 bg-surface rounded-lg">
+              <div className="text-3xl font-bold text-orange-dark mb-2">+403%</div>
+              <Text size="sm" className="text-brand-base/70">
                 Table bookings
               </Text>
             </div>
-            <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">-89%</div>
-              <Text size="sm" className="text-charcoal/70">
+            <div className="text-center p-6 bg-surface rounded-lg">
+              <div className="text-3xl font-bold text-orange-dark mb-2">-89%</div>
+              <Text size="sm" className="text-brand-base/70">
                 Booking no-shows
               </Text>
             </div>
-            <div className="text-center p-6 bg-cream rounded-lg">
-              <div className="text-3xl font-bold text-orange mb-2">+828%</div>
-              <Text size="sm" className="text-charcoal/70">
+            <div className="text-center p-6 bg-surface rounded-lg">
+              <div className="text-3xl font-bold text-orange-dark mb-2">+828%</div>
+              <Text size="sm" className="text-brand-base/70">
                 Google Search visibility
               </Text>
             </div>
           </div>
 
           {/* Introduction */}
-          <div className="prose prose-lg max-w-4xl mx-auto mb-12">
+          <div className="prose prose-lg measure mb-12">
             <Text className="mb-4">
               Every guide in this collection comes from real experience at The Anchor in Stanwell
               Moor. We've tested these strategies firsthand, measuring their impact on our bottom
@@ -296,40 +296,40 @@ export default async function LicenseesGuidePage() {
           </div>
 
           {/* What You'll Learn */}
-          <div className="bg-teal-dark/5 rounded-xl p-8 mb-12 max-w-4xl mx-auto">
+          <div className="bg-brand-base/5 rounded-xl p-8 mb-12 measure">
             <Heading level={2} align="center" className="mb-6">
               What You'll Learn
             </Heading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">How to fill your pub on quiet weeknights</Text>
               </div>
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">Social media strategies that actually drive footfall</Text>
               </div>
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">Food menu optimisation for maximum profit</Text>
               </div>
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">Event ideas that build loyal communities</Text>
               </div>
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">Competing with chains without matching prices</Text>
               </div>
               <div className="flex items-start">
-                <span className="text-orange mr-3">✓</span>
+                <span className="text-orange-dark mr-3">✓</span>
                 <Text size="sm">Budget-friendly marketing that delivers results</Text>
               </div>
             </div>
           </div>
 
           {/* Search */}
-          <div className="mb-12 max-w-2xl mx-auto">
+          <div className="mb-12 measure">
             <Heading level={2} align="center" className="mb-6">
               Search the Guides
             </Heading>

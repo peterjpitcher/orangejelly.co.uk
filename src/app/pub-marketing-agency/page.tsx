@@ -75,22 +75,22 @@ export default function PubMarketingAgencyPage() {
 
       {/* What Makes OJ Different */}
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-6">
             Why Most Hospitality Marketing Agencies Miss the Mark
           </Heading>
-          <div className="space-y-4 max-w-3xl mx-auto mb-12">
-            <Text size="lg" className="text-charcoal/80">
+          <div className="space-y-4 measure mb-12">
+            <Text size="lg" className="text-brand-base/80">
               Most hospitality marketing agencies treat pubs like any other small business. They
               sell generic social media packages, monthly retainers, and reports full of impressions
               that never translate to bums on seats.
             </Text>
-            <Text size="lg" className="text-charcoal/80">
+            <Text size="lg" className="text-brand-base/80">
               The problem? They have never pulled a pint, managed a kitchen GP, or tried to fill a
               Tuesday night in January. They do not understand that your budget is tight, your time
               is tighter, and you need results you can see on the till, not in a dashboard.
             </Text>
-            <Text size="lg" className="text-charcoal/80">
+            <Text size="lg" className="text-brand-base/80">
               Orange Jelly is different. Peter Pitcher runs The Anchor in Stanwell Moor as a Greene
               King tenant. Every strategy we recommend has been tested in a real pub, with real
               staff, on a real budget. If it does not work behind the bar, it does not go on this
@@ -134,17 +134,12 @@ export default function PubMarketingAgencyPage() {
       </Section>
 
       {/* Results */}
-      <Section background="teal" padding="large">
-        <Container maxWidth="4xl">
+      <Section background="blue-support" padding="large">
+        <Container width="measure-wide">
           <Heading level={2} color="white" align="center" className="mb-4">
             Real Numbers From a Real Pub
           </Heading>
-          <Text
-            size="lg"
-            color="white"
-            align="center"
-            className="opacity-90 mb-10 max-w-3xl mx-auto"
-          >
+          <Text size="lg" color="white" align="center" className="opacity-90 mb-10 measure">
             These are results from The Anchor, not projections, not estimates. The same systems we
             deliver for clients.
           </Text>
@@ -157,12 +152,12 @@ export default function PubMarketingAgencyPage() {
       </Section>
 
       {/* Package Overview */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="6xl">
+      <Section background="surface" padding="large">
+        <Container>
           <Heading level={2} align="center" className="mb-4">
             Clear Packages. Honest Pricing.
           </Heading>
-          <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+          <Text size="lg" color="muted" align="center" className="mb-10 measure">
             Not hourly invoices that surprise you. Four clear packages so you know exactly what you
             are getting.
           </Text>
@@ -188,7 +183,7 @@ export default function PubMarketingAgencyPage() {
 
       {/* Who This Is For */}
       <Section background="white" padding="large">
-        <Container maxWidth="4xl">
+        <Container width="measure-wide">
           <Grid columns={{ default: 1, md: 2 }} gap="large">
             <Card background="white" padding="large" variant="bordered">
               <Heading level={3} className="mb-4 text-green-700">
@@ -229,7 +224,7 @@ export default function PubMarketingAgencyPage() {
 
       {/* How It Works */}
       <Section background="white" padding="large">
-        <Container maxWidth="5xl">
+        <Container>
           <Heading level={2} align="center" className="mb-12">
             How Working With Us Works
           </Heading>
@@ -258,7 +253,7 @@ export default function PubMarketingAgencyPage() {
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="w-12 h-12 bg-orange text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                  <div className="w-12 h-12 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
                     {item.step}
                   </div>
                   <Heading level={4} className="mb-3">
@@ -275,8 +270,8 @@ export default function PubMarketingAgencyPage() {
       </Section>
 
       {/* FAQ */}
-      <Section background="cream" padding="large">
-        <Container maxWidth="4xl">
+      <Section background="surface" padding="large">
+        <Container width="measure-wide">
           <Heading level={2} align="center" className="mb-12">
             Common Questions About Hospitality Marketing Agencies
           </Heading>
@@ -290,12 +285,12 @@ export default function PubMarketingAgencyPage() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="large">
-        <Container maxWidth="3xl">
+        <Container width="measure">
           <div className="text-center">
             <Heading level={2} className="mb-4">
               Ready to Work With a Hospitality Marketing Agency That Gets It?
             </Heading>
-            <Text size="lg" className="mb-8 max-w-2xl mx-auto">
+            <Text size="lg" className="mb-8 measure">
               Message Peter on WhatsApp, tell him what is not working, and he will point you to the
               right package. No pitch decks, no sales calls.
             </Text>

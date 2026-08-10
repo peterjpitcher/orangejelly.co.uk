@@ -88,7 +88,7 @@ export default function BestOptionCard({
           and those render as outline buttons: subordinate to the leader's, not
           three identical slabs of orange competing for the same click. */}
       {best.length > 1 && (
-        <div className="mt-5 border-t border-charcoal/15 pt-4">
+        <div className="mt-5 border-t border-brand-base/15 pt-4">
           <Text size="sm" color="muted">
             {best.length === 2
               ? 'One more is level with it. Pick whichever suits you:'

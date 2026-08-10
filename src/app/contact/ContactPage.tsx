@@ -169,7 +169,7 @@ export default function ContactPage({}: ContactPageProps) {
 
       {/* Three ways to connect */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto">
+        <div className="measure">
           <Heading level={2} align="center" className="mb-12">
             Three Ways to Start Momentum
           </Heading>
@@ -267,8 +267,8 @@ export default function ContactPage({}: ContactPageProps) {
       </Section>
 
       {/* Contact Form Section */}
-      <Section background="cream" padding="large">
-        <div className="max-w-2xl mx-auto">
+      <Section background="surface" padding="large">
+        <div className="measure">
           <Heading level={2} align="center" className="mb-4">
             Send a Message
           </Heading>
@@ -288,7 +288,7 @@ export default function ContactPage({}: ContactPageProps) {
 
       {/* Contact details section */}
       <Section background="white" padding="large">
-        <div className="max-w-5xl mx-auto">
+        <div className="">
           <Grid columns={{ default: 1, md: 2 }} gap="large">
             <AnimatedItem animation="fade-in">
               <Card variant="bordered" background="white" padding="large">
@@ -384,31 +384,31 @@ export default function ContactPage({}: ContactPageProps) {
                   </Heading>
                   <div className="space-y-3">
                     <div className="flex gap-3">
-                      <Text weight="bold" className="text-orange">
+                      <Text weight="bold" className="text-orange-dark">
                         1.
                       </Text>
                       <Text>You share your current goals and bottlenecks</Text>
                     </div>
                     <div className="flex gap-3">
-                      <Text weight="bold" className="text-orange">
+                      <Text weight="bold" className="text-orange-dark">
                         2.
                       </Text>
                       <Text>We have a focused conversation (no scripts)</Text>
                     </div>
                     <div className="flex gap-3">
-                      <Text weight="bold" className="text-orange">
+                      <Text weight="bold" className="text-orange-dark">
                         3.
                       </Text>
                       <Text>I map the fastest actions to move the numbers</Text>
                     </div>
                     <div className="flex gap-3">
-                      <Text weight="bold" className="text-orange">
+                      <Text weight="bold" className="text-orange-dark">
                         4.
                       </Text>
                       <Text>We agree a plan your team can actually run</Text>
                     </div>
                     <div className="flex gap-3">
-                      <Text weight="bold" className="text-orange">
+                      <Text weight="bold" className="text-orange-dark">
                         5.
                       </Text>
                       <Text>You build weekly momentum and measurable progress</Text>
@@ -425,13 +425,13 @@ export default function ContactPage({}: ContactPageProps) {
 
       {/* Map section */}
       <Section background="white" padding="medium">
-        <div className="max-w-5xl mx-auto">
+        <div className="">
           <Card variant="bordered" className="overflow-hidden">
             <a
               href="https://www.the-anchor.pub"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block relative h-96 bg-cream"
+              className="group block relative h-96 bg-surface"
               aria-label="Visit The Anchor website"
             >
               <OptimizedImage
@@ -441,7 +441,7 @@ export default function ContactPage({}: ContactPageProps) {
                 height={400}
                 className="object-cover w-full h-full transition-opacity group-hover:opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-base/50 to-transparent flex items-end">
                 <div className="p-6 text-white">
                   <Heading level={3} color="white" className="mb-2">
                     See The Anchor in Action
@@ -457,8 +457,8 @@ export default function ContactPage({}: ContactPageProps) {
       </Section>
 
       {/* FAQ Section */}
-      <Section background="cream" padding="large">
-        <div className="max-w-4xl mx-auto">
+      <Section background="surface" padding="large">
+        <div className="measure">
           <Heading level={2} align="center" className="mb-4">
             Common Questions
           </Heading>
@@ -478,7 +478,7 @@ export default function ContactPage({}: ContactPageProps) {
 
       {/* Trust section */}
       <Section background="white" padding="large">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} className="mb-8">
             Partner-Level Support, No Agency Layers
           </Heading>
@@ -509,7 +509,7 @@ export default function ContactPage({}: ContactPageProps) {
             </Text>
           </div>
 
-          <div className="mt-12 max-w-2xl mx-auto">
+          <div className="mt-12 measure">
             <div className="relative w-full" style={{ maxWidth: '600px', margin: '0 auto' }}>
               <OptimizedImage
                 src="/images/peter-and-billy-anchor.jpg"
@@ -530,8 +530,8 @@ export default function ContactPage({}: ContactPageProps) {
       <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
 
       {/* Final CTA */}
-      <Section background="teal" padding="large">
-        <div className="max-w-2xl mx-auto text-center">
+      <Section background="blue-support" padding="large">
+        <div className="measure text-center">
           <Heading level={2} color="white" className="mb-6">
             Ready to Build Momentum?
           </Heading>
@@ -556,7 +556,7 @@ export default function ContactPage({}: ContactPageProps) {
       </Section>
 
       {/* Related links */}
-      <Section background="cream" padding="medium">
+      <Section background="surface" padding="medium">
         <RelatedLinks title="Next Steps" links={contactLinks} variant="card" />
       </Section>
     </>

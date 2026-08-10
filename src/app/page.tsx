@@ -169,7 +169,7 @@ export default function Home() {
       {/* Seasonal Playbooks */}
       <SeasonalPlaybooksBand
         highlightInSeason
-        background="cream"
+        background="surface"
         subtitle="Ready-to-run guides for the moments that matter each season, built and tested at The Anchor. Pick the playbook that fits the calendar ahead."
       />
 
@@ -178,7 +178,7 @@ export default function Home() {
         <Heading level={2} align="center" className="mb-4">
           Where Hospitality Growth Gets Stuck
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+        <Text size="lg" color="muted" align="center" className="mb-10 measure">
           Sound familiar? Every problem has a package built to solve it.
         </Text>
         <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="medium">
@@ -190,7 +190,10 @@ export default function Home() {
                   className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
                 >
                   <div className="text-3xl mb-3">{problem.emoji}</div>
-                  <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                  <Heading
+                    level={3}
+                    className="mb-2 group-hover:text-orange-dark transition-colors"
+                  >
                     {problem.title}
                   </Heading>
                   <Text color="muted">{problem.description}</Text>
@@ -202,11 +205,11 @@ export default function Home() {
       </Section>
 
       {/* Package Summary */}
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-4">
           Clear Packages. Honest Pricing.
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+        <Text size="lg" color="muted" align="center" className="mb-10 measure">
           Four packages for every stage of growth. No hidden fees, no lock-in.
         </Text>
         <Grid columns={{ default: 1, md: 2, lg: 4 }} gap="medium">
@@ -233,7 +236,7 @@ export default function Home() {
         <Heading level={2} align="center" className="mb-4">
           Everything We Can Help With
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+        <Text size="lg" color="muted" align="center" className="mb-10 measure">
           A full digital capability stack, tested at The Anchor. Support depth varies by package.
         </Text>
         <CapabilityGrid compact />
@@ -276,7 +279,7 @@ export default function Home() {
                 variant="colored"
                 background="white"
                 padding="large"
-                className="!bg-teal text-center relative overflow-hidden transition-opacity hover:opacity-95"
+                className="!bg-blue-support text-center relative overflow-hidden transition-opacity hover:opacity-95"
               >
                 <Text size="xs" color="white" align="center" className="mb-4 opacity-90">
                   Proven Daily At
@@ -303,11 +306,11 @@ export default function Home() {
       </Section>
 
       {/* Results */}
-      <Section background="teal">
+      <Section background="blue-support">
         <Heading level={2} color="white" align="center" className="mb-4">
           Real Results from The Anchor
         </Heading>
-        <Text size="lg" color="white" align="center" className="opacity-90 mb-10 max-w-2xl mx-auto">
+        <Text size="lg" color="white" align="center" className="opacity-90 mb-10 measure">
           Not projections. Not estimates. These are real outcomes from a real pub, using the same
           systems we deliver for clients.
         </Text>
@@ -329,7 +332,7 @@ export default function Home() {
           <Heading level={2} align="center" className="mb-4">
             Latest Pub Marketing Guides
           </Heading>
-          <Text size="lg" color="muted" align="center" className="mb-10 max-w-2xl mx-auto">
+          <Text size="lg" color="muted" align="center" className="mb-10 measure">
             Practical advice from a working licensee. Every guide is tested at The Anchor first.
           </Text>
           <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="large">
@@ -340,7 +343,10 @@ export default function Home() {
                     variant="bordered"
                     className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
                   >
-                    <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                    <Heading
+                      level={3}
+                      className="mb-2 group-hover:text-orange-dark transition-colors"
+                    >
                       {post.title}
                     </Heading>
                     <Text color="muted" className="mb-4 line-clamp-2">
@@ -365,11 +371,11 @@ export default function Home() {
       {/* Areas We Cover. These were eight separate county landing pages until they were
           consolidated into /pub-marketing; the counties stay named here as plain text so
           the local relevance survives without eight thin pages competing with each other. */}
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-4">
           Where We Work
         </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-6 max-w-2xl mx-auto">
+        <Text size="lg" color="muted" align="center" className="mb-6 measure">
           We work with pubs anywhere in the UK. Peter runs The Anchor in Stanwell Moor, so if you
           are in Surrey, London, Berkshire, Buckinghamshire, Hampshire, Hertfordshire, Kent or
           Oxfordshire he can get to you in person. Everywhere else works just as well remotely.
@@ -383,7 +389,7 @@ export default function Home() {
               >
                 <Heading
                   level={3}
-                  className="text-base md:text-lg group-hover:text-orange transition-colors"
+                  className="text-base md:text-lg group-hover:text-orange-dark transition-colors"
                 >
                   Pub Marketing
                 </Heading>
@@ -401,7 +407,7 @@ export default function Home() {
         <Heading level={2} className="text-center mb-8">
           Frequently Asked Questions
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -411,11 +417,11 @@ export default function Home() {
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
         <AnimatedItem animation="scale" delay={300}>
-          <Container maxWidth="3xl" center className="text-center">
+          <Container width="measure" center className="text-center">
             <Heading level={2} align="center" className="mb-4">
               Ready to Fill More Seats?
             </Heading>
-            <Text size="lg" align="center" className="mb-6 max-w-2xl mx-auto">
+            <Text size="lg" align="center" className="mb-6 measure">
               Tell Peter where momentum is stuck. He&apos;ll point you to the right package and the
               fastest next step.
             </Text>

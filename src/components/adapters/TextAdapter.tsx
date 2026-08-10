@@ -6,9 +6,18 @@ interface LegacyTextProps {
   children: React.ReactNode;
   id?: string;
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl';
-  color?: 'charcoal' | 'muted' | 'white' | 'base' | 'support' | 'accent' | 'highlight' | 'grounded';
+  color?:
+    | 'inherit'
+    | 'brand-base'
+    | 'muted'
+    | 'white'
+    | 'base'
+    | 'support'
+    | 'accent'
+    | 'highlight'
+    | 'grounded';
   weight?: 'normal' | 'medium' | 'semibold' | 'bold';
-  align?: 'left' | 'center' | 'right';
+  align?: 'inherit' | 'left' | 'center' | 'right';
   className?: string;
   as?: 'p' | 'span' | 'div';
   itemProp?: string;
@@ -18,9 +27,12 @@ export default function TextAdapter({
   children,
   id,
   size = 'base',
-  color = 'charcoal',
+  // Inherit by default. On the page background this resolves to the same navy the
+  // old 'brand-base' default emitted, since body sets text-foreground; the change is
+  // that Text no longer overrides a container that has set its own light colour.
+  color = 'inherit',
   weight = 'normal',
-  align = 'left',
+  align = 'inherit',
   className,
   as = 'p',
   itemProp,
@@ -33,9 +45,12 @@ export default function TextAdapter({
     accent: 'accent',
     highlight: 'highlight',
     grounded: 'grounded',
-    charcoal: 'charcoal',
+    // See HeadingAdapter: `charcoal` was never charcoal, and `base` already
+    // rendered this exact colour.
+    'brand-base': 'base',
     muted: 'muted',
     white: 'white',
+    inherit: 'inherit',
   } as const;
 
   return (

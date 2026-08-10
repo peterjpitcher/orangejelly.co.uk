@@ -29,7 +29,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       <Section background="white" padding="large">
         <Container>
           {pkg.badge && (
-            <span className="inline-block rounded-full bg-orange px-4 py-1 text-sm font-semibold text-white mb-4">
+            <span className="inline-block rounded-full bg-orange px-4 py-1 text-sm font-semibold text-brand-base mb-4">
               {pkg.badge}
             </span>
           )}
@@ -54,7 +54,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
             <ul className="space-y-1">
               {pkg.bestFor.map((item) => (
                 <li key={item} className="flex items-start gap-2">
-                  <span className="text-orange mt-0.5 shrink-0">&#10003;</span>
+                  <span className="text-orange-dark mt-0.5 shrink-0">&#10003;</span>
                   <Text>{item}</Text>
                 </li>
               ))}
@@ -70,7 +70,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       </Section>
 
       {/* Included */}
-      <Section background="cream" padding="medium">
+      <Section background="surface" padding="medium">
         <Container>
           <Heading level={2} className="mb-6">
             What&apos;s included
@@ -78,7 +78,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {pkg.included.map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <span className="text-green-600 mt-0.5 shrink-0 text-lg">&#10003;</span>
+                <span className="text-green-700 mt-0.5 shrink-0 text-lg">&#10003;</span>
                 <Text>{item}</Text>
               </li>
             ))}
@@ -110,7 +110,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
 
       {/* Add-ons */}
       {packageAddOns.length > 0 && (
-        <Section background="cream" padding="medium">
+        <Section background="surface" padding="medium">
           <Container>
             <Heading level={2} className="mb-2">
               Available as add-ons
@@ -157,7 +157,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       )}
 
       {/* How it works */}
-      <Section background="cream" padding="medium">
+      <Section background="surface" padding="medium">
         <Container>
           <Heading level={2} className="mb-8">
             How it works
@@ -165,7 +165,7 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pkg.process.map((step) => (
               <div key={step.step}>
-                <span className="w-8 h-8 rounded-full bg-orange text-white text-sm font-bold flex items-center justify-center mb-3">
+                <span className="w-8 h-8 rounded-full bg-orange text-brand-base text-sm font-bold flex items-center justify-center mb-3">
                   {step.step}
                 </span>
                 <Text weight="semibold" className="mb-1 block">
@@ -200,12 +200,12 @@ export function PackageDetail({ slug }: PackageDetailProps): React.ReactElement 
       {pkg.paymentPlan.available && <PaymentPlanBanner />}
 
       {/* Final CTA */}
-      <Section background="charcoal" padding="large">
+      <Section background="brand-base" padding="large">
         <Container>
           <Heading level={2} align="center" color="white" className="mb-4">
             Ready to get started?
           </Heading>
-          <Text align="center" color="white" className="mb-8 max-w-2xl mx-auto">
+          <Text align="center" color="white" className="mb-8 measure">
             Message Peter directly or send an enquiry. No obligation, no sales pitch, just a
             conversation about what your venue needs.
           </Text>

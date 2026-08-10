@@ -10,7 +10,7 @@ interface SeasonalPlaybooksBandProps {
   /** When true, the hub that is currently in season gets a "This season" pill. */
   highlightInSeason?: boolean;
   /** Section background token. Defaults to the cream band used on the guides index. */
-  background?: 'white' | 'cream';
+  background?: 'white' | 'surface';
   /** Optional heading override. */
   heading?: string;
   /** Optional subtitle override. */
@@ -27,7 +27,7 @@ const DEFAULT_SUBTITLE =
  */
 export default function SeasonalPlaybooksBand({
   highlightInSeason = false,
-  background = 'cream',
+  background = 'surface',
   heading = 'Seasonal Playbooks',
   subtitle = DEFAULT_SUBTITLE,
 }: SeasonalPlaybooksBandProps) {
@@ -37,12 +37,12 @@ export default function SeasonalPlaybooksBand({
 
   return (
     <Section background={background}>
-      <div className="max-w-4xl mx-auto">
+      <div className="measure">
         <div className="text-center mb-8">
           <Heading level={2} align="center" className="mb-3">
             {heading}
           </Heading>
-          <Text size="lg" align="center" className="max-w-2xl mx-auto text-charcoal/70">
+          <Text size="lg" align="center" className="measure text-brand-base/70">
             {subtitle}
           </Text>
         </div>
@@ -57,16 +57,19 @@ export default function SeasonalPlaybooksBand({
                   className="group block h-full"
                 >
                   <span className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-orange/10 text-orange">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-orange/10 text-orange-darker">
                       {hub.dateRangeLabel}
                     </span>
                     {inSeason && (
-                      <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-teal text-white">
+                      <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-support text-white">
                         This season
                       </span>
                     )}
                   </span>
-                  <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+                  <Heading
+                    level={3}
+                    className="mb-2 group-hover:text-orange-dark transition-colors"
+                  >
                     {hub.label}
                   </Heading>
                   <Text color="muted">

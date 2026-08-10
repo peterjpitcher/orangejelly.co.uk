@@ -39,9 +39,12 @@ export default function AlertAdapter({
   // Variant-specific styles
   const variantStyles = {
     default: '',
-    success: 'border-green-200 bg-green-50 [&>svg]:text-green-600',
+    success: 'border-green-200 bg-green-50 [&>svg]:text-green-700',
     error: '',
-    warning: 'border-orange-200 bg-orange-50 [&>svg]:text-orange-600',
+    // orange-200/50/600 do not exist here: the palette replaces Tailwind's numeric
+    // orange scale with a named ramp, so these three classes generated nothing and
+    // the warning variant rendered with no styling at all.
+    warning: 'border-orange/30 bg-orange-light [&>svg]:text-orange-dark',
     info: 'border-blue-200 bg-blue-50 [&>svg]:text-blue-600',
   };
 

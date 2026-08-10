@@ -20,14 +20,14 @@ function FeaturesGrid({ features, className = '' }: FeaturesGridProps) {
 
   return (
     <section className={`bg-white py-12 ${className}`}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="page-shell">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="text-center group">
               <div className="text-5xl mb-2 transform transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
-              <Heading level={3} color="charcoal" className="text-sm mb-1">
+              <Heading level={3} color="brand-base" className="text-sm mb-1">
                 {feature.title}
               </Heading>
               <Text size="xs" color="muted">

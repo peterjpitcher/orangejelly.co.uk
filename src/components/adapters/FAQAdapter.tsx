@@ -31,7 +31,7 @@ export default function FAQItemAdapter({ question, answer, icon }: LegacyFAQItem
           </span>
         </AccordionTrigger>
         <AccordionContent className="px-6 pb-4">
-          <div className="text-charcoal/80 pt-2">
+          <div className="text-brand-base/80 pt-2">
             {typeof answer === 'string' ? <Text>{answer}</Text> : answer}
           </div>
         </AccordionContent>

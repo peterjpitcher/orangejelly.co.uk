@@ -8,13 +8,23 @@ import Text from '@/components/Text';
 import { cn } from '@/lib/utils';
 import type { SupportLevel } from '@/types/packages';
 
+/*
+ * These four markers carry the actual meaning of the comparison table, so they are
+ * informational text and have to clear 4.5:1, not the 3:1 a decorative glyph would.
+ * Measured against the cream page background, the previous set did not: green-600
+ * 3.08:1, amber-500 2.01:1, gray-400 2.37:1, gray-300 1.38:1.
+ *
+ * Each has moved one or two steps down its own ramp, which keeps the hierarchy the
+ * design intended (included reads strongest, not-included faintest) while putting
+ * the faintest of them at 4.51:1 rather than 1.38:1.
+ */
 const levelConfig: Record<SupportLevel, { label: string; color: string; icon: string }> = {
-  included: { label: 'Included', color: 'text-green-600', icon: '\u2713' },
-  'light-touch': { label: 'Light-touch', color: 'text-amber-500', icon: '\u25CF' },
-  'add-on': { label: 'Add-on', color: 'text-gray-400', icon: '+' },
+  included: { label: 'Included', color: 'text-green-700', icon: '\u2713' },
+  'light-touch': { label: 'Light-touch', color: 'text-amber-700', icon: '\u25CF' },
+  'add-on': { label: 'Add-on', color: 'text-gray-600', icon: '+' },
   // Label was an em dash, which rendered as two dashes beside the icon and told a
   // screen reader nothing. Its siblings all carry a real label, so this now does too.
-  'not-included': { label: 'Not included', color: 'text-gray-300', icon: '\u2013' },
+  'not-included': { label: 'Not included', color: 'text-gray-500', icon: '\u2013' },
 };
 
 function SupportBadge({ level }: { level: SupportLevel }): React.ReactElement {
@@ -43,18 +53,18 @@ export function PackageComparison({ className }: PackageComparisonProps): React.
         <table className="w-full text-left">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="py-3 pr-4 text-sm font-semibold text-charcoal w-1/4">Capability</th>
+              <th className="py-3 pr-4 text-sm font-semibold text-brand-base w-1/4">Capability</th>
               {packages.map((pkg) => (
                 <th
                   key={pkg.id}
                   className={cn(
                     'py-3 px-4 text-sm font-semibold text-center',
-                    pkg.badge === 'Most Popular' ? 'text-orange' : 'text-charcoal'
+                    pkg.badge === 'Most Popular' ? 'text-orange-dark' : 'text-brand-base'
                   )}
                 >
                   {pkg.name}
                   {pkg.badge === 'Most Popular' && (
-                    <span className="block text-xs font-normal text-orange">Most Popular</span>
+                    <span className="block text-xs font-normal text-orange-dark">Most Popular</span>
                   )}
                 </th>
               ))}
@@ -92,7 +102,9 @@ export function PackageComparison({ className }: PackageComparisonProps): React.
               onClick={() => setActivePackage(pkg.id)}
               className={cn(
                 'px-3 py-2 rounded-full text-xs font-medium transition-colors text-center',
-                activePackage === pkg.id ? 'bg-orange text-white' : 'bg-gray-100 text-charcoal'
+                activePackage === pkg.id
+                  ? 'bg-orange text-brand-base'
+                  : 'bg-gray-100 text-brand-base'
               )}
             >
               {pkg.name}

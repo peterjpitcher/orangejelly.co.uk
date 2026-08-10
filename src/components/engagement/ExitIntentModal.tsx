@@ -105,7 +105,7 @@ export default function ExitIntentModal(): React.ReactElement | null {
         <button
           type="button"
           onClick={dismiss}
-          className="absolute right-4 top-4 text-charcoal/40 transition-colors hover:text-charcoal"
+          className="absolute right-4 top-4 text-brand-base/75 transition-colors hover:text-brand-base"
           aria-label="Close modal"
         >
           <svg
@@ -125,7 +125,7 @@ export default function ExitIntentModal(): React.ReactElement | null {
         </button>
 
         {/* Heading */}
-        <h2 className="mb-6 font-heading text-2xl font-bold text-charcoal sm:text-3xl">
+        <h2 className="mb-6 font-heading text-2xl font-bold text-brand-base sm:text-3xl">
           Sound familiar?
         </h2>
 
@@ -137,12 +137,12 @@ export default function ExitIntentModal(): React.ReactElement | null {
               type="button"
               onClick={() => handleOptionClick(option)}
               className={cn(
-                'flex w-full items-center justify-between rounded-lg border border-charcoal/10 px-4 py-3 text-left transition-all',
+                'flex w-full items-center justify-between rounded-lg border border-brand-base/10 px-4 py-3 text-left transition-all',
                 'hover:border-orange hover:bg-orange/5'
               )}
             >
-              <span className="pr-3 text-sm text-charcoal sm:text-base">{option.text}</span>
-              <span className="shrink-0 text-charcoal/40" aria-hidden="true">
+              <span className="pr-3 text-sm text-brand-base sm:text-base">{option.text}</span>
+              <span className="shrink-0 text-brand-base/75" aria-hidden="true">
                 &rarr;
               </span>
             </button>
@@ -150,12 +150,12 @@ export default function ExitIntentModal(): React.ReactElement | null {
         </div>
 
         {/* Dismiss text */}
-        <p className="mt-5 text-center text-sm text-charcoal/50">
+        <p className="mt-5 text-center text-sm text-brand-base/75">
           Just having a look?{' '}
           <button
             type="button"
             onClick={dismiss}
-            className="underline transition-colors hover:text-charcoal"
+            className="underline transition-colors hover:text-brand-base"
           >
             No problem.
           </button>

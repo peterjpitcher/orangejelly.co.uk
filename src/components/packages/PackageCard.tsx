@@ -37,7 +37,7 @@ export function PackageCard({
       )}
     >
       {pkg.badge && (
-        <span className="inline-block self-start rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white mb-4">
+        <span className="inline-block self-start rounded-full bg-orange px-3 py-1 text-xs font-semibold text-brand-base mb-4">
           {pkg.badge}
         </span>
       )}
@@ -65,8 +65,8 @@ export function PackageCard({
         </Text>
         <ul className="space-y-1">
           {pkg.bestFor.slice(0, 4).map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm text-charcoal/80">
-              <span className="text-orange mt-0.5 shrink-0">&#10003;</span>
+            <li key={item} className="flex items-start gap-2 text-sm text-brand-base/80">
+              <span className="text-orange-dark mt-0.5 shrink-0">&#10003;</span>
               {item}
             </li>
           ))}

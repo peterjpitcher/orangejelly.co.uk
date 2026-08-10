@@ -51,7 +51,7 @@ export default function TestShadcnPage() {
         <Heading level={2} align="center" className="mb-8">
           Typography Components
         </Heading>
-        <div className="space-y-4 max-w-3xl mx-auto">
+        <div className="space-y-4 measure">
           <Heading level={1}>Heading Level 1</Heading>
           <Heading level={2}>Heading Level 2</Heading>
           <Heading level={3}>Heading Level 3</Heading>
@@ -61,16 +61,16 @@ export default function TestShadcnPage() {
           <Text size="lg">Large text</Text>
           <Text size="xl">Extra large text</Text>
           <Text size="2xl">2XL text</Text>
-          <Text weight="bold" className="text-orange">
+          <Text weight="bold" className="text-orange-dark">
             Bold orange text
           </Text>
-          <Text weight="semibold" className="text-teal">
+          <Text weight="semibold" className="text-blue-support">
             Semibold teal text
           </Text>
         </div>
       </Section>
 
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-8">
           Button Components
         </Heading>
@@ -109,7 +109,7 @@ export default function TestShadcnPage() {
             <Heading level={3}>Colored Card</Heading>
             <Text>This card has a colored background.</Text>
           </Card>
-          <Card variant="colored" background="teal-dark">
+          <Card variant="colored" background="brand-base">
             <Heading level={3} color="white">
               Dark Card
             </Heading>
@@ -122,11 +122,11 @@ export default function TestShadcnPage() {
         </Grid>
       </Section>
 
-      <Section background="teal">
+      <Section background="blue-support">
         <Heading level={2} align="center" color="white" className="mb-8">
           Image Component
         </Heading>
-        <div className="max-w-2xl mx-auto">
+        <div className="measure">
           <Card background="white">
             <OptimizedImage
               src="/images/pub-transformation.jpg"
@@ -169,7 +169,7 @@ export default function TestShadcnPage() {
         <Heading level={2} align="center" className="mb-8">
           FAQ Components
         </Heading>
-        <div className="max-w-3xl mx-auto">
+        <div className="measure">
           <Text align="center" className="mb-8">
             Traditional card-based FAQ items:
           </Text>

@@ -28,11 +28,11 @@ function PartnershipsSection({
 
   return (
     <section className={`bg-gray-50 py-16 ${className}`}>
-      <div className="max-w-5xl mx-auto px-4">
-        <Heading level={2} align="center" color="charcoal" className="mb-12">
+      <div className="page-shell">
+        <Heading level={2} align="center" color="brand-base" className="mb-12">
           {title}
         </Heading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 measure-wide">
           {partners.map((partner, index) => (
             <div key={index} className="text-center">
               <Link href={partner.url} external className="block group">
@@ -47,8 +47,8 @@ function PartnershipsSection({
                 </div>
                 <Heading
                   level={4}
-                  color="charcoal"
-                  className="mb-3 text-lg font-bold group-hover:text-orange transition-colors"
+                  color="brand-base"
+                  className="mb-3 text-lg font-bold group-hover:text-orange-dark transition-colors"
                 >
                   {partner.name}
                 </Heading>

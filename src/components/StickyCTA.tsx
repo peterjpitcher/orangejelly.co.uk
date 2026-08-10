@@ -26,7 +26,7 @@ export default function StickyCTA() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-2 border-orange/20 shadow-lg transform transition-normal">
-      <div className="max-w-6xl mx-auto px-4 py-3">
+      <div className="page-shell py-3">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Left side - Logo and message */}
           <div className="flex items-center gap-3">
@@ -41,7 +41,7 @@ export default function StickyCTA() {
               <Text size="sm" weight="semibold" className="sm:text-base">
                 Small Team. Action-First Support.
               </Text>
-              <Text size="xs" className="text-charcoal/60 hidden sm:block">
+              <Text size="xs" className="text-brand-base/75 hidden sm:block">
                 Pay for progress, not overheads. Meaningful momentum inside 30 days.
               </Text>
             </div>
@@ -56,7 +56,7 @@ export default function StickyCTA() {
               onClick={() => setIsVisible(false)}
               variant="ghost"
               size="small"
-              className="min-h-[44px] min-w-[44px] p-2 hover:bg-cream rounded-lg transition-quick text-charcoal/60 hover:text-charcoal flex items-center justify-center"
+              className="min-h-tap min-w-tap p-2 hover:bg-surface rounded-lg transition-quick text-brand-base/75 hover:text-brand-base flex items-center justify-center"
               aria-label="Close promotional banner"
             >
               <svg

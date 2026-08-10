@@ -72,7 +72,7 @@ export function ProgressiveAccordion({
           <span className="transition-transform group-open:rotate-180">▼</span>
         </div>
       </summary>
-      <div className="mt-2 p-4 bg-cream-light rounded-lg">{children}</div>
+      <div className="mt-2 p-4 bg-surface-bright rounded-lg">{children}</div>
     </details>
   );
 }
@@ -107,7 +107,7 @@ export function ProgressiveForm({
     <form action={action} method={method} onSubmit={handleSubmit}>
       {children}
       <NoScriptFallback>
-        <p className="text-sm text-charcoal/60 mt-2">
+        <p className="text-sm text-brand-base/75 mt-2">
           JavaScript is disabled. The form will submit and reload the page.
         </p>
       </NoScriptFallback>

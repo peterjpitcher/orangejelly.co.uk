@@ -66,7 +66,7 @@ export function ContentBoundaries({ className }: ContentBoundariesProps): React.
             </Text>
             <ul className="space-y-1">
               {layer.items.map((item) => (
-                <li key={item} className="text-sm text-charcoal/70">
+                <li key={item} className="text-sm text-brand-base/70">
                   {item}
                 </li>
               ))}

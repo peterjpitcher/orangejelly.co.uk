@@ -84,7 +84,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
                 {categoryLabel}
               </div>
 
-              <Heading level={2} className="mb-3 group-hover:text-orange transition-colors">
+              <Heading level={2} className="mb-3 group-hover:text-orange-dark transition-colors">
                 {post.title}
               </Heading>
 
@@ -92,7 +92,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
                 {post.excerpt}
               </Text>
 
-              <div className="flex items-center gap-4 text-sm text-charcoal/60">
+              <div className="flex items-center gap-4 text-sm text-brand-base/75">
                 <span>{post.author.name}</span>
                 <span>&middot;</span>
                 <time dateTime={post.publishedDate}>{formatDate(post.publishedDate)}</time>
@@ -147,7 +147,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
             {categoryLabel}
           </div>
 
-          <Heading level={3} className="mb-2 group-hover:text-orange transition-colors">
+          <Heading level={3} className="mb-2 group-hover:text-orange-dark transition-colors">
             {post.title}
           </Heading>
 
@@ -155,7 +155,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
             {post.excerpt}
           </Text>
 
-          <div className="flex items-center gap-3 text-sm text-charcoal/60">
+          <div className="flex items-center gap-3 text-sm text-brand-base/75">
             <time dateTime={post.publishedDate}>{formatDate(post.publishedDate)}</time>
             <span>&middot;</span>
             <span>{post.readingTime} min read</span>

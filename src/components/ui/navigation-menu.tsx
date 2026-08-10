@@ -7,17 +7,31 @@ import { ChevronDown } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
+/**
+ * Set `viewport` to render the single shared Radix viewport instead of anchoring
+ * each panel to its own trigger.
+ *
+ * It defaults to false, and that default is the fix for a real bug. The shared
+ * viewport is wrapped in `absolute left-0 top-full`, which anchors it to the left
+ * edge of the whole menu root rather than to whichever trigger is open. With the
+ * Guides trigger at left=608 the panel rendered at left=208, i.e. underneath
+ * "Home". Anchoring each Content inside its own (now relative) Item puts every
+ * panel under the item that opened it.
+ *
+ * Only turn the viewport back on for a mega-menu that must span the full header
+ * and animate between siblings, and give it an explicit horizontal anchor if you do.
+ */
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root> & { viewport?: boolean }
+>(({ className, children, viewport = false, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
     ref={ref}
-    className={cn('relative z-10 flex max-w-max flex-1 items-center justify-center', className)}
+    className={cn('relative z-50 flex max-w-max flex-1 items-center justify-center', className)}
     {...props}
   >
     {children}
-    <NavigationMenuViewport />
+    {viewport && <NavigationMenuViewport />}
   </NavigationMenuPrimitive.Root>
 ));
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
@@ -34,7 +48,15 @@ const NavigationMenuList = React.forwardRef<
 ));
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
-const NavigationMenuItem = NavigationMenuPrimitive.Item;
+// `relative` is what each panel anchors itself to, so it belongs on the Item
+// rather than being left to the caller to remember.
+const NavigationMenuItem = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Item>
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.Item ref={ref} className={cn('relative', className)} {...props} />
+));
+NavigationMenuItem.displayName = NavigationMenuPrimitive.Item.displayName;
 
 const navigationMenuTriggerStyle = cva(
   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'
@@ -65,7 +87,15 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ',
+      // The panel carries its own surface now. Border, background, radius and
+      // shadow used to live on the shared viewport; without that wrapper the
+      // content would otherwise render unstyled over the page.
+      'top-full z-50 mt-1.5 overflow-hidden rounded-lg border bg-popover text-popover-foreground shadow-lg',
+      // Anchored left-aligned to the trigger so the panel edge lines up with the
+      // trigger label. `min-w-full` stops a short list rendering narrower than
+      // the trigger it belongs to.
+      'left-0 min-w-full md:absolute md:w-auto',
+      'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=open]:slide-in-from-top-1',
       className
     )}
     {...props}

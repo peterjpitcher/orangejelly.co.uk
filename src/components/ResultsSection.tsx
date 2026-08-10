@@ -21,13 +21,13 @@ function ResultsSection({
   className = '',
 }: ResultsSectionProps) {
   return (
-    <section className={`bg-charcoal py-16 ${className}`}>
-      <div className="max-w-4xl mx-auto px-4 text-center">
+    <section className={`bg-brand-base py-16 ${className}`}>
+      <div className="page-shell text-center">
         <Heading level={2} align="center" color="white" className="mb-8">
           {title}
         </Heading>
 
-        <div className="bg-teal/25 rounded-lg p-8 mb-8">
+        <div className="bg-blue-support/25 rounded-lg p-8 mb-8">
           <Text size="lg" color="white" className="mb-4">
             {testimonial}
           </Text>
@@ -40,7 +40,7 @@ function ResultsSection({
           href={buttonHref}
           variant="secondary"
           size="medium"
-          className="bg-white text-charcoal hover:bg-cream-light"
+          className="bg-white text-brand-base hover:bg-surface-bright"
         >
           {buttonText}
         </Button>

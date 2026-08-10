@@ -107,14 +107,14 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
           <div className="flex-1">
             <Text size="sm" weight="semibold">
               {currentNotification.pub}
-              <span className="text-xs text-charcoal/60 font-normal ml-1">
+              <span className="text-xs text-brand-base/75 font-normal ml-1">
                 ({currentNotification.location})
               </span>
             </Text>
             <Text size="sm" color="muted">
               {currentNotification.message}
             </Text>
-            <Text size="xs" className="text-charcoal/50 mt-1">
+            <Text size="xs" className="text-brand-base/75 mt-1">
               {currentNotification.time}
             </Text>
           </div>
@@ -123,7 +123,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
           <Button
             onClick={() => setIsVisible(false)}
             variant="custom"
-            className="text-charcoal/40 hover:text-charcoal/60 transition-quick p-0"
+            className="text-brand-base/75 hover:text-brand-base/75 transition-quick p-0"
             aria-label="Close notification"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function SocialProof({ socialProofItems }: SocialProofProps) {
 
         {/* Orange Jelly branding */}
         <div className="mt-3 pt-3 border-t flex items-center justify-between">
-          <span className="text-xs text-charcoal/50">Powered by</span>
+          <span className="text-xs text-brand-base/75">Powered by</span>
           <OptimizedImage
             src="/logo.png"
             alt="Orange Jelly"

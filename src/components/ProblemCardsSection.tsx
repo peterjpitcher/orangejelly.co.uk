@@ -26,9 +26,9 @@ function ProblemCardsSection({
   }
 
   return (
-    <section className={`bg-cream py-16 ${className}`}>
-      <div className="max-w-6xl mx-auto px-4">
-        <Heading level={2} align="center" color="charcoal" className="mb-12">
+    <section className={`bg-surface py-16 ${className}`}>
+      <div className="page-shell">
+        <Heading level={2} align="center" color="brand-base" className="mb-12">
           {title}
         </Heading>
 
@@ -42,7 +42,7 @@ function ProblemCardsSection({
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {problem.emoji}
                 </div>
-                <Heading level={3} color="charcoal" className="mb-3">
+                <Heading level={3} color="brand-base" className="mb-3">
                   {problem.title}
                 </Heading>
                 <Text color="muted" className="mb-6">
@@ -50,7 +50,7 @@ function ProblemCardsSection({
                 </Text>
                 <Link
                   href={problem.linkHref}
-                  className="inline-flex items-center justify-center text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                  className="inline-flex items-center justify-center text-sm font-semibold text-orange-dark hover:text-orange-darker transition-colors"
                 >
                   Learn More →
                 </Link>

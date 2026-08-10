@@ -22,13 +22,13 @@ function TrustBar({ items }: TrustBarProps) {
       <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-support/20 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
       <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-blue-support/20 to-transparent rounded-full translate-x-20 translate-y-20"></div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative page-shell">
         <Grid columns={{ default: 2, md: 4 }} gap="medium" className="text-center">
           {items.map((item, index) => (
             <div key={index}>
               <p className="text-3xl font-bold text-blue-support mb-1">{item.value}</p>
-              <p className="text-charcoal font-medium">{item.label}</p>
-              {item.subtext && <p className="text-sm text-charcoal/70 mt-1">{item.subtext}</p>}
+              <p className="text-brand-base font-medium">{item.label}</p>
+              {item.subtext && <p className="text-sm text-brand-base/70 mt-1">{item.subtext}</p>}
             </div>
           ))}
         </Grid>

@@ -41,7 +41,9 @@ export default function Loading({
   if (variant === 'section') {
     return (
       <div className={cn('py-16', className)}>
-        <Container>
+        {/* padding is explicit here: this one is not inside a Section, so nothing
+            above it has applied the page gutter. */}
+        <Container padding>
           <div className="text-center space-y-8">
             <div className="space-y-4">
               <Skeleton className="h-8 w-1/2 mx-auto" />
@@ -67,18 +69,18 @@ export default function Loading({
 
   // Page variant and fullScreen
   const content = (
-    <Container className="text-center py-20">
+    <Container padding className="text-center py-20">
       <div className="space-y-6">
         {/* Orange Jelly Loading Animation */}
         <div className="flex justify-center">
           <div className="relative">
             <div className="w-16 h-16 border-4 border-orange border-t-transparent rounded-full animate-spin"></div>
-            <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-b-teal rounded-full animate-spin animation-delay-200"></div>
+            <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-b-blue-support rounded-full animate-spin animation-delay-200"></div>
           </div>
         </div>
 
         <div className="space-y-2">
-          <Heading level={3} className="text-charcoal">
+          <Heading level={3} className="text-brand-base">
             {message}
           </Heading>
           <Text color="muted">
@@ -87,7 +89,7 @@ export default function Loading({
         </div>
 
         {/* Content skeleton */}
-        <div className="max-w-4xl mx-auto space-y-8 pt-8">
+        <div className="measure space-y-8 pt-8">
           <div className="space-y-4">
             <Skeleton className="h-8 w-2/3 mx-auto" />
             <Skeleton className="h-4 w-1/2 mx-auto" />
@@ -113,7 +115,7 @@ export default function Loading({
 
   if (fullScreen) {
     return (
-      <div className={cn('min-h-screen bg-cream flex items-center justify-center', className)}>
+      <div className={cn('min-h-screen bg-surface flex items-center justify-center', className)}>
         {content}
       </div>
     );

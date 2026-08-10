@@ -74,7 +74,7 @@ export default function DeletePollControl({
         size="medium"
         type="button"
         onClick={() => setOpen(true)}
-        className="text-charcoal-light"
+        className="text-brand-base-light"
       >
         Delete this poll
       </Button>
@@ -111,7 +111,7 @@ export default function DeletePollControl({
               onChange={(event) => setTyped(event.target.value)}
               aria-describedby="delete-poll-hint"
             />
-            <p id="delete-poll-hint" className="text-sm text-charcoal-light">
+            <p id="delete-poll-hint" className="text-sm text-brand-base-light">
               We ask for the title because this erases other people&rsquo;s details, not just yours.
             </p>
           </div>

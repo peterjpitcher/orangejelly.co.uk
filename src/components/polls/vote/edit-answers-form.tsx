@@ -176,7 +176,7 @@ export default function EditAnswersForm({
 
       {cards}
 
-      <div className="space-y-4 rounded-lg border-2 border-charcoal/15 bg-white p-4">
+      <div className="space-y-4 rounded-lg border-2 border-brand-base/15 bg-white p-4">
         <div>
           <Label htmlFor="poll-name">
             Your name <span aria-hidden="true">*</span>
@@ -230,18 +230,18 @@ export default function EditAnswersForm({
           <h2
             ref={successRef}
             tabIndex={-1}
-            className="text-lg font-semibold text-charcoal focus-visible:outline-none"
+            className="text-lg font-semibold text-brand-base focus-visible:outline-none"
           >
             Updated
           </h2>
-          <Text size="sm" color="charcoal" className="mt-1">
+          <Text size="sm" color="brand-base" className="mt-1">
             That&rsquo;s your answers changed. This link still works if you need to come back.
           </Text>
         </div>
       )}
 
       <div
-        className="sticky bottom-0 z-50 -mx-4 border-t border-charcoal/15 bg-white/95 px-4 pt-3 backdrop-blur"
+        className="sticky bottom-0 z-50 -mx-4 border-t border-brand-base/15 bg-white/95 px-4 pt-3 backdrop-blur"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <Button type="submit" variant="primary" size="large" fullWidth loading={submitting}>

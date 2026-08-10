@@ -77,7 +77,7 @@ export default function EmptyPubSolutions() {
       {/* The Problem */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} align="center" className="mb-6">
               Every Empty Table Costs You Money
             </Heading>
@@ -97,9 +97,9 @@ export default function EmptyPubSolutions() {
       </Section>
 
       {/* What We Did */}
-      <Section background="teal">
+      <Section background="blue-support">
         <AnimatedItem animation="slide-up">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="measure text-center">
             <Heading level={2} color="white" className="mb-4">
               How We Filled The Anchor
             </Heading>
@@ -118,7 +118,7 @@ export default function EmptyPubSolutions() {
       {/* What You Get */}
       <Section>
         <AnimatedItem animation="fade-in">
-          <div className="max-w-4xl mx-auto">
+          <div className="measure">
             <Heading level={2} align="center" className="mb-4">
               The Right Package to Fill Your Tables
             </Heading>
@@ -129,7 +129,7 @@ export default function EmptyPubSolutions() {
 
             <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
               <div>
-                <Card background="cream" padding="large" className="mb-4">
+                <Card background="surface" padding="large" className="mb-4">
                   <Heading level={3} className="mb-3">
                     One Clear Bottleneck?
                   </Heading>
@@ -180,11 +180,11 @@ export default function EmptyPubSolutions() {
       </Section>
 
       {/* FAQ */}
-      <Section background="cream">
+      <Section background="surface">
         <Heading level={2} align="center" className="mb-8">
           Common Questions About Filling Empty Tables
         </Heading>
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="measure space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -193,7 +193,7 @@ export default function EmptyPubSolutions() {
 
       {/* Final CTA */}
       <Section background="orange-light" padding="small">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="measure text-center">
           <Heading level={2} align="center" className="mb-4">
             Ready to Fill Those Empty Tables?
           </Heading>
