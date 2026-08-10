@@ -242,6 +242,57 @@ const IN_PAGE = () => {
     }
   }
 
+  /*
+   * 7. A full-width grid must not reserve more columns than it fills.
+   *
+   * Rules 1 to 6 all check where a CONTAINER starts and ends. They cannot see a
+   * container that is the right width but whose contents do not reach its edge.
+   * The footer had `lg:grid-cols-7` with six children, so the seventh track was
+   * allocated and left empty: the container measured a correct 416 to 1504 while
+   * the links stopped at 1345, and the whole footer read as left-aligned with a
+   * gap. Every container-based rule passed on it.
+   *
+   * Only for grids that span the shell, since that is where the dead track shows
+   * up as a ragged page edge. Intrinsic sizing (auto-fit, auto-fill) is skipped:
+   * those deliberately vary their track count with the viewport.
+   */
+  for (const grid of document.querySelectorAll('*')) {
+    const cs = getComputedStyle(grid);
+    if (cs.display !== 'grid') continue;
+    if (!visible(grid) || inFixed(grid)) continue;
+    const b = box(grid);
+    if (b.w < ref.w - 1) continue; // not a full-width grid
+    const cls = (grid.className || '').toString();
+    if (/auto-fit|auto-fill|minmax/.test(cls + cs.gridTemplateColumns)) continue;
+    const tracks = cs.gridTemplateColumns.trim().split(/\s+/).filter(Boolean).length;
+    const filled = [...grid.children].filter((c) => (c.textContent || '').trim() || c.querySelector('img,svg')).length;
+    /*
+     * Four tracks or more only, and that threshold is doing real work.
+     *
+     * With many tracks the count is almost certainly hardcoded to match a hardcoded
+     * list, so a shortfall is a genuine mistake: the footer declared seven and wrote
+     * six. With two or three tracks a partial row is the normal state of a
+     * data-driven grid, one case study or two playbooks, and flagging it would mean
+     * eight findings that are not defects. A checker people learn to ignore catches
+     * nothing, so this deliberately trades a little recall for precision.
+     */
+    if (tracks >= 4 && filled > 0 && tracks > filled) {
+      const rightmost = Math.max(
+        ...[...grid.children]
+          .filter((c) => (c.textContent || '').trim() || c.querySelector('img,svg'))
+          .map((c) => Math.round(c.getBoundingClientRect().right))
+      );
+      v.push({
+        rule: 'grid-reserves-empty-columns',
+        got: rightmost,
+        want: b.right,
+        tag: grid.tagName.toLowerCase(),
+        cls: cls.slice(0, 70),
+        text: `${tracks} columns declared, ${filled} filled, ${b.right - rightmost}px dead on the right`,
+      });
+    }
+  }
+
   const edges = {};
   for (const el of document.querySelectorAll('.page-shell, .measure, .measure-wide')) {
     if (!visible(el) || inFixed(el)) continue;

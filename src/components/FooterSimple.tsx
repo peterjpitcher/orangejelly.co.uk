@@ -86,8 +86,15 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
             </Text>
           </div>
 
-          {/* Quick Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 mb-8 text-surface/90">
+          {/*
+            Quick Links Grid. Six columns for six columns of links.
+            This was lg:grid-cols-7 with only six children, so the seventh track was
+            allocated and left empty: measured at 1920px the links stopped at 1345
+            while the footer shell ran to 1504, a dead 159px on the right that read
+            as the whole footer being left-aligned. If you add or remove a column
+            here, change the count to match.
+          */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8 text-surface/90">
             <div>
               <Heading level={5} color="white" className="mb-3 text-surface">
                 Packages
