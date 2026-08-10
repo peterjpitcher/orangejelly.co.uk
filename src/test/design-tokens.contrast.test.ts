@@ -213,7 +213,7 @@ describe('surfaces and body text', () => {
   });
 
   it('should need dark text on the highlight fill, never white', () => {
-    // brand.highlight is a light amber. White on it is ~1.7:1.
+    // brand.highlight is a light tint of the brand orange. White on it is ~2.05:1.
     expect(contrast(WHITE, BRAND.highlight)).toBeLessThan(AA_LARGE);
     expect(contrast(NAVY, BRAND.highlight)).toBeGreaterThanOrEqual(AA_BODY);
   });

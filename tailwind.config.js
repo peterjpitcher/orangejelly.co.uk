@@ -20,10 +20,29 @@ module.exports = {
           light: '#2B84B9',
           dark: '#014D7E',
         },
+        /*
+         * The brand family, all in one hue.
+         *
+         * secondary and highlight used to be #FF8901 and #FFBD28, at 32deg and
+         * 42deg while the brand orange sits at 22deg. Side by side they read as a
+         * different, more amber palette rather than lighter versions of the brand.
+         * They are now the same hue and saturation as DEFAULT, two steps lighter,
+         * so the family reads as one colour at three brightnesses:
+         *
+         *   DEFAULT    hsl(22 88% 54%)  #F16F23  the brand orange
+         *   secondary  hsl(22 88% 62%)  #F38749  lighter accent
+         *   highlight  hsl(22 88% 70%)  #F6A16F  lightest, for attention
+         *
+         * highlight has two live jobs and both are asserted in the contrast test:
+         * it is a FILL that carries navy text (6.62:1), and it is ACCENT TEXT on the
+         * navy surfaces (6.62:1), where it also has to out-contrast the brand orange
+         * because Link's orange-on-dark hovers to it. Never put white on it: at
+         * 2.05:1 it is a light fill, not a dark one.
+         */
         brand: {
           DEFAULT: '#F16F23',
-          secondary: '#FF8901',
-          highlight: '#FFBD28',
+          secondary: '#F38749',
+          highlight: '#F6A16F',
           grounded: '#736F26',
         },
         surface: {

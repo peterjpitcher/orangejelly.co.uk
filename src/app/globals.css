@@ -160,8 +160,10 @@
   --color-base: #1a2f49;
   --color-blue-support: #01619e;
   --color-accent: #f16f23;
-  --color-accent-secondary: #ff8901;
-  --color-highlight: #ffbd28;
+  /* Two lighter steps of the brand hue. Kept in step with colors.brand in
+     tailwind.config.js; see the note there for why they moved off 32deg and 42deg. */
+  --color-accent-secondary: #f38749;
+  --color-highlight: #f6a16f;
   --color-grounded: #736f26;
   --color-surface: #f2f8fc;
   --color-surface-alt: #e7f1f8;
