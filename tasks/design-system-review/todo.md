@@ -466,6 +466,37 @@ the previous value if the guides should read narrower.
 
 **Verified:** 134 routes at 1920, 1280, 768 and 375px, every block on a scale edge.
 
+## Correction: the footer, and a lesson about what "width" means
+
+Asked to check the footer width, I measured its CONTAINER, found a correct 416 to
+1504, and reported it as already aligned. Peter came back still seeing a gap on the
+right, and he was right.
+
+The container was never the problem. The footer declared `lg:grid-cols-7` and wrote
+six columns of links, so the seventh track was allocated and left empty: the links
+stopped at 1345 while the shell ran to 1504, a dead 159px that reads as the whole
+footer being left-aligned. Now `lg:grid-cols-6`, ending flush at 1504.
+
+The instructive part is why nothing caught it. All six audit rules check where a
+container starts and ends. Not one of them asks whether the container's CONTENTS
+reach its edge, so all six passed on a footer that visibly did not. A container
+being the right width is not the same as a page looking right.
+
+Rule 7 closes that: a full-width grid must not declare more columns than it fills.
+It fires at four tracks or more only. With two or three, a partial row is the normal
+state of a data-driven grid, one case study or two playbooks, and the first version
+of the rule produced eight findings that were not defects. Precision over recall,
+because a checker people learn to ignore catches nothing.
+
+Proved by reintroducing the bug and confirming the rule reports "7 columns declared,
+6 filled, 159px dead on the right", then reverting.
+
+Also in this pass: brand.secondary and brand.highlight moved from 32deg and 42deg
+into the brand hue at 22deg (#F38749 and #F6A16F), so the accents read as lighter
+versions of the brand orange rather than a separate amber palette. highlight had to
+keep two contracts at once, as a fill carrying navy text and as accent text on navy,
+and holds both at 6.62:1.
+
 ## Final state
 
 2367 text elements audited across 9 pages: **0 contrast failures**. One content
