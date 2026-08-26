@@ -132,41 +132,144 @@ reclassified something rather than demand vanishing. Do not act on either until 
 
 ---
 
-## Round 2: solution language, sectors and adjacent categories
+## Round 2 results, 26 August 2026
 
-Sectors confirmed by Peter: **professional services and trades**. UK-first.
+70 terms submitted. **51 returned a volume, 19 returned nothing.** Total monthly volume 14,250,
+against 5,000 in round 1. Sectors and solution language are where the demand lives.
 
-Round 2 tests four things round 1 could not:
+### A correction to how we read the change columns
 
-1. **Solution language.** If people search the fix rather than the symptom, we need to know the
-   exact words for the fix.
-2. **The fractional and embedded category.** Finding 4.
-3. **Professional services and trades.** The two chosen sectors, with real modifiers.
-4. **Decision and comparison intent.** Where a buyer is choosing between an agency, a consultant and
-   an internal hire, which is the moment Orange Jelly wins on argument.
+Every non-zero change value across both rounds is exactly one of: minus 100 per cent, minus 90 per
+cent, plus 900 per cent, or infinity. Twelve terms show precisely minus 90 per cent. No real market
+produces that distribution.
 
-70 terms. Sent 26 August 2026. Awaiting volumes.
+These are **bucket transitions, not measurements**. A term moving between Keyword Planner's rounded
+tiers reads as minus 90 or plus 900 per cent. The direction may be real. The magnitude is an
+artefact.
 
-### Cluster A: solution language (10)
-how to get more clients, how to grow my business, business growth ideas, how to increase revenue, marketing strategy for small business, how to win more work, how to get more enquiries, improve business profitability, how to get more sales, business growth plan
+**Do not plan on any change figure in either round.** That includes the alarming numbers on
+`ai for accountants` and the exciting one on `marketing for plumbers`.
 
-### Cluster B: fractional and embedded (10)
-fractional cmo, fractional coo, fractional marketing director, fractional operations director, part time marketing director, interim marketing director, outsourced marketing director, fractional director uk, fractional cto uk, fractional finance director
+### Finding 6: professional services beats trades, clearly
 
-### Cluster C: professional services (14)
-marketing for accountants, marketing for law firms, marketing for solicitors, lead generation for accountants, grow an accountancy practice, law firm growth strategy, marketing for consultants, professional services marketing, marketing for architects, marketing for financial advisers, client acquisition for professional services, how to get more clients as an accountant, recruitment agency growth, marketing for surveyors
+| Sector | Terms with volume | Total monthly | In the 500+ tier |
+|---|---|---|---|
+| **Professional services** | 15 | **7,950** | **6** |
+| Trades | 11 | 1,450 | 2 |
 
-### Cluster D: trades (15)
-marketing for tradesmen, marketing for builders, marketing for electricians, marketing for plumbers, how to get more work as a builder, lead generation for tradesmen, grow a trades business, marketing for roofers, marketing for landscapers, job management software for trades, how to price jobs trades business, scaling a construction business, marketing for heating engineers, get more customers trades business, construction business growth
+Strip out the suspect `ai for accountants` and professional services is still 2,950 against 1,450.
 
-### Cluster E: comparison and decision intent (9)
-marketing agency vs in house, should i hire a marketing agency, marketing consultant vs agency, how much does a business consultant cost uk, what does a growth consultant do, is a business consultant worth it, in house marketing team vs agency, cost of a marketing consultant uk, hiring a growth consultant
+Worse for trades, one of its two top-tier terms is `job management software for trades`, which
+carries the highest bid we have seen anywhere (£19.01 to £94.42) but is **software purchase intent,
+not advisory intent**. Someone searching that wants to buy Tradify, not hire a growth partner. The
+genuine trades advisory terms all sit in the bottom tier.
 
-### Cluster F: UK business support language (6)
-business support uk, small business advice uk, business mentor uk, business coach uk, business coaching for small business, growth hub business support
+**Recommendation: lead with professional services. Hold trades as a second wave.** Not abandoned,
+but it does not earn equal billing in the first build. The trades terms that do work
+(`marketing for electricians` at £6.36 to £24.81, `marketing for plumbers` at competition index 10)
+are cheap to add later as individual pages once the professional services hub is proven.
 
-### Cluster G: AI in the two chosen sectors (6)
-ai for accountants, ai for law firms, ai for trades business, automation for accountants, ai for professional services, ai for construction
+### Finding 7: the strongest theme is AI by profession
+
+| Term | Tier | Competition | Bid |
+|---|---|---|---|
+| ai for accountants | 5,000 | Medium | £3.80 to £13.58 |
+| ai for law firms | 500 | Medium | £3.93 to £17.51 |
+| ai for construction | 500 | Medium | £3.69 to £19.01 |
+| ai for professional services | 50 | Medium | **£7.25 to £39.56** |
+
+`ai for accountants` is the largest single term found across 177 tested. This cluster is where
+Orange Jelly's actual capability meets demand that already exists.
+
+**There is a tension with the brand pack and it is resolvable.** `AGENTS.md` insists AI is the
+toolkit, not the product, and bans leading with AI. The data says AI-by-profession is the best
+available entry route.
+
+Both hold if we are disciplined about the job each page does. An article answering "where does AI
+actually help an accountancy practice" is exactly the honest, useful, challenging content the pack
+asks for, and its natural conclusion is that the AI question is downstream of a business question.
+**AI is the entry. Growth is the conversion.** That is not a compromise, it is the pack's own
+argument delivered where people are standing.
+
+What we must not do is put AI in the company description, the homepage or the category.
+
+### Finding 8: the fractional category is real and consistent
+
+| Term | Tier | Competition index | Bid |
+|---|---|---|---|
+| fractional cmo | 500 | 48 | £2.28 to £19.85 |
+| fractional marketing director | 500 | 53 | £2.46 to £21.94 |
+| fractional coo | 500 | 36 | £1.70 to £6.86 |
+| fractional finance director | 500 | **12** | £1.57 to £8.34 |
+
+Four terms, all top tier, one at competition index 12. Round 1 already flagged `fractional cmo uk`.
+This is a coherent, established category with real demand, and the pack does not mention it once.
+
+The risk stands: fractional implies one functional seat, and Orange Jelly is deliberately
+cross-functional. **Recommendation: one page that uses the language to be found and then argues
+against the format.** A business with a growth problem across demand, margin and operations does
+not need a fractional CMO, it needs someone who can see all three. That is a genuinely strong
+argument and it targets a term people actually search.
+
+### Finding 9: solution language works where symptom language failed
+
+`how to grow my business` sits in the 500 tier. `marketing strategy for small business` 500.
+`business coach uk` 500. `business coaching for small business` 500.
+
+This confirms round 1 Finding 2 from the other direction. People search the fix, not the feeling.
+Copy on the problem pages should lead with the symptom, because that is how the reader recognises
+themselves, but titles, headings and metadata should carry solution language.
+
+### Finding 10: comparison intent is nearly free
+
+Most comparison terms returned nothing. The two that registered have almost no competition:
+
+| Term | Tier | Competition index |
+|---|---|---|
+| should i hire a marketing agency | 50 | **0** |
+| marketing agency vs in house | 50 | **2** |
+
+Low volume, near-zero competition, and squarely the argument Orange Jelly wins. Cheap to build,
+worth doing, never going to be a traffic pillar.
+
+### Best available targets, both rounds combined
+
+| Term | Tier | Competition index | Bid | Why |
+|---|---|---|---|---|
+| ai for accountants | 5,000 | 62 | £3.80 to £13.58 | Biggest term found. Entry route. |
+| marketing for law firms | 500 | 43 | £8.39 to £23.70 | Volume and value. |
+| fractional cmo | 500 | 48 | £2.28 to £19.85 | Category page with a counter-argument. |
+| ai for law firms | 500 | 57 | £3.93 to £17.51 | Pairs with the above. |
+| professional services marketing | 500 | 45 | £2.95 to £20.67 | Sector hub head term. |
+| marketing for accountants | 500 | 34 | £3.68 to £12.86 | Sector hub support. |
+| marketing for architects | 500 | **28** | £1.84 to £7.31 | Low competition, top tier. |
+| business growth consultant | 500 | 37 | £3.73 to £11.98 | Only category term with demand. |
+| marketing for financial advisers | 50 | 29 | £3.50 to £26.47 | High value, low competition. |
+| lead generation for accountants | 50 | 25 | £4.90 to £23.96 | High value, low competition. |
+| b2b lead generation uk | 50 | 31 | **£16.25 to £79.01** | Highest bid at low competition. |
+
+---
+
+## Round 3: depth in professional services, AI by profession, and fractional
+
+Round 3 goes deep on the three themes that won. Trades is deliberately absent, it comes later.
+
+Sent 26 August 2026. Awaiting volumes.
+
+### Cluster A: AI by profession, deeper (16)
+ai for accountancy firms, ai tools for accountants, ai in accounting uk, best ai for accountants, ai for bookkeepers, ai for solicitors, ai in legal practice uk, ai tools for law firms, legal ai software uk, ai for financial advisers, ai for recruitment agencies, ai for architects, ai for surveyors, ai for consultants, ai for estate agents, ai for insurance brokers
+
+### Cluster B: the AI decision, not the AI tool (12)
+where to start with ai in business, how to choose ai tools for business, ai adoption for small business, is ai worth the investment, ai pilot project business, how to implement ai in a small business, ai readiness assessment, what can ai actually do for my business, ai without replacing staff, ai training for teams uk, ai policy for small business, ai risks for professional services
+
+### Cluster C: fractional and the argument against it (12)
+fractional cmo cost, fractional cmo vs agency, what is a fractional cmo, do i need a fractional cmo, fractional executive uk, fractional leadership team, fractional cmo for professional services, part time commercial director, fractional growth director, hire a fractional cmo uk, fractional cmo vs marketing manager, fractional coo cost
+
+### Cluster D: professional services growth, deeper (16)
+how to grow an accountancy firm, accountancy practice growth, law firm business development, growing a legal practice uk, professional services business development, client retention professional services, accountancy firm marketing ideas, law firm client acquisition, how to win more clients professional services, professional services pricing strategy, accountancy practice management, law firm operations, professional services automation, capacity planning professional services, utilisation rate professional services, professional services profitability
+
+### Cluster E: the buying moment (10)
+when to hire a growth consultant, signs your business needs a consultant, how to choose a business consultant, business consultant for accountants, growth consultant for professional services, what to expect from a business consultant, business consultant vs coach, do i need a business consultant, business consultancy for smes uk, independent business advisor uk
 
 ---
 
@@ -174,9 +277,14 @@ ai for accountants, ai for law firms, ai for trades business, automation for acc
 
 | Round | Purpose |
 |---|---|
-| 3 | Depth in whichever of A to G wins round 2. Long tail and question forms. |
-| 4 | Geographic modifiers, UK-first. Only if rounds 2 and 3 show local intent is real. |
-| 5 | Search Console gap check. Protect what already earns impressions before any URL moves. |
+| 4 | Trades second wave. Only once the professional services hub is live and proven. |
+| 5 | **Search Console gap check for orangejelly.co.uk.** Still outstanding, see below. |
 
-Round 5 is not optional. We hold 106 posts and 33 routes of existing authority and we are keeping
-all of it. Nothing moves until we have seen what it currently earns.
+## Outstanding: the wrong Search Console property
+
+The export supplied on 26 August is **the-anchor.pub**, not orangejelly.co.uk. See
+`data/gsc-the-anchor-2026-08-26/` and the analysis in `anchor-search-performance.md`.
+
+It is genuinely valuable, but it does not answer the question that blocks the URL plan. We still
+need **orangejelly.co.uk**, last 12 months, queries and pages. Nothing moves until we know what the
+106 posts and 33 routes currently earn.

@@ -20,6 +20,9 @@ pack refuses to decide on its own.
 | D8 | **Entry is always a discussion first.** Every engagement begins with a conversation and discovery into what is causing the problem, before any solution is defined or sold. No visitor buys a product as step one. | 26 Aug 2026 | Open decision 4 |
 | D9 | **"EXPOSE" to be pressure-tested** before it is baked into 44 components and 14 templates. | 26 Aug 2026 | Open decision 3 |
 | D10 | **Design decisions settled by the designer** in the 26 Aug handback: lowercase display headings site-wide, orange header on conversion pages only, Schibsted Grotesk treated as production, hospitality pages take the full design system, seven muted taxonomy hues that are never orange. | 26 Aug 2026 | Open decisions 11 and 12 |
+| D11 | **Primary CTA is "Bring us the problem"**, site-wide, replacing "Book a growth diagnostic". The diagnostic is what the conversation leads to, not the thing a visitor buys from a button. Follows from D8 and D3. | 26 Aug 2026 | Open decision 4 |
+| D12 | **The first discovery conversation is free.** Paid engagement begins once the problem is worth defining properly. | 26 Aug 2026 | Open decision 4 |
+| D13 | **Lead sector is professional services. Trades is a second wave.** Round 2 data: professional services 7,950 monthly against 1,450 for trades, and six top-tier terms against two, one of which is software purchase intent. Trades pages get added later, individually, once the professional services hub is proven. | 26 Aug 2026 | Open decision 7, revises D7 |
 
 ## Consequences of D3 worth naming
 
@@ -60,9 +63,6 @@ The category phrase and the symptom language both returned close to zero Google 
 
 ## Still open, needed before copy is final
 
-- **Whether the discovery discussion is free or paid.** D8 settles the sequence, not the commercial
-  terms. Recommendation: free first conversation, paid diagnostic once the problem is worth
-  defining properly.
 - **Swearing boundary on the permanent homepage.** The pack recommends keeping expletives to
   founder-led and campaign content only.
 - **Founder versus company brand.** How much delivery stays visibly Peter-led.
@@ -70,3 +70,16 @@ The category phrase and the symptom language both returned close to zero Google 
   the About page and every case study.
 - **Greene King and BII logo migration** into LogoStrip. Files exist in `public/`. Designer is
   waiting on the go-ahead.
+
+## Consequence of the round 2 keyword data
+
+`AI for [profession]` is the strongest demand cluster found across 177 tested terms, and the brand
+pack bans leading with AI. Both hold, on one condition: **AI is the entry, growth is the
+conversion.** Articles answering "where does AI actually help an accountancy practice" are exactly
+the useful, challenging content the pack asks for, and they conclude that the AI question sits
+downstream of a business question. AI stays out of the company description, the homepage and the
+category. See `keyword-research.md` Finding 7.
+
+The `fractional` cluster gets one page that uses the language to be found and then argues against
+the format: a business with problems across demand, margin and operations does not need a fractional
+CMO, it needs someone who can see all three. See Finding 8.
