@@ -1,0 +1,21 @@
+import * as React from 'react';
+/**
+ * Self-assessment flow: step 2 of the conversion ladder, between reading an insight
+ * and seeing a case study. Replaces the retired pub ROI calculator. Twelve problem
+ * statements (two per pressure area) answered on a 4-point frequency scale; the result
+ * is a per-area pressure grid (PressureMap variant="grid") with a named heaviest
+ * pressure and the handover into a diagnostic enquiry. Deliberately not a score.
+ */
+export interface ScorecardQuestion{/** pressure area id */area:string;text:string}
+export interface ScorecardProps{
+  questions?:ScorecardQuestion[];
+  areas?:import('./PressureMap').PressureArea[];
+  heading?:string;
+  intro?:string;
+  cta?:{label:string;href?:string};
+  /** fires with the raw answers when the last question is answered */
+  onComplete?:(answers:{area:string;v:number}[])=>void;
+  onCta?:()=>void;
+}
+export declare function Scorecard(props:ScorecardProps):React.ReactElement;
+export declare const SCORECARD_QUESTIONS:ScorecardQuestion[];

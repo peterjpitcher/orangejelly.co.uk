@@ -1,0 +1,65 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+import {PressureMap,PRESSURE_AREAS} from './PressureMap.jsx';
+const css=`.oj-score{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:32px;max-width:720px;box-sizing:border-box}
+.oj-score .prog{display:flex;gap:5px;margin-bottom:26px}
+.oj-score .prog i{height:6px;flex:1;border:1px solid var(--oj-ink);border-radius:2px;background:var(--oj-paper)}
+.oj-score .prog i.done{background:var(--oj-orange)}
+.oj-score h3{font-family:var(--font-display);font-weight:900;font-size:26px;line-height:1.12;letter-spacing:-.02em;margin:0 0 8px}
+.oj-score .q{font-weight:800;font-size:21px;line-height:1.3;letter-spacing:-.01em;margin:0 0 22px}
+.oj-score .opts{display:flex;flex-direction:column;gap:8px}
+.oj-score .opt{font-family:inherit;text-align:left;font-weight:600;font-size:15.5px;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-paper);color:var(--oj-ink);padding:13px 16px;cursor:pointer}
+.oj-score .opt:hover{background:var(--oj-orange-soft);transform:translate(-2px,-2px);box-shadow:var(--shadow-press)}
+.oj-score .meta{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-accent);margin-bottom:8px;display:block}
+.oj-score .back{background:none;border:none;font-family:inherit;font-weight:600;font-size:13.5px;color:var(--text-muted);cursor:pointer;padding:0;margin-top:18px;text-decoration:underline;text-underline-offset:3px}`;
+const OPTIONS=[{label:'Not us',v:0},{label:'Sometimes',v:1},{label:'Often',v:2},{label:'Constantly',v:3}];
+export const SCORECARD_QUESTIONS=[
+{area:'demand',text:'We rely on the same few channels or customers for new business.'},
+{area:'demand',text:'The pipeline dries up when we stop pushing.'},
+{area:'conversion',text:'Enquiries go quiet between first contact and decision.'},
+{area:'conversion',text:'We could not say what our conversion rate is at each step.'},
+{area:'margin',text:'Revenue grows but profit does not.'},
+{area:'margin',text:'Discounting is our default response to slow periods.'},
+{area:'operations',text:'Key work depends on manual effort or one person.'},
+{area:'operations',text:'The team spends hours on tasks a system should do.'},
+{area:'experience',text:'Customers buy once and do not come back.'},
+{area:'experience',text:'We hear about problems after the customer has gone.'},
+{area:'scale',text:'Our systems creak when volume rises.'},
+{area:'scale',text:'Adding revenue means adding headcount at the same rate.'}];
+export function Scorecard({questions=SCORECARD_QUESTIONS,areas=PRESSURE_AREAS,heading='How much pressure is your growth under?',intro='Twelve statements, two minutes. You get a pressure map of your business, not a marketing score.',cta={label:'Book a growth diagnostic',href:'#'},onComplete,onCta}){
+  ensureCoreCss('oj-css-score',css);
+  const [step,setStep]=React.useState(-1);
+  const [answers,setAnswers]=React.useState([]);
+  const areaLabel=id=>(areas.find(a=>a.id===id)||{}).label||id;
+  if(step===-1)return <section className="oj-score" aria-label={heading}>
+    <h3>{heading}</h3>
+    <p style={{margin:'0 0 24px',fontSize:15.5,lineHeight:1.55,color:'var(--text-secondary)'}}>{intro}</p>
+    <Button arrow onClick={()=>setStep(0)}>Start the check</Button>
+  </section>;
+  if(step<questions.length){const q=questions[step];
+    return <section className="oj-score" aria-label={heading}>
+      <div className="prog">{questions.map((_,i)=><i key={i} className={i<step?'done':''}></i>)}</div>
+      <span className="meta">{areaLabel(q.area)} · {step+1} of {questions.length}</span>
+      <p className="q">{q.text}</p>
+      <div className="opts">{OPTIONS.map(o=><button key={o.v} type="button" className="opt" onClick={()=>{
+        const next=[...answers];next[step]={area:q.area,v:o.v};setAnswers(next);
+        if(step+1===questions.length&&onComplete)onComplete(next);
+        setStep(step+1);
+      }}>{o.label}</button>)}</div>
+      {step>0&&<button type="button" className="back" onClick={()=>setStep(step-1)}>Back</button>}
+    </section>;}
+  const totals={};answers.forEach(a=>{totals[a.area]=(totals[a.area]||0)+a.v;});
+  const max=questions.reduce((m,q)=>{m[q.area]=(m[q.area]||0)+3;return m;},{});
+  const scored=areas.map(a=>({...a,pressure:Math.min(3,Math.round((totals[a.id]||0)/(max[a.id]||3)*3)),note:undefined}));
+  const worst=[...scored].sort((a,b)=>b.pressure-a.pressure)[0];
+  return <section className="oj-score" aria-label="Your result">
+    <span className="meta">Your pressure map</span>
+    <h3>The heaviest pressure is on {worst.label.toLowerCase()}.</h3>
+    <p style={{margin:'0 0 22px',fontSize:15,lineHeight:1.55,color:'var(--text-secondary)'}}>This is a signal, not a diagnosis. A Growth Diagnostic tests it against your actual numbers and tells you what would move them.</p>
+    <PressureMap variant="grid" areas={scored}/>
+    <div style={{display:'flex',gap:14,alignItems:'center',marginTop:24,flexWrap:'wrap'}}>
+      <Button arrow href={cta.href} onClick={onCta}>{cta.label}</Button>
+      <button type="button" className="back" style={{margin:0}} onClick={()=>{setStep(-1);setAnswers([]);}}>Start again</button>
+    </div>
+  </section>;
+}

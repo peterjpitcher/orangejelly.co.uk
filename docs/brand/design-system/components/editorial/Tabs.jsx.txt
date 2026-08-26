@@ -1,0 +1,17 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-tabs .bar{display:flex;gap:0;border-bottom:var(--bw-1) solid var(--oj-ink);flex-wrap:wrap}
+.oj-tabs .bar button{font-family:inherit;font-weight:700;font-size:15px;background:none;border:none;border-bottom:3px solid transparent;color:var(--text-secondary);padding:10px 16px;margin-bottom:-1.5px;cursor:pointer}
+.oj-tabs .bar button:hover{color:var(--oj-ink)}
+.oj-tabs .bar button[aria-selected="true"]{color:var(--oj-ink);border-bottom-color:var(--oj-orange)}
+.oj-tabs .panel{padding:20px 2px}`;
+export function Tabs({items=[],active,onChange,renderPanel=true}){
+  ensureCoreCss('oj-css-tabs',css);
+  const [inner,setInner]=React.useState(0);
+  const cur=active!=null?active:inner;
+  const set=i=>{if(onChange)onChange(i);if(active==null)setInner(i);};
+  return <div className="oj-tabs">
+    <div className="bar" role="tablist">{items.map((it,i)=><button key={i} role="tab" aria-selected={cur===i} onClick={()=>set(i)}>{it.label}</button>)}</div>
+    {renderPanel&&items[cur]&&items[cur].content!=null&&<div className="panel" role="tabpanel">{items[cur].content}</div>}
+  </div>;
+}

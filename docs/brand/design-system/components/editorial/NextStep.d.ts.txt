@@ -1,0 +1,16 @@
+import * as React from 'react';
+/**
+ * The designed conversion chain: article → problem page → case study → offer.
+ * One component so the chain survives 106 blog posts instead of ad-hoc links.
+ * `from` picks sensible default links for the page type; override with `links`.
+ * Place at the end of the content, before the footer/newsletter band.
+ */
+export interface NextStepLink{/** chain stage label, e.g. "The problem", "The proof", "Next step" */stage:string;title:string;desc?:string;href:string}
+export interface NextStepProps{
+  /** page type this module sits on; sets default links */
+  from?:'article'|'problem'|'case';
+  heading?:string;
+  /** 1–2 links; more dilutes the chain */
+  links?:NextStepLink[];
+}
+export declare function NextStep(props:NextStepProps):React.ReactElement;

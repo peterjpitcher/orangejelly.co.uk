@@ -1,0 +1,49 @@
+const DSm=window.OrangeJellyDesignSystem_a79785;
+function HowWeWork({onNav}){
+  const {Button,Card,MethodStep,Tag}=DSm;
+  const steps=[["HEAR.","Understand what is really happening, not only what the brief says.","Leadership and stakeholder interviews. Performance data. Customer, journey, process and systems review."],["EXPOSE.","Find the pressure points, root causes and opportunities that matter.","Growth Pressure Map. Root-cause analysis. Prioritised opportunities with commercial stakes attached."],["BUILD.","Design and implement the right practical solution.","Build brief. Implemented solution or working prototype. Adoption plan, not just a deck."],["PROVE.","Measure the difference, improve the solution and embed what works.","Agreed success measures. Baseline and impact review. Honest reporting when evidence is incomplete."]];
+  return <main>
+    <section className="oj-sec" style={{background:'var(--oj-ink)',padding:'80px 0'}}>
+      <div className="oj-container">
+        <Eyebrow tone="dark">How we work</Eyebrow>
+        <h1 className="oj-display" style={{fontSize:68,color:'var(--oj-cream)',margin:'14px 0 18px'}}>HEAR. EXPOSE. BUILD. <span style={{color:'var(--oj-orange)'}}>PROVE.</span></h1>
+        <p className="oj-lede" style={{color:'rgba(247,245,241,.8)'}}>Four stages. No pre-selected answer. The problem decides the tool.</p>
+      </div>
+    </section>
+    <section className="oj-sec">
+      <div className="oj-container" style={{display:'flex',flexDirection:'column',gap:0}}>
+        {steps.map(([w,t,d],i)=>
+          <div key={w} style={{display:'grid',gridTemplateColumns:'100px 260px 1fr',gap:32,alignItems:'start',padding:'30px 0',borderBottom:'1px solid var(--border-soft)'}}>
+            <span style={{fontWeight:600,fontSize:14,color:'var(--text-accent)'}}>{String(i+1).padStart(2,'0')}</span>
+            <span className="oj-display" style={{fontSize:36,color:i===2?'var(--oj-orange)':'var(--oj-ink)'}}>{w}</span>
+            <div style={{display:'flex',flexDirection:'column',gap:8}}><b style={{fontSize:17}}>{t}</b><span style={{fontSize:15,lineHeight:1.55,color:'var(--text-secondary)'}}>{d}</span></div>
+          </div>)}
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{paddingTop:0}}>
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
+        <Card style={{padding:28,display:'flex',flexDirection:'column',gap:14}}>
+          <h2 className="oj-h2" style={{fontSize:26}}>What a Growth Diagnostic includes</h2>
+          <ul style={{margin:0,padding:'0 0 0 18px',display:'flex',flexDirection:'column',gap:8,fontSize:15,lineHeight:1.5}}>
+            <li>Agreed problem statement and success measures</li><li>Growth Pressure Map across the whole business</li><li>Prioritised opportunities and recommended intervention</li><li>90-day roadmap with indicative investment options</li>
+          </ul>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}><Tag size="sm">2 to 3 weeks</Tag><Tag size="sm">Fixed fee</Tag><Tag size="sm">Senior access required</Tag></div>
+        </Card>
+        <Card tone="ink" style={{padding:28,display:'flex',flexDirection:'column',gap:14}}>
+          <h2 className="oj-h2" style={{fontSize:26,color:'var(--oj-cream)'}}>What we need from you</h2>
+          <ul style={{margin:0,padding:'0 0 0 18px',display:'flex',flexDirection:'column',gap:8,fontSize:15,lineHeight:1.5,color:'rgba(247,245,241,.85)'}}>
+            <li>Direct access to a leader who can act</li><li>Willingness to be challenged</li><li>The data you already have. Imperfect is fine</li><li>Agreement on what success looks like</li>
+          </ul>
+          <span style={{fontWeight:600,fontSize:12.5,color:'var(--oj-peach)'}}>We charge for diagnosis. Understanding the real problem is valuable work.</span>
+        </Card>
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{background:'var(--oj-orange)',borderTop:'var(--bw-1) solid var(--oj-ink)'}}>
+      <div className="oj-container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:24,flexWrap:'wrap'}}>
+        <h2 className="oj-h2" style={{fontSize:34}}>Know the problem already? Start a sprint.</h2>
+        <Button variant="ink" size="lg" arrow onClick={()=>onNav('start')}>Bring us the problem</Button>
+      </div>
+    </section>
+  </main>;
+}
+window.HowWeWork=HowWeWork;

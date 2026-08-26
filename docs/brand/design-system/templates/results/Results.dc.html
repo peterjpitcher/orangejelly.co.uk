@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Results" description="Results overview: the live lab, short proof cards by pressure point, route into full case studies" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">Results</a><a href="#" style="color:#23252E;text-decoration:none">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:88px 32px 56px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Results</span>
+<h1 style="font-weight:900;font-size:70px;line-height:.98;letter-spacing:-.025em;margin:16px 0 22px;max-width:840px">Numbers, <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">not adjectives.</span></h1>
+<p style="margin:0;font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:560px">Every result here was measured against a baseline agreed before the work started. Where a claim cannot carry its baseline, it does not appear.</p>
+</section>
+<section style="background:#23252E;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px"><span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">The live lab</span><span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid #F7F5F1;border-radius:3px;font-weight:700;font-size:12px;padding:3px 9px;color:#F7F5F1"><span style="width:8px;height:8px;border-radius:50%;background:#F76B0C"></span>Trading today</span></div>
+<h2 style="font-weight:900;font-size:40px;letter-spacing:-.02em;color:#F7F5F1;margin:0 0 10px;max-width:720px"><span class="oj-keep-case">The Anchor</span>: our own business is the first case study.</h2>
+<p style="margin:0 0 34px;font-size:16px;line-height:1.55;color:rgba(247,245,241,.75);max-width:560px">A village pub run by our founder, used as a live small-business laboratory. Every method is tested on this P&L before it is recommended to a client.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="403%" label="table bookings" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="89%" label="fewer no-shows" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="828%" label="search visibility" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="98%" label="food revenue" tone="dark" hint-size="100%,84px"></x-import>
+</div>
+<div style="margin-top:32px"><x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" arrow="{{ true }}" hint-size="220px,46px">Read the full case study</x-import></div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:64px 32px 72px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Proof by pressure point</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px">
+<sc-for list="{{ proofs }}" as="p" hint-placeholder-count="6">
+<a href="{{ p.href }}" style="text-decoration:none;color:inherit;display:block" style-hover="transform:translate(-2px,-2px)">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.ProofCard" value="{{ p.value }}" label="{{ p.label }}" context="{{ p.context }}" area="{{ p.area }}" hint-size="100%,190px"></x-import>
+</a>
+</sc-for>
+</div>
+<p style="margin:22px 0 0;font-size:13.5px;color:#757784;max-width:560px">Figures are proof candidates pending final verification against source records before publish. Each card links to the full case study with baseline and method.</p>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:72px 0;text-align:center">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+<h2 style="font-weight:900;font-size:48px;letter-spacing:-.025em;margin:0;max-width:680px">Your numbers could be <span style="background:linear-gradient(transparent 55%,#F76B0C 55%,#F76B0C 96%,transparent 96%);padding:0 .08em">on this page.</span></h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+</div>
+</section>
+<footer style="background:#23252E;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    return {proofs:[
+      {value:'403%',label:'table bookings',context:'12 months vs prior year baseline',area:'Create demand',href:'#'},
+      {value:'89%',label:'fewer no-shows',context:'After booking-journey rebuild',area:'Convert more',href:'#'},
+      {value:'+9pts',label:'gross margin',context:'Pricing and mix, volume held',area:'Protect margin',href:'#'},
+      {value:'14h/wk',label:'manual work removed',context:'Automation across ops admin',area:'Remove drag',href:'#'},
+      {value:'567%',label:'private hire enquiries',context:'12 months, same venue',area:'Improve experience',href:'#'},
+      {value:'828%',label:'search visibility',context:'Content system, 18 months',area:'Build for scale',href:'#'}
+    ]};
+  }
+}
+</script>
+</body>
+</html>

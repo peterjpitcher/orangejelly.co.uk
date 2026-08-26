@@ -1,0 +1,19 @@
+import * as React from 'react';
+/**
+ * Site search: input, live results list with match highlighting, and a designed
+ * no-results state that routes to the growth-problems hub instead of dead-ending.
+ * Client-side filter over `items` (feed it the search index); `onQuery` hooks a
+ * real backend when wired.
+ */
+export interface SearchItem{title:string;href:string;category?:string;excerpt?:string}
+export interface SiteSearchProps{
+  items?:SearchItem[];
+  placeholder?:string;
+  /** min characters before results render (default 2) */
+  minChars?:number;
+  maxResults?:number;
+  /** no-results escape hatch */
+  fallback?:{label:string;href:string};
+  onQuery?:(q:string)=>void;
+}
+export declare function SiteSearch(props:SiteSearchProps):React.ReactElement;

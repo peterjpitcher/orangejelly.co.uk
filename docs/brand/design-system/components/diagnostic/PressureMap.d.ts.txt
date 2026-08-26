@@ -1,0 +1,26 @@
+import * as React from 'react';
+/**
+ * The signature Orange Jelly diagnostic asset. Maps six connected growth areas
+ * (demand, conversion, margin, operations, experience, scale) around the business,
+ * encoding pressure as node size + fill. Not a generic scorecard: pressure, not score.
+ * variant="map" = radial network (method page, case studies); variant="grid" = compact
+ * six-tile version (problem pages, scorecard results, small spaces).
+ */
+export interface PressureArea{id:string;label:string;/** 0 steady · 1 watch · 2 pressure · 3 critical */pressure:number;note?:string}
+export interface PressureMapProps{
+  areas?:PressureArea[];
+  /** cross-links between connected areas, as id pairs */
+  links?:[string,string][];
+  variant?:'map'|'grid';
+  title?:string;
+  caption?:string;
+  /** area ids to emphasise; everything else dims (drives the interactive selector) */
+  highlight?:string[];
+  /** makes nodes clickable */
+  onSelect?:(id:string)=>void;
+  legend?:boolean;
+}
+export declare function PressureMap(props:PressureMapProps):React.ReactElement;
+export declare const PRESSURE_AREAS:PressureArea[];
+export declare const PRESSURE_LINKS:[string,string][];
+export declare function pressureLevel(p:number):{w:string;fill:string;tx:string};

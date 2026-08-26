@@ -1,0 +1,45 @@
+<!-- @dsCard group="Website" viewport="1440x900" name="Marketing site" subtitle="Home · How we work · Results · Start here (click through)" -->
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Orange Jelly — Growth partner</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="Shared.jsx"></script>
+<script type="text/babel" src="Home.jsx"></script>
+<script type="text/babel" src="HowWeWork.jsx"></script>
+<script type="text/babel" src="Results.jsx"></script>
+<script type="text/babel" src="StartHere.jsx"></script>
+<script type="text/babel">
+const {Card,Tag,Button}=window.OrangeJellyDesignSystem_a79785;
+function Stub({title,note}){
+  return <main><section className="oj-sec"><div className="oj-container" style={{display:'flex',flexDirection:'column',gap:16,alignItems:'flex-start'}}>
+    <Tag size="sm" dot={false} variant="ink">Not designed yet</Tag>
+    <h1 className="oj-display" style={{fontSize:56,margin:0}}>{title}</h1>
+    <p className="oj-lede" style={{margin:0}}>{note}</p>
+  </div></section></main>;
+}
+function App(){
+  const [route,setRoute]=React.useState('home');
+  const nav=r=>{setRoute(r);window.scrollTo(0,0);};
+  window.ojNav=nav;
+  const screens={
+    home:<Home onNav={nav} />,
+    method:<HowWeWork onNav={nav} />,
+    results:<Results onNav={nav} />,
+    start:<StartHere />,
+    problems:<Stub title="Growth problems" note="Hub of eight problem pages per the website blueprint. Deliberately left blank: no page-level copy exists in the brand pack yet." />,
+    insights:<Stub title="Insights" note="Problem-led content library. Deliberately left blank pending search-territory content." />,
+    about:<Stub title="About" note="Why Orange Jelly exists, Peter's story, the real-business testing philosophy. Copy pending." />
+  };
+  return <>
+    <a href="#" onClick={e=>e.preventDefault()} style={{position:'absolute',left:-9999}}>Skip to content</a>
+    <SiteHeader route={route} onNav={nav} />
+    {screens[route]}
+    <SiteFooter onNav={nav} />
+  </>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

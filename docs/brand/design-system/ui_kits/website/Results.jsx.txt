@@ -1,0 +1,51 @@
+const DSr=window.OrangeJellyDesignSystem_a79785;
+function Results({onNav}){
+  const {Button,Tag,ProofCard,Quote,Card,Stat}=DSr;
+  return <main>
+    <section className="oj-sec" style={{padding:'80px 0 64px'}}>
+      <div className="oj-container">
+        <Eyebrow>Results</Eyebrow>
+        <h1 className="oj-display" style={{fontSize:64,margin:'14px 0 18px',maxWidth:860}}>Proof beats promises.</h1>
+        <p className="oj-lede">Every claim below carries its baseline and period. Where evidence is incomplete, we say so.</p>
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{background:'var(--oj-ink)',borderTop:'var(--bw-1) solid var(--oj-ink)'}}>
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:56,alignItems:'center'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:16}}>
+          <Tag variant="orange">The Anchor · live business laboratory</Tag>
+          <h2 className="oj-h2" style={{color:'var(--oj-cream)'}}>A real pub. Real staff, stock, margin and cash flow.</h2>
+          <p style={{margin:0,fontSize:15.5,lineHeight:1.6,color:'rgba(247,245,241,.8)'}}>The Anchor gives Orange Jelly somewhere to test ideas in the real world, where clever thinking only matters if it changes the numbers. The lessons transfer: demand, conversion, pricing, rotas, suppliers, inventory, booking systems and AI.</p>
+          <Quote tone="dark" name="Billy" role="General manager, The Anchor">They told us what we didn't want to hear. Then they built the fix with us.</Quote>
+        </div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:28,padding:'8px 0'}}>
+          <Stat value="403%" label="table bookings" sub="Year on year" tone="dark" size="lg" />
+          <Stat value="567%" label="private hire bookings" sub="Year on year" tone="dark" size="lg" />
+          <Stat value="98%" label="food revenue" sub="Menu and pricing redesign" tone="dark" size="lg" />
+          <Stat value="89%" label="fewer no-shows" sub="Booking journey rebuild" tone="dark" size="lg" />
+        </div>
+      </div>
+    </section>
+    <section className="oj-sec">
+      <div className="oj-container">
+        <h2 className="oj-h2" style={{fontSize:32,marginBottom:8}}>Proof by pressure point</h2>
+        <p style={{margin:'0 0 24px',fontSize:15,color:'var(--text-secondary)'}}>Short cards, verified metrics, honest qualifiers.</p>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}}>
+          <ProofCard value="828%" label="search visibility" context="Google visibility over 12 months after content and journey rebuild." area="Create demand" />
+          <ProofCard value="25h" label="manual work removed weekly" context="Reporting and rota automation. Verified against timesheets." area="Remove operational drag" />
+          <ProofCard value="£13k" label="annual supplier saving" context="Utilities and supplier renegotiation, like-for-like volumes." area="Protect margin" />
+        </div>
+        <Card style={{marginTop:28,padding:'18px 22px',display:'flex',gap:14,alignItems:'center',background:'var(--surface-sunken)'}}>
+          <span style={{fontWeight:600,fontSize:12,color:'var(--text-accent)',flex:'none'}}>NOTE</span>
+          <span style={{fontSize:14.5,color:'var(--text-secondary)'}}>Figures are proof candidates from The Anchor programme. Baselines, periods and data sources are shared in full during a diagnostic. We publish nothing we cannot explain.</span>
+        </Card>
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{background:'var(--oj-orange)',borderTop:'var(--bw-1) solid var(--oj-ink)'}}>
+      <div className="oj-container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:24,flexWrap:'wrap'}}>
+        <h2 className="oj-h2" style={{fontSize:34}}>Want numbers like these with your name on them?</h2>
+        <Button variant="ink" size="lg" arrow onClick={()=>onNav('start')}>Book a growth diagnostic</Button>
+      </div>
+    </section>
+  </main>;
+}
+window.Results=Results;

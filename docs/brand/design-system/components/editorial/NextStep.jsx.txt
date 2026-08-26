@@ -1,0 +1,30 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-next{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);overflow:hidden;max-width:760px}
+.oj-next .head{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:var(--bw-1) solid var(--oj-ink);background:var(--oj-ink);color:var(--oj-cream);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.oj-next a.step{display:flex;align-items:center;gap:16px;padding:18px 20px;text-decoration:none;color:var(--oj-ink)}
+.oj-next a.step+a.step{border-top:1px solid var(--border-soft)}
+.oj-next a.step:hover{background:var(--oj-orange-soft)}
+.oj-next .stage{flex:none;width:118px;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-accent)}
+.oj-next .tt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.oj-next .tt b{font-weight:800;font-size:16.5px;letter-spacing:-.01em;line-height:1.3}
+.oj-next .tt span{font-size:13.5px;color:var(--text-secondary);line-height:1.45}
+.oj-next .arr{margin-left:auto;font-size:19px;flex:none}
+.oj-next a.step:hover .arr{transform:translateX(3px)}
+@media(max-width:560px){.oj-next .stage{display:none}}`;
+const DEFAULTS={
+article:[{stage:'The problem',title:'Leads are not converting',desc:'This article is usually a symptom. Here is the growth problem behind it.',href:'#'},{stage:'The proof',title:'403% more table bookings, no extra ad spend',desc:'What fixing it looked like on a real P&L.',href:'#'}],
+problem:[{stage:'The proof',title:'How we rebuilt a leaking booking journey',desc:'A case study on this exact pressure point.',href:'#'},{stage:'Next step',title:'Book a growth diagnostic',desc:'Bring us the problem. We will tell you what would move the numbers.',href:'#'}],
+case:[{stage:'Next step',title:'Book a growth diagnostic',desc:'Same method, applied to your numbers.',href:'#'},{stage:'More proof',title:'All results',desc:'Verified outcomes across every pressure point.',href:'#'}]};
+export function NextStep({from='article',heading='Where this leads',links}){
+  ensureCoreCss('oj-css-next',css);
+  const rows=links||DEFAULTS[from]||DEFAULTS.article;
+  return <nav className="oj-next" aria-label={heading}>
+    <div className="head">{heading}</div>
+    {rows.map((l,i)=><a key={i} className="step" href={l.href}>
+      <span className="stage">{l.stage}</span>
+      <span className="tt"><b>{l.title}</b>{l.desc&&<span>{l.desc}</span>}</span>
+      <span className="arr" aria-hidden="true">→</span>
+    </a>)}
+  </nav>;
+}

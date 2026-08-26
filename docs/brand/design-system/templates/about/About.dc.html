@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="About" description="Why Orange Jelly exists: manifesto statement, beliefs, founder story, the live lab, CTA" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<sc-if value="{{ orangeHeader }}" hint-placeholder-val="{{ false }}">
+<header style="position:sticky;top:0;z-index:50;background:#F76B0C;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<span style="display:flex;align-items:center;gap:10px"><img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:32px;display:block"><span style="font-weight:900;font-size:20px;letter-spacing:-.02em;color:#FFFFFF">orange jelly</span></span>
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#FFFFFF;text-decoration:none">Growth problems</a><a href="#" style="color:#FFFFFF;text-decoration:none">How we work</a><a href="#" style="color:#FFFFFF;text-decoration:none">Results</a><a href="#" style="color:#FFFFFF;text-decoration:none">Insights</a><a href="#" style="color:#FFFFFF;text-decoration:none;box-shadow:inset 0 -3px 0 #FFFFFF">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" variant="ink" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+</sc-if>
+<sc-if value="{{ creamHeader }}" hint-placeholder-val="{{ true }}">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none">Insights</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+</sc-if>
+<section style="max-width:1160px;margin:0 auto;padding:96px 32px 72px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Why Orange Jelly exists</span>
+<h1 style="font-weight:900;font-size:76px;line-height:.98;letter-spacing:-.025em;margin:18px 0 24px;max-width:860px">Brilliant thinking is useless <span style="background:linear-gradient(transparent 52%,#FFD3AD 52%,#FFD3AD 98%,transparent 98%);padding:0 .08em">until it changes something.</span></h1>
+<p style="margin:0;font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:560px">Orange Jelly exists for ambitious small and mid-sized businesses: big enough to have real growth problems, small enough to move fast. We are not an agency with a deliverables list. We are the partner you hand the problem to.</p>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">What we believe</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px">
+<sc-for list="{{ beliefs }}" as="b" hint-placeholder-count="4">
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:24px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:900;font-size:22px;line-height:1.15;letter-spacing:-.015em">{{ b.line }}</span>
+<span style="font-size:14.5px;line-height:1.55;color:#4A4C58">{{ b.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:80px 32px">
+<div style="display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="background:#23252E;border:1.5px solid #23252E;border-radius:3px;aspect-ratio:4/5;display:grid;place-content:center;text-align:center;padding:24px;box-sizing:border-box">
+<span style="color:rgba(247,245,241,.55);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase">Founder photo</span>
+<span style="color:rgba(247,245,241,.35);font-size:12.5px;margin-top:6px">Real work, candid. No stock handshakes.</span>
+</div>
+<span style="font-weight:600;font-size:12.5px;color:#757784">Peter Pitcher, founder. Also the licensee of The Anchor.</span>
+</div>
+<div class="oj-prose">
+<p class="lead">Orange Jelly started with a business we could not walk away from: our own.</p>
+<p>Peter spent years building growth systems inside companies by day and running The Anchor, a village pub, by night. The pub became the proving ground. Every method, every piece of practical AI, every pricing decision was tested on a real P&L where a bad idea costs real money the same week.</p>
+<p>That habit became the company. We get under the skin of a business, expose what is actually blocking growth and build the fix: creativity, technology and commercial judgement, with AI where it earns its place.</p>
+<p><strong>We challenge the problem, never the person.</strong> Experienced operators do not need a lecture. They need a partner who says the uncomfortable thing, then builds the way out.</p>
+</div>
+</div>
+</section>
+<section style="background:#23252E;padding:80px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">The live lab</span>
+<h2 style="font-weight:900;font-size:38px;letter-spacing:-.02em;color:#F7F5F1;margin:12px 0 10px;max-width:700px"><span class="oj-keep-case">The Anchor</span>: a real trading business, not a case study archive.</h2>
+<p style="margin:0 0 36px;font-size:16px;line-height:1.55;color:rgba(247,245,241,.75);max-width:560px">Everything we recommend has survived contact with a live P&L first. These numbers are from our own business.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="403%" label="table bookings" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="89%" label="fewer no-shows" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="828%" label="search visibility" tone="dark" hint-size="100%,84px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="98%" label="food revenue" tone="dark" hint-size="100%,84px"></x-import>
+</div>
+<div style="margin-top:36px"><x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" variant="primary" arrow="{{ true }}" hint-size="200px,44px">See the results</x-import></div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:88px 32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px">
+<h2 style="font-weight:900;font-size:56px;letter-spacing:-.025em;margin:0;max-width:760px">You bring the growth problem. <span style="background:linear-gradient(transparent 55%,#F76B0C 55%,#F76B0C 96%,transparent 96%);padding:0 .08em">We build the solution.</span></h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+</section>
+<footer style="background:#23252E;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;orangeHeader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Header&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    const orange = this.props.orangeHeader ?? false;
+    return {
+      orangeHeader: orange,
+      creamHeader: !orange,
+      beliefs:[
+        {line:'The problem first. Always.',text:'We start from what is blocking growth, not from a service list. The diagnosis decides the work.'},
+        {line:'Tested on ourselves.',text:'Methods are proven on our own trading business before they are recommended to anyone else.'},
+        {line:'AI is a toolkit, not a product.',text:'Practical AI where it removes drag or creates advantage. Nowhere else.'},
+        {line:'Proof beats polish.',text:'Every engagement is measured against a baseline agreed before we start. Numbers, not adjectives.'}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

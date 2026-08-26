@@ -1,0 +1,21 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`@keyframes oj-shimmer{0%{opacity:.45}50%{opacity:.9}100%{opacity:.45}}
+.oj-skel{display:flex;flex-direction:column;gap:10px}
+.oj-skel i{display:block;background:var(--surface-sunken);border-radius:var(--r-1);animation:oj-shimmer 1.4s ease-in-out infinite}
+.oj-skel-card{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:20px}`;
+export function Skeleton({variant='text',lines=3,width}){
+  ensureCoreCss('oj-css-skel',css);
+  const L=({w,h=13,d=0})=><i style={{width:w,height:h,animationDelay:d+'ms'}}></i>;
+  const text=<div className="oj-skel" style={{width}} aria-hidden="true">
+    {Array.from({length:lines},(_,i)=><L key={i} w={i===lines-1?'62%':'100%'} d={i*120}/>)}
+  </div>;
+  if(variant==='card')return <div className="oj-skel-card" style={{width}} aria-hidden="true">
+    <div className="oj-skel"><L w="34%" h={11}/><L w="88%" h={19} d={120}/><L w="100%" d={240}/><L w="55%" d={360}/></div>
+  </div>;
+  if(variant==='article')return <div className="oj-skel" style={{width,maxWidth:680}} aria-hidden="true">
+    <L w="30%" h={12}/><L w="90%" h={34} d={100}/><L w="70%" h={34} d={200}/><i style={{width:'40%',height:12,animationDelay:'300ms',marginBottom:14}}></i>
+    {Array.from({length:lines},(_,i)=><L key={i} w={i%4===3?'74%':'100%'} d={400+i*80}/>)}
+  </div>;
+  return text;
+}

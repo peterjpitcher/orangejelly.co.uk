@@ -1,0 +1,17 @@
+import * as React from 'react';
+/**
+ * Interactive companion to PressureMap: the visitor picks a symptom they recognise
+ * and the map highlights the connected areas, reveals the likely connected causes,
+ * and offers the diagnostic CTA. Use on the growth-problems hub and homepage.
+ */
+export interface PressureSymptom{label:string;/** area ids the symptom implicates */areas:string[];cause:string}
+export interface PressureCheckProps{
+  symptoms?:PressureSymptom[];
+  areas?:import('./PressureMap').PressureArea[];
+  heading?:string;
+  intro?:string;
+  cta?:{label:string;href?:string};
+  onCta?:()=>void;
+}
+export declare function PressureCheck(props:PressureCheckProps):React.ReactElement;
+export declare const PRESSURE_SYMPTOMS:PressureSymptom[];

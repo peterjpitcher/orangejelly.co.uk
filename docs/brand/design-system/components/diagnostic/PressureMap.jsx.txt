@@ -1,0 +1,59 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-pmap{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:28px;max-width:640px;box-sizing:border-box}
+.oj-pmap svg text{font-family:var(--font-body)}
+.oj-pmap .node{cursor:default}
+.oj-pmap .node.click{cursor:pointer}
+.oj-pmap .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:12.5px;font-weight:600;color:var(--text-secondary)}
+.oj-pmap .legend span{display:inline-flex;align-items:center;gap:7px}
+.oj-pmap .legend i{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--oj-ink);display:inline-block}
+.oj-pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:760px}
+@media(max-width:720px){.oj-pgrid{grid-template-columns:1fr 1fr}}
+.oj-pgrid .cell{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:18px;display:flex;flex-direction:column;gap:10px}
+.oj-pgrid .cell.dim{opacity:.4}
+.oj-pgrid .cell b{font-weight:800;font-size:16px;letter-spacing:-.01em}
+.oj-pgrid .bar{display:flex;gap:4px}
+.oj-pgrid .bar i{height:8px;flex:1;border:1px solid var(--oj-ink);border-radius:2px;background:var(--oj-paper)}
+.oj-pgrid .note{font-size:13px;line-height:1.45;color:var(--text-secondary);margin:0}
+.oj-pgrid .lvl{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}`;
+export const PRESSURE_AREAS=[
+{id:'demand',label:'Demand',pressure:2,note:'Pipeline depends on effort, not a system.'},
+{id:'conversion',label:'Conversion',pressure:3,note:'Enquiries leak between contact and decision.'},
+{id:'margin',label:'Margin',pressure:1,note:'Pricing holds, but mix is untested.'},
+{id:'operations',label:'Operations',pressure:2,note:'Manual work is absorbing growth capacity.'},
+{id:'experience',label:'Experience',pressure:0,note:'Customers return; keep measuring.'},
+{id:'scale',label:'Scale',pressure:1,note:'Systems fine today, fragile at 2x.'}];
+export const PRESSURE_LINKS=[['demand','conversion'],['conversion','margin'],['margin','operations'],['operations','experience'],['experience','conversion'],['scale','operations'],['scale','demand']];
+const LVL=[{w:'steady',fill:'var(--oj-paper)',tx:'var(--oj-ink)'},{w:'watch',fill:'var(--oj-peach)',tx:'var(--oj-ink)'},{w:'pressure',fill:'var(--oj-orange)',tx:'var(--oj-ink)'},{w:'critical',fill:'var(--oj-ember)',tx:'var(--oj-cream)'}];
+export function pressureLevel(p){return LVL[Math.max(0,Math.min(3,p))];}
+const ANG=[-90,-30,30,90,150,210];
+export function PressureMap({areas=PRESSURE_AREAS,links=PRESSURE_LINKS,variant='map',title='Growth Pressure Map',caption,highlight=[],onSelect,legend=true}){
+  ensureCoreCss('oj-css-pmap',css);
+  const hi=highlight&&highlight.length?highlight:null;
+  if(variant==='grid')return <div className="oj-pgrid" role="list" aria-label={title}>{areas.map(a=>{const l=pressureLevel(a.pressure);const dim=hi&&!hi.includes(a.id);
+    return <div key={a.id} role="listitem" className={'cell'+(dim?' dim':'')}><b>{a.label}</b>
+      <span className="bar" aria-label={l.w}>{[0,1,2,3].map(i=><i key={i} style={i<=a.pressure&&a.pressure>0||i===0&&a.pressure===0?{background:i<=a.pressure&&a.pressure>0?LVL[a.pressure].fill:'var(--oj-paper)'}:undefined}></i>)}</span>
+      <span className="lvl" style={{color:a.pressure>=2?'var(--oj-orange-deep)':'var(--oj-ink-3)'}}>{l.w}</span>
+      {a.note&&<p className="note">{a.note}</p>}</div>;})}</div>;
+  const cx=280,cy=218,R=158;
+  const pos=Object.fromEntries(areas.map((a,i)=>{const r=(ANG[i%6])*Math.PI/180;return [a.id,{x:cx+R*Math.cos(r),y:cy+R*Math.sin(r)}];}));
+  return <figure className="oj-pmap" style={{margin:0}}>
+    <svg viewBox="0 0 560 436" role="img" aria-label={title} style={{width:'100%',display:'block'}}>
+      {areas.map(a=><line key={'s'+a.id} x1={cx} y1={cy} x2={pos[a.id].x} y2={pos[a.id].y} stroke="var(--oj-ink)" strokeWidth="1.2" opacity={hi?(hi.includes(a.id)?.8:.15):.55}/>)}
+      {links.map(([a,b],i)=>pos[a]&&pos[b]&&<line key={'l'+i} x1={pos[a].x} y1={pos[a].y} x2={pos[b].x} y2={pos[b].y} stroke="var(--oj-ink)" strokeWidth="1.2" strokeDasharray="3 5" opacity={hi?(hi.includes(a)&&hi.includes(b)?.8:.12):.35}/>)}
+      <circle cx={cx} cy={cy} r="42" fill="var(--oj-ink)" stroke="var(--oj-ink)" strokeWidth="1.5"/>
+      <text x={cx} y={cy-2} textAnchor="middle" fill="var(--oj-cream)" fontSize="12.5" fontWeight="800">the</text>
+      <text x={cx} y={cy+13} textAnchor="middle" fill="var(--oj-cream)" fontSize="12.5" fontWeight="800">business</text>
+      {areas.map((a,i)=>{const p=pos[a.id],l=pressureLevel(a.pressure),r=25+a.pressure*7,sel=hi&&hi.includes(a.id),dim=hi&&!sel;
+        const ly=ANG[i%6]===-90?p.y-r-12:p.y+r+18;
+        return <g key={a.id} className={'node'+(onSelect?' click':'')} opacity={dim?.3:1} onClick={onSelect?()=>onSelect(a.id):undefined}>
+          {sel&&<circle cx={p.x} cy={p.y} r={r+6} fill="none" stroke="var(--oj-orange)" strokeWidth="2.5"/>}
+          <circle cx={p.x} cy={p.y} r={r} fill={l.fill} stroke="var(--oj-ink)" strokeWidth="1.5"/>
+          <text x={p.x} y={p.y+4} textAnchor="middle" fill={l.tx} fontSize="11" fontWeight="700">{l.w}</text>
+          <text x={p.x} y={ly} textAnchor="middle" fill="var(--oj-ink)" fontSize="14.5" fontWeight="800">{a.label}</text>
+        </g>;})}
+    </svg>
+    {legend&&<div className="legend">{LVL.map(l=><span key={l.w}><i style={{background:l.fill}}></i>{l.w}</span>)}</div>}
+    {caption&&<figcaption style={{fontSize:13,color:'var(--text-muted)',fontWeight:600,marginTop:10}}>{caption}</figcaption>}
+  </figure>;
+}

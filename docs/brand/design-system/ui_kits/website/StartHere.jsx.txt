@@ -1,0 +1,49 @@
+const DSs=window.OrangeJellyDesignSystem_a79785;
+function StartHere(){
+  const {Button,Field,Input,Select,Textarea,Checkbox,Card,Tag}=DSs;
+  const [sent,setSent]=React.useState(false);
+  return <main>
+    <section className="oj-sec" style={{padding:'80px 0 56px'}}>
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1fr 1.1fr',gap:64,alignItems:'start'}}>
+        <div style={{position:'sticky',top:100}}>
+          <Eyebrow>Start here</Eyebrow>
+          <h1 className="oj-display" style={{fontSize:56,margin:'14px 0 18px'}}>Bring us the problem.</h1>
+          <p className="oj-lede" style={{margin:'0 0 26px'}}>Tell us what is happening, what you have tried and what needs to change. A senior person reads every enquiry and replies within two working days.</p>
+          <div style={{display:'flex',flexDirection:'column',gap:12,fontSize:15}}>
+            {[["What happens next","A short call to test fit, then a scoped Growth Diagnostic if it makes sense."],["What it costs","Diagnostics are fixed fee. We share investment guidance before you commit."],["Who you deal with","The people doing the work. No handoffs to a junior team."]].map(([t,d])=>
+              <div key={t} style={{display:'flex',flexDirection:'column',gap:2,paddingLeft:16,borderLeft:'3px solid var(--oj-orange)'}}><b>{t}</b><span style={{color:'var(--text-secondary)',fontSize:14.5}}>{d}</span></div>)}
+          </div>
+        </div>
+        {sent?
+        <Card tone="ink" style={{padding:40,display:'flex',flexDirection:'column',gap:16,alignItems:'flex-start'}}>
+          <Tag variant="orange">Received</Tag>
+          <h2 className="oj-h2" style={{color:'var(--oj-cream)',fontSize:34}}>Good. That took guts.</h2>
+          <p style={{margin:0,fontSize:15.5,lineHeight:1.6,color:'rgba(247,245,241,.85)'}}>We will read what you sent properly, not skim it. Expect a reply from a senior person within two working days with an honest view on fit.</p>
+          <Button onClick={()=>setSent(false)}>Send another problem</Button>
+        </Card>
+        :<Card style={{padding:32}}>
+          <form style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:18}} onSubmit={e=>{e.preventDefault();setSent(true);}}>
+            <Field label="Name" required htmlFor="f-name"><Input id="f-name" autoComplete="name" /></Field>
+            <Field label="Work email" required htmlFor="f-em"><Input id="f-em" type="email" autoComplete="email" /></Field>
+            <Field label="Company" required htmlFor="f-co"><Input id="f-co" /></Field>
+            <Field label="Your role" htmlFor="f-role"><Input id="f-role" placeholder="Owner, MD, director…" /></Field>
+            <Field label="Approximate team size" htmlFor="f-size"><Select id="f-size" defaultValue=""><option value="" disabled>Choose a band</option><option>Under 10</option><option>10 to 50</option><option>50 to 200</option><option>200 to 500</option></Select></Field>
+            <Field label="Indicative investment range" htmlFor="f-inv"><Select id="f-inv" defaultValue=""><option value="" disabled>Honest guess is fine</option><option>Under £10k</option><option>£10k to £30k</option><option>£30k to £100k</option><option>£100k plus</option></Select></Field>
+            <div style={{gridColumn:'1/-1'}}><Field label="What is happening in the business?" required htmlFor="f-what" hint="Symptoms, numbers, gut feel. Plain words beat polish."><Textarea id="f-what" rows={3} /></Field></div>
+            <div style={{gridColumn:'1/-1'}}><Field label="What do you believe is blocking growth?" htmlFor="f-block"><Textarea id="f-block" rows={2} /></Field></div>
+            <div style={{gridColumn:'1/-1'}}><Field label="What would success look like?" htmlFor="f-succ"><Textarea id="f-succ" rows={2} /></Field></div>
+            <div style={{gridColumn:'1/-1',display:'flex',flexDirection:'column',gap:10}}>
+              <Checkbox label="A decision maker will be involved from the first call" defaultChecked />
+              <Checkbox label="We are ready to be challenged, not reassured" />
+            </div>
+            <div style={{gridColumn:'1/-1',display:'flex',alignItems:'center',gap:16,marginTop:4}}>
+              <Button size="lg" type="submit" arrow>Send the problem</Button>
+              <span style={{fontSize:13,color:'var(--text-muted)'}}>No newsletter. No drip sequence. One reply.</span>
+            </div>
+          </form>
+        </Card>}
+      </div>
+    </section>
+  </main>;
+}
+window.StartHere=StartHere;

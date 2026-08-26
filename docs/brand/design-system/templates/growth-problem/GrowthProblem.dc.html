@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Growth problem" description="One of the 8 primary commercial pages: symptom recognition, connected causes on the pressure map, what we examine, proof, diagnostic CTA" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F76B0C;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<span style="display:flex;align-items:center;gap:10px"><img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:32px;display:block"><span style="font-weight:900;font-size:20px;letter-spacing:-.02em;color:#FFFFFF">orange jelly</span></span>
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#FFFFFF;text-decoration:none;box-shadow:inset 0 -3px 0 #FFFFFF">Growth problems</a><a href="#" style="color:#FFFFFF;text-decoration:none">How we work</a><a href="#" style="color:#FFFFFF;text-decoration:none">Results</a><a href="#" style="color:#FFFFFF;text-decoration:none">Insights</a><a href="#" style="color:#FFFFFF;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" variant="ink" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:22px 32px 0">
+<nav aria-label="Breadcrumb" style="display:flex;gap:8px;align-items:center;font-size:13.5px;font-weight:600"><a href="#" style="color:#757784;text-decoration:none">Home</a><span style="color:#F76B0C">/</span><a href="#" style="color:#757784;text-decoration:none">Growth problems</a><span style="color:#F76B0C">/</span><span style="color:#23252E">{{ crumb }}</span></nav>
+<div style="max-width:840px;display:flex;flex-direction:column;gap:20px;padding:40px 0 52px">
+<h1 style="font-weight:900;font-size:68px;line-height:.98;letter-spacing:-.025em;margin:0">{{ titleLead }} <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">{{ titleMark }}</span></h1>
+<p style="margin:0;font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:600px">{{ intro }}</p>
+</div>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:56px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Sound familiar?</span>
+<div style="display:flex;flex-direction:column;gap:0;border-top:1.5px solid #23252E;margin-top:16px">
+<sc-for list="{{ symptoms }}" as="s" hint-placeholder-count="4">
+<div style="display:flex;gap:14px;align-items:baseline;padding:15px 2px;border-bottom:1px solid rgba(35,37,46,.18)"><span style="color:#F76B0C;font-weight:900;flex:none">→</span><span style="font-weight:600;font-size:16.5px;line-height:1.4">{{ s }}</span></div>
+</sc-for>
+</div>
+</div>
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">The connected causes</span>
+<p style="margin:14px 0 20px;font-size:15.5px;line-height:1.55;color:#4A4C58">{{ causes }}</p>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.PressureMap" variant="grid" highlight="{{ highlight }}" hint-size="100%,320px"></x-import>
+</div>
+</div>
+</section>
+<section style="background:#23252E;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">What we would examine first</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px">
+<sc-for list="{{ examine }}" as="e" hint-placeholder-count="3">
+<div style="border:1.5px solid rgba(247,245,241,.3);border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:8px">
+<span style="font-weight:900;font-size:17px;color:#F7F5F1;letter-spacing:-.01em">{{ e.what }}</span>
+<span style="font-size:14px;line-height:1.5;color:rgba(247,245,241,.7)">{{ e.why }}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin:26px 0 0;font-size:14px;color:rgba(247,245,241,.6);max-width:560px">This is the HEAR and EXPOSE half of the method. The build comes after the evidence, not before it.</p>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:64px 32px">
+<div style="display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:start">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Proof it moves</span>
+<h2 style="font-weight:900;font-size:34px;letter-spacing:-.02em;margin:12px 0 24px;max-width:520px">{{ proofHeading }}</h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.NextStep" from="problem" hint-size="100%,180px"></x-import>
+</div>
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:28px;display:flex;flex-direction:column;gap:18px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">The next step</span>
+<span style="font-weight:900;font-size:24px;line-height:1.1;letter-spacing:-.02em">Bring us this problem.</span>
+<p style="margin:0;font-size:14.5px;line-height:1.55;color:#4A4C58">A Growth Diagnostic tests what is actually causing it against your numbers, then tells you what would move them. No service list, no pitch deck.</p>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" arrow="{{ true }}" hint-size="220px,46px">Book a growth diagnostic</x-import>
+</div>
+</div>
+</section>
+<footer style="background:#23252E;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;problem&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;stalled&quot;,&quot;options&quot;:[&quot;stalled&quot;,&quot;demand&quot;,&quot;conversion&quot;,&quot;margin&quot;,&quot;operations&quot;,&quot;experience&quot;,&quot;ai&quot;,&quot;scale&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    const P={
+      stalled:{crumb:'Growth has stalled',titleLead:'Growth has',titleMark:'stalled.',intro:'Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It is almost never the answer.',symptoms:['Revenue has been flat for three quarters or more.','Everyone has a different theory about the cause.','New initiatives launch, spike, then fade.','The market grew and you did not.'],causes:'Stalled growth is rarely one thing. It usually pairs weak demand creation with a conversion journey that leaks, capped by systems that cannot absorb more volume.',highlight:['demand','conversion','scale'],examine:[{what:'Where growth actually stopped',why:'Pipeline, conversion or capacity: the flat line always starts in one of them.'},{what:'What the data can prove',why:'Half of stall diagnoses collapse when tested against the numbers.'},{what:'The cheapest unlock',why:'The smallest intervention capable of material change, not the biggest programme.'}],proofHeading:'Businesses that stalled, and what moved.'},
+      conversion:{crumb:'Leads are not converting',titleLead:'Leads are',titleMark:'not converting.',intro:'Enquiries arrive and quietly die. The problem is almost never the leads. It is the journey between first contact and decision.',symptoms:['Enquiries go quiet after the first reply.','You could not say what your conversion rate is at each step.','Follow-up depends on someone remembering.','Price objections arrive before value was ever shown.'],causes:'Conversion problems usually live in the journey, not the leads: slow follow-up, unclear next steps, and an experience that talks people out of buying.',highlight:['conversion','experience'],examine:[{what:'The journey, step by step',why:'Where enquiries actually stall, measured, not assumed.'},{what:'Speed and clarity of follow-up',why:'Response time is the strongest single conversion lever most businesses own.'},{what:'What the buyer experiences',why:'The gap between what you promise and what an enquiry feels like.'}],proofHeading:'Leaking journeys, rebuilt and measured.'},
+      margin:{crumb:'Margin is under pressure',titleLead:'Margin is under',titleMark:'pressure.',intro:'Revenue grows but profit does not. Somewhere between price, mix, cost and manual work, the margin is leaking.',symptoms:['Turnover is up and the bank balance is not.','Discounting is the default response to a quiet period.','Prices have not been tested against value in years.','Cost-to-serve creeps up with every workaround.'],causes:'Margin leaks compound: discounting to create demand, manual work inflating cost-to-serve, and pricing that has never been tested against value.',highlight:['margin','operations','demand'],examine:[{what:'Price and mix, against value',why:'What customers would actually pay, not what feels safe.'},{what:'Where cost-to-serve hides',why:'Manual work and workarounds that inflate every order.'},{what:'The discount habit',why:'What each promotion really costs once the uplift is halved.'}],proofHeading:'Margin rebuilt without losing volume.'},
+      operations:{crumb:'Operations are slowing the business',titleLead:'Operations are slowing',titleMark:'the business.',intro:'The team works hard and the business moves slowly. Manual effort is absorbing the capacity growth needs.',symptoms:['Key work depends on one person or their spreadsheet.','Hours go on tasks a system should do.','Every sale creates admin somewhere else.','Hiring is the answer to every capacity question.'],causes:'Operational drag is a scale problem in disguise. Work that depends on effort or memory sets a hard ceiling on how big the business can get.',highlight:['operations','scale'],examine:[{what:'Where the hours actually go',why:'The real workflow, walked through, not the org chart version.'},{what:'What should be a system',why:'The manual work that automation or better process removes outright.'},{what:'The single points of failure',why:'What stops if one person is away for a fortnight.'}],proofHeading:'Drag removed, capacity recovered.'},
+      demand:{crumb:'Demand or pipeline is weak',titleLead:'Demand is',titleMark:'too thin.',intro:'The pipeline dries up the moment you stop pushing. Demand depends on effort, not on a system that creates it.',symptoms:['New business relies on the same few channels or customers.','Referrals are welcome but unplanned.','Marketing activity spikes and troughs with your attention.','You are invisible where buyers actually look.'],causes:'Weak demand usually pairs an unclear proposition with channel dependence, and it drags conversion down with it: thin pipelines make every deal feel desperate.',highlight:['demand','conversion'],examine:[{what:'Where buyers actually look',why:'Search, referral and repeat: measured against where you show up.'},{what:'The proposition, tested',why:'Whether the market can tell what you are for in one pass.'},{what:'What compounds',why:'Channels that build an asset versus activity that evaporates.'}],proofHeading:'Demand systems that outlast the campaign.'},
+      experience:{crumb:'Customer experience is leaking value',titleLead:'Experience is',titleMark:'leaking value.',intro:'Customers buy once and drift away. Retention is an experience problem before it is a marketing problem.',symptoms:['First-time buyers rarely come back.','Problems surface in reviews, not in conversations.','Repeat rate is a mystery number.','Service quality depends on who is on shift.'],causes:'Experience leaks show up as conversion and demand problems: replacing lost customers costs more than keeping them ever would.',highlight:['experience','conversion'],examine:[{what:'The journey after the sale',why:'What actually happens between first purchase and the second that never comes.'},{what:'Where promises break',why:'The gap between marketing and the experienced reality.'},{what:'What customers would say',why:'Direct feedback, gathered before the review goes public.'}],proofHeading:'Retention fixed at the source.'},
+      ai:{crumb:'Using AI intelligently',titleLead:'You want AI that',titleMark:'earns its place.',intro:'Everyone says AI. Almost nobody says where it pays. The question is not which tool, it is which problem.',symptoms:['Tools were bought and quietly abandoned.','The team is curious but nobody owns it.','Competitors claim AI and you cannot tell if it is real.','Every vendor pitch starts with the technology.'],causes:'AI-shaped confusion is usually an operations and scale question: where manual work, decisions or response times are the constraint, AI can pay. Anywhere else it is theatre.',highlight:['operations','scale'],examine:[{what:'Where hours and errors cluster',why:'AI pays where repetitive judgement and manual work meet volume.'},{what:'What your data can support',why:'Half of AI ideas die on data quality. Better to know first.'},{what:'The build-versus-buy line',why:'What a tool solves, what needs building, what needs neither.'}],proofHeading:'Practical AI, tested on a real P&L first.'},
+      scale:{crumb:'Systems cannot support the next stage',titleLead:'Your systems cannot support',titleMark:'the next stage.',intro:'What got you here creaks at higher volume. Growth is being rationed by spreadsheets, workarounds and heroics.',symptoms:['Volume spikes cause errors, not just work.','Reporting takes days and trusts nobody.','Adding revenue means adding headcount at the same rate.','Nobody wants to touch the systems that work.'],causes:'Scale limits drag operations and erode margin at exactly the moment the business needs both: teams patch by hand what systems should absorb.',highlight:['scale','operations','margin'],examine:[{what:'Where volume breaks things',why:'The workflows that fail at 2x, found before 2x arrives.'},{what:'The data foundation',why:'Whether numbers exist once, in one place, or many times in many spreadsheets.'},{what:'Sequence of the fix',why:'What must change first so everything after gets cheaper.'}],proofHeading:'Systems rebuilt ahead of the growth.'}
+    };
+    const p=P[this.props.problem]||P.stalled;
+    return {...p, highlight:p.highlight};
+  }
+}
+</script>
+</body>
+</html>

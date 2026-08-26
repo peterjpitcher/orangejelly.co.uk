@@ -1,0 +1,32 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-season{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);overflow:hidden}
+.oj-season .head{display:flex;align-items:baseline;gap:14px;justify-content:space-between;padding:20px 24px;border-bottom:var(--bw-1) solid var(--oj-ink)}
+.oj-season .head b{font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-.015em}
+.oj-season .head a{font-weight:700;font-size:13.5px}
+.oj-season .rail{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory}
+.oj-season .m{flex:0 0 232px;scroll-snap-align:start;padding:18px 20px 22px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:8px}
+.oj-season .m:last-child{border-right:none}
+.oj-season .m .mo{font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cat-hospitality)}
+.oj-season .m .ev{font-weight:800;font-size:16.5px;letter-spacing:-.01em;line-height:1.25}
+.oj-season .m .nt{font-size:13px;line-height:1.45;color:var(--text-secondary);margin:0}
+.oj-season .m a{font-weight:700;font-size:13px;margin-top:auto}`;
+export const SEASONAL_DEFAULT=[
+{month:'September',event:'Back-to-routine bookings',note:'Rebuild midweek trade as schedules return.',href:'#',cta:'Playbook'},
+{month:'October',event:'Halloween week',note:'Family sessions early, adult trade late. Book both.',href:'#',cta:'Playbook'},
+{month:'November',event:'Christmas party sales open',note:'Party bookings are won in November, not December.',href:'#',cta:'Playbook'},
+{month:'December',event:'Christmas trading',note:'Protect margin on the busiest covers of the year.',href:'#',cta:'Playbook'},
+{month:'January',event:'Dry January counter-plan',note:'Sell the occasion, not the alcohol.',href:'#',cta:'Playbook'},
+{month:'February',event:'Valentine\u2019s weekend',note:'Two-sitting plan for the highest-intent date night.',href:'#',cta:'Playbook'}];
+export function SeasonalBand({heading='The seasonal calendar',viewAll={label:'All playbooks',href:'#'},items=SEASONAL_DEFAULT}){
+  ensureCoreCss('oj-css-season',css);
+  return <section className="oj-season" aria-label={heading}>
+    <div className="head"><b>{heading}</b>{viewAll&&<a href={viewAll.href}>{viewAll.label} →</a>}</div>
+    <div className="rail">{items.map((it,i)=><div key={i} className="m">
+      <span className="mo">{it.month}</span>
+      <span className="ev">{it.event}</span>
+      {it.note&&<p className="nt">{it.note}</p>}
+      {it.href&&<a href={it.href}>{it.cta||'Read'} →</a>}
+    </div>)}</div>
+  </section>;
+}

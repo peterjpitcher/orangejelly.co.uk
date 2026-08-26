@@ -1,0 +1,20 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-cat{display:inline-flex;align-items:center;gap:8px;border:1.5px solid currentColor;border-radius:var(--r-1);font-weight:700;font-size:12.5px;padding:4px 10px;text-decoration:none}
+.oj-cat i{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+a.oj-cat:hover{filter:brightness(.8)}`;
+export const CATEGORIES={
+demand:{label:'Create demand',color:'var(--cat-demand)',soft:'var(--cat-demand-soft)'},
+conversion:{label:'Convert more',color:'var(--cat-convert)',soft:'var(--cat-convert-soft)'},
+margin:{label:'Protect margin',color:'var(--cat-margin)',soft:'var(--cat-margin-soft)'},
+operations:{label:'Remove drag',color:'var(--cat-ops)',soft:'var(--cat-ops-soft)'},
+experience:{label:'Improve experience',color:'var(--cat-experience)',soft:'var(--cat-experience-soft)'},
+scale:{label:'Build for scale',color:'var(--cat-scale)',soft:'var(--cat-scale-soft)'},
+hospitality:{label:'Hospitality',color:'var(--cat-hospitality)',soft:'var(--cat-hospitality-soft)'}};
+export function CategoryTag({category='demand',href,children,filled=false,...rest}){
+  ensureCoreCss('oj-css-cat',css);
+  const c=CATEGORIES[category]||CATEGORIES.demand;
+  const style={color:c.color,background:filled?c.soft:'var(--oj-paper)'};
+  const inner=<><i aria-hidden="true"></i>{children||c.label}</>;
+  return href?<a className="oj-cat" href={href} style={style} {...rest}>{inner}</a>:<span className="oj-cat" style={style} {...rest}>{inner}</span>;
+}

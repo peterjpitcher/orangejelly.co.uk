@@ -1,0 +1,10 @@
+import * as React from 'react';
+/** Empty state for filtered listings and searches with no matches. Always offers a route out via `action`. */
+export interface EmptyStateProps{
+  /** single character in the circle glyph. @default '0' */
+  glyph?:string;
+  title?:string;
+  body?:React.ReactNode;
+  action?:{label:string;href?:string;onClick?:()=>void};
+}
+export declare function EmptyState(props:EmptyStateProps):React.ReactElement;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="How we work" description="The method page: HEAR. EXPOSE. BUILD. PROVE., what access is required, how success is agreed, what a diagnostic includes" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:88px 32px 64px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">How we work</span>
+<h1 style="font-weight:900;font-size:70px;line-height:.98;letter-spacing:-.025em;margin:16px 0 22px;max-width:880px">Hear the business. Expose the pressure points. <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">Build the fix. Prove the impact.</span></h1>
+<p style="margin:0;font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:560px">One repeatable discipline connects everything we do. It starts with the problem and it ends with evidence, and it is the reason our range never becomes a service list.</p>
+</section>
+<section style="background:#23252E;padding:72px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.MethodStep" index="{{ one }}" word="HEAR." text="Understand what is really happening, not only what the brief says. The leader, the team, the data and the customer." hint-size="100%,190px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.MethodStep" index="{{ two }}" word="EXPOSE." text="Find the few pressure points that matter. Challenge comfortable explanations; make the trade-offs clear." active="{{ true }}" hint-size="100%,190px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.MethodStep" index="{{ three }}" word="BUILD." text="Design and implement the right solution: creative, commercial, operational or technical. AI where it earns its place." hint-size="100%,190px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.MethodStep" index="{{ four }}" word="PROVE." text="Measure against the baseline agreed before we started. Scale what works, stop what does not." hint-size="100%,190px"></x-import>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:72px 32px">
+<div style="display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:start">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">The Growth Pressure Map</span>
+<h2 style="font-weight:900;font-size:36px;letter-spacing:-.02em;margin:12px 0 14px;max-width:480px">Where EXPOSE gets its teeth.</h2>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.6;color:#4A4C58;max-width:480px">Every diagnostic maps your business across six connected areas: demand, conversion, margin, operations, experience and scale. Pressure, consequence and the recommended next move for each. Tailored to your business model, never a generic scorecard.</p>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#4A4C58;max-width:480px">It is how we avoid solving the loudest symptom instead of the few pressure points that materially change the outcome.</p>
+</div>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.PressureMap" caption="Example map: month one of a growth partnership." hint-size="100%,520px"></x-import>
+</div>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">What working with us involves</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px">
+<sc-for list="{{ practical }}" as="p" hint-placeholder-count="3">
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:24px;display:flex;flex-direction:column;gap:10px">
+<span style="font-weight:900;font-size:19px;letter-spacing:-.015em;line-height:1.2">{{ p.title }}</span>
+<sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+<span style="display:flex;gap:10px;align-items:baseline;font-size:14.5px;line-height:1.5;color:#4A4C58"><span style="color:#F76B0C;font-weight:900;flex:none">→</span><span>{{ it }}</span></span>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:80px 32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px">
+<h2 style="font-weight:900;font-size:50px;letter-spacing:-.025em;margin:0;max-width:720px">Work is not done when a deliverable ships. <span style="background:linear-gradient(transparent 55%,#F76B0C 55%,#F76B0C 96%,transparent 96%);padding:0 .08em">It is done when the change is measured.</span></h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+</section>
+<footer style="background:#23252E;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    return {one:1,two:2,three:3,four:4,
+      practical:[
+        {title:'What access we need',items:['The leader, honestly','The people doing the work','Commercial and performance data','Systems and journey walkthroughs']},
+        {title:'How success is agreed',items:['The problem, written down first','A baseline before any work starts','Success measures we both sign','What would stop, change or expand the work']},
+        {title:'What a diagnostic includes',items:['Interviews and data review','Your Growth Pressure Map','Prioritised opportunities, sized','A recommended first intervention']}
+      ]};
+  }
+}
+</script>
+</body>
+</html>

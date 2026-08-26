@@ -1,0 +1,48 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-search{max-width:680px}
+.oj-search .box{display:flex;gap:0;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-paper);overflow:hidden}
+.oj-search input{flex:1;border:none;background:none;font-family:inherit;font-size:16.5px;padding:14px 18px;color:var(--oj-ink);min-width:0}
+.oj-search input:focus{outline:none}
+.oj-search .box:focus-within{box-shadow:var(--ring)}
+.oj-search .go{font-family:inherit;font-weight:700;font-size:14.5px;border:none;border-left:var(--bw-1) solid var(--oj-ink);background:var(--oj-orange);color:var(--oj-ink);padding:0 22px;cursor:pointer}
+.oj-search .meta{font-size:13px;font-weight:600;color:var(--text-muted);margin:12px 2px}
+.oj-search .res{display:flex;flex-direction:column;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);overflow:hidden}
+.oj-search .res a{display:flex;flex-direction:column;gap:4px;padding:15px 18px;text-decoration:none;color:var(--oj-ink)}
+.oj-search .res a+a{border-top:1px solid var(--border-soft)}
+.oj-search .res a:hover{background:var(--oj-orange-soft)}
+.oj-search .res b{font-weight:800;font-size:16px;letter-spacing:-.01em}
+.oj-search .res b mark{background:var(--oj-peach);padding:0 .06em}
+.oj-search .res .ex{font-size:13.5px;line-height:1.45;color:var(--text-secondary)}
+.oj-search .res .k{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-accent)}
+.oj-search .none{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.oj-search .none b{font-family:var(--font-display);font-weight:900;font-size:20px;letter-spacing:-.015em}
+.oj-search .none p{margin:0;font-size:14.5px;color:var(--text-secondary);max-width:380px;line-height:1.5}`;
+function markUp(text,q){
+  const i=text.toLowerCase().indexOf(q.toLowerCase());
+  if(i<0)return text;
+  return <>{text.slice(0,i)}<mark>{text.slice(i,i+q.length)}</mark>{text.slice(i+q.length)}</>;
+}
+export function SiteSearch({items=[],placeholder='Search insights, problems and results…',minChars=2,maxResults=8,fallback={label:'Browse growth problems',href:'#'},onQuery}){
+  ensureCoreCss('oj-css-search',css);
+  const [q,setQ]=React.useState('');
+  const live=q.trim().length>=minChars;
+  const hits=live?items.filter(it=>(it.title+' '+(it.excerpt||'')+' '+(it.category||'')).toLowerCase().includes(q.trim().toLowerCase())).slice(0,maxResults):[];
+  return <div className="oj-search" role="search">
+    <div className="box">
+      <input type="search" value={q} placeholder={placeholder} aria-label="Search the site" onChange={e=>{setQ(e.target.value);onQuery&&onQuery(e.target.value);}}/>
+      <button type="button" className="go">Search</button>
+    </div>
+    {live&&hits.length>0&&<><p className="meta">{hits.length}{hits.length===maxResults?'+':''} result{hits.length===1?'':'s'} for “{q.trim()}”</p>
+    <nav className="res" aria-label="Search results">{hits.map((it,i)=><a key={i} href={it.href}>
+      {it.category&&<span className="k">{it.category}</span>}
+      <b>{markUp(it.title,q.trim())}</b>
+      {it.excerpt&&<span className="ex">{it.excerpt}</span>}
+    </a>)}</nav></>}
+    {live&&hits.length===0&&<div className="none" style={{marginTop:12}}>
+      <b>Nothing matches “{q.trim()}”.</b>
+      <p>Try a different word for the symptom — or start from the problem instead of the search box.</p>
+      <Button size="sm" arrow href={fallback.href}>{fallback.label}</Button>
+    </div>}
+  </div>;
+}

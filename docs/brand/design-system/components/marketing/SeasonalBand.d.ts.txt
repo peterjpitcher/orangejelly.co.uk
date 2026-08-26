@@ -1,0 +1,14 @@
+import * as React from 'react';
+/**
+ * Seasonal calendar + playbooks band for the hospitality sector hub: a horizontal
+ * scroll-snap rail of month/occasion cards. Month labels use the hospitality
+ * taxonomy hue, never orange.
+ */
+export interface SeasonalItem{month:string;event:string;note?:string;href?:string;cta?:string}
+export interface SeasonalBandProps{
+  heading?:string;
+  viewAll?:{label:string;href:string}|null;
+  items?:SeasonalItem[];
+}
+export declare function SeasonalBand(props:SeasonalBandProps):React.ReactElement;
+export declare const SEASONAL_DEFAULT:SeasonalItem[];

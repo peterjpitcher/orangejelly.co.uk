@@ -1,0 +1,11 @@
+import * as React from 'react';
+/** Article share row: text-label chips (no brand icon soup), share-intent links + copy-link with confirmation. */
+export interface ShareRowProps{
+  /** defaults to location.href */
+  url?:string;
+  title?:string;
+  label?:string;
+  /** order matters. @default ['linkedin','x','copy'] */
+  networks?:Array<'linkedin'|'x'|'facebook'|'email'|'copy'>;
+}
+export declare function ShareRow(props:ShareRowProps):React.ReactElement;

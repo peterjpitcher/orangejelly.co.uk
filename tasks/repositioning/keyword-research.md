@@ -1,90 +1,182 @@
 # Keyword research: repositioning
 
-Running log. One round per section. Peter pulls volumes from Google Keyword Planner, we narrow, we
-repeat until the plan is strong enough to shape the page structure.
+Running log. Peter pulls volumes from Google Keyword Planner, we narrow, we repeat.
 
 ---
 
-## What we are trying to learn
+## Round 1 results, 26 August 2026
 
-The repositioning creates a real risk: we invent a category nobody searches for. "Growth partner"
-is excellent positioning language and may have close to zero search volume. That is fine, as long as
-we know it and build the pages against the language people actually type.
+107 terms submitted, 106 returned. **46 returned a volume. 60 returned nothing at all.**
 
-Round 1 is deliberately broad and shallow. It is not the plan. It tells us which of the eight search
-territories in `09-search-vision.md` are real, so rounds 2 and 3 can go deep in the right places.
+### Read this caveat before reading anything else
 
-Three questions round 1 must answer:
+Every figure came back as either **50** or **500**. Nothing else. Two buckets across 46 terms is the
+signature of a Google Ads account with no active spend: Keyword Planner gives ranges, not numbers,
+until you are spending. So `50` means "somewhere in 10 to 100" and `500` means "somewhere in 100 to
+1,000".
 
-1. **Which category term carries the volume?** Consultant, consultancy, advisor, specialist,
-   fractional, or none of them.
-2. **Which pressure points do people search for?** The blueprint assumes eight problem pages get
-   built. Volume decides how many are worth building and in what order.
-3. **Does the hospitality authority hold up?** We are keeping every pub URL. We need to know what
-   they are actually worth before deciding how much to invest in the sector hub.
+**We have rank order and rough tier. We do not have volume.** Every number below should be read as
+a relative signal. If we ever need real figures, that needs a live campaign with budget behind it.
 
-## What to export
+That caveat does not weaken the findings. The pattern is consistent enough to act on.
 
-From Keyword Planner, keep these columns: keyword, average monthly searches, three-month change,
-year-on-year change, competition, top-of-page bid low and high.
+### Finding 1: the new category language has close to no search demand
 
-Year-on-year change matters more than usual here. A term that is growing tells us where the market
-is moving, and we are building for the next three years, not last year.
+Terms that returned **nothing**: `growth consultant uk`, `growth consultancy uk`,
+`sme growth consultant`, `growth partner for small business`, `external growth partner`,
+`business growth strategy uk`, `business transformation consultant uk`, `commercial consultant uk`,
+`profitability consultant uk`, `process improvement consultant uk`.
 
-Top-of-page bid is a proxy for commercial intent. High bid with modest volume is often a better
-target than the reverse.
+One category term carries demand:
+
+| Term | Bucket | Competition | Top-of-page bid |
+|---|---|---|---|
+| business growth consultant | 500 | Medium | £3.73 to £11.98 |
+
+This does not mean the positioning is wrong. Positioning language and search language are different
+jobs. It means **we cannot rely on the category phrase to be found**, and the pack's assumption in
+`09-search-vision.md` that "SME growth consultant" is a viable search territory does not survive
+contact with the data.
+
+### Finding 2: the symptom language the whole search vision rests on returns nothing
+
+This is the significant one. `09-search-vision.md` builds the entire strategy on symptom-aware
+searchers and says problem pages "should be more prominent than service pages". Every symptom
+phrase we tested came back empty:
+
+`business growth has stalled`, `why has my business stopped growing`, `business revenue plateau`,
+`stalled business growth`, `business growth ceiling`, `website traffic but no enquiries`,
+`revenue up but profit down`, `marketing not generating sales`, `manual processes slowing business`,
+`business outgrown its systems`, `weak sales pipeline`, `website not generating leads`,
+`where can ai help my business`, `is ai worth it for business`.
+
+People do not type their symptoms into Google at measurable volume. They type the solution they
+think they need.
+
+**Two things follow, and they pull in opposite directions.**
+
+Against building the problem pages for search: there is no Google demand to capture.
+
+For building them anyway: Keyword Planner measures the Google search box. It does not measure
+ChatGPT, Claude, Perplexity or AI Overviews, which is exactly where conversational, symptom-shaped
+questions have been migrating. Symptom language is the natural register of an AI prompt and the
+natural register of a referral conversation. GKP is structurally blind to both.
+
+**Recommendation: build the eight problem pages, but change what we expect from them.** They are
+conversion and citation assets, not traffic assets. They convert visitors who arrive from the blog,
+from referral, and from AI answers. Judging them on organic sessions will make good pages look like
+failures.
+
+### Finding 3: the most commercially valuable term in the set is the one the brand pack bans
+
+| Term | Bucket | Bid |
+|---|---|---|
+| hospitality marketing agency | 500 | **£11.75 to £66.03** |
+
+That is the highest top-of-page bid at real volume anywhere in the round, and `AGENTS.md` in the
+brand pack explicitly forbids describing Orange Jelly with that phrase.
+
+Both things can be true. The pack is right that it must not be the master description, because it
+caps the company. The data is right that it is where the money currently is.
+
+**Recommendation: keep the phrase working for us in the hospitality sector hub and the kept pub
+pages, where it is accurate and valuable, and keep it out of the company description, home page,
+title tag and meta description.** That is not a fudge. The sector hub is genuinely a hospitality
+marketing offer. The company is not.
+
+### Finding 4: an adjacent category the pack never considered
+
+| Term | Bucket | Competition | Bid |
+|---|---|---|---|
+| fractional cmo uk | 500 | **Low** | £2.89 to £17.42 |
+
+Volume, low competition, decent commercial value. "Fractional" is the market's existing word for
+what `07-offer-architecture.md` calls an embedded growth partnership. The pack never tests it.
+
+Worth a proper look in round 2. Note the risk: fractional implies a functional seat (marketing,
+operations) and Orange Jelly is deliberately cross-functional. It may be a useful discovery route
+rather than a description.
+
+### Finding 5: the whole market is small
+
+Roughly 5,000 searches a month across all 107 terms, and that is Keyword Planner's own rounded
+total. Even reading every bucket at its ceiling it does not reach 10,000.
+
+**We are not going to build a traffic business on the new positioning.** The 106 hospitality posts
+are the traffic engine and will stay the traffic engine for the foreseeable future. Demand for the
+new position has to come from referral, founder-led content, direct outreach and AI citation.
+
+That is a strategy, not a problem. But it has to be said out loud before anyone sets an organic
+traffic target for the repositioned site.
+
+### Highest commercial intent, any volume
+
+| Term | Bucket | Bid | Competition |
+|---|---|---|---|
+| b2b lead generation uk | 50 | **£16.25 to £79.01** | Low |
+| hospitality marketing agency | 500 | £11.75 to £66.03 | Medium |
+| crm for small business uk | 50 | £7.87 to £42.54 | Medium |
+| lead generation for small business | 50 | £5.63 to £42.40 | Medium |
+| practical ai for business | 50 | £5.42 to £27.33 | High |
+| business health check | 50 | £8.53 to £25.34 | Medium |
+| how to build a sales pipeline | 50 | £3.24 to £21.98 | Medium |
+| how to improve website conversion rate | 50 | £3.70 to £21.20 | Low |
+
+`b2b lead generation uk` at a £79 top bid with Low competition is the standout anomaly in the round.
+
+### Watch item
+
+`customer acquisition strategy` and `customer retention strategy` both show minus 90 per cent at
+three months and year on year. A matched pair collapsing identically usually means Google
+reclassified something rather than demand vanishing. Do not act on either until round 2 confirms.
 
 ---
 
-## Round 1: territory sizing
+## Round 2: solution language, sectors and adjacent categories
 
-107 terms across 11 clusters. Sent 26 August 2026. Awaiting volumes.
+Sectors confirmed by Peter: **professional services and trades**. UK-first.
 
-### Cluster 1: category and who we are (15)
-business growth consultant, business growth consultancy, growth consultant uk, sme growth consultant, small business growth consultant, growth partner for small business, business growth specialist, business growth advisor, growth consultancy uk, business transformation consultant uk, fractional cmo uk, fractional coo uk, business improvement consultant, commercial consultant uk, operations consultant for small business
+Round 2 tests four things round 1 could not:
 
-### Cluster 2: growth has stalled (10)
-business growth has stalled, why has my business stopped growing, business revenue plateau, how to grow an established business, business growth ceiling, business growth barriers, stalled business growth, how to scale a small business uk, business growth strategy uk, next stage of business growth
+1. **Solution language.** If people search the fix rather than the symptom, we need to know the
+   exact words for the fix.
+2. **The fractional and embedded category.** Finding 4.
+3. **Professional services and trades.** The two chosen sectors, with real modifiers.
+4. **Decision and comparison intent.** Where a buyer is choosing between an agency, a consultant and
+   an internal hire, which is the moment Orange Jelly wins on argument.
 
-### Cluster 3: demand is weak (10)
-not enough leads, how to generate more leads uk, lead generation for small business, customer acquisition strategy, marketing not generating sales, how to get more customers uk, b2b lead generation uk, weak sales pipeline, how to build a sales pipeline, demand generation for smes
+70 terms. Sent 26 August 2026. Awaiting volumes.
 
-### Cluster 4: conversion is poor (10)
-website traffic but no enquiries, leads not converting, how to improve website conversion rate, conversion rate optimisation uk, improve enquiry conversion, why is my website not converting, booking conversion rate, reduce abandoned enquiries, sales conversion rate improvement, website not generating leads
+### Cluster A: solution language (10)
+how to get more clients, how to grow my business, business growth ideas, how to increase revenue, marketing strategy for small business, how to win more work, how to get more enquiries, improve business profitability, how to get more sales, business growth plan
 
-### Cluster 5: margin under pressure (10)
-revenue up but profit down, how to improve profit margins, small business margin improvement, how to reduce supplier costs, pricing strategy for small business, product mix optimisation, how to increase gross margin, labour cost optimisation, cost reduction for small business, profitability consultant uk
+### Cluster B: fractional and embedded (10)
+fractional cmo, fractional coo, fractional marketing director, fractional operations director, part time marketing director, interim marketing director, outsourced marketing director, fractional director uk, fractional cto uk, fractional finance director
 
-### Cluster 6: operations cannot scale (10)
-manual processes slowing business, business process automation uk, workflow automation small business, business systems for growth, operational efficiency consultant, reduce admin time in business, business outgrown its systems, process improvement consultant uk, inventory management problems, small business operations consultant
+### Cluster C: professional services (14)
+marketing for accountants, marketing for law firms, marketing for solicitors, lead generation for accountants, grow an accountancy practice, law firm growth strategy, marketing for consultants, professional services marketing, marketing for architects, marketing for financial advisers, client acquisition for professional services, how to get more clients as an accountant, recruitment agency growth, marketing for surveyors
 
-### Cluster 7: practical AI (11)
-ai for small business uk, ai use cases for business, where can ai help my business, ai consultant for small business, is ai worth it for business, ai automation for smes, practical ai for business, ai strategy for smes, build an internal ai tool, ai tools for business operations, ai implementation consultant uk
+### Cluster D: trades (15)
+marketing for tradesmen, marketing for builders, marketing for electricians, marketing for plumbers, how to get more work as a builder, lead generation for tradesmen, grow a trades business, marketing for roofers, marketing for landscapers, job management software for trades, how to price jobs trades business, scaling a construction business, marketing for heating engineers, get more customers trades business, construction business growth
 
-### Cluster 8: customer experience (8)
-improve customer journey, customer experience consultant uk, crm for small business uk, customer retention strategy, how to reduce no shows, improve repeat business, customer follow up system, customer journey mapping uk
+### Cluster E: comparison and decision intent (9)
+marketing agency vs in house, should i hire a marketing agency, marketing consultant vs agency, how much does a business consultant cost uk, what does a growth consultant do, is a business consultant worth it, in house marketing team vs agency, cost of a marketing consultant uk, hiring a growth consultant
 
-### Cluster 9: change and scale (7)
-preparing a business to scale, business transformation for smes, external growth partner, business change consultant, scaling business operations, growth roadmap for business, business scale up support uk
+### Cluster F: UK business support language (6)
+business support uk, small business advice uk, business mentor uk, business coach uk, business coaching for small business, growth hub business support
 
-### Cluster 10: the offer itself (6)
-growth diagnostic, business diagnostic, business health check, business growth audit, business growth assessment, business audit uk
-
-### Cluster 11: hospitality authority check (10)
-pub marketing, how to fill an empty pub, pub marketing ideas, increase pub bookings, hospitality marketing agency, pub business advice, how to increase pub profits, hospitality growth consultant, pub social media marketing, restaurant marketing uk
+### Cluster G: AI in the two chosen sectors (6)
+ai for accountants, ai for law firms, ai for trades business, automation for accountants, ai for professional services, ai for construction
 
 ---
 
-## Rounds planned
+## Rounds remaining
 
 | Round | Purpose |
 |---|---|
-| 1 | Territory sizing. Which clusters are real. |
-| 2 | Depth in the three or four clusters that won round 1. Long tail, question forms, modifiers. |
-| 3 | Comparison and decision intent. Agency versus consultant versus internal hire, software versus process. |
-| 4 | Sector modifiers, once we know which two or three sectors to target beyond hospitality. |
-| 5 | Gap check against Search Console, so we protect terms we already rank for. |
+| 3 | Depth in whichever of A to G wins round 2. Long tail and question forms. |
+| 4 | Geographic modifiers, UK-first. Only if rounds 2 and 3 show local intent is real. |
+| 5 | Search Console gap check. Protect what already earns impressions before any URL moves. |
 
-Round 5 matters. We hold 106 blog posts and 33 routes of existing authority and we are keeping all
-of it. Any new structure has to be checked against what already earns impressions before we move a
-single URL.
+Round 5 is not optional. We hold 106 posts and 33 routes of existing authority and we are keeping
+all of it. Nothing moves until we have seen what it currently earns.

@@ -1,0 +1,24 @@
+import * as React from 'react';
+/**
+ * Site header: brand, primary nav, one CTA. Collapses to a full-screen ink menu below 880px.
+ * tone="orange" = campaign header for conversion pages only (Start Here, growth-problem pages);
+ * everything else stays cream. Items may carry `sub` links — the mobile drawer renders them as
+ * grouped sections (the problem-led IA needs the 8 problem pages reachable from the menu);
+ * desktop keeps the flat bar.
+ */
+export interface HeaderSubItem { label: string; href: string; current?: boolean; /** styles as a peach "view all" link */ more?: boolean }
+export interface HeaderProps {
+  /** Primary nav items; set `current` on the active page. `sub` renders as a group in the mobile drawer. */
+  items?: Array<{ label: string; href?: string; current?: boolean; sub?: HeaderSubItem[] }>;
+  /** The one header CTA (orange on cream, ink on orange). */
+  cta?: { label: string; href?: string; onClick?: () => void };
+  /** Brand node; pass an <img> of the horizontal logo. Defaults to the type wordmark. */
+  logo?: React.ReactNode;
+  /** Brand link target. @default '/' */
+  home?: string;
+  /** @default true */
+  sticky?: boolean;
+  /** @default 'cream' */
+  tone?: 'cream' | 'orange';
+}
+export declare function Header(props: HeaderProps): JSX.Element;

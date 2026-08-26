@@ -1,0 +1,49 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-header{position:sticky;top:0;z-index:60;background:var(--surface-page);border-bottom:var(--bw-1) solid var(--oj-ink)}
+.oj-header.orange{background:var(--oj-orange)}
+.oj-header-in{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:24px;height:64px}
+.oj-header nav.desk{display:flex;gap:2px;margin-left:auto}
+.oj-header nav.desk a{font-weight:600;font-size:15px;color:var(--oj-ink);text-decoration:none;padding:7px 11px;border-radius:var(--r-1)}
+.oj-header nav.desk a:hover{color:var(--text-accent)}
+.oj-header nav.desk a[aria-current]{box-shadow:inset 0 -3px 0 var(--oj-orange)}
+.oj-header.orange nav.desk a{color:#fff}
+.oj-header.orange nav.desk a:hover{color:var(--oj-ink)}
+.oj-header.orange nav.desk a[aria-current]{box-shadow:inset 0 -3px 0 #fff}
+.oj-header .mbtn{display:none;margin-left:auto;font-family:inherit;font-weight:700;font-size:14.5px;background:none;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);padding:6px 13px;cursor:pointer;color:var(--oj-ink)}
+.oj-header.orange .mbtn{border-color:#fff;color:#fff}
+.oj-header .cta{flex:none}
+@media(max-width:880px){.oj-header nav.desk,.oj-header .cta{display:none}.oj-header .mbtn{display:block}}
+.oj-mnav{position:fixed;top:64px;left:0;right:0;bottom:0;z-index:59;background:var(--oj-ink);padding:30px 32px 44px;display:flex;flex-direction:column;overflow:auto}
+.oj-mnav .top{font-family:var(--font-display);font-weight:900;font-size:31px;letter-spacing:-.02em;color:var(--oj-cream);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(247,245,241,.15);display:block}
+.oj-mnav .top[aria-current]{color:var(--oj-orange)}
+.oj-mnav .grp{padding:14px 0 6px;border-bottom:1px solid rgba(247,245,241,.15)}
+.oj-mnav .grp>span{display:block;font-family:var(--font-display);font-weight:900;font-size:31px;letter-spacing:-.02em;color:var(--oj-cream);padding-bottom:8px}
+.oj-mnav .grp>span[data-current]{color:var(--oj-orange)}
+.oj-mnav .grp a{display:block;font-weight:600;font-size:16.5px;color:rgba(247,245,241,.75);text-decoration:none;padding:7px 0 7px 2px}
+.oj-mnav .grp a:hover,.oj-mnav .grp a[aria-current]{color:var(--oj-orange)}
+.oj-mnav .grp a[data-more]{color:var(--oj-peach);font-weight:700}`;
+export function Header({items=[],cta,logo,home='/',sticky=true,tone='cream'}){
+  ensureCoreCss('oj-css-header',css);
+  const [open,setOpen]=React.useState(false);
+  const orange=tone==='orange';
+  const brand=logo||<span style={{fontFamily:'var(--font-display)',fontWeight:900,fontSize:21,letterSpacing:'-.02em',color:orange?'#fff':'inherit'}}>orange <span style={{color:orange?'var(--oj-ink)':'var(--oj-orange)'}}>jelly</span></span>;
+  return <>
+  <header className={'oj-header'+(orange?' orange':'')} style={sticky?undefined:{position:'static'}}>
+    <div className="oj-header-in">
+      <a href={home} aria-label="Home" style={{textDecoration:'none',color:'inherit',display:'flex',alignItems:'center'}}>{brand}</a>
+      <nav className="desk" aria-label="Primary">{items.map((it,i)=><a key={i} href={it.href} aria-current={it.current?'page':undefined}>{it.label}</a>)}</nav>
+      {cta&&<span className="cta"><Button size="sm" variant={orange?'ink':'primary'} href={cta.href} onClick={cta.onClick}>{cta.label}</Button></span>}
+      <button className="mbtn" onClick={()=>setOpen(o=>!o)} aria-expanded={open}>{open?'Close ×':'Menu'}</button>
+    </div>
+  </header>
+  {open&&<nav className="oj-mnav" aria-label="Primary mobile">
+    {items.map((it,i)=>it.sub&&it.sub.length?
+      <div key={i} className="grp"><span data-current={it.current?'':undefined}>{it.label}</span>
+        {it.sub.map((s,j)=><a key={j} href={s.href} aria-current={s.current?'page':undefined} data-more={s.more?'':undefined} onClick={()=>setOpen(false)}>{s.label}</a>)}
+      </div>
+      :<a key={i} className="top" href={it.href} aria-current={it.current?'page':undefined} onClick={()=>setOpen(false)}>{it.label}</a>)}
+    {cta&&<div style={{marginTop:26}}><Button size="lg" arrow href={cta.href} onClick={cta.onClick}>{cta.label}</Button></div>}
+  </nav>}
+  </>;
+}

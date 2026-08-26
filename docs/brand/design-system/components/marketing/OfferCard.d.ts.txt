@@ -1,0 +1,20 @@
+import * as React from 'react';
+/**
+ * Offer/engagement card, permanently price-free: all work is bespoke and no prices appear on the site (decided Aug 2026).
+ * State scope and outcomes; the footnote carries the investment conversation.
+ */
+export interface OfferCardProps {
+  /** Kicker, e.g. 'Step one' or a duration. */
+  eyebrow?: React.ReactNode;
+  /** Offer name (working titles until naming is decided). */
+  name: React.ReactNode;
+  blurb?: React.ReactNode;
+  /** What is included; arrow-marked list. */
+  includes?: React.ReactNode[];
+  /** e.g. 'Fixed fee, agreed on the scoping call.' */
+  footnote?: React.ReactNode;
+  cta?: { label: string; href?: string; onClick?: () => void };
+  /** Ink treatment for the recommended entry point. One per row. @default false */
+  featured?: boolean;
+}
+export declare function OfferCard(props: OfferCardProps): JSX.Element;

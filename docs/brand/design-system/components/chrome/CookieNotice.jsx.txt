@@ -1,0 +1,21 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:560px;margin:0 auto;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-ink);color:var(--oj-cream);padding:16px 18px;display:flex;gap:18px;align-items:center;box-shadow:var(--shadow-press)}
+.oj-cookie p{margin:0;font-size:13.5px;line-height:1.45}
+.oj-cookie p a{color:var(--oj-peach)}
+.oj-cookie .acts{display:flex;gap:8px;flex:none}
+.oj-cookie .no{font-family:inherit;font-weight:600;font-size:13px;background:none;border:none;color:rgba(247,245,241,.65);cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:6px 4px}
+@media(max-width:560px){.oj-cookie{flex-direction:column;align-items:stretch;text-align:left}.oj-cookie .acts{justify-content:flex-end}}`;
+export function CookieNotice({message,policyHref='#',onAccept,onDecline,storageKey='oj-cookies'}){
+  ensureCoreCss('oj-css-cookie',css);
+  const [gone,setGone]=React.useState(()=>{try{return !!localStorage.getItem(storageKey)}catch(e){return false}});
+  if(gone)return null;
+  const close=v=>{try{localStorage.setItem(storageKey,v)}catch(e){}setGone(true);};
+  return <div className="oj-cookie" role="region" aria-label="Cookies">
+    <p>{message||<>We use a small number of cookies to see what content helps. No ad tracking. <a href={policyHref}>How we use them</a>.</>}</p>
+    <span className="acts">
+      <button type="button" className="no" onClick={()=>{close('declined');onDecline&&onDecline();}}>No thanks</button>
+      <Button size="sm" onClick={()=>{close('accepted');onAccept&&onAccept();}}>Fine by me</Button>
+    </span>
+  </div>;
+}

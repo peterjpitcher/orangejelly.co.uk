@@ -1,0 +1,54 @@
+const DS=window.OrangeJellyDesignSystem_a79785;
+const {Button,Tag}=DS;
+const sharedCss=`
+.oj-container{max-width:1160px;margin:0 auto;padding:0 32px}
+.oj-nav a.nv{font-weight:600;font-size:15px;color:var(--oj-ink);text-decoration:none;padding:6px 2px;border-bottom:2.5px solid transparent}
+.oj-nav a.nv:hover{border-bottom-color:var(--oj-orange)}
+.oj-nav a.nv.on{border-bottom-color:var(--oj-ink)}
+.oj-sec{padding:88px 0}
+.oj-sec-tight{padding:64px 0}
+.oj-h2{font-family:var(--font-display);font-weight:900;font-size:40px;line-height:1.05;letter-spacing:-.02em;margin:0}
+.oj-lede{font-size:18.5px;line-height:1.55;color:var(--text-secondary);max-width:560px}
+`;
+if(!document.getElementById('oj-site-css')){const s=document.createElement('style');s.id='oj-site-css';s.textContent=sharedCss;document.head.appendChild(s);}
+function Wordmark({tone='ink',size=22}){
+  return <a href="#home" onClick={e=>{e.preventDefault();window.ojNav&&window.ojNav('home')}} style={{textDecoration:'none',display:'flex',alignItems:'center',gap:size*0.45,lineHeight:1}}>
+    <img src={'../../assets/'+(tone==='ink'?'logo-icon.png':'logo-icon-white.png')} alt="" style={{height:size*1.55,display:'block'}}/>
+    <span style={{fontFamily:'var(--font-display)',fontWeight:900,fontSize:size,letterSpacing:'-.02em'}}><span style={{color:'var(--oj-orange)'}}>Orange </span><span style={{color:tone==='ink'?'var(--oj-ink)':'var(--oj-cream)'}}>Jelly</span></span>
+  </a>;
+}
+function SiteHeader({route,onNav}){
+  const items=[['problems','Growth problems'],['method','How we work'],['results','Results'],['insights','Insights'],['about','About']];
+  return <header style={{position:'sticky',top:0,zIndex:50,background:'var(--oj-cream)',borderBottom:'var(--bw-1) solid var(--oj-ink)'}}>
+    <div className="oj-container oj-nav" style={{display:'flex',alignItems:'center',gap:28,height:68}}>
+      <Wordmark />
+      <nav style={{display:'flex',gap:22,marginLeft:'auto'}} aria-label="Main">
+        {items.map(([k,l])=><a key={k} href={'#'+k} className={'nv'+(route===k?' on':'')} onClick={e=>{e.preventDefault();onNav(k)}}>{l}</a>)}
+      </nav>
+      <Button size="sm" onClick={()=>onNav('start')}>Bring us the problem</Button>
+    </div>
+  </header>;
+}
+function SiteFooter({onNav}){
+  return <footer style={{background:'var(--oj-ink)',color:'var(--oj-cream)',padding:'56px 0 40px'}}>
+    <div className="oj-container" style={{display:'flex',gap:48,flexWrap:'wrap',alignItems:'flex-start'}}>
+      <div style={{flex:'1 1 320px',display:'flex',flexDirection:'column',gap:12}}>
+        <Wordmark tone="cream" size={26} />
+        <span style={{fontSize:14,color:'rgba(247,245,241,.75)',maxWidth:340}}>Growth partner for ambitious small and mid-sized businesses.</span>
+        <span style={{fontSize:12.5,fontWeight:500,color:'rgba(247,245,241,.5)'}}>AI is part of the toolkit, not the product.</span>
+      </div>
+      <nav style={{display:'flex',gap:44,flexWrap:'wrap'}} aria-label="Footer">
+        {[['Company',[['method','How we work'],['results','Results'],['about','About']]],['Do something',[['start','Book a growth diagnostic'],['problems','Growth problems'],['insights','Insights']]]].map(([h,ls])=>
+          <div key={h} style={{display:'flex',flexDirection:'column',gap:9}}>
+            <span style={{fontWeight:700,fontSize:11.5,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--oj-orange)'}}>{h}</span>
+            {ls.map(([k,l])=><a key={k} href={'#'+k} onClick={e=>{e.preventDefault();onNav(k)}} style={{color:'var(--oj-cream)',textDecoration:'none',fontSize:14.5}}>{l}</a>)}
+          </div>)}
+      </nav>
+    </div>
+    <div className="oj-container" style={{marginTop:44,paddingTop:20,borderTop:'1px solid rgba(247,245,241,.2)',display:'flex',justifyContent:'space-between',fontWeight:500,fontSize:13,color:'rgba(247,245,241,.55)'}}>
+      <span>© 2026 Orange Jelly Limited</span><span>Stanwell Moor, Surrey</span>
+    </div>
+  </footer>;
+}
+function Eyebrow({children,tone='light'}){return <span className="oj-eyebrow" style={{color:tone==='dark'?'var(--oj-peach)':'var(--text-accent)'}}>{children}</span>;}
+Object.assign(window,{SiteHeader,SiteFooter,Wordmark,Eyebrow});

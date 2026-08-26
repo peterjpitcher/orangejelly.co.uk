@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Sector hub" description="Hospitality as a contained specialist collection: proof-rich sector area with seasonal calendar, playbooks and the kept landing pages" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:22px 32px 0">
+<nav aria-label="Breadcrumb" style="display:flex;gap:8px;align-items:center;font-size:13.5px;font-weight:600"><a href="#" style="color:#757784;text-decoration:none">Home</a><span style="color:#F76B0C">/</span><a href="#" style="color:#757784;text-decoration:none">Insights</a><span style="color:#F76B0C">/</span><span style="color:#23252E">Hospitality</span></nav>
+<div style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:end;padding:44px 0 56px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<span style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;border:1.5px solid #8A5A2E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 10px;color:#8A5A2E;background:#EEE5DA"><span style="width:8px;height:8px;border-radius:50%;background:#8A5A2E"></span>Specialist sector</span>
+<h1 style="font-weight:900;font-size:64px;line-height:.98;letter-spacing:-.025em;margin:0">Hospitality is where we <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">prove the method.</span></h1>
+<p style="margin:0;font-size:18px;line-height:1.55;color:#4A4C58;max-width:560px">We run our own pub, so hospitality is the sector where our growth methods are tested first and documented deepest. Guides, playbooks and results for licensees who want the numbers to move.</p>
+</div>
+<div style="background:#23252E;border:1.5px solid #23252E;border-radius:3px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">Proof from our own bar</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="403%" label="table bookings" tone="dark" size="sm" hint-size="100%,64px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="89%" label="fewer no-shows" tone="dark" size="sm" hint-size="100%,64px"></x-import>
+</div>
+<a href="#" style="font-weight:700;font-size:13.5px;color:#FFD3AD">The Anchor case study →</a>
+</div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:0 32px 56px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.SeasonalBand" hint-size="100%,260px"></x-import>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:56px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap"><span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Most useful right now</span><a href="#" style="font-weight:700;font-size:13.5px">All hospitality insights →</a></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px">
+<sc-for list="{{ articles }}" as="a" hint-placeholder-count="3">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.ArticleCard" category="Hospitality" title="{{ a.title }}" excerpt="{{ a.excerpt }}" date="{{ a.date }}" readTime="{{ a.read }}" href="{{ a.href }}" hint-size="100%,220px"></x-import>
+</sc-for>
+</div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:64px 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Guides that keep their doors open</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px">
+<sc-for list="{{ landings }}" as="l" hint-placeholder-count="6">
+<a href="{{ l.href }}" style="display:flex;gap:14px;align-items:center;background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:16px 20px;text-decoration:none;color:#23252E" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 #23252E">
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-weight:800;font-size:16.5px;letter-spacing:-.01em">{{ l.title }}</span><span style="font-size:13.5px;color:#4A4C58">{{ l.line }}</span></span>
+<span style="margin-left:auto;color:#F76B0C;font-weight:900">→</span>
+</a>
+</sc-for>
+</div>
+</section>
+<section style="background:#23252E;padding:64px 0;text-align:center">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+<h2 style="font-weight:900;font-size:44px;letter-spacing:-.025em;color:#F7F5F1;margin:0;max-width:660px">Same method. <span style="background:linear-gradient(transparent 55%,#F76B0C 55%,#F76B0C 96%,transparent 96%);padding:0 .08em">Your pub's numbers.</span></h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+</div>
+</section>
+<footer style="background:#23252E;border-top:1px solid rgba(247,245,241,.2);padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    return {
+      articles:[
+        {title:'Christmas party sales are won in November',excerpt:'The booking window licensees keep missing, and the three-week plan that fills it.',date:'19 Aug 2026',read:'7 min read',href:'#'},
+        {title:'Discounting is a margin trap. Here is the maths.',excerpt:'A £2 discount on a £15 dish can need 40% more volume just to stand still.',date:'12 Aug 2026',read:'6 min read',href:'#'},
+        {title:'89% fewer no-shows without deposits',excerpt:'The booking-journey changes that fixed no-shows at our own pub.',date:'5 Aug 2026',read:'8 min read',href:'#'}
+      ],
+      landings:[
+        {title:'Fill quiet midweek sessions',line:'Demand plans for Monday to Thursday trade.',href:'#'},
+        {title:'Get more table bookings',line:'The journey rebuild behind our 403%.',href:'#'},
+        {title:'Stop no-shows',line:'Confirmation systems that work without deposits.',href:'#'},
+        {title:'Price the menu for margin',line:'Menu engineering with the maths shown.',href:'#'},
+        {title:'Sell more private hire',line:'Enquiry-to-booking systems for function rooms.',href:'#'},
+        {title:'Be found on search',line:'Local search visibility for a single site.',href:'#'}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+import {PressureMap,PRESSURE_AREAS} from './PressureMap.jsx';
+const css=`.oj-pcheck{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);display:grid;grid-template-columns:300px 1fr;overflow:hidden}
+@media(max-width:860px){.oj-pcheck{grid-template-columns:1fr}}
+.oj-pcheck .side{border-right:var(--bw-1) solid var(--oj-ink);padding:26px 24px;display:flex;flex-direction:column;gap:8px;background:var(--surface-page)}
+@media(max-width:860px){.oj-pcheck .side{border-right:none;border-bottom:var(--bw-1) solid var(--oj-ink)}}
+.oj-pcheck .side h3{font-family:var(--font-display);font-weight:900;font-size:21px;letter-spacing:-.015em;line-height:1.1;margin:0 0 10px}
+.oj-pcheck .sym{font-family:inherit;text-align:left;font-weight:600;font-size:14px;line-height:1.35;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-paper);color:var(--oj-ink);padding:10px 13px;cursor:pointer}
+.oj-pcheck .sym:hover{background:var(--oj-orange-soft)}
+.oj-pcheck .sym[aria-pressed="true"]{background:var(--oj-orange);font-weight:700}
+.oj-pcheck .main{padding:26px 28px;display:flex;flex-direction:column;gap:16px}
+.oj-pcheck .main .oj-pmap{border:none;padding:0;max-width:520px}
+.oj-pcheck .cause{border:var(--bw-1) solid var(--oj-ink);border-left-width:6px;border-left-color:var(--oj-orange);border-radius:var(--r-1);background:var(--surface-page);padding:14px 16px;font-size:14.5px;line-height:1.5}
+.oj-pcheck .cause b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-accent);margin-bottom:5px}`;
+export const PRESSURE_SYMPTOMS=[
+{label:'Growth has stalled',areas:['demand','conversion','scale'],cause:'Stalled growth is rarely one thing. It usually pairs weak demand creation with a conversion journey that leaks, capped by systems that cannot absorb more volume.'},
+{label:'Leads are not converting',areas:['conversion','experience'],cause:'Conversion problems usually live in the journey, not the leads: slow follow-up, unclear next steps, and an experience that quietly talks people out of buying.'},
+{label:'Margin is disappearing',areas:['margin','operations','demand'],cause:'Margin leaks compound: discounting to create demand, manual work inflating cost-to-serve, and pricing that has not been tested against value.'},
+{label:'Manual work is slowing the team',areas:['operations','scale'],cause:'Operational drag is a scale problem in disguise. Work that depends on effort or one person sets a ceiling on how big the business can get.'},
+{label:'Customers buy once and drift away',areas:['experience','conversion'],cause:'Retention is an experience problem before it is a marketing problem. Fix what happens after the first purchase before spending more to replace lost customers.'},
+{label:'Systems cannot support the next stage',areas:['scale','operations','margin'],cause:'When systems creak, teams patch by hand. That drags operations and erodes margin at exactly the moment the business needs both.'}];
+export function PressureCheck({symptoms=PRESSURE_SYMPTOMS,areas=PRESSURE_AREAS,heading='Where is the pressure?',intro='Pick the symptom you recognise. The map shows the connected causes we would examine first.',cta={label:'Book a growth diagnostic',href:'#'},onCta}){
+  ensureCoreCss('oj-css-pcheck',css);
+  const [sel,setSel]=React.useState(null);
+  const cur=sel==null?null:symptoms[sel];
+  const flat=areas.map(a=>({...a,pressure:cur&&cur.areas.includes(a.id)?a.pressure:a.pressure}));
+  return <section className="oj-pcheck" aria-label={heading}>
+    <div className="side">
+      <h3>{heading}</h3>
+      <p style={{margin:'0 0 10px',fontSize:13.5,lineHeight:1.5,color:'var(--text-secondary)'}}>{intro}</p>
+      {symptoms.map((s,i)=><button key={i} type="button" className="sym" aria-pressed={sel===i} onClick={()=>setSel(sel===i?null:i)}>{s.label}</button>)}
+    </div>
+    <div className="main">
+      <PressureMap areas={flat} highlight={cur?cur.areas:[]} legend={!cur} title="Growth Pressure Map"/>
+      {cur&&<div className="cause"><b>Connected causes</b>{cur.cause}</div>}
+      {cur&&<div><Button arrow href={cta.href} onClick={onCta}>{cta.label}</Button></div>}
+    </div>
+  </section>;
+}

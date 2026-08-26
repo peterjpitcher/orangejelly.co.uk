@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Error page" description="404 and 500 states: honest headline, search, routes back into the problem-led IA" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh;display:flex;flex-direction:column">
+<header style="background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<main style="flex:1;max-width:1160px;width:100%;margin:0 auto;padding:80px 32px;box-sizing:border-box">
+<div style="max-width:640px;display:flex;flex-direction:column;gap:22px">
+<span style="font-weight:900;font-size:15px;letter-spacing:.14em;color:#C05408">{{ code }}</span>
+<h1 style="font-weight:900;font-size:64px;line-height:.98;letter-spacing:-.025em;margin:0">{{ headline }} <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">{{ headlineMark }}</span></h1>
+<p style="margin:0;font-size:17.5px;line-height:1.55;color:#4A4C58">{{ body }}</p>
+<sc-if value="{{ showSearch }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.SiteSearch" placeholder="Search for what you were after…" hint-size="100%,60px"></x-import>
+</sc-if>
+<div style="display:flex;flex-direction:column;border-top:1.5px solid #23252E;margin-top:6px">
+<sc-for list="{{ routes }}" as="r" hint-placeholder-count="3">
+<a href="{{ r.href }}" style="display:flex;gap:14px;align-items:baseline;padding:15px 2px;border-bottom:1px solid rgba(35,37,46,.18);text-decoration:none;color:#23252E" style-hover="background:#FDE3CC">
+<span style="color:#F76B0C;font-weight:900;flex:none">→</span>
+<span style="font-weight:700;font-size:16.5px">{{ r.label }}</span>
+<span style="font-size:13.5px;color:#757784;margin-left:auto">{{ r.hint }}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</main>
+<footer style="background:#23252E;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;notfound&quot;,&quot;options&quot;:[&quot;notfound&quot;,&quot;error&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    const V={
+      notfound:{code:'404',headline:'This page has',headlineMark:'stalled.',body:'The address is wrong, or the page moved when we repositioned the site. Either way, the useful stuff is one click away.',showSearch:true},
+      error:{code:'500',headline:'Something broke.',headlineMark:'Our side, not yours.',body:'The page failed to load and it has been logged. Practise what we preach: measured, owned, fixed. Try again in a minute or take a route below.',showSearch:false}
+    };
+    const v=V[this.props.variant]||V.notfound;
+    return {...v,routes:[
+      {label:'Growth problems',hint:'Start from the symptom',href:'#'},
+      {label:'Results',hint:'Proof by pressure point',href:'#'},
+      {label:'Book a growth diagnostic',hint:'Bring us the problem',href:'#'}
+    ]};
+  }
+}
+</script>
+</body>
+</html>

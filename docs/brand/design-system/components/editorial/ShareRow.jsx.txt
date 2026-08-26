@@ -1,0 +1,29 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-share{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.oj-share .lbl{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-right:4px}
+.oj-share a,.oj-share button{font-family:inherit;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:7px;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-paper);color:var(--oj-ink);text-decoration:none;cursor:pointer;padding:7px 13px}
+.oj-share a:hover,.oj-share button:hover{background:var(--oj-orange-soft)}
+.oj-share button[data-done]{background:var(--oj-orange);pointer-events:none}`;
+export function ShareRow({url,title='',label='Share',networks=['linkedin','x','copy']}){
+  ensureCoreCss('oj-css-share',css);
+  const [copied,setCopied]=React.useState(false);
+  const u=()=>encodeURIComponent(url||(typeof location!=='undefined'?location.href:''));
+  const t=encodeURIComponent(title);
+  const defs={
+    linkedin:{label:'LinkedIn',href:()=>`https://www.linkedin.com/sharing/share-offsite/?url=${u()}`},
+    x:{label:'X',href:()=>`https://x.com/intent/post?url=${u()}&text=${t}`},
+    facebook:{label:'Facebook',href:()=>`https://www.facebook.com/sharer/sharer.php?u=${u()}`},
+    email:{label:'Email',href:()=>`mailto:?subject=${t}&body=${u()}`}};
+  return <div className="oj-share" aria-label="Share this page">
+    <span className="lbl">{label}</span>
+    {networks.map(n=>{
+      if(n==='copy')return <button key={n} type="button" data-done={copied?'':undefined} onClick={()=>{
+        const v=url||(typeof location!=='undefined'?location.href:'');
+        if(navigator.clipboard)navigator.clipboard.writeText(v);
+        setCopied(true);setTimeout(()=>setCopied(false),2000);
+      }}>{copied?'Copied ✓':'Copy link'}</button>;
+      const d=defs[n];return d?<a key={n} href={d.href()} target="_blank" rel="noopener noreferrer">{d.label}</a>:null;
+    })}
+  </div>;
+}

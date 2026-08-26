@@ -1,0 +1,18 @@
+import * as React from 'react';
+/**
+ * Insights taxonomy tag. Seven category hues live in tokens (--cat-*): six pressure
+ * pillars + the hospitality collection. All muted secondary hues — orange stays
+ * reserved as the action signal, so a category is never orange.
+ */
+export type CategoryId='demand'|'conversion'|'margin'|'operations'|'experience'|'scale'|'hospitality';
+export interface CategoryTagProps{
+  category?:CategoryId;
+  /** renders as a link when set */
+  href?:string;
+  /** soft tinted background instead of paper */
+  filled?:boolean;
+  /** override the default label */
+  children?:React.ReactNode;
+}
+export declare function CategoryTag(props:CategoryTagProps):React.ReactElement;
+export declare const CATEGORIES:Record<CategoryId,{label:string;color:string;soft:string}>;

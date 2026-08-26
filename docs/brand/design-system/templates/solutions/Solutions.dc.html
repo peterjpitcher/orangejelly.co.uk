@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Solutions" description="Capabilities organised by outcome, not service: create demand, convert more, protect margin, remove drag, improve experience, build for scale" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:88px 32px 60px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Solutions</span>
+<h1 style="font-weight:900;font-size:68px;line-height:.98;letter-spacing:-.025em;margin:16px 0 22px;max-width:860px">Organised by outcome, <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">not by service.</span></h1>
+<p style="margin:0;font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:580px">We do not sell a deliverables list. The diagnosis decides the work; these are the six outcomes it can be pointed at, and the kinds of work each may involve.</p>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:0 32px 72px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+<sc-for list="{{ outcomes }}" as="o" hint-placeholder-count="6">
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:28px;display:flex;flex-direction:column;gap:14px" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 #23252E">
+<span style="display:flex;align-items:baseline;gap:14px"><span style="font-weight:900;font-size:14px;color:#C05408">{{ o.n }}</span><span style="font-weight:900;font-size:26px;letter-spacing:-.02em;line-height:1.1">{{ o.title }}</span></span>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#4A4C58">{{ o.line }}</p>
+<span style="display:flex;gap:7px;flex-wrap:wrap">
+<sc-for list="{{ o.work }}" as="w" hint-placeholder-count="4">
+<span style="border:1.5px solid #23252E;border-radius:3px;font-weight:600;font-size:12.5px;padding:4px 10px;background:#F7F5F1">{{ w }}</span>
+</sc-for>
+</span>
+<a href="{{ o.href }}" style="font-weight:700;font-size:14px;color:#C05408;text-decoration:none;margin-top:auto">The problem this solves →</a>
+</div>
+</sc-for>
+</div>
+</section>
+<section style="background:#23252E;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">One discipline behind all six</span>
+<h2 style="font-weight:900;font-size:40px;letter-spacing:-.02em;color:#F7F5F1;margin:12px 0 12px;max-width:560px">The method decides which of these you need.</h2>
+<p style="margin:0;font-size:16px;line-height:1.55;color:rgba(247,245,241,.75);max-width:520px">HEAR. EXPOSE. BUILD. PROVE. Most engagements combine two or three outcomes; the diagnostic tells us which, in what order, and what to leave alone.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="100%,52px">Book a growth diagnostic</x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" variant="ghost" hint-size="100%,46px">See how we work</x-import>
+</div>
+</div>
+</section>
+<footer style="background:#23252E;border-top:1px solid rgba(247,245,241,.2);padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    return {outcomes:[
+      {n:'01',title:'Create demand',line:'Build a system that generates enquiries without depending on constant effort or one channel.',work:['Proposition & campaigns','Search & content systems','Referral engines','Booking journeys'],href:'#'},
+      {n:'02',title:'Convert more',line:'Fix the journey between first contact and decision so the demand you already have stops leaking.',work:['Conversion journey rebuilds','Follow-up automation','Sales enablement','Offer & pricing tests'],href:'#'},
+      {n:'03',title:'Protect margin',line:'Find where profit leaks between price, mix, cost and manual work, and close the gaps.',work:['Pricing & mix analysis','Cost-to-serve review','Promotion economics','Procurement & supplier plans'],href:'#'},
+      {n:'04',title:'Remove operational drag',line:'Take the manual effort out of the work that slows the team and caps capacity.',work:['Workflow & process redesign','Automation & practical AI','SOPs & operating rhythm','Reporting dashboards'],href:'#'},
+      {n:'05',title:'Improve experience',line:'Fix what customers actually experience so retention stops being a marketing problem.',work:['Journey mapping','Feedback systems','Communication programmes','Service design'],href:'#'},
+      {n:'06',title:'Build for scale',line:'Put in the systems and data foundations the next stage of the business will stand on.',work:['Systems architecture','Data foundations','AI-enabled tools','Implementation & handover'],href:'#'}
+    ]};
+  }
+}
+</script>
+</body>
+</html>

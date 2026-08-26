@@ -1,0 +1,10 @@
+import * as React from 'react';
+/** Listing pagination (106 posts and growing). Ellipsis collapse past 7 pages. Link-based via hrefFor (SEO) or callback via onPage. */
+export interface PaginationProps{
+  page?:number;total?:number;
+  /** return the href for page n — prefer this for crawlable listings */
+  hrefFor?:(n:number)=>string;
+  onPage?:(n:number)=>void;
+  label?:string;
+}
+export declare function Pagination(props:PaginationProps):React.ReactElement;

@@ -1,0 +1,107 @@
+const DSh=window.OrangeJellyDesignSystem_a79785;
+function Home({onNav}){
+  const {Button,Tag,Stat,Mark,PressureCard,MethodStep,ProofCard,Quote,Card}=DSh;
+  const pressures=[["Create demand","Not enough of the right people know you exist or care."],["Convert more","Leads, enquiries or bookings are not turning into revenue."],["Protect margin","Sales look fine. The profit is quietly leaking away."],["Remove operational drag","Manual work is slowing the team and stealing capacity."],["Improve experience","The customer journey is leaking value at avoidable points."],["Build for scale","The systems that got you here cannot support the next stage."]];
+  return <main>
+    <section className="oj-sec" style={{padding:'96px 0 88px'}}>
+      <div className="oj-container">
+        <Eyebrow>Growth partner for ambitious small and mid-sized businesses</Eyebrow>
+        <h1 className="oj-display" style={{fontSize:84,margin:'18px 0 24px',maxWidth:900}}>Growth stuck?<br>
+        </br><Mark tone="orange">Bring us the problem.</Mark></h1>
+        <p className="oj-lede" style={{margin:'0 0 36px'}}>Orange Jelly gets under the skin of your business, exposes what is holding you back and builds practical solutions using creativity, technology and AI that earns its place.</p>
+        <div style={{display:'flex',gap:14,flexWrap:'wrap'}}>
+          <Button size="lg" arrow onClick={()=>onNav('start')}>Book a growth diagnostic</Button>
+          <Button size="lg" variant="ghost" onClick={()=>onNav('method')}>See how we work</Button>
+        </div>
+      </div>
+    </section>
+    <section style={{background:'var(--oj-paper)',borderTop:'var(--bw-1) solid var(--oj-ink)',borderBottom:'var(--bw-1) solid var(--oj-ink)'}} className="oj-sec-tight">
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1.1fr 1fr',gap:56,alignItems:'center'}}>
+        <h2 className="oj-h2">You do not need more activity. You need to know <Mark tone="orange">what will move the numbers.</Mark></h2>
+        <ul style={{listStyle:'none',margin:0,padding:0,display:'flex',flexDirection:'column',gap:10}}>
+          {["Growth has stalled.","Leads are not converting.","Margin is disappearing.","Manual work is slowing the team down.","The business has outgrown its systems.","Everyone has a different view of the problem."].map(s=>
+            <li key={s} style={{display:'flex',gap:12,alignItems:'baseline',fontSize:16.5,fontWeight:600}}><span style={{width:9,height:9,borderRadius:'50%',background:'var(--oj-orange)',border:'1px solid var(--oj-ink)',flex:'none',transform:'translateY(-1px)'}}></span>{s}</li>)}
+        </ul>
+      </div>
+    </section>
+    <section className="oj-sec">
+      <div className="oj-container">
+        <Eyebrow>The promise</Eyebrow>
+        <h2 className="oj-h2" style={{fontSize:52,margin:'14px 0 18px'}}>You bring the growth problem.<br></br><span style={{color:'var(--oj-orange)'}}>We build the solution.</span></h2>
+        <p className="oj-lede">Sometimes the fix is marketing. Sometimes it is pricing, process, technology, automation or AI. We do not arrive with a pre-selected answer. The problem decides the tool.</p>
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{paddingTop:0}}>
+      <div className="oj-container">
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline',marginBottom:24}}>
+          <h2 className="oj-h2" style={{fontSize:32}}>Six growth pressure points</h2>
+          <a href="#problems" onClick={e=>{e.preventDefault();onNav('problems')}} style={{fontWeight:600,fontSize:15}}>All growth problems →</a>
+        </div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}}>
+          {pressures.map(([t,d])=><PressureCard key={t} title={t} desc={d} />)}
+        </div>
+      </div>
+    </section>
+    <section style={{background:'var(--oj-ink)'}} className="oj-sec">
+      <div className="oj-container">
+        <Eyebrow tone="dark">How we work</Eyebrow>
+        <h2 className="oj-h2" style={{color:'var(--oj-cream)',margin:'12px 0 36px'}}>HEAR. EXPOSE. BUILD. <span style={{color:'var(--oj-orange)'}}>PROVE.</span></h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:8}}>
+          <MethodStep index={1} word="HEAR." text="Understand what is really happening, not only what the brief says." />
+          <MethodStep index={2} word="EXPOSE." text="Find the pressure points, root causes and opportunities that matter." />
+          <MethodStep index={3} word="BUILD." text="Design and implement the right practical solution." />
+          <MethodStep index={4} word="PROVE." text="Measure the difference, improve the solution and embed what works." />
+        </div>
+        <div style={{marginTop:36}}><Button variant="ink" style={{borderColor:'var(--oj-cream)'}} arrow onClick={()=>onNav('method')}>The full method</Button></div>
+      </div>
+    </section>
+    <section className="oj-sec">
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1fr 1.1fr',gap:56}}>
+        <div>
+          <Eyebrow>Proof</Eyebrow>
+          <h2 className="oj-h2" style={{margin:'12px 0 16px'}}>Tested in a real trading business first</h2>
+          <p style={{fontSize:16,lineHeight:1.6,color:'var(--text-secondary)',margin:'0 0 20px'}}>The Anchor is a real pub with staff, suppliers, stock, margin pressure and cash-flow consequences. It is our live growth laboratory: ideas only survive if they change the numbers.</p>
+          <Quote name="The Anchor" role="live business laboratory">Clever thinking only matters if it changes the numbers or improves how the business runs.</Quote>
+          <div style={{marginTop:24}}><Button variant="ghost" arrow onClick={()=>onNav('results')}>See the results</Button></div>
+        </div>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:14,alignContent:'start'}}>
+          <ProofCard value="403%" label="table bookings" context="Year on year, verified baseline." area="Create demand" />
+          <ProofCard value="89%" label="fewer no-shows" context="After booking-journey rebuild." area="Improve experience" tone="ink" />
+          <ProofCard value="98%" label="food revenue" context="Menu, pricing and mix redesign." area="Protect margin" tone="ink" />
+          <ProofCard value="828%" label="search visibility" context="Google visibility, 12 months." area="Create demand" />
+        </div>
+      </div>
+    </section>
+    <section className="oj-sec-tight" style={{background:'var(--oj-orange)',borderTop:'var(--bw-1) solid var(--oj-ink)',borderBottom:'var(--bw-1) solid var(--oj-ink)'}}>
+      <div className="oj-container" style={{display:'grid',gridTemplateColumns:'1.2fr 1fr',gap:48,alignItems:'center'}}>
+        <h2 className="oj-h2" style={{fontSize:44}}>Big enough to have real growth problems. Small enough to move fast.</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:10,fontSize:15.5,fontWeight:600}}>
+          <span>For leaders ready to be challenged, with authority to act.</span>
+          <span style={{fontWeight:400}}>Not for cheap task execution, routine posting, or AI for its own sake.</span>
+        </div>
+      </div>
+    </section>
+    <section className="oj-sec">
+      <div className="oj-container">
+        <h2 className="oj-h2" style={{fontSize:32,marginBottom:24}}>Four ways in</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16}}>
+          {[["Growth Diagnostic","Find what is really blocking growth. Agree the highest-value next move.","2 to 3 weeks"],["Growth Sprint","Solve one defined problem and put the solution into use.","4 to 8 weeks"],["Growth Partnership","An embedded partner across a rolling set of priorities.","3 to 12 months"],["Transformation Programme","Several connected interventions at a major inflection point.","3 to 9 months"]].map(([t,d,dur],i)=>
+            <Card key={t} pressure style={{display:'flex',flexDirection:'column',gap:10,padding:20}} onClick={()=>onNav('start')}>
+              <span style={{fontWeight:600,fontSize:12,color:'var(--text-accent)'}}>{String(i+1).padStart(2,'0')}</span>
+              <b style={{fontSize:18,letterSpacing:'-.01em'}}>{t}</b>
+              <span style={{fontSize:14,lineHeight:1.5,color:'var(--text-secondary)'}}>{d}</span>
+              <span style={{marginTop:'auto',fontWeight:600,fontSize:12,color:'var(--text-muted)'}}>{dur}</span>
+            </Card>)}
+        </div>
+      </div>
+    </section>
+    <section style={{background:'var(--oj-ink)'}} className="oj-sec">
+      <div className="oj-container" style={{textAlign:'center',display:'flex',flexDirection:'column',alignItems:'center',gap:22}}>
+        <h2 className="oj-display" style={{fontSize:64,color:'var(--oj-cream)',margin:0}}>Stop circling <Mark>the problem.</Mark></h2>
+        <p style={{margin:0,fontSize:17,color:'rgba(247,245,241,.8)',maxWidth:480}}>Tell us what is happening, what you have tried and what needs to change.</p>
+        <Button size="lg" arrow onClick={()=>onNav('start')}>Bring us the problem</Button>
+      </div>
+    </section>
+  </main>;
+}
+window.Home=Home;

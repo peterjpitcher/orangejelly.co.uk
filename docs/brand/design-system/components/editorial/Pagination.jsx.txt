@@ -1,0 +1,26 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-pag{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.oj-pag a,.oj-pag button{font-family:inherit;font-weight:700;font-size:14px;min-width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-paper);color:var(--oj-ink);text-decoration:none;cursor:pointer;padding:0 10px}
+.oj-pag a:hover,.oj-pag button:hover{background:var(--oj-orange-soft)}
+.oj-pag [aria-current]{background:var(--oj-ink);color:var(--oj-cream);pointer-events:none}
+.oj-pag [disabled]{opacity:.35;pointer-events:none}
+.oj-pag .gap{min-width:24px;text-align:center;font-weight:700;color:var(--text-muted)}`;
+function range(page,total){
+  if(total<=7)return Array.from({length:total},(_,i)=>i+1);
+  const r=[1];
+  if(page>3)r.push('…');
+  for(let i=Math.max(2,page-1);i<=Math.min(total-1,page+1);i++)r.push(i);
+  if(page<total-2)r.push('…');
+  r.push(total);
+  return r;
+}
+export function Pagination({page=1,total=1,hrefFor,onPage,label='Insights pages'}){
+  ensureCoreCss('oj-css-pag',css);
+  const Cell=({n,children,...rest})=>hrefFor?<a href={hrefFor(n)} {...rest}>{children}</a>:<button type="button" onClick={()=>onPage&&onPage(n)} {...rest}>{children}</button>;
+  return <nav className="oj-pag" aria-label={label}>
+    <Cell n={page-1} disabled={page<=1?'':undefined} aria-label="Previous page">←</Cell>
+    {range(page,total).map((n,i)=>n==='…'?<span key={'g'+i} className="gap">…</span>:<Cell key={n} n={n} aria-current={n===page?'page':undefined}>{n}</Cell>)}
+    <Cell n={page+1} disabled={page>=total?'':undefined} aria-label="Next page">→</Cell>
+  </nav>;
+}

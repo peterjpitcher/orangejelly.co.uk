@@ -1,0 +1,15 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-empty{border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--surface-card);padding:40px 32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.oj-empty .glyph{width:52px;height:52px;border:var(--bw-1) solid var(--oj-ink);border-radius:50%;display:grid;place-content:center;font-weight:900;font-size:22px;background:var(--oj-orange-soft);margin-bottom:4px}
+.oj-empty b{font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-.015em;line-height:1.15}
+.oj-empty p{margin:0;font-size:14.5px;line-height:1.55;color:var(--text-secondary);max-width:400px}`;
+export function EmptyState({glyph='0',title='Nothing here yet.',body,action}){
+  ensureCoreCss('oj-css-empty',css);
+  return <div className="oj-empty" role="status">
+    <span className="glyph" aria-hidden="true">{glyph}</span>
+    <b>{title}</b>
+    {body&&<p>{body}</p>}
+    {action&&<div style={{marginTop:6}}><Button size="sm" arrow href={action.href} onClick={action.onClick}>{action.label}</Button></div>}
+  </div>;
+}

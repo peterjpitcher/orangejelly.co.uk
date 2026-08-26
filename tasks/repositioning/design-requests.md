@@ -1,5 +1,21 @@
 # Design requests for the Orange Jelly rebuild
 
+> **STATUS: ANSWERED IN FULL, 26 August 2026.** The designer delivered everything below in
+> `Orange Jelly Design System (1).zip`, now stored at `docs/brand/design-system/`. The bundle went
+> from 29 components and 6 templates to **44 components and 14 templates**. Their point-by-point
+> reply is `docs/brand/design-system/HANDBACK-2026-08-26.md`. This file is kept as the record of
+> what was asked and why. Nothing here is outstanding.
+>
+> Delivered: all 9 page templates (A9 confirmed as a reduced Start Here rather than a new design),
+> the Growth Pressure Map as two components (static `PressureMap`, interactive `PressureCheck`),
+> `Scorecard`, `NextStep`, `SiteSearch`, mobile navigation folded into `Header`, plus Pagination,
+> EmptyState, Skeleton, ShareRow, CookieNotice, Tabs, CategoryTag and SeasonalBand. All six
+> decisions in section C settled. `/availability` agreed out of scope.
+>
+> Two items remain on the designer's side: Greene King and BII logo migration into LogoStrip, and
+> final verification of case-study figures before publish.
+
+
 **Date:** 26 August 2026
 **For:** whoever produced `design_handoff_website_redesign`
 **Context:** the handoff covers 6 page templates and 29 components. This is what the live site needs

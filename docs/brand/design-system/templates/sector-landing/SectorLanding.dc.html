@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Sector landing page" description="New-look shell for the ~12 kept pub landing pages: outcome hero, who it's for, what you get, proof, FAQ, diagnostic CTA" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:22px 32px 0">
+<nav aria-label="Breadcrumb" style="display:flex;gap:8px;align-items:center;font-size:13.5px;font-weight:600"><a href="#" style="color:#757784;text-decoration:none">Home</a><span style="color:#F76B0C">/</span><a href="#" style="color:#757784;text-decoration:none">Hospitality</a><span style="color:#F76B0C">/</span><span style="color:#23252E">{{ crumb }}</span></nav>
+<div style="display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:start;padding:44px 0 56px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<span style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;border:1.5px solid #8A5A2E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 10px;color:#8A5A2E;background:#EEE5DA"><span style="width:8px;height:8px;border-radius:50%;background:#8A5A2E"></span>Hospitality</span>
+<h1 style="font-weight:900;font-size:60px;line-height:.98;letter-spacing:-.025em;margin:0">{{ titleLead }} <span style="background:linear-gradient(transparent 55%,#FFD3AD 55%,#FFD3AD 96%,transparent 96%);padding:0 .08em">{{ titleMark }}</span></h1>
+<p style="margin:0;font-size:18px;line-height:1.55;color:#4A4C58;max-width:540px">{{ intro }}</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" arrow="{{ true }}" hint-size="230px,46px">Book a growth diagnostic</x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" variant="ghost" hint-size="170px,46px">See the proof</x-import>
+</div>
+</div>
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:26px;display:flex;flex-direction:column;gap:14px">
+<span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Tested on our own pub first</span>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Stat" value="{{ stat.value }}" label="{{ stat.label }}" hint-size="100%,84px"></x-import>
+<span style="font-size:13.5px;line-height:1.5;color:#4A4C58">{{ stat.context }}</span>
+</div>
+</div>
+</section>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:56px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">This is for you if</span>
+<div style="display:flex;flex-direction:column;border-top:1.5px solid #23252E;margin-top:16px">
+<sc-for list="{{ forYou }}" as="f" hint-placeholder-count="4">
+<div style="display:flex;gap:14px;align-items:baseline;padding:14px 2px;border-bottom:1px solid rgba(35,37,46,.18)"><span style="color:#F76B0C;font-weight:900;flex:none">→</span><span style="font-weight:600;font-size:16px;line-height:1.4">{{ f }}</span></div>
+</sc-for>
+</div>
+</div>
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">What the work covers</span>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+<sc-for list="{{ covers }}" as="c" hint-placeholder-count="3">
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;gap:5px">
+<span style="font-weight:800;font-size:16.5px;letter-spacing:-.01em">{{ c.what }}</span>
+<span style="font-size:14px;line-height:1.5;color:#4A4C58">{{ c.how }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+<section style="max-width:1160px;margin:0 auto;padding:64px 32px">
+<div style="display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start">
+<div>
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Questions licensees ask</span>
+<div style="margin-top:16px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.FAQ" openFirst="{{ true }}" items="{{ faqs }}" hint-size="100%,320px"></x-import>
+</div>
+</div>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.NextStep" from="problem" heading="Where this leads" links="{{ nextLinks }}" hint-size="100%,190px"></x-import>
+</div>
+</section>
+<section style="background:#23252E;padding:64px 0;text-align:center">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+<h2 style="font-weight:900;font-size:44px;letter-spacing:-.025em;color:#F7F5F1;margin:0;max-width:640px">{{ ctaHeading }}</h2>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+</div>
+</section>
+<footer style="background:#23252E;border-top:1px solid rgba(247,245,241,.2);padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span style="display:flex;align-items:center;gap:14px"><img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:24px;display:block"><span>© 2026 Orange Jelly Limited</span></span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;page&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;bookings&quot;,&quot;options&quot;:[&quot;bookings&quot;,&quot;quiet&quot;,&quot;noshows&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    const S={
+      bookings:{crumb:'Get more table bookings',titleLead:'Get more',titleMark:'table bookings.',intro:'The booking journey decides whether a full dining room is a system or luck. We rebuilt ours and bookings rose 403%. The same method works for any food-led pub.',stat:{value:'403%',label:'table bookings',context:'12 months at The Anchor versus prior-year baseline, no extra ad spend.'},forYou:['Food sales matter to your P&L.','Tables sit empty on sessions you know could fill.','Booking means phoning during service.','You cannot see where enquiries come from.'],covers:[{what:'The booking journey, rebuilt',how:'From search to confirmation in the fewest steps a guest will tolerate.'},{what:'Visibility where guests look',how:'Local search and the channels that actually drive covers.'},{what:'Confirmation and reminder systems',how:'The automation that cut our no-shows 89%.'}],ctaHeading:'Bring us the empty tables.'},
+      quiet:{crumb:'Fill quiet midweek sessions',titleLead:'Fill the quiet',titleMark:'midweek sessions.',intro:'Monday to Thursday is where pubs win or lose the year. Discounting buys traffic and burns margin; occasions build habits that hold.',stat:{value:'+41%',label:'midweek covers',context:'Occasion-led programme at The Anchor, six months, margin held.'},forYou:['Weekends carry the week.','Quiet nights get staffed like busy ones.','Promotions fill seats but not the till.','Regulars exist but nothing brings them in twice.'],covers:[{what:'Occasion design',how:'Reasons to come out that do not rest on price.'},{what:'The economics, tested',how:'Every idea modelled against margin before it launches.'},{what:'A repeatable calendar',how:'A season of sessions the team can run without heroics.'}],ctaHeading:'Bring us the quiet nights.'},
+      noshows:{crumb:'Stop no-shows',titleLead:'Stop the',titleMark:'no-shows.',intro:'No-shows are a journey problem, not a customer problem. We cut ours 89% without taking deposits, and documented every step.',stat:{value:'89%',label:'fewer no-shows',context:'Confirmation-system rebuild at The Anchor, no deposits taken.'},forYou:['Saturday books out, then a fifth of it vanishes.','Deposits feel hostile for your market.','Reminders depend on someone remembering.','You re-sell no-show tables too late to matter.'],covers:[{what:'Confirmation sequences',how:'The message timing and wording that gets a reply.'},{what:'Friction in the right place',how:'Commitment without deposits: how far to go for your guest profile.'},{what:'Re-sell systems',how:'Filling released tables while they can still be sold.'}],ctaHeading:'Bring us the empty chairs you paid to fill.'}
+    };
+    const s=S[this.props.page]||S.bookings;
+    return {...s,
+      faqs:[
+        {q:'Do you only work with pubs?',a:'No. Hospitality is our proving ground because we run a pub ourselves; the method works across small and mid-sized businesses. This page is part of our specialist hospitality collection.'},
+        {q:'What does it cost?',a:'All work is bespoke, so there is no rate card. A Growth Diagnostic agrees the problem, the baseline and the investment before any build starts.'},
+        {q:'How fast do results show?',a:'Booking-journey changes typically show within one trading cycle. We agree the measurement window with the baseline, before the work.'}
+      ],
+      nextLinks:[
+        {stage:'The proof',title:'The Anchor case study',desc:'The live lab where this playbook was built.',href:'#'},
+        {stage:'Next step',title:'Book a growth diagnostic',desc:'Your numbers, same method.',href:'#'}
+      ]};
+  }
+}
+</script>
+</body>
+</html>

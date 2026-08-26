@@ -1,0 +1,14 @@
+import * as React from 'react';
+/**
+ * Cookie notice: single compact ink bar, plain-spoken copy, accept + decline of equal
+ * honesty. Persists the choice in localStorage and renders nothing once answered.
+ */
+export interface CookieNoticeProps{
+  message?:React.ReactNode;
+  policyHref?:string;
+  onAccept?:()=>void;
+  onDecline?:()=>void;
+  /** @default 'oj-cookies' */
+  storageKey?:string;
+}
+export declare function CookieNotice(props:CookieNoticeProps):React.ReactElement|null;
