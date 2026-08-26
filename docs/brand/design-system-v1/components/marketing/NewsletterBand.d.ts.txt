@@ -1,0 +1,18 @@
+import * as React from 'react';
+/**
+ * Full-width ink signup band: title + blurb left, email capture right. Place before the footer on content pages.
+ */
+export interface NewsletterBandProps {
+  /** @default 'Straight thinking, monthly.' */
+  title?: React.ReactNode;
+  blurb?: React.ReactNode;
+  /** @default 'you@company.co.uk' */
+  placeholder?: string;
+  /** @default 'Sign up' */
+  buttonLabel?: string;
+  /** Small print under the field. */
+  note?: React.ReactNode;
+  /** Receives the entered email. */
+  onSubmit?: (email: string) => void;
+}
+export declare function NewsletterBand(props: NewsletterBandProps): JSX.Element;

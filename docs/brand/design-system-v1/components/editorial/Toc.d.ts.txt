@@ -1,0 +1,13 @@
+import * as React from 'react';
+/**
+ * 'On this page' rail for long articles and guides. Sticky-position it in the page layout.
+ */
+export interface TocProps extends React.HTMLAttributes<HTMLElement> {
+  /** @default 'On this page' */
+  title?: React.ReactNode;
+  /** In document order; level 3 items indent. */
+  items?: Array<{ label: React.ReactNode; href: string; level?: 2 | 3 }>;
+  /** href of the section currently in view (orange marker). */
+  current?: string;
+}
+export declare function Toc(props: TocProps): JSX.Element;

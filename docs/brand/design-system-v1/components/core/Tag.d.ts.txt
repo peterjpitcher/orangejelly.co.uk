@@ -1,0 +1,12 @@
+import * as React from 'react';
+/** Labelled chip for pressure points, topics and metadata. Pills are not used; corners stay near-square. */
+export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
+  /** @default 'outline' */
+  variant?: 'outline' | 'ink' | 'orange';
+  /** @default 'md' */
+  size?: 'sm' | 'md';
+  /** Signal dot: true = orange pressure dot, 'ok' = green availability dot. @default true */
+  dot?: boolean | 'ok';
+  children?: React.ReactNode;
+}
+export declare function Tag(props: TagProps): JSX.Element;

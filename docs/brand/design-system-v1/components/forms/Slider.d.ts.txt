@@ -1,0 +1,12 @@
+import * as React from 'react';
+/**
+ * Range input with orange progress fill and square pressure thumb. For calculator-style inputs (team size, covers, spend).
+ */
+export interface SliderProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+  /** @default 0 */
+  min?: number;
+  /** @default 100 */
+  max?: number;
+  step?: number;
+}
+export declare function Slider(props: SliderProps): JSX.Element;

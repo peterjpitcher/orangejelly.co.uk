@@ -1,0 +1,8 @@
+import React from 'react';
+export function Quote({children,name,role,tone='light'}){
+  const dark=tone==='dark';
+  return <figure style={{margin:0,borderLeft:'3px solid var(--oj-orange)',padding:'6px 0 6px 22px',display:'flex',flexDirection:'column',gap:12}}>
+    <blockquote style={{margin:0,fontWeight:700,fontSize:21,lineHeight:1.35,letterSpacing:'-.01em',color:dark?'var(--oj-cream)':'var(--oj-ink)'}}>{children}</blockquote>
+    {(name||role)&&<figcaption style={{fontWeight:600,fontSize:12.5,color:dark?'rgba(247,245,241,.7)':'var(--text-muted)'}}>{name}{role&&<span> · {role}</span>}</figcaption>}
+  </figure>;
+}

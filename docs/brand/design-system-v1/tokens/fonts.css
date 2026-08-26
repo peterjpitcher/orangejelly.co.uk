@@ -1,0 +1,6 @@
+/* SUBSTITUTE — no font binaries were provided with the brand pack.
+   Brand direction: "bold modern grotesk for headlines, highly legible sans for body,
+   strong weight contrast". Nearest Google Fonts match: Schibsted Grotesk (variable weight;
+   Black for display). One family, weight does the work — no secondary/mono face.
+   Replace with licensed brand fonts when supplied. */
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');

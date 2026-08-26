@@ -1,0 +1,18 @@
+import * as React from 'react';
+/**
+ * Insights listing card: category tag, display headline, excerpt, meta. Whole card is the link and gets the pressure hover.
+ */
+export interface ArticleCardProps {
+  /** Content category, e.g. 'Protect margin'. */
+  category?: React.ReactNode;
+  title: React.ReactNode;
+  excerpt?: React.ReactNode;
+  /** Display date, e.g. '12 Aug 2026'. */
+  date?: React.ReactNode;
+  /** e.g. '6 min read'. */
+  readTime?: React.ReactNode;
+  href?: string;
+  /** @default 'paper' */
+  tone?: 'paper' | 'ink';
+}
+export declare function ArticleCard(props: ArticleCardProps): JSX.Element;

@@ -1,0 +1,29 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-modal-ov{position:fixed;inset:0;z-index:100;background:rgba(35,37,46,.62);display:flex;align-items:center;justify-content:center;padding:24px}
+.oj-modal{position:relative;background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-2);box-shadow:var(--shadow-press);padding:30px 32px;width:100%;max-height:88vh;overflow:auto;display:flex;flex-direction:column;gap:14px;box-sizing:border-box}
+.oj-modal .x{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--text-muted);font-size:24px;line-height:1;cursor:pointer;padding:2px;font-family:inherit}
+.oj-modal .x:hover{color:var(--oj-ink)}
+.oj-modal h2{font-family:var(--font-display);font-weight:900;font-size:27px;line-height:1.08;letter-spacing:-.02em;margin:0}
+.oj-modal .bd{font-size:15.5px;line-height:1.55;color:var(--text-secondary)}
+.oj-modal .bd p{margin:0 0 10px}.oj-modal .bd p:last-child{margin:0}
+.oj-modal .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}`;
+export function Modal({open,onClose,eyebrow,title,actions,width=520,children}){
+  ensureCoreCss('oj-css-modal',css);
+  React.useEffect(()=>{
+    if(!open)return;
+    const f=e=>{if(e.key==='Escape'&&onClose)onClose();};
+    document.addEventListener('keydown',f);
+    return ()=>document.removeEventListener('keydown',f);
+  },[open,onClose]);
+  if(!open)return null;
+  return <div className="oj-modal-ov" onMouseDown={e=>{if(e.target===e.currentTarget&&onClose)onClose();}}>
+    <div className="oj-modal" role="dialog" aria-modal="true" style={{maxWidth:width}}>
+      {onClose&&<button className="x" aria-label="Close" onClick={onClose}>×</button>}
+      {eyebrow&&<span className="oj-eyebrow" style={{color:'var(--text-accent)'}}>{eyebrow}</span>}
+      {title&&<h2>{title}</h2>}
+      {children&&<div className="bd">{children}</div>}
+      {actions&&<div className="acts">{actions}</div>}
+    </div>
+  </div>;
+}

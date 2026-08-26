@@ -1,0 +1,22 @@
+import React from 'react';
+const css=`.oj-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-body);font-weight:700;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);cursor:pointer;text-decoration:none;transition:transform var(--dur-fast) var(--ease-snap),box-shadow var(--dur-fast) var(--ease-snap);white-space:nowrap}
+.oj-btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-press)}
+.oj-btn:active{transform:none;box-shadow:none}
+.oj-btn:focus-visible{outline:none;box-shadow:var(--ring)}
+.oj-btn[disabled]{opacity:.4;pointer-events:none}
+.oj-btn-primary{background:var(--oj-orange);color:var(--oj-ink)}
+.oj-btn-ink{background:var(--oj-ink);color:var(--oj-cream)}
+.oj-btn-ink:hover{box-shadow:var(--shadow-press-orange)}
+.oj-btn-ghost{background:transparent;color:var(--oj-ink)}
+.oj-btn-md{font-size:15px;padding:11px 20px}
+.oj-btn-lg{font-size:17px;padding:15px 28px}
+.oj-btn-sm{font-size:13.5px;padding:7px 14px}
+.oj-btn .arr{font-weight:400;transition:transform var(--dur-fast) var(--ease-snap)}
+.oj-btn:hover .arr{transform:translateX(3px)}`;
+export function ensureCoreCss(id,text){if(typeof document!=='undefined'&&!document.getElementById(id)){const s=document.createElement('style');s.id=id;s.textContent=text;document.head.appendChild(s)}}
+export function Button({variant='primary',size='md',arrow=false,href,children,...rest}){
+  ensureCoreCss('oj-css-button',css);
+  const cls=`oj-btn oj-btn-${variant} oj-btn-${size}`;
+  const inner=<>{children}{arrow&&<span className="arr" aria-hidden="true">→</span>}</>;
+  return href?<a className={cls} href={href} {...rest}>{inner}</a>:<button className={cls} {...rest}>{inner}</button>;
+}

@@ -1,0 +1,3 @@
+import React from 'react';
+import {ensureFormCss} from './Field.jsx';
+export function Select({children,...rest}){ensureFormCss();return <select className="oj-input" {...rest}>{children}</select>;}

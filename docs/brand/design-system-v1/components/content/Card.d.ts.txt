@@ -1,0 +1,10 @@
+import * as React from 'react';
+/** Base surface: paper, ink border, near-square corners. `pressure` adds the shift-and-shadow hover for clickable cards. */
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** @default 'paper' */
+  tone?: 'paper' | 'ink' | 'orange';
+  /** Hover shift + hard shadow for interactive cards. @default false */
+  pressure?: boolean;
+  children?: React.ReactNode;
+}
+export declare function Card(props: CardProps): JSX.Element;

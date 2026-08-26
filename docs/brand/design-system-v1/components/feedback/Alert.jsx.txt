@@ -1,0 +1,20 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-alert{display:flex;gap:12px;align-items:flex-start;background:var(--surface-card);border:var(--bw-1) solid var(--oj-ink);border-left-width:6px;border-radius:var(--r-1);padding:13px 16px}
+.oj-alert .body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.oj-alert .t{font-weight:800;font-size:15px;letter-spacing:-.01em}
+.oj-alert .d{font-size:14.5px;line-height:1.5;color:var(--text-secondary)}
+.oj-alert .d p{margin:0}
+.oj-alert .x{background:none;border:none;color:var(--text-muted);font-size:20px;line-height:1;cursor:pointer;padding:0 2px;font-family:inherit}
+.oj-alert .x:hover{color:var(--oj-ink)}`;
+const tones={info:'var(--oj-orange)',ok:'var(--oj-ok)',danger:'var(--oj-danger)'};
+export function Alert({tone='info',title,onClose,children,style,...rest}){
+  ensureCoreCss('oj-css-alert',css);
+  return <div className="oj-alert" role={tone==='danger'?'alert':'status'} style={{borderLeftColor:tones[tone]||tones.info,...style}} {...rest}>
+    <div className="body">
+      {title&&<span className="t" style={tone!=='info'?{color:tones[tone]}:undefined}>{title}</span>}
+      {children&&<div className="d">{children}</div>}
+    </div>
+    {onClose&&<button className="x" aria-label="Dismiss" onClick={onClose}>×</button>}
+  </div>;
+}

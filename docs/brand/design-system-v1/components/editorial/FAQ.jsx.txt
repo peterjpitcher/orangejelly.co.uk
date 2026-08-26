@@ -1,0 +1,22 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-faq{display:flex;flex-direction:column}
+.oj-faq .row{border-top:var(--bw-1) solid var(--oj-ink)}
+.oj-faq .row:last-child{border-bottom:var(--bw-1) solid var(--oj-ink)}
+.oj-faq .q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:none;font-family:inherit;font-weight:800;font-size:17px;letter-spacing:-.01em;color:var(--oj-ink);text-align:left;padding:17px 2px;cursor:pointer}
+.oj-faq .q:hover .ind{color:var(--oj-orange)}
+.oj-faq .ind{font-weight:400;font-size:24px;line-height:1;color:var(--text-accent);flex:none;transition:transform var(--dur-fast) var(--ease-snap)}
+.oj-faq .a{font-size:15.5px;line-height:1.6;color:var(--text-secondary);padding:0 44px 20px 2px;max-width:640px}
+.oj-faq .a p{margin:0 0 10px}.oj-faq .a p:last-child{margin:0}`;
+export function FAQ({items=[],openFirst=false,...rest}){
+  ensureCoreCss('oj-css-faq',css);
+  const [open,setOpen]=React.useState(()=>new Set(openFirst?[0]:[]));
+  const toggle=i=>setOpen(s=>{const n=new Set(s);n.has(i)?n.delete(i):n.add(i);return n;});
+  return <div className="oj-faq" {...rest}>
+    {items.map((it,i)=>{const on=open.has(i);
+      return <div className="row" key={i}>
+        <button className="q" aria-expanded={on} onClick={()=>toggle(i)}>{it.q}<span className="ind" aria-hidden="true">{on?'×':'+'}</span></button>
+        {on&&<div className="a">{typeof it.a==='string'?<p>{it.a}</p>:it.a}</div>}
+      </div>;})}
+  </div>;
+}

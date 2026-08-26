@@ -1,0 +1,25 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-cmp{border-collapse:collapse;width:100%;background:var(--surface-card);border:var(--bw-1) solid var(--oj-ink);font-size:14.5px}
+.oj-cmp caption{caption-side:top;text-align:left;font-weight:800;font-size:17px;letter-spacing:-.01em;padding:0 0 14px}
+.oj-cmp th,.oj-cmp td{padding:12px 16px;text-align:left;vertical-align:top}
+.oj-cmp thead th{background:var(--oj-ink);color:var(--oj-cream);font-weight:700;font-size:14px}
+.oj-cmp thead th.hl{background:var(--oj-orange);color:var(--oj-ink)}
+.oj-cmp tbody th{font-weight:600;color:var(--oj-ink);width:34%}
+.oj-cmp tbody tr+tr th,.oj-cmp tbody tr+tr td{border-top:1px solid var(--border-soft)}
+.oj-cmp td.hl{background:var(--oj-orange-soft)}
+.oj-cmp .yes{color:var(--text-accent);font-weight:800}
+.oj-cmp .no{color:var(--text-muted)}`;
+function cell(v){
+  if(v===true)return <span className="yes">✓</span>;
+  if(v===false||v===null||v===undefined||v==='')return <span className="no">—</span>;
+  return v;
+}
+export function CompareTable({caption,columns=[],rows=[],highlight,...rest}){
+  ensureCoreCss('oj-css-cmp',css);
+  return <table className="oj-cmp" {...rest}>
+    {caption&&<caption>{caption}</caption>}
+    <thead><tr><th></th>{columns.map((c,i)=><th key={i} className={i===highlight?'hl':undefined} scope="col">{c}</th>)}</tr></thead>
+    <tbody>{rows.map((r,i)=><tr key={i}><th scope="row">{r.label}</th>{(r.values||[]).map((v,j)=><td key={j} className={j===highlight?'hl':undefined}>{cell(v)}</td>)}</tr>)}</tbody>
+  </table>;
+}

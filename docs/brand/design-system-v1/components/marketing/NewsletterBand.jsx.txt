@@ -1,0 +1,24 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+import {ensureFormCss} from '../forms/Field.jsx';
+const css=`.oj-nlb{background:var(--oj-ink);color:var(--oj-cream);padding:44px 0}
+.oj-nlb-in{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;gap:32px 56px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.oj-nlb h2{font-family:var(--font-display);font-weight:900;font-size:28px;line-height:1.05;letter-spacing:-.02em;margin:0}
+.oj-nlb .blurb{margin:8px 0 0;font-size:15px;line-height:1.5;color:rgba(247,245,241,.75);max-width:420px}
+.oj-nlb form{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.oj-nlb .oj-input{width:280px}
+.oj-nlb .note{margin:8px 0 0;font-size:12.5px;color:rgba(247,245,241,.55)}`;
+export function NewsletterBand({title='Straight thinking, monthly.',blurb='One growth problem pulled apart, with the numbers. No fluff.',placeholder='you@company.co.uk',buttonLabel='Sign up',note='Unsubscribe any time. No selling your data.',onSubmit}){
+  ensureCoreCss('oj-css-nlb',css);ensureFormCss();
+  const [email,setEmail]=React.useState('');
+  return <section className="oj-nlb"><div className="oj-nlb-in">
+    <div><h2>{title}</h2>{blurb&&<p className="blurb">{blurb}</p>}</div>
+    <div>
+      <form onSubmit={e=>{e.preventDefault();onSubmit&&onSubmit(email);}}>
+        <input className="oj-input" type="email" required aria-label="Email address" placeholder={placeholder} value={email} onChange={e=>setEmail(e.target.value)} />
+        <Button type="submit">{buttonLabel}</Button>
+      </form>
+      {note&&<p className="note">{note}</p>}
+    </div>
+  </div></section>;
+}

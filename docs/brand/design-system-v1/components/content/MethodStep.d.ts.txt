@@ -1,0 +1,14 @@
+import * as React from 'react';
+/** One stage of HEAR. EXPOSE. BUILD. PROVE. — mono index, display word, one sentence. */
+export interface MethodStepProps {
+  /** 1–4 */
+  index: number;
+  /** "HEAR." etc — the only ALL-CAPS words in the system. */
+  word: React.ReactNode;
+  text: React.ReactNode;
+  /** @default 'dark' */
+  tone?: 'dark' | 'light';
+  /** Orange emphasis on the current stage. @default false */
+  active?: boolean;
+}
+export declare function MethodStep(props: MethodStepProps): JSX.Element;

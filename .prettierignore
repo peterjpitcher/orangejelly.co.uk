@@ -34,3 +34,5 @@ next-env.d.ts
 # Content files (preserve original formatting)
 *.md
 *.mdx
+# Vendored brand and design-system handoff: keep byte-identical to delivery
+docs/brand/

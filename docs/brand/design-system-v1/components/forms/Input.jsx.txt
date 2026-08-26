@@ -1,0 +1,3 @@
+import React from 'react';
+import {ensureFormCss} from './Field.jsx';
+export function Input(props){ensureFormCss();return <input className="oj-input" {...props} />;}

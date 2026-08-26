@@ -1,0 +1,8 @@
+import * as React from 'react';
+/** Clickable card for one of the six growth pressure points; arrow links to its problem page. */
+export interface PressureCardProps {
+  title: React.ReactNode;
+  desc?: React.ReactNode;
+  href?: string;
+}
+export declare function PressureCard(props: PressureCardProps): JSX.Element;

@@ -1,0 +1,14 @@
+import * as React from 'react';
+/** Label + control + hint/error wrapper for every form control. */
+export interface FieldProps {
+  label?: React.ReactNode;
+  /** Grey helper line; replaced by error when present. */
+  hint?: React.ReactNode;
+  /** Mono red validation message; also style the control with aria-invalid. */
+  error?: React.ReactNode;
+  /** Adds the orange asterisk. */
+  required?: boolean;
+  htmlFor?: string;
+  children?: React.ReactNode;
+}
+export declare function Field(props: FieldProps): JSX.Element;

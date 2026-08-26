@@ -1,0 +1,19 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-logos{display:flex;align-items:center;gap:18px 44px;flex-wrap:wrap}
+.oj-logos .lbl{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);flex:none}
+.oj-logos img{display:block;filter:grayscale(1);opacity:.72;transition:opacity var(--dur-fast) var(--ease-snap),filter var(--dur-fast) var(--ease-snap)}
+.oj-logos img:hover{filter:none;opacity:1}
+.oj-logos .txt{font-weight:800;font-size:17px;letter-spacing:-.01em;color:var(--text-muted)}
+.oj-logos-dark .lbl{color:rgba(247,245,241,.6)}
+.oj-logos-dark .txt{color:rgba(247,245,241,.7)}
+.oj-logos-dark img{filter:grayscale(1) brightness(10)}`;
+export function LogoStrip({label='In partnership with',items=[],height=30,tone='light',...rest}){
+  ensureCoreCss('oj-css-logos',css);
+  return <div className={'oj-logos'+(tone==='dark'?' oj-logos-dark':'')} {...rest}>
+    {label&&<span className="lbl">{label}</span>}
+    {items.map((it,i)=>typeof it==='string'
+      ?<span className="txt" key={i}>{it}</span>
+      :<img key={i} src={it.src} alt={it.alt||''} style={{height:it.height||height}} />)}
+  </div>;
+}

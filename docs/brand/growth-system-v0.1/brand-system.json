@@ -1,0 +1,113 @@
+{
+  "version": "0.1",
+  "status": "working foundation",
+  "last_updated": "2026-08-25",
+  "brand": {
+    "name": "Orange Jelly",
+    "primary_category": "Growth partner for ambitious small and mid-sized businesses",
+    "secondary_category": "Technology-enabled business growth consultancy",
+    "core_proposition": "You bring the growth problem. We build the solution.",
+    "brand_essence": "Brilliant change, made real.",
+    "brand_idea": "An unfair advantage for ambitious businesses.",
+    "internal_rallying_cry": "Make the right change happen."
+  },
+  "vision": "To help ambitious smaller businesses outthink and outperform much larger competitors.",
+  "mission": "To expose what is blocking growth and make the right change happen using creativity, technology, AI and commercial judgement.",
+  "positioning": {
+    "audience": "Ambitious small and mid-sized businesses that have built something real, feel a growth ceiling and are ready to change.",
+    "differentiation": [
+      "Starts with the business problem rather than a fixed service",
+      "Connects demand, conversion, margin, operations, experience and scale",
+      "Combines creativity, commercial thinking, technology and practical AI",
+      "Challenges and builds rather than advising and disappearing",
+      "Uses evidence and agreed success measures"
+    ],
+    "not": [
+      "Hospitality marketing agency",
+      "Day-to-day social media posting service",
+      "Generic digital agency",
+      "AI consultancy selling technology for its own sake",
+      "Business coach without implementation",
+      "Cheap task supplier"
+    ]
+  },
+  "audience": {
+    "typical_size": "Roughly 10 to 500 employees, with fit determined by complexity, budget, authority and ambition rather than headcount alone.",
+    "decision_makers": [
+      "Owner",
+      "Founder",
+      "Managing director",
+      "Chief executive",
+      "Commercial director",
+      "Operations director",
+      "Marketing director",
+      "Transformation or innovation lead with authority"
+    ],
+    "positive_signals": [
+      "Meaningful growth problem",
+      "Direct senior access",
+      "Willingness to be challenged",
+      "Budget and capacity to implement",
+      "Agreement on measurable success"
+    ]
+  },
+  "growth_pressure_points": [
+    "Create demand",
+    "Convert more",
+    "Protect margin",
+    "Remove operational drag",
+    "Improve the experience",
+    "Build for scale"
+  ],
+  "method": {
+    "name": "HEAR. EXPOSE. BUILD. PROVE.",
+    "stages": [
+      {
+        "name": "HEAR",
+        "purpose": "Understand what is really happening, not only what the brief says."
+      },
+      {
+        "name": "EXPOSE",
+        "purpose": "Find the pressure points, root causes and opportunities that matter."
+      },
+      {
+        "name": "BUILD",
+        "purpose": "Design and implement the right practical solution."
+      },
+      {
+        "name": "PROVE",
+        "purpose": "Measure the difference, improve the solution and embed what works."
+      }
+    ]
+  },
+  "offers": [
+    "Growth Diagnostic",
+    "Growth Sprint",
+    "Growth Partnership",
+    "Transformation Programme"
+  ],
+  "voice": {
+    "principles": [
+      "Direct",
+      "Intelligent",
+      "Provocative",
+      "Practical",
+      "Human"
+    ],
+    "british_english": true,
+    "em_dash_allowed": false,
+    "expletive_policy": "Use partially censored expletives sparingly as high voltage in founder-led or manifesto content, never as decoration.",
+    "signature_lines": [
+      "You bring the growth problem. We build the solution.",
+      "AI is part of the toolkit, not the product.",
+      "A content calendar will not fix a broken growth system.",
+      "Brilliant thinking is useless until it changes something.",
+      "Built for businesses big enough to have real growth problems and small enough to move fast."
+    ]
+  },
+  "search_vision": "Show up when a serious business leader realises the problem is bigger than another quick fix.",
+  "primary_cta": "Book a growth diagnostic",
+  "campaign_cta": "Bring us the problem",
+  "proof_role_of_anchor": "A live trading small-business laboratory that demonstrates transferable growth thinking, not a hospitality-only category boundary.",
+  "open_decisions_file": "13-open-decisions.md"
+}

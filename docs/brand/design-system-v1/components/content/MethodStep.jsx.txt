@@ -1,0 +1,9 @@
+import React from 'react';
+export function MethodStep({index,word,text,tone='dark',active=false}){
+  const dark=tone==='dark';
+  return <div style={{display:'flex',flexDirection:'column',gap:10,padding:'18px 20px',borderLeft:`3px solid ${active?'var(--oj-orange)':dark?'rgba(247,245,241,.25)':'rgba(35,37,46,.2)'}`}}>
+    <span style={{fontWeight:600,fontSize:12,color:dark?'var(--oj-peach)':'var(--oj-orange-deep)'}}>{String(index).padStart(2,'0')}</span>
+    <span style={{fontFamily:'var(--font-display)',fontWeight:900,fontSize:28,lineHeight:1,color:active?'var(--oj-orange)':dark?'var(--oj-cream)':'var(--oj-ink)'}}>{word}</span>
+    <span style={{fontSize:14,lineHeight:1.5,color:dark?'rgba(247,245,241,.75)':'var(--text-secondary)'}}>{text}</span>
+  </div>;
+}

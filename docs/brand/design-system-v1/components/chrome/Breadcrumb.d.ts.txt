@@ -1,0 +1,9 @@
+import * as React from 'react';
+/**
+ * Inner-page trail. Last item is the current page (unlinked, ink). Orange arrows separate.
+ */
+export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
+  /** In order from root; omit `href` on the last (current) item. */
+  items?: Array<{ label: string; href?: string }>;
+}
+export declare function Breadcrumb(props: BreadcrumbProps): JSX.Element;

@@ -1,0 +1,13 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-card{background:var(--surface-card);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);padding:var(--sp-5);box-sizing:border-box}
+.oj-card-ink{background:var(--oj-ink);color:var(--oj-cream)}
+.oj-card-orange{background:var(--oj-orange)}
+.oj-card-press{transition:transform var(--dur-fast) var(--ease-snap),box-shadow var(--dur-fast) var(--ease-snap);cursor:pointer}
+.oj-card-press:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-press)}
+.oj-card-press:active{transform:none;box-shadow:none}`;
+export function ensureCardCss(){ensureCoreCss('oj-css-card',css);}
+export function Card({tone='paper',pressure=false,style,children,...rest}){
+  ensureCardCss();
+  return <div className={`oj-card${tone!=='paper'?' oj-card-'+tone:''}${pressure?' oj-card-press':''}`} style={style} {...rest}>{children}</div>;
+}

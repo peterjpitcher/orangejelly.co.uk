@@ -1,0 +1,15 @@
+import * as React from 'react';
+/** Proof-by-pressure-point card: verified stat + context + area tag. Claims must carry their baseline. */
+export interface ProofCardProps {
+  /** e.g. "403%" */
+  value: React.ReactNode;
+  /** Mono label, e.g. "table bookings" */
+  label: React.ReactNode;
+  /** Baseline / period / honest qualifier. */
+  context?: React.ReactNode;
+  /** Pressure-point tag, e.g. "Create demand". */
+  area?: React.ReactNode;
+  /** @default 'paper' */
+  tone?: 'paper' | 'ink';
+}
+export declare function ProofCard(props: ProofCardProps): JSX.Element;

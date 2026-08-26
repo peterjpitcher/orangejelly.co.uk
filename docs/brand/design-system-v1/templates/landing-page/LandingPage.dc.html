@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Landing page" description="Orange Jelly marketing page: hero, pressure points, method band, proof, final CTA" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:38px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#problems" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#method" style="color:#23252E;text-decoration:none">How we work</a><a href="#proof" style="color:#23252E;text-decoration:none">Results</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:96px 32px 88px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Growth partner for ambitious small and mid-sized businesses</span>
+<h1 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:80px;line-height:.98;letter-spacing:-.025em;margin:18px 0 24px;max-width:900px">Growth stuck? <span style="background:linear-gradient(transparent 55%,#F76B0C 55%,#F76B0C 96%,transparent 96%);padding:0 .08em">Bring us the problem.</span></h1>
+<p style="font-size:18.5px;line-height:1.55;color:#4A4C58;max-width:560px;margin:0 0 36px">Orange Jelly gets under the skin of your business, exposes what is holding you back and builds practical solutions using creativity, technology and AI that earns its place.</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="260px,52px">Book a growth diagnostic</x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" variant="ghost" hint-size="190px,52px">See how we work</x-import>
+</div>
+</section>
+<section id="problems" style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:64px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:32px;letter-spacing:-.02em;margin:0 0 24px">Six growth pressure points</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+<sc-for list="{{ pressures }}" as="p" hint-placeholder-count="6">
+<div style="background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:8px">
+<span style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span style="font-weight:900;font-size:19px;letter-spacing:-.01em">{{ p.title }}</span><span style="color:#C05408;font-size:20px">→</span></span>
+<span style="font-size:14.5px;line-height:1.5;color:#4A4C58">{{ p.desc }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+<section id="method" style="background:#23252E;padding:88px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">How we work</span>
+<h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:40px;letter-spacing:-.02em;color:#F7F5F1;margin:12px 0 36px">HEAR. EXPOSE. BUILD. <span style="color:#F76B0C">PROVE.</span></h2>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+<div style="display:flex;flex-direction:column;gap:10px;padding:18px 20px;border-left:3px solid rgba(247,245,241,.25)">
+<span style="font-weight:600;font-size:12px;color:#FFD3AD">{{ s.num }}</span>
+<span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:28px;line-height:1;color:#F7F5F1">{{ s.word }}</span>
+<span style="font-size:14px;line-height:1.5;color:rgba(247,245,241,.75)">{{ s.text }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+<section id="proof" style="padding:88px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:32px;letter-spacing:-.02em;margin:0 0 24px">Tested in a real trading business first</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.ProofCard" value="403%" label="table bookings" context="Year on year, verified baseline." area="Create demand" hint-size="100%,220px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.ProofCard" value="89%" label="fewer no-shows" context="After booking-journey rebuild." area="Improve experience" tone="ink" hint-size="100%,220px"></x-import>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.ProofCard" value="828%" label="search visibility" context="Google visibility, 12 months." area="Create demand" hint-size="100%,220px"></x-import>
+</div>
+</div>
+</section>
+<section style="background:#23252E;padding:88px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px">
+<h2 style="font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:60px;letter-spacing:-.025em;color:#F7F5F1;margin:0">Stop circling <span style="background:#FFD3AD;padding:0 .1em;color:#23252E">the problem.</span></h2>
+<p style="margin:0;font-size:17px;color:rgba(247,245,241,.8);max-width:480px">Tell us what is happening, what you have tried and what needs to change.</p>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="lg" arrow="{{ true }}" hint-size="240px,52px">Bring us the problem</x-import>
+</div>
+</section>
+<footer style="background:#23252E;border-top:1px solid rgba(247,245,241,.2);padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;font-weight:500;font-size:13px;color:rgba(247,245,241,.55)"><span>© 2026 Orange Jelly Limited</span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    return {
+      pressures:[
+        {title:'Create demand',desc:'Not enough of the right people know you exist or care.'},
+        {title:'Convert more',desc:'Leads, enquiries or bookings are not turning into revenue.'},
+        {title:'Protect margin',desc:'Sales look fine. The profit is quietly leaking away.'},
+        {title:'Remove operational drag',desc:'Manual work is slowing the team and stealing capacity.'},
+        {title:'Improve experience',desc:'The customer journey is leaking value at avoidable points.'},
+        {title:'Build for scale',desc:'The systems that got you here cannot support the next stage.'}
+      ],
+      steps:[
+        {num:'01',word:'HEAR.',text:'Understand what is really happening, not only what the brief says.'},
+        {num:'02',word:'EXPOSE.',text:'Find the pressure points, root causes and opportunities that matter.'},
+        {num:'03',word:'BUILD.',text:'Design and implement the right practical solution.'},
+        {num:'04',word:'PROVE.',text:'Measure the difference, improve the solution and embed what works.'}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

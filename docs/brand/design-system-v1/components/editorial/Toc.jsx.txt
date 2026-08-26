@@ -1,0 +1,15 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-toc{border-left:var(--bw-1) solid var(--oj-ink);padding-left:18px;display:flex;flex-direction:column;gap:9px;max-width:260px}
+.oj-toc .t{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px}
+.oj-toc a{font-weight:600;font-size:14px;line-height:1.35;color:var(--text-secondary);text-decoration:none}
+.oj-toc a:hover{color:var(--text-accent)}
+.oj-toc a.sub{padding-left:14px;font-weight:500}
+.oj-toc a.on{color:var(--oj-ink);box-shadow:inset 3px 0 0 var(--oj-orange);margin-left:-18px;padding-left:15px}`;
+export function Toc({title='On this page',items=[],current,...rest}){
+  ensureCoreCss('oj-css-toc',css);
+  return <nav className="oj-toc" aria-label="Table of contents" {...rest}>
+    <span className="t">{title}</span>
+    {items.map((it,i)=><a key={i} href={it.href} className={(it.level>=3?'sub':'')+(current===it.href?' on':'')}>{it.label}</a>)}
+  </nav>;
+}

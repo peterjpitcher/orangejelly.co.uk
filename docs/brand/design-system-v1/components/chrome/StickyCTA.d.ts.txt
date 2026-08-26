@@ -1,0 +1,17 @@
+import * as React from 'react';
+/**
+ * Conversion bar fixed to the viewport bottom; appears after scrolling past `showAfter` px. One per page, long conversion pages only.
+ */
+export interface StickyCTAProps {
+  /** Short hook text. @default 'Growth stuck? Tell us what is happening.' */
+  note?: React.ReactNode;
+  /** @default 'Book a growth diagnostic' */
+  label?: string;
+  href?: string;
+  onClick?: () => void;
+  /** Scroll depth in px before it appears; 0 shows immediately. @default 480 */
+  showAfter?: number;
+  /** Show the dismiss ×. @default true */
+  dismissible?: boolean;
+}
+export declare function StickyCTA(props: StickyCTAProps): JSX.Element | null;

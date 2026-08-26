@@ -1,0 +1,16 @@
+import * as React from 'react';
+/**
+ * Primary action element. Orange = the one dominant CTA; ink for secondary emphasis; ghost for tertiary.
+ */
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Visual weight. One primary per view. @default 'primary' */
+  variant?: 'primary' | 'ink' | 'ghost';
+  /** @default 'md' */
+  size?: 'sm' | 'md' | 'lg';
+  /** Append a → that nudges on hover. @default false */
+  arrow?: boolean;
+  /** Renders an <a> instead of <button>. */
+  href?: string;
+  children?: React.ReactNode;
+}
+export declare function Button(props: ButtonProps): JSX.Element;

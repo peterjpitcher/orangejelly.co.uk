@@ -1,0 +1,10 @@
+import React from 'react';
+export function Stat({value,label,sub,tone='light',size='md',accent=true}){
+  const dark=tone==='dark';
+  const vs={md:44,lg:64,sm:32}[size];
+  return <div style={{display:'flex',flexDirection:'column',gap:6}}>
+    <span style={{fontFamily:'var(--font-display)',fontWeight:900,lineHeight:1,letterSpacing:'-.02em',fontSize:vs,color:accent?'var(--oj-orange)':(dark?'var(--oj-cream)':'var(--oj-ink)')}}>{value}</span>
+    <span style={{fontWeight:600,fontSize:12,letterSpacing:'.08em',textTransform:'uppercase',color:dark?'var(--oj-cream)':'var(--oj-ink)'}}>{label}</span>
+    {sub&&<span style={{fontSize:13.5,color:dark?'rgba(247,245,241,.7)':'var(--text-secondary)',lineHeight:1.4}}>{sub}</span>}
+  </div>;
+}

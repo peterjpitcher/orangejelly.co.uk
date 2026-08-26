@@ -1,0 +1,15 @@
+import * as React from 'react';
+/**
+ * Row of partner/client marks with an eyebrow label. Logos render greyscale until hover so the orange stays proprietary.
+ */
+export interface LogoStripProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** @default 'In partnership with' */
+  label?: React.ReactNode;
+  /** Image items, or plain strings for type-only marks. */
+  items?: Array<{ src: string; alt?: string; height?: number } | string>;
+  /** Default logo height in px. @default 30 */
+  height?: number;
+  /** 'dark' inverts for ink sections. @default 'light' */
+  tone?: 'light' | 'dark';
+}
+export declare function LogoStrip(props: LogoStripProps): JSX.Element;

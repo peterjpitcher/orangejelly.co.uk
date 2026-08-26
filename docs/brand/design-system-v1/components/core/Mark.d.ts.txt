@@ -1,0 +1,8 @@
+import * as React from 'react';
+/** Highlighter showing focus or intervention. Peach = solid block with ink text, safe on any surface; orange = sweep underline, inherits text color (cream/ink surfaces). */
+export interface MarkProps {
+  /** @default 'peach' */
+  tone?: 'peach' | 'orange';
+  children?: React.ReactNode;
+}
+export declare function Mark(props: MarkProps): React.JSX.Element;

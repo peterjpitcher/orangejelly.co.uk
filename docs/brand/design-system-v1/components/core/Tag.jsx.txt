@@ -1,0 +1,14 @@
+import React from 'react';
+import {ensureCoreCss} from './Button.jsx';
+const css=`.oj-tag{display:inline-flex;align-items:center;gap:8px;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);font-weight:700;font-size:14px;padding:7px 13px;background:var(--oj-paper);color:var(--oj-ink)}
+.oj-tag-ink{background:var(--oj-ink);color:var(--oj-cream)}
+.oj-tag-orange{background:var(--oj-orange)}
+.oj-tag-sm{font-size:12.5px;padding:4px 9px}
+.oj-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--oj-orange);border:1px solid var(--oj-ink);flex:none}
+.oj-tag-ink .dot{border-color:var(--oj-cream)}
+.oj-tag .dot.ok{background:var(--oj-ok)}
+.oj-tag-orange .dot{background:var(--oj-cream)}`;
+export function Tag({variant='outline',size='md',dot=true,children,...rest}){
+  ensureCoreCss('oj-css-tag',css);
+  return <span className={`oj-tag${variant!=='outline'?' oj-tag-'+variant:''}${size==='sm'?' oj-tag-sm':''}`} {...rest}>{dot&&<span className={dot==='ok'?'dot ok':'dot'}></span>}{children}</span>;
+}

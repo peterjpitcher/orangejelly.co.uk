@@ -1,0 +1,17 @@
+import * as React from 'react';
+/**
+ * Dialog on an ink scrim: exit-intent offers, confirmations, focused forms. Esc and scrim-click close.
+ */
+export interface ModalProps {
+  open: boolean;
+  onClose?: () => void;
+  /** Uppercase kicker above the title. */
+  eyebrow?: React.ReactNode;
+  title?: React.ReactNode;
+  /** Buttons row; first action orange. */
+  actions?: React.ReactNode;
+  /** Panel max-width in px. @default 520 */
+  width?: number;
+  children?: React.ReactNode;
+}
+export declare function Modal(props: ModalProps): JSX.Element | null;

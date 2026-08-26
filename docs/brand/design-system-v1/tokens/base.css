@@ -1,0 +1,9 @@
+body{margin:0;font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);background:var(--surface-page);color:var(--text-body);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration-thickness:1.5px;text-underline-offset:3px}
+a:hover{color:var(--link-hover)}
+::selection{background:var(--oj-peach);color:var(--oj-ink)}
+:focus-visible{outline:none;box-shadow:var(--ring)}
+.oj-mark{background:var(--oj-peach);padding:0 .08em}
+.oj-mark-orange{background:linear-gradient(transparent 55%,var(--oj-orange) 55%,var(--oj-orange) 96%,transparent 96%);padding:0 .08em}
+.oj-display{font-family:var(--font-display);font-stretch:var(--stretch-display);font-weight:var(--fw-black);line-height:var(--lh-display);letter-spacing:var(--ls-display)}
+.oj-eyebrow{font-family:var(--font-body);font-size:var(--fs-xs);font-weight:700;letter-spacing:var(--ls-eyebrow);text-transform:uppercase}

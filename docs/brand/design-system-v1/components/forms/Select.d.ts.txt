@@ -1,0 +1,6 @@
+import * as React from 'react';
+/** Native select styled to match Input; ink chevron drawn in CSS. */
+export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  children?: React.ReactNode;
+}
+export declare function Select(props: SelectProps): JSX.Element;

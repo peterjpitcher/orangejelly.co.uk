@@ -1,0 +1,4 @@
+import * as React from 'react';
+/** Single-line text input. Paper surface, ink border, orange focus ring; set aria-invalid for the error state. */
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+export declare function Input(props: InputProps): JSX.Element;

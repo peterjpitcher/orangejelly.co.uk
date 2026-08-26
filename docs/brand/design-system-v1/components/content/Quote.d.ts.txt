@@ -1,0 +1,10 @@
+import * as React from 'react';
+/** Client testimony: bold quote, orange rule, mono attribution. */
+export interface QuoteProps {
+  children?: React.ReactNode;
+  name?: React.ReactNode;
+  role?: React.ReactNode;
+  /** @default 'light' */
+  tone?: 'light' | 'dark';
+}
+export declare function Quote(props: QuoteProps): JSX.Element;

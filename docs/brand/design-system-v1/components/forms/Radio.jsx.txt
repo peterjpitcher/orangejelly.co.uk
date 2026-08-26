@@ -1,0 +1,11 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-radio{display:flex;gap:11px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.45}
+.oj-radio input{appearance:none;margin:1px 0 0;width:20px;height:20px;flex:none;background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:50%;cursor:pointer;display:grid;place-content:center;transition:background var(--dur-fast) var(--ease-snap)}
+.oj-radio input:checked{background:var(--oj-orange)}
+.oj-radio input:checked::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--oj-ink)}
+.oj-radio input:focus-visible{outline:none;box-shadow:var(--ring)}`;
+export function Radio({label,...rest}){
+  ensureCoreCss('oj-css-radio',css);
+  return <label className="oj-radio"><input type="radio" {...rest} /><span>{label}</span></label>;
+}

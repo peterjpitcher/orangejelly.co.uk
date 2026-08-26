@@ -1,0 +1,11 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-check{display:flex;gap:11px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.45}
+.oj-check input{appearance:none;margin:1px 0 0;width:20px;height:20px;flex:none;background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);cursor:pointer;display:grid;place-content:center;transition:background var(--dur-fast) var(--ease-snap)}
+.oj-check input:checked{background:var(--oj-orange)}
+.oj-check input:checked::after{content:'';width:10px;height:6px;border:2.5px solid var(--oj-ink);border-top:none;border-right:none;transform:rotate(-45deg) translate(1px,-1px)}
+.oj-check input:focus-visible{outline:none;box-shadow:var(--ring)}`;
+export function Checkbox({label,...rest}){
+  ensureCoreCss('oj-css-check',css);
+  return <label className="oj-check"><input type="checkbox" {...rest} /><span>{label}</span></label>;
+}

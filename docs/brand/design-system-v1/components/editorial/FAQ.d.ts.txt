@@ -1,0 +1,10 @@
+import * as React from 'react';
+/**
+ * FAQ accordion: ruled rows, +/× indicators, several rows may be open at once. Mirror content in FAQPage structured data.
+ */
+export interface FAQProps extends React.HTMLAttributes<HTMLDivElement> {
+  items?: Array<{ q: React.ReactNode; a: React.ReactNode }>;
+  /** Open the first row initially. @default false */
+  openFirst?: boolean;
+}
+export declare function FAQ(props: FAQProps): JSX.Element;

@@ -1,0 +1,11 @@
+import React from 'react';
+import {Card} from './Card.jsx';
+export function PressureCard({title,desc,href='#'}){
+  return <Card pressure style={{padding:20,display:'flex',flexDirection:'column',gap:8}} onClick={()=>{}}>
+    <span style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:10}}>
+      <span style={{fontWeight:900,fontSize:19,letterSpacing:'-.01em'}}>{title}</span>
+      <a href={href} aria-label={typeof title==='string'?title:'open'} style={{color:'var(--oj-orange-deep)',textDecoration:'none',fontSize:20,fontWeight:400}}>→</a>
+    </span>
+    <span style={{fontSize:14.5,lineHeight:1.5,color:'var(--text-secondary)'}}>{desc}</span>
+  </Card>;
+}

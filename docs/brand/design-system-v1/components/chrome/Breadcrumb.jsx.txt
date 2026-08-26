@@ -1,0 +1,15 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;align-items:center;font-size:13.5px;font-weight:600}
+.oj-crumb li{display:flex;gap:8px;align-items:center}
+.oj-crumb a{color:var(--text-muted);text-decoration:none}
+.oj-crumb a:hover{color:var(--text-accent)}
+.oj-crumb .sep{color:var(--oj-orange);font-weight:400}
+.oj-crumb [aria-current]{color:var(--oj-ink)}`;
+export function Breadcrumb({items=[],...rest}){
+  ensureCoreCss('oj-css-crumb',css);
+  return <nav className="oj-crumb" aria-label="Breadcrumb" {...rest}><ol>
+    {items.map((it,i)=>{const last=i===items.length-1;
+      return <li key={i}>{it.href&&!last?<a href={it.href}>{it.label}</a>:<span aria-current={last?'page':undefined}>{it.label}</span>}{!last&&<span className="sep" aria-hidden="true">→</span>}</li>;})}
+  </ol></nav>;
+}

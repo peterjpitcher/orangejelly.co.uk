@@ -1,0 +1,11 @@
+:root{
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:48px;--sp-8:64px;--sp-9:96px;
+--r-0:0; /* @kind radius */
+--r-1:3px;--r-2:8px;--r-pill:999px;
+--bw-1:1.5px;--bw-2:3px;
+/* Pressure shadows: hard offsets, never blur */
+--shadow-press:5px 5px 0 0 var(--oj-ink);--shadow-press-sm:3px 3px 0 0 var(--oj-ink);--shadow-press-orange:5px 5px 0 0 var(--oj-orange);
+--ring:0 0 0 2px var(--surface-page),0 0 0 4.5px var(--oj-orange);
+--ease-snap:cubic-bezier(.2,.9,.25,1) /* @kind other */;--dur-fast:120ms /* @kind other */;--dur:200ms; /* @kind other */
+--container:1160px;
+}

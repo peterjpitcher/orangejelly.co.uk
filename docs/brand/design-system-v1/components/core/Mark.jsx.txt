@@ -1,0 +1,5 @@
+import React from 'react';
+export function Mark({tone='peach',children}){
+  if(tone==='peach')return <span style={{background:'var(--oj-peach)',padding:'0 .1em',color:'var(--oj-ink)'}}>{children}</span>;
+  return <span style={{background:'linear-gradient(transparent 55%, var(--oj-orange) 55%, var(--oj-orange) 96%, transparent 96%)',padding:'0 .08em'}}>{children}</span>;
+}

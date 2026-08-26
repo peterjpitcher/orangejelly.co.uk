@@ -20,3 +20,5 @@ coverage
 
 # Ignore public folder
 public
+# Vendored brand and design-system handoff: keep byte-identical to delivery
+docs/brand/

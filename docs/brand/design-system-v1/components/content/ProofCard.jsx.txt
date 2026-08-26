@@ -1,0 +1,11 @@
+import React from 'react';
+import {Card} from './Card.jsx';
+import {Stat} from '../core/Stat.jsx';
+import {Tag} from '../core/Tag.jsx';
+export function ProofCard({value,label,context,area,tone='paper'}){
+  return <Card tone={tone} style={{display:'flex',flexDirection:'column',gap:14}}>
+    <Stat value={value} label={label} tone={tone==='ink'?'dark':'light'} />
+    {context&&<p style={{margin:0,fontSize:14,lineHeight:1.5,color:tone==='ink'?'rgba(247,245,241,.75)':'var(--text-secondary)'}}>{context}</p>}
+    {area&&<Tag size="sm" variant={tone==='ink'?'orange':'outline'}>{area}</Tag>}
+  </Card>;
+}

@@ -1,0 +1,17 @@
+import * as React from 'react';
+/** Evidence treated as a design asset: display-black number over a mono label. */
+export interface StatProps {
+  /** The number, e.g. "403%". */
+  value: React.ReactNode;
+  /** Mono uppercase label under the value. */
+  label: React.ReactNode;
+  /** Optional qualifying sentence (baseline, period, caveat). */
+  sub?: React.ReactNode;
+  /** Match the surface it sits on. @default 'light' */
+  tone?: 'light' | 'dark';
+  /** @default 'md' */
+  size?: 'sm' | 'md' | 'lg';
+  /** Orange value. @default true */
+  accent?: boolean;
+}
+export declare function Stat(props: StatProps): JSX.Element;

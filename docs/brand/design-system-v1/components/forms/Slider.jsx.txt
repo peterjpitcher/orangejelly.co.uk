@@ -1,0 +1,17 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-slider{-webkit-appearance:none;appearance:none;width:100%;height:24px;background:transparent;cursor:pointer;margin:0}
+.oj-slider::-webkit-slider-runnable-track{height:8px;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:linear-gradient(to right,var(--oj-orange) var(--fill,50%),var(--oj-cream-2) var(--fill,50%))}
+.oj-slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-8.5px;background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);box-shadow:2px 2px 0 0 var(--oj-ink)}
+.oj-slider::-moz-range-track{height:8px;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);background:var(--oj-cream-2)}
+.oj-slider::-moz-range-progress{height:8px;background:var(--oj-orange);border-radius:var(--r-1)}
+.oj-slider::-moz-range-thumb{width:22px;height:22px;box-sizing:border-box;background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);box-shadow:2px 2px 0 0 var(--oj-ink)}
+.oj-slider:focus-visible{outline:none}
+.oj-slider:focus-visible::-webkit-slider-thumb{box-shadow:var(--ring)}`;
+export function Slider({min=0,max=100,value,defaultValue,onChange,style,...rest}){
+  ensureCoreCss('oj-css-slider',css);
+  const [v,setV]=React.useState(value!==undefined?Number(value):(defaultValue!==undefined?Number(defaultValue):(Number(min)+Number(max))/2));
+  const cur=value!==undefined?Number(value):v;
+  const pct=(cur-Number(min))/(Number(max)-Number(min))*100;
+  return <input type="range" className="oj-slider" min={min} max={max} value={cur} onChange={e=>{setV(Number(e.target.value));onChange&&onChange(e);}} style={{...style,['--fill']:pct+'%'}} {...rest} />;
+}

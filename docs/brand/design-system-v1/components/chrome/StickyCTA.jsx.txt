@@ -1,0 +1,25 @@
+import React from 'react';
+import {ensureCoreCss,Button} from '../core/Button.jsx';
+const css=`.oj-sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--oj-ink);border-top:var(--bw-2) solid var(--oj-orange);padding:12px 0}
+.oj-sticky-in{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:18px}
+.oj-sticky .note{margin:0;color:var(--oj-cream);font-weight:700;font-size:15.5px;letter-spacing:-.01em;flex:1;min-width:0}
+.oj-sticky .x{background:none;border:none;color:rgba(247,245,241,.6);font-size:22px;line-height:1;cursor:pointer;padding:2px 4px;font-family:inherit}
+.oj-sticky .x:hover{color:var(--oj-cream)}
+@media(max-width:640px){.oj-sticky .note{font-size:13px}}`;
+export function StickyCTA({note='Growth stuck? Tell us what is happening.',label='Book a growth diagnostic',href,onClick,showAfter=480,dismissible=true}){
+  ensureCoreCss('oj-css-sticky',css);
+  const [past,setPast]=React.useState(showAfter<=0);
+  const [gone,setGone]=React.useState(false);
+  React.useEffect(()=>{
+    if(showAfter<=0){setPast(true);return;}
+    const f=()=>setPast(window.scrollY>showAfter);
+    f();window.addEventListener('scroll',f,{passive:true});
+    return ()=>window.removeEventListener('scroll',f);
+  },[showAfter]);
+  if(!past||gone)return null;
+  return <div className="oj-sticky" role="complementary"><div className="oj-sticky-in">
+    <p className="note">{note}</p>
+    <Button size="sm" href={href} onClick={onClick}>{label}</Button>
+    {dismissible&&<button className="x" aria-label="Dismiss" onClick={()=>setGone(true)}>×</button>}
+  </div></div>;
+}

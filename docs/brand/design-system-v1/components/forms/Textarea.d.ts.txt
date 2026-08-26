@@ -1,0 +1,4 @@
+import * as React from 'react';
+/** Multi-line input for the enquiry form's open questions. */
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export declare function Textarea(props: TextareaProps): JSX.Element;

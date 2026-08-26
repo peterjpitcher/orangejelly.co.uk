@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Blog article" description="Insights article: title block, sticky contents rail, prose body, author, related reading, signup band" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<div style="max-width:1160px;margin:0 auto;padding:22px 32px 0">
+<nav aria-label="Breadcrumb" style="display:flex;gap:8px;align-items:center;font-size:13.5px;font-weight:600"><a href="#" style="color:#757784;text-decoration:none">Home</a><span style="color:#F76B0C" aria-hidden="true">→</span><a href="#" style="color:#757784;text-decoration:none">Insights</a><span style="color:#F76B0C" aria-hidden="true">→</span><span style="color:#23252E">Discounting is a margin trap</span></nav>
+</div>
+<article style="max-width:1160px;margin:0 auto;padding:36px 32px 72px">
+<div style="max-width:740px;display:flex;flex-direction:column;gap:18px;margin-bottom:44px">
+<span><span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px;background:#FCFBF9"><span style="width:8px;height:8px;border-radius:50%;background:#F76B0C;border:1px solid #23252E"></span>Protect margin</span></span>
+<h1 style="font-weight:900;font-size:54px;line-height:1;letter-spacing:-.025em;margin:0">Discounting is a margin trap. <span style="background:#FFD3AD;padding:0 .08em">Here is the maths.</span></h1>
+<p style="margin:0;font-weight:600;font-size:13px;color:#757784">Peter Pitcher · 12 August 2026 · 6 min read</p>
+</div>
+<div style="display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start">
+<sc-if value="{{ showToc }}" hint-placeholder-val="{{ true }}">
+<div style="position:sticky;top:96px;border-left:1.5px solid #23252E;padding-left:18px;display:flex;flex-direction:column;gap:9px">
+<span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#757784;margin-bottom:2px">On this page</span>
+<a href="#cost" style="font-weight:600;font-size:14px;color:#23252E;text-decoration:none;box-shadow:inset 3px 0 0 #F76B0C;margin-left:-18px;padding-left:15px">The real cost of a discount</a>
+<a href="#volume" style="font-weight:600;font-size:14px;color:#4A4C58;text-decoration:none">Why the volume never arrives</a>
+<a href="#instead" style="font-weight:600;font-size:14px;color:#4A4C58;text-decoration:none">What to do instead</a>
+</div>
+</sc-if>
+<div>
+<div class="oj-prose">
+<p class="lead">A £2 discount on a £15 dish feels harmless. Run the numbers and it can demand 40% more volume just to stand still. Most operators never run the numbers.</p>
+<h2 id="cost">The real cost of a discount</h2>
+<p>Discounts come off the margin, not the price. At a 30% margin, £2 off a £15 dish gives away <strong>44% of the profit</strong> in that sale. The price cut is visible to the customer once; the margin cut repeats on every plate.</p>
+<h3 id="example">Worked example</h3>
+<ul><li>Dish price £15, margin £4.50</li><li>With £2 off, margin falls to £2.50</li><li>Volume needed to stand still on that dish: +80%</li></ul>
+<blockquote><p>A content calendar will not fix a broken growth system. Neither will a discount.</p></blockquote>
+<h2 id="volume">Why the volume never arrives</h2>
+<p>Discount demand is borrowed, not created. It pulls forward visits from people who were coming anyway, and it anchors new customers to a price you cannot hold. When we tested this at The Anchor, the discounted sessions filled with existing regulars while quiet sessions stayed quiet.</p>
+<div class="oj-callout"><p>Quick test: if the promotion still looks good with the expected uplift halved, run it. If not, it is a margin leak with a marketing name.</p></div>
+<h2 id="instead">What to do instead</h2>
+<p>Raise perceived value instead of cutting price. Reprice the anchor items, fix the booking journey, make the busy sessions bookable and the quiet ones worth leaving the house for. Then measure the change against a baseline you agreed before you started.</p>
+</div>
+<div style="display:flex;gap:16px;align-items:center;border:1.5px solid #23252E;border-radius:3px;background:#FCFBF9;padding:18px 20px;margin-top:44px;max-width:680px">
+<span style="width:54px;height:54px;flex:none;display:grid;place-content:center;background:#23252E;color:#F7F5F1;font-weight:900;font-size:19px;border-radius:3px">PP</span>
+<span style="display:flex;flex-direction:column;gap:3px"><span style="font-weight:800;font-size:15.5px">Peter Pitcher</span><span style="font-size:13.5px;color:#4A4C58">Founder, Orange Jelly. Runs The Anchor, the live small-business growth laboratory every method is tested in first.</span></span>
+</div>
+</div>
+</div>
+</article>
+<section style="border-top:1.5px solid #23252E;background:#FCFBF9;padding:56px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<h2 style="font-weight:900;font-size:28px;letter-spacing:-.02em;margin:0 0 22px">Keep reading</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+<a href="#" style="text-decoration:none;color:inherit;background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:11px" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 0 #23252E">
+<span style="align-self:flex-start;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px">Remove operational drag</span>
+<span style="font-weight:900;font-size:19px;line-height:1.15;letter-spacing:-.015em">The quiet cost of manual work</span>
+<span style="font-size:14px;line-height:1.5;color:#4A4C58">Ten hours a week of copy-paste is a part-time salary spent on nothing.</span>
+<span style="font-weight:600;font-size:12.5px;color:#757784">5 min read</span>
+</a>
+<a href="#" style="text-decoration:none;color:inherit;background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:11px" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 0 #23252E">
+<span style="align-self:flex-start;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px">Improve experience</span>
+<span style="font-weight:900;font-size:19px;line-height:1.15;letter-spacing:-.015em">Your booking journey is leaking revenue</span>
+<span style="font-size:14px;line-height:1.5;color:#4A4C58">We cut no-shows 89% by changing the journey, not the customers.</span>
+<span style="font-weight:600;font-size:12.5px;color:#757784">7 min read</span>
+</a>
+<a href="#" style="text-decoration:none;color:inherit;background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:11px" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 0 #23252E">
+<span style="align-self:flex-start;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px">Convert more</span>
+<span style="font-weight:900;font-size:19px;line-height:1.15;letter-spacing:-.015em">Why more leads will not fix conversion</span>
+<span style="font-size:14px;line-height:1.5;color:#4A4C58">Pouring volume into a leaking funnel is the most expensive habit in marketing.</span>
+<span style="font-weight:600;font-size:12.5px;color:#757784">6 min read</span>
+</a>
+</div>
+</div>
+</section>
+<sc-if value="{{ showNewsletter }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.NewsletterBand" hint-size="100%,170px"></x-import>
+</sc-if>
+<footer style="background:#23252E;color:#F7F5F1;padding:56px 0 28px">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px">
+<div style="display:flex;gap:64px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:300px">
+<img src="../../assets/logo-icon-white.png" alt="Orange Jelly" style="height:34px;align-self:flex-start">
+<p style="margin:0;font-size:15.5px;line-height:1.5;font-weight:700;color:rgba(247,245,241,.85)">You bring the growth problem. We build the solution.</p>
+</div>
+<div style="display:flex;gap:56px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:10px;min-width:120px"><span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">Work with us</span><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">Growth diagnostic</a><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">How we work</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;min-width:120px"><span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">Proof</span><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">Results</a><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">The Anchor lab</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;min-width:120px"><span style="font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#FFD3AD">Company</span><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">About</a><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">Contact</a><a href="#" style="color:rgba(247,245,241,.75);text-decoration:none;font-size:14.5px" style-hover="color:#F76B0C">Privacy</a></div>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(247,245,241,.2);margin-top:48px;padding-top:20px;font-size:13px;color:rgba(247,245,241,.55)"><span>© 2026 Orange Jelly Limited</span><span>AI is part of the toolkit, not the product.</span></div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showToc&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showNewsletter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    return {
+      showToc: this.props.showToc ?? true,
+      showNewsletter: this.props.showNewsletter ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

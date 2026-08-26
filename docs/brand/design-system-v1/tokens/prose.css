@@ -1,0 +1,26 @@
+/* Long-form article styles. Apply .oj-prose to the rendered-markdown container. */
+.oj-prose{font-size:17px;line-height:1.65;color:var(--text-body);max-width:680px}
+.oj-prose>:first-child{margin-top:0}
+.oj-prose>:last-child{margin-bottom:0}
+.oj-prose p{margin:0 0 18px}
+.oj-prose .lead{font-size:19.5px;line-height:1.55;font-weight:500;color:var(--oj-ink)}
+.oj-prose h2{font-family:var(--font-display);font-weight:900;font-size:29px;line-height:1.1;letter-spacing:-.02em;margin:44px 0 16px}
+.oj-prose h3{font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-.01em;margin:34px 0 12px}
+.oj-prose a{color:var(--link);text-decoration-thickness:1.5px;text-underline-offset:3px}
+.oj-prose a:hover{color:var(--link-hover)}
+.oj-prose strong{font-weight:700}
+.oj-prose ul,.oj-prose ol{margin:0 0 18px;padding-left:24px}
+.oj-prose li{margin:0 0 8px}
+.oj-prose li::marker{color:var(--oj-orange-deep);font-weight:700}
+.oj-prose blockquote{margin:28px 0;padding:4px 0 4px 22px;border-left:3px solid var(--oj-orange);font-weight:700;font-size:20px;line-height:1.4;letter-spacing:-.01em}
+.oj-prose blockquote p{margin:0}
+.oj-prose hr{border:none;border-top:var(--bw-1) solid var(--oj-ink);margin:40px 0}
+.oj-prose table{border-collapse:collapse;width:100%;margin:0 0 22px;font-size:15px;background:var(--surface-card);border:var(--bw-1) solid var(--oj-ink)}
+.oj-prose th{background:var(--oj-ink);color:var(--oj-cream);font-weight:700;text-align:left;padding:10px 14px;font-size:14px}
+.oj-prose td{padding:10px 14px;border-top:1px solid var(--border-soft)}
+.oj-prose img,.oj-prose figure{max-width:100%;margin:26px 0}
+.oj-prose figure img{margin:0;display:block;border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1)}
+.oj-prose figcaption{font-size:13px;color:var(--text-muted);margin-top:8px;font-weight:600}
+.oj-prose code{background:var(--surface-sunken);border:1px solid var(--border-soft);border-radius:var(--r-1);padding:1px 5px;font-size:.88em}
+.oj-prose .oj-callout{background:var(--surface-card);border:var(--bw-1) solid var(--oj-ink);border-left-width:6px;border-left-color:var(--oj-orange);border-radius:var(--r-1);padding:16px 18px;margin:0 0 22px;font-size:15.5px}
+.oj-prose .oj-callout p{margin:0 0 8px}.oj-prose .oj-callout p:last-child{margin:0}

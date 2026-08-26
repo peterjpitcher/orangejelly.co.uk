@@ -1,0 +1,14 @@
+import * as React from 'react';
+/**
+ * Side-by-side comparison (engagements, approaches, before/after). Ink header row; one column may be highlighted orange.
+ */
+export interface CompareTableProps extends React.TableHTMLAttributes<HTMLTableElement> {
+  caption?: React.ReactNode;
+  /** Column headings, left to right (row label column is implicit). */
+  columns?: React.ReactNode[];
+  /** One entry per row; values align with columns. true → ✓, false/empty → —. */
+  rows?: Array<{ label: React.ReactNode; values: Array<React.ReactNode | boolean> }>;
+  /** Index of the column to highlight (0-based). */
+  highlight?: number;
+}
+export declare function CompareTable(props: CompareTableProps): JSX.Element;

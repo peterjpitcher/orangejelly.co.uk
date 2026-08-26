@@ -1,0 +1,23 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+const css=`.oj-field{display:flex;flex-direction:column;gap:7px}
+.oj-label{font-weight:700;font-size:14.5px;color:var(--oj-ink)}
+.oj-label .req{color:var(--oj-orange-deep)}
+.oj-hint{font-size:13px;color:var(--text-muted)}
+.oj-error{font-weight:600;font-size:12px;color:var(--oj-danger)}
+.oj-input{font-family:var(--font-body);font-size:15.5px;color:var(--oj-ink);background:var(--oj-paper);border:var(--bw-1) solid var(--oj-ink);border-radius:var(--r-1);padding:11px 13px;width:100%;box-sizing:border-box;transition:box-shadow var(--dur-fast) var(--ease-snap)}
+.oj-input::placeholder{color:var(--text-muted)}
+.oj-input:focus{outline:none;box-shadow:var(--ring)}
+.oj-input[aria-invalid="true"]{border-color:var(--oj-danger);box-shadow:2px 2px 0 0 var(--oj-danger)}
+.oj-input:disabled{background:var(--surface-sunken);opacity:.6}
+select.oj-input{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--oj-ink) 50%),linear-gradient(135deg,var(--oj-ink) 50%,transparent 50%);background-position:calc(100% - 19px) 55%,calc(100% - 13px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:36px}
+textarea.oj-input{resize:vertical;min-height:96px;line-height:1.5}`;
+export function ensureFormCss(){ensureCoreCss('oj-css-forms',css);}
+export function Field({label,hint,error,required,htmlFor,children}){
+  ensureFormCss();
+  return <div className="oj-field">
+    {label&&<label className="oj-label" htmlFor={htmlFor}>{label}{required&&<span className="req"> *</span>}</label>}
+    {children}
+    {error?<span className="oj-error">{error}</span>:hint?<span className="oj-hint">{hint}</span>:null}
+  </div>;
+}

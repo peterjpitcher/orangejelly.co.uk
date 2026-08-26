@@ -1,0 +1,14 @@
+import * as React from 'react';
+/**
+ * Inline notice: form success/error, banners, availability notes. Thick left rule carries the tone.
+ */
+export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+  /** info = orange rule; ok/danger colour the rule and title. @default 'info' */
+  tone?: 'info' | 'ok' | 'danger';
+  title?: React.ReactNode;
+  /** Body copy. */
+  children?: React.ReactNode;
+  /** Shows a dismiss × when provided. */
+  onClose?: () => void;
+}
+export declare function Alert(props: AlertProps): JSX.Element;

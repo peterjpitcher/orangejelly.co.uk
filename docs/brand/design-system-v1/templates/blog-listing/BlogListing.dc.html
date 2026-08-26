@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Blog listing" description="Insights hub: title block, category filter, featured article, card grid, signup band" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="background:#F7F5F1;color:#23252E;font-family:'Schibsted Grotesk',ui-sans-serif,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:50;background:#F7F5F1;border-bottom:1.5px solid #23252E">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:28px;height:64px">
+<img src="../../assets/logo-horizontal.png" alt="Orange Jelly" style="height:36px;display:block">
+<nav style="display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px"><a href="#" style="color:#23252E;text-decoration:none">Growth problems</a><a href="#" style="color:#23252E;text-decoration:none">How we work</a><a href="#" style="color:#23252E;text-decoration:none">Results</a><a href="#" style="color:#23252E;text-decoration:none;box-shadow:inset 0 -3px 0 #F76B0C">Insights</a><a href="#" style="color:#23252E;text-decoration:none">About</a></nav>
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.Button" size="sm" hint-size="180px,36px">Bring us the problem</x-import>
+</div>
+</header>
+<section style="max-width:1160px;margin:0 auto;padding:64px 32px 8px">
+<span style="font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#C05408">Insights</span>
+<h1 style="font-weight:900;font-size:58px;line-height:1;letter-spacing:-.025em;margin:14px 0 16px;max-width:760px">Straight thinking on <span style="background:#FFD3AD;padding:0 .08em">growth problems.</span></h1>
+<p style="margin:0 0 28px;font-size:18px;line-height:1.55;color:#4A4C58;max-width:560px">One problem pulled apart at a time, with the numbers. Everything tested on a real trading business first.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1.5px solid #23252E">
+<a href="#" style="text-decoration:none;background:#23252E;color:#F7F5F1;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px">All</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Create demand</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Convert more</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Protect margin</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Remove operational drag</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Improve experience</a>
+<a href="#" style="text-decoration:none;color:#23252E;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:13.5px;padding:6px 13px;background:#FCFBF9" style-hover="transform:translate(-1px,-1px);box-shadow:3px 3px 0 0 #23252E">Build for scale</a>
+</div>
+</section>
+<sc-if value="{{ showFeatured }}" hint-placeholder-val="{{ true }}">
+<section style="max-width:1160px;margin:0 auto;padding:28px 32px 8px">
+<a href="#" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:1fr 340px;border:1.5px solid #23252E;border-radius:3px;background:#FCFBF9;overflow:hidden" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 0 #23252E">
+<span style="padding:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<span style="border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px;background:#F76B0C">Featured</span>
+<span style="font-weight:900;font-size:33px;line-height:1.05;letter-spacing:-.02em">Discounting is a margin trap. Here is the maths.</span>
+<span style="font-size:15.5px;line-height:1.55;color:#4A4C58;max-width:520px">A £2 discount on a £15 dish can demand 40% more volume just to stand still. Most operators never run the numbers. We did.</span>
+<span style="font-weight:600;font-size:12.5px;color:#757784">Protect margin · 12 August 2026 · 6 min read</span>
+</span>
+<span style="background:#23252E;display:flex;flex-direction:column;gap:6px;align-items:flex-start;justify-content:center;padding:32px">
+<span style="font-weight:900;font-size:64px;line-height:1;letter-spacing:-.02em;color:#F76B0C">44%</span>
+<span style="font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#F7F5F1">of the profit gone</span>
+<span style="font-size:13.5px;line-height:1.45;color:rgba(247,245,241,.7)">in one £2 discount at a 30% margin</span>
+</span>
+</a>
+</section>
+</sc-if>
+<section style="max-width:1160px;margin:0 auto;padding:28px 32px 64px">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+<sc-for list="{{ posts }}" as="a" hint-placeholder-count="6">
+<a href="#" style="text-decoration:none;color:inherit;background:#FCFBF9;border:1.5px solid #23252E;border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:11px" style-hover="transform:translate(-2px,-2px);box-shadow:5px 5px 0 0 #23252E">
+<span style="align-self:flex-start;border:1.5px solid #23252E;border-radius:3px;font-weight:700;font-size:12.5px;padding:4px 9px">{{ a.cat }}</span>
+<span style="font-weight:900;font-size:19px;line-height:1.15;letter-spacing:-.015em">{{ a.title }}</span>
+<span style="font-size:14px;line-height:1.5;color:#4A4C58;flex:1">{{ a.ex }}</span>
+<span style="font-weight:600;font-size:12.5px;color:#757784">{{ a.meta }}</span>
+</a>
+</sc-for>
+</div>
+</section>
+<sc-if value="{{ showNewsletter }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="OrangeJellyDesignSystem_a79785.NewsletterBand" hint-size="100%,170px"></x-import>
+</sc-if>
+<footer style="background:#23252E;color:#F7F5F1;padding:20px 0">
+<div style="max-width:1160px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(247,245,241,.55)"><span>© 2026 Orange Jelly Limited</span><span>AI is part of the toolkit, not the product.</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showFeatured&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showNewsletter&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  renderVals(){
+    return {
+      showFeatured: this.props.showFeatured ?? true,
+      showNewsletter: this.props.showNewsletter ?? true,
+      posts:[
+        {cat:'Remove operational drag',title:'The quiet cost of manual work',ex:'Ten hours a week of copy-paste is a part-time salary spent on nothing.',meta:'5 min read'},
+        {cat:'Improve experience',title:'Your booking journey is leaking revenue',ex:'We cut no-shows 89% by changing the journey, not the customers.',meta:'7 min read'},
+        {cat:'Convert more',title:'Why more leads will not fix conversion',ex:'Pouring volume into a leaking funnel is the most expensive habit in marketing.',meta:'6 min read'},
+        {cat:'Create demand',title:'Being found is a system, not a lottery',ex:'828% more search visibility came from structure, not luck.',meta:'8 min read'},
+        {cat:'Build for scale',title:'The spreadsheet that runs your business will break it',ex:'Every growing business has one. Here is how to retire it safely.',meta:'6 min read'},
+        {cat:'Protect margin',title:'Price rises without the backlash',ex:'How to reprice anchor items so regulars barely notice and margin does.',meta:'5 min read'}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

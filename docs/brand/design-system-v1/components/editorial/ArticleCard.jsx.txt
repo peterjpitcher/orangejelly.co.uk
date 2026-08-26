@@ -1,0 +1,21 @@
+import React from 'react';
+import {ensureCoreCss} from '../core/Button.jsx';
+import {ensureCardCss} from '../content/Card.jsx';
+import {Tag} from '../core/Tag.jsx';
+const css=`.oj-artcard{display:block;text-decoration:none;color:inherit;height:100%;box-sizing:border-box}
+.oj-artcard .in{display:flex;flex-direction:column;gap:12px;height:100%;box-sizing:border-box}
+.oj-artcard h3{font-family:var(--font-display);font-weight:900;font-size:20px;line-height:1.14;letter-spacing:-.015em;margin:0}
+.oj-artcard:hover h3{color:var(--text-accent)}
+.oj-artcard .ex{margin:0;font-size:14.5px;line-height:1.55;color:var(--text-secondary);flex:1}
+.oj-artcard .meta{font-weight:600;font-size:12.5px;color:var(--text-muted);display:flex;gap:8px;flex-wrap:wrap}`;
+export function ArticleCard({category,title,excerpt,date,readTime,href='#',tone='paper'}){
+  ensureCoreCss('oj-css-artcard',css);ensureCardCss();
+  return <a className={`oj-artcard oj-card oj-card-press${tone!=='paper'?' oj-card-'+tone:''}`} href={href}>
+    <span className="in">
+      {category&&<span><Tag size="sm" dot={false} variant={tone==='ink'?'orange':'outline'}>{category}</Tag></span>}
+      <h3>{title}</h3>
+      {excerpt&&<p className="ex" style={tone==='ink'?{color:'rgba(247,245,241,.75)'}:undefined}>{excerpt}</p>}
+      {(date||readTime)&&<span className="meta" style={tone==='ink'?{color:'rgba(247,245,241,.6)'}:undefined}>{date}{date&&readTime&&<span aria-hidden="true">·</span>}{readTime}</span>}
+    </span>
+  </a>;
+}

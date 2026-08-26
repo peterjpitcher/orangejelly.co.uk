@@ -1,0 +1,17 @@
+import * as React from 'react';
+/**
+ * Site header: brand, primary nav, one CTA. Collapses to a full-screen ink menu below 880px.
+ */
+export interface HeaderProps {
+  /** Primary nav items; set `current` on the active page. */
+  items?: Array<{ label: string; href: string; current?: boolean }>;
+  /** The one header CTA (orange). */
+  cta?: { label: string; href?: string; onClick?: () => void };
+  /** Brand node; pass an <img> of the horizontal logo. Defaults to the type wordmark. */
+  logo?: React.ReactNode;
+  /** Brand link target. @default '/' */
+  home?: string;
+  /** @default true */
+  sticky?: boolean;
+}
+export declare function Header(props: HeaderProps): JSX.Element;

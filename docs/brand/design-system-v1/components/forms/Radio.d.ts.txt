@@ -1,0 +1,9 @@
+import * as React from 'react';
+/**
+ * Single radio option; group by giving options the same `name`. Round counterpart of Checkbox.
+ */
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  /** Option text rendered beside the control. */
+  label?: React.ReactNode;
+}
+export declare function Radio(props: RadioProps): JSX.Element;
