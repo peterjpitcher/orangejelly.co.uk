@@ -3,6 +3,16 @@ import fs from 'fs';
 import path from 'path';
 import { getAllPosts } from './blog-md';
 
+/**
+ * Which content collection an item belongs to.
+ *
+ * The site runs two: the hospitality guides at /licensees-guide/*, which carry 900
+ * of the site's 969 annual clicks and do not move, and the new-positioning articles
+ * at /insights/*. The URL is derived from this rather than hard-coded, so a new
+ * collection cannot silently end up advertising the wrong path.
+ */
+export type SearchCollection = 'licensees-guide' | 'insights';
+
 export interface SearchableItem {
   id: string;
   title: string;
@@ -13,6 +23,7 @@ export interface SearchableItem {
   slug: string;
   publishedDate: string;
   url: string;
+  collection: SearchCollection;
 }
 
 export interface SearchResult {
@@ -22,6 +33,30 @@ export interface SearchResult {
 }
 
 const SEARCH_INDEX_PATH = path.join(process.cwd(), 'public', 'search-index.json');
+
+/**
+ * How much article body goes into the index.
+ *
+ * The index used to carry every article in full, averaging 8,435 characters each
+ * and reaching 28,053, which made a 936KB file that the search component fetched on
+ * mount. Mobile is 78% of this site's search clicks, so that was most of a megabyte
+ * spent on a feature most visitors never touch.
+ *
+ * Fuzzy matching does not need the whole article. The opening carries the subject,
+ * and title, excerpt, category and tags are indexed separately and weighted higher
+ * anyway. This keeps enough body to match on phrasing without shipping the site.
+ */
+const INDEXED_CONTENT_CHARS = 1200;
+
+const COLLECTION_BASE: Record<SearchCollection, string> = {
+  'licensees-guide': '/licensees-guide',
+  insights: '/insights',
+};
+
+/** Single place that turns a slug into a URL, so the two collections cannot drift. */
+export function searchItemUrl(collection: SearchCollection, slug: string): string {
+  return `${COLLECTION_BASE[collection]}/${slug}`;
+}
 
 /**
  * Build search index from all markdown content
@@ -36,15 +71,16 @@ export function buildSearchIndex(): SearchableItem[] {
       id: post.slug,
       title: post.title || 'Untitled',
       excerpt: post.excerpt || '',
-      content: stripMarkdown(post.content || ''),
+      content: stripMarkdown(post.content || '').slice(0, INDEXED_CONTENT_CHARS),
       category: post.category || '',
       tags: post.tags || [],
       slug: post.slug,
       publishedDate: post.publishedDate || new Date().toISOString(),
-      url: `/licensees-guide/${post.slug}`,
+      collection: 'licensees-guide' as const,
+      url: searchItemUrl('licensees-guide', post.slug),
     }));
 
-  // Save index to public directory for client-side access
+  // Write the index to the public directory for client-side access
   try {
     const publicDir = path.join(process.cwd(), 'public');
     if (!fs.existsSync(publicDir)) {
@@ -54,7 +90,7 @@ export function buildSearchIndex(): SearchableItem[] {
     fs.writeFileSync(SEARCH_INDEX_PATH, JSON.stringify(searchableItems, null, 2));
     console.log(`Search index built successfully with ${searchableItems.length} items`);
   } catch (error) {
-    console.error('Error saving search index:', error);
+    console.error('Could not write the search index:', error);
   }
 
   return searchableItems;

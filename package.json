@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && next build",
+    "build": "npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && npm run build:search && next build",
     "start": "next start",
     "lint": "next lint && npm run check:growth-language && npm run check:british-english && npm run check:design-tokens",
     "audit:widths": "node scripts/audit-widths.mjs",
