@@ -34,7 +34,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T007 | Baseline all 30 protected posts: clicks, impressions, position, CTR, canonical, title, meta, H1, internal links | | M | | |
 | T008 | Error and failure monitoring: server action failures, lead writes, notification failures, 404 rate, redirect loops | | M | Vercel and Supabase access if not already granted | |
 | T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
-| T010 | GA4 enquiry event live on the **current** site, so there is a before and after | | M | GA4 and GTM access | |
+| T010 | GA4 enquiry event live on the current site. Code fires `contact_submit`; GTM container published as Version 4 with a Custom Event trigger and a GA4 Event tag | | M | | **done** |
 | T011 | Style isolation guard: `scripts/check-style-isolation.mjs`, computed-style baseline on the protected routes rather than pixel diffs (gap G9) | | S | | **done** |
 | T011a | Delete the two mislabelled `public/logo-*.svg` bitmaps, repoint the GK toolkit doc | | S | | **done** |
 | T011b | Obtain the 27 Aug design bundle. Needed for page copy in phases 4 and 5, not for tokens or components: the tokens we hold already include the `--cat-*` pairs and the lowercase rule. | | S | Chase the design team | |
@@ -84,7 +84,7 @@ Proves the whole journey including lead capture and measurement before anything 
 
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
-| T038 | Additive Supabase migration for the enquiry data, deployed and verified first | | M | Approve the migration before it runs | |
+| T038 | Additive Supabase migration for the enquiry data. Applied and verified: 8 columns added, `pub_name` and `message` now nullable, nothing dropped, 5 historic leads intact | | M | | **done** |
 | T039 | Shared Zod enquiry schema in `src/lib/schemas/enquiry.ts` | T038 | S | | |
 | T040 | `submitEnquiryStep1` and `Step2` server actions, correct failure ordering | T039 | M | | |
 | T041 | Two new rate limit buckets, honeypot, payload cap, fail closed | T040 | S | | |
