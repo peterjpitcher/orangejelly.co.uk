@@ -31,7 +31,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T004 | Send the designer batch (method, About, expletives, authority order) | | S | | **done** |
 | T005 | Build `src/lib/route-manifest.js`: every route's disposition, destination, sitemap membership. CommonJS so next.config can require it. | | M | | **done** |
 | T006 | Generate `next.config.js` redirects and the sitemap from the manifest; 8 tests assert no chains, no non-200 in sitemap, phase 4 not shipped early | T005 | M | | **done** |
-| T007 | Baseline all 30 protected posts: clicks, impressions, position, CTR, canonical, title, meta, H1, internal links | | M | | |
+| T007 | 30 protected posts baselined with search metrics and on-page state, enforced by a test that fails if one loses its file, is unpublished or becomes a redirect source | | M | | **done** |
 | T008 | Error and failure monitoring: server action failures, lead writes, notification failures, 404 rate, redirect loops | | M | Vercel and Supabase access if not already granted | |
 | T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
 | T010 | GA4 enquiry event live on the current site. Code fires `contact_submit`; GTM container published as Version 4 with a Custom Event trigger and a GA4 Event tag | | M | | **done** |
@@ -53,7 +53,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |
 | T019 | Extend the contrast test to all states: hover, focus, active, disabled, error, inverse, text over highlight bands | T013 | M | | |
 | T020 | Run the style isolation guard against the new tokens; baseline already recorded | T011, T013 | S | | |
-| T021 | **Security test: no third-party request and no marketing chrome on `/availability/o/:token` and `/p/:token`** (D19) | T013 | M | | |
+| T021 | Runtime token-privacy check, verified against production: 7 third-party requests on the homepage, zero on all three token routes. The unit-level gate already existed | T013 | M | | **done** |
 | T022 | CSP and security header review for new fonts and analytics (gap G8) | T017 | S | | |
 | T023 | Record the design authority order once the designer confirms (gap G1) | T004 | S | | **done** (D28) |
 

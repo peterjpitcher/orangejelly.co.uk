@@ -1,0 +1,696 @@
+{
+  "capturedAt": "2026-08-27",
+  "source": "GSC export 2026-08-26 + content/blog frontmatter",
+  "posts": [
+    {
+      "url": "/licensees-guide/summer-pub-event-ideas",
+      "slug": "summer-pub-event-ideas",
+      "tier": "1-critical",
+      "rank": 1,
+      "search": {
+        "clicks": 159,
+        "impressions": 10355,
+        "ctr": "1.54%",
+        "position": 16.82
+      },
+      "page": {
+        "title": "20 Summer Pub Events That Actually Make Money (Not Just Noise)",
+        "excerpt": "Most summer events cost more than they earn. These 20 formats are built to be repeatable, with the break-even maths worked through, so you fill your garden with",
+        "publishedDate": "Thu Jul 17 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 1772,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/quiz-night-ideas",
+      "slug": "quiz-night-ideas",
+      "tier": "1-critical",
+      "rank": 2,
+      "search": {
+        "clicks": 122,
+        "impressions": 6438,
+        "ctr": "1.89%",
+        "position": 12.11
+      },
+      "page": {
+        "title": "Quiz Night Ideas: 26 Formats That Pack Your Pub Every Week",
+        "excerpt": "Twenty-six quiz formats in four clusters, plus the licensing rules, the money a quiz actually makes, and the hosting details that decide whether teams come back",
+        "publishedDate": "Thu May 01 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1962,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/profitable-pub-food-menu-ideas",
+      "slug": "profitable-pub-food-menu-ideas",
+      "tier": "1-critical",
+      "rank": 3,
+      "search": {
+        "clicks": 104,
+        "impressions": 5629,
+        "ctr": "1.85%",
+        "position": 7.79
+      },
+      "page": {
+        "title": "Profitable Pub Food: 12 Dish Types and the GP Maths (2026)",
+        "excerpt": "The high-margin dishes that genuinely make money in a UK pub, the gross profit maths behind them, and how to cut a menu back to what actually pays its way.",
+        "publishedDate": "Thu Mar 13 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 3687,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/cash-bingo-101",
+      "slug": "cash-bingo-101",
+      "tier": "1-critical",
+      "rank": 4,
+      "search": {
+        "clicks": 54,
+        "impressions": 2621,
+        "ctr": "2.06%",
+        "position": 9.18
+      },
+      "page": {
+        "title": "Cash Bingo 101: Licensee Guide",
+        "excerpt": "Keep Thursday nights lively with a compliant bingo format that respects Gambling Act rules, protects your float, and delights locals.",
+        "publishedDate": "Thu Oct 09 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1118,
+        "h2Count": 13,
+        "internalLinks": 3
+      }
+    },
+    {
+      "url": "/licensees-guide/quiz-night-101",
+      "slug": "quiz-night-101",
+      "tier": "1-critical",
+      "rank": 5,
+      "search": {
+        "clicks": 48,
+        "impressions": 3615,
+        "ctr": "1.33%",
+        "position": 8.01
+      },
+      "page": {
+        "title": "Quiz Night 101: Licensee Guide",
+        "excerpt": "Step-by-step playbook for running a 90-minute pub quiz that feels hyper-local, stays compliant, and fills the till every week.",
+        "publishedDate": "Thu Nov 06 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1548,
+        "h2Count": 13,
+        "internalLinks": 3
+      }
+    },
+    {
+      "url": "/licensees-guide/social-media-strategy-for-pubs",
+      "slug": "social-media-strategy-for-pubs",
+      "tier": "1-critical",
+      "rank": 6,
+      "search": {
+        "clicks": 43,
+        "impressions": 4489,
+        "ctr": "0.96%",
+        "position": 12.57
+      },
+      "page": {
+        "title": "The Complete Social Media Strategy Guide for Pubs in 2025",
+        "excerpt": "Build a social media strategy for your pub that drives real footfall. Platform-specific tactics, content calendars, and engagement tips that work.",
+        "publishedDate": "Thu Jun 26 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 1477,
+        "h2Count": 9,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/summer-moments-simple-campaigns",
+      "slug": "summer-moments-simple-campaigns",
+      "tier": "1-critical",
+      "rank": 7,
+      "search": {
+        "clicks": 33,
+        "impressions": 1818,
+        "ctr": "1.82%",
+        "position": 17.31
+      },
+      "page": {
+        "title": "Summer Moments, Simple Campaigns: an inspiring idea bank for pub teams (May to Aug)",
+        "excerpt": null,
+        "publishedDate": "",
+        "status": null,
+        "category": "events",
+        "exists": true,
+        "wordCount": 3283,
+        "h2Count": 11,
+        "internalLinks": 7
+      }
+    },
+    {
+      "url": "/licensees-guide/oktoberfest-pub-guide",
+      "slug": "oktoberfest-pub-guide",
+      "tier": "1-critical",
+      "rank": 8,
+      "search": {
+        "clicks": 30,
+        "impressions": 798,
+        "ctr": "3.76%",
+        "position": 6.88
+      },
+      "page": {
+        "title": "Oktoberfest Ideas for Pubs: How to Host Your Own",
+        "excerpt": "A practical Oktoberfest plan for UK pubs: pick your weekend, get a festbier and steins on, lay out pretzels and bratwurst, cue the Oompah, and turn a quiet autu",
+        "publishedDate": "Mon May 25 2026 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 2575,
+        "h2Count": 10,
+        "internalLinks": 6
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-vat-accounting-guide",
+      "slug": "pub-vat-accounting-guide",
+      "tier": "1-critical",
+      "rank": 9,
+      "search": {
+        "clicks": 27,
+        "impressions": 1978,
+        "ctr": "1.37%",
+        "position": 7.51
+      },
+      "page": {
+        "title": "Pub VAT and Accounting: The Landlord's Plain-English Guide",
+        "excerpt": "A plain-English primer on pub VAT, bookkeeping, and tax mistakes. Know what to ask your accountant before they have to ask you.",
+        "publishedDate": "Mon Nov 10 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "operations",
+        "exists": true,
+        "wordCount": 2533,
+        "h2Count": 11,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/christmas-pub-promotion-ideas",
+      "slug": "christmas-pub-promotion-ideas",
+      "tier": "1-critical",
+      "rank": 10,
+      "search": {
+        "clicks": 27,
+        "impressions": 1836,
+        "ctr": "1.47%",
+        "position": 11.81
+      },
+      "page": {
+        "title": "Start Planning Christmas Now: 19 Festive Ideas to Secure December Bookings Early",
+        "excerpt": "Christmas planning starts in summer. Price two packages properly, open bookings in September, take deposits on every party, and fill December with these 19 idea",
+        "publishedDate": "Fri Sep 12 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 1569,
+        "h2Count": 11,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/why-is-my-pub-empty",
+      "slug": "why-is-my-pub-empty",
+      "tier": "1-critical",
+      "rank": 11,
+      "search": {
+        "clicks": 24,
+        "impressions": 1183,
+        "ctr": "2.03%",
+        "position": 7.2
+      },
+      "page": {
+        "title": "Why Is My Pub Empty? 12 Brutal Truths and How to Fix Them",
+        "excerpt": "Discover the real reasons your pub is struggling with footfall and learn practical, proven solutions that actually work. From a landlord who's been there.",
+        "publishedDate": "Thu Sep 04 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 1782,
+        "h2Count": 10,
+        "internalLinks": 4
+      }
+    },
+    {
+      "url": "/licensees-guide/midweek-pub-offers-that-work",
+      "slug": "midweek-pub-offers-that-work",
+      "tier": "1-critical",
+      "rank": 12,
+      "search": {
+        "clicks": 23,
+        "impressions": 1362,
+        "ctr": "1.69%",
+        "position": 7.72
+      },
+      "page": {
+        "title": "Midweek Pub Offers That Actually Drive Profits (Not Just Footfall)",
+        "excerpt": "Discover midweek promotions that boost both customer numbers AND profits. Learn from real UK pubs that transformed their Tuesday-Thursday trade.",
+        "publishedDate": "Thu Feb 13 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1752,
+        "h2Count": 11,
+        "internalLinks": 3
+      }
+    },
+    {
+      "url": "/licensees-guide/content-marketing-ideas-pubs",
+      "slug": "content-marketing-ideas-pubs",
+      "tier": "1-critical",
+      "rank": 13,
+      "search": {
+        "clicks": 18,
+        "impressions": 3130,
+        "ctr": "0.58%",
+        "position": 15.41
+      },
+      "page": {
+        "title": "Pub Content That Fills Seats: What to Post and When",
+        "excerpt": "A week-by-week content plan for pubs: exactly what to post on Facebook and Instagram, when to post it, and how to turn views into actual bookings.",
+        "publishedDate": "Fri Oct 03 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 1656,
+        "h2Count": 11,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/compete-with-wetherspoons",
+      "slug": "compete-with-wetherspoons",
+      "tier": "1-critical",
+      "rank": 14,
+      "search": {
+        "clicks": 16,
+        "impressions": 1262,
+        "ctr": "1.27%",
+        "position": 8.97
+      },
+      "page": {
+        "title": "How to Compete with Wetherspoons: A Survival Guide for Independent Pubs",
+        "excerpt": "Wetherspoons opened nearby? Don't panic. Proven strategies to help independent pubs thrive against chain competition by leveraging what Spoons can't offer.",
+        "publishedDate": "Fri Sep 26 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 1487,
+        "h2Count": 11,
+        "internalLinks": 4
+      }
+    },
+    {
+      "url": "/licensees-guide/autumn-pub-event-ideas",
+      "slug": "autumn-pub-event-ideas",
+      "tier": "2-protected",
+      "rank": 15,
+      "search": {
+        "clicks": 16,
+        "impressions": 441,
+        "ctr": "3.63%",
+        "position": 7.92
+      },
+      "page": {
+        "title": "Autumn Pub Event Ideas: The Playbook for Sept–Nov",
+        "excerpt": "The autumn pub event ideas that actually fill tables: cask, low and no, wine, Halloween, rugby and gifting. The September-to-November moments and how to run the",
+        "publishedDate": "Mon May 25 2026 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1022,
+        "h2Count": 6,
+        "internalLinks": 13
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-refurbishment-on-budget",
+      "slug": "pub-refurbishment-on-budget",
+      "tier": "2-protected",
+      "rank": 16,
+      "search": {
+        "clicks": 14,
+        "impressions": 1970,
+        "ctr": "0.71%",
+        "position": 15.61
+      },
+      "page": {
+        "title": "Should You Refurb Your Pub? What to Fix First for Under £5K",
+        "excerpt": "Before you rip anything out, read this. The changes that actually bring customers back cost under £5K, and most licensees start in the wrong place.",
+        "publishedDate": "Thu Apr 17 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 1974,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/macmillan-coffee-morning-pub-guide",
+      "slug": "macmillan-coffee-morning-pub-guide",
+      "tier": "2-protected",
+      "rank": 17,
+      "search": {
+        "clicks": 14,
+        "impressions": 1952,
+        "ctr": "0.72%",
+        "position": 9.32
+      },
+      "page": {
+        "title": "Coffee Morning Ideas for Pubs: Fundraising That Works",
+        "excerpt": "Coffee morning ideas that fill a quiet daytime and raise money: a simple run-sheet, a raffle, a local-group tie-in, and how to make a Macmillan Coffee Morning p",
+        "publishedDate": "Mon May 25 2026 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 2460,
+        "h2Count": 9,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/cellar-management-beer-quality-guide",
+      "slug": "cellar-management-beer-quality-guide",
+      "tier": "2-protected",
+      "rank": 18,
+      "search": {
+        "clicks": 13,
+        "impressions": 1882,
+        "ctr": "0.69%",
+        "position": 8.77
+      },
+      "page": {
+        "title": "Cellar Management: How to Keep Your Beer Perfect and Your Waste Low",
+        "excerpt": "A practical cellar management guide for pub landlords. Temperature control, line cleaning, stock rotation, and wastage tracking to protect your GP.",
+        "publishedDate": "Mon Oct 20 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "operations",
+        "exists": true,
+        "wordCount": 3266,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/village-pub-dying-village-survival",
+      "slug": "village-pub-dying-village-survival",
+      "tier": "2-protected",
+      "rank": 19,
+      "search": {
+        "clicks": 11,
+        "impressions": 198,
+        "ctr": "5.56%",
+        "position": 7.77
+      },
+      "page": {
+        "title": "Village Pub in a Dying Village? Survival Strategies That Actually Work",
+        "excerpt": "When your village is shrinking but your bills aren't, here's how to transform from local boozer to destination venue without losing your soul.",
+        "publishedDate": "Mon Mar 24 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "property",
+        "exists": true,
+        "wordCount": 1806,
+        "h2Count": 9,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/instagram-marketing-for-pubs",
+      "slug": "instagram-marketing-for-pubs",
+      "tier": "2-protected",
+      "rank": 20,
+      "search": {
+        "clicks": 9,
+        "impressions": 1082,
+        "ctr": "0.83%",
+        "position": 7.77
+      },
+      "page": {
+        "title": "Instagram Marketing for Pubs: Turn Food Photos Into Foot Traffic",
+        "excerpt": "How to run a pub Instagram account in-house: profile setup, phone photography rules, three content pillars, stories, Reels, and the three numbers worth tracking",
+        "publishedDate": "Fri Dec 26 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 1793,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/national-drinks-days-pub-guide",
+      "slug": "national-drinks-days-pub-guide",
+      "tier": "2-protected",
+      "rank": 21,
+      "search": {
+        "clicks": 7,
+        "impressions": 2269,
+        "ctr": "0.31%",
+        "position": 8.97
+      },
+      "page": {
+        "title": "National Vodka Day & Drinks Days: A Pub Calendar",
+        "excerpt": "A pub calendar of national drinks days to pick from, anchored by National Vodka Day. Pick a hook, run it in one shift, with serves, pricing and promotion that w",
+        "publishedDate": "Mon May 25 2026 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 2359,
+        "h2Count": 9,
+        "internalLinks": 6
+      }
+    },
+    {
+      "url": "/licensees-guide/brewery-tie-improve-your-deal",
+      "slug": "brewery-tie-improve-your-deal",
+      "tier": "2-protected",
+      "rank": 22,
+      "search": {
+        "clicks": 7,
+        "impressions": 597,
+        "ctr": "1.17%",
+        "position": 7.84
+      },
+      "page": {
+        "title": "The Complete Guide to Pub Leases, Tenancies and Brewery Ties",
+        "excerpt": "Everything you need to know about pub leases, tenancies and brewery ties. Types of agreement, negotiation tactics, your legal rights, and a week-by-week action ",
+        "publishedDate": "Mon Mar 24 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "operations",
+        "exists": true,
+        "wordCount": 3635,
+        "h2Count": 12,
+        "internalLinks": 2
+      }
+    },
+    {
+      "url": "/licensees-guide/premium-pub-positioning",
+      "slug": "premium-pub-positioning",
+      "tier": "2-protected",
+      "rank": 23,
+      "search": {
+        "clicks": 5,
+        "impressions": 1049,
+        "ctr": "0.48%",
+        "position": 19.91
+      },
+      "page": {
+        "title": "Premium Pub Positioning: How to Go Upmarket and Increase Profits",
+        "excerpt": "Learn how to position your pub as a premium destination. From craft cocktails to chef partnerships, discover strategies that justify higher prices and",
+        "publishedDate": "Thu Mar 06 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 2098,
+        "h2Count": 13,
+        "internalLinks": 1
+      }
+    },
+    {
+      "url": "/licensees-guide/double-drinks-profit-without-selling-more",
+      "slug": "double-drinks-profit-without-selling-more",
+      "tier": "2-protected",
+      "rank": 24,
+      "search": {
+        "clicks": 5,
+        "impressions": 573,
+        "ctr": "0.87%",
+        "position": 6.71
+      },
+      "page": {
+        "title": "Your Drinks Are Making Half The Profit They Should - Here's The Fix",
+        "excerpt": "Most pubs leave meaningful money on the table annually by focusing on volume instead of margin. Learn the premium shift that transforms your profits.",
+        "publishedDate": "Fri Oct 24 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "revenue-growth",
+        "exists": true,
+        "wordCount": 1418,
+        "h2Count": 7,
+        "internalLinks": 3
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-marketing-plan-2026-monthly-guide",
+      "slug": "pub-marketing-plan-2026-monthly-guide",
+      "tier": "2-protected",
+      "rank": 25,
+      "search": {
+        "clicks": 5,
+        "impressions": 286,
+        "ctr": "1.75%",
+        "position": 6.98
+      },
+      "page": {
+        "title": "Your Pub Marketing Plan for 2026: Month-by-Month Guide",
+        "excerpt": "A practical month-by-month marketing calendar for pubs in 2026. What to promote, when to plan, and how to build momentum all year.",
+        "publishedDate": "Mon Dec 29 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "marketing",
+        "exists": true,
+        "wordCount": 3541,
+        "h2Count": 16,
+        "internalLinks": 10
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-drinks-menu-design-guide",
+      "slug": "pub-drinks-menu-design-guide",
+      "tier": "2-protected",
+      "rank": 26,
+      "search": {
+        "clicks": 5,
+        "impressions": 170,
+        "ctr": "2.94%",
+        "position": 15.31
+      },
+      "page": {
+        "title": "Pub Drinks Menu: How to Design a Menu That Grows Revenue",
+        "excerpt": "How to design a pub drinks menu that sells your most profitable lines. Layout psychology, pricing strategy, cocktails without a cocktail bar, and the soft drink",
+        "publishedDate": "Mon Oct 27 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "food-drink",
+        "exists": true,
+        "wordCount": 2934,
+        "h2Count": 13,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-event-template-profit-nights",
+      "slug": "pub-event-template-profit-nights",
+      "tier": "2-protected",
+      "rank": 27,
+      "search": {
+        "clicks": 5,
+        "impressions": 138,
+        "ctr": "3.62%",
+        "position": 12.96
+      },
+      "page": {
+        "title": "The Ultimate Pub Event Template for Guaranteed Profit Nights",
+        "excerpt": "Reusable event blueprint covering planning, promotion, pricing, and post-event upsells so every activation hits profit targets.",
+        "publishedDate": "Thu Apr 03 2025 01:00:00 GMT+0100 (British Summer Time)",
+        "status": "published",
+        "category": "events",
+        "exists": true,
+        "wordCount": 1860,
+        "h2Count": 12,
+        "internalLinks": 5
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-empty-tuesday-nights",
+      "slug": "pub-empty-tuesday-nights",
+      "tier": "2-protected",
+      "rank": 28,
+      "search": {
+        "clicks": 4,
+        "impressions": 400,
+        "ctr": "1%",
+        "position": 5.05
+      },
+      "page": {
+        "title": "Why Your Pub is Empty on Tuesday Nights (And How to Fix It)",
+        "excerpt": "Discover practical strategies to transform dead Tuesday nights into profitable evenings. Real solutions from a licensee who's been there.",
+        "publishedDate": "Thu Mar 27 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "turnaround",
+        "exists": true,
+        "wordCount": 1441,
+        "h2Count": 15,
+        "internalLinks": 1
+      }
+    },
+    {
+      "url": "/licensees-guide/food-allergies-gdpr-compliance",
+      "slug": "food-allergies-gdpr-compliance",
+      "tier": "2-protected",
+      "rank": 29,
+      "search": {
+        "clicks": 4,
+        "impressions": 361,
+        "ctr": "1.11%",
+        "position": 7.03
+      },
+      "page": {
+        "title": "Food Allergies and GDPR: The Compliance Nightmares That Could Close You Down",
+        "excerpt": "Navigate the compliance minefield without hiring expensive consultants. Simple systems that keep you legal and let you focus on running your pub.",
+        "publishedDate": "Fri Dec 12 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "operations",
+        "exists": true,
+        "wordCount": 1929,
+        "h2Count": 6,
+        "internalLinks": 4
+      }
+    },
+    {
+      "url": "/licensees-guide/pub-accessibility-welcoming-guide",
+      "slug": "pub-accessibility-welcoming-guide",
+      "tier": "2-protected",
+      "rank": 30,
+      "search": {
+        "clicks": 4,
+        "impressions": 171,
+        "ctr": "2.34%",
+        "position": 8.44
+      },
+      "page": {
+        "title": "Pub Accessibility: Making Your Venue Welcoming for Everyone",
+        "excerpt": "How to make your pub accessible, dog friendly, and family friendly. Legal requirements, practical improvements, and the business case for welcoming everyone.",
+        "publishedDate": "Mon Nov 03 2025 00:00:00 GMT+0000 (Greenwich Mean Time)",
+        "status": "published",
+        "category": "operations",
+        "exists": true,
+        "wordCount": 3014,
+        "h2Count": 9,
+        "internalLinks": 4
+      }
+    }
+  ]
+}
