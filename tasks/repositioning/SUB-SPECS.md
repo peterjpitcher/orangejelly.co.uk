@@ -169,7 +169,7 @@ what success looks like, urgency.
 
 - **Purpose:** to have a useful first conversation. Nothing else. No marketing use without separate
   consent.
-- **Retention:** 24 months from last contact, then delete. Enquiries that become clients move to the
+- **Retention:** 24 months from last contact, then delete. Confirmed as D25. Enquiries that become clients move to the
   client record and leave this table.
 - **Access:** admin only. Existing auth.
 - **Notification email carries step one only.** Name, company, email, situation, plus a link to the
@@ -195,12 +195,12 @@ The parent spec ended at submission, which is where leads get lost.
 | | |
 |---|---|
 | Owner | Peter. Single responder, single mailbox: `peter@orangejelly.co.uk`. |
-| Acknowledgement | Immediate on-page confirmation, stating a human replies within one working day. |
-| Response time | One working day, as drafted. |
+| Acknowledgement | Immediate on-page confirmation: the enquiry has arrived and a person will read it and reply personally. No timescale is given (D23). |
+| Response time | **No public commitment (D23).** Existing and new clients both need proper time, and a missed promise on first contact is worse than no promise. Tracked internally as a service level, never published. |
 | Lead states | `new`, `contacted`, `qualified`, `conversation_booked`, `declined`, `client`. Extends the existing `status` column. |
 | Calendar | Never shown automatically. D8 makes the conversation the first step, and a calendar link turns it into a booking. Peter sends one after replying. |
 | Declined | A short honest reply. No silence. |
-| Notification failure | Alerts, and the admin dashboard shows any lead not acknowledged within 24 hours. |
+| Notification failure | Alerts, and the admin dashboard flags any lead not yet actioned so nothing goes quiet unnoticed. Internal only. |
 
 ---
 
@@ -227,7 +227,22 @@ Always.
 Frequency rather than agreement, because "how often does this happen" is harder to answer
 flatteringly than "do you agree".
 
-## 2.3 The twelve statements, draft
+## 2.3 Where a visitor meets this
+
+Context for anyone reading the statements cold.
+
+The assessment is a page at `/tools/ai-readiness`. Someone arrives from a search for "ai readiness
+assessment", from an insight article, or from the growth-problems hub. They answer twelve statements,
+one screen at a time, and get a picture of which parts of their business are under most pressure,
+with an honest read on where AI would and would not help.
+
+It is a **conversation starter, not a product**. It exists because the research found real search
+demand for the term, and because someone who has just seen their own pressure map is far better
+prepared for the free discovery conversation than someone arriving cold at a contact form.
+
+Nobody is scored, nothing is stored unless they go on to enquire, and there is no number at the end.
+
+## 2.4 The twelve statements, draft
 
 Drafted from the pressure-point model and The Anchor experience. The wording is a judgement call and
 is the part of this document most likely to change on review.
@@ -250,7 +265,7 @@ is the part of this document most likely to change on review.
 Statements 7 and 8 are deliberately reverse-scored: Always is the bad answer. This stops
 straight-lining and it is where AI and automation usually earn their place.
 
-## 2.4 Scoring and result
+## 2.5 Scoring and result
 
 - Each statement scores 0 to 3. Reverse-scored items invert.
 - Each area totals 0 to 6 from its two statements.
@@ -266,12 +281,12 @@ and does not help, and the handover.
 always concludes "you need AI" is a lead magnet pretending to be an assessment, and it would fail
 the brand's own decision filter.
 
-## 2.5 Handover
+## 2.6 Handover
 
 Result page ends with "Bring us the problem" (D11), pre-filling the enquiry `situation` field with
 the named pressure areas so the visitor does not retype. Editable.
 
-## 2.6 Behaviour
+## 2.7 Behaviour
 
 - Answers held client-side during the assessment.
 - **Not stored** unless the visitor submits an enquiry, in which case the pressure areas travel as
@@ -322,11 +337,18 @@ it cannot double-count, which was a real risk in the earlier list.
 
 ## 3.3 Consent
 
+**D24 splits this by whether the tool touches the device, not by whether the data is personal.**
+PECR regulation 6 requires consent to store or access information on a device regardless of whether
+it is personal data, so "there is no PII in it" does not exempt a tool that sets a cookie.
+
 | Category | Behaviour without consent |
 |---|---|
-| Operational (`enquiry_submitted`, `enquiry_qualified`) | Written to the first-party store. These are records of a transaction the user chose to start. Not sent to GA4. |
-| Analytics (everything else) | Not collected at all. No queuing, no replay on later consent. |
-| Vercel Analytics | Currently loads unconditionally. This spec gates it behind consent, on the basis that it is not essential to delivering the service. |
+| **Vercel Analytics and Speed Insights** | **Load unconditionally.** Cookieless, nothing stored on the device, so the device-storage rule is not engaged. Covers traffic, referrers, page performance and journey shape. |
+| Operational (`enquiry_submitted`, `enquiry_qualified`) | Written to the first-party store. Records of a transaction the user chose to start, not device storage. Not sent to GA4. |
+| Google Tag Manager and GA4 | **Behind consent.** GTM sets `_ga`. Analytics is not strictly necessary to deliver the service, so it does not fall in the PECR exemption. |
+| Analytics events (everything else in 3.2) | Routed to Vercel and the first-party store without consent where they carry no device identifier; sent to GA4 only with consent. |
+
+This is a good-faith reading and not legal advice.
 
 `CookieNotice` needs a permanent reopen control, a consent version, and an expiry. Withdrawal must
 stop collection immediately.
@@ -392,7 +414,14 @@ a conscious decision rather than a habit.
 
 # Review status
 
-Four points in this document are recommendations that could reasonably go the other way, and they
-have been raised with Peter directly rather than recorded here: the twelve scorecard statements, the
-one working day response promise, gating Vercel Analytics behind consent, and the 24-month lead
-retention period. This document will be updated with his answers once given.
+Reviewed by Peter on 27 August 2026. Four points were settled and are now reflected above:
+
+- **No response-time promise** (D23). Section 1.9 updated.
+- **Cookieless analytics load before consent, GTM stays behind it** (D24). Section 3.3 rewritten with
+  the reasoning.
+- **24-month lead retention confirmed** (D25). Section 1.7.
+- **Scorecard context added** (section 2.3), because the statements needed framing before they could
+  be judged. The wording of the twelve statements themselves is still open.
+
+Also now in force and affecting this document indirectly: D21 makes the site company-voiced rather
+than founder-led, so all copy examples here use "we", and D22 removes expletives site-wide.

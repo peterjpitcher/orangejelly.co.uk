@@ -29,6 +29,12 @@ pack refuses to decide on its own.
 | D17 | **Marketing design tokens are scoped, not global.** The new palette and the lowercase heading rule apply to a marketing surface, never bare `:root`. `/availability` and `/admin` keep their current styling. Rationale: "out of scope" is a requirement, not a mechanism, and root custom properties reach every route regardless of intent. Visual regression tests cover both excluded areas. | 27 Aug 2026 | n/a |
 | D18 | **`/about-demo` and `/test-shadcn` are deleted** in WS1. Both are publicly routable artefacts; `/about-demo` is a live `route.ts` handler indexed at 22 impressions. | 27 Aug 2026 | n/a |
 | D19 | **The bearer-token security boundary on `/availability` is non-negotiable.** Organiser and edit URLs carry a token in the path, and `MarketingChrome.tsx` deliberately fails closed to stop it reaching GTM, Vercel Analytics or preconnects. No test currently guards this. One is now required, asserting no third-party request and no marketing chrome on token routes. | 27 Aug 2026 | n/a |
+| D20 | **"EXPOSE" is rejected.** Peter does not like it. The method's second step needs a different word. `PLAN` was considered and is not recommended, see the note below. Final word not yet chosen, so no template or component copy is written until it is. Supersedes D9. | 27 Aug 2026 | Open decision 3 |
+| D21 | **The brand is Orange Jelly, not Peter.** Company voice throughout, "we" not "I". No founder story as a page structure. The Anchor is framed as "our own venue" and "the business we run", never "Peter's pub". Article bylines keep a named human author, because schema and search need one, but no page is built around the founder. | 27 Aug 2026 | Open decision 9 |
+| D22 | **No expletives anywhere on the site.** Not on the homepage, not on About, not in the manifesto. This overrides the brand pack's expletive rule (`05-tone-of-voice.md`), which permitted partially censored use in founder-led and campaign content. Social and campaign use remains Peter's call, off-site. | 27 Aug 2026 | Open decision 11 |
+| D23 | **No response-time promise on the site.** Orange Jelly does not commit to a number of days. Existing and new clients both need proper time, and a missed promise on first contact is worse than no promise. The acknowledgement confirms receipt and says a human will reply personally. | 27 Aug 2026 | n/a |
+| D24 | **Analytics load before consent where they are cookieless.** Vercel Analytics and Speed Insights set nothing on the device, so they load unconditionally. Google Tag Manager sets `_ga` and stays behind consent, because PECR requires consent for device storage regardless of whether the data is personal. See the note below. | 27 Aug 2026 | n/a |
+| D25 | **Lead retention is 24 months** from last contact, then deletion. Enquiries that become clients move to the client record. | 27 Aug 2026 | n/a |
 
 ## Consequences of D3 worth naming
 
@@ -125,3 +131,55 @@ carries bearer tokens in the URL.
 Open copy decisions still needing an answer, each now tied to the page it blocks: whether "EXPOSE"
 is approved (`/how-we-work`), founder versus company presentation (`/about`), and whether an
 expletive appears on any permanent page (homepage, `/about`).
+
+## Note on D20: why PLAN is not recommended
+
+`PLAN` was proposed as the replacement for `EXPOSE`. It is the weakest available option and it works
+against the positioning.
+
+The brand pack defines Orange Jelly explicitly against "a slide-deck consultancy that diagnoses and
+disappears". Planning is what that consultancy sells. Every agency plans. The word carries no
+information about what Orange Jelly does differently.
+
+It also describes the wrong activity. Stage two's job in `06-signature-method.md` is to "find the
+pressure points, root causes and opportunities that matter". That is diagnosis. A plan is an output
+of it, not the work itself, and naming the output makes the method sound like it ends at a document.
+
+Recommended instead: **HEAR. FIND. BUILD. PROVE.** Four single-syllable active verbs, and "find" is
+already in the pack's own signature lines ("We find where growth is being blocked and make the right
+change happen").
+
+On adding `OPTIMISE` as a fifth step: not recommended. `PROVE` already contains test, iterate and
+"decide whether to scale, adjust or stop". A permanent fifth step implies the work never finishes,
+which contradicts the commercial principle that Orange Jelly stops when the agreed outcome is
+reached. Ongoing work belongs in the Growth Partnership offer, not the method. Four steps also match
+the 42 components and 14 templates already built around a four-step `MethodStep` sequence.
+
+## Note on D24: the constraint behind the split
+
+Peter asked for all analytics to load before consent, on the basis that there is no personal data in
+them. That reasoning is sound for data protection but does not settle the question, because the
+relevant rule is a different one.
+
+PECR regulation 6 requires consent to store or access information on a user's device, whether or not
+that information is personal. Analytics is not "strictly necessary" for delivering the service, so
+it does not fall in the exemption. The ICO has enforced this position against analytics cookies
+specifically.
+
+The practical split gives most of what was asked for:
+
+- **Vercel Analytics and Speed Insights are cookieless.** They store nothing on the device, so the
+  device-storage rule is not engaged and they can load unconditionally. That covers traffic,
+  referrers, page performance and journey shape.
+- **Google Tag Manager sets `_ga`.** It stays behind consent.
+- **First-party operational records** (a lead written because someone submitted a form) are records
+  of a transaction the user initiated, not device storage, and are unaffected.
+
+This is a good-faith reading, not legal advice. Peter can overrule it for GTM as an accepted
+commercial risk, and that would be recorded here as a separate decision.
+
+## Consequence of D21 for the design system
+
+The `about` template ships a founder-story section with a photo placeholder. D21 removes the founder
+story as a page structure. That section needs repurposing into the company's way of working, or
+removing. Flag to the designer with the next batch of feedback.
