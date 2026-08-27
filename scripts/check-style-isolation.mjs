@@ -110,6 +110,26 @@ const FORBIDDEN_RENDERED_COLOURS = {
 async function capture(page, route) {
   await page.goto(`${BASE}${route.path}`, { waitUntil: 'networkidle' });
 
+  /*
+   * Wait for the stylesheet to actually be in effect before probing.
+   *
+   * Without this the guard reports every property at its browser default when it
+   * happens to run while the dev server is recompiling, which looks exactly like a
+   * catastrophic style loss and is nothing of the sort. A guard that cries wolf gets
+   * ignored, so it waits for evidence that CSS has landed.
+   */
+  await page
+    .waitForFunction(
+      () => {
+        const bg = getComputedStyle(document.body).backgroundColor;
+        return bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent';
+      },
+      { timeout: 15000 }
+    )
+    .catch(() => {
+      throw new Error('stylesheet never applied, the dev server may still be compiling');
+    });
+
   if (route.waitFor) {
     // Tolerated if it never appears: a route that legitimately has no such control
     // should not fail the run, it should simply record nothing for it.
