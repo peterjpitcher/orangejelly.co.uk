@@ -67,9 +67,9 @@ Ported on demand. A component is not built until a page needs it.
 | T025 | Chrome: Header in both tones, Footer, Breadcrumb. 13 behaviour tests, verified rendering | T024 | L | | **done** |
 | T026 | Mobile drawer with grouped sub-nav, folded into Header by the designer. Adds Escape, focus management and scroll lock, none of which the reference had | T025 | M | | **done** |
 | T027 | Forms: Field, Input, Select, Textarea, Checkbox, Radio. Field wires label, describedby and invalid automatically. Slider deferred: nothing in the enquiry sub-spec needs one | T024 | L | | **done** |
-| T028 | Content: Card, PressureCard, ProofCard, MethodStep, Quote | T024 | M | | |
-| T029 | Editorial: ArticleCard, FAQ, Toc, CategoryTag, NextStep, Pagination, ShareRow, Tabs | T024 | L | | |
-| T030 | Feedback: Alert, Modal, EmptyState, Skeleton | T024 | M | | |
+| T028 | Content: Card, PressureCard, ProofCard, MethodStep, Quote. PressureCard is now a real link rather than a card with an onClick and a bare arrow inside | T024 | M | | **done** |
+| T029 | Editorial: ArticleCard, FAQ, Toc, CategoryTag, NextStep, Pagination, Tabs. FAQ uses real `<details>` so it works without JavaScript. ShareRow needs client clipboard, done with T033 | T024 | L | | **done** |
+| T030 | Feedback: Alert, Modal, EmptyState, Skeleton. Modal gains a real focus trap, which the reference lacked | T024 | M | | **done** |
 | T031 | Marketing: OfferCard, CompareTable, LogoStrip, NewsletterBand, SeasonalBand. LogoStrip consumes `public/partners/*.png`, type-only fallback on ink. | T024 | M | | |
 | T032 | Diagnostic: PressureMap, PressureCheck, Scorecard | T028 | L | | |
 | T033 | StickyCTA and CookieNotice with permanent reopen control | T024 | M | | |
