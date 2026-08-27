@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Breadcrumb, { type BreadcrumbItem } from '@/components/Breadcrumb';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -7,18 +8,19 @@ interface BlogCategoryHeroProps {
   title: string;
   excerpt?: string;
   category: string; // slug
+  imageSrc?: string;
   breadcrumbs?: BreadcrumbItem[];
 }
 
 /**
- * Full-width category-coloured hero block for blog posts.
- * Replaces the previous image-based Hero with a category-specific gradient header.
- * CSS-only pattern overlay keeps it lightweight with no image dependencies.
+ * Full-width image hero for blog posts, with the category gradient kept as a
+ * strong readability layer and as the fallback when a post has no image.
  */
 export default function BlogCategoryHero({
   title,
   excerpt,
   category,
+  imageSrc,
   breadcrumbs,
 }: BlogCategoryHeroProps) {
   const gradient = getCategoryGradient(category);
@@ -26,12 +28,16 @@ export default function BlogCategoryHero({
 
   return (
     <section className="relative overflow-hidden" style={{ background: gradient }}>
-      {/* Subtle diagonal stripe pattern overlay: CSS only, no images */}
+      {imageSrc && (
+        <Image src={imageSrc} alt="" fill priority sizes="100vw" className="object-cover" />
+      )}
+
+      {/* Keep white article copy readable over every photograph. */}
       <div
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,1) 10px, rgba(255,255,255,1) 11px)',
+          background:
+            'linear-gradient(90deg, rgba(18,33,51,0.97) 0%, rgba(18,33,51,0.9) 52%, rgba(18,33,51,0.64) 100%)',
         }}
         aria-hidden="true"
       />

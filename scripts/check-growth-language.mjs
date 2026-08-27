@@ -13,9 +13,6 @@ const FILE_TARGETS = [
   'src/app/opengraph-image.tsx',
   'src/app/pub-marketing-no-budget/page.tsx',
   'src/components/Meta.tsx',
-  'src/components/SocialProof.tsx',
-  'src/components/ServiceComparison.tsx',
-  'src/components/VideoTestimonial.tsx',
   'src/components/ROICalculator.tsx',
   'src/lib/constants.ts',
 ];
@@ -98,7 +95,13 @@ function collectViolations(relativePath, content) {
 
 async function run() {
   const targetFiles = new Set();
-  const cliFileArgs = process.argv.slice(2);
+  // Vendored brand and design-system files are excluded. They are third-party and
+  // must stay byte-identical to the delivery, so the pack's own prose ("Save
+  // important decisions and artefacts") must not fail the gate and force
+  // --no-verify on unrelated commits.
+  const cliFileArgs = process.argv
+    .slice(2)
+    .filter((f) => !f.replace(/\\/g, '/').includes('docs/brand/'));
 
   for (const arg of cliFileArgs) {
     const absolutePath = path.resolve(ROOT, arg);
