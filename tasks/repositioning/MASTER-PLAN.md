@@ -29,8 +29,8 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T002 | Collapse the adapter layer behind stable import paths | T001 | M | | **done** |
 | T003 | Language gates exclude `docs/brand/`, stale targets removed | T001 | S | | **done** |
 | T004 | Send the designer batch (method, About, expletives, authority order) | | S | | **done** |
-| T005 | Build `src/lib/route-manifest.ts`: every route's disposition, destination, canonical, sitemap membership | | M | | |
-| T006 | Generate `next.config.js` redirects from the manifest; assert one hop, 308 | T005 | M | | |
+| T005 | Build `src/lib/route-manifest.js`: every route's disposition, destination, sitemap membership. CommonJS so next.config can require it. | | M | | **done** |
+| T006 | Generate `next.config.js` redirects and the sitemap from the manifest; 8 tests assert no chains, no non-200 in sitemap, phase 4 not shipped early | T005 | M | | **done** |
 | T007 | Baseline all 30 protected posts: clicks, impressions, position, CTR, canonical, title, meta, H1, internal links | | M | | |
 | T008 | Error and failure monitoring: server action failures, lead writes, notification failures, 404 rate, redirect loops | | M | Vercel and Supabase access if not already granted | |
 | T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
