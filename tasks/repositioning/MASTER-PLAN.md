@@ -52,9 +52,9 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T017b | Swap to `next/font/local` once the binaries arrive. Performance only, not a blocker. | T017 | S | Font binaries from the design team | |
 | T018 | `.oj-prose` ported from the design bundle onto the `--oj-*` namespace. Not yet wired into blog templates: that is WS6, after the protected posts have been through their change budget | T013 | M | | **done** |
 | T019 | Contrast matrix extended across the new palette. **Found 3 real accessibility defects in the supplied colours**, raised with the designer, tracked as expected-to-fail | T013 | M | | **done** |
-| T020 | Run the style isolation guard against the new tokens; baseline already recorded | T011, T013 | S | | |
+| T020 | Style isolation guard run against the new tokens and passing three consecutive runs; leak detection proved by deliberate failure | T011, T013 | S | | **done** |
 | T021 | Runtime token-privacy check, verified against production: 7 third-party requests on the homepage, zero on all three token routes. The unit-level gate already existed | T013 | M | | **done** |
-| T022 | CSP and security header review for new fonts and analytics (gap G8) | T017 | S | | |
+| T022 | CSP reviewed: **no change needed**. `next/font` self-hosts the typeface from `/_next/static/media`, so it is served from `'self'`. Verified 15 woff2 files in the build and no off-origin font reference in the compiled CSS | T017 | S | | **done** |
 | T023 | Record the design authority order once the designer confirms (gap G1) | T004 | S | | **done** (D28) |
 
 ## Phase 2: Component library
