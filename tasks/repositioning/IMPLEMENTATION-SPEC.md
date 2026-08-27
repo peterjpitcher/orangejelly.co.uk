@@ -111,18 +111,23 @@ Full text in `decisions.md`.
 | D17 | **Marketing tokens are scoped, not global.** See WS2. |
 | D18 | `/about-demo` and `/test-shadcn` are deleted in WS1. |
 | D19 | The bearer-token security boundary on `/availability` is non-negotiable and gains a test. |
+| D21 | The brand is Orange Jelly, not Peter. Company voice, no founder-story page structure. |
+| D22 | No expletives anywhere on the site. |
+| D23 | No published response time. |
+| D24 / D27 | Cookieless analytics load unconditionally. GTM and GA4 stay behind consent. |
+| D25 | 24-month lead retention. |
+| D26 | The method is **HEAR. CHALLENGE. BUILD. OPTIMISE.** |
 
-### Still open, and now owned
+### Still open
 
-These affect copy, not architecture, so they do not block the build. They do block final copy sign
-off on the pages named.
+The copy decisions that blocked pages are closed. One remains.
 
 | Open decision | Blocks | Needed by |
 |---|---|---|
-| Is "EXPOSE" approved | `/how-we-work`, method blocks on 4 templates | Before WS5 order 3 |
-| Founder versus company presentation | `/about` | Before WS5 order 5 |
-| Expletive on any permanent page | Homepage, `/about` | Before WS5 order 1 |
-| Public fit language and qualification threshold | `/start-here` | Before the enquiry sub-spec |
+| Public fit language and qualification threshold | `/start-here` | Before WS5 order 2 |
+
+The wording of the twelve scorecard statements is open but not blocking: Peter has approved the
+structure and will give feedback once it is built.
 
 ---
 

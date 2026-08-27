@@ -35,6 +35,8 @@ pack refuses to decide on its own.
 | D23 | **No response-time promise on the site.** Orange Jelly does not commit to a number of days. Existing and new clients both need proper time, and a missed promise on first contact is worse than no promise. The acknowledgement confirms receipt and says a human will reply personally. | 27 Aug 2026 | n/a |
 | D24 | **Analytics load before consent where they are cookieless.** Vercel Analytics and Speed Insights set nothing on the device, so they load unconditionally. Google Tag Manager sets `_ga` and stays behind consent, because PECR requires consent for device storage regardless of whether the data is personal. See the note below. | 27 Aug 2026 | n/a |
 | D25 | **Lead retention is 24 months** from last contact, then deletion. Enquiries that become clients move to the client record. | 27 Aug 2026 | n/a |
+| D26 | **The method is HEAR. CHALLENGE. BUILD. OPTIMISE.** Replaces HEAR. EXPOSE. BUILD. PROVE. `CHALLENGE` is a strong choice: it is active, distinctive, and already a stated brand behaviour ("Challenge early", "Challenge plus delivery"). `OPTIMISE` replaces `PROVE` as the fourth step. See the note below on what that costs and how to cover it. Closes D20 and supersedes D9. | 27 Aug 2026 | Open decision 3 |
+| D27 | **GTM stays behind consent.** Peter accepts the split in D24. Cookieless Vercel Analytics and Speed Insights load unconditionally; Google Tag Manager and GA4 require consent. | 27 Aug 2026 | n/a |
 
 ## Consequences of D3 worth naming
 
@@ -183,3 +185,31 @@ commercial risk, and that would be recorded here as a separate decision.
 The `about` template ships a founder-story section with a photo placeholder. D21 removes the founder
 story as a page structure. That section needs repurposing into the company's way of working, or
 removing. Flag to the designer with the next batch of feedback.
+
+## Note on D26: what dropping PROVE costs, and how it is covered
+
+`CHALLENGE` is a better second step than either `EXPOSE` or `PLAN`. That part is settled and good.
+
+Dropping `PROVE` has a cost worth naming, because the method is now the only place the discipline
+was visible. The brand pack hangs its entire credibility argument on measurement:
+
+- "Do not claim to be impactful. Show the problem, the change and the evidence."
+- "Brilliant thinking is useless until it changes something."
+- The positioning defines Orange Jelly against "a slide-deck consultancy that diagnoses and
+  disappears", and measurement is the thing that separates them.
+
+`OPTIMISE` means keep improving. It does not mean show it worked. A reader can now go through the
+whole method without being told that Orange Jelly measures anything.
+
+**This is Peter's decision and it stands.** The gap is covered elsewhere rather than by reopening it:
+
+1. The `/how-we-work` page states the measurement commitment inside the `OPTIMISE` step: baselines
+   agreed before work starts, impact measured against them, and the honest position where evidence
+   is incomplete.
+2. The `Results` page and `ProofCard` carry the evidence discipline in the design, which they
+   already do.
+3. The "every bold claim followed by proof" rule in `05-tone-of-voice.md` is unaffected and stays a
+   copy gate.
+
+Changing the fourth word is cheap now, while nothing is built. It becomes expensive once 14
+templates and the method components carry it. If it is going to change, it should change before WS5.

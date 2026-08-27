@@ -52,8 +52,9 @@ That transfers to an accountancy practice, a law firm, an electrical contractor 
 without changing a word of the logic. It is a demand-discovery story, not a hospitality story, which
 is precisely the reframing the whole repositioning depends on.
 
-It also demonstrates the method end to end. HEAR: what is the business actually near. EXPOSE: the
-assumed search market is not the real one. BUILD: the resource. PROVE: 6,103 clicks.
+It also demonstrates the method end to end. HEAR: what is the business actually near. CHALLENGE: the
+assumed search market is not the real one. BUILD: the resource. OPTIMISE: 6,103 clicks and still
+growing.
 
 **Recommendation: make this the lead case study on the Results page**, ahead of the booking and
 revenue percentages. It needs no claim verification, it is independently checkable in Search

@@ -43,7 +43,7 @@ blueprint in `10-website-blueprint.md` asks for more than that.
 |---|---|---|---|
 | A1 | **Growth problem detail** | The blueprint names 8 of these ("growth has stalled", "leads are not converting", "margin is under pressure" and so on). The search strategy makes them the primary commercial pages, ranked above service pages. One template, 8 instances. | **Highest** |
 | A2 | **Growth problems hub** | Index for A1. Needs to let a visitor self-identify a symptom and route to the right page. | **Highest** |
-| A3 | **How we work** | HEAR. EXPOSE. BUILD. PROVE. plus access required, how success is agreed, what a diagnostic includes. May be in the missing `ui_kits`. | High |
+| A3 | **How we work** | HEAR. CHALLENGE. BUILD. OPTIMISE. plus access required, how success is agreed, what a diagnostic includes. May be in the missing `ui_kits`. | High |
 | A4 | **Solutions / capabilities** | Organised by outcome (create demand, convert more, protect margin, remove operational drag, improve experience, build for scale), not by service. | High |
 | A5 | **Results overview** | Index above the case-study detail page. Short proof cards by pressure point. May be in the missing `ui_kits`. | High |
 | A6 | **Sector hub** | We are keeping every existing hospitality URL to protect search authority. Hospitality becomes a contained specialist collection, so it needs a hub that reads as a proof-rich sector area rather than the definition of the company. | High |
