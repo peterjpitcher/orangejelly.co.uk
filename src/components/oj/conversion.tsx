@@ -49,7 +49,7 @@ export function StickyCTA({
   return (
     <div
       className={cn(
-        'fixed inset-x-0 bottom-0 z-50 border-t-1.5 border-oj-ink bg-oj-orange',
+        'fixed inset-x-0 bottom-0 z-[50] border-t-1.5 border-oj-ink bg-oj-orange',
         // Sits above the home indicator on iOS rather than under it.
         'pb-[env(safe-area-inset-bottom)]',
         className

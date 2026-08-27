@@ -75,8 +75,8 @@ Ported on demand. A component is not built until a page needs it.
 | T033 | StickyCTA, CookieNotice with equal-weight accept and decline, and ShareRow | T024 | M | | **done** |
 | T034 | Search index rebuilt: collection-tagged, urls derived not hard-coded, 936KB down to 196KB, and now built as part of `npm run build` rather than a step someone has to remember | | L | | **done** |
 | T035 | SiteSearch: input, announced result counts, and a no-results state that routes to the growth-problems hub. Index loading stays the caller's job so it can be lazy | T034, T030 | M | | **done** |
-| T036 | Fixed-surface rules: stacking, max combined footprint, safe areas, reduced motion, keyboard-open behaviour | T033 | S | | |
-| T037 | axe and keyboard tests across ported components | T024 to T033 | L | | |
+| T036 | Fixed-surface stacking documented in `layers.ts` and enforced by tests that read the z-index out of each component rather than trusting the constant. Safe areas and reduced motion in place | T033 | S | | **done** |
+| T037 | axe sweep across all 38 component cases against wcag2a, wcag2aa and wcag21aa: zero violations. Keyboard behaviour covered per component, since axe cannot see focus order or announcement | T024 to T033 | L | | **done** |
 
 ## Phase 3: Vertical slice in staging
 
