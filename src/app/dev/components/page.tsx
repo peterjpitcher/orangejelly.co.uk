@@ -148,6 +148,71 @@ export default function ComponentHarness(): JSX.Element {
         </div>
       </Specimen>
 
+      <Specimen
+        name="Repositioning tokens"
+        note="The new palette, pressure shadow, borders and highlight band. Hover the cards."
+      >
+        <div className="w-full space-y-6">
+          <div className="flex flex-wrap gap-2">
+            {[
+              ['bg-oj-orange', 'oj-orange'],
+              ['bg-oj-orange-deep', 'oj-orange-deep'],
+              ['bg-oj-ember text-oj-cream', 'oj-ember'],
+              ['bg-oj-ink text-oj-cream', 'oj-ink'],
+              ['bg-oj-cream text-oj-ink', 'oj-cream'],
+              ['bg-oj-paper text-oj-ink', 'oj-paper'],
+              ['bg-oj-peach text-oj-ink', 'oj-peach'],
+            ].map(([cls, label]) => (
+              <span
+                key={label}
+                className={`${cls} border-1.5 border-oj-ink rounded-oj px-4 py-2 text-sm`}
+              >
+                {label}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {[
+              ['bg-cat-demand-soft text-cat-demand', 'demand'],
+              ['bg-cat-convert-soft text-cat-convert', 'convert'],
+              ['bg-cat-margin-soft text-cat-margin', 'margin'],
+              ['bg-cat-ops-soft text-cat-ops', 'ops'],
+              ['bg-cat-experience-soft text-cat-experience', 'experience'],
+              ['bg-cat-scale-soft text-cat-scale', 'scale'],
+              ['bg-cat-hospitality-soft text-cat-hospitality', 'hospitality'],
+            ].map(([cls, label]) => (
+              <span key={label} className={`${cls} rounded-full px-3 py-1 text-xs font-semibold`}>
+                {label}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-6 bg-oj-cream p-8">
+            <div className="oj-press border-1.5 border-oj-ink rounded-oj bg-oj-paper px-6 py-4 text-oj-ink">
+              pressure shadow, hover me
+            </div>
+            <button
+              type="button"
+              className="oj-press oj-focus border-1.5 border-oj-ink rounded-oj bg-oj-orange px-6 py-4 font-bold text-oj-ink"
+            >
+              action
+            </button>
+          </div>
+
+          <div className="bg-oj-cream p-8">
+            <p className="oj-eyebrow mb-2">eyebrow label</p>
+            <h3 className="oj-display text-4xl text-oj-ink">
+              Growth stuck? <span className="oj-mark">Bring us the problem.</span>
+            </h3>
+            <p className="mt-3 text-oj-ink-2">
+              Lowercase is a class, not an element rule, so{' '}
+              <span className="oj-keep-case">The Anchor</span> and VAT survive in body copy.
+            </p>
+          </div>
+        </div>
+      </Specimen>
+
       <Specimen name="Card / variants">
         <div className="grid w-full gap-4 md:grid-cols-2">
           {(['default', 'bordered', 'shadowed'] as const).map((variant) => (

@@ -226,6 +226,81 @@
 }
 
 /*
+ * ── Repositioning palette (2026) ────────────────────────────────────────────
+ *
+ * The new brand: warm ink on cream, orange as a signal for action rather than
+ * decoration. Sits ALONGSIDE the tokens above rather than replacing them, and that
+ * is the whole point.
+ *
+ * D17 requires that /availability and /admin are not restyled by a marketing-site
+ * redesign. Scoping the new values under a marketing surface selector was the
+ * obvious way to do that, and it would have forced either route groups or a
+ * dynamic layout that reads headers(), which would deopt 153 static pages.
+ *
+ * Adding a new namespace is simpler and safer. Nothing consumed --oj-* before this
+ * block existed, so nothing changes anywhere until a component opts in by using an
+ * oj-* Tailwind class. The tool routes reference the legacy tokens above and are
+ * untouched by construction, not by a selector that has to keep winning.
+ *
+ * The legacy tokens come out only when nothing references them, at which point the
+ * tool routes will have been dealt with deliberately. scripts/check-style-isolation.mjs
+ * proves the separation holds at every step in between.
+ */
+:root {
+  /* Base palette */
+  --oj-orange: #f76b0c;
+  --oj-orange-deep: #c05408;
+  --oj-ember: #7a3708;
+  --oj-orange-soft: #fde3cc;
+  --oj-ink: #23252e;
+  --oj-ink-2: #4a4c58;
+  --oj-ink-3: #757784;
+  --oj-cream: #f7f5f1;
+  --oj-cream-2: #ece9e2;
+  --oj-paper: #fcfbf9;
+  --oj-peach: #ffd3ad;
+  --oj-ok: #1e7a3c;
+  --oj-danger: #c42b09;
+
+  /* Semantic aliases. Components use these, not the base palette. */
+  --oj-surface-page: var(--oj-cream);
+  --oj-surface-card: var(--oj-paper);
+  --oj-surface-sunken: var(--oj-cream-2);
+  --oj-surface-inverse: var(--oj-ink);
+  --oj-surface-action: var(--oj-orange);
+  --oj-text-body: var(--oj-ink);
+  --oj-text-secondary: var(--oj-ink-2);
+  --oj-text-muted: var(--oj-ink-3);
+  --oj-text-inverse: var(--oj-cream);
+  --oj-text-accent: var(--oj-orange-deep);
+  --oj-text-on-action: var(--oj-ink);
+  --oj-border-default: var(--oj-ink);
+  --oj-border-soft: rgb(35 37 46 / 0.18);
+  --oj-link: var(--oj-orange-deep);
+  --oj-link-hover: var(--oj-ink);
+
+  /*
+   * Taxonomy hues. Seven muted pairs, and a category is never orange: orange is
+   * reserved as the signal for action, so a category wearing it would compete with
+   * every call to action on the page.
+   */
+  --cat-demand: #2e7d74;
+  --cat-demand-soft: #dcebe9;
+  --cat-convert: #3e5c8a;
+  --cat-convert-soft: #e0e6ef;
+  --cat-margin: #7a4468;
+  --cat-margin-soft: #eee2ea;
+  --cat-ops: #6b6d2f;
+  --cat-ops-soft: #eaebdc;
+  --cat-experience: #6c5b9e;
+  --cat-experience-soft: #e6e2f0;
+  --cat-scale: #356950;
+  --cat-scale-soft: #dde9e3;
+  --cat-hospitality: #8a5a2e;
+  --cat-hospitality-soft: #f0e5da;
+}
+
+/*
  * Seasonal hub themes
  * --------------------
  * Each season exposes the same token contract, selected via a STATIC
@@ -755,4 +830,105 @@ select:focus-visible {
 /* Hide Vercel/Next.js dev tool overlay that causes blur */
 #preact-border-shadow-host {
   display: none !important;
+}
+
+@layer components {
+  /*
+   * ── Repositioning utilities (2026) ──────────────────────────────────────────
+   * Opt-in classes. Nothing here applies until a component asks for it, which is
+   * what keeps /availability and /admin out of the redesign.
+   */
+
+  /*
+   * Lowercase display headings.
+   *
+   * Deliberately a class, not `h1, h2 { text-transform: lowercase }`. A global
+   * element rule reaches every route including the poll app and admin, and it also
+   * lowercases proper nouns inside 105 markdown articles where writers cannot wrap
+   * "VAT" or "Google" in a span, because the markdown pipeline sanitises raw HTML.
+   * Scoped to a class, article body headings keep their sentence case and the rule
+   * cannot escape the marketing templates that ask for it.
+   */
+  .oj-display {
+    text-transform: lowercase;
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+  }
+
+  /* For the proper nouns that must survive inside an .oj-display heading. */
+  .oj-keep-case {
+    text-transform: none;
+  }
+
+  .oj-eyebrow {
+    font-size: 0.78125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oj-orange-deep);
+  }
+
+  /*
+   * The pressure interaction. Hover lifts the block up-left and grows the shadow,
+   * press pushes it back into the shadow. Transform and shadow only, so it stays
+   * off the main thread.
+   */
+  .oj-press {
+    box-shadow: 5px 5px 0 var(--oj-ink);
+    transition:
+      transform 120ms cubic-bezier(0.2, 0.9, 0.25, 1),
+      box-shadow 120ms cubic-bezier(0.2, 0.9, 0.25, 1);
+  }
+
+  .oj-press:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--oj-ink);
+  }
+
+  .oj-press:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--oj-ink);
+  }
+
+  /*
+   * The highlight band. A lower-half gradient rather than a solid block, so
+   * ascenders and tight line-height are never covered. This is the one gradient the
+   * design system permits: gradients are banned as decoration, and this is a
+   * typographic device.
+   */
+  .oj-mark {
+    background-image: linear-gradient(
+      transparent 52%,
+      var(--oj-peach) 52%,
+      var(--oj-peach) 98%,
+      transparent 98%
+    );
+  }
+
+  .oj-mark-orange {
+    background-image: linear-gradient(
+      transparent 52%,
+      var(--oj-orange) 52%,
+      var(--oj-orange) 98%,
+      transparent 98%
+    );
+  }
+
+  /* Double focus ring: page colour first, then orange, so it reads on any surface. */
+  .oj-focus:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--oj-surface-page),
+      0 0 0 4.5px var(--oj-orange);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .oj-press,
+    .oj-press:hover,
+    .oj-press:active {
+      transition: none;
+      transform: none;
+    }
+  }
 }

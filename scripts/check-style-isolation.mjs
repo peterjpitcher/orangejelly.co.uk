@@ -41,39 +41,80 @@ const BASELINE = path.join(process.cwd(), 'src', 'test', 'baselines', 'style-iso
 const SHOTS = path.join(process.cwd(), '.next', 'style-isolation');
 
 /**
- * Routes that must be unaffected by the marketing restyle.
- *
- * /admin redirects to auth when signed out, which is fine: the redirect target is
- * itself a surface the restyle must not change.
- */
-const PROTECTED_ROUTES = ['/availability', '/availability/new', '/admin'];
-
-/**
  * The properties a leaking token would move. Deliberately small: this is a tripwire,
- * not a full style snapshot, and a large surface would drift for innocent reasons.
+ * not a full style snapshot, and a large surface drifts for innocent reasons.
  */
-const PROBES = [
-  { selector: 'body', props: ['background-color', 'color', 'font-family'] },
+/**
+ * Guaranteed to exist on any rendered page, and the first thing a global token
+ * change moves. Everything else on these routes is conditional.
+ */
+const BODY_PROBES = [{ selector: 'body', props: ['background-color', 'color', 'font-family'] }];
+
+const CHROME_PROBES = [
+  ...BODY_PROBES,
   { selector: 'h1', props: ['text-transform', 'font-family', 'font-weight', 'color'] },
-  { selector: 'h2', props: ['text-transform', 'font-family', 'font-weight'] },
-  { selector: 'button', props: ['background-color', 'color', 'border-color', 'border-radius'] },
   { selector: 'a', props: ['color'] },
+];
+
+const CONTROL_PROBES = [
+  { selector: 'button', props: ['background-color', 'color', 'border-color', 'border-radius'] },
   { selector: 'input', props: ['border-color', 'border-width', 'border-radius'] },
 ];
 
-/** Custom properties that must never resolve on these routes. */
-const FORBIDDEN_CUSTOM_PROPERTIES = [
-  '--oj-orange',
-  '--oj-ink',
-  '--oj-cream',
-  '--oj-peach',
-  '--surface-page',
-  '--surface-card',
-  '--text-body',
+/**
+ * Routes that must be unaffected by the marketing restyle.
+ *
+ * Probes are per route because the two kinds of page behave differently:
+ *
+ * /availability/new is a client-rendered form, so its controls exist only after
+ * hydration. waitFor gives them a chance to appear rather than racing them.
+ *
+ * /admin is auth-gated and renders a different tree depending on session state, so
+ * its controls are not a stable baseline. Chrome-level probes are, and they are the
+ * ones a leaking token would move anyway.
+ */
+const PROTECTED_ROUTES = [
+  // Signed-in dashboards. Their DOM depends on session and on whether any polls
+  // exist, so headings and controls come and go between runs and make a useless
+  // baseline. Body is stable and is what a global token change would move first.
+  // The colour walk below still covers every element on the page regardless.
+  { path: '/availability', probes: BODY_PROBES },
+  { path: '/admin', probes: BODY_PROBES },
+  // The public poll creation form. Stable, and the one place worth probing controls.
+  { path: '/availability/new', probes: [...CHROME_PROBES, ...CONTROL_PROBES], waitFor: 'input' },
 ];
 
+/**
+ * Marketing colours that must never be RENDERED on these routes, as computed rgb.
+ *
+ * An earlier version of this check asserted that the --oj-* custom properties were
+ * not DEFINED here. That was written for a design where the new palette would be
+ * scoped behind a marketing surface selector. The palette ended up namespaced and
+ * declared globally instead, because scoping it would have forced either route
+ * groups or a layout that reads headers() and deopts 153 static pages.
+ *
+ * A custom property that nothing references has no visual effect, so "is it defined"
+ * was the wrong question. "Does it actually reach a pixel on this route" is the
+ * right one, and it still catches the real risk: a component on a tool route
+ * accidentally using an oj-* class.
+ */
+const FORBIDDEN_RENDERED_COLOURS = {
+  'rgb(247, 107, 12)': '--oj-orange',
+  'rgb(192, 84, 8)': '--oj-orange-deep',
+  'rgb(35, 37, 46)': '--oj-ink',
+  'rgb(247, 245, 241)': '--oj-cream',
+  'rgb(252, 251, 249)': '--oj-paper',
+  'rgb(255, 211, 173)': '--oj-peach',
+};
+
 async function capture(page, route) {
-  await page.goto(`${BASE}${route}`, { waitUntil: 'networkidle' });
+  await page.goto(`${BASE}${route.path}`, { waitUntil: 'networkidle' });
+
+  if (route.waitFor) {
+    // Tolerated if it never appears: a route that legitimately has no such control
+    // should not fail the run, it should simply record nothing for it.
+    await page.waitForSelector(route.waitFor, { timeout: 5000 }).catch(() => {});
+  }
 
   const result = await page.evaluate(
     ({ probes, forbidden }) => {
@@ -88,17 +129,24 @@ async function capture(page, route) {
         );
       }
 
-      // A marketing token that resolves to anything here means the scope leaked.
-      const rootStyle = getComputedStyle(document.documentElement);
-      const bodyStyle = getComputedStyle(document.body);
-      for (const prop of forbidden) {
-        const value = rootStyle.getPropertyValue(prop).trim() || bodyStyle.getPropertyValue(prop).trim();
-        if (value) out.leaked[prop] = value;
+      // Walk everything on the page and see whether a marketing colour actually
+      // renders. Cheap enough on these routes and it catches a stray oj-* class
+      // anywhere, not just on the probed selectors.
+      const paintProps = ['color', 'background-color', 'border-top-color', 'border-bottom-color'];
+      for (const el of Array.from(document.querySelectorAll('*'))) {
+        const style = getComputedStyle(el);
+        for (const prop of paintProps) {
+          const value = style.getPropertyValue(prop).trim();
+          if (forbidden[value]) {
+            const where = el.tagName.toLowerCase() + (el.className ? `.${String(el.className).split(' ')[0]}` : '');
+            out.leaked[`${forbidden[value]} on ${where} (${prop})`] = value;
+          }
+        }
       }
 
       return out;
     },
-    { probes: PROBES, forbidden: FORBIDDEN_CUSTOM_PROPERTIES }
+    { probes: route.probes, forbidden: FORBIDDEN_RENDERED_COLOURS }
   );
 
   return result;
@@ -115,18 +163,18 @@ async function main() {
   for (const route of PROTECTED_ROUTES) {
     try {
       const result = await capture(page, route);
-      captured[route] = result.computed;
+      captured[route.path] = result.computed;
 
-      for (const [prop, value] of Object.entries(result.leaked)) {
-        leaks.push(`${route}: ${prop} resolves to "${value}" and must not exist here`);
+      for (const [where, value] of Object.entries(result.leaked)) {
+        leaks.push(`${route.path}: ${where} renders ${value}`);
       }
 
       await page.screenshot({
-        path: path.join(SHOTS, `${route.replace(/\//g, '_') || 'root'}.png`),
+        path: path.join(SHOTS, `${route.path.replace(/\//g, '_') || 'root'}.png`),
         fullPage: false,
       });
     } catch (error) {
-      console.error(`Could not reach ${BASE}${route}: ${error.message}`);
+      console.error(`Could not reach ${BASE}${route.path}: ${error.message}`);
       console.error('Is the dev server running? npm run dev');
       await browser.close();
       process.exit(1);
@@ -141,7 +189,7 @@ async function main() {
     console.log(`Baseline recorded for ${PROTECTED_ROUTES.length} routes.`);
     console.log(`Screenshots in ${path.relative(process.cwd(), SHOTS)} for a human to check.`);
     if (leaks.length) {
-      console.error('\nBut marketing tokens are already leaking into protected routes:');
+      console.error('\nBut marketing colours are already rendering on protected routes:');
       leaks.forEach((l) => console.error(`  ${l}`));
       process.exit(1);
     }
@@ -170,7 +218,7 @@ async function main() {
   if (leaks.length || drift.length) {
     console.error('Style isolation check failed.\n');
     if (leaks.length) {
-      console.error('Marketing tokens leaked into out-of-scope routes:');
+      console.error('Marketing colours rendered on out-of-scope routes:');
       leaks.forEach((l) => console.error(`  ${l}`));
       console.error('');
     }

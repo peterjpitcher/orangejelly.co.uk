@@ -44,10 +44,10 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
-| T013 | Map the new palette into `tailwind.config.js`, scoped to a marketing surface not `:root` (D17) | T004 | M | | |
-| T014 | Add the seven `--cat-*` taxonomy pairs, reconcile with `category-colours.ts` | T013 | S | | |
-| T015 | Pressure shadow, 1.5px borders, 3px radius, snap easing, orange double focus ring | T013 | S | | |
-| T016 | Lowercase rule scoped to marketing display headings only; article headings stay sentence case | T013 | S | | |
+| T013 | New palette added as an `oj-*` namespace alongside the legacy one, so tool routes are untouched by construction rather than by a selector (D17) | T004 | M | | **done** |
+| T014 | Seven `--cat-*` taxonomy pairs added as `cat-*` Tailwind colours. Reconciling with `category-colours.ts` happens when the blog is restyled (T073) | T013 | S | | **done** |
+| T015 | Pressure shadow, 1.5px borders, 3px radius, snap easing, orange double focus ring, all verified rendering | T013 | S | | **done** |
+| T016 | Lowercase on `.oj-display` only, never an element rule. `.oj-keep-case` for proper nouns | T013 | S | | **done** |
 | T017 | Schibsted Grotesk via `next/font/google` now. Not blocked: it is a Google font and the bundle loads it from there. Self-hosting is T017b. | T013 | S | | |
 | T017b | Swap to `next/font/local` once the binaries arrive. Performance only, not a blocker. | T017 | S | Font binaries from the design team | |
 | T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |

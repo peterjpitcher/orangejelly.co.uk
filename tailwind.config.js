@@ -9,6 +9,48 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        /*
+         * Repositioning palette (2026). Namespaced under `oj` so it can sit beside
+         * the legacy palette rather than replacing it: nothing used these names
+         * before, so adding them restyles nothing, and /availability and /admin keep
+         * their look by construction rather than by a selector that has to keep
+         * winning. See the matching block in globals.css.
+         */
+        oj: {
+          orange: 'var(--oj-orange)',
+          'orange-deep': 'var(--oj-orange-deep)',
+          'orange-soft': 'var(--oj-orange-soft)',
+          ember: 'var(--oj-ember)',
+          ink: 'var(--oj-ink)',
+          'ink-2': 'var(--oj-ink-2)',
+          'ink-3': 'var(--oj-ink-3)',
+          cream: 'var(--oj-cream)',
+          'cream-2': 'var(--oj-cream-2)',
+          paper: 'var(--oj-paper)',
+          peach: 'var(--oj-peach)',
+          ok: 'var(--oj-ok)',
+          danger: 'var(--oj-danger)',
+        },
+        /*
+         * Taxonomy hues. A category is never orange: orange is the signal for
+         * action, and a category wearing it would compete with every CTA on screen.
+         */
+        cat: {
+          demand: 'var(--cat-demand)',
+          'demand-soft': 'var(--cat-demand-soft)',
+          convert: 'var(--cat-convert)',
+          'convert-soft': 'var(--cat-convert-soft)',
+          margin: 'var(--cat-margin)',
+          'margin-soft': 'var(--cat-margin-soft)',
+          ops: 'var(--cat-ops)',
+          'ops-soft': 'var(--cat-ops-soft)',
+          experience: 'var(--cat-experience)',
+          'experience-soft': 'var(--cat-experience-soft)',
+          scale: 'var(--cat-scale)',
+          'scale-soft': 'var(--cat-scale-soft)',
+          hospitality: 'var(--cat-hospitality)',
+          'hospitality-soft': 'var(--cat-hospitality-soft)',
+        },
         // Canonical brand palette
         'brand-base': {
           DEFAULT: '#1A2F49',
@@ -160,6 +202,10 @@ module.exports = {
       // dead token: 157 rounded-lg/rounded-md usages silently took Tailwind's
       // defaults and editing --radius changed nothing. Now it drives them.
       borderRadius: {
+        // Near-square. The new system uses 3px on blocks, inputs and buttons, 8px at
+        // most on large cards, and pills only for tags.
+        oj: '3px',
+        'oj-lg': '8px',
         sm: 'calc(var(--radius) - 4px)',
         md: 'calc(var(--radius) - 2px)',
         lg: 'var(--radius)',
@@ -210,6 +256,41 @@ module.exports = {
         '2xl': '0 25px 50px -12px rgb(26 47 73 / 0.28)',
         inner: 'inset 0 2px 4px 0 rgb(26 47 73 / 0.06)',
         none: 'none',
+        /*
+         * Pressure shadows. Hard offsets with zero blur, which is the motif the new
+         * design system is built on: a block sits on the page rather than floating
+         * above it. Never add a blur radius to these, it is the entire point.
+         *
+         * Hover lifts the block up-left and grows the shadow; press returns it flat.
+         * Paired with the -2px translate in the .oj-press utility.
+         */
+        press: '5px 5px 0 var(--oj-ink)',
+        'press-sm': '3px 3px 0 var(--oj-ink)',
+        'press-lg': '8px 8px 0 var(--oj-ink)',
+      },
+      borderWidth: {
+        /*
+         * 1.5px ink borders on cards and inputs. Not a Tailwind default, and the half
+         * pixel matters: 1px reads thin against the hard shadows and 2px reads heavy.
+         *
+         * Named numerically rather than `oj` to avoid any ambiguity with the `oj`
+         * colour namespace, where `border-oj-*` already means a border colour.
+         *
+         * Note when checking this in devtools: getComputedStyle returns the USED
+         * value, and Chrome rounds a 1.5px border to 1px on a 1x display. The rule
+         * is applied; the device is rounding it. Check the stylesheet rule, not the
+         * computed value.
+         */
+        1.5: '1.5px',
+        3: '3px',
+      },
+      transitionTimingFunction: {
+        // Snap easing. Fast out, settles quickly, no bounce.
+        oj: 'cubic-bezier(.2,.9,.25,1)',
+      },
+      transitionDuration: {
+        'oj-hover': '120ms',
+        'oj-move': '200ms',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'sans-serif'],
