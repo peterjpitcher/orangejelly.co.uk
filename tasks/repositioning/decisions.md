@@ -28,7 +28,7 @@ pack refuses to decide on its own.
 | D16 | **Keyword research is closed at three rounds.** 243 terms tested, picture stable since round 2, fifteen terms worth building for. Round 4 (trades) deferred until the professional services hub is proven. | 26 Aug 2026 | Open decision 15 |
 | D17 | **Marketing design tokens are scoped, not global.** The new palette and the lowercase heading rule apply to a marketing surface, never bare `:root`. `/availability` and `/admin` keep their current styling. Rationale: "out of scope" is a requirement, not a mechanism, and root custom properties reach every route regardless of intent. Visual regression tests cover both excluded areas. | 27 Aug 2026 | n/a |
 | D18 | **`/about-demo` and `/test-shadcn` are deleted** in WS1. Both are publicly routable artefacts; `/about-demo` is a live `route.ts` handler indexed at 22 impressions. | 27 Aug 2026 | n/a |
-| D19 | **The bearer-token security boundary on `/availability` is non-negotiable.** Organiser and edit URLs carry a token in the path, and `MarketingChrome.tsx` deliberately fails closed to stop it reaching GTM, Vercel Analytics or preconnects. No test currently guards this. One is now required, asserting no third-party request and no marketing chrome on token routes. | 27 Aug 2026 | n/a |
+| D19 | **The bearer-token security boundary on `/availability` is non-negotiable.** Organiser and edit URLs carry a token in the path, and `MarketingChrome.tsx` deliberately fails closed to stop it reaching GTM, Vercel Analytics or preconnects. **Correction: this was already well guarded.** `MarketingChrome.test.tsx` asserts no external URL renders on token routes, that the token never appears in the chrome, and that the root layout cannot bypass the gate. `token-routes.ts` is a shared source of truth for middleware and client. A runtime network check (`npm run check:token-privacy`) has been added on top, and passes against production. | 27 Aug 2026 | n/a |
 | D20 | **"EXPOSE" is rejected.** Peter does not like it. The method's second step needs a different word. `PLAN` was considered and is not recommended, see the note below. Final word not yet chosen, so no template or component copy is written until it is. Supersedes D9. | 27 Aug 2026 | Open decision 3 |
 | D21 | **The brand is Orange Jelly, not Peter.** Company voice throughout, "we" not "I". No founder story as a page structure. The Anchor is framed as "our own venue" and "the business we run", never "Peter's pub". Article bylines keep a named human author, because schema and search need one, but no page is built around the founder. | 27 Aug 2026 | Open decision 9 |
 | D22 | **No expletives anywhere on the site.** Not on the homepage, not on About, not in the manifesto. This overrides the brand pack's expletive rule (`05-tone-of-voice.md`), which permitted partially censored use in founder-led and campaign content. Social and campaign use remains Peter's call, off-site. | 27 Aug 2026 | Open decision 11 |
@@ -229,3 +229,24 @@ cycle. Honest reporting when evidence is incomplete."
 
 That is a better outcome than the original PROVE, because it states the discipline as a commitment
 rather than a single word. The concern raised against D26 is resolved and needs no further action.
+
+## Correction to D19, 27 August 2026
+
+The spec claimed no test guarded the token-route boundary. That was wrong, and it
+was my error rather than a gap in the codebase. `MarketingChrome.test.tsx` already
+covers it thoroughly at unit level, and `src/lib/token-routes.ts` exists specifically
+so middleware and the client gate cannot drift apart. The comments in both files
+explain the credential-leak reasoning better than the spec did.
+
+What was genuinely missing was a runtime assertion: a unit test can prove a component
+renders nothing, but not that no request left the machine. `scripts/check-token-privacy.mjs`
+now drives a real browser with analytics consent granted, which is the strong form of
+the test, and asserts zero third-party requests on all three token routes.
+
+It has to run against a deployment. Vercel Analytics is a no-op off Vercel and a local
+`next start` does not reproduce the deployed environment, so nothing third-party loads
+locally and a pass would prove nothing. The script has a control route that turns that
+into a loud failure instead of a false pass.
+
+Verified against production on 27 August: the homepage made 7 third-party requests, the
+three token routes made none.
