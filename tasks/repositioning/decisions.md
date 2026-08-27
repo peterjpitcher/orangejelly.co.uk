@@ -37,6 +37,11 @@ pack refuses to decide on its own.
 | D25 | **Lead retention is 24 months** from last contact, then deletion. Enquiries that become clients move to the client record. | 27 Aug 2026 | n/a |
 | D26 | **The method is HEAR. CHALLENGE. BUILD. OPTIMISE.** Replaces HEAR. EXPOSE. BUILD. PROVE. `CHALLENGE` is a strong choice: it is active, distinctive, and already a stated brand behaviour ("Challenge early", "Challenge plus delivery"). `OPTIMISE` replaces `PROVE` as the fourth step. See the note below on what that costs and how to cover it. Closes D20 and supersedes D9. | 27 Aug 2026 | Open decision 3 |
 | D27 | **GTM stays behind consent.** Peter accepts the split in D24. Cookieless Vercel Analytics and Speed Insights load unconditionally; Google Tag Manager and GA4 require consent. | 27 Aug 2026 | n/a |
+| D28 | **Design authority order, confirmed with the design team.** When two files disagree: 1) the latest dated decision log (`HANDBACK-2026-08-27.md`), 2) the handback, 3) tokens plus `.d.ts` prop contracts plus `.prompt.md` rules, 4) templates, 5) overview and README, 6) superseded v1 material. Closes gap G1 and task T023. | 27 Aug 2026 | n/a |
+| D29 | **Schibsted Grotesk is production, and self-hosted.** Substitute flags removed by the design team. Binaries go in `public/fonts/` with the `@font-face` src swapped, rather than the runtime Google Fonts import. | 27 Aug 2026 | n/a |
+| D30 | **Gradients are banned as decoration, with two approved exceptions:** the lower-half highlight band device, and the slider and select treatments derived from it. `check-design-tokens.mjs` must allow exactly those. | 27 Aug 2026 | n/a |
+| D31 | **Case-study figures ship without a verification caveat.** Follows D2. The design team has removed the caveat from the Results template. | 27 Aug 2026 | n/a |
+| D32 | **The method's canonical copy is fixed.** HEAR: understand what is really happening, not only what the brief says. CHALLENGE: challenge comfortable explanations, find the pressure points that matter. BUILD: design and implement the right practical solution. OPTIMISE: measure against the agreed baseline, learn, improve and go again. OPTIMISE is a bounded measurement loop, never open-ended retainer language. | 27 Aug 2026 | n/a |
 
 ## Consequences of D3 worth naming
 
@@ -213,3 +218,14 @@ whole method without being told that Orange Jelly measures anything.
 
 Changing the fourth word is cheap now, while nothing is built. It becomes expensive once 14
 templates and the method components carry it. If it is going to change, it should change before WS5.
+
+## Note on D32: the measurement gap is closed
+
+D26 dropped PROVE and with it the only measurement language in the method. The design team's
+27 August handback closes that properly rather than papering over it. OPTIMISE now reads "measure
+against the agreed baseline, learn, improve and go again", and the How We Work page carries an
+explicit deliverables line: "Agreed success measures. Baseline and impact reviews on a repeating
+cycle. Honest reporting when evidence is incomplete."
+
+That is a better outcome than the original PROVE, because it states the discipline as a commitment
+rather than a single word. The concern raised against D26 is resolved and needs no further action.

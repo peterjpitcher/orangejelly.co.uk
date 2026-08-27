@@ -48,7 +48,7 @@ Deliver (a) the **Greene King Autumn Toolkit copy** (1–2pp A4) to Charlotte Br
 
 - **Title:** *The Autumn Pub Playbook* (clean).
 - **Byline:** *by Peter Pitcher, who runs The Anchor in Stanwell Moor.*
-- **Sponsor tag:** OJ logo + *Sponsored by Orange Jelly* (logo asset: `public/logo.png`; GK logo `public/logo-greene-king.svg` available for a co-branded lockup).
+- **Sponsor tag:** OJ logo + *Sponsored by Orange Jelly* (logo asset: `public/logo.png`; GK logo `public/partners/greene-king-logo.png` available for a co-branded lockup).
 - **Page 1:** intro (Peter's voice) → "Plan it. Post it. Brief it. Book it. Measure it." strip → **Autumn at a glance** calendar (corrected dates) → footer.
 - **Page 2:** five plays (**wine featured first**; covers low/no, cask+Macmillan, Halloween+Bonfire, rugby→Black Friday→St Andrew's) → responsible-retailing box → **Orange Jelly sponsor ad** (benefit copy + the approved £75k–£100k value-added proof point + "Book a free chat → orangejelly.co.uk") → QR callout → Christmas teaser → footer.
 

@@ -28,7 +28,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T001 | Delete 29 dead components, `demo/`, `/test-shadcn`, `/about-demo` | | M | | **done** |
 | T002 | Collapse the adapter layer behind stable import paths | T001 | M | | **done** |
 | T003 | Language gates exclude `docs/brand/`, stale targets removed | T001 | S | | **done** |
-| T004 | Send the designer batch (method, About, expletives, authority order) | | S | Send it on | **next** |
+| T004 | Send the designer batch (method, About, expletives, authority order) | | S | | **done** |
 | T005 | Build `src/lib/route-manifest.ts`: every route's disposition, destination, canonical, sitemap membership | | M | | |
 | T006 | Generate `next.config.js` redirects from the manifest; assert one hop, 308 | T005 | M | | |
 | T007 | Baseline all 30 protected posts: clicks, impressions, position, CTR, canonical, title, meta, H1, internal links | | M | | |
@@ -36,6 +36,8 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
 | T010 | GA4 enquiry event live on the **current** site, so there is a before and after | | M | GA4 and GTM access | |
 | T011 | Choose and wire visual regression tooling (gap G9) | | S | | |
+| T011a | Delete the two mislabelled `public/logo-*.svg` bitmaps, repoint the GK toolkit doc | | S | | **done** |
+| T011b | Obtain the 27 Aug design bundle. The handback describes files we do not have. | | S | Chase the design team | **next** |
 | T012 | Choose the component harness, private route only (gap G10) | | S | | |
 
 ## Phase 1: Foundations
@@ -46,13 +48,13 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T014 | Add the seven `--cat-*` taxonomy pairs, reconcile with `category-colours.ts` | T013 | S | | |
 | T015 | Pressure shadow, 1.5px borders, 3px radius, snap easing, orange double focus ring | T013 | S | | |
 | T016 | Lowercase rule scoped to marketing display headings only; article headings stay sentence case | T013 | S | | |
-| T017 | Schibsted Grotesk via `next/font`, not the bundle's runtime import | T013 | S | | |
+| T017 | Schibsted Grotesk self-hosted in `public/fonts/` via `next/font/local` (D29) | T013 | S | Font binaries needed from the design team | |
 | T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |
 | T019 | Extend the contrast test to all states: hover, focus, active, disabled, error, inverse, text over highlight bands | T013 | M | | |
 | T020 | Visual regression snapshots proving `/availability` and `/admin` are unchanged | T011, T013 | M | | |
 | T021 | **Security test: no third-party request and no marketing chrome on `/availability/o/:token` and `/p/:token`** (D19) | T013 | M | | |
 | T022 | CSP and security header review for new fonts and analytics (gap G8) | T017 | S | | |
-| T023 | Record the design authority order once the designer confirms (gap G1) | T004 | S | | |
+| T023 | Record the design authority order once the designer confirms (gap G1) | T004 | S | | **done** (D28) |
 
 ## Phase 2: Component library
 
@@ -67,7 +69,7 @@ Ported on demand. A component is not built until a page needs it.
 | T028 | Content: Card, PressureCard, ProofCard, MethodStep, Quote | T024 | M | | |
 | T029 | Editorial: ArticleCard, FAQ, Toc, CategoryTag, NextStep, Pagination, ShareRow, Tabs | T024 | L | | |
 | T030 | Feedback: Alert, Modal, EmptyState, Skeleton | T024 | M | | |
-| T031 | Marketing: OfferCard, CompareTable, LogoStrip, NewsletterBand, SeasonalBand | T024 | M | | |
+| T031 | Marketing: OfferCard, CompareTable, LogoStrip, NewsletterBand, SeasonalBand. LogoStrip consumes `public/partners/*.png`, type-only fallback on ink. | T024 | M | | |
 | T032 | Diagnostic: PressureMap, PressureCheck, Scorecard | T028 | L | | |
 | T033 | StickyCTA and CookieNotice with permanent reopen control | T024 | M | | |
 | T034 | Rebuild the search index: new content types, CI build, lazy load, stale and corrupt handling | | L | | |
