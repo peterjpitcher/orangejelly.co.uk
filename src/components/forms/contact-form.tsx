@@ -27,6 +27,7 @@ import {
 import { VALIDATION_MESSAGES, PLACEHOLDERS } from '@/lib/validation-messages';
 import { submitContactForm } from '@/app/actions/contact';
 import { getBrowserLeadSource } from '@/lib/lead-source';
+import { trackClientEvent } from '@/lib/tracking';
 
 const PACKAGE_OPTIONS = [
   { value: 'none', label: 'Not sure yet' },
@@ -88,6 +89,10 @@ export function ContactForm() {
         return;
       }
       setSubmitStatus('success');
+      // Fired here rather than in the server action because GA4 needs a browser-side
+      // dataLayer push to trigger on. trackClientEvent is consent-gated, so this stays
+      // silent until analytics consent is given.
+      trackClientEvent('contact_submit');
       form.reset();
     } catch {
       setSubmitStatus('error');

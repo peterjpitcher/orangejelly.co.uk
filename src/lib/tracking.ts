@@ -7,7 +7,12 @@ type TrackableEvent =
   | 'package_cta_click'
   | 'guide_cta_click'
   | 'site_search'
-  | 'search_result_click';
+  | 'search_result_click'
+  // Mirrors the server-side conversion event of the same name in db/leads.ts. The
+  // server has always recorded contact_submit; nothing was reaching GA4, so the
+  // enquiry was invisible in analytics while sitting in the database. The names match
+  // deliberately: an event in one store and not the other is a defect, not a variant.
+  | 'contact_submit';
 
 interface TrackClientEventOptions {
   properties?: Record<string, unknown>;
