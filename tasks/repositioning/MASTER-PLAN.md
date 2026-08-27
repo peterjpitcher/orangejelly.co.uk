@@ -63,7 +63,7 @@ Ported on demand. A component is not built until a page needs it.
 
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
-| T024 | Core: Button, Stat, Tag, Mark | T013 | M | | |
+| T024 | Core: Button, Stat, Tag, Mark, ported to `src/components/oj/` alongside the existing set. 13 behaviour tests, verified rendering | T013 | M | | **done** |
 | T025 | Chrome: Header both tones, Footer, Breadcrumb | T024 | L | | |
 | T026 | Mobile drawer, grouped nav, built mobile-first | T025 | M | | |
 | T027 | Forms: Field, Input, Select, Textarea, Checkbox, Radio, Slider | T024 | L | | |

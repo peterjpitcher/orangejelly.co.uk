@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 import Button from '@/components/Button';
+import { Button as OjButton, Stat, Tag, Mark } from '@/components/oj';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -209,6 +210,78 @@ export default function ComponentHarness(): JSX.Element {
               Lowercase is a class, not an element rule, so{' '}
               <span className="oj-keep-case">The Anchor</span> and VAT survive in body copy.
             </p>
+          </div>
+        </div>
+      </Specimen>
+
+      <Specimen
+        name="oj / Button"
+        note="The repositioning button. One primary per view. Hover to see the pressure shadow."
+      >
+        <div className="w-full space-y-4 bg-oj-cream p-8">
+          <div className="flex flex-wrap items-center gap-4">
+            <OjButton size="lg" arrow>
+              Book a growth diagnostic
+            </OjButton>
+            <OjButton variant="ink">Bring us the problem</OjButton>
+            <OjButton variant="ghost" size="sm" href="#method">
+              See how we work
+            </OjButton>
+            <OjButton disabled>Disabled</OjButton>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            {(['sm', 'md', 'lg'] as const).map((size) => (
+              <OjButton key={size} size={size}>
+                {size}
+              </OjButton>
+            ))}
+          </div>
+        </div>
+      </Specimen>
+
+      <Specimen name="oj / Stat" note="Evidence as a design asset. Always give the provenance.">
+        <div className="grid w-full gap-8 md:grid-cols-2">
+          <div className="flex flex-wrap gap-10 bg-oj-cream p-8">
+            <Stat value="403%" label="Table bookings" sub="At The Anchor, our own venue" />
+            <Stat
+              value="41.7%"
+              label="Of search clicks"
+              sub="From aviation content, not pub content"
+              accent={false}
+            />
+          </div>
+          <div className="flex flex-wrap gap-10 bg-oj-ink p-8">
+            <Stat
+              tone="dark"
+              value="828%"
+              label="Search visibility"
+              sub="At The Anchor, our own venue"
+            />
+            <Stat tone="dark" size="sm" value="89%" label="Fewer no-shows" accent={false} />
+          </div>
+        </div>
+      </Specimen>
+
+      <Specimen name="oj / Tag and Mark">
+        <div className="w-full space-y-6">
+          <div className="flex flex-wrap gap-3 bg-oj-cream p-8">
+            <Tag>Create demand</Tag>
+            <Tag variant="ink">Protect margin</Tag>
+            <Tag variant="orange">Build for scale</Tag>
+            <Tag size="sm" dot={false}>
+              No dot
+            </Tag>
+            <Tag dot="ok" variant="ink">
+              Taking work
+            </Tag>
+          </div>
+          <div className="bg-oj-cream p-8">
+            <h3 className="oj-display text-4xl text-oj-ink">
+              Growth stuck? <Mark>Bring us the problem.</Mark>
+            </h3>
+            <h3 className="oj-display mt-4 text-4xl text-oj-ink">
+              A content calendar will not fix a <Mark tone="orange">broken growth system.</Mark>
+            </h3>
           </div>
         </div>
       </Specimen>

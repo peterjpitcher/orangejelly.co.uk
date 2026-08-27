@@ -267,6 +267,8 @@ module.exports = {
         press: '5px 5px 0 var(--oj-ink)',
         'press-sm': '3px 3px 0 var(--oj-ink)',
         'press-lg': '8px 8px 0 var(--oj-ink)',
+        // An ink block casts an orange shadow: ink on ink would be invisible.
+        'press-orange': '5px 5px 0 var(--oj-orange)',
       },
       borderWidth: {
         /*
