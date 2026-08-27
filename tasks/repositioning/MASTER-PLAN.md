@@ -37,7 +37,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T010 | GA4 enquiry event live on the **current** site, so there is a before and after | | M | GA4 and GTM access | |
 | T011 | Style isolation guard: `scripts/check-style-isolation.mjs`, computed-style baseline on the protected routes rather than pixel diffs (gap G9) | | S | | **done** |
 | T011a | Delete the two mislabelled `public/logo-*.svg` bitmaps, repoint the GK toolkit doc | | S | | **done** |
-| T011b | Obtain the 27 Aug design bundle. The handback describes files we do not have. | | S | Chase the design team | **next** |
+| T011b | Obtain the 27 Aug design bundle. Needed for page copy in phases 4 and 5, not for tokens or components: the tokens we hold already include the `--cat-*` pairs and the lowercase rule. | | S | Chase the design team | |
 | T012 | Component harness at `/dev/components`, dynamic so it 404s in production. Storybook rejected (gap G10) | | S | | **done** |
 
 ## Phase 1: Foundations
@@ -48,7 +48,8 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T014 | Add the seven `--cat-*` taxonomy pairs, reconcile with `category-colours.ts` | T013 | S | | |
 | T015 | Pressure shadow, 1.5px borders, 3px radius, snap easing, orange double focus ring | T013 | S | | |
 | T016 | Lowercase rule scoped to marketing display headings only; article headings stay sentence case | T013 | S | | |
-| T017 | Schibsted Grotesk self-hosted in `public/fonts/` via `next/font/local` (D29) | T013 | S | Font binaries needed from the design team | |
+| T017 | Schibsted Grotesk via `next/font/google` now. Not blocked: it is a Google font and the bundle loads it from there. Self-hosting is T017b. | T013 | S | | |
+| T017b | Swap to `next/font/local` once the binaries arrive. Performance only, not a blocker. | T017 | S | Font binaries from the design team | |
 | T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |
 | T019 | Extend the contrast test to all states: hover, focus, active, disabled, error, inverse, text over highlight bands | T013 | M | | |
 | T020 | Run the style isolation guard against the new tokens; baseline already recorded | T011, T013 | S | | |
