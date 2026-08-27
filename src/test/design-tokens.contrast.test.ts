@@ -281,3 +281,138 @@ describe('blog category palette', () => {
     }
   });
 });
+
+/*
+ * ── Repositioning palette (2026) ──────────────────────────────────────────────
+ *
+ * The new palette gives colours deliberately different jobs to the old one, so
+ * passing the legacy matrix proves nothing about it. Orange is a signal for action
+ * rather than a background, peach exists only as a highlight, and the same ink is
+ * used for text, borders and full-bleed inverse sections.
+ *
+ * These assert the pairs the design system actually approves, and the ones it
+ * warns about. The most important is the last: orange is NOT a body-text colour on
+ * cream, which is exactly the mistake the --oj-orange-deep step exists to prevent.
+ */
+describe('repositioning palette contrast', () => {
+  const OJ = {
+    orange: cssVar('--oj-orange'),
+    orangeDeep: cssVar('--oj-orange-deep'),
+    ember: cssVar('--oj-ember'),
+    ink: cssVar('--oj-ink'),
+    ink2: cssVar('--oj-ink-2'),
+    ink3: cssVar('--oj-ink-3'),
+    cream: cssVar('--oj-cream'),
+    paper: cssVar('--oj-paper'),
+    peach: cssVar('--oj-peach'),
+    ok: cssVar('--oj-ok'),
+    danger: cssVar('--oj-danger'),
+  };
+
+  it('resolves every token from the stylesheet', () => {
+    for (const [name, value] of Object.entries(OJ)) {
+      expect(value, `--oj-${name} did not resolve`).toMatch(/^#[0-9a-f]{6}$/i);
+    }
+  });
+
+  describe('body text, needs 4.5:1', () => {
+    const cases: Array<[string, string, string]> = [
+      ['ink on cream', OJ.ink, OJ.cream],
+      ['ink on paper', OJ.ink, OJ.paper],
+      ['ink on peach', OJ.ink, OJ.peach],
+      ['ink on orange', OJ.ink, OJ.orange],
+      ['cream on ink', OJ.cream, OJ.ink],
+      ['secondary ink on cream', OJ.ink2, OJ.cream],
+      ['ember on cream', OJ.ember, OJ.cream],
+      ['danger on paper', OJ.danger, OJ.paper],
+      ['ok on paper', OJ.ok, OJ.paper],
+    ];
+
+    it.each(cases)('%s clears 4.5:1', (_name, fg, bg) => {
+      expect(contrast(fg, bg)).toBeGreaterThanOrEqual(4.5);
+    });
+  });
+
+  describe('large and non-text, needs 3:1', () => {
+    const cases: Array<[string, string, string]> = [
+      ['muted ink on cream', OJ.ink3, OJ.cream],
+      ['orange on ink, for inverse sections', OJ.orange, OJ.ink],
+      ['ink border on cream', OJ.ink, OJ.cream],
+    ];
+
+    it.each(cases)('%s clears 3:1', (_name, fg, bg) => {
+      expect(contrast(fg, bg)).toBeGreaterThanOrEqual(3);
+    });
+  });
+
+  it('does not let orange become a body-text colour on cream', () => {
+    // The whole reason --oj-orange-deep exists.
+    expect(contrast(OJ.orange, OJ.cream)).toBeLessThan(4.5);
+  });
+
+  /*
+   * ── Known accessibility failures in the supplied palette ────────────────────
+   *
+   * These are marked expected-to-fail rather than deleted or loosened. The
+   * assertions are the requirement; the palette does not currently meet it.
+   * Marking them this way means the suite stays green while the finding stays
+   * visible, AND the moment a corrected value lands these tests fail for
+   * "unexpectedly passed", which forces the marker to be removed rather than
+   * letting the issue quietly persist.
+   *
+   * Raised with the design team on 27 August with measured ratios and minimum
+   * corrections. Colour values are theirs to change, not ours.
+   *
+   * @see tasks/repositioning/DESIGNER-CONTRAST-2026-08-27.md
+   */
+  it.fails('KNOWN FAIL: accent link on cream reaches 4.5:1', () => {
+    // 4.27:1. The token exists specifically to make orange readable at body size
+    // and falls just short. Minimum correction #BA5108 gives 4.52:1.
+    expect(contrast(OJ.orangeDeep, OJ.cream)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it.fails('KNOWN FAIL: accent link on paper reaches 4.5:1', () => {
+    // 4.4995:1, short by five ten-thousandths. Fixed by the same correction.
+    expect(contrast(OJ.orangeDeep, OJ.paper)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it.fails('KNOWN FAIL: orange focus ring on cream reaches 3:1', () => {
+    // 2.73:1 against WCAG 1.4.11 non-text contrast. This one matters most: a focus
+    // indicator that cannot be seen fails keyboard users specifically.
+    expect(contrast(OJ.orange, OJ.cream)).toBeGreaterThanOrEqual(3);
+  });
+
+  it.fails('KNOWN FAIL: orange focus ring on paper reaches 3:1', () => {
+    // 2.87:1.
+    expect(contrast(OJ.orange, OJ.paper)).toBeGreaterThanOrEqual(3);
+  });
+
+  it.fails('KNOWN FAIL: the demand taxonomy hue reads on its own tint', () => {
+    // 3.98:1 on tint and 4.48:1 on cream. The only one of the seven that fails.
+    // Minimum correction #2A736B gives 4.55:1 and 5.13:1.
+    expect(contrast(cssVar('--cat-demand'), cssVar('--cat-demand-soft'))).toBeGreaterThanOrEqual(
+      4.5
+    );
+  });
+
+  it('keeps text on the peach highlight band readable', () => {
+    // The band sits behind display type, so ink over peach is the pair that matters.
+    expect(contrast(OJ.ink, OJ.peach)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  describe('taxonomy hues on their own soft tint, needs 4.5:1', () => {
+    // 'demand' is excluded and tracked as a known failure above.
+    const pairs = ['convert', 'margin', 'ops', 'experience', 'scale', 'hospitality'] as const;
+
+    it.each(pairs)('%s reads on its tint', (name) => {
+      const fg = cssVar(`--cat-${name}`);
+      const bg = cssVar(`--cat-${name}-soft`);
+      expect(fg, `--cat-${name} missing`).toMatch(/^#[0-9a-f]{6}$/i);
+      expect(contrast(fg, bg)).toBeGreaterThanOrEqual(4.5);
+    });
+
+    it.each(pairs)('%s also reads on cream', (name) => {
+      expect(contrast(cssVar(`--cat-${name}`), OJ.cream)).toBeGreaterThanOrEqual(4.5);
+    });
+  });
+});

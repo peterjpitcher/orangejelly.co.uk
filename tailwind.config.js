@@ -293,6 +293,8 @@ module.exports = {
         'oj-move': '200ms',
       },
       fontFamily: {
+        // The repositioning face. One family, weight does the work.
+        oj: ['var(--font-oj)', 'system-ui', '-apple-system', 'sans-serif'],
         sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['var(--font-heading)', 'ui-serif', 'Georgia', 'serif'],
         heading: ['var(--font-heading)', 'ui-serif', 'Georgia', 'serif'],

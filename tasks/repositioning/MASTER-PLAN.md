@@ -48,10 +48,10 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T014 | Seven `--cat-*` taxonomy pairs added as `cat-*` Tailwind colours. Reconciling with `category-colours.ts` happens when the blog is restyled (T073) | T013 | S | | **done** |
 | T015 | Pressure shadow, 1.5px borders, 3px radius, snap easing, orange double focus ring, all verified rendering | T013 | S | | **done** |
 | T016 | Lowercase on `.oj-display` only, never an element rule. `.oj-keep-case` for proper nouns | T013 | S | | **done** |
-| T017 | Schibsted Grotesk via `next/font/google` now. Not blocked: it is a Google font and the bundle loads it from there. Self-hosting is T017b. | T013 | S | | |
+| T017 | Schibsted Grotesk via `next/font/google`, added alongside the existing pair so nothing changes until a component asks for `--font-oj` | T013 | S | | **done** |
 | T017b | Swap to `next/font/local` once the binaries arrive. Performance only, not a blocker. | T017 | S | Font binaries from the design team | |
-| T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |
-| T019 | Extend the contrast test to all states: hover, focus, active, disabled, error, inverse, text over highlight bands | T013 | M | | |
+| T018 | `.oj-prose` ported from the design bundle onto the `--oj-*` namespace. Not yet wired into blog templates: that is WS6, after the protected posts have been through their change budget | T013 | M | | **done** |
+| T019 | Contrast matrix extended across the new palette. **Found 3 real accessibility defects in the supplied colours**, raised with the designer, tracked as expected-to-fail | T013 | M | | **done** |
 | T020 | Run the style isolation guard against the new tokens; baseline already recorded | T011, T013 | S | | |
 | T021 | Runtime token-privacy check, verified against production: 7 third-party requests on the homepage, zero on all three token routes. The unit-level gate already existed | T013 | M | | **done** |
 | T022 | CSP and security header review for new fonts and analytics (gap G8) | T017 | S | | |

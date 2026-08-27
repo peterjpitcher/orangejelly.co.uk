@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Fraunces, Open_Sans } from 'next/font/google';
+import { Fraunces, Open_Sans, Schibsted_Grotesk } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 import FooterWrapper from '@/components/FooterWrapper';
@@ -28,6 +28,25 @@ const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
+  display: 'swap',
+});
+
+/*
+ * The repositioning typeface. Added alongside Fraunces and Open Sans rather than
+ * replacing them, so nothing changes until a component asks for --font-oj. The old
+ * pair comes out when nothing references it, which is also what keeps /availability
+ * and /admin on their current type while the marketing site moves.
+ *
+ * Loaded through next/font rather than the design bundle's runtime @import: the
+ * bundle's `@import url(fonts.googleapis.com)` would add a render-blocking round
+ * trip and a third-party request on every page, and next/font self-hosts the files
+ * at build time. Weight 900 is the display face and is not optional.
+ */
+const schibstedGrotesk = Schibsted_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-oj',
   fallback: ['system-ui', '-apple-system', 'sans-serif'],
   display: 'swap',
 });
@@ -184,7 +203,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
         />
       </head>
-      <body className={`${fraunces.variable} ${openSans.variable} font-sans antialiased`}>
+      <body
+        className={`${fraunces.variable} ${openSans.variable} ${schibstedGrotesk.variable} font-sans antialiased`}
+      >
         <GoogleTagManager />
         <GoogleTagManagerNoscript />
         {/* Skip to main content link for keyboard navigation */}
