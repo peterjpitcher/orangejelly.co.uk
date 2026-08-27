@@ -10,6 +10,12 @@ import {
   Header as OjHeader,
   Footer as OjFooter,
   Breadcrumb as OjBreadcrumb,
+  Field,
+  Input,
+  Textarea,
+  Select,
+  Checkbox,
+  Radio,
 } from '@/components/oj';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
@@ -372,6 +378,48 @@ export default function ComponentHarness(): JSX.Element {
               Taking work for October
             </Tag>
           </OjFooter>
+        </div>
+      </Specimen>
+
+      <Specimen
+        name="oj / Form controls"
+        note="Label, hint and error are wired to the control automatically. Tab through to see the focus ring."
+      >
+        <div className="grid w-full gap-6 bg-oj-cream p-8 md:grid-cols-2">
+          <Field label="Your name" required>
+            <Input placeholder="Sam Whitfield" autoComplete="name" />
+          </Field>
+          <Field label="Work email" required hint="No newsletters. One reply.">
+            <Input type="email" placeholder="you@company.co.uk" autoComplete="email" />
+          </Field>
+          <Field label="Work email" error="Enter a work email address">
+            <Input type="email" defaultValue="sam@" />
+          </Field>
+          <Field label="Your role">
+            <Select defaultValue="">
+              <option value="">Choose one</option>
+              <option value="owner">Owner or founder</option>
+              <option value="md">Managing director</option>
+              <option value="ops">Operations director</option>
+            </Select>
+          </Field>
+          <div className="md:col-span-2">
+            <Field
+              label="What is happening in the business?"
+              required
+              hint="A sentence or two is plenty. We will ask the rest."
+            >
+              <Textarea placeholder="Enquiries have halved since the spring and nobody can agree why." />
+            </Field>
+          </div>
+          <Field label="Disabled">
+            <Input disabled defaultValue="Not editable" />
+          </Field>
+          <div className="flex flex-col gap-3">
+            <Checkbox label="Send me the write-up afterwards" defaultChecked />
+            <Radio name="demo-size" value="a" label="1 to 9 people" defaultChecked />
+            <Radio name="demo-size" value="b" label="10 to 49 people" />
+          </div>
         </div>
       </Specimen>
 
