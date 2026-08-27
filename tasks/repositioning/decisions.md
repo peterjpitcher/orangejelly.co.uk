@@ -11,7 +11,7 @@ pack refuses to decide on its own.
 | # | Decision | Made | Pack ref |
 |---|---|---|---|
 | D1 | **Existing URLs stay live.** No pub or hospitality URL is retired to make room for the new structure. Existing search authority is protected. Hospitality becomes a contained sector hub inside the new IA. Only thin or factually outdated pages are candidates for redirect, and each one is an individual call. **Refined by D14 once the Search Console data arrived.** | 26 Aug 2026 | Open decision 14 |
-| D2 | **The five proof claims will be re-verified.** Baseline, comparison period, data source, date range and context to be established for each before publication. Until that is done they are proof candidates, not approved claims. | 26 Aug 2026 | Open decision 13 |
+| D2 | ~~The five proof claims will be re-verified.~~ **CLOSED 27 Aug 2026. Peter validated the five metrics personally and they are approved for publication.** +828% search visibility, +403% table bookings, +567% private hire, minus 89% no-shows, +98% food revenue, all at The Anchor. No longer a blocker. The Results page, About page and case studies are unblocked. | 27 Aug 2026 | Open decision 13 |
 | D3 | **No pricing on the site.** All work is bespoke. No hourly rate, no package prices, no "from" figures, no investment bands. Rationale: published estimates would read as high and put the right clients off before a conversation. The price-free `OfferCard` is correct by design. | 26 Aug 2026 | Open decisions 4 and 6 |
 | D4 | **Request the missing designs** rather than inventing the absent page types. See `design-requests.md`. | 26 Aug 2026 | n/a |
 | D5 | **Sequenced delivery under one governing plan.** The work ships in phases, but a single implementation spec covers everything first so nothing is missed. Discovery and research come before the spec. | 26 Aug 2026 | Open decision in `12-90-day-activation-plan.md` |
@@ -26,6 +26,9 @@ pack refuses to decide on its own.
 | D14 | **D1 refined against evidence, not reversed.** Search Console shows the site earns 969 clicks a year, of which the blog takes 92.9%. Untouchable: the ~30 blog posts carrying 95% of blog clicks. Free to restructure: the 12 pub landing pages, 5 service pages, `/ways-to-work`, `/capabilities`, `/compete-with-pub-chains`, `/quiet-midweek-solutions` and `/empty-pub-solutions`, which earn **11 clicks a year between them**. Individual review: the 62 blog posts that rank but earn nothing. | 26 Aug 2026 | Open decision 14 |
 | D15 | **Improving existing rankings outranks building new pages.** 69,698 impressions produce 969 clicks at position 9 to 13. Fourteen posts carry 80% of blog traffic and most sit outside the top ten. Fixing them is higher-yield than any new page. The spec sequences ranking work alongside the rebuild, not after it. | 26 Aug 2026 | n/a |
 | D16 | **Keyword research is closed at three rounds.** 243 terms tested, picture stable since round 2, fifteen terms worth building for. Round 4 (trades) deferred until the professional services hub is proven. | 26 Aug 2026 | Open decision 15 |
+| D17 | **Marketing design tokens are scoped, not global.** The new palette and the lowercase heading rule apply to a marketing surface, never bare `:root`. `/availability` and `/admin` keep their current styling. Rationale: "out of scope" is a requirement, not a mechanism, and root custom properties reach every route regardless of intent. Visual regression tests cover both excluded areas. | 27 Aug 2026 | n/a |
+| D18 | **`/about-demo` and `/test-shadcn` are deleted** in WS1. Both are publicly routable artefacts; `/about-demo` is a live `route.ts` handler indexed at 22 impressions. | 27 Aug 2026 | n/a |
+| D19 | **The bearer-token security boundary on `/availability` is non-negotiable.** Organiser and edit URLs carry a token in the path, and `MarketingChrome.tsx` deliberately fails closed to stop it reaching GTM, Vercel Analytics or preconnects. No test currently guards this. One is now required, asserting no third-party request and no marketing chrome on token routes. | 27 Aug 2026 | n/a |
 
 ## Consequences of D3 worth naming
 
@@ -69,8 +72,6 @@ The category phrase and the symptom language both returned close to zero Google 
 - **Swearing boundary on the permanent homepage.** The pack recommends keeping expletives to
   founder-led and campaign content only.
 - **Founder versus company brand.** How much delivery stays visibly Peter-led.
-- **Proof verification.** D2 commits to it. The work has not started. This blocks the Results page,
-  the About page and every case study.
 - **Greene King and BII logo migration** into LogoStrip. Files exist in `public/`. Designer is
   waiting on the go-ahead.
 
@@ -109,3 +110,18 @@ study. See `anchor-search-performance.md`.
 - **Product subdomains** (`cheersai`, `mixerai`, `management`) sit inside the orangejelly.co.uk
   Search Console property with URLs indexed. They need a decision about whether they belong there.
 - **`/about-demo` is live and indexed.** Leftover demo page, should not be public.
+
+## Consequence of the developer review, 27 August 2026
+
+The review of spec v1.0 raised 54 findings. Response and disposition in `SPEC-REVIEW-RESPONSE.md`,
+spec reissued as v1.1. Four decisions came out of it: D2 closed, plus D17, D18 and D19 above.
+
+The two findings that mattered most were not in the numbers. Phase 3 as written would not have
+resolved the old-versus-new contradiction, because the old position also lives in root metadata,
+structured data, feeds, `llms.txt`, the manifest and the navigation JSON. And "out of scope" for
+`/availability` was a statement of intent with no mechanism behind it, over a route family that
+carries bearer tokens in the URL.
+
+Open copy decisions still needing an answer, each now tied to the page it blocks: whether "EXPOSE"
+is approved (`/how-we-work`), founder versus company presentation (`/about`), and whether an
+expletive appears on any permanent page (homepage, `/about`).
