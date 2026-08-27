@@ -3,9 +3,34 @@
 **Date:** 27 August 2026
 **Purpose:** an honest answer to "does the plan cover all the work?"
 
-**Short answer: no, not yet.** Roughly two thirds of the programme is specified to the point a
-developer could pick it up. The rest is named but not written, and three things are not covered at
-all. This document lists every gap so none of them is a surprise later.
+**Answered 27 August 2026.** Every gap below now has a task ID in `MASTER-PLAN.md`, which is the
+complete 94-task register for the programme. This document stays as the record of what was missing
+and why, so the gaps cannot quietly reappear.
+
+| Gap | Now tracked as |
+|---|---|
+| G1 design authority | T023 |
+| G2 page copy | T045, T047, T051, T053, T055, T066, T068 |
+| G3 fit language | T045 |
+| G4 page briefs | T079 |
+| G5 scoring rubric | T082 |
+| G6 NextStep mapping | T074 |
+| G7 case studies | T057 |
+| G8 CSP | T022 |
+| G9 visual regression | T011 |
+| G10 component harness | T012 |
+| G11 trades | T090 |
+| **N1 owners and dates** | Master plan header and phase estimates. Claude owns delivery. |
+| **N2 content author** | Claude writes. Peter supplies experience, listed in the plan. |
+| **N3 designer has the old method** | T004, sent as `DESIGNER-BATCH-2026-08-27.md` |
+
+The original assessment follows.
+
+---
+
+**Short answer at the time: no, not yet.** Roughly two thirds of the programme was specified to the
+point a developer could pick it up. The rest was named but not written, and three things were not
+covered at all.
 
 Judged against one test: **could a competent developer or writer who has not been in these
 conversations pick this up and do it without asking a question?**
