@@ -41,7 +41,7 @@ const ROUTES_ARG = arg('routes', '');
 const LIMIT = parseInt(arg('limit', '0'), 10);
 
 /** Routes that legitimately do not use the marketing shell. */
-const SKIP = [/^\/admin/, /^\/availability/, /^\/test-shadcn/];
+const SKIP = [/^\/admin/, /^\/availability/, /^\/dev\//];
 
 async function collectRoutes() {
   if (ROUTES_ARG) return ROUTES_ARG.split(',').map((r) => r.trim());

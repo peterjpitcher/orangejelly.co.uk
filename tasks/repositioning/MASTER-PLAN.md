@@ -35,10 +35,10 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T008 | Error and failure monitoring: server action failures, lead writes, notification failures, 404 rate, redirect loops | | M | Vercel and Supabase access if not already granted | |
 | T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
 | T010 | GA4 enquiry event live on the **current** site, so there is a before and after | | M | GA4 and GTM access | |
-| T011 | Choose and wire visual regression tooling (gap G9) | | S | | |
+| T011 | Style isolation guard: `scripts/check-style-isolation.mjs`, computed-style baseline on the protected routes rather than pixel diffs (gap G9) | | S | | **done** |
 | T011a | Delete the two mislabelled `public/logo-*.svg` bitmaps, repoint the GK toolkit doc | | S | | **done** |
 | T011b | Obtain the 27 Aug design bundle. The handback describes files we do not have. | | S | Chase the design team | **next** |
-| T012 | Choose the component harness, private route only (gap G10) | | S | | |
+| T012 | Component harness at `/dev/components`, dynamic so it 404s in production. Storybook rejected (gap G10) | | S | | **done** |
 
 ## Phase 1: Foundations
 
@@ -51,7 +51,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T017 | Schibsted Grotesk self-hosted in `public/fonts/` via `next/font/local` (D29) | T013 | S | Font binaries needed from the design team | |
 | T018 | Port `tokens/prose.css` to the Typography config | T013 | M | | |
 | T019 | Extend the contrast test to all states: hover, focus, active, disabled, error, inverse, text over highlight bands | T013 | M | | |
-| T020 | Visual regression snapshots proving `/availability` and `/admin` are unchanged | T011, T013 | M | | |
+| T020 | Run the style isolation guard against the new tokens; baseline already recorded | T011, T013 | S | | |
 | T021 | **Security test: no third-party request and no marketing chrome on `/availability/o/:token` and `/p/:token`** (D19) | T013 | M | | |
 | T022 | CSP and security header review for new fonts and analytics (gap G8) | T017 | S | | |
 | T023 | Record the design authority order once the designer confirms (gap G1) | T004 | S | | **done** (D28) |

@@ -1,0 +1,72 @@
+{
+  "/availability": {
+    "body": {
+      "background-color": "rgb(243, 248, 252)",
+      "color": "rgb(25, 46, 72)",
+      "font-family": "__Open_Sans_8544bd, __Open_Sans_Fallback_8544bd, system-ui, -apple-system, sans-serif, system-ui, -apple-system, sans-serif"
+    },
+    "h1": {
+      "text-transform": "none",
+      "font-family": "__Fraunces_d6f10c, __Fraunces_Fallback_d6f10c, ui-serif, Georgia, serif",
+      "font-weight": "700",
+      "color": "rgb(26, 47, 73)"
+    },
+    "a": {
+      "color": "rgb(26, 47, 73)"
+    }
+  },
+  "/availability/new": {
+    "body": {
+      "background-color": "rgb(243, 248, 252)",
+      "color": "rgb(25, 46, 72)",
+      "font-family": "__Open_Sans_8544bd, __Open_Sans_Fallback_8544bd, system-ui, -apple-system, sans-serif, system-ui, -apple-system, sans-serif"
+    },
+    "h1": {
+      "text-transform": "none",
+      "font-family": "__Fraunces_d6f10c, __Fraunces_Fallback_d6f10c, ui-serif, Georgia, serif",
+      "font-weight": "700",
+      "color": "rgb(26, 47, 73)"
+    },
+    "button": {
+      "background-color": "rgb(255, 255, 255)",
+      "color": "rgb(26, 47, 73)",
+      "border-color": "rgb(203, 213, 226)",
+      "border-radius": "6px"
+    },
+    "a": {
+      "color": "rgb(26, 47, 73)"
+    },
+    "input": {
+      "border-color": "rgb(203, 213, 226)",
+      "border-width": "1px",
+      "border-radius": "6px"
+    }
+  },
+  "/admin": {
+    "body": {
+      "background-color": "rgb(243, 248, 252)",
+      "color": "rgb(25, 46, 72)",
+      "font-family": "__Open_Sans_8544bd, __Open_Sans_Fallback_8544bd, system-ui, -apple-system, sans-serif, system-ui, -apple-system, sans-serif"
+    },
+    "h1": {
+      "text-transform": "none",
+      "font-family": "__Fraunces_d6f10c, __Fraunces_Fallback_d6f10c, ui-serif, Georgia, serif",
+      "font-weight": "700",
+      "color": "rgb(26, 47, 73)"
+    },
+    "button": {
+      "background-color": "rgb(241, 111, 35)",
+      "color": "rgb(26, 47, 73)",
+      "border-color": "rgb(229, 231, 235)",
+      "border-radius": "6px"
+    },
+    "a": {
+      "color": "rgb(26, 47, 73)"
+    },
+    "input": {
+      "border-color": "rgba(26, 47, 73, 0.2)",
+      "border-width": "1px",
+      "border-radius": "6px"
+    }
+  }
+}

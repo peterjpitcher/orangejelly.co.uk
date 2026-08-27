@@ -258,6 +258,12 @@ const ROUTES = [
   // Live but deliberately out of the sitemap.
   { path: '/privacy', disposition: 'live', sitemap: false },
   {
+    path: '/dev/components',
+    disposition: 'live',
+    sitemap: false,
+    note: 'Component harness. Dynamic so notFound() returns a real 404 in production rather than a soft one. Never indexed.',
+  },
+  {
     path: '/admin',
     disposition: 'live',
     sitemap: false,
