@@ -105,3 +105,4 @@ export {
   type CookieNoticeProps,
   type ShareRowProps,
 } from './conversion';
+export { SiteSearch, type SiteSearchProps, type SiteSearchResult } from './SiteSearch';

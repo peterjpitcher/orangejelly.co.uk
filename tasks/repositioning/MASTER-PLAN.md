@@ -74,7 +74,7 @@ Ported on demand. A component is not built until a page needs it.
 | T032 | Diagnostic: PressureMap, PressureCheck, Scorecard. Pressure stated in words as well as colour. No total is ever calculated or shown | T028 | L | | **done** |
 | T033 | StickyCTA, CookieNotice with equal-weight accept and decline, and ShareRow | T024 | M | | **done** |
 | T034 | Search index rebuilt: collection-tagged, urls derived not hard-coded, 936KB down to 196KB, and now built as part of `npm run build` rather than a step someone has to remember | | L | | **done** |
-| T035 | SiteSearch component wired to the rebuilt index | T034, T030 | M | | |
+| T035 | SiteSearch: input, announced result counts, and a no-results state that routes to the growth-problems hub. Index loading stays the caller's job so it can be lazy | T034, T030 | M | | **done** |
 | T036 | Fixed-surface rules: stacking, max combined footprint, safe areas, reduced motion, keyboard-open behaviour | T033 | S | | |
 | T037 | axe and keyboard tests across ported components | T024 to T033 | L | | |
 
