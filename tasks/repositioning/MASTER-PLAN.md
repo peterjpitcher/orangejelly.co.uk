@@ -70,9 +70,9 @@ Ported on demand. A component is not built until a page needs it.
 | T028 | Content: Card, PressureCard, ProofCard, MethodStep, Quote. PressureCard is now a real link rather than a card with an onClick and a bare arrow inside | T024 | M | | **done** |
 | T029 | Editorial: ArticleCard, FAQ, Toc, CategoryTag, NextStep, Pagination, Tabs. FAQ uses real `<details>` so it works without JavaScript. ShareRow needs client clipboard, done with T033 | T024 | L | | **done** |
 | T030 | Feedback: Alert, Modal, EmptyState, Skeleton. Modal gains a real focus trap, which the reference lacked | T024 | M | | **done** |
-| T031 | Marketing: OfferCard, CompareTable, LogoStrip, NewsletterBand, SeasonalBand. LogoStrip consumes `public/partners/*.png`, type-only fallback on ink. | T024 | M | | |
-| T032 | Diagnostic: PressureMap, PressureCheck, Scorecard | T028 | L | | |
-| T033 | StickyCTA and CookieNotice with permanent reopen control | T024 | M | | |
+| T031 | Marketing: OfferCard (price-free by construction, no price prop exists), CompareTable, LogoStrip, NewsletterBand, SeasonalBand | T024 | M | | **done** |
+| T032 | Diagnostic: PressureMap, PressureCheck, Scorecard. Pressure stated in words as well as colour. No total is ever calculated or shown | T028 | L | | **done** |
+| T033 | StickyCTA, CookieNotice with equal-weight accept and decline, and ShareRow | T024 | M | | **done** |
 | T034 | Rebuild the search index: new content types, CI build, lazy load, stale and corrupt handling | | L | | |
 | T035 | SiteSearch component wired to the rebuilt index | T034, T030 | M | | |
 | T036 | Fixed-surface rules: stacking, max combined footprint, safe areas, reduced motion, keyboard-open behaviour | T033 | S | | |

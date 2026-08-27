@@ -70,3 +70,38 @@ export {
   type NextStepProps,
   type NextStepLink,
 } from './editorial';
+export {
+  OfferCard,
+  CompareTable,
+  LogoStrip,
+  NewsletterBand,
+  SeasonalBand,
+  type OfferCardProps,
+  type CompareTableProps,
+  type LogoStripProps,
+  type NewsletterBandProps,
+  type SeasonalBandProps,
+  type SeasonalItem,
+} from './marketing';
+export {
+  PressureMap,
+  PressureCheck,
+  Scorecard,
+  PRESSURE_AREAS,
+  PRESSURE_SYMPTOMS,
+  SCORECARD_QUESTIONS,
+  type PressureArea,
+  type PressureMapProps,
+  type PressureSymptom,
+  type PressureCheckProps,
+  type ScorecardQuestion,
+  type ScorecardProps,
+} from './diagnostic';
+export {
+  StickyCTA,
+  CookieNotice,
+  ShareRow,
+  type StickyCTAProps,
+  type CookieNoticeProps,
+  type ShareRowProps,
+} from './conversion';
