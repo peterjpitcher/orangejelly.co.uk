@@ -64,8 +64,8 @@ Ported on demand. A component is not built until a page needs it.
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
 | T024 | Core: Button, Stat, Tag, Mark, ported to `src/components/oj/` alongside the existing set. 13 behaviour tests, verified rendering | T013 | M | | **done** |
-| T025 | Chrome: Header both tones, Footer, Breadcrumb | T024 | L | | |
-| T026 | Mobile drawer, grouped nav, built mobile-first | T025 | M | | |
+| T025 | Chrome: Header in both tones, Footer, Breadcrumb. 13 behaviour tests, verified rendering | T024 | L | | **done** |
+| T026 | Mobile drawer with grouped sub-nav, folded into Header by the designer. Adds Escape, focus management and scroll lock, none of which the reference had | T025 | M | | **done** |
 | T027 | Forms: Field, Input, Select, Textarea, Checkbox, Radio, Slider | T024 | L | | |
 | T028 | Content: Card, PressureCard, ProofCard, MethodStep, Quote | T024 | M | | |
 | T029 | Editorial: ArticleCard, FAQ, Toc, CategoryTag, NextStep, Pagination, ShareRow, Tabs | T024 | L | | |

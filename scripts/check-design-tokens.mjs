@@ -62,6 +62,23 @@ const WIDTH_ALLOWLIST = [
   'src/app/admin/AdminDashboard.tsx',
 ];
 
+/*
+ * Paths where a retired colour NAME may legitimately appear as a word, each for a
+ * stated reason. Adding to this list is fine; adding to it without a reason is not.
+ *
+ * The retired-colour rule catches two things: the Tailwind utility (bg-cream) and the
+ * bare quoted name, because colour names used to be passed around as props. The
+ * second is what needs an exception here.
+ */
+const RETIRED_COLOUR_ALLOWLIST = [
+  // The repositioning namespace has its own --oj-cream, a genuine cream, and the
+  // design contracts use 'cream' as a SURFACE TONE prop value (tone: 'cream' |
+  // 'orange'). That is a variant name, not the retired Tailwind colour, and the
+  // utility half of the rule still applies here: bg-cream would still be caught,
+  // only bg-oj-cream is allowed.
+  'src/components/oj/',
+];
+
 /** Colour names retired in the 2026-08 rename, with what to use instead. */
 const RETIRED_COLOURS = {
   charcoal: 'brand-base',
@@ -109,10 +126,12 @@ for (const file of files) {
     else if (closesBlock) inBlockComment = false;
 
     // 1. Retired colour names must not come back.
+    const quotedAllowed = RETIRED_COLOUR_ALLOWLIST.some((allowed) => rel.startsWith(allowed));
     for (const [old, replacement] of Object.entries(RETIRED_COLOURS)) {
       const utility = new RegExp(`${UTILITY_PREFIX}${old}(?![-\\w])`);
       const quoted = new RegExp(`(['"\`])${old}(-light|-dark)?\\1`);
-      if (!isComment && (utility.test(line) || quoted.test(line))) {
+      const hit = utility.test(line) || (!quotedAllowed && quoted.test(line));
+      if (!isComment && hit) {
         errors.push(
           `${at}\n    "${old}" was retired: it never resolved to a ${old}. Use "${replacement}".`
         );

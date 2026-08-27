@@ -2,7 +2,15 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 import Button from '@/components/Button';
-import { Button as OjButton, Stat, Tag, Mark } from '@/components/oj';
+import {
+  Button as OjButton,
+  Stat,
+  Tag,
+  Mark,
+  Header as OjHeader,
+  Footer as OjFooter,
+  Breadcrumb as OjBreadcrumb,
+} from '@/components/oj';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -283,6 +291,87 @@ export default function ComponentHarness(): JSX.Element {
               A content calendar will not fix a <Mark tone="orange">broken growth system.</Mark>
             </h3>
           </div>
+        </div>
+      </Specimen>
+
+      <Specimen
+        name="oj / Header"
+        note="Cream is the default. Orange is conversion pages only. Narrow the window below 880px for the drawer."
+      >
+        <div className="w-full space-y-8">
+          <div className="border-1.5 border-oj-ink">
+            <OjHeader
+              sticky={false}
+              items={[
+                { label: 'How we work', href: '#' },
+                {
+                  label: 'Growth problems',
+                  current: true,
+                  sub: [
+                    { label: 'Growth has stalled', href: '#' },
+                    { label: 'Leads are not converting', href: '#' },
+                    { label: 'See all eight', href: '#', more: true },
+                  ],
+                },
+                { label: 'Results', href: '#' },
+                { label: 'About', href: '#' },
+              ]}
+              cta={{ label: 'Bring us the problem', href: '#' }}
+            />
+          </div>
+          <div className="border-1.5 border-oj-ink">
+            <OjHeader
+              sticky={false}
+              tone="orange"
+              items={[
+                { label: 'How we work', href: '#' },
+                { label: 'Growth problems', current: true, href: '#' },
+                { label: 'About', href: '#' },
+              ]}
+              cta={{ label: 'Bring us the problem', href: '#' }}
+            />
+          </div>
+        </div>
+      </Specimen>
+
+      <Specimen name="oj / Breadcrumb">
+        <div className="w-full bg-oj-cream p-8">
+          <OjBreadcrumb
+            items={[
+              { label: 'Home', href: '#' },
+              { label: 'Insights', href: '#' },
+              { label: 'Where AI actually helps an accountancy practice' },
+            ]}
+          />
+        </div>
+      </Specimen>
+
+      <Specimen name="oj / Footer">
+        <div className="w-full">
+          <OjFooter
+            columns={[
+              {
+                title: 'Growth problems',
+                links: [
+                  { label: 'Growth has stalled', href: '#' },
+                  { label: 'Leads are not converting', href: '#' },
+                  { label: 'Margin is disappearing', href: '#' },
+                ],
+              },
+              {
+                title: 'Company',
+                links: [
+                  { label: 'How we work', href: '#' },
+                  { label: 'Results', href: '#' },
+                  { label: 'About', href: '#' },
+                ],
+              },
+            ]}
+          >
+            <Tag dot="ok" variant="ink">
+              Taking work for October
+            </Tag>
+          </OjFooter>
         </div>
       </Specimen>
 

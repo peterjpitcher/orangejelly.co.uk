@@ -14,3 +14,6 @@ export { Button, type ButtonProps } from './Button';
 export { Stat, type StatProps } from './Stat';
 export { Tag, type TagProps } from './Tag';
 export { Mark, type MarkProps } from './Mark';
+export { Header, type HeaderProps, type HeaderItem, type HeaderSubItem } from './Header';
+export { Footer, type FooterProps, type FooterColumn } from './Footer';
+export { Breadcrumb, type BreadcrumbProps } from './Breadcrumb';
