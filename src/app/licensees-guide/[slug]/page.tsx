@@ -461,10 +461,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: [
         {
           url: absoluteImageUrl,
-          width: 1600,
-          height: 900,
+          width: 1200,
+          height: 630,
           alt: post.title,
-          type: 'image/webp',
+          type: 'image/svg+xml',
         },
       ],
     },
@@ -718,11 +718,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               dateRangeLabel={hub.dateRangeLabel}
               label={hub.label}
               season={hub.theme}
-              imageSrc={
-                typeof post.featuredImage === 'string'
-                  ? post.featuredImage
-                  : post.featuredImage?.src || post.featuredImage?.asset?.url
-              }
               breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
             />
             <SeasonalCalendar entries={hub.calendar} season={hub.theme} />
@@ -732,11 +727,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             title={post.title}
             excerpt={post.excerpt}
             category={post.category?.slug || 'general'}
-            imageSrc={
-              typeof post.featuredImage === 'string'
-                ? post.featuredImage
-                : post.featuredImage?.src || post.featuredImage?.asset?.url
-            }
             breadcrumbs={[
               ...breadcrumbPaths.licenseesGuide,
               ...(spokeHub

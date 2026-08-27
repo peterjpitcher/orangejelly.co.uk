@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import Card from '@/components/Card';
 import Heading from '@/components/Heading';
@@ -42,10 +41,6 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
   const gradient = getCategoryGradient(categorySlug);
   const colour = getCategoryColour(categorySlug);
   const categoryLabel = getCategoryLabel(categorySlug);
-  const featuredImageSrc =
-    typeof post.featuredImage === 'string'
-      ? post.featuredImage
-      : post.featuredImage?.src || post.featuredImage?.asset?.url;
 
   if (featured) {
     return (
@@ -53,19 +48,16 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
         <Link href={postUrl} className="group">
           <div className="grid md:grid-cols-2 gap-0">
             <div
-              className="relative aspect-[16/9] md:aspect-auto md:min-h-[280px] overflow-hidden flex items-center justify-center p-8"
+              className="relative aspect-[16/9] md:aspect-auto md:min-h-[280px] flex items-center justify-center p-8"
               style={{ background: gradient }}
             >
-              {featuredImageSrc && (
-                <Image
-                  src={featuredImageSrc}
-                  alt=""
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-              )}
-              <div className="absolute inset-0 bg-brand-base/45" aria-hidden="true" />
+              <div
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)',
+                }}
+              />
               <div className="relative text-center">
                 <span className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium mb-3">
                   Featured
@@ -121,16 +113,13 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
           className="relative aspect-[16/9] overflow-hidden flex items-center justify-center"
           style={{ background: gradient }}
         >
-          {featuredImageSrc && (
-            <Image
-              src={featuredImageSrc}
-              alt=""
-              fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          )}
-          <div className="absolute inset-0 bg-brand-base/35" aria-hidden="true" />
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)',
+            }}
+          />
           <Text
             size="sm"
             color="white"

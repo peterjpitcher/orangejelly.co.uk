@@ -1,5 +1,4 @@
 import { type CSSProperties } from 'react';
-import Image from 'next/image';
 import Breadcrumb, { type BreadcrumbItem } from '@/components/Breadcrumb';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -13,7 +12,6 @@ interface SeasonalHubHeroProps {
   /** Pill label, e.g. "Autumn Pub Playbook". */
   label: string;
   season: SeasonTheme;
-  imageSrc?: string;
   breadcrumbs?: BreadcrumbItem[];
 }
 
@@ -29,7 +27,6 @@ export default function SeasonalHubHero({
   dateRangeLabel,
   label,
   season,
-  imageSrc,
   breadcrumbs,
 }: SeasonalHubHeroProps) {
   const heroStyle: CSSProperties = {
@@ -39,15 +36,12 @@ export default function SeasonalHubHero({
 
   return (
     <section data-season={season} className="relative overflow-hidden" style={heroStyle}>
-      {imageSrc && (
-        <Image src={imageSrc} alt="" fill priority sizes="100vw" className="object-cover" />
-      )}
-
+      {/* Subtle diagonal stripe pattern overlay: CSS only, no images */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
-          background:
-            'linear-gradient(90deg, rgba(18,33,51,0.97) 0%, rgba(18,33,51,0.9) 52%, rgba(18,33,51,0.62) 100%)',
+          backgroundImage:
+            'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,1) 10px, rgba(255,255,255,1) 11px)',
         }}
         aria-hidden="true"
       />
