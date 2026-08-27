@@ -74,7 +74,7 @@ structured data, `priceRange` removal, sitemap generation from the manifest, plu
 `llms-full.txt`, `manifest.json`, RSS, JSON Feed, icons, the OG image and navigation JSON.
 
 **Components and design.** F02 count corrected and the v1 bundle marked obsolete. F29 wrapper
-collapse gains an explicit API migration order. F32 design authority order recorded. F33 component
+collapse gains an explicit API migration order. F32 design authority order **not yet recorded**, tracked as G1 in `COVERAGE.md`. This document originally claimed it was done. It was not. F33 component
 done-ness now includes `.prompt.md` behaviour, states, axe and keyboard. O03 adopted: port on demand.
 
 **Accessibility and performance.** F34 per-template checklist, axe, keyboard, zoom and reflow.
