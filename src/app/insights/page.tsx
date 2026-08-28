@@ -54,7 +54,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
 
   return (
     <>
-      <OjHeader />
+      <OjHeader current="insights" />
 
       <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">

@@ -80,7 +80,7 @@ export default async function InsightPage({ params }: Params): Promise<JSX.Eleme
 
   return (
     <>
-      <OjHeader />
+      <OjHeader current="insights" />
 
       <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">

@@ -140,6 +140,16 @@ describe('internal links resolve', () => {
     expect(declaredButMissing).toEqual([]);
   });
 
+  it('links to both content libraries from the chrome', () => {
+    // The first version of this nav had neither. The 105 guides earn 92.9% of the
+    // site's search clicks and were reachable only through a footer link labelled
+    // "Insights", which is now a different collection at a different URL.
+    render(<HomePage />);
+    const hrefs = screen.getAllByRole('link').map((l) => l.getAttribute('href'));
+    expect(hrefs).toContain('/licensees-guide');
+    expect(hrefs).toContain('/insights');
+  });
+
   it('resolves every link in the shared header and footer', () => {
     // A broken link here is broken on every page at once.
     render(<HomePage />);
