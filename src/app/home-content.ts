@@ -15,36 +15,45 @@ export const SYMPTOMS = [
   'Everyone around the table has a different view of the real problem.',
 ] as const;
 
+/**
+ * The six areas, and the problem page each one leads to.
+ *
+ * The card titles are the areas (where growth gets stuck). The destinations are
+ * symptom-shaped, because that is how somebody recognises their own situation:
+ * nobody types "protect margin", they think "we are busy and not much better off".
+ * The eight problem pages carry the symptom language and tag themselves with the
+ * areas they touch, so the two vocabularies stay joined rather than competing.
+ */
 export const PRESSURE_POINTS = [
   {
     title: 'Create demand',
     desc: 'Not enough of the right people know you exist, or care yet.',
-    href: '/growth-problems/create-demand',
+    href: '/growth-problems/weak-demand',
   },
   {
     title: 'Convert more',
     desc: 'They arrive, they look, and they do not buy. Usually the fault is in the handover.',
-    href: '/growth-problems/convert-more',
+    href: '/growth-problems/leads-not-converting',
   },
   {
     title: 'Protect margin',
     desc: 'The revenue is there. It is leaking out somewhere between the sale and the bank.',
-    href: '/growth-problems/protect-margin',
+    href: '/growth-problems/margin-under-pressure',
   },
   {
     title: 'Remove operational drag',
     desc: 'People doing by hand what a system should do, and no time left to improve anything.',
-    href: '/growth-problems/operational-drag',
+    href: '/growth-problems/operations-slowing-us-down',
   },
   {
     title: 'Improve the experience',
     desc: 'What you deliver is fine. What people remember is not the same thing.',
-    href: '/growth-problems/improve-experience',
+    href: '/growth-problems/experience-leaking-value',
   },
   {
     title: 'Build for scale',
     desc: 'It works at this size. It will not work at twice this size, and you can feel it.',
-    href: '/growth-problems/build-for-scale',
+    href: '/growth-problems/systems-cannot-keep-up',
   },
 ] as const;
 

@@ -131,15 +131,32 @@ describe('planned routes', () => {
   });
 
   it('never advertises a route that does not exist yet', () => {
+    // There may legitimately be none: every route that was planned has now been
+    // built. So this asserts the property rather than requiring a population, and
+    // the test below keeps it from being vacuous.
     const planned = ROUTES.filter((route) => route.disposition === 'planned');
-    expect(planned.length).toBeGreaterThan(0);
-
     const sitemap = new Set(getSitemapRoutes().map((route) => route.path));
     const redirects = new Set(getRedirects().map((redirect) => redirect.source));
-    for (const route of planned) {
-      expect(sitemap.has(route.path)).toBe(false);
-      expect(redirects.has(route.path)).toBe(false);
-    }
+
+    const advertised = planned
+      .filter((route) => sitemap.has(route.path) || redirects.has(route.path))
+      .map((route) => route.path);
+    expect(advertised).toEqual([]);
+  });
+
+  it('would catch a planned route that got advertised', () => {
+    // The check above passes trivially while nothing is planned. This proves the
+    // rule it encodes still discriminates, by running it over a synthetic entry
+    // that breaks it.
+    const sitemap = new Set(getSitemapRoutes().map((route) => route.path));
+    const anyLiveSitemapPath = [...sitemap][0];
+    expect(anyLiveSitemapPath).toBeDefined();
+
+    const synthetic = [{ path: anyLiveSitemapPath, disposition: 'planned' as const }];
+    const advertised = synthetic
+      .filter((route) => sitemap.has(route.path))
+      .map((route) => route.path);
+    expect(advertised).toEqual([anyLiveSitemapPath]);
   });
 
   it('gives no planned route a redirect destination', () => {

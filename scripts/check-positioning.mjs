@@ -42,6 +42,7 @@ const SURFACES = [
   'src/app/home-content.ts',
   'src/app/about',
   'src/app/how-we-work',
+  'src/app/growth-problems',
   'src/app/results',
   'src/app/solutions',
   'src/app/start-here',

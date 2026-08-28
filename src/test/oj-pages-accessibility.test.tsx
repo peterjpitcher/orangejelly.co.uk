@@ -9,6 +9,8 @@ import HowWeWorkPage from '@/app/how-we-work/page';
 import ResultsPage from '@/app/results/page';
 import SolutionsPage from '@/app/solutions/page';
 import ContactPage from '@/app/contact/page';
+import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
+import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import NotFound from '@/app/not-found';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
@@ -82,6 +84,11 @@ describe('page-level accessibility', () => {
   it('finds nothing on /contact or the 404', async () => {
     expect(await scan(<ContactPage />)).toEqual([]);
     expect(await scan(<NotFound />)).toEqual([]);
+  });
+
+  it('finds nothing on the growth problems hub or a problem page', async () => {
+    expect(await scan(<GrowthProblemsHubPage />)).toEqual([]);
+    expect(await scan(<GrowthProblemPage params={{ slug: 'growth-has-stalled' }} />)).toEqual([]);
   });
 
   it('finds nothing on a case study', async () => {

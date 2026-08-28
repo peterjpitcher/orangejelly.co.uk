@@ -264,20 +264,28 @@ const ROUTES = [
    */
   {
     path: '/growth-problems',
-    disposition: 'planned',
-    note: 'Hub. Six pressure points, each with its own page. Linked from the homepage and the nav.',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.85,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'Hub. Eight symptom-shaped problems, each tagged with the areas it touches.',
   },
-  ...[
-    'create-demand',
-    'convert-more',
-    'protect-margin',
-    'operational-drag',
-    'improve-experience',
-    'build-for-scale',
-  ].map((slug) => ({
-    path: `/growth-problems/${slug}`,
-    disposition: /** @type {Disposition} */ ('planned'),
-  })),
+  /*
+   * Eight, not the homepage's six. The six are AREAS (where growth gets stuck) and
+   * the eight are SYMPTOMS (how it presents). Six map one to one; the other two are
+   * "growth has stalled", which is the umbrella people arrive with, and "using AI
+   * intelligently", which the keyword research found is the strongest entry cluster
+   * the company has.
+   *
+   * Individual slugs are generated from GROWTH_PROBLEMS, so the sitemap adds them
+   * from the data rather than from this dynamic path.
+   */
+  {
+    path: '/growth-problems/[slug]',
+    disposition: 'live',
+    sitemap: false,
+  },
   {
     path: '/solutions',
     disposition: 'live',

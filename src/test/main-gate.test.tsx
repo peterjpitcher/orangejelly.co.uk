@@ -7,6 +7,8 @@ import HowWeWorkPage from '@/app/how-we-work/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import ResultsPage from '@/app/results/page';
 import ContactPage from '@/app/contact/page';
+import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
+import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
 import SolutionsPage from '@/app/solutions/page';
@@ -63,6 +65,8 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/pub-marketing', <PubMarketingPage key="pm" />],
   ['/pub-rescue', <PubRescuePage key="pr" />],
   ['/contact', <ContactPage key="contact" />],
+  ['/growth-problems', <GrowthProblemsHubPage key="gph" />],
+  ['/growth-problems/weak-demand', <GrowthProblemPage key="gp" params={{ slug: 'weak-demand' }} />],
 ];
 
 describe('MainGate', () => {

@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/blog-md';
 import { blogCategories } from '@/lib/blog';
 import { getBaseUrl } from '@/lib/site-config';
 import { getSitemapRoutes, getRedirectedGuideSlugs } from '@/lib/route-manifest';
+import { GROWTH_PROBLEMS } from '@/app/growth-problems/content';
 import { CASE_STUDIES } from '@/app/results/case-studies';
 
 /**
@@ -45,6 +46,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const growthProblemPages = GROWTH_PROBLEMS.map((problem) => ({
+    url: `${baseUrl}/growth-problems/${problem.slug}`,
+    lastModified: '2026-08-28',
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
+
   const categoryPages = blogCategories.map((category) => ({
     url: `${baseUrl}/licensees-guide/category/${category.slug}`,
     lastModified: '2026-08-09',
@@ -52,5 +60,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...caseStudyPages, ...blogPages, ...categoryPages];
+  return [...staticPages, ...growthProblemPages, ...caseStudyPages, ...blogPages, ...categoryPages];
 }
