@@ -43,7 +43,9 @@ describe('the front matter contract', () => {
     const { collection, ...without } = VALID;
     expect(collection).toBe('insights');
     expect(insightFrontMatterSchema.safeParse(without).success).toBe(false);
-    expect(insightFrontMatterSchema.safeParse({ ...VALID, collection: 'blog' }).success).toBe(false);
+    expect(insightFrontMatterSchema.safeParse({ ...VALID, collection: 'blog' }).success).toBe(
+      false
+    );
   });
 
   it('requires a problem page, and one that exists', () => {

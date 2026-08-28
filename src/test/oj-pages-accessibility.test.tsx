@@ -13,6 +13,7 @@ import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import AiReadinessPage from '@/app/tools/ai-readiness/page';
 import FractionalCmoPage from '@/app/fractional-cmo/page';
+import ProfessionalServicesPage from '@/app/sectors/professional-services/page';
 import NotFound from '@/app/not-found';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
@@ -99,6 +100,10 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on the fractional CMO page', async () => {
     expect(await scan(<FractionalCmoPage />)).toEqual([]);
+  });
+
+  it('finds nothing on the professional services hub', async () => {
+    expect(await scan(<ProfessionalServicesPage />)).toEqual([]);
   });
 
   it('finds nothing on a case study', async () => {

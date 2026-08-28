@@ -9,6 +9,7 @@ import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import AiReadinessPage from '@/app/tools/ai-readiness/page';
 import FractionalCmoPage from '@/app/fractional-cmo/page';
+import ProfessionalServicesPage from '@/app/sectors/professional-services/page';
 import HomePage from '@/app/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import NotFound from '@/app/not-found';
@@ -61,6 +62,7 @@ const PAGES: Array<[string, React.ReactElement]> = [
   ['/growth-problems', <GrowthProblemsHubPage key="l" />],
   ['/tools/ai-readiness', <AiReadinessPage key="n" />],
   ['/fractional-cmo', <FractionalCmoPage key="o" />],
+  ['/sectors/professional-services', <ProfessionalServicesPage key="p" />],
   [
     '/growth-problems/[slug]',
     <GrowthProblemPage key="m" params={{ slug: 'growth-has-stalled' }} />,

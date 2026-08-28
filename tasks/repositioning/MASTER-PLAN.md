@@ -136,7 +136,7 @@ old position remains live afterwards.
 | T074 | All 105 mapped, in `tasks/repositioning/data/article-next-steps.json`, validated by test | T073 | L | Approve the 30 protected mappings | **done, the 30 await your approval** |
 | T075 | `/insights` collection: `collection` discriminant, Zod front matter with required `problemPage` and `targetTerm`, slug collision gate, pagination, sitemap | T029 | L | | **done, one article in it** |
 | T076 | `not-found.tsx` rebuilt, and `error.tsx` and `global-error.tsx` added, neither of which existed | T030 | M | | **done** |
-| T077 | `/sectors/professional-services` hub | T072 | M | | |
+| T077 | `/sectors/professional-services`: the six areas translated into firm language, and an explicit list of what we do not have | T072 | M | | **done** |
 | T078 | `/contact` rebuilt as a reduced `/start-here` | T046 | S | | **done** |
 
 ## Phase 6: Earn the traffic
@@ -147,7 +147,7 @@ Continuous. Starts during phase 3 and does not stop.
 |---|---|---|---|---|---|
 | T079 | Write 14 page briefs for the tier-one posts (gap G4) | T007 | L | | |
 | T080 | Execute the 14 tier-one ranking fixes, snapshot before and after | T079, T073 | XL | Approve changes to protected posts | |
-| T081 | Tier-two: restyle and NextStep only, 16 posts | T073, T074 | M | | |
+| T081 | Tier-two: NextStep and ShareRow, 16 posts | T073, T074 | M | | **done, covered by T073 and T074 which applied to all 105** |
 | T082 | Write the 72-post scoring rubric (gap G5) | | S | | |
 | T083 | Score the first ten tier-three posts, review, then decide whether to continue | T082 | M | Approve keep, merge or retire | |
 | T084 | Article: `ai for accountants` | T075 | M | **Your material needed.** | |

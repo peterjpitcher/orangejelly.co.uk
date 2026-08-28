@@ -287,6 +287,15 @@ const ROUTES = [
     sitemap: false,
   },
   {
+    path: '/sectors/professional-services',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'The primary target sector. Translates the six areas into firm language, and says plainly that there is no sector case study yet.',
+  },
+  {
     path: '/insights',
     disposition: 'live',
     sitemap: true,

@@ -26,6 +26,7 @@ export const OJ_ROUTES = [
   '/tools',
   '/fractional-cmo',
   '/insights',
+  '/sectors',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {
