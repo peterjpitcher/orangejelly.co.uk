@@ -163,7 +163,7 @@ Continuous. Starts during phase 3 and does not stop.
 | ID | Task | Size | Peter | Status |
 |---|---|---|---|---|
 | T091 | Keep `decisions.md`, `COVERAGE.md` and this register current as work lands | S | | ongoing |
-| T092 | Test matrix: component, integration, redirect and canonical assertions, visual, axe, keyboard, cross-browser, no-JS, responsive | L | | |
+| T092 | Component, integration, redirect and canonical, axe, keyboard and no-JS all covered by the suite. Visual, cross-browser and automated responsive still need a browser runner: Playwright is a dependency with no config, and responsive is currently verified by hand at 320, 375 and 1280 | L | | **partly done, browser matrix outstanding** |
 | T093 | Indexation decision for the `cheersai`, `mixerai` and `management` subdomains | S | Decide | |
 | T094 | 30-day review of enquiry quality against the fit filter | S | Together | |
 

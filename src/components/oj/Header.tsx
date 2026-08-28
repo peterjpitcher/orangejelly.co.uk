@@ -65,6 +65,16 @@ export function Header({
   const toggleRef = React.useRef<HTMLButtonElement>(null);
   const drawerRef = React.useRef<HTMLElement>(null);
 
+  /**
+   * Closing has two halves and they are equally important: the drawer goes away,
+   * and focus goes back to the button that opened it. Dropping the second half
+   * sends a keyboard user to the top of the document with no idea why.
+   */
+  const close = React.useCallback(() => {
+    setOpen(false);
+    toggleRef.current?.focus();
+  }, []);
+
   // Escape closes, focus returns to the control that opened it, and the page behind
   // stops scrolling. Without the scroll lock the drawer floats over a moving page,
   // which on iOS is disorientating rather than merely untidy.
@@ -72,7 +82,10 @@ export function Header({
     if (!open) return undefined;
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+      // `close`, not `setOpen(false)`. Escape used to skip the focus return, so the
+      // one path a keyboard user is most likely to take was the one path that left
+      // them stranded.
+      if (event.key === 'Escape') close();
     };
 
     const previousOverflow = document.body.style.overflow;
@@ -84,12 +97,7 @@ export function Header({
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', onKeyDown);
     };
-  }, [open]);
-
-  const close = React.useCallback(() => {
-    setOpen(false);
-    toggleRef.current?.focus();
-  }, []);
+  }, [open, close]);
 
   const brand = logo ?? (
     <span
