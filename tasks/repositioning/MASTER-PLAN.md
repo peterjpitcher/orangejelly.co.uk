@@ -85,9 +85,9 @@ Proves the whole journey including lead capture and measurement before anything 
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
 | T038 | Additive Supabase migration for the enquiry data. Applied and verified: 8 columns added, `pub_name` and `message` now nullable, nothing dropped, 5 historic leads intact | | M | | **done** |
-| T039 | Shared Zod enquiry schema in `src/lib/schemas/enquiry.ts` | T038 | S | | |
-| T040 | `submitEnquiryStep1` and `Step2` server actions, correct failure ordering | T039 | M | | |
-| T041 | Two new rate limit buckets, honeypot, payload cap, fail closed | T040 | S | | |
+| T039 | One Zod schema shared by client, server actions and the storage mapper, replacing a form schema and a hand-written chain of server ifs that could drift | T038 | S | | **done** |
+| T040 | Both server actions. The row is the authoritative success condition and nothing after it can turn a stored enquiry into a user-facing error | T039 | M | | **done** |
+| T041 | `enquiry_ip` and `enquiry_email` buckets, honeypot, and fail-closed limiting because this action sends mail | T040 | S | | **done** |
 | T042 | Enquiry form UI, two steps, no-JS fallback, error summary | T027, T040 | L | | |
 | T043 | Admin view, notification email, lead states | T040 | M | | |
 | T044 | Update `/privacy` for the new data, purpose, retention, deletion | T038 | M | Approve the wording | |

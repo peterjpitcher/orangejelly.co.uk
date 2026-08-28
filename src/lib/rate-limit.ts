@@ -24,7 +24,12 @@ export type RateLimitBucket =
   | 'poll_respond_poll'
   | 'poll_update_ip'
   | 'poll_organiser_ip'
-  | 'poll_send_fanout';
+  | 'poll_send_fanout'
+  // The enquiry form. A public server action that writes personal data and sends
+  // mail is a standing spam target, and unlike the poll buckets there is no token
+  // in the URL to slow anyone down.
+  | 'enquiry_ip'
+  | 'enquiry_email';
 
 interface BucketConfig {
   limit: number;
@@ -42,6 +47,10 @@ const BUCKETS: Record<RateLimitBucket, BucketConfig> = {
   poll_update_ip: { limit: 30, windowSeconds: 3600 },
   poll_organiser_ip: { limit: 30, windowSeconds: 3600 },
   poll_send_fanout: { limit: 250, windowSeconds: 86400 },
+  // Five an hour from one address covers a person who makes a mistake and retries;
+  // three a day from one address covers a person with two companies.
+  enquiry_ip: { limit: 5, windowSeconds: 3600 },
+  enquiry_email: { limit: 3, windowSeconds: 86400 },
 };
 
 /** One second. A limiter must never be the reason a form feels broken. */
