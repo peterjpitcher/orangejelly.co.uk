@@ -73,6 +73,7 @@ stop and ask.
 | G9 | **Visual regression tooling.** Required by D17 to prove `/availability` is unchanged. Not chosen. | WS2 | Small |
 | G10 | **Component harness.** WS3 says "a private component harness". Storybook or the existing test stack is not decided. | WS3 | Small |
 | G11 | **Trades second wave.** Deferred by D13 with no plan behind it. | Post-launch | Small |
+| G12 | **Founder voice in 75 of the 105 articles.** 136 instances of "I run", "my pub", "I have". D21 says company voice throughout, and article bylines keep a named human author, so it is genuinely ambiguous whether the body copy is in scope. It is a content change to the protected posts either way, so it belongs with T080 and T081 and needs Peter's call on the voice question first. | WS8 | Medium |
 
 ---
 
