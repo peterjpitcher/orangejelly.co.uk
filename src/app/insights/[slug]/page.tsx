@@ -8,6 +8,7 @@ import {
   Button,
   CategoryTag,
   FAQ,
+  KeepCase,
   NextStep,
   OjFooter,
   OjHeader,
@@ -93,7 +94,7 @@ export default async function InsightPage({ params }: Params): Promise<JSX.Eleme
               ]}
             />
             <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
-              {insight.title}
+              <KeepCase>{insight.title}</KeepCase>
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
               {insight.excerpt}

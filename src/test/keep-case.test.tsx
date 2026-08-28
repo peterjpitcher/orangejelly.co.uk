@@ -68,6 +68,15 @@ describe('the pages that need it', () => {
     expect(marks).toContain('AI');
   });
 
+  it('keeps AI upper case on an insight article and its index card', async () => {
+    // The same bug, one collection along: "AI for accountants" rendered as "ai for
+    // accountants", which reads as a typo rather than a style.
+    const InsightsPage = (await import('@/app/insights/page')).default;
+    const { container } = render(<InsightsPage searchParams={{}} />);
+    const marks = [...container.querySelectorAll('.oj-keep-case')].map((el) => el.textContent);
+    expect(marks).toContain('AI');
+  });
+
   it('does not mark up the seven headings that need no protection', () => {
     const { container } = render(<GrowthProblemPage params={{ slug: 'growth-has-stalled' }} />);
     expect(container.querySelector('h1')?.querySelector('.oj-keep-case')).toBeNull();

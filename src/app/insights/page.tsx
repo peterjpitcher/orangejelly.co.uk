@@ -6,6 +6,7 @@ import {
   Breadcrumb,
   Button,
   EmptyState,
+  KeepCase,
   OjFooter,
   OjHeader,
   Pagination,
@@ -99,7 +100,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
                         {insight.readingTime} min read
                       </span>
                       <span className="oj-display text-[24px] leading-[1.06] text-oj-ink">
-                        {insight.title}
+                        <KeepCase>{insight.title}</KeepCase>
                       </span>
                       <span className="text-[15.5px] leading-relaxed text-oj-ink-2">
                         {insight.excerpt}
