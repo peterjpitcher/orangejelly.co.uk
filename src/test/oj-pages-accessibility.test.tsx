@@ -12,6 +12,7 @@ import ContactPage from '@/app/contact/page';
 import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import AiReadinessPage from '@/app/tools/ai-readiness/page';
+import FractionalCmoPage from '@/app/fractional-cmo/page';
 import NotFound from '@/app/not-found';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
@@ -94,6 +95,10 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on the AI readiness assessment', async () => {
     expect(await scan(<AiReadinessPage />)).toEqual([]);
+  });
+
+  it('finds nothing on the fractional CMO page', async () => {
+    expect(await scan(<FractionalCmoPage />)).toEqual([]);
   });
 
   it('finds nothing on a case study', async () => {

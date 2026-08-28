@@ -31,9 +31,7 @@ describe('enquiry step one', () => {
   it('accepts a free email provider', () => {
     // Plenty of legitimate owner-operators use Gmail. Rejecting them would filter
     // out exactly the ambitious small business this is aimed at.
-    expect(
-      enquiryStep1Schema.safeParse({ ...VALID, email: 'sam@gmail.com' }).success
-    ).toBe(true);
+    expect(enquiryStep1Schema.safeParse({ ...VALID, email: 'sam@gmail.com' }).success).toBe(true);
   });
 
   it('rejects an address that is not one', () => {
@@ -46,7 +44,12 @@ describe('enquiry step one', () => {
   });
 
   it('gives a message per field, so the form can show them inline', () => {
-    const result = enquiryStep1Schema.safeParse({ name: 'S', email: 'no', company: '', situation: '' });
+    const result = enquiryStep1Schema.safeParse({
+      name: 'S',
+      email: 'no',
+      company: '',
+      situation: '',
+    });
     expect(result.success).toBe(false);
     if (!result.success) {
       const fields = new Set(result.error.issues.map((issue) => issue.path[0]));

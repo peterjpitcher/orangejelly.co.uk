@@ -287,6 +287,15 @@ const ROUTES = [
     sitemap: false,
   },
   {
+    path: '/fractional-cmo',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.75,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'Uses the category language to be found, then argues against the format. Four fractional terms in the 500 tier, one at competition index 12, and the pack never mentions the category.',
+  },
+  {
     path: '/tools/ai-readiness',
     disposition: 'live',
     sitemap: true,

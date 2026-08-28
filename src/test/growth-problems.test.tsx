@@ -88,8 +88,9 @@ describe('the eight problems', () => {
 
     const mismatches: string[] = [];
     for (const [key, source] of Object.entries(SOURCE)) {
-      const ported = GROWTH_PROBLEMS.find((p) => p.intro === source.intro || p.causes === source.causes)
-        ?? GROWTH_PROBLEMS[Object.keys(SOURCE).indexOf(key)];
+      const ported =
+        GROWTH_PROBLEMS.find((p) => p.intro === source.intro || p.causes === source.causes) ??
+        GROWTH_PROBLEMS[Object.keys(SOURCE).indexOf(key)];
       if (!ported) continue;
 
       const compare = (field: string, from: string, to: string) => {
@@ -99,7 +100,9 @@ describe('the eight problems', () => {
 
       compare('intro', source.intro, ported.intro);
       compare('causes', source.causes, ported.causes);
-      source.symptoms.forEach((symptom, i) => compare(`symptoms.${i}`, symptom, ported.symptoms[i]));
+      source.symptoms.forEach((symptom, i) =>
+        compare(`symptoms.${i}`, symptom, ported.symptoms[i])
+      );
     }
 
     expect(mismatches).toEqual([]);

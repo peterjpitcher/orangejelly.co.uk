@@ -72,7 +72,12 @@ const NAV_ITEMS = [
 
 const CASES: Array<[string, React.ReactElement]> = [
   ['Button', <Button key="b">Bring us the problem</Button>],
-  ['Button as link', <Button key="bl" href="/start-here" arrow>Start here</Button>],
+  [
+    'Button as link',
+    <Button key="bl" href="/start-here" arrow>
+      Start here
+    </Button>,
+  ],
   ['Tag', <Tag key="t">Create demand</Tag>],
   ['Stat', <Stat key="s" value="403%" label="Table bookings" sub="At The Anchor" />],
   [
@@ -103,11 +108,17 @@ const CASES: Array<[string, React.ReactElement]> = [
   ],
   ['Checkbox', <Checkbox key="cb" label="Send me the write-up" />],
   ['Radio', <Radio key="r" name="size" label="10 to 49 people" />],
-  ['Header', <Header key="h" items={NAV_ITEMS} cta={{ label: 'Bring us the problem', href: '/s' }} />],
+  [
+    'Header',
+    <Header key="h" items={NAV_ITEMS} cta={{ label: 'Bring us the problem', href: '/s' }} />,
+  ],
   ['Header orange', <Header key="ho" tone="orange" items={NAV_ITEMS} />],
   [
     'Footer',
-    <Footer key="fo" columns={[{ title: 'Company', links: [{ label: 'About', href: '/about' }] }]} />,
+    <Footer
+      key="fo"
+      columns={[{ title: 'Company', links: [{ label: 'About', href: '/about' }] }]}
+    />,
   ],
   [
     'Breadcrumb',
@@ -116,30 +127,70 @@ const CASES: Array<[string, React.ReactElement]> = [
   ['Card', <Card key="c">Body copy</Card>],
   ['PressureCard', <PressureCard key="pc" title="Protect margin" desc="Where value leaks" />],
   ['ProofCard', <ProofCard key="pf" value="98%" label="Food revenue" context="At The Anchor" />],
-  ['MethodStep', <MethodStep key="ms" index={1} word="HEAR." text="Understand what is happening." />],
-  ['Quote', <Quote key="q" name="Sam Whitfield" role="MD">They challenged us.</Quote>],
-  ['Alert', <Alert key="a" tone="danger" title="Could not send">Try again.</Alert>],
+  [
+    'MethodStep',
+    <MethodStep key="ms" index={1} word="HEAR." text="Understand what is happening." />,
+  ],
+  [
+    'Quote',
+    <Quote key="q" name="Sam Whitfield" role="MD">
+      They challenged us.
+    </Quote>,
+  ],
+  [
+    'Alert',
+    <Alert key="a" tone="danger" title="Could not send">
+      Try again.
+    </Alert>,
+  ],
   [
     'EmptyState',
-    <EmptyState key="es" title="Nothing here" action={{ label: 'Clear filters', href: '/insights' }} />,
+    <EmptyState
+      key="es"
+      title="Nothing here"
+      action={{ label: 'Clear filters', href: '/insights' }}
+    />,
   ],
   ['Skeleton', <Skeleton key="sk" variant="article" />],
-  ['FAQ', <FAQ key="faq" items={[{ q: 'What does it cost?', a: 'It is scoped to the problem.' }]} />],
-  ['Toc', <Toc key="toc" items={[{ label: 'The problem', href: '#problem' }]} current="#problem" />],
+  [
+    'FAQ',
+    <FAQ key="faq" items={[{ q: 'What does it cost?', a: 'It is scoped to the problem.' }]} />,
+  ],
+  [
+    'Toc',
+    <Toc key="toc" items={[{ label: 'The problem', href: '#problem' }]} current="#problem" />,
+  ],
   ['CategoryTag', <CategoryTag key="ct" category="margin" href="/insights?c=margin" />],
-  ['ArticleCard', <ArticleCard key="ac" title="Where AI helps" excerpt="A look" date="12 Aug 2026" />],
+  [
+    'ArticleCard',
+    <ArticleCard key="ac" title="Where AI helps" excerpt="A look" date="12 Aug 2026" />,
+  ],
   ['Pagination', <Pagination key="pg" page={3} total={12} hrefFor={(n) => `?page=${n}`} />],
   [
     'Tabs',
-    <Tabs key="tb" items={[{ label: 'Demand', content: 'One' }, { label: 'Margin', content: 'Two' }]} />,
+    <Tabs
+      key="tb"
+      items={[
+        { label: 'Demand', content: 'One' },
+        { label: 'Margin', content: 'Two' },
+      ]}
+    />,
   ],
   [
     'NextStep',
-    <NextStep key="ns" links={[{ stage: 'The problem', title: 'Growth has stalled', href: '/p' }]} />,
+    <NextStep
+      key="ns"
+      links={[{ stage: 'The problem', title: 'Growth has stalled', href: '/p' }]}
+    />,
   ],
   [
     'OfferCard',
-    <OfferCard key="oc" name="Growth diagnostic" includes={['Interviews']} cta={{ label: 'Start', href: '/s' }} />,
+    <OfferCard
+      key="oc"
+      name="Growth diagnostic"
+      includes={['Interviews']}
+      cta={{ label: 'Start', href: '/s' }}
+    />,
   ],
   [
     'CompareTable',

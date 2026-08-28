@@ -42,7 +42,11 @@ describe('search index', () => {
 
   it('indexes every protected post, since those are the ones people search for', () => {
     const slugs = new Set(items.map((item) => item.slug));
-    for (const slug of ['quiz-night-ideas', 'summer-pub-event-ideas', 'profitable-pub-food-menu-ideas']) {
+    for (const slug of [
+      'quiz-night-ideas',
+      'summer-pub-event-ideas',
+      'profitable-pub-food-menu-ideas',
+    ]) {
       expect(slugs.has(slug), `${slug} missing from the search index`).toBe(true);
     }
   });

@@ -29,7 +29,9 @@ describe('fixed surface stacking', () => {
   });
 
   it('puts the modal above everything, since it takes over the page', () => {
-    expect(LAYERS.MODAL).toBeGreaterThan(Math.max(...Object.values(LAYERS).filter((v) => v !== LAYERS.MODAL)));
+    expect(LAYERS.MODAL).toBeGreaterThan(
+      Math.max(...Object.values(LAYERS).filter((v) => v !== LAYERS.MODAL))
+    );
     expect(zIndexIn('feedback.tsx')).toContain(LAYERS.MODAL);
   });
 

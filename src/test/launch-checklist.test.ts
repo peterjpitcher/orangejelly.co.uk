@@ -16,7 +16,10 @@ import { PHASE_4_REDIRECTS } from '@/lib/route-manifest';
 const GENERATED = execFileSync('node', [join(process.cwd(), 'scripts/launch-checklist.mjs')], {
   encoding: 'utf8',
 });
-const COMMITTED = readFileSync(join(process.cwd(), 'tasks/repositioning/LAUNCH-CHECKLIST.md'), 'utf8');
+const COMMITTED = readFileSync(
+  join(process.cwd(), 'tasks/repositioning/LAUNCH-CHECKLIST.md'),
+  'utf8'
+);
 
 describe('the launch checklist', () => {
   it('is current', () => {
@@ -49,7 +52,9 @@ describe('the launch checklist', () => {
   });
 
   it('tells the reader to verify against production, not against the manifest', () => {
-    expect(GENERATED).toMatch(/proves this against the declaration; this proves\s+it against production/);
+    expect(GENERATED).toMatch(
+      /proves this against the declaration; this proves\s+it against production/
+    );
     expect(GENERATED).toMatch(/curl -sIL/);
   });
 });

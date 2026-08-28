@@ -5,7 +5,12 @@ import { describe, expect, it, vi } from 'vitest';
 import { SiteSearch } from '@/components/oj';
 
 const RESULTS = [
-  { id: '1', title: 'Quiz night ideas', url: '/licensees-guide/quiz-night-ideas', category: 'Events' },
+  {
+    id: '1',
+    title: 'Quiz night ideas',
+    url: '/licensees-guide/quiz-night-ideas',
+    category: 'Events',
+  },
 ];
 
 describe('oj/SiteSearch', () => {

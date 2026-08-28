@@ -179,9 +179,9 @@ describe('oj/Field error announcement', () => {
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
     // Still described by it, so the message is read when the field is reached.
     const input = screen.getByLabelText('Work email');
-    expect(document.getElementById(input.getAttribute('aria-describedby') as string)).toHaveTextContent(
-      'Enter a work email address'
-    );
+    expect(
+      document.getElementById(input.getAttribute('aria-describedby') as string)
+    ).toHaveTextContent('Enter a work email address');
     expect(input).toHaveAttribute('aria-invalid', 'true');
   });
 });

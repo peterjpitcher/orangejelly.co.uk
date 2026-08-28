@@ -24,6 +24,7 @@ export const OJ_ROUTES = [
   '/contact',
   '/growth-problems',
   '/tools',
+  '/fractional-cmo',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {

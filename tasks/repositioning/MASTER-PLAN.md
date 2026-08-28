@@ -130,7 +130,7 @@ old position remains live afterwards.
 | T068 | Write and build `/solutions` | T066 | M | | **done, brought forward: the phase 4 table redirects `/capabilities` here so the release could not ship without it** |
 | T069 | The twelve result texts, six areas in two states, each naming where AI does **not** help | T032 | M | Feedback once built | **done, ready for your feedback** |
 | T070 | Build `/tools/ai-readiness`, with a server-rendered fallback for no JavaScript | T069, T032 | L | | **done** |
-| T071 | Write and build `/fractional-cmo`, using the language to be found then arguing against the format | | M | | |
+| T071 | `/fractional-cmo`: uses the category language to be found, then argues against the format and says when to hire one anyway | | M | | **done** |
 | T072 | Restyle `/licensees-guide` as the hospitality sector hub | T031 | M | | |
 | T073 | Restyle all 105 live articles with `blog-article`, add ShareRow | T029, T072 | L | | |
 | T074 | Build the NextStep mapping for 105 posts, validate destinations at build (gap G6) | T073 | L | Approve the 30 protected mappings | |
