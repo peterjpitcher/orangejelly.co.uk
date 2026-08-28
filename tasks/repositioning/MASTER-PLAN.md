@@ -96,7 +96,7 @@ Proves the whole journey including lead capture and measurement before anything 
 | T047 | Homepage copy, in `tasks/repositioning/copy/homepage.md` | T023 | M | React to my draft | **done, awaiting your reaction** |
 | T048 | Build `/`, replacing the packages homepage | T047, T025, T028 | L | | **done** |
 | T049 | Client event dictionary, per-event property allowlist, session id, and the consent split drawn by device storage rather than by whether the data is personal | T010, T046 | L | | **done, wiring the remaining call sites lands with their pages** |
-| T050 | End-to-end test of the slice on a production-like Supabase and Resend | T046, T048, T049 | M | | |
+| T050 | Schema conformance between the writer and production, as a test. The live submission stays a human step on the launch checklist, because it creates a real lead and sends real mail | T046, T048, T049 | M | | **done, automatable half** |
 
 ## Phase 4: Launch coherence release
 
