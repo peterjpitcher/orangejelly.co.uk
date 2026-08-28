@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 import { EmptyState } from './feedback';
 import { Field } from './Field';
 import { Input } from './inputs';
@@ -90,7 +92,7 @@ export function SiteSearch({
           <ul id={listId} className="m-0 flex list-none flex-col gap-3 p-0">
             {results?.map((result) => (
               <li key={result.id}>
-                <a
+                <Anchor
                   href={result.url}
                   className="flex flex-col gap-1 border-1.5 border-oj-ink rounded-oj bg-oj-paper p-4 no-underline oj-press oj-focus"
                 >
@@ -103,7 +105,7 @@ export function SiteSearch({
                   {result.excerpt ? (
                     <span className="text-sm leading-normal text-oj-ink-2">{result.excerpt}</span>
                   ) : null}
-                </a>
+                </Anchor>
               </li>
             ))}
           </ul>

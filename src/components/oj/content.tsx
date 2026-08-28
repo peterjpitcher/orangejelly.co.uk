@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 import { Stat } from './Stat';
 import { Tag } from './Tag';
 
@@ -62,7 +64,7 @@ export function PressureCard({
   className,
 }: PressureCardProps): JSX.Element {
   return (
-    <a
+    <Anchor
       href={href}
       className={cn(
         'group/pressure flex flex-col gap-2 no-underline',
@@ -81,7 +83,7 @@ export function PressureCard({
         </span>
       </span>
       {desc ? <span className="text-[14.5px] leading-normal text-oj-ink-2">{desc}</span> : null}
-    </a>
+    </Anchor>
   );
 }
 

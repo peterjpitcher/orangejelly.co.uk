@@ -9,6 +9,7 @@ import { ENQUIRY_ROLES, ENQUIRY_SIZE_BANDS } from '@/lib/schemas/enquiry';
 import { hasAnalyticsConsent, trackClientEvent } from '@/lib/tracking';
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
 import { Button } from './Button';
 import { Field } from './Field';
 import { Input, Select, Textarea } from './inputs';
@@ -336,9 +337,9 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
 
           <p className="text-[13.5px] leading-relaxed text-oj-ink-3">
             We use this to have one useful conversation, nothing else. See the{' '}
-            <a href="/privacy" className="font-semibold underline">
+            <Anchor href="/privacy" className="font-semibold underline">
               privacy notice
-            </a>
+            </Anchor>
             .
           </p>
         </fieldset>

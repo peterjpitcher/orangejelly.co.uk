@@ -106,10 +106,7 @@ export {
   type ShareRowProps,
 } from './conversion';
 export { SiteSearch, type SiteSearchProps, type SiteSearchResult } from './SiteSearch';
-export {
-  EnquiryForm,
-  type EnquiryFormProps,
-  type EnquiryEntryPoint,
-} from './EnquiryForm';
+export { EnquiryForm, type EnquiryFormProps, type EnquiryEntryPoint } from './EnquiryForm';
 export { OjHeader, OjFooter, type OjHeaderProps, type OjNavKey } from './SiteChrome';
 export { Band, type BandProps } from './Band';
+export { Anchor, type AnchorProps } from './Anchor';

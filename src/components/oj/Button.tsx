@@ -3,6 +3,8 @@ import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 /**
  * The repositioning Button.
  *
@@ -102,13 +104,13 @@ export function Button({
 
   if (href !== undefined) {
     return (
-      <a
+      <Anchor
         href={href}
         className={classes}
         {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {content}
-      </a>
+      </Anchor>
     );
   }
 

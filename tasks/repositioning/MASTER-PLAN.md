@@ -107,8 +107,8 @@ old position remains live afterwards.
 |---|---|---|---|---|---|
 | T051 | `/how-we-work` copy, in `tasks/repositioning/copy/how-we-work.md` | T023 | M | React to my draft | **done, awaiting your reaction** |
 | T052 | Build `/how-we-work` | T051, T028 | M | | **done** |
-| T053 | Write `/about` copy, company voice, no founder story (D21) | | M | **Your material needed.** See "What I need from you". | |
-| T054 | Build `/about` | T053 | M | | |
+| T053 | `/about` copy, in `tasks/repositioning/copy/about.md`, written only from facts already in the repo | | M | **Twenty minutes of you talking would make it specific.** | **done, and it stands up as written** |
+| T054 | Build `/about` | T053 | M | | **done** |
 | T055 | `/results` copy, in `tasks/repositioning/copy/results.md`, leading with the demand-discovery story | | M | Confirm the framing | **done, framing awaiting your confirmation** |
 | T056 | Build `/results` and `/results/[slug]` | T055, T028 | L | | **done** |
 | T057 | The first three case studies, all at The Anchor, told through the four method steps | T055 | L | **Your material needed for any client case study.** | **done for the Anchor three; client work still needs your material and their permission** |

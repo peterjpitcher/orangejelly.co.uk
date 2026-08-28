@@ -12,8 +12,29 @@ vi.mock('next/image', () => ({
   default: vi.fn(),
 }));
 
+/*
+ * next/link needs the App Router runtime, which jsdom does not provide, so it is
+ * stood up as the anchor it renders in the browser.
+ *
+ * It used to be `vi.fn()`, which returns undefined and therefore rendered nothing
+ * at all. That was invisible while no component under test used it. It stopped
+ * being invisible the moment the oj library started routing its internal links
+ * through next/link: nineteen tests failed against an empty container, all of them
+ * for the same reason and none of them because of a real defect.
+ */
 vi.mock('next/link', () => ({
-  default: vi.fn(),
+  default: ({
+    href,
+    children,
+    ...rest
+  }: {
+    href: string;
+    children?: React.ReactNode;
+  } & React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a href={href} {...rest}>
+      {children}
+    </a>
+  ),
 }));
 
 vi.mock('next/navigation', () => ({

@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 /**
  * Ink site footer: brand and tagline, link columns, legal bar.
  *
@@ -62,13 +64,13 @@ export function Footer({
                   {column.title}
                 </span>
                 {column.links.map((link) => (
-                  <a
+                  <Anchor
                     key={link.href}
                     href={link.href}
                     className="text-[14.5px] font-medium text-oj-cream/75 no-underline hover:text-oj-orange"
                   >
                     {link.label}
-                  </a>
+                  </Anchor>
                 ))}
               </div>
             ))}

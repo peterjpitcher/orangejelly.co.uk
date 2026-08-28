@@ -18,7 +18,15 @@ import { Header } from './Header';
  *
  * @see src/lib/oj-routes.ts, which decides where the legacy chrome is suppressed
  */
-export type OjNavKey = 'growth-problems' | 'how-we-work' | 'results' | 'about' | 'start-here';
+/**
+ * Only pages in the primary nav have a key.
+ *
+ * About is deliberately not in it and therefore has no key: the nav's job is to move
+ * someone towards their own problem, not towards the company, and About is reachable
+ * from the footer and from the pages that earn it. A key for a page with no nav item
+ * would type-check and then silently mark nothing.
+ */
+export type OjNavKey = 'growth-problems' | 'how-we-work' | 'results' | 'start-here';
 
 const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   { key: 'growth-problems', label: 'Growth problems', href: '/growth-problems' },

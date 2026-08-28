@@ -3,6 +3,7 @@ import axe from 'axe-core';
 import { describe, expect, it, vi } from 'vitest';
 
 import HomePage from '@/app/page';
+import AboutPage from '@/app/about/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import ResultsPage from '@/app/results/page';
@@ -54,6 +55,10 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on /how-we-work', async () => {
     expect(await scan(<HowWeWorkPage />)).toEqual([]);
+  });
+
+  it('finds nothing on /about', async () => {
+    expect(await scan(<AboutPage />)).toEqual([]);
   });
 
   it('finds nothing on /results', async () => {

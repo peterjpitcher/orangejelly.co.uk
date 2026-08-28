@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 import { Button } from './Button';
 
 /**
@@ -110,13 +112,13 @@ export function Header({
         )}
       >
         <div className="mx-auto flex h-16 max-w-[1160px] items-center gap-6 px-8">
-          <a href={home} aria-label="Home" className="flex items-center no-underline">
+          <Anchor href={home} aria-label="Home" className="flex items-center no-underline">
             {brand}
-          </a>
+          </Anchor>
 
           <nav className="ml-auto hidden gap-0.5 min-[881px]:flex" aria-label="Primary">
             {items.map((item) => (
-              <a
+              <Anchor
                 key={item.label}
                 href={item.href}
                 aria-current={item.current ? 'page' : undefined}
@@ -128,7 +130,7 @@ export function Header({
                 )}
               >
                 {item.label}
-              </a>
+              </Anchor>
             ))}
           </nav>
 
@@ -181,7 +183,7 @@ export function Header({
                   {item.label}
                 </span>
                 {item.sub.map((sub) => (
-                  <a
+                  <Anchor
                     key={sub.href}
                     href={sub.href}
                     aria-current={sub.current ? 'page' : undefined}
@@ -196,11 +198,11 @@ export function Header({
                     )}
                   >
                     {sub.label}
-                  </a>
+                  </Anchor>
                 ))}
               </div>
             ) : (
-              <a
+              <Anchor
                 key={item.label}
                 href={item.href}
                 aria-current={item.current ? 'page' : undefined}
@@ -211,7 +213,7 @@ export function Header({
                 )}
               >
                 {item.label}
-              </a>
+              </Anchor>
             )
           )}
 

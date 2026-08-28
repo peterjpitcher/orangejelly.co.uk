@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 /**
  * Editorial components for the insights and article templates.
  *
@@ -69,7 +71,7 @@ export function Toc({
       <ul className="m-0 flex list-none flex-col gap-1 p-0">
         {items.map((item) => (
           <li key={item.href}>
-            <a
+            <Anchor
               href={item.href}
               aria-current={current === item.href ? 'location' : undefined}
               className={cn(
@@ -81,7 +83,7 @@ export function Toc({
               )}
             >
               {item.label}
-            </a>
+            </Anchor>
           </li>
         ))}
       </ul>
@@ -148,9 +150,9 @@ export function CategoryTag({
   const label = children ?? config.label;
 
   return href ? (
-    <a href={href} className={classes}>
+    <Anchor href={href} className={classes}>
       {label}
-    </a>
+    </Anchor>
   ) : (
     <span className={classes}>{label}</span>
   );
@@ -179,7 +181,7 @@ export function ArticleCard({
 }: ArticleCardProps): JSX.Element {
   const dark = tone === 'ink';
   return (
-    <a
+    <Anchor
       href={href}
       className={cn(
         'flex flex-col gap-3 border-1.5 border-oj-ink rounded-oj p-5 no-underline oj-press oj-focus',
@@ -208,7 +210,7 @@ export function ArticleCard({
           {readTime}
         </span>
       ) : null}
-    </a>
+    </Anchor>
   );
 }
 
@@ -254,7 +256,7 @@ export function Pagination({
           ) : (
             <li key={item}>
               {hrefFor ? (
-                <a
+                <Anchor
                   href={hrefFor(item)}
                   aria-current={item === page ? 'page' : undefined}
                   aria-label={`Page ${item}`}
@@ -264,7 +266,7 @@ export function Pagination({
                   )}
                 >
                   {item}
-                </a>
+                </Anchor>
               ) : (
                 <button
                   type="button"
@@ -395,7 +397,7 @@ export function NextStep({
       <p className="oj-eyebrow m-0">{heading ?? NEXT_HEADING[from]}</p>
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         {links.slice(0, 2).map((link) => (
-          <a
+          <Anchor
             key={link.href}
             href={link.href}
             className="flex flex-col gap-1 border-1.5 border-oj-ink rounded-oj bg-oj-paper p-4 no-underline oj-press oj-focus"
@@ -407,7 +409,7 @@ export function NextStep({
             {link.desc ? (
               <span className="text-sm leading-normal text-oj-ink-2">{link.desc}</span>
             ) : null}
-          </a>
+          </Anchor>
         ))}
       </div>
     </aside>

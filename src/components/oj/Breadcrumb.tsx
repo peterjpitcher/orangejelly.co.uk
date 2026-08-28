@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 /**
  * Inner-page trail. The last item is the current page: unlinked, ink, and marked
  * aria-current so it is announced as the destination rather than another option.
@@ -38,7 +40,7 @@ export function Breadcrumb({
           return (
             <li key={item.label} className="flex items-center gap-2">
               {item.href && !last ? (
-                <a
+                <Anchor
                   href={item.href}
                   className={cn(
                     onOrange
@@ -47,7 +49,7 @@ export function Breadcrumb({
                   )}
                 >
                   {item.label}
-                </a>
+                </Anchor>
               ) : (
                 <span aria-current={last ? 'page' : undefined} className="text-oj-ink">
                   {item.label}

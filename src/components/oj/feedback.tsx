@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 /**
  * Feedback surfaces.
  *
@@ -187,12 +189,12 @@ export function EmptyState({ glyph = '0', title, body, action }: EmptyStateProps
       ) : null}
       {action ? (
         action.href ? (
-          <a
+          <Anchor
             href={action.href}
             className="min-h-tap inline-flex items-center font-bold text-oj-orange-deep underline underline-offset-4"
           >
             {action.label}
-          </a>
+          </Anchor>
         ) : (
           <button
             type="button"

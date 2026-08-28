@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 import { Button } from './Button';
 import { Field } from './Field';
 import { Input } from './inputs';
@@ -325,15 +327,15 @@ export function SeasonalBand({
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h2 className="oj-display m-0 font-oj text-2xl font-black text-oj-ink">{heading}</h2>
         {viewAll ? (
-          <a href={viewAll.href} className="text-sm font-bold text-oj-orange-deep">
+          <Anchor href={viewAll.href} className="text-sm font-bold text-oj-orange-deep">
             {viewAll.label}
-          </a>
+          </Anchor>
         ) : null}
       </div>
       <ul className="m-0 flex list-none snap-x snap-mandatory gap-4 overflow-x-auto p-0 pb-2">
         {items.map((item, index) => (
           <li key={index} className="min-w-[240px] snap-start">
-            <a
+            <Anchor
               href={item.href ?? '#'}
               className="flex h-full flex-col gap-1.5 border-1.5 border-oj-ink rounded-oj bg-oj-paper p-4 no-underline oj-press oj-focus"
             >
@@ -349,7 +351,7 @@ export function SeasonalBand({
                   {item.cta} →
                 </span>
               ) : null}
-            </a>
+            </Anchor>
           </li>
         ))}
       </ul>

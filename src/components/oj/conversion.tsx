@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { Anchor } from './Anchor';
+
 import { Button } from './Button';
 
 /**
@@ -131,9 +133,12 @@ export function CookieNotice({
       <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-4 px-8 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
         <p className="m-0 max-w-2xl text-sm leading-normal text-oj-cream/85">
           {message}{' '}
-          <a href={policyHref} className="font-semibold text-oj-peach underline underline-offset-2">
+          <Anchor
+            href={policyHref}
+            className="font-semibold text-oj-peach underline underline-offset-2"
+          >
             How we handle data
-          </a>
+          </Anchor>
         </p>
         {/* Equal weight, deliberately. An accept that shouts and a decline that
             whispers is not consent, it is a dark pattern. */}
@@ -225,7 +230,7 @@ export function ShareRow({
             {copied ? 'Link copied' : SHARE_LABEL.copy}
           </button>
         ) : (
-          <a
+          <Anchor
             key={network}
             href={intent(network)}
             target="_blank"
@@ -234,7 +239,7 @@ export function ShareRow({
           >
             {SHARE_LABEL[network]}
             <span className="sr-only"> (opens in a new tab)</span>
-          </a>
+          </Anchor>
         )
       )}
       {/* Announce the copy result rather than relying on the label change alone. */}
