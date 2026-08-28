@@ -5,6 +5,7 @@ import './globals.css';
 import FooterWrapper from '@/components/FooterWrapper';
 import NavigationWrapper from '@/components/NavigationWrapper';
 import ChromeGate from '@/components/ChromeGate';
+import MainGate from '@/components/MainGate';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { PreloadResources } from '@/components/PerformanceMonitor';
 import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
@@ -60,15 +61,29 @@ export const viewport: Viewport = {
 
 const baseUrl = getBaseUrl();
 
+/*
+ * The site-wide default title and description.
+ *
+ * These are the fallback for any route that does not set its own, which makes them
+ * the sentence the company is described by wherever nothing more specific exists.
+ * They said "Transformative Hospitality Growth Partner" until the repositioning:
+ * the sector is now one market Orange Jelly works in, not its definition.
+ *
+ * The title is deliberately the promise rather than a keyword string. The strongest
+ * search term the research found is "hospitality marketing agency", and it lives on
+ * the sector hub where it is still accurate, not in the company description.
+ */
+const SITE_TITLE = 'Orange Jelly | You bring the growth problem. We build the solution.';
+const SITE_DESCRIPTION =
+  'Growth partner for ambitious small and mid-sized businesses. We get under the skin of a business, work out what is actually blocking growth, and build the thing that fixes it.';
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Transformative Hospitality Growth Partner | Orange Jelly',
-  description:
-    'Orange Jelly accelerates hospitality growth with transformative, action-first marketing delivered by a small, hands-on team. Built for measurable gains in bookings, footfall, repeat visits, and revenue.',
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: 'Transformative Hospitality Growth Partner | Orange Jelly',
-    description:
-      'Transformative, action-first marketing for hospitality partners. Small team support built to accelerate bookings, footfall, and revenue.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: 'website',
     url: baseUrl,
     locale: 'en_GB',
@@ -78,15 +93,14 @@ export const metadata: Metadata = {
         url: `${baseUrl}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: 'Orange Jelly: Hospitality marketing that works',
+        alt: 'Orange Jelly: you bring the growth problem, we build the solution',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transformative Hospitality Growth Partner | Orange Jelly',
-    description:
-      'Transformative, action-first marketing for hospitality partners. Small team support built to accelerate bookings, footfall, and revenue.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: [`${baseUrl}/opengraph-image`],
   },
   robots: {
@@ -134,18 +148,26 @@ export default function RootLayout({
     },
     image: `${baseUrl}/logo.png`,
     description:
-      'Transformative marketing partner for hospitality businesses. We combine proactive growth strategy, AI-enabled delivery, and practical systems to create measurable uplift in bookings, visibility, repeat visits, and revenue.',
+      'Growth partner for ambitious small and mid-sized businesses. Orange Jelly works out what is blocking growth and builds the fix, using marketing, commercial change, operations, systems and AI according to what the problem needs.',
+    /*
+     * The founder stays as a `founder` property and nothing more. D21 makes the
+     * brand the company, and the previous entry described Peter as a hospitality
+     * growth partner, which is both the old position and a description of the
+     * company rather than the person.
+     */
     founder: {
       '@type': 'Person',
       '@id': `${baseUrl}/#peter-pitcher`,
       name: 'Peter Pitcher',
-      jobTitle: 'Founder & Hospitality Growth Partner',
-      description:
-        'Hospitality growth partner focused on transformative, action-first marketing for pubs, bars, restaurants, venues, hotels, and event spaces. Owner of The Anchor and founder of Orange Jelly.',
+      jobTitle: 'Founder',
     },
     foundingDate: '2019-03-05',
     areaServed: 'GB',
-    priceRange: '££',
+    /*
+     * priceRange is deliberately absent. D3 took pricing off the site, and "££" is
+     * a price signal that would contradict every page saying each engagement is
+     * priced to the problem. Google treats it as optional for ProfessionalService.
+     */
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: `${CONTACT.phoneInternational}`,
@@ -176,9 +198,8 @@ export default function RootLayout({
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     url: baseUrl,
-    name: 'Orange Jelly - Transformative Hospitality Marketing',
-    description:
-      'Transformative hospitality marketing built to accelerate bookings, footfall, repeat visits, and revenue.',
+    name: 'Orange Jelly',
+    description: SITE_DESCRIPTION,
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },
@@ -222,9 +243,7 @@ export default function RootLayout({
           <NavigationWrapper />
         </ChromeGate>
         <ErrorBoundary>
-          <main id="main-content" className="min-h-screen">
-            {children}
-          </main>
+          <MainGate>{children}</MainGate>
         </ErrorBoundary>
         <ChromeGate>
           <FooterWrapper />

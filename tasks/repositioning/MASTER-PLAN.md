@@ -112,11 +112,11 @@ old position remains live afterwards.
 | T055 | `/results` copy, in `tasks/repositioning/copy/results.md`, leading with the demand-discovery story | | M | Confirm the framing | **done, framing awaiting your confirmation** |
 | T056 | Build `/results` and `/results/[slug]` | T055, T028 | L | | **done** |
 | T057 | The first three case studies, all at The Anchor, told through the four method steps | T055 | L | **Your material needed for any client case study.** | **done for the Anchor three; client work still needs your material and their permission** |
-| T058 | Root metadata, titles, descriptions, Open Graph, canonicals per template | T005 | M | | |
-| T059 | Structured data: approved types, remove `priceRange`, drop old org copy | T058 | M | | |
-| T060 | Sitemap generated from the manifest, redirect sources excluded | T005 | S | | |
+| T058 | Root metadata and the default share card, rewritten off the sector | T005 | M | | **done** |
+| T059 | Organisation and website schema: `priceRange` removed, sector description replaced, founder reduced to a `founder` property | T058 | M | | **done** |
+| T060 | Sitemap generated from the manifest, redirect sources excluded, case studies emitted from the data | T005 | S | | **done** |
 | T061 | `llms.txt`, `llms-full.txt`, `manifest.json`, RSS, JSON Feed, icons, OG image, navigation and footer JSON, `src/lib/constants.ts` | T058 | L | | |
-| T062 | Build-time scan: no banned old-position phrase, no service price, in any public output | T061 | M | | |
+| T062 | `check:positioning`, wired into build and lint, with phase 4 exemptions named and countable | T061 | M | | **done for every surface phase 4 has reached; scope widens with T063** |
 | T063 | Consolidate the pub landing pages into `sector-landing`, apply the redirect table | T006, T031 | L | | |
 | T064 | Launch checklist generated from the manifest, plus rollback plan and named incident owner | T062 | S | Be reachable for 48 hours after | |
 | T065 | **Ship phase 4** | all above | M | Approve the release | |

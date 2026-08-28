@@ -43,7 +43,7 @@ export default function HomePage(): JSX.Element {
     <>
       <OjHeader />
 
-      <main>
+      <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-orange py-16 sm:py-24">
           <div className="page-shell">
             <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-ink">

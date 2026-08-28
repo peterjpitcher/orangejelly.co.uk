@@ -50,7 +50,7 @@ export default function StartHerePage(): JSX.Element {
     <>
       <OjHeader tone="orange" current="start-here" ctaHref="#enquiry" />
 
-      <main>
+      <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-orange py-12 sm:py-16">
           <div className="page-shell">
             <Breadcrumb

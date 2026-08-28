@@ -44,7 +44,7 @@ export default function ResultsPage(): JSX.Element {
     <>
       <OjHeader current="results" />
 
-      <main>
+      <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
           <div className="page-shell">
             <Breadcrumb

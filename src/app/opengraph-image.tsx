@@ -7,6 +7,20 @@ export const size = {
 
 export const contentType = 'image/png';
 
+export const alt = 'Orange Jelly: you bring the growth problem, we build the solution';
+
+/**
+ * The default share card.
+ *
+ * It said "Hospitality marketing that works" and "Fill tables for pubs,
+ * restaurants, and bars" until the repositioning. This is the image every link to
+ * the site renders in Slack, LinkedIn and iMessage, so it was the old position
+ * travelling further than any page.
+ *
+ * Drawn in the repositioning palette, without a webfont: `next/og` would need the
+ * font file fetched and embedded at request time, and a share card that sometimes
+ * fails to render is worse than one in a system face. The colours carry the brand.
+ */
 export default function OGImage() {
   return new ImageResponse(
     <div
@@ -14,44 +28,33 @@ export default function OGImage() {
         width: '100%',
         height: '100%',
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: '#F2F8FC',
-        fontFamily: 'Fraunces, Open Sans, system-ui, sans-serif',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        background: '#F76B0C',
+        padding: 72,
+        fontFamily: 'system-ui, sans-serif',
       }}
     >
+      <div style={{ display: 'flex', fontSize: 34, fontWeight: 800, color: '#23252E' }}>
+        orange jelly
+      </div>
+
       <div
         style={{
           display: 'flex',
-          alignItems: 'center',
-          gap: 32,
-          padding: 48,
-          border: '8px solid #1A2F49',
-          borderRadius: 24,
+          fontSize: 92,
+          fontWeight: 900,
+          letterSpacing: '-0.03em',
+          lineHeight: 1,
+          color: '#23252E',
+          maxWidth: 940,
         }}
       >
-        <div
-          style={{
-            background: '#1A2F49',
-            color: '#FFFFFF',
-            fontSize: 72,
-            fontWeight: 800,
-            padding: '24px 32px',
-            borderRadius: 16,
-            lineHeight: 1,
-          }}
-        >
-          OJ
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ fontSize: 56, color: '#1A2F49', fontWeight: 800 }}>Orange Jelly</div>
-          <div style={{ fontSize: 36, color: '#01619E', fontWeight: 600 }}>
-            Hospitality marketing that works
-          </div>
-          <div style={{ fontSize: 28, color: '#1A2F49' }}>
-            Fill tables for pubs, restaurants, and bars. Get found, get booked, grow.
-          </div>
-        </div>
+        you bring the growth problem. we build the solution.
+      </div>
+
+      <div style={{ display: 'flex', fontSize: 30, color: '#23252E' }}>
+        Growth partner for ambitious small and mid-sized businesses
       </div>
     </div>,
     {

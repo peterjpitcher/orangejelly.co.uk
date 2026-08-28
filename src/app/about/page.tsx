@@ -42,7 +42,7 @@ export default function AboutPage(): JSX.Element {
       {/* About is not in the primary nav, so nothing is marked current. See SiteChrome. */}
       <OjHeader />
 
-      <main>
+      <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
           <div className="page-shell">
             <Breadcrumb
