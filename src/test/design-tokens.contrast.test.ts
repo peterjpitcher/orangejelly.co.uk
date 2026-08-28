@@ -428,3 +428,19 @@ describe('the web app manifest', () => {
     expect(manifest.background_color.toLowerCase()).toBe(cssVar('--oj-paper').toLowerCase());
   });
 });
+
+describe('the last-resort error page', () => {
+  it('uses the real palette values, since it renders without the stylesheet', () => {
+    // global-error.tsx replaces the root layout, so it has no access to the
+    // stylesheet or to Tailwind. Its colours are literal by necessity, which makes
+    // them the other place a palette change can silently fail to reach.
+    const source = readFileSync(path.resolve(__dirname, '../app/global-error.tsx'), 'utf8');
+    expect(source).toContain(cssVar('--oj-orange'));
+    expect(source).toContain(cssVar('--oj-ink'));
+  });
+
+  it('keeps that page readable', () => {
+    // Ink on orange, which is the one pairing the page has.
+    expect(contrast(cssVar('--oj-ink'), cssVar('--oj-orange'))).toBeGreaterThanOrEqual(4.5);
+  });
+});

@@ -135,9 +135,9 @@ old position remains live afterwards.
 | T073 | Restyle all 105 live articles with `blog-article`, add ShareRow | T029, T072 | L | | |
 | T074 | Build the NextStep mapping for 105 posts, validate destinations at build (gap G6) | T073 | L | Approve the 30 protected mappings | |
 | T075 | `/insights` collection: directory, front matter schema, slug collision check, feeds, pagination | T029 | L | | |
-| T076 | Error handling via `not-found.tsx`, `error.tsx`, `global-error.tsx` | T030 | M | | |
+| T076 | `not-found.tsx` rebuilt, and `error.tsx` and `global-error.tsx` added, neither of which existed | T030 | M | | **done** |
 | T077 | `/sectors/professional-services` hub | T072 | M | | |
-| T078 | Restyle `/contact` as reduced start-here | T046 | S | | |
+| T078 | `/contact` rebuilt as a reduced `/start-here` | T046 | S | | **done** |
 
 ## Phase 6: Earn the traffic
 

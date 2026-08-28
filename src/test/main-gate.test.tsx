@@ -6,6 +6,7 @@ import HomePage from '@/app/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import ResultsPage from '@/app/results/page';
+import ContactPage from '@/app/contact/page';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
 import SolutionsPage from '@/app/solutions/page';
@@ -61,6 +62,7 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/solutions', <SolutionsPage key="solutions" />],
   ['/pub-marketing', <PubMarketingPage key="pm" />],
   ['/pub-rescue', <PubRescuePage key="pr" />],
+  ['/contact', <ContactPage key="contact" />],
 ];
 
 describe('MainGate', () => {

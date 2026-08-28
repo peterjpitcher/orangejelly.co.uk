@@ -38,6 +38,11 @@ const HEX_ALLOWLIST = [
   'src/app/opengraph-image.tsx',
   'src/app/icon.tsx',
   'src/app/apple-icon.tsx',
+  // global-error.tsx replaces the root layout, so it renders without the
+  // stylesheet the layout loads. Tailwind classes there would produce an unstyled
+  // page at exactly the moment the page has to be legible. Its values are pinned to
+  // the palette by src/test/design-tokens.contrast.test.ts.
+  'src/app/global-error.tsx',
   // The web app manifest is JSON consumed by the operating system. There is no
   // stylesheet in an Android home screen, so background_color and theme_color have
   // to be literal. Their values are pinned to the palette by
