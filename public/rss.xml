@@ -7,10 +7,10 @@
      xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
      xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
   <channel>
-    <title><![CDATA[Orange Jelly - Pub Marketing & Business Growth]]></title>
+    <title><![CDATA[The Licensee's Guide | Orange Jelly]]></title>
     <link>https://www.orangejelly.co.uk</link>
-    <description><![CDATA[Expert pub marketing strategies, business growth tips, and practical advice for UK publicans. From empty pub solutions to premium positioning.]]></description>
-    <lastBuildDate>Mon, 25 May 2026 00:00:00 GMT</lastBuildDate>
+    <description><![CDATA[Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, a growth partner for ambitious small and mid-sized businesses.]]></description>
+    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
     <language>en-GB</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
@@ -20,109 +20,142 @@
     <atom:link href="https://www.orangejelly.co.uk/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://www.orangejelly.co.uk/logo.png</url>
-      <title><![CDATA[Orange Jelly - Pub Marketing & Business Growth]]></title>
+      <title><![CDATA[The Licensee's Guide | Orange Jelly]]></title>
       <link>https://www.orangejelly.co.uk</link>
       <width>144</width>
       <height>144</height>
     </image>
     <item>
-      <title><![CDATA[The Autumn Pub Playbook: How to Fill Your Pub from September to November]]></title>
+      <title><![CDATA[Summer Pub Marketing: Five Ways to Turn Footfall into Revenue]]></title>
+      <link>https://www.orangejelly.co.uk/licensees-guide/summer-pub-marketing</link>
+      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/summer-pub-marketing</guid>
+      <description><![CDATA[Summer footfall doesn't become revenue on its own. Five practical moves to turn a busy summer into bookings, loyalty and repeat revenue, starting today.]]></description>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
+      <category><![CDATA[marketing]]></category>
+      <category><![CDATA[summer pub marketing]]></category><category><![CDATA[summer footfall]]></category><category><![CDATA[pub revenue]]></category><category><![CDATA[pub marketing ideas]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/summer-pub-marketing.webp" type="image/svg+xml" />
+    </item>
+<item>
+      <title><![CDATA[Autumn Pub Event Ideas: The Playbook for Sept–Nov]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/autumn-pub-event-ideas</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/autumn-pub-event-ideas</guid>
-      <description><![CDATA[A practical autumn plan for pubs: cask, low and no, wine, Halloween, rugby and gifting — the September-to-November moments that fill tables, and how to run them.]]></description>
+      <description><![CDATA[The autumn pub event ideas that actually fill tables: cask, low and no, wine, Halloween, rugby and gifting. The September-to-November moments and how to run them.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[autumn pub events]]></category><category><![CDATA[autumn pub ideas]]></category><category><![CDATA[pub event ideas]]></category><category><![CDATA[seasonal pub events]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/autumn-pub-event-ideas.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/autumn-pub-event-ideas.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[Autumn Rugby 2026: Filling Your Pub for the Nations Championship]]></title>
+      <title><![CDATA[Autumn Internationals 2026: Fill Your Pub for the Rugby]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/autumn-rugby-nations-championship-pubs</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/autumn-rugby-nations-championship-pubs</guid>
-      <description><![CDATA[Your operator's guide to filling the pub for the new Nations Championship in November 2026. Fixtures, bookings, match platters and a screen checklist that works.]]></description>
+      <description><![CDATA[Your operator's guide to filling the pub for the autumn internationals in November 2026. Where to watch rugby, table bookings, match platters and a screen checklist.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[autumn rugby]]></category><category><![CDATA[nations championship]]></category><category><![CDATA[rugby in pubs]]></category><category><![CDATA[showing rugby in your pub]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/autumn-rugby-nations-championship-pubs.svg" type="image/svg+xml" />
+      <category><![CDATA[autumn internationals]]></category><category><![CDATA[autumn rugby]]></category><category><![CDATA[rugby in pubs]]></category><category><![CDATA[showing rugby in your pub]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/autumn-rugby-nations-championship-pubs.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[Black Friday for Pubs: Gift Cards and Bookings, Not Discounts]]></title>
+      <title><![CDATA[Black Friday Ideas for Pubs: Turn It Into Bookings]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/black-friday-pub-ideas</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/black-friday-pub-ideas</guid>
-      <description><![CDATA[How pubs can use Black Friday weekend to sell gift cards, take Christmas deposits and build a January bounce-back, instead of starting a discount war.]]></description>
+      <description><![CDATA[Black Friday ideas for pubs that build your December instead of cutting prices: turn the weekend into party deposits, pre-orders, gift-card sales and a January bounce-back. A plan to bank bookings and revenue, with no discount war.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[black friday pub]]></category><category><![CDATA[pub gift cards]]></category><category><![CDATA[cyber monday pub]]></category><category><![CDATA[st andrews day pub]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/black-friday-pub-ideas.svg" type="image/svg+xml" />
+      <category><![CDATA[black friday pub ideas]]></category><category><![CDATA[christmas party bookings]]></category><category><![CDATA[pub gift card]]></category><category><![CDATA[christmas deposits]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/black-friday-pub-ideas.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[Cask Ale Week: A 10-Day Plan to Get Regulars Trying Something New]]></title>
+      <title><![CDATA[Beer Festival & Cask Ale Week: A 10-Day Plan for Pubs]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/cask-ale-week-pub-guide</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/cask-ale-week-pub-guide</guid>
-      <description><![CDATA[A practical 10-day plan for Cask Ale Week 2026: a featured cask, a cask passport, tasting paddles and plain-English tasting notes that turn one week into lasting sales.]]></description>
+      <description><![CDATA[Run Cask Ale Week as your own beer festival: a practical 10-day plan with a featured cask, a beer passport, tasting paddles and plain-English notes that turn one week into lasting trade.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[cask ale week]]></category><category><![CDATA[cask ale]]></category><category><![CDATA[real ale pub]]></category><category><![CDATA[pub events]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/cask-ale-week-pub-guide.svg" type="image/svg+xml" />
+      <category><![CDATA[beer festival]]></category><category><![CDATA[cask ale week]]></category><category><![CDATA[real ale festival]]></category><category><![CDATA[cask ale]]></category><category><![CDATA[pub events]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/cask-ale-week-pub-guide.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[The Christmas Pub Playbook: How to Fill December and Ring in the New Year]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/christmas-pub-event-ideas</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/christmas-pub-event-ideas</guid>
-      <description><![CDATA[A practical festive plan for pubs: gifting and Black Friday, December party season, New Year's Eve, Dry January and warming winter nights — the November-to-January moments that fill tables, and how to run them.]]></description>
+      <description><![CDATA[A practical festive plan for pubs: gifting and Black Friday, December party season, New Year's Eve, Dry January and warming winter nights. The November-to-January moments that fill tables, and how to run them.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[christmas pub events]]></category><category><![CDATA[christmas pub ideas]]></category><category><![CDATA[festive pub events]]></category><category><![CDATA[pub event ideas]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/christmas-pub-event-ideas.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/christmas-pub-event-ideas.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[How to Host a Macmillan Coffee Morning in Your Pub]]></title>
+      <title><![CDATA[Coffee Morning Ideas for Pubs: Fundraising That Works]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/macmillan-coffee-morning-pub-guide</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/macmillan-coffee-morning-pub-guide</guid>
-      <description><![CDATA[A practical, operator-to-operator guide to hosting a Macmillan Coffee Morning in your pub: a simple run-sheet, how it pays for a wet-led pub, and how to promote it.]]></description>
+      <description><![CDATA[Coffee morning ideas that fill a quiet daytime and raise money: a simple run-sheet, a raffle, a local-group tie-in, and how to make a Macmillan Coffee Morning pay for a wet-led pub.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[macmillan coffee morning]]></category><category><![CDATA[pub fundraising event]]></category><category><![CDATA[pub coffee morning]]></category><category><![CDATA[community pub events]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/macmillan-coffee-morning-pub-guide.svg" type="image/svg+xml" />
+      <category><![CDATA[coffee morning ideas]]></category><category><![CDATA[macmillan coffee morning]]></category><category><![CDATA[pub fundraising]]></category><category><![CDATA[charity event ideas]]></category><category><![CDATA[community pub events]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/macmillan-coffee-morning-pub-guide.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[Vodka, Gin and Champagne Days: Easy Autumn Drinks Activations]]></title>
+      <title><![CDATA[National Vodka Day & Drinks Days: A Pub Calendar]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/national-drinks-days-pub-guide</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/national-drinks-days-pub-guide</guid>
-      <description><![CDATA[Three autumn drinks days your pub can run in a single shift. Vodka, gin and tonic, and a Champagne weekend, with serves, pricing and promotion that actually work.]]></description>
+      <description><![CDATA[A pub calendar of national drinks days to pick from, anchored by National Vodka Day. Pick a hook, run it in one shift, with serves, pricing and promotion that work.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[national vodka day]]></category><category><![CDATA[international gin and tonic day]]></category><category><![CDATA[champagne day]]></category><category><![CDATA[pub drinks promotion]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/national-drinks-days-pub-guide.svg" type="image/svg+xml" />
+      <category><![CDATA[national vodka day]]></category><category><![CDATA[national drinks days]]></category><category><![CDATA[world gin day]]></category><category><![CDATA[international champagne day]]></category><category><![CDATA[pub drinks promotion]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/national-drinks-days-pub-guide.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[Sober October: Low and No Drinks That Actually Sell in Your Pub]]></title>
+      <title><![CDATA[Oktoberfest Ideas for Pubs: How to Host Your Own]]></title>
+      <link>https://www.orangejelly.co.uk/licensees-guide/oktoberfest-pub-guide</link>
+      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/oktoberfest-pub-guide</guid>
+      <description><![CDATA[A practical Oktoberfest plan for UK pubs: pick your weekend, get a festbier and steins on, lay out pretzels and bratwurst, cue the Oompah, and turn a quiet autumn night into repeat bookings.]]></description>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
+      <category><![CDATA[events]]></category>
+      <category><![CDATA[oktoberfest]]></category><category><![CDATA[oktoberfest ideas for pubs]]></category><category><![CDATA[beer festival]]></category><category><![CDATA[pub events]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/oktoberfest-pub-guide.webp" type="image/svg+xml" />
+    </item>
+<item>
+      <title><![CDATA[Halloween Food & Party Ideas for Pubs (+ Bonfire Night)]]></title>
+      <link>https://www.orangejelly.co.uk/licensees-guide/pub-halloween-bonfire-night-events</link>
+      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/pub-halloween-bonfire-night-events</guid>
+      <description><![CDATA[Halloween food ideas and party ideas for pubs that actually drive trade: themed menus, adult party nights, plus Bonfire Night events and food. Practical, profitable, and easy to run.]]></description>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
+      <category><![CDATA[events]]></category>
+      <category><![CDATA[halloween food ideas]]></category><category><![CDATA[halloween party ideas]]></category><category><![CDATA[pub halloween party]]></category><category><![CDATA[bonfire night events]]></category><category><![CDATA[pub autumn events]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/pub-halloween-bonfire-night-events.webp" type="image/svg+xml" />
+    </item>
+<item>
+      <title><![CDATA[Non Alcoholic Beer & a Low/No Bar That Sells: Sober October]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/sober-october-low-no-alcohol-pubs</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/sober-october-low-no-alcohol-pubs</guid>
-      <description><![CDATA[How to build a low and no range that earns its space behind the bar, with staff scripts, pricing, food pairings and how to promote Sober October properly.]]></description>
+      <description><![CDATA[Start with one cracking non alcoholic beer, then build a small alcohol free bar (low and no alcohol drinks, a non alcoholic drinks menu and mocktail menu ideas) that earns its space and sells through Sober October and beyond.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[low and no alcohol]]></category><category><![CDATA[sober october]]></category><category><![CDATA[alcohol free pub]]></category><category><![CDATA[pub drinks]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/sober-october-low-no-alcohol-pubs.svg" type="image/svg+xml" />
+      <category><![CDATA[non alcoholic beer]]></category><category><![CDATA[alcohol free bar]]></category><category><![CDATA[low and no alcohol]]></category><category><![CDATA[sober october]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/sober-october-low-no-alcohol-pubs.webp" type="image/svg+xml" />
     </item>
 <item>
-      <title><![CDATA[How to Run a Wine Tasting Evening in Your Pub (Without Overcomplicating It)]]></title>
+      <title><![CDATA[Wine & Cheese Evening: How to Run One in Your Pub]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/wine-tasting-evenings-for-pubs</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/wine-tasting-evenings-for-pubs</guid>
-      <description><![CDATA[A plain-English guide to running a pub wine tasting evening that sells more wine, from a simple £10 flight format to staff crib notes and repeat bookings.]]></description>
+      <description><![CDATA[A plain-English guide to running a wine and cheese evening in your pub, from a simple £10 flight and pairing board to local cheese, staff crib notes and repeat bookings.]]></description>
       <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
-      <category><![CDATA[wine tasting evening]]></category><category><![CDATA[pub wine sales]]></category><category><![CDATA[wine tasting night]]></category><category><![CDATA[pub events]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/wine-tasting-evenings-for-pubs.svg" type="image/svg+xml" />
+      <category><![CDATA[wine and cheese evening]]></category><category><![CDATA[cheese and wine night]]></category><category><![CDATA[wine tasting evening]]></category><category><![CDATA[pub events]]></category>
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/wine-tasting-evenings-for-pubs.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Pub Event Ideas: The Year-Round Guide to Filling Quiet Nights]]></title>
@@ -133,7 +166,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[pub event ideas]]></category><category><![CDATA[event ideas for pubs]]></category><category><![CDATA[pub entertainment ideas]]></category><category><![CDATA[pub events]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/pub-event-ideas.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/pub-event-ideas.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[How to Attract Families to Your Pub: Activities That Fill Tables]]></title>
@@ -144,7 +177,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[revenue-growth]]></category>
       <category><![CDATA[Family Friendly]]></category><category><![CDATA[Pub Events]]></category><category><![CDATA[Footfall]]></category><category><![CDATA[Revenue Growth]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/how-to-attract-families.png" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/how-to-attract-families-to-your-pub.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Summer Moments, Simple Campaigns: an inspiring idea bank for pub teams (May to Aug)]]></title>
@@ -155,7 +188,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[summer]]></category><category><![CDATA[campaigns]]></category><category><![CDATA[events]]></category><category><![CDATA[marketing]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/summer-moments-simple-campaigns.png" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/summer-moments-simple-campaigns.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Your Pub Marketing Plan for 2026: Month-by-Month Guide]]></title>
@@ -166,18 +199,18 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[marketing]]></category>
       <category><![CDATA[pub marketing plan]]></category><category><![CDATA[pub marketing calendar]]></category><category><![CDATA[pub events calendar]]></category><category><![CDATA[pub promotion ideas]]></category><category><![CDATA[pub marketing 2026]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/pub-marketing-plan-2026-monthly-guide.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/pub-marketing-plan-2026-monthly-guide.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Instagram Marketing for Pubs: Turn Food Photos Into Foot Traffic]]></title>
       <link>https://www.orangejelly.co.uk/licensees-guide/instagram-marketing-for-pubs</link>
       <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/instagram-marketing-for-pubs</guid>
-      <description><![CDATA[Transform your pub's Instagram from amateur snapshots to a customer magnet. Photography tips, hashtag strategies, and content ideas that fill tables.]]></description>
+      <description><![CDATA[How to run a pub Instagram account in-house: profile setup, phone photography rules, three content pillars, stories, Reels, and the three numbers worth tracking.]]></description>
       <pubDate>Fri, 26 Dec 2025 00:00:00 GMT</pubDate>
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[marketing]]></category>
       <category><![CDATA[pub Instagram ideas]]></category><category><![CDATA[Instagram for pubs]]></category><category><![CDATA[social media marketing]]></category><category><![CDATA[pub photography]]></category><category><![CDATA[Instagram marketing]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/instagram-marketing-for-pubs.png" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/instagram-marketing-for-pubs.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Wet-Led vs Food-Led Pubs: Understanding Your Revenue Model]]></title>
@@ -188,7 +221,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[operations]]></category>
       <category><![CDATA[wet led pub]]></category><category><![CDATA[food led pub]]></category><category><![CDATA[pub revenue model]]></category><category><![CDATA[pub business strategy]]></category><category><![CDATA[pub economics]]></category><category><![CDATA[dry led pub]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/wet-led-vs-food-led-pubs.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/wet-led-vs-food-led-pubs.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[How to Run Successful Pub Events: A Complete Guide to Profitable Functions]]></title>
@@ -199,7 +232,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[pub events]]></category><category><![CDATA[event planning]]></category><category><![CDATA[pub entertainment]]></category><category><![CDATA[event ideas]]></category><category><![CDATA[customer engagement]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/how-to-run-successful-pub-events.png" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/how-to-run-successful-pub-events.webp" type="image/svg+xml" />
     </item>
 <item>
       <title><![CDATA[Six Nations 2026: How to Make the Most of Rugby in Your Pub]]></title>
@@ -210,40 +243,7 @@
       <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
       <category><![CDATA[events]]></category>
       <category><![CDATA[Six Nations]]></category><category><![CDATA[pub sporting events]]></category><category><![CDATA[rugby]]></category><category><![CDATA[pub events]]></category><category><![CDATA[match day]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/pub-six-nations-rugby-marketing.svg" type="image/svg+xml" />
-    </item>
-<item>
-      <title><![CDATA[Food Allergies and GDPR: The Compliance Nightmares That Could Close You Down]]></title>
-      <link>https://www.orangejelly.co.uk/licensees-guide/food-allergies-gdpr-compliance</link>
-      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/food-allergies-gdpr-compliance</guid>
-      <description><![CDATA[Navigate the compliance minefield without hiring expensive consultants. Simple systems that keep you legal and let you focus on running your pub.]]></description>
-      <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
-      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
-      <category><![CDATA[operations]]></category>
-      <category><![CDATA[allergen management]]></category><category><![CDATA[GDPR compliance]]></category><category><![CDATA[food safety]]></category><category><![CDATA[pub regulations]]></category><category><![CDATA[compliance systems]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/food-allergies-gdpr-compliance.png" type="image/svg+xml" />
-    </item>
-<item>
-      <title><![CDATA[How Much Profit Does a Pub Make? Realistic Numbers for 2026]]></title>
-      <link>https://www.orangejelly.co.uk/licensees-guide/how-much-profit-does-a-pub-make</link>
-      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/how-much-profit-does-a-pub-make</guid>
-      <description><![CDATA[Honest pub profit benchmarks for 2026. Wet GP, food GP, labour costs, rent, and what is actually left. From a working licensee who grew food GP from 58% to 71%.]]></description>
-      <pubDate>Mon, 08 Dec 2025 00:00:00 GMT</pubDate>
-      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
-      <category><![CDATA[operations]]></category>
-      <category><![CDATA[pub profit]]></category><category><![CDATA[pub finances]]></category><category><![CDATA[gross profit]]></category><category><![CDATA[pub operations]]></category><category><![CDATA[break even]]></category><category><![CDATA[pub business]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/how-much-profit-does-a-pub-make.svg" type="image/svg+xml" />
-    </item>
-<item>
-      <title><![CDATA[Pub Chalkboard & A-Board Ideas That Actually Drive Footfall]]></title>
-      <link>https://www.orangejelly.co.uk/licensees-guide/pub-chalkboard-a-board-ideas</link>
-      <guid isPermaLink="true">https://www.orangejelly.co.uk/licensees-guide/pub-chalkboard-a-board-ideas</guid>
-      <description><![CDATA[Practical chalkboard and A-board ideas that turn passing foot traffic into paying customers. What to write, how to design it, and the legal rules you need to know.]]></description>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
-      <author>peter@orangejelly.co.uk (Peter Pitcher)</author>
-      <category><![CDATA[marketing]]></category>
-      <category><![CDATA[pub chalkboard ideas]]></category><category><![CDATA[pub a-board signs]]></category><category><![CDATA[pub window display]]></category><category><![CDATA[pub marketing]]></category><category><![CDATA[local pub marketing]]></category><category><![CDATA[pub signage]]></category>
-      <enclosure url="https://www.orangejelly.co.uk/images/blog/pub-chalkboard-a-board-ideas.svg" type="image/svg+xml" />
+      <enclosure url="https://www.orangejelly.co.uk/images/blog/heroes/pub-six-nations-rugby-marketing.webp" type="image/svg+xml" />
     </item>
   </channel>
 </rss>

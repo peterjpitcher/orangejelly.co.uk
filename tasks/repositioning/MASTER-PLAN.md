@@ -115,7 +115,7 @@ old position remains live afterwards.
 | T058 | Root metadata and the default share card, rewritten off the sector | T005 | M | | **done** |
 | T059 | Organisation and website schema: `priceRange` removed, sector description replaced, founder reduced to a `founder` property | T058 | M | | **done** |
 | T060 | Sitemap generated from the manifest, redirect sources excluded, case studies emitted from the data | T005 | S | | **done** |
-| T061 | `llms.txt`, `llms-full.txt`, `manifest.json`, RSS, JSON Feed, icons, OG image, navigation and footer JSON, `src/lib/constants.ts` | T058 | L | | |
+| T061 | `llms.txt`, `llms-full.txt` and the manifest generated rather than written; feeds, OG image and the company tagline rewritten | T058 | L | | **done except the legacy navigation and footer JSON, which phase 4 replaces with T063** |
 | T062 | `check:positioning`, wired into build and lint, with phase 4 exemptions named and countable | T061 | M | | **done for every surface phase 4 has reached; scope widens with T063** |
 | T063 | Consolidate the pub landing pages into `sector-landing`, apply the redirect table | T006, T031 | L | | |
 | T064 | Launch checklist generated from the manifest, plus rollback plan and named incident owner | T062 | S | Be reachable for 48 hours after | |

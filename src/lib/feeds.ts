@@ -14,10 +14,18 @@ export interface SiteConfig {
   language: string;
 }
 
+/*
+ * This describes the FEED, not the company.
+ *
+ * The feed carries the licensees' guide, which is genuinely a hospitality article
+ * library, so naming the sector here is accurate rather than the old position
+ * leaking through. What changed is the title: it said "Orange Jelly - Pub Marketing
+ * & Business Growth", which described the company by the collection.
+ */
 const siteConfig: SiteConfig = {
-  title: 'Orange Jelly - Pub Marketing & Business Growth',
+  title: "The Licensee's Guide | Orange Jelly",
   description:
-    'Expert pub marketing strategies, business growth tips, and practical advice for UK publicans. From empty pub solutions to premium positioning.',
+    'Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, a growth partner for ambitious small and mid-sized businesses.',
   url: getBaseUrl(),
   author: {
     name: 'Peter Pitcher',

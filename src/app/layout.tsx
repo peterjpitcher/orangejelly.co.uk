@@ -118,7 +118,9 @@ export const metadata: Metadata = {
     apple: '/apple-icon',
     shortcut: '/icon',
   },
-  manifest: '/manifest.json',
+  // Next generates this from src/app/manifest.ts, which is why the path has no
+  // extension. The hand-written public/manifest.json it replaced is deleted.
+  manifest: '/manifest.webmanifest',
   other: {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',

@@ -416,3 +416,15 @@ describe('repositioning palette contrast', () => {
     });
   });
 });
+
+describe('the web app manifest', () => {
+  it('uses the real palette values, not an approximation of them', async () => {
+    // The manifest is JSON the operating system reads, so its colours have to be
+    // literal: there is no stylesheet on an Android home screen. That makes them
+    // the one place a palette change can silently fail to reach, which is what this
+    // pins down.
+    const manifest = (await import('@/app/manifest')).default();
+    expect(manifest.theme_color.toLowerCase()).toBe(cssVar('--oj-orange').toLowerCase());
+    expect(manifest.background_color.toLowerCase()).toBe(cssVar('--oj-paper').toLowerCase());
+  });
+});

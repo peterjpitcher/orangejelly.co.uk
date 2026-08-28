@@ -38,6 +38,11 @@ const HEX_ALLOWLIST = [
   'src/app/opengraph-image.tsx',
   'src/app/icon.tsx',
   'src/app/apple-icon.tsx',
+  // The web app manifest is JSON consumed by the operating system. There is no
+  // stylesheet in an Android home screen, so background_color and theme_color have
+  // to be literal. Their values are pinned to the palette by
+  // src/test/design-tokens.contrast.test.ts.
+  'src/app/manifest.ts',
 ];
 
 /** Tests assert literal values on purpose; that is the point of them. */
