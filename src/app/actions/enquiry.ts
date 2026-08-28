@@ -40,6 +40,8 @@ export interface EnquiryStep1Result {
  * behind admin auth rather than sitting in an inbox indefinitely. The email says
  * enough to reply to a person, and links to the rest.
  */
+const ADMIN_URL = 'https://www.orangejelly.co.uk/admin';
+
 function notificationBody(input: {
   name: string;
   email: string;
@@ -55,11 +57,20 @@ function notificationBody(input: {
   ];
   if (input.sourcePage) rows.push(['Came from', input.sourcePage]);
 
+  // The qualification answers are not in this list and never will be. They stay
+  // behind admin auth rather than sitting in an inbox indefinitely, so the mail
+  // links to them instead of carrying them.
+  const tail = 'The rest of the answers, and the lead state, are in the admin view.';
+
   return {
-    html: rows
-      .map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`)
-      .join('\n'),
-    text: rows.map(([label, value]) => `${label}: ${value}`).join('\n'),
+    html: [
+      ...rows.map(
+        ([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`
+      ),
+      `<p>${escapeHtml(tail)}</p>`,
+      `<p><a href="${ADMIN_URL}">${ADMIN_URL}</a></p>`,
+    ].join('\n'),
+    text: [...rows.map(([label, value]) => `${label}: ${value}`), '', tail, ADMIN_URL].join('\n'),
   };
 }
 

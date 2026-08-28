@@ -86,7 +86,6 @@ export async function GET(request: Request) {
     contacts30d,
     subscribers30d,
     events30d,
-    recentContacts,
     recentSubscribers,
     eventRows,
   ] = await Promise.all([
@@ -96,13 +95,6 @@ export async function GET(request: Request) {
     countTable('contacts', since),
     countTable('newsletter_subscribers', since),
     countTable('conversion_events', since),
-    supabase
-      .from('contacts')
-      .select(
-        'id, name, email, phone, pub_name, package_interest, message, source_page, utm_source, utm_campaign, created_at, status'
-      )
-      .order('created_at', { ascending: false })
-      .limit(20),
     supabase
       .from('newsletter_subscribers')
       .select('id, email, status, source_page, utm_source, utm_campaign, created_at, last_seen_at')
@@ -118,7 +110,7 @@ export async function GET(request: Request) {
       .limit(1000),
   ]);
 
-  for (const result of [recentContacts, recentSubscribers, eventRows]) {
+  for (const result of [recentSubscribers, eventRows]) {
     if (result.error) {
       throw result.error;
     }
@@ -160,7 +152,6 @@ export async function GET(request: Request) {
     sourcePages: toRows(bySourcePage),
     campaigns: toRows(byCampaign),
     searchTerms: toRows(bySearchTerm),
-    recentContacts: recentContacts.data || [],
     recentSubscribers: recentSubscribers.data || [],
     generatedAt: new Date().toISOString(),
   });

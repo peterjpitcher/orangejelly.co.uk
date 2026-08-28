@@ -4,8 +4,11 @@ import { type LeadSourceInput } from '@/lib/lead-source';
 import {
   type EnquiryStep1,
   type EnquiryStep2,
+  type LeadState,
+  type QualificationPayload,
   QUALIFICATION_SCHEMA_VERSION,
   countCompletedFields,
+  isLeadState,
   toQualificationPayload,
 } from '@/lib/schemas/enquiry';
 
@@ -119,3 +122,115 @@ export async function storeEnquiryStep2(
 }
 
 export { countCompletedFields };
+
+/**
+ * One enquiry as the admin view needs it.
+ *
+ * The qualification answers are the commercially sensitive half and are why this
+ * lives behind auth rather than in the notification email.
+ */
+export interface AdminEnquiry {
+  id: string;
+  name: string;
+  email: string;
+  company: string | null;
+  situation: string | null;
+  role: string | null;
+  sizeBand: string | null;
+  website: string | null;
+  qualification: QualificationPayload;
+  status: LeadState;
+  completedStep: number;
+  sourcePage: string | null;
+  utmSource: string | null;
+  utmCampaign: string | null;
+  createdAt: string;
+  updatedAt: string;
+  /** Historic pub-era fields. Read-only, and only ever populated on old rows. */
+  legacy: { pubName: string | null; packageInterest: string | null; message: string | null };
+}
+
+const ADMIN_COLUMNS =
+  'id, name, email, company, situation, role, size_band, website, qualification, status, ' +
+  'completed_step, source_page, utm_source, utm_campaign, created_at, updated_at, ' +
+  'pub_name, package_interest, message';
+
+/* eslint-disable @typescript-eslint/no-explicit-any -- one row shape, mapped once. */
+function toAdminEnquiry(row: any): AdminEnquiry {
+  return {
+    id: row.id,
+    name: row.name,
+    email: row.email,
+    company: row.company,
+    situation: row.situation,
+    role: row.role,
+    sizeBand: row.size_band,
+    website: row.website,
+    qualification: (row.qualification ?? {}) as QualificationPayload,
+    status: isLeadState(row.status) ? row.status : 'new',
+    completedStep: row.completed_step ?? 1,
+    sourcePage: row.source_page,
+    utmSource: row.utm_source,
+    utmCampaign: row.utm_campaign,
+    createdAt: row.created_at,
+    updatedAt: row.updated_at,
+    legacy: {
+      pubName: row.pub_name,
+      packageInterest: row.package_interest,
+      message: row.message,
+    },
+  };
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+export interface ListEnquiriesOptions {
+  status?: LeadState;
+  limit?: number;
+}
+
+/** Newest first. Admin only: this returns every answer someone gave. */
+export async function listEnquiries(
+  options: ListEnquiriesOptions = {}
+): Promise<{ enquiries: AdminEnquiry[]; error?: string }> {
+  if (!isSupabaseAdminConfigured()) {
+    return { enquiries: [], error: 'Enquiry storage is not configured.' };
+  }
+
+  const supabase = getSupabaseAdminClient();
+  let query = supabase
+    .from('contacts')
+    .select(ADMIN_COLUMNS)
+    .order('created_at', { ascending: false })
+    .limit(Math.min(options.limit ?? 50, 200));
+
+  if (options.status) query = query.eq('status', options.status);
+
+  const { data, error } = await query;
+  if (error) return { enquiries: [], error: error.message };
+
+  return { enquiries: (data ?? []).map(toAdminEnquiry) };
+}
+
+/**
+ * Moves a lead along the pipeline.
+ *
+ * The state is validated here as well as by the database constraint. The
+ * constraint is the guarantee; this is what turns a bad value into a useful
+ * message instead of a 500.
+ */
+export async function setEnquiryStatus(leadId: string, status: LeadState): Promise<StoredEnquiry> {
+  if (!isSupabaseAdminConfigured()) {
+    return { stored: false, error: 'Enquiry storage is not configured.' };
+  }
+  if (!isLeadState(status)) {
+    return { stored: false, error: 'Unknown lead state.' };
+  }
+
+  const supabase = getSupabaseAdminClient();
+  // updated_at is maintained by a trigger, so it cannot be forgotten here. It is
+  // what measures the 24-month retention window.
+  const { error } = await supabase.from('contacts').update({ status }).eq('id', leadId);
+
+  if (error) return { stored: false, error: error.message };
+  return { stored: true, id: leadId };
+}

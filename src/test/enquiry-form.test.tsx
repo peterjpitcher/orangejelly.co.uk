@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/app/actions/enquiry';
 import { EnquiryForm } from '@/components/oj/EnquiryForm';
+import type * as ReactDom from 'react-dom';
 
 /**
  * `useFormState` belongs to Next's own React build, which resolves at build time
@@ -18,7 +19,7 @@ let currentState: EnquiryFormState = ENQUIRY_INITIAL_STATE;
 const dispatch = vi.fn();
 
 vi.mock('react-dom', async () => {
-  const actual = await vi.importActual<typeof import('react-dom')>('react-dom');
+  const actual = await vi.importActual<typeof ReactDom>('react-dom');
   return {
     ...actual,
     useFormStatus: () => ({ pending: false }),
@@ -195,7 +196,9 @@ describe('EnquiryForm, step two', () => {
   it('lets both selects be left unanswered', () => {
     renderAt(STEP_TWO);
     expect(screen.getByLabelText('Your role')).toHaveValue('');
-    expect(within(screen.getByLabelText('Your role')).getByText('Prefer not to say')).toBeInTheDocument();
+    expect(
+      within(screen.getByLabelText('Your role')).getByText('Prefer not to say')
+    ).toBeInTheDocument();
   });
 
   it('offers a real way to skip, not just a suggestion that it is optional', () => {

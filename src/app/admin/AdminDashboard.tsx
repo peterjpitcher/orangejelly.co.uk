@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import AuthedNav from '@/components/admin/AuthedNav';
+import EnquiriesPanel from '@/components/admin/EnquiriesPanel';
 import {
   readSession,
   writeSession,
@@ -13,21 +14,6 @@ import {
 type CountRow = {
   label: string;
   count: number;
-};
-
-type ContactRow = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string | null;
-  pub_name: string;
-  package_interest: string | null;
-  message: string;
-  source_page: string | null;
-  utm_source: string | null;
-  utm_campaign: string | null;
-  created_at: string;
-  status: string;
 };
 
 type SubscriberRow = {
@@ -56,7 +42,6 @@ type AdminStats = {
   sourcePages: CountRow[];
   campaigns: CountRow[];
   searchTerms: CountRow[];
-  recentContacts: ContactRow[];
   recentSubscribers: SubscriberRow[];
   generatedAt: string;
 };
@@ -313,55 +298,7 @@ export default function AdminDashboard() {
                 <CountList title="Campaigns" rows={stats.campaigns} />
               </div>
 
-              <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
-                <h2 className="text-lg font-semibold text-brand-base">Recent contacts</h2>
-                <div className="mt-4 overflow-x-auto">
-                  <table className="w-full text-left text-sm">
-                    <thead className="text-brand-base/75">
-                      <tr>
-                        <th className="py-2 pr-4 align-top">When</th>
-                        <th className="py-2 pr-4 align-top">Contact</th>
-                        <th className="py-2 pr-4 align-top">Venue</th>
-                        <th className="py-2 pr-4 align-top">Package</th>
-                        <th className="py-2 pr-4 align-top">Message</th>
-                        <th className="py-2 pr-4 align-top">Source</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {stats.recentContacts.map((contact) => (
-                        <tr key={contact.id} className="border-t border-brand-base/10 align-top">
-                          <td className="whitespace-nowrap py-3 pr-4">
-                            {formatDate(contact.created_at)}
-                          </td>
-                          <td className="py-3 pr-4">
-                            <div className="font-medium">{contact.name}</div>
-                            <div className="text-brand-base/75">
-                              <a href={`mailto:${contact.email}`} className="hover:underline">
-                                {contact.email}
-                              </a>
-                            </div>
-                            {contact.phone && (
-                              <div className="text-brand-base/75">
-                                <a href={`tel:${contact.phone}`} className="hover:underline">
-                                  {contact.phone}
-                                </a>
-                              </div>
-                            )}
-                          </td>
-                          <td className="py-3 pr-4">{contact.pub_name}</td>
-                          <td className="py-3 pr-4">{contact.package_interest || '-'}</td>
-                          <td className="max-w-md whitespace-pre-wrap break-words py-3 pr-4">
-                            {contact.message}
-                          </td>
-                          <td className="max-w-xs truncate py-3 pr-4">
-                            {contact.source_page || '-'}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </section>
+              <EnquiriesPanel />
 
               <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
                 <h2 className="text-lg font-semibold text-brand-base">Recent newsletter signups</h2>

@@ -18,11 +18,7 @@ import { z } from 'zod';
  * enquiry rather than nothing.
  */
 export const enquiryStep1Schema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(2, 'Tell us your name')
-    .max(80, 'That is longer than we can store'),
+  name: z.string().trim().min(2, 'Tell us your name').max(80, 'That is longer than we can store'),
   email: z
     .string()
     .trim()
@@ -128,4 +124,37 @@ export function countCompletedFields(input: EnquiryStep2): number {
     input.success,
     input.whyNow,
   ].filter((value) => Boolean(value && String(value).trim())).length;
+}
+
+/**
+ * The lead pipeline.
+ *
+ * Extends the existing `status` column, which was free text defaulting to 'new'.
+ * A database CHECK constraint enforces the same six, because a convention that
+ * nothing enforces is a typo away from a seventh state that no filter knows about.
+ *
+ * @see supabase/migrations/20260828090000_contact_lead_states.sql
+ */
+export const LEAD_STATES = [
+  'new',
+  'contacted',
+  'qualified',
+  'conversation_booked',
+  'declined',
+  'client',
+] as const;
+
+export type LeadState = (typeof LEAD_STATES)[number];
+
+export const LEAD_STATE_LABELS: Record<LeadState, string> = {
+  new: 'New',
+  contacted: 'Contacted',
+  qualified: 'Qualified',
+  conversation_booked: 'Conversation booked',
+  declined: 'Declined',
+  client: 'Client',
+};
+
+export function isLeadState(value: unknown): value is LeadState {
+  return typeof value === 'string' && (LEAD_STATES as readonly string[]).includes(value);
 }

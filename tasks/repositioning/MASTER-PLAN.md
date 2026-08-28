@@ -89,8 +89,8 @@ Proves the whole journey including lead capture and measurement before anything 
 | T040 | Both server actions. The row is the authoritative success condition and nothing after it can turn a stored enquiry into a user-facing error | T039 | M | | **done** |
 | T041 | `enquiry_ip` and `enquiry_email` buckets, honeypot, and fail-closed limiting because this action sends mail | T040 | S | | **done** |
 | T042 | Two-step enquiry form: one native form, one server action, error summary, and it works with JavaScript off | T027, T040 | L | | **done** |
-| T043 | Admin view, notification email, lead states | T040 | M | | |
-| T044 | Update `/privacy` for the new data, purpose, retention, deletion | T038 | M | Approve the wording | |
+| T043 | Admin enquiry view, the six lead states enforced by a database constraint, and a notification email that links to the answers rather than carrying them | T040 | M | | **done** |
+| T044 | `/privacy` rewritten for the new data, the 24-month retention, and the consent line drawn at device storage | T038 | M | Approve the wording | **done, wording awaiting your approval** |
 | T045 | Write `/start-here` copy including the fit language (gap G3) | T042 | M | React to my draft | |
 | T046 | Build `/start-here` | T045, T042 | M | | |
 | T047 | Write homepage copy (gap G2) | T023 | M | React to my draft | |

@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ENQUIRY_INITIAL_STATE, submitEnquiry } from '@/app/actions/enquiry';
 import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
+import type * as RateLimit from '@/lib/rate-limit';
 
 /**
  * The state machine behind the form.
@@ -31,7 +32,7 @@ vi.mock('next/headers', () => ({
 }));
 
 vi.mock('@/lib/rate-limit', async () => {
-  const actual = await vi.importActual<typeof import('@/lib/rate-limit')>('@/lib/rate-limit');
+  const actual = await vi.importActual<typeof RateLimit>('@/lib/rate-limit');
   return { ...actual, isRateLimitConfigured: () => false };
 });
 
@@ -72,7 +73,10 @@ describe('submitEnquiry, step one', () => {
 
     // A broken hidden field is an attribution problem, never a reason to lose the
     // enquiry.
-    const next = await submitEnquiry(ENQUIRY_INITIAL_STATE, formData({ ...VALID, leadSource: '{' }));
+    const next = await submitEnquiry(
+      ENQUIRY_INITIAL_STATE,
+      formData({ ...VALID, leadSource: '{' })
+    );
     expect(next.step).toBe(2);
   });
 
@@ -140,7 +144,10 @@ describe('submitEnquiry, step two', () => {
   it('still confirms when step two fails, because the enquiry is already safe', async () => {
     vi.mocked(storeEnquiryStep2).mockResolvedValue({ stored: false, error: 'down' });
 
-    const next = await submitEnquiry({ step: 2, leadId: 'lead-1' }, formData({ whyNow: 'Renewal' }));
+    const next = await submitEnquiry(
+      { step: 2, leadId: 'lead-1' },
+      formData({ whyNow: 'Renewal' })
+    );
     // There is nothing useful for the person to do about it, and telling them
     // implies their enquiry is at risk when it is not.
     expect(next).toEqual({ step: 'done', leadId: 'lead-1' });

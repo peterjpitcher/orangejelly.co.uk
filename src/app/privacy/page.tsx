@@ -49,7 +49,7 @@ export default function PrivacyPage(): JSX.Element {
       <div className="measure space-y-8">
         <div className="space-y-3">
           <Heading level={1}>Privacy policy</Heading>
-          <Text color="muted">Last updated: 16 July 2026</Text>
+          <Text color="muted">Last updated: 28 August 2026</Text>
           <Text>
             This explains what personal data Orange Jelly Limited collects through{' '}
             {COMPANY.website.replace('https://', '')}, why we collect it, who else handles it, how
@@ -72,10 +72,28 @@ export default function PrivacyPage(): JSX.Element {
         <Section title="What we collect, and why">
           <Text weight="semibold">When you send us an enquiry</Text>
           <Text>
-            Our contact form asks for your name, email address, venue name and your message, and
-            optionally your phone number. We use these to reply to you and to keep track of the
-            conversation. Our lawful basis is legitimate interests: responding to someone who has
-            asked us to get in touch.
+            The form asks for four things: your name, your email address, your company, and a
+            description of what is happening in the business. We use these to reply to you and to
+            prepare for the conversation.
+          </Text>
+          <Text>
+            After you have sent that, we ask six more questions: your role, roughly how many people
+            work there, your website, what you think is blocking growth, what success would look
+            like, and why now. <strong>Every one of these is optional.</strong> Your enquiry is
+            already with us by that point, and skipping them changes nothing about the reply you
+            get. They exist so the first conversation starts somewhere useful.
+          </Text>
+          <Text>
+            We use this for one purpose: having a useful first conversation with you. We do not add
+            you to a mailing list, we do not use it to market to you, and we do not share it. Our
+            lawful basis is legitimate interests: responding to someone who has asked us to get in
+            touch.
+          </Text>
+          <Text>
+            The answers about your business are commercially sensitive, so we treat them that way.
+            The email that tells us an enquiry has arrived carries your name, company, email address
+            and what you wrote in that first description. The rest is not put in an inbox: it is
+            readable only from our password-protected admin area.
           </Text>
 
           <Text weight="semibold">When you set up an availability poll</Text>
@@ -99,9 +117,35 @@ export default function PrivacyPage(): JSX.Element {
 
           <Text weight="semibold">When you browse the site</Text>
           <Text>
-            We use Google Tag Manager and Google Analytics to understand which pages are useful.
-            These are switched off entirely on poll pages, because the poll link in the address bar
-            is itself a credential and we will not hand it to a third party.
+            We split this by whether something is stored on your device, not by whether it is
+            personal data, because that is what the rules on cookies actually turn on.
+          </Text>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>
+              <Text as="span">
+                <strong>Without asking you</strong>: Vercel Analytics and Speed Insights, which
+                count page views and measure how quickly pages load. They set no cookie and store
+                nothing on your device. We also keep our own record of things like which button was
+                pressed, so we can tell whether the site is working. Those records carry no
+                identifier for you or your device.
+              </Text>
+            </li>
+            <li>
+              <Text as="span">
+                <strong>Only if you agree</strong>: Google Tag Manager and Google Analytics, which
+                do set a cookie. If you decline, or ignore the banner, they never load. You can
+                change your mind at any time, and withdrawing stops the collection straight away.
+              </Text>
+            </li>
+          </ul>
+          <Text>
+            All of it is switched off entirely on poll pages, because the poll link in the address
+            bar is itself a credential and we will not hand it to a third party.
+          </Text>
+          <Text>
+            The records we keep of what happened on the site never contain anything you typed. They
+            hold counts, yes-or-no answers and page names, and nothing else. Your enquiry answers do
+            not go into analytics, ever.
           </Text>
         </Section>
 
@@ -119,7 +163,8 @@ export default function PrivacyPage(): JSX.Element {
             </li>
             <li>
               <Text as="span">
-                <strong>Vercel</strong>: runs and serves the site.
+                <strong>Vercel</strong>: runs and serves the site, and provides the cookieless page
+                and speed measurements described above.
               </Text>
             </li>
             <li>
@@ -155,9 +200,10 @@ export default function PrivacyPage(): JSX.Element {
             proposed date, whichever is later. That deletion runs automatically.
           </Text>
           <Text>
-            <strong>Enquiries</strong>: we keep these for as long as we may need them for the
-            conversation and any work that follows, and no longer than is useful. Ask us to remove
-            yours and we will.
+            <strong>Enquiries</strong>: we keep these for 24 months from the last time we were in
+            contact, then delete them. If your enquiry becomes work we do together, the details move
+            to the client record and leave the enquiry list. Ask us to remove yours sooner and we
+            will.
           </Text>
         </Section>
 
