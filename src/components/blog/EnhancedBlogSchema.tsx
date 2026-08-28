@@ -43,8 +43,8 @@ export default function EnhancedBlogSchema({ post, baseUrl, imageUrl }: Enhanced
       image: {
         '@type': 'ImageObject',
         url: imageUrl,
-        width: 1200,
-        height: 630,
+        width: 1600,
+        height: 900,
       },
     }),
     datePublished: post.publishedDate,

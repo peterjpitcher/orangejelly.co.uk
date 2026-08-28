@@ -54,9 +54,13 @@ describe('enquiry step one', () => {
     }
   });
 
-  it('carries a honeypot that only a bot fills in', () => {
-    expect(enquiryStep1Schema.safeParse({ ...VALID, website: 'http://spam' }).success).toBe(false);
-    expect(enquiryStep1Schema.safeParse({ ...VALID, website: '' }).success).toBe(true);
+  it('carries a honeypot, and lets a filled one through to the action', () => {
+    // Rejecting it here would tell the bot which field is the trap, and would show a
+    // real person an error against a field they cannot see if a password manager
+    // filled it. The action reads it and answers as though the submission worked.
+    const filled = enquiryStep1Schema.safeParse({ ...VALID, website: 'http://spam' });
+    expect(filled.success).toBe(true);
+    if (filled.success) expect(filled.data.website).toBe('http://spam');
   });
 });
 

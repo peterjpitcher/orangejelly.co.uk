@@ -187,3 +187,103 @@ export async function submitEnquiryStep2(
 
   return { success: true };
 }
+
+/**
+ * FORM-DATA ENTRY POINT
+ *
+ * One action drives both steps, so the whole enquiry is a single `<form>` whose
+ * action is a server action. That is what makes it work without JavaScript: the
+ * browser posts the form, the action runs, and Next re-renders the page with the
+ * returned state. With JavaScript it is the same code path without the navigation.
+ *
+ * Which step runs is decided by the state the form carries, not by anything the
+ * client asserts, and step two additionally requires a lead id that only step one
+ * can have produced.
+ */
+export interface EnquiryFormState {
+  step: 1 | 2 | 'done';
+  leadId?: string;
+  error?: string;
+  fieldErrors?: Record<string, string>;
+  /**
+   * Echoed back so a failed submit does not wipe what someone typed. Without
+   * JavaScript the page is re-rendered from scratch, and a form that clears itself
+   * on a validation error is the fastest way to lose an enquiry.
+   */
+  values?: Record<string, string>;
+}
+
+export const ENQUIRY_INITIAL_STATE: EnquiryFormState = { step: 1 };
+
+function text(formData: FormData, key: string): string {
+  const value = formData.get(key);
+  return typeof value === 'string' ? value : '';
+}
+
+function leadSourceFrom(formData: FormData): LeadSourceInput {
+  const raw = text(formData, 'leadSource');
+  if (!raw) return {};
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' ? (parsed as LeadSourceInput) : {};
+  } catch {
+    // A malformed hidden field is an attribution problem, never a reason to lose
+    // the enquiry.
+    return {};
+  }
+}
+
+export async function submitEnquiry(
+  previous: EnquiryFormState,
+  formData: FormData
+): Promise<EnquiryFormState> {
+  const onStepTwo = previous.step === 2 && Boolean(previous.leadId);
+
+  if (onStepTwo) {
+    const leadId = previous.leadId as string;
+
+    // Skipping is a first-class outcome, not an escape hatch. Step two is optional
+    // and is described as optional, so the button that says so has to work.
+    if (text(formData, 'intent') === 'skip') {
+      return { step: 'done', leadId };
+    }
+
+    await submitEnquiryStep2(leadId, {
+      role: text(formData, 'role'),
+      sizeBand: text(formData, 'sizeBand'),
+      companyWebsite: text(formData, 'companyWebsite'),
+      blocker: text(formData, 'blocker'),
+      success: text(formData, 'success'),
+      whyNow: text(formData, 'whyNow'),
+    });
+
+    // Step two cannot fail in a way worth telling anyone about: the enquiry was
+    // already stored, and there is nothing useful for them to do.
+    return { step: 'done', leadId };
+  }
+
+  const values = {
+    name: text(formData, 'name'),
+    email: text(formData, 'email'),
+    company: text(formData, 'company'),
+    situation: text(formData, 'situation'),
+  };
+
+  const result = await submitEnquiryStep1({
+    ...values,
+    website: text(formData, 'website'),
+    leadSource: leadSourceFrom(formData),
+  });
+
+  if (result.error) {
+    return { step: 1, error: result.error, fieldErrors: result.fieldErrors, values };
+  }
+
+  // A honeypot submission returns success with no lead id. It goes straight to the
+  // thank-you, because sending a bot on to step two only wastes another write.
+  if (!result.leadId) {
+    return { step: 'done' };
+  }
+
+  return { step: 2, leadId: result.leadId };
+}

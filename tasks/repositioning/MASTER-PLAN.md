@@ -88,14 +88,14 @@ Proves the whole journey including lead capture and measurement before anything 
 | T039 | One Zod schema shared by client, server actions and the storage mapper, replacing a form schema and a hand-written chain of server ifs that could drift | T038 | S | | **done** |
 | T040 | Both server actions. The row is the authoritative success condition and nothing after it can turn a stored enquiry into a user-facing error | T039 | M | | **done** |
 | T041 | `enquiry_ip` and `enquiry_email` buckets, honeypot, and fail-closed limiting because this action sends mail | T040 | S | | **done** |
-| T042 | Enquiry form UI, two steps, no-JS fallback, error summary | T027, T040 | L | | |
+| T042 | Two-step enquiry form: one native form, one server action, error summary, and it works with JavaScript off | T027, T040 | L | | **done** |
 | T043 | Admin view, notification email, lead states | T040 | M | | |
 | T044 | Update `/privacy` for the new data, purpose, retention, deletion | T038 | M | Approve the wording | |
 | T045 | Write `/start-here` copy including the fit language (gap G3) | T042 | M | React to my draft | |
 | T046 | Build `/start-here` | T045, T042 | M | | |
 | T047 | Write homepage copy (gap G2) | T023 | M | React to my draft | |
 | T048 | Build `/` | T047, T025, T028 | L | | |
-| T049 | Analytics events wired per the dictionary, consent split per D24 and D27 | T010, T046 | L | | |
+| T049 | Client event dictionary, per-event property allowlist, session id, and the consent split drawn by device storage rather than by whether the data is personal | T010, T046 | L | | **done, wiring the remaining call sites lands with their pages** |
 | T050 | End-to-end test of the slice on a production-like Supabase and Resend | T046, T048, T049 | M | | |
 
 ## Phase 4: Launch coherence release

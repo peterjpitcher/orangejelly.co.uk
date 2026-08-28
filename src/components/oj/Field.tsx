@@ -44,6 +44,16 @@ export interface FieldProps {
   required?: boolean;
   /** Explicit id for the control. One is generated when omitted. */
   htmlFor?: string;
+  /**
+   * Whether the error announces itself when it appears.
+   *
+   * True suits a field that stands alone: the message arrives after a submit that
+   * did not move the page, so without this it is silent. Set it false when the form
+   * has an error summary. Otherwise a screen-reader user hears the summary and then
+   * every inline message again, which is three or four interruptions for one failed
+   * submit and buries the one that took focus.
+   */
+  announceError?: boolean;
   children?: React.ReactNode;
   className?: string;
 }
@@ -54,6 +64,7 @@ export function Field({
   error,
   required,
   htmlFor,
+  announceError = true,
   children,
   className,
 }: FieldProps): JSX.Element {
@@ -90,9 +101,14 @@ export function Field({
         {children}
 
         {error ? (
-          // role="alert" so a validation message that appears after submit is
-          // announced rather than sitting there silently.
-          <span id={messageId} role="alert" className="text-xs font-semibold text-oj-danger">
+          // Announced by default, so a validation message that appears after a
+          // submit is not silent. A form with an error summary turns this off and
+          // lets the summary do the announcing.
+          <span
+            id={messageId}
+            role={announceError ? 'alert' : undefined}
+            className="text-xs font-semibold text-oj-danger"
+          >
             {error}
           </span>
         ) : hint ? (

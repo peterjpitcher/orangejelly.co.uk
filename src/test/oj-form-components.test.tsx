@@ -157,3 +157,31 @@ describe('oj form controls', () => {
     expect(screen.getByLabelText('Company').className).toContain('min-h-tap');
   });
 });
+
+describe('oj/Field error announcement', () => {
+  it('announces a standalone field error', () => {
+    render(
+      <Field label="Work email" error="Enter a work email address">
+        <Input />
+      </Field>
+    );
+    expect(screen.getByRole('alert')).toHaveTextContent('Enter a work email address');
+  });
+
+  it('stays quiet when the form has an error summary to do the announcing', () => {
+    render(
+      <Field label="Work email" error="Enter a work email address" announceError={false}>
+        <Input />
+      </Field>
+    );
+    // Otherwise a screen-reader user hears the summary and then every inline
+    // message again, which buries the one that took focus.
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    // Still described by it, so the message is read when the field is reached.
+    const input = screen.getByLabelText('Work email');
+    expect(document.getElementById(input.getAttribute('aria-describedby') as string)).toHaveTextContent(
+      'Enter a work email address'
+    );
+    expect(input).toHaveAttribute('aria-invalid', 'true');
+  });
+});

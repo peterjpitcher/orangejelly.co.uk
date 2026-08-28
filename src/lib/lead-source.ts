@@ -16,7 +16,25 @@ function blankToUndefined(value: string | null): string | undefined {
   return trimmed ? trimmed : undefined;
 }
 
-export function getBrowserLeadSource(): LeadSourceInput {
+export interface LeadSourceOptions {
+  /**
+   * Whether the first landing page of the session may be remembered.
+   *
+   * This is sessionStorage, which PECR regulation 6 treats as device storage
+   * regardless of whether the value is personal data. Remembering where someone
+   * arrived is attribution for Orange Jelly, not something the visitor asked for,
+   * so it is not covered by the strictly-necessary exemption and defaults to off.
+   *
+   * Callers pass `true` only once analytics consent has been given. Without it the
+   * landing page simply equals the current page, which is accurate for the majority
+   * of enquiries anyway: most arrive on the page they convert from.
+   *
+   * @see tasks/repositioning/SUB-SPECS.md part 3.3 and decision D24
+   */
+  persist?: boolean;
+}
+
+export function getBrowserLeadSource(options: LeadSourceOptions = {}): LeadSourceInput {
   if (typeof window === 'undefined') {
     return {};
   }
@@ -25,15 +43,17 @@ export function getBrowserLeadSource(): LeadSourceInput {
   const sourcePage = `${url.pathname}${url.search}`;
 
   let landingPage = sourcePage;
-  try {
-    const storedLandingPage = window.sessionStorage.getItem(FIRST_LANDING_PAGE_KEY);
-    if (storedLandingPage) {
-      landingPage = storedLandingPage;
-    } else {
-      window.sessionStorage.setItem(FIRST_LANDING_PAGE_KEY, sourcePage);
+  if (options.persist) {
+    try {
+      const storedLandingPage = window.sessionStorage.getItem(FIRST_LANDING_PAGE_KEY);
+      if (storedLandingPage) {
+        landingPage = storedLandingPage;
+      } else {
+        window.sessionStorage.setItem(FIRST_LANDING_PAGE_KEY, sourcePage);
+      }
+    } catch {
+      landingPage = sourcePage;
     }
-  } catch {
-    landingPage = sourcePage;
   }
 
   return {

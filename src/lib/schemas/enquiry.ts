@@ -42,8 +42,16 @@ export const enquiryStep1Schema = z.object({
     // few honest filters left.
     .min(20, 'A sentence or two, so we know what we are looking at')
     .max(2000, 'Keep it to a couple of paragraphs, we will ask the rest'),
-  /** Honeypot. A real person never sees it, so anything in it is a bot. */
-  website: z.string().max(0).optional().or(z.literal('')),
+  /**
+   * Honeypot. A real person never sees it, so anything in it is a bot.
+   *
+   * It is deliberately NOT rejected here. Failing validation would send the bot a
+   * message naming the field it got wrong, which is a free lesson, and would show a
+   * real person an error against a field they cannot see if a password manager
+   * filled it for them. The server action reads it and answers as though the
+   * submission worked.
+   */
+  website: z.string().max(200).optional(),
 });
 
 export const ENQUIRY_ROLES = [
