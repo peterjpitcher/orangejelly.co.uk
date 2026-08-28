@@ -28,7 +28,8 @@
     "launch:checklist": "node scripts/launch-checklist.mjs > tasks/repositioning/LAUNCH-CHECKLIST.md && echo \"Wrote tasks/repositioning/LAUNCH-CHECKLIST.md\"",
     "check:slugs": "node scripts/check-slug-collisions.mjs",
     "monitor:posts": "node scripts/monitor-protected-posts.mjs",
-    "check:claims": "node scripts/check-claims.mjs"
+    "check:claims": "node scripts/check-claims.mjs",
+    "check:synthetic": "node scripts/synthetic-check.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [

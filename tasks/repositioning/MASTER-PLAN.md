@@ -33,7 +33,7 @@ Nothing user-visible. Makes everything after it cheaper and safer.
 | T006 | Generate `next.config.js` redirects and the sitemap from the manifest; 8 tests assert no chains, no non-200 in sitemap, phase 4 not shipped early | T005 | M | | **done** |
 | T007 | 30 protected posts baselined with search metrics and on-page state, enforced by a test that fails if one loses its file, is unpublished or becomes a redirect source | | M | | **done** |
 | T008 | Error and failure monitoring: server action failures, lead writes, notification failures, 404 rate, redirect loops | | M | Vercel and Supabase access if not already granted | |
-| T009 | Synthetic checks: homepage, protected article, search, enquiry submit | T008 | S | | |
+| T009 | `npm run check:synthetic` covers the landing pages, the highest-earning article with its schema and canonical, the enquiry form, search, sitemap, robots, a redirect, a hard 404 and the admin gate | T008 | S | Point a cron or an uptime service at it | **done** |
 | T010 | GA4 enquiry event live on the current site. Code fires `contact_submit`; GTM container published as Version 4 with a Custom Event trigger and a GA4 Event tag | | M | | **done** |
 | T011 | Style isolation guard: `scripts/check-style-isolation.mjs`, computed-style baseline on the protected routes rather than pixel diffs (gap G9) | | S | | **done** |
 | T011a | Delete the two mislabelled `public/logo-*.svg` bitmaps, repoint the GK toolkit doc | | S | | **done** |
