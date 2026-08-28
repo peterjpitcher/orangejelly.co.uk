@@ -105,8 +105,8 @@ old position remains live afterwards.
 
 | ID | Task | Depends | Size | Peter | Status |
 |---|---|---|---|---|---|
-| T051 | Write `/how-we-work` copy, HEAR CHALLENGE BUILD OPTIMISE, measurement inside OPTIMISE | T023 | M | React to my draft | |
-| T052 | Build `/how-we-work` | T051, T028 | M | | |
+| T051 | `/how-we-work` copy, in `tasks/repositioning/copy/how-we-work.md` | T023 | M | React to my draft | **done, awaiting your reaction** |
+| T052 | Build `/how-we-work` | T051, T028 | M | | **done** |
 | T053 | Write `/about` copy, company voice, no founder story (D21) | | M | **Your material needed.** See "What I need from you". | |
 | T054 | Build `/about` | T053 | M | | |
 | T055 | Write `/results` copy, lead with the Anchor demand-discovery story | | M | Confirm the framing | |

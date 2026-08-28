@@ -12,7 +12,7 @@
  *
  * @see tasks/repositioning/IMPLEMENTATION-SPEC.md section 4
  */
-export const OJ_ROUTES = ['/', '/start-here'] as const;
+export const OJ_ROUTES = ['/', '/start-here', '/how-we-work'] as const;
 
 export function isOjRoute(pathname: string): boolean {
   // '/' is matched exactly. A prefix match on it would claim the whole site, which

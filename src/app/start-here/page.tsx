@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import {
+  Band,
   Breadcrumb,
   Button,
   EnquiryForm,
@@ -43,35 +44,6 @@ export const metadata: Metadata = {
     siteName: 'Orange Jelly',
   },
 };
-
-function Band({
-  id,
-  heading,
-  intro,
-  tone = 'page',
-  children,
-}: {
-  id?: string;
-  heading: string;
-  intro?: React.ReactNode;
-  tone?: 'page' | 'paper' | 'ink';
-  children: React.ReactNode;
-}): JSX.Element {
-  // Tone names the role, not the colour. Naming it after the colour is how a
-  // palette change turns every page into a rename.
-  const surface =
-    tone === 'ink' ? 'bg-oj-ink text-oj-cream' : tone === 'paper' ? 'bg-oj-paper' : 'bg-oj-cream';
-
-  return (
-    <section id={id} className={`${surface} border-b-1.5 border-oj-ink py-14 sm:py-20`}>
-      <div className="page-shell">
-        <h2 className="oj-display text-[clamp(30px,5vw,46px)] leading-[0.98]">{heading}</h2>
-        {intro ? <p className="measure mt-4 text-[17px] leading-relaxed">{intro}</p> : null}
-        <div className="mt-8">{children}</div>
-      </div>
-    </section>
-  );
-}
 
 export default function StartHerePage(): JSX.Element {
   return (
@@ -230,21 +202,19 @@ export default function StartHerePage(): JSX.Element {
           </div>
         </Band>
 
-        <section className="bg-oj-ink py-16 sm:py-24">
-          <div className="page-shell">
-            <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-              stop circling the problem.
-            </h2>
-            <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-              Tell us what is happening, what you have tried, and what needs to change.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" arrow href="#enquiry">
-                Bring us the problem
-              </Button>
-            </div>
+        <Band tone="ink" size="lg" divider={false}>
+          <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+            stop circling the problem.
+          </h2>
+          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+            Tell us what is happening, what you have tried, and what needs to change.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" arrow href="#enquiry">
+              Bring us the problem
+            </Button>
           </div>
-        </section>
+        </Band>
       </main>
 
       <OjFooter />

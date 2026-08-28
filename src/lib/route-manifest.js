@@ -278,7 +278,15 @@ const ROUTES = [
     path: `/growth-problems/${slug}`,
     disposition: /** @type {Disposition} */ ('planned'),
   })),
-  { path: '/how-we-work', disposition: 'planned', note: 'HEAR CHALLENGE BUILD OPTIMISE in full.' },
+  {
+    path: '/how-we-work',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'HEAR CHALLENGE BUILD OPTIMISE in full.',
+  },
   {
     path: '/results/[slug]',
     disposition: 'planned',

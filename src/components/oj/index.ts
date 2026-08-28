@@ -112,3 +112,4 @@ export {
   type EnquiryEntryPoint,
 } from './EnquiryForm';
 export { OjHeader, OjFooter, type OjHeaderProps, type OjNavKey } from './SiteChrome';
+export { Band, type BandProps } from './Band';

@@ -3,6 +3,7 @@ import axe from 'axe-core';
 import { describe, expect, it, vi } from 'vitest';
 
 import HomePage from '@/app/page';
+import HowWeWorkPage from '@/app/how-we-work/page';
 import StartHerePage from '@/app/start-here/page';
 import type * as ReactDom from 'react-dom';
 
@@ -49,15 +50,27 @@ describe('page-level accessibility', () => {
     expect(await scan(<StartHerePage />)).toEqual([]);
   });
 
+  it('finds nothing on /how-we-work', async () => {
+    expect(await scan(<HowWeWorkPage />)).toEqual([]);
+  });
+
   it('gives each page exactly one h1', async () => {
-    for (const page of [<HomePage key="home" />, <StartHerePage key="start" />]) {
+    for (const page of [
+      <HomePage key="home" />,
+      <StartHerePage key="start" />,
+      <HowWeWorkPage key="how" />,
+    ]) {
       const { container } = render(page);
       expect(container.querySelectorAll('h1')).toHaveLength(1);
     }
   });
 
   it('never skips a heading level', () => {
-    for (const page of [<HomePage key="home" />, <StartHerePage key="start" />]) {
+    for (const page of [
+      <HomePage key="home" />,
+      <StartHerePage key="start" />,
+      <HowWeWorkPage key="how" />,
+    ]) {
       const { container } = render(page);
       const levels = [...container.querySelectorAll('h1,h2,h3,h4,h5,h6')].map((h) =>
         Number(h.tagName[1])
