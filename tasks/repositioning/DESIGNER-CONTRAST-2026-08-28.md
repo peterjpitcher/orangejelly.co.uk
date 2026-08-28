@@ -102,3 +102,70 @@ margin rather than by hundredths, on the same reasoning you applied to
 rather move the hue than the tint here too.
 
 No rush on our side. It is tracked and it is not shipping in front of anybody.
+
+---
+
+## Round two: the orange band, raised 28 August 2026
+
+### What changed and why
+
+Peter asked for white text on orange backgrounds, for impact. White on the brand
+orange `#f76b0c` measures **2.97:1**. That fails body text at 4.5:1 and fails even
+the 3:1 large-text floor, so it could not ship as asked.
+
+Rather than refuse the instruction or ship a failure, the orange sections now sit on
+a new surface token:
+
+```css
+--oj-surface-band: var(--oj-orange-deep);  /* #b34e08 */
+--oj-text-on-band: #ffffff;
+```
+
+White on that ground is **5.24:1** and passes at every size. A deeper ground under
+white type also reads as more emphatic, which was the point of the request.
+
+The brand orange keeps its existing job as the action fill on buttons, tags,
+pagination and the like, where the text is ink at 5.13:1 and unchanged.
+
+Applied to: the hero bands on `/start-here`, `/growth-problems/[slug]` and
+`/results/[slug]`, the campaign header, and the sticky call-to-action bar.
+
+### One thing this fixed that was already broken
+
+The campaign header with `tone="orange"` put white nav links on the brand orange.
+That was **2.97:1** before this change as well as after it, on `/start-here` and every
+growth problem page. It is now 5.24:1.
+
+The sticky bar's dismiss control was `ink/70` over orange, which composites to
+**3.27:1**. Text needs 4.5:1, and it is the only way to clear a bar that covers
+content on a short screen. Now full strength on the band.
+
+### One thing this made worse, and it needs your decision
+
+Buttons on a band keep the heavy ink border the pack specifies. Against the brand
+orange that border was 5.13:1. Against the deeper band it is **2.92:1**, a hair under
+the 3:1 that WCAG 1.4.11 asks of a control boundary.
+
+It has been left alone on purpose, because the fix is a design change rather than a
+bug fix:
+
+- The button label is unaffected and passes at 5.13:1. Nobody cannot read the
+  button. The only question is whether the edge is what identifies it.
+- The button is also carried by hue and by its hard offset shadow, so the border is
+  not doing the work by itself.
+- The obvious remedy, a white border, measures 5.24:1 and clears the criterion
+  outright, but it takes the heavy ink outline off every call to action on the site.
+
+**Question for you: white border on band buttons, or keep the ink border and accept
+2.92:1?** Either is defensible. We would rather you chose than have us restyle the
+primary call to action while fixing a colour bug.
+
+The shortfall is asserted at its current size in `design-tokens.contrast.test.ts`, so
+if a token moves later the suite raises it again instead of letting it drift.
+
+### Logos
+
+The new marks are in `public/brand/`. The horizontal lockup on the orange header is
+currently a `brightness-0 invert` filter on the dark asset. It renders correctly, but
+a proper reversed horizontal asset would be better than a filter, particularly for
+anyone printing a page. **Can you supply one?**

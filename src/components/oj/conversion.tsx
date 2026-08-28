@@ -51,14 +51,17 @@ export function StickyCTA({
   return (
     <div
       className={cn(
-        'fixed inset-x-0 bottom-0 z-[50] border-t-1.5 border-oj-ink bg-oj-orange',
+        // The band, not the brand orange, for the same reason as the heroes and the
+        // campaign header: white on the brand orange is 2.97:1. On the band it is
+        // 5.24:1, and the bar matches the hero it was scrolled away from.
+        'fixed inset-x-0 bottom-0 z-[50] border-t-1.5 border-oj-ink bg-oj-band',
         // Sits above the home indicator on iOS rather than under it.
         'pb-[env(safe-area-inset-bottom)]',
         className
       )}
     >
       <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-3 px-8 py-3">
-        <p className="m-0 text-[15px] font-bold text-oj-ink">{note}</p>
+        <p className="m-0 text-[15px] font-bold text-oj-on-band">{note}</p>
         <div className="flex items-center gap-2">
           <Button variant="ink" size="sm" href={href} onClick={onClick} arrow>
             {label}
@@ -67,7 +70,10 @@ export function StickyCTA({
             <button
               type="button"
               onClick={() => setDismissed(true)}
-              className="min-h-tap px-2 text-xl leading-none text-oj-ink/70 hover:text-oj-ink"
+              // Full strength, not 70%. At 70% over orange the glyph measured
+              // 3.27:1, which is under the 4.5:1 that text needs, and it is the only
+              // way to get rid of a bar that covers content on a short screen.
+              className="min-h-tap px-2 text-xl leading-none text-oj-on-band hover:text-oj-cream"
             >
               <span aria-hidden="true">×</span>
               <span className="sr-only">Dismiss</span>

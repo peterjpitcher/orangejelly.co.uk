@@ -103,7 +103,7 @@ export function Header({
     <span
       className={cn(
         'font-oj text-[21px] font-black tracking-[-0.02em]',
-        orange ? 'text-white' : 'text-oj-ink'
+        orange ? 'text-oj-on-band' : 'text-oj-ink'
       )}
     >
       orange <span className={orange ? 'text-oj-ink' : 'text-oj-orange'}>jelly</span>
@@ -116,7 +116,13 @@ export function Header({
         className={cn(
           'z-[60] border-b-1.5 border-oj-ink',
           sticky && 'sticky top-0',
-          orange ? 'bg-oj-orange' : 'bg-oj-cream'
+          /*
+           * The band surface, not the brand orange. White nav links on the brand
+           * orange measured 2.97:1, which failed before this change as well as
+           * after it. The deeper band ground takes them to 5.24:1 and matches the
+           * hero the campaign header always sits above.
+           */
+          orange ? 'bg-oj-band' : 'bg-oj-cream'
         )}
       >
         <div className="mx-auto flex h-16 max-w-[1160px] items-center gap-6 px-8">
@@ -133,7 +139,7 @@ export function Header({
                 className={cn(
                   'rounded-oj px-[11px] py-[7px] text-[15px] font-semibold no-underline',
                   orange
-                    ? 'text-white hover:text-oj-ink aria-[current]:shadow-[inset_0_-3px_0_#fff]'
+                    ? 'text-oj-on-band hover:text-oj-cream aria-[current]:shadow-[inset_0_-3px_0_currentColor]'
                     : 'text-oj-ink hover:text-oj-orange-deep aria-[current]:shadow-[inset_0_-3px_0_var(--oj-orange)]'
                 )}
               >
@@ -163,7 +169,7 @@ export function Header({
             aria-controls={MENU_ID}
             className={cn(
               'ml-auto min-h-tap rounded-oj border-1.5 px-[13px] py-1.5 font-oj text-[14.5px] font-bold min-[881px]:hidden',
-              orange ? 'border-white text-white' : 'border-oj-ink text-oj-ink'
+              orange ? 'border-oj-on-band text-oj-on-band' : 'border-oj-ink text-oj-ink'
             )}
           >
             {open ? 'Close ×' : 'Menu'}

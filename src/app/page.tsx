@@ -44,15 +44,15 @@ export default function HomePage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-orange py-16 sm:py-24">
+        <section className="border-b-1.5 border-oj-ink bg-oj-band py-16 sm:py-24 text-oj-on-band">
           <div className="page-shell">
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-ink">
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
               growth partner for ambitious businesses
             </p>
-            <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-ink">
+            <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-on-band">
               you bring the growth problem. we build the solution.
             </h1>
-            <p className="measure mt-6 text-[19px] leading-relaxed text-oj-ink">
+            <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
               We get under the skin of a business, work out what is actually blocking growth, and
               build the thing that fixes it. Sometimes that is marketing. Often it is not.
             </p>
@@ -60,7 +60,7 @@ export default function HomePage(): JSX.Element {
               <Button size="lg" arrow href="/start-here">
                 Bring us the problem
               </Button>
-              <Button variant="ghost" href="/how-we-work">
+              <Button variant="ghost-band" href="/how-we-work">
                 See how we work
               </Button>
             </div>

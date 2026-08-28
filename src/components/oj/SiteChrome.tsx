@@ -1,5 +1,8 @@
 'use client';
 
+import Image from 'next/image';
+
+import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 import { Footer } from './Footer';
@@ -67,6 +70,32 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
   return (
     <Header
       tone={tone}
+      /*
+       * The real horizontal logo, not the type wordmark the component falls back to.
+       * next/image is doing the work here: the supplied asset is 1200x260 and 194KB,
+       * and the header renders it at 28px tall, so shipping the raw file would cost
+       * every visitor a fifth of a megabyte for something the size of a stamp.
+       *
+       * `priority` because it is in the header on every page and therefore always
+       * the largest contentful paint candidate above the fold.
+       */
+      logo={
+        <Image
+          src="/brand/logo-horizontal.png"
+          alt="Orange Jelly"
+          width={1200}
+          height={260}
+          priority
+          /*
+           * On the orange band the supplied horizontal logo is dark ink on a dark
+           * ground and all but disappears. The pack ships a white variant of the
+           * icon but not of the horizontal lockup, so this knocks it to pure white
+           * in CSS. It is a stopgap: a proper reversed horizontal asset would be
+           * better than a filter, and is worth asking the design team for.
+           */
+          className={cn('h-7 w-auto', tone === 'orange' && 'brightness-0 invert')}
+        />
+      }
       items={ITEMS.map((item) => ({
         label: item.label,
         href: item.href,
@@ -80,6 +109,16 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
 export function OjFooter(): JSX.Element {
   return (
     <Footer
+      // The reversed mark, because the footer is ink.
+      logo={
+        <Image
+          src="/brand/logo-icon-white.png"
+          alt="Orange Jelly"
+          width={640}
+          height={667}
+          className="h-10 w-auto"
+        />
+      }
       columns={[
         {
           title: 'Start',
@@ -110,7 +149,12 @@ export function OjFooter(): JSX.Element {
           ],
         },
       ]}
-      legal="Orange Jelly Limited"
+      /*
+       * No `legal` override. The Footer's own default is
+       * `© <year> Orange Jelly Limited`, and passing the bare company name here
+       * replaced it, which silently dropped the copyright notice and the year from
+       * every page on the site.
+       */
     />
   );
 }

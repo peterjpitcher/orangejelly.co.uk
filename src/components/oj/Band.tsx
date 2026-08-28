@@ -31,7 +31,7 @@ const SURFACES: Record<NonNullable<BandProps['tone']>, string> = {
   page: 'bg-oj-cream',
   paper: 'bg-oj-paper',
   ink: 'bg-oj-ink text-oj-cream',
-  orange: 'bg-oj-orange text-oj-ink',
+  orange: 'bg-oj-band text-oj-on-band',
 };
 
 export function Band({

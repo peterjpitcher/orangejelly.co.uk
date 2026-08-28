@@ -42,20 +42,20 @@ export default function PubRescuePage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-orange py-12 sm:py-16">
+        <section className="border-b-1.5 border-oj-ink bg-oj-band py-12 sm:py-16 text-oj-on-band">
           <div className="page-shell">
             <Breadcrumb
               tone="orange"
               className="mb-7"
               items={[{ label: 'Home', href: '/' }, { label: 'Trade is falling' }]}
             />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-ink">
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
               hospitality
             </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
+            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
               trade is falling and you need it to stop.
             </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink">
+            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
               This page is for the version of the problem that is not a project. Takings are down
               week on week, the wage bill is not, and every day it continues costs more than the
               last one.
@@ -64,7 +64,7 @@ export default function PubRescuePage(): JSX.Element {
               <Button size="lg" arrow variant="ink" href="/start-here">
                 Bring us the problem
               </Button>
-              <Button variant="ghost" href="/how-we-work">
+              <Button variant="ghost-band" href="/how-we-work">
                 How we work
               </Button>
             </div>

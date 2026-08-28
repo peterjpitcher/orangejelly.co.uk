@@ -45,6 +45,16 @@ const buttonVariants = cva(
         // An ink block casts an orange shadow. Ink on ink would be invisible.
         ink: 'bg-oj-ink text-oj-cream hover:shadow-press-orange',
         ghost: 'bg-transparent text-oj-ink hover:shadow-press',
+        /*
+         * Ghost, for the orange band.
+         *
+         * The plain ghost is ink text with an ink border, which reads at 2.92:1 on
+         * the band and fails. It was fine while the band was the brand orange and
+         * stopped being fine the moment the band went deeper to carry white type.
+         * This is the same button in the band's own colour, at 5.24:1.
+         */
+        'ghost-band':
+          'bg-transparent text-oj-on-band border-oj-on-band hover:shadow-[5px_5px_0_var(--oj-ink)]',
       },
       size: {
         sm: 'text-[13.5px] px-3.5 py-[7px]',

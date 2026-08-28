@@ -17,10 +17,10 @@ export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * The surface underneath.
    *
-   * On the orange campaign hero the muted link grey measures 1.49:1, which is not
-   * a near miss, it is invisible. Orange is a dark-enough surface that ink is the
-   * only readable choice, so links there are ink and are underlined to stay
-   * distinguishable from the current-page item, which is also ink.
+   * On the orange band the muted link grey measures 1.49:1, which is not a near
+   * miss, it is invisible. The band is now the deeper orange carrying white text,
+   * so links there are white and underlined to stay distinguishable from the
+   * current-page item, which is also white.
    */
   tone?: 'light' | 'orange';
 }
@@ -44,7 +44,7 @@ export function Breadcrumb({
                   href={item.href}
                   className={cn(
                     onOrange
-                      ? 'text-oj-ink underline decoration-oj-ink/40 underline-offset-2 hover:decoration-oj-ink'
+                      ? 'text-oj-on-band underline decoration-oj-on-band/50 underline-offset-2 hover:decoration-oj-on-band'
                       : 'text-oj-ink-3 no-underline hover:text-oj-orange-deep'
                   )}
                 >
@@ -58,7 +58,7 @@ export function Breadcrumb({
               {!last ? (
                 <span
                   aria-hidden="true"
-                  className={cn('font-normal', onOrange ? 'text-oj-ink/70' : 'text-oj-orange')}
+                  className={cn('font-normal', onOrange ? 'text-oj-on-band/70' : 'text-oj-orange')}
                 >
                   →
                 </span>

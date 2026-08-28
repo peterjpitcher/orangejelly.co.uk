@@ -275,6 +275,24 @@
   --oj-surface-sunken: var(--oj-cream-2);
   --oj-surface-inverse: var(--oj-ink);
   --oj-surface-action: var(--oj-orange);
+  /*
+   * The full-width orange band, and the text that sits on it.
+   *
+   * Peter asked for white text on orange for impact. On the brand orange white
+   * measures 2.97:1, which fails body text at 4.5:1 and fails even the large-text
+   * floor of 3:1. Ink on brand orange is 5.13:1 and passes, which is why it was
+   * ink.
+   *
+   * The way to have white and keep the impact is to take the band a shade deeper.
+   * White on --oj-orange-deep is 5.24:1, so it passes at every size, and a deeper
+   * ground under white type reads as more emphatic rather than less.
+   *
+   * This is the BAND only. Buttons, tags and pagination keep ink on brand orange:
+   * they are small text, where white would fail harder, and the orange fill is the
+   * action signal the design system specifies.
+   */
+  --oj-surface-band: var(--oj-orange-deep);
+  --oj-text-on-band: #ffffff;
   --oj-text-body: var(--oj-ink);
   --oj-text-secondary: var(--oj-ink-2);
   --oj-text-muted: var(--oj-ink-3);

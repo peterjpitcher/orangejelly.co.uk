@@ -586,3 +586,133 @@ describe('palette parity with the supplied pack', () => {
     }
   });
 });
+
+/**
+ * The orange band, and why it is not the brand orange.
+ *
+ * Peter asked for white text on orange, for impact. On the brand orange white
+ * measures 2.97:1: it fails body text at 4.5:1 and fails even the large-text floor
+ * of 3:1. Ink on brand orange is 5.13:1, which is why it had been ink.
+ *
+ * The band therefore sits on --oj-orange-deep, where white is 5.24:1 and passes at
+ * every size. A deeper ground under white type also reads as more emphatic, which
+ * was the point of asking.
+ *
+ * The brand orange keeps its job as the action fill on buttons, tags and pagination,
+ * where the text is ink and small.
+ */
+describe('the orange band', () => {
+  const BAND = cssVar('--oj-surface-band');
+  const ON_BAND = cssVar('--oj-text-on-band');
+  const ORANGE_DEEP = cssVar('--oj-orange-deep');
+  const BRAND_ORANGE_OJ = cssVar('--oj-orange');
+  const INK = cssVar('--oj-ink');
+
+  it('resolves the band to the deep orange rather than the brand orange', () => {
+    expect(BAND).toBe('var(--oj-orange-deep)');
+    expect(ON_BAND.toLowerCase()).toBe('#ffffff');
+  });
+
+  it('carries body text at 4.5:1', () => {
+    expect(contrast(ON_BAND, ORANGE_DEEP)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it('would have failed on the brand orange, which is why the band moved', () => {
+    // Kept as a live assertion rather than a comment. If somebody points the band
+    // back at --oj-orange to "fix the colour", the reason it moved is right here.
+    expect(contrast('#ffffff', BRAND_ORANGE_OJ)).toBeLessThan(3);
+  });
+
+  it('keeps the action fill legible where it still uses the brand orange', () => {
+    // Buttons and tags on the band: ink on brand orange, small text, needs 4.5.
+    expect(contrast(INK, BRAND_ORANGE_OJ)).toBeGreaterThanOrEqual(4.5);
+  });
+});
+
+/**
+ * Tailwind's opacity modifier against these tokens.
+ *
+ * `text-oj-cream` worked and `text-oj-cream/80` silently did not, because Tailwind
+ * cannot apply an alpha modifier to a bare `var(--x)`. Fifty usages across
+ * twenty-six files rendered the inherited legacy body colour, which on the ink
+ * sections was dark navy on near-black.
+ *
+ * The fix is a token function in tailwind.config.js. It has to handle three input
+ * shapes, and getting one of them wrong is how the first attempt broke every
+ * UNmodified colour instead.
+ */
+describe('the colour token function', () => {
+  const config = tailwindConfig as unknown as {
+    theme: { extend: { colors: Record<string, unknown> } };
+  };
+  const oj = config.theme.extend.colors.oj as Record<
+    string,
+    (arg: { opacityValue?: string | number }) => string
+  >;
+
+  it('is a function, so the opacity modifier has something to call', () => {
+    expect(typeof oj.cream).toBe('function');
+  });
+
+  it('returns the plain variable when no modifier is used', () => {
+    // Tailwind passes its own plumbing string here, NOT undefined. Treating that as
+    // a number gives NaN, which produced `color-mix(... NaN% ...)`, which browsers
+    // drop entirely.
+    expect(oj.cream({ opacityValue: 'var(--tw-text-opacity)' })).toBe('var(--oj-cream)');
+    expect(oj.cream({})).toBe('var(--oj-cream)');
+    expect(oj.cream({ opacityValue: 1 })).toBe('var(--oj-cream)');
+  });
+
+  it('mixes towards transparent when a real number is given', () => {
+    expect(oj.cream({ opacityValue: 0.8 })).toBe(
+      'color-mix(in srgb, var(--oj-cream) 80%, transparent)'
+    );
+  });
+
+  it('never emits NaN, whatever it is handed', () => {
+    for (const value of ['var(--tw-bg-opacity)', undefined, '', 'not-a-number', 1, 0.5]) {
+      expect(oj.ink({ opacityValue: value as never })).not.toMatch(/NaN/);
+    }
+  });
+});
+
+/**
+ * The one number the band change moved the wrong way, recorded rather than hidden.
+ *
+ * Buttons on an orange band keep the ink border the design pack gives them. Against
+ * the brand orange that border was 5.13:1. Against the deeper band it is 2.92:1,
+ * which is a hair under the 3:1 that WCAG 1.4.11 asks of a control boundary.
+ *
+ * It is left as it is, deliberately:
+ *
+ *   - The label inside the button is unaffected and passes at 5.13:1. Nobody is
+ *     unable to read the button; the question is only whether its edge is the thing
+ *     that identifies it.
+ *   - The button is also carried by hue (brand orange against deep orange are
+ *     plainly different colours at similar luminance) and by a hard offset shadow.
+ *     The border is not doing the work alone.
+ *   - The alternative is a white border, which fixes the number at 5.24:1 but takes
+ *     the heavy ink outline off every call to action on the site. That is the
+ *     designer's decision to make, not one to take while fixing a colour bug.
+ *
+ * So this test asserts the shortfall exists at the size it exists. If someone later
+ * changes a token and the figure moves, the suite says so and the choice gets made
+ * again on purpose. See tasks/repositioning/DESIGNER-CONTRAST-2026-08-28.md.
+ */
+describe('known shortfall: the ink control border on the orange band', () => {
+  it('is a shortfall, and a small one', () => {
+    const boundary = contrast(cssVar('--oj-ink'), cssVar('--oj-orange-deep'));
+    expect(boundary).toBeLessThan(AA_NON_TEXT);
+    expect(boundary).toBeGreaterThan(2.85);
+  });
+
+  it('does not affect the button label, which is the part that has to be read', () => {
+    expect(contrast(cssVar('--oj-ink'), cssVar('--oj-orange'))).toBeGreaterThanOrEqual(AA_BODY);
+  });
+
+  it('has a fix costed and waiting, if the designer wants it', () => {
+    // A white border would clear 1.4.11 outright. Kept as an assertion so the
+    // remedy is measured rather than assumed whenever this is revisited.
+    expect(contrast('#ffffff', cssVar('--oj-orange-deep'))).toBeGreaterThanOrEqual(AA_NON_TEXT);
+  });
+});

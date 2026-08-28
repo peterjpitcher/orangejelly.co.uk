@@ -186,7 +186,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
             <Button size="lg" arrow variant="ink" href="/start-here">
               Bring us the problem
             </Button>
-            <Button variant="ghost" href="/growth-problems">
+            <Button variant="ghost-band" href="/growth-problems">
               See the other seven
             </Button>
           </div>

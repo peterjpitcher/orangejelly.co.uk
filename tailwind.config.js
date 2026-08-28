@@ -1,4 +1,39 @@
 /** @type {import('tailwindcss').Config} */
+/**
+ * A design token that survives Tailwind's opacity modifier.
+ *
+ * `text-oj-cream` worked and `text-oj-cream/80` did not, silently. Tailwind cannot
+ * apply an alpha modifier to a bare `var(--x)`: it needs either channel numbers and
+ * an <alpha-value> placeholder, or a function like this one. Given a plain var it
+ * emitted nothing usable, the element inherited the legacy body colour, and fifty
+ * usages across twenty-six files rendered dark navy. On the ink sections that meant
+ * dark navy text on near-black, which is what Peter saw and reported.
+ *
+ * color-mix is used rather than converting every token to channel triplets, because
+ * the raw `var(--oj-cream)` form is referenced directly throughout globals.css and
+ * in several box-shadow literals. This keeps both working from one definition.
+ */
+const token =
+  (name) =>
+  ({ opacityValue }) => {
+    /*
+     * opacityValue arrives in three shapes and only one of them is a number.
+     *
+     * With no modifier Tailwind passes the string `var(--tw-bg-opacity)`, its own
+     * plumbing, NOT undefined. Feeding that to Number() gives NaN, and the first
+     * version of this helper emitted `color-mix(... NaN% ...)`, which is invalid,
+     * so the browser dropped the declaration and every unmodified oj colour stopped
+     * resolving. That fixed text-oj-cream/80 and broke text-oj-cream, which is a
+     * worse trade than the bug it replaced.
+     *
+     * So parse it, and only mix when a real number comes back.
+     */
+    const alpha = Number(opacityValue);
+    return Number.isFinite(alpha) && alpha !== 1
+      ? `color-mix(in srgb, var(${name}) ${alpha * 100}%, transparent)`
+      : `var(${name})`;
+  };
+
 module.exports = {
   darkMode: ['class'],
   content: [
@@ -17,39 +52,41 @@ module.exports = {
          * winning. See the matching block in globals.css.
          */
         oj: {
-          orange: 'var(--oj-orange)',
-          'orange-deep': 'var(--oj-orange-deep)',
-          'orange-soft': 'var(--oj-orange-soft)',
-          ember: 'var(--oj-ember)',
-          ink: 'var(--oj-ink)',
-          'ink-2': 'var(--oj-ink-2)',
-          'ink-3': 'var(--oj-ink-3)',
-          cream: 'var(--oj-cream)',
-          'cream-2': 'var(--oj-cream-2)',
-          paper: 'var(--oj-paper)',
-          peach: 'var(--oj-peach)',
-          ok: 'var(--oj-ok)',
-          danger: 'var(--oj-danger)',
+          orange: token('--oj-orange'),
+          'orange-deep': token('--oj-orange-deep'),
+          'orange-soft': token('--oj-orange-soft'),
+          ember: token('--oj-ember'),
+          ink: token('--oj-ink'),
+          'ink-2': token('--oj-ink-2'),
+          'ink-3': token('--oj-ink-3'),
+          cream: token('--oj-cream'),
+          'cream-2': token('--oj-cream-2'),
+          paper: token('--oj-paper'),
+          peach: token('--oj-peach'),
+          band: token('--oj-surface-band'),
+          'on-band': token('--oj-text-on-band'),
+          ok: token('--oj-ok'),
+          danger: token('--oj-danger'),
         },
         /*
          * Taxonomy hues. A category is never orange: orange is the signal for
          * action, and a category wearing it would compete with every CTA on screen.
          */
         cat: {
-          demand: 'var(--cat-demand)',
-          'demand-soft': 'var(--cat-demand-soft)',
-          convert: 'var(--cat-convert)',
-          'convert-soft': 'var(--cat-convert-soft)',
-          margin: 'var(--cat-margin)',
-          'margin-soft': 'var(--cat-margin-soft)',
-          ops: 'var(--cat-ops)',
-          'ops-soft': 'var(--cat-ops-soft)',
-          experience: 'var(--cat-experience)',
-          'experience-soft': 'var(--cat-experience-soft)',
-          scale: 'var(--cat-scale)',
-          'scale-soft': 'var(--cat-scale-soft)',
-          hospitality: 'var(--cat-hospitality)',
-          'hospitality-soft': 'var(--cat-hospitality-soft)',
+          demand: token('--cat-demand'),
+          'demand-soft': token('--cat-demand-soft'),
+          convert: token('--cat-convert'),
+          'convert-soft': token('--cat-convert-soft'),
+          margin: token('--cat-margin'),
+          'margin-soft': token('--cat-margin-soft'),
+          ops: token('--cat-ops'),
+          'ops-soft': token('--cat-ops-soft'),
+          experience: token('--cat-experience'),
+          'experience-soft': token('--cat-experience-soft'),
+          scale: token('--cat-scale'),
+          'scale-soft': token('--cat-scale-soft'),
+          hospitality: token('--cat-hospitality'),
+          'hospitality-soft': token('--cat-hospitality-soft'),
         },
         // Canonical brand palette
         'brand-base': {

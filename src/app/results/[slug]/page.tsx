@@ -124,7 +124,7 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
             <Button size="lg" arrow variant="ink" href="/start-here">
               Bring us the problem
             </Button>
-            <Button variant="ghost" href="/results">
+            <Button variant="ghost-band" href="/results">
               See the other two
             </Button>
           </div>
