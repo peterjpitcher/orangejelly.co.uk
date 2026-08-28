@@ -4,6 +4,7 @@ import { blogCategories } from '@/lib/blog';
 import { getBaseUrl } from '@/lib/site-config';
 import { getSitemapRoutes, getRedirectedGuideSlugs } from '@/lib/route-manifest';
 import { GROWTH_PROBLEMS } from '@/app/growth-problems/content';
+import { getAllInsights } from '@/lib/insights';
 import { CASE_STUDIES } from '@/app/results/case-studies';
 
 /**
@@ -39,6 +40,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+  const insightPages = getAllInsights().map((insight) => ({
+    url: `${baseUrl}/insights/${insight.slug}`,
+    lastModified: insight.publishedDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   const caseStudyPages = CASE_STUDIES.map((study) => ({
     url: `${baseUrl}/results/${study.slug}`,
     lastModified: '2026-08-28',
@@ -60,5 +68,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...growthProblemPages, ...caseStudyPages, ...blogPages, ...categoryPages];
+  return [
+    ...staticPages,
+    ...growthProblemPages,
+    ...insightPages,
+    ...caseStudyPages,
+    ...blogPages,
+    ...categoryPages,
+  ];
 }

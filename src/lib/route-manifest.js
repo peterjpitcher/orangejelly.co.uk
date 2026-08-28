@@ -287,6 +287,16 @@ const ROUTES = [
     sitemap: false,
   },
   {
+    path: '/insights',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.8,
+    changeFrequency: 'weekly',
+    lastModified: '2026-08-28',
+    note: 'The second collection. Separate from the 105 hospitality guides by a front-matter discriminant, not by path.',
+  },
+  { path: '/insights/[slug]', disposition: 'live', sitemap: false },
+  {
     path: '/fractional-cmo',
     disposition: 'live',
     sitemap: true,

@@ -44,6 +44,7 @@ const SURFACES = [
   'src/app/how-we-work',
   'src/app/fractional-cmo',
   'src/app/growth-problems',
+  'src/app/insights',
   'src/app/results',
   'src/app/solutions',
   'src/app/start-here',

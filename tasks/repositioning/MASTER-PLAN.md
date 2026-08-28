@@ -134,7 +134,7 @@ old position remains live afterwards.
 | T072 | `/licensees-guide` framed as the hospitality sector hub, additively so the schema and hero are untouched | T031 | M | | **done** |
 | T073 | `ShareRow` and `NextStep` added to all 105 articles, additively. Full visual restyle held: it changes the rendering of the 30 posts carrying 95% of blog clicks and belongs with T080 | T029, T072 | L | | **partly done, visual restyle held for T080** |
 | T074 | All 105 mapped, in `tasks/repositioning/data/article-next-steps.json`, validated by test | T073 | L | Approve the 30 protected mappings | **done, the 30 await your approval** |
-| T075 | `/insights` collection: directory, front matter schema, slug collision check, feeds, pagination | T029 | L | | |
+| T075 | `/insights` collection: `collection` discriminant, Zod front matter with required `problemPage` and `targetTerm`, slug collision gate, pagination, sitemap | T029 | L | | **done, one article in it** |
 | T076 | `not-found.tsx` rebuilt, and `error.tsx` and `global-error.tsx` added, neither of which existed | T030 | M | | **done** |
 | T077 | `/sectors/professional-services` hub | T072 | M | | |
 | T078 | `/contact` rebuilt as a reduced `/start-here` | T046 | S | | **done** |
@@ -152,7 +152,7 @@ Continuous. Starts during phase 3 and does not stop.
 | T083 | Score the first ten tier-three posts, review, then decide whether to continue | T082 | M | Approve keep, merge or retire | |
 | T084 | Article: `ai for accountants` | T075 | M | **Your material needed.** | |
 | T085 | Article: `marketing for law firms` | T075 | M | **Your material needed.** | |
-| T086 | Article: `what is a fractional cmo` | T075 | M | | |
+| T086 | Article: `what is a fractional cmo`, written from research and flagged as such on the page | T075 | M | | **done** |
 | T087 | Article: `professional services marketing` | T075 | M | **Your material needed.** | |
 | T088 | Articles 5 to 15 against the remaining target terms | T084 to T087 | XL | Ongoing input | |
 | T089 | Weekly monitoring of the 30 protected posts for eight weeks after T073 | T073 | M | | |

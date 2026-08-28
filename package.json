@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && npm run check:positioning && npm run build:search && next build",
+    "build": "npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && npm run check:positioning && npm run check:slugs && npm run build:search && next build",
     "start": "next start",
-    "lint": "next lint && npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && npm run check:positioning",
+    "lint": "next lint && npm run check:growth-language && npm run check:british-english && npm run check:design-tokens && npm run check:positioning && npm run check:slugs",
     "audit:widths": "node scripts/audit-widths.mjs",
     "check:growth-language": "node scripts/check-growth-language.mjs",
     "check:british-english": "node scripts/check-british-english.mjs",
@@ -25,7 +25,8 @@
     "check:style-isolation": "node scripts/check-style-isolation.mjs",
     "check:token-privacy": "node scripts/check-token-privacy.mjs --base=https://www.orangejelly.co.uk",
     "check:positioning": "node scripts/check-positioning.mjs",
-    "launch:checklist": "node scripts/launch-checklist.mjs > tasks/repositioning/LAUNCH-CHECKLIST.md && echo \"Wrote tasks/repositioning/LAUNCH-CHECKLIST.md\""
+    "launch:checklist": "node scripts/launch-checklist.mjs > tasks/repositioning/LAUNCH-CHECKLIST.md && echo \"Wrote tasks/repositioning/LAUNCH-CHECKLIST.md\"",
+    "check:slugs": "node scripts/check-slug-collisions.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [
