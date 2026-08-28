@@ -8,6 +8,8 @@ import CaseStudyPage from '@/app/results/[slug]/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import ResultsPage from '@/app/results/page';
 import SolutionsPage from '@/app/solutions/page';
+import PubMarketingPage from '@/app/pub-marketing/page';
+import PubRescuePage from '@/app/pub-rescue/page';
 import StartHerePage from '@/app/start-here/page';
 import type * as ReactDom from 'react-dom';
 
@@ -68,6 +70,11 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on /solutions', async () => {
     expect(await scan(<SolutionsPage />)).toEqual([]);
+  });
+
+  it('finds nothing on the two hospitality sector pages', async () => {
+    expect(await scan(<PubMarketingPage />)).toEqual([]);
+    expect(await scan(<PubRescuePage />)).toEqual([]);
   });
 
   it('finds nothing on a case study', async () => {

@@ -517,9 +517,39 @@ const ALL_ENTRIES = [...ROUTES, ...PHASE_4_REDIRECTS];
  * @returns {{source: string, destination: string, permanent: boolean}[]}
  */
 function getRedirects() {
-  const routed = ALL_ENTRIES.filter(
-    (r) => r.disposition === 'redirect' && ACTIVE_PHASES.includes(r.phase || 'active')
-  ).map((r) => ({
+  /*
+   * A source may be declared twice: once for today and once for the phase that
+   * supersedes it. `/services` points at `/ways-to-work` now and at `/how-we-work`
+   * in phase 4, because `/ways-to-work` itself retires.
+   *
+   * The later declaration wins. Emitting both would leave Next matching whichever
+   * came first in the array, which is the older one, and the result is a chain:
+   * /services to /ways-to-work to /how-we-work. Google follows it, but it dilutes
+   * the signal and it is invisible in review because both lines look correct on
+   * their own.
+   */
+  return getRedirectsForPhases(ACTIVE_PHASES);
+}
+
+/**
+ * The redirect table for a given set of phases.
+ *
+ * Exported so the release can be checked before it happens. The test that proves
+ * phase 4 is safe calls this with ['active', 'phase4'] rather than rebuilding the
+ * merge itself, because a test that reimplements the rule can only ever agree with
+ * its own version of it.
+ *
+ * @param {string[]} phases
+ */
+function getRedirectsForPhases(phases) {
+  const bySource = new Map();
+  for (const entry of ALL_ENTRIES) {
+    if (entry.disposition !== 'redirect') continue;
+    if (!phases.includes(entry.phase || 'active')) continue;
+    bySource.set(entry.path, entry);
+  }
+
+  const routed = [...bySource.values()].map((r) => ({
     source: r.path,
     destination: /** @type {string} */ (r.destination),
     permanent: true,
@@ -527,13 +557,21 @@ function getRedirects() {
   return [...routed, ...CAMPAIGN_REDIRECTS.map((c) => ({ ...c, permanent: false }))];
 }
 
-/** Paths that must never appear in the sitemap because they do not serve a 200. */
+/**
+ * Paths that must never appear in the sitemap.
+ *
+ * Anything that redirects TODAY, anything that is deleted, and anything DECLARED to
+ * redirect in a future phase.
+ *
+ * That last one is the important part. It used to be scoped to the active phase, so
+ * on the day phase 4 shipped the sitemap would have advertised eight URLs that had
+ * become 308s an hour earlier. Dropping them now costs nothing: they are still
+ * crawlable and still linked, and they are being consolidated anyway.
+ */
 function getNonIndexablePaths() {
-  return ALL_ENTRIES.filter(
-    (r) =>
-      (r.disposition === 'redirect' && ACTIVE_PHASES.includes(r.phase || 'active')) ||
-      r.disposition === 'deleted'
-  ).map((r) => r.path);
+  return ALL_ENTRIES.filter((r) => r.disposition === 'redirect' || r.disposition === 'deleted').map(
+    (r) => r.path
+  );
 }
 
 /** Live routes marked for the sitemap, in declaration order. */
@@ -551,6 +589,7 @@ function getRedirectedGuideSlugs() {
 }
 
 module.exports = {
+  getRedirectsForPhases,
   ROUTES,
   PHASE_4_REDIRECTS,
   CAMPAIGN_REDIRECTS,

@@ -7,6 +7,7 @@ import {
   PHASE_4_REDIRECTS,
   ACTIVE_PHASES,
   getRedirects,
+  getRedirectsForPhases,
   getNonIndexablePaths,
   getSitemapRoutes,
 } from '@/lib/route-manifest';
@@ -180,5 +181,46 @@ describe('redirect destinations', () => {
       (route) => !servesTwoHundred(route.destination as string)
     );
     expect(broken.map((route) => `${route.path} -> ${route.destination}`)).toEqual([]);
+  });
+});
+
+describe('phase 4, simulated', () => {
+  /**
+   * The release flips ACTIVE_PHASES to include phase 4. That is one line, and it
+   * turns twelve declared redirects live at once.
+   *
+   * These rebuild the redirect table as it will be on that day and check it the way
+   * the active table is checked. Finding a chain or a duplicate source on release
+   * day, with the old pages already deleted, is the worst possible time to find it.
+   */
+  // Built by the shipping code with the phase forced on, not reassembled here. A
+  // test that reimplements the merge rule can only ever agree with its own version
+  // of it, which is exactly the bug this is looking for.
+  const asShipped = getRedirectsForPhases(['active', 'phase4']).filter(
+    (redirect) => redirect.permanent
+  );
+
+  it('declares each source once, so nothing depends on declaration order', () => {
+    // A path can appear as live now and as a phase 4 redirect. It must not appear
+    // twice as a redirect: Next takes the first match, and which one that is comes
+    // down to the order of two arrays.
+    const counts = new Map<string, number>();
+    for (const route of asShipped) counts.set(route.source, (counts.get(route.source) ?? 0) + 1);
+    const duplicates = [...counts.entries()].filter(([, n]) => n > 1).map(([path]) => path);
+    expect(duplicates).toEqual([]);
+  });
+
+  it('never chains, so no redirect lands on another redirect', () => {
+    const sources = new Set(asShipped.map((route) => route.source));
+    const chained = asShipped
+      .filter((route) => sources.has(route.destination.split('?')[0]))
+      .map((route) => `${route.source} -> ${route.destination}`);
+    expect(chained).toEqual([]);
+  });
+
+  it('advertises none of the redirected paths in the sitemap', () => {
+    const sitemap = new Set(getSitemapRoutes().map((route) => route.path));
+    const advertised = asShipped.filter((route) => sitemap.has(route.source)).map((r) => r.source);
+    expect(advertised).toEqual([]);
   });
 });

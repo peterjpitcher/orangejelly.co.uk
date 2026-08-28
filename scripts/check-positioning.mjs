@@ -29,7 +29,13 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 
-/** Files and directories that describe the company itself. */
+/**
+ * Files and directories that describe the company itself.
+ *
+ * The two hospitality sector pages are NOT here. They are the pages where "pub
+ * marketing" is accurate and valuable, which is the whole point of keeping the
+ * scope narrow. Their own test asserts what they must and must not say.
+ */
 const SURFACES = [
   'src/app/layout.tsx',
   'src/app/page.tsx',

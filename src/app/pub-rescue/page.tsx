@@ -1,631 +1,158 @@
-import { type Metadata } from 'next';
-import Hero from '@/components/Hero';
-import Section from '@/components/Section';
-import CTASection from '@/components/CTASection';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import Text from '@/components/Text';
-import Heading from '@/components/Heading';
-import Card from '@/components/Card';
-import Grid from '@/components/Grid';
-import FeatureList from '@/components/FeatureList';
-import AnimatedItem from '@/components/AnimatedItem';
-import FAQItem from '@/components/FAQItem';
-import RelatedLinks from '@/components/RelatedLinks';
-import { generateMetadata as generateMeta } from '@/lib/metadata';
-import { FAQSchema } from '@/components/StructuredData';
-import StickyCTA from '@/components/StickyCTA';
-// Import local data
-import pubRescueData from '../../../content/data/pub-rescue.json';
+import type { Metadata } from 'next';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return generateMeta({
-    title: 'Pub Recovery Support - Action-First Help for UK Pubs',
-    description:
-      'If trade is under pressure, get practical action-first support to stabilise performance and rebuild momentum. Proven at The Anchor.',
-    path: '/pub-rescue',
-  });
-}
+import { Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import { getBaseUrl } from '@/lib/site-config';
 
-export default function PubRescue() {
-  // Use local data
-  const heroSection = pubRescueData.heroSection;
-  const emergencyCategories = pubRescueData.emergencyCategories;
-  const faqs = pubRescueData.faqs;
+import { CAUSES, WOULD_NOT_DO } from './content';
 
+/**
+ * `/pub-rescue`. Where the four problem-shaped hospitality landing pages
+ * consolidate.
+ *
+ * The page opens by refusing the emergency framing it used to carry. A venue that
+ * genuinely cannot pay this month needs its BDM, its accountant and the Licensed
+ * Trade Charity, and saying so is both true and the reason to trust the rest of the
+ * page. It also keeps Orange Jelly out of engagements where nobody can win: the
+ * pack's own ideal-client work says complete financial distress destroys the ability
+ * to act, which is exactly the case a rescue page attracts if it oversells itself.
+ *
+ * Copy: `tasks/repositioning/copy/sector-hospitality.md`.
+ */
+const TITLE = 'Trade is falling | Orange Jelly';
+const DESCRIPTION =
+  'For a venue that is still trading and sliding for reasons nobody has correctly identified. The six causes that account for most of it, and what we would actually do.';
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${getBaseUrl()}/pub-rescue` },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${getBaseUrl()}/pub-rescue`,
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Orange Jelly',
+  },
+};
+
+export default function PubRescuePage(): JSX.Element {
   return (
     <>
-      {heroSection && (
-        <Hero
-          title={heroSection.title}
-          subtitle={heroSection.subtitle}
-          showCTA={false}
-          breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Rescue' }]}
-          backgroundImage="/images/headers/pub-rescue.png"
-        />
-      )}
+      <OjHeader />
 
-      {/* Emergency Banner */}
-      <Section background="orange-light" padding="small">
-        <div className="text-center">
-          <div className="inline-flex items-center justify-center mb-4">
-            <Text size="xl" className="mr-3">
-              🚨
-            </Text>
-            <Heading level={2}>{pubRescueData.emergencyBanner.heading}</Heading>
-            <Text size="xl" className="ml-3">
-              🚨
-            </Text>
-          </div>
-          <Text size="lg" className="mb-6 measure">
-            {pubRescueData.emergencyBanner.description}
-          </Text>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <WhatsAppButton
-              text={pubRescueData.emergencyBanner.ctaText}
-              size="large"
-              className="!bg-orange !text-brand-base hover:!text-brand-base-dark"
+      <main id="main-content">
+        <section className="border-b-1.5 border-oj-ink bg-oj-orange py-12 sm:py-16">
+          <div className="page-shell">
+            <Breadcrumb
+              tone="orange"
+              className="mb-7"
+              items={[{ label: 'Home', href: '/' }, { label: 'Trade is falling' }]}
             />
-            <Text size="sm" className="text-brand-base/75">
-              {pubRescueData.emergencyBanner.supportText}
-            </Text>
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-ink">
+              hospitality
+            </p>
+            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
+              trade is falling and you need it to stop.
+            </h1>
+            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink">
+              This page is for the version of the problem that is not a project. Takings are down
+              week on week, the wage bill is not, and every day it continues costs more than the
+              last one.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button size="lg" arrow variant="ink" href="/start-here">
+                Bring us the problem
+              </Button>
+              <Button variant="ghost" href="/how-we-work">
+                How we work
+              </Button>
+            </div>
           </div>
-        </div>
-      </Section>
+        </section>
 
-      {/* Crisis Categories */}
-      {emergencyCategories.length > 0 && (
-        <Section background="white">
-          <Heading level={2} align="center" className="mb-4">
-            What's Your Biggest Growth Bottleneck Right Now?
-          </Heading>
-          <Text size="lg" align="center" className="mb-12 measure">
-            Pick the issue slowing performance most. We'll share how we solved similar challenges at
-            The Anchor and build a practical action plan.
-          </Text>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {emergencyCategories.map((category) => (
-              <div
-                key={category._key}
-                className="bg-white rounded-lg p-6 border-2 border-orange/20 hover:border-orange transition-all hover:shadow-lg"
+        <Band heading="first, the honest part." tone="paper">
+          <div className="measure space-y-4 text-[17px] leading-relaxed">
+            <p>
+              We are not an emergency service and we will not pretend to be one. If the business
+              genuinely cannot pay its bills this month, the useful call is to your BDM, your
+              accountant and the{' '}
+              <a
+                href="https://www.licensedtradecharity.org.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline"
               >
-                <div className="flex items-start mb-4">
-                  <Text size="xl" className="mr-4">
-                    {category.icon}
-                  </Text>
-                  <div className="flex-1">
-                    <Heading level={3} className="mb-2">
-                      {category.title}
-                    </Heading>
-                    <Text size="sm" className="mb-2 text-brand-base/80">
-                      {category.description}
-                    </Text>
-                    {category.impact && (
-                      <Text size="sm" className="font-semibold text-red-600 mb-2">
-                        Impact: {category.impact}
-                      </Text>
-                    )}
-                    {/* text-blue-support, not text-teal-600: Tailwind's numeric teal
-                        is not in this palette and rendered nothing here. */}
-                    {category.solution && (
-                      <Text size="sm" className="text-blue-support">
-                        Solution: {category.solution}
-                      </Text>
-                    )}
-                  </div>
-                </div>
+                Licensed Trade Charity
+              </a>
+              <span className="sr-only"> (opens in a new tab)</span>, not to us.
+            </p>
+            <p>
+              What we are good at is the situation just before that: a venue that is still trading,
+              still has some money to work with, and is sliding for reasons nobody has correctly
+              identified.
+            </p>
+          </div>
+        </Band>
 
-                <WhatsAppButton
-                  text={`Help with ${category.title}`}
-                  fullWidth
-                  size="medium"
-                  className="!bg-orange !text-brand-base hover:!text-brand-base-dark"
-                />
+        <Band heading="the six that account for most of it.">
+          <dl className="measure-wide grid gap-x-10 gap-y-6 sm:grid-cols-2">
+            {CAUSES.map((cause) => (
+              <div key={cause.title}>
+                <dt className="font-oj text-[18px] font-black leading-snug text-oj-ink">
+                  {cause.title}
+                </dt>
+                <dd className="mt-2 text-[16px] leading-relaxed text-oj-ink-2">{cause.body}</dd>
               </div>
             ))}
+          </dl>
+        </Band>
+
+        <Band heading="what we would actually do." tone="paper">
+          <div className="measure space-y-4 text-[17px] leading-relaxed">
+            <p>
+              A week or two of looking, properly, before anything is changed. The baseline first:
+              takings by session, covers, spend per head, where enquiries come from and where they
+              stop. Then the one or two changes with the largest effect, built and measured against
+              that baseline.
+            </p>
+            <p>
+              It is not fast in the way a promise is fast. It is fast in the way that means you stop
+              paying for the wrong fix.
+            </p>
           </div>
+        </Band>
 
-          {/* Our Story Box */}
-          <div className="bg-blue-support text-white rounded-lg p-8 mb-12">
-            <Heading level={3} align="center" className="mb-6">
-              We've Been Where You Are Now
-            </Heading>
-            <Text size="lg" align="center" className="mb-6 text-surface/90 measure">
-              When we took over The Anchor, performance was flat and midweek trade was weak. Sound
-              familiar?
-            </Text>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-brand-base/30 rounded-lg p-4">
-                <Heading level={4} className="mb-2">
-                  Our Tuesday Nights
-                </Heading>
-                <Text size="sm" className="mb-2">
-                  Were: sparse attendance, losing money
-                </Text>
-                <Text size="sm" className="font-semibold">
-                  Now: table bookings up 403%, good atmosphere
-                </Text>
-              </div>
-              <div className="bg-brand-base/30 rounded-lg p-4">
-                <Heading level={4} className="mb-2">
-                  Our Sunday Roasts
-                </Heading>
-                <Text size="sm" className="mb-2">
-                  Were: half-full room
-                </Text>
-                <Text size="sm" className="font-semibold">
-                  Now: booking no-shows down 89% with pre-orders
-                </Text>
-              </div>
-              <div className="bg-brand-base/30 rounded-lg p-4">
-                <Heading level={4} className="mb-2">
-                  Our Time
-                </Heading>
-                <Text size="sm" className="mb-2">
-                  Were: long weeks, no family time
-                </Text>
-                <Text size="sm" className="font-semibold">
-                  Now: Evenings off, AI handles admin
-                </Text>
-              </div>
-            </div>
+        <Band heading="what we would not do.">
+          <ul className="measure flex list-none flex-col gap-3 p-0">
+            {WOULD_NOT_DO.map((item) => (
+              <li key={item} className="flex gap-3 text-[17px] leading-relaxed">
+                <span aria-hidden="true" className="font-black text-oj-orange-deep">
+                  &mdash;
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </Band>
+
+        <Band tone="ink" size="lg" divider={false}>
+          <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+            the first hour is free.
+          </h2>
+          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+            Tell us what is happening and what you have already tried. If we are not the right
+            people we will tell you that inside the hour, and point you at who is.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" arrow href="/start-here">
+              Bring us the problem
+            </Button>
           </div>
+        </Band>
+      </main>
 
-          {/* Support Promise */}
-          <div className="bg-gradient-to-r from-orange/10 to-orange/5 rounded-lg p-8 border-2 border-orange/20">
-            <Heading level={3} align="center" className="mb-6">
-              Our Action-First Support Promise
-            </Heading>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-              <div>
-                <div className="text-3xl mb-2">⚡</div>
-                <Heading level={4} className="mb-1">
-                  Fast Response
-                </Heading>
-                <Text size="sm">Message anytime - I'll reply as quickly as I can</Text>
-              </div>
-              <div>
-                <div className="text-3xl mb-2">🎯</div>
-                <Heading level={4} className="mb-1">
-                  Quick Diagnosis
-                </Heading>
-                <Text size="sm">Identify root problems, not just symptoms</Text>
-              </div>
-              <div>
-                <div className="text-3xl mb-2">💰</div>
-                <Heading level={4} className="mb-1">
-                  ROI Focused
-                </Heading>
-                <Text size="sm">Solutions that pay for themselves fast</Text>
-              </div>
-              <div>
-                <div className="text-3xl mb-2">🛡️</div>
-                <Heading level={4} className="mb-1">
-                  30-Day Partnership
-                </Heading>
-                <Text size="sm">We stay involved until momentum sticks</Text>
-              </div>
-            </div>
-          </div>
-        </Section>
-      )}
-
-      {/* Crisis Calculator */}
-      <Section background="surface" padding="small">
-        <div className="text-center measure">
-          <Heading level={3} className="mb-4">
-            Delays Have A Cost
-          </Heading>
-          <div className="bg-white rounded-lg p-6 border-2 border-red-200">
-            <Text size="lg" className="font-semibold mb-4">
-              When action is delayed, trade often drifts:
-            </Text>
-            <div className="grid md:grid-cols-3 gap-4 mb-6">
-              <div>
-                <Text className="text-3xl font-bold text-red-600">£30-£50</Text>
-                <Text size="sm">Typical online estimate per empty table</Text>
-              </div>
-              <div>
-                <Text className="text-3xl font-bold text-red-600">Context</Text>
-                <Text size="sm">Wet-led tables cost less than headline figures</Text>
-              </div>
-              <div>
-                <Text className="text-3xl font-bold text-red-600">Act Now</Text>
-                <Text size="sm">Every empty night compounds the gap</Text>
-              </div>
-            </div>
-            <Text size="sm" className="text-brand-base/70 mb-4">
-              Most pubs see meaningful progress inside 30 days
-            </Text>
-            <WhatsAppButton text="Help me assess the gap" size="medium" />
-          </div>
-        </div>
-      </Section>
-
-      {/* Our Rescue Methodology */}
-      <Section background="white">
-        <AnimatedItem animation="fade-in">
-          <div className="measure">
-            <Heading level={2} align="center" className="mb-12">
-              The Orange Jelly Recovery Method
-            </Heading>
-
-            <Text size="lg" align="center" className="mb-12 text-brand-base/70 measure">
-              We don't guess. We use a proven process that created a step-change at The Anchor. Here
-              is how we rebuild momentum:
-            </Text>
-
-            <Grid columns={{ default: 1, md: 2 }} gap="large">
-              <Card variant="bordered" padding="large">
-                <div className="text-4xl mb-4">📊</div>
-                <Heading level={3} className="mb-4">
-                  Week 1: Performance Triage
-                </Heading>
-                <Text className="mb-4">
-                  We identify what is creating drag right now. Empty nights? Low GP? Weak bookings?
-                  We prioritise the biggest levers first.
-                </Text>
-                <FeatureList
-                  items={[
-                    'Analyse your numbers quickly',
-                    'Identify top 3 profit drags',
-                    'Implement quick wins immediately',
-                    'Early margin gains from waste and cost fixes',
-                  ]}
-                  icon="check"
-                  iconColor="green"
-                  spacing="tight"
-                />
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-4xl mb-4">🚀</div>
-                <Heading level={3} className="mb-4">
-                  Week 2-3: Quick Wins
-                </Heading>
-                <Text className="mb-4">
-                  While we plan longer-term fixes, we execute actions that show visible movement
-                  quickly.
-                </Text>
-                <FeatureList
-                  items={[
-                    'Launch "must-attend" midweek events',
-                    'Fix your Google presence (huge impact)',
-                    'Rewrite menu for stronger margins',
-                    'Start social media that actually works',
-                  ]}
-                  icon="check"
-                  iconColor="orange"
-                  spacing="tight"
-                />
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-4xl mb-4">📈</div>
-                <Heading level={3} className="mb-4">
-                  Week 4: Momentum Building
-                </Heading>
-                <Text className="mb-4">
-                  Now we're seeing results. Tables filling up. Phone ringing. Time to lock in
-                  sustainable growth that keeps building.
-                </Text>
-                <FeatureList
-                  items={[
-                    'Automate the marketing grind and focus on growth',
-                    'Build customer database for repeat visits',
-                    'Train your team on upselling techniques',
-                    'Create systems so it runs without you',
-                  ]}
-                  icon="check"
-                  iconColor="blue-support"
-                  spacing="tight"
-                />
-              </Card>
-
-              <Card variant="bordered" padding="large">
-                <div className="text-4xl mb-4">🎯</div>
-                <Heading level={3} className="mb-4">
-                  Month 2+: Sustainable Success
-                </Heading>
-                <Text className="mb-4">
-                  You have a step-change in consistency: stronger nights, better margins, and better
-                  systems. Now we protect and compound it.
-                </Text>
-                <FeatureList
-                  items={[
-                    'Monthly check-ins to maintain momentum',
-                    'Seasonal campaign planning',
-                    'Advanced strategies for growth',
-                    "You're working less, earning more",
-                  ]}
-                  icon="check"
-                  iconColor="green"
-                  spacing="tight"
-                />
-              </Card>
-            </Grid>
-
-            {/* successMetrics not defined - commenting out this section
-            {successMetrics && successMetrics.metrics && successMetrics.metrics.length > 0 && (
-              <Card background="orange-light" padding="large" className="mt-8">
-                <Text size="lg" align="center" weight="semibold" className="mb-4">
-                  {successMetrics.title || 'Most Pubs See These Results Within 30 Days:'}
-                </Text>
-                {(() => {
-                  const count = successMetrics.metrics.length;
-                  const mdCols = (count >= 4 ? 4 : count === 3 ? 3 : count === 2 ? 2 : 1) as
-                    | 1
-                    | 2
-                    | 3
-                    | 4;
-                  return (
-                    <Grid columns={{ default: 1, md: mdCols }} gap="medium">
-                      {successMetrics.metrics.map((metric) => (
-                        <div key={metric._key} className="text-center">
-                          <Text size="2xl" weight="bold" className="text-orange-dark">
-                            {metric.value}
-                          </Text>
-                          <Text size="sm">{metric.label}</Text>
-                          {metric.description && (
-                            <Text size="xs" className="text-brand-base/75 mt-1">
-                              {metric.description}
-                            </Text>
-                          )}
-                        </div>
-                      ))}
-                    </Grid>
-                  );
-                })()}
-              </Card>
-            )} */}
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* Why Pubs Plateau Section */}
-      <Section background="surface">
-        <AnimatedItem animation="slide-up">
-          <div className="measure">
-            <Heading level={2} align="center" className="mb-12">
-              Why Good Pubs Plateau (And How We Reset Momentum)
-            </Heading>
-
-            <div className="space-y-6">
-              <Card background="white" padding="large">
-                <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
-                  <div>
-                    <Heading level={3} className="mb-4 text-red-600">
-                      They Work IN the Business, Not ON It
-                    </Heading>
-                    <Text className="mb-4">
-                      You're behind the bar most of the week. No time to plan campaigns, update
-                      channels, or analyse what is working. Delivery crowds out growth.
-                    </Text>
-                    <Text weight="semibold" className="text-green-700">
-                      We Fix This: AI handles the boring bits. Marketing runs itself. You get
-                      evenings back to think strategically (or just rest).
-                    </Text>
-                  </div>
-                  <div className="text-6xl text-center opacity-20">😰</div>
-                </Grid>
-              </Card>
-
-              <Card background="white" padding="large">
-                <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
-                  <div className="text-6xl text-center opacity-20 order-2 md:order-1">📉</div>
-                  <div className="order-1 md:order-2">
-                    <Heading level={3} className="mb-4 text-red-600">
-                      They Compete on Price, Not Experience
-                    </Heading>
-                    <Text className="mb-4">
-                      You can't beat chains on price. Trying to be the cheapest is a race to the
-                      bottom that erodes your margins and attracts the wrong customers.
-                    </Text>
-                    <Text weight="semibold" className="text-green-700">
-                      We Fix This: Position your pub as THE place for something specific. Quiz
-                      nights, Sunday roasts, craft beer - own your niche and charge accordingly.
-                    </Text>
-                  </div>
-                </Grid>
-              </Card>
-
-              <Card background="white" padding="large">
-                <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
-                  <div>
-                    <Heading level={3} className="mb-4 text-red-600">
-                      They Wait for Conditions to Improve
-                    </Heading>
-                    <Text className="mb-4">
-                      "Summer will be busier." "Once the roadworks finish." "When the economy
-                      improves." Waiting isn't a strategy, and delay has a cost.
-                    </Text>
-                    <Text weight="semibold" className="text-green-700">
-                      We Fix This: Take action this week. Our quick wins create early movement, then
-                      we build consistency month by month.
-                    </Text>
-                  </div>
-                  <div className="text-6xl text-center opacity-20">⏳</div>
-                </Grid>
-              </Card>
-            </div>
-
-            <div className="mt-12 text-center">
-              <Heading level={3} className="mb-6">
-                Your Pub Can Move Faster Than the Market
-              </Heading>
-              <Text size="lg" className="mb-8 text-brand-base/70 measure">
-                Trading conditions are tough, but proactive, modern execution still wins. Start with
-                the biggest bottleneck and build momentum from there.
-              </Text>
-              <WhatsAppButton text="Help me build a recovery plan" size="large" />
-            </div>
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* What You Get Section */}
-      <Section>
-        <AnimatedItem animation="fade-in">
-          <div className="measure">
-            <Heading level={2} align="center" className="mb-12">
-              What You Get With Pub Recovery Support
-            </Heading>
-
-            <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-12">
-              <Card background="orange-light" padding="large">
-                <Heading level={3} className="mb-6">
-                  Immediate Support
-                </Heading>
-                <FeatureList
-                  items={[
-                    'Quick response when possible',
-                    'Priority triage call where possible',
-                    'Quick wins to implement this week',
-                    'Direct WhatsApp access to Peter',
-                    'No corporate call centres',
-                  ]}
-                  icon="bullet"
-                  iconColor="orange"
-                  spacing="normal"
-                />
-              </Card>
-
-              <Card background="brand-base" padding="large">
-                <Heading level={3} color="white" className="mb-6">
-                  30-Day Momentum Sprint
-                </Heading>
-                <div className="text-white">
-                  <FeatureList
-                    items={[
-                      'Complete marketing system setup',
-                      'Menu rewrite for stronger margins',
-                      'Event calendar that fills seats',
-                      'Social media on autopilot',
-                      'Staff training resources',
-                    ]}
-                    icon="bullet"
-                    iconColor="orange-on-dark"
-                    spacing="normal"
-                  />
-                </div>
-              </Card>
-            </Grid>
-
-            <Card variant="bordered" padding="large" className="mb-8">
-              <Heading level={3} align="center" className="mb-6">
-                Plus These Practical Growth Tools
-              </Heading>
-              <Grid columns={{ default: 1, md: 3 }} gap="medium">
-                <div className="text-center">
-                  <div className="text-3xl mb-3">📱</div>
-                  <Heading level={4} className="mb-2">
-                    AI Marketing Assistant
-                  </Heading>
-                  <Text size="sm">
-                    Creates all your social media, emails, and promotions. Takes the marketing grind
-                    off your plate so you can focus on growth.
-                  </Text>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-3">📊</div>
-                  <Heading level={4} className="mb-2">
-                    Profit Analysis Tools
-                  </Heading>
-                  <Text size="sm">
-                    Find where you're losing money and where the biggest margin gains are hiding.
-                  </Text>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl mb-3">🎯</div>
-                  <Heading level={4} className="mb-2">
-                    Customer Magnet System
-                  </Heading>
-                  <Text size="sm">
-                    Proven campaigns that fill empty tables. Tested at The Anchor and partner pubs.
-                  </Text>
-                </div>
-              </Grid>
-            </Card>
-
-            <div className="text-center">
-              <Text size="lg" className="mb-2">
-                Investment is simple and transparent
-              </Text>
-              <Text size="2xl" weight="bold" className="text-orange-dark mb-4">
-                Packages from £375 + VAT
-              </Text>
-              <Text size="sm" color="muted" className="mb-8">
-                Most pubs see meaningful progress inside 30 days
-              </Text>
-            </div>
-          </div>
-        </AnimatedItem>
-      </Section>
-
-      {/* FAQ Section */}
-      {faqs.length > 0 && (
-        <Section background="white">
-          <AnimatedItem animation="slide-up">
-            <div className="measure">
-              <Heading level={2} align="center" className="mb-12">
-                Common Questions From Hospitality Partners
-              </Heading>
-
-              <div className="space-y-6">
-                {faqs.map((faq, index) => (
-                  <FAQItem key={index} question={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </div>
-          </AnimatedItem>
-        </Section>
-      )}
-
-      {/* Related Links */}
-      <Section background="surface">
-        <div className="measure">
-          <RelatedLinks
-            title="Choose Your Recovery Focus"
-            subtitle="Pick the issue that is slowing growth most and we'll tailor the support"
-            links={[
-              {
-                title: 'Growth Fix',
-                description: 'Solve one clear problem fast with a focused action plan',
-                href: '/ways-to-work/growth-fix',
-                emoji: '🏚️',
-                highlight: true,
-              },
-              {
-                title: 'Momentum Month',
-                description: 'Ongoing monthly support to build consistent trade',
-                href: '/ways-to-work/momentum-month',
-                emoji: '🍽️',
-              },
-              {
-                title: 'Turnaround Intensive',
-                description: 'A 30-day sprint to reset your commercial model',
-                href: '/ways-to-work/turnaround-intensive',
-                emoji: '📱',
-              },
-            ]}
-            variant="card"
-            columns={{ default: 1, md: 3 }}
-          />
-        </div>
-      </Section>
-
-      {/* Final CTA */}
-      <CTASection
-        title="Ready to Rebuild Momentum?"
-        subtitle="With the right priorities and consistent execution, performance can shift quickly. Message me and we'll fix the highest-impact issue first."
-        whatsappMessage="Peter, I need help with my pub's performance. My biggest issue is [describe issue]."
-        buttonText="Start My Pub Recovery Plan"
-      />
-
-      {/* Add FAQ Schema */}
-      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
-
-      <StickyCTA />
+      <OjFooter />
     </>
   );
 }

@@ -1,743 +1,185 @@
-import Hero from '@/components/Hero';
-import Section from '@/components/Section';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
-import Card from '@/components/Card';
-import Button from '@/components/Button';
-import TrackedButton from '@/components/TrackedButton';
-import Container from '@/components/Container';
-import Grid from '@/components/Grid';
-import FAQItem from '@/components/FAQItem';
-import FeatureList from '@/components/FeatureList';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import { FAQSchema } from '@/components/StructuredData';
-import { generateMetadata } from '@/lib/metadata';
-import Link from 'next/link';
-import pubMarketingData from '../../../content/data/pub-marketing.json';
+import type { Metadata } from 'next';
 
-export const metadata = generateMetadata({
-  title: 'Pub Marketing: The Complete Guide for UK Licensees',
-  description:
-    'The definitive pub marketing guide from a working licensee. Social media, events, email, local SEO, and menu engineering, all tested at The Anchor. Packages from £375 + VAT.',
-  path: '/pub-marketing',
-  ogType: 'website',
-});
+import { PROOF } from '@/app/home-content';
+import {
+  Band,
+  Breadcrumb,
+  Button,
+  FAQ,
+  MethodStep,
+  OjFooter,
+  OjHeader,
+  ProofCard,
+} from '@/components/oj';
+import { getBaseUrl } from '@/lib/site-config';
 
-type PubMarketingCard = {
-  title: string;
-  description: string;
-  href: string;
-  ctaText: string;
+import { FAQS, LOOK_AT_FIRST } from './content';
+
+/**
+ * `/pub-marketing`. The hospitality sector landing page.
+ *
+ * It survives the consolidation because it earns 847 impressions on its own, and
+ * because the sector language is genuinely accurate here. Four near-duplicate pages
+ * that were splitting authority away from it redirect into it and into /pub-rescue.
+ *
+ * The old page opened by selling packages from a published price and pushed people
+ * into WhatsApp. It now opens by saying most pubs do not have a marketing problem,
+ * which is both truer and the argument for the diagnostic.
+ *
+ * Copy: `tasks/repositioning/copy/sector-hospitality.md`.
+ */
+const TITLE = 'Pub marketing | Orange Jelly';
+const DESCRIPTION =
+  'Most pubs do not have a marketing problem, they have a diagnosis problem. What we look at first, what it costs to find out, and the numbers from our own venue.';
+
+const METHOD = [
+  {
+    word: 'HEAR.',
+    text: 'What is actually happening in the venue, from the people in it and the numbers.',
+  },
+  {
+    word: 'CHALLENGE.',
+    text: 'The explanation everyone has agreed on, tested against the evidence.',
+  },
+  {
+    word: 'BUILD.',
+    text: 'The fix. Visibility, an offer, a booking journey, a menu, a system. Whatever it turns out to need.',
+  },
+  {
+    word: 'OPTIMISE.',
+    text: 'Measured against the baseline we took before we started, and kept at until it moves.',
+  },
+] as const;
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${getBaseUrl()}/pub-marketing` },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${getBaseUrl()}/pub-marketing`,
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Orange Jelly',
+  },
 };
 
-const pillarFaqs = [
-  ...pubMarketingData.faqs,
-  {
-    question: 'What is the most effective pub marketing channel?',
-    answer:
-      'For most pubs, Google Business Profile and Facebook deliver the fastest results. Google captures people actively searching for somewhere to eat or drink nearby. Facebook reaches locals who are not yet searching but can be prompted to visit. Start with both and add Instagram or email once the basics are working.',
-  },
-  {
-    question: 'How do I market my pub with no budget?',
-    answer:
-      'Focus on free channels first: optimise your Google Business Profile, post consistently on Facebook, respond to every review, and ask happy customers to leave new ones. Run a weekly event to create word-of-mouth. These cost nothing but time and can deliver real footfall increases.',
-  },
-  {
-    question: 'Should I hire a pub marketing agency or do it myself?',
-    answer:
-      'Start by doing the basics yourself using templates and systems. If you are too busy to maintain consistency, a specialist like Orange Jelly can either do it for you or set up AI-powered workflows so it takes minutes instead of hours. Packages start from £375 + VAT with no lock-in contracts.',
-  },
-];
-
-export default function PubMarketingPage() {
-  const focusAreas = pubMarketingData.focusAreas.items;
-  const solutionCards = pubMarketingData.solutions.cards as PubMarketingCard[];
-
+export default function PubMarketingPage(): JSX.Element {
   return (
     <>
-      <FAQSchema faqs={pillarFaqs} />
+      <OjHeader />
 
-      <Hero
-        title="Pub Marketing: The Complete Guide for UK Licensees"
-        subtitle="Everything you need to fill tables, build regulars, and grow profit, tested at a real pub, not an agency desk. Social media, events, email, local SEO, and more."
-        showCTA
-        ctaText={pubMarketingData.hero.ctaText}
-        bottomText={pubMarketingData.hero.bottomText}
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pub Marketing' }]}
-        backgroundImage="/images/headers/services.png"
-      />
-
-      {/* Intro */}
-      <Section background="white" padding="large">
-        <Container width="measure-wide">
-          <Heading level={2} align="center" className="mb-6">
-            Why Pub Marketing Is Different From Every Other Business
-          </Heading>
-          <div className="space-y-4 measure">
-            <Text size="lg" className="text-brand-base/80">
-              Most small business marketing advice does not work for pubs. You cannot A/B test a
-              Tuesday night. Your product is an experience, not a widget. And your competition
-              includes chains with six-figure marketing budgets. Here is{' '}
-              <Link
-                href="/compete-with-pub-chains"
-                className="text-blue-support underline hover:text-orange-dark"
-              >
-                how an independent pub competes with pub chains
-              </Link>{' '}
-              without trying to outspend them.
-            </Text>
-            <Text size="lg" className="text-brand-base/80">
-              Effective pub marketing focuses on three things: getting found by people already
-              looking for somewhere to go, giving them a reason to choose you, and turning
-              first-timers into regulars. Everything on this page is built around those three
-              objectives.
-            </Text>
-            <Text size="lg" className="text-brand-base/80">
-              I run The Anchor in Stanwell Moor and built these systems to solve my own problems.
-              Food revenue grew 98% in three months. Google Search visibility climbed 828%. Table
-              bookings grew 403%. If it works behind our bar, it goes on this page.
-            </Text>
+      <main id="main-content">
+        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
+          <div className="page-shell">
+            <Breadcrumb
+              className="mb-7"
+              items={[{ label: 'Home', href: '/' }, { label: 'Pub marketing' }]}
+            />
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+              hospitality
+            </p>
+            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
+              pub marketing that starts with the numbers.
+            </h1>
+            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
+              Orange Jelly is a growth partner for ambitious small and mid-sized businesses, and
+              hospitality is the sector we know best, because we run one. The Anchor is our own
+              venue. Everything here was tested there before it was offered to anybody else.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button size="lg" arrow href="/start-here">
+                Bring us the problem
+              </Button>
+              <Button variant="ghost" href="/results">
+                See the numbers
+              </Button>
+            </div>
           </div>
-        </Container>
-      </Section>
+        </section>
 
-      {/* Quick wins */}
-      <Section background="surface" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            {pubMarketingData.focusAreas.heading}
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            These are the four areas that move the needle fastest for most pubs.
-          </Text>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {focusAreas.map((item) => (
-              <Card key={item.title} variant="bordered" padding="large">
-                <Heading level={3} className="mb-3">
+        <Band heading="most pubs do not have a marketing problem." tone="paper">
+          <div className="measure space-y-4 text-[17px] leading-relaxed">
+            <p>
+              They have a diagnosis problem. Trade is down, and the explanation everyone agrees on
+              is the economy, the weather, the estate, the new place up the road. Sometimes it is.
+              Usually the actual cause is somewhere nobody has looked, and more posting will not
+              find it.
+            </p>
+            <p>That is why we start by looking, not by proposing a campaign.</p>
+          </div>
+        </Band>
+
+        <Band heading="what we look at first.">
+          <dl className="measure-wide grid gap-x-10 gap-y-6 sm:grid-cols-2">
+            {LOOK_AT_FIRST.map((item) => (
+              <div key={item.title}>
+                <dt className="font-oj text-[18px] font-black leading-snug text-oj-ink">
                   {item.title}
-                </Heading>
-                <Text color="muted">{item.description}</Text>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* === PILLAR SECTION: Social Media === */}
-      <Section background="white" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            Social Media Marketing for Pubs
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            Social media should make locals think &ldquo;I need to go there this week&rdquo;, not
-            just scroll past another stock photo.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
-            <div>
-              <Heading level={3} className="mb-4">
-                Facebook for Pubs
-              </Heading>
-              <Text className="mb-4">
-                Facebook remains the most effective social platform for UK pubs. Your audience is
-                there, local groups drive real footfall, and events tools are built for hospitality.
-              </Text>
-              <FeatureList
-                items={[
-                  'Post 3-5 times per week with a mix of events, food, and behind-the-scenes',
-                  'Use Facebook Events for every recurring night: they show up in local searches',
-                  'Share to local community groups (ask first, follow their rules)',
-                  'Respond to every comment within 2 hours during trading',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-              <div className="mt-4">
-                <Link
-                  href="/licensees-guide/facebook-marketing-local-pubs"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Read: Facebook marketing for local pubs →
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <Heading level={3} className="mb-4">
-                Instagram for Pubs
-              </Heading>
-              <Text className="mb-4">
-                Instagram works best for food-led pubs and venues with visual appeal. Stories drive
-                urgency, Reels build reach, and a strong grid builds credibility.
-              </Text>
-              <FeatureList
-                items={[
-                  'Post your best dishes and drinks: natural light, no filters needed',
-                  'Use Stories for daily specials, countdowns, and behind-the-scenes',
-                  'Reels of 15-30 seconds get 3-5x more reach than static posts',
-                  'Tag your location on everything to appear in local discovery',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-              <div className="mt-4">
-                <Link
-                  href="/licensees-guide/instagram-marketing-for-pubs"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Read: Instagram marketing for pubs →
-                </Link>
-              </div>
-            </div>
-          </Grid>
-
-          <Card background="orange-light" padding="large">
-            <div className="text-center">
-              <Text size="lg" weight="semibold" className="mb-2">
-                AI takes the marketing grind off your plate so you can focus on filling tables
-              </Text>
-              <Text color="muted">
-                We batch-create a week of posts in under an hour using AI tools. Templates,
-                captions, and scheduling, all systematised so it runs without daily effort.
-              </Text>
-              <div className="mt-4">
-                <Link
-                  href="/licensees-guide/social-media-strategy-for-pubs"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Read: Complete social media strategy for pubs →
-                </Link>
-              </div>
-            </div>
-          </Card>
-        </Container>
-      </Section>
-
-      {/* === PILLAR SECTION: Events === */}
-      <Section background="surface" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            Event Marketing for Pubs
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            One strong weekly event can transform your midweek. The key is consistency, not
-            spectacle.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-            <Card variant="bordered" padding="large">
-              <Heading level={3} className="mb-3">
-                Quiz Nights
-              </Heading>
-              <Text color="muted" className="mb-3">
-                The most reliable midweek event for any pub. Low cost, high retention, builds a
-                community of regulars who come every week.
-              </Text>
-              <Text size="sm" weight="semibold" className="text-blue-support">
-                Our result: table bookings up 403%
-              </Text>
-              <div className="mt-3">
-                <Link
-                  href="/licensees-guide/quiz-night-ideas"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Quiz night ideas →
-                </Link>
-              </div>
-            </Card>
-
-            <Card variant="bordered" padding="large">
-              <Heading level={3} className="mb-3">
-                Tasting Events
-              </Heading>
-              <Text color="muted" className="mb-3">
-                Wine, gin, whisky, or craft beer tastings attract a different crowd and command
-                premium pricing. Partner with suppliers for stock and expertise.
-              </Text>
-              <Text size="sm" weight="semibold" className="text-blue-support">
-                Our result: private hire bookings up 567%
-              </Text>
-            </Card>
-
-            <Card variant="bordered" padding="large">
-              <Heading level={3} className="mb-3">
-                Live Music
-              </Heading>
-              <Text color="muted" className="mb-3">
-                Live music works when it fits your audience and is promoted properly. Start with
-                acoustic acts on quiet nights to test demand before committing to a regular slot.
-              </Text>
-              <div className="mt-3">
-                <Link
-                  href="/licensees-guide/live-music-events-for-pubs"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Live music guide →
-                </Link>
-              </div>
-            </Card>
-          </Grid>
-
-          <div className="text-center">
-            <Link
-              href="/licensees-guide/how-to-run-successful-pub-events"
-              className="text-orange-dark hover:text-orange-darker font-medium"
-            >
-              Read the complete guide: How to run successful pub events →
-            </Link>
-          </div>
-        </Container>
-      </Section>
-
-      {/* === PILLAR SECTION: Email Marketing === */}
-      <Section background="white" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            Email Marketing for Pubs
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            Your customer database is the one marketing asset you own. Social platforms change their
-            algorithms. Your email list is yours forever.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 2 }} gap="large">
-            <div>
-              <Heading level={3} className="mb-4">
-                Building Your Database
-              </Heading>
-              <Text className="mb-4">
-                Start collecting emails and phone numbers from day one. Wi-Fi sign-up, booking
-                confirmations, event registrations, and a simple sign-up card on the bar all work.
-              </Text>
-              <FeatureList
-                items={[
-                  'Wi-Fi captive portal: guests give email for internet access',
-                  'Booking confirmation: capture details from every reservation',
-                  'Event sign-ups: quiz teams, tastings, and functions',
-                  'Loyalty programme: reward regulars for sharing their details',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-              <Text size="sm" weight="semibold" className="text-blue-support mt-4">
-                We built a genuine local following using these methods at The Anchor
-              </Text>
-            </div>
-
-            <div>
-              <Heading level={3} className="mb-4">
-                What to Send
-              </Heading>
-              <Text className="mb-4">
-                Keep it simple and useful. One email per week is enough. Focus on what is happening
-                this week and one reason to book.
-              </Text>
-              <FeatureList
-                items={[
-                  'Weekly"What\'s On" roundup: events, specials, live music',
-                  'Seasonal menus and new dish announcements',
-                  'Exclusive offers for database members (makes them feel valued)',
-                  'Last-minute table availability on quiet nights',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-              <div className="mt-4">
-                <Link
-                  href="/licensees-guide/email-marketing-pub-retention"
-                  className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-                >
-                  Read: Email marketing for pub retention →
-                </Link>
-              </div>
-            </div>
-          </Grid>
-        </Container>
-      </Section>
-
-      {/* === PILLAR SECTION: Local SEO === */}
-      <Section background="surface" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            Local SEO for Pubs
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            When someone searches &ldquo;pub near me&rdquo; or &ldquo;Sunday roast [your
-            town],&rdquo; you need to appear. This is often the fastest win for any pub.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 2 }} gap="large" className="mb-8">
-            <Card variant="bordered" padding="large">
-              <Heading level={3} className="mb-4">
-                Google Business Profile
-              </Heading>
-              <Text className="mb-4">
-                Your Google Business Profile is the single most important piece of digital marketing
-                for a pub. It appears in Maps, local search, and &ldquo;near me&rdquo; queries.
-              </Text>
-              <FeatureList
-                items={[
-                  'Complete every field: hours, menu link, booking link, attributes',
-                  'Add 10+ high-quality photos (food, interior, garden, events)',
-                  'Post weekly updates with events and specials',
-                  'Respond to every review within 24 hours (positive and negative)',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-            </Card>
-
-            <Card variant="bordered" padding="large">
-              <Heading level={3} className="mb-4">
-                Reviews Strategy
-              </Heading>
-              <Text className="mb-4">
-                Reviews are the biggest ranking factor for local search. More reviews, higher
-                ratings, and recent activity all push you up the results.
-              </Text>
-              <FeatureList
-                items={[
-                  'Ask every happy table to leave a review: a simple card works',
-                  'Train staff to mention reviews naturally at the end of a meal',
-                  'Respond to negative reviews calmly and professionally',
-                  'Never buy fake reviews: Google catches them and penalises you',
-                ]}
-                icon="check"
-                iconColor="green"
-                spacing="tight"
-              />
-            </Card>
-          </Grid>
-        </Container>
-      </Section>
-
-      {/* === PILLAR SECTION: Menu Engineering === */}
-      <Section background="white" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            Menu Engineering and Profit Growth
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            Your menu is your biggest profit lever. Small changes to layout, descriptions, and
-            pricing can shift gross profit by double digits.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 3 }} gap="medium" className="mb-8">
-            <Card variant="bordered" padding="large">
-              <Heading level={4} className="mb-3">
-                Menu Layout
-              </Heading>
-              <Text size="sm" color="muted">
-                Place high-margin dishes in the top-right of each section. Use boxes or borders to
-                draw attention. Remove pound signs: they make people think about cost.
-              </Text>
-            </Card>
-            <Card variant="bordered" padding="large">
-              <Heading level={4} className="mb-3">
-                Descriptions That Sell
-              </Heading>
-              <Text size="sm" color="muted">
-                Sensory language lifts orders of your higher-margin dishes. &ldquo;Slow-roasted
-                belly pork with crackling&rdquo; outsells &ldquo;pork belly&rdquo; every time. Tell
-                the story.
-              </Text>
-            </Card>
-            <Card variant="bordered" padding="large">
-              <Heading level={4} className="mb-3">
-                Waste Reduction
-              </Heading>
-              <Text size="sm" color="muted">
-                Pre-order systems with deposits cut booking no-shows by 89% at The Anchor. Know your
-                numbers, order precisely, and use daily specials to move surplus stock.
-              </Text>
-            </Card>
-          </Grid>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/licensees-guide/menu-engineering-lift-average-spend"
-              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-            >
-              Menu engineering guide →
-            </Link>
-            <Link
-              href="/licensees-guide/upselling-secrets-training-scripts"
-              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-            >
-              Upselling training scripts →
-            </Link>
-            <Link
-              href="/licensees-guide/profitable-pub-food-menu-ideas"
-              className="text-orange-dark hover:text-orange-darker font-medium text-sm"
-            >
-              Profitable food menu ideas →
-            </Link>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Results */}
-      <Section background="blue-support" padding="large">
-        <Container>
-          <Heading level={2} color="white" align="center" className="mb-4">
-            What Pub Marketing Actually Delivers
-          </Heading>
-          <Text size="lg" color="white" align="center" className="opacity-90 mb-12 measure">
-            Real numbers from The Anchor, the same systems we set up for clients.
-          </Text>
-
-          <Grid columns={{ default: 2, md: 4 }} gap="medium">
-            <div className="text-center">
-              <Text size="2xl" weight="bold" className="text-white">
-                +98%
-              </Text>
-              <Text size="sm" className="text-white/80 mt-1">
-                Food revenue (3 months)
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" className="text-white">
-                +828%
-              </Text>
-              <Text size="sm" className="text-white/80 mt-1">
-                Google Search visibility
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" className="text-white">
-                +403%
-              </Text>
-              <Text size="sm" className="text-white/80 mt-1">
-                Table bookings
-              </Text>
-            </div>
-            <div className="text-center">
-              <Text size="2xl" weight="bold" className="text-white">
-                -89%
-              </Text>
-              <Text size="sm" className="text-white/80 mt-1">
-                Booking no-shows
-              </Text>
-            </div>
-          </Grid>
-        </Container>
-      </Section>
-
-      {/* Solutions */}
-      <Section background="white" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            {pubMarketingData.solutions.heading}
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            Pick the issue that is costing you the most. We will start there.
-          </Text>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {solutionCards.map((card) => (
-              <Card key={card.href} variant="bordered" padding="large" className="flex flex-col">
-                <div className="flex-1">
-                  <Heading level={3} className="mb-3">
-                    {card.title}
-                  </Heading>
-                  <Text color="muted" className="mb-6">
-                    {card.description}
-                  </Text>
-                </div>
-                <div>
-                  <Button href={card.href} variant="primary" size="medium">
-                    {card.ctaText}
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* More reading */}
-      <Section background="surface" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-4">
-            More Pub Marketing Guides
-          </Heading>
-          <Text size="lg" align="center" className="mb-10 measure text-brand-base/70">
-            Deep dives into specific pub marketing challenges, written by a licensee who has solved
-            them.
-          </Text>
-
-          <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="medium">
-            {[
-              {
-                title: 'Low Budget Pub Marketing Ideas',
-                href: '/licensees-guide/low-budget-pub-marketing-ideas',
-                desc: 'Free and near-free tactics that actually drive footfall.',
-              },
-              {
-                title: 'Midweek Offers That Work',
-                href: '/licensees-guide/midweek-pub-offers-that-work',
-                desc: 'Proven promotions for the quietest nights of the week.',
-              },
-              {
-                title: 'Compete With Pub Chains',
-                href: '/licensees-guide/compete-with-wetherspoons',
-                desc: 'Positioning tactics that chains cannot copy.',
-              },
-              {
-                title: 'Revenue Levers for Struggling Pubs',
-                href: '/licensees-guide/revenue-levers-struggling-pubs',
-                desc: 'The key financial levers every licensee should know.',
-              },
-              {
-                title: 'Staff Motivation Without Pay Rises',
-                href: '/licensees-guide/staff-motivation-hacks-no-pay-rise',
-                desc: 'Keep your team engaged without increasing the wage bill.',
-              },
-              {
-                title: 'Recession-Proof Pub Strategies',
-                href: '/licensees-guide/recession-proof-pub-strategies',
-                desc: 'How to protect your pub when the economy tightens.',
-              },
-            ].map((guide) => (
-              <Link key={guide.href} href={guide.href} className="block group">
-                <Card
-                  variant="bordered"
-                  padding="large"
-                  className="h-full group-hover:border-orange transition-colors"
-                >
-                  <Heading
-                    level={4}
-                    className="mb-2 group-hover:text-orange-dark transition-colors"
-                  >
-                    {guide.title}
-                  </Heading>
-                  <Text size="sm" color="muted">
-                    {guide.desc}
-                  </Text>
-                </Card>
-              </Link>
-            ))}
-          </Grid>
-        </Container>
-      </Section>
-
-      {/* Locations */}
-      <Section background="blue-support" padding="large">
-        <Container width="measure-wide">
-          <div className="text-center">
-            <Heading level={2} color="white" className="mb-4">
-              {pubMarketingData.locations.heading}
-            </Heading>
-            <Text size="lg" color="white" className="opacity-90 mb-8">
-              {pubMarketingData.locations.description}
-            </Text>
-          </div>
-
-          {/* Plain chips, not links. Each county used to have its own landing page; those
-              were consolidated into this page and now 301 here, so linking them would
-              either point at a redirect or point this page at itself. */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {pubMarketingData.locations.areas.map((area) => (
-              <span
-                key={area}
-                className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm text-white"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Process */}
-      <Section background="white" padding="large">
-        <Container>
-          <Heading level={2} align="center" className="mb-12">
-            {pubMarketingData.process.heading}
-          </Heading>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {(
-              pubMarketingData.process.steps as Array<{
-                number: string;
-                title: string;
-                description: string;
-              }>
-            ).map((step) => (
-              <div key={step.number} className="text-center">
-                <div className="w-12 h-12 bg-orange text-brand-base rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
-                  {step.number}
-                </div>
-                <Heading level={4} className="mb-3">
-                  {step.title}
-                </Heading>
-                <Text size="sm" color="muted">
-                  {step.description}
-                </Text>
+                </dt>
+                <dd className="mt-2 text-[16px] leading-relaxed text-oj-ink-2">{item.body}</dd>
               </div>
             ))}
-          </div>
-        </Container>
-      </Section>
+          </dl>
+        </Band>
 
-      {/* FAQ */}
-      <Section background="surface" padding="large">
-        <Container width="measure-wide">
-          <Heading level={2} align="center" className="mb-12">
-            Pub Marketing Questions Answered
-          </Heading>
-          <div className="space-y-4">
-            {pillarFaqs.map((faq, index) => (
-              <FAQItem key={index} question={faq.question} answer={faq.answer} />
+        <Band
+          heading="proven in our own venue."
+          intro="Every figure below is from The Anchor, measured against a baseline, in a business where getting it wrong cost us rather than a client."
+          tone="paper"
+        >
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PROOF.map((proof) => (
+              <ProofCard
+                key={proof.label}
+                value={proof.value}
+                label={proof.label}
+                context={proof.context}
+                area={proof.area}
+              />
             ))}
           </div>
-        </Container>
-      </Section>
+        </Band>
 
-      {/* CTA */}
-      <Section background="orange-light" padding="large">
-        <Container width="measure">
-          <div className="text-center">
-            <Heading level={2} className="mb-4">
-              {pubMarketingData.cta.title}
-            </Heading>
-            <Text size="lg" className="mb-8 measure">
-              {pubMarketingData.cta.subtitle}
-            </Text>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-              <TrackedButton
-                eventName="package_cta_click"
-                eventProperties={{ cta: 'pub_marketing_packages' }}
-                href="/ways-to-work"
-                variant="primary"
-                size="large"
-              >
-                See Our Packages
-              </TrackedButton>
-              <WhatsAppButton
-                text={pubMarketingData.cta.whatsappMessage}
-                label="Message Peter on WhatsApp"
-                size="large"
-              />
-            </div>
-            <div className="flex flex-wrap gap-4 justify-center mt-4">
-              <Button href="/capabilities" variant="ghost" size="medium">
-                What we do
-              </Button>
-              <Button href="/pub-marketing-agency" variant="ghost" size="medium">
-                Why choose Orange Jelly?
-              </Button>
-            </div>
-            <Text size="sm" color="muted" className="mt-4">
-              Packages from £375 + VAT, no lock-in, payment plans available
-            </Text>
+        <Band heading="how it works." tone="ink">
+          <ol className="grid list-none gap-6 p-0 sm:grid-cols-2">
+            {METHOD.map((step, index) => (
+              <li key={step.word}>
+                <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
+              </li>
+            ))}
+          </ol>
+          <div className="mt-9">
+            <Button variant="ink" href="/how-we-work">
+              The method in full
+            </Button>
           </div>
-        </Container>
-      </Section>
+        </Band>
+
+        <Band heading="questions publicans ask.">
+          <div className="measure">
+            <FAQ items={FAQS} />
+          </div>
+        </Band>
+
+        <Band tone="ink" size="lg" divider={false}>
+          <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+            we are a tenant too.
+          </h2>
+          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+            Whatever is happening in your venue, we have probably had a version of it in ours. Tell
+            us what it is.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" arrow href="/start-here">
+              Bring us the problem
+            </Button>
+          </div>
+        </Band>
+      </main>
+
+      <OjFooter />
     </>
   );
 }
