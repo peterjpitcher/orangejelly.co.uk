@@ -150,10 +150,10 @@ Continuous. Starts during phase 3 and does not stop.
 | T081 | Tier-two: NextStep and ShareRow, 16 posts | T073, T074 | M | | **done, covered by T073 and T074 which applied to all 105** |
 | T082 | `tasks/repositioning/TIER-THREE-RUBRIC.md`: eight weighted criteria, a decision tree, automatic keeps and merge mechanics | | S | | **done** |
 | T083 | Score the first ten tier-three posts, review, then decide whether to continue | T082 | M | Approve keep, merge or retire | |
-| T084 | Article: `ai for accountants` | T075 | M | **Your material needed.** | |
-| T085 | Article: `marketing for law firms` | T075 | M | **Your material needed.** | |
+| T084 | Article: `ai for accountants`, research-led and flagged as such. It also gives `/growth-problems/using-ai-intelligently` its first way in from search | T075 | M | **Sharpen with your real exposure when you have it.** | **done, research-led** |
+| T085 | Article: `marketing for law firms`, research-led and flagged as such | T075 | M | **Sharpen if you have legal exposure; the plan says an honest none is fine.** | **done, research-led** |
 | T086 | Article: `what is a fractional cmo`, written from research and flagged as such on the page | T075 | M | | **done** |
-| T087 | Article: `professional services marketing` | T075 | M | **Your material needed.** | |
+| T087 | Article: `professional services marketing`, research-led and flagged as such | T075 | M | **Your view on why they market badly would sharpen it.** | **done, research-led** |
 | T088 | Articles 5 to 15 against the remaining target terms | T084 to T087 | XL | Ongoing input | |
 | T089 | `npm run monitor:posts -- <GSC Pages.csv>` diffs all 30 against the committed baseline and flags real movement | T073 | M | Export from Search Console weekly for eight weeks | **script done, the weekly export is yours** |
 | T090 | Trades second wave: keyword round 4, then pages (gap G11) | T077 | L | Decide when | |

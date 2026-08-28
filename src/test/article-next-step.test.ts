@@ -66,16 +66,27 @@ describe('the mapping', () => {
      * tills and till data, and pointing those at the AI page would be a dishonest
      * handoff for a reader who came to find out about a till.
      *
-     * It is a CONTENT gap, not a mapping gap, and the fix is the AI-for-profession
-     * articles rather than borrowed hospitality traffic. That is T084 to T087, and
-     * this assertion is what stops the omission being forgotten: it fails the day
-     * an article finally points there, forcing the note to be removed.
+     * It was a CONTENT gap rather than a mapping gap, and it is now filled from the
+     * other side: `content/insights/ai-for-accountants.md` points at that page, so
+     * it has a way in from search that is not borrowed hospitality traffic. The
+     * assertion below proves that, and this list stays because no HOSPITALITY
+     * article should be forced there.
      */
     const KNOWN_ORPHANS = ['using-ai-intelligently'];
 
     const pointedAt = new Set(Object.values(ARTICLE_NEXT_STEPS).map((entry) => entry.problem));
     const orphaned = GROWTH_PROBLEMS.filter((p) => !pointedAt.has(p.slug)).map((p) => p.slug);
     expect(orphaned).toEqual(KNOWN_ORPHANS);
+  });
+
+  it('gives the AI problem its way in from the insights collection instead', async () => {
+    // The hospitality library legitimately has nothing to say about AI. The entry
+    // point is an article written for the sector that searches for it.
+    const { getAllInsights } = await import('@/lib/insights');
+    const pointingAtAi = getAllInsights().filter(
+      (insight) => insight.problemPage === 'using-ai-intelligently'
+    );
+    expect(pointingAtAi.length).toBeGreaterThan(0);
   });
 
   it('keeps the thinly-served problems visible', () => {
