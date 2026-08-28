@@ -29,7 +29,8 @@
     "check:slugs": "node scripts/check-slug-collisions.mjs",
     "monitor:posts": "node scripts/monitor-protected-posts.mjs",
     "check:claims": "node scripts/check-claims.mjs",
-    "check:synthetic": "node scripts/synthetic-check.mjs"
+    "check:synthetic": "node scripts/synthetic-check.mjs",
+    "audit:contrast": "node scripts/audit-contrast.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [

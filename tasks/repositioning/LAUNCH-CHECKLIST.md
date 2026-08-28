@@ -20,11 +20,11 @@ Active phases after release: active, phase4
 
 - [ ] `/capabilities` → `/solutions`
 - [ ] `/compete-with-pub-chains` → `/licensees-guide/compete-with-wetherspoons`
-- [ ] `/empty-pub-solutions` → `/pub-rescue`
-- [ ] `/fix-my-pub` → `/pub-rescue`
+- [ ] `/empty-pub-solutions` → `/small-business-rescue`
+- [ ] `/fix-my-pub` → `/small-business-rescue`
 - [ ] `/pub-marketing-agency` → `/pub-marketing`
 - [ ] `/pub-marketing-no-budget` → `/pub-marketing`
-- [ ] `/quiet-midweek-solutions` → `/pub-rescue`
+- [ ] `/quiet-midweek-solutions` → `/small-business-rescue`
 - [ ] `/services/:slug` → `/pub-marketing`
 - [ ] `/ways-to-work` → `/how-we-work`
 - [ ] `/ways-to-work/:slug` → `/how-we-work`
@@ -35,7 +35,7 @@ These already redirect. The release repoints them, because their current
 destination is itself retiring and leaving them would form a chain.
 
 - [ ] `/services`: was `/ways-to-work`, becomes `/how-we-work`
-- [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/pub-rescue`
+- [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/small-business-rescue`
 
 ## Page files to delete (9)
 
@@ -61,6 +61,7 @@ it against production.
 
 ```bash
 for u in \
+  /pub-rescue \
   /services \
   /pub-marketing-surrey \
   /pub-marketing-london \
@@ -110,7 +111,7 @@ the old pages and the old redirect table in a single step. Nothing in the
 release writes to the database, so there is no data to unwind.
 
 **Not a trigger:** a ranking movement. Consolidation moves rankings around for
-weeks and reverting on day two would cost more authority than it saved.
+weeks, and reverting on day two would cost more authority than it earned.
 
 **Owner:** Peter Pitcher. Single responder, single mailbox
 (`peter@orangejelly.co.uk`). Reachable for 48 hours after the release.
@@ -128,4 +129,4 @@ day nobody is available.
 - [ ] Enquiry form submitted end to end against production Supabase and Resend
 - [ ] Search Console open, so the crawl can be watched rather than assumed
 
-_23 checkable items. Generated from 57 declared routes._
+_23 checkable items. Generated from 58 declared routes._

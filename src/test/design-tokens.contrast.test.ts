@@ -335,7 +335,6 @@ describe('repositioning palette contrast', () => {
 
   describe('large and non-text, needs 3:1', () => {
     const cases: Array<[string, string, string]> = [
-      ['muted ink on cream', OJ.ink3, OJ.cream],
       ['orange on ink, for inverse sections', OJ.orange, OJ.ink],
       ['ink border on cream', OJ.ink, OJ.cream],
     ];
@@ -550,6 +549,10 @@ describe('palette parity with the supplied pack', () => {
       ours: '#276e66',
       why: 'Design team correction, 28 Aug 2026. Pack #2E7D74 gives 3.99:1 on its own tint.',
     },
+    '--oj-ink-3': {
+      ours: '#666873',
+      why: 'Raised with the design team 28 Aug 2026, not yet answered. Pack #757784 fails on every surface it is used on: 4.29:1 on paper, 4.08:1 on cream, 3.66:1 on cream-2, against 4.5:1. It carries field hints, breadcrumbs and card context, so it was failing on every page. #666873 is the same hue at 87%, the shallowest darkening that clears all three.',
+    },
   };
 
   const ours = hexTokens(CSS);
@@ -714,5 +717,39 @@ describe('known shortfall: the ink control border on the orange band', () => {
     // A white border would clear 1.4.11 outright. Kept as an assertion so the
     // remedy is measured rather than assumed whenever this is revisited.
     expect(contrast('#ffffff', cssVar('--oj-orange-deep'))).toBeGreaterThanOrEqual(AA_NON_TEXT);
+  });
+});
+
+/**
+ * Muted ink has to clear body text, not large text.
+ *
+ * It was in the 3:1 group, on the reasoning that a muted colour carries secondary
+ * material. That reasoning does not survive looking at where it is actually used:
+ * field hints at 13px, breadcrumb links at 13.5px, card context at 14.5px. All of
+ * that is body text and all of it needs 4.5:1.
+ *
+ * At #757784 it cleared none of the three surfaces it renders on, which a rendered
+ * audit found and no unit test did, because no unit test knew which surfaces those
+ * were. Now it does.
+ */
+describe('muted ink carries body text', () => {
+  const INK_3 = cssVar('--oj-ink-3');
+  const SURFACES: Array<[string, string]> = [
+    // Named for the tokens rather than the shades. The design token gate reads bare
+    // strings looking for retired legacy colour names, and a label reading "cream"
+    // trips it: that word used to be a Tailwind colour here and no longer resolves.
+    ['--oj-paper', cssVar('--oj-paper')],
+    ['--oj-cream', cssVar('--oj-cream')],
+    ['--oj-cream-2', cssVar('--oj-cream-2')],
+  ];
+
+  it.each(SURFACES)('clears 4.5:1 on %s', (_name, surface) => {
+    expect(contrast(INK_3, surface)).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it('is still visibly lighter than the full ink', () => {
+    // If it darkens far enough to be mistaken for the primary text colour, the
+    // hierarchy it exists to express is gone and the fix has broken the design.
+    expect(contrast(INK_3, cssVar('--oj-ink'))).toBeGreaterThan(2);
   });
 });

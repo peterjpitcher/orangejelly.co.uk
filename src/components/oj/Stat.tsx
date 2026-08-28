@@ -51,7 +51,13 @@ export function Stat({
         className={cn(
           'font-oj font-black leading-none tracking-[-0.02em]',
           VALUE_SIZE[size],
-          accent ? 'text-oj-orange' : dark ? 'text-oj-cream' : 'text-oj-ink'
+          accent
+            ? dark
+              ? 'text-oj-orange'
+              : 'text-oj-orange-deep'
+            : dark
+              ? 'text-oj-cream'
+              : 'text-oj-ink'
         )}
       >
         {value}

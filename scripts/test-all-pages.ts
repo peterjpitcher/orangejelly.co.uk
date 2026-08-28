@@ -14,7 +14,7 @@ const pages = [
   { name: 'empty-pub-solutions', path: '/empty-pub-solutions' },
   { name: 'quiet-midweek-solutions', path: '/quiet-midweek-solutions' },
   { name: 'compete-with-pub-chains', path: '/compete-with-pub-chains' },
-  { name: 'pub-rescue', path: '/pub-rescue' },
+  { name: 'small-business-rescue', path: '/small-business-rescue' },
   { name: 'pub-marketing-no-budget', path: '/pub-marketing-no-budget' },
 ];
 
@@ -22,7 +22,7 @@ async function testAllPages() {
   // Create directories for screenshots and logs
   const screenshotDir = path.join(process.cwd(), 'test-results', 'screenshots');
   const logsDir = path.join(process.cwd(), 'test-results', 'logs');
-  
+
   if (!fs.existsSync(screenshotDir)) {
     fs.mkdirSync(screenshotDir, { recursive: true });
   }
@@ -45,7 +45,7 @@ async function testAllPages() {
 
   for (const pageInfo of pages) {
     console.log(`📸 Testing ${pageInfo.name} page...`);
-    
+
     const page = await context.newPage();
     const consoleLogs: string[] = [];
     const errors: string[] = [];
@@ -55,7 +55,7 @@ async function testAllPages() {
       const type = msg.type();
       const text = msg.text();
       consoleLogs.push(`[${type.toUpperCase()}] ${text}`);
-      
+
       if (type === 'error') {
         errors.push(text);
       }
@@ -118,10 +118,7 @@ async function testAllPages() {
         `URL: ${page.url()}`,
       ].join('\n');
 
-      fs.writeFileSync(
-        path.join(logsDir, `${pageInfo.name}.log`),
-        logContent
-      );
+      fs.writeFileSync(path.join(logsDir, `${pageInfo.name}.log`), logContent);
 
       // Print summary
       if (errors.length > 0) {
@@ -129,13 +126,12 @@ async function testAllPages() {
       } else {
         console.log(`  ✅ No errors`);
       }
-      console.log(`  📄 Screenshots saved`);
-      console.log(`  📝 Logs saved\n`);
-
+      console.log(`  📄 Screenshots written`);
+      console.log(`  📝 Logs written\n`);
     } catch (error) {
       console.error(`  ❌ Failed to test page: ${error}`);
-      
-      // Save error log
+
+      // Write the error log
       fs.writeFileSync(
         path.join(logsDir, `${pageInfo.name}-error.log`),
         `Failed to load page: ${error}\n\nConsole logs:\n${consoleLogs.join('\n')}`
@@ -152,7 +148,7 @@ async function testAllPages() {
     `Generated: ${new Date().toISOString()}`,
     '',
     '## Pages Tested',
-    pages.map(p => `- [${p.name}](${p.path})`).join('\n'),
+    pages.map((p) => `- [${p.name}](${p.path})`).join('\n'),
     '',
     '## Results',
     'Check the screenshots and logs directories for detailed results.',
@@ -164,13 +160,13 @@ async function testAllPages() {
     '### Log Files',
     '- Console and error logs: `[page-name].log`',
   ].join('\n');
-  
+
   fs.writeFileSync(summaryPath, summary);
 
   await browser.close();
-  
+
   console.log('✨ All tests complete!');
-  console.log(`📁 Results saved to: ${path.join(process.cwd(), 'test-results')}`);
+  console.log(`📁 Results written to: ${path.join(process.cwd(), 'test-results')}`);
 }
 
 // Run the tests

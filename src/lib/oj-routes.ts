@@ -20,7 +20,7 @@ export const OJ_ROUTES = [
   '/about',
   '/solutions',
   '/pub-marketing',
-  '/pub-rescue',
+  '/small-business-rescue',
   '/contact',
   '/growth-problems',
   '/tools',

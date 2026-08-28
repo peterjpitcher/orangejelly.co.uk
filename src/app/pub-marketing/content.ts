@@ -49,3 +49,29 @@ export const FAQS = [
     a: 'Yes. Almost every win here is operational or about messaging: events, positioning, local visibility, repeat visits. None of it depends on who supplies the beer.',
   },
 ] as const;
+
+/**
+ * Where we can get to in person.
+ *
+ * Restored from the page this one replaced. Eight county landing pages were
+ * consolidated into `/pub-marketing` in August 2026 and now 301 here, and the local
+ * intent that earned them is worth keeping on the page that absorbed it.
+ *
+ * They are chips, not links, and deliberately so: every one of those URLs redirects
+ * to this page, so linking them would either point at a redirect or point the page
+ * at itself.
+ *
+ * The wording is careful about what it claims. Orange Jelly works UK-wide and always
+ * has. These are the counties close enough to The Anchor for someone to turn up,
+ * which is a different and smaller promise.
+ */
+export const AREAS = [
+  'London',
+  'Surrey',
+  'Berkshire',
+  'Buckinghamshire',
+  'Hertfordshire',
+  'Kent',
+  'Hampshire',
+  'Oxfordshire',
+] as const;

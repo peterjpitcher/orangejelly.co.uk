@@ -9,7 +9,7 @@ const FILE_TARGETS = [
   'src/app/page.tsx',
   'src/app/results/layout.tsx',
   'src/app/results/page.tsx',
-  'src/app/pub-rescue/page.tsx',
+  'src/app/small-business-rescue/page.tsx',
   'src/app/opengraph-image.tsx',
   'src/app/pub-marketing-no-budget/page.tsx',
   'src/components/Meta.tsx',

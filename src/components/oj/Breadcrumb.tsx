@@ -51,14 +51,28 @@ export function Breadcrumb({
                   {item.label}
                 </Anchor>
               ) : (
-                <span aria-current={last ? 'page' : undefined} className="text-oj-ink">
+                <span
+                  aria-current={last ? 'page' : undefined}
+                  /*
+                   * On the band this has to be the band's own text colour. It was
+                   * ink, which against the brand orange was fine and against the
+                   * deeper band is 2.92:1, under the 4.5:1 that 13.5px text needs.
+                   * The current page is already distinguished from the others by
+                   * being the only item without an underline, so nothing is lost by
+                   * dropping the colour difference here.
+                   */
+                  className={onOrange ? 'text-oj-on-band' : 'text-oj-ink'}
+                >
                   {item.label}
                 </span>
               )}
               {!last ? (
                 <span
                   aria-hidden="true"
-                  className={cn('font-normal', onOrange ? 'text-oj-on-band/70' : 'text-oj-orange')}
+                  className={cn(
+                    'font-normal',
+                    onOrange ? 'text-oj-on-band/80' : 'text-oj-orange-deep'
+                  )}
                 >
                   →
                 </span>

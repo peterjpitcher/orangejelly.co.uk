@@ -137,7 +137,7 @@ push('the old pages and the old redirect table in a single step. Nothing in the'
 push('release writes to the database, so there is no data to unwind.');
 push();
 push('**Not a trigger:** a ranking movement. Consolidation moves rankings around for');
-push('weeks and reverting on day two would cost more authority than it saved.');
+push('weeks, and reverting on day two would cost more authority than it earned.');
 push();
 push('**Owner:** Peter Pitcher. Single responder, single mailbox');
 push('(`peter@orangejelly.co.uk`). Reachable for 48 hours after the release.');

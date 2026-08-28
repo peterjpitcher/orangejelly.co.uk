@@ -16,7 +16,7 @@ import FractionalCmoPage from '@/app/fractional-cmo/page';
 import ProfessionalServicesPage from '@/app/sectors/professional-services/page';
 import NotFound from '@/app/not-found';
 import PubMarketingPage from '@/app/pub-marketing/page';
-import PubRescuePage from '@/app/pub-rescue/page';
+import SmallBusinessRescuePage from '@/app/small-business-rescue/page';
 import StartHerePage from '@/app/start-here/page';
 import type * as ReactDom from 'react-dom';
 
@@ -81,7 +81,7 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on the two hospitality sector pages', async () => {
     expect(await scan(<PubMarketingPage />)).toEqual([]);
-    expect(await scan(<PubRescuePage />)).toEqual([]);
+    expect(await scan(<SmallBusinessRescuePage />)).toEqual([]);
   });
 
   it('finds nothing on /contact or the 404', async () => {

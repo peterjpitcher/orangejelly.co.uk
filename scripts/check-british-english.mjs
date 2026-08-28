@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 
 const FILE_TARGETS = new Set([
   'src/app/empty-pub-solutions/page.tsx',
-  'src/app/pub-rescue/page.tsx',
+  'src/app/small-business-rescue/page.tsx',
   'src/app/pub-marketing-no-budget/page.tsx',
   'src/app/results/page.tsx',
   'src/app/licensees-guide/page.tsx',

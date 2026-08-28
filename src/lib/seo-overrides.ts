@@ -58,7 +58,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads and local SEO for independent pubs. From £375 + VAT.',
   },
-  '/pub-rescue': {
+  '/small-business-rescue': {
     title: 'Pub Rescue: Fast Turnaround Help From a Working Licensee',
     description:
       'Pub in trouble? Get a fast, practical rescue plan from a licensee who has done it. We fix the highest-impact problem first. Packages from £375 + VAT.',

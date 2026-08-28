@@ -6,8 +6,8 @@ import { describe, expect, it } from 'vitest';
 import { PROOF } from '@/app/home-content';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import { FAQS, LOOK_AT_FIRST } from '@/app/pub-marketing/content';
-import PubRescuePage from '@/app/pub-rescue/page';
-import { CAUSES, WOULD_NOT_DO } from '@/app/pub-rescue/content';
+import SmallBusinessRescuePage from '@/app/small-business-rescue/page';
+import { CAUSES, FAQS as RESCUE_FAQS, WOULD_NOT_DO } from '@/app/small-business-rescue/content';
 
 const COPY = readFileSync(
   join(process.cwd(), 'tasks/repositioning/copy/sector-hospitality.md'),
@@ -72,39 +72,39 @@ describe('/pub-marketing', () => {
   });
 });
 
-describe('/pub-rescue', () => {
+describe('/small-business-rescue', () => {
   it('refuses the emergency framing it used to carry', () => {
     // A venue that genuinely cannot pay this month needs its BDM, its accountant
     // and the Licensed Trade Charity. Saying so is true, it is the reason to trust
     // the rest of the page, and it keeps Orange Jelly out of engagements where the
     // client has lost the ability to act.
-    const text = textOf(<PubRescuePage />);
+    const text = textOf(<SmallBusinessRescuePage />);
     expect(text).toMatch(/We are not an emergency service and we will not pretend to be one/);
     expect(text).toMatch(/Licensed Trade Charity/);
   });
 
   it('sends people who need other help to other help', () => {
-    render(<PubRescuePage />);
+    render(<SmallBusinessRescuePage />);
     const link = screen.getByRole('link', { name: /Licensed Trade Charity/ });
     expect(link).toHaveAttribute('href', 'https://www.licensedtradecharity.org.uk');
     expect(link).toHaveAttribute('rel', expect.stringContaining('noopener'));
   });
 
   it('names the six causes and what it would not do', () => {
-    render(<PubRescuePage />);
+    render(<SmallBusinessRescuePage />);
     expect(CAUSES).toHaveLength(6);
     for (const cause of CAUSES) expect(screen.getByText(cause.title)).toBeInTheDocument();
     for (const item of WOULD_NOT_DO) expect(screen.getByText(item)).toBeInTheDocument();
   });
 
   it('insists on a baseline before anything changes', () => {
-    const text = textOf(<PubRescuePage />);
+    const text = textOf(<SmallBusinessRescuePage />);
     expect(text).toMatch(/The baseline first/);
     expect(text).toMatch(/Start before there is a baseline/);
   });
 
   it('quotes no price and promises no timescale', () => {
-    const text = textOf(<PubRescuePage />);
+    const text = textOf(<SmallBusinessRescuePage />);
     expect(text).not.toMatch(/£/);
     expect(text).not.toMatch(/within \d+ (hours|days)|30-day|guarantee/i);
   });
@@ -112,7 +112,7 @@ describe('/pub-rescue', () => {
 
 describe('both sector pages', () => {
   it('send every action to the conversation', () => {
-    for (const page of [<PubMarketingPage key="m" />, <PubRescuePage key="r" />]) {
+    for (const page of [<PubMarketingPage key="m" />, <SmallBusinessRescuePage key="r" />]) {
       const { unmount } = render(page);
       const ctas = screen.getAllByRole('link', { name: /Bring us the problem/ });
       expect(ctas.length).toBeGreaterThanOrEqual(2);
@@ -124,7 +124,7 @@ describe('both sector pages', () => {
   it('no longer push people into WhatsApp as the first step', () => {
     // The old pages led with a WhatsApp link, which skips the enquiry entirely and
     // leaves no record of the lead.
-    for (const page of [<PubMarketingPage key="m" />, <PubRescuePage key="r" />]) {
+    for (const page of [<PubMarketingPage key="m" />, <SmallBusinessRescuePage key="r" />]) {
       const { container, unmount } = render(page);
       expect(container.querySelector('a[href*="wa.me"]')).toBeNull();
       unmount();
@@ -135,6 +135,8 @@ describe('both sector pages', () => {
     for (const item of [...LOOK_AT_FIRST, ...CAUSES]) {
       expect(COPY).toContain(item.body.replace(/\s+/g, ' '));
     }
-    for (const faq of FAQS) expect(COPY).toContain(faq.a.replace(/\s+/g, ' '));
+    for (const faq of [...FAQS, ...RESCUE_FAQS]) {
+      expect(COPY).toContain(faq.a.replace(/\s+/g, ' '));
+    }
   });
 });

@@ -261,7 +261,19 @@
   --oj-orange-soft: #fde3cc;
   --oj-ink: #23252e;
   --oj-ink-2: #4a4c58;
-  --oj-ink-3: #757784;
+  /*
+   * Muted text. Darkened from #757784 on 28 August 2026 after a contrast audit of
+   * the rendered site found it failing on every surface it is used on: 4.29:1 on
+   * paper, 4.08:1 on cream, 3.66:1 on cream-2, against the 4.5:1 body text needs.
+   * It carries field hints, breadcrumbs, captions and card context, so it was
+   * failing on every page rather than in one component.
+   *
+   * #666873 is the same hue at 87% and the shallowest darkening that clears 4.5:1
+   * on the darkest of the three (4.57:1 on cream-2, 5.09:1 on cream, 5.35:1 on
+   * paper). It still reads as clearly lighter than the full ink, which is the job
+   * the token exists to do.
+   */
+  --oj-ink-3: #666873;
   --oj-cream: #f7f5f1;
   --oj-cream-2: #ece9e2;
   --oj-paper: #fcfbf9;

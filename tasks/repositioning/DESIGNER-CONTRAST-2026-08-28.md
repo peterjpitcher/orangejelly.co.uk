@@ -169,3 +169,82 @@ The new marks are in `public/brand/`. The horizontal lockup on the orange header
 currently a `brightness-0 invert` filter on the dark asset. It renders correctly, but
 a proper reversed horizontal asset would be better than a filter, particularly for
 anyone printing a page. **Can you supply one?**
+
+---
+
+## Round three: a full audit of the rendered site
+
+The band work prompted a proper sweep rather than another spot check, so
+`npm run audit:contrast` now renders all 34 live routes and measures every visible
+text node against its real composited background.
+
+It exists because unit tests could not have found any of this. They check the
+palette's pairs are sound; they cannot check that a component reaches for the right
+pair. That gap is exactly where the failures were.
+
+Getting the measurement honest took three passes. The first run reported 157
+failures. 52 were text on a gradient the script could not see, and 52 false alarms
+in one page is how a check like this gets ignored, so it now reads gradient stops,
+composites absolutely positioned scrims, and skips visually hidden text.
+
+**157 real-looking findings became 44 real ones, and are now 41.**
+
+### Fixed
+
+**`--oj-ink-3`, the muted text colour: 34 failures on its own.** It was #757784,
+which clears nothing it is used on: 4.29:1 on paper, 4.08:1 on cream, 3.66:1 on
+cream-2, against the 4.5:1 body text needs. It carries field hints, breadcrumbs,
+card context and captions, so it was failing on every page rather than in one place.
+
+It was also sitting in the suite's 3:1 group, on the reasoning that muted text is
+secondary. Looking at where it actually renders, at 13px and 13.5px, that reasoning
+does not hold. It has been moved to the 4.5:1 group.
+
+Now **#666873**, the same hue at 87% and the shallowest darkening that clears all
+three surfaces: 5.35:1 on paper, 5.09:1 on cream, 4.57:1 on cream-2. It still reads
+clearly lighter than the full ink, which is the job it exists to do.
+
+**This is a change to your palette and we would like it confirmed.** It is recorded
+as an approved divergence in the test suite so it cannot drift, and it is the third
+such correction after `--oj-orange-deep` and `--cat-demand`.
+
+**The brand orange used as text on light surfaces.** `Stat`, `PressureCard` and the
+`Header` wordmark used `--oj-orange` for their accent, which on paper is 2.73:1 and
+fails even the 3:1 large-text floor. They now pick the deep orange on light grounds
+and keep the brand orange on ink, where it is 5.55:1 and correct.
+
+Worth saying we got this wrong first time and the audit caught it: the same swap was
+applied to four headings on `/about`, `/how-we-work`, `/fractional-cmo` and
+`/sectors/professional-services`, which turned out to sit on ink bands rather than
+light ones, where it made 5.55:1 into 2.90:1. Reverted, measured, and the reason is
+in the code.
+
+**The breadcrumb's current page on a band.** Ink at 2.92:1, from the band move. It is
+now the band's own text colour, and the current page is still distinguished by being
+the only item without an underline.
+
+**The WhatsApp button's trust line, at 1.69:1 on three live service pages.** It was
+navy at 70%, chosen because that gives 5.27:1 on white, which it does. The button is
+also used inside the blue call-to-action band, where navy on blue is invisible. It
+now inherits its colour instead of naming one: 4.80:1 on the blue, 7.21:1 on white.
+
+### Left alone, on purpose
+
+**27 failures on five pages that redirect in phase 4** (`/fix-my-pub`,
+`/empty-pub-solutions`, `/compete-with-pub-chains` and the four `/ways-to-work`
+pages). Legacy styling on pages that are going away. Fixing them is work thrown away
+at launch.
+
+**9 on `/dev/components`.** The internal gallery, not in the sitemap, and several are
+deliberate swatch labels showing what a colour looks like.
+
+**1 on `/sectors/professional-services`:** `--cat-ops` at 4.45:1, the tint you asked
+us to freeze. Unchanged, still recorded, still latent rather than live.
+
+### Not measurable, and worth your eye
+
+Guide cards put white text over a photograph with a 35% navy scrim. Against the
+gradient fallback that is 5.40:1 and fine. Against a bright photograph it may not be,
+and no static check can tell you. If you have a view on the scrim strength, we would
+take it: at 55% the same text is 6.58:1 against the gradient and has much more room
+against a light image.

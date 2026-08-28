@@ -161,7 +161,13 @@ export function MethodStep({
       <span
         className={cn(
           'font-oj text-[28px] font-black leading-none',
-          active ? 'text-oj-orange' : dark ? 'text-oj-cream' : 'text-oj-ink'
+          active
+            ? dark
+              ? 'text-oj-orange'
+              : 'text-oj-orange-deep'
+            : dark
+              ? 'text-oj-cream'
+              : 'text-oj-ink'
         )}
       >
         {word}

@@ -106,7 +106,7 @@ export function Header({
         orange ? 'text-oj-on-band' : 'text-oj-ink'
       )}
     >
-      orange <span className={orange ? 'text-oj-ink' : 'text-oj-orange'}>jelly</span>
+      orange <span className={orange ? 'text-oj-on-band' : 'text-oj-orange-deep'}>jelly</span>
     </span>
   );
 

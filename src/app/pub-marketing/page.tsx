@@ -13,7 +13,7 @@ import {
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { FAQS, LOOK_AT_FIRST } from './content';
+import { AREAS, FAQS, LOOK_AT_FIRST } from './content';
 
 /**
  * `/pub-marketing`. The hospitality sector landing page.
@@ -155,6 +155,29 @@ export default function PubMarketingPage(): JSX.Element {
               The method in full
             </Button>
           </div>
+        </Band>
+
+        <Band heading="where we can get to in person." tone="paper">
+          <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
+            We work with pubs anywhere in the UK, and most of what we do works the same either way.
+            These are the counties close enough to The Anchor for us to turn up.
+          </p>
+          {/*
+            Chips, not links. Each of these counties had its own landing page until
+            they were consolidated into this one, and every one of those URLs now
+            redirects here. Linking them would either point at a redirect or point
+            the page at itself.
+          */}
+          <ul className="mt-6 flex list-none flex-wrap gap-2.5 p-0">
+            {AREAS.map((area) => (
+              <li
+                key={area}
+                className="rounded-oj border-1.5 border-oj-ink bg-oj-cream px-3.5 py-1.5 text-[15px] font-semibold text-oj-ink"
+              >
+                {area}
+              </li>
+            ))}
+          </ul>
         </Band>
 
         <Band heading="questions publicans ask.">

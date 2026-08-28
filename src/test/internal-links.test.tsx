@@ -14,7 +14,7 @@ import HomePage from '@/app/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import NotFound from '@/app/not-found';
 import PubMarketingPage from '@/app/pub-marketing/page';
-import PubRescuePage from '@/app/pub-rescue/page';
+import SmallBusinessRescuePage from '@/app/small-business-rescue/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import ResultsPage from '@/app/results/page';
 import SolutionsPage from '@/app/solutions/page';
@@ -56,7 +56,7 @@ const PAGES: Array<[string, React.ReactElement]> = [
   ['/about', <AboutPage key="f" />],
   ['/solutions', <SolutionsPage key="g" />],
   ['/pub-marketing', <PubMarketingPage key="h" />],
-  ['/pub-rescue', <PubRescuePage key="i" />],
+  ['/small-business-rescue', <SmallBusinessRescuePage key="i" />],
   ['/contact', <ContactPage key="j" />],
   ['/404', <NotFound key="k" />],
   ['/growth-problems', <GrowthProblemsHubPage key="l" />],

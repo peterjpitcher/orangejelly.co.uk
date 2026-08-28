@@ -101,9 +101,20 @@ function WhatsAppButton({
           {showPhone && <span className="text-sm sm:text-xs opacity-90">{CONTACT.phone}</span>}
         </span>
       </a>
-      {/* charcoal/70, not /60. At 60% this microcopy sat at 3.90:1 on white, under
-          the 4.5:1 AA minimum for text this size. 70% gives 5.27:1. */}
-      {trustText && <span className="mt-2 block text-xs text-brand-base/70">{trustText}</span>}
+      {/*
+        Inherits its colour rather than naming one.
+
+        This used to be charcoal at 70%, chosen because it gives 5.27:1 on white.
+        It does, but the button is also used inside the blue call-to-action band on
+        the three service pages, where navy on blue is 1.69:1 and the line is
+        effectively invisible. A colour that is only correct on one background is
+        the bug, not the particular value.
+
+        Inheriting gives white on the blue band and navy on the light sections, and
+        80% opacity keeps it quieter than the button without dropping it below AA:
+        4.80:1 on the blue, 7.21:1 on white.
+      */}
+      {trustText && <span className="mt-2 block text-xs opacity-80">{trustText}</span>}
     </span>
   );
 }

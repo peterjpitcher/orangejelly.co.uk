@@ -13,7 +13,7 @@ import AiReadinessPage from '@/app/tools/ai-readiness/page';
 import FractionalCmoPage from '@/app/fractional-cmo/page';
 import ProfessionalServicesPage from '@/app/sectors/professional-services/page';
 import PubMarketingPage from '@/app/pub-marketing/page';
-import PubRescuePage from '@/app/pub-rescue/page';
+import SmallBusinessRescuePage from '@/app/small-business-rescue/page';
 import SolutionsPage from '@/app/solutions/page';
 import StartHerePage from '@/app/start-here/page';
 import MainGate from '@/components/MainGate';
@@ -66,7 +66,7 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/about', <AboutPage key="about" />],
   ['/solutions', <SolutionsPage key="solutions" />],
   ['/pub-marketing', <PubMarketingPage key="pm" />],
-  ['/pub-rescue', <PubRescuePage key="pr" />],
+  ['/small-business-rescue', <SmallBusinessRescuePage key="pr" />],
   ['/contact', <ContactPage key="contact" />],
   ['/growth-problems', <GrowthProblemsHubPage key="gph" />],
   ['/tools/ai-readiness', <AiReadinessPage key="air" />],
