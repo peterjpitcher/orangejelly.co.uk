@@ -256,6 +256,34 @@ const ROUTES = [
   },
 
   // ------------------------------------------------------ repositioning routes
+  /*
+   * Declared here before they exist so the shape of the finished site is recorded
+   * in one place rather than inferred from which files happen to be present. The
+   * navigation already links to them, which is correct: phase 4 is an atomic
+   * release and nothing here goes live on its own.
+   */
+  {
+    path: '/growth-problems',
+    disposition: 'planned',
+    note: 'Hub. Six pressure points, each with its own page. Linked from the homepage and the nav.',
+  },
+  ...[
+    'create-demand',
+    'convert-more',
+    'protect-margin',
+    'operational-drag',
+    'improve-experience',
+    'build-for-scale',
+  ].map((slug) => ({
+    path: `/growth-problems/${slug}`,
+    disposition: /** @type {Disposition} */ ('planned'),
+  })),
+  { path: '/how-we-work', disposition: 'planned', note: 'HEAR CHALLENGE BUILD OPTIMISE in full.' },
+  {
+    path: '/results/[slug]',
+    disposition: 'planned',
+    note: 'Case studies. /results and /about already exist and are rebuilt in place, so they stay listed as live above.',
+  },
   {
     path: '/start-here',
     disposition: 'live',

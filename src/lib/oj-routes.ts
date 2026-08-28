@@ -12,8 +12,13 @@
  *
  * @see tasks/repositioning/IMPLEMENTATION-SPEC.md section 4
  */
-export const OJ_ROUTES = ['/start-here'] as const;
+export const OJ_ROUTES = ['/', '/start-here'] as const;
 
 export function isOjRoute(pathname: string): boolean {
-  return OJ_ROUTES.some((route) => pathname === route || pathname.startsWith(`${route}/`));
+  // '/' is matched exactly. A prefix match on it would claim the whole site, which
+  // is the one thing this list must not do while the rest of the pages still run on
+  // the legacy chrome.
+  return OJ_ROUTES.some((route) =>
+    route === '/' ? pathname === '/' : pathname === route || pathname.startsWith(`${route}/`)
+  );
 }

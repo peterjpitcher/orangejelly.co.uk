@@ -116,3 +116,34 @@ describe('route manifest', () => {
     expect(campaign.every((r) => r.permanent === false)).toBe(true);
   });
 });
+
+describe('planned routes', () => {
+  it('declares each path once within ROUTES', () => {
+    // A path may legitimately appear twice across ALL_ENTRIES: once live now, once
+    // as a phase 4 redirect. Twice inside ROUTES is always a mistake, and the one
+    // that loses is decided by declaration order, which nobody reading the file
+    // would predict. This caught /results and /about being declared planned when
+    // they were already live and are rebuilt in place.
+    const counts = new Map<string, number>();
+    for (const route of ROUTES) counts.set(route.path, (counts.get(route.path) ?? 0) + 1);
+    expect([...counts.entries()].filter(([, n]) => n > 1)).toEqual([]);
+  });
+
+  it('never advertises a route that does not exist yet', () => {
+    const planned = ROUTES.filter((route) => route.disposition === 'planned');
+    expect(planned.length).toBeGreaterThan(0);
+
+    const sitemap = new Set(getSitemapRoutes().map((route) => route.path));
+    const redirects = new Set(getRedirects().map((redirect) => redirect.source));
+    for (const route of planned) {
+      expect(sitemap.has(route.path)).toBe(false);
+      expect(redirects.has(route.path)).toBe(false);
+    }
+  });
+
+  it('gives no planned route a redirect destination', () => {
+    for (const route of ROUTES.filter((r) => r.disposition === 'planned')) {
+      expect(route.destination).toBeUndefined();
+    }
+  });
+});

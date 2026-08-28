@@ -111,3 +111,4 @@ export {
   type EnquiryFormProps,
   type EnquiryEntryPoint,
 } from './EnquiryForm';
+export { OjHeader, OjFooter, type OjHeaderProps, type OjNavKey } from './SiteChrome';

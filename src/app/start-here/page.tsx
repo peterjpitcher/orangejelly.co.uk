@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 
-import { Breadcrumb, Button, EnquiryForm, FAQ, Footer, Header, MethodStep } from '@/components/oj';
+import {
+  Breadcrumb,
+  Button,
+  EnquiryForm,
+  FAQ,
+  MethodStep,
+  OjFooter,
+  OjHeader,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
@@ -68,16 +76,7 @@ function Band({
 export default function StartHerePage(): JSX.Element {
   return (
     <>
-      <Header
-        tone="orange"
-        items={[
-          { label: 'Growth problems', href: '/growth-problems' },
-          { label: 'How we work', href: '/how-we-work' },
-          { label: 'Results', href: '/results' },
-          { label: 'Start here', href: '/start-here', current: true },
-        ]}
-        cta={{ label: 'Bring us the problem', href: '#enquiry' }}
-      />
+      <OjHeader tone="orange" current="start-here" ctaHref="#enquiry" />
 
       <main>
         <section className="border-b-1.5 border-oj-ink bg-oj-orange py-12 sm:py-16">
@@ -248,27 +247,7 @@ export default function StartHerePage(): JSX.Element {
         </section>
       </main>
 
-      <Footer
-        columns={[
-          {
-            title: 'Start',
-            links: [
-              { label: 'Start here', href: '/start-here' },
-              { label: 'How we work', href: '/how-we-work' },
-              { label: 'Results', href: '/results' },
-            ],
-          },
-          {
-            title: 'Company',
-            links: [
-              { label: 'About', href: '/about' },
-              { label: 'Insights', href: '/licensees-guide' },
-              { label: 'Privacy', href: '/privacy' },
-            ],
-          },
-        ]}
-        legal="Orange Jelly Limited"
-      />
+      <OjFooter />
     </>
   );
 }

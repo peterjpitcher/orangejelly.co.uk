@@ -1,437 +1,215 @@
-import { generateStaticMetadata } from '@/lib/metadata';
-import { getAllBlogPosts } from '@/lib/markdown/markdown';
-import { AsyncErrorBoundary } from '@/components/ErrorBoundary';
-import Hero from '@/components/Hero';
-import Section from '@/components/Section';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
-import Card from '@/components/Card';
-import Button from '@/components/Button';
-import TrackedButton from '@/components/TrackedButton';
-import Grid from '@/components/Grid';
-import AnimatedItem from '@/components/AnimatedItem';
-import Container from '@/components/Container';
-import Box from '@/components/Box';
-import OptimizedImage from '@/components/OptimizedImage';
-import FAQItem from '@/components/FAQItem';
-import Link from 'next/link';
-import { FAQSchema } from '@/components/StructuredData';
-import { SpeakableContent } from '@/components/SpeakableContent';
-import SeasonalPlaybooksBand from '@/components/SeasonalPlaybooksBand';
-import {
-  ProofStrip,
-  PackageCard,
-  CapabilityGrid,
-  CaseStudyCard,
-  PackageCTA,
-} from '@/components/packages';
-import path from 'path';
+import type { Metadata } from 'next';
 
-export async function generateMetadata() {
-  return generateStaticMetadata({
-    title: 'Hospitality Marketing That Fills Seats | Orange Jelly',
-    description:
-      'Hospitality marketing packages from a working pub. Strategy, events, social, local visibility, tested at The Anchor, delivered for your venue. Packages from £375 + VAT.',
-    path: '/',
-    ogImage: '/images/og-default.jpg',
-    ogType: 'website',
-  });
-}
+import { Button, MethodStep, OjFooter, OjHeader, PressureCard, ProofCard } from '@/components/oj';
+import { getBaseUrl } from '@/lib/site-config';
 
-const faqs = [
-  {
-    question: 'Which package is right for my pub?',
-    answer:
-      'If you have one clear issue, start with a Growth Fix. If you need ongoing monthly support, Momentum Month or Growth Partner. If your pub needs a complete reset, the Turnaround Intensive.',
-  },
-  {
-    question: 'How quickly can Orange Jelly create momentum?',
-    answer:
-      'Growth Fix clients typically see their first win within 2 weeks. Momentum Month and Growth Partner clients build visible momentum within 30-60 days.',
-  },
-  {
-    question: 'What makes Orange Jelly different from a typical agency?',
-    answer:
-      'We are small on purpose. You work directly with us, not layers of account managers. We test everything at The Anchor first, then apply what works with practical, action-first support.',
-  },
-  {
-    question: 'Do you offer payment plans?',
-    answer:
-      'Yes. We offer flexible payment options to make support accessible. Ask Peter when you get in touch.',
-  },
-];
+import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from './home-content';
 
-const problems = [
-  {
-    emoji: '\u{1FA91}',
-    title: 'Empty Tables Midweek',
-    description: 'Proven systems to fill Tuesday and Wednesday nights',
-    linkHref: '/ways-to-work/growth-fix',
-  },
-  {
-    emoji: '\u{1F4C9}',
-    title: 'Pub Struggling?',
-    description: 'Honest diagnosis and a clear plan to turn things around',
-    linkHref: '/ways-to-work/turnaround-intensive',
-  },
-  {
-    emoji: '\u{1F3DA}\u{FE0F}',
-    title: 'Empty Pub',
-    description: 'A 30-day recovery plan that rebuilds consistent trade',
-    linkHref: '/ways-to-work/growth-fix',
-  },
-  {
-    emoji: '\u{1F3EA}',
-    title: 'Competing with Chains',
-    description: 'Beat the big brands without matching their budgets',
-    linkHref: '/ways-to-work/growth-partner',
-  },
-  {
-    emoji: '\u{1F6A8}',
-    title: 'Pub in Crisis?',
-    description: 'Emergency turnaround help for struggling pubs',
-    linkHref: '/ways-to-work/turnaround-intensive',
-  },
-  {
-    emoji: '\u{1F4B7}',
-    title: 'No Marketing Budget?',
-    description: 'Focused marketing from just £375 + VAT',
-    linkHref: '/ways-to-work/growth-fix',
-  },
-];
+/**
+ * The homepage.
+ *
+ * Replaces a page that sold four named packages at published prices and described
+ * Orange Jelly as a hospitality marketing company. Both were true and neither is
+ * any more: D3 removed pricing because a published estimate reads as high and puts
+ * the right client off before a conversation, and the repositioning makes the
+ * sector one market rather than the company's definition.
+ *
+ * The proof stays hospitality-specific on purpose. It is the only place the
+ * numbers are real, and pretending otherwise would be the exact thing this
+ * repositioning is supposed to stop.
+ *
+ * Copy: `tasks/repositioning/copy/homepage.md`, held to it by a test.
+ */
+const TITLE = 'Orange Jelly | You bring the growth problem. We build the solution.';
+const DESCRIPTION =
+  'Growth partner for ambitious small and mid-sized businesses. We get under the skin of a business, work out what is actually blocking growth, and build the thing that fixes it.';
 
-// Load recent blog posts for the homepage
-function getRecentBlogPosts() {
-  try {
-    const blogDirectory = path.join(process.cwd(), 'content/blog');
-    const allPosts = getAllBlogPosts(
-      blogDirectory,
-      { draft: false, dateTo: new Date() },
-      { field: 'publishedAt', direction: 'desc' }
-    );
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: getBaseUrl() },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: getBaseUrl(),
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Orange Jelly',
+  },
+};
 
-    return allPosts.slice(0, 9).map((post) => {
-      const frontMatterRecord = post.frontMatter as Record<string, unknown>;
-      const publishedDate =
-        typeof post.publishedAt === 'string'
-          ? post.publishedAt
-          : typeof frontMatterRecord.publishedDate === 'string'
-            ? frontMatterRecord.publishedDate
-            : new Date().toISOString();
-
-      return {
-        slug: post.slug,
-        title: post.title,
-        excerpt: post.excerpt || '',
-        publishedDate,
-        readingTime: Math.round(post.readingTime?.minutes || 5),
-      };
-    });
-  } catch (error) {
-    console.error('Error loading blog posts for homepage:', error);
-    return [];
-  }
-}
-
-export default function Home() {
-  const recentPosts = getRecentBlogPosts();
-
+export default function HomePage(): JSX.Element {
   return (
-    <AsyncErrorBoundary>
-      <FAQSchema faqs={faqs} />
-      <SpeakableContent
-        cssSelectors={[
-          '.hero-title',
-          '.hero-subtitle',
-          '.trust-bar',
-          '.problem-card h3',
-          '.cta-section h2',
-          '.cta-section p',
-        ]}
-        url="/"
-      />
+    <>
+      <OjHeader />
 
-      {/* Hero */}
-      <Hero
-        title="Hospitality marketing from a working pub. Proven packages that fill seats."
-        subtitle="Orange Jelly delivers hospitality marketing that works for pubs, bars, and venues. Clear packages built on systems proven at The Anchor: strategy, events, social, and local visibility that drive bookings, footfall, and revenue."
-        secondaryAction={{
-          text: 'See Our Packages',
-          href: '/ways-to-work',
-        }}
-        bottomText="Packages from £375 + VAT • Proven at The Anchor • Payment plans available"
-        backgroundImage="/images/headers/homepage.png"
-      />
-
-      {/* Proof Strip */}
-      <ProofStrip claimIds={['search-visibility', 'table-bookings', 'food-revenue', 'no-shows']} />
-
-      {/* Seasonal Playbooks */}
-      <SeasonalPlaybooksBand
-        highlightInSeason
-        background="surface"
-        subtitle="Ready-to-run guides for the moments that matter each season, built and tested at The Anchor. Pick the playbook that fits the calendar ahead."
-      />
-
-      {/* Where Growth Gets Stuck */}
-      <Section>
-        <Heading level={2} align="center" className="mb-4">
-          Where Hospitality Growth Gets Stuck
-        </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 measure">
-          Sound familiar? Every problem has a package built to solve it.
-        </Text>
-        <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="medium">
-          {problems.map((problem) => (
-            <AnimatedItem key={problem.title} animation="slide-up" delay={100}>
-              <Link href={problem.linkHref} className="block group h-full">
-                <Card
-                  variant="bordered"
-                  className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
-                >
-                  <div className="text-3xl mb-3">{problem.emoji}</div>
-                  <Heading
-                    level={3}
-                    className="mb-2 group-hover:text-orange-dark transition-colors"
-                  >
-                    {problem.title}
-                  </Heading>
-                  <Text color="muted">{problem.description}</Text>
-                </Card>
-              </Link>
-            </AnimatedItem>
-          ))}
-        </Grid>
-      </Section>
-
-      {/* Package Summary */}
-      <Section background="surface">
-        <Heading level={2} align="center" className="mb-4">
-          Clear Packages. Honest Pricing.
-        </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 measure">
-          Four packages for every stage of growth. No hidden fees, no lock-in.
-        </Text>
-        <Grid columns={{ default: 1, md: 2, lg: 4 }} gap="medium">
-          <PackageCard packageId="growth-fix" />
-          <PackageCard packageId="momentum-month" />
-          <PackageCard packageId="growth-partner" highlighted />
-          <PackageCard packageId="turnaround-intensive" />
-        </Grid>
-        <Box className="text-center mt-8">
-          <TrackedButton
-            eventName="package_cta_click"
-            eventProperties={{ cta: 'homepage_compare_packages' }}
-            href="/ways-to-work"
-            variant="primary"
-            size="large"
-          >
-            Compare All Packages
-          </TrackedButton>
-        </Box>
-      </Section>
-
-      {/* Capability Summary */}
-      <Section>
-        <Heading level={2} align="center" className="mb-4">
-          Everything We Can Help With
-        </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-10 measure">
-          A full digital capability stack, tested at The Anchor. Support depth varies by package.
-        </Text>
-        <CapabilityGrid compact />
-        <Box className="text-center mt-8">
-          <Button href="/capabilities" variant="secondary">
-            See Full Capability Breakdown
-          </Button>
-        </Box>
-      </Section>
-
-      {/* Why OJ Is Different */}
-      <Section background="white">
-        <AnimatedItem animation="slide-up" delay={200}>
-          <Grid columns={{ default: 1, md: 2 }} gap="large" className="items-center">
-            <Box>
-              <Heading level={2} className="mb-6">
-                Built in a Real Venue
-              </Heading>
-              <Text size="lg" color="muted" className="mb-4">
-                I&apos;m Peter. Billy runs The Anchor in Stanwell Moor day-to-day, and I lead
-                marketing and growth. The Anchor is our proving ground for strategies that work
-                under real trading pressure.
-              </Text>
-              <Text size="lg" color="muted" className="mb-6">
-                Orange Jelly exists to bring that same transformative approach to other hospitality
-                venues: proactive plans, faster execution, practical tools, and measurable outcomes.
-              </Text>
-              <Button href="/about" variant="ghost" className="text-lg">
-                Read Our Full Story
+      <main>
+        <section className="border-b-1.5 border-oj-ink bg-oj-orange py-16 sm:py-24">
+          <div className="page-shell">
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-ink">
+              growth partner for ambitious businesses
+            </p>
+            <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-ink">
+              you bring the growth problem. we build the solution.
+            </h1>
+            <p className="measure mt-6 text-[19px] leading-relaxed text-oj-ink">
+              We get under the skin of a business, work out what is actually blocking growth, and
+              build the thing that fixes it. Sometimes that is marketing. Often it is not.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <Button size="lg" arrow href="/start-here">
+                Bring us the problem
               </Button>
-            </Box>
-            <a
-              href="https://www.the-anchor.pub"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-              aria-label="Visit The Anchor website"
-            >
-              <Card
-                variant="colored"
-                background="white"
-                padding="large"
-                className="!bg-blue-support text-center relative overflow-hidden transition-opacity hover:opacity-95"
-              >
-                <Text size="xs" color="white" align="center" className="mb-4 opacity-90">
-                  Proven Daily At
-                </Text>
-                <OptimizedImage
-                  src="/images/the-anchor/the-anchor-exterior.jpg"
-                  alt="Exterior of The Anchor in Stanwell Moor"
-                  width={320}
-                  height={180}
-                  className="mx-auto mb-4 rounded-lg"
-                  style={{ width: 'auto', height: 'auto' }}
+              <Button variant="ghost" href="/how-we-work">
+                See how we work
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
+          <div className="page-shell">
+            <h2 className="oj-display max-w-[22ch] text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+              you do not need more activity. you need to know what will move the numbers.
+            </h2>
+            <p className="measure mt-5 text-[17px] leading-relaxed text-oj-ink-2">
+              Most businesses that come to us can describe the symptom precisely and the cause not
+              at all.
+            </p>
+            <ul className="measure-wide mt-8 grid list-none gap-x-10 gap-y-4 p-0 sm:grid-cols-2">
+              {SYMPTOMS.map((symptom) => (
+                <li key={symptom} className="flex gap-3 text-[17px] leading-relaxed">
+                  <span aria-hidden="true" className="font-black text-oj-orange-deep">
+                    &mdash;
+                  </span>
+                  <span>{symptom}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="measure mt-8 text-[17px] font-semibold leading-relaxed">
+              Any one of those is worth an hour of our time and none of yours until it is.
+            </p>
+          </div>
+        </section>
+
+        <section className="border-b-1.5 border-oj-ink bg-oj-paper py-14 sm:py-20">
+          <div className="page-shell">
+            <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+              six places growth gets stuck.
+            </h2>
+            <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {PRESSURE_POINTS.map((point) => (
+                <PressureCard
+                  key={point.title}
+                  title={point.title}
+                  desc={point.desc}
+                  href={point.href}
                 />
-                <Text color="white" align="center" className="opacity-90 font-semibold">
-                  Real venue experience + measurable growth systems
-                </Text>
-                <Box
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange to-transparent"
-                  position="absolute"
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b-1.5 border-oj-ink bg-oj-ink py-14 text-oj-cream sm:py-20">
+          <div className="page-shell">
+            <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+              hear. challenge. build. optimise.
+            </h2>
+            <p className="measure mt-5 text-[17px] leading-relaxed text-oj-cream/80">
+              Four steps, in that order, every time. The order is the method.
+            </p>
+            <ol className="mt-9 grid list-none gap-6 p-0 sm:grid-cols-2">
+              {METHOD.map((step, index) => (
+                <li key={step.word}>
+                  <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
+                </li>
+              ))}
+            </ol>
+            <div className="mt-9">
+              <Button variant="ink" href="/how-we-work">
+                How we work in full
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
+          <div className="page-shell">
+            <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+              proven where the risk was ours.
+            </h2>
+            <p className="measure mt-5 text-[17px] leading-relaxed text-oj-ink-2">
+              The Anchor is our own venue, a real trading business we run, and it is where this
+              thinking was built and tested before it was ever sold to anybody. Every number below
+              comes from it.
+            </p>
+            <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {PROOF.map((proof) => (
+                <ProofCard
+                  key={proof.label}
+                  value={proof.value}
+                  label={proof.label}
+                  context={proof.context}
+                  area={proof.area}
                 />
-              </Card>
-            </a>
-          </Grid>
-        </AnimatedItem>
-      </Section>
+              ))}
+            </div>
+            <p className="measure mt-9 text-[17px] leading-relaxed">
+              A pub is not a professional services firm. Demand, conversion, margin and drag behave
+              the same way in both, which is why the method travels and the tactics do not.
+            </p>
+            <div className="mt-7">
+              <Button variant="ghost" href="/results">
+                See the work
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      {/* Results */}
-      <Section background="blue-support">
-        <Heading level={2} color="white" align="center" className="mb-4">
-          Real Results from The Anchor
-        </Heading>
-        <Text size="lg" color="white" align="center" className="opacity-90 mb-10 measure">
-          Not projections. Not estimates. These are real outcomes from a real pub, using the same
-          systems we deliver for clients.
-        </Text>
-        <Grid columns={{ default: 1, md: 3 }} gap="large">
-          <CaseStudyCard id="anchor-midweek-turnaround" />
-          <CaseStudyCard id="anchor-food-gp" />
-          <CaseStudyCard id="anchor-social-growth" />
-        </Grid>
-        <Box className="text-center mt-8">
-          <Button href="/results" variant="secondary" size="large">
-            See More Results
-          </Button>
-        </Box>
-      </Section>
+        <section className="border-b-1.5 border-oj-ink bg-oj-paper py-14 sm:py-20">
+          <div className="page-shell">
+            <h2 className="oj-display max-w-[20ch] text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+              big enough to have real problems. small enough to move fast.
+            </h2>
+            <div className="measure mt-6 space-y-4 text-[17px] leading-relaxed">
+              <p>
+                This works best for a business that has built something real, feels a ceiling, and
+                can act once a direction is agreed. Roughly 10 to 500 people, as a guide rather than
+                a rule.
+              </p>
+              <p>
+                It does not work if you want three posts a week, a pair of hands for a plan already
+                decided, or AI because it is AI. We say all of that plainly before anyone spends
+                anything.
+              </p>
+            </div>
+            <div className="mt-7">
+              <Button variant="ghost" href="/start-here">
+                Who this is and is not for
+              </Button>
+            </div>
+          </div>
+        </section>
 
-      {/* Latest Pub Marketing Guides */}
-      {recentPosts && recentPosts.length > 0 && (
-        <Section background="white">
-          <Heading level={2} align="center" className="mb-4">
-            Latest Pub Marketing Guides
-          </Heading>
-          <Text size="lg" color="muted" align="center" className="mb-10 measure">
-            Practical advice from a working licensee. Every guide is tested at The Anchor first.
-          </Text>
-          <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="large">
-            {recentPosts.map((post) => (
-              <AnimatedItem key={post.slug} animation="slide-up" delay={100}>
-                <Link href={`/licensees-guide/${post.slug}`} className="block group h-full">
-                  <Card
-                    variant="bordered"
-                    className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
-                  >
-                    <Heading
-                      level={3}
-                      className="mb-2 group-hover:text-orange-dark transition-colors"
-                    >
-                      {post.title}
-                    </Heading>
-                    <Text color="muted" className="mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </Text>
-                    <Text size="sm" color="muted">
-                      {post.readingTime} min read
-                    </Text>
-                  </Card>
-                </Link>
-              </AnimatedItem>
-            ))}
-          </Grid>
-          <Box className="text-center mt-8">
-            <Button href="/licensees-guide" variant="secondary">
-              Browse All Guides
-            </Button>
-          </Box>
-        </Section>
-      )}
+        <section className="bg-oj-ink py-16 sm:py-24">
+          <div className="page-shell">
+            <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+              stop circling the problem.
+            </h2>
+            <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+              Tell us what is happening, what you have tried, and what needs to change. The first
+              conversation is an hour, it is free, and it is not a pitch.
+            </p>
+            <div className="mt-8">
+              <Button size="lg" arrow href="/start-here">
+                Bring us the problem
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
 
-      {/* Areas We Cover. These were eight separate county landing pages until they were
-          consolidated into /pub-marketing; the counties stay named here as plain text so
-          the local relevance survives without eight thin pages competing with each other. */}
-      <Section background="surface">
-        <Heading level={2} align="center" className="mb-4">
-          Where We Work
-        </Heading>
-        <Text size="lg" color="muted" align="center" className="mb-6 measure">
-          We work with pubs anywhere in the UK. Peter runs The Anchor in Stanwell Moor, so if you
-          are in Surrey, London, Berkshire, Buckinghamshire, Hampshire, Hertfordshire, Kent or
-          Oxfordshire he can get to you in person. Everywhere else works just as well remotely.
-        </Text>
-        <div className="text-center">
-          <AnimatedItem animation="slide-up" delay={100}>
-            <Link href="/pub-marketing" className="inline-block group">
-              <Card
-                variant="bordered"
-                className="!px-6 !py-4 text-center transition-all hover:shadow-lg hover:-translate-y-1"
-              >
-                <Heading
-                  level={3}
-                  className="text-base md:text-lg group-hover:text-orange-dark transition-colors"
-                >
-                  Pub Marketing
-                </Heading>
-                <Text size="sm" color="muted" className="mt-1">
-                  See how we work with pubs across the UK
-                </Text>
-              </Card>
-            </Link>
-          </AnimatedItem>
-        </div>
-      </Section>
-
-      {/* FAQ Section */}
-      <Section background="white">
-        <Heading level={2} className="text-center mb-8">
-          Frequently Asked Questions
-        </Heading>
-        <div className="measure space-y-4">
-          {faqs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
-        </div>
-      </Section>
-
-      {/* Final CTA */}
-      <Section background="orange-light" padding="small">
-        <AnimatedItem animation="scale" delay={300}>
-          <Container width="measure" center className="text-center">
-            <Heading level={2} align="center" className="mb-4">
-              Ready to Fill More Seats?
-            </Heading>
-            <Text size="lg" align="center" className="mb-6 measure">
-              Tell Peter where momentum is stuck. He&apos;ll point you to the right package and the
-              fastest next step.
-            </Text>
-            <PackageCTA />
-            <Text size="sm" color="muted" align="center" className="mt-4">
-              Packages from £375 + VAT. Payment plans available.
-            </Text>
-          </Container>
-        </AnimatedItem>
-      </Section>
-    </AsyncErrorBoundary>
+      <OjFooter />
+    </>
   );
 }
