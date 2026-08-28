@@ -109,9 +109,9 @@ old position remains live afterwards.
 | T052 | Build `/how-we-work` | T051, T028 | M | | **done** |
 | T053 | Write `/about` copy, company voice, no founder story (D21) | | M | **Your material needed.** See "What I need from you". | |
 | T054 | Build `/about` | T053 | M | | |
-| T055 | Write `/results` copy, lead with the Anchor demand-discovery story | | M | Confirm the framing | |
-| T056 | Build `/results` and `/results/[slug]` | T055, T028 | L | | |
-| T057 | Select and write the first case studies (gap G7) | T055 | L | **Your material needed.** | |
+| T055 | `/results` copy, in `tasks/repositioning/copy/results.md`, leading with the demand-discovery story | | M | Confirm the framing | **done, framing awaiting your confirmation** |
+| T056 | Build `/results` and `/results/[slug]` | T055, T028 | L | | **done** |
+| T057 | The first three case studies, all at The Anchor, told through the four method steps | T055 | L | **Your material needed for any client case study.** | **done for the Anchor three; client work still needs your material and their permission** |
 | T058 | Root metadata, titles, descriptions, Open Graph, canonicals per template | T005 | M | | |
 | T059 | Structured data: approved types, remove `priceRange`, drop old org copy | T058 | M | | |
 | T060 | Sitemap generated from the manifest, redirect sources excluded | T005 | S | | |

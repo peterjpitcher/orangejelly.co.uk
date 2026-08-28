@@ -1,137 +1,182 @@
-import { generateStaticMetadata } from '@/lib/metadata';
-import ResultsPage from './ResultsPage';
+import type { Metadata } from 'next';
+
+import { Band, Breadcrumb, Button, OjFooter, OjHeader, ProofCard, Tag } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
-export async function generateMetadata() {
-  return generateStaticMetadata({
-    title: 'Pub Marketing Results - Proven at The Anchor',
-    description:
-      'Pub marketing results from The Anchor: Google Search visibility +828%, table bookings +403%, food revenue +98%. See what works.',
-    path: '/results',
-    ogImage: '/images/og-default.jpg',
-    ogType: 'website',
-  });
-}
+import { CASE_STUDIES, getFeaturedCaseStudy } from './case-studies';
 
-export default function Results() {
-  // Use local data
+/**
+ * `/results`.
+ *
+ * Every case study here is The Anchor, our own venue, and the page says so in the
+ * first sentence rather than hoping nobody notices. That is the stronger position:
+ * the numbers are real, they were measured against a baseline, and the risk of
+ * getting them wrong was ours. A wall of anonymous logos says less.
+ *
+ * Replaces a page built from `content/data/results.json`, whose stats the CLAIMS
+ * rewrite had already retired.
+ *
+ * Copy: `tasks/repositioning/copy/results.md`, held to it by a test.
+ */
+const TITLE = 'Results | Orange Jelly';
+const DESCRIPTION =
+  'What changed, by how much, and how it was measured. Every number here comes from The Anchor, the business we run ourselves, where the risk of getting it wrong was ours.';
 
-  // Generate comprehensive schema for Results
-  const baseUrl = getBaseUrl();
-  const resultsSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'HowTo',
-        '@id': `${baseUrl}/results#no-shows`,
-        name: 'How to Cut Booking No-Shows with a Deposit System',
-        description:
-          'How The Anchor cut booking no-shows by 89% using a simple online booking, deposit, and reminder system',
-        supply: ['Online booking form', 'Payment processor', 'SMS system'],
-        tool: ['Online form builder', 'Automated SMS tool'],
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Set up an easy online booking flow',
-            text: 'Create a simple booking form with a small deposit option',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Take a small deposit',
-            text: 'A small deposit creates commitment without scaring guests off',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Send automated reminders',
-            text: 'Automated SMS confirms the booking and reminds guests the day before',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Link bookings to kitchen prep',
-            text: 'Confirmed bookings mean accurate prep and reliable covers',
-          },
-        ],
-        yield: 'Booking no-shows cut by 89%',
-      },
-      {
-        '@type': 'Article',
-        '@id': `${baseUrl}/results#search-visibility`,
-        headline: 'How an AI-Optimised Website Grew Our Google Search Visibility by 828%',
-        description:
-          'Case study showing how The Anchor launched a search-led website that grew Google Search visibility by 828%',
-        author: {
-          '@id': `${baseUrl}/#peter-pitcher`,
-        },
-        datePublished: '2025-08-15',
-        articleBody:
-          'We launched the-anchor.pub as an AI-optimised, search-led website in August 2025. Built around what locals actually search for, Google Search visibility grew 828%, and the people finding us are booking tables...',
-      },
-      {
-        '@type': 'Article',
-        '@id': `${baseUrl}/results#table-bookings`,
-        headline: 'How We Grew Table Bookings by 403% at The Anchor',
-        description:
-          'How AI-planned events, a clear reason to book, and an easy booking journey grew table bookings by 403%',
-        author: {
-          '@id': `${baseUrl}/#peter-pitcher`,
-        },
-        datePublished: '2025-10-01',
-        articleBody:
-          'Quiet sessions used to barely cover the staff. With AI-planned events, a clear reason to book, and an easy direct booking journey, table bookings grew 403% and the quiet nights started to pay...',
-      },
-      {
-        '@type': 'HowTo',
-        '@id': `${baseUrl}/results#private-hire`,
-        name: 'How to Grow Private Hire Bookings by 567%',
-        description:
-          'How The Anchor grew private hire bookings by 567% with a clear offer and an easy enquiry-to-booking journey',
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Build a clear, premium offer',
-            text: 'Give the space a reason to be booked with curated, premium experiences',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Make the space easy to find',
-            text: 'Show up for local searches like private hire nearby',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Convert enquiries quickly',
-            text: 'A smooth enquiry-to-booking journey turns interest into confirmed dates',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Price for the experience',
-            text: 'Partner with quality local suppliers and price with confidence',
-          },
-        ],
-        yield: 'Private hire bookings up 567%',
-      },
-      {
-        '@type': 'Article',
-        '@id': `${baseUrl}/results#food-revenue`,
-        headline: 'How We Grew Food Revenue by 98% in Three Months',
-        description:
-          'How menu engineering, strategic pricing, and a high-margin hero product grew food revenue by 98%',
-        author: {
-          '@id': `${baseUrl}/#peter-pitcher`,
-        },
-        datePublished: '2025-09-15',
-        articleBody:
-          'Food sales had gone flat. With AI-led menu engineering, sensory descriptions, strategic pricing, and a stone-baked pizza hero product, food revenue grew 98% in three months...',
-      },
-    ],
-  };
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: `${getBaseUrl()}/results` },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${getBaseUrl()}/results`,
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Orange Jelly',
+  },
+};
+
+export default function ResultsPage(): JSX.Element {
+  const featured = getFeaturedCaseStudy();
+  const rest = CASE_STUDIES.filter((study) => study.slug !== featured.slug);
 
   return (
     <>
-      <ResultsPage />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(resultsSchema) }}
-      />
+      <OjHeader current="results" />
+
+      <main>
+        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
+          <div className="page-shell">
+            <Breadcrumb
+              className="mb-7"
+              items={[{ label: 'Home', href: '/' }, { label: 'Results' }]}
+            />
+            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+              the work
+            </p>
+            <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-ink">
+              proven where the risk was ours.
+            </h1>
+            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
+              Every number on this page comes from The Anchor, our own venue and a real trading
+              business we run. It is where this way of working was built and tested before it was
+              ever sold to anybody, and where getting it wrong cost us rather than a client.
+            </p>
+          </div>
+        </section>
+
+        <Band tone="paper" className="!py-12 sm:!py-14">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {CASE_STUDIES.flatMap((study) =>
+              study.stats.map((stat) => (
+                <ProofCard
+                  key={`${study.slug}-${stat.label}`}
+                  value={stat.value}
+                  label={stat.label}
+                  context={stat.context}
+                  area={study.area}
+                />
+              ))
+            )}
+          </div>
+        </Band>
+
+        <Band heading="the one that changed the most.">
+          <article className="rounded-oj border-1.5 border-oj-ink bg-oj-paper p-6 shadow-press sm:p-9">
+            <Tag size="sm" variant="outline" dot={false}>
+              {featured.area}
+            </Tag>
+            <h3 className="oj-display mt-4 text-[clamp(28px,5vw,44px)] leading-[1] text-oj-ink">
+              {featured.title}
+            </h3>
+            <p className="measure mt-3.5 text-[18px] leading-relaxed text-oj-ink-2">
+              {featured.summary}
+            </p>
+            <p className="mt-6 font-oj text-[clamp(40px,7vw,64px)] font-black leading-none tracking-[-0.03em] text-oj-orange-deep">
+              {featured.headline.value}
+            </p>
+            <p className="mt-1 text-[17px] font-bold text-oj-ink">{featured.headline.label}</p>
+            <p className="mt-1 text-[14.5px] text-oj-ink-3">{featured.headline.context}</p>
+            <div className="mt-7">
+              {/*
+               * The visible label is short; the accessible name carries the title.
+               * "Read what happened" on its own is one of several links on this page
+               * that all say the same thing, which is exactly the case screen-reader
+               * users navigate by link list.
+               */}
+              <Button
+                arrow
+                href={`/results/${featured.slug}`}
+                aria-label={`Read what happened: ${featured.title}`}
+              >
+                Read what happened
+              </Button>
+            </div>
+          </article>
+        </Band>
+
+        <Band heading="the rest of it." tone="paper">
+          <div className="grid gap-5 sm:grid-cols-2">
+            {rest.map((study) => (
+              <a
+                key={study.slug}
+                href={`/results/${study.slug}`}
+                className="oj-press oj-focus flex flex-col gap-3 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6 no-underline"
+              >
+                <span className="font-oj text-[13px] font-bold uppercase tracking-[0.1em] text-oj-orange-deep">
+                  {study.area}
+                </span>
+                <span className="oj-display text-[26px] leading-[1.02] text-oj-ink">
+                  {study.title}
+                </span>
+                <span className="text-[16px] leading-relaxed text-oj-ink-2">{study.summary}</span>
+                <span className="mt-1 font-oj text-[30px] font-black leading-none tracking-[-0.02em] text-oj-ink">
+                  {study.headline.value}{' '}
+                  <span className="text-[15px] font-bold">{study.headline.label}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </Band>
+
+        <Band heading="why they are all one business.">
+          <div className="measure space-y-4 text-[17px] leading-relaxed">
+            <p>
+              Because that is the truth, and the alternative is worse. We could show you a wall of
+              logos from work we cannot describe, or numbers with no baseline behind them. Neither
+              would tell you anything.
+            </p>
+            <p>
+              The Anchor is where the method was built, and it is the one place we can show you the
+              before as well as the after, say exactly how it was measured, and answer any question
+              about it. Client work joins this page as it becomes publishable, with permission, and
+              not before.
+            </p>
+            <p>
+              A pub is not a professional services firm. Demand, conversion and margin behave the
+              same way in both, which is why each of these ends with what the mechanism actually
+              was, rather than what industry it happened in.
+            </p>
+          </div>
+        </Band>
+
+        <Band tone="ink" size="lg" divider={false}>
+          <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+            your numbers, not ours.
+          </h2>
+          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+            None of this tells you what would happen in your business. An hour on the phone gets
+            closer to that than any case study will.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" arrow href="/start-here">
+              Bring us the problem
+            </Button>
+          </div>
+        </Band>
+      </main>
+
+      <OjFooter />
     </>
   );
 }

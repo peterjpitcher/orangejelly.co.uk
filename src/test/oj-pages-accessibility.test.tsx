@@ -3,7 +3,9 @@ import axe from 'axe-core';
 import { describe, expect, it, vi } from 'vitest';
 
 import HomePage from '@/app/page';
+import CaseStudyPage from '@/app/results/[slug]/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
+import ResultsPage from '@/app/results/page';
 import StartHerePage from '@/app/start-here/page';
 import type * as ReactDom from 'react-dom';
 
@@ -52,6 +54,14 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on /how-we-work', async () => {
     expect(await scan(<HowWeWorkPage />)).toEqual([]);
+  });
+
+  it('finds nothing on /results', async () => {
+    expect(await scan(<ResultsPage />)).toEqual([]);
+  });
+
+  it('finds nothing on a case study', async () => {
+    expect(await scan(<CaseStudyPage params={{ slug: 'nobody-could-find-us' }} />)).toEqual([]);
   });
 
   it('gives each page exactly one h1', async () => {

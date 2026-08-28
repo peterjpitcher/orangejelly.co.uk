@@ -289,8 +289,9 @@ const ROUTES = [
   },
   {
     path: '/results/[slug]',
-    disposition: 'planned',
-    note: 'Case studies. /results and /about already exist and are rebuilt in place, so they stay listed as live above.',
+    disposition: 'live',
+    sitemap: false,
+    note: 'Case studies. Individual slugs are generated, so the sitemap adds them from CASE_STUDIES rather than from this dynamic path. /results and /about already exist and are rebuilt in place, so they stay listed as live above.',
   },
   {
     path: '/start-here',

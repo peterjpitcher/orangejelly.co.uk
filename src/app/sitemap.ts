@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/blog-md';
 import { blogCategories } from '@/lib/blog';
 import { getBaseUrl } from '@/lib/site-config';
 import { getSitemapRoutes, getRedirectedGuideSlugs } from '@/lib/route-manifest';
+import { CASE_STUDIES } from '@/app/results/case-studies';
 
 /**
  * The static half of this file used to be a hand-maintained list, alongside a
@@ -11,7 +12,10 @@ import { getSitemapRoutes, getRedirectedGuideSlugs } from '@/lib/route-manifest'
  * next.config.js. One list cannot disagree with itself, so a redirecting URL can no
  * longer be advertised here as indexable.
  *
- * Blog posts and categories stay dynamic: they are content, not routing.
+ * Blog posts, categories and case studies stay dynamic: they are content, not
+ * routing. The manifest holds `/results/[slug]` as a live route with sitemap false,
+ * because the pattern is not a URL and listing it would advertise a page that does
+ * not exist.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = getBaseUrl();
@@ -34,6 +38,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+  const caseStudyPages = CASE_STUDIES.map((study) => ({
+    url: `${baseUrl}/results/${study.slug}`,
+    lastModified: '2026-08-28',
+    changeFrequency: 'yearly' as const,
+    priority: 0.6,
+  }));
+
   const categoryPages = blogCategories.map((category) => ({
     url: `${baseUrl}/licensees-guide/category/${category.slug}`,
     lastModified: '2026-08-09',
@@ -41,5 +52,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...blogPages, ...categoryPages];
+  return [...staticPages, ...caseStudyPages, ...blogPages, ...categoryPages];
 }
