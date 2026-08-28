@@ -161,6 +161,24 @@ for (const file of files) {
       }
     }
 
+    // 3. An arbitrary shadow holding a bare var() is read by Tailwind as a shadow
+    //    COLOUR, not a shadow value. It emits --tw-shadow-color with no --tw-shadow
+    //    to colour and no box-shadow property at all, so nothing paints and nothing
+    //    errors. It cost the focus ring on every input and every button here, and it
+    //    was invisible in review because the class looks exactly right.
+    //
+    //    The fix is Tailwind's type hint: shadow-[shadow:var(--x)].
+    if (!isComment) {
+      const bareVarShadow = line.match(/\bshadow-\[var\(--[a-z0-9-]+\)\]/i);
+      if (bareVarShadow) {
+        const inner = bareVarShadow[0].slice('shadow-['.length, -1);
+        errors.push(
+          `${at}\n    ${bareVarShadow[0]} is read by Tailwind as a shadow COLOUR, not a shadow value,\n` +
+            `    so it emits --tw-shadow-color and paints nothing. Write shadow-[shadow:${inner}].`
+        );
+      }
+    }
+
     // 3. Control sizes have names. `min-h-[44px]` appeared thirty times, which
     //    meant the accessibility floor had thirty definitions and changing
     //    --tap-target-size changed none of them.

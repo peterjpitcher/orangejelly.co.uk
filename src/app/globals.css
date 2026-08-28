@@ -256,7 +256,7 @@
 :root {
   /* Base palette */
   --oj-orange: #f76b0c;
-  --oj-orange-deep: #c05408;
+  --oj-orange-deep: #b34e08;
   --oj-ember: #7a3708;
   --oj-orange-soft: #fde3cc;
   --oj-ink: #23252e;
@@ -287,24 +287,40 @@
   --oj-link-hover: var(--oj-ink);
 
   /*
+   * The focus ring, as a complete box-shadow. See .oj-focus below for why the outer
+   * band is ink. Kept as one value so a component cannot use half of it.
+   */
+  --oj-ring: 0 0 0 2px var(--oj-surface-page), 0 0 0 4.5px var(--oj-ink);
+
+  /*
    * Taxonomy hues. Seven muted pairs, and a category is never orange: orange is
    * reserved as the signal for action, so a category wearing it would compete with
    * every call to action on the page.
+   *
+   * EVERY VALUE HERE IS THE PACK'S, BYTE FOR BYTE. All seven soft tints previously
+   * differed from docs/brand/design-system/tokens/colors.css by one to three per
+   * channel, in mixed directions, from the moment they were first written. The
+   * commit that introduced them claimed no colour value had been changed, which was
+   * wrong. A private fork of somebody else's palette is undetectable by eye and it
+   * made our contrast measurements describe a palette nobody else was running.
+   *
+   * src/test/design-tokens.contrast.test.ts now diffs this block against the pack
+   * file on every run, so the two cannot separate again without the build saying so.
    */
-  --cat-demand: #2e7d74;
-  --cat-demand-soft: #dcebe9;
+  --cat-demand: #276e66;
+  --cat-demand-soft: #deebe9;
   --cat-convert: #3e5c8a;
-  --cat-convert-soft: #e0e6ef;
+  --cat-convert-soft: #e0e6ee;
   --cat-margin: #7a4468;
-  --cat-margin-soft: #eee2ea;
+  --cat-margin-soft: #ebe1e8;
   --cat-ops: #6b6d2f;
-  --cat-ops-soft: #eaebdc;
+  --cat-ops-soft: #e9e9dc;
   --cat-experience: #6c5b9e;
-  --cat-experience-soft: #e6e2f0;
+  --cat-experience-soft: #e7e3f0;
   --cat-scale: #356950;
-  --cat-scale-soft: #dde9e3;
+  --cat-scale-soft: #dfe9e4;
   --cat-hospitality: #8a5a2e;
-  --cat-hospitality-soft: #f0e5da;
+  --cat-hospitality-soft: #eee5da;
 }
 
 /*
@@ -865,7 +881,11 @@ select:focus-visible {
      * class is what makes the heading look like the brand rather than like whoever
      * remembered to add font-oj.
      */
-    font-family: var(--font-oj), system-ui, -apple-system, sans-serif;
+    font-family:
+      var(--font-oj),
+      system-ui,
+      -apple-system,
+      sans-serif;
     text-transform: lowercase;
     font-weight: 900;
     line-height: 0.98;
@@ -931,12 +951,32 @@ select:focus-visible {
     );
   }
 
-  /* Double focus ring: page colour first, then orange, so it reads on any surface. */
+  /*
+   * The focus ring. Declared once, here, and referenced everywhere else.
+   *
+   * It was written out as a box-shadow literal in four places: this rule, both
+   * controls in inputs.tsx and Button.tsx. Four copies of a value that has to be
+   * identical is how the correction below would have landed in three of them.
+   *
+   * OUTER BAND IS INK, NOT ORANGE. Orange measured 2.73:1 on cream and 2.87:1 on
+   * paper, against the 3:1 that WCAG 1.4.11 requires of a focus indicator, so the
+   * ring was failing on the two surfaces it appears on most. Ink is 14.02:1 on
+   * cream and 14.76:1 on paper. It also self-corrects on surfaces orange could
+   * never have covered: focus lands on the seven taxonomy tints and on the peach
+   * band, where a darkened orange has nothing left, and on ink sections the outer
+   * band disappears into the background and the page-colour inner band carries the
+   * ring at 14.02:1 instead. No per-surface logic is needed.
+   *
+   * Orange is still the action and pressure signal. It is no longer the focus
+   * signal, and it is not described as one anywhere.
+   *
+   * The design system calls this token --ring. That name is taken here by the
+   * legacy shadcn theme, which stores an HSL triplet rather than a shadow, so the
+   * repositioning keeps it in its own namespace like every other oj token.
+   */
   .oj-focus:focus-visible {
     outline: none;
-    box-shadow:
-      0 0 0 2px var(--oj-surface-page),
-      0 0 0 4.5px var(--oj-orange);
+    box-shadow: var(--oj-ring);
   }
 
   @media (prefers-reduced-motion: reduce) {

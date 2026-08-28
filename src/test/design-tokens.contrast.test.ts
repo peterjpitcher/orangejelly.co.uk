@@ -351,45 +351,66 @@ describe('repositioning palette contrast', () => {
   });
 
   /*
-   * ── Known accessibility failures in the supplied palette ────────────────────
+   * ── The three corrections of 28 August 2026 ─────────────────────────────────
    *
-   * These are marked expected-to-fail rather than deleted or loosened. The
-   * assertions are the requirement; the palette does not currently meet it.
-   * Marking them this way means the suite stays green while the finding stays
-   * visible, AND the moment a corrected value lands these tests fail for
-   * "unexpectedly passed", which forces the marker to be removed rather than
-   * letting the issue quietly persist.
+   * These were `it.fails` markers describing real defects in the supplied palette,
+   * raised with the design team on 27 August. All three came back corrected, so the
+   * markers are gone and these are ordinary assertions again. That is the point of
+   * having marked them rather than deleting or loosening them: the requirement
+   * never moved, only the palette did.
    *
-   * Raised with the design team on 27 August with measured ratios and minimum
-   * corrections. Colour values are theirs to change, not ours.
-   *
-   * @see tasks/repositioning/DESIGNER-CONTRAST-2026-08-27.md
+   * @see tasks/repositioning/DESIGNER-CONTRAST-2026-08-27.md for what was raised
+   * @see tasks/repositioning/decisions.md D33 for what came back
    */
-  it.fails('KNOWN FAIL: accent link on cream reaches 4.5:1', () => {
-    // 4.27:1. The token exists specifically to make orange readable at body size
-    // and falls just short. Minimum correction #BA5108 gives 4.52:1.
+  it('gives the accent link enough contrast on cream', () => {
+    // Was 4.27:1 with #C05408. Now 4.81:1 with #B34E08, which is two steps past the
+    // minimum correction on purpose: a value clearing 4.5 by 0.02 is the same
+    // mistake as one missing by 0.0005, facing the other way.
     expect(contrast(OJ.orangeDeep, OJ.cream)).toBeGreaterThanOrEqual(4.5);
   });
 
-  it.fails('KNOWN FAIL: accent link on paper reaches 4.5:1', () => {
-    // 4.4995:1, short by five ten-thousandths. Fixed by the same correction.
+  it('gives the accent link enough contrast on paper', () => {
+    // Was 4.4995:1, short by five ten-thousandths. Now 5.06:1.
     expect(contrast(OJ.orangeDeep, OJ.paper)).toBeGreaterThanOrEqual(4.5);
   });
 
-  it.fails('KNOWN FAIL: orange focus ring on cream reaches 3:1', () => {
-    // 2.73:1 against WCAG 1.4.11 non-text contrast. This one matters most: a focus
-    // indicator that cannot be seen fails keyboard users specifically.
-    expect(contrast(OJ.orange, OJ.cream)).toBeGreaterThanOrEqual(3);
+  it('keeps accent text off the sunken surface, where it does not clear 4.5:1', () => {
+    // 4.32:1 on --oj-cream-2. The correction did not lift it far enough to make the
+    // accent safe on every surface, so the rule is written down here rather than
+    // left to be rediscovered: sunken surfaces take ink body text, not accent.
+    expect(contrast(OJ.orangeDeep, cssVar('--oj-cream-2'))).toBeLessThan(4.5);
   });
 
-  it.fails('KNOWN FAIL: orange focus ring on paper reaches 3:1', () => {
-    // 2.87:1.
-    expect(contrast(OJ.orange, OJ.paper)).toBeGreaterThanOrEqual(3);
+  it('draws the focus ring in ink, so it reads on light surfaces', () => {
+    // WCAG 1.4.11. The outer band was orange at 2.73:1 on cream and 2.87:1 on
+    // paper, which is a focus indicator keyboard users cannot see. Ink is 14.02:1
+    // and 14.76:1.
+    expect(contrast(OJ.ink, OJ.cream)).toBeGreaterThanOrEqual(3);
+    expect(contrast(OJ.ink, OJ.paper)).toBeGreaterThanOrEqual(3);
   });
 
-  it.fails('KNOWN FAIL: the demand taxonomy hue reads on its own tint', () => {
-    // 3.98:1 on tint and 4.48:1 on cream. The only one of the seven that fails.
-    // Minimum correction #2A736B gives 4.55:1 and 5.13:1.
+  it('lets the inner band carry the ring on ink sections', () => {
+    // On an ink surface the ink outer band disappears into the background, and the
+    // page-colour inner band is what makes the ring visible. 14.02:1. This is why
+    // the ring needs no per-surface logic.
+    //
+    // --oj-surface-page is an alias rather than a hex, so the alias is checked and
+    // the ratio is measured against what it resolves to.
+    expect(cssVar('--oj-surface-page')).toBe('var(--oj-cream)');
+    expect(contrast(OJ.cream, OJ.ink)).toBeGreaterThanOrEqual(3);
+  });
+
+  it('keeps the ring pointed at ink, in the one place it is declared', () => {
+    // The ring was written out as a box-shadow literal in four files. It is now one
+    // token. This asserts the token itself, because the correction is only real if
+    // nothing quietly points the outer band back at orange.
+    const ring = cssVar('--oj-ring');
+    expect(ring).toContain('var(--oj-ink)');
+    expect(ring).not.toContain('var(--oj-orange)');
+  });
+
+  it('reads the demand hue on its own tint', () => {
+    // Was 3.98:1, the only one of the seven that failed. Now 4.89:1 with #276E66.
     expect(contrast(cssVar('--cat-demand'), cssVar('--cat-demand-soft'))).toBeGreaterThanOrEqual(
       4.5
     );
@@ -401,8 +422,9 @@ describe('repositioning palette contrast', () => {
   });
 
   describe('taxonomy hues on their own soft tint, needs 4.5:1', () => {
-    // 'demand' is excluded and tracked as a known failure above.
-    const pairs = ['convert', 'margin', 'ops', 'experience', 'scale', 'hospitality'] as const;
+    // 'demand' was a known failure and is fixed. 'ops' is a known failure and is
+    // asserted separately below.
+    const pairs = ['demand', 'convert', 'margin', 'experience', 'scale', 'hospitality'] as const;
 
     it.each(pairs)('%s reads on its tint', (name) => {
       const fg = cssVar(`--cat-${name}`);
@@ -411,8 +433,43 @@ describe('repositioning palette contrast', () => {
       expect(contrast(fg, bg)).toBeGreaterThanOrEqual(4.5);
     });
 
-    it.each(pairs)('%s also reads on cream', (name) => {
+    it.each([...pairs, 'ops'] as const)('%s also reads on cream', (name) => {
+      // ops is included here: it is only the tint pairing that fails, and the hue
+      // is fine on the page background at 5.00:1.
       expect(contrast(cssVar(`--cat-${name}`), OJ.cream)).toBeGreaterThanOrEqual(4.5);
+    });
+
+    /*
+     * KNOWN FAIL, raised with the design team on 28 August 2026.
+     *
+     * --cat-ops #6B6D2F on --cat-ops-soft #E9E9DC is 4.4513:1, short of 4.5:1 by
+     * 0.0487. Both values are the pack's, so this is a defect in the supplied
+     * palette rather than in this repository.
+     *
+     * IT WAS HIDDEN BY OUR OWN DRIFT. Against the tint this repo previously held,
+     * #EAEBDC, the same hue reads 4.5191:1 and passes. That is why the memo of 27
+     * August reported ops as passing at 4.52, and why the design team confirmed
+     * "ops and experience both pass": both were reading a number that only existed
+     * here. Syncing the tints to the pack is what exposed it.
+     *
+     * LATENT, NOT LIVE. CategoryTag has no production consumer yet, and the tint is
+     * the background only when `filled` is passed, which happens once, in a test,
+     * for a different category. Nobody has seen this pairing. It is marked rather
+     * than fixed locally because the hue is the design team's to change, and
+     * darkening it here would put the repository back into a private fork of their
+     * palette, which is the thing that caused this.
+     *
+     * The marker fails for "unexpectedly passed" the moment a corrected hue lands,
+     * which forces it to be removed rather than quietly outliving the problem.
+     */
+    it.fails('KNOWN FAIL: ops reads on its own tint', () => {
+      expect(contrast(cssVar('--cat-ops'), cssVar('--cat-ops-soft'))).toBeGreaterThanOrEqual(4.5);
+    });
+
+    it('still clears the 3:1 that its border and dot need', () => {
+      // SC 1.4.11 governs the tag's 1.5px border and its dot, which are non-text.
+      // Those are fine; the failure is specific to the label at 12.5px.
+      expect(contrast(cssVar('--cat-ops'), cssVar('--cat-ops-soft'))).toBeGreaterThanOrEqual(3);
     });
   });
 });
@@ -442,5 +499,90 @@ describe('the last-resort error page', () => {
   it('keeps that page readable', () => {
     // Ink on orange, which is the one pairing the page has.
     expect(contrast(cssVar('--oj-ink'), cssVar('--oj-orange'))).toBeGreaterThanOrEqual(4.5);
+  });
+});
+
+/**
+ * The repositioning palette against the pack it came from.
+ *
+ * Every one of the seven `--cat-*-soft` tints differed from
+ * `docs/brand/design-system/tokens/colors.css` by one to three per channel, in
+ * mixed directions, from the moment they were first written. Nothing recorded it as
+ * an override and the commit that introduced them stated that no colour value had
+ * been changed.
+ *
+ * It mattered more than a rounding difference. The contrast memo sent to the design
+ * team on 27 August was measured against our tints, so the ratios we reported, and
+ * the ratios they confirmed back to us, described a palette nobody else was
+ * running. One pair, `--cat-ops`, passes on our tint and fails on theirs.
+ *
+ * A palette held in two places drifts silently and by eye is undetectable. This
+ * diffs them.
+ */
+describe('palette parity with the supplied pack', () => {
+  const PACK = readFileSync(
+    path.resolve(__dirname, '../../docs/brand/design-system/tokens/colors.css'),
+    'utf8'
+  );
+
+  function hexTokens(source: string): Map<string, string> {
+    const found = new Map<string, string>();
+    for (const match of source.matchAll(/(--[a-z0-9-]+)\s*:\s*(#[0-9a-fA-F]{3,8})\s*;/g)) {
+      found.set(match[1], match[2].toLowerCase());
+    }
+    return found;
+  }
+
+  /**
+   * Divergences that are deliberate, each with the reason and the date it was
+   * agreed. The vendored pack copy is the 26 August delivery and predates the
+   * corrections the design team issued on the 28th.
+   *
+   * Anything not on this list fails. Adding to it without a reason is the thing
+   * that produced the tint drift.
+   */
+  const APPROVED_DIVERGENCE: Record<string, { ours: string; why: string }> = {
+    '--oj-orange-deep': {
+      ours: '#b34e08',
+      why: 'Design team correction, 28 Aug 2026. Pack #C05408 gives 4.27:1 on cream, under the 4.5:1 needed for a body-text accent.',
+    },
+    '--cat-demand': {
+      ours: '#276e66',
+      why: 'Design team correction, 28 Aug 2026. Pack #2E7D74 gives 3.99:1 on its own tint.',
+    },
+  };
+
+  const ours = hexTokens(CSS);
+  const pack = hexTokens(PACK);
+  const shared = [...pack.keys()].filter(
+    (name) => name.startsWith('--oj-') || name.startsWith('--cat-')
+  );
+
+  it('holds every token the pack defines', () => {
+    const missing = shared.filter((name) => !ours.has(name));
+    expect(missing).toEqual([]);
+  });
+
+  it('matches the pack everywhere except the two agreed corrections', () => {
+    const unexplained = shared
+      .filter((name) => ours.get(name) !== pack.get(name))
+      .filter((name) => APPROVED_DIVERGENCE[name]?.ours !== ours.get(name))
+      .map((name) => `${name}: pack ${pack.get(name)}, ours ${ours.get(name)}`);
+
+    expect(unexplained).toEqual([]);
+  });
+
+  it('holds the two corrections at exactly the agreed values', () => {
+    for (const [name, { ours: expected }] of Object.entries(APPROVED_DIVERGENCE)) {
+      expect(ours.get(name)).toBe(expected);
+    }
+  });
+
+  it('carries all seven taxonomy tints, which is where the drift was', () => {
+    const softs = shared.filter((name) => name.endsWith('-soft') && name.startsWith('--cat-'));
+    expect(softs).toHaveLength(7);
+    for (const name of softs) {
+      expect(ours.get(name)).toBe(pack.get(name));
+    }
   });
 });

@@ -23,7 +23,18 @@ const CONTROL = [
   'px-[13px] py-[11px]',
   'placeholder:text-oj-ink-3',
   'transition-shadow duration-oj-hover ease-oj motion-reduce:transition-none',
-  'focus:outline-none focus:shadow-[0_0_0_2px_var(--oj-surface-page),0_0_0_4.5px_var(--oj-orange)]',
+  /*
+   * One token, declared in globals.css. It was a literal here, in the tickbox below
+   * and in Button.tsx: three places for a value that has to be identical.
+   *
+   * THE `shadow:` HINT IS LOAD-BEARING. `shadow-[var(--oj-ring)]` is ambiguous to
+   * Tailwind, which reads a bare var() as a shadow COLOUR and emits
+   * --tw-shadow-color with no --tw-shadow to colour. The result is no ring at all,
+   * on every input and every button, with no error anywhere. The old literal
+   * started with `0` so Tailwind inferred a value; consolidating to a var removed
+   * that clue. scripts/check-design-tokens.mjs now fails the build on it.
+   */
+  'focus:outline-none focus:shadow-[shadow:var(--oj-ring)]',
   'aria-[invalid=true]:border-oj-danger aria-[invalid=true]:shadow-[2px_2px_0_0_var(--oj-danger)]',
   'disabled:bg-oj-cream-2 disabled:opacity-60',
 ].join(' ');
@@ -90,7 +101,7 @@ const TICKBOX = [
   'appearance-none w-5 h-5 flex-none mt-px grid place-content-center cursor-pointer',
   'bg-oj-paper border-1.5 border-oj-ink',
   'transition-[background-color] duration-oj-hover ease-oj motion-reduce:transition-none',
-  'focus-visible:outline-none focus-visible:shadow-[0_0_0_2px_var(--oj-surface-page),0_0_0_4.5px_var(--oj-orange)]',
+  'focus-visible:outline-none focus-visible:shadow-[shadow:var(--oj-ring)]',
   'disabled:opacity-60 disabled:cursor-not-allowed',
 ].join(' ');
 

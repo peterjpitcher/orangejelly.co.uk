@@ -33,7 +33,7 @@ const buttonVariants = cva(
     // shadow entirely, which reads as the block being pushed back into the page.
     'hover:-translate-x-0.5 hover:-translate-y-0.5',
     'active:translate-x-0 active:translate-y-0 active:shadow-none',
-    'focus-visible:outline-none focus-visible:shadow-[0_0_0_2px_var(--oj-surface-page),0_0_0_4.5px_var(--oj-orange)]',
+    'focus-visible:outline-none focus-visible:shadow-[shadow:var(--oj-ring)]',
     'disabled:pointer-events-none disabled:opacity-40',
     // Respect reduced motion: the shadow still communicates state, the movement goes.
     'motion-reduce:transition-none motion-reduce:hover:translate-x-0 motion-reduce:hover:translate-y-0',
