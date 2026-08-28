@@ -26,7 +26,8 @@
     "check:token-privacy": "node scripts/check-token-privacy.mjs --base=https://www.orangejelly.co.uk",
     "check:positioning": "node scripts/check-positioning.mjs",
     "launch:checklist": "node scripts/launch-checklist.mjs > tasks/repositioning/LAUNCH-CHECKLIST.md && echo \"Wrote tasks/repositioning/LAUNCH-CHECKLIST.md\"",
-    "check:slugs": "node scripts/check-slug-collisions.mjs"
+    "check:slugs": "node scripts/check-slug-collisions.mjs",
+    "monitor:posts": "node scripts/monitor-protected-posts.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [

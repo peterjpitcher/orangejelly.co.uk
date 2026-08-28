@@ -46,6 +46,7 @@ const SURFACES = [
   'src/app/growth-problems',
   'src/app/insights',
   'src/app/results',
+  'src/app/sectors',
   'src/app/solutions',
   'src/app/start-here',
   'src/app/tools',

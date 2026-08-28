@@ -155,7 +155,7 @@ Continuous. Starts during phase 3 and does not stop.
 | T086 | Article: `what is a fractional cmo`, written from research and flagged as such on the page | T075 | M | | **done** |
 | T087 | Article: `professional services marketing` | T075 | M | **Your material needed.** | |
 | T088 | Articles 5 to 15 against the remaining target terms | T084 to T087 | XL | Ongoing input | |
-| T089 | Weekly monitoring of the 30 protected posts for eight weeks after T073 | T073 | M | | |
+| T089 | `npm run monitor:posts -- <GSC Pages.csv>` diffs all 30 against the committed baseline and flags real movement | T073 | M | Export from Search Console weekly for eight weeks | **script done, the weekly export is yours** |
 | T090 | Trades second wave: keyword round 4, then pages (gap G11) | T077 | L | Decide when | |
 
 ## Cross-cutting, not phase-bound
