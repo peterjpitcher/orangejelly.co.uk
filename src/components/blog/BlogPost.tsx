@@ -1,5 +1,8 @@
 'use client';
 
+import { NextStep, ShareRow } from '@/components/oj';
+import { getNextStepFor } from '@/lib/article-next-step';
+import { getBaseUrl } from '@/lib/site-config';
 import React, { useEffect } from 'react';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
@@ -96,6 +99,7 @@ function getCategoryCTA(categorySlug: string): {
 }
 
 export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
+  const nextStepLinks = getNextStepFor(post.slug);
   // Track reading progress
   useEffect(() => {
     const updateProgress = () => {
@@ -385,6 +389,32 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
 
         {/* Related posts */}
         <RelatedPosts posts={relatedPosts} currentPostSlug={post.slug} />
+
+        {/*
+         * Where this article leads, and the way to pass it on.
+         *
+         * Added to the existing template rather than replacing it. These 105
+         * articles carry 92.9% of the site's search clicks, and thirty of them
+         * carry 95% of that, so the schema, canonicals, breadcrumbs and OG
+         * handling above are deliberately untouched.
+         *
+         * The next step takes somebody who arrived from Google asking a pub
+         * question and offers them the business problem underneath it, which is
+         * the entire reason the hospitality library still earns its place in the
+         * new positioning.
+         */}
+        {nextStepLinks.length > 0 && (
+          <div className="mt-10">
+            <NextStep from="article" links={nextStepLinks} />
+          </div>
+        )}
+
+        <div className="mt-8">
+          <ShareRow
+            url={`${getBaseUrl()}/licensees-guide/${post.slug}`}
+            title={post.title}
+          />
+        </div>
 
         {/* Tags */}
         {post.tags.length > 0 && (

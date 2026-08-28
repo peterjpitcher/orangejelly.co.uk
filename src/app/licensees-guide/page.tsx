@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import { Button as OjButton } from '@/components/oj';
 import Section from '@/components/Section';
 import BlogPostCard from '@/components/blog/BlogPostCard';
 import CategoryList from '@/components/blog/CategoryList';
@@ -243,6 +244,38 @@ export default async function LicenseesGuidePage() {
         backgroundImage="/images/headers/licensees-guide.png"
         breadcrumbEmitJsonLd={false}
       />
+
+      {/*
+       * The sector framing. This library is 105 hospitality articles carrying 92.9%
+       * of the site's search clicks, so it is not going anywhere, and it is also no
+       * longer what the company is. Saying that here, once, is what lets the
+       * articles keep their sector language without the site as a whole reading as
+       * a pub agency.
+       */}
+      <section className="border-y-1.5 border-oj-ink bg-oj-cream py-9">
+        <div className="page-shell">
+          <p className="font-oj text-[13px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+            hospitality
+          </p>
+          <p className="measure mt-2.5 text-[17px] leading-relaxed text-oj-ink-2">
+            Hospitality is the sector we know best, because we run one. Orange Jelly is a growth
+            partner for ambitious small and mid-sized businesses, and this library is the part of it
+            written for people running venues. Every article ends with the business problem
+            underneath it.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <OjButton variant="ghost" size="sm" href="/pub-marketing">
+              Pub marketing
+            </OjButton>
+            <OjButton variant="ghost" size="sm" href="/pub-rescue">
+              Trade is falling
+            </OjButton>
+            <OjButton variant="ghost" size="sm" href="/growth-problems">
+              The eight growth problems
+            </OjButton>
+          </div>
+        </div>
+      </section>
 
       <SeasonalPlaybooksBand background="surface" />
 

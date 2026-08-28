@@ -131,9 +131,9 @@ old position remains live afterwards.
 | T069 | The twelve result texts, six areas in two states, each naming where AI does **not** help | T032 | M | Feedback once built | **done, ready for your feedback** |
 | T070 | Build `/tools/ai-readiness`, with a server-rendered fallback for no JavaScript | T069, T032 | L | | **done** |
 | T071 | `/fractional-cmo`: uses the category language to be found, then argues against the format and says when to hire one anyway | | M | | **done** |
-| T072 | Restyle `/licensees-guide` as the hospitality sector hub | T031 | M | | |
-| T073 | Restyle all 105 live articles with `blog-article`, add ShareRow | T029, T072 | L | | |
-| T074 | Build the NextStep mapping for 105 posts, validate destinations at build (gap G6) | T073 | L | Approve the 30 protected mappings | |
+| T072 | `/licensees-guide` framed as the hospitality sector hub, additively so the schema and hero are untouched | T031 | M | | **done** |
+| T073 | `ShareRow` and `NextStep` added to all 105 articles, additively. Full visual restyle held: it changes the rendering of the 30 posts carrying 95% of blog clicks and belongs with T080 | T029, T072 | L | | **partly done, visual restyle held for T080** |
+| T074 | All 105 mapped, in `tasks/repositioning/data/article-next-steps.json`, validated by test | T073 | L | Approve the 30 protected mappings | **done, the 30 await your approval** |
 | T075 | `/insights` collection: directory, front matter schema, slug collision check, feeds, pagination | T029 | L | | |
 | T076 | `not-found.tsx` rebuilt, and `error.tsx` and `global-error.tsx` added, neither of which existed | T030 | M | | **done** |
 | T077 | `/sectors/professional-services` hub | T072 | M | | |

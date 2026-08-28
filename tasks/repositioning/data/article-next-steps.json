@@ -1,0 +1,422 @@
+{
+ "30-day-action-plan-stabilise-hospitality": {
+  "caseStudy": null,
+  "problem": "growth-has-stalled"
+ },
+ "autumn-pub-event-ideas": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "autumn-rugby-nations-championship-pubs": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "black-friday-pub-ideas": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "leads-not-converting"
+ },
+ "boardgame-night-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "brewery-tie-improve-your-deal": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "build-loyalty-scheme-fill-pub": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "buying-a-pub-complete-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "cash-bingo-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "cash-flow-crisis-breaking-cycle": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "cashflow-fixes-when-trade-drops": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "cask-ale-week-pub-guide": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "cellar-management-beer-quality-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "christmas-pub-event-ideas": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "christmas-pub-promotion-ideas": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "leads-not-converting"
+ },
+ "community-outreach-reintroduce-pub": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "compete-with-wetherspoons": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "content-marketing-ideas-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "delivery-click-collect-without-harm": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "does-your-pub-need-a-website": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "double-drinks-profit-without-selling-more": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "email-marketing-pub-retention": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "energy-bill-shock-cut-venue-costs": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "epos-data-revenue-comeback": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "facebook-marketing-local-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "family-craft-hour-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "fill-empty-pub-tables": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "food-allergies-gdpr-compliance": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "food-hygiene-rating-five-star-guide": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "google-business-profile-pub-guide": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "how-much-profit-does-a-pub-make": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "how-to-attract-families-to-your-pub": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "how-to-respond-bad-pub-reviews": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "how-to-run-successful-pub-events": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "instagram-marketing-for-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "karaoke-night-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "kitchen-nightmares-chef-quits": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "live-music-events-for-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "low-budget-pub-marketing-ideas": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "low-cost-decor-refreshes-new-improved": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "macmillan-coffee-morning-pub-guide": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "menu-engineering-lift-average-spend": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "midweek-pub-offers-that-work": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "music-bingo-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "national-drinks-days-pub-guide": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "nobody-books-tables-anymore": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "leads-not-converting"
+ },
+ "oktoberfest-pub-guide": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "partnering-local-brands-share-marketing": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "pop-up-events-for-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "premium-pub-positioning": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "profitable-pub-food-menu-ideas": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "prs-ppl-music-licensing-pubs": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "pub-accessibility-welcoming-guide": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "pub-business-plan-template-guide": {
+  "caseStudy": null,
+  "problem": "growth-has-stalled"
+ },
+ "pub-chalkboard-a-board-ideas": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "pub-christmas-bookings-fill-december": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "leads-not-converting"
+ },
+ "pub-differentiation-strategies": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "pub-drinks-menu-design-guide": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "pub-empty-tuesday-nights": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "pub-epos-system-guide": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "systems-cannot-keep-up"
+ },
+ "pub-event-ideas": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "pub-event-template-profit-nights": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "pub-halloween-bonfire-night-events": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "pub-health-check-essential-fundamentals-licensee-success": {
+  "caseStudy": null,
+  "problem": "growth-has-stalled"
+ },
+ "pub-health-safety-checklist": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "pub-insurance-cover-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "pub-licensing-premises-personal-licence-guide": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "pub-marketing-plan-2026-monthly-guide": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "pub-new-years-eve-planning-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "pub-recruitment-hiring-bar-staff": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "pub-refurbishment-on-budget": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "growth-has-stalled"
+ },
+ "pub-six-nations-rugby-marketing": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "pub-toilet-refurbishment-budget-guide": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "pub-vat-accounting-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "pub-wages-labour-costs-guide": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "quiet-monday-night-promotions": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "quiz-night-101": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "quiz-night-ideas": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "reboot-pub-atmosphere-on-budget": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "recession-proof-pub-strategies": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "rent-supplier-negotiations-cash-tight": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "rescue-your-margins-drinks-mix": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "restart-quiz-music-sport-roi": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "revenue-levers-struggling-pubs": {
+  "caseStudy": null,
+  "problem": "growth-has-stalled"
+ },
+ "seasonal-pub-events-calendar": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "sober-october-low-no-alcohol-pubs": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "social-media-strategy-for-pubs": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "social-media-tactics-footfall-seven-days": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "weak-demand"
+ },
+ "staff-motivation-hacks-no-pay-rise": {
+  "caseStudy": null,
+  "problem": "operations-slowing-us-down"
+ },
+ "summer-moments-simple-campaigns": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "summer-pub-event-ideas": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "summer-pub-marketing": {
+  "caseStudy": "interest-that-did-not-turn-up",
+  "problem": "leads-not-converting"
+ },
+ "survive-off-season-revenue-packages": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "terrible-online-reviews-damage-control": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "theme-hour-power-hour": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "turn-heating-costs-into-winter-wins": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ },
+ "turnaround-playbook-independent-bars": {
+  "caseStudy": null,
+  "problem": "growth-has-stalled"
+ },
+ "upselling-secrets-training-scripts": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "village-pub-dying-village-survival": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "weak-demand"
+ },
+ "wet-led-vs-food-led-pubs": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "why-is-my-pub-empty": {
+  "caseStudy": "nobody-could-find-us",
+  "problem": "growth-has-stalled"
+ },
+ "win-back-locals-after-slow-trade": {
+  "caseStudy": null,
+  "problem": "experience-leaking-value"
+ },
+ "wine-tasting-evenings-for-pubs": {
+  "caseStudy": "busy-and-not-much-better-off",
+  "problem": "margin-under-pressure"
+ },
+ "young-people-wont-come-to-your-pub": {
+  "caseStudy": null,
+  "problem": "weak-demand"
+ },
+ "zero-waste-stock-management-pubs": {
+  "caseStudy": null,
+  "problem": "margin-under-pressure"
+ }
+}
