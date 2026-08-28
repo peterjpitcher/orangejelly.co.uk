@@ -1,0 +1,78 @@
+import { render, screen } from '@testing-library/react';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { describe, expect, it } from 'vitest';
+
+import { PRESSURE_POINTS } from '@/app/home-content';
+import SolutionsPage from '@/app/solutions/page';
+import { CAPABILITIES, DECLINED } from '@/app/solutions/content';
+
+function body(): string {
+  render(<SolutionsPage />);
+  return document.body.textContent ?? '';
+}
+
+describe('/solutions', () => {
+  it('leads with the problem, not with the capability list', () => {
+    render(<SolutionsPage />);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      'the problem decides the tool.'
+    );
+
+    // Thirteen capabilities as a headline reads as a company that will do
+    // anything, which is the impression the method exists to correct. The order of
+    // the two sections is the argument.
+    const text = document.body.textContent ?? '';
+    expect(text.indexOf('start with where it is stuck.')).toBeLessThan(
+      text.indexOf('what a fix can be made of.')
+    );
+  });
+
+  it('shares the six pressure points with the homepage rather than restating them', () => {
+    render(<SolutionsPage />);
+    // Two lists of the same six things drift, and the day they drift the site
+    // disagrees with itself about what it works on.
+    for (const point of PRESSURE_POINTS) {
+      expect(screen.getByRole('link', { name: new RegExp(`^${point.title}`) })).toHaveAttribute(
+        'href',
+        point.href
+      );
+    }
+  });
+
+  it('says nobody buys a capability on its own', () => {
+    const text = body();
+    expect(text).toMatch(/Nobody buys one of them on its own/);
+    expect(text).toMatch(/Nobody buys a solution from this page/);
+  });
+
+  it('lists what it declines, including work it would be second best at', () => {
+    render(<SolutionsPage />);
+    expect(DECLINED).toHaveLength(5);
+    for (const item of DECLINED) expect(screen.getByText(item)).toBeInTheDocument();
+    expect(document.body.textContent).toMatch(/second-best supplier/);
+  });
+
+  it('names all thirteen capabilities', () => {
+    render(<SolutionsPage />);
+    expect(CAPABILITIES).toHaveLength(13);
+    for (const capability of CAPABILITIES) {
+      expect(screen.getByText(capability.name)).toBeInTheDocument();
+    }
+  });
+
+  it('quotes no price and names no package', () => {
+    const text = body();
+    expect(text).not.toMatch(/£/);
+    expect(text).not.toMatch(/Growth Fix|Momentum Month|Turnaround Intensive/);
+  });
+
+  it('says the same words as the approved copy', () => {
+    const flatten = (value: string) => value.replace(/\s+/g, ' ');
+    const copy = flatten(
+      readFileSync(join(process.cwd(), 'tasks/repositioning/copy/solutions.md'), 'utf8')
+    );
+    for (const capability of CAPABILITIES) expect(copy).toContain(flatten(capability.body));
+    for (const item of DECLINED) expect(copy).toContain(flatten(item));
+  });
+});

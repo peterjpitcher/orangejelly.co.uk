@@ -147,3 +147,38 @@ describe('planned routes', () => {
     }
   });
 });
+
+describe('redirect destinations', () => {
+  /**
+   * Every redirect has to land somewhere that serves a 200.
+   *
+   * This is the check that would have caught /capabilities pointing at /solutions
+   * months before /solutions existed. A redirect to a 404 is worse than no
+   * redirect: it consolidates authority into nothing and the release looks fine
+   * until somebody follows the link.
+   */
+  function servesTwoHundred(destination: string): boolean {
+    const target = destination.split('?')[0].replace(/\/$/, '') || '/';
+    const live = new Set(
+      ROUTES.filter((route) => route.disposition === 'live').map((route) => route.path)
+    );
+    if (live.has(target)) return true;
+    // Guide articles are content rather than routes, so the manifest does not list
+    // them individually.
+    return target.startsWith('/licensees-guide/');
+  }
+
+  it('sends every active redirect to a live route', () => {
+    const broken = ROUTES.filter(
+      (route) => route.disposition === 'redirect' && !servesTwoHundred(route.destination as string)
+    );
+    expect(broken.map((route) => `${route.path} -> ${route.destination}`)).toEqual([]);
+  });
+
+  it('sends every phase 4 redirect to a live route, before the release rather than during it', () => {
+    const broken = PHASE_4_REDIRECTS.filter(
+      (route) => !servesTwoHundred(route.destination as string)
+    );
+    expect(broken.map((route) => `${route.path} -> ${route.destination}`)).toEqual([]);
+  });
+});

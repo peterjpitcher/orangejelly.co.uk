@@ -279,6 +279,15 @@ const ROUTES = [
     disposition: /** @type {Disposition} */ ('planned'),
   })),
   {
+    path: '/solutions',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'What a fix can be made of. Built ahead of its place in the plan because the phase 4 table redirects /capabilities here, so the release could not ship without it.',
+  },
+  {
     path: '/how-we-work',
     disposition: 'live',
     sitemap: true,

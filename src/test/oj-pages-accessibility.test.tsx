@@ -7,6 +7,7 @@ import AboutPage from '@/app/about/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import ResultsPage from '@/app/results/page';
+import SolutionsPage from '@/app/solutions/page';
 import StartHerePage from '@/app/start-here/page';
 import type * as ReactDom from 'react-dom';
 
@@ -63,6 +64,10 @@ describe('page-level accessibility', () => {
 
   it('finds nothing on /results', async () => {
     expect(await scan(<ResultsPage />)).toEqual([]);
+  });
+
+  it('finds nothing on /solutions', async () => {
+    expect(await scan(<SolutionsPage />)).toEqual([]);
   });
 
   it('finds nothing on a case study', async () => {

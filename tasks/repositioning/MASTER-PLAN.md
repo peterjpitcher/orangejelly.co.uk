@@ -127,7 +127,7 @@ old position remains live afterwards.
 |---|---|---|---|---|---|
 | T066 | Write the eight growth-problem pages, lifting the designer's copy where it holds | T023 | L | | |
 | T067 | Build `/growth-problems` and its eight children | T066, T032 | L | | |
-| T068 | Write and build `/solutions` | T066 | M | | |
+| T068 | Write and build `/solutions` | T066 | M | | **done, brought forward: the phase 4 table redirects `/capabilities` here so the release could not ship without it** |
 | T069 | Write the twelve scorecard result texts, including where AI does not help | T032 | M | Feedback once built | |
 | T070 | Build `/tools/ai-readiness` | T069, T032 | L | | |
 | T071 | Write and build `/fractional-cmo`, using the language to be found then arguing against the format | | M | | |

@@ -37,6 +37,7 @@ const SURFACES = [
   'src/app/about',
   'src/app/how-we-work',
   'src/app/results',
+  'src/app/solutions',
   'src/app/start-here',
   'src/app/opengraph-image.tsx',
   'src/components/oj',

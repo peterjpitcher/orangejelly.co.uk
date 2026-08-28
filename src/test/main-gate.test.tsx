@@ -6,6 +6,7 @@ import HomePage from '@/app/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import ResultsPage from '@/app/results/page';
+import SolutionsPage from '@/app/solutions/page';
 import StartHerePage from '@/app/start-here/page';
 import MainGate from '@/components/MainGate';
 import { OJ_ROUTES } from '@/lib/oj-routes';
@@ -55,6 +56,7 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
     <CaseStudyPage key="case" params={{ slug: 'nobody-could-find-us' }} />,
   ],
   ['/about', <AboutPage key="about" />],
+  ['/solutions', <SolutionsPage key="solutions" />],
 ];
 
 describe('MainGate', () => {
