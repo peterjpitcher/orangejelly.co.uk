@@ -53,7 +53,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     titleLead: 'Growth has',
     titleMark: 'stalled.',
     intro:
-      'Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It is almost never the answer.',
+      'Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It is rarely the answer.',
     symptoms: [
       'Revenue has been flat for long enough that it is no longer a blip.',
       'Everyone has a different theory about the cause.',
@@ -66,14 +66,14 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     examine: [
       {
         what: 'Where growth actually stopped',
-        why: 'Pipeline, conversion or capacity: the flat line always starts in one of them.',
+        why: 'Pipeline, conversion or capacity: the flat line starts in one of the three far more often than not.',
       },
       {
         what: 'What the data can prove',
         why: 'Confident explanations rarely survive contact with the numbers.',
       },
       {
-        what: 'The cheapest unlock',
+        what: 'The smallest change that moves it',
         why: 'The smallest intervention capable of material change, not the biggest programme.',
       },
     ],
@@ -129,7 +129,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     titleLead: 'Leads are',
     titleMark: 'not converting.',
     intro:
-      'Enquiries arrive and quietly die. The problem is almost never the leads. It is the journey between first contact and decision.',
+      'Enquiries arrive and quietly die. The leads are usually fine. What happens between first contact and decision is not.',
     symptoms: [
       'Enquiries go quiet after the first reply.',
       'You could not say what your conversion rate is at each step.',
@@ -286,7 +286,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       'Tools were bought and quietly abandoned.',
       'The team is curious but nobody owns it.',
       'Competitors claim AI and you cannot tell if it is real.',
-      'Every vendor pitch starts with the technology.',
+      'Every supplier pitch starts with the technology.',
     ],
     causes:
       'AI-shaped confusion is usually an operations and scale question: where manual work, decisions or response times are the constraint, AI can pay. Anywhere else it is theatre.',
@@ -307,7 +307,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'How we use AI, and what we will not claim for it.',
-      body: 'We have no AI number, and the honest reason is that we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor, our own venue: the research, the drafting, the analysis, the repetitive judgement. It is not the reason those figures moved. Menu economics moved food revenue by 98%. Search intent moved visibility by 828%. AI made that work fast enough to be worth doing at all. We used to quote a time-reclaimed figure for it, and we withdrew it, because it was a raw count nobody could verify. So what is on offer here is not a result, it is a filter. We will tell you where AI would pay in your business, where your data will not support the idea yet, and where the honest answer is that it would be theatre. That third answer is the one most vendors will not give you.',
+      body: 'We have no AI number, and the honest reason is that we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor, our own venue: the research, the drafting, the analysis, the repetitive judgement. It is not the reason those figures moved. Menu economics moved food revenue by 98%. Search intent moved visibility by 828%. AI made that work fast enough to be worth doing at all. We used to quote a time-reclaimed figure for it, and we withdrew it, because it was a raw count nobody could verify. So what is on offer here is not a result, it is a filter. We will tell you where AI would pay in your business, where your data will not support the idea yet, and where the honest answer is that it would be theatre. That third answer is the one most suppliers will not give you.',
       hasNumbers: false,
     },
   },

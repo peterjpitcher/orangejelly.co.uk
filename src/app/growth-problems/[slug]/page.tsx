@@ -171,7 +171,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
 
         <Band tone="orange" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95] text-oj-ink">
-            bring us this problem.
+            tell us what is happening.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-ink">
             It starts as a conversation, and the first one is free. We work out what is actually

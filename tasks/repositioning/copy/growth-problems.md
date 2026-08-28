@@ -41,6 +41,19 @@ strongest entry cluster the company has. Each problem tags itself with the areas
 | scale | "The workflows that fail at 2x" | CLAIMS.md bans multiples outright |
 | scale | "so everything after gets cheaper" | Cost-reduction framing the repo hook rejects |
 | experience | "replacing lost customers costs more than keeping them ever would" | Unsupported claim, and cost framing |
+| stalled | "The cheapest unlock" | A price signal, on a site that publishes no prices, framing the answer as the cheap one rather than the right one |
+| stalled, conversion | "It is almost never the answer", "The problem is almost never the leads" | Unsupported absolutes, and the same one twice |
+| stalled | "the flat line always starts in one of them" | Absolute |
+| ai | "vendor" | American register |
+
+Thirteen changes across the eight pages. Every one is listed in
+`src/test/growth-problems.test.tsx`, which asserts that everything NOT on that list still matches the
+supplied source byte for byte. A stray edit fails the build rather than quietly becoming the new
+original.
+
+**Still to sweep when their templates are ported:** the retired method word EXPOSE is hardcoded in
+four more supplied templates (`solutions`, `how-we-work`, `case-study`, `landing-page`). Our built
+versions of those pages already say CHALLENGE; the note is for whoever ports the remaining ones.
 
 ## The proof sections, including the three that have none
 

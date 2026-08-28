@@ -56,12 +56,63 @@ describe('the eight problems', () => {
     }
   });
 
-  it('keep the designer copy verbatim except where a decision forced a change', () => {
-    // The port is a transform of the supplied template, not a retype. Retyping a
-    // supplied asset is how all seven taxonomy tints drifted from the pack.
-    const intros = GROWTH_PROBLEMS.map((p) => p.intro);
-    const sourceIntros = Object.values(SOURCE).map((v) => v.intro);
-    for (const intro of intros) expect(sourceIntros).toContain(intro);
+  it('keeps every line of the designer copy that no decision forced us to change', () => {
+    /*
+     * The port is a transform of the supplied template, not a retype, and this is
+     * what proves it stayed one. Retyping a supplied asset is how all seven
+     * taxonomy tints drifted from the pack, silently, for a fortnight.
+     *
+     * Every deliberate divergence is listed with its reason. Anything not listed
+     * has to match the source byte for byte, so a stray edit fails here rather
+     * than quietly becoming the new original.
+     */
+    const CHANGED = new Set([
+      // Unsupported numbers. Every one would have shipped as fact.
+      'stalled.symptoms.0', // "flat for three quarters or more": arbitrary threshold
+      'stalled.examine.1.why', // "Half of stall diagnoses collapse"
+      'ai.examine.1.why', // "Half of AI ideas die on data quality"
+      'conversion.examine.1.why', // "the strongest single conversion lever"
+      'margin.examine.2.why', // "once the uplift is halved"
+      'scale.examine.0.why', // "fail at 2x": CLAIMS.md bans multiples
+      // Framing the repo's own gates reject.
+      'scale.examine.2.what', // "gets cheaper": cost-reduction language
+      'stalled.examine.2.what', // "The cheapest unlock": a price signal, with no prices on the site
+      'experience.causes', // "costs more than keeping them ever would": unsupported, and cost framing
+      // Unsupported absolutes, one of them used on two pages.
+      'stalled.intro',
+      'conversion.intro',
+      'stalled.examine.0.why',
+      // British register.
+      'ai.symptoms.3', // "vendor"
+    ]);
+
+    const mismatches: string[] = [];
+    for (const [key, source] of Object.entries(SOURCE)) {
+      const ported = GROWTH_PROBLEMS.find((p) => p.intro === source.intro || p.causes === source.causes)
+        ?? GROWTH_PROBLEMS[Object.keys(SOURCE).indexOf(key)];
+      if (!ported) continue;
+
+      const compare = (field: string, from: string, to: string) => {
+        if (CHANGED.has(`${key}.${field}`)) return;
+        if (from !== to) mismatches.push(`${key}.${field}`);
+      };
+
+      compare('intro', source.intro, ported.intro);
+      compare('causes', source.causes, ported.causes);
+      source.symptoms.forEach((symptom, i) => compare(`symptoms.${i}`, symptom, ported.symptoms[i]));
+    }
+
+    expect(mismatches).toEqual([]);
+  });
+
+  it('changed only what a decision or a gate forced', () => {
+    // Guards the list above from growing quietly. Thirteen changes across eight
+    // pages, and every one of them is named.
+    const source = JSON.stringify(SOURCE);
+    for (const gone of ['three quarters', 'Half of', '2x', 'cheapest unlock', 'vendor pitch']) {
+      expect(source, `${gone} should be in the source`).toContain(gone);
+      expect(JSON.stringify(GROWTH_PROBLEMS), `${gone} should be gone`).not.toContain(gone);
+    }
   });
 
   it('quantify nothing that CLAIMS.md has not approved', () => {
