@@ -80,6 +80,27 @@ export default function GrowthProblemsHubPage(): JSX.Element {
           </ol>
         </Band>
 
+        {/*
+          The eight above are written for a business that has stalled. A business
+          losing revenue week on week has less time and fewer options, and sending it
+          through a page about plateaus wastes both. The rescue page is the same
+          territory in a different tense, and this is the only place a reader would
+          think to look for it.
+
+          It also stops the page being an orphan, which is what its predecessor was:
+          the July crawl found /pub-rescue with no contextual inbound links at all.
+        */}
+        <Band heading="falling rather than flat?" tone="paper">
+          <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
+            These eight are written for growth that has stopped. If revenue is actively going
+            backwards, the clock changes and so does the order things should be done in.{' '}
+            <Anchor href="/small-business-rescue" className="font-semibold">
+              That version of the problem has its own page
+            </Anchor>
+            , including the part where we say who we are not the right people for.
+          </p>
+        </Band>
+
         <Band heading="cannot see yours? bring it anyway." tone="ink" size="lg" divider={false}>
           <p className="measure text-[18px] leading-relaxed text-oj-cream/80">
             Most growth problems are combinations. Tell us what is happening and we will tell you

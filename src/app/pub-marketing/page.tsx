@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { PROOF } from '@/app/home-content';
 import {
+  Anchor,
   Band,
   Breadcrumb,
   Button,
@@ -155,6 +156,18 @@ export default function PubMarketingPage(): JSX.Element {
               The method in full
             </Button>
           </div>
+        </Band>
+
+        <Band heading="if it is not marketing, and it is urgent." tone="paper">
+          <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
+            Everything above assumes there is time to look properly. If takings are falling week on
+            week and the wage bill is not,{' '}
+            <Anchor href="/small-business-rescue" className="font-semibold">
+              the page for that is here
+            </Anchor>
+            . It starts by saying what we are not, which matters more in that situation than in this
+            one.
+          </p>
         </Band>
 
         <Band heading="where we can get to in person." tone="paper">
