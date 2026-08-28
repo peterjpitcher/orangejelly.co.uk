@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Anchor, Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import { Anchor, Band, Breadcrumb, Button, KeepCase, OjFooter, OjHeader } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { GROWTH_PROBLEMS } from './content';
@@ -71,7 +71,7 @@ export default function GrowthProblemsHubPage(): JSX.Element {
                     {problem.number}
                   </span>
                   <span className="oj-display text-[25px] leading-[1.04] text-oj-ink">
-                    {problem.title}
+                    <KeepCase>{problem.title}</KeepCase>
                   </span>
                   <span className="text-[16px] leading-relaxed text-oj-ink-2">{problem.line}</span>
                 </Anchor>

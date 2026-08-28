@@ -6,6 +6,7 @@ import {
   Breadcrumb,
   Button,
   CategoryTag,
+  KeepCase,
   OjFooter,
   OjHeader,
   PressureMap,
@@ -83,7 +84,10 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
               ]}
             />
             <h1 className="oj-display max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              {problem.titleLead} <span className="oj-mark-orange">{problem.titleMark}</span>
+              <KeepCase>{problem.titleLead}</KeepCase>{' '}
+              <span className="oj-mark-orange">
+                <KeepCase>{problem.titleMark}</KeepCase>
+              </span>
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
               {problem.intro}

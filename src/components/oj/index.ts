@@ -110,3 +110,4 @@ export { EnquiryForm, type EnquiryFormProps, type EnquiryEntryPoint } from './En
 export { OjHeader, OjFooter, type OjHeaderProps, type OjNavKey } from './SiteChrome';
 export { Band, type BandProps } from './Band';
 export { Anchor, type AnchorProps } from './Anchor';
+export { KeepCase, type KeepCaseProps } from './KeepCase';
