@@ -23,6 +23,7 @@ export const OJ_ROUTES = [
   '/pub-rescue',
   '/contact',
   '/growth-problems',
+  '/tools',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {

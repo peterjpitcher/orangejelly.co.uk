@@ -91,7 +91,7 @@ for u in \
     "https://www.orangejelly.co.uk$u"; done
 ```
 
-Then confirm the sitemap lists 18 static routes and none of the
+Then confirm the sitemap lists 19 static routes and none of the
 redirected paths above:
 
 ```bash
@@ -128,4 +128,4 @@ day nobody is available.
 - [ ] Enquiry form submitted end to end against production Supabase and Resend
 - [ ] Search Console open, so the crawl can be watched rather than assumed
 
-_23 checkable items. Generated from 52 declared routes._
+_23 checkable items. Generated from 53 declared routes._

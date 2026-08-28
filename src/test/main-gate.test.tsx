@@ -9,6 +9,7 @@ import ResultsPage from '@/app/results/page';
 import ContactPage from '@/app/contact/page';
 import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
+import AiReadinessPage from '@/app/tools/ai-readiness/page';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import PubRescuePage from '@/app/pub-rescue/page';
 import SolutionsPage from '@/app/solutions/page';
@@ -66,6 +67,7 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/pub-rescue', <PubRescuePage key="pr" />],
   ['/contact', <ContactPage key="contact" />],
   ['/growth-problems', <GrowthProblemsHubPage key="gph" />],
+  ['/tools/ai-readiness', <AiReadinessPage key="air" />],
   ['/growth-problems/weak-demand', <GrowthProblemPage key="gp" params={{ slug: 'weak-demand' }} />],
 ];
 

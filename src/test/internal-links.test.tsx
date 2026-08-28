@@ -7,6 +7,7 @@ import AboutPage from '@/app/about/page';
 import ContactPage from '@/app/contact/page';
 import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
+import AiReadinessPage from '@/app/tools/ai-readiness/page';
 import HomePage from '@/app/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
 import NotFound from '@/app/not-found';
@@ -57,6 +58,7 @@ const PAGES: Array<[string, React.ReactElement]> = [
   ['/contact', <ContactPage key="j" />],
   ['/404', <NotFound key="k" />],
   ['/growth-problems', <GrowthProblemsHubPage key="l" />],
+  ['/tools/ai-readiness', <AiReadinessPage key="n" />],
   [
     '/growth-problems/[slug]',
     <GrowthProblemPage key="m" params={{ slug: 'growth-has-stalled' }} />,

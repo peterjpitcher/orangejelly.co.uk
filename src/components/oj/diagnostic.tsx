@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { SCORECARD_QUESTIONS, type ScorecardQuestion } from './scorecard-questions';
+
 import { Button } from './Button';
 
 /**
@@ -156,6 +158,15 @@ export interface PressureCheckProps {
   intro?: string;
   cta?: { label: string; href?: string };
   onCta?: () => void;
+  /**
+   * Whether the built-in result renders its own call to action.
+   *
+   * False where the page adds its own, so the reader is not offered the same thing
+   * twice with different words. `/tools/ai-readiness` does that, because its
+   * handover carries the named pressure areas into the enquiry form and this one
+   * cannot: the href would have to be known before the answers are.
+   */
+  showCta?: boolean;
   className?: string;
 }
 
@@ -220,51 +231,8 @@ export function PressureCheck({
   );
 }
 
-export interface ScorecardQuestion {
-  /** Pressure area id. */
-  area: string;
-  text: string;
-  /** True when "always" is the bad answer, which stops straight-lining. */
-  reverse?: boolean;
-}
-
-export const SCORECARD_QUESTIONS: ScorecardQuestion[] = [
-  { area: 'demand', text: 'We can explain exactly where our best new customers come from.' },
-  { area: 'demand', text: 'When we need more enquiries, we know which lever to pull.' },
-  {
-    area: 'conversion',
-    text: 'We know how many enquiries turn into paying work, and why the rest do not.',
-  },
-  {
-    area: 'conversion',
-    text: 'Someone follows up every enquiry within a day, without being chased.',
-  },
-  { area: 'margin', text: 'We know which products, services or customers actually make us money.' },
-  {
-    area: 'margin',
-    text: 'We review pricing on a schedule rather than when something goes wrong.',
-  },
-  {
-    area: 'operations',
-    text: 'The same information gets typed into more than one system.',
-    reverse: true,
-  },
-  {
-    area: 'operations',
-    text: 'Work stalls because it is waiting on one particular person.',
-    reverse: true,
-  },
-  {
-    area: 'experience',
-    text: 'We hear from customers about problems before they leave, not after.',
-  },
-  {
-    area: 'experience',
-    text: 'A new team member could deliver our service to the same standard as our best person.',
-  },
-  { area: 'scale', text: 'We could take on 50% more work without something breaking.' },
-  { area: 'scale', text: 'Our numbers are current enough to make a decision on this week.' },
-];
+export type { ScorecardQuestion } from './scorecard-questions';
+export { SCORECARD_QUESTIONS } from './scorecard-questions';
 
 const FREQUENCY = ['Never', 'Sometimes', 'Often', 'Always'] as const;
 
@@ -274,8 +242,26 @@ export interface ScorecardProps {
   heading?: string;
   intro?: string;
   cta?: { label: string; href?: string };
-  onComplete?: (answers: Array<{ area: string; v: number }>) => void;
+  /**
+   * Fired when the last statement is answered.
+   *
+   * `areas` carries the computed pressure bands. It is passed rather than left to
+   * the caller because the scoring rule is not obvious: reverse-scored statements
+   * invert, and pressure is the inverse of the score. A caller recomputing it from
+   * the raw answers has to match the questions by index, and matching them any
+   * other way silently applies `reverse` to the wrong statement.
+   */
+  onComplete?: (answers: Array<{ area: string; v: number }>, areas: PressureArea[]) => void;
   onCta?: () => void;
+  /**
+   * Whether the built-in result renders its own call to action.
+   *
+   * False where the page adds its own, so the reader is not offered the same thing
+   * twice with different words. `/tools/ai-readiness` does that, because its
+   * handover carries the named pressure areas into the enquiry form and this one
+   * cannot: the href would have to be known before the answers are.
+   */
+  showCta?: boolean;
   className?: string;
 }
 
@@ -287,6 +273,7 @@ export function Scorecard({
   cta = { label: 'Bring us the problem', href: '/start-here' },
   onComplete,
   onCta,
+  showCta = true,
   className,
 }: ScorecardProps): JSX.Element {
   const [answers, setAnswers] = React.useState<Array<number | null>>(() =>
@@ -295,41 +282,54 @@ export function Scorecard({
   const answeredCount = answers.filter((a) => a !== null).length;
   const complete = answeredCount === questions.length;
 
+  /**
+   * Pressure is the inverse of the score, and there is deliberately no total.
+   * Reverse-scored statements invert, so "always" on "the same information gets
+   * typed into more than one system" counts as pressure rather than health.
+   *
+   * THE ONLY IMPLEMENTATION OF THIS RULE. It is handed to `onComplete` rather than
+   * left for a caller to redo, because redoing it means matching answers back to
+   * questions, and matching them by anything other than index applies `reverse` to
+   * the wrong statement without ever looking wrong.
+   */
+  const scoreAreas = React.useCallback(
+    (given: Array<number | null>): PressureArea[] =>
+      areas.map((area) => {
+        const forArea = questions
+          .map((question, index) => ({ question, value: given[index] }))
+          .filter((entry) => entry.question.area === area.id && entry.value !== null);
+
+        if (!forArea.length) return { ...area, pressure: 0 };
+
+        const score = forArea.reduce((total, entry) => {
+          const raw = entry.value as number;
+          return total + (entry.question.reverse ? 3 - raw : raw);
+        }, 0);
+        const max = forArea.length * 3;
+        // 6 of 6 is steady, 0 of 6 is critical.
+        return { ...area, pressure: Math.round(3 - (score / max) * 3) };
+      }),
+    [areas, questions]
+  );
+
   const answer = (index: number, value: number) => {
     setAnswers((previous) => {
       const next = [...previous];
       next[index] = value;
       if (next.every((v) => v !== null)) {
         onComplete?.(
-          questions.map((question, i) => ({ area: question.area, v: next[i] as number }))
+          questions.map((question, i) => ({ area: question.area, v: next[i] as number })),
+          scoreAreas(next)
         );
       }
       return next;
     });
   };
 
-  /**
-   * Pressure is the inverse of the score, and there is deliberately no total.
-   * Reverse-scored statements invert, so "always" on "the same information gets
-   * typed into more than one system" counts as pressure rather than health.
-   */
-  const resultAreas = React.useMemo<PressureArea[]>(() => {
-    return areas.map((area) => {
-      const forArea = questions
-        .map((question, index) => ({ question, value: answers[index] }))
-        .filter((entry) => entry.question.area === area.id && entry.value !== null);
-
-      if (!forArea.length) return { ...area, pressure: 0 };
-
-      const score = forArea.reduce((total, entry) => {
-        const raw = entry.value as number;
-        return total + (entry.question.reverse ? 3 - raw : raw);
-      }, 0);
-      const max = forArea.length * 3;
-      // 6 of 6 is steady, 0 of 6 is critical.
-      return { ...area, pressure: Math.round(3 - (score / max) * 3) };
-    });
-  }, [answers, areas, questions]);
+  const resultAreas = React.useMemo<PressureArea[]>(
+    () => scoreAreas(answers),
+    [answers, scoreAreas]
+  );
 
   const heaviest = React.useMemo(
     () => [...resultAreas].sort((a, b) => b.pressure - a.pressure).slice(0, 2),
@@ -396,11 +396,13 @@ export function Scorecard({
             </strong>
             . That is where we would start looking, not what we would conclude.
           </p>
-          <div>
-            <Button href={cta.href} onClick={onCta} arrow>
-              {cta.label}
-            </Button>
-          </div>
+          {showCta ? (
+            <div>
+              <Button href={cta.href} onClick={onCta} arrow>
+                {cta.label}
+              </Button>
+            </div>
+          ) : null}
         </div>
       ) : null}
     </section>

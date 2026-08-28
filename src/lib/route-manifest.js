@@ -287,6 +287,15 @@ const ROUTES = [
     sitemap: false,
   },
   {
+    path: '/tools/ai-readiness',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.75,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'Assessment. Real search demand for the term, and it prepares somebody for the first conversation.',
+  },
+  {
     path: '/solutions',
     disposition: 'live',
     sitemap: true,
