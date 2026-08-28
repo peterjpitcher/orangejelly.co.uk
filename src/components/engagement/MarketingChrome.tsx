@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import PerformanceMonitor from '@/components/PerformanceMonitor';
 import CookieNotice from '@/components/CookieNotice';
+import { isOjRoute } from '@/lib/oj-routes';
 import { isPollRoute } from '@/lib/token-routes';
 import StickyEngagementBar from './StickyEngagementBar';
 import ExitIntentModal from './ExitIntentModal';
@@ -43,13 +44,25 @@ export default function MarketingChrome(): React.ReactElement | null {
     return null;
   }
 
+  // Repositioned pages keep the measurement and the consent notice, and lose the
+  // three legacy overlays. Those overlays sell packages at published prices and
+  // open with hospitality staffing lines, both of which the repositioning removed:
+  // a page arguing that every engagement is priced to the problem cannot have a bar
+  // across the bottom offering "See Packages". They come out site-wide in phase 4;
+  // until then this stops them contradicting the pages that have already moved.
+  const repositioned = isOjRoute(pathname);
+
   return (
     <>
       <PerformanceMonitor />
       <CookieNotice />
-      <StickyEngagementBar />
-      <ExitIntentModal />
-      <MobileScrollPrompt />
+      {repositioned ? null : (
+        <>
+          <StickyEngagementBar />
+          <ExitIntentModal />
+          <MobileScrollPrompt />
+        </>
+      )}
       <Analytics />
       <SpeedInsights />
     </>

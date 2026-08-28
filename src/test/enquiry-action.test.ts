@@ -95,7 +95,7 @@ describe('submitEnquiry, step one', () => {
   it('sends a honeypot submission straight to the confirmation without storing it', async () => {
     const next = await submitEnquiry(
       ENQUIRY_INITIAL_STATE,
-      formData({ ...VALID, website: 'http://spam.example' })
+      formData({ ...VALID, subject: 'http://spam.example' })
     );
 
     // Telling a bot it failed only teaches it. It gets the thank-you and no lead id,

@@ -90,7 +90,7 @@ export async function submitEnquiryStep1(input: unknown): Promise<EnquiryStep1Re
 
   // Honeypot. A real person never sees this field, so anything in it is a bot.
   // Answer as though it worked: telling a bot it failed only teaches it.
-  if (data.website) {
+  if (data.subject) {
     return { success: true };
   }
 
@@ -282,7 +282,7 @@ export async function submitEnquiry(
 
   const result = await submitEnquiryStep1({
     ...values,
-    website: text(formData, 'website'),
+    subject: text(formData, 'subject'),
     leadSource: leadSourceFrom(formData),
   });
 

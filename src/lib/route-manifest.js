@@ -255,6 +255,17 @@ const ROUTES = [
     lastModified: LAST_CONTENT_SWEEP,
   },
 
+  // ------------------------------------------------------ repositioning routes
+  {
+    path: '/start-here',
+    disposition: 'live',
+    sitemap: true,
+    priority: 0.9,
+    changeFrequency: 'monthly',
+    lastModified: '2026-08-28',
+    note: 'The conversion page. Carries the fit language that replaced the price when D3 removed pricing.',
+  },
+
   // Live but deliberately out of the sitemap.
   { path: '/privacy', disposition: 'live', sitemap: false },
   {

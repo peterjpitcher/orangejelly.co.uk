@@ -2,6 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 
+import { isOjRoute } from '@/lib/oj-routes';
+
 /**
  * Hides the marketing site chrome (the main nav and footer) on the organiser
  * tool and the poll pages.
@@ -24,6 +26,11 @@ export default function ChromeGate({
 
   const isToolRoute = pathname === '/admin' || pathname.startsWith('/availability');
   if (isToolRoute) return null;
+
+  // Repositioned pages carry their own header and footer. Rendering the legacy
+  // chrome as well would stack two navigations on the most important pages on the
+  // site, which is why the list lives in one place rather than in this condition.
+  if (isOjRoute(pathname)) return null;
 
   return <>{children}</>;
 }

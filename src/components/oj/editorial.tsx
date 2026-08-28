@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
  * button-and-panel accordion, which is more code for less behaviour.
  */
 export interface FAQProps extends React.HTMLAttributes<HTMLDivElement> {
-  items?: Array<{ q: React.ReactNode; a: React.ReactNode }>;
+  items?: ReadonlyArray<{ readonly q: React.ReactNode; readonly a: React.ReactNode }>;
   openFirst?: boolean;
 }
 

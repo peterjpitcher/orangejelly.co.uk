@@ -857,6 +857,15 @@ select:focus-visible {
    * cannot escape the marketing templates that ask for it.
    */
   .oj-display {
+    /*
+     * The family is set here, not left to the caller. The base stylesheet gives
+     * every h1 to h6 the Fraunces serif, which wins over a Tailwind font utility
+     * on the same element in the cascade, so a display heading that did not name
+     * its own family silently rendered as the old typeface. Setting it on the
+     * class is what makes the heading look like the brand rather than like whoever
+     * remembered to add font-oj.
+     */
+    font-family: var(--font-oj), system-ui, -apple-system, sans-serif;
     text-transform: lowercase;
     font-weight: 900;
     line-height: 0.98;

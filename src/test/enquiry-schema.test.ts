@@ -58,9 +58,9 @@ describe('enquiry step one', () => {
     // Rejecting it here would tell the bot which field is the trap, and would show a
     // real person an error against a field they cannot see if a password manager
     // filled it. The action reads it and answers as though the submission worked.
-    const filled = enquiryStep1Schema.safeParse({ ...VALID, website: 'http://spam' });
+    const filled = enquiryStep1Schema.safeParse({ ...VALID, subject: 'http://spam' });
     expect(filled.success).toBe(true);
-    if (filled.success) expect(filled.data.website).toBe('http://spam');
+    if (filled.success) expect(filled.data.subject).toBe('http://spam');
   });
 });
 
@@ -108,5 +108,18 @@ describe('enquiry step two', () => {
     });
     expect(countCompletedFields(input)).toBe(3);
     expect(countCompletedFields(enquiryStep2Schema.parse({}))).toBe(0);
+  });
+});
+
+describe('the honeypot field name', () => {
+  it('is not a name a password manager fills', () => {
+    // The obvious name is `website`, and that is exactly the name Chrome and most
+    // managers fill unprompted: autocomplete="off" is ignored on URL-shaped
+    // fields. A honeypot an autofiller trips is worse than no honeypot, because a
+    // real person's enquiry is silently discarded while they are shown a
+    // confirmation.
+    const keys = Object.keys(enquiryStep1Schema.shape);
+    expect(keys).toContain('subject');
+    expect(keys).not.toContain('website');
   });
 });

@@ -91,8 +91,8 @@ Proves the whole journey including lead capture and measurement before anything 
 | T042 | Two-step enquiry form: one native form, one server action, error summary, and it works with JavaScript off | T027, T040 | L | | **done** |
 | T043 | Admin enquiry view, the six lead states enforced by a database constraint, and a notification email that links to the answers rather than carrying them | T040 | M | | **done** |
 | T044 | `/privacy` rewritten for the new data, the 24-month retention, and the consent line drawn at device storage | T038 | M | Approve the wording | **done, wording awaiting your approval** |
-| T045 | Write `/start-here` copy including the fit language (gap G3) | T042 | M | React to my draft | |
-| T046 | Build `/start-here` | T045, T042 | M | | |
+| T045 | `/start-here` copy including the fit language, in `tasks/repositioning/copy/start-here.md` | T042 | M | React to my draft | **done, awaiting your reaction** |
+| T046 | Build `/start-here`, with its own `oj` chrome and the legacy package overlays suppressed | T045, T042 | M | | **done** |
 | T047 | Write homepage copy (gap G2) | T023 | M | React to my draft | |
 | T048 | Build `/` | T047, T025, T028 | L | | |
 | T049 | Client event dictionary, per-event property allowlist, session id, and the consent split drawn by device storage rather than by whether the data is personal | T010, T046 | L | | **done, wiring the remaining call sites lands with their pages** |

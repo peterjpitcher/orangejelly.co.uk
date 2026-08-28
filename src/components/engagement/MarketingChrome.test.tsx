@@ -188,3 +188,35 @@ describe('root layout third-party imports', () => {
     expect(layoutSource).toContain('MarketingChrome');
   });
 });
+
+describe('MarketingChrome on repositioned routes', () => {
+  beforeEach(() => {
+    vi.stubEnv('NEXT_PUBLIC_GTM_ID', 'GTM-TEST123');
+    stubLocalStorage();
+  });
+
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+  });
+
+  it('keeps measurement and consent but drops the legacy overlays', () => {
+    // Those overlays sell packages at published prices and open with hospitality
+    // staffing lines, both of which the repositioning removed. A page arguing that
+    // every engagement is priced to the problem cannot carry a bar offering "See
+    // Packages".
+    pathnameMock.mockReturnValue('/start-here');
+    const { container } = render(<MarketingChrome />);
+    const html = container.innerHTML;
+
+    expect(container.querySelector('[data-testid="vercel-analytics"]')).not.toBeNull();
+    expect(container.querySelector('[data-testid="vercel-speed-insights"]')).not.toBeNull();
+    expect(html).not.toMatch(/See Packages|Chat on WhatsApp/);
+  });
+
+  it('still renders the overlays everywhere the repositioning has not reached', () => {
+    pathnameMock.mockReturnValue(MARKETING_ROUTE);
+    const { container } = render(<MarketingChrome />);
+    expect(container.innerHTML).toMatch(/See Packages|Chat on WhatsApp/);
+  });
+});

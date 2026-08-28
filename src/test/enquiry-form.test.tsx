@@ -74,14 +74,14 @@ describe('EnquiryForm, step one', () => {
 
   it('names its fields the way the action reads them', () => {
     const { container } = render(<EnquiryForm />);
-    for (const name of ['name', 'email', 'company', 'situation', 'leadSource', 'website']) {
+    for (const name of ['name', 'email', 'company', 'situation', 'leadSource', 'subject']) {
       expect(container.querySelector(`[name="${name}"]`)).toBeInTheDocument();
     }
   });
 
   it('carries a honeypot that is hidden from people and from screen readers', () => {
     const { container } = render(<EnquiryForm />);
-    const honeypot = container.querySelector('input[name="website"]');
+    const honeypot = container.querySelector('input[name="subject"]');
     expect(honeypot?.closest('[aria-hidden="true"]')).not.toBeNull();
     expect(honeypot).toHaveAttribute('tabindex', '-1');
   });
@@ -219,7 +219,7 @@ describe('EnquiryForm, step two', () => {
 
   it('drops the honeypot once step one is past', () => {
     const { container } = renderAt(STEP_TWO);
-    expect(container.querySelector('input[name="website"]')).not.toBeInTheDocument();
+    expect(container.querySelector('input[name="subject"]')).not.toBeInTheDocument();
   });
 });
 

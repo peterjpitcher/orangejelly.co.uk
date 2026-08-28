@@ -41,13 +41,19 @@ export const enquiryStep1Schema = z.object({
   /**
    * Honeypot. A real person never sees it, so anything in it is a bot.
    *
+   * NAMED `subject` ON PURPOSE. The obvious name is `website`, and that is exactly
+   * the name a password manager will fill unprompted: Chrome ignores
+   * `autocomplete="off"` on URL-shaped fields. A honeypot an autofiller trips is
+   * worse than no honeypot, because a real person's enquiry is silently discarded
+   * while they are shown a confirmation. Nothing fills `subject`, and a bot that
+   * fills every input it finds still trips it.
+   *
    * It is deliberately NOT rejected here. Failing validation would send the bot a
    * message naming the field it got wrong, which is a free lesson, and would show a
-   * real person an error against a field they cannot see if a password manager
-   * filled it for them. The server action reads it and answers as though the
-   * submission worked.
+   * real person an error against a field they cannot see. The server action reads
+   * it and answers as though the submission worked.
    */
-  website: z.string().max(200).optional(),
+  subject: z.string().max(200).optional(),
 });
 
 export const ENQUIRY_ROLES = [
