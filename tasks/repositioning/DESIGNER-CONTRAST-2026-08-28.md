@@ -248,3 +248,61 @@ gradient fallback that is 5.40:1 and fine. Against a bright photograph it may no
 and no static check can tell you. If you have a view on the scrim strength, we would
 take it: at 55% the same text is 6.58:1 against the gradient and has much more room
 against a light image.
+
+---
+
+## Round four: Peter's button decision, 30 August 2026
+
+Peter answered the question this memo put to him:
+
+> "Make the boarder white and all text on an orange button needs to be white too"
+
+Both are done, and the second forced the first further than the question anticipated.
+
+### White text on an orange button
+
+It cannot be the brand orange. White on `#f76b0c` is **2.97:1**, and every button
+label in this system is bold at 13.5 to 17px, so it sits under the 18.66px large-text
+threshold and needs 4.5:1. It fails even the 3:1 floor.
+
+So an orange button is now `--oj-orange-deep #b34e08`, where white is **5.24:1**, and
+on the orange band itself it steps down again to `--oj-ember #7a3708`, where white is
+**8.83:1** and the fill does not disappear into a ground of its own colour.
+
+**The brand orange has left button fills entirely.** It keeps tags, chips, pagination
+and the method-step numbers, where the text is ink at 5.13:1 and small.
+
+### White outline
+
+On every dark ground, which is 25 buttons rather than the 5 the question was about.
+
+Deliberately **not** on cream, paper or cream-2: white on cream is **1.09:1**, so the
+outline would vanish and take the heavy dark border that defines the look with it.
+
+The rule now written down is that the outline is the strongest neutral against its
+ground: ink on light, white on dark. It inverts, it never disappears.
+
+### What we found while doing it
+
+Two buttons were invisible and had been since the pages were built. "How we work in
+full" on the homepage and "The method in full" on `/pub-marketing` were ink-filled
+buttons inside ink sections: fill against background **1.00:1**, border against
+background **1.00:1**. Only the label showed, so they read as a stray line of text
+rather than a control. Both are now cream blocks at 14.02:1.
+
+The cause was that each call site was choosing its own colours. That is fixed at the
+root: a button now names a role, never a colour, and reads its ground from whatever
+painted the background. The colour-naming variants were deleted from the type, so
+twelve call sites failed to compile and had to be looked at rather than found later.
+
+### Where it leaves us
+
+Measured on the built site: **63 buttons across every repositioned route, none below
+4.5:1 on the label or 3:1 on the boundary.**
+
+The whole-site sweep is down from 41 findings to 33, and none of the 33 are in the new
+design: 27 are on five pages that redirect at phase 4, one is the `--cat-ops` tint you
+asked us to freeze, and one is a colour specimen on the internal component gallery.
+
+**The question about the ink border on the band is closed.** Peter chose the white
+outline, so D38 is answered and the shortfall is gone rather than accepted.
