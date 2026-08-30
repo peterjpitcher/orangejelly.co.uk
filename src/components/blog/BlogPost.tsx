@@ -17,10 +17,8 @@ import { formatDate } from '@/lib/utils';
 import { type BlogPost as BlogPostType, type AdjacentPostNavItem, defaultAuthor } from '@/lib/blog';
 // MarkdownContent is now only used for PortableText (if needed)
 import MarkdownContent from '@/components/MarkdownContent';
-import { MESSAGES, URLS } from '@/lib/constants';
 import AdjacentPostNav from './AdjacentPostNav';
 import RelatedPosts from './RelatedPosts';
-import { getGuideServiceBridge } from '@/lib/guide-service-bridge';
 
 interface BlogPostProps {
   post: BlogPostType & {
@@ -50,54 +48,6 @@ interface BlogPostProps {
   };
 }
 
-function getCategoryCTA(categorySlug: string): {
-  heading: string;
-  body: string;
-} {
-  const toolkitCategories = ['toolkits', 'events-promotions'];
-  const acquisitionCategories = [
-    'customer-acquisition',
-    'empty-pub-solutions',
-    'turnaround',
-    'community',
-    'social-media',
-  ];
-  const operationalCategories = [
-    'food-drink',
-    'analytics',
-    'sales',
-    'communications',
-    'competition',
-    'people',
-  ];
-
-  if (toolkitCategories.includes(categorySlug)) {
-    return {
-      heading: 'Running a pub?',
-      body: 'See how our packages help licensees grow revenue, fill tables, and build momentum.',
-    };
-  }
-
-  if (acquisitionCategories.includes(categorySlug)) {
-    return {
-      heading: 'Need help putting this into practice?',
-      body: 'Our packages give you strategy, direction, and hands-on support, from a one-off Growth Fix to ongoing Growth Partner.',
-    };
-  }
-
-  if (operationalCategories.includes(categorySlug)) {
-    return {
-      heading: 'We do this for pubs every week',
-      body: 'See our packages to find the right level of support for your venue.',
-    };
-  }
-
-  return {
-    heading: 'Want hands-on help?',
-    body: 'See our packages: clear pricing, real expertise, no agency overhead.',
-  };
-}
-
 export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: BlogPostProps) {
   const nextStepLinks = getNextStepFor(post.slug);
   // Track reading progress
@@ -124,8 +74,6 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
   }, []);
 
   const categorySlug = typeof post.category === 'string' ? post.category : post.category.slug;
-  const categoryCTA = getCategoryCTA(categorySlug);
-  const serviceBridge = getGuideServiceBridge(categorySlug);
   const hasAdjacentPosts = Boolean(adjacentPosts?.previous || adjacentPosts?.next);
   const quickAnswerText = (
     post.quickAnswer ||
@@ -219,161 +167,6 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           )}
         </div>
 
-        {/* Call to action */}
-        <Card variant="bordered" className="bg-brand-base mb-12">
-          <div className="text-center">
-            <Heading level={3} align="center" color="white" className="mb-4">
-              {categoryCTA.heading}
-            </Heading>
-            <Text align="center" color="white" className="mb-6">
-              {categoryCTA.body}
-            </Text>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <TrackedButton
-                eventName="guide_cta_click"
-                eventProperties={{
-                  post_slug: post.slug,
-                  category: categorySlug,
-                  cta: 'blog_primary_packages',
-                }}
-                href="/ways-to-work"
-                variant="primary"
-                size="large"
-              >
-                See Our Packages
-              </TrackedButton>
-              <TrackedButton
-                eventName="whatsapp_click"
-                eventProperties={{
-                  post_slug: post.slug,
-                  category: categorySlug,
-                  cta: 'blog_primary_whatsapp',
-                }}
-                href={URLS.whatsapp(post.ctaSettings?.whatsappMessage || MESSAGES.whatsapp.blog)}
-                variant="secondary"
-                size="large"
-                external
-                className="!bg-white !text-brand-base hover:!bg-surface"
-              >
-                Message Peter on WhatsApp
-              </TrackedButton>
-            </div>
-          </div>
-        </Card>
-
-        <Card variant="bordered" className="mb-12">
-          <div className="text-center">
-            <Heading level={3} align="center" className="mb-4">
-              How we can help
-            </Heading>
-            <Text align="center" color="muted" className="mb-6">
-              If you&apos;d rather copy a proven system than figure it out alone, see how we work
-              with pubs like yours.
-            </Text>
-          </div>
-
-          <div className="flex flex-wrap gap-3 justify-center">
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_capability_social',
-              }}
-              href="/capabilities"
-              variant="outline"
-              size="small"
-            >
-              Social media for pubs
-            </TrackedButton>
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_capability_paid',
-              }}
-              href="/capabilities"
-              variant="outline"
-              size="small"
-            >
-              Paid social and ads
-            </TrackedButton>
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_capability_content',
-              }}
-              href="/capabilities"
-              variant="outline"
-              size="small"
-            >
-              Content and creative
-            </TrackedButton>
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_capability_events',
-              }}
-              href="/capabilities"
-              variant="outline"
-              size="small"
-            >
-              Event marketing
-            </TrackedButton>
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_help_packages',
-              }}
-              href="/ways-to-work"
-              variant="outline"
-              size="small"
-            >
-              See our packages
-            </TrackedButton>
-            <TrackedButton
-              eventName="guide_cta_click"
-              eventProperties={{
-                post_slug: post.slug,
-                category: categorySlug,
-                cta: 'blog_help_turnaround',
-              }}
-              href="/ways-to-work/turnaround-intensive"
-              variant="outline"
-              size="small"
-            >
-              Turnaround Intensive
-            </TrackedButton>
-          </div>
-        </Card>
-
-        {/* Guide → service bridge: one relevant link per guide, by category */}
-        <div className="mb-12 rounded-lg border border-brand-base/10 bg-surface px-6 py-5 text-center">
-          <Text className="mb-3">Running a pub and want a hand putting this into practice?</Text>
-          <TrackedButton
-            eventName="guide_cta_click"
-            eventProperties={{
-              post_slug: post.slug,
-              category: categorySlug,
-              cta: 'guide_service_bridge',
-              bridge_href: serviceBridge.href,
-              bridge_label: serviceBridge.label,
-            }}
-            href={serviceBridge.href}
-            variant="primary"
-            size="medium"
-          >
-            {serviceBridge.label} →
-          </TrackedButton>
-        </div>
-
         {/* Author bio */}
         <AuthorInfo
           author={{
@@ -409,11 +202,46 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           </div>
         )}
 
+        {/*
+          One call to action, and it is the site's call to action.
+
+          What used to be here was three competing blocks: a card selling packages,
+          a card of six links to /capabilities, and a category bridge. Every
+          destination among them retires at phase 4, and the copy offered "our
+          packages" with "clear pricing" on a site that D3 removed pricing from. On
+          106 articles.
+
+          The next-step chain above already does the useful work of naming the growth
+          problem underneath the article. This is the invitation that follows it.
+        */}
+        <Card variant="bordered" className="bg-brand-base mb-12 mt-10">
+          <div className="text-center">
+            <Heading level={3} align="center" color="white" className="mb-4">
+              Not sure this is your actual problem?
+            </Heading>
+            <Text align="center" color="white" className="mb-6">
+              That is the more common situation, and it is what the first conversation is for. An
+              hour, free, going through what is happening in your business before anybody suggests a
+              fix.
+            </Text>
+            <TrackedButton
+              eventName="guide_cta_click"
+              eventProperties={{
+                post_slug: post.slug,
+                category: categorySlug,
+                cta: 'blog_bring_us_the_problem',
+              }}
+              href="/start-here"
+              variant="primary"
+              size="large"
+            >
+              Bring us the problem
+            </TrackedButton>
+          </div>
+        </Card>
+
         <div className="mt-8">
-          <ShareRow
-            url={`${getBaseUrl()}/licensees-guide/${post.slug}`}
-            title={post.title}
-          />
+          <ShareRow url={`${getBaseUrl()}/licensees-guide/${post.slug}`} title={post.title} />
         </div>
 
         {/* Tags */}

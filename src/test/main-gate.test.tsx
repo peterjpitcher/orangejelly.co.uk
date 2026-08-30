@@ -76,8 +76,24 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
 ];
 
 describe('MainGate', () => {
-  it('opens a main for the legacy templates, which render page content only', () => {
+  it('stands back on the guides, which now open their own main', () => {
+    // The guides adopted the oj chrome on 30 August 2026. They render OjHeader and
+    // OjFooter themselves, so a main opened here would wrap the header too, and two
+    // main landmarks is a 1.3.1 failure. src/app/licensees-guide carries the id.
     pathname.mockReturnValue('/licensees-guide/karaoke-night-101');
+    render(
+      <MainGate>
+        <p>content</p>
+      </MainGate>
+    );
+    expect(screen.queryByRole('main')).not.toBeInTheDocument();
+  });
+
+  it('opens a main for the legacy templates, which render page content only', () => {
+    // A route still on the legacy templates. This used to be a guide article, and
+    // when the guides adopted the new chrome the fixture became a repositioned route,
+    // so the test stopped covering the case its name describes.
+    pathname.mockReturnValue('/ways-to-work/growth-fix');
     render(
       <MainGate>
         <p>content</p>

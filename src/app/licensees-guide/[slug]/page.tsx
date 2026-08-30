@@ -18,6 +18,7 @@ import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types
 import { seoOverrides } from '@/lib/seo-overrides';
 import { resolveOgImage } from '@/lib/og-image';
 import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
+import { OjFooter, OjHeader } from '@/components/oj';
 
 interface BlogPostPageProps {
   params: {
@@ -683,95 +684,99 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     return (
       <>
-        <EnhancedBlogSchema
-          post={{
-            ...postWithFaqs,
-            faqs,
-            quickAnswer: post.quickAnswer,
-            voiceSearchQueries: post.voiceSearchQueries,
-            localSEO: post.localSEO,
-          }}
-          baseUrl={baseUrl}
-          imageUrl={`${baseUrl}${resolveOgImage(post.slug, post.featuredImage)}`}
-        />
-        <BreadcrumbJsonLd
-          items={[
-            { name: 'Home', url: '/' },
-            { name: "The Licensee's Guide", url: '/licensees-guide' },
-            ...(spokeHub
-              ? [
-                  {
-                    name: spokeHub.shortLabel,
-                    url: `/licensees-guide/${spokeHub.hubSlug}`,
-                  },
-                ]
-              : []),
-            { name: post.title, url: `/licensees-guide/${post.slug}` },
-          ]}
-        />
-        {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
-        {isHub && hub ? (
-          <>
-            <SeasonalHubHero
+        <OjHeader current="guides" />
+        <main id="main-content">
+          <EnhancedBlogSchema
+            post={{
+              ...postWithFaqs,
+              faqs,
+              quickAnswer: post.quickAnswer,
+              voiceSearchQueries: post.voiceSearchQueries,
+              localSEO: post.localSEO,
+            }}
+            baseUrl={baseUrl}
+            imageUrl={`${baseUrl}${resolveOgImage(post.slug, post.featuredImage)}`}
+          />
+          <BreadcrumbJsonLd
+            items={[
+              { name: 'Home', url: '/' },
+              { name: "The Licensee's Guide", url: '/licensees-guide' },
+              ...(spokeHub
+                ? [
+                    {
+                      name: spokeHub.shortLabel,
+                      url: `/licensees-guide/${spokeHub.hubSlug}`,
+                    },
+                  ]
+                : []),
+              { name: post.title, url: `/licensees-guide/${post.slug}` },
+            ]}
+          />
+          {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
+          {isHub && hub ? (
+            <>
+              <SeasonalHubHero
+                title={post.title}
+                excerpt={post.excerpt}
+                dateRangeLabel={hub.dateRangeLabel}
+                label={hub.label}
+                season={hub.theme}
+                imageSrc={
+                  typeof post.featuredImage === 'string'
+                    ? post.featuredImage
+                    : post.featuredImage?.src || post.featuredImage?.asset?.url
+                }
+                breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+              />
+              <SeasonalCalendar entries={hub.calendar} season={hub.theme} />
+            </>
+          ) : (
+            <BlogCategoryHero
               title={post.title}
               excerpt={post.excerpt}
-              dateRangeLabel={hub.dateRangeLabel}
-              label={hub.label}
-              season={hub.theme}
+              category={post.category?.slug || 'general'}
               imageSrc={
                 typeof post.featuredImage === 'string'
                   ? post.featuredImage
                   : post.featuredImage?.src || post.featuredImage?.asset?.url
               }
-              breadcrumbs={[...breadcrumbPaths.licenseesGuide, { label: post.title }]}
+              breadcrumbs={[
+                ...breadcrumbPaths.licenseesGuide,
+                ...(spokeHub
+                  ? [{ label: spokeHub.shortLabel, href: `/licensees-guide/${spokeHub.hubSlug}` }]
+                  : []),
+                { label: post.title },
+              ]}
             />
-            <SeasonalCalendar entries={hub.calendar} season={hub.theme} />
-          </>
-        ) : (
-          <BlogCategoryHero
-            title={post.title}
-            excerpt={post.excerpt}
-            category={post.category?.slug || 'general'}
-            imageSrc={
-              typeof post.featuredImage === 'string'
-                ? post.featuredImage
-                : post.featuredImage?.src || post.featuredImage?.asset?.url
-            }
-            breadcrumbs={[
-              ...breadcrumbPaths.licenseesGuide,
-              ...(spokeHub
-                ? [{ label: spokeHub.shortLabel, href: `/licensees-guide/${spokeHub.hubSlug}` }]
-                : []),
-              { label: post.title },
-            ]}
-          />
-        )}
-        <Section background="white">
-          <div>
-            <BlogPostClient
-              post={postWithFaqs}
-              relatedPosts={isHub ? [] : relatedPosts}
-              adjacentPosts={adjacentPosts}
-            />
-            {isHub && hubSpokes.length > 0 && (
-              <SeriesHubGrid
-                posts={hubSpokes}
-                baseUrl={baseUrl}
-                heading={`The full ${hub!.label}`}
-                listName={hub!.label}
+          )}
+          <Section background="white">
+            <div>
+              <BlogPostClient
+                post={postWithFaqs}
+                relatedPosts={isHub ? [] : relatedPosts}
+                adjacentPosts={adjacentPosts}
               />
-            )}
-            {isHub && moreThisSeason.length > 0 && (
-              <SeriesHubGrid
-                posts={moreThisSeason}
-                baseUrl={baseUrl}
-                heading={`More for this ${hub!.season}`}
-                subtitle="Extra guides that fit the same season."
-                listName={`More for ${hub!.season}`}
-              />
-            )}
-          </div>
-        </Section>
+              {isHub && hubSpokes.length > 0 && (
+                <SeriesHubGrid
+                  posts={hubSpokes}
+                  baseUrl={baseUrl}
+                  heading={`The full ${hub!.label}`}
+                  listName={hub!.label}
+                />
+              )}
+              {isHub && moreThisSeason.length > 0 && (
+                <SeriesHubGrid
+                  posts={moreThisSeason}
+                  baseUrl={baseUrl}
+                  heading={`More for this ${hub!.season}`}
+                  subtitle="Extra guides that fit the same season."
+                  listName={`More for ${hub!.season}`}
+                />
+              )}
+            </div>
+          </Section>
+        </main>
+        <OjFooter />
       </>
     );
   } catch (error) {

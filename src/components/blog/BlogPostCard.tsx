@@ -66,11 +66,21 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
                 />
               )}
               <div className="absolute inset-0 bg-brand-base/45" aria-hidden="true" />
+              {/*
+                Same reasoning as the standard card above, and the "Featured" pill had
+                the worse version of the problem: white text on a 20% white fill over a
+                photograph, which is unreadable the moment the photo is pale.
+              */}
               <div className="relative text-center">
-                <span className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium mb-3">
+                <span className="mb-3 inline-block rounded-full bg-brand-base px-3 py-1 text-xs font-medium text-white">
                   Featured
                 </span>
-                <Text size="lg" color="white" align="center" className="text-white/90 font-medium">
+                <Text
+                  size="lg"
+                  color="white"
+                  align="center"
+                  className="inline-block rounded bg-brand-base px-3 py-1 font-medium text-white"
+                >
                   {categoryLabel}
                 </Text>
               </div>
@@ -131,12 +141,25 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
             />
           )}
           <div className="absolute inset-0 bg-brand-base/35" aria-hidden="true" />
+          {/*
+            A solid block behind the label, not a tint over the photo.
+
+            The label used to be white at 80% sitting on this 35% scrim, and against
+            the gradient fallback that is 5.40:1 and perfectly fine. Against the real
+            photographs it is not: measured across all 105 hero images, 80 of them
+            leave it under the 4.5:1 that text needs, and the worst is 1.83:1.
+
+            A scrim cannot fix that. Getting every photo above 4.5:1 needs it at
+            roughly 74%, which hides most of the picture, and the picture is the point
+            of having one. A solid block is 13.58:1 on every card regardless of what
+            is behind it, and the photo stays visible around it.
+          */}
           <Text
             size="sm"
             color="white"
             align="center"
             weight="medium"
-            className="relative text-white/80 uppercase tracking-wider"
+            className="relative rounded bg-brand-base px-2.5 py-1 uppercase tracking-wider text-white"
           >
             {categoryLabel}
           </Text>

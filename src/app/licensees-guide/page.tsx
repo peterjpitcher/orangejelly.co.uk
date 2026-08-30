@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import { Button as OjButton } from '@/components/oj';
+import { Button as OjButton, OjFooter, OjHeader } from '@/components/oj';
 import Section from '@/components/Section';
 import BlogPostCard from '@/components/blog/BlogPostCard';
 import CategoryList from '@/components/blog/CategoryList';
@@ -194,24 +194,31 @@ export default async function LicenseesGuidePage() {
     // Return a fallback UI
     return (
       <>
-        <Hero
-          title="The Licensee's Guide"
-          subtitle="Essential guides for modern pub management"
-          showCTA={false}
-        />
-        <Section background="white">
-          <div className="measure py-12">
-            <Text className="text-red-600 text-center">
-              Error loading blog posts. Please try refreshing the page.
-            </Text>
-          </div>
-        </Section>
+        <OjHeader current="guides" />
+        <main id="main-content">
+          <main id="main-content">
+            <Hero
+              title="The Licensee's Guide"
+              subtitle="Essential guides for modern pub management"
+              showCTA={false}
+            />
+            <Section background="white">
+              <div className="measure py-12">
+                <Text className="text-red-600 text-center">
+                  Error loading blog posts. Please try refreshing the page.
+                </Text>
+              </div>
+            </Section>
+          </main>
+        </main>
+        <OjFooter />
       </>
     );
   }
 
   return (
     <>
+      <OjHeader current="guides" />
       {posts.length > 0 && (
         <CollectionPageSchema
           name="The Licensee's Guide"
@@ -410,6 +417,7 @@ export default async function LicenseesGuidePage() {
           </div>
         </div>
       </Section>
+      <OjFooter />
     </>
   );
 }

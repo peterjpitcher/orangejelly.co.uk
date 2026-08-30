@@ -37,7 +37,15 @@ const THIRD_PARTY_HOSTS = [
 const TOKEN_ROUTE = '/availability/o/0123456789abcdef0123456789abcdef';
 const PARTICIPANT_ROUTE = '/availability/p/0123456789abcdef0123456789abcdef';
 const VERIFY_ROUTE = '/availability/verify/0123456789abcdef0123456789abcdef';
-const MARKETING_ROUTE = '/licensees-guide/some-article';
+/*
+ * A route the repositioning has genuinely not reached.
+ *
+ * This was '/licensees-guide/some-article' until the guides adopted the new chrome
+ * on 30 August 2026, at which point the fixture quietly became a repositioned route
+ * and the assertion below stopped testing what its name says. '/ways-to-work' is
+ * still on the legacy templates and still carries the overlays.
+ */
+const MARKETING_ROUTE = '/ways-to-work';
 
 const pathnameMock = vi.fn<[], string>(() => MARKETING_ROUTE);
 

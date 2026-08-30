@@ -27,6 +27,24 @@ export const OJ_ROUTES = [
   '/fractional-cmo',
   '/insights',
   '/sectors',
+  /*
+   * The guides, added 30 August 2026.
+   *
+   * "Guides" is an item in the new primary navigation, and until this line was here
+   * clicking it dropped the reader onto the old site: a different navigation offering
+   * Ways to Work and Capabilities, both of which retire at phase 4, and a WhatsApp
+   * button as the call to action.
+   *
+   * Seven of the ten WhatsApp links on a guide page were contact prompts rather than
+   * share links, and one of them opened "I'd like to find out about your packages",
+   * which is a message about packages at prices this site no longer has (D3) written
+   * in the founder's first person (D21). Across 106 pages.
+   *
+   * The article bodies keep their existing styling, which is good and would be a much
+   * larger job to port. This is the chrome only: the navigation, the footer and the
+   * legacy overlays.
+   */
+  '/licensees-guide',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {
