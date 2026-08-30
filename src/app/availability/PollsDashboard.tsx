@@ -140,7 +140,7 @@ export default function PollsDashboard(): JSX.Element {
 
   if (state === 'anon') {
     return (
-      <main className="mx-auto max-w-md px-4 py-16 text-center">
+      <main id="main-content" className="mx-auto max-w-md px-4 py-16 text-center">
         <h1 className="text-2xl font-bold text-brand-base">Sign in to see your polls</h1>
         <p className="mt-3 text-brand-base/70">
           Your polls live behind the same sign-in as the admin dashboard.
@@ -158,7 +158,7 @@ export default function PollsDashboard(): JSX.Element {
   return (
     <>
       <AuthedNav />
-      <main className="measure px-4 py-8 sm:px-6">
+      <main id="main-content" className="measure px-4 py-8 sm:px-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-3xl font-bold text-brand-base">Your polls</h1>

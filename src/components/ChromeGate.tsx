@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 
 import { isOjRoute } from '@/lib/oj-routes';
+import { isToolRoute } from '@/lib/tool-routes';
 
 /**
  * Hides the marketing site chrome (the main nav and footer) on the organiser
@@ -24,8 +25,9 @@ export default function ChromeGate({
 }): JSX.Element | null {
   const pathname = usePathname();
 
-  const isToolRoute = pathname === '/admin' || pathname.startsWith('/availability');
-  if (isToolRoute) return null;
+  // Shared with MainGate. Written out twice, the two drifted and the tool ended up
+  // with two main landmarks on every page.
+  if (isToolRoute(pathname)) return null;
 
   // Repositioned pages carry their own header and footer. Rendering the legacy
   // chrome as well would stack two navigations on the most important pages on the

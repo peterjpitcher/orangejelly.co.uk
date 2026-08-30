@@ -143,3 +143,39 @@ describe('the repositioned pages', () => {
     }
   });
 });
+
+/**
+ * The tool routes, which open their own main.
+ *
+ * ChromeGate already stood back on /admin and /availability. MainGate did not, so
+ * every screen in the organiser tool rendered two main landmarks: the one the layout
+ * opened and the one the screen opened for itself. Two mains is a 1.3.1 failure, and
+ * nothing caught it because the tool has no page-level axe sweep and the two gates
+ * each looked correct on their own.
+ *
+ * The predicate now lives in one module so they cannot disagree again.
+ */
+describe('MainGate on the organiser tool', () => {
+  it.each(['/admin', '/availability', '/availability/o/abc123'])(
+    'stands back on %s, which opens its own main',
+    (route) => {
+      pathname.mockReturnValue(route);
+      render(
+        <MainGate>
+          <p>content</p>
+        </MainGate>
+      );
+      expect(screen.queryByRole('main')).not.toBeInTheDocument();
+    }
+  );
+
+  it('still opens one for a legacy marketing page', () => {
+    pathname.mockReturnValue('/privacy');
+    render(
+      <MainGate>
+        <p>content</p>
+      </MainGate>
+    );
+    expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
+  });
+});

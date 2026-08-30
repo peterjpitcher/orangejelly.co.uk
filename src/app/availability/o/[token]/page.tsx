@@ -132,7 +132,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
       <AuthedNav />
       {/* Rendered outside <Section>: Section.tsx applies `overflow-hidden`, which
           would clip the sticky headers and kill the horizontal scroll. */}
-      <main className="page-shell py-8">
+      <main id="main-content" className="page-shell py-8">
         {/*
         One column, in flow. This was a 2fr/1fr grid with the card in the right
         column, which floated it as an island beside a near-empty header column:

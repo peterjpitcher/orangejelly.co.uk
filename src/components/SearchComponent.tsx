@@ -28,6 +28,7 @@ export default function SearchComponent({
   const [isIndexLoaded, setIsIndexLoaded] = useState(false);
   const [announcement, setAnnouncement] = useState('');
   const lastTrackedSearchRef = useRef('');
+  const inputId = useId();
   const resultsListId = useId();
   const statusMessageId = useId();
 
@@ -140,7 +141,19 @@ export default function SearchComponent({
     <div className={`relative ${className}`}>
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        {/*
+          A real label, visually hidden.
+
+          The field had only a placeholder, and a placeholder is not a label: it is
+          announced inconsistently, and it disappears the moment somebody starts
+          typing, which is exactly when a person using speech input or a screen
+          reader needs to know what the field is for.
+        */}
+        <label htmlFor={inputId} className="sr-only">
+          {placeholder}
+        </label>
         <input
+          id={inputId}
           role="combobox"
           type="text"
           value={query}

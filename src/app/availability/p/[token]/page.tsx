@@ -73,7 +73,7 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
     : undefined;
 
   return (
-    <main className="w-full measure px-4 py-8">
+    <main id="main-content" className="w-full measure px-4 py-8">
       <div className="space-y-6">
         <PollHeader
           title={poll.title}

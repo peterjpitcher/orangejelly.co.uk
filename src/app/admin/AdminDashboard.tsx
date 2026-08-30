@@ -192,7 +192,7 @@ export default function AdminDashboard() {
 
   if (!session) {
     return (
-      <main className="min-h-screen bg-surface px-4 py-12">
+      <main id="main-content" className="min-h-screen bg-surface px-4 py-12">
         <div className="mx-auto max-w-md rounded-lg border border-brand-base/10 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-brand-base">Orange Jelly admin</h1>
           <form onSubmit={handleLogin} className="mt-6 space-y-4">
@@ -244,7 +244,7 @@ export default function AdminDashboard() {
           It also carries the create-poll link that used to live in this header,
           so the poll tool is reachable without editing the URL. */}
       <AuthedNav />
-      <main className="min-h-screen bg-surface px-4 py-8">
+      <main id="main-content" className="min-h-screen bg-surface px-4 py-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-4 border-b border-brand-base/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
             <div>

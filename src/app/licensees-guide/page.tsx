@@ -196,20 +196,18 @@ export default async function LicenseesGuidePage() {
       <>
         <OjHeader current="guides" />
         <main id="main-content">
-          <main id="main-content">
-            <Hero
-              title="The Licensee's Guide"
-              subtitle="Essential guides for modern pub management"
-              showCTA={false}
-            />
-            <Section background="white">
-              <div className="measure py-12">
-                <Text className="text-red-600 text-center">
-                  Error loading blog posts. Please try refreshing the page.
-                </Text>
-              </div>
-            </Section>
-          </main>
+          <Hero
+            title="The Licensee's Guide"
+            subtitle="Essential guides for modern pub management"
+            showCTA={false}
+          />
+          <Section background="white">
+            <div className="measure py-12">
+              <Text className="text-red-600 text-center">
+                Error loading blog posts. Please try refreshing the page.
+              </Text>
+            </div>
+          </Section>
         </main>
         <OjFooter />
       </>
@@ -219,204 +217,206 @@ export default async function LicenseesGuidePage() {
   return (
     <>
       <OjHeader current="guides" />
-      {posts.length > 0 && (
-        <CollectionPageSchema
-          name="The Licensee's Guide"
-          description="Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice to increase revenue and build thriving local pubs."
-          url="/licensees-guide"
-          items={posts.map((post) => ({
-            url: `/licensees-guide/${post.slug}`,
-            name: post.title,
-            description: post.excerpt,
-            datePublished: post.publishedDate,
-            author: post.author?.name || 'Peter Pitcher',
-            image: typeof post.featuredImage === 'string' ? post.featuredImage : '/logo.png',
-          }))}
-          breadcrumbs={[
-            { name: 'Home', url: '/' },
-            { name: "The Licensee's Guide", url: '/licensees-guide' },
-          ]}
-        />
-      )}
+      <main id="main-content">
+        {posts.length > 0 && (
+          <CollectionPageSchema
+            name="The Licensee's Guide"
+            description="Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice to increase revenue and build thriving local pubs."
+            url="/licensees-guide"
+            items={posts.map((post) => ({
+              url: `/licensees-guide/${post.slug}`,
+              name: post.title,
+              description: post.excerpt,
+              datePublished: post.publishedDate,
+              author: post.author?.name || 'Peter Pitcher',
+              image: typeof post.featuredImage === 'string' ? post.featuredImage : '/logo.png',
+            }))}
+            breadcrumbs={[
+              { name: 'Home', url: '/' },
+              { name: "The Licensee's Guide", url: '/licensees-guide' },
+            ]}
+          />
+        )}
 
-      {/*
+        {/*
         breadcrumbEmitJsonLd is false because CollectionPageSchema above already nests
         the trail under CollectionPage.breadcrumb, the schema.org-preferred association.
       */}
-      <Hero
-        title="The Licensee's Guide"
-        subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
-        showCTA={false}
-        breadcrumbs={breadcrumbPaths.licenseesGuide}
-        backgroundImage="/images/headers/licensees-guide.png"
-        breadcrumbEmitJsonLd={false}
-      />
+        <Hero
+          title="The Licensee's Guide"
+          subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
+          showCTA={false}
+          breadcrumbs={breadcrumbPaths.licenseesGuide}
+          backgroundImage="/images/headers/licensees-guide.png"
+          breadcrumbEmitJsonLd={false}
+        />
 
-      {/*
-       * The sector framing. This library is 105 hospitality articles carrying 92.9%
-       * of the site's search clicks, so it is not going anywhere, and it is also no
-       * longer what the company is. Saying that here, once, is what lets the
-       * articles keep their sector language without the site as a whole reading as
-       * a pub agency.
-       */}
-      <section className="border-y-1.5 border-oj-ink bg-oj-cream py-9">
-        <div className="page-shell">
-          <p className="font-oj text-[13px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-            hospitality
-          </p>
-          <p className="measure mt-2.5 text-[17px] leading-relaxed text-oj-ink-2">
-            Hospitality is the sector we know best, because we run one. Orange Jelly is a growth
-            partner for ambitious small and mid-sized businesses, and this library is the part of it
-            written for people running venues. Every article ends with the business problem
-            underneath it.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <OjButton variant="ghost" size="sm" href="/pub-marketing">
-              Pub marketing
-            </OjButton>
-            <OjButton variant="ghost" size="sm" href="/small-business-rescue">
-              Trade is falling
-            </OjButton>
-            <OjButton variant="ghost" size="sm" href="/growth-problems">
-              The eight growth problems
-            </OjButton>
+        {/*
+         * The sector framing. This library is 105 hospitality articles carrying 92.9%
+         * of the site's search clicks, so it is not going anywhere, and it is also no
+         * longer what the company is. Saying that here, once, is what lets the
+         * articles keep their sector language without the site as a whole reading as
+         * a pub agency.
+         */}
+        <section className="border-y-1.5 border-oj-ink bg-oj-cream py-9">
+          <div className="page-shell">
+            <p className="font-oj text-[13px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+              hospitality
+            </p>
+            <p className="measure mt-2.5 text-[17px] leading-relaxed text-oj-ink-2">
+              Hospitality is the sector we know best, because we run one. Orange Jelly is a growth
+              partner for ambitious small and mid-sized businesses, and this library is the part of
+              it written for people running venues. Every article ends with the business problem
+              underneath it.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <OjButton variant="ghost" size="sm" href="/pub-marketing">
+                Pub marketing
+              </OjButton>
+              <OjButton variant="ghost" size="sm" href="/small-business-rescue">
+                Trade is falling
+              </OjButton>
+              <OjButton variant="ghost" size="sm" href="/growth-problems">
+                The eight growth problems
+              </OjButton>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <SeasonalPlaybooksBand background="surface" />
+        <SeasonalPlaybooksBand background="surface" />
 
-      <Section background="white">
-        <div className="measure py-12">
-          {/* Lead paragraph */}
-          <Text size="lg" align="center" className="mb-8 text-brand-base/70">
-            Essential guides for modern pub management, with ideas you can adapt for restaurants and
-            bars. From filling empty venues to competing with chains, discover practical advice that
-            actually works.
-          </Text>
+        <Section background="white">
+          <div className="measure py-12">
+            {/* Lead paragraph */}
+            <Text size="lg" align="center" className="mb-8 text-brand-base/70">
+              Essential guides for modern pub management, with ideas you can adapt for restaurants
+              and bars. From filling empty venues to competing with chains, discover practical
+              advice that actually works.
+            </Text>
 
-          {/* Key Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 measure-wide mb-12">
-            <div className="text-center p-6 bg-surface rounded-lg">
-              <div className="text-3xl font-bold text-orange-dark mb-2">+403%</div>
-              <Text size="sm" className="text-brand-base/70">
-                Table bookings
+            {/* Key Statistics */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 measure-wide mb-12">
+              <div className="text-center p-6 bg-surface rounded-lg">
+                <div className="text-3xl font-bold text-orange-dark mb-2">+403%</div>
+                <Text size="sm" className="text-brand-base/70">
+                  Table bookings
+                </Text>
+              </div>
+              <div className="text-center p-6 bg-surface rounded-lg">
+                <div className="text-3xl font-bold text-orange-dark mb-2">-89%</div>
+                <Text size="sm" className="text-brand-base/70">
+                  Booking no-shows
+                </Text>
+              </div>
+              <div className="text-center p-6 bg-surface rounded-lg">
+                <div className="text-3xl font-bold text-orange-dark mb-2">+828%</div>
+                <Text size="sm" className="text-brand-base/70">
+                  Google Search visibility
+                </Text>
+              </div>
+            </div>
+
+            {/* Introduction */}
+            <div className="prose prose-lg measure mb-12">
+              <Text className="mb-4">
+                Every guide in this collection comes from real experience at The Anchor in Stanwell
+                Moor. We've tested these strategies firsthand, measuring their impact on our bottom
+                line.
+              </Text>
+              <Text className="mb-4">
+                Whether you're tackling quiet Tuesday nights, competing with chains, or building a
+                stronger food offer, you'll find honest, practical advice that works for pubs, bars,
+                and venues.
+              </Text>
+              <Text className="mb-8">
+                No theory. No fluff. Just proven methods that created a measurable step-change in
+                our own pub and can do the same for yours.
               </Text>
             </div>
-            <div className="text-center p-6 bg-surface rounded-lg">
-              <div className="text-3xl font-bold text-orange-dark mb-2">-89%</div>
-              <Text size="sm" className="text-brand-base/70">
-                Booking no-shows
-              </Text>
-            </div>
-            <div className="text-center p-6 bg-surface rounded-lg">
-              <div className="text-3xl font-bold text-orange-dark mb-2">+828%</div>
-              <Text size="sm" className="text-brand-base/70">
-                Google Search visibility
-              </Text>
-            </div>
-          </div>
 
-          {/* Introduction */}
-          <div className="prose prose-lg measure mb-12">
-            <Text className="mb-4">
-              Every guide in this collection comes from real experience at The Anchor in Stanwell
-              Moor. We've tested these strategies firsthand, measuring their impact on our bottom
-              line.
-            </Text>
-            <Text className="mb-4">
-              Whether you're tackling quiet Tuesday nights, competing with chains, or building a
-              stronger food offer, you'll find honest, practical advice that works for pubs, bars,
-              and venues.
-            </Text>
-            <Text className="mb-8">
-              No theory. No fluff. Just proven methods that created a measurable step-change in our
-              own pub and can do the same for yours.
-            </Text>
-          </div>
-
-          {/* What You'll Learn */}
-          <div className="bg-brand-base/5 rounded-xl p-8 mb-12 measure">
-            <Heading level={2} align="center" className="mb-6">
-              What You'll Learn
-            </Heading>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">How to fill your pub on quiet weeknights</Text>
-              </div>
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">Social media strategies that actually drive footfall</Text>
-              </div>
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">Food menu optimisation for maximum profit</Text>
-              </div>
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">Event ideas that build loyal communities</Text>
-              </div>
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">Competing with chains without matching prices</Text>
-              </div>
-              <div className="flex items-start">
-                <span className="text-orange-dark mr-3">✓</span>
-                <Text size="sm">Budget-friendly marketing that delivers results</Text>
+            {/* What You'll Learn */}
+            <div className="bg-brand-base/5 rounded-xl p-8 mb-12 measure">
+              <Heading level={2} align="center" className="mb-6">
+                What You'll Learn
+              </Heading>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">How to fill your pub on quiet weeknights</Text>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">Social media strategies that actually drive footfall</Text>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">Food menu optimisation for maximum profit</Text>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">Event ideas that build loyal communities</Text>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">Competing with chains without matching prices</Text>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-orange-dark mr-3">✓</span>
+                  <Text size="sm">Budget-friendly marketing that delivers results</Text>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Search */}
-          <div className="mb-12 measure">
-            <Heading level={2} align="center" className="mb-6">
-              Search the Guides
-            </Heading>
-            <SearchComponent
-              placeholder="Search guides by topic, problem, or event..."
-              maxResults={8}
-            />
-          </div>
-
-          {/* Category Navigation */}
-          <div className="mb-12">
-            <Heading level={2} align="center" className="mb-6">
-              Top Topics
-            </Heading>
-            <CategoryList categories={categories} variant="grid" maxVisible={6} />
-          </div>
-
-          {/* Category Colour Legend */}
-          <div className="mb-8">
-            <CategoryLegend />
-          </div>
-
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <BlogPostCard
-                key={post.slug}
-                post={{
-                  slug: post.slug,
-                  title: post.title,
-                  excerpt: post.excerpt,
-                  publishedDate: post.publishedDate,
-                  category: {
-                    name: getCategoryDisplayInfo(post.category).name,
-                    slug: post.category,
-                  },
-                  featuredImage: post.featuredImage, // Pass the raw featuredImage data
-                  author: {
-                    name: post.author?.name || 'Peter Pitcher',
-                  },
-                  readingTime: post.readingTime || 5,
-                }}
+            {/* Search */}
+            <div className="mb-12 measure">
+              <Heading level={2} align="center" className="mb-6">
+                Search the Guides
+              </Heading>
+              <SearchComponent
+                placeholder="Search guides by topic, problem, or event..."
+                maxResults={8}
               />
-            ))}
+            </div>
+
+            {/* Category Navigation */}
+            <div className="mb-12">
+              <Heading level={2} align="center" className="mb-6">
+                Top Topics
+              </Heading>
+              <CategoryList categories={categories} variant="grid" maxVisible={6} />
+            </div>
+
+            {/* Category Colour Legend */}
+            <div className="mb-8">
+              <CategoryLegend />
+            </div>
+
+            {/* Blog Posts Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.map((post) => (
+                <BlogPostCard
+                  key={post.slug}
+                  post={{
+                    slug: post.slug,
+                    title: post.title,
+                    excerpt: post.excerpt,
+                    publishedDate: post.publishedDate,
+                    category: {
+                      name: getCategoryDisplayInfo(post.category).name,
+                      slug: post.category,
+                    },
+                    featuredImage: post.featuredImage, // Pass the raw featuredImage data
+                    author: {
+                      name: post.author?.name || 'Peter Pitcher',
+                    },
+                    readingTime: post.readingTime || 5,
+                  }}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </main>
       <OjFooter />
     </>
   );
