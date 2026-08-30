@@ -196,12 +196,27 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 let total = 0;
 let unreadable = 0;
+const unreachable = [];
 const byText = new Map();
 
 for (const p of paths) {
-  const res = await page.goto(BASE + p, { waitUntil: 'networkidle' }).catch(() => null);
+  /*
+   * Retry, and count what never loaded.
+   *
+   * A dev server compiles a route on first request, and a run against a cold server
+   * had six routes time out. They were printed as "?" and skipped, the totals looked
+   * wonderful, and the report was worthless: 41 findings became 6 because two thirds
+   * of the site was never measured.
+   *
+   * A check that gets quieter the less it manages to do is the wrong shape.
+   */
+  let res = null;
+  for (let attempt = 0; attempt < 3 && !res; attempt++) {
+    res = await page.goto(BASE + p, { waitUntil: 'networkidle', timeout: 45000 }).catch(() => null);
+  }
   if (!res || !res.ok()) {
-    console.log(`  ?  ${p}  (${res ? res.status() : 'no response'})`);
+    unreachable.push(`${p} (${res ? res.status() : 'no response after 3 attempts'})`);
+    console.log(`  UNREACHABLE  ${p}`);
     continue;
   }
   const { findings: found, unmeasurable } = await page.evaluate(MEASURE);
@@ -225,7 +240,14 @@ for (const p of paths) {
 await browser.close();
 
 console.log(`\n${'='.repeat(70)}`);
-console.log(`${total} failing text nodes across ${paths.length} routes.`);
+console.log(
+  `${total} failing text nodes across ${paths.length - unreachable.length} of ${paths.length} routes.`
+);
+if (unreachable.length) {
+  console.log(`\n${unreachable.length} route(s) could not be loaded and were NOT measured:`);
+  for (const u of unreachable) console.log(`  ${u}`);
+  console.log('The result above is incomplete. Fix these before trusting it.');
+}
 if (unreadable) {
   console.log(`${unreadable} more sit on a raster image and need looking at by eye.`);
 }
@@ -235,4 +257,4 @@ if (byText.size) {
     console.log(`  ${String(n).padStart(4)}x  ${k}`);
   }
 }
-process.exit(total ? 1 : 0);
+process.exit(total || unreachable.length ? 1 : 0);
