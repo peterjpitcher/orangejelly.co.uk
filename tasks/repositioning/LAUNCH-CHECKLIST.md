@@ -20,11 +20,11 @@ Active phases after release: active, phase4
 
 - [ ] `/capabilities` → `/solutions`
 - [ ] `/compete-with-pub-chains` → `/licensees-guide/compete-with-wetherspoons`
-- [ ] `/empty-pub-solutions` → `/small-business-rescue`
-- [ ] `/fix-my-pub` → `/small-business-rescue`
+- [ ] `/empty-pub-solutions` → `/why-revenue-is-falling`
+- [ ] `/fix-my-pub` → `/why-revenue-is-falling`
 - [ ] `/pub-marketing-agency` → `/pub-marketing`
 - [ ] `/pub-marketing-no-budget` → `/pub-marketing`
-- [ ] `/quiet-midweek-solutions` → `/small-business-rescue`
+- [ ] `/quiet-midweek-solutions` → `/why-revenue-is-falling`
 - [ ] `/services/:slug` → `/pub-marketing`
 - [ ] `/ways-to-work` → `/how-we-work`
 - [ ] `/ways-to-work/:slug` → `/how-we-work`
@@ -35,7 +35,7 @@ These already redirect. The release repoints them, because their current
 destination is itself retiring and leaving them would form a chain.
 
 - [ ] `/services`: was `/ways-to-work`, becomes `/how-we-work`
-- [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/small-business-rescue`
+- [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/why-revenue-is-falling`
 
 ## Page files to delete (9)
 

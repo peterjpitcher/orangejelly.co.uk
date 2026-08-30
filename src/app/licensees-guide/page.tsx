@@ -273,8 +273,8 @@ export default async function LicenseesGuidePage() {
               <OjButton variant="ghost" size="sm" href="/pub-marketing">
                 Pub marketing
               </OjButton>
-              <OjButton variant="ghost" size="sm" href="/small-business-rescue">
-                Trade is falling
+              <OjButton variant="ghost" size="sm" href="/why-revenue-is-falling">
+                Why revenue is falling
               </OjButton>
               <OjButton variant="ghost" size="sm" href="/growth-problems">
                 The eight growth problems

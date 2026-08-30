@@ -32,7 +32,7 @@ const PAGES: Array<[string, () => Promise<{ metadata?: unknown }>]> = [
   ['/growth-problems', () => import('@/app/growth-problems/page')],
   ['/fractional-cmo', () => import('@/app/fractional-cmo/page')],
   ['/pub-marketing', () => import('@/app/pub-marketing/page')],
-  ['/small-business-rescue', () => import('@/app/small-business-rescue/page')],
+  ['/why-revenue-is-falling', () => import('@/app/why-revenue-is-falling/page')],
   ['/sectors/professional-services', () => import('@/app/sectors/professional-services/page')],
   ['/tools/ai-readiness', () => import('@/app/tools/ai-readiness/page')],
   ['/insights', () => import('@/app/insights/page')],

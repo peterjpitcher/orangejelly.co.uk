@@ -93,9 +93,9 @@ export default function GrowthProblemsHubPage(): JSX.Element {
         <Band heading="falling rather than flat?" tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
             These eight are written for growth that has stopped. If revenue is actively going
-            backwards, the clock changes and so does the order things should be done in.{' '}
-            <Anchor href="/small-business-rescue" className="font-semibold">
-              That version of the problem has its own page
+            backwards, the clock changes and so does the order things should be done in, so{' '}
+            <Anchor href="/why-revenue-is-falling" className="font-semibold">
+              finding out why has its own page
             </Anchor>
             , including the part where we say who we are not the right people for.
           </p>

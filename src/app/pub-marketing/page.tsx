@@ -161,9 +161,9 @@ export default function PubMarketingPage(): JSX.Element {
         <Band heading="if it is not marketing, and it is urgent." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
             Everything above assumes there is time to look properly. If takings are falling week on
-            week and the wage bill is not,{' '}
-            <Anchor href="/small-business-rescue" className="font-semibold">
-              the page for that is here
+            week and the wage bill is not, there is{' '}
+            <Anchor href="/why-revenue-is-falling" className="font-semibold">
+              a page on finding out why
             </Anchor>
             . It starts by saying what we are not, which matters more in that situation than in this
             one.

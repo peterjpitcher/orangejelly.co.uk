@@ -33,9 +33,20 @@ Peter asked for white text on orange backgrounds, for impact. On the brand orang
 white text is not readable, so those sections use a darker shade of the same orange
 where it is. Buttons and tags keep the original orange.
 
-**3. Buttons on orange now have a white outline.**
+**3. Buttons changed, and it is more than the outline.**
 
-Peter's decision. The dark outline was hard to make out against the deeper orange.
+Peter asked for a white outline on buttons over orange, and for white text on any
+orange button. The second one forced the first to go further than expected: white text
+cannot sit on their orange at all, it is not readable, so an orange button is now a
+darker shade of the same orange.
+
+The white outline is on every dark background, not only the orange ones. It is not on
+the cream pages, where a white outline would simply disappear and take the heavy dark
+outline of the design with it. The rule is that the outline is whichever of black or
+white stands out most against what is behind it.
+
+Two buttons were invisible before this and nobody had noticed: a dark button on a dark
+section, with a dark outline. They read as a line of text rather than a button.
 
 ---
 

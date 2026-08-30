@@ -58,11 +58,14 @@ export const seoOverrides: Record<string, SeoOverride> = {
     description:
       'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads and local SEO for independent pubs. From £375 + VAT.',
   },
-  '/small-business-rescue': {
-    title: 'Pub Rescue: Fast Turnaround Help From a Working Licensee',
-    description:
-      'Pub in trouble? Get a fast, practical rescue plan from a licensee who has done it. We fix the highest-impact problem first. Packages from £375 + VAT.',
-  },
+  /*
+   * The rescue page's override is deleted rather than renamed.
+   *
+   * It read "Pub Rescue: Fast Turnaround Help From a Working Licensee" and quoted
+   * "Packages from £375 + VAT". Inert today, because the page exports its own
+   * metadata, but it names a package at a price on a site that has neither (D3), and
+   * carrying it through the rename would have kept a live breach one refactor away.
+   */
   '/empty-pub-solutions': {
     title: 'Empty Pub? A Proven Plan to Fill Tables Again',
     description:

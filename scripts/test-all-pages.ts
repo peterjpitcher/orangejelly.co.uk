@@ -14,7 +14,7 @@ const pages = [
   { name: 'empty-pub-solutions', path: '/empty-pub-solutions' },
   { name: 'quiet-midweek-solutions', path: '/quiet-midweek-solutions' },
   { name: 'compete-with-pub-chains', path: '/compete-with-pub-chains' },
-  { name: 'small-business-rescue', path: '/small-business-rescue' },
+  { name: 'why-revenue-is-falling', path: '/why-revenue-is-falling' },
   { name: 'pub-marketing-no-budget', path: '/pub-marketing-no-budget' },
 ];
 

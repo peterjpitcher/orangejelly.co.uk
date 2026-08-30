@@ -172,18 +172,18 @@ const ROUTES = [
     note: 'Survives as the single hospitality service page and absorbs the /services children.',
   },
   {
-    path: '/small-business-rescue',
+    path: '/why-revenue-is-falling',
     disposition: 'live',
     sitemap: true,
     priority: 0.75,
     changeFrequency: 'monthly',
     lastModified: LAST_CONTENT_SWEEP,
-    note: 'Was /pub-rescue. De-sectored on the repositioning: the six causes behave the same way outside hospitality.',
+    note: 'Was /pub-rescue, then briefly /small-business-rescue, neither of which shipped. De-sectored because the six causes behave the same way outside hospitality, and reframed away from rescue because the page is about finding the cause, not about insolvency.',
   },
   {
     path: '/pub-rescue',
     disposition: 'redirect',
-    destination: '/small-business-rescue',
+    destination: '/why-revenue-is-falling',
     note: 'Renamed, not retired. It was the strongest of the pub pages at 6 clicks and 519 impressions a year, which is little enough that the rename costs almost nothing and enough that it earns a permanent redirect rather than a 410. The query "pub rescue" itself earned none of those clicks.',
   },
   {
@@ -400,7 +400,7 @@ const ROUTES = [
     path: '/licensees-guide/cash-flow-crisis-breaking-cycle',
     disposition: 'redirect',
     destination: '/fix-my-pub',
-    note: 'Retired guide, previously 410. Repointed to /small-business-rescue in phase 4 when /fix-my-pub retires.',
+    note: 'Retired guide, previously 410. Repointed to /why-revenue-is-falling in phase 4 when /fix-my-pub retires.',
   },
   {
     path: '/services/instagram-services-for-pubs',
@@ -467,26 +467,26 @@ const PHASE_4_REDIRECTS = [
   {
     path: '/fix-my-pub',
     disposition: 'redirect',
-    destination: '/small-business-rescue',
+    destination: '/why-revenue-is-falling',
     phase: 'phase4',
   },
   {
     path: '/licensees-guide/cash-flow-crisis-breaking-cycle',
     disposition: 'redirect',
-    destination: '/small-business-rescue',
+    destination: '/why-revenue-is-falling',
     phase: 'phase4',
     note: 'Repointed from /fix-my-pub so the chain never forms.',
   },
   {
     path: '/empty-pub-solutions',
     disposition: 'redirect',
-    destination: '/small-business-rescue',
+    destination: '/why-revenue-is-falling',
     phase: 'phase4',
   },
   {
     path: '/quiet-midweek-solutions',
     disposition: 'redirect',
-    destination: '/small-business-rescue',
+    destination: '/why-revenue-is-falling',
     phase: 'phase4',
   },
   {

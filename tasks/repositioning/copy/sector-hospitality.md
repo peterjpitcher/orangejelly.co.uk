@@ -1,6 +1,6 @@
-# `/pub-marketing` and `/small-business-rescue` copy
+# `/pub-marketing` and `/why-revenue-is-falling` copy
 
-**Task:** T063. Built as `src/app/pub-marketing/page.tsx` and `src/app/small-business-rescue/page.tsx`.
+**Task:** T063. Built as `src/app/pub-marketing/page.tsx` and `src/app/why-revenue-is-falling/page.tsx`.
 
 **Why these two survive and the rest redirect.** They are the two hospitality pages that earn anything:
 `/pub-marketing` takes 847 impressions on its own, and the rescue page is the destination the four
@@ -84,44 +84,64 @@ it is.
 
 ---
 
-# `/small-business-rescue`
+# `/why-revenue-is-falling`
 
-**Renamed from `/pub-rescue` on Peter's instruction, 28 August 2026.** The six causes
-behave the same way in a professional services firm, a trade business and a venue, so
-the page is no longer written only for pubs. The old URL earned 6 clicks in twelve
-months and the query "pub rescue" earned none of them, so the rename costs almost
-nothing. `/pub-rescue` redirects permanently, and the phase 4 redirects point at the
-new URL directly rather than chaining through the old one.
+**Renamed twice and reframed once.** `/pub-rescue` became `/small-business-rescue` on
+28 August 2026 when Peter asked for it to stop being pub-specific, and became this on
+30 August when he asked for "a more positive intent". Neither intermediate shipped, so
+`/pub-rescue` redirects straight here and the phase 4 redirects point here directly.
 
-The hospitality specifics did not disappear, they moved: `/pub-marketing` is still the
-sector page and still says pub in the first line.
+**Why the word rescue had to go, and what replaced it.** "Rescue" carries insolvency
+connotations in UK usage, and a page that turns away businesses which genuinely cannot
+pay should not be wearing the word. More than that it was the wrong promise: the page
+never offered to stop the fall, it offered to find the cause. So the page now says
+that. The positive intent lives in what is actually on offer, not in softer language
+about the same thing.
 
-**Eyebrow:** when it is going the wrong way
+The diagnosis frame is also the house argument already, which is why this reframe
+makes the page sound more like the rest of the site rather than less. `/pub-marketing`
+opens "most pubs do not have a marketing problem. They have a diagnosis problem."
 
-**H1:** revenue is falling and you need it to stop.
+**Why this slug.** Somebody with this problem types "why is my revenue falling". They
+do not type "turn it round", and "revenue recovery" is debt-collection territory. It
+also sits consistently beside `/growth-problems/growth-has-stalled`.
+
+**Eyebrow:** a direction, not a verdict
+
+**H1:** find out why revenue is falling.
 
 **Standfirst:**
-This page is for the version of the problem that is not a project. Takings are down week on week, the
-wage bill is not, and every day it continues costs more than the last one.
+Takings are down week on week and the wage bill is not. What makes that hard to fix is
+rarely the fall itself, it is that nobody can say what is causing it. The cause is
+findable, and once you have it, everything after is easier to decide, quicker to do and
+cheaper to get right.
 
 **Primary action:** Bring us the problem
 **Secondary:** How we work → `/how-we-work`
 
 ## first, the honest part.
 
-We are not an emergency service and we will not pretend to be one. If the business genuinely cannot pay
-its bills this month, the useful calls are to your accountant and to a licensed insolvency practitioner,
-not to us. If you run a pub, your BDM and the Licensed Trade Charity belong on that list too.
+There is a point at which knowing the cause is not the thing you need next. If the
+business genuinely cannot pay its bills this month, the useful calls are to your
+accountant and to a licensed insolvency practitioner rather than to us. If you run a
+pub, your BDM and the Licensed Trade Charity belong on that list too. They are better
+at that month than we are, and we would rather tell you now than take the meeting.
 
-What we are good at is the situation just before that: a business that is still trading, still has some
-money to work with, and is sliding for reasons nobody has correctly identified.
+Everything below is written for the ground just before that: a business still trading,
+still with money to work with, and sliding for reasons nobody has correctly identified.
+That version has options, and the options are widest the earlier somebody looks
+properly.
 
 ## the six that account for most of it.
 
-Written for any small business now, not only a venue. What separates these from the six
-growth problems is tense: this is the same territory while it is actively falling, and a
-business losing revenue week on week has less time and fewer options than one that has
-plateaued.
+**Intro:** It is usually one or two of these, rather than the economy and rather than
+everything at once. Each one is revenue the business is already capable of and is not
+currently getting, which is why it can be got back. Read them as a shortlist to check
+your own numbers against, not as a diagnosis.
+
+The six are unchanged word for word through both renames. They were written as causes
+rather than as accusations, and each already describes money not being collected
+rather than a business failing, which is the frame Peter asked for.
 
 - **Nobody who could buy from you remembers you exist.** Visibility decays quietly and nothing tells you
   it is happening. The enquiries do not stop, they thin, and the month it becomes obvious is nine months
@@ -138,6 +158,9 @@ plateaued.
   being addressed. Every week spent arguing about the cause is a week the cause continues.
 
 ## what we would actually do.
+
+Unchanged. Under the new H1 this stops being reassurance after an alarm and becomes the
+payoff the headline promised, so the position does the work rather than the words.
 
 A week or two of looking, properly, before anything is changed. The baseline first: revenue by week, by
 line and by source, where enquiries come from and where they stop, and what each one is worth. Then the
@@ -174,9 +197,39 @@ implied a response time (D23).
 5. **What if it does not work?**
    We agree the measure and take the baseline before anything is built, so that question has an answer rather than an argument. We stay close through the first month, review against the baseline rather than against activity, and change direction when the number says to. If it is not moving we will say that too.
 
+## questions people ask first.
+
+The five questions the old URL ranked for, kept word for word because the search value
+is in the questions and the FAQPage schema maps the same array. Every answer is
+rewritten: the originals quoted a package at a price (D3), spoke in the founder's first
+person (D21), and one promised the first conversation would happen the same week, which
+is a response-time promise in all but name (D23).
+
+1. **How quickly can you help?**
+   There are two clocks here and it helps to separate them. The first is how soon you know more than you do now: that is one hour, free, going through what is actually happening, what you have already tried and what we would look at first. The second is how long the cause takes to find, normally a week or two of looking at real numbers, because a cause guessed at in a day is the one that gets fixed twice. We will not put a date on a web page that we cannot keep for everybody who reads it. If it is urgent, say so in your first line and we will treat it that way.
+
+2. **What if we cannot afford help right now?**
+   Say so early. It changes what we would recommend, not whether we will talk to you. The first hour costs nothing, so the money question only applies to what comes after it, and by then you will know what the problem actually is. There is no price on this site because every engagement is scoped to the problem and agreed in writing before anything starts, and a business with less room than usual is exactly the one that should not be sold a large programme. Sometimes the honest recommendation is a small piece of work. Sometimes it is that you now know enough to go and do it yourself.
+
+3. **Do you work with all types of business?**
+   Yes, within one limit. The six causes above behave the same way in a professional services firm, a trade business, a shop and a venue, because they are about demand, margin, conversion and systems rather than about what you sell. Where it does not transfer is anything needing sector accreditation or technical knowledge of your field. If that is you, we will say so inside the first hour and point you at someone better placed, rather than take the work.
+
+4. **What makes you different from other consultants?**
+   We look before we propose. It is easy to arrive with the answer already chosen and treat the diagnosis as a formality on the way to it, and that is how businesses end up paying for the wrong fix. We would rather spend a week or two finding out and then tell you the job is smaller than you feared. That is easier to say when you run a business yourself: The Anchor is our own venue, a real trading business with a wage bill and suppliers, and everything on this site was tested there before it was offered to anybody.
+
+5. **What if it does not work?**
+   We agree the measure and take the baseline before anything is built, so that question has an answer rather than an argument. We stay close through the first month, review against the baseline rather than against activity, and change direction when the number says to. If it is not moving we will say that too.
+
 ## final band
 
-**Heading:** the first hour is free.
+**Heading:** you do not have to guess at this.
 
-**Line:** Tell us what is happening and what you have already tried. If we are not the right people we
-will tell you that inside the hour, and point you at who is.
+**Line:** Bring us what is happening, what you have already tried, and what everybody thinks the cause
+is. The first hour is free, and you leave it with a clearer view of where to look than you came in
+with. If we are not the right people we will say so inside that hour and point you at who is.
+
+## Navigation and internal link name
+
+"Why revenue is falling" everywhere: breadcrumb, the `/licensees-guide` button (was
+"Trade is falling"), and the contextual links from `/growth-problems` and
+`/pub-marketing`.

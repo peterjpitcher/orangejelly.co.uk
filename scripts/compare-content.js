@@ -22,7 +22,7 @@ const PAGES = [
   { name: 'Services', path: '/services' },
   { name: 'Results', path: '/results' },
   { name: 'Contact', path: '/contact' },
-  { name: 'Small business rescue', path: '/small-business-rescue' },
+  { name: 'Small business rescue', path: '/why-revenue-is-falling' },
   { name: 'Compete with Chains', path: '/compete-with-pub-chains' },
   { name: 'Quiet Midweek', path: '/quiet-midweek-solutions' },
 ];

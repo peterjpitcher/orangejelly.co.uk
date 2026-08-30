@@ -18,8 +18,8 @@ import { CASE_STUDIES } from '../results/case-studies';
 import { CAUSES, FAQS, WOULD_NOT_DO } from './content';
 
 /**
- * `/small-business-rescue`. Where the four problem-shaped hospitality landing pages
- * consolidate, de-sectored.
+ * `/why-revenue-is-falling`. Where the four problem-shaped hospitality landing pages
+ * consolidate, de-sectored and reframed.
  *
  * The page opens by refusing the emergency framing its predecessor carried. A
  * business that genuinely cannot pay this month needs an accountant and an
@@ -36,9 +36,9 @@ import { CAUSES, FAQS, WOULD_NOT_DO } from './content';
  *
  * Copy: `tasks/repositioning/copy/sector-hospitality.md`.
  */
-const TITLE = 'Revenue is falling | Orange Jelly';
+const TITLE = 'Why Revenue Is Falling: Find the Cause First | Orange Jelly';
 const DESCRIPTION =
-  'For a business still trading and sliding for reasons nobody has identified. The six causes that account for most of it, and what we would actually do.';
+  'Revenue down week on week and nobody can say why. The six causes that account for most of it, how we find which one is yours, and what we would do next.';
 const CANONICAL = `${getBaseUrl()}/small-business-rescue`;
 
 export const metadata: Metadata = {
@@ -89,18 +89,19 @@ export default function SmallBusinessRescuePage(): JSX.Element {
               <Breadcrumb
                 tone="orange"
                 className="mb-7"
-                items={[{ label: 'Home', href: '/' }, { label: 'Revenue is falling' }]}
+                items={[{ label: 'Home', href: '/' }, { label: 'Why revenue is falling' }]}
               />
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
-                when it is going the wrong way
+                a direction, not a verdict
               </p>
               <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
-                revenue is falling and you need it to stop.
+                find out why revenue is falling.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
-                This page is for the version of the problem that is not a project. Takings are down
-                week on week, the wage bill is not, and every day it continues costs more than the
-                last one.
+                Takings are down week on week and the wage bill is not. What makes that hard to fix
+                is rarely the fall itself, it is that nobody can say what is causing it. The cause
+                is findable, and once you have it, everything after is easier to decide, quicker to
+                do and cheaper to get right.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -117,9 +118,10 @@ export default function SmallBusinessRescuePage(): JSX.Element {
         <Band heading="first, the honest part." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              We are not an emergency service and we will not pretend to be one. If the business
-              genuinely cannot pay its bills this month, the useful calls are to your accountant and
-              to a licensed insolvency practitioner, not to us. If you run a pub, your BDM and the{' '}
+              There is a point at which knowing the cause is not the thing you need next. If the
+              business genuinely cannot pay its bills this month, the useful calls are to your
+              accountant and to a licensed insolvency practitioner rather than to us. If you run a
+              pub, your BDM and the{' '}
               <a
                 href="https://www.licensedtradecharity.org.uk"
                 target="_blank"
@@ -128,17 +130,23 @@ export default function SmallBusinessRescuePage(): JSX.Element {
               >
                 Licensed Trade Charity
               </a>
-              <span className="sr-only"> (opens in a new tab)</span> belong on that list too.
+              <span className="sr-only"> (opens in a new tab)</span> belong on that list too. They
+              are better at that month than we are, and we would rather tell you now than take the
+              meeting.
             </p>
             <p>
-              What we are good at is the situation just before that: a business that is still
-              trading, still has some money to work with, and is sliding for reasons nobody has
-              correctly identified.
+              Everything below is written for the ground just before that: a business still trading,
+              still with money to work with, and sliding for reasons nobody has correctly
+              identified. That version has options, and the options are widest the earlier somebody
+              looks properly.
             </p>
           </div>
         </Band>
 
-        <Band heading="the six that account for most of it.">
+        <Band
+          heading="the six that account for most of it."
+          intro="It is usually one or two of these, rather than the economy and rather than everything at once. Each one is revenue the business is already capable of and is not currently getting, which is why it can be got back. Read them as a shortlist to check your own numbers against, not as a diagnosis."
+        >
           <dl className="measure-wide grid gap-x-10 gap-y-6 sm:grid-cols-2">
             {CAUSES.map((cause) => (
               <div key={cause.title}>
@@ -212,11 +220,13 @@ export default function SmallBusinessRescuePage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            the first hour is free.
+            you do not have to guess at this.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what is happening and what you have already tried. If we are not the right
-            people we will tell you that inside the hour, and point you at who is.
+            Bring us what is happening, what you have already tried, and what everybody thinks the
+            cause is. The first hour is free, and you leave it with a clearer view of where to look
+            than you came in with. If we are not the right people we will say so inside that hour
+            and point you at who is.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

@@ -93,7 +93,7 @@ export function getStickyBarConfig(pathname: string): StickyBarConfig {
   const problemPaths = [
     '/fix-my-pub',
     '/empty-pub-solutions',
-    '/small-business-rescue',
+    '/why-revenue-is-falling',
     '/quiet-midweek',
     '/compete-with',
     '/pub-marketing-no-budget',
