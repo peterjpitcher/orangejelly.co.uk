@@ -20,7 +20,7 @@ import { CASE_STUDIES, getFeaturedCaseStudy } from './case-studies';
  */
 const TITLE = 'Results | Orange Jelly';
 const DESCRIPTION =
-  'What changed, by how much, and how it was measured. Every number here comes from The Anchor, the business we run ourselves, where the risk of getting it wrong was ours.';
+  'What changed, by how much, and how it was measured. Every number comes from The Anchor, the business we run ourselves, where the risk was ours.';
 
 export const metadata: Metadata = {
   title: TITLE,

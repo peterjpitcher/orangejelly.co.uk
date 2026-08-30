@@ -37,7 +37,7 @@ import { CAUSES, FAQS, WOULD_NOT_DO } from './content';
  */
 const TITLE = 'Revenue is falling | Orange Jelly';
 const DESCRIPTION =
-  'For a business that is still trading and sliding for reasons nobody has correctly identified. The six causes that account for most of it, and what we would actually do.';
+  'For a business still trading and sliding for reasons nobody has identified. The six causes that account for most of it, and what we would actually do.';
 const CANONICAL = `${getBaseUrl()}/small-business-rescue`;
 
 export const metadata: Metadata = {

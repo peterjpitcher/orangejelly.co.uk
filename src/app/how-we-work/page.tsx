@@ -17,7 +17,7 @@ import { METHOD_DETAIL, PRESSURE_AREAS_EXPLAINED, PREVENTS, STARTING_AGREEMENT }
  */
 const TITLE = 'How we work | Orange Jelly';
 const DESCRIPTION =
-  'Hear, challenge, build, optimise. Four steps in that order, every time, because the order is what stops us solving the loudest symptom instead of the real problem.';
+  'Hear, challenge, build, optimise. Four steps in that order, every time, because the order is what stops us fixing the loudest symptom instead of the cause.';
 
 export const metadata: Metadata = {
   title: TITLE,

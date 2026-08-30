@@ -20,7 +20,7 @@ import { FACTS, LESSONS, REFUSALS } from './content';
  */
 const TITLE = 'About | Orange Jelly';
 const DESCRIPTION =
-  'A growth partner for ambitious small and mid-sized businesses, small on purpose. Where the thinking came from, what we will not do, and who you would actually be dealing with.';
+  'A growth partner for ambitious businesses, small on purpose. Where the thinking came from, what we will not do, and who you would be dealing with.';
 
 export const metadata: Metadata = {
   title: TITLE,

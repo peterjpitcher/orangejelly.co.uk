@@ -21,7 +21,7 @@ import { QUESTIONS_TO_ASK, RIGHT_ANSWER, WRONG_SHAPE } from './content';
  */
 const TITLE = 'Do you need a fractional CMO? | Orange Jelly';
 const DESCRIPTION =
-  'When a fractional CMO is the right hire, when it is the wrong shape of answer, and the five questions to ask before you hire one. Including where we would tell you to hire one instead of us.';
+  'When a fractional CMO is the right hire, when it is the wrong answer, and five questions to ask first. Including when we would say hire one instead of us.';
 
 export const metadata: Metadata = {
   title: TITLE,

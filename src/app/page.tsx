@@ -20,9 +20,9 @@ import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from './home-content';
  *
  * Copy: `tasks/repositioning/copy/homepage.md`, held to it by a test.
  */
-const TITLE = 'Orange Jelly | You bring the growth problem. We build the solution.';
+const TITLE = 'Orange Jelly | You bring the problem. We build the solution.';
 const DESCRIPTION =
-  'Growth partner for ambitious small and mid-sized businesses. We get under the skin of a business, work out what is actually blocking growth, and build the thing that fixes it.';
+  'Growth partner for ambitious small and mid-sized businesses. We work out what is actually blocking growth, then build the thing that fixes it.';
 
 export const metadata: Metadata = {
   title: TITLE,

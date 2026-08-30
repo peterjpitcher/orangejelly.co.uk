@@ -24,7 +24,7 @@ import { TRANSLATIONS, WHAT_WE_DO_NOT_HAVE } from './content';
  */
 const TITLE = 'Growth for professional services firms | Orange Jelly';
 const DESCRIPTION =
-  'What stalled growth actually looks like inside an accountancy practice, a law firm or a consultancy, in the language firms use about themselves. Including what we do not have.';
+  'What stalled growth looks like inside an accountancy practice, a law firm or a consultancy, in their own language. Including what we do not have.';
 
 export const metadata: Metadata = {
   title: TITLE,

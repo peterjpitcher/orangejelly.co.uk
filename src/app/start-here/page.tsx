@@ -29,7 +29,7 @@ import { FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
  */
 const TITLE = 'Start here | Orange Jelly';
 const DESCRIPTION =
-  'Every piece of work starts with a conversation about what is actually happening, before anyone says the word solution. What that involves, what you get from it, and who it does not work for.';
+  'Every piece of work starts with a conversation about what is actually happening. What that involves, what you get from it, and who it does not work for.';
 
 export const metadata: Metadata = {
   title: TITLE,

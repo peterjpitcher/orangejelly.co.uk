@@ -26,7 +26,7 @@ import { AREA_RESULTS } from './content';
  */
 const TITLE = 'AI readiness assessment | Orange Jelly';
 const DESCRIPTION =
-  'Twelve statements about how your business actually runs, and an honest read on where AI would help and where it would not. No score, and nothing stored unless you get in touch.';
+  'Twelve statements about how your business actually runs, and an honest read on where AI would help and where it would not. No score, nothing stored.';
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -24,7 +24,7 @@ import { CAPABILITIES, DECLINED } from './content';
  */
 const TITLE = 'What we build | Orange Jelly';
 const DESCRIPTION =
-  'Orange Jelly builds fixes, not services. What a fix is made of depends on what is actually blocking growth, which is why this starts with the problem rather than a list of things we sell.';
+  'Orange Jelly builds fixes, not services. What a fix is made of depends on what is blocking growth, so this starts with the problem, not a list.';
 
 export const metadata: Metadata = {
   title: TITLE,
