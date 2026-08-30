@@ -152,7 +152,7 @@ export default function PubMarketingPage(): JSX.Element {
             ))}
           </ol>
           <div className="mt-9">
-            <Button variant="ink" href="/how-we-work">
+            <Button variant="solid" href="/how-we-work">
               The method in full
             </Button>
           </div>

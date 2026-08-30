@@ -299,9 +299,13 @@
    * White on --oj-orange-deep is 5.24:1, so it passes at every size, and a deeper
    * ground under white type reads as more emphatic rather than less.
    *
-   * This is the BAND only. Buttons, tags and pagination keep ink on brand orange:
-   * they are small text, where white would fail harder, and the orange fill is the
-   * action signal the design system specifies.
+   * TAGS AND PAGINATION keep ink on the brand orange: small text, where the orange
+   * fill is the action signal and ink is 5.13:1 on it.
+   *
+   * BUTTONS no longer do. Peter asked for white text on any orange button, and white
+   * on the brand orange is 2.97:1, so an orange button is the deep orange at 5.24:1
+   * or, sitting on the band itself, ember at 8.83:1. The brand orange has left button
+   * fills entirely. See Button.tsx and Ground.tsx.
    */
   --oj-surface-band: var(--oj-orange-deep);
   --oj-text-on-band: #ffffff;
@@ -321,6 +325,16 @@
    * band is ink. Kept as one value so a component cannot use half of it.
    */
   --oj-ring: 0 0 0 2px var(--oj-surface-page), 0 0 0 4.5px var(--oj-ink);
+  /*
+   * The focus ring for a dark ground.
+   *
+   * The light ring is a page-coloured gap with an ink outer band, which is the right
+   * way round on cream and useless on ink: the ink band is 1.00:1 against an ink
+   * section, and the cream gap merges with a white button border at 1.09:1. Inverted,
+   * the ink gap separates a white ring from a white border, giving 15.27:1 on ink and
+   * 5.24:1 on the band.
+   */
+  --oj-ring-inverse: 0 0 0 2px var(--oj-ink), 0 0 0 4.5px var(--oj-text-on-band);
 
   /*
    * Taxonomy hues. Seven muted pairs, and a category is never orange: orange is

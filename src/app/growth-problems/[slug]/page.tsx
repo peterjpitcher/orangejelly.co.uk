@@ -183,10 +183,10 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
             no pitch deck.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button size="lg" arrow variant="ink" href="/start-here">
+            <Button size="lg" arrow href="/start-here">
               Bring us the problem
             </Button>
-            <Button variant="ghost-band" href="/growth-problems">
+            <Button variant="ghost" href="/growth-problems">
               See the other seven
             </Button>
           </div>

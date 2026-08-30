@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { GroundProvider, type Ground } from './Ground';
+
 /**
  * A full-width page section: surface, gutter, display heading, optional intro.
  *
@@ -34,6 +36,19 @@ const SURFACES: Record<NonNullable<BandProps['tone']>, string> = {
   orange: 'bg-oj-band text-oj-on-band',
 };
 
+/*
+ * A Band paints the background, so a Band declares the ground. Every button inside
+ * one then picks its own border, label and shadow without the call site being asked
+ * to remember which way round they go. This covers about twenty call sites on its
+ * own, which is most of them.
+ */
+const GROUNDS: Record<NonNullable<BandProps['tone']>, Ground> = {
+  page: 'light',
+  paper: 'light',
+  ink: 'ink',
+  orange: 'band',
+};
+
 export function Band({
   id,
   heading,
@@ -46,36 +61,43 @@ export function Band({
   className,
 }: BandProps): JSX.Element {
   return (
-    <section
-      id={id}
-      className={cn(
-        SURFACES[tone],
-        divider && 'border-b-1.5 border-oj-ink',
-        size === 'lg' ? 'py-16 sm:py-24' : 'py-14 sm:py-20',
-        className
-      )}
-    >
-      <div className="page-shell">
-        {heading ? (
-          <h2
-            className={cn('oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]', headingWidth)}
-          >
-            {heading}
-          </h2>
-        ) : null}
-        {intro ? (
-          <p
-            className={cn(
-              'measure mt-5 text-[17px] leading-relaxed',
-              tone === 'ink' ? 'text-oj-cream/80' : 'text-oj-ink-2'
-            )}
-          >
-            {intro}
-          </p>
-        ) : null}
-        {children ? <div className={heading || intro ? 'mt-8' : undefined}>{children}</div> : null}
-      </div>
-    </section>
+    <GroundProvider value={GROUNDS[tone]}>
+      <section
+        id={id}
+        className={cn(
+          SURFACES[tone],
+          divider && 'border-b-1.5 border-oj-ink',
+          size === 'lg' ? 'py-16 sm:py-24' : 'py-14 sm:py-20',
+          className
+        )}
+      >
+        <div className="page-shell">
+          {heading ? (
+            <h2
+              className={cn(
+                'oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]',
+                headingWidth
+              )}
+            >
+              {heading}
+            </h2>
+          ) : null}
+          {intro ? (
+            <p
+              className={cn(
+                'measure mt-5 text-[17px] leading-relaxed',
+                tone === 'ink' ? 'text-oj-cream/80' : 'text-oj-ink-2'
+              )}
+            >
+              {intro}
+            </p>
+          ) : null}
+          {children ? (
+            <div className={heading || intro ? 'mt-8' : undefined}>{children}</div>
+          ) : null}
+        </div>
+      </section>
+    </GroundProvider>
   );
 }
 

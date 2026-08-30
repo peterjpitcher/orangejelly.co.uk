@@ -9,6 +9,7 @@ import {
   OjFooter,
   OjHeader,
   ProofCard,
+  GroundProvider,
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
@@ -82,34 +83,36 @@ export default function SmallBusinessRescuePage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-band py-12 text-oj-on-band sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              tone="orange"
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Revenue is falling' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
-              when it is going the wrong way
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
-              revenue is falling and you need it to stop.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
-              This page is for the version of the problem that is not a project. Takings are down
-              week on week, the wage bill is not, and every day it continues costs more than the
-              last one.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow variant="ink" href="/start-here">
-                Bring us the problem
-              </Button>
-              <Button variant="ghost-band" href="/how-we-work">
-                How we work
-              </Button>
+        <GroundProvider value="band">
+          <section className="border-b-1.5 border-oj-ink bg-oj-band py-12 text-oj-on-band sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="orange"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Revenue is falling' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
+                when it is going the wrong way
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
+                revenue is falling and you need it to stop.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
+                This page is for the version of the problem that is not a project. Takings are down
+                week on week, the wage bill is not, and every day it continues costs more than the
+                last one.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Bring us the problem
+                </Button>
+                <Button variant="ghost" href="/how-we-work">
+                  How we work
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="first, the honest part." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">

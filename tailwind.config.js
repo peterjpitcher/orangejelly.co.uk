@@ -306,6 +306,9 @@ module.exports = {
         'press-lg': '8px 8px 0 var(--oj-ink)',
         // An ink block casts an orange shadow: ink on ink would be invisible.
         'press-orange': '5px 5px 0 var(--oj-orange)',
+        // The hover shadow for a button on a dark ground. The ink one is invisible
+        // there: 1.00:1 on an ink section, 2.92:1 on the band.
+        'press-inverse': '5px 5px 0 var(--oj-text-on-band)',
       },
       borderWidth: {
         /*

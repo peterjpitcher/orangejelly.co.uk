@@ -4,6 +4,8 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { GroundProvider } from './Ground';
+
 import { Anchor } from './Anchor';
 
 import { Button } from './Button';
@@ -41,67 +43,73 @@ export function OfferCard({
   className,
 }: OfferCardProps): JSX.Element {
   return (
-    <div
-      className={cn(
-        'flex flex-col gap-4 border-1.5 border-oj-ink rounded-oj p-6',
-        featured ? 'bg-oj-ink text-oj-cream shadow-press-orange' : 'bg-oj-paper text-oj-ink',
-        className
-      )}
-    >
-      {eyebrow ? (
-        <p
-          className={cn(
-            'm-0 text-xs font-bold uppercase tracking-[0.14em]',
-            featured ? 'text-oj-peach' : 'text-oj-orange-deep'
-          )}
-        >
-          {eyebrow}
-        </p>
-      ) : null}
-      <p className="m-0 font-oj text-[23px] font-black leading-tight tracking-[-0.01em]">{name}</p>
-      {blurb ? (
-        <p
-          className={cn(
-            'm-0 text-[15px] leading-normal',
-            featured ? 'text-oj-cream/80' : 'text-oj-ink-2'
-          )}
-        >
-          {blurb}
-        </p>
-      ) : null}
-      {includes.length ? (
-        <ul className="m-0 flex list-none flex-col gap-2 p-0">
-          {includes.map((item, index) => (
-            <li key={index} className="flex gap-2.5 text-[14.5px] leading-normal">
-              <span
-                aria-hidden="true"
-                className={featured ? 'text-oj-orange' : 'text-oj-orange-deep'}
-              >
-                →
-              </span>
-              <span className={featured ? 'text-oj-cream/85' : 'text-oj-ink-2'}>{item}</span>
-            </li>
-          ))}
-        </ul>
-      ) : null}
-      {footnote ? (
-        <p className={cn('m-0 text-[13px]', featured ? 'text-oj-cream/60' : 'text-oj-ink-3')}>
-          {footnote}
-        </p>
-      ) : null}
-      {cta ? (
-        <div className="mt-auto pt-2">
-          <Button
-            variant={featured ? 'primary' : 'ink'}
-            href={cta.href}
-            onClick={cta.onClick}
-            arrow
+    // A featured card is an ink block whatever section it sits in, so it declares
+    // its own ground rather than inheriting the one around it.
+    <GroundProvider value={featured ? 'ink' : 'light'}>
+      <div
+        className={cn(
+          'flex flex-col gap-4 border-1.5 border-oj-ink rounded-oj p-6',
+          featured ? 'bg-oj-ink text-oj-cream shadow-press-orange' : 'bg-oj-paper text-oj-ink',
+          className
+        )}
+      >
+        {eyebrow ? (
+          <p
+            className={cn(
+              'm-0 text-xs font-bold uppercase tracking-[0.14em]',
+              featured ? 'text-oj-peach' : 'text-oj-orange-deep'
+            )}
           >
-            {cta.label}
-          </Button>
-        </div>
-      ) : null}
-    </div>
+            {eyebrow}
+          </p>
+        ) : null}
+        <p className="m-0 font-oj text-[23px] font-black leading-tight tracking-[-0.01em]">
+          {name}
+        </p>
+        {blurb ? (
+          <p
+            className={cn(
+              'm-0 text-[15px] leading-normal',
+              featured ? 'text-oj-cream/80' : 'text-oj-ink-2'
+            )}
+          >
+            {blurb}
+          </p>
+        ) : null}
+        {includes.length ? (
+          <ul className="m-0 flex list-none flex-col gap-2 p-0">
+            {includes.map((item, index) => (
+              <li key={index} className="flex gap-2.5 text-[14.5px] leading-normal">
+                <span
+                  aria-hidden="true"
+                  className={featured ? 'text-oj-orange' : 'text-oj-orange-deep'}
+                >
+                  →
+                </span>
+                <span className={featured ? 'text-oj-cream/85' : 'text-oj-ink-2'}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        {footnote ? (
+          <p className={cn('m-0 text-[13px]', featured ? 'text-oj-cream/60' : 'text-oj-ink-3')}>
+            {footnote}
+          </p>
+        ) : null}
+        {cta ? (
+          <div className="mt-auto pt-2">
+            <Button
+              variant={featured ? 'primary' : 'solid'}
+              href={cta.href}
+              onClick={cta.onClick}
+              arrow
+            >
+              {cta.label}
+            </Button>
+          </div>
+        ) : null}
+      </div>
+    </GroundProvider>
   );
 }
 
@@ -260,40 +268,42 @@ export function NewsletterBand({
   const [email, setEmail] = React.useState('');
 
   return (
-    <section className={cn('bg-oj-ink px-8 py-12 text-oj-cream', className)}>
-      <div className="mx-auto flex max-w-[1160px] flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        <div className="max-w-md">
-          <h2 className="oj-display m-0 font-oj text-[28px] font-black leading-tight">{title}</h2>
-          {blurb ? (
-            <p className="mt-2 text-[15px] leading-normal text-oj-cream/75">{blurb}</p>
-          ) : null}
-        </div>
-        <form
-          className="flex w-full max-w-md flex-col gap-3"
-          onSubmit={(event) => {
-            event.preventDefault();
-            onSubmit?.(email);
-          }}
-        >
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <div className="flex-1">
-              <Field label={<span className="sr-only">Work email</span>}>
-                <Input
-                  type="email"
-                  required
-                  value={email}
-                  placeholder={placeholder}
-                  autoComplete="email"
-                  onChange={(event) => setEmail(event.target.value)}
-                />
-              </Field>
-            </div>
-            <Button type="submit">{buttonLabel}</Button>
+    <GroundProvider value="ink">
+      <section className={cn('bg-oj-ink px-8 py-12 text-oj-cream', className)}>
+        <div className="mx-auto flex max-w-[1160px] flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-md">
+            <h2 className="oj-display m-0 font-oj text-[28px] font-black leading-tight">{title}</h2>
+            {blurb ? (
+              <p className="mt-2 text-[15px] leading-normal text-oj-cream/75">{blurb}</p>
+            ) : null}
           </div>
-          {note ? <p className="m-0 text-[13px] text-oj-cream/55">{note}</p> : null}
-        </form>
-      </div>
-    </section>
+          <form
+            className="flex w-full max-w-md flex-col gap-3"
+            onSubmit={(event) => {
+              event.preventDefault();
+              onSubmit?.(email);
+            }}
+          >
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="flex-1">
+                <Field label={<span className="sr-only">Work email</span>}>
+                  <Input
+                    type="email"
+                    required
+                    value={email}
+                    placeholder={placeholder}
+                    autoComplete="email"
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                </Field>
+              </div>
+              <Button type="submit">{buttonLabel}</Button>
+            </div>
+            {note ? <p className="m-0 text-[13px] text-oj-cream/55">{note}</p> : null}
+          </form>
+        </div>
+      </section>
+    </GroundProvider>
   );
 }
 

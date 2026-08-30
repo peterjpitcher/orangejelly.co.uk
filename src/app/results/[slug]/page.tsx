@@ -121,10 +121,10 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
             The first conversation is an hour, it is free, and it is not a pitch.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button size="lg" arrow variant="ink" href="/start-here">
+            <Button size="lg" arrow href="/start-here">
               Bring us the problem
             </Button>
-            <Button variant="ghost-band" href="/results">
+            <Button variant="ghost" href="/results">
               See the other two
             </Button>
           </div>

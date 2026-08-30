@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 
-import { Button, MethodStep, OjFooter, OjHeader, PressureCard, ProofCard } from '@/components/oj';
+import {
+  Button,
+  GroundProvider,
+  MethodStep,
+  OjFooter,
+  OjHeader,
+  PressureCard,
+  ProofCard,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from './home-content';
@@ -44,28 +52,30 @@ export default function HomePage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-band py-16 sm:py-24 text-oj-on-band">
-          <div className="page-shell">
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
-              growth partner for ambitious businesses
-            </p>
-            <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-on-band">
-              you bring the growth problem. we build the solution.
-            </h1>
-            <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
-              We get under the skin of a business, work out what is actually blocking growth, and
-              build the thing that fixes it. Sometimes that is marketing. Often it is not.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Bring us the problem
-              </Button>
-              <Button variant="ghost-band" href="/how-we-work">
-                See how we work
-              </Button>
+        <GroundProvider value="band">
+          <section className="border-b-1.5 border-oj-ink bg-oj-band py-16 sm:py-24 text-oj-on-band">
+            <div className="page-shell">
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
+                growth partner for ambitious businesses
+              </p>
+              <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-on-band">
+                you bring the growth problem. we build the solution.
+              </h1>
+              <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
+                We get under the skin of a business, work out what is actually blocking growth, and
+                build the thing that fixes it. Sometimes that is marketing. Often it is not.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Bring us the problem
+                </Button>
+                <Button variant="ghost" href="/how-we-work">
+                  See how we work
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
           <div className="page-shell">
@@ -110,28 +120,30 @@ export default function HomePage(): JSX.Element {
           </div>
         </section>
 
-        <section className="border-b-1.5 border-oj-ink bg-oj-ink py-14 text-oj-cream sm:py-20">
-          <div className="page-shell">
-            <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
-              hear. challenge. build. optimise.
-            </h2>
-            <p className="measure mt-5 text-[17px] leading-relaxed text-oj-cream/80">
-              Four steps, in that order, every time. The order is the method.
-            </p>
-            <ol className="mt-9 grid list-none gap-6 p-0 sm:grid-cols-2">
-              {METHOD.map((step, index) => (
-                <li key={step.word}>
-                  <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
-                </li>
-              ))}
-            </ol>
-            <div className="mt-9">
-              <Button variant="ink" href="/how-we-work">
-                How we work in full
-              </Button>
+        <GroundProvider value="ink">
+          <section className="border-b-1.5 border-oj-ink bg-oj-ink py-14 text-oj-cream sm:py-20">
+            <div className="page-shell">
+              <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
+                hear. challenge. build. optimise.
+              </h2>
+              <p className="measure mt-5 text-[17px] leading-relaxed text-oj-cream/80">
+                Four steps, in that order, every time. The order is the method.
+              </p>
+              <ol className="mt-9 grid list-none gap-6 p-0 sm:grid-cols-2">
+                {METHOD.map((step, index) => (
+                  <li key={step.word}>
+                    <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-9">
+                <Button variant="solid" href="/how-we-work">
+                  How we work in full
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
           <div className="page-shell">
@@ -191,22 +203,24 @@ export default function HomePage(): JSX.Element {
           </div>
         </section>
 
-        <section className="bg-oj-ink py-16 sm:py-24">
-          <div className="page-shell">
-            <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-              stop circling the problem.
-            </h2>
-            <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-              Tell us what is happening, what you have tried, and what needs to change. The first
-              conversation is an hour, it is free, and it is not a pitch.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" arrow href="/start-here">
-                Bring us the problem
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-16 sm:py-24">
+            <div className="page-shell">
+              <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
+                stop circling the problem.
+              </h2>
+              <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+                Tell us what is happening, what you have tried, and what needs to change. The first
+                conversation is an hour, it is free, and it is not a pitch.
+              </p>
+              <div className="mt-8">
+                <Button size="lg" arrow href="/start-here">
+                  Bring us the problem
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
       </main>
 
       <OjFooter />

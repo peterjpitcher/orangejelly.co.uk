@@ -237,7 +237,7 @@ export default function ComponentHarness(): JSX.Element {
             <OjButton size="lg" arrow>
               Book a growth diagnostic
             </OjButton>
-            <OjButton variant="ink">Bring us the problem</OjButton>
+            <OjButton variant="solid">Bring us the problem</OjButton>
             <OjButton variant="ghost" size="sm" href="#method">
               See how we work
             </OjButton>

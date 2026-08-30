@@ -11,6 +11,7 @@
  * is expressed in this repo's CVA and Tailwind idiom rather than copied.
  */
 export { Button, type ButtonProps } from './Button';
+export { GroundProvider, useGround, type Ground } from './Ground';
 export { Stat, type StatProps } from './Stat';
 export { Tag, type TagProps } from './Tag';
 export { Mark, type MarkProps } from './Mark';

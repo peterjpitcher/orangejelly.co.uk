@@ -8,6 +8,7 @@ import {
   FAQ,
   MethodStep,
   OjFooter,
+  GroundProvider,
   OjHeader,
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
@@ -51,34 +52,36 @@ export default function StartHerePage(): JSX.Element {
       <OjHeader tone="orange" current="start-here" ctaHref="#enquiry" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-band py-12 sm:py-16 text-oj-on-band">
-          <div className="page-shell">
-            <Breadcrumb
-              tone="orange"
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Start here' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
-              the first conversation
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(44px,9vw,84px)] leading-[0.92] text-oj-on-band">
-              start here.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
-              Every piece of work we do starts the same way. A conversation about what is actually
-              happening in your business, before anyone says the word solution. This page tells you
-              what that involves, what you get out of it, and who it does not work for.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="#enquiry">
-                Bring us the problem
-              </Button>
-              <Button variant="ghost-band" href="/how-we-work">
-                See how we work
-              </Button>
+        <GroundProvider value="band">
+          <section className="border-b-1.5 border-oj-ink bg-oj-band py-12 sm:py-16 text-oj-on-band">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="orange"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Start here' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
+                the first conversation
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(44px,9vw,84px)] leading-[0.92] text-oj-on-band">
+                start here.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
+                Every piece of work we do starts the same way. A conversation about what is actually
+                happening in your business, before anyone says the word solution. This page tells
+                you what that involves, what you get out of it, and who it does not work for.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="#enquiry">
+                  Bring us the problem
+                </Button>
+                <Button variant="ghost" href="/how-we-work">
+                  See how we work
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="what actually happens." tone="ink">
           <ol className="grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
