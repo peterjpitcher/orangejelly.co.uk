@@ -1,6 +1,6 @@
 'use client';
 
-import { NextStep, ShareRow } from '@/components/oj';
+import { NextStep, ShareRow, StickyCTA } from '@/components/oj';
 import { getNextStepFor } from '@/lib/article-next-step';
 import { getBaseUrl } from '@/lib/site-config';
 import React, { useEffect } from 'react';
@@ -11,7 +11,6 @@ import Button from '@/components/Button';
 import TrackedButton from '@/components/TrackedButton';
 import ShareButtons from './ShareButtons';
 import AuthorInfo from './AuthorInfo';
-import StickyCTA from './StickyCTA';
 import QuickAnswer from './QuickAnswer';
 import { formatDate } from '@/lib/utils';
 import { type BlogPost as BlogPostType, type AdjacentPostNavItem, defaultAuthor } from '@/lib/blog';
@@ -97,7 +96,19 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       <ShareButtons url={`/licensees-guide/${post.slug}`} title={post.title} variant="floating" />
 
       {/* Sticky CTA */}
-      <StickyCTA />
+      {/*
+        The site's sticky bar, not the blog's own.
+
+        The blog one offered "Packages for every pub" and "See Our Packages" pointing
+        at /ways-to-work, on 106 pages: packages at prices this site removed (D3),
+        and a destination that retires at phase 4. Its mobile bar was also white text
+        on the brand orange, the 2.97:1 combination this release moved off.
+      */}
+      <StickyCTA
+        note="Not sure this is your actual problem?"
+        label="Bring us the problem"
+        href="/start-here"
+      />
 
       <article id="blog-article" className="measure">
         {/* Post metadata */}

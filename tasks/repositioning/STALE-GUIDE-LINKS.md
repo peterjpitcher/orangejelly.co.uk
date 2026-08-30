@@ -45,3 +45,24 @@ sed -i '' \
 
 `/fix-my-pub` is left out of that command on purpose: its destination is the rescue
 page, whose slug is changing, so it should be done in the same pass as the rename.
+
+---
+
+## Also in the article text: instructions to press a button that is not there
+
+Six guides tell the reader:
+
+> Tap the sticky "Get in Touch" button on orangejelly.co.uk or email peter@orangejelly.co.uk
+
+There has never been a button with that label. The sticky bar on a guide now reads
+"Bring us the problem" and goes to `/start-here`, so the sentence is wrong twice.
+
+Same reason as above for not fixing it here: it is markdown, and those files carry
+uncommitted work. Find them with:
+
+```bash
+grep -rl "Tap the sticky" content/blog/
+```
+
+The replacement is a link to `/start-here`, not a description of a button. Telling
+someone which control to press ages badly, as this shows.
