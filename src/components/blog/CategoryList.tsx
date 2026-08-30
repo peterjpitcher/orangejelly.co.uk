@@ -46,7 +46,8 @@ function CategoryList({
                   ${currentCategory === category.slug ? 'border-blue-support' : ''}
                 `}
               >
-                <Heading level={4} className="mb-1 group-hover:text-blue-support transition-colors">
+                {/* h3: these sit under the "Top Topics" h2, so level 4 skipped one. */}
+                <Heading level={3} className="mb-1 group-hover:text-blue-support transition-colors">
                   {category.name}
                 </Heading>
                 {category.postCount !== undefined && (
