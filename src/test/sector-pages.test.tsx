@@ -134,7 +134,7 @@ describe('both sector pages', () => {
   it('send every action to the conversation', () => {
     for (const page of [<PubMarketingPage key="m" />, <WhyRevenueIsFallingPage key="r" />]) {
       const { unmount } = render(page);
-      const ctas = screen.getAllByRole('link', { name: /Bring us the problem/ });
+      const ctas = screen.getAllByRole('link', { name: /Start the conversation/ });
       expect(ctas.length).toBeGreaterThanOrEqual(2);
       for (const cta of ctas) expect(cta).toHaveAttribute('href', '/start-here');
       unmount();

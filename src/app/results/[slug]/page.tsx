@@ -122,7 +122,7 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button size="lg" arrow href="/start-here">
-              Bring us the problem
+              Start the conversation
             </Button>
             <Button variant="ghost" href="/results">
               See the other two

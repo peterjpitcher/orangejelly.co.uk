@@ -46,8 +46,21 @@ export function Footer({
   return (
     <footer className={cn('bg-oj-ink pb-[30px] pt-16 text-oj-cream', className)}>
       <div className="mx-auto max-w-[1160px] px-8">
-        <div className="flex flex-wrap items-start justify-between gap-16">
-          <div className="flex max-w-[300px] flex-col gap-3.5">
+        {/*
+          A grid, not `justify-between` with a fixed-width brand block.
+
+          The old layout pinned the brand to 300px on the left and pushed the three
+          link groups to the right edge, which on a 1160px shell left roughly 300px of
+          nothing down the middle. The brand column is also much shorter than the link
+          columns, 101px against 234px, so the bottom left was empty too. Together
+          that read as a mostly empty footer rather than a deliberate one.
+
+          Four grid tracks spread the same content across the full width. The brand
+          gets a wider track because its line wraps; the three link groups share the
+          rest evenly.
+        */}
+        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.35fr)_repeat(3,minmax(0,1fr))]">
+          <div className="flex flex-col gap-3.5">
             {/*
               `self-start` on the brand, and not `items-start` on the column.
 
@@ -67,34 +80,55 @@ export function Footer({
             */}
             <div className="self-start">{brand}</div>
             {tagline ? (
-              <p className="m-0 text-[15.5px] font-bold leading-normal text-oj-cream/85">
+              <p className="m-0 max-w-[30ch] text-[15.5px] font-bold leading-normal text-oj-cream/85">
                 {tagline}
               </p>
             ) : null}
+            {/*
+              The category line and a way to reach a person.
+
+              The brand column carried a logo and one line, 101px against the 234px of
+              the link columns beside it, so the bottom left of the footer was empty on
+              every page. The link columns are tall because each row is a 44px touch
+              target, which is deliberate and stays, so the fix is to give this column
+              something worth reading rather than to shrink the others.
+
+              Both additions earn their place. The category line is what section 27 of
+              the positioning overview asks to be preserved, and the footer is on every
+              page. The address is the only mailbox Orange Jelly has, and a footer with
+              no way to contact anybody is a gap rather than a clean design.
+            */}
+            <p className="m-0 max-w-[32ch] text-[14px] leading-relaxed text-oj-cream/60">
+              A strategic growth partner for ambitious small and mid-sized businesses.
+            </p>
+            <Anchor
+              href="mailto:peter@orangejelly.co.uk"
+              className="text-[14.5px] font-medium text-oj-cream/75 no-underline hover:text-oj-orange"
+            >
+              peter@orangejelly.co.uk
+            </Anchor>
             {children}
           </div>
 
-          <div className="flex flex-wrap gap-14">
-            {columns.map((column) => (
-              <div key={column.title} className="flex min-w-[120px] flex-col gap-2.5">
-                <span className="mb-0.5 text-xs font-bold uppercase tracking-[0.14em] text-oj-peach">
-                  {column.title}
-                </span>
-                {column.links.map((link) => (
-                  <Anchor
-                    key={link.href}
-                    href={link.href}
-                    className="text-[14.5px] font-medium text-oj-cream/75 no-underline hover:text-oj-orange"
-                  >
-                    {link.label}
-                  </Anchor>
-                ))}
-              </div>
-            ))}
-          </div>
+          {columns.map((column) => (
+            <div key={column.title} className="flex flex-col gap-2.5">
+              <span className="mb-0.5 text-xs font-bold uppercase tracking-[0.14em] text-oj-peach">
+                {column.title}
+              </span>
+              {column.links.map((link) => (
+                <Anchor
+                  key={link.href}
+                  href={link.href}
+                  className="text-[14.5px] font-medium text-oj-cream/75 no-underline hover:text-oj-orange"
+                >
+                  {link.label}
+                </Anchor>
+              ))}
+            </div>
+          ))}
         </div>
 
-        <div className="mt-[52px] flex flex-wrap justify-between gap-4 border-t border-oj-cream/20 pt-5 text-[13px] text-oj-cream/55">
+        <div className="mt-14 flex flex-wrap justify-between gap-4 border-t border-oj-cream/20 pt-5 text-[13px] text-oj-cream/55">
           <span>{legal ?? `© ${new Date().getFullYear()} Orange Jelly Limited`}</span>
           <span>{note}</span>
         </div>

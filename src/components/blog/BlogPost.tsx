@@ -106,7 +106,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       */}
       <StickyCTA
         note="Not sure this is your actual problem?"
-        label="Bring us the problem"
+        label="Start the conversation"
         href="/start-here"
       />
 
@@ -246,7 +246,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
               variant="primary"
               size="large"
             >
-              Bring us the problem
+              Start the conversation
             </TrackedButton>
           </div>
         </Card>

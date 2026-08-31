@@ -276,7 +276,7 @@ describe('a growth problem page', () => {
 
   it('sends its action to the conversation, not to a product', () => {
     render(<GrowthProblemPage params={{ slug: 'margin-under-pressure' }} />);
-    const cta = screen.getAllByRole('link', { name: /Bring us the problem/ });
+    const cta = screen.getAllByRole('link', { name: /Start the conversation/ });
     expect(cta.length).toBeGreaterThanOrEqual(2);
     for (const link of cta) expect(link).toHaveAttribute('href', '/start-here');
     expect(document.body.textContent).not.toMatch(/A Growth Diagnostic/);

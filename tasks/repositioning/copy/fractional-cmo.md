@@ -28,7 +28,7 @@ People search for one when growth has stalled and the in-house team is stretched
 instinct and often the wrong shape of answer. Here is when it works, when it does not, and what to
 ask before you hire either of us.
 
-**Primary action:** Bring us the problem
+**Primary action:** Start the conversation
 **Secondary:** See the eight growth problems → `/growth-problems`
 
 ---
@@ -109,4 +109,4 @@ talking to.
 **Line:** Tell us what is actually happening and we will tell you what shape of help it needs, even
 when that is not us. The first conversation is an hour and it is free.
 
-**Action:** Bring us the problem
+**Action:** Start the conversation

@@ -27,7 +27,7 @@ describe('oj/marketing', () => {
         blurb="Find what is actually blocking growth."
         includes={['Leadership interviews', 'Growth Pressure Map']}
         footnote="Fixed fee, agreed on the scoping call."
-        cta={{ label: 'Bring us the problem', href: '/start-here' }}
+        cta={{ label: 'Start the conversation', href: '/start-here' }}
       />
     );
 
@@ -182,14 +182,14 @@ describe('oj/conversion', () => {
 
   it('shows the sticky CTA immediately when showAfter is 0', () => {
     render(<StickyCTA showAfter={0} />);
-    expect(screen.getByRole('link', { name: /Bring us the problem/ })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Start the conversation/ })).toBeInTheDocument();
   });
 
   it('can be dismissed', async () => {
     const user = userEvent.setup();
     render(<StickyCTA showAfter={0} />);
     await user.click(screen.getByRole('button', { name: 'Dismiss' }));
-    expect(screen.queryByRole('link', { name: /Bring us the problem/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /Start the conversation/ })).not.toBeInTheDocument();
   });
 
   it('gives accept and decline equal weight', () => {

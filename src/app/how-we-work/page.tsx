@@ -57,7 +57,7 @@ export default function HowWeWorkPage(): JSX.Element {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button size="lg" arrow href="/start-here">
-                Bring us the problem
+                Start the conversation
               </Button>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function HowWeWorkPage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Bring us the problem
+              Start the conversation
             </Button>
           </div>
         </Band>

@@ -175,7 +175,7 @@ export function PressureCheck({
   areas = PRESSURE_AREAS,
   heading = 'Which of these do you recognise?',
   intro,
-  cta = { label: 'Bring us the problem', href: '/start-here' },
+  cta = { label: 'Start the conversation', href: '/start-here' },
   onCta,
   className,
 }: PressureCheckProps): JSX.Element {
@@ -270,7 +270,7 @@ export function Scorecard({
   areas = PRESSURE_AREAS,
   heading = 'Where is the pressure in your business?',
   intro,
-  cta = { label: 'Bring us the problem', href: '/start-here' },
+  cta = { label: 'Start the conversation', href: '/start-here' },
   onComplete,
   onCta,
   showCta = true,

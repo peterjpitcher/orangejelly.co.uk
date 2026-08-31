@@ -89,7 +89,7 @@ describe('/start-here', () => {
 
   it('leads every action with the site-wide call', () => {
     render(<StartHerePage />);
-    const ctas = screen.getAllByRole('link', { name: /Bring us the problem/ });
+    const ctas = screen.getAllByRole('link', { name: /Start the conversation/ });
     expect(ctas.length).toBeGreaterThanOrEqual(2);
     for (const cta of ctas) expect(cta).toHaveAttribute('href', '#enquiry');
   });
@@ -125,13 +125,18 @@ describe('/start-here', () => {
     expect(screen.getByRole('navigation', { name: 'Breadcrumb' })).toBeInTheDocument();
   });
 
-  it('marks itself as the current page in its own navigation', () => {
+  it('does not offer a second control to the page you are already on', () => {
+    /*
+     * "Start here" used to sit in the navigation bar a few pixels from a button
+     * pointing at the same place, which asked the reader to work out whether two
+     * differently worded controls meant the same thing. Peter had it removed.
+     *
+     * This asserts the absence rather than deleting the old test, because the bar is
+     * the obvious place someone would put it back.
+     */
     render(<StartHerePage />);
     const nav = screen.getByRole('navigation', { name: 'Primary' });
-    expect(within(nav).getByRole('link', { name: 'Start here' })).toHaveAttribute(
-      'aria-current',
-      'page'
-    );
+    expect(within(nav).queryByRole('link', { name: 'Start here' })).toBeNull();
   });
 
   it('says the same words as the approved copy', () => {

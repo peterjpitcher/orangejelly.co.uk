@@ -68,7 +68,7 @@ export default function HomePage(): JSX.Element {
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
-                  Bring us the problem
+                  Start the conversation
                 </Button>
                 <Button variant="ghost" href="/how-we-work">
                   See how we work
@@ -216,7 +216,7 @@ export default function HomePage(): JSX.Element {
               </p>
               <div className="mt-8">
                 <Button size="lg" arrow href="/start-here">
-                  Bring us the problem
+                  Start the conversation
                 </Button>
               </div>
             </div>

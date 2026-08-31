@@ -246,9 +246,9 @@ If seven header items is one too many, put "What we build" in the footer's "Star
 
 **The live call is the homepage hero versus problem-first entry.**
 
-Section 34 says the homepage should lead with possibility and growth. D8 and D11 say the entry is always a conversation about a problem, and the primary button reads "Bring us the problem". Both are yours, and 3.1 puts them a few pixels apart: an H1 about taking control of growth, with a button about bringing a problem.
+Section 34 says the homepage should lead with possibility and growth. D8 and D11 say the entry is always a conversation about a problem, and the primary button reads "Start the conversation". Both are yours, and 3.1 puts them a few pixels apart: an H1 about taking control of growth, with a button about bringing a problem.
 
-**Recommendation: make the change in 3.1 and keep the button exactly as it is.** The two are not in conflict once they sit at different levels. The H1 is who this is for and what they get, which is what filters an ambitious owner in. The button is what happens next, and "Bring us the problem" is a low-commitment, honest instruction rather than a description of the reader. Section 27 wants the primary line to filter for ambition; D11 wants the action to be a conversation rather than a purchase. Both survive.
+**Recommendation: make the change in 3.1 and keep the button exactly as it is.** The two are not in conflict once they sit at different levels. The H1 is who this is for and what they get, which is what filters an ambitious owner in. The button is what happens next, and "Start the conversation" is a low-commitment, honest instruction rather than a description of the reader. Section 27 wants the primary line to filter for ambition; D11 wants the action to be a conversation rather than a purchase. Both survive.
 
 **The alternative, if you disagree:** keep the problem-first H1 and put the section 37 line in the eyebrow above it. That is cheaper and safer, but it gives the biggest type on the site to the one line section 34 warns against, and the eyebrow is the smallest text in the hero. I would not do it.
 

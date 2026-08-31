@@ -96,7 +96,7 @@ describe('the homepage', () => {
 
   it('sends every primary action to the conversation', () => {
     render(<HomePage />);
-    const ctas = screen.getAllByRole('link', { name: /Bring us the problem/ });
+    const ctas = screen.getAllByRole('link', { name: /Start the conversation/ });
     expect(ctas.length).toBeGreaterThanOrEqual(2);
     for (const cta of ctas) expect(cta).toHaveAttribute('href', '/start-here');
   });

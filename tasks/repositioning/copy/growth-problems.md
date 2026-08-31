@@ -26,7 +26,7 @@ strongest entry cluster the company has. Each problem tags itself with the areas
 | Supplied | Changed to | Why |
 |---|---|---|
 | "the HEAR and EXPOSE half of the method" | "the HEAR and CHALLENGE half" | EXPOSE was replaced by CHALLENGE |
-| "Book a growth diagnostic" | "Bring us the problem" | D11 |
+| "Book a growth diagnostic" | "Start the conversation" | D11 |
 | "A Growth Diagnostic tests what is actually causing it…" | "It starts as a conversation, and the first one is free…" | D8 and D12: nobody buys a product as step one |
 
 **Per page.** Every one of these was an unsupported number that would have shipped as fact:

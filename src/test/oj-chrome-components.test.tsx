@@ -26,7 +26,7 @@ const ITEMS = [
   { label: 'About', href: '/about' },
 ];
 
-const CTA = { label: 'Bring us the problem', href: '/start-here' };
+const CTA = { label: 'Start the conversation', href: '/start-here' };
 
 describe('oj/Header', () => {
   it('renders primary nav and marks the current page', () => {

@@ -25,7 +25,7 @@ No prices (D3), no packages, and the entry is always a conversation (D8).
 Orange Jelly builds fixes, not services. What a fix is made of depends entirely on what is actually
 blocking growth, which is why this page starts with the problem and not with a list of things we sell.
 
-**Primary action:** Bring us the problem
+**Primary action:** Start the conversation
 **Secondary:** How we work → `/how-we-work`
 
 ---
@@ -83,7 +83,7 @@ Nobody buys a solution from this page. Every engagement starts with a conversati
 happening, and the first one is an hour and free. What gets built, and what it costs, is agreed after
 that and in writing.
 
-**Action:** Bring us the problem
+**Action:** Start the conversation
 
 ---
 
@@ -93,4 +93,4 @@ that and in writing.
 
 **Line:** Tell us what is happening and we will tell you what we think it needs.
 
-**Action:** Bring us the problem
+**Action:** Start the conversation

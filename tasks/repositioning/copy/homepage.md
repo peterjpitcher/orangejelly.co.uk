@@ -3,7 +3,7 @@
 **Task:** T047. **Gap closed:** G2 (homepage half).
 **Built as:** `src/app/page.tsx`. A test holds the page to these words.
 
-Written against: no pricing (D3), entry is always a conversation (D8), primary action "Bring us the problem" (D11),
+Written against: no pricing (D3), entry is always a conversation (D8), primary action "Start the conversation" (D11),
 first conversation free (D12), company voice never the founder (D21), no response-time promise (D23),
 method is HEAR CHALLENGE BUILD OPTIMISE, no expletives, and every number from `CLAIMS.md` as a percentage
 with its provenance stated.
@@ -20,7 +20,7 @@ with its provenance stated.
 We get under the skin of a business, work out what is actually blocking growth, and build the thing that
 fixes it. Sometimes that is marketing. Often it is not.
 
-**Primary action:** Bring us the problem → `/start-here`
+**Primary action:** Start the conversation → `/start-here`
 **Secondary:** See how we work → `/how-we-work`
 
 ---
@@ -119,4 +119,4 @@ it is AI. We say all of that plainly before anyone spends anything.
 **Line:** Tell us what is happening, what you have tried, and what needs to change. The first conversation
 is an hour, it is free, and it is not a pitch.
 
-**Action:** Bring us the problem → `/start-here`
+**Action:** Start the conversation → `/start-here`

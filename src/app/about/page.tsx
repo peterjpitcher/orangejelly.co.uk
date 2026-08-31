@@ -193,7 +193,7 @@ export default function AboutPage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Bring us the problem
+              Start the conversation
             </Button>
           </div>
         </Band>

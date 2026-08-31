@@ -81,7 +81,7 @@ Restated as testable criteria. v1.0 used absolutes that would have failed valid 
   in the research.
 - **No protected URL suffers a canonical, metadata, internal-link or content regression.** Rankings
   are monitored against agreed thresholds, not guaranteed, because they are not ours to control.
-- **All primary commercial conversion CTAs** read "Bring us the problem". Functional controls
+- **All primary commercial conversion CTAs** read "Start the conversation". Functional controls
   (search, share, submit, pagination, cookie) keep descriptive labels.
 - **No Orange Jelly service price is published.** Editorial pricing examples in articles are
   permitted and expected.
@@ -104,7 +104,7 @@ Full text in `decisions.md`.
 | D1 / D14 | Existing URLs stay live, refined by evidence. 30 protected posts, commercial pages free to restructure. |
 | D2 | **CLOSED 27 Aug 2026.** Peter has personally validated the five metrics. Approved for publication. |
 | D3 | No Orange Jelly service price on the site. |
-| D8 / D11 / D12 | Entry is always a free discovery conversation. Primary CTA is "Bring us the problem". |
+| D8 / D11 / D12 | Entry is always a free discovery conversation. Primary CTA is "Start the conversation". |
 | D13 | Professional services first. Trades is a second wave. |
 | D15 | Ranking work runs alongside the rebuild. |
 | D16 | Keyword research closed. |
@@ -135,7 +135,7 @@ structure and will give feedback once it is built.
 
 ### Navigation
 
-`Growth problems` · `How we work` · `Results` · `Insights` · `About` · **Bring us the problem**
+`Growth problems` · `How we work` · `Results` · `Insights` · `About` · **Start the conversation**
 
 ### The two content collections
 

@@ -55,7 +55,7 @@ Six guides tell the reader:
 > Tap the sticky "Get in Touch" button on orangejelly.co.uk or email peter@orangejelly.co.uk
 
 There has never been a button with that label. The sticky bar on a guide now reads
-"Bring us the problem" and goes to `/start-here`, so the sentence is wrong twice.
+"Start the conversation" and goes to `/start-here`, so the sentence is wrong twice.
 
 Same reason as above for not fixing it here: it is markdown, and those files carry
 uncommitted work. Find them with:

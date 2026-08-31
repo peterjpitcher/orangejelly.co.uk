@@ -32,8 +32,8 @@ function classesOf(name: string | RegExp): string {
 
 describe('the button ground', () => {
   it('defaults to light when there is no provider', () => {
-    render(<Button href="/x">Bring us the problem</Button>);
-    const classes = classesOf('Bring us the problem');
+    render(<Button href="/x">Start the conversation</Button>);
+    const classes = classesOf('Start the conversation');
     expect(classes).toContain('border-oj-ink');
     expect(classes).toContain('bg-oj-orange-deep');
   });
@@ -41,10 +41,10 @@ describe('the button ground', () => {
   it('puts a white outline on a button sitting on ink', () => {
     render(
       <GroundProvider value="ink">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </GroundProvider>
     );
-    const classes = classesOf('Bring us the problem');
+    const classes = classesOf('Start the conversation');
     // Ink on ink is 1.00:1. The border is what makes this a button at all.
     expect(classes).toContain('border-oj-on-band');
     expect(classes).not.toContain('border-oj-ink');
@@ -53,10 +53,10 @@ describe('the button ground', () => {
   it('puts a white outline on a button sitting on the orange band', () => {
     render(
       <GroundProvider value="band">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </GroundProvider>
     );
-    expect(classesOf('Bring us the problem')).toContain('border-oj-on-band');
+    expect(classesOf('Start the conversation')).toContain('border-oj-on-band');
   });
 
   it('drops the primary fill to ember on the band so it does not vanish into it', () => {
@@ -64,10 +64,10 @@ describe('the button ground', () => {
     // outline around nothing.
     render(
       <GroundProvider value="band">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </GroundProvider>
     );
-    const classes = classesOf('Bring us the problem');
+    const classes = classesOf('Start the conversation');
     expect(classes).toContain('bg-oj-ember');
     expect(classes).not.toContain('bg-oj-orange-deep');
   });
@@ -128,21 +128,21 @@ describe('the button ground', () => {
     // cream gap that merges with a white border at 1.09:1.
     render(
       <GroundProvider value="ink">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </GroundProvider>
     );
-    expect(classesOf('Bring us the problem')).toContain('var(--oj-ring-inverse)');
+    expect(classesOf('Start the conversation')).toContain('var(--oj-ring-inverse)');
   });
 
   it('lets a caller override the ground for a component that paints its own', () => {
     render(
       <GroundProvider value="ink">
         <Button ground="light" href="/x">
-          Bring us the problem
+          Start the conversation
         </Button>
       </GroundProvider>
     );
-    expect(classesOf('Bring us the problem')).toContain('border-oj-ink');
+    expect(classesOf('Start the conversation')).toContain('border-oj-ink');
   });
 
   it('has no variant that names a colour', () => {
@@ -163,29 +163,29 @@ describe('the surfaces that declare a ground', () => {
     const { Band } = await import('@/components/oj');
     render(
       <Band tone="ink">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </Band>
     );
-    expect(classesOf('Bring us the problem')).toContain('border-oj-on-band');
+    expect(classesOf('Start the conversation')).toContain('border-oj-on-band');
   });
 
   it('treats a paper band as a light ground', async () => {
     const { Band } = await import('@/components/oj');
     render(
       <Band tone="paper">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </Band>
     );
-    expect(classesOf('Bring us the problem')).toContain('border-oj-ink');
+    expect(classesOf('Start the conversation')).toContain('border-oj-ink');
   });
 
   it('treats an orange band as the band ground', async () => {
     const { Band } = await import('@/components/oj');
     render(
       <Band tone="orange">
-        <Button href="/x">Bring us the problem</Button>
+        <Button href="/x">Start the conversation</Button>
       </Band>
     );
-    expect(classesOf('Bring us the problem')).toContain('bg-oj-ember');
+    expect(classesOf('Start the conversation')).toContain('bg-oj-ember');
   });
 });

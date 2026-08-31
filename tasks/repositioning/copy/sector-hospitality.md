@@ -27,7 +27,7 @@ Orange Jelly is a growth partner for ambitious small and mid-sized businesses, a
 sector we know best, because we run one. The Anchor is our own venue. Everything here was tested there
 before it was offered to anybody else.
 
-**Primary action:** Bring us the problem
+**Primary action:** Start the conversation
 **Secondary:** See the numbers → `/results`
 
 ## most pubs do not have a marketing problem.
@@ -116,7 +116,7 @@ rarely the fall itself, it is that nobody can say what is causing it. The cause 
 findable, and once you have it, everything after is easier to decide, quicker to do and
 cheaper to get right.
 
-**Primary action:** Bring us the problem
+**Primary action:** Start the conversation
 **Secondary:** How we work → `/how-we-work`
 
 ## first, the honest part.

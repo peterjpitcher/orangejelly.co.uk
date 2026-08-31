@@ -83,7 +83,19 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   { key: 'results', label: 'Results', href: '/results' },
   { key: 'insights', label: 'Insights', href: '/insights' },
   { key: 'guides', label: 'Guides', href: '/licensees-guide' },
-  { key: 'start-here', label: 'Start here', href: '/start-here' },
+  /*
+   * "Start here" is deliberately NOT in the bar.
+   *
+   * It was a navigation item pointing at /start-here sitting a few pixels from a
+   * button pointing at /start-here. Two controls, one destination, two different
+   * names, which asks the reader to work out whether they are the same thing. Peter
+   * put it plainly: we do not need both.
+   *
+   * The button is the one that stays, because D11 makes it the single call to action
+   * and it is the louder control. The key stays in OjNavKey so /start-here can still
+   * mark itself current, and the footer keeps a link for anyone reading the site as a
+   * sitemap.
+   */
 ];
 
 export interface OjHeaderProps {
@@ -139,7 +151,7 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
         href: item.href,
         current: item.key === current,
       }))}
-      cta={{ label: 'Bring us the problem', href: ctaHref }}
+      cta={{ label: 'Start the conversation', href: ctaHref }}
     />
   );
 }

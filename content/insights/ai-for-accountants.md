@@ -98,4 +98,4 @@ AI belongs in an accountancy practice, in specific places, at the volume-and-rep
 
 But "should we be using AI" is almost never the question that is actually pressing on the practice. Capacity, realisation, client mix and pricing sit underneath it, and only one of those responds to a tool.
 
-Work out which one is holding you back first. It is a cheaper piece of work than any implementation, and it is usually a conversation rather than a project. [Bring us the problem](/start-here), whether or not AI turns out to be any part of the answer.
+Work out which one is holding you back first. It is a cheaper piece of work than any implementation, and it is usually a conversation rather than a project. [Start the conversation](/start-here), whether or not AI turns out to be any part of the answer.

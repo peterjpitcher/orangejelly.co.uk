@@ -127,4 +127,4 @@ Professional services firms market badly for structural reasons. The chargeable 
 
 None of that is fixed by more activity. It is fixed by seeing where work actually comes from, giving the job an owner and a number, and answering the buyer's real question before the caveats.
 
-If you are not sure whether marketing is your constraint or your symptom, that is the useful question, and it is a conversation rather than a project. Bring us the problem at [/start-here](/start-here). We would rather tell you it is not a marketing problem than sell you marketing.
+If you are not sure whether marketing is your constraint or your symptom, that is the useful question, and it is a conversation rather than a project. Start the conversation at [/start-here](/start-here). We would rather tell you it is not a marketing problem than sell you marketing.

@@ -49,7 +49,7 @@ describe('EnquiryForm, step one', () => {
     // If step one were driven by an onClick handler it would be JavaScript-only, and
     // step one is the half that writes the lead.
     expect(container.querySelector('form')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Bring us the problem/ })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: /Start the conversation/ })).toHaveAttribute(
       'type',
       'submit'
     );
