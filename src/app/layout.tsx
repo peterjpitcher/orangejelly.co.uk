@@ -73,7 +73,7 @@ const baseUrl = getBaseUrl();
  * search term the research found is "hospitality marketing agency", and it lives on
  * the sector hub where it is still accurate, not in the company description.
  */
-const SITE_TITLE = 'Orange Jelly | You bring the growth problem. We build the solution.';
+const SITE_TITLE = 'Orange Jelly | For owners ready to take control of growth.';
 const SITE_DESCRIPTION =
   'Growth partner for ambitious small and mid-sized businesses. We get under the skin of a business, work out what is actually blocking growth, and build the thing that fixes it.';
 
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: 'Orange Jelly: you bring the growth problem, we build the solution',
+        alt: 'Orange Jelly: for business owners ready to take control of growth',
       },
     ],
   },

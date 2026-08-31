@@ -51,7 +51,20 @@ export type OjNavKey =
  * bar is the wrong trade.
  */
 const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
-  { key: 'growth-problems', label: 'Growth problems', href: '/growth-problems' },
+  /*
+   * "Unlock growth", not "Growth problems".
+   *
+   * The header carried the word "problem" twice a few pixels apart, once as this
+   * label and once on the button beside it. D11 fixes the button wording, so the
+   * label is the half that moves. Section 34 of the positioning overview flags
+   * "problem" as overused in customer-facing copy, and section 33 lists "unlock" as
+   * language that fits, because it points at the outcome rather than the symptom.
+   *
+   * The URL stays `/growth-problems`. It is accurate, people search that way, and
+   * moving it would mean redirects, eight child pages and the mapping that connects
+   * all 105 guide articles to a growth problem, for nothing a visitor would notice.
+   */
+  { key: 'growth-problems', label: 'Unlock growth', href: '/growth-problems' },
   { key: 'how-we-work', label: 'How we work', href: '/how-we-work' },
   /*
    * `/solutions` was unreachable from the site's own navigation.
@@ -149,7 +162,7 @@ export function OjFooter(): JSX.Element {
           title: 'Start',
           links: [
             { label: 'Start here', href: '/start-here' },
-            { label: 'Growth problems', href: '/growth-problems' },
+            { label: 'Unlock growth', href: '/growth-problems' },
             { label: 'How we work', href: '/how-we-work' },
             { label: 'Results', href: '/results' },
           ],

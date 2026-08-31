@@ -79,7 +79,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
               className="mb-7"
               items={[
                 { label: 'Home', href: '/' },
-                { label: 'Growth problems', href: '/growth-problems' },
+                { label: 'Unlock growth', href: '/growth-problems' },
                 { label: problem.title },
               ]}
             />

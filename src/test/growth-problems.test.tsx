@@ -285,7 +285,7 @@ describe('a growth problem page', () => {
   it('marks growth problems as the current section', () => {
     render(<GrowthProblemPage params={{ slug: 'weak-demand' }} />);
     const nav = screen.getByRole('navigation', { name: 'Primary' });
-    expect(within(nav).getByRole('link', { name: 'Growth problems' })).toHaveAttribute(
+    expect(within(nav).getByRole('link', { name: 'Unlock growth' })).toHaveAttribute(
       'aria-current',
       'page'
     );

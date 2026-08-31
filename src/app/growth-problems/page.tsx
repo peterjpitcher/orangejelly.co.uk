@@ -16,7 +16,7 @@ import { GROWTH_PROBLEMS } from './content';
  * Copy from the design team's hub template, with the closing call to action changed
  * per D11.
  */
-const TITLE = 'Growth problems | Orange Jelly';
+const TITLE = 'Unlock growth: eight places it gets stuck | Orange Jelly';
 const DESCRIPTION =
   'Eight growth problems in plain words. Start from the symptom and we will show you what it is connected to, before anyone talks about a solution.';
 
@@ -44,10 +44,10 @@ export default function GrowthProblemsHubPage(): JSX.Element {
           <div className="page-shell">
             <Breadcrumb
               className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Growth problems' }]}
+              items={[{ label: 'Home', href: '/' }, { label: 'Unlock growth' }]}
             />
             <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              growth problems
+              unlock growth
             </p>
             <h1 className="oj-display mt-2.5 max-w-[18ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
               which of these sounds like your business?

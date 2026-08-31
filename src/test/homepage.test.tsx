@@ -15,7 +15,7 @@ describe('the homepage', () => {
   it('leads with the promise, not with a service', () => {
     render(<HomePage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'you bring the growth problem. we build the solution.'
+      'for business owners ready to take control of growth.'
     );
   });
 

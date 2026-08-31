@@ -7,7 +7,7 @@ export const size = {
 
 export const contentType = 'image/png';
 
-export const alt = 'Orange Jelly: you bring the growth problem, we build the solution';
+export const alt = 'Orange Jelly: for business owners ready to take control of growth';
 
 /**
  * The default share card.
@@ -50,7 +50,7 @@ export default function OGImage() {
           maxWidth: 940,
         }}
       >
-        you bring the growth problem. we build the solution.
+        for business owners ready to take control of growth.
       </div>
 
       <div style={{ display: 'flex', fontSize: 30, color: '#23252E' }}>

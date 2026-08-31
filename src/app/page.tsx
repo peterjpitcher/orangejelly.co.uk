@@ -28,7 +28,7 @@ import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from './home-content';
  *
  * Copy: `tasks/repositioning/copy/homepage.md`, held to it by a test.
  */
-const TITLE = 'Orange Jelly | You bring the problem. We build the solution.';
+const TITLE = 'Orange Jelly | For owners ready to take control of growth.';
 const DESCRIPTION =
   'Growth partner for ambitious small and mid-sized businesses. We work out what is actually blocking growth, then build the thing that fixes it.';
 
@@ -59,11 +59,12 @@ export default function HomePage(): JSX.Element {
                 strategic growth partner for ambitious businesses
               </p>
               <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-on-band">
-                you bring the growth problem. we build the solution.
+                for business owners ready to take control of growth.
               </h1>
               <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
-                We get under the skin of a business, work out what is actually blocking growth, and
-                build the thing that fixes it. Sometimes that is marketing. Often it is not.
+                We get under the skin of a business, work out what is actually blocking growth,
+                build the strategy to move it, and turn that into action. Sometimes that is
+                marketing. Often it is not.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">

@@ -124,7 +124,7 @@ export default function StartHerePage(): JSX.Element {
 
         <Band
           heading="big enough to have real problems. small enough to move fast."
-          intro="You will get the most from this if:"
+          intro="We work best with ambitious owners who are ready to act. You will get the most from this if:"
         >
           <ul className="measure flex list-none flex-col gap-3 p-0">
             {FIT.works.map((item) => (

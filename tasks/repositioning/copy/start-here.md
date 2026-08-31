@@ -75,12 +75,12 @@ You are not buying anything in that conversation and we are not asking you to.
 
 **Section heading:** big enough to have real problems. small enough to move fast.
 
-You will get the most from this if:
+We work best with ambitious owners who are ready to act. You will get the most from this if:
 
-- You have built something real and it has stopped growing the way it used to.
-- You are busy, and the numbers are not moving in proportion to the effort.
-- The problem crosses more than one part of the business, and nobody quite agrees what it is.
-- The systems you are running were built for a smaller company.
+- You believe the business is capable of more than it is currently doing.
+- You want to know what is actually driving the numbers, rather than what everyone assumes.
+- You are ready to change how the business works, not only how it is marketed.
+- You want the systems built for the company you are becoming, not the one you started.
 - You want someone to challenge the thinking, not agree with it.
 - You can act once a direction is agreed.
 

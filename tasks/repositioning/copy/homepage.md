@@ -14,7 +14,7 @@ with its provenance stated.
 
 **Eyebrow:** growth partner for ambitious businesses
 
-**H1:** you bring the growth problem. we build the solution.
+**H1:** for business owners ready to take control of growth.
 
 **Standfirst:**
 We get under the skin of a business, work out what is actually blocking growth, and build the thing that

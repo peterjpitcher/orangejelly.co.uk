@@ -50,10 +50,23 @@ export const NEEDS = [
 
 export const FIT = {
   works: [
-    'You have built something real and it has stopped growing the way it used to.',
-    'You are busy, and the numbers are not moving in proportion to the effort.',
-    'The problem crosses more than one part of the business, and nobody quite agrees what it is.',
-    'The systems you are running were built for a smaller company.',
+    /*
+     * Rewritten 31 Aug 2026 towards what the reader wants, not what is wrong.
+     *
+     * Section 14 of the positioning overview: Orange Jelly should intentionally
+     * attract people who want something, not merely people who want a pain removed.
+     * Four of the six entries here described something going wrong, which meant the
+     * one list that decides who self-selects in was filtering for the reader the
+     * document says is the wrong fit.
+     *
+     * The last two are unchanged. They were already about readiness, which is
+     * section 15's non-negotiable, and they are the reason this reads as a filter
+     * rather than as flattery.
+     */
+    'You believe the business is capable of more than it is currently doing.',
+    'You want to know what is actually driving the numbers, rather than what everyone assumes.',
+    'You are ready to change how the business works, not only how it is marketed.',
+    'You want the systems built for the company you are becoming, not the one you started.',
     'You want someone to challenge the thinking, not agree with it.',
     'You can act once a direction is agreed.',
   ],
