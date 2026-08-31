@@ -17,9 +17,13 @@ import { Button } from './Button';
  * search clicks and ranks eight positions better than desktop, so the drawer is not
  * a fallback, it is the main event.
  *
- * `tone="orange"` is the campaign header, for conversion pages only: Start Here,
- * the growth-problems hub and the eight problem pages. Everything else stays cream,
- * About included.
+ * `tone="orange"` is the campaign header. Only `/start-here` uses it.
+ *
+ * This docblock used to say it also covered the growth-problems hub and the eight
+ * problem pages. It never did, and those pages read better without it: they open on
+ * an orange hero band, and an orange bar directly above an orange band removes the
+ * edge that makes the hero land. Corrected rather than implemented, because the
+ * pages as built are the ones that were reviewed.
  *
  * WHAT THIS PORT ADDS. The reference toggles a boolean and renders a panel. That
  * leaves the drawer open to Escape doing nothing, focus staying behind on the page

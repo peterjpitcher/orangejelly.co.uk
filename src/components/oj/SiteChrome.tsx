@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 
-import { cn } from '@/lib/utils';
 import * as React from 'react';
 
 import { Footer } from './Footer';
@@ -81,19 +80,30 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
        */
       logo={
         <Image
-          src="/brand/logo-horizontal.png"
+          /*
+           * A real reversed asset on the orange band, not a filter.
+           *
+           * This used to be the colour logo with `brightness-0 invert` on it, because
+           * the pack shipped a white icon but no white horizontal lockup. It rendered
+           * correctly and it was still the wrong thing: a filter is not in the file,
+           * so it does not survive being printed, exported, or opened anywhere outside a
+           * browser, and it flattens every colour rather than reversing the artwork.
+           *
+           * The white lockup arrived on 31 August. The supplied file is 1672x941 with
+           * the mark occupying 1414x262 in the middle, so nearly three quarters of its
+           * height is empty and it would have rendered a third the height of its
+           * colour twin. `logo-horizontal-white.png` is that file cropped to its
+           * artwork and rebuilt on the same 1200x260 canvas with the same 1154x214
+           * inset, so both files size identically from one class.
+           */
+          src={
+            tone === 'orange' ? '/brand/logo-horizontal-white.png' : '/brand/logo-horizontal.png'
+          }
           alt="Orange Jelly"
           width={1200}
           height={260}
           priority
-          /*
-           * On the orange band the supplied horizontal logo is dark ink on a dark
-           * ground and all but disappears. The pack ships a white variant of the
-           * icon but not of the horizontal lockup, so this knocks it to pure white
-           * in CSS. It is a stopgap: a proper reversed horizontal asset would be
-           * better than a filter, and is worth asking the design team for.
-           */
-          className={cn('h-7 w-auto', tone === 'orange' && 'brightness-0 invert')}
+          className="h-7 w-auto"
         />
       }
       items={ITEMS.map((item) => ({
