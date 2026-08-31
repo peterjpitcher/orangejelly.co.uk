@@ -10,7 +10,7 @@ Active phases after release: active, phase4
 ## What the release commit contains
 
 1. `ACTIVE_PHASES` in `src/lib/route-manifest.js` gains `phase4`. One line.
-2. 9 page file(s) deleted, listed below. They become unreachable the
+2. 11 page file(s) deleted, listed below. They become unreachable the
    moment the redirect is emitted, because a Next redirect takes precedence
    over a page at the same path. Deleting them in the same commit is what
    stops the old position sitting in the repository as live-looking code.
@@ -29,15 +29,17 @@ Active phases after release: active, phase4
 - [ ] `/ways-to-work` → `/how-we-work`
 - [ ] `/ways-to-work/:slug` → `/how-we-work`
 
-## Redirects that change destination (2)
+## Redirects that change destination (4)
 
 These already redirect. The release repoints them, because their current
 destination is itself retiring and leaving them would form a chain.
 
 - [ ] `/services`: was `/ways-to-work`, becomes `/how-we-work`
 - [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/why-revenue-is-falling`
+- [ ] `/services/instagram-services-for-pubs`: was `/services/social-media-marketing-for-pubs`, becomes `/pub-marketing`
+- [ ] `/services/facebook-services-for-pubs`: was `/services/social-media-marketing-for-pubs`, becomes `/pub-marketing`
 
-## Page files to delete (9)
+## Page files to delete (11)
 
 - [ ] `src/app/capabilities/page.tsx`
 - [ ] `src/app/compete-with-pub-chains/page.tsx`
@@ -46,6 +48,8 @@ destination is itself retiring and leaving them would form a chain.
 - [ ] `src/app/pub-marketing-agency/page.tsx`
 - [ ] `src/app/pub-marketing-no-budget/page.tsx`
 - [ ] `src/app/quiet-midweek-solutions/page.tsx`
+- [ ] `src/app/services/facebook-services-for-pubs/page.tsx`
+- [ ] `src/app/services/instagram-services-for-pubs/page.tsx`
 - [ ] `src/app/services/page.tsx`
 - [ ] `src/app/ways-to-work/page.tsx`
 
@@ -129,4 +133,4 @@ day nobody is available.
 - [ ] Enquiry form submitted end to end against production Supabase and Resend
 - [ ] Search Console open, so the crawl can be watched rather than assumed
 
-_23 checkable items. Generated from 58 declared routes._
+_27 checkable items. Generated from 58 declared routes._

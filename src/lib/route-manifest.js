@@ -508,12 +508,39 @@ const PHASE_4_REDIRECTS = [
     destination: '/pub-marketing',
     phase: 'phase4',
   },
+  /*
+   * These two are already redirects today, pointing at the social hub, which itself
+   * retires below. The wildcard underneath was written believing it superseded them.
+   * It does not: `bySource` is keyed by the literal path, so the exact entries and
+   * the wildcard are different keys and Next emits both. The exact ones come from
+   * ROUTES, which is first in ALL_ENTRIES, so they match first and the hop stands.
+   *
+   * Declaring them here, at the same key and later in the array, is what actually
+   * makes the "later declaration wins" rule apply to them.
+   *
+   * The chain test could not see this either, because it compared sources as plain
+   * strings and skipped wildcards entirely. It understands patterns now.
+   */
+  {
+    path: '/services/instagram-services-for-pubs',
+    disposition: 'redirect',
+    destination: '/pub-marketing',
+    phase: 'phase4',
+    note: 'Was pointing at the social hub, which retires. Straight to the destination.',
+  },
+  {
+    path: '/services/facebook-services-for-pubs',
+    disposition: 'redirect',
+    destination: '/pub-marketing',
+    phase: 'phase4',
+    note: 'Was pointing at the social hub, which retires. Straight to the destination.',
+  },
   {
     path: '/services/:slug',
     disposition: 'redirect',
     destination: '/pub-marketing',
     phase: 'phase4',
-    note: 'Covers all five children, including the two that currently point at the social hub. Repointed to avoid a three-hop chain.',
+    note: 'Retires all five children, including the three that still publish a price. The two that currently hop through the social hub are declared explicitly above, because a wildcard does not supersede an exact source.',
   },
   {
     path: '/services',

@@ -20,15 +20,56 @@ import {
  * restructure quietly loses the small amount of search authority the site has, and it
  * is invisible until someone crawls the live site.
  */
+/**
+ * Does a Next redirect `source` match this path?
+ *
+ * WHY THIS EXISTS. Both chain tests used to compare sources and destinations as plain
+ * strings, and the active one went further and filtered wildcard sources out
+ * altogether. That makes the check blind to the most likely kind of chain in this
+ * manifest, because the wildcards are what retire whole folders:
+ *
+ *   /services/instagram-services-for-pubs -> /services/social-media-marketing-for-pubs
+ *   /services/:slug                       -> /pub-marketing
+ *
+ * Two lines, each correct on its own, and at phase 4 they compose into a hop through
+ * a page that no longer exists. Neither test could see it, because neither knew that
+ * `/services/:slug` matches the first line's destination.
+ *
+ * `:slug` matches one segment, `:slug*` matches the rest of the path, which is how
+ * Next reads them.
+ */
+function sourceMatches(source: string, path: string): boolean {
+  if (!source.includes(':')) return source === path;
+  const pattern = source
+    .split('/')
+    .map((segment) => {
+      if (segment.startsWith(':') && segment.endsWith('*')) return '.+';
+      if (segment.startsWith(':')) return '[^/]+';
+      return segment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    })
+    .join('/');
+  return new RegExp(`^${pattern}$`).test(path);
+}
+
+/** Every redirect whose destination is itself redirected by some other rule. */
+function chainsIn(table: Array<{ source: string; destination: string }>): string[] {
+  return table
+    .map((route) => {
+      const destination = route.destination.split('?')[0];
+      const next = table.find(
+        (other) => other !== route && sourceMatches(other.source, destination)
+      );
+      return next ? `${route.source} -> ${destination} -> ${next.destination}` : null;
+    })
+    .filter((x): x is string => x !== null);
+}
+
 describe('route manifest', () => {
-  const activeRedirects = getRedirects().filter((r) => !r.source.includes(':'));
+  // Wildcards included. Excluding them was the blind spot, not a simplification.
+  const activeRedirects = getRedirects();
 
   it('never chains: no redirect points at another redirect source', () => {
-    const sources = new Set(activeRedirects.map((r) => r.source));
-    const chains = activeRedirects
-      .filter((r) => sources.has(r.destination.split('?')[0]))
-      .map((r) => `${r.source} -> ${r.destination}`);
-
+    const chains = chainsIn(activeRedirects);
     expect(chains, `these redirects land on another redirect:\n${chains.join('\n')}`).toEqual([]);
   });
 
@@ -228,11 +269,8 @@ describe('phase 4, simulated', () => {
   });
 
   it('never chains, so no redirect lands on another redirect', () => {
-    const sources = new Set(asShipped.map((route) => route.source));
-    const chained = asShipped
-      .filter((route) => sources.has(route.destination.split('?')[0]))
-      .map((route) => `${route.source} -> ${route.destination}`);
-    expect(chained).toEqual([]);
+    const chained = chainsIn(asShipped);
+    expect(chained, `these chain on release day:\n${chained.join('\n')}`).toEqual([]);
   });
 
   it('advertises none of the redirected paths in the sitemap', () => {
