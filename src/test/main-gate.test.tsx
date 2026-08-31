@@ -96,10 +96,11 @@ describe('MainGate', () => {
   });
 
   it('opens a main for the legacy templates, which render page content only', () => {
-    // A route still on the legacy templates. This used to be a guide article, and
-    // when the guides adopted the new chrome the fixture became a repositioned route,
-    // so the test stopped covering the case its name describes.
-    pathname.mockReturnValue('/ways-to-work/growth-fix');
+    // The fixture has moved twice, which is the point: it was a guide article until
+    // the guides adopted the new chrome, then /ways-to-work/growth-fix until phase 4
+    // retired it on 31 August 2026. The component gallery is the last route on the
+    // legacy templates, so it is the only fixture left that covers this case.
+    pathname.mockReturnValue('/dev/components');
     render(
       <MainGate>
         <p>content</p>
@@ -176,10 +177,9 @@ describe('MainGate on the organiser tool', () => {
   );
 
   it('still opens one for a legacy marketing page', () => {
-    // This was /privacy until 31 August 2026, when the policy moved onto the
-    // repositioned chrome and started opening its own main. Any route still on the
-    // legacy templates does the job; /services is one.
-    pathname.mockReturnValue('/services');
+    // /privacy until it was restyled on 31 August 2026, then /services until phase 4
+    // retired it the same day. The component gallery is what is left.
+    pathname.mockReturnValue('/dev/components');
     render(
       <MainGate>
         <p>content</p>

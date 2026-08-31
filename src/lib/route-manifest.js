@@ -13,11 +13,10 @@
  * module that both sides read has neither problem. Types come from the JSDoc below and
  * are checked because tsconfig sets allowJs.
  *
- * WHAT THIS FILE DOES NOT DO YET: the repositioning's redirects are declared here with
- * phase 'phase4' and are deliberately NOT emitted. Shipping them early would redirect
- * live pages before their replacements exist, which is exactly the half-launched state
- * the implementation spec forbids. Flipping them on is a one-line change to
- * ACTIVE_PHASES when phase 4 ships.
+ * PHASE 4 IS LIVE as of 31 August 2026. Its redirects were declared here and held
+ * back until their replacements existed, which is what stopped the site spending
+ * months in the half-launched state the implementation spec forbids. They are
+ * emitted now; see ACTIVE_PHASES below.
  *
  * @see tasks/repositioning/IMPLEMENTATION-SPEC.md section 3
  */
@@ -44,7 +43,17 @@
  */
 
 /** Redirect phases currently emitted into next.config.js. */
-const ACTIVE_PHASES = ['active'];
+/*
+ * Phase 4 shipped 31 August 2026, on the owner's word.
+ *
+ * The fifteen pages selling the old position, the priced `/ways-to-work` pages,
+ * `/capabilities`, the `/services` pages and the six pub landing pages, redirect
+ * from here rather than existing. Their page files are deleted in the same commit,
+ * because a Next redirect takes precedence over a page at the same path and
+ * leaving the files would keep the old position in the repository as live-looking
+ * code.
+ */
+const ACTIVE_PHASES = ['active', 'phase4'];
 
 /**
  * Counties consolidated into /pub-marketing on 2026-08-09. Eight near-identical
@@ -112,54 +121,6 @@ const ROUTES = [
   },
 
   // ways-to-work becomes /how-we-work in phase 4. Live and in the sitemap until then.
-  {
-    path: '/ways-to-work',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.9,
-    changeFrequency: 'weekly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/ways-to-work/growth-fix',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.85,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/ways-to-work/momentum-month',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.85,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/ways-to-work/growth-partner',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.85,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/ways-to-work/turnaround-intensive',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.85,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/capabilities',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.85,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
 
   // Hospitality landing pages. All keep their URLs; most are consolidated in phase 4.
   {
@@ -186,80 +147,8 @@ const ROUTES = [
     destination: '/why-revenue-is-falling',
     note: 'Renamed, not retired. It was the strongest of the pub pages at 6 clicks and 519 impressions a year, which is little enough that the rename costs almost nothing and enough that it earns a permanent redirect rather than a 410. The query "pub rescue" itself earned none of those clicks.',
   },
-  {
-    path: '/fix-my-pub',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.8,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/quiet-midweek-solutions',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.75,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/empty-pub-solutions',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.75,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/pub-marketing-no-budget',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.7,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/compete-with-pub-chains',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.7,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/pub-marketing-agency',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.8,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
 
   // Service pages that render their own self-canonical content.
-  {
-    path: '/services/social-media-marketing-for-pubs',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.75,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/services/paid-social-for-pubs',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.75,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
-  {
-    path: '/services/content-creation-for-pubs',
-    disposition: 'live',
-    sitemap: true,
-    priority: 0.75,
-    changeFrequency: 'monthly',
-    lastModified: LAST_CONTENT_SWEEP,
-  },
 
   // ------------------------------------------------------ repositioning routes
   /*
@@ -385,33 +274,11 @@ const ROUTES = [
   },
 
   // ------------------------------------------------------------ active redirects
-  {
-    path: '/services',
-    disposition: 'redirect',
-    destination: '/ways-to-work',
-    note: 'Already a redirect, not a page, despite 1,199 impressions at position 24.',
-  },
   ...CONSOLIDATED_COUNTIES.map((county) => ({
     path: `/pub-marketing-${county}`,
     disposition: /** @type {Disposition} */ ('redirect'),
     destination: '/pub-marketing',
   })),
-  {
-    path: '/licensees-guide/cash-flow-crisis-breaking-cycle',
-    disposition: 'redirect',
-    destination: '/fix-my-pub',
-    note: 'Retired guide, previously 410. Repointed to /why-revenue-is-falling in phase 4 when /fix-my-pub retires.',
-  },
-  {
-    path: '/services/instagram-services-for-pubs',
-    disposition: 'redirect',
-    destination: '/services/social-media-marketing-for-pubs',
-  },
-  {
-    path: '/services/facebook-services-for-pubs',
-    disposition: 'redirect',
-    destination: '/services/social-media-marketing-for-pubs',
-  },
   {
     path: '/licensees-guide/pub-wages-labour-costs-uk',
     disposition: 'redirect',
@@ -554,6 +421,27 @@ const ROUTES = [
     note: 'Declared before the article wildcard: /category/x is two segments and :slug is one, so this would never be reached otherwise.',
   },
   {
+    path: '/licensees-guide/cash-flow-crisis-breaking-cycle',
+    disposition: 'redirect',
+    destination: '/why-revenue-is-falling',
+    /*
+     * Declared here, above the wildcard, and that position is the whole rule.
+     *
+     * It used to point at /fix-my-pub and lived in this block; phase 4 repointed it
+     * so no chain formed when /fix-my-pub retired, and for a while both copies
+     * existed. Deleting the one here on release day looked like tidying a duplicate
+     * and was not: the phase 4 array is concatenated after ROUTES, so with the exact
+     * rule gone the wildcard below matched first and the URL started landing on the
+     * article instead. The article is still published, so it answered 200 and
+     * nothing failed loudly.
+     *
+     * The destination is deliberate rather than convenient. This URL is one of the
+     * few whose article is kept out of the sitemap by `getRedirectedGuideSlugs`,
+     * because the old path is a redirect source; sending it to the article would
+     * advertise a page the sitemap deliberately withholds.
+     */
+  },
+  {
     path: '/licensees-guide/:slug',
     disposition: 'redirect',
     destination: '/guides/:slug',
@@ -573,13 +461,6 @@ const PHASE_4_REDIRECTS = [
     disposition: 'redirect',
     destination: '/why-revenue-is-falling',
     phase: 'phase4',
-  },
-  {
-    path: '/licensees-guide/cash-flow-crisis-breaking-cycle',
-    disposition: 'redirect',
-    destination: '/why-revenue-is-falling',
-    phase: 'phase4',
-    note: 'Repointed from /fix-my-pub so the chain never forms.',
   },
   {
     path: '/empty-pub-solutions',

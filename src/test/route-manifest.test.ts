@@ -98,19 +98,36 @@ describe('route manifest', () => {
     expect(broken).toEqual([]);
   });
 
-  it('keeps phase 4 redirects declared but not live', () => {
-    expect(ACTIVE_PHASES).toEqual(['active']);
+  /*
+   * INVERTED 31 August 2026, the day phase 4 shipped.
+   *
+   * This asserted the opposite for as long as the redirects were held back, which
+   * was its whole job: it stopped them going live before their replacements
+   * existed. They are live now, so the same list has to arrive intact rather than
+   * be kept out, and the assertion protects the release instead of the wait.
+   */
+  it('emits every phase 4 redirect, now that phase 4 has shipped', () => {
+    expect(ACTIVE_PHASES).toEqual(['active', 'phase4']);
 
-    const emitted = new Set(getRedirects().map((r) => r.source));
-    const leaked = PHASE_4_REDIRECTS.filter(
-      (r) =>
-        emitted.has(r.path) &&
-        // a path can legitimately be an active redirect to one target and a phase 4
-        // redirect to another; what must not happen is the phase 4 target going live
-        getRedirects().find((e) => e.source === r.path)?.destination === r.destination
+    const emitted = getRedirects();
+    const missing = PHASE_4_REDIRECTS.filter(
+      (r) => !emitted.some((e) => e.source === r.path && e.destination === r.destination)
     ).map((r) => `${r.path} -> ${r.destination}`);
 
-    expect(leaked, `phase 4 redirects must not ship early:\n${leaked.join('\n')}`).toEqual([]);
+    expect(missing, `these were declared but never emitted:\n${missing.join('\n')}`).toEqual([]);
+  });
+
+  /*
+   * The other half, and the reason a retired page needs both changes in one commit:
+   * a Next redirect wins over a page at the same path, so leaving the `live`
+   * declaration behind would say the site still has fifteen pages it has deleted.
+   */
+  it('declares no retired page as live', () => {
+    const retired = new Set(PHASE_4_REDIRECTS.map((r) => r.path));
+    const stillLive = ROUTES.filter((r) => r.disposition === 'live' && retired.has(r.path)).map(
+      (r) => r.path
+    );
+    expect(stillLive).toEqual([]);
   });
 
   it('only lists routes in the sitemap that actually exist in the app', () => {

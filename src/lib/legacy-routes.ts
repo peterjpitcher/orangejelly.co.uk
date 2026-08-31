@@ -27,25 +27,16 @@ import { isToolRoute } from './tool-routes';
  * every browser. `legacy-routes.test.ts` diffs this list against the manifest, so
  * the two cannot separate without the build saying so.
  *
- * Every entry below is a page phase 4 turns into a redirect, apart from
- * `/dev/components`, which is the internal component gallery. `/privacy` used to be
- * the other exception; it is public, it outlives phase 4, and it was restyled onto
- * the repositioned chrome on 31 August 2026, so it moved to `OJ_ROUTES`. When phase
- * 4 lands this list is down to the component gallery alone, and once that is
- * restyled the file and both gates can be deleted.
+ * Phase 4 landed on 31 August 2026 and took fifteen of the sixteen entries with it:
+ * they are redirects now, not pages, so nothing needs the old chrome for them.
+ * `/privacy` left earlier the same day, when it was restyled onto the repositioned
+ * header and footer and moved to `OJ_ROUTES`.
+ *
+ * What remains is the internal component gallery, and only because it is a
+ * development surface nobody outside the team sees. Once that is restyled this file
+ * and both gates can be deleted outright.
  */
-export const LEGACY_ROUTES = [
-  '/capabilities',
-  '/compete-with-pub-chains',
-  '/dev/components',
-  '/empty-pub-solutions',
-  '/fix-my-pub',
-  '/pub-marketing-agency',
-  '/pub-marketing-no-budget',
-  '/quiet-midweek-solutions',
-  '/services',
-  '/ways-to-work',
-] as const;
+export const LEGACY_ROUTES = ['/dev/components'] as const;
 
 /**
  * True only for a path the manifest declares as a live legacy page.

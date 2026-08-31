@@ -46,8 +46,24 @@ describe('legacy routes', () => {
     }
   });
 
+  /*
+   * The parent-match behaviour still matters even though only one route uses it:
+   * `/dev/components` is a directory today and could gain a child tomorrow, and the
+   * fixtures this used before, `/services/paid-social-for-pubs` and
+   * `/ways-to-work/growth-fix`, stopped existing when phase 4 shipped.
+   */
   it('covers nested pages under a listed parent', () => {
-    expect(isLegacyRoute('/services/paid-social-for-pubs')).toBe(true);
-    expect(isLegacyRoute('/ways-to-work/growth-fix')).toBe(true);
+    expect(isLegacyRoute('/dev/components')).toBe(true);
+    expect(isLegacyRoute('/dev/components/buttons')).toBe(true);
+  });
+
+  it('no longer claims the pages phase 4 retired', () => {
+    for (const path of [
+      '/services/paid-social-for-pubs',
+      '/ways-to-work/growth-fix',
+      '/capabilities',
+    ]) {
+      expect(isLegacyRoute(path)).toBe(false);
+    }
   });
 });
