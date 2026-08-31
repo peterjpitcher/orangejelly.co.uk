@@ -165,9 +165,31 @@ export function parseMarkdownFile(
       slug: data.slug,
     };
 
-    // Extract excerpt
+    /*
+     * The excerpt, in the order of who actually wrote it.
+     *
+     * The written `excerpt:` in the frontmatter came last here, which is to say it
+     * never came at all: the derived version is always produced, so `||` downstream
+     * always took it and 104 of the 106 guides had a hand-written summary that was
+     * never once published. CLAUDE.md asks for that field on every article and calls
+     * it the summary for search results and social shares, so the code was ignoring
+     * the contract the content was written to.
+     *
+     * What it published instead is worse than nothing on most of them. Ninety of the
+     * articles open by repeating their own title, so the derived text reads as the
+     * headline again followed by half a sentence and an ellipsis, and that string was
+     * the standfirst under the title, the BlogPosting description, and the meta
+     * description on the handful with no `seoDescription`.
+     *
+     * The derived text stays as the last resort, for an article with neither a
+     * written excerpt nor a `<!--more-->` marker.
+     */
+    const writtenExcerpt = typeof data.excerpt === 'string' ? data.excerpt.trim() : '';
+
     let excerpt: string | undefined;
-    if (content.includes(opts.excerptSeparator!)) {
+    if (writtenExcerpt) {
+      excerpt = writtenExcerpt;
+    } else if (content.includes(opts.excerptSeparator!)) {
       excerpt = content.split(opts.excerptSeparator!)[0].trim();
     } else if (opts.excerptLength! > 0) {
       excerpt = extractExcerpt(content, opts.excerptLength!, opts.stripHtml!);
