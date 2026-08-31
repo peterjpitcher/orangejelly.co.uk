@@ -3,7 +3,6 @@ import path from 'path';
 import { draftMode } from 'next/headers';
 
 import { CollectionPageSchema } from '@/components/CollectionPageSchema';
-import SearchComponent from '@/components/SearchComponent';
 import {
   Anchor,
   ArticleCard,
@@ -12,6 +11,7 @@ import {
   Button,
   CategoryTag,
   EmptyState,
+  GuideSearch,
   OjFooter,
   OjHeader,
   SeasonalBand,
@@ -293,10 +293,7 @@ export default async function GuidesPage(): Promise<JSX.Element> {
           <div className="measure mt-10">
             <p className="oj-eyebrow m-0">Or search the library</p>
             <div className="mt-3">
-              <SearchComponent
-                placeholder="Search guides by topic, problem, or event..."
-                maxResults={8}
-              />
+              <GuideSearch placeholder="Search guides by topic, problem, or event..." />
             </div>
           </div>
         </Band>
@@ -370,8 +367,8 @@ export default async function GuidesPage(): Promise<JSX.Element> {
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
             Reading is the cheap part. If you would rather work out which change matters most for
-            your venue first, an hour on the phone gets further than another article. It's free,
-            and it isn't a pitch.
+            your venue first, an hour on the phone gets further than another article. It's free, and
+            it isn't a pitch.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

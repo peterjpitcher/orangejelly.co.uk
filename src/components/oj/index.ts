@@ -106,6 +106,7 @@ export {
   type CookieNoticeProps,
   type ShareRowProps,
 } from './conversion';
+export { GuideSearch } from './GuideSearch';
 export { SiteSearch, type SiteSearchProps, type SiteSearchResult } from './SiteSearch';
 export { EnquiryForm, type EnquiryFormProps, type EnquiryEntryPoint } from './EnquiryForm';
 export { OjHeader, OjFooter, type OjHeaderProps, type OjNavKey } from './SiteChrome';
