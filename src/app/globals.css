@@ -93,6 +93,25 @@
     @apply mx-auto w-full;
     max-width: var(--measure-wide-max);
   }
+
+  /*
+   * Long-form only. `.measure-article` for a guide's title block, `.measure-prose`
+   * for the body column and everything that runs alongside it, so a whole article
+   * is one width from the quick answer to the author card.
+   *
+   * Both align left inside the shell rather than centring, which is what the design
+   * system template does and what the articles already did: the reader's eye keeps
+   * one left edge all the way down, from breadcrumb to byline to body.
+   */
+  .measure-article {
+    @apply w-full;
+    max-width: var(--measure-article);
+  }
+
+  .measure-prose {
+    @apply w-full;
+    max-width: var(--measure-prose);
+  }
 }
 
 /* Base heading styles for better SEO and accessibility */
@@ -149,6 +168,23 @@
    */
   --measure-max: 72rem;
   --measure-wide-max: 72rem;
+  /*
+   * The third width, and the only one that is a reading measure rather than a
+   * layout one.
+   *
+   * The two above are both the shell width, which is right for marketing sections
+   * where a paragraph is one element among cards and grids. It is wrong for an
+   * article, where the paragraph IS the page: at 1088px a guide runs about 150
+   * characters a line against the 45 to 75 that is legible.
+   *
+   * 740 and 680 are the design system's own article numbers, from the blog-article
+   * template: 740 for the title block, 680 for everything the reader then reads
+   * down. The site had 680 on `.oj-prose` alone, so the article text was 680 while
+   * the quick answer, contents, questions and author card around it were all 1088,
+   * and the column visibly changed width halfway down every guide.
+   */
+  --measure-article: 740px;
+  --measure-prose: 680px;
   --safe-area-inset-top: env(safe-area-inset-top, 0);
   --safe-area-inset-right: env(safe-area-inset-right, 0);
   --safe-area-inset-bottom: env(safe-area-inset-bottom, 0);

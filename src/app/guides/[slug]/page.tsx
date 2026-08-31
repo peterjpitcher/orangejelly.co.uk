@@ -546,7 +546,7 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                 { label: guide.title },
               ]}
             />
-            <div className="mb-5 flex flex-wrap items-center gap-3">
+            <div className="measure-article mb-5 flex flex-wrap items-center gap-3">
               <CategoryTag category={hue} href={`/guides/category/${guide.category.slug}`}>
                 {guide.category.name}
               </CategoryTag>
@@ -556,15 +556,15 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                 </span>
               ) : null}
             </div>
-            <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
+            <h1 className="oj-display measure-article text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
               <KeepCase>{guide.title}</KeepCase>
             </h1>
             {guide.excerpt ? (
-              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
+              <p className="measure-article mt-5 text-[19px] leading-relaxed text-oj-ink-2">
                 {guide.excerpt}
               </p>
             ) : null}
-            <p className="mt-6 text-[14.5px] text-oj-ink-3">
+            <p className="measure-article mt-6 text-[14.5px] text-oj-ink-3">
               {formatDate(guide.publishedDate)}
               {' · '}
               {guide.readingTime} min read
@@ -572,7 +572,7 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
               {guide.authorName}
             </p>
             {heroImage ? (
-              <div className="measure mt-8 overflow-hidden rounded-oj border-1.5 border-oj-ink">
+              <div className="measure-prose mt-8 overflow-hidden rounded-oj border-1.5 border-oj-ink">
                 <Image
                   src={heroImage}
                   alt=""
@@ -588,7 +588,18 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
         </section>
 
         <Band tone="paper">
-          <div className="measure">
+          {/*
+            One width for the whole article, not just for the words.
+
+            `.oj-prose` has always capped the body at the design system's 680px
+            reading measure, but the blocks around it were on `.measure`, which is
+            the shell width. So a guide opened with a 1088px quick answer and a
+            1088px contents card, dropped to 680px for the article itself, then went
+            back to 1088px for the questions and the author. The hero image gave the
+            game away: it declared `sizes="680px"` while rendering into 1088, so the
+            browser was fetching a file a third too small for the box it was in.
+          */}
+          <div className="measure-prose">
             {guide.quickAnswer ? (
               /* The class is load-bearing: BlogPosting's speakable block points at it. */
               <div className="quick-answer mb-9 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm">
