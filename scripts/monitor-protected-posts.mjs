@@ -48,6 +48,39 @@ function pct(now, before) {
   return Math.round(((now - before) / before) * 100);
 }
 
+/**
+ * Find a post's row, whatever the section is called this month.
+ *
+ * The baseline keys every post by the URL it had when the export was taken. A section
+ * rename therefore breaks this script in a way that looks exactly like catastrophe:
+ * every protected post reports as gone, on the first run after the release, which is
+ * the run you would most want to trust.
+ *
+ * Rewriting the baseline to the new paths is the obvious fix and it is wrong. Search
+ * Console keeps reporting the old URLs for weeks after a move, until Google recrawls
+ * and reassigns the data, so a baseline holding only new paths is blind for exactly the
+ * period the old one would have covered. During the transition an export legitimately
+ * contains a mixture of both.
+ *
+ * So match on the slug across every name the section has had. The slug is the part that
+ * does not change, and two posts never share one.
+ */
+const SECTION_ALIASES = ['/licensees-guide', '/guides'];
+
+function lookUp(byPath, url) {
+  const direct = byPath.get(url);
+  if (direct) return direct;
+
+  const slug = url.split('/').filter(Boolean).pop();
+  if (!slug) return undefined;
+
+  for (const prefix of SECTION_ALIASES) {
+    const row = byPath.get(`${prefix}/${slug}`);
+    if (row) return row;
+  }
+  return undefined;
+}
+
 async function run() {
   const exportPath = process.argv[2];
   if (!exportPath) {
@@ -79,7 +112,7 @@ async function run() {
   const lines = [];
 
   for (const post of protectedPosts) {
-    const row = byPath.get(post.url);
+    const row = lookUp(byPath, post.url);
     if (!row) {
       gone.push(post.url);
       continue;
