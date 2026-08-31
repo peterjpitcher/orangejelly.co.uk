@@ -48,7 +48,24 @@ export function Footer({
       <div className="mx-auto max-w-[1160px] px-8">
         <div className="flex flex-wrap items-start justify-between gap-16">
           <div className="flex max-w-[300px] flex-col gap-3.5">
-            {brand}
+            {/*
+              `self-start` on the brand, and not `items-start` on the column.
+
+              A column flex container stretches its children across the cross axis,
+              which here is the width. An `<img className="h-10 w-auto">` cannot
+              resist that: `w-auto` loses to the stretch, the image is forced to the
+              container's 300px, and `object-fit` defaults to `fill`, so the mark is
+              squashed. The footer icon is 640x667, near square, and was rendering
+              300x40. It looked like a flattened ellipse.
+
+              Fixing it with `items-start` on the parent would work for the image and
+              break the tagline, which needs the full 300px to wrap where it is meant
+              to. Constraining just the brand leaves the text alone.
+
+              It sits here rather than on the logo passed in, because the next person
+              to pass a logo would hit exactly the same thing.
+            */}
+            <div className="self-start">{brand}</div>
             {tagline ? (
               <p className="m-0 text-[15.5px] font-bold leading-normal text-oj-cream/85">
                 {tagline}
