@@ -164,3 +164,25 @@ export const LEAD_STATE_LABELS: Record<LeadState, string> = {
 export function isLeadState(value: unknown): value is LeadState {
   return typeof value === 'string' && (LEAD_STATES as readonly string[]).includes(value);
 }
+
+/**
+ * What the enquiry form carries between submits.
+ *
+ * Deliberately here and not in `src/app/actions/enquiry.ts`, which is a 'use server'
+ * module and may therefore export nothing but async functions. See the comment at the
+ * top of that file for what happens when this rule is broken.
+ */
+export interface EnquiryFormState {
+  step: 1 | 2 | 'done';
+  leadId?: string;
+  error?: string;
+  fieldErrors?: Record<string, string>;
+  /**
+   * Echoed back so a failed submit does not wipe what someone typed. Without
+   * JavaScript the page is re-rendered from scratch, and a form that clears itself
+   * on a validation error is the fastest way to lose an enquiry.
+   */
+  values?: Record<string, string>;
+}
+
+export const ENQUIRY_INITIAL_STATE: EnquiryFormState = { step: 1 };

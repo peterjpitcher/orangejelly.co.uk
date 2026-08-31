@@ -2,6 +2,21 @@
 
 import { headers } from 'next/headers';
 
+/*
+ * The form state type and its initial value live in a plain module, not here.
+ *
+ * A 'use server' file may only export async functions. Exporting a plain object from
+ * one makes the whole action module fail to load, and the failure only appears when a
+ * person presses the button: the build exits 0, tsc exits 0, lint passes and 1,613
+ * tests pass, because none of them enforce the rule. It cost this site every enquiry
+ * until a pre-flight check pressed the button on a real build.
+ *
+ * A type-only re-export is fine, because types are erased before any of this runs.
+ */
+import type { EnquiryFormState } from '@/lib/schemas/enquiry';
+
+export type { EnquiryFormState };
+
 import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
 import { storeConversionEvent } from '@/lib/db/leads';
 import { sendLeadNotification, escapeHtml } from '@/lib/email';
@@ -116,15 +131,35 @@ export async function submitEnquiryStep1(input: unknown): Promise<EnquiryStep1Re
     return { error: 'Something went wrong. Please email peter@orangejelly.co.uk directly.' };
   }
 
-  void afterEnquiryStored(stored.id, data, source);
+  /*
+   * Awaited, not fired and forgotten.
+   *
+   * This was `void afterEnquiryStored(...)`, on the sound reasoning that a failed
+   * notification must never tell somebody their enquiry did not arrive. That reasoning
+   * still holds and it is already satisfied a different way: every step inside
+   * afterEnquiryStored catches its own errors, so awaiting it cannot surface one.
+   *
+   * What not awaiting costs is the email itself. On Vercel the function can be frozen
+   * the moment the response is sent, so the notification may never be attempted, and
+   * the console.error that would have recorded the failure never runs either. The
+   * enquiry is safe in the database, but nobody is told it arrived, intermittently, so
+   * it works in testing and fails in production.
+   *
+   * There is no deferral primitive available here to do it properly: Next is 14.2.35,
+   * which has no `after`, and @vercel/functions is not a dependency. So it is awaited.
+   * That costs 200 to 400ms on a form a person submits once.
+   */
+  await afterEnquiryStored(stored.id, data, source);
 
   return { success: true, leadId: stored.id };
 }
 
 /**
- * Retryable secondary work. Deliberately not awaited by the action's return path:
- * a failed notification is an operational problem to alert on, never a reason to
- * tell someone their enquiry did not arrive.
+ * Retryable secondary work.
+ *
+ * Every step in here catches its own errors, so a failed notification is logged as the
+ * operational problem it is and never becomes a reason to tell somebody their enquiry
+ * did not arrive. That containment is what makes it safe for the caller to await this.
  */
 async function afterEnquiryStored(
   leadId: string,
@@ -211,20 +246,6 @@ export async function submitEnquiryStep2(
  * client asserts, and step two additionally requires a lead id that only step one
  * can have produced.
  */
-export interface EnquiryFormState {
-  step: 1 | 2 | 'done';
-  leadId?: string;
-  error?: string;
-  fieldErrors?: Record<string, string>;
-  /**
-   * Echoed back so a failed submit does not wipe what someone typed. Without
-   * JavaScript the page is re-rendered from scratch, and a form that clears itself
-   * on a validation error is the fastest way to lose an enquiry.
-   */
-  values?: Record<string, string>;
-}
-
-export const ENQUIRY_INITIAL_STATE: EnquiryFormState = { step: 1 };
 
 function text(formData: FormData, key: string): string {
   const value = formData.get(key);

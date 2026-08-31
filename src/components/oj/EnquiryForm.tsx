@@ -3,7 +3,8 @@
 import * as React from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 
-import { ENQUIRY_INITIAL_STATE, type EnquiryFormState, submitEnquiry } from '@/app/actions/enquiry';
+import { submitEnquiry } from '@/app/actions/enquiry';
+import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/lib/schemas/enquiry';
 import { getBrowserLeadSource } from '@/lib/lead-source';
 import { ENQUIRY_ROLES, ENQUIRY_SIZE_BANDS } from '@/lib/schemas/enquiry';
 import { hasAnalyticsConsent, trackClientEvent } from '@/lib/tracking';

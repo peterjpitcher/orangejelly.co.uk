@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/app/actions/enquiry';
+import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/lib/schemas/enquiry';
 import { EnquiryForm } from '@/components/oj/EnquiryForm';
 import type * as ReactDom from 'react-dom';
 

@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ENQUIRY_INITIAL_STATE, submitEnquiry } from '@/app/actions/enquiry';
+import { submitEnquiry } from '@/app/actions/enquiry';
+import { ENQUIRY_INITIAL_STATE } from '@/lib/schemas/enquiry';
 import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
 import type * as RateLimit from '@/lib/rate-limit';
 
