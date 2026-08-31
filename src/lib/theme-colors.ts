@@ -25,6 +25,12 @@ export const THEME_COLORS = {
   // the rest was dead weight, and orangeDark had drifted to #FF8901 while the real
   // token moved down the ramp. A dead alias holding a stale value is worse than no
   // alias: the next person to reach for it gets a colour the site stopped using.
+  //
+  // Those two files went on 31 August 2026, when the favicon stopped being white
+  // "OJ" letters generated on the legacy navy and became the brand mark. Nothing in
+  // the app reads `base` now; only the contrast test, which pins it against the
+  // palette. The map stays for that, and because the legacy templates still read
+  // the tokens above it.
 
   // External Brand Colors
   whatsapp: '#25D366',

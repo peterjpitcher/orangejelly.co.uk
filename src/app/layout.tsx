@@ -111,11 +111,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl,
   },
-  icons: {
-    icon: '/icon',
-    apple: '/apple-icon',
-    shortcut: '/icon',
-  },
+  /*
+   * Removed, deliberately, rather than repointed at the new filenames.
+   *
+   * These paths existed because `app/icon.tsx` and `app/apple-icon.tsx` generated
+   * the icons at runtime, and a generated route has no extension. Both files are
+   * gone: the favicon was white "OJ" letters drawn on the legacy navy, which is the
+   * old identity, and it is the brand mark now. The replacements are static
+   * `app/icon.png` and `app/apple-icon.png`, which Next finds by convention and
+   * declares itself, with a content hash on the URL that a hand-written path cannot
+   * carry. Writing the paths out again would 404, because the files now end in .png,
+   * which is exactly what happened first time round.
+   */
   // Next generates this from src/app/manifest.ts, which is why the path has no
   // extension. The hand-written public/manifest.json it replaced is deleted.
   manifest: '/manifest.webmanifest',
