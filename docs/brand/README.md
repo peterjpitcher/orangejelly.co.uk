@@ -96,3 +96,24 @@ no stock AI imagery.
 
 The repo's existing build gates still apply: `check:design-tokens`, `check:british-english`,
 `check:growth-language`.
+
+## positioning-overview.md
+
+Peter's business, brand and positioning overview, supplied 31 August 2026 and stored
+verbatim. It is the source of truth for what Orange Jelly is, who it is for and how it
+should sound, and it supersedes any earlier positioning language in this repo where
+the two disagree.
+
+Do not edit it to fit the site. If the site and this document disagree, the site is
+what changes. If Peter revises the positioning, replace the file wholesale rather than
+patching it, so it always reads as he wrote it.
+
+The three lines section 37 asks to be preserved exactly:
+
+- For business owners ready to take control of growth.
+- Orange Jelly is a strategic growth partner for ambitious businesses.
+- Strategy first. Then the right combination of marketing, technology, process and
+  action to make growth happen. (working copy, refinable)
+
+`docs/brand/` is exempt from the repo's content gates, which is why a verbatim source
+document can live here without being reformatted by a hook on commit.
