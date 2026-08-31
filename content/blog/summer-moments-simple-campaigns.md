@@ -9,7 +9,7 @@ tags: ["summer", "campaigns", "events", "marketing"]
 seasons:
   - summer
 occasions: []
-featuredImage: "/images/blog/summer-moments-simple-campaigns.png"
+featuredImage: "/images/blog/heroes/summer-moments-simple-campaigns.webp"
 author: "Peter Pitcher"
 voiceSearchQueries:
   - "what simple summer campaigns can I run at my pub?"

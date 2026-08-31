@@ -6,7 +6,7 @@ excerpt: "Budget-friendly pub toilet refurbishment ideas that make a real impres
 quickAnswer: "Start with a deep clean, fresh paint, decent lighting, and a reliable hand dryer or quality towel dispenser. These four changes cost under a thousand pounds and transform how customers feel about your venue. Toilets are the second thing people judge after the beer, so small upgrades here pay back faster than almost anything else you can spend money on."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-toilet-refurbishment-budget-guide.svg"
+featuredImage: "/images/blog/heroes/pub-toilet-refurbishment-budget-guide.webp"
 tags:
   - "pub toilet refurbishment"
   - "pub refurbishment"

@@ -7,7 +7,7 @@ excerpt: "Transform dead Monday nights into thriving profit centres with promoti
 quickAnswer: "Work out what a Monday session has to clear first, then pick one format and only one: a fixed-price comfort menu night, a community club using a room you were not going to fill, low-key entertainment such as board games, or an early week treat. Bundle rather than discount, and give it six to eight weeks."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/quiet-monday-night-promotions.png"
+featuredImage: "/images/blog/heroes/quiet-monday-night-promotions.webp"
 tags:
   - "monday night pub ideas"
   - "quiet monday promotions"

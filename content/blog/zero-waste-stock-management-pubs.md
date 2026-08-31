@@ -14,7 +14,7 @@ tags:
   - "pub management"
   - "sustainability"
 status: "published"
-featuredImage: "/images/blog/zero-waste-stock-management-pubs.png"
+featuredImage: "/images/blog/heroes/zero-waste-stock-management-pubs.webp"
 metaDescription: "Zero-waste stock management tactics for struggling pubs, covering counts, prep, menu engineering, and staff accountability."
 keywords:
   - "pub stock control"

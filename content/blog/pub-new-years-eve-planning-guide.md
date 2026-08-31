@@ -6,7 +6,7 @@ excerpt: "How to plan a profitable New Year's Eve at your pub. Ticketing, pricin
 quickAnswer: "Start planning your pub New Year's Eve at least six weeks out. Decide between ticketed and walk-in formats based on your venue size and style. Price for perceived value not cost recovery, plan a limited menu that your kitchen can deliver under pressure, book entertainment early, and staff generously. The real win is converting first-time NYE visitors into January regulars."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/pub-new-years-eve-planning-guide.svg"
+featuredImage: "/images/blog/heroes/pub-new-years-eve-planning-guide.webp"
 tags:
   - "pub new year menu"
   - "pub events"

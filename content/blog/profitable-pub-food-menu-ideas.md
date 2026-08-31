@@ -7,7 +7,7 @@ excerpt: "The high-margin dishes that genuinely make money in a UK pub, the gros
 quickAnswer: "The highest margin pub food is sides, pizza, loaded fries and burgers, running 68 to 87 percent gross profit on low ingredient cost and short prep. Sunday roasts and steaks show weaker GP but earn the most cash per plate. Target 68 to 72 percent blended food GP, always worked ex-VAT."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/profitable-pub-food-menu-ideas.png"
+featuredImage: "/images/blog/heroes/profitable-pub-food-menu-ideas.webp"
 tags:
   - "pub food"
   - "menu ideas"

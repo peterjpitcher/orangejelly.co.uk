@@ -18,7 +18,7 @@ seasons:
   - winter
 occasions: []
 status: "published"
-featuredImage: "/images/blog/survive-off-season-revenue-packages.png"
+featuredImage: "/images/blog/heroes/survive-off-season-revenue-packages.webp"
 metaDescription: "How pubs can survive the off-season with targeted packages for corporates, families, and clubs, complete with pricing and marketing tips."
 keywords:
   - "pub off season ideas"

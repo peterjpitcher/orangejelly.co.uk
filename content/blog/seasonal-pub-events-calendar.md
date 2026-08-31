@@ -7,7 +7,7 @@ excerpt: "Never face a quiet period again. Discover month-by-month seasonal even
 quickAnswer: "Build a 12-month skeleton first: fixed dates like Burns Night and Halloween, movable ones like Mothering Sunday and Easter, then your own local dates. Choose one or two events a month rather than filling every night, work a quarter ahead, and take a deposit on anything with a fixed menu."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/seasonal-pub-events-calendar.png"
+featuredImage: "/images/blog/heroes/seasonal-pub-events-calendar.webp"
 tags:
   - "seasonal events"
   - "pub calendar"

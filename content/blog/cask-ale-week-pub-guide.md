@@ -7,7 +7,7 @@ excerpt: "Run Cask Ale Week as your own beer festival: a practical 10-day plan w
 quickAnswer: "Run Cask Ale Week as your own small beer festival: you don't need a marquee or a brewery. Pick a handful of cask ales, write a plain-English tasting note for each, give every staff member one to champion, and add a beer passport so drinkers work through the range. Keep the cellar spot-on so every pint tastes right."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/cask-ale-week-pub-guide.svg"
+featuredImage: "/images/blog/heroes/cask-ale-week-pub-guide.webp"
 tags:
   - "beer festival"
   - "cask ale week"

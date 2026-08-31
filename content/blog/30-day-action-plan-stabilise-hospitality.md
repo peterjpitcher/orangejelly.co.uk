@@ -14,7 +14,7 @@ tags:
   - "pub management"
   - "strategy"
 status: "published"
-featuredImage: "/images/blog/30-day-action-plan-stabilise-hospitality.png"
+featuredImage: "/images/blog/heroes/30-day-action-plan-stabilise-hospitality.webp"
 metaDescription: "30-day action plan and checklist to stabilise a struggling hospitality business, covering cashflow, marketing, and operations."
 keywords:
   - "30 day pub plan"

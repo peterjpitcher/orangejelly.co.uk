@@ -7,7 +7,7 @@ excerpt: "Black Friday ideas for pubs that build your December instead of cuttin
 quickAnswer: "The best Black Friday ideas for pubs turn the weekend into December bookings and revenue, not a discount war. Take Christmas party deposits and pre-orders, sell gift cards as a present people are already shopping for, and hand out a January bounce-back voucher. You convert the footfall you've already got into full-price visits later, with your margin intact."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/black-friday-pub-ideas.svg"
+featuredImage: "/images/blog/heroes/black-friday-pub-ideas.webp"
 tags:
   - "black friday pub ideas"
   - "christmas party bookings"

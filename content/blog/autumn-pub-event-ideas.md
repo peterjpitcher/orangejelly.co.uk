@@ -7,7 +7,7 @@ excerpt: "The autumn pub event ideas that actually fill tables: cask, low and no
 quickAnswer: "The best autumn pub event ideas are Cask Ale Week, a low-and-no push for Sober October, a wine tasting night, Halloween and Bonfire, November rugby, and early Christmas gifting. Pick two or three that fit your pub, plan them early, and take bookings before guests drift into Christmas mode."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/autumn-pub-event-ideas.svg"
+featuredImage: "/images/blog/heroes/autumn-pub-event-ideas.webp"
 tags:
   - "autumn pub events"
   - "autumn pub ideas"

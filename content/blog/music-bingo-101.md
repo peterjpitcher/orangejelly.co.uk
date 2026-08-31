@@ -13,7 +13,7 @@ tags:
   - "licensee guide"
   - "midweek mixer"
 status: "published"
-featuredImage: "/images/blog/music-bingo-101.png"
+featuredImage: "/images/blog/heroes/music-bingo-101.webp"
 metaDescription: "Music Bingo 101 guide: prep timeline, playlists, run-sheet, compliance, and QR-ready templates for UK pubs."
 keywords:
   - "music bingo guide"

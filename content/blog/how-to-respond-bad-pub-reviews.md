@@ -6,7 +6,7 @@ excerpt: "Real response templates for 1-star pub reviews. The 3 rules, what neve
 quickAnswer: "Respond within 24 hours, acknowledge the experience without being defensive, and offer a private resolution. Never argue, blame the customer, or copy-paste the same reply. Future customers judge your response more than the complaint itself. A calm, specific, human reply to a 1-star review is more powerful marketing than a dozen 5-star ratings."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/how-to-respond-bad-pub-reviews.svg"
+featuredImage: "/images/blog/heroes/how-to-respond-bad-pub-reviews.webp"
 tags:
   - "online reviews"
   - "reputation management"

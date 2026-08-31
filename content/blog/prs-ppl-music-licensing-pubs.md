@@ -6,7 +6,7 @@ excerpt: "TheMusicLicence explained for pub landlords. What it costs, how fees a
 quickAnswer: "Every pub playing music needs TheMusicLicence, a joint licence from PRS for Music and PPL. Fees are based on your venue size, the type of music use, and your opening hours. A typical small pub pays around 500 to 1,500 pounds a year. Playing music without a licence can result in legal action and fines of thousands of pounds."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/prs-ppl-music-licensing-pubs.svg"
+featuredImage: "/images/blog/heroes/prs-ppl-music-licensing-pubs.webp"
 tags:
   - "pub background music"
   - "PRS licence pub"

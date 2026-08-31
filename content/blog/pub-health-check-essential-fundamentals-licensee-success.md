@@ -27,7 +27,7 @@ keywords:
   - "pub operations"
   - "pub business"
   - "pub finances"
-featuredImage: "/images/blog/pub-health-check-essential-fundamentals.png"
+featuredImage: "/images/blog/heroes/pub-health-check-essential-fundamentals-licensee-success.webp"
 hasFAQs: true
 hasQuickAnswer: true
 localSEO: {"localModifiers":["near me","local pub","in my area","nearby"],"nearbyLandmarks":["Local high street","Town centre","Village pub"],"targetLocation":"United Kingdom"}

@@ -14,7 +14,7 @@ tags:
   - "pub finances"
   - "upsell"
 status: "published"
-featuredImage: "/images/blog/rescue-your-margins-drinks-mix.png"
+featuredImage: "/images/blog/heroes/rescue-your-margins-drinks-mix.webp"
 metaDescription: "Guide to designing a profitable pub drinks mix, covering product tiers, supplier negotiations, pricing ladders, and team training."
 keywords:
   - "profitable drinks menu"

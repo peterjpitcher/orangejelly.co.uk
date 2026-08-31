@@ -6,7 +6,7 @@ excerpt: "A working licensee's guide to pub wages, realistic pay rates by role, 
 quickAnswer: "UK pub labour costs should sit between 25 and 30 percent of total revenue. Bar staff typically earn 11.44 to 13 per hour depending on age and experience, kitchen porters 11.44 to 12.50, and chefs 13 to 18 plus. Control costs through smart rota planning, cross-training, and tracking labour percentage weekly rather than monthly."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-wages-labour-costs-guide.svg"
+featuredImage: "/images/blog/heroes/pub-wages-labour-costs-guide.webp"
 tags:
   - "pub wages"
   - "labour costs"

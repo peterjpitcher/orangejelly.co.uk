@@ -7,7 +7,7 @@ excerpt: "How to run a pub Instagram account in-house: profile setup, phone phot
 quickAnswer: "Set one visual standard, natural light, clean backgrounds and consistent framing, then rotate three content pillars weekly: food and drink, people and atmosphere, events and offers. Give every post a clear call to action, use stories for urgency during event weeks, and engage locally with nearby accounts and hashtags."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/instagram-marketing-for-pubs.png"
+featuredImage: "/images/blog/heroes/instagram-marketing-for-pubs.webp"
 tags:
   - "pub Instagram ideas"
   - "Instagram for pubs"

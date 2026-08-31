@@ -9,7 +9,7 @@ author:
   bio: Founder of Orange Jelly, helping UK pubs increase revenue through proven strategies
 featured: true
 category: "revenue-growth"
-featuredImage: "/images/blog/double-drinks-profit-without-selling-more.png"
+featuredImage: "/images/blog/heroes/double-drinks-profit-without-selling-more.webp"
 tags:
   - Drinks Strategy
   - Profit Margins

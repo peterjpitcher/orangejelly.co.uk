@@ -14,7 +14,7 @@ tags:
   - "service"
   - "average spend"
 status: "published"
-featuredImage: "/images/blog/upselling-secrets-training-scripts.png"
+featuredImage: "/images/blog/heroes/upselling-secrets-training-scripts.webp"
 metaDescription: "Upselling techniques for UK pubs, including training drills, sample scripts, and metrics to track conversions without pushiness."
 keywords:
   - "pub upselling tips"

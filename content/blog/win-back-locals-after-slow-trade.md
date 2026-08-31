@@ -14,7 +14,7 @@ tags:
   - "pub relaunch"
   - "loyalty"
 status: "published"
-featuredImage: "/images/blog/win-back-locals-after-slow-trade.png"
+featuredImage: "/images/blog/heroes/win-back-locals-after-slow-trade.webp"
 metaDescription: "Step-by-step playbook to win back local pub regulars after a slump, covering messaging, offers, and follow-up cadences."
 keywords:
   - "win back pub customers"

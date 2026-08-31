@@ -6,7 +6,7 @@ excerpt: "A practical health and safety checklist for pub licensees. Fire safety
 quickAnswer: "Pub health and safety starts with five written risk assessments, maintained fire safety equipment, a stocked first aid kit, COSHH data sheets for every chemical, an up-to-date accident book, and a glass management policy. Review weekly, audit monthly, and keep an inspection-ready folder so you are never caught off guard."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-health-safety-checklist.svg"
+featuredImage: "/images/blog/heroes/pub-health-safety-checklist.webp"
 tags:
   - "pub health and safety"
   - "fire safety pub"

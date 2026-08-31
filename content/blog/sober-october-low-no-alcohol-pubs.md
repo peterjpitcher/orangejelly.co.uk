@@ -7,7 +7,7 @@ excerpt: "Start with one cracking non alcoholic beer, then build a small alcohol
 quickAnswer: "Lead with one genuinely good non alcoholic beer, then build a small alcohol free bar around it: a cider or sparkling option, one proper mocktail, and two or three grown-up softs. Give them their own menu section, price them like premium products, and train staff to offer them naturally. Keep the winners on all year."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/sober-october-low-no-alcohol-pubs.svg"
+featuredImage: "/images/blog/heroes/sober-october-low-no-alcohol-pubs.webp"
 tags:
   - "non alcoholic beer"
   - "alcohol free bar"

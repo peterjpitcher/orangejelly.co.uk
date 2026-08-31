@@ -7,7 +7,7 @@ excerpt: "A plain-English guide to running a wine and cheese evening in your pub
 quickAnswer: "A wine and cheese night pairs three small wine tastes, served as a flight, with a cheese and charcuterie board, priced around £10 to £15 a head. Ask your wine supplier to part-fund the stock, give every guest a scorecard, match each wine to one cheese, and take the next booking before the room empties."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/wine-tasting-evenings-for-pubs.svg"
+featuredImage: "/images/blog/heroes/wine-tasting-evenings-for-pubs.webp"
 tags:
   - "wine and cheese evening"
   - "cheese and wine night"

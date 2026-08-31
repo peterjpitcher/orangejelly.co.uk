@@ -6,7 +6,7 @@ excerpt: "Plain-English guide to every licence a pub landlord needs. Premises li
 quickAnswer: "Every pub needs a premises licence to sell alcohol and provide entertainment. At least one person must hold a personal licence and be named as the Designated Premises Supervisor. For one-off events outside your normal licence conditions, you need a Temporary Event Notice. Getting the paperwork wrong can mean fines, prosecution, or losing the right to trade."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-licensing-premises-personal-licence-guide.svg"
+featuredImage: "/images/blog/heroes/pub-licensing-premises-personal-licence-guide.webp"
 tags:
   - "premises licence"
   - "personal licence"

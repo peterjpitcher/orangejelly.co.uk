@@ -6,7 +6,7 @@ excerpt: "Most pubs rely on Facebook alone for their online presence. Here is wh
 quickAnswer: "Yes, your pub needs a website, but it does not need to cost thousands. A simple site with your menu, opening hours, location, and booking link gives you a shopfront you own. Combine it with an optimised Google Business Profile and you will show up in local searches that Facebook alone cannot reach."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/does-your-pub-need-a-website.svg"
+featuredImage: "/images/blog/heroes/does-your-pub-need-a-website.webp"
 tags:
   - "pub website"
   - "pub seo"

@@ -7,7 +7,7 @@ excerpt: "Coffee morning ideas that fill a quiet daytime and raise money: a simp
 quickAnswer: "The simplest coffee morning ideas work best: coffee and cake on a suggested donation, a raffle with local prizes, a donation jar with a QR code, and a local group invited in to make a crowd. It fills a dead daytime, lifts lunch trade and builds goodwill. Macmillan's 2026 date is Friday 25 September."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/macmillan-coffee-morning-pub-guide.svg"
+featuredImage: "/images/blog/heroes/macmillan-coffee-morning-pub-guide.webp"
 tags:
   - "coffee morning ideas"
   - "macmillan coffee morning"

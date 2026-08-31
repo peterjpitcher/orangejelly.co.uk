@@ -14,7 +14,7 @@ tags:
   - "pub management"
   - "performance"
 status: "published"
-featuredImage: "/images/blog/epos-data-revenue-comeback.png"
+featuredImage: "/images/blog/heroes/epos-data-revenue-comeback.webp"
 metaDescription: "Guide to using EPOS data for a revenue comeback, including dashboards, KPIs, and decision rhythms for pubs."
 keywords:
   - "use epos data"

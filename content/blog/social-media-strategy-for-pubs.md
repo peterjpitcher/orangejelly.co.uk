@@ -7,7 +7,7 @@ excerpt: "Build a social media strategy for your pub that drives real footfall. 
 quickAnswer: "Pick one goal, give each platform a role, and post three times a week: a Monday what's-on, a midweek staff story, and a Friday event reminder. Batch photos once a week, give every post one job with a clear next step, then track bookings, messages and link clicks rather than likes."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/social-media-strategy-for-pubs.png"
+featuredImage: "/images/blog/heroes/social-media-strategy-for-pubs.webp"
 tags:
   - "social media for pubs"
   - "pub marketing"

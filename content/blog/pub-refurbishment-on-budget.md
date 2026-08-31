@@ -7,7 +7,7 @@ excerpt: "Before you rip anything out, read this. The changes that actually brin
 quickAnswer: "Work out whether the problem is the building or the offer, then spend in phases. Under £1,000 buys a deep clean, warm lighting on dimmers, one repainted wall and sorted toilets. The next band recovers seating and takes the ring out of a hard room. Above that, do the entrance, the sign, and one corner worth photographing."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/pub-refurbishment-on-budget.png"
+featuredImage: "/images/blog/heroes/pub-refurbishment-on-budget.webp"
 tags:
   - "refurbishment"
   - "budget"

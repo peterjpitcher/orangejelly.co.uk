@@ -14,7 +14,7 @@ tags:
   - "leadership"
   - "cash flow"
 status: "published"
-featuredImage: "/images/blog/turnaround-playbook-independent-bars.png"
+featuredImage: "/images/blog/heroes/turnaround-playbook-independent-bars.webp"
 metaDescription: "Step-by-step turnaround playbook for independent pubs, covering cash triage, offer redesign, relaunch tactics, and scaling habits."
 keywords:
   - "pub turnaround plan"

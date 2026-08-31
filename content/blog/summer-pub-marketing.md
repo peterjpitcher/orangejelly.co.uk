@@ -7,7 +7,7 @@ excerpt: "Summer footfall doesn't become revenue on its own. Five practical move
 quickAnswer: "Summer creates attention, not automatic sales. Turn it into revenue with five moves: give people bookable reasons to visit, make every social post lead to an action, keep your Google Business Profile fresh, capture customer details while trade is high, then follow up to bring people back."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/summer-pub-marketing.svg"
+featuredImage: "/images/blog/heroes/summer-pub-marketing.webp"
 tags:
   - "summer pub marketing"
   - "summer footfall"

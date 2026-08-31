@@ -7,7 +7,7 @@ excerpt: "Your operator's guide to filling the pub for the autumn internationals
 quickAnswer: "The autumn internationals are the home nations' November rugby fixtures, and in 2026 they sit inside the new Nations Championship. The pool window runs 6 to 21 November, then Finals Weekend at Twickenham, 27 to 29 November. Take table bookings before kick-off, sell a fixed match-day package, and test screens and sound early."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/autumn-rugby-nations-championship-pubs.svg"
+featuredImage: "/images/blog/heroes/autumn-rugby-nations-championship-pubs.webp"
 tags:
   - "autumn internationals"
   - "autumn rugby"

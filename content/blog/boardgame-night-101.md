@@ -13,7 +13,7 @@ tags:
   - "licensee guide"
   - "community nights"
 status: "published"
-featuredImage: "/images/blog/boardgame-night-101.png"
+featuredImage: "/images/blog/heroes/boardgame-night-101.webp"
 metaDescription: "Boardgame & Team Night 101: zone layouts, run-sheet, loyalty mechanics, food pairings, and downloadables for busy Mondays."
 keywords:
   - "board game pub night"

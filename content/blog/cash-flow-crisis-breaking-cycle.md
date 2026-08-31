@@ -7,7 +7,7 @@ excerpt: "Stop the monthly panic of making rent. Build predictable income, manag
 quickAnswer: "Break the feast-or-famine cycle by building a repeatable cash rhythm rather than chasing one big week. Add two reliable midweek anchors, align payment dates with your strongest inflows, protect gross profit, and pull cash forward with deposits. Build a buffer worth one week of fixed costs from a fixed share of weekly profit."
 author: "Peter Pitcher"
 category: "revenue-growth"
-featuredImage: "/images/blog/cash-flow-crisis-breaking-cycle.png"
+featuredImage: "/images/blog/heroes/cash-flow-crisis-breaking-cycle.webp"
 tags:
   - "cash flow management"
   - "pub finances"

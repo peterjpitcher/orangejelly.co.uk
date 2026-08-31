@@ -14,7 +14,7 @@ tags:
   - "events"
   - "ROI"
 status: "published"
-featuredImage: "/images/blog/restart-quiz-music-sport-roi.png"
+featuredImage: "/images/blog/heroes/restart-quiz-music-sport-roi.webp"
 metaDescription: "Guide to relaunching quiz, music, and sport nights in pubs with profit-focused planning, marketing, and upselling."
 keywords:
   - "pub quiz relaunch"

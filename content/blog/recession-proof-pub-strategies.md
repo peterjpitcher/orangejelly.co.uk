@@ -7,7 +7,7 @@ excerpt: "Proven strategies to maintain and grow your pub business during econom
 quickAnswer: "Recession-proof your pub by protecting value rather than cutting price: use bundles and set menus instead of heavy discounts, tighten the menu to reduce waste, add small luxuries like a premium dessert or a themed night, build repeat trade through loyalty and personal invites, and review cash weekly rather than monthly."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/recession-proof-pub-strategies.png"
+featuredImage: "/images/blog/heroes/recession-proof-pub-strategies.webp"
 tags:
   - "recession proof pub"
   - "pub survival strategies"

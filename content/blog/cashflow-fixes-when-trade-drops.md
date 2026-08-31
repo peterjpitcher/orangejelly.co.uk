@@ -14,7 +14,7 @@ tags:
   - "cost control"
   - "turnaround"
 status: "published"
-featuredImage: "/images/blog/cashflow-fixes-when-trade-drops.png"
+featuredImage: "/images/blog/heroes/cashflow-fixes-when-trade-drops.webp"
 metaDescription: "Immediate cashflow fixes for UK pubs when trade slumps, covering forecasting, supplier talks, upsells, and emergency sales drives."
 keywords:
   - "pub cashflow help"

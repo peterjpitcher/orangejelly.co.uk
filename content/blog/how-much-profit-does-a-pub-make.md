@@ -6,7 +6,7 @@ excerpt: "Honest pub profit benchmarks for 2026. Wet GP, food GP, labour costs, 
 quickAnswer: "A well-run community pub turning over 400K to 600K a year can expect to net between 20K and 60K in owner's profit after all costs. The key variables are gross profit on drinks (target 60-65%), food GP (target 65-70%), labour costs (keep below 30%), and rent. Most pubs that struggle are losing money in places they have never measured."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/how-much-profit-does-a-pub-make.svg"
+featuredImage: "/images/blog/heroes/how-much-profit-does-a-pub-make.webp"
 tags:
   - "pub profit"
   - "pub finances"

@@ -7,7 +7,7 @@ excerpt: "When your village is shrinking but your bills aren't, here's how to tr
 quickAnswer: "Work out your break-even and spend per head first, because the village alone will not cover it. Then pick one reason to travel, a hero dish, session or setting, and market it to the twenty minute catchment. Fill the daytime with coffee, a shop counter, parcels or clubs, and keep one night for the locals."
 author: "Peter Pitcher"
 category: "property"
-featuredImage: "/images/blog/village-pub-dying-village-survival.png"
+featuredImage: "/images/blog/heroes/village-pub-dying-village-survival.webp"
 tags:
   - "village pub"
   - "rural pub"

@@ -14,7 +14,7 @@ tags:
   - "pub promo"
   - "content"
 status: "published"
-featuredImage: "/images/blog/social-media-tactics-footfall-seven-days.png"
+featuredImage: "/images/blog/heroes/social-media-tactics-footfall-seven-days.webp"
 metaDescription: "Seven-day social media plan for UK pubs, including content ideas, ad tactics, and conversion workflows that drive immediate visits."
 keywords:
   - "pub social media plan"

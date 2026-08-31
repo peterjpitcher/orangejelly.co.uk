@@ -14,7 +14,7 @@ tags:
   - "csr"
   - "events"
 status: "published"
-featuredImage: "/images/blog/community-outreach-reintroduce-pub.webp"
+featuredImage: "/images/blog/heroes/community-outreach-reintroduce-pub.webp"
 metaDescription: "Community outreach ideas for pubs, including partnerships with schools, charities, and local groups to drive goodwill and revenue."
 keywords:
   - "pub community ideas"

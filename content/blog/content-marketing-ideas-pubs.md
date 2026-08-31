@@ -7,7 +7,7 @@ excerpt: "A week-by-week content plan for pubs: exactly what to post on Facebook
 quickAnswer: "Post across four pillars: your story, proof that other people are enjoying the place, useful practical information, and clear offers or events. Run a fixed weekly rhythm, what is on this week on Monday, a story on Wednesday, social proof on Friday, and a teaser on Sunday. Four consistent posts a week beat a burst of ten."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/content-marketing-ideas-pubs.png"
+featuredImage: "/images/blog/heroes/content-marketing-ideas-pubs.webp"
 tags:
   - "pub marketing ideas"
   - "content marketing"

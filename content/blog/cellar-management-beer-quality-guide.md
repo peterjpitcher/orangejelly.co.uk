@@ -6,7 +6,7 @@ excerpt: "A practical cellar management guide for pub landlords. Temperature con
 quickAnswer: "Good cellar management means keeping cask ale at 11 to 13 degrees, keg at 3 to 5 degrees, cleaning lines every seven days, rotating stock first in first out, and tracking every pint of ullage. Get these basics right and you protect your gross profit, reduce waste, and serve beer your customers come back for."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/cellar-management-beer-quality-guide.svg"
+featuredImage: "/images/blog/heroes/cellar-management-beer-quality-guide.webp"
 tags:
   - "cellar management"
   - "pub stock take"

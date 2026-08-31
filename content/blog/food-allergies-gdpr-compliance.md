@@ -21,7 +21,7 @@ keywords:
   - "Natasha's Law"
   - "pub compliance"
   - "food allergy regulations"
-featuredImage: "/images/blog/food-allergies-gdpr-compliance.png"
+featuredImage: "/images/blog/heroes/food-allergies-gdpr-compliance.webp"
 hasFAQs: true
 hasQuickAnswer: true
 hasQuickStats: true

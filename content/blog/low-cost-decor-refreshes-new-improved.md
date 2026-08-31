@@ -14,7 +14,7 @@ tags:
   - "guest experience"
   - "design"
 status: "published"
-featuredImage: "/images/blog/low-cost-decor-refreshes-new-improved.png"
+featuredImage: "/images/blog/heroes/low-cost-decor-refreshes-new-improved.webp"
 metaDescription: "Low-cost decor refresh ideas for pubs to show momentum, including paint schemes, signage, lighting, and furniture hacks."
 keywords:
   - "pub decor refresh"

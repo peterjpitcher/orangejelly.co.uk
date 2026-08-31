@@ -14,7 +14,7 @@ tags:
   - "cashflow"
   - "finance"
 status: "published"
-featuredImage: "/images/blog/rent-supplier-negotiations-cash-tight.png"
+featuredImage: "/images/blog/heroes/rent-supplier-negotiations-cash-tight.webp"
 metaDescription: "Negotiation tactics for pubs facing rent and supplier pressure, including scripts, repayment plans, and relationship management."
 keywords:
   - "negotiate pub rent"

@@ -6,7 +6,7 @@ excerpt: "What wet-led and food-led actually mean, the economics of each model, 
 quickAnswer: "A wet-led pub generates most of its revenue from drinks, typically 70 percent or more. A food-led pub generates the majority from food sales. Neither model is inherently better. The right choice depends on your location, premises, staffing capacity, and local competition. Most successful independents run a hybrid model with a clear primary driver."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/wet-led-vs-food-led-pubs.svg"
+featuredImage: "/images/blog/heroes/wet-led-vs-food-led-pubs.webp"
 tags:
   - "wet led pub"
   - "food led pub"

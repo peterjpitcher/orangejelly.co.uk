@@ -7,7 +7,7 @@ excerpt: "Practical tactics to transform empty pub tables into bustling profit c
 quickAnswer: "Implement table reservation systems, create intimate dining spaces, offer walk-in incentives during slow periods, and use dynamic pricing. Focus on turning tables faster during peak times while extending stays during quiet periods. Strategic lighting and layout changes can make empty spaces feel welcoming."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/fill-empty-pub-tables.png"
+featuredImage: "/images/blog/heroes/fill-empty-pub-tables.webp"
 tags:
   - "fill empty tables"
   - "get more pub customers"

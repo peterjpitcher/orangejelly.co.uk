@@ -7,7 +7,7 @@ excerpt: "Christmas planning starts in summer. Price two packages properly, open
 quickAnswer: "Start Christmas planning in June or July, because corporate bookers fix dates early and the best December nights go first. Price two simple packages from your own plate cost, take a ten pound per head deposit on every party booking, and have your menu, entertainment and booking page live by September."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/christmas-pub-promotion-ideas.png"
+featuredImage: "/images/blog/heroes/christmas-pub-promotion-ideas.webp"
 tags:
   - "seasonal"
   - "promotions"

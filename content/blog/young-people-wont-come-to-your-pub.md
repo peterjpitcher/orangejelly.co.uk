@@ -6,7 +6,7 @@ excerpt: "Transform your pub into a magnet for 18-30s with proven strategies tha
 quickAnswer: "Young adults are not avoiding pubs, they are avoiding boring ones. Give them a reason to choose you: warm lighting and one photogenic corner, a signature serve worth posting, events they actually want like bottomless brunch or board game afternoons, a proper alcohol-free range, fast WiFi and phone chargers. Quality beats cheap drinks."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/young-people-wont-come-to-your-pub.png"
+featuredImage: "/images/blog/heroes/young-people-wont-come-to-your-pub.webp"
 tags:
   - "young customers"
   - "millennials"

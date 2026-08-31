@@ -6,7 +6,7 @@ excerpt: "A practical festive plan for pubs: gifting and Black Friday, December 
 quickAnswer: "The festive moments that reliably fill pubs are Black Friday gifting, December party season, New Year's Eve, Dry January's low-and-no range and a warming January roast. Pick the two or three that fit your pub, take deposits and pre-orders early, and lock in bookings before guests commit elsewhere."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/christmas-pub-event-ideas.svg"
+featuredImage: "/images/blog/heroes/christmas-pub-event-ideas.webp"
 tags:
   - "christmas pub events"
   - "christmas pub ideas"

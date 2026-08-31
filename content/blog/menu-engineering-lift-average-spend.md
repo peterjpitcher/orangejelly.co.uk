@@ -14,7 +14,7 @@ tags:
   - "design"
   - "upsell"
 status: "published"
-featuredImage: "/images/blog/menu-engineering-lift-average-spend.png"
+featuredImage: "/images/blog/heroes/menu-engineering-lift-average-spend.webp"
 metaDescription: "Menu engineering tactics for pubs to lift average spend, including layout, language, pricing ladders, and training tips."
 keywords:
   - "menu engineering pub"

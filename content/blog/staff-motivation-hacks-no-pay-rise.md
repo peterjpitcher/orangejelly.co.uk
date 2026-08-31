@@ -14,7 +14,7 @@ tags:
   - "management"
   - "training"
 status: "published"
-featuredImage: "/images/blog/staff-motivation-hacks-no-pay-rise.png"
+featuredImage: "/images/blog/heroes/staff-motivation-hacks-no-pay-rise.webp"
 metaDescription: "Practical ways for UK publicans to motivate staff when pay rises are off the table, including recognition rituals and development hacks."
 keywords:
   - "motivate pub staff"

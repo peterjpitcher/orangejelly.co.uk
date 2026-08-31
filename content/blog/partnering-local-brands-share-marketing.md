@@ -14,7 +14,7 @@ tags:
   - "co-branding"
   - "events"
 status: "published"
-featuredImage: "/images/blog/partnering-local-brands-share-marketing.png"
+featuredImage: "/images/blog/heroes/partnering-local-brands-share-marketing.webp"
 metaDescription: "How to partner with local brands for shared marketing, covering partner selection, offer design, contracts, and promotion."
 keywords:
   - "pub brand partnerships"

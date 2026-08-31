@@ -7,7 +7,7 @@ excerpt: "A pub calendar of national drinks days to pick from, anchored by Natio
 quickAnswer: "National Vodka Day is Sunday 4 October 2026, and it anchors a calendar of drinks days pubs can pick from. The tidiest autumn run adds International Gin and Tonic Day on Monday 19 October and Champagne Day on Friday 23 October. Each one needs only a featured serve, a chalkboard and a social post."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/national-drinks-days-pub-guide.svg"
+featuredImage: "/images/blog/heroes/national-drinks-days-pub-guide.webp"
 tags:
   - "national vodka day"
   - "national drinks days"

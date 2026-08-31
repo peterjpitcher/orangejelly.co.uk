@@ -7,7 +7,7 @@ excerpt: "Twenty-six quiz formats in four clusters, plus the licensing rules, th
 quickAnswer: "Run six to eight varied rounds across about two and a half hours door to door, with a fifteen minute break in the middle so the bar takes money. Mix picture, music and interactive rounds, charge £2 to £3 a head, and pay prizes as a bar tab rather than cash."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/quiz-night-ideas.png"
+featuredImage: "/images/blog/heroes/quiz-night-ideas.webp"
 tags:
   - "quiz night"
   - "pub quiz ideas"

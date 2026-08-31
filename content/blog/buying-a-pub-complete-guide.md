@@ -6,7 +6,7 @@ excerpt: "Everything you need to know about buying a pub in the UK. From finding
 quickAnswer: "Buying a pub starts with honest self-assessment, then choosing between freehold, leasehold, or tenancy. Budget for at least three to six months of working capital on top of the purchase price. Use specialist agents like Fleurets or Christie and Co, do thorough due diligence on accounts and lease terms, and have a clear 90-day plan before you open."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/buying-a-pub-complete-guide.svg"
+featuredImage: "/images/blog/heroes/buying-a-pub-complete-guide.webp"
 tags:
   - "buying a pub"
   - "pub ownership"

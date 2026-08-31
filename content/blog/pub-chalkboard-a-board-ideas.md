@@ -6,7 +6,7 @@ excerpt: "Practical chalkboard and A-board ideas that turn passing foot traffic 
 quickAnswer: "The best pub A-boards combine a short, witty headline with a clear reason to walk in right now. Change the message at least twice a week, tie it to what is happening today, and position the board where pedestrians naturally pause. Keep it readable from three metres away and check your council's pavement licence rules before you put it out."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/pub-chalkboard-a-board-ideas.svg"
+featuredImage: "/images/blog/heroes/pub-chalkboard-a-board-ideas.webp"
 tags:
   - "pub chalkboard ideas"
   - "pub a-board signs"

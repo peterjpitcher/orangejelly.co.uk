@@ -6,7 +6,7 @@ excerpt: "How to make your pub accessible, dog friendly, and family friendly. Le
 quickAnswer: "Making your pub accessible starts with understanding the Equality Act 2010, which requires you to make reasonable adjustments for disabled customers. Practical steps include ramps, accessible toilets, hearing loops, and large print menus. Welcoming dogs and families broadens your customer base without losing your identity. Accessible pubs attract more customers, more often."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-accessibility-welcoming-guide.svg"
+featuredImage: "/images/blog/heroes/pub-accessibility-welcoming-guide.webp"
 tags:
   - "disabled access"
   - "pub accessibility"

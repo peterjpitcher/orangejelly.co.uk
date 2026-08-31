@@ -7,7 +7,7 @@ excerpt: "Transform quiet nights into packed events. From planning to promotion,
 quickAnswer: "Start with quiz nights or themed events, promote 3 weeks ahead using social media and local groups, price entry low but focus on increased drink sales. Partner with local suppliers for prizes. Track attendance and revenue to optimise future events."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/how-to-run-successful-pub-events.png"
+featuredImage: "/images/blog/heroes/how-to-run-successful-pub-events.webp"
 tags:
   - "pub events"
   - "event planning"

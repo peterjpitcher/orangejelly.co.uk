@@ -17,7 +17,7 @@ seasons:
   - winter
 occasions: []
 status: "published"
-featuredImage: "/images/blog/energy-bill-shock-cut-venue-costs.png"
+featuredImage: "/images/blog/heroes/energy-bill-shock-cut-venue-costs.webp"
 metaDescription: "Actionable tactics to cut energy costs in UK pubs facing bill shocks, including audits, behavioural tweaks, and supplier negotiations."
 keywords:
   - "reduce pub energy bills"

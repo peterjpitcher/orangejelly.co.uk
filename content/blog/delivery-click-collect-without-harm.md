@@ -14,7 +14,7 @@ tags:
   - "guest experience"
   - "systems"
 status: "published"
-featuredImage: "/images/blog/delivery-click-collect-without-harm.png"
+featuredImage: "/images/blog/heroes/delivery-click-collect-without-harm.webp"
 metaDescription: "Guide to running delivery and click & collect from a pub while protecting dine-in service, covering menus, staffing, and tech."
 keywords:
   - "pub delivery tips"

@@ -7,7 +7,7 @@ excerpt: "Turn one-time visitors into regulars with email marketing that works. 
 quickAnswer: "Collect addresses at the booking form, at event sign-ups, on a table QR card and through your loyalty programme, always with a tick box the customer ticks themselves. Send one short email a week with what is on, then automate the booking reminder, the birthday message and a lapsed-guest note."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/email-marketing-pub-retention.png"
+featuredImage: "/images/blog/heroes/email-marketing-pub-retention.webp"
 tags:
   - "email marketing for pubs"
   - "pub customer retention"

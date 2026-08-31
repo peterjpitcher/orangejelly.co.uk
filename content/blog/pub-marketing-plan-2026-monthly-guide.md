@@ -6,7 +6,7 @@ excerpt: "A practical month-by-month marketing calendar for pubs in 2026. What t
 quickAnswer: "Build a pub marketing plan around the calendar: quiz relaunches and Dry January in January, Six Nations and Valentine's in February, Mother's Day in March, outdoor trade from April, summer events June to August, Christmas bookings open by mid-September, then Halloween, bonfire night and New Year's Eve. Plan events eight weeks ahead and major occasions twelve weeks ahead."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/pub-marketing-plan-2026-monthly-guide.svg"
+featuredImage: "/images/blog/heroes/pub-marketing-plan-2026-monthly-guide.webp"
 tags:
   - "pub marketing plan"
   - "pub marketing calendar"

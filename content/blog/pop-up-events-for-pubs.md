@@ -7,7 +7,7 @@ excerpt: "Pop-up events fill quiet nights without a permanent kitchen overhaul. 
 quickAnswer: "A pop-up event is a short, one-off takeover, such as street food, a guest chef, or a makers' market, that brings new people in on a quiet night. Pick one format, partner with a local trader on a fixed-price bundle, cap service to about 90 minutes, and run it as a regular monthly fixture so people learn to expect it."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/fizz-street-food-pop-up.webp"
+featuredImage: "/images/blog/heroes/pop-up-events-for-pubs.webp"
 tags:
   - "pop up events for pubs"
   - "street food pub"

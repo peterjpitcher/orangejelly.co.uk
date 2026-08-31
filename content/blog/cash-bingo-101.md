@@ -13,7 +13,7 @@ tags:
   - "midweek toolkit"
   - "licensee guide"
 status: "published"
-featuredImage: "/images/blog/cash-bingo-101.png"
+featuredImage: "/images/blog/heroes/cash-bingo-101.webp"
 metaDescription: "Licensee guide for running cash bingo in UK pubs: compliance checklist, game structure, pricing, promotion ideas, and downloadable logs."
 keywords:
   - "pub bingo guide"

@@ -14,7 +14,7 @@ tags:
   - "operations"
   - "hospitality"
 status: "published"
-featuredImage: "/images/blog/reboot-pub-atmosphere-on-budget.png"
+featuredImage: "/images/blog/heroes/reboot-pub-atmosphere-on-budget.webp"
 metaDescription: "Practical guide to transforming a quiet UK pub atmosphere using low-cost sensory changes, rituals, and host-led experiences."
 keywords:
   - "improve pub atmosphere"

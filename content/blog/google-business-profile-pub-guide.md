@@ -6,7 +6,7 @@ excerpt: "Step-by-step guide to setting up and optimising your pub's Google Busi
 quickAnswer: "Google Business Profile is the single most important free marketing tool for any pub. Claim your listing, choose the right categories, upload quality photos weekly, respond to every review, and post regular updates. Pubs that optimise their profile properly appear in the local 3-pack when someone searches pub near me, which is where the vast majority of clicks go."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/google-business-profile-pub-guide.svg"
+featuredImage: "/images/blog/heroes/google-business-profile-pub-guide.webp"
 tags:
   - "pub google maps"
   - "google business profile"

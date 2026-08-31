@@ -7,7 +7,7 @@ excerpt: "Fifteen ways to be known for one thing locally, across atmosphere, pro
 quickAnswer: "Pick one thing you can be known for locally and do it better than anyone nearby: one owned night of the week, one drinks category, one hero dish, dog or family friendly done properly, or a bookable private room. Then say the same sentence everywhere until locals repeat it back to you."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/pub-differentiation-strategies.png"
+featuredImage: "/images/blog/heroes/pub-differentiation-strategies.webp"
 tags:
   - "differentiation"
   - "unique pub ideas"

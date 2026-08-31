@@ -7,7 +7,7 @@ excerpt: "From open mic nights to booked bands: how to work out whether live mus
 quickAnswer: "Check first that your locals want live music, your room can handle the sound, and your team can cope with the extra flow. Then start with open mic nights, which carry the lowest risk, and only book paid acts once demand is proven. Control volume, track spend per head, and add a ticket or deposit for premium tables."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/live-music-events-for-pubs.png"
+featuredImage: "/images/blog/heroes/live-music-events-for-pubs.webp"
 tags:
   - "live music"
   - "pub entertainment"

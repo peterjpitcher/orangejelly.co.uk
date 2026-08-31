@@ -7,7 +7,7 @@ excerpt: "Most summer events cost more than they earn. These 20 formats are buil
 quickAnswer: "Run beer garden BBQs, outdoor quiz nights, family and community days, acoustic sessions and street food pop-ups. The formats that make money are weekly, simple to deliver, and use outdoor space you already pay for. Take deposits, plan for rain, and price a bundle so spend per head is predictable."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/summer-pub-event-ideas.webp"
+featuredImage: "/images/blog/heroes/summer-pub-event-ideas.webp"
 tags:
   - "seasonal"
   - "events"

@@ -6,7 +6,7 @@ excerpt: "Everything you need to know about pub leases, tenancies and brewery ti
 quickAnswer: "A pub lease is a long-term agreement (typically 10-25 years) where you pay rent and run the business independently. A tenancy is shorter (usually 3-5 years) with more pubco involvement. Many leases and tenancies include a brewery tie requiring you to buy drinks from the landlord. You can negotiate terms, explore the MRO option, and maximise free-of-tie categories to protect your margin."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/brewery-tie-improve-your-deal.png"
+featuredImage: "/images/blog/heroes/brewery-tie-improve-your-deal.webp"
 tags:
   - "pub lease"
   - "pub tenancy"

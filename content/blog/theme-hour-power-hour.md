@@ -13,7 +13,7 @@ tags:
   - "spin to win"
   - "saturday promotions"
 status: "published"
-featuredImage: "/images/blog/theme-hour-power-hour.png"
+featuredImage: "/images/blog/heroes/theme-hour-power-hour.webp"
 metaDescription: "Theme Hour Saturday toolkit for pubs: playlist formats, prize mechanics, staffing pattern, run-sheet, marketing copy, and safeguarding."
 keywords:
   - "pub theme hour"

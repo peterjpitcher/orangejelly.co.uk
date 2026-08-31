@@ -6,7 +6,7 @@ excerpt: "Practical guide to finding, hiring, and keeping great pub staff. Where
 quickAnswer: "The best pub staff come from word of mouth, local colleges, and targeted social media posts, not generic job boards. Write ads that sell the role honestly, run paid trial shifts, onboard properly in week one, and retain through recognition, flexibility, and a culture worth staying for. Staff leave managers, not pubs."
 author: "Peter Pitcher"
 category: "people"
-featuredImage: "/images/blog/pub-recruitment-hiring-bar-staff.svg"
+featuredImage: "/images/blog/heroes/pub-recruitment-hiring-bar-staff.webp"
 tags:
   - "hospitality recruitment"
   - "hiring bar staff"

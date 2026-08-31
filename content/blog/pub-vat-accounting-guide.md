@@ -6,7 +6,7 @@ excerpt: "A plain-English primer on pub VAT, bookkeeping, and tax mistakes. Know
 quickAnswer: "Most pub sales carry 20 percent VAT, but cold takeaway food is zero-rated. You must register once taxable turnover exceeds 90,000 pounds in any rolling 12-month period. A good hospitality accountant will recover more than they cost by reclaiming input VAT on equipment, repairs, and professional fees, and by keeping you on the right side of HMRC."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-vat-accounting-guide.svg"
+featuredImage: "/images/blog/heroes/pub-vat-accounting-guide.webp"
 tags:
   - "pub vat"
   - "pub accounting"

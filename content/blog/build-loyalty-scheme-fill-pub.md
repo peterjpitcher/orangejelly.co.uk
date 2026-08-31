@@ -14,7 +14,7 @@ tags:
   - "pub marketing"
   - "guest experience"
 status: "published"
-featuredImage: "/images/blog/build-loyalty-scheme-fill-pub.png"
+featuredImage: "/images/blog/heroes/build-loyalty-scheme-fill-pub.webp"
 metaDescription: "Guide to creating a loyalty scheme for pubs that fills Fridays, covering mechanics, tech, incentives, and promotion."
 keywords:
   - "pub loyalty scheme"

@@ -6,7 +6,7 @@ excerpt: "A practical guide to scoring 5 on your food hygiene rating. What inspe
 quickAnswer: "A 5-star food hygiene rating depends on three things: your food safety procedures, the structural condition of your premises, and the inspector's confidence in your management. Prepare by auditing all three areas before inspection day, keeping paperwork current, and building daily routines that make compliance automatic rather than a scramble."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/food-hygiene-rating-five-star-guide.svg"
+featuredImage: "/images/blog/heroes/food-hygiene-rating-five-star-guide.webp"
 tags:
   - "food hygiene rating"
   - "EHO inspection"

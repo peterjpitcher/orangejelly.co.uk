@@ -14,7 +14,7 @@ tags:
   - "activations"
   - "pub marketing"
 status: "published"
-featuredImage: "/images/blog/pub-event-template-profit-nights.png"
+featuredImage: "/images/blog/heroes/pub-event-template-profit-nights.webp"
 metaDescription: "Plug-and-play pub event template ensuring profitable nights, including timeline, budgets, staffing, and marketing checklist."
 keywords:
   - "pub event template"

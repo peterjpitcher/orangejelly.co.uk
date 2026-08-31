@@ -6,7 +6,7 @@ excerpt: "What to look for in a pub EPOS system, which features actually matter,
 quickAnswer: "A good pub EPOS system should handle stock management, table service, real-time reporting, and integrate with your booking and accounting tools. The best system is the one your team will actually use. Focus on ease of training, reliable support, and the quality of data it gives you rather than flashy features you will never touch."
 author: "Peter Pitcher"
 category: "operations"
-featuredImage: "/images/blog/pub-epos-system-guide.svg"
+featuredImage: "/images/blog/heroes/pub-epos-system-guide.webp"
 tags:
   - "pub epos system"
   - "best epos system for pubs"

@@ -7,7 +7,7 @@ excerpt: "A practical guide to pub event ideas that fill quiet nights, organised
 quickAnswer: "The pub events that reliably fill quiet nights are quizzes, live music, pop-ups, family sessions, tastings and competitive socialising. Pick one format that fits your pub and run it on a fixed weekly or monthly rhythm so people learn to expect it, rather than scattering one-off events."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/pub-event-ideas.svg"
+featuredImage: "/images/blog/heroes/pub-event-ideas.webp"
 tags:
   - "pub event ideas"
   - "event ideas for pubs"

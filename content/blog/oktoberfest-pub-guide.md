@@ -6,7 +6,7 @@ excerpt: "A practical Oktoberfest plan for UK pubs: pick your weekend, get a fes
 quickAnswer: "To host an Oktoberfest in your pub, pick a quiet weekend in late September or early October, put a German festbier or wheat beer on, and serve it in steins with a deposit. Add simple Bavarian food, an Oompah playlist, blue-and-white bunting and long shared tables, then chase group bookings."
 author: "Peter Pitcher"
 category: "events"
-featuredImage: "/images/blog/oktoberfest-pub-guide.svg"
+featuredImage: "/images/blog/heroes/oktoberfest-pub-guide.webp"
 tags:
   - "oktoberfest"
   - "oktoberfest ideas for pubs"

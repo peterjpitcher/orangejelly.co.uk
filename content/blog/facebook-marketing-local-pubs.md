@@ -7,7 +7,7 @@ excerpt: "How a pub runs Facebook in-house: fixing the page, using events proper
 quickAnswer: "Fix your page first: correct opening and kitchen hours, a booking button and current photos. Then create a Facebook event for every named night, post three or four times a week, take part in the local groups your customers already use, and put £10 to £20 a week behind whichever post has already worked."
 author: "Peter Pitcher"
 category: "marketing"
-featuredImage: "/images/blog/facebook-marketing-local-pubs.png"
+featuredImage: "/images/blog/heroes/facebook-marketing-local-pubs.webp"
 tags:
   - "pub Facebook marketing"
   - "Facebook for pubs"

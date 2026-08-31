@@ -9,7 +9,7 @@ author:
   bio: Founder of Orange Jelly, helping UK pubs increase revenue through proven strategies
 featured: true
 category: "revenue-growth"
-featuredImage: "/images/blog/turn-heating-costs-into-winter-wins.png"
+featuredImage: "/images/blog/heroes/turn-heating-costs-into-winter-wins.webp"
 tags:
   - Energy Costs
   - Winter Strategy

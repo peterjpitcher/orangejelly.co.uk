@@ -7,7 +7,7 @@ excerpt: "Proven low-cost marketing strategies for pubs. From free social media 
 quickAnswer: "Work five pillars rather than a long list: visibility in the community, social proof, partnerships, in-pub conversion and retention. Pick one idea from each, run those five for six weeks, then judge them against one number. Almost all of it costs time rather than money, and the free work comes before any paid boost."
 author: "Peter Pitcher"
 category: "turnaround"
-featuredImage: "/images/blog/low-budget-pub-marketing-ideas.webp"
+featuredImage: "/images/blog/heroes/low-budget-pub-marketing-ideas.webp"
 tags:
   - "pub marketing"
   - "low budget marketing"
