@@ -95,19 +95,13 @@
   }
 
   /*
-   * Long-form only. `.measure-article` for a guide's title block, `.measure-prose`
-   * for the body column and everything that runs alongside it, so a whole article
-   * is one width from the quick answer to the author card.
+   * Long-form only: the article's reading column, and everything that runs with it,
+   * so a whole guide is one width from the quick answer to the author card.
    *
-   * Both align left inside the shell rather than centring, which is what the design
+   * Left-aligned inside its track rather than centred, which is what the design
    * system template does and what the articles already did: the reader's eye keeps
-   * one left edge all the way down, from breadcrumb to byline to body.
+   * one left edge all the way down.
    */
-  .measure-article {
-    @apply w-full;
-    max-width: var(--measure-article);
-  }
-
   .measure-prose {
     @apply w-full;
     max-width: var(--measure-prose);
@@ -183,8 +177,17 @@
    * the quick answer, contents, questions and author card around it were all 1088,
    * and the column visibly changed width halfway down every guide.
    */
-  --measure-article: 740px;
   --measure-prose: 680px;
+
+  /*
+   * How far a sticky thing sits from the top, in one place.
+   *
+   * The header is 65px and sticks, so anything that pins below it and every jump
+   * to an in-page anchor has to clear the same distance or the target lands
+   * underneath it. Two users today: the guides contents rail, and the
+   * scroll offset below. They must not drift apart.
+   */
+  --oj-sticky-offset: 96px;
   --safe-area-inset-top: env(safe-area-inset-top, 0);
   --safe-area-inset-right: env(safe-area-inset-right, 0);
   --safe-area-inset-bottom: env(safe-area-inset-bottom, 0);
@@ -985,6 +988,22 @@ select:focus-visible {
 
   .oj-root :is(h1, h2, h3, h4, h5, h6) {
     font-family: inherit;
+  }
+
+  /*
+   * Anchor jumps have to clear the sticky header.
+   *
+   * Following a contents link scrolled the heading to the very top of the viewport,
+   * which is underneath the 65px header, so the section you asked for was the one
+   * thing you could not see and the first line of it read like the middle of a
+   * paragraph. `scroll-margin-top` is inert until something scrolls the element into
+   * view, so this costs nothing anywhere else.
+   *
+   * On every element with an id rather than only on headings, because a footnote, a
+   * FAQ entry or an accordion linked from elsewhere lands exactly the same way.
+   */
+  .oj-root [id] {
+    scroll-margin-top: var(--oj-sticky-offset);
   }
 
   .oj-display {

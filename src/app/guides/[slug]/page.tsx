@@ -400,6 +400,12 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
   const url = `${baseUrl}/guides/${guide.slug}`;
   const html = await renderMarkdownToHtml(preprocessMarkdown(guide.content));
   const toc = tocItems(html);
+  /*
+   * Three is the point at which a contents list is worth a column of its own. Below
+   * that the rail is mostly empty space beside the article, which looks worse than no
+   * rail, so short guides run as a single column.
+   */
+  const hasRail = toc.length >= 3;
   const showFaqs = guide.faqs.length > 0 && !BODY_HAS_FAQS.test(guide.content);
   const nextStepLinks = getNextStepFor(guide.slug);
   const hue = getCategoryHue(guide.category.slug);
@@ -546,7 +552,7 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                 { label: guide.title },
               ]}
             />
-            <div className="measure-article mb-5 flex flex-wrap items-center gap-3">
+            <div className="mb-5 flex flex-wrap items-center gap-3">
               <CategoryTag category={hue} href={`/guides/category/${guide.category.slug}`}>
                 {guide.category.name}
               </CategoryTag>
@@ -556,15 +562,15 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                 </span>
               ) : null}
             </div>
-            <h1 className="oj-display measure-article text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
+            <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
               <KeepCase>{guide.title}</KeepCase>
             </h1>
             {guide.excerpt ? (
-              <p className="measure-article mt-5 text-[19px] leading-relaxed text-oj-ink-2">
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
                 {guide.excerpt}
               </p>
             ) : null}
-            <p className="measure-article mt-6 text-[14.5px] text-oj-ink-3">
+            <p className="mt-6 text-[14.5px] text-oj-ink-3">
               {formatDate(guide.publishedDate)}
               {' · '}
               {guide.readingTime} min read
@@ -572,14 +578,14 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
               {guide.authorName}
             </p>
             {heroImage ? (
-              <div className="measure-prose mt-8 overflow-hidden rounded-oj border-1.5 border-oj-ink">
+              <div className="measure mt-8 overflow-hidden rounded-oj border-1.5 border-oj-ink">
                 <Image
                   src={heroImage}
                   alt=""
                   width={1600}
                   height={900}
                   priority
-                  sizes="(min-width: 768px) 680px, 100vw"
+                  sizes="(min-width: 1152px) 1088px, 100vw"
                   className="h-auto w-full"
                 />
               </div>
@@ -589,127 +595,165 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
 
         <Band tone="paper">
           {/*
-            One width for the whole article, not just for the words.
+            The article is a contents rail and a reading column, which is the design
+            system's own blog-article layout.
 
-            `.oj-prose` has always capped the body at the design system's 680px
-            reading measure, but the blocks around it were on `.measure`, which is
-            the shell width. So a guide opened with a 1088px quick answer and a
-            1088px contents card, dropped to 680px for the article itself, then went
-            back to 1088px for the questions and the author. The hero image gave the
-            game away: it declared `sizes="680px"` while rendering into 1088, so the
-            browser was fetching a file a third too small for the box it was in.
+            Two faults were being fixed at once here. The first was width: `.oj-prose`
+            has always carried the 680px reading measure, but the blocks around it were
+            on `.measure`, the shell width, so a guide opened with a 1088px quick answer
+            and contents card, dropped to 680px for the article, then went back to
+            1088px for the questions and the author. The hero image proved 680 was
+            always the intent, since it declared `sizes="680px"` while rendering into
+            1088 and was fetching a file a third too small for its box.
+
+            Narrowing the body alone then caused the second fault, and it was the more
+            obvious one: a 680px column left-aligned in a 1088px shell reads as a page
+            that has lost a column, because roughly a third of the width is empty and
+            all of it is on one side. The contents belong in that space. Moving the
+            list into a rail fills the page, gets a long contents block out of the way
+            of the first paragraph, and keeps the sections reachable while reading,
+            which on guides that run to seven or eight sections is the whole point.
+
+            Below `lg` there is no room for a rail, so the grid collapses and the
+            contents go back to a card above the article, which is what they were.
           */}
-          <div className="measure-prose">
-            {guide.quickAnswer ? (
-              /* The class is load-bearing: BlogPosting's speakable block points at it. */
-              <div className="quick-answer mb-9 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm">
-                <p className="oj-eyebrow m-0">Quick answer</p>
-                <p className="mt-2 text-[17px] font-semibold leading-relaxed text-oj-ink">
-                  {guide.quickAnswer}
-                </p>
-              </div>
-            ) : null}
+          <div
+            className={
+              hasRail ? 'grid gap-9 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-16' : 'measure-prose'
+            }
+          >
+            {hasRail ? (
+              /*
+                `self-start` is what makes the sticky work: a grid item stretches to
+                the row height by default, so the element is already as tall as the
+                article and has nothing left to stick within.
 
-            {toc.length >= 3 ? (
-              <div className="mb-10 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5">
+                Hidden rather than reordered below `lg`. The rail has to be the first
+                grid child to sit on the left, and on a phone that would put a list of
+                seven links above the quick answer, which is the thing somebody
+                arriving from a search result came for. The stacked copy lives inside
+                the article column instead, where it can sit between the two. Only one
+                of the pair is ever rendered, and `display: none` takes the other out
+                of the accessibility tree as well as off the screen, so this is one
+                contents list to a screen reader, not two.
+              */
+              <aside className="hidden lg:sticky lg:top-[var(--oj-sticky-offset)] lg:block lg:self-start">
                 <Toc items={toc} />
-              </div>
+              </aside>
             ) : null}
 
-            <div className="oj-prose" dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="measure-prose">
+              {guide.quickAnswer ? (
+                /* The class is load-bearing: BlogPosting's speakable block points at it. */
+                <div className="quick-answer mb-9 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm">
+                  <p className="oj-eyebrow m-0">Quick answer</p>
+                  <p className="mt-2 text-[17px] font-semibold leading-relaxed text-oj-ink">
+                    {guide.quickAnswer}
+                  </p>
+                </div>
+              ) : null}
 
-            {showFaqs ? (
-              <div className="mt-12">
-                <h2 className="oj-display text-[28px] leading-none text-oj-ink">
-                  questions people ask.
-                </h2>
-                <div className="mt-5">
-                  <FAQ items={guide.faqs.map((faq) => ({ q: faq.question, a: faq.answer }))} />
+              {hasRail ? (
+                <div className="mb-10 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 lg:hidden">
+                  <Toc items={toc} />
+                </div>
+              ) : null}
+
+              <div className="oj-prose" dangerouslySetInnerHTML={{ __html: html }} />
+
+              {showFaqs ? (
+                <div className="mt-12">
+                  <h2 className="oj-display text-[28px] leading-none text-oj-ink">
+                    questions people ask.
+                  </h2>
+                  <div className="mt-5">
+                    <FAQ items={guide.faqs.map((faq) => ({ q: faq.question, a: faq.answer }))} />
+                  </div>
+                </div>
+              ) : null}
+
+              {nextStepLinks.length > 0 ? (
+                <div className="mt-12">
+                  <NextStep from="article" links={nextStepLinks} />
+                </div>
+              ) : null}
+
+              {newer || older ? (
+                <nav className="mt-12 border-t-1.5 border-oj-ink pt-6" aria-label="More guides">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {older ? (
+                      <Anchor
+                        href={`/guides/${older.slug}`}
+                        className="group/adj block rounded-oj border-1.5 border-oj-ink bg-oj-paper p-4 no-underline"
+                      >
+                        <span className="block text-xs font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+                          Earlier guide
+                        </span>
+                        <span className="mt-1.5 block font-oj text-[17px] font-black leading-snug text-oj-ink group-hover/adj:text-oj-orange-deep">
+                          {older.title}
+                        </span>
+                      </Anchor>
+                    ) : (
+                      <span />
+                    )}
+                    {newer ? (
+                      <Anchor
+                        href={`/guides/${newer.slug}`}
+                        className="group/adj block rounded-oj border-1.5 border-oj-ink bg-oj-paper p-4 no-underline sm:text-right"
+                      >
+                        <span className="block text-xs font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+                          Later guide
+                        </span>
+                        <span className="mt-1.5 block font-oj text-[17px] font-black leading-snug text-oj-ink group-hover/adj:text-oj-orange-deep">
+                          {newer.title}
+                        </span>
+                      </Anchor>
+                    ) : null}
+                  </div>
+                </nav>
+              ) : null}
+
+              <div className="mt-12 flex flex-col gap-5 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6 sm:flex-row sm:items-start">
+                <Image
+                  src="/images/peter-pitcher.jpg"
+                  alt=""
+                  width={72}
+                  height={72}
+                  className="h-[72px] w-[72px] flex-none rounded-full border-1.5 border-oj-ink object-cover"
+                />
+                <div>
+                  <h2 className="font-oj text-[20px] font-black leading-tight text-oj-ink">
+                    {guide.authorName}
+                  </h2>
+                  <p className="oj-eyebrow mt-2">{AUTHOR_ROLE}</p>
+                  <p className="mt-3 text-[15.5px] leading-relaxed text-oj-ink-2">
+                    {guide.authorBio}
+                  </p>
+                  <p className="mt-3 text-[15px]">
+                    <Anchor
+                      href="/about"
+                      className="font-semibold text-oj-orange-deep underline underline-offset-2"
+                    >
+                      More about Orange Jelly
+                    </Anchor>
+                  </p>
                 </div>
               </div>
-            ) : null}
 
-            {nextStepLinks.length > 0 ? (
-              <div className="mt-12">
-                <NextStep from="article" links={nextStepLinks} />
-              </div>
-            ) : null}
-
-            {newer || older ? (
-              <nav className="mt-12 border-t-1.5 border-oj-ink pt-6" aria-label="More guides">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {older ? (
-                    <Anchor
-                      href={`/guides/${older.slug}`}
-                      className="group/adj block rounded-oj border-1.5 border-oj-ink bg-oj-paper p-4 no-underline"
-                    >
-                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-                        Earlier guide
-                      </span>
-                      <span className="mt-1.5 block font-oj text-[17px] font-black leading-snug text-oj-ink group-hover/adj:text-oj-orange-deep">
-                        {older.title}
-                      </span>
-                    </Anchor>
-                  ) : (
-                    <span />
-                  )}
-                  {newer ? (
-                    <Anchor
-                      href={`/guides/${newer.slug}`}
-                      className="group/adj block rounded-oj border-1.5 border-oj-ink bg-oj-paper p-4 no-underline sm:text-right"
-                    >
-                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-                        Later guide
-                      </span>
-                      <span className="mt-1.5 block font-oj text-[17px] font-black leading-snug text-oj-ink group-hover/adj:text-oj-orange-deep">
-                        {newer.title}
-                      </span>
-                    </Anchor>
-                  ) : null}
+              {guide.tags.length > 0 ? (
+                <div className="mt-8 flex flex-wrap items-center gap-2">
+                  <span className="text-[13.5px] font-semibold text-oj-ink-3">Tagged</span>
+                  {guide.tags.map((tag) => (
+                    <Tag key={tag} dot={false} size="sm">
+                      {tag}
+                    </Tag>
+                  ))}
                 </div>
-              </nav>
-            ) : null}
+              ) : null}
 
-            <div className="mt-12 flex flex-col gap-5 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6 sm:flex-row sm:items-start">
-              <Image
-                src="/images/peter-pitcher.jpg"
-                alt=""
-                width={72}
-                height={72}
-                className="h-[72px] w-[72px] flex-none rounded-full border-1.5 border-oj-ink object-cover"
-              />
-              <div>
-                <h2 className="font-oj text-[20px] font-black leading-tight text-oj-ink">
-                  {guide.authorName}
-                </h2>
-                <p className="oj-eyebrow mt-2">{AUTHOR_ROLE}</p>
-                <p className="mt-3 text-[15.5px] leading-relaxed text-oj-ink-2">
-                  {guide.authorBio}
-                </p>
-                <p className="mt-3 text-[15px]">
-                  <Anchor
-                    href="/about"
-                    className="font-semibold text-oj-orange-deep underline underline-offset-2"
-                  >
-                    More about Orange Jelly
-                  </Anchor>
-                </p>
+              <div className="mt-8">
+                <ShareRow url={url} title={guide.title} />
               </div>
-            </div>
-
-            {guide.tags.length > 0 ? (
-              <div className="mt-8 flex flex-wrap items-center gap-2">
-                <span className="text-[13.5px] font-semibold text-oj-ink-3">Tagged</span>
-                {guide.tags.map((tag) => (
-                  <Tag key={tag} dot={false} size="sm">
-                    {tag}
-                  </Tag>
-                ))}
-              </div>
-            ) : null}
-
-            <div className="mt-8">
-              <ShareRow url={url} title={guide.title} />
             </div>
           </div>
         </Band>
