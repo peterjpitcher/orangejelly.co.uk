@@ -2,8 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { isOjRoute } from '@/lib/oj-routes';
-import { isToolRoute } from '@/lib/tool-routes';
+import { isLegacyRoute } from '@/lib/legacy-routes';
 
 /**
  * Hides the marketing site chrome (the main nav and footer) on the organiser
@@ -25,14 +24,16 @@ export default function ChromeGate({
 }): JSX.Element | null {
   const pathname = usePathname();
 
-  // Shared with MainGate. Written out twice, the two drifted and the tool ended up
-  // with two main landmarks on every page.
-  if (isToolRoute(pathname)) return null;
-
-  // Repositioned pages carry their own header and footer. Rendering the legacy
-  // chrome as well would stack two navigations on the most important pages on the
-  // site, which is why the list lives in one place rather than in this condition.
-  if (isOjRoute(pathname)) return null;
+  /*
+   * Asked the other way round from before: render the old chrome only where a page
+   * still wants it, rather than everywhere that is not on a list of exceptions.
+   *
+   * The old form defaulted to the legacy chrome, so any path nobody had declared got
+   * it. `not-found.tsx` is served at whatever URL the visitor typed and carries its
+   * own repositioned header and footer, so every 404 on the site rendered two of
+   * each, plus two `<main>` landmarks. See `isLegacyRoute` for the rest of it.
+   */
+  if (!isLegacyRoute(pathname)) return null;
 
   return <>{children}</>;
 }

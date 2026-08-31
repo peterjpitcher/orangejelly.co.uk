@@ -2,8 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { isOjRoute } from '@/lib/oj-routes';
-import { isToolRoute } from '@/lib/tool-routes';
+import { isLegacyRoute } from '@/lib/legacy-routes';
 
 /**
  * Decides who owns the `<main>` landmark.
@@ -21,11 +20,22 @@ import { isToolRoute } from '@/lib/tool-routes';
  *
  * Pages that opt out must carry `id="main-content"` themselves, or the skip link at
  * the top of every page stops working. `MainGate.test.tsx` holds that.
+ *
+ * The question is asked as "is this still a legacy page?" rather than as a list of
+ * everything that opens its own main, for the reason set out in `legacy-routes.ts`:
+ * the old form defaulted to opening a `<main>` for any path nobody had declared, and
+ * `not-found.tsx` is served at whatever URL the visitor typed. So every 404 got one
+ * main from here and a second from the page, which is the exact failure this file
+ * exists to prevent, on the one page every stale link in the world lands on.
+ *
+ * The tool screens no longer need a branch of their own. They are not legacy, so
+ * they fall through the same way the repositioned pages do, which is what they
+ * always wanted: they open their own main in several places each.
  */
 export default function MainGate({ children }: { children: React.ReactNode }): JSX.Element {
   const pathname = usePathname();
 
-  if (isOjRoute(pathname)) {
+  if (!isLegacyRoute(pathname)) {
     /*
      * `oj-root` is the typeface scope, and this is the only place it goes on.
      *
@@ -40,18 +50,6 @@ export default function MainGate({ children }: { children: React.ReactNode }): J
      * site in the old face on first load. See `.oj-root` in globals.css.
      */
     return <div className="oj-root">{children}</div>;
-  }
-
-  /*
-   * The organiser tool and the poll pages open their own main, in several places
-   * each, because they render whole screens rather than page content. Opening one
-   * here as well gave every one of them two main landmarks, which is the exact
-   * 1.3.1 failure this component exists to prevent. ChromeGate already stands back
-   * on these routes; this did not, and nothing noticed because the tool has no
-   * page-level axe sweep.
-   */
-  if (isToolRoute(pathname)) {
-    return <>{children}</>;
   }
 
   return (
