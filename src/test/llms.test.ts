@@ -17,7 +17,7 @@ const FULL = buildLlmsFullTxt();
 
 describe('llms.txt', () => {
   it('describes the company by what it does', () => {
-    expect(SHORT).toMatch(/growth partner for ambitious small and mid-sized businesses/i);
+    expect(SHORT).toMatch(/strategic growth partner for ambitious small and mid-sized businesses/i);
   });
 
   it('carries no price, no package and no retired claim', () => {

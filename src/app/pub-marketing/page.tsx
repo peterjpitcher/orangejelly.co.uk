@@ -85,7 +85,7 @@ export default function PubMarketingPage(): JSX.Element {
               pub marketing that starts with the numbers.
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly is a growth partner for ambitious small and mid-sized businesses, and
+              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses, and
               hospitality is the sector we know best, because we run one. The Anchor is our own
               venue. Everything here was tested there before it was offered to anybody else.
             </p>

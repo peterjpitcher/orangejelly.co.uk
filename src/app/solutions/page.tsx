@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 export default function SolutionsPage(): JSX.Element {
   return (
     <>
-      <OjHeader />
+      <OjHeader current="solutions" />
 
       <main id="main-content">
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">

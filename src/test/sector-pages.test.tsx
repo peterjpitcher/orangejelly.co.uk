@@ -32,7 +32,7 @@ describe('/pub-marketing', () => {
 
   it('says what the company is before it says what the sector is', () => {
     expect(textOf(<PubMarketingPage />)).toMatch(
-      /growth partner for ambitious small and mid-sized businesses, and hospitality is the sector we know best/
+      /strategic growth partner for ambitious small and mid-sized businesses, and hospitality is the sector we know best/
     );
   });
 

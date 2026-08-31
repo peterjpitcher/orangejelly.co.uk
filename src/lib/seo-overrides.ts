@@ -5,19 +5,24 @@ export type SeoOverride = {
   canonical?: string;
 };
 
+/*
+ * `/` and `/pub-marketing` were removed on 31 August 2026.
+ *
+ * They held the pre-repositioning titles, "Hospitality Marketing From a Real
+ * Publican" and "Pub Marketing Packages and Prices From £375 + VAT", and both quoted
+ * a price. Neither was reaching anybody: both pages export their own `metadata`,
+ * which wins, and the built homepage serves its own title.
+ *
+ * Dead is not the same as harmless. This table exists precisely to override a page's
+ * metadata, so the day somebody removes one of those exports to tidy up, the old
+ * hospitality position and a price the site does not publish ship to Google in the
+ * same commit, silently, and look deliberate. Deleting them removes the trap.
+ *
+ * Prices remaining in this file belong to pages that retire at launch, and to three
+ * guide articles where the figure is editorial (what a refurbishment costs the
+ * reader) rather than what Orange Jelly charges. D3 is about our prices, not theirs.
+ */
 export const seoOverrides: Record<string, SeoOverride> = {
-  '/': {
-    title: 'Hospitality Marketing From a Real Publican | Orange Jelly',
-    description:
-      'Hospitality marketing proven at a real pub. We grew table bookings 403% and food revenue 98% at The Anchor. Packages from £375 + VAT.',
-    keywords: [
-      'hospitality marketing',
-      'hospitality marketing ideas',
-      'pub marketing',
-      'pub marketing ideas',
-      'hospitality growth',
-    ],
-  },
   '/ways-to-work': {
     title: 'Pub Marketing Packages and Prices From £375 + VAT',
     description:
@@ -47,11 +52,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: 'Pub Marketing Capabilities: Social, Events, SEO and More',
     description:
       'Full-stack pub marketing: social media, events, paid ads, local visibility, content and website work. See what is included in each package.',
-  },
-  '/pub-marketing': {
-    title: 'Pub Marketing: Proven Systems From a Working Licensee',
-    description:
-      'Pub marketing that fills tables, run by a licensee who does it daily: strategy, social, events and local visibility. Packages from £375 + VAT.',
   },
   '/pub-marketing-agency': {
     title: 'Pub Marketing Agency for Independent Pubs & Bars',

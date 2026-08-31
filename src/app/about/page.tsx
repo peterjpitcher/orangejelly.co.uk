@@ -20,7 +20,7 @@ import { FACTS, LESSONS, REFUSALS } from './content';
  */
 const TITLE = 'About | Orange Jelly';
 const DESCRIPTION =
-  'A growth partner for ambitious businesses, small on purpose. Where the thinking came from, what we will not do, and who you would be dealing with.';
+  'A strategic growth partner for ambitious businesses, small on purpose. Where the thinking came from, what we will not do, and who you would be dealing with.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -56,7 +56,7 @@ export default function AboutPage(): JSX.Element {
               small on purpose.
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly is a growth partner for ambitious small and mid-sized businesses. There
+              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses. There
               is no account team, no layer between you and the people doing the work, and no
               incentive to sell you more of something that is not working.
             </p>

@@ -31,6 +31,7 @@ import { Header } from './Header';
 export type OjNavKey =
   | 'growth-problems'
   | 'how-we-work'
+  | 'solutions'
   | 'results'
   | 'insights'
   | 'guides'
@@ -52,6 +53,20 @@ export type OjNavKey =
 const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   { key: 'growth-problems', label: 'Growth problems', href: '/growth-problems' },
   { key: 'how-we-work', label: 'How we work', href: '/how-we-work' },
+  /*
+   * `/solutions` was unreachable from the site's own navigation.
+   *
+   * It is live, it sits in the sitemap at priority 0.8, and it is the page that
+   * answers "what do you actually build", which section 10 of the positioning
+   * overview says is the thing Orange Jelly sells and section 11 says must stay
+   * visible. Nothing linked to it from the header or the footer, so the only way in
+   * was a search result.
+   *
+   * Labelled "What we build" rather than "Solutions": it says what the page is, and
+   * it keeps the bar reading as outcomes rather than as a services menu, which is
+   * the distinction section 36 turns on.
+   */
+  { key: 'solutions', label: 'What we build', href: '/solutions' },
   { key: 'results', label: 'Results', href: '/results' },
   { key: 'insights', label: 'Insights', href: '/insights' },
   { key: 'guides', label: 'Guides', href: '/licensees-guide' },

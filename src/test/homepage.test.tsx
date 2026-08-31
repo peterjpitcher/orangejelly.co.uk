@@ -21,7 +21,7 @@ describe('the homepage', () => {
 
   it('describes the company by market, not by sector', () => {
     const text = body();
-    expect(text).toContain('growth partner for ambitious businesses');
+    expect(text).toContain('strategic growth partner for ambitious businesses');
     // The old homepage called Orange Jelly a hospitality marketing company. The
     // sector is now one market it works in, not the company's definition.
     expect(text).not.toMatch(/hospitality marketing/i);

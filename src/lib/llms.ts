@@ -19,7 +19,7 @@ import { getBaseUrl } from '@/lib/site-config';
  * @see https://llmstxt.org
  */
 const INTRO =
-  'Orange Jelly Limited is a growth partner for ambitious small and mid-sized businesses. ' +
+  'Orange Jelly Limited is a strategic growth partner for ambitious small and mid-sized businesses. ' +
   'We work out what is actually blocking growth in a business and build the thing that fixes it, ' +
   'using marketing, commercial change, operations, systems and AI according to what the problem needs.';
 
