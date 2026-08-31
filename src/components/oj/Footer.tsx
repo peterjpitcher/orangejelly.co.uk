@@ -30,7 +30,7 @@ export interface FooterProps {
 
 export function Footer({
   logo,
-  tagline = 'You bring the growth problem. We build the solution.',
+  tagline = 'Your business is capable of more. Our job is finding what is stopping it.',
   columns = [],
   legal,
   note = 'AI is part of the toolkit, not the product.',

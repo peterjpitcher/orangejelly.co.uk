@@ -15,7 +15,7 @@ export const COMPANY = {
   // The company is described by what it does, not by the sector it started in.
   // Hospitality is one market Orange Jelly works in; the sector pages still say so
   // where it is accurate.
-  tagline: 'You bring the growth problem. We build the solution.',
+  tagline: 'Your business is capable of more. Our job is finding what is stopping it.',
   website: 'https://www.orangejelly.co.uk',
   vatStatus: 'All prices exclude VAT',
 } as const;
