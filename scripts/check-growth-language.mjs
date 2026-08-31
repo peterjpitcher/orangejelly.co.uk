@@ -70,16 +70,97 @@ function lineAndColumn(text, index) {
   return { line, column };
 }
 
+/*
+ * Blanks out code comments, leaving the text length and every newline intact so the
+ * reported line and column still point at the right place.
+ *
+ * The gate governs what a reader sees, and a reader never sees a comment. Without
+ * this it fails on `// Generate and save RSS feed` in `feeds.ts`, which is a note
+ * about writing a file to disk, and the only way past it is `--no-verify` on an
+ * unrelated commit. That is the same reason `docs/brand/` is excluded above.
+ *
+ * Quote state is tracked rather than regexed, because `'https://...'` contains `//`
+ * and a naive strip would blank the rest of that line along with anything real
+ * sitting after it.
+ */
+function withoutComments(source) {
+  let out = '';
+  let quote = null;
+  let comment = null;
+
+  for (let i = 0; i < source.length; i += 1) {
+    const c = source[i];
+    const next = source[i + 1];
+
+    if (comment === 'line') {
+      if (c === '\n') {
+        comment = null;
+        out += c;
+      } else {
+        out += ' ';
+      }
+      continue;
+    }
+
+    if (comment === 'block') {
+      if (c === '*' && next === '/') {
+        comment = null;
+        out += '  ';
+        i += 1;
+      } else {
+        out += c === '\n' ? c : ' ';
+      }
+      continue;
+    }
+
+    if (quote) {
+      out += c;
+      if (c === '\\') {
+        out += next ?? '';
+        i += 1;
+      } else if (c === quote) {
+        quote = null;
+      }
+      continue;
+    }
+
+    if (c === "'" || c === '"' || c === '`') {
+      quote = c;
+      out += c;
+      continue;
+    }
+
+    if (c === '/' && next === '/') {
+      comment = 'line';
+      out += '  ';
+      i += 1;
+      continue;
+    }
+
+    if (c === '/' && next === '*') {
+      comment = 'block';
+      out += '  ';
+      i += 1;
+      continue;
+    }
+
+    out += c;
+  }
+
+  return out;
+}
+
 function collectViolations(relativePath, content) {
   const violations = [];
+  const source = /\.(ts|tsx)$/.test(relativePath) ? withoutComments(content) : content;
 
   for (const rule of BANNED_RULES) {
-    for (const match of content.matchAll(rule.pattern)) {
+    for (const match of source.matchAll(rule.pattern)) {
       if (match.index === undefined) {
         continue;
       }
 
-      const { line, column } = lineAndColumn(content, match.index);
+      const { line, column } = lineAndColumn(source, match.index);
       violations.push({
         file: relativePath,
         line,
@@ -101,7 +182,14 @@ async function run() {
   // --no-verify on unrelated commits.
   const cliFileArgs = process.argv
     .slice(2)
-    .filter((f) => !f.replace(/\\/g, '/').includes('docs/brand/'));
+    .map((f) => f.replace(/\\/g, '/'))
+    .filter((f) => !f.includes('docs/brand/'))
+    /*
+     * And test files. `llms.test.ts` asserts that the generated llms.txt does not
+     * match /save/i, which is this rule enforced one layer down. A gate that fails
+     * on the test written to uphold it is a gate that gets bypassed.
+     */
+    .filter((f) => !/\.test\.(ts|tsx)$/.test(f));
 
   for (const arg of cliFileArgs) {
     const absolutePath = path.resolve(ROOT, arg);
