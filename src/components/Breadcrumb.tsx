@@ -95,7 +95,7 @@ export const breadcrumbPaths = {
   contact: [{ label: 'Home', href: '/' }, { label: 'Contact' }],
   licenseesGuide: [
     { label: 'Home', href: '/' },
-    { label: "The Licensee's Guide", href: '/guides' },
+    { label: 'Guides', href: '/guides' },
   ],
   // Package-specific breadcrumbs
   growthFix: [

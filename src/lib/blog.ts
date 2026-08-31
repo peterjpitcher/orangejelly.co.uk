@@ -251,7 +251,7 @@ export function generateBlogBreadcrumbs(
 ): BreadcrumbItem[] {
   const breadcrumbs: BreadcrumbItem[] = [
     { label: 'Home', href: '/' },
-    { label: "The Licensee's Guide", href: '/guides' },
+    { label: 'Guides', href: '/guides' },
   ];
 
   if (type === 'category' && category) {

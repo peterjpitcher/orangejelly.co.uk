@@ -746,7 +746,7 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // here would never render. GSC still shows impressions against the old URL, which is
   // historical rather than a live page.
   '/guides': {
-    title: "The Licensee's Guide: 100+ Practical Guides for UK Pubs",
+    title: 'Guides: 100+ Practical Playbooks for UK Pubs | Orange Jelly',
     description:
       'Over 100 practical guides for UK licensees: filling tables, running events, menu margins, staffing, compliance and marketing. From a working publican.',
   },

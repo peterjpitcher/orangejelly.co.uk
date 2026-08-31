@@ -23,7 +23,7 @@ export interface SiteConfig {
  * & Business Growth", which described the company by the collection.
  */
 const siteConfig: SiteConfig = {
-  title: "The Licensee's Guide | Orange Jelly",
+  title: 'Guides | Orange Jelly',
   description:
     'Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, a growth partner for ambitious small and mid-sized businesses.',
   url: getBaseUrl(),

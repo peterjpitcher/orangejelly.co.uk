@@ -67,7 +67,7 @@ interface GuideCategory {
  */
 export async function generateMetadata() {
   return generateStaticMetadata({
-    title: "The Licensee's Guide - Expert Pub Management Advice",
+    title: 'Guides: Practical Playbooks for UK Pubs',
     description:
       'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice that also applies to restaurants and bars.',
     path: '/guides',
@@ -182,7 +182,7 @@ export default async function GuidesPage(): Promise<JSX.Element> {
       <main id="main-content">
         {posts.length > 0 ? (
           <CollectionPageSchema
-            name="The Licensee's Guide"
+            name="Guides"
             description="Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice to increase revenue and build thriving local pubs."
             url="/guides"
             items={posts.map((post) => ({
@@ -195,7 +195,7 @@ export default async function GuidesPage(): Promise<JSX.Element> {
             }))}
             breadcrumbs={[
               { name: 'Home', url: '/' },
-              { name: "The Licensee's Guide", url: '/guides' },
+              { name: 'Guides', url: '/guides' },
             ]}
           />
         ) : null}
@@ -209,7 +209,7 @@ export default async function GuidesPage(): Promise<JSX.Element> {
           <div className="page-shell">
             <Breadcrumb
               className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: "The Licensee's Guide" }]}
+              items={[{ label: 'Home', href: '/' }, { label: 'Guides' }]}
             />
             <p className="oj-eyebrow m-0">Hospitality</p>
             <h1 className="oj-display mt-2 text-[clamp(38px,7.5vw,68px)] leading-[0.94] text-oj-ink">

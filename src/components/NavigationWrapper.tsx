@@ -29,7 +29,7 @@ interface LocalNavigationType {
 const seasonalPlaybookLinks: NavigationLink[] = SEASON_HUBS.map((hub, index) => ({
   label: hub.shortLabel,
   href: `/guides/${hub.hubSlug}`,
-  order: index + 2, // sit after the static "The Licensee's Guide" entry (order 1)
+  order: index + 2, // sit after the static "Guides" entry (order 1)
 }));
 
 // Sort children by order and append the seasonal playbooks for items that

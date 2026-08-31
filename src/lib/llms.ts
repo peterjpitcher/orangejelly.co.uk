@@ -97,7 +97,7 @@ export function buildLlmsTxt(): string {
       `- [How we work](${base}/how-we-work): the method in full.`,
       `- [Results](${base}/results): the case studies and how each was measured.`,
       `- [About](${base}/about): the company, and what it will not do.`,
-      `- [The Licensee's Guide](${base}/guides): the hospitality article library.`,
+      `- [Guides](${base}/guides): the hospitality article library.`,
       `- [Full detail](${base}/llms-full.txt): case studies and the article index.`,
     ]),
     section('Contact', [
@@ -149,7 +149,7 @@ export function buildLlmsFullTxt(): string {
     'permission.',
     '',
     ...caseStudies,
-    `## The Licensee's Guide (${posts.length} articles)`,
+    `## Guides (${posts.length} articles)`,
     '',
     'A hospitality article library. Hospitality is one market Orange Jelly works in, not what',
     'the company is.',

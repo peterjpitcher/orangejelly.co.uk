@@ -63,10 +63,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const title = category?.name || humanizeCategorySlug(canonicalCategorySlug);
   const description =
     category?.description ||
-    `Browse all ${title} articles from The Licensee's Guide. Practical, proven ideas you can use.`;
+    `Browse all ${title} articles in the Orange Jelly guides. Practical, proven ideas you can use.`;
 
   return generateMeta({
-    title: `${title} - The Licensee's Guide`,
+    title: `${title} - Guides`,
     description,
     path: `/guides/category/${canonicalCategorySlug}`,
     ogType: 'website',
@@ -101,7 +101,7 @@ export default async function CategoryPage({ params }: CategoryPageProps): Promi
   return (
     <>
       <CollectionPageSchema
-        name={`${categoryTitle} - The Licensee's Guide`}
+        name={`${categoryTitle} - Guides`}
         description={categoryDescription || `Browse all ${categoryTitle} articles`}
         url={`/guides/category/${canonicalCategorySlug}`}
         items={categoryPosts.map((post) => ({
@@ -114,7 +114,7 @@ export default async function CategoryPage({ params }: CategoryPageProps): Promi
         }))}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: "The Licensee's Guide", url: '/guides' },
+          { name: 'Guides', url: '/guides' },
           { name: categoryTitle, url: `/guides/category/${canonicalCategorySlug}` },
         ]}
       />
@@ -135,11 +135,11 @@ export default async function CategoryPage({ params }: CategoryPageProps): Promi
               className="mb-7"
               items={[
                 { label: 'Home', href: '/' },
-                { label: "The Licensee's Guide", href: '/guides' },
+                { label: 'Guides', href: '/guides' },
                 { label: categoryTitle },
               ]}
             />
-            <p className="oj-eyebrow m-0">The Licensee&rsquo;s Guide</p>
+            <p className="oj-eyebrow m-0">Guides</p>
             <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-ink">
               {categoryTitle}.
             </h1>

@@ -519,7 +519,7 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
         <BreadcrumbJsonLd
           items={[
             { name: 'Home', url: '/' },
-            { name: "The Licensee's Guide", url: '/guides' },
+            { name: 'Guides', url: '/guides' },
             ...(spokeHub
               ? [{ name: spokeHub.shortLabel, url: `/guides/${spokeHub.hubSlug}` }]
               : []),
@@ -539,7 +539,7 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
               className="mb-7"
               items={[
                 { label: 'Home', href: '/' },
-                { label: "The Licensee's Guide", href: '/guides' },
+                { label: 'Guides', href: '/guides' },
                 ...(spokeHub
                   ? [{ label: spokeHub.shortLabel, href: `/guides/${spokeHub.hubSlug}` }]
                   : []),

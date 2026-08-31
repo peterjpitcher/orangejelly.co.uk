@@ -172,7 +172,7 @@ export function generatePageMeta(
       canonical: '/results',
     },
     blog: {
-      title: "Licensee's Guide - Practical Hospitality Marketing Tips | Orange Jelly",
+      title: 'Guides - Practical Hospitality Marketing Tips | Orange Jelly',
       description:
         'Free pub marketing guides from a working licensee, with ideas you can adapt for restaurants and bars. Learn how to fill empty tables, compete with chains, and boost revenue.',
       keywords: [

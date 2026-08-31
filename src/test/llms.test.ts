@@ -25,7 +25,7 @@ describe('llms.txt', () => {
     // excluded because it reproduces guide titles verbatim, and one of those is
     // "What to Fix First for Under £5K", which is a refurbishment budget in a
     // hospitality article and not a fee anybody is being quoted.
-    const selfDescription = FULL.split("## The Licensee's Guide")[0];
+    const selfDescription = FULL.split('## Guides')[0];
     for (const text of [SHORT, selfDescription]) {
       expect(text).not.toMatch(/£/);
       expect(text).not.toMatch(/Growth Fix|Momentum Month|Turnaround Intensive/);
@@ -88,7 +88,7 @@ describe('llms-full.txt', () => {
   });
 
   it('indexes the article library and says what it is', () => {
-    expect(FULL).toMatch(/The Licensee's Guide \(\d+ articles\)/);
+    expect(FULL).toMatch(/## Guides \(\d+ articles\)/);
     // Hospitality is one market, and the file says so rather than letting a
     // hundred pub articles imply the company is a pub agency.
     expect(FULL).toMatch(/Hospitality is one market Orange Jelly works in/);

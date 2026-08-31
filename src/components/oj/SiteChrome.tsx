@@ -185,7 +185,7 @@ export function OjFooter(): JSX.Element {
           // different URL, so the one link to 105 articles pointed at the wrong idea.
           title: 'Reading',
           links: [
-            { label: "The Licensee's Guide", href: '/guides' },
+            { label: 'Guides', href: '/guides' },
             { label: 'Insights', href: '/insights' },
             { label: 'For professional services', href: '/sectors/professional-services' },
           ],
