@@ -205,7 +205,12 @@ export default function HomePage(): JSX.Element {
         </section>
 
         <GroundProvider value="ink">
-          <section className="bg-oj-ink py-16 sm:py-24">
+          {/*
+            Hand-rolled rather than a Band, so it needs the closing-band padding
+            written out. Miss this and the busiest page on the site keeps the full
+            841px dark block while every lesser page gets the shorter one.
+          */}
+          <section className="bg-oj-ink pb-10 pt-14 sm:pb-10 sm:pt-20">
             <div className="page-shell">
               <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
                 stop circling the problem.

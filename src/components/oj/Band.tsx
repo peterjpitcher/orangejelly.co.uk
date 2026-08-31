@@ -67,7 +67,24 @@ export function Band({
         className={cn(
           SURFACES[tone],
           divider && 'border-b-1.5 border-oj-ink',
-          size === 'lg' ? 'py-16 sm:py-24' : 'py-14 sm:py-20',
+          /*
+           * `lg` is the closing-band size, and its padding is deliberately
+           * asymmetric.
+           *
+           * All nineteen uses are the last Band on their page with
+           * `divider={false}`, and sixteen of them are `tone="ink"`, sitting
+           * directly on top of an ink footer. Symmetric 96px there meant 96px of
+           * empty dark below the call to action and another 64px of footer padding
+           * under it: 160px of nothing between the button somebody is meant to
+           * press and the first thing below it, in one unbroken slab that reads as
+           * a single enormous footer.
+           *
+           * So the air moves above the heading, where it separates the band from
+           * the page, instead of below the button, where it only separates dark
+           * from more dark. 120px total against the design system's own ink CTA
+           * sections, which run 64px on five templates and 80px on two, and never 96.
+           */
+          size === 'lg' ? 'pb-10 pt-14 sm:pb-10 sm:pt-20' : 'py-14 sm:py-20',
           className
         )}
       >

@@ -43,8 +43,20 @@ export function Footer({
     </span>
   );
 
+  /*
+   * The hairline is what lets the padding be small.
+   *
+   * With no edge at all, the closing ink band and the ink footer were one 834px
+   * slab and the footer's own 64px of top padding was just more of it. Every
+   * design-system template whose closing section is ink gives the footer a 1px top
+   * border, and every template whose closing section is not ink omits one, which is
+   * the whole rule: the line exists to say where the band stops. With it, 40px
+   * reads as a gap rather than as a mistake.
+   */
   return (
-    <footer className={cn('bg-oj-ink pb-[30px] pt-16 text-oj-cream', className)}>
+    <footer
+      className={cn('border-t border-oj-cream/20 bg-oj-ink pb-7 pt-10 text-oj-cream', className)}
+    >
       <div className="mx-auto max-w-[1160px] px-8">
         {/*
           A grid, not `justify-between` with a fixed-width brand block.
@@ -59,8 +71,21 @@ export function Footer({
           gets a wider track because its line wraps; the three link groups share the
           rest evenly.
         */}
-        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.35fr)_repeat(3,minmax(0,1fr))]">
-          <div className="flex flex-col gap-3.5">
+        {/*
+          Two columns on a phone, not four stacked blocks.
+
+          Below 640px this collapsed to a single column, so the footer ran to 1,191px
+          on a 390px screen: about one and a third screens of footer, and by far the
+          worst version of the "footer is too big" problem. The three link groups sit
+          two-up instead, with the brand spanning both, which takes 244px off it and
+          costs nothing legible.
+
+          `sm:col-span-1` rather than `lg:`, deliberately. With `lg:` the brand block
+          would stay full width from 640 to 1023px and the footer would grow by about
+          178px on a tablet, trading a phone win for a tablet regression.
+        */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-10 lg:grid-cols-[minmax(0,1.35fr)_repeat(3,minmax(0,1fr))]">
+          <div className="col-span-2 flex flex-col gap-3.5 sm:col-span-1">
             {/*
               `self-start` on the brand, and not `items-start` on the column.
 
@@ -128,7 +153,7 @@ export function Footer({
           ))}
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-between gap-4 border-t border-oj-cream/20 pt-5 text-[13px] text-oj-cream/55">
+        <div className="mt-12 flex flex-wrap justify-between gap-4 border-t border-oj-cream/20 pt-5 text-[13px] text-oj-cream/55">
           <span>{legal ?? `© ${new Date().getFullYear()} Orange Jelly Limited`}</span>
           <span>{note}</span>
         </div>
