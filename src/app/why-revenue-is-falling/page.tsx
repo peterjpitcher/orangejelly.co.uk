@@ -39,7 +39,7 @@ import { CAUSES, FAQS, WOULD_NOT_DO } from './content';
 const TITLE = 'Why Revenue Is Falling: Find the Cause First | Orange Jelly';
 const DESCRIPTION =
   'Revenue down week on week and nobody can say why. The six causes that account for most of it, how we find which one is yours, and what we would do next.';
-const CANONICAL = `${getBaseUrl()}/small-business-rescue`;
+const CANONICAL = `${getBaseUrl()}/why-revenue-is-falling`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -72,7 +72,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-export default function SmallBusinessRescuePage(): JSX.Element {
+export default function WhyRevenueIsFallingPage(): JSX.Element {
   return (
     <>
       <script
