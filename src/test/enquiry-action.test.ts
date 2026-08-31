@@ -56,11 +56,11 @@ describe('submitEnquiry, step one', () => {
     vi.mocked(storeEnquiryStep2).mockReset().mockResolvedValue({ stored: true, id: 'lead-1' });
   });
 
-  it('stores the enquiry and moves to step two', async () => {
+  it('stores the enquiry and confirms, with nothing else asked', async () => {
     const next = await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
 
     expect(storeEnquiryStep1).toHaveBeenCalled();
-    expect(next).toEqual({ step: 2, leadId: 'lead-1' });
+    expect(next).toEqual({ step: 'done', leadId: 'lead-1' });
   });
 
   it('reads attribution from the hidden field, and shrugs off a malformed one', async () => {
@@ -78,19 +78,36 @@ describe('submitEnquiry, step one', () => {
       ENQUIRY_INITIAL_STATE,
       formData({ ...VALID, leadSource: '{' })
     );
-    expect(next.step).toBe(2);
+    expect(next.step).toBe('done');
   });
 
   it('returns the field errors and what was typed, so the form can be rebuilt', async () => {
     const next = await submitEnquiry(
       ENQUIRY_INITIAL_STATE,
-      formData({ ...VALID, email: 'sam@', situation: 'help' })
+      formData({ ...VALID, email: 'sam@', situation: '' })
     );
 
     expect(storeEnquiryStep1).not.toHaveBeenCalled();
     expect(next.step).toBe(1);
     expect(Object.keys(next.fieldErrors ?? {})).toEqual(['email', 'situation']);
     expect(next.values).toMatchObject({ name: 'Sam Whitfield', email: 'sam@' });
+  });
+
+  /*
+   * The minimum length came off on 31 August 2026. It was twenty characters, argued
+   * as a filter on people who would not describe the problem; the owner's view is
+   * that it is friction on the one field between somebody and a conversation. Four
+   * characters used to be rejected and now go through, and the field is still
+   * required, so an empty one still fails above.
+   */
+  it('accepts a short answer, because there is no minimum any more', async () => {
+    const next = await submitEnquiry(
+      ENQUIRY_INITIAL_STATE,
+      formData({ ...VALID, situation: 'help' })
+    );
+
+    expect(storeEnquiryStep1).toHaveBeenCalled();
+    expect(next.step).toBe('done');
   });
 
   it('sends a honeypot submission straight to the confirmation without storing it', async () => {
@@ -115,49 +132,39 @@ describe('submitEnquiry, step one', () => {
   });
 });
 
-describe('submitEnquiry, step two', () => {
+/*
+ * REPLACED 31 August 2026, when the second screen of optional questions was removed
+ * on the owner's instruction. Six tests covered enriching, skipping and failing on a
+ * step that no longer runs. What is worth keeping is the guarantee that took its
+ * place: the enquiry now finishes where it is stored, so nothing can put a person
+ * between deciding to make contact and being told it worked.
+ *
+ * `storeEnquiryStep2` and its columns are untouched: rows written before today still
+ * carry answers and the admin dashboard still reads them.
+ */
+describe('submitEnquiry, after the second step was removed', () => {
   beforeEach(() => {
     vi.mocked(storeEnquiryStep1).mockReset().mockResolvedValue({ stored: true, id: 'lead-1' });
     vi.mocked(storeEnquiryStep2).mockReset().mockResolvedValue({ stored: true, id: 'lead-1' });
   });
 
-  it('enriches the lead the previous state names', async () => {
-    const next = await submitEnquiry(
-      { step: 2, leadId: 'lead-1' },
-      formData({ role: 'Managing director', blocker: 'Nobody agrees what the problem is' })
-    );
-
-    expect(storeEnquiryStep2).toHaveBeenCalledWith(
-      'lead-1',
-      expect.objectContaining({ role: 'Managing director' })
-    );
-    expect(next).toEqual({ step: 'done', leadId: 'lead-1' });
+  it('never returns step two, so the form can never render it again', async () => {
+    const next = await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
+    expect(next.step).toBe('done');
   });
 
-  it('honours skip without writing anything', async () => {
-    const next = await submitEnquiry({ step: 2, leadId: 'lead-1' }, formData({ intent: 'skip' }));
-
-    // Step two is described as optional, so the control that says so has to work.
+  it('writes nothing to the step two columns from the form', async () => {
+    await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
     expect(storeEnquiryStep2).not.toHaveBeenCalled();
-    expect(next).toEqual({ step: 'done', leadId: 'lead-1' });
   });
 
-  it('still confirms when step two fails, because the enquiry is already safe', async () => {
-    vi.mocked(storeEnquiryStep2).mockResolvedValue({ stored: false, error: 'down' });
-
+  it('ignores a crafted post claiming to be on the old second step', async () => {
+    // A stale tab or a hand-rolled request must not reach the update path. With no
+    // contact fields it falls through to validation, which is the safe outcome.
     const next = await submitEnquiry(
-      { step: 2, leadId: 'lead-1' },
-      formData({ whyNow: 'Renewal' })
+      { step: 2, leadId: 'lead-1' } as never,
+      formData({ role: 'Managing director' })
     );
-    // There is nothing useful for the person to do about it, and telling them
-    // implies their enquiry is at risk when it is not.
-    expect(next).toEqual({ step: 'done', leadId: 'lead-1' });
-  });
-
-  it('cannot be reached without a lead id, whatever the form claims', async () => {
-    // A crafted post saying step 2 with no lead id falls back to step one, where the
-    // missing contact fields fail validation. It never reaches the update path.
-    const next = await submitEnquiry({ step: 2 }, formData({ role: 'Managing director' }));
 
     expect(storeEnquiryStep2).not.toHaveBeenCalled();
     expect(next.step).toBe(1);

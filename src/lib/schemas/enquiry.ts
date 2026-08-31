@@ -33,10 +33,16 @@ export const enquiryStep1Schema = z.object({
   situation: z
     .string()
     .trim()
-    // The floor is deliberate. Someone who will not describe the problem in a
-    // sentence is not the client, and with no price on the site this is one of the
-    // few honest filters left.
-    .min(20, 'A sentence or two, so we know what we are looking at')
+    /*
+     * No minimum length, on the owner's instruction, 31 August 2026.
+     *
+     * There was a twenty-character floor here, argued as an honest filter on people
+     * who would not describe the problem. The owner's view is that it is friction on
+     * the one field standing between somebody and a conversation, and that a short
+     * answer is still an answer. `min(1)` keeps the field required without
+     * dictating how much anybody writes.
+     */
+    .min(1, 'Tell us a little about what is going on')
     .max(2000, 'Keep it to a couple of paragraphs, we will ask the rest'),
   /**
    * Honeypot. A real person never sees it, so anything in it is a bot.

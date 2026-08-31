@@ -96,7 +96,7 @@ describe('/start-here', () => {
 
   it('puts the enquiry form on the page rather than sending people elsewhere', () => {
     render(<StartHerePage />);
-    expect(screen.getByLabelText(/What is happening in the business/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/What's going on/)).toBeInTheDocument();
     expect(document.getElementById('enquiry')).toBeInTheDocument();
   });
 

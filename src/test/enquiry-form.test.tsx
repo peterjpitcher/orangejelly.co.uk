@@ -49,10 +49,7 @@ describe('EnquiryForm, step one', () => {
     // If step one were driven by an onClick handler it would be JavaScript-only, and
     // step one is the half that writes the lead.
     expect(container.querySelector('form')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Let's talk/ })).toHaveAttribute(
-      'type',
-      'submit'
-    );
+    expect(screen.getByRole('button', { name: /Let's talk/ })).toHaveAttribute('type', 'submit');
   });
 
   it('labels every field and marks the required ones for a screen reader', () => {
@@ -60,7 +57,7 @@ describe('EnquiryForm, step one', () => {
     expect(screen.getByLabelText(/Your name/)).toBeInTheDocument();
     expect(screen.getByLabelText(/Work email/)).toBeInTheDocument();
     expect(screen.getByLabelText(/^Company/)).toBeInTheDocument();
-    expect(screen.getByLabelText(/What is happening in the business/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/What's going on/)).toBeInTheDocument();
     // Four required fields, each announcing it in words rather than by an asterisk.
     expect(screen.getAllByText('(required)')).toHaveLength(4);
   });
@@ -158,7 +155,7 @@ describe('EnquiryForm, when step one is rejected', () => {
     // clears itself on a validation error is the fastest way to lose an enquiry.
     expect(screen.getByLabelText(/Your name/)).toHaveValue('Sam Whitfield');
     expect(screen.getByLabelText(/^Company/)).toHaveValue('Barton Reed');
-    expect(screen.getByLabelText(/What is happening in the business/)).toHaveValue('help');
+    expect(screen.getByLabelText(/What's going on/)).toHaveValue('help');
   });
 
   it('marks the failing fields invalid and leaves the others alone', () => {
@@ -168,58 +165,28 @@ describe('EnquiryForm, when step one is rejected', () => {
   });
 });
 
-describe('EnquiryForm, step two', () => {
-  const STEP_TWO: EnquiryFormState = { step: 2, leadId: 'lead-1' };
-
-  it('says the enquiry is already safe before asking anything else', () => {
-    renderAt(STEP_TWO);
+/*
+ * REPLACED 31 August 2026, when the second screen was removed on the owner's
+ * instruction. Four tests described a screen of six optional questions that no
+ * longer exists. What replaces them is the guarantee that matters: the form cannot
+ * render that screen again, whatever state it is handed.
+ */
+describe('EnquiryForm, after the second step was removed', () => {
+  it('shows the confirmation, not a second screen, once the enquiry is stored', () => {
+    renderAt({ step: 'done', leadId: 'lead-1' });
     const banner = screen.getByRole('status');
-    expect(banner).toHaveTextContent('Your enquiry is in. Nothing else is needed.');
+    expect(banner).toHaveTextContent(/that has arrived/);
     expect(banner).toHaveFocus();
+    expect(screen.queryByLabelText('Your role')).not.toBeInTheDocument();
   });
 
-  it('asks the six optional questions', () => {
-    renderAt(STEP_TWO);
-    expect(screen.getByLabelText('Your role')).toBeInTheDocument();
-    expect(screen.getByLabelText('Roughly how many people?')).toBeInTheDocument();
-    expect(screen.getByLabelText(/Website/)).toBeInTheDocument();
-    expect(screen.getByLabelText(/blocking growth/)).toBeInTheDocument();
-    expect(screen.getByLabelText(/success look like/)).toBeInTheDocument();
-    expect(screen.getByLabelText('Why now?')).toBeInTheDocument();
-  });
-
-  it('marks none of them required', () => {
-    renderAt(STEP_TWO);
-    expect(screen.queryByText('(required)')).not.toBeInTheDocument();
-  });
-
-  it('lets both selects be left unanswered', () => {
-    renderAt(STEP_TWO);
-    expect(screen.getByLabelText('Your role')).toHaveValue('');
-    expect(
-      within(screen.getByLabelText('Your role')).getByText('Prefer not to say')
-    ).toBeInTheDocument();
-  });
-
-  it('offers a real way to skip, not just a suggestion that it is optional', () => {
-    renderAt(STEP_TWO);
-    const skip = screen.getByRole('button', { name: 'Skip this' });
-    expect(skip).toHaveAttribute('type', 'submit');
-    expect(skip).toHaveAttribute('name', 'intent');
-    expect(skip).toHaveAttribute('value', 'skip');
-  });
-
-  it('never asks for a budget or who makes the decision', () => {
-    renderAt(STEP_TWO);
-    // Both were in the blueprint and both are deliberately absent: with no prices on
-    // the site, asking about budget before a free conversation is incoherent.
-    expect(screen.queryByLabelText(/budget|investment/i)).not.toBeInTheDocument();
-    expect(screen.queryByLabelText(/decision/i)).not.toBeInTheDocument();
-  });
-
-  it('drops the honeypot once step one is past', () => {
-    const { container } = renderAt(STEP_TWO);
-    expect(container.querySelector('input[name="subject"]')).not.toBeInTheDocument();
+  it('renders the contact fields, not the old questions, if handed a stale step two', () => {
+    // A tab left open across the deploy posts `step: 2`. It must fall back to the
+    // form somebody can actually use rather than to a screen that no longer exists.
+    renderAt({ step: 2, leadId: 'lead-1' } as never);
+    expect(screen.queryByLabelText('Your role')).not.toBeInTheDocument();
+    expect(screen.queryByText('Skip this')).not.toBeInTheDocument();
+    expect(screen.getByLabelText(/Your name/)).toBeInTheDocument();
   });
 });
 

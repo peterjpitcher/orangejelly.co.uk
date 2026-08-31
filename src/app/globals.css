@@ -545,6 +545,19 @@ body {
   position: relative;
 }
 
+/*
+ * Except a textarea, which is the one control here that is not a single line.
+ *
+ * `align-content: center` above exists to centre a label inside the space
+ * `min-height` adds to a short control. On a five-row textarea it centres the text
+ * block instead, so somebody typing the first sentence of an enquiry watched it sit
+ * in the middle of the box and drift upward as they wrote. The tap target is
+ * unaffected: a textarea is already far taller than 44px.
+ */
+:where(textarea) {
+  align-content: start;
+}
+
 /* Mobile tap highlight color */
 a,
 button {

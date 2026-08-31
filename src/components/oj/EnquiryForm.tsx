@@ -6,14 +6,13 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { submitEnquiry } from '@/app/actions/enquiry';
 import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/lib/schemas/enquiry';
 import { getBrowserLeadSource } from '@/lib/lead-source';
-import { ENQUIRY_ROLES, ENQUIRY_SIZE_BANDS } from '@/lib/schemas/enquiry';
 import { hasAnalyticsConsent, trackClientEvent } from '@/lib/tracking';
 import { cn } from '@/lib/utils';
 
 import { Anchor } from './Anchor';
 import { Button } from './Button';
 import { Field } from './Field';
-import { Input, Select, Textarea } from './inputs';
+import { Input, Textarea } from './inputs';
 
 /**
  * The enquiry form. Two steps, one `<form>`, one server action.
@@ -43,7 +42,7 @@ const STEP_ONE_FIELDS = [
   { name: 'name', id: 'enquiry-name', label: 'Your name' },
   { name: 'email', id: 'enquiry-email', label: 'Work email' },
   { name: 'company', id: 'enquiry-company', label: 'Company' },
-  { name: 'situation', id: 'enquiry-situation', label: 'What is happening in the business?' },
+  { name: 'situation', id: 'enquiry-situation', label: "What's going on?" },
 ] as const;
 
 function SubmitButton({ children }: { children: React.ReactNode }): JSX.Element {
@@ -51,15 +50,6 @@ function SubmitButton({ children }: { children: React.ReactNode }): JSX.Element 
   return (
     <Button type="submit" size="lg" arrow disabled={pending}>
       {pending ? 'Sending…' : children}
-    </Button>
-  );
-}
-
-function SkipButton(): JSX.Element {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" name="intent" value="skip" variant="ghost" disabled={pending}>
-      Skip this
     </Button>
   );
 }
@@ -129,7 +119,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
   // screen reader is silent: the page does not navigate and focus stays on a button
   // that is no longer there.
   React.useEffect(() => {
-    if (state.step === 2 || state.step === 'done') doneRef.current?.focus();
+    if (state.step === 'done') doneRef.current?.focus();
   }, [state.step]);
 
   const onFirstInput = React.useCallback(() => {
@@ -143,8 +133,17 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
 
   if (state.step === 'done') {
     return (
+      /*
+        `role="status"` as well as the focus move.
+        
+        The banner that used to sit on the second step carried it and this did not,
+        because focus moving here was enough while there was another screen after it.
+        With the second step gone this is the only confirmation an enquiry ever gets,
+        so it announces itself as well as taking focus.
+      */
       <div
         ref={doneRef}
+        role="status"
         tabIndex={-1}
         className={cn(
           'rounded-oj border-1.5 border-oj-ink bg-oj-paper p-8 shadow-press outline-none',
@@ -153,8 +152,8 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
       >
         <h2 className="oj-display text-[34px] leading-[1.05] text-oj-ink">that has arrived.</h2>
         <p className="measure mt-3.5 text-[17px] leading-relaxed text-oj-ink-2">
-          A person will read it, not a filter. You'll get a reply from Orange Jelly, and it will
-          be about your situation rather than a brochure.
+          A person will read it, not a filter. You'll get a reply from Orange Jelly, and it will be
+          about your situation rather than a brochure.
         </p>
         <p className="mt-3 text-[15px] text-oj-ink-3">
           If anything changes in the meantime, reply to that email or write to{' '}
@@ -169,182 +168,95 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
 
   const values = state.values ?? {};
   const fieldErrors = state.fieldErrors ?? {};
-  const onStepTwo = state.step === 2;
 
   return (
     <form action={formAction} className={className} noValidate>
-      {onStepTwo ? (
-        <div
-          ref={doneRef}
-          tabIndex={-1}
-          role="status"
-          className="mb-7 rounded-oj border-1.5 border-oj-ink bg-oj-cream-2 p-5 outline-none"
-        >
-          <p className="font-oj text-[17px] font-black text-oj-ink">
-            Your enquiry is in. Nothing else is needed.
-          </p>
-          <p className="mt-1.5 text-[15px] leading-relaxed text-oj-ink-2">
-            The questions below are optional. They exist so the first conversation starts somewhere
-            useful instead of at the beginning.
-          </p>
-        </div>
-      ) : (
-        <ErrorSummary state={state} />
-      )}
+      <ErrorSummary state={state} />
 
       {/* Attribution and the honeypot. Both are hidden from people and from screen
           readers: one is not information, the other is a trap. */}
       <input type="hidden" name="leadSource" value={leadSource} />
-      {!onStepTwo ? (
-        <div className="absolute h-px w-px overflow-hidden" aria-hidden="true">
-          <label htmlFor="enquiry-subject">Do not fill this in</label>
-          <input id="enquiry-subject" name="subject" type="text" tabIndex={-1} autoComplete="off" />
+      <div className="absolute h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="enquiry-subject">Do not fill this in</label>
+        <input id="enquiry-subject" name="subject" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
+      <fieldset className="flex flex-col gap-5 border-0 p-0" onInput={onFirstInput}>
+        <legend className="oj-display mb-1.5 text-[27px] leading-none text-oj-ink">
+          tell us what's happening.
+        </legend>
+
+        <Field
+          label="Your name"
+          htmlFor="enquiry-name"
+          required
+          announceError={false}
+          error={fieldErrors.name}
+        >
+          <Input name="name" autoComplete="name" maxLength={80} defaultValue={values.name} />
+        </Field>
+
+        <Field
+          label="Work email"
+          htmlFor="enquiry-email"
+          required
+          announceError={false}
+          error={fieldErrors.email}
+          hint="One reply from a person. No list, no sequence."
+        >
+          <Input
+            name="email"
+            type="email"
+            autoComplete="email"
+            maxLength={254}
+            defaultValue={values.email}
+          />
+        </Field>
+
+        <Field
+          label="Company"
+          htmlFor="enquiry-company"
+          required
+          announceError={false}
+          error={fieldErrors.company}
+        >
+          <Input
+            name="company"
+            autoComplete="organization"
+            maxLength={120}
+            defaultValue={values.company}
+          />
+        </Field>
+
+        <Field
+          label="What's going on?"
+          htmlFor="enquiry-situation"
+          required
+          announceError={false}
+          error={fieldErrors.situation}
+          hint="A line is plenty. We'll ask the rest when we talk."
+        >
+          <Textarea
+            name="situation"
+            rows={5}
+            maxLength={2000}
+            defaultValue={values.situation}
+            placeholder="Enquiries have halved since the spring and nobody can agree why."
+          />
+        </Field>
+
+        <div className="mt-1">
+          <SubmitButton>Let's talk</SubmitButton>
         </div>
-      ) : null}
 
-      {onStepTwo ? (
-        <fieldset className="flex flex-col gap-5 border-0 p-0">
-          <legend className="oj-display mb-1.5 text-[27px] leading-none text-oj-ink">
-            this makes the first call useful.
-          </legend>
-
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Your role" htmlFor="enquiry-role">
-              <Select name="role" defaultValue="">
-                <option value="">Prefer not to say</option>
-                {ENQUIRY_ROLES.map((role) => (
-                  <option key={role} value={role}>
-                    {role}
-                  </option>
-                ))}
-              </Select>
-            </Field>
-
-            <Field label="Roughly how many people?" htmlFor="enquiry-size">
-              <Select name="sizeBand" defaultValue="">
-                <option value="">Prefer not to say</option>
-                {ENQUIRY_SIZE_BANDS.map((band) => (
-                  <option key={band} value={band}>
-                    {band}
-                  </option>
-                ))}
-              </Select>
-            </Field>
-          </div>
-
-          <Field
-            label="Website"
-            htmlFor="enquiry-company-website"
-            hint="We'll have a look first."
-          >
-            <Input
-              name="companyWebsite"
-              type="text"
-              inputMode="url"
-              autoComplete="url"
-              placeholder="bartonreed.co.uk"
-            />
-          </Field>
-
-          <Field label="What do you think is blocking growth?" htmlFor="enquiry-blocker">
-            <Textarea name="blocker" rows={3} maxLength={2000} />
-          </Field>
-
-          <Field label="What would success look like?" htmlFor="enquiry-success">
-            <Textarea name="success" rows={3} maxLength={2000} />
-          </Field>
-
-          <Field
-            label="Why now?"
-            htmlFor="enquiry-why-now"
-            hint="Something has usually changed. Knowing what saves a whole conversation."
-          >
-            <Textarea name="whyNow" rows={2} maxLength={1000} />
-          </Field>
-
-          <div className="mt-1 flex flex-wrap items-center gap-3.5">
-            <SubmitButton>Send these too</SubmitButton>
-            <SkipButton />
-          </div>
-        </fieldset>
-      ) : (
-        <fieldset className="flex flex-col gap-5 border-0 p-0" onInput={onFirstInput}>
-          <legend className="oj-display mb-1.5 text-[27px] leading-none text-oj-ink">
-            tell us what's happening.
-          </legend>
-
-          <Field
-            label="Your name"
-            htmlFor="enquiry-name"
-            required
-            announceError={false}
-            error={fieldErrors.name}
-          >
-            <Input name="name" autoComplete="name" maxLength={80} defaultValue={values.name} />
-          </Field>
-
-          <Field
-            label="Work email"
-            htmlFor="enquiry-email"
-            required
-            announceError={false}
-            error={fieldErrors.email}
-            hint="One reply from a person. No list, no sequence."
-          >
-            <Input
-              name="email"
-              type="email"
-              autoComplete="email"
-              maxLength={254}
-              defaultValue={values.email}
-            />
-          </Field>
-
-          <Field
-            label="Company"
-            htmlFor="enquiry-company"
-            required
-            announceError={false}
-            error={fieldErrors.company}
-          >
-            <Input
-              name="company"
-              autoComplete="organization"
-              maxLength={120}
-              defaultValue={values.company}
-            />
-          </Field>
-
-          <Field
-            label="What is happening in the business?"
-            htmlFor="enquiry-situation"
-            required
-            announceError={false}
-            error={fieldErrors.situation}
-            hint="A couple of sentences is plenty. We'll ask the rest."
-          >
-            <Textarea
-              name="situation"
-              rows={5}
-              maxLength={2000}
-              defaultValue={values.situation}
-              placeholder="Enquiries have halved since the spring and nobody can agree why."
-            />
-          </Field>
-
-          <div className="mt-1">
-            <SubmitButton>Let's talk</SubmitButton>
-          </div>
-
-          <p className="text-[13.5px] leading-relaxed text-oj-ink-3">
-            We use this to have one useful conversation, nothing else. See the{' '}
-            <Anchor href="/privacy" className="font-semibold underline">
-              privacy notice
-            </Anchor>
-            .
-          </p>
-        </fieldset>
-      )}
+        <p className="text-[13.5px] leading-relaxed text-oj-ink-3">
+          We use this to have one useful conversation, nothing else. See the{' '}
+          <Anchor href="/privacy" className="font-semibold underline">
+            privacy notice
+          </Anchor>
+          .
+        </p>
+      </fieldset>
     </form>
   );
 }

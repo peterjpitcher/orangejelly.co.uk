@@ -269,31 +269,20 @@ export async function submitEnquiry(
   previous: EnquiryFormState,
   formData: FormData
 ): Promise<EnquiryFormState> {
-  const onStepTwo = previous.step === 2 && Boolean(previous.leadId);
-
-  if (onStepTwo) {
-    const leadId = previous.leadId as string;
-
-    // Skipping is a first-class outcome, not an escape hatch. Step two is optional
-    // and is described as optional, so the button that says so has to work.
-    if (text(formData, 'intent') === 'skip') {
-      return { step: 'done', leadId };
-    }
-
-    await submitEnquiryStep2(leadId, {
-      role: text(formData, 'role'),
-      sizeBand: text(formData, 'sizeBand'),
-      companyWebsite: text(formData, 'companyWebsite'),
-      blocker: text(formData, 'blocker'),
-      success: text(formData, 'success'),
-      whyNow: text(formData, 'whyNow'),
-    });
-
-    // Step two cannot fail in a way worth telling anyone about: the enquiry was
-    // already stored, and there is nothing useful for them to do.
-    return { step: 'done', leadId };
-  }
-
+  /*
+   * One step, as of 31 August 2026, on the owner's instruction.
+   *
+   * There was a second screen of six optional qualifying questions between the
+   * enquiry and the thank-you. It was described as optional and had a skip button,
+   * and it still sat between somebody who had just decided to make contact and any
+   * confirmation that they had. The enquiry is complete when the lead is stored, so
+   * that is where it now ends.
+   *
+   * `submitEnquiryStep2` is left in place and still exported: the six columns exist
+   * in the database, the admin dashboard reads them, and the rows written before
+   * today still carry answers. Deleting the writer would make that data unreachable
+   * to no purpose. Nothing calls it from the form any more.
+   */
   const values = {
     name: text(formData, 'name'),
     email: text(formData, 'email'),
@@ -317,5 +306,5 @@ export async function submitEnquiry(
     return { step: 'done' };
   }
 
-  return { step: 2, leadId: result.leadId };
+  return { step: 'done', leadId: result.leadId };
 }

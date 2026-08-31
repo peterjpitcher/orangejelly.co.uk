@@ -21,11 +21,22 @@ describe('enquiry step one', () => {
     expect(enquiryStep1Schema.safeParse(VALID).success).toBe(true);
   });
 
-  it('requires enough of the situation to be worth reading', () => {
-    // The floor is a filter, not a formality. With no price on the site it is one
-    // of the few honest ones left.
+  /*
+   * INVERTED 31 August 2026. There was a twenty-character floor on this field,
+   * argued as an honest filter on people who would not describe the problem. The
+   * owner's view is that it is friction on the one field standing between somebody
+   * and a conversation, and that a short answer is still an answer.
+   */
+  it('accepts a short situation, because there is no minimum length', () => {
     const result = enquiryStep1Schema.safeParse({ ...VALID, situation: 'help' });
-    expect(result.success).toBe(false);
+    expect(result.success).toBe(true);
+  });
+
+  it('still requires the field to be answered at all', () => {
+    // No minimum is not the same as optional: an empty enquiry helps nobody.
+    for (const situation of ['', '   ']) {
+      expect(enquiryStep1Schema.safeParse({ ...VALID, situation }).success).toBe(false);
+    }
   });
 
   it('accepts a free email provider', () => {
