@@ -19,11 +19,11 @@ export const STEPS = [
   },
   {
     word: 'WE SAY IT.',
-    text: 'What we think, including when the answer is that you do not need us. That happens, and saying so is worth more than three weeks of finding out.',
+    text: "What we think, including when the answer is that you don't need us. That happens, and saying so is worth more than three weeks of finding out.",
   },
   {
     word: 'WE SCOPE IT.',
-    text: 'If it is worth going further: a defined piece of work, a fixed fee agreed before anything starts, and a measure we both sign up to.',
+    text: "If it's worth going further: a defined piece of work, a fixed fee agreed before anything starts, and a measure we both sign up to.",
   },
 ] as const;
 
@@ -63,21 +63,21 @@ export const FIT = {
      * section 15's non-negotiable, and they are the reason this reads as a filter
      * rather than as flattery.
      */
-    'You believe the business is capable of more than it is currently doing.',
-    'You want to know what is actually driving the numbers, rather than what everyone assumes.',
-    'You are ready to change how the business works, not only how it is marketed.',
-    'You want the systems built for the company you are becoming, not the one you started.',
+    "You believe the business is capable of more than it's currently doing.",
+    "You want to know what's actually driving the numbers, rather than what everyone assumes.",
+    "You're ready to change how the business works, not only how it's marketed.",
+    "You want the systems built for the company you're becoming, not the one you started.",
     'You want someone to challenge the thinking, not agree with it.',
     'You can act once a direction is agreed.',
   ],
   doesNot: [
     {
       title: 'You want someone to post three times a week.',
-      body: 'Posting more will not fix a proposition, a conversion journey or an offer. If posting is genuinely the gap we will say so, but it is not what you would be hiring us for.',
+      body: "Posting more will not fix a proposition, a conversion journey or an offer. If posting is genuinely the gap we will say so, but it's not what you'd be hiring us for.",
     },
     {
       title: 'You have decided the plan and need a pair of hands.',
-      body: 'We are not the cheapest way to execute a decision that is already made, and we would be bad value doing it.',
+      body: "We're not the cheapest way to execute a decision that is already made, and we would be bad value doing it.",
     },
     {
       title: 'You cannot give us access to the people, the numbers or the customers.',
@@ -89,7 +89,7 @@ export const FIT = {
     },
     {
       title: 'You want the decision validated.',
-      body: 'If the direction is set and the question is really whether it is right, a second opinion you have paid for is worth nothing.',
+      body: "If the direction is set and the question is really whether it's right, a second opinion you've paid for is worth nothing.",
     },
     {
       title: 'Nothing inside the business can actually change.',
@@ -101,11 +101,11 @@ export const FIT = {
 export const FAQS = [
   {
     q: 'Is the first conversation really free?',
-    a: 'Yes, and there is no follow-up sequence attached to it. You get an hour, our honest read, and no obligation. If we both think there is something worth doing, we will tell you what that would look like.',
+    a: "Yes, and there's no follow-up sequence attached to it. You get an hour, our honest read, and no obligation. If we both think there's something worth doing, we will tell you what that would look like.",
   },
   {
-    q: 'What if we are not sure what the problem is?',
-    a: 'That is the normal case, and it is the reason the first step is a conversation rather than a quote. Most businesses can describe the symptom precisely and the cause not at all. Working out which is which is the job.',
+    q: "What if we're not sure what the problem is?",
+    a: "That's the normal case, and it's why the first step is a conversation rather than a quote. Most businesses can describe the symptom precisely and the cause not at all. Working out which is which is the job.",
   },
   {
     q: 'Do you only work with hospitality?',
@@ -113,7 +113,7 @@ export const FAQS = [
   },
   {
     q: 'Who will we actually be dealing with?',
-    a: 'Orange Jelly is deliberately small, so you are dealing with the people doing the work. There is no account manager between you and the thinking.',
+    a: "Orange Jelly is deliberately small, so you're dealing with the people doing the work. There is no account manager between you and the thinking.",
   },
   {
     q: 'What happens to what we tell you?',

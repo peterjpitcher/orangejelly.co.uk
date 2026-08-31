@@ -41,7 +41,7 @@ That is why we start by looking, not by proposing a campaign.
 ## what we look at first.
 
 - **Whether people can find you.** Google Business Profile, the search terms locals actually use, the
-  photos, the review replies. It is the cheapest fix in hospitality and the one most often left undone.
+  photos, the review replies. It's the cheapest fix in hospitality and the one most often left undone.
 - **Whether there is a reason to come.** A clear midweek hook beats a full content calendar. One
   repeatable reason is worth more than thirty posts.
 - **Whether the booking survives the interest.** Most venues lose people between wanting to come and
@@ -61,15 +61,15 @@ HEAR. CHALLENGE. BUILD. OPTIMISE, in four short lines, linking to `/how-we-work`
 1. **Do you do it for me, or show me how?** Either, and we decide which in the first conversation. Some
    venues want a plan and the templates to run it. Others want it done. What we will not do is sell you
    the hands-on version when the plan would have been enough.
-2. **How quickly does pub marketing work?** Local visibility moves in days, because it is mostly
+2. **How quickly does pub marketing work?** Local visibility moves in days, because it's mostly
    correcting things that are wrong. Bookings and repeat visits build over weeks, because they depend on
    people coming back. Anyone promising both in a fortnight is selling you the first and calling it the
    second.
-3. **Can you help with Google Business Profile and reviews?** Yes, and it is usually where we start. It
+3. **Can you help with Google Business Profile and reviews?** Yes, and it's usually where we start. It
    is the quickest win for local footfall: accuracy, photos, replies, and posts that actually get seen.
 4. **What does it cost?** There is no price list, because there is no package. What we would quote for a
    single quiet midweek session is nothing like what we would quote for a venue where the whole week has
-   slipped. The first conversation is an hour and it is free, and you get a number in writing before
+   slipped. The first conversation is an hour and it's free, and you get a number in writing before
    anything starts.
 5. **Will this work for a tied pub or a managed house?** Yes. Almost every win here is operational or
    about messaging: events, positioning, local visibility, repeat visits. None of it depends on who
@@ -206,7 +206,7 @@ person (D21), and one promised the first conversation would happen the same week
 is a response-time promise in all but name (D23).
 
 1. **How quickly can you help?**
-   There are two clocks here and it helps to separate them. The first is how soon you know more than you do now: that is one hour, free, going through what is actually happening, what you have already tried and what we would look at first. The second is how long the cause takes to find, normally a week or two of looking at real numbers, because a cause guessed at in a day is the one that gets fixed twice. We will not put a date on a web page that we cannot keep for everybody who reads it. If it is urgent, say so in your first line and we will treat it that way.
+   There are two clocks here and it helps to separate them. The first is how soon you know more than you do now: that's one hour, free, going through what is actually happening, what you have already tried and what we would look at first. The second is how long the cause takes to find, normally a week or two of looking at real numbers, because a cause guessed at in a day is the one that gets fixed twice. We will not put a date on a web page that we cannot keep for everybody who reads it. If it's urgent, say so in your first line and we'll treat it that way.
 
 2. **What if we cannot afford help right now?**
    Say so early. It changes what we would recommend, not whether we will talk to you. The first hour costs nothing, so the money question only applies to what comes after it, and by then you will know what the problem actually is. There is no price on this site because every engagement is scoped to the problem and agreed in writing before anything starts, and a business with less room than usual is exactly the one that should not be sold a large programme. Sometimes the honest recommendation is a small piece of work. Sometimes it is that you now know enough to go and do it yourself.

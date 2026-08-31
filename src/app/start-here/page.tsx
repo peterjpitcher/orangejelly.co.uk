@@ -30,7 +30,7 @@ import { FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
  */
 const TITLE = 'Start here | Orange Jelly';
 const DESCRIPTION =
-  'Every piece of work starts with a conversation about what is actually happening. What that involves, what you get from it, and who it does not work for.';
+  "Every piece of work starts with a conversation about what is actually happening. What that involves, what you get from it, and who it doesn't work for.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -69,7 +69,7 @@ export default function StartHerePage(): JSX.Element {
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
                 Every piece of work we do starts the same way. A conversation about what is actually
                 happening in your business, before anyone says the word solution. This page tells
-                you what that involves, what you get out of it, and who it does not work for.
+                you what that involves, what you get out of it, and who it doesn't work for.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="#enquiry">
@@ -95,7 +95,7 @@ export default function StartHerePage(): JSX.Element {
 
         <Band
           heading="what you get from the hour."
-          intro="You are not buying anything in that conversation and we are not asking you to."
+          intro="You're not buying anything in that conversation, and we're not asking you to."
         >
           <ul className="measure-wide grid list-none gap-4 p-0 sm:grid-cols-3">
             {TAKEAWAYS.map((item) => (
@@ -124,7 +124,7 @@ export default function StartHerePage(): JSX.Element {
 
         <Band
           heading="big enough to have real problems. small enough to move fast."
-          intro="We work best with ambitious owners who are ready to act. You will get the most from this if:"
+          intro="We work best with ambitious owners who are ready to act. You'll get the most from this if:"
         >
           <ul className="measure flex list-none flex-col gap-3 p-0">
             {FIT.works.map((item) => (
@@ -137,7 +137,7 @@ export default function StartHerePage(): JSX.Element {
             ))}
           </ul>
           <p className="measure mt-7 text-[16px] leading-relaxed text-oj-ink-2">
-            Roughly, that tends to mean 10 to 500 people. It is a guide rather than a rule: a
+            Roughly, that tends to mean 10 to 500 people. It's a guide rather than a rule: a
             smaller business with real scale, urgency and something to invest fits fine.
           </p>
         </Band>
@@ -148,8 +148,8 @@ export default function StartHerePage(): JSX.Element {
          * names behaviours rather than hedging about "the right partnership".
          */}
         <Band
-          heading="who this does not work for."
-          intro="We would rather say this now than three weeks in. This is not a fit if:"
+          heading="who this doesn't work for."
+          intro="We'd rather say this now than three weeks in. This is not a fit if:"
           tone="paper"
         >
           <ul className="measure-wide grid list-none gap-5 p-0 sm:grid-cols-2">
@@ -183,8 +183,8 @@ export default function StartHerePage(): JSX.Element {
             </p>
             <p>
               <strong>On cost:</strong> we do not publish prices, because we do not sell packages.
-              What we would quote a company of eight with a conversion problem looks nothing like
-              what we would quote a company of two hundred with a margin problem, and a number on
+              What we'd quote a company of eight with a conversion problem looks nothing like
+              what we'd quote a company of two hundred with a margin problem, and a number on
               this page would only be wrong for both. Every engagement is priced to the problem and
               agreed in writing before any work begins.
             </p>
@@ -210,7 +210,7 @@ export default function StartHerePage(): JSX.Element {
             stop circling the problem.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what is happening, what you have tried, and what needs to change.
+            Tell us what's happening, what you've tried, and what needs to change.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="#enquiry">

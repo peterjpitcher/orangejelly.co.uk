@@ -118,7 +118,7 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
             recognise any of that?
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-ink">
-            The first conversation is an hour, it is free, and it is not a pitch.
+            The first conversation is an hour, it's free, and it's not a pitch.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button size="lg" arrow href="/start-here">

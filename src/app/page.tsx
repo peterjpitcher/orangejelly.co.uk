@@ -63,8 +63,8 @@ export default function HomePage(): JSX.Element {
               </h1>
               <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
                 We get under the skin of a business, work out what is actually blocking growth,
-                build the strategy to move it, and turn that into action. Sometimes that is
-                marketing. Often it is not.
+                build the strategy to move it, and turn that into action. Sometimes that's
+                marketing. Often it isn't.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -81,7 +81,7 @@ export default function HomePage(): JSX.Element {
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
           <div className="page-shell">
             <h2 className="oj-display max-w-[22ch] text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
-              you do not need more activity. you need to know what will move the numbers.
+              you don't need more activity. you need to know what will move the numbers.
             </h2>
             <p className="measure mt-5 text-[17px] leading-relaxed text-oj-ink-2">
               Most businesses that come to us can describe the symptom precisely and the cause not
@@ -152,7 +152,7 @@ export default function HomePage(): JSX.Element {
               proven where the risk was ours.
             </h2>
             <p className="measure mt-5 text-[17px] leading-relaxed text-oj-ink-2">
-              The Anchor is our own venue, a real trading business we run, and it is where this
+              The Anchor is our own venue, a real trading business we run, and it's where this
               thinking was built and tested before it was ever sold to anybody. Every number below
               comes from it.
             </p>
@@ -191,14 +191,14 @@ export default function HomePage(): JSX.Element {
                 a rule.
               </p>
               <p>
-                It does not work if you want three posts a week, a pair of hands for a plan already
-                decided, or AI because it is AI. We say all of that plainly before anyone spends
+                It doesn't work if you want three posts a week, a pair of hands for a plan already
+                decided, or AI because it's AI. We say all of that plainly before anyone spends
                 anything.
               </p>
             </div>
             <div className="mt-7">
               <Button variant="ghost" href="/start-here">
-                Who this is and is not for
+                Who this is and isn't for
               </Button>
             </div>
           </div>
@@ -211,8 +211,8 @@ export default function HomePage(): JSX.Element {
                 stop circling the problem.
               </h2>
               <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-                Tell us what is happening, what you have tried, and what needs to change. The first
-                conversation is an hour, it is free, and it is not a pitch.
+                Tell us what's happening, what you've tried, and what needs to change. The first
+                conversation is an hour, it's free, and it is not a pitch.
               </p>
               <div className="mt-8">
                 <Button size="lg" arrow href="/start-here">

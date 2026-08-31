@@ -21,7 +21,7 @@ import { QUESTIONS_TO_ASK, RIGHT_ANSWER, WRONG_SHAPE } from './content';
  */
 const TITLE = 'Do you need a fractional CMO? | Orange Jelly';
 const DESCRIPTION =
-  'When a fractional CMO is the right hire, when it is the wrong answer, and five questions to ask first. Including when we would say hire one instead of us.';
+  "When a fractional CMO is the right hire, when it's the wrong answer, and five questions to ask first. Including when we would say hire one instead of us.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -56,9 +56,9 @@ export default function FractionalCmoPage(): JSX.Element {
               you might not need a fractional <span className="oj-keep-case">CMO</span>.
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              People search for one when growth has stalled and the in-house team is stretched. It
-              is a sensible instinct and often the wrong shape of answer. Here is when it works,
-              when it does not, and what to ask before you hire either of us.
+              People search for one when growth has stalled and the in-house team is stretched. It's
+              a sensible instinct and often the wrong shape of answer. Here's when it works, when it
+              does not, and what to ask before you hire either of us.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button size="lg" arrow href="/start-here">
@@ -79,7 +79,7 @@ export default function FractionalCmoPage(): JSX.Element {
               somewhere larger.
             </p>
             <p>
-              It is a good model. It exists because a business can need senior marketing judgement
+              It's a good model. It exists because a business can need senior marketing judgement
               long before it can justify a full-time salary for it, and the market has correctly
               worked out that the gap is real.
             </p>
@@ -91,7 +91,7 @@ export default function FractionalCmoPage(): JSX.Element {
          * conceded the format works would be a sales pitch, and the reader would
          * know it by the second paragraph.
          */}
-        <Band heading="when it is the right answer." intro="Three cases, and they are common.">
+        <Band heading="when it's the right answer." intro="Three cases, and they are common.">
           <ul className="measure-wide grid list-none gap-5 p-0 sm:grid-cols-3">
             {RIGHT_ANSWER.map((item) => (
               <li
@@ -111,7 +111,7 @@ export default function FractionalCmoPage(): JSX.Element {
           </p>
         </Band>
 
-        <Band heading="when it is the wrong shape." tone="ink">
+        <Band heading="when it's the wrong shape." tone="ink">
           <div className="flex flex-col gap-7">
             {WRONG_SHAPE.map((item) => (
               <div key={item.title}>
@@ -133,13 +133,13 @@ export default function FractionalCmoPage(): JSX.Element {
             </p>
             <p>
               We take the problem, work out what is actually causing it across every function it
-              touches, and build the fix. Sometimes that is marketing. Often it is a pricing change,
-              a process, a system, or three small things in three different places that only make
+              touches, and build the fix. Sometimes that's marketing. Often it's a pricing change, a
+              process, a system, or three small things in three different places that only make
               sense together.
             </p>
             <p>
-              Then we leave. An engagement that has done its job should end, which is the other
-              thing a monthly retainer for a seat is not designed to do.
+              Then we leave. An engagement that has done its job should end, which is not what a
+              monthly retainer for a seat is designed to do.
             </p>
           </div>
         </Band>
@@ -159,7 +159,7 @@ export default function FractionalCmoPage(): JSX.Element {
             ))}
           </ol>
           <p className="measure mt-8 text-[17px] font-semibold leading-relaxed text-oj-ink">
-            If the answers to the second and the fifth are vague, that is your answer, whoever you
+            If the answers to the second and the fifth are vague, that's your answer, whoever you
             are talking to.
           </p>
         </Band>
@@ -169,8 +169,8 @@ export default function FractionalCmoPage(): JSX.Element {
             describe the problem, not the role.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what is actually happening and we will tell you what shape of help it needs,
-            even when that is not us. The first conversation is an hour and it is free.
+            Tell us what is actually happening and we'll tell you what shape of help it needs, even
+            when that is not us. The first conversation is an hour and it's free.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

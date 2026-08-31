@@ -29,7 +29,7 @@ export interface StickyCTAProps {
 }
 
 export function StickyCTA({
-  note = 'Growth stuck? Tell us what is happening.',
+  note = "Growth stuck? Tell us what's happening.",
   label = "Let's talk",
   href = '/start-here',
   onClick,

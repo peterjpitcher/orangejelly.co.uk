@@ -152,7 +152,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
       >
         <h2 className="oj-display text-[34px] leading-[1.05] text-oj-ink">that has arrived.</h2>
         <p className="measure mt-3.5 text-[17px] leading-relaxed text-oj-ink-2">
-          A person will read it, not a filter. You will get a reply from Orange Jelly, and it will
+          A person will read it, not a filter. You'll get a reply from Orange Jelly, and it will
           be about your situation rather than a brochure.
         </p>
         <p className="mt-3 text-[15px] text-oj-ink-3">
@@ -234,7 +234,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
           <Field
             label="Website"
             htmlFor="enquiry-company-website"
-            hint="We will have a look first."
+            hint="We'll have a look first."
           >
             <Input
               name="companyWebsite"
@@ -269,7 +269,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
       ) : (
         <fieldset className="flex flex-col gap-5 border-0 p-0" onInput={onFirstInput}>
           <legend className="oj-display mb-1.5 text-[27px] leading-none text-oj-ink">
-            tell us what is happening.
+            tell us what's happening.
           </legend>
 
           <Field
@@ -320,7 +320,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
             required
             announceError={false}
             error={fieldErrors.situation}
-            hint="A couple of sentences is plenty. We will ask the rest."
+            hint="A couple of sentences is plenty. We'll ask the rest."
           >
             <Textarea
               name="situation"

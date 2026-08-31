@@ -60,7 +60,7 @@ export default function SolutionsPage(): JSX.Element {
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
               Orange Jelly builds fixes, not services. What a fix is made of depends entirely on
-              what is actually blocking growth, which is why this page starts with the problem and
+              what's actually blocking growth, which is why this page starts with the problem and
               not with a list of things we sell.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -74,7 +74,7 @@ export default function SolutionsPage(): JSX.Element {
           </div>
         </section>
 
-        <Band heading="start with where it is stuck." tone="paper">
+        <Band heading="start with where it's stuck." tone="paper">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {PRESSURE_POINTS.map((point) => (
               <PressureCard
@@ -89,7 +89,7 @@ export default function SolutionsPage(): JSX.Element {
 
         <Band
           heading="what a fix can be made of."
-          intro="Thirteen things we build with. Nobody buys one of them on its own, and if somebody asks us for one before we have understood the problem we will say so."
+          intro="Thirteen things we build with. Nobody buys one of them on its own, and if somebody asks us for one before we've understood the problem, we'll say so."
         >
           <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {CAPABILITIES.map((capability) => (
@@ -122,7 +122,7 @@ export default function SolutionsPage(): JSX.Element {
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               Nobody buys a solution from this page. Every engagement starts with a conversation
-              about what is actually happening, and the first one is an hour and free. What gets
+              about what's actually happening, and the first one is an hour and free. What gets
               built, and what it costs, is agreed after that and in writing.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function SolutionsPage(): JSX.Element {
             the tool is the last decision, not the first.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what is happening and we will tell you what we think it needs.
+            Tell us what's happening and we'll tell you what we think it needs.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

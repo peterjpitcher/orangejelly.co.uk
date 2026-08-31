@@ -103,7 +103,7 @@ describe('oj/diagnostic', () => {
     const user = userEvent.setup();
     render(<PressureCheck />);
 
-    const button = screen.getByRole('button', { name: 'Leads are not converting' });
+    const button = screen.getByRole('button', { name: "Leads aren't converting" });
     expect(button).toHaveAttribute('aria-pressed', 'false');
 
     await user.click(button);

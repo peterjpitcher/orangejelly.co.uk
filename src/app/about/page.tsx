@@ -56,9 +56,9 @@ export default function AboutPage(): JSX.Element {
               small on purpose.
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses. There
-              is no account team, no layer between you and the people doing the work, and no
-              incentive to sell you more of something that is not working.
+              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses.
+              There's no account team, no layer between you and the people doing the work, and no
+              incentive to sell you more of something that isn't working.
             </p>
           </div>
         </section>
@@ -66,10 +66,10 @@ export default function AboutPage(): JSX.Element {
         <Band heading="what we actually are." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              We get under the skin of a business, work out what is genuinely blocking growth, and
+              We get under the skin of a business, work out what's genuinely blocking growth, and
               build the thing that fixes it. The fix might be marketing. It might be a pricing
               change, a process, a system, an automation, or a piece of software with some AI in it.
-              The problem decides, and the problem is not usually what the brief says it is.
+              The problem decides, and it isn't usually what the brief says it is.
             </p>
             <p>
               That range is only defensible because of the method. Without it, a company that does
@@ -87,9 +87,9 @@ export default function AboutPage(): JSX.Element {
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               The Anchor is our own venue in Stanwell Moor, run as a Greene King tenancy since 2019.
-              It is not a case study we bought and it is not a client. It is a business that has to
+              It is not a case study we bought and it is not a client. It's a business that has to
               trade every week, with a wage bill, a cellar, suppliers who put prices up and
-              customers who go elsewhere when it is not good enough.
+              customers who go elsewhere when it isn't good enough.
             </p>
             <p>
               Everything on this site was built and tested there first. Search visibility grew 828%,
@@ -98,9 +98,9 @@ export default function AboutPage(): JSX.Element {
               cost us rather than a client.
             </p>
             <p>
-              That is a different kind of experience from advising. It is the difference between
-              knowing that a booking which does not turn up is expensive and having stood in a
-              kitchen at seven o&rsquo;clock with the food already prepped.
+              That's a different kind of experience from advising. It's the difference between knowing
+              a booking that doesn't turn up is expensive and having stood in a kitchen at seven
+              o&rsquo;clock with the food already prepped.
             </p>
             <p>
               <Anchor href="/results" className="font-semibold underline">
@@ -154,13 +154,13 @@ export default function AboutPage(): JSX.Element {
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               Orange Jelly is deliberately small, so the people you meet are the people doing the
-              work. There is no account manager, no team you never see, and no handover to somebody
+              work. There's no account manager, no team you never see, and no handover to somebody
               more junior once the contract is signed.
             </p>
             <p>
               Day to day, The Anchor is run by Billy Summers and the growth work is led by Peter
-              Pitcher. That is the whole company, which is a constraint we are honest about: it
-              means we take on what we can do properly and say no to the rest.
+              Pitcher. That's the whole company, and it's a constraint we are honest about: we take
+              on what we can do properly and say no to the rest.
             </p>
           </div>
         </Band>
@@ -178,8 +178,8 @@ export default function AboutPage(): JSX.Element {
           </dl>
           <p className="measure mt-8 text-[17px] leading-relaxed">
             That last line is deliberate. Orange Jelly spent six years doing this in a business we
-            owned before we offered it to anybody else, which is both the reason the proof is real
-            and the reason there is one business on the results page rather than twenty.
+            owned before we offered it to anybody else. That's why the proof is real, and why
+            there's one business on the results page rather than twenty.
           </p>
         </Band>
 
@@ -188,8 +188,8 @@ export default function AboutPage(): JSX.Element {
             the shortest way to find out.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            An hour on the phone, free, no pitch. If we are not the right people we will tell you
-            that inside the hour.
+            An hour on the phone, free, no pitch. If we're not the right people we will tell you
+            inside the hour.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

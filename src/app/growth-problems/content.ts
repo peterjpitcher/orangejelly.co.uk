@@ -53,9 +53,9 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     titleLead: 'Growth has',
     titleMark: 'stalled.',
     intro:
-      'Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It is rarely the answer.',
+      "Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It's rarely the answer.",
     symptoms: [
-      'Revenue has been flat for long enough that it is no longer a blip.',
+      "Revenue has been flat for long enough that it's no longer a blip.",
       'Everyone has a different theory about the cause.',
       'New initiatives launch, spike, then fade.',
       'The market grew and you did not.',
@@ -66,7 +66,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     examine: [
       {
         what: 'Where growth actually stopped',
-        why: 'Pipeline, conversion or capacity: the flat line starts in one of the three far more often than not.',
+        why: 'Pipeline, conversion or capacity: the flat line usually starts in one of the three.',
       },
       {
         what: 'What the data can prove',
@@ -74,7 +74,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       },
       {
         what: 'The smallest change that moves it',
-        why: 'The smallest intervention capable of material change, not the biggest programme.',
+        why: 'The smallest thing that would make a real difference, not the biggest programme.',
       },
     ],
     proof: {
@@ -108,7 +108,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       },
       {
         what: 'The proposition, tested',
-        why: 'Whether the market can tell what you are for in one pass.',
+        why: "Whether the market can tell what you're for in one pass.",
       },
       {
         what: 'What compounds',
@@ -117,7 +117,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'The demand that was going somewhere else.',
-      body: 'The Anchor, our own venue, had a demand problem it could not see, because the demand was going somewhere else entirely. The site described the venue in the language the venue used about itself, while people nearby were searching in completely different words for completely different things. Rebuilt around what people actually search for, Google Search visibility grew 828% against a Search Console baseline taken before any of it, and private hire bookings grew 567%, from about six a year to twenty confirmed in six months. That second figure is what the visibility was worth in money. The mechanism has nothing to do with pubs: a business describes itself in its own words, its customers search in theirs, and the gap between the two is demand somebody else is collecting.',
+      body: "The Anchor, our own venue, had a demand problem it couldn't see, because the demand was going somewhere else entirely. The site described the venue in the language the venue used about itself, while people nearby were searching in completely different words for completely different things. Rebuilt around what people actually search for, Google Search visibility grew 828% against a Search Console baseline taken before any of it, and private hire bookings grew 567%, from about six a year to twenty confirmed in six months. That second figure is what the visibility was worth in money. The mechanism has nothing to do with pubs: a business describes itself in its own words, its customers search in theirs, and the gap between the two is demand somebody else is collecting.",
       hasNumbers: true,
     },
   },
@@ -155,7 +155,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'The gap between wanting to come and having a table.',
-      body: 'At The Anchor, our own venue, plenty of people wanted to come. The booking route was a phone number during service, and nobody was counting how many tried and gave up. We rebuilt the journey from interest to confirmed table, then added confirmations and reminders. Table bookings grew 403% against the previous run rate, and no-shows fell 89%, from about one in five to about one in fifty. The second number is the one that changed the economics: the table was held and the food was prepped whether or not anyone arrived. Every business has a version of the held table, whether it is a slot, a quote, an appointment or a sample, and almost nobody measures the drop-off between interest and confirmation.',
+      body: "At The Anchor, our own venue, plenty of people wanted to come. The booking route was a phone number during service, and nobody was counting how many tried and gave up. We rebuilt the journey from interest to confirmed table, then added confirmations and reminders. Table bookings grew 403% against the previous run rate, and no-shows fell 89%, from about one in five to about one in fifty. The second number is the one that changed the economics: the table was held and the food was prepped whether or not anyone arrived. Every business has a version of the held table, whether it's a slot, a quote, an appointment or a sample. Almost nobody measures the drop-off between interest and confirmation.",
       hasNumbers: true,
     },
   },
@@ -193,7 +193,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'Mix rebuilt around what each line actually contributes.',
-      body: 'At The Anchor, our own venue, the kitchen was busy and the contribution did not match the effort. Pricing had been set by looking at what everyone else charged and taking a bit off. We rebuilt the menu around what each dish actually contributes rather than what it costs, rewrote the descriptions to sell rather than to list, and gave the pricing a reason. Food revenue grew 98% within three months, and the growth came from the lines worth selling rather than from volume across the board. Now be exact about what that number is. It measures revenue, not margin percentage. We do not publish a gross margin figure and we are not going to imply one from a revenue result. What this case proves is the mechanism: the thing that sells most is rarely the thing worth selling most, and nobody finds that out from the revenue line.',
+      body: "At The Anchor, our own venue, the kitchen was busy and the contribution didn't match the effort. Pricing had been set by looking at what everyone else charged and taking a bit off. We rebuilt the menu around what each dish actually contributes rather than what it costs, rewrote the descriptions to sell rather than to list, and gave the pricing a reason. Food revenue grew 98% within three months, and the growth came from the lines worth selling rather than from volume across the board. Now be exact about what that number is. It measures revenue, not margin percentage. We do not publish a gross margin figure and we are not going to imply one from a revenue result. What this case proves is the mechanism: the thing that sells most is rarely the thing worth selling most, and nobody finds that out from the revenue line.",
       hasNumbers: true,
     },
   },
@@ -231,7 +231,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'What we would look at before hiring again.',
-      body: 'We have no number for this one, and we are not going to borrow one from somewhere else on this site. Every figure we publish comes from The Anchor, our own venue, and all five measure demand, bookings or revenue. Not one of them measures hours reclaimed, cost-to-serve, or capacity released. We used to quote a time-reclaimed figure and we withdrew it, because it was a raw count nobody could check rather than a measured result. So here is what we bring instead of a percentage. We walk the real workflow rather than the org chart version, find where the hours actually go, name the work a system should be doing outright, and find what stops if one person is away for a fortnight. Then we agree the measure and take the baseline before any work starts, so the number that ends up in this section next time is yours and you can check it.',
+      body: "We have no number for this one, and we are not going to borrow one from somewhere else on this site. Every figure we publish comes from The Anchor, our own venue, and all five measure demand, bookings or revenue. Not one of them measures hours reclaimed, cost-to-serve, or capacity released. We used to quote a time-reclaimed figure and we withdrew it, because it was a raw count nobody could check rather than a measured result. So here's what we bring instead of a percentage. We walk the real workflow rather than the org chart version, find where the hours actually go, name the work a system should be doing outright, and find what stops if one person is away for a fortnight. Then we agree the measure and take the baseline before any work starts, so the number that ends up in this section next time is yours and you can check it.",
       hasNumbers: false,
     },
   },
@@ -307,16 +307,16 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'How we use AI, and what we will not claim for it.',
-      body: 'We have no AI number, and the honest reason is that we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor, our own venue: the research, the drafting, the analysis, the repetitive judgement. It is not the reason those figures moved. Menu economics moved food revenue by 98%. Search intent moved visibility by 828%. AI made that work fast enough to be worth doing at all. We used to quote a time-reclaimed figure for it, and we withdrew it, because it was a raw count nobody could verify. So what is on offer here is not a result, it is a filter. We will tell you where AI would pay in your business, where your data will not support the idea yet, and where the honest answer is that it would be theatre. That third answer is the one most suppliers will not give you.',
+      body: "We have no AI number, and the honest reason is that we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor, our own venue: the research, the drafting, the analysis, the repetitive judgement. It is not the reason those figures moved. Menu economics moved food revenue by 98%. Search intent moved visibility by 828%. AI made that work fast enough to be worth doing at all. We used to quote a time-reclaimed figure for it, and we withdrew it, because it was a raw count nobody could verify. So what's on offer here is not a result, it is a filter. We will tell you where AI would pay in your business, where your data will not support the idea yet, and where the honest answer is that it would be theatre. That third answer is the one most suppliers will not give you.",
       hasNumbers: false,
     },
   },
   {
     slug: 'systems-cannot-keep-up',
     number: '08',
-    title: 'Systems cannot support the next stage',
+    title: "Systems can't support the next stage",
     line: 'What got you here creaks at higher volume.',
-    titleLead: 'Your systems cannot support',
+    titleLead: "Your systems can't support",
     titleMark: 'the next stage.',
     intro:
       'What got you here creaks at higher volume. Growth is being rationed by spreadsheets, workarounds and heroics.',
@@ -332,7 +332,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     examine: [
       {
         what: 'Where volume breaks things',
-        why: 'The workflows that break as volume climbs, found before it climbs.',
+        why: 'The workflows that break as volume climbs, found before it does.',
       },
       {
         what: 'The data foundation',
@@ -345,7 +345,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'What we would look at before volume finds the cracks.',
-      body: 'No number here either, and we would rather say so than dress one up. The five figures we publish all come from The Anchor, our own venue, and all five measure demand, bookings or revenue. None of them measures what happened to a system at higher volume. The Anchor is a single site, so we have not tested our own work against the kind of volume that breaks reporting or forces headcount up in step with revenue. Anyone claiming otherwise from these numbers would be the first thing you should not trust. What we do bring is the sequencing question, which is the one most businesses get wrong: which workflows fail at twice the volume, whether your numbers exist once in one place or many times in many spreadsheets, and what has to change first so everything after it gets easier. We agree the measures and take the baseline before any work starts, so the result is yours to check.',
+      body: 'No number here either, and we would rather say so than dress one up. The five figures we publish all come from The Anchor, our own venue, and all five measure demand, bookings or revenue. None of them measures what happened to a system at higher volume. The Anchor is a single site, so we have not tested our own work against the kind of volume that breaks reporting or forces headcount up in step with revenue. If anyone claims otherwise from these numbers, that is the first thing you should not trust. What we do bring is the sequencing question, which is the one most businesses get wrong: which workflows fail at twice the volume, whether your numbers exist once in one place or many times in many spreadsheets, and what has to change first so everything after it gets easier. We agree the measures and take the baseline before any work starts, so the result is yours to check.',
       hasNumbers: false,
     },
   },

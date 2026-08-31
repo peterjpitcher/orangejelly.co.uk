@@ -18,7 +18,7 @@ import { GROWTH_PROBLEMS } from './content';
  */
 const TITLE = 'Unlock growth: eight places it gets stuck | Orange Jelly';
 const DESCRIPTION =
-  'Eight growth problems in plain words. Start from the symptom and we will show you what it is connected to, before anyone talks about a solution.';
+  "Eight growth problems in plain words. Start from the symptom and we'll show you what it's connected to, before anyone talks about a solution.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -53,8 +53,8 @@ export default function GrowthProblemsHubPage(): JSX.Element {
               which of these sounds like your business?
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              You do not need more activity. You need to know what will move the numbers. Start from
-              the symptom and we will show you what it is connected to.
+              You don't need more activity. You need to know what will move the numbers. Start from
+              the symptom and we'll show you what it's connected to.
             </p>
           </div>
         </section>
@@ -101,10 +101,10 @@ export default function GrowthProblemsHubPage(): JSX.Element {
           </p>
         </Band>
 
-        <Band heading="cannot see yours? bring it anyway." tone="ink" size="lg" divider={false}>
+        <Band heading="can't see yours? bring it anyway." tone="ink" size="lg" divider={false}>
           <p className="measure text-[18px] leading-relaxed text-oj-cream/80">
-            Most growth problems are combinations. Tell us what is happening and we will tell you
-            where the pressure really is. The first conversation is an hour and it is free.
+            Most growth problems are combinations. Tell us what's happening and we'll tell you where
+            the pressure really is. The first conversation is an hour and it is free.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

@@ -327,7 +327,7 @@ export interface SeasonalBandProps {
  * never orange.
  */
 export function SeasonalBand({
-  heading = 'What is coming up',
+  heading = "What's coming up",
   viewAll,
   items = [],
   className,

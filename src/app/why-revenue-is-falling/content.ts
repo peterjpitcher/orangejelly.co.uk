@@ -36,11 +36,11 @@ export const CAUSES = [
     body: 'The monthly average hides it, so it goes unnoticed until a quarter does the arithmetic for you.',
   },
   {
-    title: 'You are selling plenty and keeping very little',
+    title: "You're selling plenty and keeping very little",
     body: 'Busy and not much better off is a margin problem wearing a demand problem’s clothes, and the usual response, selling harder, makes it worse.',
   },
   {
-    title: 'People commit and then do not turn up',
+    title: "People commit and then don't turn up",
     body: 'A booking, a slot, an appointment, a quote accepted and then gone quiet. It was paid for twice: once when you held it, once when you filled it with nothing.',
   },
   {
@@ -71,7 +71,7 @@ export const WOULD_NOT_DO = [
 export const FAQS = [
   {
     q: 'How quickly can you help?',
-    a: 'There are two clocks here and it helps to separate them. The first is how soon you know more than you do now: that is one hour, free, going through what is actually happening, what you have already tried and what we would look at first. The second is how long the cause takes to find, normally a week or two of looking at real numbers, because a cause guessed at in a day is the one that gets fixed twice. We will not put a date on a web page that we cannot keep for everybody who reads it. If it is urgent, say so in your first line and we will treat it that way.',
+    a: "There are two clocks here and it helps to separate them. The first is how soon you know more than you do now: that's one hour, free, going through what is actually happening, what you have already tried and what we would look at first. The second is how long the cause takes to find, normally a week or two of looking at real numbers, because a cause guessed at in a day is the one that gets fixed twice. We will not put a date on a web page that we cannot keep for everybody who reads it. If it's urgent, say so in your first line and we'll treat it that way.",
   },
   {
     q: 'What if we cannot afford help right now?',

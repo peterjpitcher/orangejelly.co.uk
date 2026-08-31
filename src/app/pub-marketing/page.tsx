@@ -105,10 +105,10 @@ export default function PubMarketingPage(): JSX.Element {
             <p>
               They have a diagnosis problem. Trade is down, and the explanation everyone agrees on
               is the economy, the weather, the estate, the new place up the road. Sometimes it is.
-              Usually the actual cause is somewhere nobody has looked, and more posting will not
-              find it.
+              Usually the actual cause is somewhere nobody has looked, and more posting won't find
+              it.
             </p>
-            <p>That is why we start by looking, not by proposing a campaign.</p>
+            <p>That's why we start by looking, not by proposing a campaign.</p>
           </div>
         </Band>
 
@@ -158,10 +158,10 @@ export default function PubMarketingPage(): JSX.Element {
           </div>
         </Band>
 
-        <Band heading="if it is not marketing, and it is urgent." tone="paper">
+        <Band heading="if it's not marketing, and it's urgent." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
-            Everything above assumes there is time to look properly. If takings are falling week on
-            week and the wage bill is not, there is{' '}
+            Everything above assumes there's time to look properly. If takings are falling week on
+            week and the wage bill is not, there's{' '}
             <Anchor href="/why-revenue-is-falling" className="font-semibold">
               a page on finding out why
             </Anchor>
@@ -201,11 +201,11 @@ export default function PubMarketingPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            we are a tenant too.
+            we're a tenant too.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Whatever is happening in your venue, we have probably had a version of it in ours. Tell
-            us what it is.
+            Whatever is happening in your venue, we've probably had a version of it in ours. Tell us
+            what it is.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

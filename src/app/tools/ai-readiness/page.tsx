@@ -93,7 +93,7 @@ export default function AiReadinessPage(): JSX.Element {
                 <p className="measure mt-3 text-[16.5px] leading-relaxed text-oj-ink-2">
                   It runs entirely in your browser, which is why nothing is stored. Here are the
                   twelve statements it asks about. If more than a couple of them make you wince,
-                  that is the same signal the tool would have given you.
+                  that's the same signal the tool would have given you.
                 </p>
                 <ol className="mt-5 flex list-decimal flex-col gap-2 pl-5 text-[16px] leading-relaxed">
                   {SCORECARD_QUESTIONS.map((question) => (
@@ -123,7 +123,7 @@ export default function AiReadinessPage(): JSX.Element {
               },
               {
                 title: 'A diagnosis.',
-                body: 'Twelve statements cannot diagnose a business. It is a signal about where to look, which is a genuinely different thing and worth having.',
+                body: "Twelve statements cannot diagnose a business. It's a signal about where to look, which is a genuinely different thing and worth having.",
               },
               {
                 title: 'That you need AI.',

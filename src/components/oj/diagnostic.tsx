@@ -117,10 +117,10 @@ export const PRESSURE_SYMPTOMS: PressureSymptom[] = [
     label: 'Growth has stalled',
     areas: ['demand', 'conversion', 'scale'],
     cause:
-      'A plateau is rarely one thing. Usually demand has flattened while the journey that converts it has quietly got worse, and the systems cannot carry more anyway.',
+      "A plateau is rarely one thing. Usually demand has flattened while the journey that converts it has quietly got worse, and the systems can't carry more anyway.",
   },
   {
-    label: 'Leads are not converting',
+    label: "Leads aren't converting",
     areas: ['conversion', 'experience'],
     cause:
       'When enquiries arrive and stall, the fault is usually in the handover: how fast someone replies, what they say, and how easy the next step is to take.',
@@ -129,7 +129,7 @@ export const PRESSURE_SYMPTOMS: PressureSymptom[] = [
     label: 'Profit is weak despite good sales',
     areas: ['margin', 'operations'],
     cause:
-      'Revenue growth hiding a margin problem almost always means the mix, the pricing or the cost of delivery has drifted while nobody was measuring it.',
+      "When revenue is growing and margin isn't, it almost always means the mix, the pricing or the cost of delivery has drifted while nobody was measuring it.",
   },
   {
     label: 'The team is busy but nothing moves',
@@ -138,13 +138,13 @@ export const PRESSURE_SYMPTOMS: PressureSymptom[] = [
       'Effort without output is a process problem. Work is usually waiting on one person, or the same information is being typed into three systems.',
   },
   {
-    label: 'Customers do not come back',
+    label: "Customers don't come back",
     areas: ['experience', 'demand'],
     cause:
-      'Retention problems look like marketing problems and are usually experience problems: what happens after the sale is nobody in particular’s job.',
+      'Retention looks like a marketing problem and is usually an experience problem: what happens after the sale is nobody in particular’s job.',
   },
   {
-    label: 'We have outgrown our systems',
+    label: "We've outgrown our systems",
     areas: ['scale', 'operations'],
     cause:
       'Systems built for a smaller business fail quietly. The symptom is manual workarounds that everyone has stopped noticing.',
@@ -268,7 +268,7 @@ export interface ScorecardProps {
 export function Scorecard({
   questions = SCORECARD_QUESTIONS,
   areas = PRESSURE_AREAS,
-  heading = 'Where is the pressure in your business?',
+  heading = "Where's the pressure in your business?",
   intro,
   cta = { label: "Let's talk", href: '/start-here' },
   onComplete,
@@ -394,7 +394,7 @@ export function Scorecard({
             <strong className="text-oj-ink">
               {heaviest.map((a) => a.label.toLowerCase()).join(' and ')}
             </strong>
-            . That is where we would start looking, not what we would conclude.
+            . That&rsquo;s where we would start looking, not what we would conclude.
           </p>
           {showCta ? (
             <div>

@@ -91,7 +91,10 @@ describe('the page', () => {
     const html = renderToStaticMarkup(<AiReadinessPage />);
     expect(html).toContain('<noscript>');
     for (const question of SCORECARD_QUESTIONS) {
-      expect(html).toContain(question.text);
+      // renderToStaticMarkup escapes apostrophes, and the statements now contain
+      // them. Comparing the raw string would fail on the encoding rather than on
+      // whether the statement is actually in the fallback, which is what this checks.
+      expect(html).toContain(question.text.replace(/'/g, '&#x27;'));
     }
   });
 

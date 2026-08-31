@@ -18,7 +18,7 @@ import { getBaseUrl } from '@/lib/site-config';
  */
 const TITLE = 'Contact | Orange Jelly';
 const DESCRIPTION =
-  'Tell us what is happening. A person reads every enquiry and replies. No list, no sequence, no account manager.';
+  "Tell us what's happening. A person reads every enquiry and replies. No list, no sequence, no account manager.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -47,7 +47,7 @@ export default function ContactPage(): JSX.Element {
               items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
             />
             <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-ink">
-              tell us what is happening.
+              tell us what's happening.
             </h1>
             <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
               A person reads every enquiry and replies. Not a filter, not a sequence, and not an
@@ -62,17 +62,17 @@ export default function ContactPage(): JSX.Element {
           </div>
         </Band>
 
-        <Band heading="if you would rather not use a form." divider={false}>
+        <Band heading="if you'd rather not use a form." divider={false}>
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               Email{' '}
               <a href="mailto:peter@orangejelly.co.uk" className="font-semibold underline">
                 peter@orangejelly.co.uk
               </a>
-              . It is the only mailbox we have, so it reaches the same person either way.
+              . It's the only mailbox we have, so it reaches the same person either way.
             </p>
             <p>
-              If you want to know what happens next, who this works for and who it does not, that is
+              If you want to know what happens next, who this works for and who it doesn't, that's
               all on{' '}
               <Button variant="ghost" size="sm" href="/start-here">
                 Start here

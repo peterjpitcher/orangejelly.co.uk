@@ -148,7 +148,7 @@ export default function AiReadinessTool(): JSX.Element {
               <p className="measure text-[17px] leading-relaxed">
                 On these twelve statements nothing came out badly, which is worth taking seriously
                 rather than dismissing. If growth has still stalled, the cause is somewhere these
-                statements do not reach, and that is worth an hour of conversation more than another
+                statements do not reach, and that's worth an hour of conversation more than another
                 assessment.
               </p>
             )}

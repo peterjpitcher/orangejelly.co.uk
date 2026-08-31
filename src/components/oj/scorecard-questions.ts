@@ -22,7 +22,7 @@ export const SCORECARD_QUESTIONS: ScorecardQuestion[] = [
   { area: 'demand', text: 'When we need more enquiries, we know which lever to pull.' },
   {
     area: 'conversion',
-    text: 'We know how many enquiries turn into paying work, and why the rest do not.',
+    text: "We know how many enquiries turn into paying work, and why the rest don't.",
   },
   {
     area: 'conversion',
@@ -40,7 +40,7 @@ export const SCORECARD_QUESTIONS: ScorecardQuestion[] = [
   },
   {
     area: 'operations',
-    text: 'Work stalls because it is waiting on one particular person.',
+    text: "Work stalls because it's waiting on one particular person.",
     reverse: true,
   },
   {
@@ -52,5 +52,5 @@ export const SCORECARD_QUESTIONS: ScorecardQuestion[] = [
     text: 'A new team member could deliver our service to the same standard as our best person.',
   },
   { area: 'scale', text: 'We could take on 50% more work without something breaking.' },
-  { area: 'scale', text: 'Our numbers are current enough to make a decision on this week.' },
+  { area: 'scale', text: 'Our numbers are current enough to act on this week.' },
 ];

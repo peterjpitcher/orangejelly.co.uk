@@ -137,7 +137,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
                 },
                 { id: 'scale', label: 'Scale', pressure: areas.includes('scale') ? 3 : 0 },
               ]}
-              caption="Where this problem usually shows up. Yours will not look exactly like this, which is what the first conversation is for."
+              caption="Where this problem usually shows up. Yours won't look exactly like this, which is what the first conversation is for."
             />
           </div>
         </Band>
@@ -175,10 +175,10 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
 
         <Band tone="orange" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95] text-oj-ink">
-            tell us what is happening.
+            tell us what's happening.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-ink">
-            It starts as a conversation, and the first one is free. We work out what is actually
+            It starts as a conversation, and the first one is free. We work out what's actually
             causing this against your numbers, then tell you what would move them. No service list,
             no pitch deck.
           </p>

@@ -84,7 +84,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
           {insights.length === 0 ? (
             <EmptyState
               title="Nothing here yet."
-              body="The first pieces are being written. In the meantime the hospitality library has a hundred and five, and most of what is in them is not hospitality-shaped."
+              body="We're writing the first pieces. In the meantime the hospitality library has a hundred and five, and most of it isn't hospitality-shaped."
               action={{ label: "Read The Licensee's Guide", href: '/licensees-guide' }}
             />
           ) : (

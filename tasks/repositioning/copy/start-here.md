@@ -17,8 +17,7 @@ no response-time promise (D23), company voice throughout, never the founder (D21
 
 **Standfirst:**
 Every piece of work we do starts the same way. A conversation about what is actually happening in your
-business, before anyone says the word solution. This page tells you what that involves, what you get out
-of it, and who it does not work for.
+business, before anyone says the word solution. This page tells you what that involves, what you get out of it, and who it doesn't work for.
 
 **Primary action:** Let's talk
 **Secondary:** See how we work → `/how-we-work`
@@ -77,14 +76,14 @@ You are not buying anything in that conversation and we are not asking you to.
 
 We work best with ambitious owners who are ready to act. You will get the most from this if:
 
-- You believe the business is capable of more than it is currently doing.
-- You want to know what is actually driving the numbers, rather than what everyone assumes.
-- You are ready to change how the business works, not only how it is marketed.
-- You want the systems built for the company you are becoming, not the one you started.
+- You believe the business is capable of more than it's currently doing.
+- You want to know what's actually driving the numbers, rather than what everyone assumes.
+- You're ready to change how the business works, not only how it's marketed.
+- You want the systems built for the company you're becoming, not the one you started.
 - You want someone to challenge the thinking, not agree with it.
 - You can act once a direction is agreed.
 
-Roughly, that tends to mean 10 to 500 people. It is a guide rather than a rule: a smaller business with
+Roughly, that tends to mean 10 to 500 people. It's a guide rather than a rule: a smaller business with
 real scale, urgency and something to invest fits fine.
 
 ---
@@ -123,9 +122,7 @@ thing and a much cheaper one to find out early.
 **A diagnostic** is normally two to three weeks. Longer work depends entirely on what we find, and we
 agree the shape of it with you before it starts rather than after.
 
-**On cost:** we do not publish prices, because we do not sell packages. What we would quote a company of
-eight with a conversion problem looks nothing like what we would quote a company of two hundred with a
-margin problem, and a number on this page would only be wrong for both. Every engagement is priced to the
+**On cost:** we do not publish prices, because we do not sell packages. What we'd quote a company of eight with a conversion problem looks nothing like what we'd quote a company of two hundred with a margin problem, and a number on this page would only be wrong for both. Every engagement is priced to the
 problem and agreed in writing before any work begins.
 
 ---
@@ -146,7 +143,7 @@ problem and agreed in writing before any work begins.
 Yes, and there is no follow-up sequence attached to it. You get an hour, our honest read, and no
 obligation. If we both think there is something worth doing, we will tell you what that would look like.
 
-**What if we are not sure what the problem is?**
+**What if we're not sure what the problem is?**
 That is the normal case, and it is the reason the first step is a conversation rather than a quote. Most
 businesses can describe the symptom precisely and the cause not at all. Working out which is which is the
 job.
@@ -172,6 +169,6 @@ read them. The [privacy notice](/privacy) has the detail.
 
 **Heading:** stop circling the problem.
 
-**Line:** Tell us what is happening, what you have tried, and what needs to change.
+**Line:** Tell us what's happening, what you've tried, and what needs to change.
 
 **Action:** Let's talk

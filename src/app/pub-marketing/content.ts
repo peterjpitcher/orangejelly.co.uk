@@ -11,7 +11,7 @@
 export const LOOK_AT_FIRST = [
   {
     title: 'Whether people can find you',
-    body: 'Google Business Profile, the search terms locals actually use, the photos, the review replies. It is the cheapest fix in hospitality and the one most often left undone.',
+    body: "Google Business Profile, the search terms locals actually use, the photos, the review replies. It's the cheapest fix in hospitality and the one most often left undone.",
   },
   {
     title: 'Whether there is a reason to come',
@@ -34,15 +34,15 @@ export const FAQS = [
   },
   {
     q: 'How quickly does pub marketing work?',
-    a: 'Local visibility moves in days, because it is mostly correcting things that are wrong. Bookings and repeat visits build over weeks, because they depend on people coming back. Anyone promising both in a fortnight is selling you the first and calling it the second.',
+    a: "Local visibility moves in days, because it's mostly correcting things that are wrong. Bookings and repeat visits build over weeks, because they depend on people coming back. Anyone promising both in a fortnight is selling you the first and calling it the second.",
   },
   {
     q: 'Can you help with Google Business Profile and reviews?',
-    a: 'Yes, and it is usually where we start. It is the quickest win for local footfall: accuracy, photos, replies, and posts that actually get seen.',
+    a: "Yes, and it's usually where we start. It is the quickest win for local footfall: accuracy, photos, replies, and posts that actually get seen.",
   },
   {
     q: 'What does it cost?',
-    a: 'There is no price list, because there is no package. What we would quote for a single quiet midweek session is nothing like what we would quote for a venue where the whole week has slipped. The first conversation is an hour and it is free, and you get a number in writing before anything starts.',
+    a: "There is no price list, because there is no package. What we would quote for a single quiet midweek session is nothing like what we would quote for a venue where the whole week has slipped. The first conversation is an hour and it's free, and you get a number in writing before anything starts.",
   },
   {
     q: 'Will this work for a tied pub or a managed house?',

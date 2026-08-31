@@ -67,12 +67,12 @@ export default function HowWeWorkPage(): JSX.Element {
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               Orange Jelly works across marketing, commercial change, operations, systems and AI.
-              Without a method that looks like a company that will do anything, which is another way
-              of saying a company that is good at nothing.
+              Without a method, that looks like a company that will do anything, which is another way
+              of saying a company that's good at nothing.
             </p>
             <p>
               The method is what connects them. It starts with the problem and ends with evidence,
-              and it is the same sequence whether the answer turns out to be a campaign, a pricing
+              and it's the same sequence whether the answer turns out to be a campaign, a pricing
               change or a piece of software.
             </p>
             <p>It also decides when to stop, which most engagements never do.</p>
@@ -120,7 +120,7 @@ export default function HowWeWorkPage(): JSX.Element {
             ))}
           </dl>
           <p className="measure mt-9 text-[17px] leading-relaxed text-oj-cream/80">
-            It is not a generic scorecard with a total at the bottom. A score invites a league table
+            It's not a generic scorecard with a total at the bottom. A score invites a league table
             and false precision. The map is built around your business model and is there to focus
             the next move, not to grade you.
           </p>
@@ -138,8 +138,8 @@ export default function HowWeWorkPage(): JSX.Element {
             ))}
           </ul>
           <p className="measure mt-8 text-[17px] leading-relaxed">
-            Every one of those is agreed in writing before the first day of build. It is not
-            paperwork: it is the list of things that, left unsaid, turn into the argument at the
+            Every one of those is agreed in writing before the first day of build. It's not
+            paperwork: it's the list of things that, left unsaid, turn into the argument at the
             end.
           </p>
         </Band>
@@ -162,7 +162,7 @@ export default function HowWeWorkPage(): JSX.Element {
             the order is the method.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            It starts with an hour on the phone and no charge. Tell us what is happening and we will
+            It starts with an hour on the phone and no charge. Tell us what's happening and we'll
             tell you what we think.
           </p>
           <div className="mt-8">

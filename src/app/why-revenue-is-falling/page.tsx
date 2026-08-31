@@ -99,7 +99,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
                 Takings are down week on week and the wage bill is not. What makes that hard to fix
-                is rarely the fall itself, it is that nobody can say what is causing it. The cause
+                is rarely the fall itself, it's that nobody can say what is causing it. The cause
                 is findable, and once you have it, everything after is easier to decide, quicker to
                 do and cheaper to get right.
               </p>
@@ -118,7 +118,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
         <Band heading="first, the honest part." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              There is a point at which knowing the cause is not the thing you need next. If the
+              There's a point at which knowing the cause is not the thing you need next. If the
               business genuinely cannot pay its bills this month, the useful calls are to your
               accountant and to a licensed insolvency practitioner rather than to us. If you run a
               pub, your BDM and the{' '}
@@ -131,21 +131,20 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
                 Licensed Trade Charity
               </a>
               <span className="sr-only"> (opens in a new tab)</span> belong on that list too. They
-              are better at that month than we are, and we would rather tell you now than take the
+              are better at that month than we are, and we'd rather tell you now than take the
               meeting.
             </p>
             <p>
               Everything below is written for the ground just before that: a business still trading,
               still with money to work with, and sliding for reasons nobody has correctly
-              identified. That version has options, and the options are widest the earlier somebody
-              looks properly.
+              identified. That version has options, and they are widest when somebody looks early.
             </p>
           </div>
         </Band>
 
         <Band
           heading="the six that account for most of it."
-          intro="It is usually one or two of these, rather than the economy and rather than everything at once. Each one is revenue the business is already capable of and is not currently getting, which is why it can be got back. Read them as a shortlist to check your own numbers against, not as a diagnosis."
+          intro="It's usually one or two of these, rather than the economy and rather than everything at once. Each one is revenue the business is already capable of and is not currently getting, which is why it can come back. Read them as a shortlist to check your own numbers against, not as a diagnosis."
         >
           <dl className="measure-wide grid gap-x-10 gap-y-6 sm:grid-cols-2">
             {CAUSES.map((cause) => (
@@ -168,7 +167,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
               and measured against that baseline.
             </p>
             <p>
-              It is not fast in the way a promise is fast. It is fast in the way that means you stop
+              It's not fast in the way a promise is fast. It's fast in the way that stops you
               paying for the wrong fix.
             </p>
           </div>
@@ -190,7 +189,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
         <Band
           heading="three times we did exactly that."
           tone="paper"
-          intro="All three are The Anchor, our own venue. That is the whole of our evidence and we would rather say so than dress it up."
+          intro="All three are The Anchor, our own venue. That's the whole of our evidence, and we'd rather say so than dress it up."
         >
           <div className="grid gap-5 sm:grid-cols-3">
             {CASE_STUDIES.map((study) => (
@@ -220,12 +219,12 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            you do not have to guess at this.
+            you don't have to guess at this.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Bring us what is happening, what you have already tried, and what everybody thinks the
+            Bring us what's happening, what you've already tried, and what everybody thinks the
             cause is. The first hour is free, and you leave it with a clearer view of where to look
-            than you came in with. If we are not the right people we will say so inside that hour
+            than you came in with. If we're not the right people, we will say so inside that hour
             and point you at who is.
           </p>
           <div className="mt-8">

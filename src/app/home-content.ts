@@ -8,8 +8,8 @@
  */
 export const SYMPTOMS = [
   'Growth has stalled, and nobody can say exactly when it did.',
-  'Leads arrive and do not convert, and the handover is where they go quiet.',
-  'Sales look healthy and the profit does not follow.',
+  "Leads arrive and don't convert, and the handover is where they go quiet.",
+  "Sales look healthy and the profit doesn't follow.",
   'The team is busy doing things a system should be doing.',
   'The business has outgrown the way it was set up to run.',
   'Everyone around the table has a different view of the real problem.',
@@ -32,12 +32,12 @@ export const PRESSURE_POINTS = [
   },
   {
     title: 'Convert more',
-    desc: 'They arrive, they look, and they do not buy. Usually the fault is in the handover.',
+    desc: "They arrive, they look, and they don't buy. Usually the fault is in the handover.",
     href: '/growth-problems/leads-not-converting',
   },
   {
     title: 'Protect margin',
-    desc: 'The revenue is there. It is leaking out somewhere between the sale and the bank.',
+    desc: "The revenue is there. It's leaking out somewhere between the sale and the bank.",
     href: '/growth-problems/margin-under-pressure',
   },
   {
@@ -52,7 +52,7 @@ export const PRESSURE_POINTS = [
   },
   {
     title: 'Build for scale',
-    desc: 'It works at this size. It will not work at twice this size, and you can feel it.',
+    desc: "It works at this size. It won't work at twice this size, and you can feel it.",
     href: '/growth-problems/systems-cannot-keep-up',
   },
 ] as const;
@@ -60,11 +60,11 @@ export const PRESSURE_POINTS = [
 export const METHOD = [
   {
     word: 'HEAR.',
-    text: 'We start by listening. The people running the business already know most of what is wrong, and it is rarely written down anywhere.',
+    text: "We start by listening. The people running the business already know most of what is wrong, and it's rarely written down anywhere.",
   },
   {
     word: 'CHALLENGE.',
-    text: 'We test what everyone assumes, against the numbers. This is the uncomfortable part and it is the part that pays.',
+    text: "We test what everyone assumes, against the numbers. This is the uncomfortable part and it's the part that pays.",
   },
   {
     word: 'BUILD.',

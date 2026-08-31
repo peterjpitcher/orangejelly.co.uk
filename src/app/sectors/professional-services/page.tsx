@@ -157,7 +157,7 @@ export default function ProfessionalServicesPage(): JSX.Element {
 
         <Band heading="where to start." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
-            If one of the six above made you wince, that is the one. Each has its own page with what
+            If one of the six above made you wince, that's the one. Each has its own page with what
             we would examine first.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -175,10 +175,10 @@ export default function ProfessionalServicesPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            you will know within the hour.
+            you'll know within the hour.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Whether we are useful to a firm like yours is a short conversation, and it is free. If
+            Whether we are useful to a firm like yours is a short conversation, and it's free. If
             the answer is no we will say so inside it.
           </p>
           <div className="mt-8">
