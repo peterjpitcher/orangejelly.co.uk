@@ -231,10 +231,17 @@ export default function RootLayout({
       >
         <GoogleTagManager />
         <GoogleTagManagerNoscript />
-        {/* Skip to main content link for keyboard navigation */}
+        {/*
+          Skip to main content link for keyboard navigation.
+
+          Styled on the new system even though it sits above the route gate, for the
+          same reason as the consent panel: it was `bg-orange` with `text-brand-base`,
+          which is dark text on brand orange at 2.97:1, and it is the first thing a
+          keyboard user ever sees. Deep orange carries white at 5.24:1.
+        */}
         <Link
           href="#main-content"
-          className="skip-to-main sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:inline-flex focus:items-center focus:justify-center focus:bg-orange focus:text-brand-base focus:px-6 focus:py-3 focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange"
+          className="skip-to-main sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:items-center focus:justify-center focus:rounded-oj focus:border-1.5 focus:border-oj-ink focus:bg-oj-orange-deep focus:px-6 focus:py-3 focus:font-oj focus:font-bold focus:text-oj-on-band focus:shadow-press focus:outline-none focus:ring-2 focus:ring-oj-ink focus:ring-offset-2"
         >
           Skip to main content
         </Link>

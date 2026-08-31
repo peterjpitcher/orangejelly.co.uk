@@ -75,18 +75,33 @@ export default function CookieNotice() {
     return null;
   }
 
+  /*
+   * The consent panel is on every page, so it was the one piece of old design the
+   * repositioning could not hide from and the one nobody looked at. It carried the
+   * legacy palette (`bg-brand-base`, `rounded-lg`, soft shadows) beside pages built
+   * on ink, 1.5px borders and the press shadow, and its accept button was
+   * `bg-orange` with `text-brand-base`, which is dark text on brand orange: exactly
+   * the pairing that came off every other button on the site.
+   *
+   * Restyled here rather than gated behind a route check, because the button rule
+   * is not a redesign preference. Dark text on brand orange measures 2.97:1 and
+   * fails at any size, on the legacy pages as much as the new ones.
+   *
+   * Colours follow the same table as `oj/Button`: deep orange fill carries white,
+   * and on a dark ground the outline is white so it stays a visible boundary.
+   */
   return (
-    <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50">
+    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-6 sm:max-w-md">
       <div
-        className="rounded-lg bg-brand-base text-surface px-4 py-4 shadow-lg space-y-3"
+        className="font-oj space-y-3 rounded-oj border-1.5 border-oj-cream bg-oj-ink px-4 py-4 text-oj-cream shadow-press"
         role="dialog"
         aria-modal="false"
         aria-label="Cookie preferences"
       >
-        <p className="text-xs sm:text-sm leading-relaxed">
+        <p className="text-xs leading-relaxed sm:text-sm">
           We use essential cookies to keep the site running and optional analytics to understand how
           people find and use Orange Jelly. You can accept or reject analytics below. Questions?{' '}
-          <Link href="/contact" className="underline underline-offset-2">
+          <Link href="/contact" className="font-semibold underline underline-offset-2">
             Contact us
           </Link>
           .
@@ -94,47 +109,47 @@ export default function CookieNotice() {
 
         <div
           id="cookie-details-panel"
-          className={`rounded-md bg-white/10 p-3 text-xs space-y-2 ${showDetails ? 'block' : 'hidden'}`}
+          className={`space-y-2 rounded-oj border-1.5 border-oj-cream/35 p-3 text-xs ${showDetails ? 'block' : 'hidden'}`}
         >
           <div>
-            <p className="font-semibold">Essential (always on)</p>
-            <p className="text-surface/80">
+            <p className="font-bold">Essential (always on)</p>
+            <p className="text-oj-cream/80">
               Keeps navigation, forms, and security working. Served directly by Next.js, no third
               parties.
             </p>
           </div>
           <div>
-            <p className="font-semibold">Analytics (optional)</p>
-            <p className="text-surface/80">
+            <p className="font-bold">Analytics (optional)</p>
+            <p className="text-oj-cream/80">
               Google Tag Manager, GA4, and first-party conversion events. Runs in cookieless mode
               until you accept.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-end">
+          <button
+            type="button"
+            onClick={() => setShowDetails((prev) => !prev)}
+            className="oj-focus inline-flex items-center justify-center rounded-oj px-1 py-2 text-xs font-bold text-oj-cream underline underline-offset-4 transition-colors hover:text-oj-peach sm:mr-auto"
+            aria-expanded={showDetails}
+            aria-controls="cookie-details-panel"
+          >
+            {showDetails ? 'Hide details' : 'Manage settings'}
+          </button>
           <button
             type="button"
             onClick={handleReject}
-            className="inline-flex items-center justify-center rounded-md border border-white/40 px-3 py-2 text-xs font-semibold text-white hover:bg-white/10 transition-colors"
+            className="oj-focus inline-flex items-center justify-center rounded-oj border-1.5 border-oj-on-band px-3 py-2 text-xs font-bold text-oj-cream transition-colors hover:bg-oj-cream/10"
           >
             Reject analytics
           </button>
           <button
             type="button"
             onClick={handleAccept}
-            className="inline-flex items-center justify-center rounded-md bg-orange px-3 py-2 text-xs font-semibold text-brand-base hover:text-brand-base-dark transition-colors"
+            className="oj-focus inline-flex items-center justify-center rounded-oj border-1.5 border-oj-on-band bg-oj-orange-deep px-3 py-2 text-xs font-bold text-oj-on-band transition-colors hover:bg-oj-ember"
           >
             Accept analytics
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowDetails((prev) => !prev)}
-            className="inline-flex items-center justify-center rounded-md bg-white/10 px-3 py-2 text-xs font-semibold text-white hover:bg-white/20 transition-colors"
-            aria-expanded={showDetails}
-            aria-controls="cookie-details-panel"
-          >
-            {showDetails ? 'Hide details' : 'Manage settings'}
           </button>
         </div>
       </div>
