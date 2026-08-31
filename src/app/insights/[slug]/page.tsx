@@ -8,6 +8,7 @@ import {
   Button,
   CategoryTag,
   FAQ,
+  GroundProvider,
   KeepCase,
   NextStep,
   OjFooter,
@@ -83,34 +84,37 @@ export default async function InsightPage({ params }: Params): Promise<JSX.Eleme
       <OjHeader current="insights" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Insights', href: '/insights' },
-                { label: insight.title },
-              ]}
-            />
-            <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
-              <KeepCase>{insight.title}</KeepCase>
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              {insight.excerpt}
-            </p>
-            <p className="mt-6 text-[14.5px] text-oj-ink-3">
-              {new Intl.DateTimeFormat('en-GB', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              }).format(new Date(insight.publishedDate))}
-              {' · '}
-              {insight.readingTime} min read
-              {insight.author?.name ? ` · ${insight.author.name}` : ''}
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Insights', href: '/insights' },
+                  { label: insight.title },
+                ]}
+              />
+              <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-cream">
+                <KeepCase>{insight.title}</KeepCase>
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                {insight.excerpt}
+              </p>
+              <p className="mt-6 text-[14.5px] text-oj-cream/60">
+                {new Intl.DateTimeFormat('en-GB', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                }).format(new Date(insight.publishedDate))}
+                {' · '}
+                {insight.readingTime} min read
+                {insight.author?.name ? ` · ${insight.author.name}` : ''}
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper">
           <div className="measure">

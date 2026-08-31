@@ -99,9 +99,9 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
                 Takings are down week on week and the wage bill is not. What makes that hard to fix
-                is rarely the fall itself, it's that nobody can say what is causing it. The cause
-                is findable, and once you have it, everything after is easier to decide, quicker to
-                do and cheaper to get right.
+                is rarely the fall itself, it's that nobody can say what is causing it. The cause is
+                findable, and once you have it, everything after is easier to decide, quicker to do
+                and cheaper to get right.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -167,8 +167,8 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
               and measured against that baseline.
             </p>
             <p>
-              It's not fast in the way a promise is fast. It's fast in the way that stops you
-              paying for the wrong fix.
+              It's not fast in the way a promise is fast. It's fast in the way that stops you paying
+              for the wrong fix.
             </p>
           </div>
         </Band>

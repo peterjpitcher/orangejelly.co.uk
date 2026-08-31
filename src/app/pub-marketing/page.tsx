@@ -7,6 +7,7 @@ import {
   Breadcrumb,
   Button,
   FAQ,
+  GroundProvider,
   MethodStep,
   OjFooter,
   OjHeader,
@@ -72,33 +73,37 @@ export default function PubMarketingPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Pub marketing' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              hospitality
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              pub marketing that starts with the numbers.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses, and
-              hospitality is the sector we know best, because we run one. The Anchor is our own
-              venue. Everything here was tested there before it was offered to anybody else.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Let's talk
-              </Button>
-              <Button variant="ghost" href="/results">
-                See the numbers
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Pub marketing' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                hospitality
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                pub marketing that starts with the numbers.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Orange Jelly is a strategic growth partner for ambitious small and mid-sized
+                businesses, and hospitality is the sector we know best, because we run one. The
+                Anchor is our own venue. Everything here was tested there before it was offered to
+                anybody else.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Let's talk
+                </Button>
+                <Button variant="ghost" href="/results">
+                  See the numbers
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="most pubs do not have a marketing problem." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">

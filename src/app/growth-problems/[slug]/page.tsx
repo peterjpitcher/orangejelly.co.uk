@@ -6,6 +6,7 @@ import {
   Breadcrumb,
   Button,
   CategoryTag,
+  GroundProvider,
   KeepCase,
   OjFooter,
   OjHeader,
@@ -73,32 +74,49 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
       <OjHeader current="growth-problems" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Unlock growth', href: '/growth-problems' },
-                { label: problem.title },
-              ]}
-            />
-            <h1 className="oj-display max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              <KeepCase>{problem.titleLead}</KeepCase>{' '}
-              <span className="oj-mark-orange">
-                <KeepCase>{problem.titleMark}</KeepCase>
-              </span>
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              {problem.intro}
-            </p>
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {areas.map((area) => (
-                <CategoryTag key={area} category={area} filled />
-              ))}
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Unlock growth', href: '/growth-problems' },
+                  { label: problem.title },
+                ]}
+              />
+              <h1 className="oj-display max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                <KeepCase>{problem.titleLead}</KeepCase>{' '}
+                {/*
+                 * The highlight was a half-height orange band behind ink type, which
+                 * is a device for paper: it needs the ink to read against both the
+                 * orange and the cream around it. On ink neither colour can do both
+                 * jobs. Cream over the brand orange is 2.82:1, under even the 3:1
+                 * large-text floor, and ink over the ink half of the glyph is 1:1.
+                 * So the emphasis becomes colour rather than highlight, in the peach
+                 * this site already uses for accents on a dark ground: 11.03:1.
+                 */}
+                <span className="text-oj-peach">
+                  <KeepCase>{problem.titleMark}</KeepCase>
+                </span>
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                {problem.intro}
+              </p>
+              <div className="mt-7 flex flex-wrap gap-2.5">
+                {areas.map((area) => (
+                  <CategoryTag key={area} category={area} filled />
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="sound familiar?" tone="paper">
           <ul className="measure-wide grid list-none gap-4 p-0 sm:grid-cols-2">

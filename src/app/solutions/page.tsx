@@ -1,7 +1,15 @@
 import type { Metadata } from 'next';
 
 import { PRESSURE_POINTS } from '@/app/home-content';
-import { Band, Breadcrumb, Button, OjFooter, OjHeader, PressureCard } from '@/components/oj';
+import {
+  Band,
+  Breadcrumb,
+  Button,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+  PressureCard,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { CAPABILITIES, DECLINED } from './content';
@@ -46,33 +54,36 @@ export default function SolutionsPage(): JSX.Element {
       <OjHeader current="solutions" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'What we build' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              what we build
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-ink">
-              the problem decides the tool.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly builds fixes, not services. What a fix is made of depends entirely on
-              what's actually blocking growth, which is why this page starts with the problem and
-              not with a list of things we sell.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Let's talk
-              </Button>
-              <Button variant="ghost" href="/how-we-work">
-                How we work
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'What we build' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                what we build
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
+                the problem decides the tool.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Orange Jelly builds fixes, not services. What a fix is made of depends entirely on
+                what's actually blocking growth, which is why this page starts with the problem and
+                not with a list of things we sell.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Let's talk
+                </Button>
+                <Button variant="ghost" href="/how-we-work">
+                  How we work
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="start with where it's stuck." tone="paper">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

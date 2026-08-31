@@ -2,19 +2,20 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
 import {
+  Breadcrumb as OjBreadcrumb,
   Button as OjButton,
+  Checkbox,
+  Field,
+  Footer as OjFooter,
+  GroundProvider,
+  Header as OjHeader,
+  Input,
+  Mark,
+  Radio,
+  Select,
   Stat,
   Tag,
-  Mark,
-  Header as OjHeader,
-  Footer as OjFooter,
-  Breadcrumb as OjBreadcrumb,
-  Field,
-  Input,
   Textarea,
-  Select,
-  Checkbox,
-  Radio,
 } from '@/components/oj';
 
 /**
@@ -75,14 +76,27 @@ function Specimen({
 function BothGrounds({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <div className="grid w-full gap-4 md:grid-cols-2">
-      <div className="rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6">
-        <p className="oj-eyebrow mb-4">light</p>
-        <div className="flex flex-wrap items-start gap-3">{children}</div>
-      </div>
-      <div className="rounded-oj border-1.5 border-oj-cream bg-oj-ink p-6">
-        <p className="oj-eyebrow mb-4 text-oj-peach">dark</p>
-        <div className="flex flex-wrap items-start gap-3">{children}</div>
-      </div>
+      <GroundProvider value="light">
+        <div className="rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6">
+          <p className="oj-eyebrow mb-4">light</p>
+          <div className="flex flex-wrap items-start gap-3">{children}</div>
+        </div>
+      </GroundProvider>
+      {/*
+        The dark half declares its ground, and that is not decoration.
+
+        Without it the components inside render for a light ground while sitting on
+        ink, so the ghost Button came out as an ink label on an ink border at 1.00:1:
+        invisible, in the specimen whose entire job is to catch invisible buttons.
+        The contrast audit found it, which is the second time that pairing has been
+        caught by a rendered sweep rather than by reading the code.
+      */}
+      <GroundProvider value="ink">
+        <div className="rounded-oj border-1.5 border-oj-cream bg-oj-ink p-6">
+          <p className="oj-eyebrow mb-4 text-oj-peach">dark</p>
+          <div className="flex flex-wrap items-start gap-3">{children}</div>
+        </div>
+      </GroundProvider>
     </div>
   );
 }
@@ -141,8 +155,11 @@ export default function ComponentHarness(): JSX.Element {
         <div className="w-full space-y-6">
           <div className="flex flex-wrap gap-2">
             {[
+              // Deep orange carries white, like every other orange fill on the site.
+              // The swatch labelled itself in ink at 2.63:1, which is the pairing
+              // this system exists to prevent, on the page that documents it.
               ['bg-oj-orange', 'oj-orange'],
-              ['bg-oj-orange-deep', 'oj-orange-deep'],
+              ['bg-oj-orange-deep text-oj-on-band', 'oj-orange-deep'],
               ['bg-oj-ember text-oj-cream', 'oj-ember'],
               ['bg-oj-ink text-oj-cream', 'oj-ink'],
               ['bg-oj-cream text-oj-ink', 'oj-cream'],

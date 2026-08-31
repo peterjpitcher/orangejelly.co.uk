@@ -12,6 +12,7 @@ import {
   Button,
   CategoryTag,
   FAQ,
+  GroundProvider,
   KeepCase,
   NextStep,
   OjFooter,
@@ -524,59 +525,82 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
           href="/start-here"
         />
 
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Guides', href: '/guides' },
-                ...(spokeHub
-                  ? [{ label: spokeHub.shortLabel, href: `/guides/${spokeHub.hubSlug}` }]
-                  : []),
-                { label: guide.title },
-              ]}
-            />
-            <div className="mb-5 flex flex-wrap items-center gap-3">
-              <CategoryTag category={hue} href={`/guides/category/${guide.category.slug}`}>
-                {guide.category.name}
-              </CategoryTag>
-              {hub ? (
-                <span className="oj-eyebrow">
-                  {hub.label} · {hub.dateRangeLabel}
-                </span>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Recoloured for ink rather than left on the light default, which on
+               * this ground is ink-3 links at 1.29:1 and an ink current item at
+               * 1.00:1, so not a near miss but nothing at all. Cream/85 links are
+               * 10.5:1, the cream current item 14.02:1 and the peach arrow 11.03:1.
+               * Written the same way as every other ink hero on the site so the
+               * trail does not change shape between one page and the next.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Guides', href: '/guides' },
+                  ...(spokeHub
+                    ? [{ label: spokeHub.shortLabel, href: `/guides/${spokeHub.hubSlug}` }]
+                    : []),
+                  { label: guide.title },
+                ]}
+              />
+              <div className="mb-5 flex flex-wrap items-center gap-3">
+                {/*
+                 * The tag paints its own pale chip, so it carries its light ground
+                 * with it: paper is 14.76:1 against ink and the hue text inside is
+                 * measured against paper, not against the section.
+                 */}
+                <CategoryTag category={hue} href={`/guides/category/${guide.category.slug}`}>
+                  {guide.category.name}
+                </CategoryTag>
+                {hub ? (
+                  /* The eyebrow's own deep orange is 2.92:1 on ink. Peach is 11.03:1. */
+                  <span className="oj-eyebrow text-oj-peach">
+                    {hub.label} · {hub.dateRangeLabel}
+                  </span>
+                ) : null}
+              </div>
+              <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-cream">
+                <KeepCase>{guide.title}</KeepCase>
+              </h1>
+              {guide.excerpt ? (
+                <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                  {guide.excerpt}
+                </p>
+              ) : null}
+              <p className="mt-6 text-[14.5px] text-oj-cream/60">
+                {formatDate(guide.publishedDate)}
+                {' · '}
+                {guide.readingTime} min read
+                {' · '}
+                {guide.authorName}
+              </p>
+              {heroImage ? (
+                /*
+                 * The frame inverts with the ground. An ink border on ink is 1.00:1,
+                 * so a pale image would have looked like it was bleeding into the
+                 * section; cream is 14.02:1 and holds the same edge the border was
+                 * drawing on cream.
+                 */
+                <div className="measure mt-8 overflow-hidden rounded-oj border-1.5 border-oj-cream">
+                  <Image
+                    src={heroImage}
+                    alt=""
+                    width={1600}
+                    height={900}
+                    priority
+                    sizes="(min-width: 1152px) 1088px, 100vw"
+                    className="h-auto w-full"
+                  />
+                </div>
               ) : null}
             </div>
-            <h1 className="oj-display measure text-[clamp(34px,6.5vw,60px)] leading-[0.98] text-oj-ink">
-              <KeepCase>{guide.title}</KeepCase>
-            </h1>
-            {guide.excerpt ? (
-              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-                {guide.excerpt}
-              </p>
-            ) : null}
-            <p className="mt-6 text-[14.5px] text-oj-ink-3">
-              {formatDate(guide.publishedDate)}
-              {' · '}
-              {guide.readingTime} min read
-              {' · '}
-              {guide.authorName}
-            </p>
-            {heroImage ? (
-              <div className="measure mt-8 overflow-hidden rounded-oj border-1.5 border-oj-ink">
-                <Image
-                  src={heroImage}
-                  alt=""
-                  width={1600}
-                  height={900}
-                  priority
-                  sizes="(min-width: 1152px) 1088px, 100vw"
-                  className="h-auto w-full"
-                />
-              </div>
-            ) : null}
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper">
           {/*

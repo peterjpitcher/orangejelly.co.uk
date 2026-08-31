@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
 
-import { Anchor, Band, Breadcrumb, Button, KeepCase, OjFooter, OjHeader } from '@/components/oj';
+import {
+  Anchor,
+  Band,
+  Breadcrumb,
+  Button,
+  GroundProvider,
+  KeepCase,
+  OjFooter,
+  OjHeader,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { GROWTH_PROBLEMS } from './content';
@@ -40,24 +49,33 @@ export default function GrowthProblemsHubPage(): JSX.Element {
       <OjHeader current="growth-problems" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Unlock growth' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              unlock growth
-            </p>
-            <h1 className="oj-display mt-2.5 max-w-[18ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              which of these sounds like your business?
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              You don't need more activity. You need to know what will move the numbers. Start from
-              the symptom and we'll show you what it's connected to.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Unlock growth' }]}
+              />
+              {/* Orange-deep is 2.92:1 on ink. Peach is 11.03:1, as in the footer. */}
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                unlock growth
+              </p>
+              <h1 className="oj-display mt-2.5 max-w-[18ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                which of these sounds like your business?
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                You don't need more activity. You need to know what will move the numbers. Start
+                from the symptom and we'll show you what it's connected to.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band heading="all eight, in plain words." tone="paper">
           <ol className="grid list-none gap-5 p-0 sm:grid-cols-2">

@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 
-import { Band, Breadcrumb, Button, EnquiryForm, OjFooter, OjHeader } from '@/components/oj';
+import {
+  Band,
+  Breadcrumb,
+  Button,
+  EnquiryForm,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 /**
@@ -40,21 +48,29 @@ export default function ContactPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
-            />
-            <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-ink">
-              tell us what's happening.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              A person reads every enquiry and replies. Not a filter, not a sequence, and not an
-              account manager.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
+              />
+              <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-cream">
+                tell us what's happening.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                A person reads every enquiry and replies. Not a filter, not a sequence, and not an
+                account manager.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper">
           <div className="measure">

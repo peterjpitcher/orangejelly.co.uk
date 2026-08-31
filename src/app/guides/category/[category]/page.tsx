@@ -9,6 +9,7 @@ import {
   Breadcrumb,
   Button,
   CategoryTag,
+  GroundProvider,
   OjFooter,
   OjHeader,
 } from '@/components/oj';
@@ -129,29 +130,43 @@ export default async function CategoryPage({ params }: CategoryPageProps): Promi
       <OjHeader current="guides" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Guides', href: '/guides' },
-                { label: categoryTitle },
-              ]}
-            />
-            <p className="oj-eyebrow m-0">Guides</p>
-            <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-ink">
-              {categoryTitle}.
-            </h1>
-            {standfirst ? (
-              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">{standfirst}</p>
-            ) : null}
-            <p className="mt-6 text-[14.5px] text-oj-ink-3">
-              {categoryPosts.length} {categoryPosts.length === 1 ? 'article' : 'articles'}, newest
-              first.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Recoloured for ink rather than left on the light default, which on
+               * this ground is ink-3 links at 1.29:1 and an ink current item at
+               * 1.00:1, so not a near miss but nothing at all. Cream/85 links are
+               * 10.5:1, the cream current item 14.02:1 and the peach arrow 11.03:1.
+               * Written the same way as every other ink hero on the site so the
+               * trail does not change shape between one page and the next.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Guides', href: '/guides' },
+                  { label: categoryTitle },
+                ]}
+              />
+              {/* The eyebrow's own deep orange is 2.92:1 on ink. Peach is 11.03:1. */}
+              <p className="oj-eyebrow m-0 text-oj-peach">Guides</p>
+              <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-cream">
+                {categoryTitle}.
+              </h1>
+              {standfirst ? (
+                <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                  {standfirst}
+                </p>
+              ) : null}
+              <p className="mt-6 text-[14.5px] text-oj-cream/60">
+                {categoryPosts.length} {categoryPosts.length === 1 ? 'article' : 'articles'}, newest
+                first.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper" divider={false}>
           {/*

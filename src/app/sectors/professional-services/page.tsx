@@ -1,7 +1,16 @@
 import type { Metadata } from 'next';
 
 import { GROWTH_PROBLEMS } from '@/app/growth-problems/content';
-import { Anchor, Band, Breadcrumb, Button, CategoryTag, OjFooter, OjHeader } from '@/components/oj';
+import {
+  Anchor,
+  Band,
+  Breadcrumb,
+  Button,
+  CategoryTag,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+} from '@/components/oj';
 import { getAllInsights } from '@/lib/insights';
 import { getBaseUrl } from '@/lib/site-config';
 
@@ -48,33 +57,42 @@ export default function ProfessionalServicesPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Professional services' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              professional services
-            </p>
-            <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              the growth problem is rarely the one on the agenda.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Accountancy practices, law firms, consultancies and agencies. Businesses built on
-              expertise and referral, where the constraint is almost never expertise and almost
-              always something nobody has had time to look at.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Let's talk
-              </Button>
-              <Button variant="ghost" href="/growth-problems">
-                The eight growth problems
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Professional services' }]}
+              />
+              {/* Orange-deep is 2.92:1 on ink. Peach is 11.03:1, as in the footer. */}
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                professional services
+              </p>
+              <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                the growth problem is rarely the one on the agenda.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Accountancy practices, law firms, consultancies and agencies. Businesses built on
+                expertise and referral, where the constraint is almost never expertise and almost
+                always something nobody has had time to look at.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Let's talk
+                </Button>
+                <Button variant="ghost" href="/growth-problems">
+                  The eight growth problems
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band
           heading="six problems, in your language."

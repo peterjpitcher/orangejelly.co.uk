@@ -1,7 +1,15 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { Band, Breadcrumb, Button, OjFooter, OjHeader, ProofCard } from '@/components/oj';
+import {
+  Band,
+  Breadcrumb,
+  Button,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+  ProofCard,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { CASE_STUDIES, getCaseStudy } from '../case-studies';
@@ -59,30 +67,38 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
       <OjHeader current="results" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Results', href: '/results' },
-                { label: study.title },
-              ]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              {study.area}
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              {study.title}
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              {study.summary}
-            </p>
-            <p className="mt-6 text-[15px] font-semibold text-oj-ink-2">
-              At The Anchor, the business we run ourselves.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Results', href: '/results' },
+                  { label: study.title },
+                ]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                {study.area}
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                {study.title}
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                {study.summary}
+              </p>
+              <p className="mt-6 text-[15px] font-semibold text-oj-cream/85">
+                At The Anchor, the business we run ourselves.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper" className="!py-12">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import { Band, Breadcrumb, Button, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
 // Straight from the data module, not the barrel: the barrel re-exports client
 // components, and this page renders the statements on the server.
 import { SCORECARD_QUESTIONS } from '@/components/oj/scorecard-questions';
@@ -48,30 +48,41 @@ export default function AiReadinessPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'AI readiness' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              assessment
-            </p>
-            <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              is your business ready for <span className="oj-keep-case">AI</span>?
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Not a technical assessment. This asks whether the business is in a state where{' '}
-              <span className="font-semibold">AI</span> would actually help, which is the more
-              useful question and the one most tools skip.
-            </p>
-            <p className="measure mt-4 text-[16px] leading-relaxed text-oj-ink-3">
-              Twelve statements, about two minutes. There is no score at the end, nothing is stored
-              unless you decide to get in touch, and the result tells you where AI would not help as
-              well as where it would.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * The trail is built for a light ground and every part of it fails on
+               * ink: the links are ink-3 at 2.76:1, the current page is ink on ink at
+               * 1.00:1, and the arrow is orange-deep at 2.92:1. Recoloured from here
+               * because the component has no ink tone yet. Links cream/85 at 10.51:1,
+               * current page cream at 14.02:1, hover and arrow peach at 11.03:1.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'AI readiness' }]}
+              />
+              {/* Peach, not orange-deep: the eyebrow's own colour is 2.92:1 on ink. */}
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                assessment
+              </p>
+              <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                is your business ready for <span className="oj-keep-case">AI</span>?
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Not a technical assessment. This asks whether the business is in a state where{' '}
+                <span className="font-semibold">AI</span> would actually help, which is the more
+                useful question and the one most tools skip.
+              </p>
+              <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
+                Twelve statements, about two minutes. There is no score at the end, nothing is
+                stored unless you decide to get in touch, and the result tells you where AI would
+                not help as well as where it would.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
           <div className="page-shell">

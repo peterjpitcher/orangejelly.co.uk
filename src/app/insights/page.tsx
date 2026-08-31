@@ -6,6 +6,7 @@ import {
   Breadcrumb,
   Button,
   EmptyState,
+  GroundProvider,
   KeepCase,
   OjFooter,
   OjHeader,
@@ -57,28 +58,31 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
       <OjHeader current="insights" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Insights' }]}
-            />
-            <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-ink">
-              insights.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Writing about what actually blocks growth, and what to do about it. Every piece ends
-              at the problem underneath it rather than at a contact form.
-            </p>
-            <p className="measure mt-4 text-[16px] leading-relaxed text-oj-ink-3">
-              Running a pub or a restaurant? The hospitality library is over in the{' '}
-              <Anchor href="/guides" className="font-semibold underline">
-                guides
-              </Anchor>
-              , where there are {105} of these.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Insights' }]}
+              />
+              <h1 className="oj-display mt-1 text-[clamp(40px,8vw,72px)] leading-[0.94] text-oj-cream">
+                insights.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Writing about what actually blocks growth, and what to do about it. Every piece ends
+                at the problem underneath it rather than at a contact form.
+              </p>
+              <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
+                Running a pub or a restaurant? The hospitality library is over in the{' '}
+                <Anchor href="/guides" className="font-semibold underline">
+                  guides
+                </Anchor>
+                , where there are {105} of these.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper" divider={false}>
           {insights.length === 0 ? (

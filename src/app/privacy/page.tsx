@@ -1,4 +1,4 @@
-import { Band, Breadcrumb, OjFooter, OjHeader } from '@/components/oj';
+import { Band, Breadcrumb, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
 import { CONTACT, COMPANY } from '@/lib/constants';
 import { generateStaticMetadata } from '@/lib/metadata';
 
@@ -60,25 +60,35 @@ export default function PrivacyPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Privacy' }]}
-            />
-            <h1 className="oj-display mt-1 text-[clamp(36px,7vw,64px)] leading-[0.94] text-oj-ink">
-              Privacy policy
-            </h1>
-            <p className="mt-4 text-[15px] leading-relaxed text-oj-ink-3">
-              Last updated: 28 August 2026
-            </p>
-            <p className="measure-prose mt-4 text-[19px] leading-relaxed text-oj-ink-2">
-              This explains what personal data Orange Jelly Limited collects through{' '}
-              {COMPANY.website.replace('https://', '')}, why we collect it, who else handles it, how
-              long we keep it, and what you can ask us to do about it.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * The trail is built for a light ground and every part of it fails on
+               * ink: the links are ink-3 at 2.76:1, the current page is ink on ink at
+               * 1.00:1, and the arrow is orange-deep at 2.92:1. Recoloured from here
+               * because the component has no ink tone yet. Links cream/85 at 10.51:1,
+               * current page cream at 14.02:1, hover and arrow peach at 11.03:1.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Privacy' }]}
+              />
+              <h1 className="oj-display mt-1 text-[clamp(36px,7vw,64px)] leading-[0.94] text-oj-cream">
+                Privacy policy
+              </h1>
+              <p className="mt-4 text-[15px] leading-relaxed text-oj-cream/60">
+                Last updated: 28 August 2026
+              </p>
+              <p className="measure-prose mt-4 text-[19px] leading-relaxed text-oj-cream/85">
+                This explains what personal data Orange Jelly Limited collects through{' '}
+                {COMPANY.website.replace('https://', '')}, why we collect it, who else handles it,
+                how long we keep it, and what you can ask us to do about it.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper" divider={false}>
           <div className="oj-prose measure-prose">

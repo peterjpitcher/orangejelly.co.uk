@@ -11,6 +11,7 @@ import {
   Button,
   CategoryTag,
   EmptyState,
+  GroundProvider,
   GuideSearch,
   OjFooter,
   OjHeader,
@@ -205,46 +206,58 @@ export default async function GuidesPage(): Promise<JSX.Element> {
          * is not pretending otherwise. What has changed is the company around it, so
          * the heading is about the business rather than about the job title.
          */}
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Guides' }]}
-            />
-            <p className="oj-eyebrow m-0">Hospitality</p>
-            <h1 className="oj-display mt-2 text-[clamp(38px,7.5vw,68px)] leading-[0.94] text-oj-ink">
-              guides for growing a venue.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              {posts.length > 0
-                ? `There are ${posts.length} of them, written for pubs, bars and restaurants, and tested at The Anchor before any of it went out.`
-                : 'Written for pubs, bars and restaurants, and tested at The Anchor before any of it went out.'}
-            </p>
-            <p className="measure mt-4 text-[17px] leading-relaxed text-oj-ink-2">
-              The tactics are hospitality, because that is the sector we know best: we run one. The
-              thinking underneath is the same commercial thinking we bring to any ambitious small
-              business. Find what is actually holding growth back, then act on it.
-            </p>
-            <p className="measure mt-4 text-[16px] leading-relaxed text-oj-ink-3">
-              Not running a venue? The same thinking, applied to every other sector, is over at{' '}
-              <Anchor href="/insights" className="font-semibold underline">
-                Insights
-              </Anchor>
-              .
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button variant="ghost" size="sm" href="/pub-marketing">
-                Pub marketing
-              </Button>
-              <Button variant="ghost" size="sm" href="/why-revenue-is-falling">
-                Why revenue is falling
-              </Button>
-              <Button variant="ghost" size="sm" href="/growth-problems">
-                The eight growth problems
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Recoloured for ink rather than left on the light default, which on
+               * this ground is ink-3 links at 1.29:1 and an ink current item at
+               * 1.00:1, so not a near miss but nothing at all. Cream/85 links are
+               * 10.5:1, the cream current item 14.02:1 and the peach arrow 11.03:1.
+               * Written the same way as every other ink hero on the site so the
+               * trail does not change shape between one page and the next.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Guides' }]}
+              />
+              {/* The eyebrow's own deep orange is 2.92:1 on ink. Peach is 11.03:1. */}
+              <p className="oj-eyebrow m-0 text-oj-peach">Hospitality</p>
+              <h1 className="oj-display mt-2 text-[clamp(38px,7.5vw,68px)] leading-[0.94] text-oj-cream">
+                guides for growing a venue.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                {posts.length > 0
+                  ? `There are ${posts.length} of them, written for pubs, bars and restaurants, and tested at The Anchor before any of it went out.`
+                  : 'Written for pubs, bars and restaurants, and tested at The Anchor before any of it went out.'}
+              </p>
+              <p className="measure mt-4 text-[17px] leading-relaxed text-oj-cream/85">
+                The tactics are hospitality, because that is the sector we know best: we run one.
+                The thinking underneath is the same commercial thinking we bring to any ambitious
+                small business. Find what is actually holding growth back, then act on it.
+              </p>
+              <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
+                Not running a venue? The same thinking, applied to every other sector, is over at{' '}
+                <Anchor href="/insights" className="font-semibold underline">
+                  Insights
+                </Anchor>
+                .
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button variant="ghost" size="sm" href="/pub-marketing">
+                  Pub marketing
+                </Button>
+                <Button variant="ghost" size="sm" href="/why-revenue-is-falling">
+                  Why revenue is falling
+                </Button>
+                <Button variant="ghost" size="sm" href="/growth-problems">
+                  The eight growth problems
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper">
           <div className="grid gap-8 sm:grid-cols-3">

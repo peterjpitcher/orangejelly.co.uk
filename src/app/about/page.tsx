@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 
-import { Anchor, Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import {
+  Anchor,
+  Band,
+  Breadcrumb,
+  Button,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { FACTS, LESSONS, REFUSALS } from './content';
@@ -43,25 +51,28 @@ export default function AboutPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'About' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              the company
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(44px,9vw,84px)] leading-[0.92] text-oj-ink">
-              small on purpose.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Orange Jelly is a strategic growth partner for ambitious small and mid-sized businesses.
-              There's no account team, no layer between you and the people doing the work, and no
-              incentive to sell you more of something that isn't working.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                the company
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(44px,9vw,84px)] leading-[0.92] text-oj-cream">
+                small on purpose.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Orange Jelly is a strategic growth partner for ambitious small and mid-sized
+                businesses. There's no account team, no layer between you and the people doing the
+                work, and no incentive to sell you more of something that isn't working.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band heading="what we actually are." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
@@ -98,9 +109,9 @@ export default function AboutPage(): JSX.Element {
               cost us rather than a client.
             </p>
             <p>
-              That's a different kind of experience from advising. It's the difference between knowing
-              a booking that doesn't turn up is expensive and having stood in a kitchen at seven
-              o&rsquo;clock with the food already prepped.
+              That's a different kind of experience from advising. It's the difference between
+              knowing a booking that doesn't turn up is expensive and having stood in a kitchen at
+              seven o&rsquo;clock with the food already prepped.
             </p>
             <p>
               <Anchor href="/results" className="font-semibold underline">

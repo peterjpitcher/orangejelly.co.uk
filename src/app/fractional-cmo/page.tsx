@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import { Band, Breadcrumb, Button, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { QUESTIONS_TO_ASK, RIGHT_ANSWER, WRONG_SHAPE } from './content';
@@ -43,33 +43,44 @@ export default function FractionalCmoPage(): JSX.Element {
       <OjHeader />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Fractional CMO' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              fractional leadership
-            </p>
-            <h1 className="oj-display mt-2.5 max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-ink">
-              you might not need a fractional <span className="oj-keep-case">CMO</span>.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              People search for one when growth has stalled and the in-house team is stretched. It's
-              a sensible instinct and often the wrong shape of answer. Here's when it works, when it
-              does not, and what to ask before you hire either of us.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Let's talk
-              </Button>
-              <Button variant="ghost" href="/growth-problems">
-                See the eight growth problems
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * The trail is built for a light ground and every part of it fails on
+               * ink: the links are ink-3 at 2.76:1, the current page is ink on ink at
+               * 1.00:1, and the arrow is orange-deep at 2.92:1. Recoloured from here
+               * because the component has no ink tone yet. Links cream/85 at 10.51:1,
+               * current page cream at 14.02:1, hover and arrow peach at 11.03:1.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Fractional CMO' }]}
+              />
+              {/* Peach, not orange-deep: the eyebrow's own colour is 2.92:1 on ink. */}
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                fractional leadership
+              </p>
+              <h1 className="oj-display mt-2.5 max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                you might not need a fractional <span className="oj-keep-case">CMO</span>.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                People search for one when growth has stalled and the in-house team is stretched.
+                It's a sensible instinct and often the wrong shape of answer. Here's when it works,
+                when it does not, and what to ask before you hire either of us.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Let's talk
+                </Button>
+                <Button variant="ghost" href="/growth-problems">
+                  See the eight growth problems
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="what a fractional cmo actually is." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Band, Breadcrumb, Button, OjFooter, OjHeader } from '@/components/oj';
+import { Band, Breadcrumb, Button, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { METHOD_DETAIL, PRESSURE_AREAS_EXPLAINED, PREVENTS, STARTING_AGREEMENT } from './content';
@@ -39,36 +39,40 @@ export default function HowWeWorkPage(): JSX.Element {
       <OjHeader current="how-we-work" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'How we work' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              the method
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-ink">
-              hear. challenge. build. optimise.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Four steps, in that order, every time. Not because process is comforting, but because
-              the order is what stops us solving the loudest symptom instead of the real problem.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" arrow href="/start-here">
-                Let's talk
-              </Button>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'How we work' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                the method
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
+                hear. challenge. build. optimise.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Four steps, in that order, every time. Not because process is comforting, but
+                because the order is what stops us solving the loudest symptom instead of the real
+                problem.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button size="lg" arrow href="/start-here">
+                  Let's talk
+                </Button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </GroundProvider>
 
         <Band heading="why a method, and not just experience." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               Orange Jelly works across marketing, commercial change, operations, systems and AI.
-              Without a method, that looks like a company that will do anything, which is another way
-              of saying a company that's good at nothing.
+              Without a method, that looks like a company that will do anything, which is another
+              way of saying a company that's good at nothing.
             </p>
             <p>
               The method is what connects them. It starts with the problem and ends with evidence,
@@ -139,8 +143,7 @@ export default function HowWeWorkPage(): JSX.Element {
           </ul>
           <p className="measure mt-8 text-[17px] leading-relaxed">
             Every one of those is agreed in writing before the first day of build. It's not
-            paperwork: it's the list of things that, left unsaid, turn into the argument at the
-            end.
+            paperwork: it's the list of things that, left unsaid, turn into the argument at the end.
           </p>
         </Band>
 

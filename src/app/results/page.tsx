@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
 
-import { Band, Breadcrumb, Button, OjFooter, OjHeader, ProofCard, Tag } from '@/components/oj';
+import {
+  Band,
+  Breadcrumb,
+  Button,
+  GroundProvider,
+  OjFooter,
+  OjHeader,
+  ProofCard,
+  Tag,
+} from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { CASE_STUDIES, getFeaturedCaseStudy } from './case-studies';
@@ -45,25 +54,33 @@ export default function ResultsPage(): JSX.Element {
       <OjHeader current="results" />
 
       <main id="main-content">
-        <section className="border-b-1.5 border-oj-ink bg-oj-cream py-12 sm:py-16">
-          <div className="page-shell">
-            <Breadcrumb
-              className="mb-7"
-              items={[{ label: 'Home', href: '/' }, { label: 'Results' }]}
-            />
-            <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
-              the work
-            </p>
-            <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-ink">
-              proven where the risk was ours.
-            </h1>
-            <p className="measure mt-5 text-[19px] leading-relaxed text-oj-ink-2">
-              Every number on this page comes from The Anchor, our own venue and a real trading
-              business we run. It's where this way of working was built and tested before it was
-              ever sold to anybody, and where getting it wrong cost us rather than a client.
-            </p>
-          </div>
-        </section>
+        <GroundProvider value="ink">
+          <section className="bg-oj-ink py-12 text-oj-cream sm:py-16">
+            <div className="page-shell">
+              {/*
+               * Breadcrumb has no ink tone, and its light one is built for cream:
+               * muted grey links, ink current page, orange-deep arrow. All three
+               * are unreadable here, so the ground recolours them from outside.
+               */}
+              <Breadcrumb
+                tone="ink"
+                className="mb-7"
+                items={[{ label: 'Home', href: '/' }, { label: 'Results' }]}
+              />
+              <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
+                the work
+              </p>
+              <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
+                proven where the risk was ours.
+              </h1>
+              <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
+                Every number on this page comes from The Anchor, our own venue and a real trading
+                business we run. It's where this way of working was built and tested before it was
+                ever sold to anybody, and where getting it wrong cost us rather than a client.
+              </p>
+            </div>
+          </section>
+        </GroundProvider>
 
         <Band tone="paper" className="!py-12 sm:!py-14">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
