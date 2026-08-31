@@ -215,8 +215,22 @@ const IN_PAGE = () => {
    * they share neither is there a step.
    */
   const h1 = [...document.querySelectorAll('h1')].filter((e) => visible(e) && !inFixed(e))[0];
+  /*
+   * A card is not a reading column, even when it is an `<article>`.
+   *
+   * `/sectors/professional-services` has no page-level prose at all: its first
+   * `<article>` is a bordered card with `p-6`, so this rule compared the page title
+   * against the inside of a card and reported a 24px step that nobody can see. The
+   * page's own reading column has neither a border nor horizontal padding, because
+   * the shell has already applied the gutter, so that is what to require.
+   */
   const proseHost =
-    document.querySelector('article.measure, article, .measure > .prose, .prose') || null;
+    [...document.querySelectorAll('article.measure, article, .measure > .prose, .prose')].find(
+      (el) => {
+        const cs = getComputedStyle(el);
+        return parseFloat(cs.paddingLeft) === 0 && parseFloat(cs.borderLeftWidth) === 0;
+      }
+    ) || null;
   /*
    * Only when the prose is the page's own reading column, not a column inside a
    * multi-up layout. On /about the first .prose is one half of a two-up grid, 669px
