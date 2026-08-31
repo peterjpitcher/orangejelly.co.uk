@@ -174,10 +174,10 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
         </Band>
 
         <Band tone="orange" size="lg" divider={false}>
-          <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95] text-oj-ink">
+          <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95]">
             tell us what's happening.
           </h2>
-          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-ink">
+          <p className="measure mt-4 text-[18px] leading-relaxed">
             It starts as a conversation, and the first one is free. We work out what's actually
             causing this against your numbers, then tell you what would move them. No service list,
             no pitch deck.

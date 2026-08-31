@@ -114,10 +114,10 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
         </Band>
 
         <Band tone="orange" size="lg" divider={false}>
-          <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95] text-oj-ink">
+          <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95]">
             recognise any of that?
           </h2>
-          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-ink">
+          <p className="measure mt-4 text-[18px] leading-relaxed">
             The first conversation is an hour, it's free, and it's not a pitch.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
