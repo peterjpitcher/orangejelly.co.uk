@@ -48,7 +48,7 @@ happened in.
 **Line:** None of this tells you what would happen in your business. An hour on the phone gets closer to
 that than any case study will.
 
-**Action:** Start the conversation
+**Action:** Let's talk
 
 ---
 
@@ -141,4 +141,4 @@ thing worth selling most, and nobody finds that out by looking at the revenue li
 
 **Line:** The first conversation is an hour, it is free, and it is not a pitch.
 
-**Actions:** Start the conversation, and See the other two.
+**Actions:** Let's talk, and See the other two.

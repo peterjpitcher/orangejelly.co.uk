@@ -4,7 +4,7 @@
 **Built as:** `src/app/start-here/page.tsx`. This file and the page say the same words, and a test holds them together.
 
 Constraints this copy is written against: no pricing anywhere (D3), the first conversation is free (D12),
-entry is always a discussion before any solution (D8), the primary action is "Start the conversation" (D11),
+entry is always a discussion before any solution (D8), the primary action is "Let's talk" (D11),
 no response-time promise (D23), company voice throughout, never the founder (D21), no expletives.
 
 ---
@@ -20,7 +20,7 @@ Every piece of work we do starts the same way. A conversation about what is actu
 business, before anyone says the word solution. This page tells you what that involves, what you get out
 of it, and who it does not work for.
 
-**Primary action:** Start the conversation
+**Primary action:** Let's talk
 **Secondary:** See how we work → `/how-we-work`
 
 ---
@@ -174,4 +174,4 @@ read them. The [privacy notice](/privacy) has the detail.
 
 **Line:** Tell us what is happening, what you have tried, and what needs to change.
 
-**Action:** Start the conversation
+**Action:** Let's talk

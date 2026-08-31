@@ -151,7 +151,7 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
         href: item.href,
         current: item.key === current,
       }))}
-      cta={{ label: 'Start the conversation', href: ctaHref }}
+      cta={{ label: "Let's talk", href: ctaHref }}
     />
   );
 }

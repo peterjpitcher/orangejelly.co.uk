@@ -138,7 +138,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>

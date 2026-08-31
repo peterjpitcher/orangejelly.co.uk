@@ -102,7 +102,7 @@ export default function AiReadinessPage(): JSX.Element {
                 </ol>
                 <div className="mt-6">
                   <Button arrow href="/start-here">
-                    Start the conversation
+                    Let's talk
                   </Button>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function AiReadinessPage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>

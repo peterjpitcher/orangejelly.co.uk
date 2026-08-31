@@ -1,0 +1,11 @@
+# High-Risk Approval List — Orange Jelly (2026-07-07)
+
+These changes affect indexation, canonicals, redirects on ranking URLs, or revenue-critical behaviour. Per the skill contract they require one batched sign-off before implementation. This run is review-only, so none are applied.
+
+| Group | Ticket(s) | Change | Risk | Impact if wrong | Rollback | Cannibalisation check |
+|---|---|---|---|---|---|---|
+| A. Channel-page routing | SEO-106 | Move Instagram/Facebook page-level redirect to `next.config.js` → `/services/social-media-marketing-for-pubs`, OR build them as real self-canonical pages | The two URLs rank pos 6–7; a wrong redirect/canonical could drop the ranking before the target inherits it | Loss of the site's best-positioned commercial rankings | Revert redirect; URL-inspect | Both currently canonical→homepage; target `/services/social-media-marketing-for-pubs` already ranks (7 impr). Decision: **redirect to the hub** and strengthen the hub (SEO-110), OR rebuild as distinct pages if we want to hold both the channel and hub rankings. Recommend redirect-to-hub to avoid a 3-way split. |
+| B. Hub consolidation | SEO-113 | Pick ONE canonical hub for "pub marketing agency" intent (recommend `/pub-marketing-agency`); 301/de-optimise the 4 overlapping hubs | Consolidating the wrong URL, or before Google settles post-June-fix, could sacrifice a hub that was about to rank | Loss of agency-cluster impressions (1,131/12mo) | Documented redirect map, reversible; never delete content | Five hubs compete (`/pub-marketing`, `/pub-marketing-agency`, `/compete-with-pub-chains`, `/empty-pub-solutions`, `/pub-marketing-no-budget`). **Gate on the August GSC export** to see which URL Google prefers before choosing. |
+| C. Lead delivery change | SEO-102 | Add email/webhook notification on new Supabase lead | Touches the live enquiry path; a bug could break lead capture | Missed enquiries | Feature-flag / revert; Supabase store is unaffected | n/a (additive to storage) |
+
+**Recommendation:** Approve Group A now (redirect-to-hub variant) as it unblocks the highest click-per-effort win; **defer** Group B until the mid-August GSC refresh; approve Group C alongside the tracking work (SEO-101).

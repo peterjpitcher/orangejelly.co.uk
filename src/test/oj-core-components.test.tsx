@@ -18,11 +18,11 @@ import { Button, Stat, Tag, Mark } from '@/components/oj';
  */
 describe('oj/Button', () => {
   it('renders a button by default and a link when given href', () => {
-    const { rerender } = render(<Button>Start the conversation</Button>);
-    expect(screen.getByRole('button', { name: 'Start the conversation' })).toBeInTheDocument();
+    const { rerender } = render(<Button>Let's talk</Button>);
+    expect(screen.getByRole('button', { name: "Let's talk" })).toBeInTheDocument();
 
-    rerender(<Button href="/start-here">Start the conversation</Button>);
-    expect(screen.getByRole('link', { name: 'Start the conversation' })).toHaveAttribute(
+    rerender(<Button href="/start-here">Let's talk</Button>);
+    expect(screen.getByRole('link', { name: "Let's talk" })).toHaveAttribute(
       'href',
       '/start-here'
     );

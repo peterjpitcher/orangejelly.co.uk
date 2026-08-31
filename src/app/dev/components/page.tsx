@@ -218,7 +218,7 @@ export default function ComponentHarness(): JSX.Element {
           <div className="bg-oj-cream p-8">
             <p className="oj-eyebrow mb-2">eyebrow label</p>
             <h3 className="oj-display text-4xl text-oj-ink">
-              Growth stuck? <span className="oj-mark">Start the conversation.</span>
+              Growth stuck? <span className="oj-mark">Let's talk.</span>
             </h3>
             <p className="mt-3 text-oj-ink-2">
               Lowercase is a class, not an element rule, so{' '}
@@ -237,7 +237,7 @@ export default function ComponentHarness(): JSX.Element {
             <OjButton size="lg" arrow>
               Book a growth diagnostic
             </OjButton>
-            <OjButton variant="solid">Start the conversation</OjButton>
+            <OjButton variant="solid">Let's talk</OjButton>
             <OjButton variant="ghost" size="sm" href="#method">
               See how we work
             </OjButton>
@@ -291,7 +291,7 @@ export default function ComponentHarness(): JSX.Element {
           </div>
           <div className="bg-oj-cream p-8">
             <h3 className="oj-display text-4xl text-oj-ink">
-              Growth stuck? <Mark>Start the conversation.</Mark>
+              Growth stuck? <Mark>Let's talk.</Mark>
             </h3>
             <h3 className="oj-display mt-4 text-4xl text-oj-ink">
               A content calendar will not fix a <Mark tone="orange">broken growth system.</Mark>
@@ -322,7 +322,7 @@ export default function ComponentHarness(): JSX.Element {
                 { label: 'Results', href: '#' },
                 { label: 'About', href: '#' },
               ]}
-              cta={{ label: 'Start the conversation', href: '#' }}
+              cta={{ label: "Let's talk", href: '#' }}
             />
           </div>
           <div className="border-1.5 border-oj-ink">
@@ -334,7 +334,7 @@ export default function ComponentHarness(): JSX.Element {
                 { label: 'Growth problems', current: true, href: '#' },
                 { label: 'About', href: '#' },
               ]}
-              cta={{ label: 'Start the conversation', href: '#' }}
+              cta={{ label: "Let's talk", href: '#' }}
             />
           </div>
         </div>

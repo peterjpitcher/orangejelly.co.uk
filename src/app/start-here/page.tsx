@@ -73,7 +73,7 @@ export default function StartHerePage(): JSX.Element {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="#enquiry">
-                  Start the conversation
+                  Let's talk
                 </Button>
                 <Button variant="ghost" href="/how-we-work">
                   See how we work
@@ -214,7 +214,7 @@ export default function StartHerePage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="#enquiry">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>

@@ -1,0 +1,15 @@
+reason,page_count
+Blocked by robots.txt,6
+Crawled - currently not indexed,30
+Discovered – currently not indexed,44
+Duplicate without user-selected canonical,2
+Excluded by ‘noindex’ tag,10
+Not found (404),6
+Page with redirect,7
+drilldown-1,94
+drilldown-2,91
+drilldown-3,90
+drilldown-4,90
+drilldown-5,86
+drilldown-6,128
+drilldown-7,114

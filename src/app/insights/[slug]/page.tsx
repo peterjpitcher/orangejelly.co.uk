@@ -178,7 +178,7 @@ export default async function InsightPage({ params }: Params): Promise<JSX.Eleme
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>

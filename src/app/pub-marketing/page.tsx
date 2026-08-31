@@ -91,7 +91,7 @@ export default function PubMarketingPage(): JSX.Element {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button size="lg" arrow href="/start-here">
-                Start the conversation
+                Let's talk
               </Button>
               <Button variant="ghost" href="/results">
                 See the numbers
@@ -209,7 +209,7 @@ export default function PubMarketingPage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>

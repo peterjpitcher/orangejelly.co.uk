@@ -178,7 +178,7 @@ export default function AiReadinessTool(): JSX.Element {
                   })
                 }
               >
-                Start the conversation
+                Let's talk
               </Button>
             </div>
           </Band>

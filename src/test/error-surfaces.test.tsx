@@ -38,7 +38,7 @@ describe('404', () => {
 
   it('always offers a way to ask a person', () => {
     render(<NotFound />);
-    expect(screen.getAllByRole('link', { name: /Start the conversation/ }).length).toBeGreaterThan(0);
+    expect(screen.getAllByRole('link', { name: /Let's talk/ }).length).toBeGreaterThan(0);
   });
 });
 

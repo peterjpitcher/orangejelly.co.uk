@@ -20,7 +20,7 @@ pack refuses to decide on its own.
 | D8 | **Entry is always a discussion first.** Every engagement begins with a conversation and discovery into what is causing the problem, before any solution is defined or sold. No visitor buys a product as step one. | 26 Aug 2026 | Open decision 4 |
 | D9 | **"EXPOSE" to be pressure-tested** before it is baked into 44 components and 14 templates. | 26 Aug 2026 | Open decision 3 |
 | D10 | **Design decisions settled by the designer** in the 26 Aug handback: lowercase display headings site-wide, orange header on conversion pages only, Schibsted Grotesk treated as production, hospitality pages take the full design system, seven muted taxonomy hues that are never orange. | 26 Aug 2026 | Open decisions 11 and 12 |
-| D11 | **Primary CTA is "Start the conversation"**, site-wide, replacing "Book a growth diagnostic". The diagnostic is what the conversation leads to, not the thing a visitor buys from a button. Follows from D8 and D3. | 26 Aug 2026 | Open decision 4 |
+| D11 | **Primary CTA is "Let's talk"**, site-wide, replacing "Book a growth diagnostic". The diagnostic is what the conversation leads to, not the thing a visitor buys from a button. Follows from D8 and D3. | 26 Aug 2026 | Open decision 4 |
 | D12 | **The first discovery conversation is free.** Paid engagement begins once the problem is worth defining properly. | 26 Aug 2026 | Open decision 4 |
 | D13 | **Lead sector is professional services. Trades is a second wave.** Round 2 data: professional services 7,950 monthly against 1,450 for trades, and six top-tier terms against two, one of which is software purchase intent. Trades pages get added later, individually, once the professional services hub is proven. | 26 Aug 2026 | Open decision 7, revises D7 |
 | D14 | **D1 refined against evidence, not reversed.** Search Console shows the site earns 969 clicks a year, of which the blog takes 92.9%. Untouchable: the ~30 blog posts carrying 95% of blog clicks. Free to restructure: the 12 pub landing pages, 5 service pages, `/ways-to-work`, `/capabilities`, `/compete-with-pub-chains`, `/quiet-midweek-solutions` and `/empty-pub-solutions`, which earn **11 clicks a year between them**. Individual review: the 62 blog posts that rank but earn nothing. | 26 Aug 2026 | Open decision 14 |
@@ -77,7 +77,7 @@ problem"** to a campaign line. D8 reverses the logic. If the first step is alway
 the primary action is a conversation, not a purchase, and "Book a growth diagnostic" reads as buying
 a product before anyone has agreed what the problem is.
 
-**Recommendation: promote "Start the conversation" to the primary site-wide CTA** and keep the
+**Recommendation: promote "Let's talk" to the primary site-wide CTA** and keep the
 diagnostic as what the conversation leads to. This also solves a second problem. With no price on
 the site (D3), a button that says "book" invites the question the page cannot answer.
 

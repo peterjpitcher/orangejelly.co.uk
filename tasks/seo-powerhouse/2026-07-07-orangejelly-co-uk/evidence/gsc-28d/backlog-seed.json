@@ -1,0 +1,142 @@
+[
+  {
+    "id": "SD-001",
+    "category": "content",
+    "what": "Lift 'fix my pub' out of striking distance",
+    "action": "Lift 'fix my pub' out of striking distance",
+    "why": "Ranks at position 5.3 on 29 impressions with CTR 0.0% vs an expected 6.0%; an estimated 2 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=2"
+  },
+  {
+    "id": "SD-002",
+    "category": "content",
+    "what": "Lift 'event ideas for pubs' out of striking distance",
+    "action": "Lift 'event ideas for pubs' out of striking distance",
+    "why": "Ranks at position 18.6 on 156 impressions with CTR 0.0% vs an expected 0.8%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-003",
+    "category": "content",
+    "what": "Lift 'pub loyalty scheme' out of striking distance",
+    "action": "Lift 'pub loyalty scheme' out of striking distance",
+    "why": "Ranks at position 13.3 on 82 impressions with CTR 0.0% vs an expected 1.4%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-004",
+    "category": "content",
+    "what": "Lift 'pub ideas to make money' out of striking distance",
+    "action": "Lift 'pub ideas to make money' out of striking distance",
+    "why": "Ranks at position 9.4 on 42 impressions with CTR 0.0% vs an expected 2.5%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-005",
+    "category": "content",
+    "what": "Lift 'pub marketing' out of striking distance",
+    "action": "Lift 'pub marketing' out of striking distance",
+    "why": "Ranks at position 20.0 on 144 impressions with CTR 0.0% vs an expected 0.7%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-006",
+    "category": "content",
+    "what": "Lift 'bingo in pubs' out of striking distance",
+    "action": "Lift 'bingo in pubs' out of striking distance",
+    "why": "Ranks at position 11.1 on 51 impressions with CTR 0.0% vs an expected 1.8%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-007",
+    "category": "content",
+    "what": "Lift 'kids craft pop up events for pubs' out of striking distance",
+    "action": "Lift 'kids craft pop up events for pubs' out of striking distance",
+    "why": "Ranks at position 14.2 on 70 impressions with CTR 0.0% vs an expected 1.3%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-008",
+    "category": "content",
+    "what": "Lift 'pub bingo' out of striking distance",
+    "action": "Lift 'pub bingo' out of striking distance",
+    "why": "Ranks at position 12.6 on 59 impressions with CTR 0.0% vs an expected 1.4%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-009",
+    "category": "content",
+    "what": "Lift 'how to increase midweek revenue for a pub or bar?' out of striking distance",
+    "action": "Lift 'how to increase midweek revenue for a pub or bar?' out of striking distance",
+    "why": "Ranks at position 8.2 on 25 impressions with CTR 0.0% vs an expected 3.0%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "SD-010",
+    "category": "content",
+    "what": "Lift 'pub quiz format' out of striking distance",
+    "action": "Lift 'pub quiz format' out of striking distance",
+    "why": "Ranks at position 12.4 on 44 impressions with CTR 0.0% vs an expected 1.6%; an estimated 1 extra clicks if moved onto page one.",
+    "source": "opportunities-striking-distance.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "potential_clicks_gain=1"
+  },
+  {
+    "id": "CTR-011",
+    "category": "content",
+    "what": "Improve title/snippet for 'pub loyalty scheme'",
+    "action": "Improve title/snippet for 'pub loyalty scheme'",
+    "why": "At position 13.3 the page earns CTR 0.0% against an expected 1.4% — about 1 clicks left on the table on 82 impressions.",
+    "source": "opportunities-ctr-gap.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "est_clicks_left_on_table=1"
+  },
+  {
+    "id": "CTR-012",
+    "category": "content",
+    "what": "Improve title/snippet for 'bingo in pubs'",
+    "action": "Improve title/snippet for 'bingo in pubs'",
+    "why": "At position 11.1 the page earns CTR 0.0% against an expected 1.8% — about 1 clicks left on the table on 51 impressions.",
+    "source": "opportunities-ctr-gap.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "est_clicks_left_on_table=1"
+  },
+  {
+    "id": "CTR-013",
+    "category": "content",
+    "what": "Improve title/snippet for 'kids craft pop up events for pubs'",
+    "action": "Improve title/snippet for 'kids craft pop up events for pubs'",
+    "why": "At position 14.2 the page earns CTR 0.0% against an expected 1.3% — about 1 clicks left on the table on 70 impressions.",
+    "source": "opportunities-ctr-gap.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "est_clicks_left_on_table=1"
+  },
+  {
+    "id": "CTR-014",
+    "category": "content",
+    "what": "Improve title/snippet for 'pub bingo'",
+    "action": "Improve title/snippet for 'pub bingo'",
+    "why": "At position 12.6 the page earns CTR 0.0% against an expected 1.4% — about 1 clicks left on the table on 59 impressions.",
+    "source": "opportunities-ctr-gap.csv (from /Users/peterpitcher/Cursor/OJ-OrangeJelly.co.uk/tasks/seo-powerhouse/2026-07-07-orangejelly-co-uk/evidence/gsc-28d/search-queries.csv); CTR target via inferred industry curve (source: Advanced Web Ranking, Google Organic CTR study)",
+    "target_url": "",
+    "suggested_metric": "est_clicks_left_on_table=1"
+  }
+]

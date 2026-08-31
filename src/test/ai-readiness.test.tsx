@@ -98,7 +98,10 @@ describe('the page', () => {
   it('offers the conversation from the fallback too', () => {
     const html = renderToStaticMarkup(<AiReadinessPage />);
     const fallback = html.slice(html.indexOf('<noscript>'), html.indexOf('</noscript>'));
-    expect(fallback).toMatch(/Start the conversation/);
+    // The apostrophe arrives HTML-escaped from renderToStaticMarkup, so match either
+    // form rather than the literal. Asserting the raw character here would fail for a
+    // reason that has nothing to do with what this test is checking.
+    expect(fallback).toMatch(/Let(&#x27;|')s talk/);
     expect(fallback).toMatch(/href="\/start-here"/);
   });
 });
@@ -133,7 +136,7 @@ describe('running the assessment', () => {
     expect(await screen.findByText('This is a signal, not a diagnosis.')).toBeInTheDocument();
     expect(screen.getAllByText('Where AI helps').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Where it does not').length).toBeGreaterThan(0);
-    expect(screen.getAllByRole('link', { name: /Start the conversation/ })).toHaveLength(1);
+    expect(screen.getAllByRole('link', { name: /Let's talk/ })).toHaveLength(1);
   });
 
   it('respects the reverse-scored statements rather than straight-lining', async () => {
@@ -155,7 +158,7 @@ describe('running the assessment', () => {
     render(<AiReadinessTool />);
     await answerAll(user, 'Never');
 
-    const cta = await screen.findByRole('link', { name: /Start the conversation/ });
+    const cta = await screen.findByRole('link', { name: /Let's talk/ });
     const href = cta.getAttribute('href') ?? '';
     expect(href.startsWith('/start-here?situation=')).toBe(true);
     expect(decodeURIComponent(href)).toMatch(/put us under most pressure on/);

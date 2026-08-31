@@ -89,7 +89,7 @@ describe('/how-we-work', () => {
 
   it('sends its actions to the conversation', () => {
     render(<HowWeWorkPage />);
-    const ctas = screen.getAllByRole('link', { name: /Start the conversation/ });
+    const ctas = screen.getAllByRole('link', { name: /Let's talk/ });
     expect(ctas.length).toBeGreaterThanOrEqual(2);
     for (const cta of ctas) expect(cta).toHaveAttribute('href', '/start-here');
   });

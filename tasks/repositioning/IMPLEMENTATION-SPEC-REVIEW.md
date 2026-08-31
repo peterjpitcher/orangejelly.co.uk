@@ -305,7 +305,7 @@ These results describe the current working tree, which already contains unrelate
 - **Description:** `Every CTA` cannot use one label because search, share, form submit, cookie and pagination controls need descriptive actions. `No price anywhere` conflicts with useful editorial examples and sector content. `No page describes Orange Jelly as a hospitality marketing agency` conflicts with the approved hospitality search target. `Not one ... loses a ranking` is not controllable by the implementation.
 - **Rationale:** Absolute language makes valid content fail and external search behaviour an engineering acceptance gate.
 - **Impact:** Endless interpretation disputes or accidental deletion of useful content.
-- **Recommended action:** Suggested wording: `All primary commercial conversion CTAs use Start the conversation`; `No public Orange Jelly service price is published`; `No master company description uses hospitality marketing agency, while approved sector usage remains`; `No protected URL, canonical, metadata or content regression is introduced, with rankings monitored against agreed thresholds`.
+- **Recommended action:** Suggested wording: `All primary commercial conversion CTAs use Let's talk`; `No public Orange Jelly service price is published`; `No master company description uses hospitality marketing agency, while approved sector usage remains`; `No protected URL, canonical, metadata or content regression is introduced, with rankings monitored against agreed thresholds`.
 - **Open questions:** Which controls count as primary conversion CTAs? Which editorial prices and sector phrases are exempt?
 
 #### F23. The Anchor story still requires proof verification

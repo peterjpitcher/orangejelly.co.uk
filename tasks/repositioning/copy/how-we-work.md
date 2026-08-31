@@ -19,7 +19,7 @@ lives inside OPTIMISE rather than standing as its own step.
 Four steps, in that order, every time. Not because process is comforting, but because the order is what
 stops us solving the loudest symptom instead of the real problem.
 
-**Primary action:** Start the conversation
+**Primary action:** Let's talk
 **Secondary:** Start here → `/start-here`
 
 ---
@@ -158,4 +158,4 @@ is the list of things that, left unsaid, turn into the argument at the end.
 **Line:** It starts with an hour on the phone and no charge. Tell us what is happening and we will tell you
 what we think.
 
-**Action:** Start the conversation
+**Action:** Let's talk

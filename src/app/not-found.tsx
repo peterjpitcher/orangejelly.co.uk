@@ -48,7 +48,7 @@ export default function NotFound(): JSX.Element {
                 Start at the beginning
               </Button>
               <Button variant="ghost" href="/start-here">
-                Start the conversation
+                Let's talk
               </Button>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function NotFound(): JSX.Element {
             <EmptyState
               title="Still nothing?"
               body="Tell us what you were looking for and we will point you at it, or tell you honestly that it is not here any more."
-              action={{ label: 'Start the conversation', href: '/start-here' }}
+              action={{ label: "Let's talk", href: '/start-here' }}
             />
           </div>
         </Band>

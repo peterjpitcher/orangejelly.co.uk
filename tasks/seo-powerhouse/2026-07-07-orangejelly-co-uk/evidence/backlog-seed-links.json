@@ -1,0 +1,20 @@
+[
+  {
+    "id": "il-orphan-001",
+    "category": "technical",
+    "what": "Add internal links to 1 orphaned page(s)",
+    "why": "1 page(s) (0.7% of the inventory) have no internal inbound links, so they rely on the sitemap alone for discovery and receive no internal link equity. Linking them from relevant pages aids crawl and ranking.",
+    "source": "internal-links.csv + url-inventory.csv via analyze-internal-links.py: 1 orphan(s), e.g. https://www.orangejelly.co.uk/pub-rescue.",
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "il-anchor-002",
+    "category": "content",
+    "what": "Diversify anchor text for 29 over-concentrated internal target(s)",
+    "why": "29 target(s) receive ≥80% of their inbound links via a single anchor phrase. Varied, descriptive anchors usually communicate relevance better than one repeated phrase.",
+    "source": "internal-links.csv via analyze-internal-links.py: https://www.orangejelly.co.uk/services/paid-social-for-pubs (\"Paid Social\" 100%), https://www.orangejelly.co.uk/contact?package=growth-fix (\"Send an enquiry\" 100%), https://www.orangejelly.co.uk/contact?package=turnaround-intensive (\"Send an enquiry\" 100%).",
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  }
+]

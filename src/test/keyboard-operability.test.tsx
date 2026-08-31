@@ -38,7 +38,7 @@ describe('the mobile drawer', () => {
 
   it('moves focus into the drawer when it opens', async () => {
     const user = userEvent.setup();
-    render(<Header items={ITEMS} cta={{ label: 'Start the conversation', href: '/start-here' }} />);
+    render(<Header items={ITEMS} cta={{ label: "Let's talk", href: '/start-here' }} />);
 
     await user.click(screen.getByRole('button', { name: 'Menu' }));
     // Without this a keyboard user opens the menu and is still in the page behind

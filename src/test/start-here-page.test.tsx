@@ -89,7 +89,7 @@ describe('/start-here', () => {
 
   it('leads every action with the site-wide call', () => {
     render(<StartHerePage />);
-    const ctas = screen.getAllByRole('link', { name: /Start the conversation/ });
+    const ctas = screen.getAllByRole('link', { name: /Let's talk/ });
     expect(ctas.length).toBeGreaterThanOrEqual(2);
     for (const cta of ctas) expect(cta).toHaveAttribute('href', '#enquiry');
   });

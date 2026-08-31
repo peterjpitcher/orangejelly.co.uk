@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "schema-001",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/ — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/ no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-002",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/about — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/about no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/about",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-003",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/compete-with-pub-chains — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/compete-with-pub-chains no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/compete-with-pub-chains",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-004",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/contact — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/contact no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/contact",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-005",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/contact?package=growth-fix — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/contact?package=growth-fix no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/contact?package=growth-fix",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-006",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/contact?package=growth-partner — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/contact?package=growth-partner no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/contact?package=growth-partner",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-007",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/contact?package=momentum-month — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/contact?package=momentum-month no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/contact?package=momentum-month",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-008",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/contact?package=turnaround-intensive — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/contact?package=turnaround-intensive no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/contact?package=turnaround-intensive",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-009",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/empty-pub-solutions — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/empty-pub-solutions no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/empty-pub-solutions",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-010",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/fix-my-pub — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/fix-my-pub no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/fix-my-pub",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-011",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-012",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/30-day-action-plan-stabilise-hospitality — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/30-day-action-plan-stabilise-hospitality no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/30-day-action-plan-stabilise-hospitality",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-013",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/autumn-pub-event-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/autumn-pub-event-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/autumn-pub-event-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-014",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/autumn-rugby-nations-championship-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/autumn-rugby-nations-championship-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/autumn-rugby-nations-championship-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-015",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/beat-chain-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/beat-chain-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/beat-chain-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-016",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/black-friday-pub-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/black-friday-pub-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/black-friday-pub-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-017",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/boardgame-night-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/boardgame-night-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/boardgame-night-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-018",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/brewery-tie-improve-your-deal — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/brewery-tie-improve-your-deal no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/brewery-tie-improve-your-deal",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-019",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/build-loyalty-scheme-fill-pub — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/build-loyalty-scheme-fill-pub no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/build-loyalty-scheme-fill-pub",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-020",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/buying-a-pub-complete-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/buying-a-pub-complete-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/buying-a-pub-complete-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-021",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/cash-bingo-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/cash-bingo-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/cash-bingo-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-022",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/cash-flow-crisis-breaking-cycle — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/cash-flow-crisis-breaking-cycle no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/cash-flow-crisis-breaking-cycle",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-023",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/cashflow-fixes-when-trade-drops — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/cashflow-fixes-when-trade-drops no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/cashflow-fixes-when-trade-drops",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-024",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/cask-ale-week-pub-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/cask-ale-week-pub-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/cask-ale-week-pub-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-025",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/events.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/events is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/events",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-026",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/food-drink.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/food-drink is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/food-drink",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-027",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/marketing.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/marketing is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/marketing",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-028",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/operations.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/operations is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/operations",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-029",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/people.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/people is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/people",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-030",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/property.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/property is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/property",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-031",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/revenue-growth.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/revenue-growth is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/revenue-growth",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-032",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [name, url] to the WebSite schema on https://www.orangejelly.co.uk/licensees-guide/category/turnaround.",
+    "why": "WebSite on https://www.orangejelly.co.uk/licensees-guide/category/turnaround is missing required field(s) name, url; without them the block cannot earn a rich result. Source: schema.json (WebSite block).",
+    "source": "schema.json: WebSite on https://www.orangejelly.co.uk/licensees-guide/category/turnaround",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-033",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/cellar-management-beer-quality-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/cellar-management-beer-quality-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/cellar-management-beer-quality-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-034",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-event-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-event-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-event-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-035",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-promotion-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-promotion-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/christmas-pub-promotion-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-036",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/community-outreach-reintroduce-pub — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/community-outreach-reintroduce-pub no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/community-outreach-reintroduce-pub",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-037",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/compete-with-wetherspoons — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/compete-with-wetherspoons no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/compete-with-wetherspoons",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-038",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/content-marketing-ideas-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/content-marketing-ideas-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/content-marketing-ideas-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-039",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/delivery-click-collect-without-harm — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/delivery-click-collect-without-harm no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/delivery-click-collect-without-harm",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-040",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/does-your-pub-need-a-website — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/does-your-pub-need-a-website no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/does-your-pub-need-a-website",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-041",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/double-drinks-profit-without-selling-more — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/double-drinks-profit-without-selling-more no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/double-drinks-profit-without-selling-more",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-042",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/email-marketing-pub-retention — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/email-marketing-pub-retention no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/email-marketing-pub-retention",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-043",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/energy-bill-shock-cut-venue-costs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/energy-bill-shock-cut-venue-costs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/energy-bill-shock-cut-venue-costs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-044",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/epos-data-revenue-comeback — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/epos-data-revenue-comeback no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/epos-data-revenue-comeback",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-045",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/facebook-marketing-local-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/facebook-marketing-local-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/facebook-marketing-local-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-046",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/family-craft-hour-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/family-craft-hour-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/family-craft-hour-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-047",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/fill-empty-pub-tables — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/fill-empty-pub-tables no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/fill-empty-pub-tables",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-048",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/fill-empty-seats-midweek-offers — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/fill-empty-seats-midweek-offers no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/fill-empty-seats-midweek-offers",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-049",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/food-allergies-gdpr-compliance — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/food-allergies-gdpr-compliance no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/food-allergies-gdpr-compliance",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-050",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/food-hygiene-rating-five-star-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/food-hygiene-rating-five-star-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/food-hygiene-rating-five-star-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-051",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/google-business-profile-pub-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/google-business-profile-pub-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/google-business-profile-pub-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-052",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/how-much-profit-does-a-pub-make — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-much-profit-does-a-pub-make no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-much-profit-does-a-pub-make",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-053",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/how-to-attract-families-to-your-pub — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-attract-families-to-your-pub no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-attract-families-to-your-pub",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-054",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/how-to-respond-bad-pub-reviews — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-respond-bad-pub-reviews no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-respond-bad-pub-reviews",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-055",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/how-to-run-successful-pub-events — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-run-successful-pub-events no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/how-to-run-successful-pub-events",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-056",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/instagram-marketing-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/instagram-marketing-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/instagram-marketing-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-057",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/karaoke-night-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/karaoke-night-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/karaoke-night-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-058",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/kitchen-nightmares-chef-quits — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/kitchen-nightmares-chef-quits no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/kitchen-nightmares-chef-quits",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-059",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/live-music-events-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/live-music-events-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/live-music-events-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-060",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/local-pub-marketing — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/local-pub-marketing no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/local-pub-marketing",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-061",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/low-budget-pub-marketing-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/low-budget-pub-marketing-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/low-budget-pub-marketing-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-062",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/low-cost-decor-refreshes-new-improved — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/low-cost-decor-refreshes-new-improved no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/low-cost-decor-refreshes-new-improved",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-063",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/macmillan-coffee-morning-pub-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/macmillan-coffee-morning-pub-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/macmillan-coffee-morning-pub-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-064",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/menu-engineering-lift-average-spend — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/menu-engineering-lift-average-spend no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/menu-engineering-lift-average-spend",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-065",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/midweek-pub-offers-that-work — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/midweek-pub-offers-that-work no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/midweek-pub-offers-that-work",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-066",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/music-bingo-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/music-bingo-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/music-bingo-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-067",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/national-drinks-days-pub-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/national-drinks-days-pub-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/national-drinks-days-pub-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-068",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/nobody-books-tables-anymore — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/nobody-books-tables-anymore no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/nobody-books-tables-anymore",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-069",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/oktoberfest-pub-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/oktoberfest-pub-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/oktoberfest-pub-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-070",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/partnering-local-brands-share-marketing — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/partnering-local-brands-share-marketing no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/partnering-local-brands-share-marketing",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-071",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pop-up-events-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pop-up-events-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pop-up-events-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-072",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/premium-pub-positioning — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/premium-pub-positioning no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/premium-pub-positioning",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-073",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/profitable-pub-food-menu-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/profitable-pub-food-menu-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/profitable-pub-food-menu-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-074",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/prs-ppl-music-licensing-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/prs-ppl-music-licensing-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/prs-ppl-music-licensing-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-075",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-accessibility-welcoming-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-accessibility-welcoming-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-accessibility-welcoming-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-076",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-business-plan-template-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-business-plan-template-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-business-plan-template-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-077",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-chalkboard-a-board-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-chalkboard-a-board-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-chalkboard-a-board-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-078",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-christmas-bookings-fill-december — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-christmas-bookings-fill-december no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-christmas-bookings-fill-december",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-079",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-differentiation-strategies — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-differentiation-strategies no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-differentiation-strategies",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-080",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-drinks-menu-design-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-drinks-menu-design-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-drinks-menu-design-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-081",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-empty-tuesday-nights — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-empty-tuesday-nights no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-empty-tuesday-nights",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-082",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-epos-system-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-epos-system-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-epos-system-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-083",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-event-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-event-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-event-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-084",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-event-template-profit-nights — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-event-template-profit-nights no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-event-template-profit-nights",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-085",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-halloween-bonfire-night-events — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-halloween-bonfire-night-events no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-halloween-bonfire-night-events",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-086",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-health-check-essential-fundamentals-licensee-success — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-health-check-essential-fundamentals-licensee-success no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-health-check-essential-fundamentals-licensee-success",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-087",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-health-safety-checklist — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-health-safety-checklist no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-health-safety-checklist",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-088",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-insurance-cover-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-insurance-cover-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-insurance-cover-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-089",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-licensing-premises-personal-licence-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-licensing-premises-personal-licence-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-licensing-premises-personal-licence-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-090",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-marketing-plan-2026-monthly-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-marketing-plan-2026-monthly-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-marketing-plan-2026-monthly-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-091",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-new-years-eve-planning-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-new-years-eve-planning-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-new-years-eve-planning-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-092",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-recruitment-hiring-bar-staff — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-recruitment-hiring-bar-staff no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-recruitment-hiring-bar-staff",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-093",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-refurbishment-on-budget — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-refurbishment-on-budget no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-refurbishment-on-budget",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-094",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-six-nations-rugby-marketing — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-six-nations-rugby-marketing no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-six-nations-rugby-marketing",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-095",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-toilet-refurbishment-budget-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-toilet-refurbishment-budget-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-toilet-refurbishment-budget-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-096",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-vat-accounting-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-vat-accounting-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-vat-accounting-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-097",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/pub-wages-labour-costs-guide — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-wages-labour-costs-guide no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/pub-wages-labour-costs-guide",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-098",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/quiet-monday-night-promotions — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiet-monday-night-promotions no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiet-monday-night-promotions",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-099",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/quiz-night-101 — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiz-night-101 no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiz-night-101",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-100",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/quiz-night-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiz-night-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/quiz-night-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-101",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/reboot-pub-atmosphere-on-budget — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/reboot-pub-atmosphere-on-budget no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/reboot-pub-atmosphere-on-budget",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-102",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/recession-proof-pub-strategies — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/recession-proof-pub-strategies no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/recession-proof-pub-strategies",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-103",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/rent-supplier-negotiations-cash-tight — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/rent-supplier-negotiations-cash-tight no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/rent-supplier-negotiations-cash-tight",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-104",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/rescue-your-margins-drinks-mix — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/rescue-your-margins-drinks-mix no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/rescue-your-margins-drinks-mix",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-105",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/restart-quiz-music-sport-roi — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/restart-quiz-music-sport-roi no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/restart-quiz-music-sport-roi",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-106",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/revenue-levers-struggling-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/revenue-levers-struggling-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/revenue-levers-struggling-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-107",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/seasonal-pub-events-calendar — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/seasonal-pub-events-calendar no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/seasonal-pub-events-calendar",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-108",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/sober-october-low-no-alcohol-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/sober-october-low-no-alcohol-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/sober-october-low-no-alcohol-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-109",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/social-media-strategy-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/social-media-strategy-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/social-media-strategy-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-110",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/social-media-tactics-footfall-seven-days — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/social-media-tactics-footfall-seven-days no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/social-media-tactics-footfall-seven-days",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-111",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/staff-motivation-hacks-no-pay-rise — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/staff-motivation-hacks-no-pay-rise no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/staff-motivation-hacks-no-pay-rise",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-112",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/summer-moments-simple-campaigns — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-moments-simple-campaigns no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-moments-simple-campaigns",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-113",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/summer-pub-event-ideas — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-pub-event-ideas no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-pub-event-ideas",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-114",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/summer-pub-marketing — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-pub-marketing no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/summer-pub-marketing",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-115",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/survive-off-season-revenue-packages — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/survive-off-season-revenue-packages no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/survive-off-season-revenue-packages",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-116",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/terrible-online-reviews-damage-control — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/terrible-online-reviews-damage-control no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/terrible-online-reviews-damage-control",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-117",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/theme-hour-power-hour — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/theme-hour-power-hour no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/theme-hour-power-hour",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-118",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/turn-heating-costs-into-winter-wins — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/turn-heating-costs-into-winter-wins no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/turn-heating-costs-into-winter-wins",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-119",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/turnaround-playbook-independent-bars — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/turnaround-playbook-independent-bars no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/turnaround-playbook-independent-bars",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-120",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/upselling-secrets-training-scripts — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/upselling-secrets-training-scripts no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/upselling-secrets-training-scripts",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-121",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/village-pub-dying-village-survival — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/village-pub-dying-village-survival no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/village-pub-dying-village-survival",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-122",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/wet-led-vs-food-led-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/wet-led-vs-food-led-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/wet-led-vs-food-led-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-123",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/why-is-my-pub-empty — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/why-is-my-pub-empty no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/why-is-my-pub-empty",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-124",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/win-back-locals-after-slow-trade — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/win-back-locals-after-slow-trade no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/win-back-locals-after-slow-trade",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-125",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/wine-tasting-evenings-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/wine-tasting-evenings-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/wine-tasting-evenings-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-126",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/young-people-wont-come-to-your-pub — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/young-people-wont-come-to-your-pub no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/young-people-wont-come-to-your-pub",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-127",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/licensees-guide/zero-waste-stock-management-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/licensees-guide/zero-waste-stock-management-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/licensees-guide/zero-waste-stock-management-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-128",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-129",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-agency — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-agency no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-agency",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-130",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-berkshire — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-berkshire no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-berkshire",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-131",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-buckinghamshire — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-buckinghamshire no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-buckinghamshire",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-132",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-hampshire — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-hampshire no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-hampshire",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-133",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-hertfordshire — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-hertfordshire no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-hertfordshire",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-134",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-kent — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-kent no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-kent",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-135",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-london — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-london no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-london",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-136",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-no-budget — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-no-budget no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-no-budget",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-137",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-oxfordshire — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-oxfordshire no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-oxfordshire",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-138",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-marketing-surrey — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-marketing-surrey no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-marketing-surrey",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-139",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/pub-rescue — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/pub-rescue no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/pub-rescue",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-140",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/quiet-midweek-solutions — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/quiet-midweek-solutions no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/quiet-midweek-solutions",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-141",
+    "category": "Technical",
+    "what": "Review the HowTo schema on https://www.orangejelly.co.uk/results — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "HowTo on https://www.orangejelly.co.uk/results no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: HowTo on https://www.orangejelly.co.uk/results",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-142",
+    "category": "Technical",
+    "what": "Review the HowTo schema on https://www.orangejelly.co.uk/results — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "HowTo on https://www.orangejelly.co.uk/results no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: HowTo on https://www.orangejelly.co.uk/results",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-143",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/services — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/services no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/services",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-144",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/services/content-creation-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/services/content-creation-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/services/content-creation-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-145",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [address] to the LocalBusiness schema on https://www.orangejelly.co.uk/services/content-creation-for-pubs.",
+    "why": "LocalBusiness on https://www.orangejelly.co.uk/services/content-creation-for-pubs is missing required field(s) address; without them the block cannot earn a rich result. Source: schema.json (LocalBusiness block).",
+    "source": "schema.json: LocalBusiness on https://www.orangejelly.co.uk/services/content-creation-for-pubs",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-146",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/services/paid-social-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/services/paid-social-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/services/paid-social-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-147",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [address] to the LocalBusiness schema on https://www.orangejelly.co.uk/services/paid-social-for-pubs.",
+    "why": "LocalBusiness on https://www.orangejelly.co.uk/services/paid-social-for-pubs is missing required field(s) address; without them the block cannot earn a rich result. Source: schema.json (LocalBusiness block).",
+    "source": "schema.json: LocalBusiness on https://www.orangejelly.co.uk/services/paid-social-for-pubs",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-148",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-149",
+    "category": "Technical",
+    "what": "Add the missing required field(s) [address] to the LocalBusiness schema on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs.",
+    "why": "LocalBusiness on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs is missing required field(s) address; without them the block cannot earn a rich result. Source: schema.json (LocalBusiness block).",
+    "source": "schema.json: LocalBusiness on https://www.orangejelly.co.uk/services/social-media-marketing-for-pubs",
+    "suggested_search_opportunity": 4,
+    "suggested_effort": 2,
+    "suggested_risk": 1
+  },
+  {
+    "id": "schema-150",
+    "category": "Technical",
+    "what": "Review the FAQPage schema on https://www.orangejelly.co.uk/ways-to-work — its rich result has been retired by Google; keep the markup only if it still serves a non-rich-result purpose.",
+    "why": "FAQPage on https://www.orangejelly.co.uk/ways-to-work no longer earns a rich result (still valid markup). Decide whether to keep or remove. Source: schema.json.",
+    "source": "schema.json: FAQPage on https://www.orangejelly.co.uk/ways-to-work",
+    "suggested_search_opportunity": 1,
+    "suggested_effort": 1,
+    "suggested_risk": 1
+  }
+]

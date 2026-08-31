@@ -71,7 +71,7 @@ const NAV_ITEMS = [
 ];
 
 const CASES: Array<[string, React.ReactElement]> = [
-  ['Button', <Button key="b">Start the conversation</Button>],
+  ['Button', <Button key="b">Let's talk</Button>],
   [
     'Button as link',
     <Button key="bl" href="/start-here" arrow>
@@ -110,7 +110,7 @@ const CASES: Array<[string, React.ReactElement]> = [
   ['Radio', <Radio key="r" name="size" label="10 to 49 people" />],
   [
     'Header',
-    <Header key="h" items={NAV_ITEMS} cta={{ label: 'Start the conversation', href: '/s' }} />,
+    <Header key="h" items={NAV_ITEMS} cta={{ label: "Let's talk", href: '/s' }} />,
   ],
   ['Header orange', <Header key="ho" tone="orange" items={NAV_ITEMS} />],
   [

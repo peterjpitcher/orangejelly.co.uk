@@ -62,7 +62,7 @@ export default function FractionalCmoPage(): JSX.Element {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button size="lg" arrow href="/start-here">
-                Start the conversation
+                Let's talk
               </Button>
               <Button variant="ghost" href="/growth-problems">
                 See the eight growth problems
@@ -174,7 +174,7 @@ export default function FractionalCmoPage(): JSX.Element {
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">
-              Start the conversation
+              Let's talk
             </Button>
           </div>
         </Band>
