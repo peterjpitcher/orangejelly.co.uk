@@ -47,7 +47,7 @@ ctaSettings:
   ctaType: "services"
   ctaHeading: "Let Us Sort Your Google Profile"
   ctaButtonText: "Explore Our Packages"
-  ctaButtonLink: "/ways-to-work"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -429,4 +429,4 @@ The pubs that appear in the local 3-pack are not necessarily the best pubs. They
 
 You can be one of those pubs. Start this week.
 
-If you want help optimising your Google Business Profile or building a broader local marketing strategy, [explore how we work with pubs](/ways-to-work). From a one-off Growth Fix to ongoing Growth Partner support, we help pubs get found and get busy.
+If you want help optimising your Google Business Profile or building a broader local marketing strategy, [explore how we work](/how-we-work). From a one-off Growth Fix to ongoing Growth Partner support, we help pubs get found and get busy.

@@ -162,4 +162,4 @@ Only if your audience already wants one and nobody nearby has claimed the night.
 **What if Monday still loses money after a fair run at it?**
 Then close on Mondays and put the hours into a night that works. That is a legitimate answer, and it is the one I would rather you reached deliberately than by drifting.
 
-If you want a plan that covers the whole quiet stretch rather than one night, start with our [quiet midweek solutions](/quiet-midweek-solutions), and use the [profit night event template](/guides/pub-event-template-profit-nights) to cost whatever you choose before you commit to it.
+If you want a plan that covers the whole quiet stretch rather than one night, start with our [why the midweek is quiet](/why-revenue-is-falling), and use the [profit night event template](/guides/pub-event-template-profit-nights) to cost whatever you choose before you commit to it.

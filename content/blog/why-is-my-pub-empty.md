@@ -64,7 +64,7 @@ Before we dive into solutions, let's quantify what those empty seats are costing
 
 - **Mental health toll**: The stress of a failing pub is crushing
 
-At our lowest point, we were losing £2,000 per week. That's not sustainable for anyone. If this sounds like your situation, our [fix my pub](/fix-my-pub) programme is designed for exactly this moment.
+At our lowest point, we were losing £2,000 per week. That's not sustainable for anyone. If this sounds like your situation, our [find out why revenue is falling](/why-revenue-is-falling) programme is designed for exactly this moment.
 
 ## The 12 Reasons Your Pub Is Empty (And How to Fix Each One)
 
@@ -392,4 +392,4 @@ Implementation costs vary by strategy. Many improvements like social media optim
 
 Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The key is adapting the approach to your specific circumstances, customer base, and local market. All strategies come from real-world success at The Anchor.
 
-If you would rather not tackle it alone, our [empty pub solutions](/empty-pub-solutions) set out a focused plan to get footfall back.
+If you would rather not tackle it alone, our [why the tables are empty](/why-revenue-is-falling) set out a focused plan to get footfall back.

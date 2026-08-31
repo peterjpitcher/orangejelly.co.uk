@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need Help Getting Your Pub Compliant?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -198,4 +198,4 @@ TheMusicLicence is not optional if you play any music in your pub. The good news
 
 Get it sorted, budget for the annual renewal, and then focus on using music to make your pub the place people want to be.
 
-If you want help reviewing your pub's compliance, events calendar, or overall commercial strategy, [book a Growth Fix](/ways-to-work/growth-fix) and we will work through it together.
+If you want help reviewing your pub's compliance, events calendar, or overall commercial strategy, [see how we work](/how-we-work) and we will work through it together.

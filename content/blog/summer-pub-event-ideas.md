@@ -137,7 +137,7 @@ Run every idea through four filters:
 
 If it fails two of the four, park it. You do not have the labour to be adventurous every weekend.
 
-Summer is great, but what about the rest of the year? If your quieter midweek nights need the same attention, see our guide to [filling those empty slots](/quiet-midweek-solutions).
+Summer is great, but what about the rest of the year? If your quieter midweek nights need the same attention, see our guide to [filling those empty slots](/why-revenue-is-falling).
 
 ## Make every summer event bookable
 

@@ -121,7 +121,7 @@ Don't plan a calendar. Plan one event.
 
 Do that for one format until it becomes a fixture, then add a second. That's how a quiet week turns into a full one, not with a grand plan, but with one reliable reason to come.
 
-If you'd like a hand choosing the right format for your pub or building the promotion around it, that's the kind of thing we help with at Orange Jelly. See [how we work with pubs](/ways-to-work).
+If you'd like a hand choosing the right format for your pub or building the promotion around it, that's the kind of thing we help with at Orange Jelly. See [how we work](/how-we-work).
 
 ## FAQs
 

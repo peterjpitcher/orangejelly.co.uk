@@ -250,7 +250,7 @@ Children drop crumbs. That's true. But a family of four spending £70 on a Sunda
 
 **"What if it doesn't work?"**
 
-The total investment for everything described in this article is under £100. If budget is a concern across the board, our [pub marketing on no budget](/pub-marketing-no-budget) resource covers more free and low-cost tactics. If you spend a month trying it and see no improvement, you've lost very little. But if it works (and for most pubs it does), you've unlocked a revenue stream that keeps growing.
+The total investment for everything described in this article is under £100. If budget is a concern across the board, our [pub marketing](/pub-marketing) resource covers more free and low-cost tactics. If you spend a month trying it and see no improvement, you've lost very little. But if it works (and for most pubs it does), you've unlocked a revenue stream that keeps growing.
 
 ## The Bottom Line
 

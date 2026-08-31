@@ -159,7 +159,7 @@ Most pubs target somewhere around 65% to 70% food gross profit, and wet gross pr
 ## Mini FAQ
 
 **Should I rebrand during a turnaround?**
-Only after the offer and cashflow are stable. Rebrands are expensive distractions that let you feel busy while the real problems sit untouched. If you want structured support through the process, our [fix my pub](/fix-my-pub) programme walks you through each phase.
+Only after the offer and cashflow are stable. Rebrands are expensive distractions that let you feel busy while the real problems sit untouched. If you want structured support through the process, our [find out why revenue is falling](/why-revenue-is-falling) programme walks you through each phase.
 
 **What if week one shows I cannot cover the wages?**
 Deal with it in the open and immediately. Speak to your accountant, your landlord and, if the tenancy is at risk, an insolvency practitioner for an initial conversation. Acting six weeks early gives you options; acting six weeks late usually removes them.

@@ -187,4 +187,4 @@ If profile visits are healthy but link taps are not, the problem is your bio and
 **Should I boost posts?**
 Only once the organic version has already performed well, and only with a booking link attached. Boosting a weak post just buys more people the chance to ignore it.
 
-If you want hands-on help running your pub's Instagram properly, explore our [Instagram services for pubs](/services/instagram-services-for-pubs).
+If you want hands-on help running your pub's Instagram properly, explore our [pub marketing](/pub-marketing).

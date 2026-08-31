@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help building your wine offer?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -184,7 +184,7 @@ Don't plan a wine programme. Plan one evening.
 
 Do that once and you'll wonder why wine ever sat quiet behind your bar.
 
-If you'd like a hand building a wine offer that actually sells, or turning a one-off night into a regular earner, that's the kind of thing we help with at Orange Jelly. Have a look at [how we work with pubs](/ways-to-work).
+If you'd like a hand building a wine offer that actually sells, or turning a one-off night into a regular earner, that's the kind of thing we help with at Orange Jelly. Have a look at [how we work](/how-we-work).
 
 ## FAQs
 

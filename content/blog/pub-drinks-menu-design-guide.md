@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Engineering Your Drinks Menu?"
   ctaButtonText: "Talk to Orange Jelly"
-  ctaButtonLink: "/ways-to-work/growth-partner"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -353,4 +353,4 @@ Start this week. Audit what you have, decide what to change, and get a new menu 
 
 ---
 
-*Peter Pitcher is the founder of Orange Jelly and licensee of The Anchor in Stanwell Moor, a Greene King tenancy. Orange Jelly helps UK pubs grow revenue through practical, proven strategies. If you want help engineering your drinks menu or any other part of your offer, [get in touch](/ways-to-work/growth-partner).*
+*Peter Pitcher is the founder of Orange Jelly and licensee of The Anchor in Stanwell Moor, a Greene King tenancy. Orange Jelly helps UK pubs grow revenue through practical, proven strategies. If you want help engineering your drinks menu or any other part of your offer, [get in touch](/start-here).*

@@ -46,7 +46,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a hand planning your autumn?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -90,7 +90,7 @@ Don't try to run the whole calendar. The best autumn pub event ideas are the two
 
 A few of the moments above lean on drinks and entertainment (cask, wine, the rugby), and a few are pure promotion (gifting, the Christmas bounce-back). That mix is deliberate: a good autumn balances something to do with something to sell. If you want more pub entertainment ideas to slot alongside these (quizzes, live music, that sort of thing) and a wider set of bar event ideas and pub promotion ideas for the rest of the year, our [pub event ideas guide](/guides/pub-event-ideas) is the full list. For a month-by-month framework of seasonal pub marketing ideas you can reuse every year, use our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar).
 
-If you'd like a hand choosing the right moments for your pub or building the promotion around them, that's what we do at Orange Jelly. See [how we work with pubs](/ways-to-work).
+If you'd like a hand choosing the right moments for your pub or building the promotion around them, that's what we do at Orange Jelly. See [how we work](/how-we-work).
 
 ## FAQs
 

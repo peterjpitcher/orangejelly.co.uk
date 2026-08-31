@@ -320,4 +320,4 @@ A well-run community pub with controlled margins, disciplined labour costs, and 
 
 The numbers do not lie, but they do require you to look at them. If you have read this far and you are not regularly tracking your wet GP, food GP, labour costs, and break-even point, start this week. The information is already in your EPOS, your invoices, and your bank statements. You just need to pull it together.
 
-If you want someone to sit down with you, go through your numbers, and build a plan to improve your profitability, [talk to Orange Jelly](/contact). We work with licensees across the UK through our [Growth Partner](/ways-to-work/growth-partner) and [Turnaround Intensive](/ways-to-work/turnaround-intensive) packages. Everything we do starts with the numbers, because that is where the truth lives.
+If you want someone to sit down with you, go through your numbers, and build a plan to improve your profitability, [talk to Orange Jelly](/contact). We work with licensees across the UK through our [how we work](/how-we-work) and [how we work](/how-we-work) packages. Everything we do starts with the numbers, because that is where the truth lives.

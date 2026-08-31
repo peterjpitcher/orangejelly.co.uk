@@ -109,7 +109,7 @@ Comfort is what keeps people in the building for a second drink, so this is the 
 
 Before you order external signage, check the consent position. Signs are controlled separately from planning permission under the Town and Country Planning (Control of Advertisements) (England) Regulations 2007. Plenty of standard signs are allowed under deemed consent, but illuminated signs, oversized signs, and anything on a listed building or within a conservation area often need express consent from the council. Listed building consent is a separate application again. A five-minute call to the planning duty desk beats a removal notice.
 
-If the pub needs more than a cosmetic refresh, and trade has dropped to the point where you need a proper recovery plan, our [Fix My Pub](/fix-my-pub) service will help you decide what to tackle first.
+If the pub needs more than a cosmetic refresh, and trade has dropped to the point where you need a proper recovery plan, our [find out why revenue is falling](/why-revenue-is-falling) service will help you decide what to tackle first.
 
 ## Ask your pubco or brewery before you spend your own money
 

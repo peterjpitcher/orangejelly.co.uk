@@ -53,7 +53,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a drinks offer that lifts spend?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -161,7 +161,7 @@ Don't plan all three at once. Pick the one date that fits your week best, most l
 
 Run that one, see how the spend lands, and add the next date the following time it comes round. These three are part of a much bigger autumn calendar, so if you want the full run of dates and event ideas through the season, work from [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas).
 
-If you'd like a hand building a drinks offer that genuinely lifts spend rather than just shifting it about, that's the kind of thing we help with at Orange Jelly, see [how we work with pubs](/ways-to-work).
+If you'd like a hand building a drinks offer that genuinely lifts spend rather than just shifting it about, that's the kind of thing we help with at Orange Jelly, see [how we work](/how-we-work).
 
 ## FAQs
 

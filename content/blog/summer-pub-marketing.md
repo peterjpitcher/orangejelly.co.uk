@@ -45,7 +45,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a hand building your summer growth system?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -103,7 +103,7 @@ Turn first visits into regulars with our guide to [building a loyalty habit that
 
 You do not need all five running perfectly on day one. Pick the moves that fit your pub, set them up properly, and let them work together: bookable reasons bring people in, action-led posts and a fresh listing get them to book, data capture keeps their details, and a good follow-up brings them back.
 
-That is the difference between a summer that feels busy and a summer that leaves your business commercially stronger. If you would like a hand building the system around your pub, that is exactly what we do. See [how we work with pubs](/ways-to-work).
+That is the difference between a summer that feels busy and a summer that leaves your business commercially stronger. If you would like a hand building the system around your pub, that is exactly what we do. See [how we work](/how-we-work).
 
 ## FAQs
 

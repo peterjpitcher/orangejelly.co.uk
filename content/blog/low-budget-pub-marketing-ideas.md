@@ -52,7 +52,7 @@ Marketing does not need a big budget. It needs focus, local relevance and repeti
 
 Below are 25 ideas grouped into five pillars: visibility, social proof, partnerships, in-pub conversion and retention. A pub that is weak in one pillar leaks customers no matter how good the other four are.
 
-Do not try all 25. Pick one from each pillar, run those five for six weeks, then add more. If you are starting from a standing start with nothing to spend, our [pub marketing on no budget](/pub-marketing-no-budget) resource covers the free-first approach in detail.
+Do not try all 25. Pick one from each pillar, run those five for six weeks, then add more. If you are starting from a standing start with nothing to spend, our [pub marketing](/pub-marketing) resource covers the free-first approach in detail.
 
 ## Pillar 1: Visibility in the community
 

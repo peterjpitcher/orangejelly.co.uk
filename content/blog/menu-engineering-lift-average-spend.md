@@ -190,4 +190,4 @@ Menu engineering is one of [nine revenue levers struggling pubs should pull](/gu
 **How often should I redesign the menu?**
 Two proper reviews a year, with small seasonal swaps in between. Constant redesign confuses regulars and gives you no clean data.
 
-If you want help redesigning your menu for profit, explore our [pub consultancy services](/services).
+If you want help redesigning your menu for profit, explore our [pub marketing](/pub-marketing).

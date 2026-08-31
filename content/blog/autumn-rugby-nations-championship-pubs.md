@@ -45,7 +45,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want your screens booked out this November?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -146,7 +146,7 @@ Don't try to plan all six weekends at once. Plan the first game.
 
 Get one rugby weekend right and the rest follow the same pattern: same package, same prep, same booking system, new fixture. That's how November stops being a month you survive and starts being one you look forward to.
 
-If you'd like a hand setting up the bookings, the package and the promotion so your screens are booked out all month, that's exactly the kind of thing we help with. See [how we work with pubs](/ways-to-work).
+If you'd like a hand setting up the bookings, the package and the promotion so your screens are booked out all month, that's exactly the kind of thing we help with. See [how we work](/how-we-work).
 
 ## FAQs
 

@@ -180,4 +180,4 @@ Ninety days in, you should have a list that grows every week without anyone thin
 
 Email is one channel in a wider retention mix. Pair it with a strong [social media strategy for pubs](/guides/social-media-strategy-for-pubs) to reach customers wherever they spend their time.
 
-If you want professional help setting up your email marketing and retention systems, take a look at our [pub marketing services](/services).
+If you want professional help setting up your email marketing and retention systems, take a look at our [pub marketing](/pub-marketing).

@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need Help Planning Your Biggest Night?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"

@@ -46,7 +46,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need Help Getting Your Pub Compliance-Ready?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -318,4 +318,4 @@ Pub health and safety is not glamorous. Nobody got into this industry because th
 
 The checklist in this article covers everything most pubs need. Print it, work through it, and build the weekly and monthly checks into your routine. Once the system is in place, it takes minutes, not hours. And when that inspector walks through your door unannounced, you will hand them your folder, offer them a cup of tea, and know that everything is in order.
 
-If you want a fresh pair of eyes on your pub's compliance and operations, [book a Growth Fix with Orange Jelly](/ways-to-work/growth-fix). We will walk your site, review your documentation, and give you a clear action plan, the same practical approach I use at The Anchor every day.
+If you want a fresh pair of eyes on your pub's compliance and operations, [see how we work](/how-we-work). We will walk your site, review your documentation, and give you a clear action plan, the same practical approach I use at The Anchor every day.

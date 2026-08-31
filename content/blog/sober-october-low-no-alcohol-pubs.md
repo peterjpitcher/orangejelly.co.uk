@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want an alcohol free bar that actually sells?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -157,7 +157,7 @@ Don't overhaul your back bar this week. Do one thing.
 
 Get that working, watch who orders it, then build out the cider, the mocktail and the softs from there. That's how a quiet corner of your range turns into steady, year-round trade, not with a grand relaunch, but with one good pint nobody has to feel awkward ordering.
 
-If you'd like a hand putting a low and no range together that actually sells, or pricing it so it earns its keep, that's the kind of thing we help with at Orange Jelly. Here's [how we work with pubs](/ways-to-work).
+If you'd like a hand putting a low and no range together that actually sells, or pricing it so it earns its keep, that's the kind of thing we help with at Orange Jelly. Here's [how we work](/how-we-work).
 
 ## FAQs
 

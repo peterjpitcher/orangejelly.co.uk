@@ -48,7 +48,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help filling your quiet daytimes?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -135,7 +135,7 @@ A coffee morning with no one in it helps no one. Promotion is where most well-me
 
 **Tell your regulars in person.** The oldest channel and still the best. A word over the bar in the run-up does more than you'd think, especially for a daytime crowd who aren't always glued to a feed.
 
-If posting consistently across all this feels like one more job you don't have time for, that's exactly the kind of thing we help with. See [how we work with pubs](/ways-to-work).
+If posting consistently across all this feels like one more job you don't have time for, that's exactly the kind of thing we help with. See [how we work](/how-we-work).
 
 ## Turning it into a fixture, not a one-off
 

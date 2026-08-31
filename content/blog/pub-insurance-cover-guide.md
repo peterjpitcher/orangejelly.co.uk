@@ -47,7 +47,7 @@ ctaSettings:
   ctaType: "services"
   ctaHeading: "Not Sure Your Pub Is Properly Protected?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -289,6 +289,6 @@ If you are [buying a pub](/guides/buying-a-pub-complete-guide), factor insurance
 
 If you are already trading and are not sure whether your cover is right, a good starting point is our [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success), which reviews the fundamentals of your operation including insurance, licensing, and compliance.
 
-And if you want someone to look at the whole picture, from your insurance and compliance through to your marketing, events, and revenue strategy, that is exactly what the [Growth Fix](/ways-to-work/growth-fix) is designed for. Five hours of focused consultancy to identify the gaps and build a plan to fix them.
+And if you want someone to look at the whole picture, from your insurance and compliance through to your marketing, events, and revenue strategy, that is exactly what the [how we work](/how-we-work) is designed for. Five hours of focused consultancy to identify the gaps and build a plan to fix them.
 
 Your pub is your livelihood. Protect it properly.

@@ -100,7 +100,7 @@ Make it concrete. Give your team a shared album on the phone or a shared cloud f
 
 Shoot with the light coming through a window onto the subject, not behind it. Wipe the phone lens. Shoot vertical for stories and reels, and get closer than feels natural. Those four habits fix most pub photographs on their own, and there is more detail in our guide to [Instagram marketing for pubs](/guides/instagram-marketing-for-pubs).
 
-If you want hands-on help building the system rather than doing it alone, our [social media marketing service](/services/social-media-marketing-for-pubs) is built specifically for pubs.
+If you want hands-on help building the system rather than doing it alone, our [pub marketing](/pub-marketing) is built specifically for pubs.
 
 ## Step 5: Track results that matter
 

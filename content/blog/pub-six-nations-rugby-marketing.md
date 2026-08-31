@@ -47,7 +47,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Planning Your Match-Day Strategy?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"

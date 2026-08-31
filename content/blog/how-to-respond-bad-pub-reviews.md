@@ -42,7 +42,7 @@ ctaSettings:
   ctaType: "services"
   ctaHeading: "Need Help With Your Pub's Online Reputation?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -234,4 +234,4 @@ Bad reviews are not the problem. Bad responses are the problem. No responses are
 
 Every review is an opportunity to show future customers that your pub is well-run, that you listen, and that you care enough to make things right. The pubs that get this right do not just survive bad reviews. They use them to build deeper trust than a perfect 5-star rating ever could.
 
-If your online reputation needs more than a few template responses, if there is a pattern in the negative feedback that points to something deeper, that is worth looking at properly. A [Growth Fix](/ways-to-work/growth-fix) gives you five focused hours to diagnose the root cause and build a plan that turns your reviews around for good.
+If your online reputation needs more than a few template responses, if there is a pattern in the negative feedback that points to something deeper, that is worth looking at properly. A [how we work](/how-we-work) gives you five focused hours to diagnose the root cause and build a plan that turns your reviews around for good.

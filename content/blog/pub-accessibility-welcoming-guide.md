@@ -49,7 +49,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need Help Making Your Pub More Welcoming?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -287,4 +287,4 @@ The Equality Act requires you to make reasonable adjustments. Common sense requi
 
 Start with the quick wins this week. Plan the bigger changes over the coming months. And remember: the goal is not to change what your pub is. It is to let more people enjoy it.
 
-If you would like an independent assessment of your pub's accessibility and customer experience, [book a Growth Fix with Orange Jelly](/ways-to-work/growth-fix). We will walk your venue, identify the quick wins, and build a practical improvement plan that fits your budget.
+If you would like an independent assessment of your pub's accessibility and customer experience, [see how we work](/how-we-work). We will walk your venue, identify the quick wins, and build a practical improvement plan that fits your budget.

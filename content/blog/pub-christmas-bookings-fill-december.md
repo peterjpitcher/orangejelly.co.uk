@@ -50,7 +50,7 @@ ctaSettings:
   ctaType: "services"
   ctaHeading: "Ready to Fill Your December Calendar?"
   ctaButtonText: "Explore Momentum Month"
-  ctaButtonLink: "/ways-to-work/momentum-month"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -305,4 +305,4 @@ December is the biggest revenue opportunity of the pub calendar year. But it doe
 
 Build your offering now. Set your prices to protect your margins. Take deposits to protect your bookings. Market it consistently for 12 weeks. And do not forget that every new face in December is a potential regular for January and beyond.
 
-If you want help building your Christmas strategy and marketing plan, [explore our Momentum Month package](/ways-to-work/momentum-month) or [talk to us about Growth Partner support](/ways-to-work/growth-partner). We have done this at The Anchor and we can help you do it at yours.
+If you want help building your Christmas strategy and marketing plan, [explore how we work](/how-we-work) or [see how we work](/how-we-work). We have done this at The Anchor and we can help you do it at yours.

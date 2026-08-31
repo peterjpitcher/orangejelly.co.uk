@@ -164,4 +164,4 @@ For attribution, keep it crude but honest: use a distinct booking link for Faceb
 - Messenger instant reply live and someone owning the inbox each shift.
 - Monthly review of your top three and bottom three posts.
 
-If you would rather not run it yourself, see how we handle [social media for pubs](/services/social-media-marketing-for-pubs), Facebook included.
+If you would rather not run it yourself, see how we handle [social media for pubs](/pub-marketing), Facebook included.

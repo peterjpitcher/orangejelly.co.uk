@@ -34,7 +34,7 @@ Active phases after release: active, phase4
 These already redirect. The release repoints them, because their current
 destination is itself retiring and leaving them would form a chain.
 
-- [ ] `/services`: was `/ways-to-work`, becomes `/how-we-work`
+- [ ] `/services`: was `/ways-to-work`, becomes `/pub-marketing`
 - [ ] `/licensees-guide/cash-flow-crisis-breaking-cycle`: was `/fix-my-pub`, becomes `/why-revenue-is-falling`
 - [ ] `/services/instagram-services-for-pubs`: was `/services/social-media-marketing-for-pubs`, becomes `/pub-marketing`
 - [ ] `/services/facebook-services-for-pubs`: was `/services/social-media-marketing-for-pubs`, becomes `/pub-marketing`
@@ -97,7 +97,7 @@ for u in \
     "https://www.orangejelly.co.uk$u"; done
 ```
 
-Then confirm the sitemap lists 22 static routes and none of the
+Then confirm the sitemap lists 15 static routes and none of the
 redirected paths above:
 
 ```bash

@@ -158,4 +158,4 @@ Done well, everyone behind your bar is now marketing the pub in conversations yo
 **How many should I pull at once?**
 Three, properly, beats nine badly. Pick the three with the fastest cash speed for your site, run them for a fortnight, then add the next three.
 
-If you need a structured recovery plan beyond quick wins, our [fix my pub](/fix-my-pub) programme takes you through the full turnaround process.
+If you need a structured recovery plan beyond quick wins, our [find out why revenue is falling](/why-revenue-is-falling) programme takes you through the full turnaround process.

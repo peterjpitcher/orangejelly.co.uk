@@ -274,8 +274,22 @@ describe('phase 4, simulated', () => {
   });
 
   it('advertises none of the redirected paths in the sitemap', () => {
-    const sitemap = new Set(getSitemapRoutes().map((route) => route.path));
-    const advertised = asShipped.filter((route) => sitemap.has(route.source)).map((r) => r.source);
-    expect(advertised).toEqual([]);
+    /*
+     * Matched with `sourceMatches`, not with `Set.has`.
+     *
+     * This assertion passed for as long as it has existed while the sitemap
+     * advertised seven pages that phase 4 redirects, because it compared the
+     * concrete `/ways-to-work/growth-fix` against the literal string
+     * `/ways-to-work/:slug` and found nothing. A green test over a real defect is
+     * worse than no test, and it is the same blind spot the chain test was fixed for.
+     */
+    const sitemap = getSitemapRoutes().map((route) => route.path);
+    const advertised = sitemap.filter((path) =>
+      asShipped.some((route) => sourceMatches(route.source, path))
+    );
+    expect(
+      advertised,
+      `these are in the sitemap and redirect on release day:\n${advertised.join('\n')}`
+    ).toEqual([]);
   });
 });

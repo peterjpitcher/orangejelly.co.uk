@@ -52,7 +52,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help making cask your hero?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -192,7 +192,7 @@ Don't plan ten days. Plan day one.
 
 Do that, and the rest of the week builds on itself. Cask is the thing you're already good at. Cask Ale Week is just the excuse to finally make a noise about it.
 
-If you'd like a hand turning the week into a proper plan, or making cask the hero of your autumn, that's exactly the sort of thing we help pubs with at Orange Jelly. See [how we work with pubs](/ways-to-work).
+If you'd like a hand turning the week into a proper plan, or making cask the hero of your autumn, that's exactly the sort of thing we help pubs with at Orange Jelly. See [how we work](/how-we-work).
 
 ## FAQs
 

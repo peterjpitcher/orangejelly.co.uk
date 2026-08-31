@@ -44,7 +44,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need a Plan to Refresh Your Pub?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -262,4 +262,4 @@ Pub toilet refurbishment does not need to be a five-figure project. A focused sp
 
 Nobody ever chose a pub because of the toilets. But plenty of people have decided not to come back because of them. Your job is to make sure the toilets are never the reason someone does not return.
 
-If you are planning a wider refresh of your venue and want a structured plan that prioritises the changes with the biggest commercial impact, a [Growth Fix](/ways-to-work/growth-fix) gives you exactly that: a focused session to identify what to fix first and a clear action plan to make it happen.
+If you are planning a wider refresh of your venue and want a structured plan that prioritises the changes with the biggest commercial impact, a [how we work](/how-we-work) gives you exactly that: a focused session to identify what to fix first and a clear action plan to make it happen.

@@ -45,7 +45,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help turning Oktoberfest into a full weekend?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -153,7 +153,7 @@ A simple promotion plan:
 - **Get a few good shots on the night itself.** A full long table mid-toast, a stein in hand, the pretzels. Post them while it's happening and the next day. It's your advert for next year and your nudge to everyone who missed it.
 - **Encourage your customers to tag you.** People love posting a stein photo. Make sure your handle's on the chalkboard so their reach becomes yours.
 
-If you'd like a hand getting the build-up right and turning it into bookings, that's exactly the sort of thing we help pubs with. See [how we work with pubs](/ways-to-work).
+If you'd like a hand getting the build-up right and turning it into bookings, that's exactly the sort of thing we help pubs with. See [how we work](/how-we-work).
 
 ## Turning the night into repeat bookings
 

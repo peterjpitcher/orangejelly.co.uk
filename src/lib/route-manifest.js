@@ -583,9 +583,20 @@ const PHASE_4_REDIRECTS = [
   {
     path: '/services',
     disposition: 'redirect',
-    destination: '/how-we-work',
+    destination: '/pub-marketing',
     phase: 'phase4',
-    note: 'Repointed from /ways-to-work, which itself retires.',
+    /*
+     * Follows its own children rather than its old destination.
+     *
+     * It pointed at /how-we-work because it used to point at /ways-to-work and that
+     * is where /ways-to-work goes. But /how-we-work does not contain the words pub,
+     * hospitality, licensee or venue anywhere in a thousand words, while all five
+     * /services/* pages go to /pub-marketing, which does, twenty-two times. This URL
+     * carries 1,199 impressions at position 24 on hospitality service queries, and a
+     * destination with none of that language reads to Google as a soft 404 and drops
+     * the signal rather than passing it on. A parent should not land somewhere less
+     * relevant than its children.
+     */
   },
   { path: '/capabilities', disposition: 'redirect', destination: '/solutions', phase: 'phase4' },
   {
@@ -695,10 +706,41 @@ function getNonIndexablePaths() {
   );
 }
 
+/**
+ * Does a declared path, wildcards included, cover this concrete URL.
+ *
+ * A plain `Set.has` cannot answer that, and the gap is not theoretical: seven pages
+ * were covered only by `/ways-to-work/:slug` and `/services/:slug`, so the sitemap
+ * filter compared `/ways-to-work/growth-fix` against the literal string
+ * `/ways-to-work/:slug`, found no match, and advertised all seven. On release day
+ * that is seven URLs handed to Google as live pages that answer with a redirect,
+ * which is how a retirement turns into a crawl of soft 404s.
+ *
+ * The test file has carried this function since the chain tests learned about
+ * wildcards. It belongs here, where the sitemap can use it too.
+ */
+function pathMatches(declared, path) {
+  if (!declared.includes(':')) return declared === path;
+  const pattern = declared
+    .split('/')
+    .map((segment) => {
+      if (segment.startsWith(':') && segment.endsWith('*')) return '.+';
+      if (segment.startsWith(':')) return '[^/]+';
+      return segment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    })
+    .join('/');
+  return new RegExp(`^${pattern}$`).test(path);
+}
+
 /** Live routes marked for the sitemap, in declaration order. */
 function getSitemapRoutes() {
-  const blocked = new Set(getNonIndexablePaths());
-  return ROUTES.filter((r) => r.disposition === 'live' && r.sitemap && !blocked.has(r.path));
+  const blocked = getNonIndexablePaths();
+  return ROUTES.filter(
+    (r) =>
+      r.disposition === 'live' &&
+      r.sitemap &&
+      !blocked.some((declared) => pathMatches(declared, r.path))
+  );
 }
 
 /** Guide slugs that redirect, so the sitemap never advertises them. */
@@ -735,6 +777,7 @@ function getRedirectedGuideSlugs() {
 
 module.exports = {
   getRedirectsForPhases,
+  pathMatches,
   ROUTES,
   PHASE_4_REDIRECTS,
   CAMPAIGN_REDIRECTS,

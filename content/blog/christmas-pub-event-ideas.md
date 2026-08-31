@@ -44,7 +44,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a hand planning your Christmas?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -86,7 +86,7 @@ Don't try to run the whole festive calendar. Pick the two or three moments that 
 
 For a month-by-month framework you can reuse every year, use our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar). For the wider list of formats beyond Christmas, see [pub event ideas](/guides/pub-event-ideas).
 
-If you'd like a hand choosing the right moments for your pub or building the promotion around them, that's what we do at Orange Jelly. See [how we work with pubs](/ways-to-work).
+If you'd like a hand choosing the right moments for your pub or building the promotion around them, that's what we do at Orange Jelly. See [how we work](/how-we-work).
 
 ## FAQs
 

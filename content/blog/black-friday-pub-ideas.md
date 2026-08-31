@@ -47,7 +47,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a Christmas booking machine, not a discount war?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -154,7 +154,7 @@ Don't plan a sale. Plan the conversions.
 
 Do those four things and Black Friday stops being a weekend you survive and starts being one that builds your winter.
 
-If you'd like a hand turning this weekend into a Christmas booking machine rather than a discount war, that's exactly the kind of thing we help with at Orange Jelly. See [how we work with pubs](/ways-to-work).
+If you'd like a hand turning this weekend into a Christmas booking machine rather than a discount war, that's exactly the kind of thing we help with at Orange Jelly. See [how we work](/how-we-work).
 
 ## FAQs
 

@@ -148,7 +148,7 @@ Tell your existing regulars personally, by name, three weeks out. Put a chalkboa
 
 Make it bookable too. At The Anchor we grew table bookings by 403%, and a big part of that was letting people reserve a table for an event instead of hoping there would be room. A team that has booked turns up.
 
-A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-midweek-solutions). If you are starting from scratch, our [quiz night starter guide](/guides/quiz-night-101) covers the basics, and for the wider picture see [how to run successful pub events](/guides/how-to-run-successful-pub-events).
+A strong quiz is one of the best ways to [work out why the midweek is quiet](/why-revenue-is-falling). If you are starting from scratch, our [quiz night starter guide](/guides/quiz-night-101) covers the basics, and for the wider picture see [how to run successful pub events](/guides/how-to-run-successful-pub-events).
 
 ## Common mistakes
 
@@ -173,4 +173,4 @@ A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-mid
 **How long before I know if it is working?**
 Six weeks, minimum, run on the same night at the same time. Judging a new quiz after two weeks is how good quizzes get cancelled.
 
-If you want hands-on help building your events programme, explore our [pub consultancy services](/services).
+If you want hands-on help building your events programme, explore our [pub marketing](/pub-marketing).

@@ -48,7 +48,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a Second Pair of Eyes on Your Pub Finances?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -251,4 +251,4 @@ VAT and accounting are not exciting. They will never fill your bar on a Friday n
 
 Get a hospitality accountant you trust. Set up your systems properly from day one. Build the weekly routine until it becomes second nature. And when something does not make sense, ask. The only stupid question in tax is the one you did not ask before HMRC did.
 
-If you want help reviewing your pub's financial health or building systems that give you clarity on your numbers, [book a Growth Fix](/ways-to-work/growth-fix). We will look at your operation with fresh eyes and tell you where the opportunities are.
+If you want help reviewing your pub's financial health or building systems that give you clarity on your numbers, [see how we work](/how-we-work). We will look at your operation with fresh eyes and tell you where the opportunities are.

@@ -45,7 +45,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Growing Your Pub's Local Visibility?"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -291,4 +291,4 @@ You do not need artistic talent. You do not need a budget. You need a clear mess
 
 The pubs that treat their boards as an afterthought are missing an opportunity that costs nothing and delivers every single day. Do not be one of them.
 
-If you want help pulling together your pub's full local marketing strategy (signage, social media, events, and everything in between), [book a Growth Fix](/ways-to-work/growth-fix) and we will build a plan that works for your venue.
+If you want help pulling together your pub's full local marketing strategy (signage, social media, events, and everything in between), [see how we work](/how-we-work) and we will build a plan that works for your venue.

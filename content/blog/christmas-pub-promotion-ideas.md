@@ -143,7 +143,7 @@ If you want the operational detail on filling every December session, our guide 
 
 **December**: execute, capture reviews while people are still happy, and take next year's provisional bookings from your best parties before they leave.
 
-If you want professional support getting your Christmas marketing right, take a look at our [pub marketing services](/services). We can help with everything from social media to event promotion.
+If you want professional support getting your Christmas marketing right, take a look at our [pub marketing](/pub-marketing). We can help with everything from social media to event promotion.
 
 ## Common mistakes
 

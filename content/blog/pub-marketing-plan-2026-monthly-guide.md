@@ -45,7 +45,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Building Your 2026 Marketing Plan?"
   ctaButtonText: "Explore Momentum Month"
-  ctaButtonLink: "/ways-to-work/momentum-month"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -400,4 +400,4 @@ A pub marketing plan is not a luxury. It is the difference between reacting to q
 
 This calendar gives you a framework. Adapt it to your pub, your area, and your customers. Start with the next month, plan the one after that, and build the habit. By the end of 2026, you will have twelve months of data, a growing database, and a clear picture of what works for your venue.
 
-If you want help building or executing your marketing plan, [talk to Orange Jelly](/contact). We work alongside licensees to build practical, commercially sound marketing programmes. Our [Momentum Month package](/ways-to-work/momentum-month) gives you ongoing monthly support, and our [Growth Partner programme](/ways-to-work/growth-partner) provides full-service marketing partnership for pubs ready to grow seriously.
+If you want help building or executing your marketing plan, [talk to Orange Jelly](/contact). We work alongside licensees to build practical, commercially sound marketing programmes. Our [how we work](/how-we-work) gives you ongoing monthly support, and our [how we work](/how-we-work) provides full-service marketing partnership for pubs ready to grow seriously.

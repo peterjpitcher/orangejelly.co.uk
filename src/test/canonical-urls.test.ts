@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { getRedirectsForPhases, ROUTES } from '@/lib/route-manifest';
+import { getRedirectsForPhases, pathMatches, ROUTES } from '@/lib/route-manifest';
 
 /**
  * Every canonical points at a URL that actually serves a page.
@@ -23,7 +23,7 @@ import { getRedirectsForPhases, ROUTES } from '@/lib/route-manifest';
  * from its own declared address.
  */
 const LIVE = new Set(ROUTES.filter((r) => r.disposition === 'live').map((r) => r.path));
-const REDIRECT_SOURCES = new Set(getRedirectsForPhases(['active', 'phase4']).map((r) => r.source));
+const REDIRECT_SOURCES = getRedirectsForPhases(['active', 'phase4']).map((r) => r.source);
 
 /**
  * Read from source rather than by rendering.
@@ -91,7 +91,14 @@ describe('canonical URLs', () => {
   it.each(declarations.map((d) => [d.file, d.canonical]))(
     '%s does not point at a redirect (%s)',
     (_file, canonical) => {
-      expect(REDIRECT_SOURCES.has(canonical)).toBe(false);
+      /*
+       * Wildcard-aware, for the same reason as the sitemap assertion in
+       * `route-manifest.test.ts`: a canonical of `/ways-to-work/growth-fix` compared
+       * against the literal `/ways-to-work/:slug` never matches, so the check was
+       * blind to exactly the rules most likely to catch something.
+       */
+      const redirected = REDIRECT_SOURCES.some((source) => pathMatches(source, canonical));
+      expect(redirected).toBe(false);
     }
   );
 

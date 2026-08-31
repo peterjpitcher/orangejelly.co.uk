@@ -113,7 +113,7 @@ That makes your Google Business Profile the most valuable asset you own after th
 
 Then give your website a page for each thing people actually search: Sunday lunch, the garden, the function room, dog friendly, parking. One page per intent beats one clever page about everything.
 
-This is where the effort compounds. At The Anchor we grew Google Search visibility by 828%, and that is the single change that turned a small village into a workable catchment. If trade has dropped sharply and you want a structured recovery plan, our [pub recovery service](/fix-my-pub) is built for exactly that.
+This is where the effort compounds. At The Anchor we grew Google Search visibility by 828%, and that is the single change that turned a small village into a workable catchment. If trade has dropped sharply and you want a structured recovery plan, our [work out why revenue is falling](/why-revenue-is-falling) is built for exactly that.
 
 ## Step 6: Keep the community heart
 

@@ -50,7 +50,7 @@ ctaSettings:
   ctaType: "services"
   ctaHeading: "Get Your Pub Operating at Five Stars"
   ctaButtonText: "Book a Growth Fix"
-  ctaButtonLink: "/ways-to-work/growth-fix"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -327,7 +327,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 - Induct every new starter with a food safety briefing on day one
 - Fix structural issues as they arise, not when an inspection is due
 
-A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best (from food safety to [menu profitability](/guides/profitable-pub-food-menu-ideas) to marketing that fills tables), that is exactly what a [Growth Fix](/ways-to-work/growth-fix) is designed for.
+A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best (from food safety to [menu profitability](/guides/profitable-pub-food-menu-ideas) to marketing that fills tables), that is exactly what a [how we work](/how-we-work) is designed for.
 
 ## The bottom line
 

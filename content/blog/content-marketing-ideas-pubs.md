@@ -129,7 +129,7 @@ An email or SMS list is the only audience you own outright. Collect it properly,
 
 Four posts, one per pillar, every week. If you can only manage three, drop the Sunday teaser and keep the other three fixed. A predictable rhythm beats a burst of ten posts followed by three quiet weeks.
 
-If you would rather hand the content off entirely, our [content creation service for pubs](/services/content-creation-for-pubs) handles the planning, writing and posting so you can focus on running service.
+If you would rather hand the content off entirely, our [pub marketing](/pub-marketing) handles the planning, writing and posting so you can focus on running service.
 
 ## Shoot a week of content in twenty minutes
 

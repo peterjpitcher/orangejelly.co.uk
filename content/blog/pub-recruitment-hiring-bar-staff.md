@@ -47,7 +47,7 @@ ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need Help Building a Team That Stays?"
   ctaButtonText: "Talk to Orange Jelly"
-  ctaButtonLink: "/ways-to-work/growth-partner"
+  ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -302,4 +302,4 @@ The pubs that consistently find and keep great staff are not paying double the m
 
 Your team is the single biggest factor in whether customers come back. A warm welcome, a well-pulled pint, and a smile that feels real. That is what turns a first visit into a regular habit. And that starts with hiring the right people and giving them every reason to stay.
 
-If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly about a Growth Partnership](/ways-to-work/growth-partner). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403%, and it starts with the people behind the bar.
+If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly](/start-here). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403%, and it starts with the people behind the bar.

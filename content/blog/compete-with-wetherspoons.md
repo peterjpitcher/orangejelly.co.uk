@@ -305,7 +305,6 @@ Yes, but target specific segments: beer enthusiasts, foodies, dog owners, and th
 
 Usually 3-6 months. The novelty wears off and people remember why they loved their local.
 
-For more detailed strategies on standing out against chain competition, see our dedicated guide on [how to compete with pub chains](/compete-with-pub-chains).
 
 ## Conclusion: David Can Beat Goliath
 
@@ -323,7 +322,7 @@ Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings
 
 ### How much will this cost to implement?
 
-Implementation costs vary by strategy. Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT, or as fixed-price packages from £375 + VAT.
+Implementation costs vary by strategy. Many improvements, like tightening your social media or changing how something is run, cost nothing beyond time. Events may need a small amount up front. If you want a hand with it, there is no price list because there are no packages: the work is scoped to the problem and agreed in writing before anything starts, and the first conversation is free.
 
 ### Can this work for my type of pub?
 
@@ -331,4 +330,4 @@ Yes, these strategies are proven across wet-led, food-led, and hybrid pubs. The 
 
 ### Do you offer payment plans?
 
-Yes, payment plans are available to help with cash flow. Services are charged at £75 per hour plus VAT, with fixed-price packages from £375 + VAT also available. Contact us to discuss a payment arrangement that works for your business.
+Say so early. It changes what we would recommend, not whether we will talk to you. The first conversation costs nothing, so the money question only applies to what comes after it, and by then you will know what the problem actually is. A business with less room than usual is exactly the one that should not be sold a large programme.

@@ -486,7 +486,7 @@ Pivot quickly. Failed fast is better than failed slowly. Try something new withi
 
 This week, calculate the TRUE profit margin of your current midweek offers. Are you busy being broke or building a business?
 
-Choose ONE profitable promotion from this guide. Test it. Track it. Transform your midweek. For a complete system to fill those empty Tuesday-to-Thursday slots, see our [quiet midweek solutions](/quiet-midweek-solutions) page.
+Choose ONE profitable promotion from this guide. Test it. Track it. Transform your midweek. For a complete system to fill those empty Tuesday-to-Thursday slots, see our [why the midweek is quiet](/why-revenue-is-falling) page.
 
 ## Ready to Make Midweek Profitable?
 
