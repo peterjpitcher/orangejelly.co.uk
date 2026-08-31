@@ -2,9 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Fraunces, Open_Sans, Schibsted_Grotesk } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
-import FooterWrapper from '@/components/FooterWrapper';
-import NavigationWrapper from '@/components/NavigationWrapper';
-import ChromeGate from '@/components/ChromeGate';
+import LegacyChrome from '@/components/LegacyChrome';
 import MainGate from '@/components/MainGate';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { PreloadResources } from '@/components/PerformanceMonitor';
@@ -246,17 +244,16 @@ export default function RootLayout({
           Skip to main content
         </Link>
 
-        {/* Marketing nav and footer, hidden on the organiser tool and poll
-            pages so they do not stack a second navigation on the tool. */}
-        <ChromeGate>
-          <NavigationWrapper />
-        </ChromeGate>
+        {/*
+          Chrome for the pages that do not render their own, which is now only the
+          fourteen still on the old templates, and it is the repositioned header and
+          footer rather than the old ones. See `LegacyChrome`.
+        */}
+        <LegacyChrome slot="header" />
         <ErrorBoundary>
           <MainGate>{children}</MainGate>
         </ErrorBoundary>
-        <ChromeGate>
-          <FooterWrapper />
-        </ChromeGate>
+        <LegacyChrome slot="footer" />
         <MarketingChrome />
       </body>
     </html>

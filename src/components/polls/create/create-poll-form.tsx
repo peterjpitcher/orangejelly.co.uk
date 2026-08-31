@@ -2,31 +2,10 @@
 
 import { useRef, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm, type FieldErrors } from 'react-hook-form';
+import { Loader2 } from 'lucide-react';
 
-import Button from '@/components/Button';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Alert, Button, Field, Input, Modal, Textarea } from '@/components/oj';
 import { CONTACT } from '@/lib/constants';
 import { getTodayIsoDate, type IsoDate } from '@/lib/dateUtils';
 import {
@@ -56,10 +35,21 @@ import TurnstileWidget from './turnstile-widget';
  * The create-poll form.
  *
  * A client component because it needs `useForm` and `useState` for the submitted
- * state. Mirrors the split in src/components/forms/contact-form.tsx in shape only:
- * that file imports the raw shadcn Button, whose `--primary` is charcoal rather
- * than brand orange and whose default size is under the 44px tap target. This one
- * uses the legacy Button.
+ * state.
+ *
+ * WHAT WEARS THE FORM. The controls, the label-and-error wrapper, the buttons, the
+ * notices and the confirm dialog all come from `@/components/oj`. React Hook Form
+ * still owns the values, the schema and the submit; it has simply stopped owning
+ * the markup, so `Field` wires each label, hint and error to its control instead
+ * of every call site being asked to remember to.
+ *
+ * React Hook Form's own error focus cannot survive that swap: its `field.ref` wants
+ * a forwardRef control and the design system's do not take one, so the ref is
+ * dropped deliberately below rather than passed and silently ignored. The BEHAVIOUR
+ * it provided is kept, by naming each control's id here and moving focus by id when
+ * a submit fails. The cursor lands where it always did, and `Field` now also marks
+ * each message `role="alert"`, which this form did not do before, so a failed submit
+ * speaks as well as moving the cursor.
  *
  * The options are picked on a calendar grid rather than typed into a repeater.
  * The grid is a different way of producing the same two shapes this form has
@@ -102,6 +92,64 @@ import TurnstileWidget from './turnstile-widget';
 // London's today, so the deadline picker never offers a date already gone. The
 // server rejects a past instant too; this only spares the obvious mistake.
 const minDeadlineDate = getTodayIsoDate();
+
+/**
+ * The heading for a tool screen.
+ *
+ * Sentence case, not the lowercase display face the marketing pages use. This is
+ * a thing you operate rather than a thing you are being sold, and a heading that
+ * shouts in lowercase over a form reads as branding applied to the wrong surface.
+ * The weight and the tight tracking are what make it belong to the same family.
+ */
+const TOOL_HEADING = 'text-[28px] font-black leading-tight tracking-[-0.02em] text-oj-ink';
+
+/**
+ * A URL you are meant to copy, shown whole.
+ *
+ * `break-all` rather than a truncation: the point of showing it is that someone
+ * can read it back or select it by hand when the copy button cannot help them.
+ */
+const LINK_BOX =
+  'mt-2 break-all rounded-oj border-1.5 border-oj-ink bg-oj-paper p-3 text-sm text-oj-ink';
+
+/**
+ * The id every control carries, in the order the form reads.
+ *
+ * Named rather than generated for one reason: a failed submit has to put the
+ * cursor on the first thing that is wrong. React Hook Form does that itself when
+ * it can hold a ref on the control, and it cannot hold one on a plain function
+ * component, so the same job is done here by id. Without this the cursor stays on
+ * the submit button and someone using a keyboard has to go and hunt for the field
+ * that failed.
+ *
+ * Prefixed because the page also carries the duration controls, and two elements
+ * sharing an id breaks the label association of both.
+ */
+const FIELD_IDS = {
+  title: 'poll-title',
+  description: 'poll-description',
+  agenda: 'poll-agenda',
+  location: 'poll-location',
+  organiserName: 'poll-organiser-name',
+  organiserEmail: 'poll-organiser-email',
+  deadlineDate: 'poll-deadline-date',
+  deadlineTime: 'poll-deadline-time',
+} as const;
+
+/** Visual order, so "first invalid" means first on the screen. */
+const FOCUS_ORDER = Object.keys(FIELD_IDS) as (keyof typeof FIELD_IDS)[];
+
+/**
+ * Moves the cursor to the first field that failed.
+ *
+ * The options array and the Turnstile token are deliberately absent: neither has a
+ * control of ours to focus, and neither was focused before this either.
+ */
+function focusFirstInvalid(errors: FieldErrors<CreatePollFormValues>): void {
+  const first = FOCUS_ORDER.find((name) => errors[name]);
+  if (!first) return;
+  window.requestAnimationFrame(() => document.getElementById(FIELD_IDS[first])?.focus());
+}
 
 const DEFAULT_VALUES: CreatePollFormValues = {
   title: '',
@@ -340,301 +388,292 @@ export default function CreatePollForm(): JSX.Element {
 
   return (
     <div className="max-w-2xl mt-8">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
-          <FormField
-            control={form.control}
-            name="title"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>What are you arranging?</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    type="text"
-                    maxLength={120}
-                    placeholder="Quiz night briefing"
-                    disabled={isSubmitting}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="description"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Any detail people need (optional)</FormLabel>
-                <FormControl>
-                  <Textarea {...field} rows={3} maxLength={1000} disabled={isSubmitting} />
-                </FormControl>
-                <FormDescription>Shown to everyone you send the link to.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="agenda"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>What&apos;s on the agenda? (optional)</FormLabel>
-                <FormControl>
-                  <Textarea {...field} rows={4} maxLength={2000} disabled={isSubmitting} />
-                </FormControl>
-                <FormDescription>
-                  Shown on the poll, and it goes into the calendar entry so it&apos;s there on the
-                  day.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="location"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Where? (optional)</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    type="text"
-                    maxLength={200}
-                    placeholder="The Anchor, back room"
-                    disabled={isSubmitting}
-                  />
-                </FormControl>
-                <FormDescription>
-                  Shown on the poll and added to the calendar entry.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="organiserName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Your name</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    type="text"
-                    autoComplete="name"
-                    maxLength={50}
-                    disabled={isSubmitting}
-                  />
-                </FormControl>
-                <FormDescription>
-                  Shown on the poll so people know who&apos;s asking.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="organiserEmail"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Your email</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    type="email"
-                    inputMode="email"
-                    autoComplete="email"
-                    maxLength={254}
-                    disabled={isSubmitting}
-                  />
-                </FormControl>
-                <FormDescription>
-                  We send your organiser link here. It is the only way back into your results, so
-                  use an address you can get to.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/*
-            Optional deadline. Leaving it blank keeps the old behaviour: the poll
-            stays open until you confirm it. Set it and we email YOU when it
-            passes, to come and pick. Nothing sends to guests on its own. The
-            invite always waits for you to choose, because a tie or a thin
-            turnout is a judgement, not a sum.
-          */}
-          <fieldset className="rounded-lg border border-brand-base/15 p-4">
-            <legend className="px-1 text-sm font-medium text-brand-base">
-              Close entries automatically (optional)
-            </legend>
-            <p className="mb-3 text-sm text-brand-base/75">
-              We&rsquo;ll email you when this passes so you can pick a time. We never send the
-              invite for you.
-            </p>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <FormField
-                control={form.control}
-                name="deadlineDate"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Date</FormLabel>
-                    <FormControl>
-                      <Input
-                        {...field}
-                        value={field.value ?? ''}
-                        type="date"
-                        min={minDeadlineDate}
-                        disabled={isSubmitting}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
+      <form
+        onSubmit={form.handleSubmit(onSubmit, focusFirstInvalid)}
+        className="space-y-6"
+        noValidate
+      >
+        {/* `ref` is pulled out of every field below. React Hook Form hands one
+            down for its own focus-on-error, and the design system's controls are
+            plain function components, so passing it through would warn in the
+            console and attach to nothing. Dropping it here says so out loud. */}
+        <Controller
+          control={form.control}
+          name="title"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.title}
+              label="What are you arranging?"
+              error={fieldState.error?.message}
+            >
+              <Input
+                {...field}
+                type="text"
+                maxLength={120}
+                placeholder="Quiz night briefing"
+                disabled={isSubmitting}
               />
-              <FormField
-                control={form.control}
-                name="deadlineTime"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Time</FormLabel>
-                    <FormControl>
-                      <Input
-                        {...field}
-                        value={field.value ?? ''}
-                        type="time"
-                        disabled={isSubmitting}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-          </fieldset>
-
-          {/* The duration decides what kind of poll this is, so it sits above the
-              grid: "All day" asks about whole days, any length asks about times. */}
-          <DurationSelector value={duration} onChange={requestDuration} disabled={isSubmitting} />
-
-          {/* min-w-0 is load-bearing. A fieldset's UA style is
-              `min-inline-size: min-content`, so it refuses to shrink below its
-              widest child (here, a 43rem grid). Without this it sits 690px wide
-              inside a 375px screen, the scroll container inherits that width and
-              therefore never scrolls, and the back half of the week becomes
-              unreachable on a phone. */}
-          <fieldset className="min-w-0 space-y-3">
-            <legend className="text-base font-medium text-brand-base">Your options</legend>
-            <Text size="sm" color="muted">
-              {allDay
-                ? 'Tap the days that work. Pick between two and eight.'
-                : 'Tap the times that work. Pick between two and eight. All times are London time.'}
-            </Text>
-
-            <AvailabilityGrid
-              duration={duration}
-              dates={dates}
-              slots={slots}
-              onToggleDate={toggleDate}
-              onToggleSlot={toggleSlot}
-              disabled={isSubmitting}
-            />
-
-            {/* The array-level message: too few, too many, duplicates.
-                A plain <p>, not <FormMessage>: FormMessage calls useFormField(),
-                which reads a FormField context that does not exist out here and
-                would resolve the field name to undefined. It belongs to the
-                array, not to any one row's input. */}
-            {optionsError && (
-              <p role="alert" className="text-[0.8rem] font-medium text-destructive">
-                {optionsError}
-              </p>
-            )}
-          </fieldset>
-
-          {/* Honeypot. Verbatim from contact-form.tsx: all five attributes. */}
-          <input
-            type="text"
-            tabIndex={-1}
-            autoComplete="off"
-            className="hidden"
-            aria-hidden="true"
-            {...form.register('website')}
-          />
-
-          <TurnstileWidget
-            onToken={(token) =>
-              form.setValue('turnstileToken', token ?? '', { shouldValidate: false })
-            }
-          />
-          <FormField
-            control={form.control}
-            name="turnstileToken"
-            render={() => (
-              <FormItem>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {error && (
-            <Alert variant="destructive" role="alert" className="mb-6" ref={errorRef} tabIndex={-1}>
-              <AlertTitle>That didn&apos;t go through</AlertTitle>
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
+            </Field>
           )}
+        />
 
-          <div className="md:w-auto md:inline-block">
-            <Button variant="primary" size="large" type="submit" fullWidth loading={isSubmitting}>
-              Send me my links
-            </Button>
+        <Controller
+          control={form.control}
+          name="description"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.description}
+              label="Any detail people need (optional)"
+              hint="Shown to everyone you send the link to."
+              error={fieldState.error?.message}
+            >
+              <Textarea {...field} rows={3} maxLength={1000} disabled={isSubmitting} />
+            </Field>
+          )}
+        />
+
+        <Controller
+          control={form.control}
+          name="agenda"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.agenda}
+              label="What's on the agenda? (optional)"
+              hint="Shown on the poll, and it goes into the calendar entry so it's there on the day."
+              error={fieldState.error?.message}
+            >
+              <Textarea {...field} rows={4} maxLength={2000} disabled={isSubmitting} />
+            </Field>
+          )}
+        />
+
+        <Controller
+          control={form.control}
+          name="location"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.location}
+              label="Where? (optional)"
+              hint="Shown on the poll and added to the calendar entry."
+              error={fieldState.error?.message}
+            >
+              <Input
+                {...field}
+                type="text"
+                maxLength={200}
+                placeholder="The Anchor, back room"
+                disabled={isSubmitting}
+              />
+            </Field>
+          )}
+        />
+
+        <Controller
+          control={form.control}
+          name="organiserName"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.organiserName}
+              label="Your name"
+              hint="Shown on the poll so people know who's asking."
+              error={fieldState.error?.message}
+            >
+              <Input
+                {...field}
+                type="text"
+                autoComplete="name"
+                maxLength={50}
+                disabled={isSubmitting}
+              />
+            </Field>
+          )}
+        />
+
+        <Controller
+          control={form.control}
+          name="organiserEmail"
+          render={({ field: { ref: _ref, ...field }, fieldState }) => (
+            <Field
+              htmlFor={FIELD_IDS.organiserEmail}
+              label="Your email"
+              hint="We send your organiser link here. It is the only way back into your results, so use an address you can get to."
+              error={fieldState.error?.message}
+            >
+              <Input
+                {...field}
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                maxLength={254}
+                disabled={isSubmitting}
+              />
+            </Field>
+          )}
+        />
+
+        {/*
+          Optional deadline. Leaving it blank keeps the old behaviour: the poll
+          stays open until you confirm it. Set it and we email YOU when it
+          passes, to come and pick. Nothing sends to guests on its own. The
+          invite always waits for you to choose, because a tie or a thin
+          turnout is a judgement, not a sum.
+        */}
+        <fieldset className="rounded-oj-lg border-1.5 border-oj-ink bg-oj-cream p-4">
+          <legend className="px-1 text-[14.5px] font-bold text-oj-ink">
+            Close entries automatically (optional)
+          </legend>
+          <p className="mb-3 text-[14.5px] leading-normal text-oj-ink-2">
+            We&rsquo;ll email you when this passes so you can pick a time. We never send the invite
+            for you.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Controller
+              control={form.control}
+              name="deadlineDate"
+              render={({ field: { ref: _ref, ...field }, fieldState }) => (
+                <Field
+                  htmlFor={FIELD_IDS.deadlineDate}
+                  label="Date"
+                  error={fieldState.error?.message}
+                >
+                  <Input
+                    {...field}
+                    value={field.value ?? ''}
+                    type="date"
+                    min={minDeadlineDate}
+                    disabled={isSubmitting}
+                  />
+                </Field>
+              )}
+            />
+            <Controller
+              control={form.control}
+              name="deadlineTime"
+              render={({ field: { ref: _ref, ...field }, fieldState }) => (
+                <Field
+                  htmlFor={FIELD_IDS.deadlineTime}
+                  label="Time"
+                  error={fieldState.error?.message}
+                >
+                  <Input {...field} value={field.value ?? ''} type="time" disabled={isSubmitting} />
+                </Field>
+              )}
+            />
           </div>
+        </fieldset>
 
-          <Text size="sm" color="muted">
-            By sending this you agree we can email you about this poll. Nothing else, and we
-            don&apos;t pass your address on. We delete the poll and everyone&apos;s answers 60 days
-            after the last date on it.
-          </Text>
-        </form>
-      </Form>
+        {/* The duration decides what kind of poll this is, so it sits above the
+            grid: "All day" asks about whole days, any length asks about times. */}
+        <DurationSelector value={duration} onChange={requestDuration} disabled={isSubmitting} />
+
+        {/* min-w-0 is load-bearing. A fieldset's UA style is
+            `min-inline-size: min-content`, so it refuses to shrink below its
+            widest child (here, a 43rem grid). Without this it sits 690px wide
+            inside a 375px screen, the scroll container inherits that width and
+            therefore never scrolls, and the back half of the week becomes
+            unreachable on a phone. */}
+        <fieldset className="min-w-0 space-y-3">
+          <legend className="text-base font-black tracking-[-0.02em] text-oj-ink">
+            Your options
+          </legend>
+          <p className="text-[14.5px] leading-normal text-oj-ink-3">
+            {allDay
+              ? 'Tap the days that work. Pick between two and eight.'
+              : 'Tap the times that work. Pick between two and eight. All times are London time.'}
+          </p>
+
+          <AvailabilityGrid
+            duration={duration}
+            dates={dates}
+            slots={slots}
+            onToggleDate={toggleDate}
+            onToggleSlot={toggleSlot}
+            disabled={isSubmitting}
+          />
+
+          {/* The array-level message: too few, too many, duplicates.
+              A plain <p>, not a Field: it belongs to the array, not to any one
+              row's input, and there is no control here for a Field to wrap. It
+              wears the same size, weight and colour a Field error does. */}
+          {optionsError && (
+            <p role="alert" className="text-xs font-semibold text-oj-danger">
+              {optionsError}
+            </p>
+          )}
+        </fieldset>
+
+        {/* Honeypot. Verbatim from contact-form.tsx: all five attributes. */}
+        <input
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+          {...form.register('website')}
+        />
+
+        <TurnstileWidget
+          onToken={(token) =>
+            form.setValue('turnstileToken', token ?? '', { shouldValidate: false })
+          }
+        />
+        {/* The widget is a third-party iframe with no control of ours to label,
+            so its message stands on its own, exactly as the options one does. */}
+        {form.formState.errors.turnstileToken?.message && (
+          <p role="alert" className="text-xs font-semibold text-oj-danger">
+            {form.formState.errors.turnstileToken.message}
+          </p>
+        )}
+
+        {error && (
+          // The wrapper holds the focus, not the notice. Alert takes no ref, and
+          // the failure has to land somewhere a keyboard and a screen reader both
+          // arrive at, so the thing that takes focus is the thing wrapping it.
+          <div ref={errorRef} tabIndex={-1} className="mb-6 outline-none">
+            <Alert tone="danger" title="That didn't go through">
+              {error}
+            </Alert>
+          </div>
+        )}
+
+        <Button
+          type="submit"
+          size="lg"
+          disabled={isSubmitting}
+          aria-busy={isSubmitting || undefined}
+          className="w-full md:w-auto"
+        >
+          {isSubmitting && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
+          Send me my links
+        </Button>
+
+        <p className="text-[14.5px] leading-normal text-oj-ink-3">
+          By sending this you agree we can email you about this poll. Nothing else, and we
+          don&apos;t pass your address on. We delete the poll and everyone&apos;s answers 60 days
+          after the last date on it.
+        </p>
+      </form>
 
       {/* Only ever opens for the one change that cannot keep what is picked:
           whole days and times are different shapes and cannot hold each other's
           values. Changing between two timed lengths keeps everything. */}
-      <Dialog
+      <Modal
         open={pendingDuration !== null}
-        onOpenChange={(open) => !open && setPendingDuration(null)}
-      >
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Start the options again?</DialogTitle>
-            <DialogDescription>
-              {pendingDuration === 'all-day'
-                ? 'Asking about whole days means the times you picked no longer fit, so we’ll clear them and you can pick days instead.'
-                : 'Asking about times means the days you picked no longer fit, so we’ll clear them and you can pick times instead.'}
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <Button
-              variant="ghost"
-              size="medium"
-              type="button"
-              onClick={() => setPendingDuration(null)}
-            >
+        onClose={() => setPendingDuration(null)}
+        /* Modal draws its title with the lowercase display face, which belongs to
+           the marketing pages. This is a tool, and a dialog that asks "start the
+           options again?" in lowercase reads as branding stuck on the wrong
+           surface. `oj-keep-case` is the design system's own escape hatch for
+           text that must survive inside a display heading, so the case is fixed
+           here rather than by forking Modal. */
+        title={<span className="oj-keep-case">Start the options again?</span>}
+        actions={
+          <>
+            <Button variant="ghost" type="button" onClick={() => setPendingDuration(null)}>
               Leave it as it is
             </Button>
             <Button
               variant="primary"
-              size="medium"
               type="button"
               onClick={() => {
                 if (pendingDuration !== null) applyDuration(pendingDuration);
@@ -643,9 +682,13 @@ export default function CreatePollForm(): JSX.Element {
             >
               Yes, clear them
             </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+          </>
+        }
+      >
+        {pendingDuration === 'all-day'
+          ? 'Asking about whole days means the times you picked no longer fit, so we’ll clear them and you can pick days instead.'
+          : 'Asking about times means the days you picked no longer fit, so we’ll clear them and you can pick times instead.'}
+      </Modal>
     </div>
   );
 }
@@ -694,46 +737,29 @@ function SuccessState({
   if (links) {
     return (
       <div className="max-w-2xl mt-8">
-        <Heading level={1} color="brand-base">
-          Your poll is live
-        </Heading>
+        <h1 className={TOOL_HEADING}>Your poll is live</h1>
 
-        <Alert
-          variant="default"
-          role="status"
-          className="mt-4 border-orange bg-orange-light text-brand-base"
-        >
-          <AlertTitle>No email needed</AlertTitle>
-          <AlertDescription>
-            You were already signed in, so we did not make you confirm an address you had just
-            proved. Your poll is open and taking answers now.
-          </AlertDescription>
+        <Alert tone="ok" title="No email needed" className="mt-4">
+          You were already signed in, so we did not make you confirm an address you had just proved.
+          Your poll is open and taking answers now.
         </Alert>
 
         <div className="mt-6 space-y-6">
           <div>
-            <Text weight="semibold" color="brand-base">
-              Send this one to your guests
-            </Text>
-            <Text size="sm" color="muted" className="mt-1">
+            <p className="font-bold text-oj-ink">Send this one to your guests</p>
+            <p className="mt-1 text-[14.5px] leading-normal text-oj-ink-3">
               Anyone with it can answer. They will not need an account.
-            </Text>
-            <p className="mt-2 break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
-              {links.participantUrl}
             </p>
+            <p className={LINK_BOX}>{links.participantUrl}</p>
           </div>
 
           <div>
-            <Text weight="semibold" color="brand-base">
-              Keep this one to yourself
-            </Text>
-            <Text size="sm" color="muted" className="mt-1">
+            <p className="font-bold text-oj-ink">Keep this one to yourself</p>
+            <p className="mt-1 text-[14.5px] leading-normal text-oj-ink-3">
               It shows who said what, and it can close the poll and confirm the time. Anyone you
               forward it to can do the same, so do not send it round with the other one.
-            </Text>
-            <p className="mt-2 break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
-              {links.organiserUrl}
             </p>
+            <p className={LINK_BOX}>{links.organiserUrl}</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -756,56 +782,52 @@ function SuccessState({
 
   return (
     <div className="max-w-2xl mt-8">
-      <Heading level={1} color="brand-base">
-        Check your inbox
-      </Heading>
+      <h1 className={TOOL_HEADING}>Check your inbox</h1>
 
-      {/* There is no success variant on Alert, so border-orange + bg-orange-light
-          is the agreed treatment, used identically on every poll screen. */}
-      <Alert
-        variant="default"
-        role="status"
-        className="mt-4 border-orange bg-orange-light text-brand-base"
-      >
-        <AlertTitle>We&apos;ve sent your links</AlertTitle>
-        <AlertDescription>
-          We&apos;ve emailed <strong>{email}</strong> a link to confirm your address. Tap it and
-          your poll goes live, then you&apos;ll get your team&apos;s link and your own private one.
-        </AlertDescription>
+      {/* The design system has a success tone, so this is that rather than the
+          orange-tinted stand-in the poll screens used to share. */}
+      <Alert tone="ok" title="We've sent your links" className="mt-4">
+        We&apos;ve emailed <strong>{email}</strong> a link to confirm your address. Tap it and your
+        poll goes live, then you&apos;ll get your team&apos;s link and your own private one.
       </Alert>
 
       {resendToken && resendState !== 'sent' && (
         <div className="mt-6 space-y-3">
-          <Text size="sm" color="muted">
+          <p className="text-[14.5px] leading-normal text-oj-ink-3">
             Nothing there? Have a look in your spam folder first.
-          </Text>
+          </p>
           <Button
-            variant="outline"
-            size="medium"
+            variant="ghost"
             type="button"
-            loading={resendState === 'sending'}
+            disabled={resendState === 'sending'}
+            aria-busy={resendState === 'sending' || undefined}
             onClick={onResend}
           >
+            {resendState === 'sending' && (
+              <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
+            )}
             Send it again
           </Button>
-          {resendError && (
-            <Alert variant="destructive" role="alert">
-              <AlertDescription>{resendError}</AlertDescription>
-            </Alert>
-          )}
+          {resendError && <Alert tone="danger">{resendError}</Alert>}
         </div>
       )}
 
       {resendState === 'sent' && (
-        <Text size="sm" color="muted" className="mt-6">
+        <p className="mt-6 text-[14.5px] leading-normal text-oj-ink-3">
           Sent again. Give it a minute to come through.
-        </Text>
+        </p>
       )}
 
       {!resendToken && (
-        <Text size="sm" color="muted" className="mt-6">
-          Still nothing? <a href="/availability/new">Set up a new poll.</a>
-        </Text>
+        <p className="mt-6 text-[14.5px] leading-normal text-oj-ink-3">
+          Still nothing?{' '}
+          <a
+            href="/availability/new"
+            className="font-bold text-oj-orange-deep underline underline-offset-4"
+          >
+            Set up a new poll.
+          </a>
+        </p>
       )}
     </div>
   );

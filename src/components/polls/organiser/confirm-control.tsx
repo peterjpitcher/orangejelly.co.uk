@@ -1,16 +1,8 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import Button from '@/components/Button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+import { Loader2 } from 'lucide-react';
+import { Alert, Button, Modal } from '@/components/oj';
 import { confirmOption } from '@/app/actions/poll-organiser';
 
 /**
@@ -27,8 +19,11 @@ import { confirmOption } from '@/app/actions/poll-organiser';
  * `@/lib/poll-tokens` is likewise never imported here: it pulls Node's crypto
  * shim into the browser bundle, which cost 317 kB last time.
  *
- * Radix's Dialog traps focus and closes on Escape out of the box, which is the
- * project's modal accessibility bar met without extra work.
+ * The dialogue is the design system's `Modal`, not the shadcn/Radix one. Radix
+ * traps focus and closes on Escape, and so does this: the port carries a real
+ * focus trap for exactly that reason. What Radix could not give us was the
+ * surface, which is hardcoded to `rounded-lg`, `shadow-lg` and `bg-background`
+ * in `ui/dialog.tsx` and cannot be restyled from a call site.
  */
 
 export interface ConfirmControlProps {
@@ -44,6 +39,10 @@ export interface ConfirmControlProps {
    * The tied alternatives render as outline so the leader's button is the one
    * that reads as "the" action. Three identical primaries stacked in one card
    * is a wall of orange with no hierarchy at all.
+   *
+   * The name stays `outline` because two call sites in `best-option-card` pass
+   * it. The design system's equivalent role is `ghost`: transparent fill, ink
+   * border, ink label.
    */
   buttonVariant?: 'primary' | 'outline';
 }
@@ -77,61 +76,63 @@ export default function ConfirmControl({
   return (
     <>
       <Button
-        variant={buttonVariant}
-        size="medium"
+        variant={buttonVariant === 'outline' ? 'ghost' : 'primary'}
+        size="md"
         type="button"
-        fullWidth
-        className="mt-4 md:w-auto"
+        className="mt-4 w-full md:w-auto"
         onClick={() => setOpen(true)}
       >
         {buttonLabel}
       </Button>
 
-      <Dialog
+      <Modal
         open={open}
-        onOpenChange={(next) => {
+        onClose={() => {
           // Never dismiss mid-flight: the action is already running and the
           // result still has to land somewhere.
           if (isPending) return;
-          setOpen(next);
-          if (!next) setError(null);
+          setOpen(false);
+          setError(null);
         }}
-      >
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Confirm this time?</DialogTitle>
-            <DialogDescription>
-              {hasResponses ? optionLabel : 'Nobody voted, so this is your call.'}
-              {!hasResponses && <span className="mt-2 block">{optionLabel}</span>}
-            </DialogDescription>
-          </DialogHeader>
-
-          <p className="text-sm text-brand-base">
-            This locks the poll. You can&rsquo;t undo it from here.
-          </p>
-
-          {error && (
-            <Alert variant="destructive" role="alert">
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-
-          <DialogFooter>
-            <Button variant="ghost" size="medium" type="button" onClick={() => setOpen(false)}>
+        title={
+          // `Modal` styles its title with `.oj-display`, which lowercases. That is
+          // the marketing treatment; a tool screen keeps sentence case.
+          <span className="normal-case">Confirm this time?</span>
+        }
+        actions={
+          <>
+            <Button variant="ghost" size="md" type="button" onClick={() => setOpen(false)}>
               Not yet
             </Button>
             <Button
               variant="primary"
-              size="medium"
+              size="md"
               type="button"
-              loading={isPending}
+              disabled={isPending}
+              aria-busy={isPending || undefined}
               onClick={handleConfirm}
             >
+              {isPending && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
               Yes, confirm it
             </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+          </>
+        }
+      >
+        <p className="m-0">
+          {hasResponses ? optionLabel : 'Nobody voted, so this is your call.'}
+          {!hasResponses && <span className="mt-2 block">{optionLabel}</span>}
+        </p>
+
+        <p className="mt-3 text-sm text-oj-ink">
+          This locks the poll. You can&rsquo;t undo it from here.
+        </p>
+
+        {error && (
+          <Alert tone="danger" role="alert" className="mt-4">
+            {error}
+          </Alert>
+        )}
+      </Modal>
     </>
   );
 }

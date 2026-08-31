@@ -2,8 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import Button from '@/components/Button';
-import Text from '@/components/Text';
+import { Button } from '@/components/oj';
 import { cn } from '@/lib/utils';
 import { getTodayIsoDate, type IsoDate } from '@/lib/dateUtils';
 import {
@@ -154,7 +153,7 @@ export default function AvailabilityGrid({
           sits apart from the controls so it does not read as one. */}
       {allDay && (
         <div
-          className="inline-flex rounded-md border border-border bg-white p-1"
+          className="inline-flex rounded-oj border-1.5 border-oj-ink bg-oj-paper p-1"
           role="tablist"
           aria-label="Calendar view"
         >
@@ -167,8 +166,12 @@ export default function AvailabilityGrid({
               onClick={() => setView(mode)}
               disabled={disabled}
               className={cn(
-                'min-h-tap rounded px-4 text-sm font-medium capitalize transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2',
-                view === mode ? 'bg-orange text-brand-base' : 'text-brand-base hover:bg-orange/10'
+                'oj-focus min-h-tap rounded-oj px-4 text-sm font-bold capitalize transition-colors',
+                // Deep orange, never brand orange: the label is bold and small, so
+                // white on it has to clear 4.5:1, and only the deep tone does.
+                view === mode
+                  ? 'bg-oj-orange-deep text-oj-on-band'
+                  : 'text-oj-ink hover:bg-oj-cream-2'
               )}
             >
               {mode}
@@ -197,7 +200,7 @@ export default function AvailabilityGrid({
           />
           <Button
             variant="ghost"
-            size="small"
+            size="sm"
             type="button"
             onClick={() => setAnchor(today)}
             disabled={disabled}
@@ -205,21 +208,19 @@ export default function AvailabilityGrid({
             Today
           </Button>
           {/* Announced, because moving the week changes everything below it. */}
-          <p className="text-base font-medium text-brand-base" aria-live="polite">
+          <p className="text-base font-bold text-oj-ink" aria-live="polite">
             {rangeLabel}
           </p>
         </div>
 
-        <Text size="sm" color="muted">
-          {londonZoneLabel(weekStart)}
-        </Text>
+        <p className="text-[14.5px] text-oj-ink-3">{londonZoneLabel(weekStart)}</p>
       </div>
 
       {/* The scroll container. tabIndex and a name because a keyboard user must be
           able to reach and scroll it; without both, the far end of the week is
           unreachable on a narrow screen. */}
       <div
-        className="overflow-x-auto rounded-md border border-border bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+        className="oj-focus overflow-x-auto rounded-oj-lg border-1.5 border-oj-ink bg-oj-paper"
         tabIndex={0}
         role="group"
         aria-label={
@@ -243,28 +244,30 @@ export default function AvailabilityGrid({
           >
             {/* Header row. The gutter corner is sticky too, or it slides out from
                 under the day names as the week scrolls. */}
-            <div className="sticky left-0 z-20 border-b border-r border-border bg-white" />
+            {/* The rules inside the grid are the hairline ink the design system
+                uses inside a table, not the 1.5px card border: at 1.5px every
+                one of the fifty-odd lines here reads as an edge and the grid
+                stops being one object. */}
+            <div className="sticky left-0 z-20 border-b border-r border-oj-ink/15 bg-oj-paper" />
             {weekDays.map((date) => (
               <div
                 key={date}
                 className={cn(
-                  'border-b border-border px-1 py-2 text-center',
-                  date === today && 'bg-orange-light'
+                  'border-b border-oj-ink/15 px-1 py-2 text-center',
+                  date === today && 'bg-oj-orange-soft'
                 )}
               >
-                <div className="text-xs uppercase text-brand-base-light">
+                <div className="text-xs uppercase tracking-[0.08em] text-oj-ink-3">
                   {formatWeekdayShort(date)}
                 </div>
-                <div className="text-base font-semibold text-brand-base">
-                  {formatDayOfMonth(date)}
-                </div>
+                <div className="text-base font-bold text-oj-ink">{formatDayOfMonth(date)}</div>
               </div>
             ))}
 
             {allDay ? (
               // One row: the whole day, per day.
               <>
-                <div className="sticky left-0 z-10 flex items-center justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-brand-base-light">
+                <div className="sticky left-0 z-10 flex items-center justify-end border-r border-oj-ink/15 bg-oj-paper px-2 py-1 text-right text-xs text-oj-ink-3">
                   All day
                 </div>
                 {weekDays.map((date) => {
@@ -305,7 +308,7 @@ export default function AvailabilityGrid({
           type="button"
           onClick={() => setExpanded((value) => !value)}
           disabled={disabled}
-          className="min-h-tap text-sm font-medium text-orange-dark underline underline-offset-2 hover:text-orange-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+          className="oj-focus min-h-tap text-sm font-bold text-oj-orange-deep underline underline-offset-4 hover:text-oj-ink"
         >
           {expanded ? 'Show 8am to 11pm only' : 'Show every hour of the day'}
         </button>
@@ -313,14 +316,14 @@ export default function AvailabilityGrid({
 
       {/* The counter. Live, because the cap is only fair if you can see it coming. */}
       <div aria-live="polite" className="space-y-1">
-        <Text size="sm" color="muted">
+        <p className="text-[14.5px] text-oj-ink-3">
           {selectedCount} of {MAX_POLL_OPTIONS} times selected
-        </Text>
+        </p>
         {atCap && (
-          <Text size="sm" color="muted">
+          <p className="text-[14.5px] leading-normal text-oj-ink-3">
             That&apos;s the maximum. Unpick one to pick another. A long list makes people skim and
             leave out times they could actually do.
-          </Text>
+          </p>
         )}
       </div>
     </div>
@@ -347,7 +350,7 @@ function TimeRow({
 }): JSX.Element {
   return (
     <>
-      <div className="sticky left-0 z-10 flex items-start justify-end border-r border-border bg-white px-2 py-1 text-right text-xs text-brand-base-light">
+      <div className="sticky left-0 z-10 flex items-start justify-end border-r border-oj-ink/15 bg-oj-paper px-2 py-1 text-right text-xs text-oj-ink-3">
         {formatWallClockLabel(time)}
       </div>
       {weekDays.map((date) => {
@@ -403,14 +406,25 @@ function GridCell({
       disabled={disabled || blocked}
       onClick={onClick}
       className={cn(
-        'relative m-0.5 flex min-h-tap items-center justify-center rounded border text-sm transition-colors',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-1',
+        'oj-focus relative m-0.5 flex min-h-tap items-center justify-center rounded-oj border-1.5 text-sm transition-colors',
+        /*
+         * Three states that have to be told apart at a glance, and each one is
+         * carried by more than colour:
+         *
+         *   picked      filled deep orange, white label, solid ink edge, tick
+         *   free        cream tile inside the paper grid, solid faint edge
+         *   unpickable  no tile at all and a dashed edge, so the cell reads as
+         *               absent rather than merely quiet
+         *
+         * The fill is the DEEP orange. Brand orange with white is 2.97:1, and
+         * the tick sits at 14px bold, so it needs 4.5:1; deep orange gives 5.24.
+         */
         selected
-          ? 'border-2 border-orange-darker bg-orange font-semibold text-brand-base'
-          : 'border-border bg-surface-bright hover:border-orange hover:bg-orange-light',
+          ? 'border-oj-ink bg-oj-orange-deep font-bold text-oj-on-band'
+          : 'border-oj-ink/20 bg-oj-cream hover:border-oj-ink hover:bg-oj-orange-soft',
         blocked &&
           !selected &&
-          'cursor-not-allowed border-dashed bg-transparent hover:border-border hover:bg-transparent',
+          'cursor-not-allowed border-dashed border-oj-ink/20 bg-transparent hover:border-oj-ink/20 hover:bg-transparent',
         block === 'past' && 'opacity-40'
       )}
     >
@@ -444,7 +458,7 @@ function MonthGrid({
       {weeks[0].map((date) => (
         <div
           key={`head-${date}`}
-          className="py-2 text-center text-xs uppercase text-brand-base-light"
+          className="py-2 text-center text-xs uppercase tracking-[0.08em] text-oj-ink-3"
         >
           {formatWeekdayShort(date)}
         </div>
@@ -469,16 +483,18 @@ function MonthGrid({
             disabled={disabled || blocked}
             onClick={() => onToggleDate(date)}
             className={cn(
-              'flex min-h-tap items-center justify-center gap-1 rounded border text-sm transition-colors',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-1',
+              'oj-focus flex min-h-tap items-center justify-center gap-1 rounded-oj border-1.5 text-sm transition-colors',
+              // Same three states, same reasoning, as GridCell above.
               selected
-                ? 'border-2 border-orange-darker bg-orange font-semibold text-brand-base'
-                : 'border-border bg-surface-bright hover:border-orange hover:bg-orange-light',
-              blocked && !selected && 'cursor-not-allowed border-dashed bg-transparent',
+                ? 'border-oj-ink bg-oj-orange-deep font-bold text-oj-on-band'
+                : 'border-oj-ink/20 bg-oj-cream hover:border-oj-ink hover:bg-oj-orange-soft',
+              blocked &&
+                !selected &&
+                'cursor-not-allowed border-dashed border-oj-ink/20 bg-transparent',
               // Matches the week grid: a day that has been and gone reads as spent.
               block === 'past' && 'opacity-40',
-              outside && !selected && 'text-brand-base-light opacity-60',
-              date === today && !selected && 'border-orange'
+              outside && !selected && 'text-oj-ink-3 opacity-60',
+              date === today && !selected && 'border-oj-orange-deep'
             )}
           >
             <span aria-hidden="true">{formatDayOfMonth(date)}</span>
@@ -503,14 +519,20 @@ function NavButton({
   disabled: boolean;
 }): JSX.Element {
   return (
-    <button
+    // The design system's ghost button, squared off. It already carries the
+    // border, the focus ring, the disabled state and the tap floor; the only
+    // thing it does not know is that this one holds a glyph rather than a word,
+    // so the width and the side padding are the whole override.
+    <Button
+      variant="ghost"
+      size="sm"
       type="button"
       aria-label={label}
       onClick={onClick}
       disabled={disabled}
-      className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-white text-brand-base transition-colors hover:border-orange hover:text-orange-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 disabled:opacity-50"
+      className="w-tap px-0"
     >
       <span aria-hidden="true">{glyph}</span>
-    </button>
+    </Button>
   );
 }

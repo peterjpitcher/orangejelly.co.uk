@@ -1,7 +1,8 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Button from '@/components/Button';
+
+import { Button } from '@/components/oj';
 
 /**
  * A copy-to-clipboard button that a screen reader hears succeed.
@@ -25,6 +26,20 @@ export interface CopyButtonProps {
   copiedLabel?: string;
   variant?: 'primary' | 'secondary' | 'outline';
 }
+
+/**
+ * The prop names a role, and the design system names a role too, so this is a
+ * rename rather than a restyle. The prop keeps its old spelling because two other
+ * share surfaces pass it; only what it resolves to has moved.
+ *
+ * `outline` is the bordered, unfilled button, which the new system calls `ghost`.
+ * `secondary` is the second-emphasis block, which it calls `solid`.
+ */
+const VARIANT: Record<NonNullable<CopyButtonProps['variant']>, 'primary' | 'solid' | 'ghost'> = {
+  primary: 'primary',
+  secondary: 'solid',
+  outline: 'ghost',
+};
 
 export default function CopyButton({
   text,
@@ -73,7 +88,7 @@ export default function CopyButton({
 
   return (
     <span className="inline-flex items-center gap-2">
-      <Button type="button" variant={variant} size="small" onClick={copy}>
+      <Button type="button" variant={VARIANT[variant]} size="sm" onClick={copy}>
         {state === 'copied' ? `✓ ${copiedLabel}` : label}
       </Button>
       {/* The announcement. Visually the button label already changed; this is
@@ -82,7 +97,7 @@ export default function CopyButton({
         {state === 'copied' ? copiedLabel : state === 'failed' ? 'Copy failed' : ''}
       </span>
       {state === 'failed' && (
-        <span className="text-sm text-destructive">
+        <span className="text-sm font-semibold text-oj-danger">
           Copying is blocked here. Select the text and copy it yourself.
         </span>
       )}

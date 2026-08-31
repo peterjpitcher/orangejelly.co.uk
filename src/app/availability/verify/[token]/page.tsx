@@ -1,19 +1,16 @@
 import type { Metadata } from 'next';
-import Box from '@/components/Box';
-import Button from '@/components/Button';
-import Heading from '@/components/Heading';
-import Section from '@/components/Section';
-import Text from '@/components/Text';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Alert, Button } from '@/components/oj';
 import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
 
 /**
  * The magic-link landing page.
  *
  * The [token] is the `verify_token`, not the organiser token. Verification is a
- * plain GET with no client boundary at all: there is nothing interactive here
- * beyond links, so zero client JS is the correct call and the poll goes live
- * with no hydration delay.
+ * plain GET, and the outcome is decided and rendered entirely on the server, so
+ * the poll goes live and the links are readable before any script runs. Nothing
+ * on the screen is interactive beyond its links. `Alert` and `Button` are client
+ * components, so they do bring a small hydration bundle with them; nothing the
+ * organiser needs from this page waits on it.
  *
  * Verifying on GET means an email-scanner prefetch can consume the token. The
  * token IS single-use, so a scanner's prefetch publishes the poll and the
@@ -53,81 +50,101 @@ export default async function VerifyPage({ params }: VerifyPageProps): Promise<J
 }
 
 /**
- * Success. Renders both links, clearly separated and labelled.
+ * The shell both outcomes sit in.
  *
- * The links are selectable text in a bordered box rather than a copy button:
- * there is no toast component, so a "copied!" confirmation has nowhere to live
- * without adding a client boundary, and these same links are already sitting in
- * the organiser's inbox. `select-all` means one tap selects the whole URL on iOS.
+ * It opens the `<main>` landmark itself. `MainGate` passes the tool routes
+ * straight through without one, so before this the skip link at the top of every
+ * page pointed at nothing on this screen and there was no main region to jump to.
+ * The vote and 404 screens under /availability already carry their own.
  */
+function Outcome({ children }: { children: React.ReactNode }): JSX.Element {
+  return (
+    <main id="main-content" className="py-14 md:py-20">
+      <div className="page-shell">
+        <div className="mx-auto max-w-md space-y-6 text-center">{children}</div>
+      </div>
+    </main>
+  );
+}
+
+/**
+ * The outcome badge. Decoration: the meaning is carried by the H1 beneath it, so
+ * the glyph is hidden from assistive technology.
+ *
+ * White on the deep orange is 5.24:1. The brand orange would be 2.97:1, which is
+ * why the fill is never that one.
+ */
+function OutcomeBadge({ glyph, tone }: { glyph: string; tone: 'ok' | 'danger' }): JSX.Element {
+  return (
+    <span
+      aria-hidden="true"
+      className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full border-1.5 border-oj-ink text-2xl shadow-press-sm ${
+        tone === 'ok' ? 'bg-oj-orange-deep text-oj-on-band' : 'bg-oj-cream-2 text-oj-danger'
+      }`}
+    >
+      {glyph}
+    </span>
+  );
+}
+
+/**
+ * A link the organiser has to keep. Selectable text in a bordered block rather
+ * than a copy button: there is no toast component, so a "copied!" confirmation
+ * has nowhere to live without adding a client boundary, and these same links are
+ * already sitting in the organiser's inbox. `select-all` means one tap selects
+ * the whole URL on iOS.
+ */
+function LinkBlock({
+  label,
+  note,
+  url,
+}: {
+  label: string;
+  note?: string;
+  url: string;
+}): JSX.Element {
+  return (
+    <div className="rounded-oj border-1.5 border-oj-ink bg-oj-cream p-4 text-left shadow-press-sm">
+      <p className="oj-eyebrow m-0">{label}</p>
+      {note ? <p className="mt-2 text-[14px] leading-normal text-oj-ink-2">{note}</p> : null}
+      <p className="mt-2 select-all break-all font-mono text-[14px] leading-normal text-oj-ink">
+        {url}
+      </p>
+    </div>
+  );
+}
+
+/** Success. Renders both links, clearly separated and labelled. */
 function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
   return (
-    <Section background="surface" padding="large">
-      <div className="max-w-md mx-auto text-center space-y-6">
-        {/* The meaning is carried by the H1; the glyph is decoration. */}
-        <span aria-hidden="true" className="block text-4xl">
-          ✓
-        </span>
-        <Heading level={1} align="center" color="brand-base">
-          You&apos;re all set
-        </Heading>
+    <Outcome>
+      <OutcomeBadge glyph="✓" tone="ok" />
+      <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
+        You&apos;re all set
+      </h1>
 
-        <Alert
-          variant="default"
-          role="status"
-          className="border-orange bg-orange-light text-brand-base text-left"
-        >
-          <AlertTitle>Your poll is live</AlertTitle>
-          <AlertDescription>
-            Share the link below with your team. They don&apos;t need an account, they just tap
-            three buttons and they&apos;re done.
-          </AlertDescription>
-        </Alert>
+      <Alert tone="ok" role="status" title="Your poll is live" className="text-left">
+        Share the link below with your team. They don&apos;t need an account, they just tap three
+        buttons and they&apos;re done.
+      </Alert>
 
-        <Box
-          as="div"
-          background="white"
-          padding="small"
-          rounded="md"
-          className="border border-border text-left break-all"
-        >
-          <Text size="sm" color="muted" className="mb-1">
-            Your team&apos;s link
-          </Text>
-          <Text size="sm" as="span" className="font-mono select-all">
-            {links.participantUrl}
-          </Text>
-        </Box>
+      <LinkBlock label="Your team's link" url={links.participantUrl} />
 
-        <Box
-          as="div"
-          background="white"
-          padding="small"
-          rounded="md"
-          className="border border-border text-left break-all"
-        >
-          <Text size="sm" weight="semibold" className="mb-1">
-            Private: just for you
-          </Text>
-          <Text size="sm" color="muted" className="mb-2">
-            Keep this one. Anyone who has it can close the poll and confirm the time.
-          </Text>
-          <Text size="sm" as="span" className="font-mono select-all">
-            {links.organiserUrl}
-          </Text>
-        </Box>
+      <LinkBlock
+        label="Private: just for you"
+        note="Keep this one. Anyone who has it can close the poll and confirm the time."
+        url={links.organiserUrl}
+      />
 
-        <Button
-          variant="primary"
-          size="large"
-          href={`/availability/o/${links.organiserToken}`}
-          fullWidth
-          className="md:w-auto"
-        >
-          See my results
-        </Button>
-      </div>
-    </Section>
+      <Button
+        variant="primary"
+        size="lg"
+        href={`/availability/o/${links.organiserToken}`}
+        className="w-full md:w-auto"
+      >
+        See my results
+      </Button>
+    </Outcome>
   );
 }
 
@@ -139,33 +156,20 @@ function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
  */
 function InvalidOutcome(): JSX.Element {
   return (
-    <Section background="surface" padding="large">
-      <div className="max-w-md mx-auto text-center space-y-6">
-        <span aria-hidden="true" className="block text-4xl">
-          ✕
-        </span>
-        <Heading level={1} align="center" color="brand-base">
-          That link didn&apos;t work
-        </Heading>
+    <Outcome>
+      <OutcomeBadge glyph="✕" tone="danger" />
+      <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
+        That link didn&apos;t work
+      </h1>
 
-        <Alert variant="destructive" className="text-left">
-          <AlertTitle>We couldn&apos;t confirm your email</AlertTitle>
-          <AlertDescription>
-            Confirmation links work once and last a day. If you&apos;ve already used it, your links
-            are in the email we sent straight afterwards. Otherwise, set up a new poll.
-          </AlertDescription>
-        </Alert>
+      <Alert tone="danger" title="We couldn't confirm your email" className="text-left">
+        Confirmation links work once and last a day. If you&apos;ve already used it, your links are
+        in the email we sent straight afterwards. Otherwise, set up a new poll.
+      </Alert>
 
-        <Button
-          variant="outline"
-          size="large"
-          href="/availability/new"
-          fullWidth
-          className="md:w-auto"
-        >
-          Set up a new poll
-        </Button>
-      </div>
-    </Section>
+      <Button variant="ghost" size="lg" href="/availability/new" className="w-full md:w-auto">
+        Set up a new poll
+      </Button>
+    </Outcome>
   );
 }

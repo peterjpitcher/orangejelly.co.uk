@@ -288,9 +288,13 @@
  * oj-* Tailwind class. The tool routes reference the legacy tokens above and are
  * untouched by construction, not by a selector that has to keep winning.
  *
- * The legacy tokens come out only when nothing references them, at which point the
- * tool routes will have been dealt with deliberately. scripts/check-style-isolation.mjs
- * proves the separation holds at every step in between.
+ * The tool routes have since been dealt with deliberately, which is the "at which
+ * point" this used to be waiting for: /admin, /availability and the poll screens
+ * were restyled onto the oj tokens on 31 August 2026 at the owner's request. So the
+ * separation this describes is history rather than a live constraint, and
+ * check-style-isolation.mjs, which existed to prove the separation held, went with
+ * it. The legacy tokens below still come out only when nothing references them, and
+ * what still references them is the fourteen page bodies phase 4 retires.
  */
 :root {
   /* Base palette */

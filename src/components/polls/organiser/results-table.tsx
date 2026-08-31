@@ -8,7 +8,6 @@ import {
   answerGlyph,
   answerLabel,
   cellAccessibleName,
-  cellClass,
   duplicateNames,
   optionFullLabel,
   optionHeaderLines,
@@ -56,6 +55,47 @@ export interface ResultsTableProps {
   confirmedOptionId: string | null;
 }
 
+/**
+ * The shape every answer chip shares. State-specific fill, border and weight come
+ * from `cellChipClass`.
+ */
+export const CELL_CHIP_BASE =
+  'inline-flex min-h-[32px] min-w-[32px] items-center justify-center gap-1 rounded-oj border-1.5 px-2 py-1';
+
+/**
+ * The chip treatment for one answer.
+ *
+ * FOUR TREATMENTS THAT DIFFER BY MORE THAN HUE. This is the densest screen in the
+ * app, and hue alone at this size is guesswork even for someone who can see it:
+ * at a glance a reader is scanning shape and weight, not sampling colour. So each
+ * state changes fill, border style and text weight together.
+ *
+ *   yes           filled deep orange, white label, solid ink border, bold
+ *   if need be    filled sunken cream, ink label, solid ink border
+ *   no            no fill, dashed border, recessed label
+ *   not answered  nothing at all
+ *
+ * WHITE ON THE ORANGE FILL, NEVER INK. `--oj-orange-deep` with white is 5.24:1;
+ * the brand orange with white is 2.97:1 and is not a fill text ever sits on.
+ *
+ * The glyph and the word beside it still carry the state on their own, which is
+ * what keeps this out of WCAG 1.4.1 territory. The fill is reinforcement.
+ */
+export function cellChipClass(state: CellState): string {
+  switch (state) {
+    case 'yes':
+      return 'border-oj-ink bg-oj-orange-deep font-bold text-oj-on-band';
+    case 'if_need_be':
+      return 'border-oj-ink bg-oj-cream-2 font-semibold text-oj-ink';
+    case 'no':
+      return 'border-dashed border-oj-ink/40 text-oj-ink-2';
+    default:
+      // `text-oj-ink-2` rather than the muted `text-oj-ink-3`, which drops to
+      // 4.4:1 on the chosen column's tint.
+      return 'border-transparent text-oj-ink-2';
+  }
+}
+
 /** The proportional bar. Decorative: the counts are already stated as text above it. */
 function TotalsBar({ tally }: { tally: OptionTally }): JSX.Element | null {
   const total = tally.yes + tally.if_need_be + tally.no;
@@ -63,13 +103,12 @@ function TotalsBar({ tally }: { tally: OptionTally }): JSX.Element | null {
 
   // A plain three-div flex bar. `src/components/ui/progress.tsx` cannot do this:
   // it takes one value and hardcodes `bg-primary`, so it physically cannot show
-  // three shares. `bg-chart-1` is also not an option: tailwind.config.js has no
-  // `chart` colour key, so the class compiles to nothing at all. Inline
-  // `hsl(var(--chart-N))` reads the tokens that do exist in globals.css.
-  const shares: Array<{ count: number; colour: string }> = [
-    { count: tally.yes, colour: 'hsl(var(--chart-2))' },
-    { count: tally.if_need_be, colour: 'hsl(var(--chart-4))' },
-    { count: tally.no, colour: 'hsl(var(--chart-1))' },
+  // three shares. The fills echo the chips above them, so the bar reads as a
+  // summary of the column rather than as a second, unrelated colour scheme.
+  const shares: Array<{ count: number; fill: string }> = [
+    { count: tally.yes, fill: 'bg-oj-orange-deep' },
+    { count: tally.if_need_be, fill: 'bg-oj-peach' },
+    { count: tally.no, fill: 'bg-oj-ink/25' },
   ];
 
   return (
@@ -77,13 +116,14 @@ function TotalsBar({ tally }: { tally: OptionTally }): JSX.Element | null {
     // reader announcing the same counts twice is noise.
     <div
       aria-hidden="true"
-      className="mt-2 flex h-1.5 w-full overflow-hidden rounded-full bg-surface"
+      className="mt-2 flex h-1.5 w-full overflow-hidden rounded-oj bg-oj-cream-2"
     >
       {shares.map((share, index) =>
         share.count > 0 ? (
           <div
             key={index}
-            style={{ backgroundColor: share.colour, width: `${(share.count / total) * 100}%` }}
+            className={share.fill}
+            style={{ width: `${(share.count / total) * 100}%` }}
           />
         ) : null
       )}
@@ -114,7 +154,9 @@ export default function ResultsTable({
       tabIndex={0}
       role="region"
       aria-labelledby="results-table-caption"
-      className="relative -mx-4 overflow-x-auto overflow-y-visible px-4 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--color-focus-ring)] sm:mx-0 sm:px-0"
+      // The full-bleed negative margin went when the border arrived: a card that
+      // runs its own edges off the side of a phone reads as a rendering fault.
+      className="oj-focus relative overflow-x-auto overflow-y-visible rounded-oj border-1.5 border-oj-ink bg-oj-paper"
     >
       <table className="w-full min-w-[640px] border-collapse text-sm">
         {/* Supplies both the region's accessible name and an explanation of the
@@ -128,7 +170,7 @@ export default function ResultsTable({
             {/* z-20: the corner cell sits above both sticky edges. */}
             <th
               scope="col"
-              className="sticky left-0 top-0 z-20 bg-white p-3 text-left font-semibold text-brand-base"
+              className="sticky left-0 top-0 z-20 border-b-1.5 border-oj-ink bg-oj-cream p-3 text-left font-bold text-oj-ink"
             >
               Name
             </th>
@@ -141,18 +183,16 @@ export default function ResultsTable({
                   key={option.id}
                   scope="col"
                   className={cn(
-                    'sticky top-0 z-10 min-w-[8rem] p-3 text-left font-semibold text-brand-base',
+                    'sticky top-0 z-10 min-w-[8rem] border-b-1.5 border-oj-ink p-3 text-left font-bold text-oj-ink',
                     // Sticky needs a non-transparent background or the rows
                     // scroll visibly underneath it.
-                    isConfirmed ? 'bg-orange-light' : 'bg-white'
+                    isConfirmed ? 'bg-oj-orange-soft' : 'bg-oj-cream'
                   )}
                 >
                   {/* The chosen column is marked by words, not only by fill. */}
                   {isConfirmed && <span className="sr-only">Chosen option. </span>}
                   <span className="block">{dateLine}</span>
-                  {timeLine && (
-                    <span className="block font-normal text-brand-base-light">{timeLine}</span>
-                  )}
+                  {timeLine && <span className="block font-normal text-oj-ink-2">{timeLine}</span>}
                 </th>
               );
             })}
@@ -168,10 +208,12 @@ export default function ResultsTable({
             );
 
             return (
-              <tr key={participant.id} className="border-t border-border">
+              // A soft rule, not the full ink 1.5px: thirty hard lines down a
+              // dense grid is a fence, and the rows stop being readable.
+              <tr key={participant.id} className="border-t-1.5 border-oj-ink/10">
                 <th
                   scope="row"
-                  className="sticky left-0 z-10 bg-white p-3 text-left font-medium text-brand-base"
+                  className="sticky left-0 z-10 bg-oj-paper p-3 text-left font-semibold text-oj-ink"
                 >
                   {/* The visible name stays short; the accessible name carries
                       the disambiguator when two people share it. */}
@@ -185,13 +227,8 @@ export default function ResultsTable({
                   const isConfirmed = option.id === confirmedOptionId;
 
                   return (
-                    <td key={option.id} className={cn('p-3', isConfirmed && 'bg-orange-light')}>
-                      <span
-                        className={cn(
-                          'inline-flex min-h-[32px] min-w-[32px] items-center justify-center gap-1 rounded-md px-2 py-1',
-                          cellClass(state)
-                        )}
-                      >
+                    <td key={option.id} className={cn('p-3', isConfirmed && 'bg-oj-orange-soft')}>
+                      <span className={cn(CELL_CHIP_BASE, cellChipClass(state))}>
                         <span aria-hidden="true">{answerGlyph(state)}</span>
                         {/* Self-contained: name, option and state together. */}
                         <span className="sr-only">
@@ -207,8 +244,14 @@ export default function ResultsTable({
                           {answerLabel(state)}
                         </span>
                       </span>
+                      {/* EMBER, NOT DEEP ORANGE. This marker is 12px bold, so it
+                          needs 4.5:1 and never gets the 3:1 large text is allowed.
+                          Deep orange manages 5.06:1 on paper but only 4.25:1 once
+                          the cell is the chosen column's orange tint, and the
+                          chosen column is exactly where a video marker is most
+                          likely to matter. Ember holds 8.54:1 and 7.17:1. */}
                       {needsLink && (
-                        <span className="mt-1 block text-xs font-medium text-blue-support">
+                        <span className="mt-1 block text-xs font-bold text-oj-ember">
                           <span aria-hidden="true">▶ </span>video
                           <span className="sr-only">: would join by video or dial-in</span>
                         </span>
@@ -222,10 +265,10 @@ export default function ResultsTable({
         </tbody>
 
         <tfoot>
-          <tr className="border-t-2 border-brand-base/20">
+          <tr className="border-t-1.5 border-oj-ink">
             <th
               scope="row"
-              className="sticky left-0 z-10 bg-white p-3 text-left font-semibold text-brand-base"
+              className="sticky left-0 z-10 bg-oj-cream p-3 text-left font-bold text-oj-ink"
             >
               Totals
             </th>
@@ -238,13 +281,13 @@ export default function ResultsTable({
                   key={option.id}
                   className={cn(
                     'p-3 align-top',
-                    option.id === confirmedOptionId && 'bg-orange-light'
+                    option.id === confirmedOptionId ? 'bg-oj-orange-soft' : 'bg-oj-cream'
                   )}
                 >
                   {/* COUNTS AS TEXT FIRST, then the bar. The summary card above
                       uses percentages; the foot uses counts, because a per-cell
                       percentage next to a per-cell count is noise. */}
-                  <span className="block text-brand-base">{totalsLine(counts)}</span>
+                  <span className="block text-oj-ink">{totalsLine(counts)}</span>
                   {tally && <TotalsBar tally={tally} />}
                 </td>
               );

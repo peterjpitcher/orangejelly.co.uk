@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import Text from '@/components/Text';
+import { Input, Select } from '@/components/oj';
 import { cn } from '@/lib/utils';
 import {
   DURATION_CHOICES,
@@ -40,8 +40,20 @@ interface DurationSelectorProps {
   disabled: boolean;
 }
 
+/**
+ * One choice, drawn as a block rather than a tickbox.
+ *
+ * The chosen one is a filled block, and the fill is the DEEP orange with a white
+ * label. Brand orange with white is 2.97:1 and this label is bold and under
+ * 18.66px, so it needs 4.5:1; deep orange gives 5.24:1. Same rule the buttons
+ * follow, for the same reason.
+ *
+ * Focus comes last on purpose: Tailwind emits `checked` before `focus-visible`,
+ * so the ring wins over the chosen block's shadow rather than being painted under
+ * it.
+ */
 const CHOICE_CLASSES =
-  'flex min-h-tap cursor-pointer items-center justify-center rounded-md border border-border bg-white px-3 py-2 text-center text-sm font-medium text-brand-base transition-colors hover:border-orange peer-checked:border-orange peer-checked:bg-orange peer-checked:text-brand-base peer-focus-visible:ring-2 peer-focus-visible:ring-orange peer-focus-visible:ring-offset-2 peer-disabled:cursor-not-allowed peer-disabled:opacity-50';
+  'flex min-h-tap cursor-pointer items-center justify-center rounded-oj border-1.5 border-oj-ink bg-oj-paper px-3 py-2 text-center text-sm font-bold text-oj-ink transition-shadow duration-oj-hover ease-oj motion-reduce:transition-none hover:shadow-press-sm peer-checked:bg-oj-orange-deep peer-checked:text-oj-on-band peer-checked:shadow-press-sm peer-focus-visible:shadow-[shadow:var(--oj-ring)] peer-disabled:cursor-not-allowed peer-disabled:opacity-40';
 
 /** Renders a length in the given unit, for seeding the field when the unit flips. */
 function toUnit(minutes: number, unit: DurationUnit): string {
@@ -105,11 +117,13 @@ export default function DurationSelector({
 
   return (
     <fieldset className="min-w-0 space-y-3">
-      <legend className="text-base font-medium text-brand-base">How long is each option?</legend>
-      <Text size="sm" color="muted">
+      <legend className="text-base font-black tracking-[-0.02em] text-oj-ink">
+        How long is each option?
+      </legend>
+      <p className="text-[14.5px] leading-normal text-oj-ink-3">
         Pick &lsquo;All day&rsquo; to ask about whole days instead of times. You can&apos;t change
         that once the poll is out.
-      </Text>
+      </p>
 
       {/* Nine choices. They wrap rather than shrink: a tap target under 44px is
           not a smaller button, it is a button you miss. */}
@@ -165,10 +179,16 @@ export default function DurationSelector({
       {customOpen && (
         <div className="space-y-2">
           <div className="flex flex-wrap items-center gap-3">
-            <label htmlFor="customDuration" className="text-sm font-medium text-brand-base">
+            <label htmlFor="customDuration" className="text-[14.5px] font-bold text-oj-ink">
               Each option runs
             </label>
-            <input
+            {/* The controls come from the design system rather than being drawn
+                here, so the border, the focus ring and the invalid state are the
+                same ones every other field on the site uses. Both sit outside a
+                Field because the row is horizontal: label, number, unit. The
+                width is the only thing overridden, since a full-width box for
+                two digits reads as a mistake. */}
+            <Input
               id="customDuration"
               type="text"
               inputMode="decimal"
@@ -177,35 +197,35 @@ export default function DurationSelector({
               aria-invalid={error !== null}
               aria-describedby={error ? 'customDurationError' : undefined}
               onChange={(event) => commit(event.target.value, unit)}
-              className="h-11 w-24 rounded-md border border-border bg-white px-3 text-brand-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+              className="w-24"
             />
             <label htmlFor="customDurationUnit" className="sr-only">
               Unit
             </label>
-            <select
+            <Select
               id="customDurationUnit"
               value={unit}
               disabled={disabled}
               onChange={(event) => changeUnit(event.target.value as DurationUnit)}
-              className="h-11 rounded-md border border-border bg-white px-3 text-brand-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2"
+              className="w-auto"
             >
               <option value="minutes">minutes</option>
               <option value="hours">hours</option>
-            </select>
+            </Select>
           </div>
 
           {error ? (
             <p
               id="customDurationError"
               role="alert"
-              className="text-[0.8rem] font-medium text-destructive"
+              className="text-xs font-semibold text-oj-danger"
             >
               {error}
             </p>
           ) : (
-            <Text size="sm" color="muted">
+            <p className="text-[13px] text-oj-ink-3">
               Anything from 5 minutes to 12 hours. Type 1.5 in hours for an hour and a half.
-            </Text>
+            </p>
           )}
         </div>
       )}

@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
-import Button from '@/components/Button';
+import { Button } from '@/components/oj';
 
 /**
  * ONE outcome for every dead poll link.
@@ -33,22 +31,34 @@ export const metadata: Metadata = {
 
 export default function AvailabilityNotFound(): JSX.Element {
   return (
-    <main id="main-content" className="w-full measure px-4 py-16">
-      <div className="space-y-4">
-        <Heading level={1}>This link isn&rsquo;t live</Heading>
+    /*
+      The same centred column the two error boundaries under /availability use, so
+      every dead end in this app is one shape. An EmptyState was tried here and is
+      wrong for a whole page: it is a dashed block for a hole inside a screen, and
+      run at the page measure it becomes an empty panel with a lost sentence in it.
 
-        <Text color="muted">
-          It might have expired, or the poll might have been removed. Polls are deleted 60 days
-          after the last date on them.
-        </Text>
+      A real `h1`, not the EmptyState title, which renders as a paragraph. A 404
+      with no h1 gives a screen-reader user nothing to land on.
+    */
+    <main id="main-content" className="py-14 md:py-20">
+      <div className="page-shell">
+        <div className="mx-auto max-w-md space-y-6 text-center">
+          <h1 className="text-3xl font-black tracking-[-0.02em] text-oj-ink">
+            This link isn&rsquo;t live
+          </h1>
 
-        <Text color="muted">
-          If someone sent you this link, ask them for a fresh one. They can see whether the poll is
-          still running.
-        </Text>
+          <div className="space-y-3 text-oj-ink-2">
+            <p>
+              It might have expired, or the poll might have been removed. Polls are deleted 60 days
+              after the last date on them.
+            </p>
+            <p>
+              If someone sent you this link, ask them for a fresh one. They can see whether the poll
+              is still running.
+            </p>
+          </div>
 
-        <div className="pt-2">
-          <Button href="/" variant="secondary" size="medium">
+          <Button href="/" variant="ghost">
             Go to the Orange Jelly home page
           </Button>
         </div>

@@ -33,8 +33,19 @@ export default function AvailabilityLayout({
 }: {
   children: React.ReactNode;
 }): React.ReactElement {
-  // Deliberately a pass-through. The marketing chrome is already gated off these
-  // routes in MarketingChrome and GoogleTagManager; re-implementing that here
-  // would give the same rule two homes and let them drift.
-  return <>{children}</>;
+  /*
+   * The only thing this adds to its children is the page ground.
+   *
+   * The marketing chrome is already gated off these routes in MarketingChrome and
+   * GoogleTagManager; re-implementing that here would give the same rule two homes
+   * and let them drift. The surface is different: `<body>` still paints the legacy
+   * background, so every organiser and participant screen under here sat on it and
+   * the ink-bordered blocks had nothing of their own to sit on. Declaring it once
+   * at the segment boundary is what stops four screens each picking their own.
+   *
+   * Paper, matching /admin, because the organiser moves between the two through
+   * AuthedNav and a change of page colour on the way would read as a change of app.
+   * Raised blocks are cream against it.
+   */
+  return <div className="min-h-screen bg-oj-paper text-oj-ink">{children}</div>;
 }

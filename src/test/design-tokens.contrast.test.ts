@@ -486,18 +486,54 @@ describe('the web app manifest', () => {
 });
 
 describe('the last-resort error page', () => {
-  it('uses the real palette values, since it renders without the stylesheet', () => {
-    // global-error.tsx replaces the root layout, so it has no access to the
-    // stylesheet or to Tailwind. Its colours are literal by necessity, which makes
-    // them the other place a palette change can silently fail to reach.
-    const source = readFileSync(path.resolve(__dirname, '../app/global-error.tsx'), 'utf8');
-    expect(source).toContain(cssVar('--oj-orange'));
-    expect(source).toContain(cssVar('--oj-ink'));
+  /*
+   * REWRITTEN 31 August 2026, when global-error.tsx moved onto the band palette.
+   *
+   * It used to be the brand orange carrying ink text. That passed at 5.13:1 and
+   * still broke the rule the rest of the site is held to, which is that an orange
+   * fill always carries white: brand orange with white is 2.97:1, so the page was
+   * the one orange surface on the site reading the other way round. It is now the
+   * band, deep orange with white, and the button is the band's secondary, a cream
+   * block with an ink label and a white border.
+   *
+   * The guard itself is unchanged in purpose. These four are the tokens the page
+   * names, and a palette change that does not reach them fails here.
+   */
+  const PAGE = readFileSync(path.resolve(__dirname, '../app/global-error.tsx'), 'utf8');
+
+  it('uses the real palette values, since it may render without the stylesheet', () => {
+    // global-error.tsx replaces the root layout, so the stylesheet it would need is
+    // imported by the segment that just threw. Every colour is written as
+    // `var(--token, #hex)`, and the hex half is what this pins: it is the other
+    // place, with the web app manifest, where a palette change can silently fail to
+    // reach.
+    expect(PAGE).toContain(cssVar('--oj-orange-deep'));
+    expect(PAGE).toContain(cssVar('--oj-text-on-band'));
+    expect(PAGE).toContain(cssVar('--oj-ink'));
+    expect(PAGE).toContain(cssVar('--oj-cream'));
+  });
+
+  it('no longer carries the brand orange, which cannot hold white text', () => {
+    // The specific regression this replaces. If the ground goes back to #f76b0c the
+    // page is either white at 2.97:1 or ink on an orange fill, and both are wrong.
+    expect(PAGE).not.toContain(cssVar('--oj-orange'));
   });
 
   it('keeps that page readable', () => {
-    // Ink on orange, which is the one pairing the page has.
-    expect(contrast(cssVar('--oj-ink'), cssVar('--oj-orange'))).toBeGreaterThanOrEqual(4.5);
+    // The two pairings the page has: white on the band, and the button's ink label
+    // on its cream block.
+    expect(
+      contrast(cssVar('--oj-text-on-band'), cssVar('--oj-orange-deep'))
+    ).toBeGreaterThanOrEqual(AA_BODY);
+    expect(contrast(cssVar('--oj-ink'), cssVar('--oj-cream'))).toBeGreaterThanOrEqual(AA_BODY);
+  });
+
+  it('keeps the button visible against the ground it sits on', () => {
+    // SC 1.4.11: the block's own boundary. The white border is what does this work,
+    // because the cream fill alone against the band is close to the 3:1 line.
+    expect(
+      contrast(cssVar('--oj-text-on-band'), cssVar('--oj-orange-deep'))
+    ).toBeGreaterThanOrEqual(AA_NON_TEXT);
   });
 });
 

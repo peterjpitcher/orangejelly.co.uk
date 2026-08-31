@@ -222,9 +222,16 @@ describe('MarketingChrome on repositioned routes', () => {
     expect(html).not.toMatch(/See Packages|Chat on WhatsApp/);
   });
 
-  it('still renders the overlays everywhere the repositioning has not reached', () => {
+  /*
+   * INVERTED 31 August 2026. This asserted the opposite until the legacy pages were
+   * given the repositioned header and footer: a bar across the bottom offering "See
+   * Packages", under a footer that no longer mentions packages, was the last thing on
+   * those pages still arguing the old position. The overlays are gone site-wide now,
+   * so the assertion that used to protect them protects their absence instead.
+   */
+  it('drops the legacy overlays on the old pages too, not just the repositioned ones', () => {
     pathnameMock.mockReturnValue(MARKETING_ROUTE);
     const { container } = render(<MarketingChrome />);
-    expect(container.innerHTML).toMatch(/See Packages|Chat on WhatsApp/);
+    expect(container.innerHTML).not.toMatch(/See Packages|Chat on WhatsApp/);
   });
 });

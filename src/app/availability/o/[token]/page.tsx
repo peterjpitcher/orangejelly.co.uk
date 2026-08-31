@@ -4,11 +4,7 @@ import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 import { formatSlotInLondon } from '@/lib/dateUtils';
 import type { Metadata } from 'next';
 
-import Card from '@/components/Card';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
-import Button from '@/components/Button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Alert, Button, EmptyState } from '@/components/oj';
 import AuthedNav from '@/components/admin/AuthedNav';
 import BestOptionCard from '@/components/polls/organiser/best-option-card';
 import ClosePollControl from '@/components/polls/organiser/close-poll-control';
@@ -132,7 +128,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
       <AuthedNav />
       {/* Rendered outside <Section>: Section.tsx applies `overflow-hidden`, which
           would clip the sticky headers and kill the horizontal scroll. */}
-      <main id="main-content" className="page-shell py-8">
+      <main id="main-content" className="min-h-screen bg-oj-paper py-8">
         {/*
         One column, in flow. This was a 2fr/1fr grid with the card in the right
         column, which floated it as an island beside a near-empty header column:
@@ -140,39 +136,32 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
         card caps its own width instead, so it reads as the next thing to look
         at rather than furniture parked beside nothing.
       */}
-        <div>
+        <div className="page-shell">
           <div>
-            <Heading level={1}>{poll.title}</Heading>
-            <Text color="muted" className="mt-2">
-              {replyCountLine(responderCount)}
-            </Text>
+            {/* Sentence case and no `.oj-display`: this is a tool screen, and the
+                heading is somebody's poll title rather than a marketing line. */}
+            <h1 className="text-3xl font-black tracking-[-0.02em] text-oj-ink">{poll.title}</h1>
+            <p className="mt-2 text-oj-ink-2">{replyCountLine(responderCount)}</p>
 
             {poll.status === 'closed' && (
-              <Alert
-                variant="default"
-                role="status"
-                className="mt-4 border-brand-base bg-surface-alt"
-              >
-                <AlertTitle>Closed</AlertTitle>
-                <AlertDescription>Nobody can vote or change their answer.</AlertDescription>
+              <Alert tone="info" role="status" className="mt-4" title="Closed">
+                Nobody can vote or change their answer.
               </Alert>
             )}
 
             {isConfirmed && confirmedOption && (
               <Alert
-                variant="default"
+                tone="ok"
                 role="status"
-                className="mt-4 border-orange bg-orange-light text-brand-base"
+                className="mt-4"
+                title={<>You&rsquo;ve picked a time</>}
               >
-                <AlertTitle>You&rsquo;ve picked a time</AlertTitle>
-                <AlertDescription>
-                  Confirmed for{' '}
-                  {poll.option_kind === 'slots'
-                    ? `${optionFullLabel(confirmedOption, poll.option_kind)} UK time`
-                    : optionFullLabel(confirmedOption, poll.option_kind)}
-                  . If it falls through, tell people yourself and build a fresh poll. We won&rsquo;t
-                  quietly move a date that&rsquo;s already in their calendar.
-                </AlertDescription>
+                Confirmed for{' '}
+                {poll.option_kind === 'slots'
+                  ? `${optionFullLabel(confirmedOption, poll.option_kind)} UK time`
+                  : optionFullLabel(confirmedOption, poll.option_kind)}
+                . If it falls through, tell people yourself and build a fresh poll. We won&rsquo;t
+                quietly move a date that&rsquo;s already in their calendar.
               </Alert>
             )}
 
@@ -181,27 +170,21 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               could not reach, so there is no list to render and no copyable
               block of addresses to offer. */}
             {isConfirmed && poll.confirm_notify_failures > 0 && (
-              <Alert
-                variant="default"
-                role="status"
-                className="mt-4 border-brand-base bg-surface-alt"
-              >
-                <AlertDescription>
-                  We couldn&rsquo;t reach {poll.confirm_notify_failures}{' '}
-                  {poll.confirm_notify_failures === 1 ? 'person' : 'people'} with the confirmation.
-                  Tell them yourself if you can.
-                </AlertDescription>
+              <Alert tone="info" role="status" className="mt-4">
+                We couldn&rsquo;t reach {poll.confirm_notify_failures}{' '}
+                {poll.confirm_notify_failures === 1 ? 'person' : 'people'} with the confirmation.
+                Tell them yourself if you can.
               </Alert>
             )}
 
             {showNothingWorks && (
               <Alert
-                variant="default"
+                tone="info"
                 role="status"
-                className="mt-4 border-brand-base bg-surface-alt"
+                className="mt-4"
+                title="Nothing here works for anyone"
               >
-                <AlertTitle>Nothing here works for anyone</AlertTitle>
-                <AlertDescription>Build a fresh poll with different times.</AlertDescription>
+                Build a fresh poll with different times.
               </Alert>
             )}
           </div>
@@ -223,14 +206,14 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               {/* There is no un-confirm control, and there will not be one:
                 twenty people already hold the date. A fresh poll is the honest
                 route. */}
-              <Button variant="outline" size="medium" href="/availability/new">
+              <Button variant="ghost" size="md" href="/availability/new">
                 Build a fresh poll
               </Button>
             </div>
           )}
         </div>
 
-        <div className="mt-8 space-y-6">
+        <div className="page-shell mt-8 space-y-6">
           {/* The share block renders above the matrix in EVERY state: the empty
             state is precisely when the organiser needs this link most. */}
           <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
@@ -251,21 +234,35 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               {/* Not rendered once confirmed: the matrix is a read-only record
                 from that point, and `deleteResponse` refuses server-side too. */}
               {!isConfirmed && (
-                <section aria-labelledby="remove-heading" className="border-t border-border pt-6">
-                  <h2 id="remove-heading" className="text-base font-semibold text-brand-base">
+                <section
+                  aria-labelledby="remove-heading"
+                  className="border-t-1.5 border-oj-ink/20 pt-6"
+                >
+                  <h2
+                    id="remove-heading"
+                    className="text-lg font-black tracking-[-0.02em] text-oj-ink"
+                  >
                     Remove someone&rsquo;s answers
                   </h2>
-                  <Text size="sm" color="muted" className="mt-1">
+                  <p className="mt-1 text-sm text-oj-ink-2">
                     Deletes them and everything they answered. They can vote again with your
                     team&rsquo;s link.
-                  </Text>
+                  </p>
                   <ul className="mt-3 flex flex-wrap gap-2">
                     {participants.map((participant) => (
+                      // Cream needs a rule to exist. Cream on paper is 1.05:1,
+                      // so a borderless chip is not a quiet chip, it is no chip
+                      // at all: the name floats loose beside a bordered button.
+                      // The soft ink rule is the same treatment the create
+                      // screen's unselected slots use, and it stays out of the
+                      // way of the ghost button's full-strength ink border.
                       <li
                         key={participant.id}
-                        className="flex items-center gap-1 rounded-md border border-brand-base/15 px-2"
+                        className="flex items-center gap-2 rounded-oj border-1.5 border-oj-ink/20 bg-oj-cream px-2 py-1"
                       >
-                        <span className="text-sm text-brand-base">{participant.display_name}</span>
+                        <span className="pl-1 text-sm font-semibold text-oj-ink">
+                          {participant.display_name}
+                        </span>
                         <DeleteResponseControl
                           organiserToken={params.token}
                           participantId={participant.id}
@@ -280,17 +277,22 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
           ) : (
             // Never an empty <tbody> with sticky headers: that is a confusing
             // artefact, not an empty state.
-            <Card variant="bordered" padding="large" className="text-center">
-              <Heading level={2} align="center" className="text-xl">
+            <div>
+              {/* The heading stays outside the EmptyState, which renders its own
+                  title as a paragraph. That is right for a block on a page that
+                  already has an h1, and it is right here too: this is a real
+                  section of the page and wants a real h2. */}
+              <h2 className="mb-4 text-center text-xl font-black tracking-[-0.02em] text-oj-ink">
                 Nobody has voted yet
-              </Heading>
-              <Text align="center" color="muted" className="mt-2">
-                Here&rsquo;s your participant link again, and a nudge is usually all it takes.
-              </Text>
-            </Card>
+              </h2>
+              <EmptyState
+                glyph="0"
+                body="Here’s your participant link again, and a nudge is usually all it takes."
+              />
+            </div>
           )}
 
-          <div className="flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-4 border-t-1.5 border-oj-ink/20 pt-6 sm:flex-row sm:items-start sm:justify-between">
             {/* Confirm stays available on a closed poll, so closing stays
               reversible and non-destructive. */}
             {!isConfirmed && (

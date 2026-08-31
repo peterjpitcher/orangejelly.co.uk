@@ -45,6 +45,18 @@ export const OJ_ROUTES = [
    * legacy overlays.
    */
   '/guides',
+  /*
+   * The privacy policy, added 31 August 2026.
+   *
+   * The last public route on the old chrome. It is linked from the footer of every
+   * page and from the cookie notice, so it was reachable in two clicks from the
+   * homepage and landed the reader on the old dark navy navigation.
+   *
+   * It has to leave `LEGACY_ROUTES` in the same change. A path on both lists gets
+   * the legacy header and footer from `ChromeGate` on top of the `OjHeader` and
+   * `OjFooter` the page now renders itself, plus a second `<main>` from `MainGate`.
+   */
+  '/privacy',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {

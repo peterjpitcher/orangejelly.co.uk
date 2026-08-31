@@ -7,6 +7,7 @@ import HowWeWorkPage from '@/app/how-we-work/page';
 import CaseStudyPage from '@/app/results/[slug]/page';
 import ResultsPage from '@/app/results/page';
 import ContactPage from '@/app/contact/page';
+import PrivacyPage from '@/app/privacy/page';
 import GrowthProblemPage from '@/app/growth-problems/[slug]/page';
 import GrowthProblemsHubPage from '@/app/growth-problems/page';
 import AiReadinessPage from '@/app/tools/ai-readiness/page';
@@ -73,6 +74,11 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/fractional-cmo', <FractionalCmoPage key="fcmo" />],
   ['/sectors/professional-services', <ProfessionalServicesPage key="ps" />],
   ['/growth-problems/weak-demand', <GrowthProblemPage key="gp" params={{ slug: 'weak-demand' }} />],
+  // The privacy policy joined the repositioned chrome on 31 August 2026. It is in
+  // here because it is the page most likely to be forgotten: it is reached from the
+  // footer of every page rather than from the nav, so a second header on it would
+  // survive a long time before anyone browsing the site walked into it.
+  ['/privacy', <PrivacyPage key="privacy" />],
 ];
 
 describe('MainGate', () => {
@@ -170,7 +176,10 @@ describe('MainGate on the organiser tool', () => {
   );
 
   it('still opens one for a legacy marketing page', () => {
-    pathname.mockReturnValue('/privacy');
+    // This was /privacy until 31 August 2026, when the policy moved onto the
+    // repositioned chrome and started opening its own main. Any route still on the
+    // legacy templates does the job; /services is one.
+    pathname.mockReturnValue('/services');
     render(
       <MainGate>
         <p>content</p>

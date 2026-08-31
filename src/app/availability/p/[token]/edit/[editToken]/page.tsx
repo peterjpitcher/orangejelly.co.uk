@@ -4,7 +4,7 @@ import { getEditView } from '../../../poll-data';
 import EditAnswersForm from '@/components/polls/vote/edit-answers-form';
 import PollHeader from '@/components/polls/vote/poll-header';
 import { formatOptionLabel, type TallyCounts } from '@/components/polls/vote/poll-display';
-import Text from '@/components/Text';
+import { Alert } from '@/components/oj';
 import { canEditResponse } from '@/lib/poll-state';
 
 /**
@@ -65,8 +65,9 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
     : undefined;
 
   return (
-    <main id="main-content" className="w-full measure px-4 py-8">
-      <div className="space-y-6">
+    // The ground is painted once, by the segment layout. This sets rhythm only.
+    <main id="main-content" className="py-10 sm:py-14">
+      <div className="page-shell space-y-6">
         <PollHeader
           title={poll.title}
           organiserName={poll.organiser_name}
@@ -80,26 +81,25 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
           }
         />
 
+        {/* The heading stays an <h2> inside the Alert rather than moving to the
+            component's `title` prop, which renders a <p>: it is a real section
+            heading under the poll title and a screen-reader user navigates by it. */}
         {poll.status === 'confirmed' && confirmedOption && (
-          <div className="rounded-lg border-2 border-orange bg-orange-light p-4" role="status">
-            <h2 className="text-lg font-semibold text-brand-base">
+          <Alert tone="ok" role="status">
+            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
               Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
             </h2>
-            <Text size="sm" color="brand-base" className="mt-1">
-              The time is picked, so answers are locked.
-            </Text>
-          </div>
+            <p className="mt-1 text-oj-ink-2">The time is picked, so answers are locked.</p>
+          </Alert>
         )}
 
         {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
-          <div className="rounded-lg border-2 border-brand-base bg-surface-alt p-4" role="status">
-            <h2 className="text-lg font-semibold text-brand-base">
+          <Alert tone="info" role="status">
+            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
               This poll is closed, so answers are locked
             </h2>
-            <Text size="sm" color="brand-base" className="mt-1">
-              {poll.organiser_name} is picking a time.
-            </Text>
-          </div>
+            <p className="mt-1 text-oj-ink-2">{poll.organiser_name} is picking a time.</p>
+          </Alert>
         )}
 
         {/* Locked or not, the same component renders the same answers: the

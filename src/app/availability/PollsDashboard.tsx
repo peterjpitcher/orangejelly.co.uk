@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback, useEffect, useState } from 'react';
 
 import AuthedNav from '@/components/admin/AuthedNav';
+import { Alert, Button, EmptyState, Skeleton, Tag, type TagProps } from '@/components/oj';
 import { getValidAccessToken } from '@/lib/admin-session';
 import { deletePoll } from '@/app/actions/poll-organiser';
 
@@ -40,11 +40,36 @@ interface PollListItem {
 
 type LoadState = 'loading' | 'anon' | 'ready' | 'error';
 
-const STATUS: Record<PollStatus, { label: string; style: string }> = {
-  draft: { label: 'Not live yet', style: 'bg-brand-base/10 text-brand-base' },
-  open: { label: 'Taking answers', style: 'bg-orange/10 text-orange-darker' },
-  closed: { label: 'Closed', style: 'bg-brand-base/10 text-brand-base' },
-  confirmed: { label: 'Confirmed', style: 'bg-blue-support/10 text-blue-support' },
+/*
+ * One card treatment, matching /admin, because the organiser crosses between the
+ * two through AuthedNav: cream block on the paper page, ink border, the 3px
+ * radius and the small hard shadow rather than a blurred one.
+ */
+const CARD = 'rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm';
+
+/* Tool screens take sentence case at the tool weight, not the display face. */
+const TOOL_HEADING = 'font-black tracking-[-0.02em] text-oj-ink';
+
+/*
+ * Status as Tag props rather than a colour pair.
+ *
+ * Each state is told apart by two things at once, never by colour alone: the
+ * label, and the shape or signal dot beside it. The one live state is the filled
+ * ink chip so it carries down a long list; a draft still wants something from you
+ * so it keeps the orange pressure dot; a closed poll wants nothing, so it has no
+ * dot at all; and a confirmed one takes the green availability dot.
+ *
+ * Nothing here uses the orange chip: brand orange is the one fill the palette
+ * cannot carry white on, and a status chip is small bold text.
+ */
+const STATUS: Record<
+  PollStatus,
+  { label: string; variant: TagProps['variant']; dot: TagProps['dot'] }
+> = {
+  draft: { label: 'Not live yet', variant: 'outline', dot: true },
+  open: { label: 'Taking answers', variant: 'ink', dot: true },
+  closed: { label: 'Closed', variant: 'outline', dot: false },
+  confirmed: { label: 'Confirmed', variant: 'outline', dot: 'ok' },
 };
 
 // Active polls first (they need attention), then closed, then confirmed. Within
@@ -141,16 +166,13 @@ export default function PollsDashboard(): JSX.Element {
   if (state === 'anon') {
     return (
       <main id="main-content" className="mx-auto max-w-md px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-brand-base">Sign in to see your polls</h1>
-        <p className="mt-3 text-brand-base/70">
+        <h1 className={`text-2xl ${TOOL_HEADING}`}>Sign in to see your polls</h1>
+        <p className="mt-3 text-oj-ink-2">
           Your polls live behind the same sign-in as the admin dashboard.
         </p>
-        <Link
-          href="/admin"
-          className="mt-6 inline-flex items-center justify-center rounded-md bg-orange px-6 py-3 font-medium text-brand-base transition-colors hover:text-brand-base-dark"
-        >
-          Go to sign in
-        </Link>
+        <div className="mt-6 flex justify-center">
+          <Button href="/admin">Go to sign in</Button>
+        </div>
       </main>
     );
   }
@@ -161,42 +183,51 @@ export default function PollsDashboard(): JSX.Element {
       <main id="main-content" className="measure px-4 py-8 sm:px-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-brand-base">Your polls</h1>
-            <p className="mt-1 text-sm text-brand-base/75">
+            <h1 className={`text-3xl ${TOOL_HEADING}`}>Your polls</h1>
+            <p className="mt-1 text-sm text-oj-ink-2">
               Every poll you have set up. Tap one to see the answers.
             </p>
           </div>
-          <Link
-            href="/availability/new"
-            className="inline-flex items-center justify-center rounded-md bg-orange px-5 py-2.5 text-sm font-medium text-brand-base transition-colors hover:text-brand-base-dark"
-          >
+          <Button href="/availability/new" size="sm">
             New poll
-          </Link>
+          </Button>
         </div>
 
+        {/* The skeleton stands in for the list that is coming rather than
+            describing it, so the page does not reflow around a line of text.
+            Skeleton announces "Loading" once to a screen reader instead of
+            reading out the placeholder blocks. */}
         {state === 'loading' && (
-          <p className="mt-10 text-center text-brand-base/75">Loading your polls…</p>
-        )}
-
-        {state === 'error' && (
-          <div className="mt-10 rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-            Something went wrong.{' '}
-            <button onClick={() => void load()} className="underline">
-              Try again
-            </button>
-            .
+          <div className="mt-10 space-y-4">
+            <Skeleton variant="card" />
+            <Skeleton variant="card" />
+            <Skeleton variant="card" />
           </div>
         )}
 
-        {state === 'ready' && polls.length === 0 && (
-          <div className="mt-10 rounded-lg border border-brand-base/15 bg-white p-8 text-center">
-            <p className="text-brand-base/70">You have not made a poll yet.</p>
-            <Link
-              href="/availability/new"
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-orange px-5 py-2.5 text-sm font-medium text-brand-base transition-colors hover:text-brand-base-dark"
+        {state === 'error' && (
+          <Alert tone="danger" className="mt-10">
+            Something went wrong.{' '}
+            <button
+              type="button"
+              onClick={() => void load()}
+              // The same inline text control EmptyState uses for its action, plus
+              // the system focus ring: this is the one control on the screen that
+              // is not a Button, so nothing else was giving it one.
+              className="oj-focus rounded-oj font-bold text-oj-orange-deep underline underline-offset-4"
             >
-              Make your first poll
-            </Link>
+              Try again
+            </button>
+            .
+          </Alert>
+        )}
+
+        {state === 'ready' && polls.length === 0 && (
+          <div className="mt-10">
+            <EmptyState
+              body="You have not made a poll yet."
+              action={{ label: 'Make your first poll', href: '/availability/new' }}
+            />
           </div>
         )}
 
@@ -208,63 +239,59 @@ export default function PollsDashboard(): JSX.Element {
               const isOpen = poll.status === 'open';
 
               return (
-                <li
-                  key={poll.id}
-                  className="rounded-lg border border-brand-base/15 bg-white p-5 transition-shadow hover:shadow-sm"
-                >
+                <li key={poll.id} className={CARD}>
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
-                        <h2 className="text-lg font-semibold text-brand-base">{poll.title}</h2>
-                        <span
-                          className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${status.style}`}
-                        >
+                        <h2 className={`text-lg ${TOOL_HEADING}`}>{poll.title}</h2>
+                        <Tag size="sm" variant={status.variant} dot={status.dot}>
                           {status.label}
-                        </span>
+                        </Tag>
                       </div>
 
                       {isConfirmed && poll.confirmedLabel ? (
-                        <p className="mt-1 text-sm font-medium text-blue-support">
+                        <p className="mt-1 text-sm font-bold text-oj-ok">
                           {poll.confirmedLabel}
                           {poll.optionKind === 'slots' ? ' UK time' : ''}
                         </p>
                       ) : (
-                        <p className="mt-1 text-sm text-brand-base/75">
+                        <p className="mt-1 text-sm text-oj-ink-2">
                           {repliesLine(poll.responderCount)}
                         </p>
                       )}
                     </div>
 
                     <div className="flex flex-shrink-0 flex-wrap gap-2">
-                      <Link
-                        href={`/availability/o/${poll.organiserToken}`}
-                        className="inline-flex items-center justify-center rounded-md bg-orange px-4 py-2 text-sm font-medium text-brand-base transition-colors hover:text-brand-base-dark"
-                      >
+                      <Button href={`/availability/o/${poll.organiserToken}`} size="sm">
                         See answers
-                      </Link>
+                      </Button>
 
                       {/* Sharing only makes sense while a poll is still taking
                           answers. On a closed or confirmed poll it would send
                           people to a page that no longer accepts a vote. */}
                       {isOpen && (
-                        <button
-                          type="button"
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           onClick={() => void copyParticipantLink(poll)}
-                          className="inline-flex items-center justify-center rounded-md border border-orange px-4 py-2 text-sm font-medium text-orange-dark transition-colors hover:bg-orange hover:text-brand-base"
                         >
                           {copiedId === poll.id ? 'Copied' : 'Copy sharing link'}
-                        </button>
+                        </Button>
                       )}
 
-                      <button
-                        type="button"
+                      {/* Destructive, so it keeps the outline of its neighbours
+                          but drops to the muted ink and only turns danger red
+                          under the pointer. */}
+                      <Button
+                        variant="ghost"
+                        size="sm"
                         onClick={() => void removePoll(poll)}
                         disabled={deletingId === poll.id}
-                        className="inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium text-brand-base/75 transition-colors hover:bg-red-50 hover:text-red-700 disabled:opacity-50"
                         aria-label={`Delete ${poll.title}`}
+                        className="text-oj-ink-3 hover:text-oj-danger"
                       >
                         {deletingId === poll.id ? 'Deleting…' : 'Delete'}
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </li>

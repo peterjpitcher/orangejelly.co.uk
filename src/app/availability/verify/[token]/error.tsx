@@ -1,9 +1,6 @@
 'use client';
 
-import Button from '@/components/Button';
-import Heading from '@/components/Heading';
-import Section from '@/components/Section';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Alert, Button } from '@/components/oj';
 
 /**
  * The error boundary for a genuine data-layer exception.
@@ -13,22 +10,29 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
  * unreachable and similar. It deliberately says nothing about the token: the
  * poll may or may not have been published, and guessing either way in the copy
  * would be a lie half the time.
+ *
+ * It opens the `<main>` landmark itself, for the same reason the page does:
+ * `MainGate` hands the tool routes straight through without one, so the skip
+ * link at the top of every page had nothing to land on here.
  */
 export default function VerifyError({ reset }: { error: Error; reset: () => void }): JSX.Element {
   return (
-    <Section background="surface" padding="large">
-      <div className="max-w-md mx-auto text-center space-y-6">
-        <Heading level={1} align="center" color="brand-base">
-          Something went wrong
-        </Heading>
-        <Alert variant="destructive" className="text-left">
-          <AlertTitle>That&apos;s at our end, not yours</AlertTitle>
-          <AlertDescription>Try the link from your email again in a minute.</AlertDescription>
-        </Alert>
-        <Button variant="outline" size="medium" type="button" onClick={reset}>
-          Try again
-        </Button>
+    <main id="main-content" className="py-14 md:py-20">
+      <div className="page-shell">
+        <div className="mx-auto max-w-md space-y-6 text-center">
+          <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
+            Something went wrong
+          </h1>
+
+          <Alert tone="danger" title="That's at our end, not yours" className="text-left">
+            Try the link from your email again in a minute.
+          </Alert>
+
+          <Button variant="ghost" size="md" type="button" onClick={reset}>
+            Try again
+          </Button>
+        </div>
       </div>
-    </Section>
+    </main>
   );
 }

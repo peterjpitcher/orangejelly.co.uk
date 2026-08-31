@@ -1,18 +1,23 @@
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/components/oj';
 
 /**
  * The results page reads four tables before it can render a single cell, so a
  * blank screen is a real possibility on a cold connection. The shapes below
- * mirror the finished layout (heading, sub-line, summary card, matrix) so the
- * page does not visibly jump when the data lands.
+ * mirror the finished layout (heading and sub-line, then the summary card and the
+ * matrix) so the page does not visibly jump when the data lands.
+ *
+ * Three `Skeleton`s, one per block, and no more than that. Each one is its own
+ * `role="status"` announcing "Loading", so a bar-per-element layout would make a
+ * screen-reader user hear it once per rectangle.
  */
 export default function OrganiserLoading(): JSX.Element {
   return (
-    <div className="page-shell space-y-6 py-10">
-      <Skeleton className="h-9 w-1/2" />
-      <Skeleton className="h-4 w-1/3" />
-      <Skeleton className="h-32 w-full rounded-lg" />
-      <Skeleton className="h-64 w-full rounded-lg" />
+    <div className="min-h-screen bg-oj-paper py-10">
+      <div className="page-shell space-y-8">
+        <Skeleton variant="text" lines={2} width="55%" />
+        <Skeleton variant="card" />
+        <Skeleton variant="card" />
+      </div>
     </div>
   );
 }
