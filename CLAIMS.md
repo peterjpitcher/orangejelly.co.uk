@@ -55,7 +55,7 @@ These older metrics are no longer approved. Remove them wherever they appear (da
 
 ## Implementation map (where these render)
 
-- **Structured data:** `content/data/claims.json` (ProofStrip source), `content/data/social-proof.json`, `content/data/results.json`, `content/data/case-studies.json`
+- **Structured data:** none. `claims.json`, `case-studies.json`, `social-proof.json` and `results.json` were all deleted from `content/data` on 31 August 2026, together with the packages components that read them. No live page loaded any of the four. The `/results` case studies now carry their own data in `src/app/results/case-studies.ts`, and every figure there is checked against this file by `npm run check:claims`.
 - **Code constants:** `src/lib/constants.ts` (`SUCCESS_METRICS`)
 - **AI / dev guidance:** `CLAUDE.md` (`metrics:` block) — keep in sync with this file
 - **Pages & content:** homepage, `/results`, `/pub-marketing`, location landing pages, plus blog posts and FAQs
