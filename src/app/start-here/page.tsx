@@ -137,8 +137,8 @@ export default function StartHerePage(): JSX.Element {
             ))}
           </ul>
           <p className="measure mt-7 text-[16px] leading-relaxed text-oj-ink-2">
-            Roughly, that tends to mean 10 to 500 people. It's a guide rather than a rule: a
-            smaller business with real scale, urgency and something to invest fits fine.
+            Roughly, that tends to mean 10 to 500 people. It's a guide rather than a rule: a smaller
+            business with real scale, urgency and something to invest fits fine.
           </p>
         </Band>
 
@@ -182,11 +182,11 @@ export default function StartHerePage(): JSX.Element {
               rather than after.
             </p>
             <p>
-              <strong>On cost:</strong> we do not publish prices, because we do not sell packages.
-              What we'd quote a company of eight with a conversion problem looks nothing like
-              what we'd quote a company of two hundred with a margin problem, and a number on
-              this page would only be wrong for both. Every engagement is priced to the problem and
-              agreed in writing before any work begins.
+              <strong>On cost:</strong> the rate is £62.50 plus VAT an hour, and that is the whole
+              price list. We do not sell packages, because what a company of eight with a conversion
+              problem needs looks nothing like what a company of two hundred with a margin problem
+              needs, and quoting either before we have looked would be a guess. What changes is how
+              many hours a piece of work takes, and you get that in writing before anything starts.
             </p>
           </div>
         </Band>

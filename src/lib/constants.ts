@@ -20,12 +20,19 @@ export const COMPANY = {
   vatStatus: 'All prices exclude VAT',
 } as const;
 
-// Pricing Configuration
+/*
+ * The one price the site publishes, as of 31 August 2026.
+ *
+ * D3 removed pricing entirely, on the argument that a number on the page is wrong
+ * for every reader who has not been asked what they need. The owner reinstated an
+ * hourly rate for transparency, and only that: a rate says what an hour costs and
+ * leaves the size of the job open, where a package quotes the job before anybody has
+ * looked at it. `Packages from £375 + VAT` is what used to be here.
+ */
 export const PRICING = {
-  startingFrom: {
-    amount: 375,
-    display: 'Packages from £375 + VAT',
-    description: 'Clear packages for every stage of growth',
+  hourly: {
+    amount: 62.5,
+    display: '£62.50 plus VAT an hour',
   },
 } as const;
 
@@ -58,7 +65,7 @@ export const MESSAGES = {
     noAgencyFees: 'No Agency Fees',
     fromlicensees: 'Small Team Support',
     resultsIn14Days: 'Results in 30 Days',
-    costEffective: 'Packages from £375 + VAT',
+    costEffective: '£62.50 plus VAT an hour',
     coversIncrease: '+403%',
     coversIncreaseLabel: 'More table bookings at The Anchor',
     foodGPIncrease: '+98%',

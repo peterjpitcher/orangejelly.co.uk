@@ -117,6 +117,6 @@ export const FAQS = [
   },
   {
     q: 'What happens to what we tell you?',
-    a: 'It is used to have one useful conversation and nothing else. No list, no sequence, no sharing it. The answers you give on the second step of the form are commercially sensitive and are kept where only we can read them. The privacy notice has the detail.',
+    a: 'It is used to have one useful conversation and nothing else. No list, no sequence, no sharing it. What you write about the business is commercially sensitive and is kept where only we can read it. The privacy notice has the detail.',
   },
 ] as const;

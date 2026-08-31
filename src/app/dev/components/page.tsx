@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-import Button from '@/components/Button';
 import {
   Button as OjButton,
   Stat,
@@ -17,9 +16,6 @@ import {
   Checkbox,
   Radio,
 } from '@/components/oj';
-import Card from '@/components/Card';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
 
 /**
  * Component harness. Development only.
@@ -37,7 +33,7 @@ import Text from '@/components/Text';
  * it was a publicly routable development artefact, and reintroducing one would be
  * daft. The noindex metadata is belt and braces on top of the 404.
  *
- * Add a specimen when you port a component. A component that has no specimen here is
+ * Add a specimen when you build a component. The legacy Button, Heading, Text and Card specimens came out on 31 August 2026 with the components themselves. A component that has no specimen here is
  * not finished, because nobody has looked at its states.
  */
 export const metadata: Metadata = {
@@ -53,18 +49,6 @@ export const metadata: Metadata = {
  */
 export const dynamic = 'force-dynamic';
 
-const BUTTON_VARIANTS = [
-  'primary',
-  'secondary',
-  'outline',
-  'ghost',
-  'base',
-  'support',
-  'accent',
-] as const;
-
-const BUTTON_SIZES = ['small', 'medium', 'large'] as const;
-
 function Specimen({
   name,
   note,
@@ -75,9 +59,9 @@ function Specimen({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <section className="border-t border-gray-300 py-8">
-      <h2 className="mb-1 font-mono text-sm uppercase tracking-widest text-gray-600">{name}</h2>
-      {note ? <p className="mb-4 text-sm text-gray-500">{note}</p> : null}
+    <section className="border-t-1.5 border-oj-ink py-8">
+      <h2 className="oj-eyebrow mb-1">{name}</h2>
+      {note ? <p className="mb-4 text-sm text-oj-ink-2">{note}</p> : null}
       <div className="flex flex-wrap items-start gap-4">{children}</div>
     </section>
   );
@@ -91,12 +75,12 @@ function Specimen({
 function BothGrounds({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <div className="grid w-full gap-4 md:grid-cols-2">
-      <div className="rounded border border-gray-200 bg-white p-6">
-        <p className="mb-4 font-mono text-xs uppercase text-gray-400">light</p>
+      <div className="rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6">
+        <p className="oj-eyebrow mb-4">light</p>
         <div className="flex flex-wrap items-start gap-3">{children}</div>
       </div>
-      <div className="rounded border border-gray-700 bg-gray-900 p-6">
-        <p className="mb-4 font-mono text-xs uppercase text-gray-500">dark</p>
+      <div className="rounded-oj border-1.5 border-oj-cream bg-oj-ink p-6">
+        <p className="oj-eyebrow mb-4 text-oj-peach">dark</p>
         <div className="flex flex-wrap items-start gap-3">{children}</div>
       </div>
     </div>
@@ -107,59 +91,46 @@ export default function ComponentHarness(): JSX.Element {
   if (process.env.NODE_ENV === 'production') notFound();
 
   return (
-    <main className="page-shell py-12">
-      <h1 className="text-3xl font-bold">Component harness</h1>
-      <p className="measure mt-2 text-gray-600">
+    <main id="main-content" className="page-shell bg-oj-paper py-12">
+      <h1 className="oj-display text-[34px] leading-none text-oj-ink">component harness.</h1>
+      <p className="measure mt-2 text-oj-ink-2">
         Development only. Renders the real components inside the real application, so the cascade
-        and the tokens are the ones that ship. Add a specimen when you port a component.
+        and the tokens are the ones that ship. Add a specimen when you build a component. The legacy
+        Button, Heading, Text and Card specimens came out on 31 August 2026 with the components
+        themselves.
       </p>
 
-      <Specimen name="Button / variants" note="Every variant at the default size.">
+      {/*
+        The Button, on both grounds, first.
+
+        Its colour table is the most argued-over thing in the system and the one
+        place a mistake is expensive: the rule is that white always sits on an orange
+        fill, and that on a dark ground the border is white so the boundary survives.
+        Both are only checkable side by side, which is what BothGrounds is for.
+      */}
+      <Specimen
+        name="oj / Button"
+        note="Every variant on both grounds. Ground normally comes from context; it is set by hand here so the pairs sit together."
+      >
         <BothGrounds>
-          {BUTTON_VARIANTS.map((variant) => (
-            <Button key={variant} variant={variant}>
+          {(['primary', 'solid', 'ghost'] as const).map((variant) => (
+            <OjButton key={variant} variant={variant}>
               {variant}
-            </Button>
+            </OjButton>
           ))}
         </BothGrounds>
       </Specimen>
 
-      <Specimen name="Button / sizes">
-        <BothGrounds>
-          {BUTTON_SIZES.map((size) => (
-            <Button key={size} size={size}>
+      <Specimen name="oj / Button sizes and states">
+        <div className="flex w-full flex-wrap items-center gap-3">
+          {(['sm', 'md', 'lg'] as const).map((size) => (
+            <OjButton key={size} size={size}>
               {size}
-            </Button>
+            </OjButton>
           ))}
-        </BothGrounds>
-      </Specimen>
-
-      <Specimen name="Button / states" note="Loading and disabled are the two most often missed.">
-        <BothGrounds>
-          <Button>default</Button>
-          <Button loading>loading</Button>
-          <Button disabled>disabled</Button>
-          <Button href="/dev/components">as a link</Button>
-        </BothGrounds>
-      </Specimen>
-
-      <Specimen name="Heading / levels">
-        <div className="w-full space-y-2">
-          {([1, 2, 3, 4, 5, 6] as const).map((level) => (
-            <Heading key={level} level={level}>
-              Heading level {level}
-            </Heading>
-          ))}
-        </div>
-      </Specimen>
-
-      <Specimen name="Text / sizes">
-        <div className="w-full space-y-2">
-          {(['xs', 'sm', 'base', 'lg', 'xl', '2xl'] as const).map((size) => (
-            <Text key={size} size={size}>
-              Text at {size}
-            </Text>
-          ))}
+          <OjButton arrow>with arrow</OjButton>
+          <OjButton href="/dev/components">as a link</OjButton>
+          <OjButton disabled>disabled</OjButton>
         </div>
       </Specimen>
 
@@ -420,17 +391,6 @@ export default function ComponentHarness(): JSX.Element {
             <Radio name="demo-size" value="a" label="1 to 9 people" defaultChecked />
             <Radio name="demo-size" value="b" label="10 to 49 people" />
           </div>
-        </div>
-      </Specimen>
-
-      <Specimen name="Card / variants">
-        <div className="grid w-full gap-4 md:grid-cols-2">
-          {(['default', 'bordered', 'shadowed'] as const).map((variant) => (
-            <Card key={variant} variant={variant}>
-              <Heading level={3}>{variant}</Heading>
-              <Text>Body copy inside a {variant} card, to check contrast and padding.</Text>
-            </Card>
-          ))}
         </div>
       </Specimen>
     </main>

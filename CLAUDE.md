@@ -78,9 +78,10 @@ business:
   first_external_client: "September 2025"
   
 pricing:
-  hourly_rate: "£75 plus VAT"
-  packages: true
-  packages_from: "£375 plus VAT"
+  # Updated 31 August 2026. The rate is published for transparency; packages are not
+  # coming back, and the only number that may appear on the site is this one.
+  hourly_rate: "£62.50 plus VAT an hour"
+  packages: false
   fixed_prices: true
   guarantee: "30-day"
 
@@ -484,7 +485,7 @@ schema:
 [Solution with example]
 
 **"I don't have time..."**
-[Time-saving approach]
+[Approach that takes less time]
 
 **"What if it doesn't work..."**
 [Risk mitigation/guarantee]

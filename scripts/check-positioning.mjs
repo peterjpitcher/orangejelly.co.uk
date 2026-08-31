@@ -73,20 +73,35 @@ const RULES = [
       'Scopes the offer to hospitality. The offer is for ambitious small and mid-sized businesses.',
   },
   {
-    name: 'published price',
+    name: 'published price other than the hourly rate',
     /*
-     * A price for work, not any currency amount. Two or more digits, or any amount
-     * carrying a VAT or per-period qualifier.
+     * A price for work, not any currency amount, and no longer a blanket ban.
      *
-     * The looser version caught "£2" in a sample quiz-night message, which is a
-     * pub's entry fee in example content and not something Orange Jelly charges.
-     * A gate that cries wolf gets switched off, so it has to be able to tell the
-     * difference between a price and a number with a pound sign in front of it.
+     * D3 removed pricing entirely. On 31 August 2026 the owner reinstated one number
+     * and one only: £62.50 plus VAT an hour, published for transparency. Packages
+     * did not come back and are still caught by the rule below, so what this now
+     * guards is the difference between a rate and a menu. A rate says what an hour
+     * costs and leaves the size of the job open; a package quotes the job before
+     * anybody has looked at it, which is the thing the repositioning removed.
+     *
+     * THE_RATE is allowed wherever it appears. Any other price still fails, which is
+     * what catches the old £75 and £375 if they ever come back.
+     *
+     * The looser version of this pattern caught "£2" in a sample quiz-night message,
+     * which is a pub's entry fee in example content and not something Orange Jelly
+     * charges. A gate that cries wolf gets switched off, so it has to tell a price
+     * from a number with a pound sign in front of it.
+     */
+    /*
+     * `(?:\.\d{2})?` matters more than it looks. Without it the pattern stopped at
+     * the pound and the whole number, so £62.50 was reported as "£62" and no
+     * allowance written against the real rate could ever match it.
      */
     pattern:
-      /(?:from\s*)?£\s?(?:\d[\d,]{1,}|\d(?=\s*(?:\+|plus)\s*VAT|\s*(?:per|\/)\s*(?:month|mo|hour|hr|day)))[\d,]*(?:\s*(?:\+|plus)\s*VAT|\s*(?:per|\/)\s*(?:month|mo|hour|hr|day))?/gi,
+      /(?:from\s*)?£\s?(?:\d[\d,]{1,}|\d(?=\s*(?:\+|plus)\s*VAT|\s*(?:per|\/)\s*(?:month|mo|hour|hr|day)))[\d,]*(?:\.\d{2})?(?:\s*(?:\+|plus)\s*VAT|\s*(?:per|\/)\s*(?:month|mo|hour|hr|day))?/gi,
+    allow: /^£\s?62\.50(?:\s*(?:\+|plus)\s*VAT)?(?:\s*(?:per|\/)\s*(?:hour|hr))?$/i,
     message:
-      'D3 removed pricing from the site. Every engagement is priced to the problem and agreed in writing.',
+      'The only price the site publishes is £62.50 plus VAT an hour. Anything else is a package, and packages went with D3.',
   },
   {
     name: 'retired package',
@@ -123,11 +138,16 @@ const RULES = [
  * Delete each entry with the task named beside it. The gate reports an exemption
  * that is no longer needed, so they cannot outlive their reason.
  */
-const PENDING_PHASE_4 = {
-  // /ways-to-work still sells the four named packages and is redirected in T063.
-  'src/lib/constants.ts': { rules: ['published price'], task: 'T063' },
-  'content/data/footer.json': { rules: ['retired package', 'old position'], task: 'T063' },
-};
+/*
+ * Empty since phase 4 shipped on 31 August 2026.
+ *
+ * Both entries existed because /ways-to-work still sold four named packages and was
+ * waiting on T063 to redirect. It has, the pages are deleted, and the constants and
+ * footer data that carried the package names have been rewritten, so there is
+ * nothing left to hold open. Kept as a mechanism rather than deleted: the next
+ * staged change will want it.
+ */
+const PENDING_PHASE_4 = {};
 
 async function exists(target) {
   try {
@@ -184,6 +204,11 @@ async function collect(file) {
   for (const rule of RULES) {
     for (const match of content.matchAll(rule.pattern)) {
       if (match.index === undefined) continue;
+      /*
+       * A rule may allow specific matches through. Only the price rule uses it, to
+       * let the published hourly rate past while every other price still fails.
+       */
+      if (rule.allow?.test(match[0].trim())) continue;
       const { line } = position(content, match.index);
       if (isDeliberateMention(lines[line - 1] ?? '')) continue;
       if (pending?.rules.includes(rule.name)) {

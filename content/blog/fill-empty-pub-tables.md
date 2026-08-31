@@ -477,7 +477,7 @@ The primary cause is usually poor visibility and communication. Customers don't 
 
 ### Which day of the week is usually quietest?
 
-Tuesday is typically the quietest day for most pubs, followed by Monday and Wednesday. Combat this with specific midweek offers, regular events like quiz nights, and targeted social media campaigns. The Anchor saw weekday revenue lift ~20% using these strategies.
+Tuesday is typically the quietest day for most pubs, followed by Monday and Wednesday. Combat this with specific midweek offers, regular events like quiz nights, and targeted social media campaigns.
 
 ### How quickly will I see results?
 
@@ -485,7 +485,7 @@ Most strategies show meaningful, bankable progress inside 30 days. Week 1 brings
 
 ### How much will this cost to implement?
 
-Implementation costs vary by strategy. Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. Professional support is available at £75 per hour plus VAT, or as fixed-price packages from £375 + VAT.
+Implementation costs vary by strategy. Many improvements like social media optimisation and operational changes cost nothing beyond time. Events may require £50-200 initial investment. If you want a hand with it, we charge £62.50 plus VAT an hour. There are no packages: what changes is how many hours a piece of work takes, and you get that in writing before anything starts.
 
 ### Can this work for my type of pub?
 

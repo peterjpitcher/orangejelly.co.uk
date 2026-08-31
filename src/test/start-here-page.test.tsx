@@ -53,11 +53,21 @@ describe('/start-here', () => {
     expect(text).toMatch(/AI because it is AI/);
   });
 
-  it('quotes no price anywhere', () => {
+  /*
+   * INVERTED 31 August 2026. This asserted the page quoted no price at all, which
+   * was D3. The owner reinstated one number for transparency: £62.50 plus VAT an
+   * hour, and only that. What the test protects is the same distinction the
+   * positioning gate now draws, between a rate and a menu.
+   */
+  it('quotes the hourly rate and nothing else', () => {
     const text = body();
-    expect(text).not.toMatch(/£/);
-    expect(text).not.toMatch(/\bfrom \d/);
-    expect(text).toMatch(/we do not publish prices/);
+    expect(text).toMatch(/£62\.50 plus VAT an hour/);
+    // No other price, and no package language of any kind.
+    expect(text.match(/£/g) ?? []).toHaveLength(1);
+    expect(text).not.toMatch(/\bfrom £/);
+    // "We do not sell packages" is the point, so the word is allowed; a package
+    // PRICE is what must never appear.
+    expect(text).not.toMatch(/packages? (from|start|at) /i);
   });
 
   it('says the first conversation is free', () => {

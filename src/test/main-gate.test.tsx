@@ -81,7 +81,36 @@ const OJ_PAGES: Array<[string, React.ReactElement]> = [
   ['/privacy', <PrivacyPage key="privacy" />],
 ];
 
+/*
+ * The legacy-main tests came out on 31 August 2026. Both asserted that the layout
+ * opens `<main id="main-content">` for a page that renders content only, and there
+ * are no such pages left: phase 4 retired the last fifteen and the component gallery
+ * moved onto the new system, so every route brings its own main. The assertion that
+ * replaces them is the one that still matters, and it is stronger: no route may get
+ * a main from the layout, because a second one is the failure this file exists for.
+ */
 describe('MainGate', () => {
+  it('never opens a main itself, because every page now brings its own', () => {
+    for (const path of [
+      '/',
+      '/guides',
+      '/admin',
+      '/availability',
+      '/privacy',
+      '/dev/components',
+      '/anything-at-all',
+    ]) {
+      pathname.mockReturnValue(path);
+      const { unmount } = render(
+        <MainGate>
+          <p>content</p>
+        </MainGate>
+      );
+      expect(screen.queryByRole('main')).not.toBeInTheDocument();
+      unmount();
+    }
+  });
+
   it('stands back on the guides, which now open their own main', () => {
     // The guides adopted the oj chrome on 30 August 2026. They render OjHeader and
     // OjFooter themselves, so a main opened here would wrap the header too, and two
@@ -93,20 +122,6 @@ describe('MainGate', () => {
       </MainGate>
     );
     expect(screen.queryByRole('main')).not.toBeInTheDocument();
-  });
-
-  it('opens a main for the legacy templates, which render page content only', () => {
-    // The fixture has moved twice, which is the point: it was a guide article until
-    // the guides adopted the new chrome, then /ways-to-work/growth-fix until phase 4
-    // retired it on 31 August 2026. The component gallery is the last route on the
-    // legacy templates, so it is the only fixture left that covers this case.
-    pathname.mockReturnValue('/dev/components');
-    render(
-      <MainGate>
-        <p>content</p>
-      </MainGate>
-    );
-    expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
   });
 
   it('opens none for a repositioned page, which brings its own', () => {
@@ -175,16 +190,4 @@ describe('MainGate on the organiser tool', () => {
       expect(screen.queryByRole('main')).not.toBeInTheDocument();
     }
   );
-
-  it('still opens one for a legacy marketing page', () => {
-    // /privacy until it was restyled on 31 August 2026, then /services until phase 4
-    // retired it the same day. The component gallery is what is left.
-    pathname.mockReturnValue('/dev/components');
-    render(
-      <MainGate>
-        <p>content</p>
-      </MainGate>
-    );
-    expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content');
-  });
 });

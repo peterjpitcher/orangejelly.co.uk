@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Fraunces, Open_Sans, Schibsted_Grotesk } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
-import LegacyChrome from '@/components/LegacyChrome';
 import MainGate from '@/components/MainGate';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { PreloadResources } from '@/components/PerformanceMonitor';
@@ -243,24 +242,26 @@ export default function RootLayout({
           same reason as the consent panel: it was `bg-orange` with `text-brand-base`,
           which is dark text on brand orange at 2.97:1, and it is the first thing a
           keyboard user ever sees. Deep orange carries white at 5.24:1.
+
+          `font-oj` moved off the focus variant on 31 August 2026. It only applied
+          once the link was focused, so the element sat in the old typeface the rest
+          of the time. Invisible, and the last piece of the old identity anywhere on
+          the site, which made it the one thing a sweep kept reporting.
         */}
         <Link
           href="#main-content"
-          className="skip-to-main sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:items-center focus:justify-center focus:rounded-oj focus:border-1.5 focus:border-oj-ink focus:bg-oj-orange-deep focus:px-6 focus:py-3 focus:font-oj focus:font-bold focus:text-oj-on-band focus:shadow-press focus:outline-none focus:ring-2 focus:ring-oj-ink focus:ring-offset-2"
+          className="skip-to-main sr-only font-oj focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:items-center focus:justify-center focus:rounded-oj focus:border-1.5 focus:border-oj-ink focus:bg-oj-orange-deep focus:px-6 focus:py-3 focus:font-bold focus:text-oj-on-band focus:shadow-press focus:outline-none focus:ring-2 focus:ring-oj-ink focus:ring-offset-2"
         >
           Skip to main content
         </Link>
 
         {/*
-          Chrome for the pages that do not render their own, which is now only the
-          fourteen still on the old templates, and it is the repositioned header and
-          footer rather than the old ones. See `LegacyChrome`.
+          No chrome here any more. Every page renders its own header, main and
+          footer; `MainGate` is now only the typeface wrapper. See its comment.
         */}
-        <LegacyChrome slot="header" />
         <ErrorBoundary>
           <MainGate>{children}</MainGate>
         </ErrorBoundary>
-        <LegacyChrome slot="footer" />
         <MarketingChrome />
       </body>
     </html>

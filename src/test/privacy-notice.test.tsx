@@ -25,8 +25,20 @@ describe('the privacy notice', () => {
     expect(body).toMatch(/what is happening in the business/i);
   });
 
-  it('says the six later questions are optional', () => {
-    expect(text()).toMatch(/Every one of these is optional/);
+  /*
+   * REWRITTEN 31 August 2026, when the second step of the enquiry form was removed.
+   * The notice used to say the six later questions were optional; it now has to say
+   * they are no longer asked and what happened to the answers already given, because
+   * a privacy notice describing a form that does not exist is the wrong kind of
+   * wrong.
+   */
+  it('says the six later questions are no longer asked, and what became of the answers', () => {
+    const body = text();
+    expect(body).toMatch(/no longer does/i);
+    expect(body).toMatch(/Answers given before that date are still held/i);
+    expect(body).toMatch(/ask us to delete them/i);
+    // The claim it replaced must not survive anywhere.
+    expect(body).not.toMatch(/Every one of these is optional/);
   });
 
   it('no longer describes a pub contact form', () => {

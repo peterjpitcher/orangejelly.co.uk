@@ -102,11 +102,11 @@ export default function PrivacyPage(): JSX.Element {
                 to prepare for the conversation.
               </p>
               <p>
-                After you have sent that, we ask six more questions: your role, roughly how many
-                people work there, your website, what you think is blocking growth, what success
-                would look like, and why now. <strong>Every one of these is optional.</strong> Your
-                enquiry is already with us by that point, and skipping them changes nothing about
-                the reply you get. They exist so the first conversation starts somewhere useful.
+                Until 31 August 2026 the form asked six further optional questions after that, about
+                your role, the size of the company, your website, what you thought was blocking
+                growth, what success would look like and why now. It no longer does. Answers given
+                before that date are still held, on the same basis and with the same access, and you
+                can ask us to delete them like anything else here.
               </p>
               <p>
                 We use this for one purpose: having a useful first conversation with you. We do not
