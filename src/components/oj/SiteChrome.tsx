@@ -174,14 +174,33 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
 export function OjFooter(): JSX.Element {
   return (
     <Footer
-      // The reversed mark, because the footer is ink.
+      /*
+        The orange mark, not the reversed white one, at the owner's request.
+        
+        He pointed at `orange-jelly-icon-square-light.png`, which is the same
+        artwork but RGB with no alpha: the white behind it is baked into the file,
+        so on an ink footer it would render as a light square block rather than a
+        floating mark. Every `-light` file in the brand folder is built that way,
+        for use on white. `logo-icon.png` is the identical design with a real
+        transparent background, already used elsewhere on the site, and it is what
+        he actually asked for.
+        
+        Contrast is not a constraint here: a logotype is explicitly exempt from
+        1.4.11, and brand orange on ink is plainly visible regardless.
+      */
       logo={
         <Image
-          src="/brand/logo-icon-white.png"
+          src="/brand/logo-icon.png"
           alt="Orange Jelly"
           width={640}
           height={667}
-          className="h-10 w-auto"
+          /*
+            80px, twice what it was, at the owner's request. The footer brand column
+            is the widest track in the grid and the mark is the only thing in it
+            above the strapline, so it has the room: at 80px tall the 640x667 file
+            renders 77px wide against a 300px column.
+          */
+          className="h-20 w-auto"
         />
       }
       columns={[
