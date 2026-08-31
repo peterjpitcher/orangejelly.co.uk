@@ -444,6 +444,71 @@ const ROUTES = [
     destination: '/guides/pop-up-events-for-pubs',
   },
 
+  /*
+   * URLs Google has crawled that this site never declared.
+   *
+   * Found by sweeping every GSC export against the release-day redirect table: 183
+   * distinct URLs, of which 25 reached nothing. The manifest was silent about all
+   * but two of them, which is the real gap. A URL nobody has declared cannot be
+   * reasoned about, cannot be kept out of the sitemap on purpose, and cannot be
+   * told apart from one that has been forgotten.
+   *
+   * These four have a genuinely relevant destination, which is the only reason they
+   * are redirects. A redirect to a page that does not answer the request is a soft
+   * 404: Google ignores it and it makes the destination look worse, so relevance is
+   * the whole test, not tidiness.
+   */
+  {
+    path: '/terms',
+    disposition: 'redirect',
+    destination: '/privacy',
+    note: 'No terms page has ever existed. The privacy policy is the only document that answers what somebody arriving here wants.',
+  },
+  {
+    path: '/help',
+    disposition: 'redirect',
+    destination: '/start-here',
+    note: 'Somebody looking for help wants to reach a person, and that is what /start-here is for.',
+  },
+  {
+    path: '/campaigns',
+    disposition: 'redirect',
+    destination: '/pub-marketing',
+    note: 'Never a page here. Campaign intent is closest to the marketing page.',
+  },
+
+  /*
+   * The events app that used to answer on this domain.
+   *
+   * Twenty-one of the twenty-five dead URLs are one story: /events/:slug, the auth
+   * flow that guarded it (/auth/login carries ?redirectedFrom=/events/... on eight
+   * of them), and its /dashboard and /settings screens. That application is not on
+   * orangejelly.co.uk and is not coming back.
+   *
+   * Declared rather than redirected, deliberately. There is no page on this site
+   * that answers "bingo night, 14 November 2025", so every candidate destination
+   * would be a soft 404, and the 404 page already offers the six places growth gets
+   * stuck, which is a better answer than the wrong page. Declaring them keeps them
+   * out of the sitemap, records that they were considered, and stops the next person
+   * finding them in Search Console and assuming they were missed.
+   *
+   * If The Anchor's own site carries these events, a cross-domain redirect would
+   * serve a visitor better than a 404 and is worth a decision. It is not one to make
+   * inside a route manifest.
+   */
+  {
+    path: '/events/:slug',
+    disposition: 'deleted',
+    note: 'The Anchor events app. Nine URLs indexed, no clicks.',
+  },
+  {
+    path: '/auth/:path*',
+    disposition: 'deleted',
+    note: 'Auth flow for the events app above. Ten URLs indexed, no clicks.',
+  },
+  { path: '/dashboard', disposition: 'deleted', note: 'Events app screen.' },
+  { path: '/settings', disposition: 'deleted', note: 'Events app screen.' },
+
   // ------------------------------------------------------------------- deleted
   {
     path: '/test-shadcn',
@@ -452,8 +517,9 @@ const ROUTES = [
   },
   {
     path: '/about-demo',
-    disposition: 'deleted',
-    note: 'Leftover route.ts handler, indexed at 22 impressions. Removed 27 Aug 2026.',
+    disposition: 'redirect',
+    destination: '/about',
+    note: 'Leftover route.ts handler, indexed at 22 impressions. Removed 27 Aug 2026, and redirected on 31 August rather than left as a 404: it was a copy of the about page, so the about page is a genuinely relevant destination rather than a soft 404.',
   },
 
   /*

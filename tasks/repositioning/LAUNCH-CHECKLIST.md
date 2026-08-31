@@ -84,6 +84,10 @@ for u in \
   /licensees-guide/fill-empty-seats-midweek-offers \
   /licensees-guide/crisis-pr-landlords-bad-reviews \
   /licensees-guide/fizz-street-food-pop-up \
+  /terms \
+  /help \
+  /campaigns \
+  /about-demo \
   /licensees-guide \
   /fix-my-pub \
   /empty-pub-solutions \
@@ -134,4 +138,4 @@ day nobody is available.
 - [ ] Enquiry form submitted end to end against production Supabase and Resend
 - [ ] Search Console open, so the crawl can be watched rather than assumed
 
-_27 checkable items. Generated from 61 declared routes._
+_27 checkable items. Generated from 68 declared routes._
