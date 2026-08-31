@@ -144,13 +144,21 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
           height={260}
           priority
           /*
-            36px, which is the design system's own header logo height, not a
-            preference. The port shipped 28px, so the mark sat at 44% of a 64px bar
-            and read as small next to nav labels at 15px semibold. The supplied file
-            is 1200x260, so at 36px tall it is 166px wide and still clears the nav by
-            a wide margin at every breakpoint the header supports.
+            44px in a 64px bar, which is as large as it goes without moving the bar.
+            
+            The port shipped 28px and the design system specifies 36px; the owner
+            asked for bigger than both. 44 leaves 10px of air above and below, and
+            the horizontal lockup carries that better than a square mark would
+            because it is wide rather than tall. Measured at 881, 1024 and 1440: the
+            mark renders 203x44 at all three with no page overflow and at least 24px
+            between it and the first nav item.
+            
+            Beyond this the bar has to grow with it. At 48px the logo is 75% of the
+            bar height and reads as crowded rather than confident, and the header
+            height is not a local decision: `--oj-sticky-offset` is set from it and
+            every in-page anchor on the site clears the header by that number.
           */
-          className="h-9 w-auto"
+          className="h-11 w-auto"
         />
       }
       items={ITEMS.map((item) => ({

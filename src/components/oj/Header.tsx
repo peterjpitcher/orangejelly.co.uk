@@ -139,7 +139,22 @@ export function Header({
           )}
         >
           <div className="mx-auto flex h-16 max-w-[1160px] items-center gap-6 px-8">
-            <Anchor href={home} aria-label="Home" className="flex items-center no-underline">
+            {/*
+              `flex-none`, or the mark gets squeezed rather than the bar wrapping.
+              
+              The logo sits in a flex row with the nav, and a flex item shrinks by
+              default. Below about 1024px the nav needed room and took it out of the
+              image: `w-auto` loses to the shrink, `object-fit` defaults to `fill`,
+              and the artwork distorts rather than the layout giving way. Measured at
+              881px it rendered 146x36 against a natural 166x36, so the wordmark was
+              about 12% narrow on every laptop between the mobile breakpoint and
+              1024, and worse the larger the logo is set.
+            */}
+            <Anchor
+              href={home}
+              aria-label="Home"
+              className="flex flex-none items-center no-underline"
+            >
               {brand}
             </Anchor>
 
