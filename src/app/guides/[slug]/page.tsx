@@ -60,19 +60,6 @@ export const revalidate = 60;
 export const dynamicParams = false;
 
 const CONTENT_DIR = path.join(process.cwd(), 'content/blog');
-const AUTHOR_ROLE = 'Founder, Orange Jelly';
-
-/**
- * The default byline.
- *
- * What was here read "Licensee of The Anchor and founder of Orange Jelly. Helping
- * pubs thrive with proven strategies", which is the old hospitality position in the
- * founder's own voice, and leans on the word this company no longer sells on. This
- * says the two facts and stops.
- */
-const AUTHOR_BIO =
-  'Founder of Orange Jelly and licensee of The Anchor in Stanwell Moor. Everything in this library is run in a working business before it is written down.';
-
 const str = (value: unknown): string | undefined => {
   if (typeof value === 'string' && value.trim().length > 0) return value;
   if (value instanceof Date && !Number.isNaN(value.getTime())) {
@@ -164,7 +151,6 @@ interface Guide {
   metaTitle: string;
   metaDescription: string;
   authorName: string;
-  authorBio: string;
   readingTime: number;
   quickAnswer?: string;
   voiceSearchQueries: string[];
@@ -199,7 +185,6 @@ function loadGuide(slug: string, includeDrafts: boolean): Guide | null {
     metaDescription:
       str(frontMatter.seoDescription) ?? str(frontMatter.metaDescription) ?? parsed.excerpt ?? '',
     authorName: str(frontMatter.author) ?? str(author?.name) ?? 'Peter Pitcher',
-    authorBio: str(author?.bio) ?? AUTHOR_BIO,
     readingTime: Math.round(parsed.readingTime?.minutes || 5),
     quickAnswer: str(frontMatter.quickAnswer),
     voiceSearchQueries: strArray(frontMatter.voiceSearchQueries),
@@ -712,33 +697,6 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                   </div>
                 </nav>
               ) : null}
-
-              <div className="mt-12 flex flex-col gap-5 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-6 sm:flex-row sm:items-start">
-                <Image
-                  src="/images/peter-pitcher.jpg"
-                  alt=""
-                  width={72}
-                  height={72}
-                  className="h-[72px] w-[72px] flex-none rounded-full border-1.5 border-oj-ink object-cover"
-                />
-                <div>
-                  <h2 className="font-oj text-[20px] font-black leading-tight text-oj-ink">
-                    {guide.authorName}
-                  </h2>
-                  <p className="oj-eyebrow mt-2">{AUTHOR_ROLE}</p>
-                  <p className="mt-3 text-[15.5px] leading-relaxed text-oj-ink-2">
-                    {guide.authorBio}
-                  </p>
-                  <p className="mt-3 text-[15px]">
-                    <Anchor
-                      href="/about"
-                      className="font-semibold text-oj-orange-deep underline underline-offset-2"
-                    >
-                      More about Orange Jelly
-                    </Anchor>
-                  </p>
-                </div>
-              </div>
 
               {guide.tags.length > 0 ? (
                 <div className="mt-8 flex flex-wrap items-center gap-2">
