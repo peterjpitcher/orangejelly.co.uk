@@ -31,7 +31,8 @@
     "check:claims": "node scripts/check-claims.mjs",
     "check:synthetic": "node scripts/synthetic-check.mjs",
     "audit:contrast": "node scripts/audit-contrast.mjs",
-    "audit:images": "node scripts/audit-images.mjs"
+    "audit:images": "node scripts/audit-images.mjs",
+    "audit:redirects": "node scripts/audit-redirects.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md}": [

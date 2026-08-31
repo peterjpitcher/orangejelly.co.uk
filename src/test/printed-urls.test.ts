@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 import { describe, expect, it } from 'vitest';
@@ -103,9 +103,27 @@ function serves(target: string): boolean {
   const slug = segments.pop();
   if (!slug) return false;
 
-  const routeRendersIt = existsSync(path.join(APP, ...segments, '[slug]', 'page.tsx'));
-  const contentExists = existsSync(path.join(CONTENT, `${slug}.md`));
-  return routeRendersIt && contentExists;
+  /*
+   * Any dynamic segment, not just [slug].
+   *
+   * An earlier version looked only for a folder literally called `[slug]`, which made
+   * it blind to `/guides/category/<name>`, rendered by `[category]`. It reported eight
+   * live, working category URLs as dead ends. A guard that cries wolf about working
+   * pages gets ignored, which is worse than not having it.
+   */
+  const parent = path.join(APP, ...segments);
+  if (!existsSync(parent)) return false;
+  const dynamic = readdirSync(parent).filter(
+    (entry) => entry.startsWith('[') && existsSync(path.join(parent, entry, 'page.tsx'))
+  );
+  if (dynamic.length === 0) return false;
+
+  /*
+   * An article route needs its markdown behind it; a category route is generated from
+   * the category list, so the route existing is the whole of the check.
+   */
+  const isArticleRoute = dynamic.includes('[slug]');
+  return isArticleRoute ? existsSync(path.join(CONTENT, `${slug}.md`)) : true;
 }
 
 describe.each([
