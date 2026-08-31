@@ -57,13 +57,13 @@ schema:
 
 # Wine & Cheese Evening: How to Run One in Your Pub
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 A wine and cheese evening is one of the easiest ways to lift spend per head, fill a quiet midweek, and turn wine from the dusty afterthought behind your bar into something your regulars actually look forward to. Put a few good wines next to a proper cheese board, charge a fair ticket, and you've got a cheese and wine night that feels like an occasion without costing you a fortune to put on. And no, you don't need a sommelier, a white tablecloth, or a single bit of jargon.
 
 Wine is the quiet underperformer behind most pub bars. The cellar work is sorted, the beer range gets all the attention, and the wine just sits there on a tired list, selling the same two house options to people who'd happily spend more if you gave them a reason to. Cheese is the reason. It makes the wine make sense, it slows the drinking down, and it turns "a few samples" into a sit-down evening people will book a table for.
 
-This is the click-out guide from [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). Autumn is the moment to fix your wine offer: you've got a refreshed list going in before the party season, the nights are drawing in, and people are back to wanting somewhere warm to sit with a proper glass of something and a bit of cheese.
+This is the click-out guide from [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas). Autumn is the moment to fix your wine offer: you've got a refreshed list going in before the party season, the nights are drawing in, and people are back to wanting somewhere warm to sit with a proper glass of something and a bit of cheese.
 
 ## Why a wine and cheese night works when wine alone doesn't
 
@@ -79,7 +79,7 @@ There's a tailwind here too. The themes coming out of the London Wine Fair in Ma
 
 Before you run a single event, sort the everyday stuff. A tasting brings people in; a clear, confident wine offer is what keeps them spending once the event is over.
 
-**Make it visible.** Get your wines somewhere people actually look: a clean menu, a tidy back-bar display, a chalkboard by the door. If you're rethinking the layout, our guide to [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) walks through it properly.
+**Make it visible.** Get your wines somewhere people actually look: a clean menu, a tidy back-bar display, a chalkboard by the door. If you're rethinking the layout, our guide to [pub drinks menu design](/guides/pub-drinks-menu-design-guide) walks through it properly.
 
 **Ditch the jargon.** Nobody knows what "notes of cassis and a long finish" means, and the people who do don't need telling. Use plain-English descriptions instead:
 
@@ -151,13 +151,13 @@ The golden rule: if a customer asks what a wine's like, answer in food. "It's gr
 
 ## Other premium serve moments
 
-A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening. These are the [national drinks days](/licensees-guide/national-drinks-days-pub-guide) worth a look, each one a single featured serve rather than a whole event:
+A wine and cheese night doesn't have to stand alone. Autumn is full of drinks-led hooks you can hang a premium serve on, the same way you would a wine evening. These are the [national drinks days](/guides/national-drinks-days-pub-guide) worth a look, each one a single featured serve rather than a whole event:
 
 - **National Vodka Day** (4 October) for a small batch of proper martinis or a signature serve
 - **A gin tasting evening** around International Gin & Tonic Day (19 October). A perfect-serve flight is gin's answer to the wine flight, and it runs on exactly the same format: three contrasting gins, a scorecard, a garnish each, and a supplier glad to part-fund it
 - **Champagne Friday or a Fizz Weekend** heading into party-booking season, when people are already in the mood to treat themselves
 
-And don't forget the ones drinking less. A good alcohol-free pour deserves the same care as a fine wine, so it's worth reading your wine evening alongside our [Sober October low-and-no guide](/licensees-guide/sober-october-low-no-alcohol-pubs). A confident no/low option means nobody at the table feels left out of the occasion. You'll find the full calendar of all this in [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
+And don't forget the ones drinking less. A good alcohol-free pour deserves the same care as a fine wine, so it's worth reading your wine evening alongside our [Sober October low-and-no guide](/guides/sober-october-low-no-alcohol-pubs). A confident no/low option means nobody at the table feels left out of the occasion. You'll find the full calendar of all this in [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas). The point is the same throughout: give people a reason to trade up from the usual, and most of them happily will.
 
 ## Turning a tasting into repeat bookings
 

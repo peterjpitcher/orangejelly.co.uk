@@ -17,7 +17,7 @@ import {
  * The insights collection.
  *
  * The failure this exists to prevent is subtle: the existing loader hard-codes
- * `/licensees-guide/<slug>` for everything under `content/blog`, so a new article
+ * `/guides/<slug>` for everything under `content/blog`, so a new article
  * dropped in there gets a hospitality URL, a hospitality canonical and a place in
  * the hospitality feed, and nothing anywhere reports a problem.
  */

@@ -40,7 +40,7 @@ const VERIFY_ROUTE = '/availability/verify/0123456789abcdef0123456789abcdef';
 /*
  * A route the repositioning has genuinely not reached.
  *
- * This was '/licensees-guide/some-article' until the guides adopted the new chrome
+ * This was '/guides/some-article' until the guides adopted the new chrome
  * on 30 August 2026, at which point the fixture quietly became a repositioned route
  * and the assertion below stopped testing what its name says. '/ways-to-work' is
  * still on the legacy templates and still carries the overlays.

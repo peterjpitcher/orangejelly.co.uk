@@ -29,8 +29,8 @@ export function GET(request: Request) {
 
   draftMode().enable();
 
-  const candidatePath = rawPath ?? (slug ? `/licensees-guide/${slug}` : '/licensees-guide');
-  const redirectPath = isSafeRelativePath(candidatePath) ? candidatePath : '/licensees-guide';
+  const candidatePath = rawPath ?? (slug ? `/guides/${slug}` : '/guides');
+  const redirectPath = isSafeRelativePath(candidatePath) ? candidatePath : '/guides';
 
   const redirectUrl = new URL(redirectPath, request.url);
   return NextResponse.redirect(redirectUrl, 307);

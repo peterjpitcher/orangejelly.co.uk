@@ -54,7 +54,7 @@ The losers are not usually worse operators. They are just later. By the time an 
 
 I run The Anchor in Stanwell Moor as a Greene King tenant, and I start on December while the beer garden is still busy. Everything below is what I would do in that order.
 
-For a month-by-month view of how Christmas fits into the bigger picture, see our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar). This guide trims the noise and focuses on the ideas that actually drive bookings.
+For a month-by-month view of how Christmas fits into the bigger picture, see our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar). This guide trims the noise and focuses on the ideas that actually drive bookings.
 
 ## The three things that matter most
 
@@ -82,7 +82,7 @@ Now check it against the corporate ceiling. HMRC's annual functions exemption le
 
 These are worked examples. Cost yours off your own invoices, and re-cost in October when your suppliers confirm December pricing rather than assuming August prices hold.
 
-Once the festive season is over, keep the momentum going with [summer pub event ideas](/licensees-guide/summer-pub-event-ideas) that fill the warmer months too.
+Once the festive season is over, keep the momentum going with [summer pub event ideas](/guides/summer-pub-event-ideas) that fill the warmer months too.
 
 ## Event ideas that create buzz
 
@@ -129,7 +129,7 @@ One tax point worth knowing: since March 2019 HMRC treats retained payments from
 
 Deposits work. At The Anchor we cut booking no-shows by 89%, and a no-show table on a Saturday in December is the single most expensive empty chair in your year.
 
-If you want the operational detail on filling every December session, our guide to [filling December with Christmas bookings](/licensees-guide/pub-christmas-bookings-fill-december) goes deeper on the diary.
+If you want the operational detail on filling every December session, our guide to [filling December with Christmas bookings](/guides/pub-christmas-bookings-fill-december) goes deeper on the diary.
 
 ## A simple planning timeline
 
@@ -166,7 +166,7 @@ If you want professional support getting your Christmas marketing right, take a 
 ## Mini FAQ
 
 **Should I discount to win parties?**
-No. Use added value instead of price cuts. Our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events) covers pricing models that protect your margins.
+No. Use added value instead of price cuts. Our guide on [how to run successful pub events](/guides/how-to-run-successful-pub-events) covers pricing models that protect your margins.
 
 **What do I do with the dates that have not sold by late November?**
 Release them to smaller groups and walk-ins with a lighter, cheaper offer. An empty function room earns nothing, and a two course option at a lower price still beats a locked door.

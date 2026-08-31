@@ -10,7 +10,7 @@ import { TRANSLATIONS, WHAT_WE_DO_NOT_HAVE } from './content';
 /**
  * `/sectors/professional-services`.
  *
- * The mirror of what `/licensees-guide` is for hospitality, with one difference the
+ * The mirror of what `/guides` is for hospitality, with one difference the
  * page has to be honest about: there is no professional services case study,
  * because there is not yet a professional services client.
  *

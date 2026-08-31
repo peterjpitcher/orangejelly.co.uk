@@ -170,7 +170,7 @@ A Christmas pub quiz works because:
 
 Running our quiz night consistently at The Anchor was part of what grew our table bookings by 403%. In December, that number swells because groups come as a Christmas outing. Make sure you take bookings for the Christmas quiz specials because demand will exceed your normal capacity.
 
-For ideas on quiz formats and logistics, see our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events).
+For ideas on quiz formats and logistics, see our guide on [how to run successful pub events](/guides/how-to-run-successful-pub-events).
 
 ### Live music and entertainment
 
@@ -190,7 +190,7 @@ Beyond the standard Christmas party offering, themed nights create extra reasons
 - **Mulled wine and mince pie evening**: a low-key midweek event that suits older demographics and couples.
 - **New Year's Eve preview**: a ticketed tasting menu in the last week of December that doubles as your NYE rehearsal run.
 
-For a full breakdown of seasonal event ideas, see our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar) and our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) guide.
+For a full breakdown of seasonal event ideas, see our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar) and our [Christmas pub promotion ideas](/guides/christmas-pub-promotion-ideas) guide.
 
 ## The social media promotion timeline
 

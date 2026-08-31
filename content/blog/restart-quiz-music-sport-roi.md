@@ -51,11 +51,11 @@ Most relaunches fail for the same three reasons: no calendar, so people cannot f
 
 I run The Anchor in Stanwell Moor and I have rebuilt all three of these formats more than once, usually after letting one drift.
 
-Fix those three and the rest is detail. Here is how to bring back quiz nights, [live music that pays its way](/licensees-guide/live-music-events-for-pubs), and sport with something better than hope.
+Fix those three and the rest is detail. Here is how to bring back quiz nights, [live music that pays its way](/guides/live-music-events-for-pubs), and sport with something better than hope.
 
 ## Step 1: Build an 8-week calendar
 
-Eight weeks is long enough to build a habit and short enough that you will actually finish it. Map it out before you book anything, using the same planning rhythm as our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events).
+Eight weeks is long enough to build a habit and short enough that you will actually finish it. Map it out before you book anything, using the same planning rhythm as our guide to [running successful pub events](/guides/how-to-run-successful-pub-events).
 
 | Week | Format | Purpose |
 |---|---|---|
@@ -78,7 +78,7 @@ Do this in the first week, because it changes what you can afford.
 
 **Live music.** The performance itself usually needs no extra entertainment licensing. Amplified live music between 8am and 11pm in premises licensed to sell alcohol for drinking on site is exempt for audiences up to 500, and unamplified music in those hours has no audience limit. Push past 11pm and your premises licence conditions apply again.
 
-**The music rights are separate.** Live sets, recorded playlists, background music and a TV in the corner all sit under TheMusicLicence from PPL PRS, priced on how you use music and the size of your venue. There is more detail in our guide to [what PRS and PPL actually cost a pub](/licensees-guide/prs-ppl-music-licensing-pubs). Get a quote before you build a music programme, not after.
+**The music rights are separate.** Live sets, recorded playlists, background music and a TV in the corner all sit under TheMusicLicence from PPL PRS, priced on how you use music and the size of your venue. There is more detail in our guide to [what PRS and PPL actually cost a pub](/guides/prs-ppl-music-licensing-pubs). Get a quote before you build a music programme, not after.
 
 **Sport.** Commercial subscriptions from Sky and TNT are priced against your rateable value, so two pubs on the same street can pay very different amounts. Get your own quote rather than trusting the number your mate down the road quotes you. Showing sport on a domestic subscription is not a grey area, it is illegal, and it gets pubs prosecuted every season.
 
@@ -111,7 +111,7 @@ Price the middle tier as the obvious choice. If standard entry is £3 a head and
 
 A scripted host earns more than a charming one, and a charming host with a script earns most of all.
 
-Give quizmasters and MCs a printed running order with the sell built in: what to say at 8:00, what to announce before the interval, what to say when handing out answer sheets. Specific lines beat vague instructions, and the same principles apply as in our [upselling scripts for bar teams](/licensees-guide/upselling-secrets-training-scripts).
+Give quizmasters and MCs a printed running order with the sell built in: what to say at 8:00, what to announce before the interval, what to say when handing out answer sheets. Specific lines beat vague instructions, and the same principles apply as in our [upselling scripts for bar teams](/guides/upselling-secrets-training-scripts).
 
 Four cues that pay for themselves:
 
@@ -120,7 +120,7 @@ Four cues that pay for themselves:
 3. **Next date.** Announced twice, once mid-quiz and once at the results.
 4. **The rebook.** "Tables for next week are open at the bar now."
 
-If you are rebuilding the format itself as well as the commercial side, revisit the [quiz night format basics](/licensees-guide/quiz-night-101) before you write the first round.
+If you are rebuilding the format itself as well as the commercial side, revisit the [quiz night format basics](/guides/quiz-night-101) before you write the first round.
 
 ## Step 6: Maximise food and drink
 

@@ -81,7 +81,7 @@ Practical moves this week:
 - Replace three single-use garnishes with one house pickle or slaw that works across the board.
 - Buy whole and butcher in-house where you have the skill, so the trim goes into stock, ragu or staff food rather than the waste bin.
 
-This sits directly alongside [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend): the same tightening that cuts waste also pushes guests towards your strongest-margin plates. If you want a starting point for what to keep, work through [these profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas) before you cut anything popular.
+This sits directly alongside [menu engineering that lifts average spend](/guides/menu-engineering-lift-average-spend): the same tightening that cuts waste also pushes guests towards your strongest-margin plates. If you want a starting point for what to keep, work through [these profitable pub food menu ideas](/guides/profitable-pub-food-menu-ideas) before you cut anything popular.
 
 ## Step 3: Portion control is culture
 
@@ -93,7 +93,7 @@ The bar is where this bites hardest, because the numbers are bigger than people 
 
 Weights and Measures law already requires spirits to be sold in specified quantities, so thumb-poured gin is a compliance problem as well as a margin problem. Use thimble measures or optics, and check them.
 
-Apply the same discipline in the cellar with [a routine that protects beer quality and yield](/licensees-guide/cellar-management-beer-quality-guide), then look at your range with [a drinks mix that rescues margin](/licensees-guide/rescue-your-margins-drinks-mix).
+Apply the same discipline in the cellar with [a routine that protects beer quality and yield](/guides/cellar-management-beer-quality-guide), then look at your range with [a drinks mix that rescues margin](/guides/rescue-your-margins-drinks-mix).
 
 ## Step 4: FIFO is not optional
 
@@ -139,7 +139,7 @@ Stock systems do not reduce waste. People following a process reduce waste, and 
 
 Get these four habits running for eight weeks first: weekly counts, dated labels, spec-sheet portions, and a waste log filled in at the point of binning rather than at the end of the night.
 
-Once the habits hold, [an EPOS system that tracks stock properly](/licensees-guide/pub-epos-system-guide) will earn its keep, because it can compare theoretical against actual usage automatically and flag the lines drifting out of spec. Buy it before the habits exist and you will have an expensive subscription producing reports nobody trusts.
+Once the habits hold, [an EPOS system that tracks stock properly](/guides/pub-epos-system-guide) will earn its keep, because it can compare theoretical against actual usage automatically and flag the lines drifting out of spec. Buy it before the habits exist and you will have an expensive subscription producing reports nobody trusts.
 
 ## The waste you cannot see behind the bar
 

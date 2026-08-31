@@ -25,7 +25,7 @@ describe('subscribeToNewsletter', () => {
     const result = await subscribeToNewsletter({
       email: 'reader@example.com',
       leadSource: {
-        sourcePage: '/licensees-guide?utm_source=test',
+        sourcePage: '/guides?utm_source=test',
         landingPage: '/',
         utmSource: 'test',
       },
@@ -35,7 +35,7 @@ describe('subscribeToNewsletter', () => {
     expect(storeNewsletterSignup).toHaveBeenCalledWith({
       email: 'reader@example.com',
       leadSource: {
-        sourcePage: '/licensees-guide?utm_source=test',
+        sourcePage: '/guides?utm_source=test',
         landingPage: '/',
         utmSource: 'test',
       },

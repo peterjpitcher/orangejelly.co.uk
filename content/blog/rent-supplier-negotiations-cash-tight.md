@@ -47,7 +47,7 @@ faqs:
 
 # Handling Rent and Supplier Negotiations When Cash Is Tight
 
-Ignoring the phone does not fix cash pressure, and it will not break the [cycle behind a cash flow crisis](/licensees-guide/cash-flow-crisis-breaking-cycle). Every landlord, brewer and wholesaler I have dealt with reads silence the same way: they assume the worst and they escalate.
+Ignoring the phone does not fix cash pressure, and it will not break the [cycle behind a cash flow crisis](/guides/cash-flow-crisis-breaking-cycle). Every landlord, brewer and wholesaler I have dealt with reads silence the same way: they assume the worst and they escalate.
 
 Almost everyone you owe money to would rather take a slower payment from a trading pub than a write-off from a closed one. Your job is to make that the obvious commercial choice for them, in a fifteen-minute conversation, with numbers on the table.
 
@@ -91,7 +91,7 @@ Send one line: "Can we book twenty minutes this week? I want to walk you through
 
 Explain what happened and what you are doing about it. Three sentences, no excuses, no weather, no cost of living speech. They have heard all of it.
 
-Then move straight to the actions you have already taken, such as the [cashflow fixes you have put in place as trade dropped](/licensees-guide/cashflow-fixes-when-trade-drops) or the stock discipline you have introduced. Evidence of self-help is what separates a tenant worth backing from one worth writing off.
+Then move straight to the actions you have already taken, such as the [cashflow fixes you have put in place as trade dropped](/guides/cashflow-fixes-when-trade-drops) or the stock discipline you have introduced. Evidence of self-help is what separates a tenant worth backing from one worth writing off.
 
 A script that works: "Trade dropped 14% in January and I got behind. I have cut the Monday shift, renegotiated the food order to twice weekly, and dropped four slow lines from the menu. Weekly costs are down £310. Here is the forecast. Here is what I can pay."
 
@@ -127,14 +127,14 @@ The week you cannot make a payment, tell them on the Wednesday, not the followin
 
 Ask for the reason, because it is usually specific and often fixable. If the answer is credit policy, ask what would make it approvable. If the answer is authority, ask to escalate one level and offer to re-present the same numbers.
 
-If the amounts are serious, get help. The BII supports members with trade advice, the Pubs Code Adjudicator publishes guidance for tied tenants in England and Wales, and a licensed trade accountant will read a lease far better than a generalist. For tax, HMRC's instalment route covers VAT debts of £50,000 or less for accounting periods starting in 2023 or later, and you may be able to set that up online without a phone call. That is far easier when your [VAT and accounting basics](/licensees-guide/pub-vat-accounting-guide) are already in order.
+If the amounts are serious, get help. The BII supports members with trade advice, the Pubs Code Adjudicator publishes guidance for tied tenants in England and Wales, and a licensed trade accountant will read a lease far better than a generalist. For tax, HMRC's instalment route covers VAT debts of £50,000 or less for accounting periods starting in 2023 or later, and you may be able to set that up online without a phone call. That is far easier when your [VAT and accounting basics](/guides/pub-vat-accounting-guide) are already in order.
 
 ## Common mistakes
 
 - **Waiting until the payment is overdue.** Before the due date you are a customer managing a problem. After it you are a debtor.
 - **Asking for help without a plan.** Open-ended requests get open-ended answers, which usually means no.
 - **Overpromising and missing the new schedule.** Commit to less than you think you can pay. Nobody minds an early payment.
-- **Treating the tie as fixed.** If the terms of your supply are the real problem, the fix is a separate conversation about how you [improve the terms of a brewery tie](/licensees-guide/brewery-tie-improve-your-deal), not another payment plan.
+- **Treating the tie as fixed.** If the terms of your supply are the real problem, the fix is a separate conversation about how you [improve the terms of a brewery tie](/guides/brewery-tie-improve-your-deal), not another payment plan.
 - **Chasing a cheaper price outside your agreement.** If you buy free of tie on any line, check the wholesaler's Alcohol Wholesaler Registration Scheme number from their invoice against HMRC's approval page. Buying from an unapproved wholesaler is an offence and puts your premises licence at risk.
 
 ## Quick checklist

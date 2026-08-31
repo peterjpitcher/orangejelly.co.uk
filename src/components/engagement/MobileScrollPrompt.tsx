@@ -14,8 +14,8 @@ export default function MobileScrollPrompt(): React.ReactElement | null {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
-  // Only on blog post pages: /licensees-guide/[slug]
-  const isBlogPost = pathname.startsWith('/licensees-guide/') && pathname !== '/licensees-guide/';
+  // Only on blog post pages: /guides/[slug]
+  const isBlogPost = pathname.startsWith('/guides/') && pathname !== '/guides/';
 
   const handleScroll = useCallback(() => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;

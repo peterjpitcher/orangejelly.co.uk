@@ -108,7 +108,7 @@ I have seen this go wrong. Cook in bulk during a quiet daytime shift on a timed 
 
 Chips costing 55 pence sell at four pounds fifty. That is 3.20 pounds of cash gross profit for one minute of work, on a cover you have already paid to acquire.
 
-Be realistic about the base. Most mains already come with chips, so the upsell is the chargeable extra: onion rings, garlic bread, a sauce. Across 250 food covers a week, moving that attach rate from 20 to 35 percent is 38 extra items, worth 6,240 pounds a year. Our guide to [upselling scripts that work at the table](/licensees-guide/upselling-secrets-training-scripts) covers the asking.
+Be realistic about the base. Most mains already come with chips, so the upsell is the chargeable extra: onion rings, garlic bread, a sauce. Across 250 food covers a week, moving that attach rate from 20 to 35 percent is 38 extra items, worth 6,240 pounds a year. Our guide to [upselling scripts that work at the table](/guides/upselling-secrets-training-scripts) covers the asking.
 
 ### The dishes that look profitable and are not
 
@@ -123,7 +123,7 @@ Fresh fish specials at low volume, because three portions a week cannot be bough
 | Premium or gastro kitchen | 60% to 68% | 32% to 40% |
 | What struggling kitchens actually run | 55% to 62% | 38% to 45% |
 
-That bottom row is the honest one: plenty of kitchens believe they sit at 70 percent because they have only ever worked recipe GP, which is always optimistic. If food exists mainly to hold people in the room, chasing 70 percent on a nine-dish menu shrinks portions and costs you the drinks it was selling. See our comparison of [wet-led and food-led pub economics](/licensees-guide/wet-led-vs-food-led-pubs).
+That bottom row is the honest one: plenty of kitchens believe they sit at 70 percent because they have only ever worked recipe GP, which is always optimistic. If food exists mainly to hold people in the room, chasing 70 percent on a nine-dish menu shrinks portions and costs you the drinks it was selling. See our comparison of [wet-led and food-led pub economics](/guides/wet-led-vs-food-led-pubs).
 
 ## Working out GP with VAT handled properly
 
@@ -148,7 +148,7 @@ Work it on the inclusive price instead and you get 15.95 less 4.05, divided by 1
 
 The error is always 20 percent of your inclusive-price cost ratio. A side overstates by two points, a burger by five, fish and chips by six, a steak by seven. The higher the plate cost, the more the mistake flatters you, which is precisely backwards. A pub proudly running 70 percent on inclusive maths is running 64 percent for real.
 
-Two caveats. Under the 90,000 pound registration threshold you are not VAT registered, so you do not divide by 1.2 at all and your plate cost is the gross invoice figure. On the Flat Rate Scheme, under 150,000 pounds, it differs again. Our [pub VAT and accounting guide](/licensees-guide/pub-vat-accounting-guide) covers both.
+Two caveats. Under the 90,000 pound registration threshold you are not VAT registered, so you do not divide by 1.2 at all and your plate cost is the gross invoice figure. On the Flat Rate Scheme, under 150,000 pounds, it differs again. Our [pub VAT and accounting guide](/guides/pub-vat-accounting-guide) covers both.
 
 ### The zero-rating most kitchens miss
 
@@ -168,7 +168,7 @@ For a target GP: divide plate cost by one minus the target, then multiply by 1.2
 
 ## The cost nobody puts on the plate: kitchen time
 
-A chef on 14 pounds an hour costs closer to 18.20 once holiday accrual, employer National Insurance and pension land on top. Call it 30 pence a chef minute; our [guide to pub wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide) works the on-costs properly.
+A chef on 14 pounds an hour costs closer to 18.20 once holiday accrual, employer National Insurance and pension land on top. Call it 30 pence a chef minute; our [guide to pub wages and labour costs](/guides/pub-wages-labour-costs-guide) works the on-costs properly.
 
 | | Homemade steak and ale pie | Bought-in premium pie |
 |---|---|---|
@@ -238,7 +238,7 @@ Value that win carefully. If covers stay flat, doubling the shank's mix takes th
 
 The exception is a veto dish. The vegan curry sits just under the section average, but one person can decide where a party of eight eats. Re-engineer it rather than cutting it.
 
-Those three moves are worth roughly 2,060 pounds a year and change two prices. A blanket 4 percent rise draws far more resistance for a similar result. For the whole-ticket version, see our guide on [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend).
+Those three moves are worth roughly 2,060 pounds a year and change two prices. A blanket 4 percent rise draws far more resistance for a similar result. For the whole-ticket version, see our guide on [menu engineering to lift average spend](/guides/menu-engineering-lift-average-spend).
 
 ## Pricing without losing your regulars
 

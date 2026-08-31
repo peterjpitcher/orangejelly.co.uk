@@ -49,7 +49,7 @@ export async function generateMetadata() {
     title: "The Licensee's Guide - Expert Pub Management Advice",
     description:
       'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice that also applies to restaurants and bars.',
-    path: '/licensees-guide',
+    path: '/guides',
     ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });
@@ -222,9 +222,9 @@ export default async function LicenseesGuidePage() {
           <CollectionPageSchema
             name="The Licensee's Guide"
             description="Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice to increase revenue and build thriving local pubs."
-            url="/licensees-guide"
+            url="/guides"
             items={posts.map((post) => ({
-              url: `/licensees-guide/${post.slug}`,
+              url: `/guides/${post.slug}`,
               name: post.title,
               description: post.excerpt,
               datePublished: post.publishedDate,
@@ -233,7 +233,7 @@ export default async function LicenseesGuidePage() {
             }))}
             breadcrumbs={[
               { name: 'Home', url: '/' },
-              { name: "The Licensee's Guide", url: '/licensees-guide' },
+              { name: "The Licensee's Guide", url: '/guides' },
             ]}
           />
         )}
@@ -247,7 +247,7 @@ export default async function LicenseesGuidePage() {
           subtitle="Proven strategies that increase revenue for pubs, restaurants, and bars"
           showCTA={false}
           breadcrumbs={breadcrumbPaths.licenseesGuide}
-          backgroundImage="/images/headers/licensees-guide.png"
+          backgroundImage="/images/headers/guides.png"
           breadcrumbEmitJsonLd={false}
         />
 

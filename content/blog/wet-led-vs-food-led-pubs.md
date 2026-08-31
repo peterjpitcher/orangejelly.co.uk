@@ -94,7 +94,7 @@ Wet GP in a well-managed pub should sit between 55 and 65 percent, depending on 
 - **Tied pubs** buying through a brewery or pubco will typically achieve 55 to 58 percent wet GP. The tie means you pay above open-market prices for your core lines, which compresses margin. The trade-off is lower rent and brewery support.
 - **Free-of-tie pubs** buying on the open market can push toward 60 to 65 percent by shopping around, negotiating hard, and building a range weighted toward higher-margin products.
 
-The biggest lever for wet GP is **product mix**. Standard draught lager at 58 percent GP is fine, but premium spirits at 75 percent, cocktails at 80 percent, and wine by the glass at 70 percent all lift the blended margin. For a deep dive on this, read our guide on [rescuing your margins through drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
+The biggest lever for wet GP is **product mix**. Standard draught lager at 58 percent GP is fine, but premium spirits at 75 percent, cocktails at 80 percent, and wine by the glass at 70 percent all lift the blended margin. For a deep dive on this, read our guide on [rescuing your margins through drinks mix](/guides/rescue-your-margins-drinks-mix).
 
 ### Overheads
 
@@ -129,7 +129,7 @@ Wet-led works best when:
 
 Food GP should be your obsession if you run a kitchen. The industry average sits around 60 to 65 percent, but well-managed operations can hit 68 to 72 percent consistently.
 
-At The Anchor, we grew our food revenue by 98 percent in three months through disciplined menu engineering: reducing waste, designing dishes around shared core ingredients, pricing with margin in mind rather than competitor-matching, and training the team to upsell higher-margin items. Our guide on [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend) explains the system in detail.
+At The Anchor, we grew our food revenue by 98 percent in three months through disciplined menu engineering: reducing waste, designing dishes around shared core ingredients, pricing with margin in mind rather than competitor-matching, and training the team to upsell higher-margin items. Our guide on [menu engineering to lift average spend](/guides/menu-engineering-lift-average-spend) explains the system in detail.
 
 ### The cost of a kitchen
 
@@ -272,7 +272,7 @@ Focus on:
 - **Atmosphere**: photos and videos of busy nights, happy crowds, real moments.
 - **Deals**: drinks promotions, happy hours (priced carefully to protect GP), loyalty schemes.
 
-Our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) has specific tactics for wet-led venues.
+Our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) has specific tactics for wet-led venues.
 
 ### Food-led marketing
 

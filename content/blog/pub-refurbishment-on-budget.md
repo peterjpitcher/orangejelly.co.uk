@@ -79,11 +79,11 @@ This is the phase that changes how the room feels, and almost none of it is skil
 
 **Deep clean everything guests touch or look up at.** Hire a rotary floor machine for a day and do the trade floor properly. Degrease the bar top and gantry. Then clean the light fittings: a dusty shade swallows a startling amount of light, and most have not had a ladder near them in years.
 
-**Warm the lighting.** Cool white lamps at 4000K and above make skin look grey and food look worse. Swap to 2700K warm white, fit dimmers on the main circuits, and add two or three table lamps for the evening. This is the cheapest atmosphere change there is, and it is the whole idea behind [rebooting your pub atmosphere on a budget](/licensees-guide/reboot-pub-atmosphere-on-budget).
+**Warm the lighting.** Cool white lamps at 4000K and above make skin look grey and food look worse. Swap to 2700K warm white, fit dimmers on the main circuits, and add two or three table lamps for the evening. This is the cheapest atmosphere change there is, and it is the whole idea behind [rebooting your pub atmosphere on a budget](/guides/reboot-pub-atmosphere-on-budget).
 
 **Paint one high-visibility wall.** Trade eggshell or a scrubbable matt, one weekday morning, two coats.
 
-**Sort the toilets.** Guests forgive a scuffed bar and never forgive a grim loo. A working lock, a clear mirror, a hook on the door and a light that does not buzz. Fuller breakdown in the [pub toilet refurbishment budget guide](/licensees-guide/pub-toilet-refurbishment-budget-guide).
+**Sort the toilets.** Guests forgive a scuffed bar and never forgive a grim loo. A working lock, a clear mirror, a hook on the door and a light that does not buzz. Fuller breakdown in the [pub toilet refurbishment budget guide](/guides/pub-toilet-refurbishment-budget-guide).
 
 **Bin the chipped glassware.** Nothing announces neglect faster, and it is a hygiene issue too.
 
@@ -101,7 +101,7 @@ Comfort is what keeps people in the building for a second drink, so this is the 
 
 ## Phase 3: Statement moments (£2,500 to £5,000)
 
-**Build one photo-worthy corner.** Not the whole pub. One spot people will stand in front of: a painted feature wall, a mirror, a flower arch in summer, a local history wall. This is your free marketing, and it is the same thinking behind [low-cost decor refreshes that signal new and improved](/licensees-guide/low-cost-decor-refreshes-new-improved).
+**Build one photo-worthy corner.** Not the whole pub. One spot people will stand in front of: a painted feature wall, a mirror, a flower arch in summer, a local history wall. This is your free marketing, and it is the same thinking behind [low-cost decor refreshes that signal new and improved](/guides/low-cost-decor-refreshes-new-improved).
 
 **Light and tidy the back bar.** Guests stare at the gantry the whole time they are served. Strip the dead stock, face everything forward, add an LED strip behind the bottles.
 
@@ -115,7 +115,7 @@ If the pub needs more than a cosmetic refresh, and trade has dropped to the poin
 
 If you are tied, go to your BDM with a one-page plan before you spend a penny of your own. Show the work, the cost, and the trade you expect it to produce. Ask three questions: is there a capital investment budget, is any of this actually the landlord's repairing obligation under the lease, and is there a rent concession available while the work is done.
 
-Be careful what you sign in return. Under the Pubs Code etc. Regulations 2016, tied tenants of the large pub companies have market rent only rights triggered at certain events, and landlord and tenant can agree to defer those rights in exchange for significant investment, for up to seven years. That may still be a good deal, but it is a real trade. Get any offer in writing and take advice first. I am a BII member and this is precisely what their helpline is for. There is more in our guide to [improving your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal).
+Be careful what you sign in return. Under the Pubs Code etc. Regulations 2016, tied tenants of the large pub companies have market rent only rights triggered at certain events, and landlord and tenant can agree to defer those rights in exchange for significant investment, for up to seven years. That may still be a good deal, but it is a real trade. Get any offer in writing and take advice first. I am a BII member and this is precisely what their helpline is for. There is more in our guide to [improving your brewery tie deal](/guides/brewery-tie-improve-your-deal).
 
 ## The rules you cannot decorate around
 

@@ -234,7 +234,7 @@ It is almost never just about pay. Exit conversations and industry research cons
 - **Create team moments.** A staff drink after a big night, a group chat that is actually fun, a team outing once a quarter. People stay for the people as much as the job.
 - **Offer flexibility where you can.** A student who needs exam week off, a parent who cannot do school holidays. Accommodate where possible and they will go the extra mile when you need them to.
 
-For more ideas on keeping your team motivated when budgets are tight, read our guide on [pub staff motivation without pay rises](/licensees-guide/staff-motivation-hacks-no-pay-rise).
+For more ideas on keeping your team motivated when budgets are tight, read our guide on [pub staff motivation without pay rises](/guides/staff-motivation-hacks-no-pay-rise).
 
 ## Chef recruitment: a special case
 
@@ -302,4 +302,4 @@ The pubs that consistently find and keep great staff are not paying double the m
 
 Your team is the single biggest factor in whether customers come back. A warm welcome, a well-pulled pint, and a smile that feels real. That is what turns a first visit into a regular habit. And that starts with hiring the right people and giving them every reason to stay.
 
-If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly about a Growth Partnership](/ways-to-work/growth-partner). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403%, and it starts with the people behind the bar.
+If you are struggling with recruitment, retention, or building a team culture that works, a [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success) can help identify exactly where the gaps are. And if you want hands-on support building systems that attract and keep great people, [talk to Orange Jelly about a Growth Partnership](/ways-to-work/growth-partner). We have built a team at The Anchor that helped grow our Google Search visibility by 828% and our table bookings by 403%, and it starts with the people behind the bar.

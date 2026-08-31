@@ -65,7 +65,7 @@ function pct(now, before) {
  * So match on the slug across every name the section has had. The slug is the part that
  * does not change, and two posts never share one.
  */
-const SECTION_ALIASES = ['/licensees-guide', '/guides'];
+const SECTION_ALIASES = ['/guides', '/guides'];
 
 function lookUp(byPath, url) {
   const direct = byPath.get(url);

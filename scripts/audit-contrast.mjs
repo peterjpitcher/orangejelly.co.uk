@@ -58,7 +58,7 @@ const MEASURE = () => {
    *
    * Background IMAGES matter as much as background colours and are easy to miss.
    * The first version of this ignored them and reported 105 false failures on
-   * /licensees-guide alone, where white text sits on a dark red gradient that the
+   * /guides alone, where white text sits on a dark red gradient that the
    * script could not see, so it fell through to the white card behind and called
    * white-on-white. A run that cries wolf 105 times is worse than no run at all.
    *
@@ -79,7 +79,7 @@ const MEASURE = () => {
    * rather than an ancestor, so walking up the tree never sees it.
    *
    * Missing them is not a small error. It made every category label on
-   * /licensees-guide look like a failure when the real figures are 5.4:1 and 5.97:1,
+   * /guides look like a failure when the real figures are 5.4:1 and 5.97:1,
    * and 52 false alarms in one page is how a check like this gets ignored.
    */
   const scrims = (ancestor, textRect) => {

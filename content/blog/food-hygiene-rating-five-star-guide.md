@@ -82,7 +82,7 @@ They look at:
 - **Cross-contamination prevention.** Are raw and cooked foods stored separately? Do you have separate chopping boards, clearly colour-coded? Are staff washing hands between tasks?
 - **Cooking and reheating.** Is food cooked to a safe core temperature (75 degrees or above)? Is reheated food brought to at least 82 degrees in Scotland, or 75 degrees in England and Wales?
 - **Personal hygiene.** Are staff wearing clean clothing? Is there evidence of proper handwashing: soap, hot water, paper towels (not shared cloth towels)?
-- **Allergen management.** Can you demonstrate that you know the 14 allergens and can communicate them to customers? If you need to strengthen this area, our guide on [food allergen and GDPR compliance](/licensees-guide/food-allergies-gdpr-compliance) covers the practical systems.
+- **Allergen management.** Can you demonstrate that you know the 14 allergens and can communicate them to customers? If you need to strengthen this area, our guide on [food allergen and GDPR compliance](/guides/food-allergies-gdpr-compliance) covers the practical systems.
 
 This area is worth up to 25 points. Serious failures here can single-handedly sink your rating.
 
@@ -258,9 +258,9 @@ Your food hygiene rating affects your pub in ways that go beyond a sticker in th
 
 **Insurance and compliance.** Some insurers ask about your food hygiene rating. A poor score could affect your premiums or policy terms.
 
-**Staff recruitment.** Good chefs and kitchen staff want to work in well-run kitchens. A visible 5-star rating tells potential hires that you take standards seriously. If you are thinking about how food quality connects to your bottom line, read our guide on [profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas) for the revenue side of the equation.
+**Staff recruitment.** Good chefs and kitchen staff want to work in well-run kitchens. A visible 5-star rating tells potential hires that you take standards seriously. If you are thinking about how food quality connects to your bottom line, read our guide on [profitable pub food menu ideas](/guides/profitable-pub-food-menu-ideas) for the revenue side of the equation.
 
-**Reputation compounding.** A 5-star rating is not just a score. It compounds your reputation. Customers mention it in reviews. It appears in social media posts. It gives your marketing credibility. And crucially, it is one less thing for a customer to worry about when deciding where to eat. For more on how your menu structure drives profitability alongside food safety, see our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend).
+**Reputation compounding.** A 5-star rating is not just a score. It compounds your reputation. Customers mention it in reviews. It appears in social media posts. It gives your marketing credibility. And crucially, it is one less thing for a customer to worry about when deciding where to eat. For more on how your menu structure drives profitability alongside food safety, see our [menu engineering guide](/guides/menu-engineering-lift-average-spend).
 
 ## Maintaining your 5 stars: the routines that prevent slippage
 
@@ -300,7 +300,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 
 4. **Cross-contamination.** Raw and cooked foods are always separated. Colour-coded boards are always used correctly. Hands are washed between tasks, after handling raw food, after using the toilet, after touching your face, after handling waste.
 
-5. **Allergens.** We must be able to tell every customer exactly what is in every dish. If you are not sure, do not guess. Check the recipe sheet or ask the head chef. If you need a refresher on the full allergen and data handling process, the detailed guide is [here](/licensees-guide/food-allergies-gdpr-compliance).
+5. **Allergens.** We must be able to tell every customer exactly what is in every dish. If you are not sure, do not guess. Check the recipe sheet or ask the head chef. If you need a refresher on the full allergen and data handling process, the detailed guide is [here](/guides/food-allergies-gdpr-compliance).
 
 6. **SFBB and record keeping.** The daily diary must be completed every day. If you are the opening chef, this is your responsibility. If you see a gap, fill it.
 
@@ -327,7 +327,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 - Induct every new starter with a food safety briefing on day one
 - Fix structural issues as they arise, not when an inspection is due
 
-A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best (from food safety to [menu profitability](/licensees-guide/profitable-pub-food-menu-ideas) to marketing that fills tables), that is exactly what a [Growth Fix](/ways-to-work/growth-fix) is designed for.
+A 5-star food hygiene rating is not about perfection. It is about consistent, well-documented good practice that becomes second nature to your team. If you want help building the operational systems that keep your pub running at its best (from food safety to [menu profitability](/guides/profitable-pub-food-menu-ideas) to marketing that fills tables), that is exactly what a [Growth Fix](/ways-to-work/growth-fix) is designed for.
 
 ## The bottom line
 

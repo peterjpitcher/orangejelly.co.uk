@@ -9,7 +9,7 @@ const pages = [
   { name: 'about', path: '/about' },
   { name: 'results', path: '/results' },
   { name: 'contact', path: '/contact' },
-  { name: 'licensees-guide', path: '/licensees-guide' },
+  { name: 'licensees-guide', path: '/guides' },
   // Landing pages
   { name: 'empty-pub-solutions', path: '/empty-pub-solutions' },
   { name: 'quiet-midweek-solutions', path: '/quiet-midweek-solutions' },

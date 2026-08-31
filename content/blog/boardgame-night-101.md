@@ -105,7 +105,7 @@ Print these cues on A6 cards and keep them with each game.
 
 ## Community and Retention
 
-- **Punch cards:** play five nights, get a limited enamel pin or free platter, the simplest version of a [loyalty scheme that rewards frequency](/licensees-guide/build-loyalty-scheme-fill-pub).
+- **Punch cards:** play five nights, get a limited enamel pin or free platter, the simplest version of a [loyalty scheme that rewards frequency](/guides/build-loyalty-scheme-fill-pub).
 - **Leaderboard:** highlight teams that completed the most games or achieved “King of Carcassonne”.
 - **Discord/WhatsApp group:** share teaches, vote for next spotlight, arrange off-site meetups.
 - **Photo consent system:** opt-out stickers/wristbands for anyone who doesn’t want to appear on socials.
@@ -139,7 +139,7 @@ Encourage guests to donate games in exchange for bar credit, but vet condition a
 
 - **Visuals:** overhead shots of colourful boards, “hands-in” moments.
 - **Copy-ready caption:** “Board Game Night every Monday, 7pm. Library provided, teaches included, solo players welcome. Reserve a seat 👉 [link].”
-- **Cross-promo:** tie into your [weekly quiz night](/licensees-guide/quiz-night-101) (“Prefer tabletop strategy? Join us Mondays”) and your [music bingo night](/licensees-guide/music-bingo-101) (“Same crowd, different vibe”).
+- **Cross-promo:** tie into your [weekly quiz night](/guides/quiz-night-101) (“Prefer tabletop strategy? Join us Mondays”) and your [music bingo night](/guides/music-bingo-101) (“Same crowd, different vibe”).
 - **Community outreach:** drop flyers at local game shops, universities, community centres.
 
 ## Compliance & Housekeeping

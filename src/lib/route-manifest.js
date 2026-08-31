@@ -102,13 +102,13 @@ const ROUTES = [
     lastModified: LAST_CONTENT_SWEEP,
   },
   {
-    path: '/licensees-guide',
+    path: '/guides',
     disposition: 'live',
     sitemap: true,
     priority: 0.8,
     changeFrequency: 'weekly',
     lastModified: LAST_CONTENT_SWEEP,
-    note: 'Becomes the hospitality sector hub. Path does not change: it carries 897 of the site’s 969 annual clicks.',
+    note: 'Was /licensees-guide until 31 Aug 2026. Renamed on Peter\'s instruction because "licensee" is hospitality-only language and the section is meant to read as small business. The old path and every article under it redirect permanently and must never stop: seven of those URLs are printed on QR codes. It carries 900 of the site\'s 978 annual clicks, which is why the redirects matter more here than anywhere else on the site.',
   },
 
   // ways-to-work becomes /how-we-work in phase 4. Live and in the sitemap until then.
@@ -415,13 +415,13 @@ const ROUTES = [
   {
     path: '/licensees-guide/pub-wages-labour-costs-uk',
     disposition: 'redirect',
-    destination: '/licensees-guide/pub-wages-labour-costs-guide',
+    destination: '/guides/pub-wages-labour-costs-guide',
     note: 'Slug rename that never got a redirect.',
   },
   {
     path: '/licensees-guide/beat-chain-pubs',
     disposition: 'redirect',
-    destination: '/licensees-guide/compete-with-wetherspoons',
+    destination: '/guides/compete-with-wetherspoons',
   },
   {
     path: '/licensees-guide/local-pub-marketing',
@@ -431,17 +431,17 @@ const ROUTES = [
   {
     path: '/licensees-guide/fill-empty-seats-midweek-offers',
     disposition: 'redirect',
-    destination: '/licensees-guide/fill-empty-pub-tables',
+    destination: '/guides/fill-empty-pub-tables',
   },
   {
     path: '/licensees-guide/crisis-pr-landlords-bad-reviews',
     disposition: 'redirect',
-    destination: '/licensees-guide/terrible-online-reviews-damage-control',
+    destination: '/guides/terrible-online-reviews-damage-control',
   },
   {
     path: '/licensees-guide/fizz-street-food-pop-up',
     disposition: 'redirect',
-    destination: '/licensees-guide/pop-up-events-for-pubs',
+    destination: '/guides/pop-up-events-for-pubs',
   },
 
   // ------------------------------------------------------------------- deleted
@@ -454,6 +454,44 @@ const ROUTES = [
     path: '/about-demo',
     disposition: 'deleted',
     note: 'Leftover route.ts handler, indexed at 22 impressions. Removed 27 Aug 2026.',
+  },
+
+  /*
+   * The guide rename, 31 August 2026. /licensees-guide became /guides.
+   *
+   * THESE THREE MUST NEVER BE REMOVED. Seven article URLs under the old prefix are
+   * printed on QR codes distributed to licensees through Greene King, and a printed
+   * code cannot be reissued. `src/test/printed-urls.test.ts` names them and fails if
+   * any of them stops resolving. The section also carries 900 of the site's 978 annual
+   * clicks, so the redirects protect nearly all of the search traffic the company has.
+   *
+   * DECLARATION ORDER IS LOAD-BEARING. `getRedirectsForPhases` emits in array order and
+   * Next matches first-wins, so the six exact old-slug rules above must stay above this
+   * wildcard. Four of those slugs have no article behind them: if the wildcard matched
+   * first it would rewrite the prefix and land them on a 404 under the new name, which
+   * is a worse outcome than not renaming at all. Moving either block past the other
+   * breaks it silently.
+   *
+   * The category rule is separate rather than covered by :slug because a single :slug
+   * segment does not match /category/<name>, which is two.
+   */
+  {
+    path: '/licensees-guide',
+    disposition: 'redirect',
+    destination: '/guides',
+    note: 'The section index. Linked from an already-sent Greene King email.',
+  },
+  {
+    path: '/licensees-guide/category/:category',
+    disposition: 'redirect',
+    destination: '/guides/category/:category',
+    note: 'Declared before the article wildcard: /category/x is two segments and :slug is one, so this would never be reached otherwise.',
+  },
+  {
+    path: '/licensees-guide/:slug',
+    disposition: 'redirect',
+    destination: '/guides/:slug',
+    note: 'All 104 articles, including the seven printed on QR codes. Permanent, and permanent means permanent.',
   },
 ];
 
@@ -492,7 +530,7 @@ const PHASE_4_REDIRECTS = [
   {
     path: '/compete-with-pub-chains',
     disposition: 'redirect',
-    destination: '/licensees-guide/compete-with-wetherspoons',
+    destination: '/guides/compete-with-wetherspoons',
     phase: 'phase4',
     note: 'That post earns 16 clicks on 1,262 impressions.',
   },
@@ -577,17 +615,17 @@ const CAMPAIGN_REDIRECTS = [
   {
     source: '/autumn',
     destination:
-      '/licensees-guide/autumn-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=autumn-2026',
+      '/guides/autumn-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=autumn-2026',
   },
   {
     source: '/christmas',
     destination:
-      '/licensees-guide/christmas-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=christmas-2026',
+      '/guides/christmas-pub-event-ideas?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=christmas-2026',
   },
   {
     source: '/summer',
     destination:
-      '/licensees-guide/summer-pub-marketing?utm_source=bii&utm_medium=print-magazine&utm_campaign=summer-2026',
+      '/guides/summer-pub-marketing?utm_source=bii&utm_medium=print-magazine&utm_campaign=summer-2026',
   },
 ];
 
@@ -665,10 +703,34 @@ function getSitemapRoutes() {
 
 /** Guide slugs that redirect, so the sitemap never advertises them. */
 function getRedirectedGuideSlugs() {
-  const prefix = '/licensees-guide/';
-  return getNonIndexablePaths()
-    .filter((p) => p.startsWith(prefix) && !p.includes(':'))
-    .map((p) => p.slice(prefix.length));
+  /*
+   * Both prefixes, deliberately.
+   *
+   * This exists to stop the sitemap advertising an article URL that redirects. The
+   * sitemap builds those URLs from the markdown files under the CURRENT prefix, while
+   * the redirect sources are still declared under the OLD one, because the old paths
+   * are what people linked and printed.
+   *
+   * Reading only one prefix breaks it in whichever direction you pick, and it breaks
+   * silently: the function returns an empty array, every filter downstream passes, and
+   * the sitemap starts advertising redirecting URLs with nothing to say so. That is
+   * exactly what happened during the rename, and no test caught it, because the sitemap
+   * test only checks the static route list.
+   *
+   * Matching on the slug across both names is what makes it survive a rename. The slug
+   * is the part that does not move.
+   */
+  const prefixes = ['/licensees-guide/', '/guides/'];
+  const slugs = new Set();
+
+  for (const nonIndexable of getNonIndexablePaths()) {
+    if (nonIndexable.includes(':')) continue;
+    for (const prefix of prefixes) {
+      if (nonIndexable.startsWith(prefix)) slugs.add(nonIndexable.slice(prefix.length));
+    }
+  }
+
+  return [...slugs];
 }
 
 module.exports = {

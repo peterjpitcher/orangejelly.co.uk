@@ -428,7 +428,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const baseUrl = getBaseUrl();
-  const canonicalPath = `/licensees-guide/${params.slug}`;
+  const canonicalPath = `/guides/${params.slug}`;
   const override = seoOverrides[canonicalPath];
 
   // Resolve to an image that actually exists and that social platforms can render.
@@ -700,16 +700,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <BreadcrumbJsonLd
             items={[
               { name: 'Home', url: '/' },
-              { name: "The Licensee's Guide", url: '/licensees-guide' },
+              { name: "The Licensee's Guide", url: '/guides' },
               ...(spokeHub
                 ? [
                     {
                       name: spokeHub.shortLabel,
-                      url: `/licensees-guide/${spokeHub.hubSlug}`,
+                      url: `/guides/${spokeHub.hubSlug}`,
                     },
                   ]
                 : []),
-              { name: post.title, url: `/licensees-guide/${post.slug}` },
+              { name: post.title, url: `/guides/${post.slug}` },
             ]}
           />
           {/* BlogPosting + FAQ + HowTo schemas handled by EnhancedBlogSchema above */}
@@ -743,7 +743,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               breadcrumbs={[
                 ...breadcrumbPaths.licenseesGuide,
                 ...(spokeHub
-                  ? [{ label: spokeHub.shortLabel, href: `/licensees-guide/${spokeHub.hubSlug}` }]
+                  ? [{ label: spokeHub.shortLabel, href: `/guides/${spokeHub.hubSlug}` }]
                   : []),
                 { label: post.title },
               ]}

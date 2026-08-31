@@ -10,7 +10,7 @@ import { searchItemUrl, type SearchableItem } from '@/lib/search';
  * 936KB file: most of a megabyte spent on a feature most visitors never open.
  *
  * These hold the two things that regressed silently before: the size, and the
- * assumption that every item lives under /licensees-guide.
+ * assumption that every item lives under /guides.
  */
 describe('search index', () => {
   const file = path.join(process.cwd(), 'public', 'search-index.json');

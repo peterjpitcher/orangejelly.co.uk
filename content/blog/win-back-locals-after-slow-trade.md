@@ -57,9 +57,9 @@ Do this first. A warm invitation to a cold, scruffy room simply confirms the dec
 
 Walk in as a guest on a Thursday evening. Time how long it takes for someone to acknowledge you. Order a pint and taste it properly. Sit at three different tables and check whether they are sticky and whether the seat is cold. Use the toilets. Read your own menu as if you had never seen it.
 
-Nine times out of ten the honest list is short and unglamorous: line cleaning has slipped, the heating comes on too late, the music is wrong, one member of staff is quietly rude, the menu has fifteen dishes and the kitchen can only do six well. Beer quality is worth a hard look on its own, because it is the single fastest way to lose a wet-led local without ever hearing a complaint. Our [cellar management and beer quality guide](/licensees-guide/cellar-management-beer-quality-guide) is the checklist I would run against.
+Nine times out of ten the honest list is short and unglamorous: line cleaning has slipped, the heating comes on too late, the music is wrong, one member of staff is quietly rude, the menu has fifteen dishes and the kitchen can only do six well. Beer quality is worth a hard look on its own, because it is the single fastest way to lose a wet-led local without ever hearing a complaint. Our [cellar management and beer quality guide](/guides/cellar-management-beer-quality-guide) is the checklist I would run against.
 
-Give yourself two weeks to fix the basics. If money is tight, [rebooting the atmosphere on a small budget](/licensees-guide/reboot-pub-atmosphere-on-budget) gets you most of the way with lighting, layout and warmth rather than a refit.
+Give yourself two weeks to fix the basics. If money is tight, [rebooting the atmosphere on a small budget](/guides/reboot-pub-atmosphere-on-budget) gets you most of the way with lighting, layout and warmth rather than a refit.
 
 ## Step 1: Own the story
 
@@ -84,7 +84,7 @@ You almost certainly have more contacts than you think, scattered across six pla
 
 Record where each contact came from, because that determines what you are allowed to send them. Under the PECR rules, the soft opt-in generally lets you email or text people whose details you collected while selling them something, provided you offered them a way to refuse marketing at the time and you offer it in every message since. Marketing texts need a simple STOP instruction. If a mobile number came off a booking form with no mention of marketing, do not add it to a bulk text: phone that person or catch them in the pub instead.
 
-Never buy a list. It will not contain your locals and it will damage your standing with both the ICO and your neighbours. Treat this spreadsheet as the foundation for proper [email marketing built on retention](/licensees-guide/email-marketing-pub-retention) rather than a one-off blast.
+Never buy a list. It will not contain your locals and it will damage your standing with both the ICO and your neighbours. Treat this spreadsheet as the foundation for proper [email marketing built on retention](/guides/email-marketing-pub-retention) rather than a one-off blast.
 
 ## Step 3: Send personal invitations
 
@@ -111,7 +111,7 @@ Do not mass-BCC an email that opens with "Dear customer". Do not send the same m
 One event does not rebuild a habit. Four weeks of visible activity does, because it gives people repeated chances to say yes and gives your regulars something to tell other people about.
 
 - **Week one:** the locals night. Keep it simple and warm. Free bar snacks, the fire on, no ticketing.
-- **Week two:** a [community collaboration that reintroduces the pub](/licensees-guide/community-outreach-reintroduce-pub). Host the running club, the school PTA, the parish council, anyone with their own audience.
+- **Week two:** a [community collaboration that reintroduces the pub](/guides/community-outreach-reintroduce-pub). Host the running club, the school PTA, the parish council, anyone with their own audience.
 - **Week three:** a new menu highlight or a tasting. Something with news value that the local Facebook groups will repeat for you.
 - **Week four:** a small event with a date that repeats. This is the one you want to become permanent.
 
@@ -129,7 +129,7 @@ Confirm every booking the day before. Booking no-shows fell by 89% at The Anchor
 
 Momentum decays. The month after the drumbeat is when it either becomes normal or fades back.
 
-Fix one recurring night in the diary and never move it. Keep collecting contacts at the point of booking, with a clear opt-in line. Then give the habit somewhere to land with a [simple loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub) so returning is rewarded quietly rather than begged for.
+Fix one recurring night in the diary and never move it. Keep collecting contacts at the point of booking, with a clear opt-in line. Then give the habit somewhere to land with a [simple loyalty scheme](/guides/build-loyalty-scheme-fill-pub) so returning is rewarded quietly rather than begged for.
 
 Book the next invitation before the current one has happened. That is the whole trick.
 

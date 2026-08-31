@@ -119,7 +119,7 @@ Your kitchen is under more pressure on NYE than any other night. This is not the
 
 **Do not forget the bar food.** Not everyone wants a sit-down meal. A simple bar snack menu (loaded fries, sharing boards, sliders) gives non-diners something to eat and protects your duty of care on a long drinking night.
 
-For more on menu pricing and layout, our guide on [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend) applies directly here.
+For more on menu pricing and layout, our guide on [menu engineering to lift average spend](/guides/menu-engineering-lift-average-spend) applies directly here.
 
 ## Entertainment that matches your crowd
 
@@ -127,7 +127,7 @@ The entertainment sets the tone for the entire night. Match it to your audience,
 
 **Live band or DJ.** The most popular option, and it works in most venues. Book early. Good acts for NYE are locked in by October at the latest. Expect to pay a premium: 300 to 800 pounds for a decent pub band, 150 to 400 for a DJ. Worth every penny if they keep the room dancing until 1am.
 
-**Hosted party night.** If your pub is more community than nightclub, a hosted evening with [music bingo](/licensees-guide/music-bingo-101), a countdown quiz, or karaoke can be more fun than a DJ that nobody dances to. A good host keeps the energy up and involves the whole room.
+**Hosted party night.** If your pub is more community than nightclub, a hosted evening with [music bingo](/guides/music-bingo-101), a countdown quiz, or karaoke can be more fun than a DJ that nobody dances to. A good host keeps the energy up and involves the whole room.
 
 **Low-key celebration.** For quieter venues or food-led pubs, you do not need to compete with nightclubs. Great food, good wine, a relaxed atmosphere, and a champagne toast at midnight. Some customers are specifically looking for a civilised New Year and will pay well for it.
 
@@ -171,7 +171,7 @@ Here is the real prize. NYE brings people into your pub who might not normally v
 
 **Promote your January calendar on NYE.** A poster in the toilets, a mention from the DJ, a flyer on the table with their bill. Plant the seed while they are having a great time in your pub.
 
-For a full approach to keeping momentum through the quieter months, our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar) maps out what to run and when.
+For a full approach to keeping momentum through the quieter months, our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar) maps out what to run and when.
 
 ## Your six-week NYE planning timeline
 
@@ -199,7 +199,7 @@ February follows December faster than you think, and Valentine's Day is the next
 
 A well-run Valentine's dinner at your pub can match a busy Saturday in revenue terms, with less chaos, fewer staff, and higher margins on food and drinks.
 
-For more ideas on building a year-round events programme, our [Christmas promotion ideas guide](/licensees-guide/christmas-pub-promotion-ideas) covers the wider festive planning process, and our guide on [filling your December calendar](/licensees-guide/pub-christmas-bookings-fill-december) has booking systems and deposit policies you can adapt for any event.
+For more ideas on building a year-round events programme, our [Christmas promotion ideas guide](/guides/christmas-pub-promotion-ideas) covers the wider festive planning process, and our guide on [filling your December calendar](/guides/pub-christmas-bookings-fill-december) has booking systems and deposit policies you can adapt for any event.
 
 ## Common NYE mistakes to avoid
 

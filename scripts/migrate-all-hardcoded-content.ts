@@ -412,7 +412,7 @@ async function updateNavigationDefaults() {
       mainMenu: [
         { _key: 'nav1', href: '/', label: 'Home' },
         { _key: 'nav2', href: '/services', label: 'Services' },
-        { _key: 'nav3', href: '/licensees-guide', label: "Licensee's Guide" },
+        { _key: 'nav3', href: '/guides', label: "Licensee's Guide" },
         { _key: 'nav4', href: '/results', label: 'Success Stories' },
         { _key: 'nav5', href: '/about', label: 'About' },
         { _key: 'nav6', href: '/contact', label: 'Contact' }
@@ -420,7 +420,7 @@ async function updateNavigationDefaults() {
       mobileMenu: [
         { _key: 'mnav1', href: '/', label: 'Home' },
         { _key: 'mnav2', href: '/services', label: 'Services' },
-        { _key: 'mnav3', href: '/licensees-guide', label: "Licensee's Guide" },
+        { _key: 'mnav3', href: '/guides', label: "Licensee's Guide" },
         { _key: 'mnav4', href: '/results', label: 'Success Stories' },
         { _key: 'mnav5', href: '/about', label: 'About' },
         { _key: 'mnav6', href: '/contact', label: 'Contact' }

@@ -102,7 +102,7 @@ You can get an exact quote from TheMusicLicence website by entering your venue d
 
 ### Payment options
 
-You can pay annually or by direct debit in quarterly instalments. The quarterly option is useful for cash flow, especially if you are managing tight margins. For more on managing pub finances, see our guide on [cash flow fixes when trade drops](/licensees-guide/cashflow-fixes-when-trade-drops).
+You can pay annually or by direct debit in quarterly instalments. The quarterly option is useful for cash flow, especially if you are managing tight margins. For more on managing pub finances, see our guide on [cash flow fixes when trade drops](/guides/cashflow-fixes-when-trade-drops).
 
 ## What does TheMusicLicence cover?
 
@@ -116,9 +116,9 @@ Once you have TheMusicLicence, you are covered to play music in your pub in the 
 
 **Live music.** Bands, solo artists, open mic nights. The licence covers the public performance of copyrighted songs by live performers.
 
-**Karaoke.** Customers singing along to backing tracks is a public performance of copyrighted music. TheMusicLicence covers it. If you are thinking of starting karaoke, our [karaoke night guide](/licensees-guide/karaoke-night-101) walks you through the full setup.
+**Karaoke.** Customers singing along to backing tracks is a public performance of copyrighted music. TheMusicLicence covers it. If you are thinking of starting karaoke, our [karaoke night guide](/guides/karaoke-night-101) walks you through the full setup.
 
-**Music bingo.** Playing clips of songs as part of a music bingo format is covered. This is a brilliant midweek event format and we have a complete [music bingo toolkit](/licensees-guide/music-bingo-101) if you want to try it.
+**Music bingo.** Playing clips of songs as part of a music bingo format is covered. This is a brilliant midweek event format and we have a complete [music bingo toolkit](/guides/music-bingo-101) if you want to try it.
 
 **Jukeboxes.** Physical or digital jukeboxes playing copyrighted music.
 
@@ -128,7 +128,7 @@ Once you have TheMusicLicence, you are covered to play music in your pub in the 
 
 There are some common misconceptions, so let us be clear about what falls outside the scope.
 
-**Your premises licence for entertainment.** TheMusicLicence covers the copyright aspect of playing music. Your premises licence, issued by the local council, covers the entertainment licensing aspect. Live music after 11pm, for example, typically requires specific conditions on your premises licence. These are two separate legal requirements. Our [pub licensing guide](/licensees-guide/pub-licensing-premises-personal-licence-guide) explains premises licence conditions in detail.
+**Your premises licence for entertainment.** TheMusicLicence covers the copyright aspect of playing music. Your premises licence, issued by the local council, covers the entertainment licensing aspect. Live music after 11pm, for example, typically requires specific conditions on your premises licence. These are two separate legal requirements. Our [pub licensing guide](/guides/pub-licensing-premises-personal-licence-guide) explains premises licence conditions in detail.
 
 **Film screenings.** Showing a film to the public requires a separate licence from the film distributor or a blanket licence from a body like Filmbank.
 
@@ -152,7 +152,7 @@ The Live Music Act 2012 provides an exemption from entertainment licensing (not 
 
 If your live music meets these conditions, you do not need specific entertainment licensing on your premises licence for that performance. However, you still need TheMusicLicence to cover the copyright element.
 
-This is an important distinction. The Live Music Act helps with premises licence conditions, not with PRS and PPL obligations. If you are planning regular live music nights, our [live music events guide](/licensees-guide/live-music-events-for-pubs) covers everything from booking acts to sound setup.
+This is an important distinction. The Live Music Act helps with premises licence conditions, not with PRS and PPL obligations. If you are planning regular live music nights, our [live music events guide](/guides/live-music-events-for-pubs) covers everything from booking acts to sound setup.
 
 ## Penalties for playing music without a licence
 
@@ -186,7 +186,7 @@ Once you are paying for TheMusicLicence, make sure you are getting value from it
 
 **Curate your playlists intentionally.** Match your music to the mood you want at different times. Relaxed acoustic for Sunday lunch, upbeat for Friday evening, background jazz for midweek dining. Do not just hit shuffle and hope for the best.
 
-**Use music to drive events.** A [quiz night](/licensees-guide/quiz-night-101) with a music round, a themed playlist evening, or a music bingo night all add value to your licence. These are low-cost events that bring people in on quiet nights.
+**Use music to drive events.** A [quiz night](/guides/quiz-night-101) with a music round, a themed playlist evening, or a music bingo night all add value to your licence. These are low-cost events that bring people in on quiet nights.
 
 **Consider the volume.** Background music should be exactly that. If customers have to shout to be heard, the music is too loud for a dining environment. Reserve the volume for dedicated music nights.
 

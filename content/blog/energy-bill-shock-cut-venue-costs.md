@@ -82,13 +82,13 @@ Walk the building at lock-up with a torch. The usual suspects:
 - Heating clocked to come on at 6am for a pub that opens at noon.
 - Half-empty fridges running as hard as full ones.
 
-That last one is worth its own look. If you are cooling three fridges to hold what fits in one, the fix is stockholding, not refrigeration. Our guide to [zero waste stock management](/licensees-guide/zero-waste-stock-management-pubs) covers how to tighten that up.
+That last one is worth its own look. If you are cooling three fridges to hold what fits in one, the fix is stockholding, not refrigeration. Our guide to [zero waste stock management](/guides/zero-waste-stock-management-pubs) covers how to tighten that up.
 
 ## Step 2: Service the workhorses
 
 Cooling equipment fails slowly. It does not stop, it just costs more, which is why nobody notices until the bill arrives.
 
-**Cellar cooling.** Your cellar should sit between 11 and 13°C. Above that, cask beer spoils; below it, you get chill haze and slow conditioning. Clean the condenser coils and grilles, indoors and out, and make sure nothing is stacked against the external unit. A condenser choked with dust or blocked by empty kegs makes the compressor run longer for the same result. Get it serviced at least annually, and if the cellar sits outside 11 to 13°C for more than a few days, call an engineer rather than waiting. This is the rare case where the energy fix and the quality fix are the same job, which our [cellar management and beer quality guide](/licensees-guide/cellar-management-beer-quality-guide) goes into properly.
+**Cellar cooling.** Your cellar should sit between 11 and 13°C. Above that, cask beer spoils; below it, you get chill haze and slow conditioning. Clean the condenser coils and grilles, indoors and out, and make sure nothing is stacked against the external unit. A condenser choked with dust or blocked by empty kegs makes the compressor run longer for the same result. Get it serviced at least annually, and if the cellar sits outside 11 to 13°C for more than a few days, call an engineer rather than waiting. This is the rare case where the energy fix and the quality fix are the same job, which our [cellar management and beer quality guide](/guides/cellar-management-beer-quality-guide) goes into properly.
 
 **Fridge and cellar door seals.** The paper test takes ten seconds. Close the door on a sheet of paper. If it slides out with no resistance, the seal has gone. Replacement seals are cheap and fitting one is a five-minute job.
 
@@ -118,7 +118,7 @@ Drift past your contract end date without signing anything and you land on deeme
 
 Business contracts also generally have no cooling-off period, so a rate you agree on the phone can be binding. Ofgem's microbusiness rules have improved this, including protections around verbal contracts and a requirement that brokers disclose their commission and belong to a redress scheme. Ask any broker two direct questions before you sign: what is your commission, and is it included in the unit rate you have quoted me? Get the answer in writing.
 
-Start shopping three to six months before your end date, take at least three written quotes, and compare the unit rate and standing charge together rather than the headline alone. Approach it the way you would any other supplier negotiation, using the same discipline as our guide to [rent and supplier negotiations when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight).
+Start shopping three to six months before your end date, take at least three written quotes, and compare the unit rate and standing charge together rather than the headline alone. Approach it the way you would any other supplier negotiation, using the same discipline as our guide to [rent and supplier negotiations when cash is tight](/guides/rent-supplier-negotiations-cash-tight).
 
 If you are locked in, stop worrying about the rate and put all your effort into usage. That is the half you still control.
 
@@ -141,13 +141,13 @@ Not everything worth doing is expensive. Rank by payback period, not by how impr
 
 Take lighting as a worked example. Replace 30 old 50W halogen downlights, running twelve hours a day, with 6W LED equivalents. That is 44W less per fitting, 1.32 kW in total, about 15.8 kWh a day, or roughly 5,780 kWh a year. At an example rate of 28p per kWh that is around £1,600 a year, against maybe £180 of lamps. The payback is measured in weeks.
 
-Other quick wins in rough payback order: draught proofing on doors and sash windows, replacement fridge and cellar door seals, a strip curtain or insulated door on the cellar, night blinds on open chillers, and insulating the cellar if it sits under a warm room. Draught proofing does double duty by making the pub feel welcoming in January, which is the argument in our guide to [turning heating costs into winter trade](/licensees-guide/turn-heating-costs-into-winter-wins).
+Other quick wins in rough payback order: draught proofing on doors and sash windows, replacement fridge and cellar door seals, a strip curtain or insulated door on the cellar, night blinds on open chillers, and insulating the cellar if it sits under a warm room. Draught proofing does double duty by making the pub feel welcoming in January, which is the argument in our guide to [turning heating costs into winter trade](/guides/turn-heating-costs-into-winter-wins).
 
 Bigger items such as solar or new refrigeration come last, because a retrofit sized around wasteful usage will be sized wrong.
 
 ## What not to cut
 
-Some economies cost more than they return. Do not turn the trading areas cold, do not run the hot water short, and never let the cellar drift out of range to shave a few pounds. A cold pub empties, and an empty pub has no margin to protect. If cash is the real pressure, work through the [cash flow fixes for when trade drops](/licensees-guide/cashflow-fixes-when-trade-drops) rather than taking it out of the guest experience.
+Some economies cost more than they return. Do not turn the trading areas cold, do not run the hot water short, and never let the cellar drift out of range to shave a few pounds. A cold pub empties, and an empty pub has no margin to protect. If cash is the real pressure, work through the [cash flow fixes for when trade drops](/guides/cashflow-fixes-when-trade-drops) rather than taking it out of the guest experience.
 
 ## Common mistakes
 

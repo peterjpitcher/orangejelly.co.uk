@@ -63,7 +63,7 @@ Take 25% off. The menu price becomes £11.21, the net becomes £9.34, the food c
 
 A bundle behaves completely differently because you choose the components. A pie, a pint and a pudding at £16.95 might list individually at £14.95, £5.50 and £6.50. The guest sees £26.95 of value for £16.95. You know the pint and the pudding carry high gross profit, so the real cash you give away is a fraction of what it looks like.
 
-**Do this week:** build two bundles anchored on your best-margin items, print the "normally" price next to each one, and brief the team to offer the bundle before the menu. The [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend) guide covers how to pick the right anchors.
+**Do this week:** build two bundles anchored on your best-margin items, print the "normally" price next to each one, and brief the team to offer the bundle before the menu. The [menu engineering that lifts average spend](/guides/menu-engineering-lift-average-spend) guide covers how to pick the right anchors.
 
 **The mistake to avoid:** an across-the-board percentage off. It teaches your regulars to wait for the discount, and once trained they are very hard to untrain.
 
@@ -77,9 +77,9 @@ Three tactics that work without a budget:
 
 - **The named return reason.** Never let a guest leave without knowing what is on next. "Quiz is Wednesday, we can hold the corner table for you" beats "see you soon" every time.
 - **A list you actually own.** Collect first names and mobile numbers or emails at the point of booking, with proper consent, and message before the quiet sessions rather than the busy ones.
-- **Expiring stamp cards.** An open-ended loyalty card sits in a wallet forever. A card with a date on it creates a deadline, which is the entire point. Our guide to a [simple loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub) sets out the mechanics.
+- **Expiring stamp cards.** An open-ended loyalty card sits in a wallet forever. A card with a date on it creates a deadline, which is the entire point. Our guide to a [simple loyalty scheme](/guides/build-loyalty-scheme-fill-pub) sets out the mechanics.
 
-If trade has already slipped, start with the people who used to come and stopped. Working through [how to win back locals after slow trade](/licensees-guide/win-back-locals-after-slow-trade) will get you further than any new-customer campaign.
+If trade has already slipped, start with the people who used to come and stopped. Working through [how to win back locals after slow trade](/guides/win-back-locals-after-slow-trade) will get you further than any new-customer campaign.
 
 ## Strategy 3: Tighten the menu
 
@@ -111,7 +111,7 @@ Build a 13-week rolling forecast in one spreadsheet tab: one column per week, th
 
 Then put the four dates that will hurt on the wall: your VAT quarter end and payment date, PAYE on the 22nd, your rent day, and your biggest supplier payment run. Most cash crises are timing crises, and timing is knowable weeks in advance.
 
-If a tax payment is going to be late, ring HMRC before the due date rather than after. Time to Pay instalment arrangements can often be set up online for VAT debts up to £50,000 (for accounting periods starting in 2023 or later) and qualifying PAYE debts up to £100,000; above those thresholds, or with multiple liabilities, you need to speak to them directly. The [cashflow fixes that apply when trade drops](/licensees-guide/cashflow-fixes-when-trade-drops) go through the rest of the levers in order.
+If a tax payment is going to be late, ring HMRC before the due date rather than after. Time to Pay instalment arrangements can often be set up online for VAT debts up to £50,000 (for accounting periods starting in 2023 or later) and qualifying PAYE debts up to £100,000; above those thresholds, or with multiple liabilities, you need to speak to them directly. The [cashflow fixes that apply when trade drops](/guides/cashflow-fixes-when-trade-drops) go through the rest of the levers in order.
 
 ## Strategy 6: Attack the fixed costs your customers never see
 
@@ -124,7 +124,7 @@ Every pound taken out of an invisible cost is a pound you do not have to take ou
 | Labour | Hourly sales against hourly wage cost, session by session | The National Living Wage is £12.71 an hour for 21 and over from April 2026, and £10.85 for 18 to 20 year olds |
 | Duty | How much of your range is draught | Draught relief cuts duty on qualifying beer and cider below 8.5% ABV sold from containers of 20 litres or more on your premises |
 
-Diarise your energy renewal window now, not the week it expires, and check the half-hourly data before you accept a quote. Our guide on [what to do about energy bill shock](/licensees-guide/energy-bill-shock-cut-venue-costs) covers the negotiation in detail.
+Diarise your energy renewal window now, not the week it expires, and check the half-hourly data before you accept a quote. Our guide on [what to do about energy bill shock](/guides/energy-bill-shock-cut-venue-costs) covers the negotiation in detail.
 
 On labour, the fix is almost never a pay cut. It is rotaing to demand rather than to habit: shortening a dead mid-afternoon section, starting the kitchen an hour later on a Tuesday, or moving one shift from a quiet night to a busy one.
 

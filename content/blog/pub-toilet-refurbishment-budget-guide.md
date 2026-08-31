@@ -146,7 +146,7 @@ That is under two thousand pounds for both rooms. If you do the painting and fit
 
 Compare that to a full strip-out refurbishment, which typically runs £5,000 to £15,000 per room once you factor in plumbing, tiling, cubicle systems, and a contractor. The budget route gets you 80 percent of the impact for 10 percent of the cost.
 
-For more ideas on prioritising spend across your whole venue, have a look at our guide to [pub refurbishment on a budget](/licensees-guide/pub-refurbishment-on-budget).
+For more ideas on prioritising spend across your whole venue, have a look at our guide to [pub refurbishment on a budget](/guides/pub-refurbishment-on-budget).
 
 ## Making it feel premium without the price tag
 
@@ -160,7 +160,7 @@ There are a few tricks that lift a pub toilet from acceptable to genuinely impre
 
 **Consistent accessories.** Match your soap dispenser, towel dispenser, and bin in the same colour or material. Chrome or matte black both work. The consistency looks intentional, which reads as quality.
 
-These touches are exactly the kind of low-cost changes that transform a room. We cover more of these in our guide to [low-cost decor refreshes that signal change](/licensees-guide/low-cost-decor-refreshes-new-improved).
+These touches are exactly the kind of low-cost changes that transform a room. We cover more of these in our guide to [low-cost decor refreshes that signal change](/guides/low-cost-decor-refreshes-new-improved).
 
 ## Pub lighting ideas that work beyond the toilets
 
@@ -174,7 +174,7 @@ Since you are already thinking about lighting for the bathrooms, it is worth con
 
 **Entrance and hallways:** These transition spaces are often neglected but they set the tone. A well-lit entrance feels welcoming. A dark corridor to the toilets feels unsafe.
 
-For a broader look at how atmosphere affects customer perception and spending, read our guide to [rebooting your pub atmosphere on a budget](/licensees-guide/reboot-pub-atmosphere-on-budget).
+For a broader look at how atmosphere affects customer perception and spending, read our guide to [rebooting your pub atmosphere on a budget](/guides/reboot-pub-atmosphere-on-budget).
 
 ## The maintenance schedule that keeps standards up
 

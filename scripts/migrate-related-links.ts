@@ -244,7 +244,7 @@ const linkClusters = {
       {
         title: "Pub Marketing Guide",
         description: "Free marketing tips for licensees",
-        href: "/licensees-guide",
+        href: "/guides",
         emoji: "📚"
       }
     ]

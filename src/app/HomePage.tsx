@@ -259,7 +259,7 @@ export default function HomePage({
           <Grid columns={{ default: 1, md: 2, lg: 3 }} gap="large">
             {recentPosts.map((post) => (
               <AnimatedItem key={post.slug} animation="slide-up" delay={100}>
-                <Link href={`/licensees-guide/${post.slug}`} className="block group h-full">
+                <Link href={`/guides/${post.slug}`} className="block group h-full">
                   <Card
                     variant="bordered"
                     className="h-full p-6 transition-all hover:shadow-lg hover:-translate-y-1"
@@ -282,7 +282,7 @@ export default function HomePage({
             ))}
           </Grid>
           <Box className="text-center mt-8">
-            <Button href="/licensees-guide" variant="secondary">
+            <Button href="/guides" variant="secondary">
               Browse All Guides
             </Button>
           </Box>

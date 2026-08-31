@@ -53,13 +53,13 @@ schema:
 
 # Autumn Internationals 2026: Fill Your Pub for the Rugby
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 November used to be a month you survived. The beer garden's done, the Christmas bookings haven't landed, and the dark nights keep people on the sofa. But the **autumn internationals** change that. If you show rugby in your pub, this is quietly one of the best trading months you've got, because a big game gives people a fixed reason to be out: in a warm room, on a big screen, with a pint in hand.
 
 This year it gets bigger. The November window, the **autumn internationals rugby** most of your customers already know by name, now sits inside the new **Nations Championship**. Instead of a loose run of friendlies, you've got a proper competition with a points table, a pool window through November, and a finale that means something. For a pub, that's the gift that keeps giving: a marquee home-nation game most weekends, and a reason to come back the next one.
 
-This guide is the practical version. What's on, how to take the bookings, what to put on a plate, and how to make sure the big screen and sound actually deliver when the room's full. It sits alongside [our year-round pub rugby playbook](/licensees-guide/pub-six-nations-rugby-marketing), which covers the Six Nations and the long game; this one is about nailing this November.
+This guide is the practical version. What's on, how to take the bookings, what to put on a plate, and how to make sure the big screen and sound actually deliver when the room's full. It sits alongside [our year-round pub rugby playbook](/guides/pub-six-nations-rugby-marketing), which covers the Six Nations and the long game; this one is about nailing this November.
 
 ## Why the autumn internationals fill a pub
 
@@ -94,7 +94,7 @@ This is the single thing that turns a busy-looking afternoon into a properly pro
 
 Take bookings instead. Open the diary three to four weeks ahead for the games you're building around, sell the good tables as "a table for the match," and where you can, tie a small pre-order or deposit to it. That does three things: it locks the seat, it tells your kitchen exactly what to make, and it gives you a list of people to remind the day before.
 
-If you don't currently take bookings well, or you're not sure people still want to, it's worth reading [get more table bookings](/licensees-guide/nobody-books-tables-anymore) before the first fixture. A full room of bookings beats a hopeful room of maybes every time.
+If you don't currently take bookings well, or you're not sure people still want to, it's worth reading [get more table bookings](/guides/nobody-books-tables-anymore) before the first fixture. A full room of bookings beats a hopeful room of maybes every time.
 
 ## Match platters and packages
 
@@ -133,7 +133,7 @@ Here's the bit most pubs miss. The people filling your room for the rugby in Nov
 
 Have the Christmas message ready while the rugby crowd is in. A table tent, a line from the bar, a card with the booking details. Capture the table that's clearly a work crowd or a group of friends, and invite them back. A run of full rugby weekends is the perfect on-ramp to a full December, if you join the dots.
 
-That's the whole idea behind [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas): autumn isn't a dead patch to get through, it's the run-up that sets up your best trading of the year. Rugby is one of the strongest anchors in it.
+That's the whole idea behind [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas): autumn isn't a dead patch to get through, it's the run-up that sets up your best trading of the year. Rugby is one of the strongest anchors in it.
 
 ## Your first move
 

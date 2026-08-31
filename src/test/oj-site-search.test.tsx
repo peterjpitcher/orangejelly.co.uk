@@ -8,7 +8,7 @@ const RESULTS = [
   {
     id: '1',
     title: 'Quiz night ideas',
-    url: '/licensees-guide/quiz-night-ideas',
+    url: '/guides/quiz-night-ideas',
     category: 'Events',
   },
 ];
@@ -63,7 +63,7 @@ describe('oj/SiteSearch', () => {
     await user.type(screen.getByLabelText('Search'), 'quiz');
     expect(screen.getByRole('link', { name: /Quiz night ideas/ })).toHaveAttribute(
       'href',
-      '/licensees-guide/quiz-night-ideas'
+      '/guides/quiz-night-ideas'
     );
   });
 });

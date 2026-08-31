@@ -137,7 +137,7 @@ Here is where theory meets reality. These are the improvements that make the big
 
 **Automatic doors.** Automatic or push-button operated doors at the main entrance cost 1,500 to 4,000 pounds. They benefit everyone: parents with pushchairs, delivery drivers, elderly customers, and wheelchair users alike.
 
-If your premises needs broader work, our guide on [pub refurbishment on a budget](/licensees-guide/pub-refurbishment-on-budget) covers how to prioritise improvements that give the best return on investment.
+If your premises needs broader work, our guide on [pub refurbishment on a budget](/guides/pub-refurbishment-on-budget) covers how to prioritise improvements that give the best return on investment.
 
 ## The business case for accessibility
 
@@ -195,7 +195,7 @@ This is non-negotiable. Under the Equality Act 2010, you must allow assistance d
 
 Families represent significant daytime and weekend trade, particularly on Saturdays, Sundays, and school holidays. A family of four spending 60 pounds on lunch visits far more predictably than a solo drinker.
 
-For a deeper dive on this topic, read our full guide on [how to attract families to your pub](/licensees-guide/how-to-attract-families-to-your-pub).
+For a deeper dive on this topic, read our full guide on [how to attract families to your pub](/guides/how-to-attract-families-to-your-pub).
 
 ### The essentials
 
@@ -247,7 +247,7 @@ Accessibility and character are not opposites. A 16th-century pub with uneven fl
 
 The goal is not to become all things to all people. It is to remove the barriers that prevent willing customers from walking through your door.
 
-For more ideas on building stronger connections with your local community, see our guide on [community outreach to reintroduce your pub](/licensees-guide/community-outreach-reintroduce-pub).
+For more ideas on building stronger connections with your local community, see our guide on [community outreach to reintroduce your pub](/guides/community-outreach-reintroduce-pub).
 
 ## Your action plan
 

@@ -58,7 +58,7 @@ Let me share something that changed my entire perspective on heating costs. Last
 
 ## The Real Problem
 
-The hospitality sector spends huge sums on energy bills, with a large chunk going on heating and cooling. Energy prices have stabilised somewhat from their peak, but commercial rates remain well above pre-2020 levels, which is why it pays to work through the [practical ways to cut venue energy costs](/licensees-guide/energy-bill-shock-cut-venue-costs) first. 
+The hospitality sector spends huge sums on energy bills, with a large chunk going on heating and cooling. Energy prices have stabilised somewhat from their peak, but commercial rates remain well above pre-2020 levels, which is why it pays to work through the [practical ways to cut venue energy costs](/guides/energy-bill-shock-cut-venue-costs) first. 
 
 But focusing on the cost is missing the bigger picture. The real problem isn't the £700 monthly increase - it's not leveraging the warm environment you're paying for to drive revenue. Every degree of warmth you pump into your pub is an opportunity to sell comfort, community, and escape from the cold.
 
@@ -101,7 +101,7 @@ If you're selling a handful of hot drinks daily, aim to double it by actively pr
 - Buy vintage teapots from charity shops
 - Train staff on theatrical presentation
 - Create Instagram-worthy garnishes
-- Price at a healthy multiple of cost, using [menu engineering to lift average spend](/licensees-guide/menu-engineering-lift-average-spend)
+- Price at a healthy multiple of cost, using [menu engineering to lift average spend](/guides/menu-engineering-lift-average-spend)
 
 ## Transform Dead Time Into Profit
 
@@ -117,7 +117,7 @@ Your heating's on from 11am but quiet until evening? Here's an opportunity for 2
 Even starting with a handful of people daily can generate meaningful revenue from dead hours. Build it into a steady habit using heating you're already paying for.
 
 **Action Plan:**
-- Choose your quietest weekday periods and pair the club with [midweek offers that actually work](/licensees-guide/midweek-pub-offers-that-work)
+- Choose your quietest weekday periods and pair the club with [midweek offers that actually work](/guides/midweek-pub-offers-that-work)
 - Create a simple, appealing offer
 - Target local Facebook groups
 - Start next Monday - don't overthink it

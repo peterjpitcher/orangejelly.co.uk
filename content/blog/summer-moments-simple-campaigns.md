@@ -30,7 +30,7 @@ A long weekend where the town feels lighter. A sunny Friday when everyone wants 
 
 The pubs that win summer do not necessarily do the biggest things. They do the clearest things.
 
-They give people a reason to choose them, today, with an experience that feels effortless to join and simple to deliver. This page is designed to help you do exactly that: a big, inspiring bank of formats, twists, prompts, and thought starters you can turn into your own [plug-and-play seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar).
+They give people a reason to choose them, today, with an experience that feels effortless to join and simple to deliver. This page is designed to help you do exactly that: a big, inspiring bank of formats, twists, prompts, and thought starters you can turn into your own [plug-and-play seasonal events calendar](/guides/seasonal-pub-events-calendar).
 
 You do not need perfection. You need momentum.
 
@@ -484,7 +484,7 @@ Skip anything that feels like gambling. Keep it playful.
 
 ![Wine Tasting](/images/blog/wine-tasting.png)
 
-A [wine tasting night](/licensees-guide/wine-tasting-evenings-for-pubs) does not need expertise. It needs clarity, warmth, and structure.
+A [wine tasting night](/guides/wine-tasting-evenings-for-pubs) does not need expertise. It needs clarity, warmth, and structure.
 
 Your audience is not wine obsessives. It is guests who want to learn a little and enjoy a social evening.
 
@@ -559,7 +559,7 @@ At the end:
 
 ## Bonus: turn “national drink days” into micro-moments without overwhelm
 
-There are lots of [national drink days](/licensees-guide/national-drinks-days-pub-guide). You do not need to chase them all. The trick is to use them as a reason to refresh your message.
+There are lots of [national drink days](/guides/national-drinks-days-pub-guide). You do not need to chase them all. The trick is to use them as a reason to refresh your message.
 
 ### The hero serve strategy
 

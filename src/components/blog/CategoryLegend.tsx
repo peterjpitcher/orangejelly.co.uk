@@ -20,7 +20,7 @@ export default function CategoryLegend({ className = '' }: CategoryLegendProps) 
       {categories.map((cat) => (
         <Link
           key={cat.slug}
-          href={`/licensees-guide/category/${cat.slug}`}
+          href={`/guides/category/${cat.slug}`}
           className="flex items-center gap-2 group"
         >
           <span

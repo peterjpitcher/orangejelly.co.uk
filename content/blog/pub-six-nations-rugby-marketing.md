@@ -59,7 +59,7 @@ The Six Nations is one of the biggest sporting events of the early calendar year
 
 But here is what separates the pubs that profit from it and the pubs that just have a telly on in the corner: preparation. If you plan your screening, your deals, your promotion, and your follow-up properly, the Six Nations can do more than fill your pub for six Saturdays. It can introduce you to customers who come back all year.
 
-Rugby isn't only a spring fixture, either. For the autumn internationals and the new Nations Championship in November, see our [Autumn Rugby 2026 guide](/licensees-guide/autumn-rugby-nations-championship-pubs).
+Rugby isn't only a spring fixture, either. For the autumn internationals and the new Nations Championship in November, see our [Autumn Rugby 2026 guide](/guides/autumn-rugby-nations-championship-pubs).
 
 I have screened every major tournament at The Anchor in Stanwell Moor since we took on the Greene King tenancy in 2019. Some of those tournaments were brilliant for us, and some taught us expensive lessons. This guide is built on what actually works.
 
@@ -167,15 +167,15 @@ Send a thank-you message after the match. Include your next event: the quiz nigh
 
 ### Create a reason to return
 
-The Six Nations gives you six weekends. Between fixtures, you have midweek evenings to fill. Invite match-day visitors to your [quiz night](/licensees-guide/quiz-night-101) or a themed food evening. Cross-promote your regular events during the match-day experience with table cards or a quick announcement at half-time.
+The Six Nations gives you six weekends. Between fixtures, you have midweek evenings to fill. Invite match-day visitors to your [quiz night](/guides/quiz-night-101) or a themed food evening. Cross-promote your regular events during the match-day experience with table cards or a quick announcement at half-time.
 
-For a broader approach to running events that bring people back, our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events) covers the full planning cycle.
+For a broader approach to running events that bring people back, our guide on [how to run successful pub events](/guides/how-to-run-successful-pub-events) covers the full planning cycle.
 
 ## Planning beyond the Six Nations
 
 The Six Nations is a template. Everything you learn screening these six weekends applies to the Autumn Internationals, the Champions Cup, the FIFA World Cup, the Euros, Wimbledon, and any other major sporting event.
 
-Build a [seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar) that maps out every major sporting fixture for the year. Plan your promotions, stock levels, and staffing around those dates. The pubs that treat live sport as a strategic pillar rather than an afterthought are the ones that fill consistently.
+Build a [seasonal events calendar](/guides/seasonal-pub-events-calendar) that maps out every major sporting fixture for the year. Plan your promotions, stock levels, and staffing around those dates. The pubs that treat live sport as a strategic pillar rather than an afterthought are the ones that fill consistently.
 
 ### Kit and infrastructure
 

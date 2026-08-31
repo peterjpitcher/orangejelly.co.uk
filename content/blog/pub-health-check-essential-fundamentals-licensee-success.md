@@ -123,7 +123,7 @@ Stock is cash sitting on your shelves. Managing it properly is one of the fastes
 - **First in, first out**: rigorous stock rotation prevents wastage from out-of-date products.
 - **Supplier management**: review your supplier deals quarterly. Are you getting the best terms? Even small margin gains per unit add up to thousands over a year.
 
-For a deeper dive into stock control, read our guide on [zero-waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs).
+For a deeper dive into stock control, read our guide on [zero-waste stock management for pubs](/guides/zero-waste-stock-management-pubs).
 
 ### Cash Handling
 
@@ -155,7 +155,7 @@ Your gross profit percentage (GP%) tells you whether you are making money on wha
 - **Wet sales target:** 60-65% GP
 - **Food sales target:** 65-70% GP
 
-At The Anchor, disciplined [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) and portion control grew our food revenue by 98% in three months. That kind of improvement drops straight to the bottom line.
+At The Anchor, disciplined [menu engineering](/guides/menu-engineering-lift-average-spend) and portion control grew our food revenue by 98% in three months. That kind of improvement drops straight to the bottom line.
 
 Calculate it weekly. If GP drops by more than 2 points, investigate immediately. Common culprits are wastage, theft, over-pouring, incorrect pricing, or supplier price increases you have not passed on.
 
@@ -168,15 +168,15 @@ Staff wages are typically your second biggest cost after stock:
 
 Include everything: wages, employer's NI, pension contributions, holiday pay. Review your rota weekly against actual trade. Are you overstaffed on quiet nights? Understaffed when it is busy? Cross-train your team so you have flexibility.
 
-For ideas on keeping your team motivated without increasing the wage bill, see our guide on [staff motivation when pay rises are off the table](/licensees-guide/staff-motivation-hacks-no-pay-rise).
+For ideas on keeping your team motivated without increasing the wage bill, see our guide on [staff motivation when pay rises are off the table](/guides/staff-motivation-hacks-no-pay-rise).
 
 ### Overheads and Cash Flow
 
 Beyond stock and wages, your overheads include rent, utilities, insurance, repairs, licensing fees, subscriptions, and maintenance. Track them monthly and look for margin growth.
 
-Energy costs have hit pubs hard. Smart scheduling of heating, switching to LED lighting, and negotiating better tariffs can make a real difference. We cover this in detail in our [energy bill guide](/licensees-guide/energy-bill-shock-cut-venue-costs).
+Energy costs have hit pubs hard. Smart scheduling of heating, switching to LED lighting, and negotiating better tariffs can make a real difference. We cover this in detail in our [energy bill guide](/guides/energy-bill-shock-cut-venue-costs).
 
-Cash flow is where many pubs come unstuck. You might be profitable on paper but unable to pay this week's bills because the timing is wrong. A simple 13-week cash flow forecast will protect you from nasty surprises. If you are already feeling the squeeze, read our [cash flow crisis guide](/licensees-guide/cashflow-fixes-when-trade-drops).
+Cash flow is where many pubs come unstuck. You might be profitable on paper but unable to pay this week's bills because the timing is wrong. A simple 13-week cash flow forecast will protect you from nasty surprises. If you are already feeling the squeeze, read our [cash flow crisis guide](/guides/cashflow-fixes-when-trade-drops).
 
 ### Key Numbers to Track Weekly
 
@@ -204,7 +204,7 @@ Social media is free and it works. At The Anchor, consistent posting helped grow
 - **Promote events early and often.** Do not just post once. Build anticipation over the week.
 - **Engage with comments and messages.** Social media is a conversation, not a broadcast.
 
-For a detailed weekly system, read our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs). We also have specific guides for [Facebook marketing](/licensees-guide/facebook-marketing-local-pubs) and [Instagram marketing](/licensees-guide/instagram-marketing-for-pubs).
+For a detailed weekly system, read our [social media strategy for pubs](/guides/social-media-strategy-for-pubs). We also have specific guides for [Facebook marketing](/guides/facebook-marketing-local-pubs) and [Instagram marketing](/guides/instagram-marketing-for-pubs).
 
 ### Google Business Profile
 
@@ -225,13 +225,13 @@ Work with your community, not just in it:
 - **Charities**: fundraising events build goodwill and bring in people who might not usually visit.
 - **Schools and community groups**: appropriate family events, meeting space, craft fairs.
 
-For more on community-based marketing, see our guides on [pub marketing](/pub-marketing) and [community outreach](/licensees-guide/community-outreach-reintroduce-pub).
+For more on community-based marketing, see our guides on [pub marketing](/pub-marketing) and [community outreach](/guides/community-outreach-reintroduce-pub).
 
 ### Email and Database Marketing
 
 Build a customer database. Ours has become one of our most valuable marketing assets, a direct line to regulars that does not depend on social media algorithms. Collect email addresses through WiFi sign-in, event bookings, and loyalty schemes.
 
-A monthly email newsletter keeps your pub front of mind. Share upcoming events, new menu items, and behind-the-scenes stories. Read more in our [email marketing guide](/licensees-guide/email-marketing-pub-retention).
+A monthly email newsletter keeps your pub front of mind. Share upcoming events, new menu items, and behind-the-scenes stories. Read more in our [email marketing guide](/guides/email-marketing-pub-retention).
 
 ## Building Your Team
 
@@ -250,7 +250,7 @@ Invest in your team and they will invest in your pub:
 
 - **Induction**: every new starter gets a structured first week. Introduce the pub, the team, the standards, and the safety procedures.
 - **Product knowledge**: your team should know what is on tap, what the specials are, and be able to recommend confidently.
-- **Upselling**: not pushy selling, but genuine recommendations. "That pairs really well with..." or "Have you tried our..." can meaningfully lift average spend. See our [upselling scripts guide](/licensees-guide/upselling-secrets-training-scripts) for natural approaches.
+- **Upselling**: not pushy selling, but genuine recommendations. "That pairs really well with..." or "Have you tried our..." can meaningfully lift average spend. See our [upselling scripts guide](/guides/upselling-secrets-training-scripts) for natural approaches.
 - **Cellar skills**: at least two people should be able to change a barrel, clean lines, and troubleshoot issues.
 - **Food safety**: everyone who handles food needs Level 2 Food Hygiene at minimum.
 
@@ -278,7 +278,7 @@ Atmosphere is not something you can fake. It comes from getting the details righ
 - **Music**: background music sets the mood. Too loud kills conversation. No music feels dead. Get the balance right and change it through the day.
 - **Lighting**: bright for lunchtime, warmer for evenings. Lighting changes how a space feels more than almost anything else.
 
-For budget-friendly ideas on refreshing your space, see our [pub atmosphere guide](/licensees-guide/reboot-pub-atmosphere-on-budget) and [low-cost decor refreshes](/licensees-guide/low-cost-decor-refreshes-new-improved).
+For budget-friendly ideas on refreshing your space, see our [pub atmosphere guide](/guides/reboot-pub-atmosphere-on-budget) and [low-cost decor refreshes](/guides/low-cost-decor-refreshes-new-improved).
 
 ### Service Standards
 
@@ -286,7 +286,7 @@ Set clear standards and hold everyone to them:
 
 - Acknowledge every customer within 30 seconds of arriving at the bar, even if you are busy. A nod and "I'll be with you in a moment" is enough.
 - Remember regulars' names and their usual. This is the single most powerful retention tool in hospitality.
-- Handle complaints immediately and generously. A free drink costs you pennies and can retain a customer worth hundreds over a year. For serious issues, see our [bad review recovery guide](/licensees-guide/terrible-online-reviews-damage-control).
+- Handle complaints immediately and generously. A free drink costs you pennies and can retain a customer worth hundreds over a year. For serious issues, see our [bad review recovery guide](/guides/terrible-online-reviews-damage-control).
 - Train your team to read the room. A couple on a date and a group of lads watching football need different energy.
 
 ### Building a Regular Base
@@ -295,8 +295,8 @@ Regulars are the backbone of every successful pub. They provide consistent, pred
 
 Build regulars by:
 
-- Running consistent events. Our weekly quiz night runs without fail every single week, and that consistency was part of growing our table bookings by 403%. See our [quiz night guide](/licensees-guide/quiz-night-101) for the full system.
-- Creating a [loyalty scheme](/licensees-guide/build-loyalty-scheme-fill-pub) that rewards frequency, not just spend.
+- Running consistent events. Our weekly quiz night runs without fail every single week, and that consistency was part of growing our table bookings by 403%. See our [quiz night guide](/guides/quiz-night-101) for the full system.
+- Creating a [loyalty scheme](/guides/build-loyalty-scheme-fill-pub) that rewards frequency, not just spend.
 - Knowing your community. What do they need? A meeting space? A family-friendly Sunday? A late-night venue? Serve the gap.
 
 ## Compliance and Legal: Staying on the Right Side
@@ -316,7 +316,7 @@ If you serve food:
 
 - Maintain your Food Safety Management System (based on HACCP principles). Your local Environmental Health Officer will inspect this.
 - Display your Food Hygiene Rating prominently. Aim for a 5. Anything below 4 puts customers off.
-- Allergen management is a legal requirement under Natasha's Law. You must be able to tell customers about all 14 allergens in every dish. See our [allergen compliance guide](/licensees-guide/food-allergies-gdpr-compliance) for practical systems.
+- Allergen management is a legal requirement under Natasha's Law. You must be able to tell customers about all 14 allergens in every dish. See our [allergen compliance guide](/guides/food-allergies-gdpr-compliance) for practical systems.
 - Temperature records for fridges, freezers, and hot holding. Daily checks, documented.
 
 ### Health and Safety
@@ -349,21 +349,21 @@ Events are the single most effective revenue driver for community pubs. They cre
 
 Start with the basics:
 
-- **Quiz night**: the classic for good reason. Ours has thrived on consistent promotion and a good format, and it helped grow our table bookings by 403%. See our [quiz night guide](/licensees-guide/quiz-night-101) and [quiz night ideas](/licensees-guide/quiz-night-ideas).
-- **Live music**: monthly or fortnightly depending on your space and audience. Our [live music guide](/licensees-guide/live-music-events-for-pubs) covers booking, sound, and licensing.
-- **Themed nights**: [music bingo](/licensees-guide/music-bingo-101), [cash bingo](/licensees-guide/cash-bingo-101), [karaoke](/licensees-guide/karaoke-night-101), [board game nights](/licensees-guide/boardgame-night-101). Each one fills a different night and attracts a different crowd.
-- **Seasonal events**: plan your year in advance with a [seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar). Christmas bookings, summer BBQs, bank holiday specials.
+- **Quiz night**: the classic for good reason. Ours has thrived on consistent promotion and a good format, and it helped grow our table bookings by 403%. See our [quiz night guide](/guides/quiz-night-101) and [quiz night ideas](/guides/quiz-night-ideas).
+- **Live music**: monthly or fortnightly depending on your space and audience. Our [live music guide](/guides/live-music-events-for-pubs) covers booking, sound, and licensing.
+- **Themed nights**: [music bingo](/guides/music-bingo-101), [cash bingo](/guides/cash-bingo-101), [karaoke](/guides/karaoke-night-101), [board game nights](/guides/boardgame-night-101). Each one fills a different night and attracts a different crowd.
+- **Seasonal events**: plan your year in advance with a [seasonal events calendar](/guides/seasonal-pub-events-calendar). Christmas bookings, summer BBQs, bank holiday specials.
 
-For a complete events planning system, read our [pub events guide](/licensees-guide/how-to-run-successful-pub-events).
+For a complete events planning system, read our [pub events guide](/guides/how-to-run-successful-pub-events).
 
 ### Food
 
 Food can transform a pub's profitability when done right. The key is matching your food offer to your capabilities and your market.
 
 - Start simple. A small, well-executed menu beats a long menu of average food every time.
-- Focus on high-margin items. Our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend) shows you how to design a menu that naturally steers customers towards your most profitable dishes.
+- Focus on high-margin items. Our [menu engineering guide](/guides/menu-engineering-lift-average-spend) shows you how to design a menu that naturally steers customers towards your most profitable dishes.
 - Portion control is everything. Inconsistent portions destroy your GP.
-- For menu ideas that balance quality with margin, see our [profitable pub food guide](/licensees-guide/profitable-pub-food-menu-ideas).
+- For menu ideas that balance quality with margin, see our [profitable pub food guide](/guides/profitable-pub-food-menu-ideas).
 
 ### Drinks Mix
 
@@ -373,7 +373,7 @@ Your drinks range is not just about what customers ask for: it is about guiding 
 - Train your team to recommend. "We have a really good local IPA on at the moment" costs nothing and can shift the mix.
 - Review your range quarterly. Drop what does not sell, trial what might.
 
-For a detailed strategy on improving your drinks profitability, read our guide on [rescuing margins through your drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
+For a detailed strategy on improving your drinks profitability, read our guide on [rescuing margins through your drinks mix](/guides/rescue-your-margins-drinks-mix).
 
 ### Upselling and Average Spend
 
@@ -396,7 +396,7 @@ After years in the trade and working with pubs across the UK through Orange Jell
 
 4. **Hiring friends.** It feels comfortable, but managing friends is miserable. Hire the best person for the job and keep your friendships separate.
 
-5. **Competing on price.** If the pub down the road sells a pint for 50p less, your answer is not to cut your prices. It is to offer something they cannot: better atmosphere, better events, better service. Read our [pub differentiation guide](/licensees-guide/pub-differentiation-strategies) for more on this.
+5. **Competing on price.** If the pub down the road sells a pint for 50p less, your answer is not to cut your prices. It is to offer something they cannot: better atmosphere, better events, better service. Read our [pub differentiation guide](/guides/pub-differentiation-strategies) for more on this.
 
 6. **Neglecting social media.** "I'm too busy to post" means you are too busy to market your business. Make it part of the daily routine.
 
@@ -422,7 +422,7 @@ If you are taking on a new pub or want to reset your approach, here is a practic
 - Set up or optimise your Google Business Profile.
 - Establish consistent social media posting: minimum three times a week.
 
-For a detailed day-by-day version, see our [30-day stabilisation plan](/licensees-guide/30-day-action-plan-stabilise-hospitality).
+For a detailed day-by-day version, see our [30-day stabilisation plan](/guides/30-day-action-plan-stabilise-hospitality).
 
 ### Days 31-60: Fix and Build
 

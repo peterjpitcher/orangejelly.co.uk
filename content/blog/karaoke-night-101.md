@@ -102,7 +102,7 @@ Before doors open, run a full soundcheck with your loudest backing tracks and qu
 - **Visuals:** neon typography, mic silhouettes, lyric overlays.
 - **Content ideas:** Reel of crowd chorus (with consent), “Song of the Week” poll, behind-the-scenes soundcheck snippet.
 - **Copy-ready caption:** “Karaoke Friday, 8pm. Free to sing, prizes for biggest crowd reaction. Book a table or just rock up. Link in bio.”
-- **Cross-promo:** plug [Music Bingo 101](/licensees-guide/music-bingo-101) for midweek fun and [Quiz Night 101](/licensees-guide/quiz-night-101) for trivia lovers.
+- **Cross-promo:** plug [Music Bingo 101](/guides/music-bingo-101) for midweek fun and [Quiz Night 101](/guides/quiz-night-101) for trivia lovers.
 
 ## Budget Snapshot
 
@@ -116,7 +116,7 @@ Before doors open, run a full soundcheck with your loudest backing tracks and qu
 
 ## Compliance Corner: Music Licensing
 
-Karaoke involves both recorded backing tracks and live vocal performance. Most venues cover this via **TheMusicLicence** (PPL PRS), which bundles permissions from PRS for Music and PPL. Confirm your venue’s licence type covers karaoke/live events and keep evidence on file, as our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains. More info: [PPL PRS live events](https://pplprs.co.uk/themusiclicence/sectors/live-events-festivals/).
+Karaoke involves both recorded backing tracks and live vocal performance. Most venues cover this via **TheMusicLicence** (PPL PRS), which bundles permissions from PRS for Music and PPL. Confirm your venue’s licence type covers karaoke/live events and keep evidence on file, as our guide to [PRS and PPL music licensing for pubs](/guides/prs-ppl-music-licensing-pubs) explains. More info: [PPL PRS live events](https://pplprs.co.uk/themusiclicence/sectors/live-events-festivals/).
 
 ## FAQs
 

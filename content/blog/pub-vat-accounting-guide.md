@@ -134,7 +134,7 @@ This is where a good accountant earns their fee. You can reclaim VAT on legitima
 
 If you are a tied tenant, your beer and some other drinks come from your pubco at their prices. The VAT position here is straightforward: you pay VAT on the tied purchases and reclaim it as input tax, just like any other stock purchase. The tie affects your margin, not your VAT position. But make sure you are getting proper VAT invoices from the pubco for every delivery.
 
-For more on managing your tied arrangement effectively, read our guide on [improving your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal).
+For more on managing your tied arrangement effectively, read our guide on [improving your brewery tie deal](/guides/brewery-tie-improve-your-deal).
 
 ## Choosing the right accounting scheme
 
@@ -185,7 +185,7 @@ Build this into your week and it takes 30 minutes. Leave it to the end of the qu
 
 **Every quarter:** VAT return preparation and submission (or review if your accountant handles this). Quarterly stocktake to verify your EPOS numbers against actual stock.
 
-This discipline is not glamorous, but it is the difference between knowing your numbers and guessing. If you want to understand how strong financial routines connect to pub profitability, our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) shows where the numbers matter most.
+This discipline is not glamorous, but it is the difference between knowing your numbers and guessing. If you want to understand how strong financial routines connect to pub profitability, our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) shows where the numbers matter most.
 
 ## Choosing a hospitality accountant
 
@@ -237,11 +237,11 @@ MTD is not optional. If you are VAT-registered and still filing returns manually
 
 Your VAT liability builds up between quarterly returns. If you spend the money instead of setting it aside, the quarterly bill becomes a cash flow crisis. Open a separate holding account and transfer your estimated VAT liability into it weekly. When the bill comes, the money is already there.
 
-For a deeper look at managing cash flow timing in a pub, read our guide on [breaking the cash flow crisis cycle](/licensees-guide/cash-flow-crisis-breaking-cycle).
+For a deeper look at managing cash flow timing in a pub, read our guide on [breaking the cash flow crisis cycle](/guides/cash-flow-crisis-breaking-cycle).
 
 ## Building a financial plan that works
 
-If you are writing or updating your [pub business plan](/licensees-guide/pub-business-plan-template-guide), the financial section should reflect everything in this guide. Your accountant can help you build realistic projections, but you need to understand the fundamentals yourself.
+If you are writing or updating your [pub business plan](/guides/pub-business-plan-template-guide), the financial section should reflect everything in this guide. Your accountant can help you build realistic projections, but you need to understand the fundamentals yourself.
 
 A pub that tracks its numbers weekly, files its VAT on time, reclaims everything it is entitled to, and works with an accountant who understands hospitality is a pub that makes better decisions. You spot problems earlier, you negotiate from a position of knowledge, and you sleep better at night.
 

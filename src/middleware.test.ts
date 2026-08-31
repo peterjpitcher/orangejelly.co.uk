@@ -29,7 +29,7 @@ describe('Referrer-Policy', () => {
     expect(response.headers.get('Referrer-Policy')).toBe('no-referrer');
   });
 
-  it.each([['/'], ['/contact'], ['/licensees-guide/some-article'], ['/availability/new']])(
+  it.each([['/'], ['/contact'], ['/guides/some-article'], ['/availability/new']])(
     'should keep the site-wide default on %s',
     (pathname) => {
       const response = middleware(requestFor(pathname));

@@ -176,7 +176,7 @@ If you serve food and drink, and you do, you need product liability insurance.
 
 Food allergen claims are increasing. Since Natasha's Law came into effect in 2021, the requirements around allergen labelling have tightened, and customer awareness is higher than ever. If you serve food, you need robust allergen procedures and insurance to back them up.
 
-For a deeper dive into allergen compliance, see our guide on [food allergens and compliance for pubs](/licensees-guide/food-allergies-gdpr-compliance).
+For a deeper dive into allergen compliance, see our guide on [food allergens and compliance for pubs](/guides/food-allergies-gdpr-compliance).
 
 ### Typical cost
 
@@ -285,9 +285,9 @@ Use this once a year, ideally a month before your renewal date.
 
 Insurance is one of those areas where getting it wrong costs you nothing until it costs you everything. A 500-pound cut in your premium means nothing if a claim gets rejected because you were underinsured or an activity was not disclosed.
 
-If you are [buying a pub](/licensees-guide/buying-a-pub-complete-guide), factor insurance into your startup costs from day one. It is not an afterthought; it is a core operating expense.
+If you are [buying a pub](/guides/buying-a-pub-complete-guide), factor insurance into your startup costs from day one. It is not an afterthought; it is a core operating expense.
 
-If you are already trading and are not sure whether your cover is right, a good starting point is our [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success), which reviews the fundamentals of your operation including insurance, licensing, and compliance.
+If you are already trading and are not sure whether your cover is right, a good starting point is our [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success), which reviews the fundamentals of your operation including insurance, licensing, and compliance.
 
 And if you want someone to look at the whole picture, from your insurance and compliance through to your marketing, events, and revenue strategy, that is exactly what the [Growth Fix](/ways-to-work/growth-fix) is designed for. Five hours of focused consultancy to identify the gaps and build a plan to fix them.
 

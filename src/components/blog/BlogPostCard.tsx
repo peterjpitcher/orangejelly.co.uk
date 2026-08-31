@@ -37,7 +37,7 @@ interface BlogPostCardProps {
 }
 
 export default function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
-  const postUrl = `/licensees-guide/${post.slug}`;
+  const postUrl = `/guides/${post.slug}`;
   const categorySlug = post.category?.slug || 'operations';
   const gradient = getCategoryGradient(categorySlug);
   const colour = getCategoryColour(categorySlug);
@@ -92,7 +92,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  window.location.href = `/licensees-guide/category/${categorySlug}`;
+                  window.location.href = `/guides/category/${categorySlug}`;
                 }}
               >
                 <span
@@ -171,7 +171,7 @@ export default function BlogPostCard({ post, featured = false }: BlogPostCardPro
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              window.location.href = `/licensees-guide/category/${categorySlug}`;
+              window.location.href = `/guides/category/${categorySlug}`;
             }}
           >
             <span

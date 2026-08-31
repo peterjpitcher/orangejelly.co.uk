@@ -15,7 +15,7 @@ describe('isTokenRoute', () => {
   it.each([
     ['/availability/new'],
     ['/availability'],
-    ['/licensees-guide/some-article'],
+    ['/guides/some-article'],
     ['/'],
     ['/contact'],
   ])('should be false for %s when the path carries no token', (pathname) => {
@@ -25,7 +25,7 @@ describe('isTokenRoute', () => {
   it('should be false when the token segment is a prefix of another site path', () => {
     // Anchored at the start so an attacker cannot smuggle the pattern into a
     // path we do not control, e.g. a blog slug.
-    expect(isTokenRoute(`/licensees-guide/availability/o/${TOKEN}`)).toBe(false);
+    expect(isTokenRoute(`/guides/availability/o/${TOKEN}`)).toBe(false);
   });
 
   it('should be false when the token itself is missing', () => {
@@ -46,7 +46,7 @@ describe('isPollRoute', () => {
     expect(isPollRoute(pathname)).toBe(true);
   });
 
-  it.each([['/licensees-guide/some-article'], ['/'], ['/contact'], ['/availability-guide']])(
+  it.each([['/guides/some-article'], ['/'], ['/contact'], ['/availability-guide']])(
     'should be false for %s when the path is outside the poll feature',
     (pathname) => {
       expect(isPollRoute(pathname)).toBe(false);

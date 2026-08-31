@@ -65,7 +65,7 @@ Within three weeks you will see the pattern you have been feeling: the week the 
 
 Most pubs live on Friday and Saturday. Two good nights out of seven is a fragile business, because one bad weekend takes out a third of the month.
 
-Build at least two reliable [midweek anchors that actually pay](/licensees-guide/midweek-pub-offers-that-work): a recurring event on one night and a food-led format on another. The point is not that they beat Saturday. The point is that they are the same every week, so people can plan around them and so can you.
+Build at least two reliable [midweek anchors that actually pay](/guides/midweek-pub-offers-that-work): a recurring event on one night and a food-led format on another. The point is not that they beat Saturday. The point is that they are the same every week, so people can plan around them and so can you.
 
 Worked example: a Wednesday set menu that pulls 40 covers at £18 a head is £720 a week. Add a Tuesday quiz doing £450 on the wet side and you have £1,170 of near-predictable weekly income, roughly £60,000 a year, arriving on the days your fixed costs do not care about.
 
@@ -79,7 +79,7 @@ Three rules that make anchors stick:
 
 Half of a cash crisis is simply the wrong things due in the wrong week. Most of that is negotiable, and nobody negotiates it because they never ask.
 
-- **Suppliers.** Ask for fortnightly terms or a payment date that sits two days after your strongest banking day. A straight conversation about [rent and supplier terms when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight) usually buys more room than you expect, especially if you go first with a plan rather than an apology.
+- **Suppliers.** Ask for fortnightly terms or a payment date that sits two days after your strongest banking day. A straight conversation about [rent and supplier terms when cash is tight](/guides/rent-supplier-negotiations-cash-tight) usually buys more room than you expect, especially if you go first with a plan rather than an apology.
 - **Business rates.** Bills default to ten instalments running April to January. You have the right to require twelve monthly instalments instead, but you have to ask your billing authority early in the financial year. On a £12,000 bill that changes £1,200 a month into £1,000 a month, and it puts payments in February and March when you need the room most.
 - **PAYE.** Due by the 22nd of the following month if you pay electronically. If your average monthly PAYE and NIC liability is under £1,500 you can usually pay quarterly instead, which suits a small team.
 - **Payroll.** Moving from monthly to fortnightly does not change the cost, but it stops one enormous outflow landing in a quiet week.
@@ -94,7 +94,7 @@ Open a separate bank account and give it a boring name. Money you can see in you
 
 Worked example: if rent, wages, utilities and insurance come to £9,000 a month, your one-week target is roughly £2,080. Move 5% of weekly takings across every Monday. On £12,000 a week that is £600, so you hit the target in about four weeks and you barely feel it going.
 
-Run a second account for tax. Every Monday, move across your best estimate of the VAT on the week's takings. The reason licensees dread the quarterly VAT bill is that they have already spent the VAT. Once the tax pot exists, the bill stops being an event. If you want the mechanics of that, work through [how VAT and accounting actually work in a pub](/licensees-guide/pub-vat-accounting-guide).
+Run a second account for tax. Every Monday, move across your best estimate of the VAT on the week's takings. The reason licensees dread the quarterly VAT bill is that they have already spent the VAT. Once the tax pot exists, the bill stops being an event. If you want the mechanics of that, work through [how VAT and accounting actually work in a pub](/guides/pub-vat-accounting-guide).
 
 ## Step 4: Protect gross profit relentlessly
 
@@ -109,7 +109,7 @@ Four moves that work in the same week:
 - Re-cost your top twenty dishes against current invoice prices, not last year's.
 - Cut or reprice anything running below 60% food GP that is not a deliberate loss leader.
 - Round prices up to sensible points rather than holding £12.95 out of sentiment.
-- Train the team on [upsells that protect margin](/licensees-guide/upselling-secrets-training-scripts), starting with the double-up on spirits and a named premium option on every category.
+- Train the team on [upsells that protect margin](/guides/upselling-secrets-training-scripts), starting with the double-up on spirits and a named premium option on every category.
 
 Discounting is the opposite of this. It reduces the cash per transaction at exactly the moment you need more of it.
 
@@ -142,7 +142,7 @@ If a bill is already going to be missed, ring HMRC before the due date and ask a
 
 **Weeks 9 to 12**: hold the anchors, start the weekly buffer transfer, review pricing, and decide whether annual accounting suits you.
 
-If trade drops mid-plan, do not abandon it. Work through [the fixes that hold cash together when trade falls away](/licensees-guide/cashflow-fixes-when-trade-drops) and keep the rhythm running.
+If trade drops mid-plan, do not abandon it. Work through [the fixes that hold cash together when trade falls away](/guides/cashflow-fixes-when-trade-drops) and keep the rhythm running.
 
 ## Common mistakes
 

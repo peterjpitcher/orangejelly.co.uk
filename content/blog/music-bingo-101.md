@@ -125,7 +125,7 @@ When winners shout “BINGO!” the host pauses music, verifies card versus the 
 - **Copy-ready caption:** “Music Bingo drops Thursday 7.30pm 🎶 Free to play, prizes every round, bookings recommended 👉 [link].”
 - **Day-of stories:** show card stacks, dabbers lined up, playlist screenshot.
 
-Cross-link to your [quiz night launch guide](/licensees-guide/quiz-night-101) for guests who also love trivia, and to [everything you need to run a karaoke night](/licensees-guide/karaoke-night-101) for those chasing mic time.
+Cross-link to your [quiz night launch guide](/guides/quiz-night-101) for guests who also love trivia, and to [everything you need to run a karaoke night](/guides/karaoke-night-101) for those chasing mic time.
 
 ## Accessibility and Inclusion
 
@@ -135,7 +135,7 @@ Cross-link to your [quiz night launch guide](/licensees-guide/quiz-night-101) fo
 
 ## Compliance Corner
 
-Music bingo uses recorded tracks, so ensure your venue holds **TheMusicLicence** (PPL PRS) covering public performance of recorded music, which our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains in full. If you charge for entry or offer cash-equivalent prizes, check local licensing guidance to confirm you’re running a promotional activity rather than regulated gambling. Useful starting points: [PPL PRS](https://pplprs.co.uk/themusiclicence/) and [Gambling Commission guidance](https://www.gamblingcommission.gov.uk/guidance/guidance-to-licensing-authorities/part-18-bingo-in-clubs-and-alcohol-licensed-premises).
+Music bingo uses recorded tracks, so ensure your venue holds **TheMusicLicence** (PPL PRS) covering public performance of recorded music, which our guide to [PRS and PPL music licensing for pubs](/guides/prs-ppl-music-licensing-pubs) explains in full. If you charge for entry or offer cash-equivalent prizes, check local licensing guidance to confirm you’re running a promotional activity rather than regulated gambling. Useful starting points: [PPL PRS](https://pplprs.co.uk/themusiclicence/) and [Gambling Commission guidance](https://www.gamblingcommission.gov.uk/guidance/guidance-to-licensing-authorities/part-18-bingo-in-clubs-and-alcohol-licensed-premises).
 
 ## Metrics to Track
 

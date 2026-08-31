@@ -58,7 +58,7 @@ How you respond to bad reviews matters more than the reviews themselves. Future 
 
 I have been on the receiving end of brutal reviews at The Anchor. One reviewer said our food was not fit for dogs. Three months later, that person was a regular. The response is everything.
 
-If you are dealing with a full-blown reputation crisis rather than individual bad reviews, our [damage control playbook for terrible online reviews](/licensees-guide/terrible-online-reviews-damage-control) covers the bigger picture. This guide is about the practical, review-by-review response system you need every week.
+If you are dealing with a full-blown reputation crisis rather than individual bad reviews, our [damage control playbook for terrible online reviews](/guides/terrible-online-reviews-damage-control) covers the bigger picture. This guide is about the practical, review-by-review response system you need every week.
 
 ## The 3 golden rules of responding to bad reviews
 
@@ -150,7 +150,7 @@ The three main platforms have different dynamics, and your approach should adjus
 
 Google is the most important platform for pub reputation management because it directly affects your local search ranking. More reviews and higher ratings mean better visibility in the local 3-pack. Respond to every review, positive and negative. Google confirms that businesses that respond to reviews are considered more trustworthy by their algorithm.
 
-If you want to understand how your website and Google presence work together, our guide on [whether your pub needs a website](/licensees-guide/does-your-pub-need-a-website) covers local SEO in more detail.
+If you want to understand how your website and Google presence work together, our guide on [whether your pub needs a website](/guides/does-your-pub-need-a-website) covers local SEO in more detail.
 
 ### TripAdvisor
 

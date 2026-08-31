@@ -194,7 +194,7 @@ At our lowest point, we were losing £2,000 per week. That's not sustainable for
 
 - Create "can't miss" weekly fixtures
 
-**Winner**: "Pie and Pint Wednesdays" now account for a meaningful share of our weekly revenue. For 15 more practical tactics, read our guide on [how to fill empty pub tables](/licensees-guide/fill-empty-pub-tables).
+**Winner**: "Pie and Pint Wednesdays" now account for a meaningful share of our weekly revenue. For 15 more practical tactics, read our guide on [how to fill empty pub tables](/guides/fill-empty-pub-tables).
 
 ### 9. Your Prices Are Wrong (Too High OR Too Low)
 
@@ -316,7 +316,7 @@ Over time, The Anchor went from quiet nights to regularly turning people away. H
 
 ## The Mindset Shift That Changes Everything
 
-Stop thinking like a failing publican and start thinking like a hospitality entrepreneur. Every empty chair is feedback. Every quiet night is data. Every lost customer is a lesson. Our guide to the [nine revenue levers every struggling pub should pull](/licensees-guide/revenue-levers-struggling-pubs) gives you specific actions to take this week.
+Stop thinking like a failing publican and start thinking like a hospitality entrepreneur. Every empty chair is feedback. Every quiet night is data. Every lost customer is a lesson. Our guide to the [nine revenue levers every struggling pub should pull](/guides/revenue-levers-struggling-pubs) gives you specific actions to take this week.
 
 ## Common Excuses That Keep Pubs Empty
 

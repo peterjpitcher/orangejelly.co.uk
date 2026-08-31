@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return generateMeta({
     title: `${title} - The Licensee's Guide`,
     description,
-    path: `/licensees-guide/category/${canonicalCategorySlug}`,
+    path: `/guides/category/${canonicalCategorySlug}`,
     ogType: 'website',
   });
 }
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const canonicalCategorySlug = getCanonicalCategorySlug(params.category);
   if (params.category !== canonicalCategorySlug) {
-    permanentRedirect(`/licensees-guide/category/${canonicalCategorySlug}`);
+    permanentRedirect(`/guides/category/${canonicalCategorySlug}`);
   }
 
   const { isEnabled } = await draftMode();
@@ -102,9 +102,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <CollectionPageSchema
         name={`${categoryTitle} - The Licensee's Guide`}
         description={categoryDescription || `Browse all ${categoryTitle} articles`}
-        url={`/licensees-guide/category/${canonicalCategorySlug}`}
+        url={`/guides/category/${canonicalCategorySlug}`}
         items={categoryPosts.map((post) => ({
-          url: `/licensees-guide/${post.slug}`,
+          url: `/guides/${post.slug}`,
           name: post.title,
           description: post.excerpt,
           datePublished: post.publishedDate,
@@ -113,8 +113,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         }))}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: "The Licensee's Guide", url: '/licensees-guide' },
-          { name: categoryTitle, url: `/licensees-guide/category/${canonicalCategorySlug}` },
+          { name: "The Licensee's Guide", url: '/guides' },
+          { name: categoryTitle, url: `/guides/category/${canonicalCategorySlug}` },
         ]}
       />
       {/*
@@ -129,7 +129,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         showCTA={false}
         breadcrumbs={[
           ...breadcrumbPaths.licenseesGuide,
-          { label: categoryTitle, href: `/licensees-guide/category/${canonicalCategorySlug}` },
+          { label: categoryTitle, href: `/guides/category/${canonicalCategorySlug}` },
         ]}
         breadcrumbEmitJsonLd={false}
       />

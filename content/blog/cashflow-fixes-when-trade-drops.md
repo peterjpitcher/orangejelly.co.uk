@@ -92,7 +92,7 @@ Every keg in the cellar and every case in the store is money you have already sp
 - Create a bundle using slow movers alongside a popular item, so the perceived value is high but the margin is protected.
 - Promote it for seven days, then move on.
 
-Then stop the leak that created the pile. Cut order sizes and increase order frequency, even if the bigger drop earns a slightly better unit price, because a smaller weekly order keeps cash in the bank rather than in the cellar. Ask suppliers whether anything can go on sale or return. Take a physical stocktake weekly instead of monthly while things are tight, since you cannot manage what you are not counting. Our guide to [zero waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs) covers the routine in detail.
+Then stop the leak that created the pile. Cut order sizes and increase order frequency, even if the bigger drop earns a slightly better unit price, because a smaller weekly order keeps cash in the bank rather than in the cellar. Ask suppliers whether anything can go on sale or return. Take a physical stocktake weekly instead of monthly while things are tight, since you cannot manage what you are not counting. Our guide to [zero waste stock management for pubs](/guides/zero-waste-stock-management-pubs) covers the routine in detail.
 
 The rule: convert stock to cash without teaching customers to wait for discounts.
 
@@ -118,13 +118,13 @@ Deposits also fix a different problem. Taking a card at the point of booking is 
 
 Train the team to push the one or two items that actually move margin. Script it, practise it, and track it for a week.
 
-Pick the two highest cash-margin items you sell, not the two highest GP percentage items, and make them the default suggestion on every order. A two percent shift in [how your drinks mix is weighted](/licensees-guide/rescue-your-margins-drinks-mix) can stabilise a tight week.
+Pick the two highest cash-margin items you sell, not the two highest GP percentage items, and make them the default suggestion on every order. A two percent shift in [how your drinks mix is weighted](/guides/rescue-your-margins-drinks-mix) can stabilise a tight week.
 
 Then look honestly at rotas against the cash board. If Tuesday takes a fraction of Friday and you are running the same number behind the bar, that is a fixable cost, not a fact of life. Cut hours from the shifts that cannot pay for themselves, protect the shifts that carry the week, and tell staff why so they hear a plan instead of a rumour.
 
 ## Step 6: Protect the marketing that works
 
-The fastest mistake is turning off the only channel that drives bookings. If a specific post type or local group drives covers, keep it alive even when cash is tight, and fill the gaps with [marketing that costs time rather than money](/licensees-guide/low-budget-pub-marketing-ideas).
+The fastest mistake is turning off the only channel that drives bookings. If a specific post type or local group drives covers, keep it alive even when cash is tight, and fill the gaps with [marketing that costs time rather than money](/guides/low-budget-pub-marketing-ideas).
 
 Be ruthless about the distinction. Print advertising with no measurable response, a listing site nobody clicks, a design retainer producing posters for events that are already full: those go today. Your Google Business Profile, your email list and your local Facebook presence cost nothing but time and are usually the last things generating trade.
 
@@ -132,7 +132,7 @@ Cut noise, not traction.
 
 ## Step 7: Talk to the landlord early
 
-This is hard but important. Share the plan, not the panic. Explain the actions you are taking, and propose a clear, time-bound adjustment if needed, the same way you would approach [rent and supplier negotiations when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight).
+This is hard but important. Share the plan, not the panic. Explain the actions you are taking, and propose a clear, time-bound adjustment if needed, the same way you would approach [rent and supplier negotiations when cash is tight](/guides/rent-supplier-negotiations-cash-tight).
 
 Go in with three things: your cash board, the specific ask (a three-month rent concession, a deferral repaid over twelve months, a temporary change to your credit terms), and the date you will review it. A specific, dated ask gets answered. "Things are tough" does not.
 
@@ -163,4 +163,4 @@ The same principle applies to HMRC. If VAT or PAYE is going to be a problem, rin
 Only if you can protect margins with bundles or upsells. Discounts alone create busy losses, and a full room at 30% GP can lose more money than a half-empty one at 65%.
 
 **How quickly should I act?**
-Within 48 hours. Waiting for trade to bounce back is how shortfalls become crises. If this is the third time in a year rather than a one-off, treat it as a structural problem and work through [breaking the cash flow crisis cycle](/licensees-guide/cash-flow-crisis-breaking-cycle) instead of triaging again.
+Within 48 hours. Waiting for trade to bounce back is how shortfalls become crises. If this is the third time in a year rather than a one-off, treat it as a structural problem and work through [breaking the cash flow crisis cycle](/guides/cash-flow-crisis-breaking-cycle) instead of triaging again.

@@ -60,7 +60,7 @@ schema:
 
 # Beer Festival & Cask Ale Week: A 10-Day Plan for Pubs
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas): a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas): a September-to-November plan for filling your pub.*
 
 You don't need a marquee, a field, or a dozen breweries to run a beer festival. The best one you can put on is the pub you've already got, a handful of well-kept ales, and a week with a name on it. Cask is one of the few things a chain down the road can't really copy. They'll match your prices and out-spend your marketing, but a well-kept cask, poured by someone who can tell you what it tastes like, is properly your patch. The trouble is most of us never make a fuss about it. The handpulls just sit there, and half your customers walk past them every week without giving one a go.
 
@@ -137,7 +137,7 @@ Strip it back to how it actually tastes. A few honest, plain-English handles you
 - **"Proper bitter finish"**: for the drinker who likes a bit of bite and a dry end.
 - **"Dark and rich"**: think coffee, toffee, a pudding of a pint for a cold evening.
 
-That's all most customers need to choose with confidence. Match the description to the drinker in front of you and you'll convert far more than any tasting wheel ever will. If you're refreshing your boards for the week anyway, our guide to [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) covers how to lay it all out so it actually sells.
+That's all most customers need to choose with confidence. Match the description to the drinker in front of you and you'll convert far more than any tasting wheel ever will. If you're refreshing your boards for the week anyway, our guide to [pub drinks menu design](/guides/pub-drinks-menu-design-guide) covers how to lay it all out so it actually sells.
 
 ## Cellar quality is the whole foundation
 
@@ -151,7 +151,7 @@ Cask is a living product and it shows up every mistake. Before the week, give yo
 - **Lines clean and on schedule.** This is the one people skip and it's the one customers taste first.
 - **Every cask checked before serving.** Pull a taster yourself. If it's not right, it doesn't go on.
 
-Get this bedded in now and it pays you back every week, not just in September. For the full method (cooling, cleaning, ullage, the lot) work through our guide to [cellar management and beer quality](/licensees-guide/cellar-management-beer-quality-guide).
+Get this bedded in now and it pays you back every week, not just in September. For the full method (cooling, cleaning, ullage, the lot) work through our guide to [cellar management and beer quality](/guides/cellar-management-beer-quality-guide).
 
 One word on doing it properly: serve every cask in genuinely good condition, and keep Challenge 25 front of mind: taster paddles and passports are no excuse to drop the basics. Responsible retailing and a great pint go hand in hand.
 
@@ -179,7 +179,7 @@ A few moves that make it stick:
 - **Capture who showed up.** Every passport handed back is someone to tell about your next guest ale. Build the relationship, not just the one sale.
 - **Ask what they liked.** The ales that flew this week are the ones worth keeping on. Let your customers shape your range and they'll feel ownership of it.
 
-Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. It also sits right next to another beer-led moment: if your festival lands late in September, you can roll it straight into [Oktoberfest](/licensees-guide/oktoberfest-pub-guide) on the same kit: different beers, same theatre, two reasons to come in across one fortnight. If you're planning the whole season, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
+Cask Ale Week slots neatly into a busy autumn, alongside Halloween, Bonfire Night and the run-up to Christmas. It also sits right next to another beer-led moment: if your festival lands late in September, you can roll it straight into [Oktoberfest](/guides/oktoberfest-pub-guide) on the same kit: different beers, same theatre, two reasons to come in across one fortnight. If you're planning the whole season, [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas) pulls it all together so cask is one strong thread rather than a standalone scramble.
 
 ## Your first move
 

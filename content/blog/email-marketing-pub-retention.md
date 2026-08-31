@@ -56,7 +56,7 @@ It is also the only channel you actually own. Facebook can halve your reach over
 
 I run The Anchor in Stanwell Moor as a Greene King tenant, and the list is the one marketing asset here that nobody else controls. What follows is how I would build one from nothing.
 
-Email works even better alongside a [loyalty scheme that fills your pub](/licensees-guide/build-loyalty-scheme-fill-pub). The two reinforce each other: the scheme gives people a reason to hand over an address, and the emails give you a reason to use it.
+Email works even better alongside a [loyalty scheme that fills your pub](/guides/build-loyalty-scheme-fill-pub). The two reinforce each other: the scheme gives people a reason to hand over an address, and the emails give you a reason to use it.
 
 ## Step 1: Build the list the right way
 
@@ -128,7 +128,7 @@ The scheduled weekly email builds the habit. The triggered ones do the heavy lif
 
 The reminder is the one to build first. Booking no-shows at The Anchor are down **89%**, and the mechanism is unglamorous: confirm the booking, remind the guest the day before, and make it effortless for them to tell you if plans have changed. An empty table you knew about at 4pm is a table you can resell.
 
-For the lapsed-guest trigger, the tone matters more than the offer. A short, warm "we have not seen you in a while, here is what has changed" outperforms a discount almost every time. Our guide on [winning back locals after slow trade](/licensees-guide/win-back-locals-after-slow-trade) goes further into what to say.
+For the lapsed-guest trigger, the tone matters more than the offer. A short, warm "we have not seen you in a while, here is what has changed" outperforms a discount almost every time. Our guide on [winning back locals after slow trade](/guides/win-back-locals-after-slow-trade) goes further into what to say.
 
 ## Step 4: Segment lightly
 
@@ -178,6 +178,6 @@ Ninety days in, you should have a list that grows every week without anyone thin
 - Booking reminder automation live 24 hours before every booking.
 - Clicks and actual bookings tracked, not just opens.
 
-Email is one channel in a wider retention mix. Pair it with a strong [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) to reach customers wherever they spend their time.
+Email is one channel in a wider retention mix. Pair it with a strong [social media strategy for pubs](/guides/social-media-strategy-for-pubs) to reach customers wherever they spend their time.
 
 If you want professional help setting up your email marketing and retention systems, take a look at our [pub marketing services](/services).

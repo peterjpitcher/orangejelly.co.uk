@@ -53,7 +53,7 @@ The off-season rarely creeps up on you politely. One week you are turning tables
 
 Waiting for trade to return is the expensive option. The pubs that get through a flat January are the ones that sold something in October. Packages are how you do that, because a package is a decision someone can make in a single phone call, and it is a decision you can actively go out and ask for.
 
-We grew private hire bookings by 567% at The Anchor, and almost none of that came from people ringing us out of the blue. It came from deciding what we sold, putting a price on it, and asking. Here is the structure, and it works whether [trade has slowed across the whole week](/licensees-guide/cashflow-fixes-when-trade-drops) or you are simply staring down a seasonal dip.
+We grew private hire bookings by 567% at The Anchor, and almost none of that came from people ringing us out of the blue. It came from deciding what we sold, putting a price on it, and asking. Here is the structure, and it works whether [trade has slowed across the whole week](/guides/cashflow-fixes-when-trade-drops) or you are simply staring down a seasonal dip.
 
 ## Step 1: Pick three core segments
 
@@ -76,7 +76,7 @@ Each one needs a price per head, a minimum number, a start and finish time, and 
 - **Family Sunday.** Roast plus a kids' activity table, booked in two sittings so you control the kitchen.
 - **Funeral tea.** Fixed price per head, sandwiches and hot bites, tea and coffee, a private space and a named host. No minimum spend, no upselling, ever.
 
-Build them the same way you would build a [repeatable profit night](/licensees-guide/pub-event-template-profit-nights): same kit, same prep, same staffing pattern, so the tenth one is easier than the first.
+Build them the same way you would build a [repeatable profit night](/guides/pub-event-template-profit-nights): same kit, same prep, same staffing pattern, so the tenth one is easier than the first.
 
 **The mistake to avoid:** replying "we can do anything you like" to an enquiry. It sounds generous and it kills bookings, because now the customer has to do the work. Give them something to say yes to.
 
@@ -108,7 +108,7 @@ Take your list of twenty and get it to forty. The people you want are office man
 
 Keep the call to thirty seconds. "I run The Anchor in Stanwell Moor. We do a team lunch at £24 a head, we can seat thirty in a private room, and you'll be back at your desks by two. Shall I email you the one-pager?" That is it. You are asking for permission to send something, not for a booking.
 
-Follow up three times, roughly a week apart, and write the dates in the diary when you make the first call. One call is not a campaign, and the follow-up is the only part of this you fully control. The [community groups already on your doorstep](/licensees-guide/community-outreach-reintroduce-pub) are the warmest calls on the list, so start there to build momentum.
+Follow up three times, roughly a week apart, and write the dates in the diary when you make the first call. One call is not a campaign, and the follow-up is the only part of this you fully control. The [community groups already on your doorstep](/guides/community-outreach-reintroduce-pub) are the warmest calls on the list, so start there to build momentum.
 
 Start eight weeks before the quiet period, minimum. If January is your dead month, you are selling it in early November while people still have budget and diary space.
 
@@ -118,7 +118,7 @@ An enquiry is not revenue. A confirmed booking with money attached is.
 
 Take a deposit on anything with a set menu or a minimum spend: £10 a head or 25% of the estimated value, held once you are inside 14 days of the date. Send a written confirmation the same day that restates the date, arrival time, numbers, menu choices, the final numbers deadline (seven days before is standard) and the fact that you will charge on the confirmed figure.
 
-One caveat licensees rarely hear. Where the customer is a consumer rather than a business, the Consumer Rights Act 2015 requires your terms to be fair, and a deposit or cancellation charge that goes well beyond what the booking actually costs you can be challenged and may not be enforceable. Work out what you genuinely lose when a forty cover booking drops to twenty (the food ordered, the staff rostered, the session you turned away) and set the terms against that. Fair, written and explained at the time is both more defensible and easier to enforce than a big round number nobody read. This is the same discipline that stops walk-in tables evaporating when [people stop turning up for bookings](/licensees-guide/nobody-books-tables-anymore).
+One caveat licensees rarely hear. Where the customer is a consumer rather than a business, the Consumer Rights Act 2015 requires your terms to be fair, and a deposit or cancellation charge that goes well beyond what the booking actually costs you can be challenged and may not be enforceable. Work out what you genuinely lose when a forty cover booking drops to twenty (the food ordered, the staff rostered, the session you turned away) and set the terms against that. Fair, written and explained at the time is both more defensible and easier to enforce than a big round number nobody read. This is the same discipline that stops walk-in tables evaporating when [people stop turning up for bookings](/guides/nobody-books-tables-anymore).
 
 Then diarise a call two days before the final numbers deadline. That single call is where most upsells happen.
 
@@ -134,7 +134,7 @@ Ask for the rebook while they are still in the building, diary open. "Same time 
 
 Gift vouchers sold in December and redeemed in February move money into the month you need it. So do prepaid January supper clubs and paid-in-advance club dinners.
 
-One thing to get right: a voucher that can be spent on anything in the pub is usually a multi-purpose voucher, which means the VAT normally falls when it is redeemed rather than when it is sold. Track the outstanding balance as a liability so a busy February does not surprise you, and check the treatment with your accountant. Sell them hard alongside your [December bookings push](/licensees-guide/pub-christmas-bookings-fill-december), because that is when people are actually buying.
+One thing to get right: a voucher that can be spent on anything in the pub is usually a multi-purpose voucher, which means the VAT normally falls when it is redeemed rather than when it is sold. Track the outstanding balance as a liability so a busy February does not surprise you, and check the treatment with your accountant. Sell them hard alongside your [December bookings push](/guides/pub-christmas-bookings-fill-december), because that is when people are actually buying.
 
 ## Common mistakes
 

@@ -39,7 +39,7 @@ faqs:
 
 # Quiz Night 101: Plan, Host and Grow a Brilliant Weekly Quiz
 
-[Quiet Tuesday nights](/licensees-guide/pub-empty-tuesday-nights) don’t have to stay that way. A well-run pub quiz keeps regulars loyal, gives newcomers an easy first visit, and delivers a predictable midweek bump for the bar. This guide walks you through every element: format, staffing, question writing, marketing, accessibility, compliance, and the numbers you should track afterwards.
+[Quiet Tuesday nights](/guides/pub-empty-tuesday-nights) don’t have to stay that way. A well-run pub quiz keeps regulars loyal, gives newcomers an easy first visit, and delivers a predictable midweek bump for the bar. This guide walks you through every element: format, staffing, question writing, marketing, accessibility, compliance, and the numbers you should track afterwards.
 
 > **At-a-glance checklist**
 > - ☐ Rounds scripted & printed  
@@ -64,7 +64,7 @@ Successful quiz nights share six traits:
 
 ## Choose Your Format
 
-Most pubs rotate between a classic mixed quiz, [themed quiz night ideas](/licensees-guide/quiz-night-ideas), and interactive rounds to keep things fresh without rewriting the rulebook.
+Most pubs rotate between a classic mixed quiz, [themed quiz night ideas](/guides/quiz-night-ideas), and interactive rounds to keep things fresh without rewriting the rulebook.
 
 ### Core structures
 
@@ -169,7 +169,7 @@ Aim for a 60/30/10 mix (easy/medium/tricky). Keep a spreadsheet tagging each que
 
 ## Compliance Corner: Music Licensing
 
-If you play recorded music (audio clips, walk-in playlists) or host live performance, you’ll usually need **TheMusicLicence** from PPL PRS, which covers both PRS for Music and PPL permissions. Confirm your venue’s licence against the [music licensing rules for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) and keep documentation handy. More information: [PPL PRS](https://pplprs.co.uk/themusiclicence/).
+If you play recorded music (audio clips, walk-in playlists) or host live performance, you’ll usually need **TheMusicLicence** from PPL PRS, which covers both PRS for Music and PPL permissions. Confirm your venue’s licence against the [music licensing rules for pubs](/guides/prs-ppl-music-licensing-pubs) and keep documentation handy. More information: [PPL PRS](https://pplprs.co.uk/themusiclicence/).
 
 ## Metrics and Post-Event Debrief
 

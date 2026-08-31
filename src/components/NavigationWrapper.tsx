@@ -28,7 +28,7 @@ interface LocalNavigationType {
 // hub pages stay in sync (e.g. "Autumn Playbook", "Christmas Playbook").
 const seasonalPlaybookLinks: NavigationLink[] = SEASON_HUBS.map((hub, index) => ({
   label: hub.shortLabel,
-  href: `/licensees-guide/${hub.hubSlug}`,
+  href: `/guides/${hub.hubSlug}`,
   order: index + 2, // sit after the static "The Licensee's Guide" entry (order 1)
 }));
 

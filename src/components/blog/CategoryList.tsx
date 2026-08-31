@@ -36,7 +36,7 @@ function CategoryList({
           {visibleCategories.map((category) => (
             <Link
               key={category.slug}
-              href={`/licensees-guide/category/${category.slug}`}
+              href={`/guides/category/${category.slug}`}
               className="group"
             >
               <Card
@@ -69,7 +69,7 @@ function CategoryList({
               {hiddenCategories.map((category) => (
                 <Link
                   key={category.slug}
-                  href={`/licensees-guide/category/${category.slug}`}
+                  href={`/guides/category/${category.slug}`}
                   className={`
                     inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors
                     ${
@@ -100,7 +100,7 @@ function CategoryList({
       <ul className="space-y-2">
         <li>
           <Link
-            href="/licensees-guide"
+            href="/guides"
             className={`
               block py-2 px-3 rounded-lg transition-colors text-sm
               ${!currentCategory ? 'bg-blue-support text-white' : 'hover:bg-blue-support/10 text-brand-base'}
@@ -112,7 +112,7 @@ function CategoryList({
         {categories.map((category) => (
           <li key={category.slug}>
             <Link
-              href={`/licensees-guide/category/${category.slug}`}
+              href={`/guides/category/${category.slug}`}
               className={`
                 block py-2 px-3 rounded-lg transition-colors text-sm
                 ${

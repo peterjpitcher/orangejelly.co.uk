@@ -63,7 +63,7 @@ schema:
 
 # Halloween Food & Party Ideas for Pubs (+ Bonfire Night)
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 The best Halloween food ideas for a pub aren't a freezer full of novelty nonsense. They're warming, shareable plates you can dress up for pennies and sell at a proper margin. And the best Halloween party ideas aren't a wall of pound-shop cobwebs either. They're a reason to go out: a themed quiz, a daft fancy dress competition, a dark cocktail with a bit of theatre. Get the food and the party right and October stops being a dead month. Then Bonfire Night, a week later, gives you a second bite of the same crowd.
 
@@ -102,7 +102,7 @@ The whole point of leading with food is that it does the quiet work. The drinks 
 
 ### The themed quiz night
 
-If you already run a [pub quiz night](/licensees-guide/quiz-night-101), a Halloween edition is the easiest win on the calendar. You already have the format, the equipment, and the audience. You are simply adding a theme.
+If you already run a [pub quiz night](/guides/quiz-night-101), a Halloween edition is the easiest win on the calendar. You already have the format, the equipment, and the audience. You are simply adding a theme.
 
 **What works:**
 
@@ -234,7 +234,7 @@ You do not need to spend hundreds on decorations. You need a few well-chosen ite
 - Candles on every table. Simple and effective
 - Chalk boards advertising your bonfire menu and hot drinks
 
-The biggest atmosphere upgrade costs nothing. Get your playlist right. A curated autumn playlist, or a horror film soundtrack for Halloween, changes the entire feel of the room. Check your [PRS and PPL licence](/licensees-guide/prs-ppl-music-licensing-pubs) covers background music and you are sorted.
+The biggest atmosphere upgrade costs nothing. Get your playlist right. A curated autumn playlist, or a horror film soundtrack for Halloween, changes the entire feel of the room. Check your [PRS and PPL licence](/guides/prs-ppl-music-licensing-pubs) covers background music and you are sorted.
 
 ## The six-week promotion timeline
 
@@ -285,7 +285,7 @@ This is the timeline that works for us at The Anchor. Adapt the dates to fit you
 
 This timeline works because it builds momentum gradually. A single post saying "Halloween Quiz, October 31st" gets lost in the noise. A six-week campaign makes your event feel like an occasion.
 
-For a full year of event planning, see our [seasonal pub events calendar](/licensees-guide/seasonal-pub-events-calendar). And if you want the foundations of running any pub event well, our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events) covers planning, promotion, and execution in detail.
+For a full year of event planning, see our [seasonal pub events calendar](/guides/seasonal-pub-events-calendar). And if you want the foundations of running any pub event well, our guide on [how to run successful pub events](/guides/how-to-run-successful-pub-events) covers planning, promotion, and execution in detail.
 
 ## Common mistakes to avoid
 
@@ -327,7 +327,7 @@ Halloween and Bonfire Night are two of the easiest revenue opportunities in the 
 
 Keep it practical, promote it early, and focus on the food and drink tie-ins that actually make you money. You do not need a haunted house or a professional fireworks display. You need a well-planned event, a decent menu, and six weeks of consistent promotion.
 
-Halloween and Bonfire Night are two threads in a busier autumn. If you're planning the whole run, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls September to November together, and [the Cask Ale Week plan](/licensees-guide/cask-ale-week-pub-guide) is a good companion piece for the same period.
+Halloween and Bonfire Night are two threads in a busier autumn. If you're planning the whole run, [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas) pulls September to November together, and [the Cask Ale Week plan](/guides/cask-ale-week-pub-guide) is a good companion piece for the same period.
 
 Start planning now. Your autumn is about to get a lot busier.
 

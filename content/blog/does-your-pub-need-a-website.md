@@ -106,7 +106,7 @@ When someone searches "pubs in [your town]" or "pub near me," the map results th
 1. **Claim and verify** your listing at business.google.com
 2. **Complete every section**: hours, address, phone, website, category (set it to "Pub"), attributes (dog friendly, beer garden, live music, etc.)
 3. **Upload photos regularly**: aim for new photos every week or two. Food, drinks, events, the beer garden, staff. Google rewards active profiles.
-4. **Respond to every review**: every single one, good or bad. Thank people for positive reviews. Address negatives professionally. If you need help with review management, our guide on [handling negative reviews](/licensees-guide/terrible-online-reviews-damage-control) covers the full playbook.
+4. **Respond to every review**: every single one, good or bad. Thank people for positive reviews. Address negatives professionally. If you need help with review management, our guide on [handling negative reviews](/guides/terrible-online-reviews-damage-control) covers the full playbook.
 5. **Post updates**: Google Business Profile has a "posts" feature. Use it for events, specials, and seasonal offers. It is free and it signals to Google that your business is active.
 6. **Keep hours accurate**: especially bank holidays, Christmas, and any temporary changes. Wrong hours are one of the fastest ways to lose trust.
 
@@ -130,7 +130,7 @@ For a deeper dive into local strategies, our [pub marketing guide](/pub-marketin
 
 This is where a lot of pub owners get confused. Social media and a website are not interchangeable. They serve different purposes at different stages of the customer journey.
 
-**Social media is for people who already know you.** It keeps you in their feed, reminds them you exist, and builds that sense of community and FOMO that makes someone say, "Let's go to the pub tonight." It is brilliant for events, specials, and behind-the-scenes content. Our [social media strategy guide](/licensees-guide/social-media-strategy-for-pubs) has a weekly system you can follow.
+**Social media is for people who already know you.** It keeps you in their feed, reminds them you exist, and builds that sense of community and FOMO that makes someone say, "Let's go to the pub tonight." It is brilliant for events, specials, and behind-the-scenes content. Our [social media strategy guide](/guides/social-media-strategy-for-pubs) has a weekly system you can follow.
 
 **Your website is for people who do not know you yet.** It is where someone lands after searching Google. They are already interested: they are looking for a pub. Your job is to give them what they need (hours, menu, how to get there) so they convert from a searcher into a visitor.
 

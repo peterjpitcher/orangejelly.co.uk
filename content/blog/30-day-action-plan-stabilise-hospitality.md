@@ -50,10 +50,10 @@ The goal is simple: cash clarity, a tighter offer, a sales lift, then repeatable
 This week is about visibility. If you cannot see cash in and cash out by day, you are guessing.
 
 **Day 1: Build the cash map**
-Create a 13-week cashflow sheet and highlight red days, the first of the [cashflow fixes that matter when trade drops](/licensees-guide/cashflow-fixes-when-trade-drops). Include rent, wages, VAT, supplier payments, and any loan repayments. This is the baseline for every decision this month.
+Create a 13-week cashflow sheet and highlight red days, the first of the [cashflow fixes that matter when trade drops](/guides/cashflow-fixes-when-trade-drops). Include rent, wages, VAT, supplier payments, and any loan repayments. This is the baseline for every decision this month.
 
 **Day 2: Triage suppliers**
-Call your top five suppliers and agree a payment plan, using the same approach as [negotiating rent and supplier terms when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight). Lead with a simple plan, not a plea. A structured repayment schedule beats silence every time.
+Call your top five suppliers and agree a payment plan, using the same approach as [negotiating rent and supplier terms when cash is tight](/guides/rent-supplier-negotiations-cash-tight). Lead with a simple plan, not a plea. A structured repayment schedule beats silence every time.
 
 **Day 3: Audit stock and sell down**
 Identify slow movers and design a clear sell-down. This is not discount chaos. It is a short, focused clearance that frees cash and space.
@@ -131,7 +131,7 @@ Write simple opening, closing, and service checklists. This lowers stress and pr
 One page: covers, average spend, GP, labour percentage. Keep it visible.
 
 **Day 24: Launch a loyalty or referral loop**
-Reward the fifth visit, not the first, with a [loyalty scheme built around frequency](/licensees-guide/build-loyalty-scheme-fill-pub). Repeat trade is your easiest growth lever.
+Reward the fifth visit, not the first, with a [loyalty scheme built around frequency](/guides/build-loyalty-scheme-fill-pub). Repeat trade is your easiest growth lever.
 
 **Day 25: Negotiate with data**
 Use your progress to reopen landlord or supplier conversations. Data changes the tone.

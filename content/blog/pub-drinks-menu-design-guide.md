@@ -76,7 +76,7 @@ Here is what a well-designed menu does:
 - **Creates upsell without pressure.** The menu does the selling so your team does not have to push.
 - **Signals quality.** A thoughtful menu says this pub cares about its offer, even before the first sip.
 
-If you are already working on your overall drinks mix, our guide on [rescuing your margins with a better drinks mix](/licensees-guide/rescue-your-margins-drinks-mix) covers the commercial strategy. This article focuses on the menu itself: the design, layout, and presentation that turns strategy into sales.
+If you are already working on your overall drinks mix, our guide on [rescuing your margins with a better drinks mix](/guides/rescue-your-margins-drinks-mix) covers the commercial strategy. This article focuses on the menu itself: the design, layout, and presentation that turns strategy into sales.
 
 ## The psychology of menu layout
 
@@ -114,7 +114,7 @@ Place a premium option at the top of each section. A 12 pound premium gin and to
 
 This is not about tricking anyone. The premium option should be genuinely worth the price. But its presence reframes everything below it.
 
-For a deeper dive into these pricing mechanics across your whole menu, see our [menu engineering guide](/licensees-guide/menu-engineering-lift-average-spend).
+For a deeper dive into these pricing mechanics across your whole menu, see our [menu engineering guide](/guides/menu-engineering-lift-average-spend).
 
 ## Pricing strategy that protects your margin
 
@@ -165,7 +165,7 @@ Syrups, purees, and pre-mixed bases can be prepared on a quiet afternoon and ref
 
 Cocktails should be your highest-margin drinks. A well-made espresso martini costs you around 1 pound 50 in ingredients and sells for 9 to 10 pounds. That is a margin most pint pours cannot touch. Feature them prominently on your menu.
 
-For more on shifting your drinks mix towards profit, read [how to double drinks profit without selling more](/licensees-guide/double-drinks-profit-without-selling-more).
+For more on shifting your drinks mix towards profit, read [how to double drinks profit without selling more](/guides/double-drinks-profit-without-selling-more).
 
 ## A wine list for non-experts
 
@@ -293,7 +293,7 @@ A beautiful menu is wasted if your team does not know it. Staff should be able t
 
 A 10 minute briefing before each shift is enough. Taste the new lines together. Make it part of the culture, not a chore.
 
-For scripts and techniques your team can use, see our guide on [upselling secrets and training scripts](/licensees-guide/upselling-secrets-training-scripts).
+For scripts and techniques your team can use, see our guide on [upselling secrets and training scripts](/guides/upselling-secrets-training-scripts).
 
 ## Your action plan
 

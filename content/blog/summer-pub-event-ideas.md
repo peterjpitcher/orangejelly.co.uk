@@ -52,7 +52,7 @@ The fix is to stop chasing spectaculars and build two or three formats you can r
 
 I run The Anchor in Stanwell Moor, and the twenty formats below are the ones I would actually put on a whiteboard, with the sums you need before you commit to any of them.
 
-For events beyond summer, see our full guide to [pub event ideas](/licensees-guide/pub-event-ideas) across every season and type.
+For events beyond summer, see our full guide to [pub event ideas](/guides/pub-event-ideas) across every season and type.
 
 ## The maths of a summer event
 
@@ -79,7 +79,7 @@ The mistake to avoid: pricing a bundle you have not costed. Work out the gross p
 Food is where the margin lives, because you control the plate cost and people stay longer.
 
 - **BBQ nights with pre-booked tables** and a two or three item menu. Two items done fast beats six done slowly at 40 degrees in a marquee.
-- **[Street food pop-ups](/licensees-guide/pop-up-events-for-pubs) with a partner.** Either charge a pitch fee or take a share of their takings, and keep every drop of the wet trade. Agree in writing who is responsible for their food hygiene registration.
+- **[Street food pop-ups](/guides/pop-up-events-for-pubs) with a partner.** Either charge a pitch fee or take a share of their takings, and keep every drop of the wet trade. Agree in writing who is responsible for their food hygiene registration.
 - **Sharing board nights** for groups, priced per board rather than per head so parties self-select upwards.
 - **Low and slow smoker day**, one cut of meat, one price, sold until it is gone. Scarcity does the marketing.
 - **Ice cream window on Sunday afternoons** to catch families walking past who would never come inside.
@@ -120,7 +120,7 @@ Use this to sanity check formats against your own numbers, not as a forecast.
 
 ## Licence, weather and safety
 
-**Licence.** Check the plan attached to your premises licence and confirm the garden sits inside the red line. If it does not, drinks carried out are off-sales and need the right permission. For music, the Live Music Act means live music between 8am and 11pm needs no extra permission at licensed premises open for on-sales, with amplified performances limited to audiences of 500. Go past 11pm, or licence a field that is not on your plan, and you need a Temporary Event Notice. A premises can use 15 TENs a year across no more than 21 days, capped at 499 people, and a standard TEN needs ten working days' notice, so diarise it early. Recorded music still needs TheMusicLicence, and our guide to [PRS and PPL music licensing](/licensees-guide/prs-ppl-music-licensing-pubs) explains what you owe and why.
+**Licence.** Check the plan attached to your premises licence and confirm the garden sits inside the red line. If it does not, drinks carried out are off-sales and need the right permission. For music, the Live Music Act means live music between 8am and 11pm needs no extra permission at licensed premises open for on-sales, with amplified performances limited to audiences of 500. Go past 11pm, or licence a field that is not on your plan, and you need a Temporary Event Notice. A premises can use 15 TENs a year across no more than 21 days, capped at 499 people, and a standard TEN needs ten working days' notice, so diarise it early. Recorded music still needs TheMusicLicence, and our guide to [PRS and PPL music licensing](/guides/prs-ppl-music-licensing-pubs) explains what you owe and why.
 
 **Weather.** Set a decision point, for example 5pm on the Thursday, and publish it in advance: "on rain or shine, inside if wet." Book gazebos rather than a marquee where you can, and never put non-refundable money into a single outdoor-only date.
 
@@ -145,7 +145,7 @@ A great summer event is only half the job. Package each one as a named, bookable
 
 Practically, that means three things. Give the event a name people can search, not "live music Saturday". Take bookings with a deposit or a card guarantee for anything over six people. And put a QR code on the table that leads to your mailing list with a reason to sign up, so August's crowd is still reachable in November.
 
-That is how a single event turns into repeat trade rather than a one-off. For the full system around your events, see our [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
+That is how a single event turns into repeat trade rather than a one-off. For the full system around your events, see our [summer pub marketing playbook](/guides/summer-pub-marketing).
 
 ## Common mistakes
 

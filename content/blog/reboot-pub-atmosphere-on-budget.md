@@ -99,7 +99,7 @@ Harsh overhead light is the fastest way to make a pub feel like a waiting room.
 
 Two warnings. Naked flames must clear your fire risk assessment and your insurer, so battery LED tea lights in glass holders are the safer default. And never light the room evenly: that is what supermarkets do.
 
-There is a side benefit: swapping tired halogen and fluorescent fittings for LED cuts your electricity bill too, which pairs neatly with our guide to [cutting venue energy costs](/licensees-guide/energy-bill-shock-cut-venue-costs). The same thinking sits behind other [low-cost decor refreshes](/licensees-guide/low-cost-decor-refreshes-new-improved): change what people perceive before you change what you own.
+There is a side benefit: swapping tired halogen and fluorescent fittings for LED cuts your electricity bill too, which pairs neatly with our guide to [cutting venue energy costs](/guides/energy-bill-shock-cut-venue-costs). The same thinking sits behind other [low-cost decor refreshes](/guides/low-cost-decor-refreshes-new-improved): change what people perceive before you change what you own.
 
 ## Make the room look occupied
 
@@ -126,7 +126,7 @@ Give the team an actual script, four beats long:
 3. **Recommend.** One thing, specifically. "The pale ale's just gone on and it's drinking beautifully."
 4. **Name.** Get theirs, use it, and use it again when they order.
 
-Rehearse it in a fifteen-minute pre-shift with two role-plays. It feels silly for four minutes, then it becomes normal. The same muscle powers your drinks and food recommendations, which is why it pairs so well with proper [upselling scripts and training](/licensees-guide/upselling-secrets-training-scripts).
+Rehearse it in a fifteen-minute pre-shift with two role-plays. It feels silly for four minutes, then it becomes normal. The same muscle powers your drinks and food recommendations, which is why it pairs so well with proper [upselling scripts and training](/guides/upselling-secrets-training-scripts).
 
 **The mistake to avoid:** a team that faces the till instead of the door. Move where they stand and half the problem disappears.
 
@@ -134,7 +134,7 @@ Rehearse it in a fifteen-minute pre-shift with two role-plays. It feels silly fo
 
 Small, repeatable touches give people something to notice, mention and photograph:
 
-- A daily [chalkboard line that sells the day](/licensees-guide/pub-chalkboard-a-board-ideas). One thing, named, with a price, changed every day, because a stale board is worse than no board.
+- A daily [chalkboard line that sells the day](/guides/pub-chalkboard-a-board-ideas). One thing, named, with a price, changed every day, because a stale board is worse than no board.
 - One featured drink with a story behind it, not just a pump clip.
 - A community board with dated posters and a monthly clear-out. Out-of-date notices signal a pub nobody is looking after.
 - A jar of dog biscuits by the till, a basket of board games, newspapers that are actually today's.
@@ -150,7 +150,7 @@ The usual culprits: drip trays and bar mats, dry drain traps, bins near the door
 
 Do not mask a smell with a plug-in air freshener at the door. Customers read that as a cover-up and start hunting for the source.
 
-Temperature is the other invisible killer, because a cold room reads as an empty one even when it is not. Aim for 19 to 21 degrees in the main bar, draught-proof the front door, and hang a heavy curtain in winter. Then check the toilets hourly against a signed sheet; our [budget toilet refurbishment guide](/licensees-guide/pub-toilet-refurbishment-budget-guide) covers the cheap wins there.
+Temperature is the other invisible killer, because a cold room reads as an empty one even when it is not. Aim for 19 to 21 degrees in the main bar, draught-proof the front door, and hang a heavy curtain in winter. Then check the toilets hourly against a signed sheet; our [budget toilet refurbishment guide](/guides/pub-toilet-refurbishment-budget-guide) covers the cheap wins there.
 
 ## Step 7: Capture and share
 

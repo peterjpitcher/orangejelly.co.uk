@@ -46,7 +46,7 @@ Saturday pre-peak (4–6pm) is prime for a punchy activation that fills the bar 
 ## Why Theme Hour Works
 - **Short and sharp:** Guests commit to one hour, then stay for dinner or rebook for next week.
 - **Low lift:** Reuse existing playlists, handheld mics, and prize stock.
-- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers healthy GP and anchors the promo, the same maths behind any [profitable event night template](/licensees-guide/pub-event-template-profit-nights).
+- **Margin friendly:** £12–£14 Power-Hour Spritz bundle delivers healthy GP and anchors the promo, the same maths behind any [profitable event night template](/guides/pub-event-template-profit-nights).
 - **Content factory:** Every spin, winner, and crowd sing-along becomes a reel for the following week.
 
 ## Choose Your Theme
@@ -58,7 +58,7 @@ Saturday pre-peak (4–6pm) is prime for a punchy activation that fills the bar 
 | **Playlist Battle** | Two playlists compete; crowd applause meter decides the winner | MC + volunteer counters | Round of drinks for the team on stage |
 | **Flash Challenge Hour** | Dance-off, lyric-finish, “guess the riff” back-to-back | MC only if using autop-run cues | Gift cards, dessert tokens, VIP booth |
 
-Pick one theme per month to build muscle memory for staff and regulars, then rotate it alongside the rest of your [pub event ideas](/licensees-guide/pub-event-ideas).
+Pick one theme per month to build muscle memory for staff and regulars, then rotate it alongside the rest of your [pub event ideas](/guides/pub-event-ideas).
 
 ## Run-of-Show (Example for Power Hour)
 | Time | Beat | Notes |
@@ -81,7 +81,7 @@ Keep the MC script in 5-minute increments so covering staff can run it if the le
 - **Local collabs:** Print instant photo souvenirs (£1 cost, £5 upsell) with sponsor logo.
 
 ## Promotion Timetable
-- **Monday:** Drop teaser reel with last week’s winners + CTA, following the same [seven-day social rhythm that drives footfall](/licensees-guide/social-media-tactics-footfall-seven-days).
+- **Monday:** Drop teaser reel with last week’s winners + CTA, following the same [seven-day social rhythm that drives footfall](/guides/social-media-tactics-footfall-seven-days).
 - **Wednesday:** Send SMS/WhatsApp reminder to booking list (“Spin-to-Win seats released for Saturday 4pm”).
 - **Friday:** Print table toppers for lunch service pushing the hour.
 - **Saturday morning:** Post schedule graphic + prize highlight. Encourage DMs for booth reservations.

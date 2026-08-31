@@ -44,7 +44,7 @@ export const OJ_ROUTES = [
    * larger job to port. This is the chrome only: the navigation, the footer and the
    * legacy overlays.
    */
-  '/licensees-guide',
+  '/guides',
 ] as const;
 
 export function isOjRoute(pathname: string): boolean {

@@ -10,7 +10,7 @@ const FILE_TARGETS = new Set([
   'src/app/why-revenue-is-falling/page.tsx',
   'src/app/pub-marketing-no-budget/page.tsx',
   'src/app/results/page.tsx',
-  'src/app/licensees-guide/page.tsx',
+  'src/app/guides/page.tsx',
   'src/app/test-shadcn/page.tsx',
 ]);
 

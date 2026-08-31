@@ -82,7 +82,7 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   { key: 'solutions', label: 'What we build', href: '/solutions' },
   { key: 'results', label: 'Results', href: '/results' },
   { key: 'insights', label: 'Insights', href: '/insights' },
-  { key: 'guides', label: 'Guides', href: '/licensees-guide' },
+  { key: 'guides', label: 'Guides', href: '/guides' },
   /*
    * "Start here" is deliberately NOT in the bar.
    *
@@ -185,7 +185,7 @@ export function OjFooter(): JSX.Element {
           // different URL, so the one link to 105 articles pointed at the wrong idea.
           title: 'Reading',
           links: [
-            { label: "The Licensee's Guide", href: '/licensees-guide' },
+            { label: "The Licensee's Guide", href: '/guides' },
             { label: 'Insights', href: '/insights' },
             { label: 'For professional services', href: '/sectors/professional-services' },
           ],

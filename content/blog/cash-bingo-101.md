@@ -56,7 +56,7 @@ UK pubs typically run 90-ball bingo:
 - Wins: one line, two lines, full house.
 - Each strip/book contains six tickets covering numbers 1–90.
 
-If you do something different (75-ball US-style cards, themed variations, or a prize-based [music bingo night](/licensees-guide/music-bingo-101)), explain it clearly at the start and note whether it fits exempt gaming rules.
+If you do something different (75-ball US-style cards, themed variations, or a prize-based [music bingo night](/guides/music-bingo-101)), explain it clearly at the start and note whether it fits exempt gaming rules.
 
 ## Kit and Setup
 
@@ -112,7 +112,7 @@ If you do something different (75-ball US-style cards, themed variations, or a p
 ## Marketing (Responsibly)
 
 - Focus messaging on community, atmosphere, and bundles, not guaranteed winnings.
-- Channels: in-house posters, [local Facebook groups and pages](/licensees-guide/facebook-marketing-local-pubs), pensioner lunch leaflets, WhatsApp broadcast to regulars.
+- Channels: in-house posters, [local Facebook groups and pages](/guides/facebook-marketing-local-pubs), pensioner lunch leaflets, WhatsApp broadcast to regulars.
 - **Copy-ready caption:** “Cash Bingo this Thursday, eyes down 7.15pm 👀 Books from £1, prizes every game, Challenge 25 in operation. Reserve a table: [link].”
 
 ## Budget Snapshot
@@ -141,7 +141,7 @@ Always log conversations with licensing officers and keep a folder containing: h
 | Average spend per head | Healthy |
 | Repeat attendance (4 weeks) | Strong |
 
-Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we need more dabbers? Capture feedback before the next session, the same discipline behind [any profitable pub event night](/licensees-guide/pub-event-template-profit-nights).
+Debrief the next day: Did any rules confuse people? Were payouts smooth? Do we need more dabbers? Capture feedback before the next session, the same discipline behind [any profitable pub event night](/guides/pub-event-template-profit-nights).
 
 ## FAQs
 

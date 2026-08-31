@@ -207,7 +207,7 @@ const IN_PAGE = () => {
    * shell edge and the measure edge are legal. A page can therefore pass all of
    * them and still look broken, by putting its H1 flush to the shell while its
    * article sits in a centred measure. That is exactly what happened on
-   * /licensees-guide/[slug]: the hero title started at 416 and the article at 576,
+   * /guides/[slug]: the hero title started at 416 and the article at 576,
    * a visible 160px step, and every earlier rule was satisfied.
    *
    * Aligned means sharing a left edge OR sharing a centre, because a centred title

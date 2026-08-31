@@ -335,11 +335,11 @@ Whether you are taking over an existing pub or starting from scratch, here is yo
 - [ ] Keep a copy of your premises licence summary on display at the premises (this is a legal requirement)
 - [ ] Review your licence conditions annually: if your business has changed, consider a variation
 
-For a broader look at the operational fundamentals every licensee should nail, read our [pub health check guide](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success).
+For a broader look at the operational fundamentals every licensee should nail, read our [pub health check guide](/guides/pub-health-check-essential-fundamentals-licensee-success).
 
-If you are in the early stages of taking on a pub, our [complete guide to buying a pub](/licensees-guide/buying-a-pub-complete-guide) walks you through every step of the process.
+If you are in the early stages of taking on a pub, our [complete guide to buying a pub](/guides/buying-a-pub-complete-guide) walks you through every step of the process.
 
-And if you are working within a tied agreement and want to understand your rights and options, our [guide to brewery ties and pub leases](/licensees-guide/brewery-tie-improve-your-deal) covers the Pubs Code, MRO, and negotiation strategies.
+And if you are working within a tied agreement and want to understand your rights and options, our [guide to brewery ties and pub leases](/guides/brewery-tie-improve-your-deal) covers the Pubs Code, MRO, and negotiation strategies.
 
 ## When to get professional help
 

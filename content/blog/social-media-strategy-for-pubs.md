@@ -74,9 +74,9 @@ Do not try to master all of them at once. Give each platform one job and ignore 
 | WhatsApp | Enquiries and group bookings | Replies, not broadcasts | Enquiries answered and converted |
 | TikTok | Reach beyond your regulars | Short vertical clips, one idea each | Views, follows, bio link clicks |
 
-One important correction to the usual advice: your Google Business Profile is social media, and for a pub it may be the highest-value channel you have. It is what people see when they search "pub near me" or your name. It takes event posts, photos and offers just like Facebook does, and the people looking at it are already deciding where to go tonight. Our [Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide) covers how to set it up properly.
+One important correction to the usual advice: your Google Business Profile is social media, and for a pub it may be the highest-value channel you have. It is what people see when they search "pub near me" or your name. It takes event posts, photos and offers just like Facebook does, and the people looking at it are already deciding where to go tonight. Our [Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide) covers how to set it up properly.
 
-Also be realistic about Facebook. Organic reach on business pages is a fraction of your follower count now, so a post that only lives on your page will reach very few of the people who follow you. Facebook still earns its place for events and for local community groups, where a genuine, non-spammy post from a licensee still travels. There is more on that in our guide to [Facebook marketing for local pubs](/licensees-guide/facebook-marketing-local-pubs).
+Also be realistic about Facebook. Organic reach on business pages is a fraction of your follower count now, so a post that only lives on your page will reach very few of the people who follow you. Facebook still earns its place for events and for local community groups, where a genuine, non-spammy post from a licensee still travels. There is more on that in our guide to [Facebook marketing for local pubs](/guides/facebook-marketing-local-pubs).
 
 ## Step 3: Build a simple calendar
 
@@ -90,7 +90,7 @@ Fix the days and the times and do not negotiate with yourself about them. Consis
 
 Then layer a monthly rhythm on top: one event push per month planned three weeks out, one seasonal menu or offer, and one community post (a charity night, a local team, a supplier you use). Put the whole thing in a wall planner in the office where your team can see it, not in an app only you open.
 
-Plan around the calendar you already have. Bank holidays, school holidays, the local carnival, big sporting fixtures and the first genuinely warm weekend of the year are all predictable. For how the seasonal side fits together, see our [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
+Plan around the calendar you already have. Bank holidays, school holidays, the local carnival, big sporting fixtures and the first genuinely warm weekend of the year are all predictable. For how the seasonal side fits together, see our [summer pub marketing playbook](/guides/summer-pub-marketing).
 
 ## Step 4: Create a content workflow
 
@@ -98,7 +98,7 @@ Batch content once a week. Take photographs during service and store them in a s
 
 Make it concrete. Give your team a shared album on the phone or a shared cloud folder, and ask for three photographs a shift: one plate, one room shot, one person doing something. Then spend twenty minutes on your quiet morning writing the week's three posts and scheduling them.
 
-Shoot with the light coming through a window onto the subject, not behind it. Wipe the phone lens. Shoot vertical for stories and reels, and get closer than feels natural. Those four habits fix most pub photographs on their own, and there is more detail in our guide to [Instagram marketing for pubs](/licensees-guide/instagram-marketing-for-pubs).
+Shoot with the light coming through a window onto the subject, not behind it. Wipe the phone lens. Shoot vertical for stories and reels, and get closer than feels natural. Those four habits fix most pub photographs on their own, and there is more detail in our guide to [Instagram marketing for pubs](/guides/instagram-marketing-for-pubs).
 
 If you want hands-on help building the system rather than doing it alone, our [social media marketing service](/services/social-media-marketing-for-pubs) is built specifically for pubs.
 

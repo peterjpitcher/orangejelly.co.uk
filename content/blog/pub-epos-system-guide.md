@@ -84,7 +84,7 @@ Your EPOS should track stock at product level, calculate theoretical versus actu
 
 At The Anchor, switching to proper EPOS-driven stock management was one of the biggest factors behind growing our food revenue by 98% in three months. When you can see exactly which dishes are underperforming on margin, you can fix pricing, portion sizes, or supplier costs with precision instead of guessing.
 
-For a deeper look at stock discipline, our guide on [zero-waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs) covers the counting rhythms and waste KPIs that make your EPOS data meaningful.
+For a deeper look at stock discipline, our guide on [zero-waste stock management for pubs](/guides/zero-waste-stock-management-pubs) covers the counting rhythms and waste KPIs that make your EPOS data meaningful.
 
 ### 2. Real-time reporting and dashboards
 
@@ -188,7 +188,7 @@ Set aside 30 minutes every Monday morning to review last week's numbers. Look at
 
 This is not complicated analysis. It is reading the numbers your EPOS already produces and asking simple questions about what they mean.
 
-For a detailed breakdown of how to turn EPOS reports into weekly action plans, read our guide on [using EPOS data to drive a revenue comeback](/licensees-guide/epos-data-revenue-comeback).
+For a detailed breakdown of how to turn EPOS reports into weekly action plans, read our guide on [using EPOS data to drive a revenue comeback](/guides/epos-data-revenue-comeback).
 
 ### Spot the revenue leaks
 
@@ -199,7 +199,7 @@ Your EPOS data will reveal problems you did not know you had:
 - **Price points that have not been updated** since your supplier costs increased.
 - **Dead trading hours** where you are paying staff but generating almost nothing.
 
-Each of these is a revenue lever you can pull. Our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) walks through the specific actions you can take once your data shows you where the problems sit.
+Each of these is a revenue lever you can pull. Our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) walks through the specific actions you can take once your data shows you where the problems sit.
 
 ### Set targets and track them
 

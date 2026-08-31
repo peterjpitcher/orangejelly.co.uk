@@ -12,8 +12,8 @@ import { getAllPostSlugs } from '@/lib/blog-md';
  * The insights collection.
  *
  * A second body of content at `/insights`, separate from the 105 hospitality
- * articles at `/licensees-guide`. They cannot share a loader by accident: the
- * existing one hard-codes `/licensees-guide/<slug>` for everything it finds under
+ * articles at `/guides`. They cannot share a loader by accident: the
+ * existing one hard-codes `/guides/<slug>` for everything it finds under
  * `content/blog`, so a new article dropped in there would leak into the hospitality
  * sitemap, feed and search index with a hospitality URL.
  *

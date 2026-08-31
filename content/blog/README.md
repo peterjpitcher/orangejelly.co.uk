@@ -27,4 +27,4 @@ image: "/images/blog/filename.svg"
 
 ## Migration Notes
 - Content will be migrated from Sanity CMS to markdown files
-- Existing blog posts are currently managed through Sanity and accessed via `/licensees-guide/` routes
+- Existing blog posts are currently managed through Sanity and accessed via `/guides/` routes

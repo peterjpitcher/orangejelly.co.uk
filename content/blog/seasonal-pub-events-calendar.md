@@ -72,7 +72,7 @@ Only then start choosing events. The skeleton shows you where the gaps are, and 
 
 January is not dead, it is different. People still come out, they just spend differently and book earlier in the evening.
 
-Take Dry January seriously rather than resenting it. Put three low and no serves on the menu that your team can make in under a minute, price them close to a full-strength equivalent, and put them on the table talker. A properly made alcohol-free serve holds a good margin and keeps the round intact, which is the point. There is more on getting the range right in our guide to [low and no alcohol done properly](/licensees-guide/sober-october-low-no-alcohol-pubs).
+Take Dry January seriously rather than resenting it. Put three low and no serves on the menu that your team can make in under a minute, price them close to a full-strength equivalent, and put them on the table talker. A properly made alcohol-free serve holds a good margin and keeps the round intact, which is the point. There is more on getting the range right in our guide to [low and no alcohol done properly](/guides/sober-october-low-no-alcohol-pubs).
 
 Burns Night is the easiest fixed-menu night of the year: one sitting, one price, pre-ordered. As an example, 40 covers on a £24 fixed menu is £960 through the till, which is £800 once the VAT comes out, and at a 68% gross profit worked on that net figure you are left with roughly £544 before a drop of drink is poured. Always run gross profit on the net price rather than the menu price, or every event you plan will look better on paper than it does in the bank. You know your covers in advance, so you order to the number and reduce waste to almost nothing.
 
@@ -102,9 +102,9 @@ September is the month most pubs get wrong. Trade drops, the garden fades, and C
 
 Halloween is a decoration night and a family night: an afternoon for children in costume, an evening for adults with a competition and a themed serve. Bonfire Night rarely needs your own fireworks. Being the warm place people go before and after the town display is a better and cheaper position.
 
-For the full September-to-November plan (cask, low/no, wine, Halloween, rugby and gifting), see our [autumn pub event ideas](/licensees-guide/autumn-pub-event-ideas) guide.
+For the full September-to-November plan (cask, low/no, wine, Halloween, rugby and gifting), see our [autumn pub event ideas](/guides/autumn-pub-event-ideas) guide.
 
-December pays for the quarter, and it is won in September. Open party bookings and deposits before the end of September, publish a fixed party menu with a pre-order deadline, and sell daytime slots hard: retired groups, office lunches, mother and toddler groups and clubs will take midweek lunchtimes that would otherwise sit empty. Our guide on [filling December with Christmas bookings](/licensees-guide/pub-christmas-bookings-fill-december) has the booking sequence in detail.
+December pays for the quarter, and it is won in September. Open party bookings and deposits before the end of September, publish a fixed party menu with a pre-order deadline, and sell daytime slots hard: retired groups, office lunches, mother and toddler groups and clubs will take midweek lunchtimes that would otherwise sit empty. Our guide on [filling December with Christmas bookings](/guides/pub-christmas-bookings-fill-december) has the booking sequence in detail.
 
 Cap capacity honestly. A December night that overpromises and underdelivers costs you the following January.
 
@@ -128,7 +128,7 @@ Check three things before you promote anything unusual.
 
 **Temporary Event Notices.** A TEN covers licensable activity beyond your permission, such as serving in a field or extending hours for one night. A premises can have up to 15 TENs in a calendar year covering no more than 21 days in total, with at least 24 hours between separate events. A standard notice needs at least ten working days' notice to the council and police, and a late TEN needs five. If you are a personal licence holder you can give up to 50 notices a year; if you are not, the limit is five.
 
-**Music.** Live acts, a DJ, background playlists and karaoke almost always need a music licence covering both PRS and PPL. Our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains what you actually need and when.
+**Music.** Live acts, a DJ, background playlists and karaoke almost always need a music licence covering both PRS and PPL. Our guide to [PRS and PPL music licensing for pubs](/guides/prs-ppl-music-licensing-pubs) explains what you actually need and when.
 
 ## How to choose the right events
 
@@ -147,7 +147,7 @@ An event without a booking system is a hope. Put a booking link on every post, t
 
 At The Anchor, our own pub, we cut booking no-shows by 89%, and deposits plus a clear reminder did most of the work. An empty table you were counting on hurts more than a table you never sold, because you ordered stock and rostered staff for it.
 
-The mechanics of running the night itself, from run sheet to team briefing, are covered in our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events).
+The mechanics of running the night itself, from run sheet to team briefing, are covered in our guide to [running successful pub events](/guides/how-to-run-successful-pub-events).
 
 ## Common mistakes
 

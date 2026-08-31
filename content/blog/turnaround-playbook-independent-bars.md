@@ -51,7 +51,7 @@ It is not progress. Marketing a broken offer just introduces more people to the 
 
 I run The Anchor in Stanwell Moor as a Greene King tenant, so this is the order I would work in myself, and the order I would hold anyone else to. Twelve weeks, four phases, nothing started until the phase before it is done.
 
-Before you dive in, our [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) helps you work out where the problems actually sit. This playbook then focuses the team on the right moves at the right time.
+Before you dive in, our [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success) helps you work out where the problems actually sit. This playbook then focuses the team on the right moves at the right time.
 
 ## Before you start: the three numbers that decide the plan
 
@@ -73,7 +73,7 @@ Write those three numbers on one sheet of paper. Every decision in the next twel
 
 **Do this today:** print three months of bank statements and list every direct debit and card subscription. Almost every struggling pub finds services it forgot it had, from an unused booking add-on to a duplicated music subscription.
 
-**Talk to people before you miss a payment, not after.** Ring your suppliers and your landlord with a specific proposal and a specific date. Silence is what turns a supplier into a creditor. Our guide to [rent and supplier negotiations when cash is tight](/licensees-guide/rent-supplier-negotiations-cash-tight) covers how to frame the conversation.
+**Talk to people before you miss a payment, not after.** Ring your suppliers and your landlord with a specific proposal and a specific date. Silence is what turns a supplier into a creditor. Our guide to [rent and supplier negotiations when cash is tight](/guides/rent-supplier-negotiations-cash-tight) covers how to frame the conversation.
 
 If a tax payment is going to be late, contact HMRC before the deadline. Time to Pay instalment plans can often be arranged online for VAT debts up to £50,000 and qualifying PAYE debts up to £100,000, with a phone call needed above that or where there are multiple liabilities.
 
@@ -87,7 +87,7 @@ If a tax payment is going to be late, contact HMRC before the deadline. Time to 
 
 **Goal**: simplify and make the offer clear.
 
-**Choose one hero food offer and one drinks focus.** One, not five. A team under strain cannot execute five new things, and guests cannot remember them either. Our guide to the [nine revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) will help you pick the changes with the most upside for your site.
+**Choose one hero food offer and one drinks focus.** One, not five. A team under strain cannot execute five new things, and guests cannot remember them either. Our guide to the [nine revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) will help you pick the changes with the most upside for your site.
 
 **Cost and price properly.** Recipe cards with weights, not "a handful". Take a burger as a worked example: 170g patty at £1.62, bun £0.38, cheese £0.22, bacon £0.41, sauce and garnish £0.25, 250g chips £0.32, so £3.20 on the plate. At £13.95 including VAT the net sale is £11.63 and your gross profit is £8.43, or 72.5%. Drop the price to £11.95 and gross profit falls to £6.76, or 68%. Same plate, two very different businesses.
 
@@ -95,7 +95,7 @@ Most pubs target somewhere around 65% to 70% food gross profit, and wet gross pr
 
 **Refresh the room for atmosphere.** This is cheap and it moves the needle. Warm bulbs and working dimmers, a genuinely deep clean of the toilets, clutter cleared off the bar top, a chalkboard rewritten in a legible hand. Try the first 10 metres test: walk in as a stranger and write down the first ten things you notice. Fix them in order.
 
-**Train the team on scripts and upsells.** Not pushy add-ons, just confident recommendations at the right moment. A single well-timed suggestion on every table moves average spend more reliably than any promotion, and the [upselling scripts guide](/licensees-guide/upselling-secrets-training-scripts) gives you the wording to practise.
+**Train the team on scripts and upsells.** Not pushy add-ons, just confident recommendations at the right moment. A single well-timed suggestion on every table moves average spend more reliably than any promotion, and the [upselling scripts guide](/guides/upselling-secrets-training-scripts) gives you the wording to practise.
 
 **Key KPI**: average spend per head and gross profit by category.
 

@@ -69,7 +69,7 @@ Here's the painful truth: if you're focusing on shifting more pints to increase 
 
 **Your drinks menu is stuck in 1995 while your costs are firmly in 2025.**
 
-Standard lager runs on [thinner margins than most people realise](/licensees-guide/rescue-your-margins-drinks-mix). After wage and tax rises, that margin can shrink to almost nothing. You can't raise pint prices much more - customers are already sensitive. You can't cut costs further without compromising quality.
+Standard lager runs on [thinner margins than most people realise](/guides/rescue-your-margins-drinks-mix). After wage and tax rises, that margin can shrink to almost nothing. You can't raise pint prices much more - customers are already sensitive. You can't cut costs further without compromising quality.
 
 But here's what nobody talks about: while you're battling over pint prices, Wetherspoons quietly sells 50 million coffees a year. While you're discounting lager to compete, the gastropub down the road makes £15 profit on every cocktail. While you're worried about losing regulars, they're already buying premium drinks elsewhere.
 
@@ -163,7 +163,7 @@ This isn't upselling. It's offering experiences. The couple having a meal and tw
 - Monday: Order coffee machine (or arrange lease)
 - Tuesday: Stock 5 premium soft drinks
 - Wednesday: Train staff on coffee (supplier usually does this free)
-- Thursday: Create simple [drinks menu cards that sell the premium range](/licensees-guide/pub-drinks-menu-design-guide)
+- Thursday: Create simple [drinks menu cards that sell the premium range](/guides/pub-drinks-menu-design-guide)
 - Friday: Launch with free coffee samples (9-11am)
 - Weekend: Track every premium sale
 
@@ -171,7 +171,7 @@ This isn't upselling. It's offering experiences. The couple having a meal and tw
 - Add cocktail ingredients for your five classics
 - Run staff tasting session (they sell what they know)
 - Create table talkers about new drinks
-- Start [suggesting specific drinks with a short serving script](/licensees-guide/upselling-secrets-training-scripts), not asking "what would you like?"
+- Start [suggesting specific drinks with a short serving script](/guides/upselling-secrets-training-scripts), not asking "what would you like?"
 - Introduce "Coffee & Cake" afternoon deal
 
 ### Week 3: Expansion

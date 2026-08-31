@@ -45,7 +45,7 @@ faqs:
 
 # The Ultimate Pub Event Template for Guaranteed Profit Nights
 
-Events only work when they are structured, and [running a pub event well](/licensees-guide/how-to-run-successful-pub-events) starts long before the doors open. This template turns any activation into a repeatable profit night by locking in pricing, staffing, marketing, and post-event follow up.
+Events only work when they are structured, and [running a pub event well](/guides/how-to-run-successful-pub-events) starts long before the doors open. This template turns any activation into a repeatable profit night by locking in pricing, staffing, marketing, and post-event follow up.
 
 The reason most pub events lose money is not the idea. It is that nobody decided the capacity, nobody priced against actual costs, and the promotion was one Facebook post six days out. All three of those are fixable with a run sheet.
 
@@ -66,7 +66,7 @@ Judge the event against a normal trading night of the same weekday. A Tuesday ev
 
 **Week 6 to 4: confirm the concept**
 
-- Choose one clear theme from your [pub event ideas](/licensees-guide/pub-event-ideas) shortlist and commit. No hybrid themes.
+- Choose one clear theme from your [pub event ideas](/guides/pub-event-ideas) shortlist and commit. No hybrid themes.
 - Set capacity, start time, finish time and price.
 - Book the act or host in writing, with the fee, the set times and a cancellation clause.
 - Clear the paperwork (see the next section) while there is still time to fix a problem.
@@ -90,9 +90,9 @@ Only three weeks to work with? Cut the middle block, not the promotion. Concept 
 
 Most events need nothing beyond your existing premises licence. Some do, and finding out five days beforehand is how a night dies.
 
-You need a Temporary Event Notice if the event goes past your licensed hours, or puts licensable activity somewhere outside your licensed footprint, such as a bar in the car park. A standard notice must reach the council at least ten clear working days before the event and costs £21. A late notice is possible between five and nine clear working days out, but the police or environmental health can block it with no right of appeal. A single premises can use up to 15 notices covering a maximum of 21 days a year, and consecutive events need a 24-hour gap. Our [premises and personal licence guide](/licensees-guide/pub-licensing-premises-personal-licence-guide) covers where the boundaries sit.
+You need a Temporary Event Notice if the event goes past your licensed hours, or puts licensable activity somewhere outside your licensed footprint, such as a bar in the car park. A standard notice must reach the council at least ten clear working days before the event and costs £21. A late notice is possible between five and nine clear working days out, but the police or environmental health can block it with no right of appeal. A single premises can use up to 15 notices covering a maximum of 21 days a year, and consecutive events need a 24-hour gap. Our [premises and personal licence guide](/guides/pub-licensing-premises-personal-licence-guide) covers where the boundaries sit.
 
-Music needs its own permission. Live or recorded, public performance requires a licence from PPL PRS, priced per event and banded by audience size for one-off events. If you already hold TheMusicLicence, check the event is inside your existing cover before assuming it is, and read our guide to [PRS and PPL music licensing](/licensees-guide/prs-ppl-music-licensing-pubs) if you are starting from scratch.
+Music needs its own permission. Live or recorded, public performance requires a licence from PPL PRS, priced per event and banded by audience size for one-off events. If you already hold TheMusicLicence, check the event is inside your existing cover before assuming it is, and read our guide to [PRS and PPL music licensing](/guides/prs-ppl-music-licensing-pubs) if you are starting from scratch.
 
 For external acts, ask for their public liability insurance certificate and confirm their electrical equipment has been tested. Write a one-page risk assessment for anything involving fire, height, crowds or a moved bar. It takes twenty minutes and it is the first thing anyone asks for when something goes wrong.
 
@@ -143,7 +143,7 @@ Ask your team to mention the event to every seated guest for the fortnight befor
 
 - Greet and explain the flow within the first minute, so nobody spends the night unsure where the food is.
 - Collect content early, while the room looks full and people look fresh. Nothing usable gets shot at 10:45pm.
-- Upsell one add-on and one only (dessert, a premium pour, or a raffle ticket) using your [upselling scripts](/licensees-guide/upselling-secrets-training-scripts). Ask everyone, once, at the same moment.
+- Upsell one add-on and one only (dessert, a premium pour, or a raffle ticket) using your [upselling scripts](/guides/upselling-secrets-training-scripts). Ask everyone, once, at the same moment.
 - Announce the next event from the microphone before people leave, and open bookings for it that night.
 
 ## Post-event: prove it made money

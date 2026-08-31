@@ -71,7 +71,7 @@ Two things to check before you open the tin: if the building is listed, internal
 
 ## 2. Upgrade signage and menus
 
-Old signage whispers neglect. Clean typography, [chalkboards that earn their space](/licensees-guide/pub-chalkboard-a-board-ideas), and a tidy menu signal care. It is a small cost with a big perception lift.
+Old signage whispers neglect. Clean typography, [chalkboards that earn their space](/guides/pub-chalkboard-a-board-ideas), and a tidy menu signal care. It is a small cost with a big perception lift.
 
 The practical fix is standardisation. Pick one font, one board style and one voice, then apply it to everything: the A-board, the specials board, the toilet signs, the "please wait to be seated" card and the laminated thing taped to the fruit machine. Most pubs have eight visual identities running at once and it reads as chaos.
 
@@ -98,7 +98,7 @@ One consistent fabric across all your pads will make mismatched old furniture re
 
 ## 4. Layer lighting
 
-Lighting is the fastest way to [reboot the atmosphere on a budget](/licensees-guide/reboot-pub-atmosphere-on-budget). Add warm bulbs, dimmers, or simple table lamps to remove the harsh overhead feel.
+Lighting is the fastest way to [reboot the atmosphere on a budget](/guides/reboot-pub-atmosphere-on-budget). Add warm bulbs, dimmers, or simple table lamps to remove the harsh overhead feel.
 
 Get specific about it. Aim for 2700K warm white lamps rather than the 4000K plus cool white that most trade fittings ship with, because cool light makes food look grey and faces look tired. Then build three layers: general ambient light overhead on a dimmer, task light where people read menus and pay, and accent light on the things you want noticed, such as the gantry, a fireplace or a feature wall.
 
@@ -120,16 +120,16 @@ Give guests one or two visual moments to remember. A wall of local history photo
 
 The best talking points are local and true. Old photographs of the street borrowed from the parish archive or a local history group. A framed pump clip wall of every guest ale you have run. A blackboard where regulars name the next quiz team. These cost almost nothing and they cannot be copied by the chain pub down the road.
 
-Pick the spot with the best light and the cleanest background, because that corner will end up in customer photos. That makes it free marketing, and it is worth reading how to make the most of it in our guide to [Instagram marketing for pubs](/licensees-guide/instagram-marketing-for-pubs).
+Pick the spot with the best light and the cleanest background, because that corner will end up in customer photos. That makes it free marketing, and it is worth reading how to make the most of it in our guide to [Instagram marketing for pubs](/guides/instagram-marketing-for-pubs).
 
-If the pub needs more than cosmetics, the phased approach in our [under £5K pub refurbishment guide](/licensees-guide/pub-refurbishment-on-budget) sets out what to tackle in what order.
+If the pub needs more than cosmetics, the phased approach in our [under £5K pub refurbishment guide](/guides/pub-refurbishment-on-budget) sets out what to tackle in what order.
 
 ## Common mistakes
 
 - Trying to refresh everything at once, so nothing looks finished.
 - Choosing colours that are trendy but wrong for your pub and your light.
 - Buying furniture before checking the fire certification.
-- Forgetting the entrance and [the toilets, where a small budget goes a long way](/licensees-guide/pub-toilet-refurbishment-budget-guide).
+- Forgetting the entrance and [the toilets, where a small budget goes a long way](/guides/pub-toilet-refurbishment-budget-guide).
 - Doing the work quietly and never telling anyone it happened.
 
 ## Quick checklist

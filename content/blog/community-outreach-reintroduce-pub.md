@@ -55,7 +55,7 @@ Use this as a three-layer plan: show up, collaborate, then become essential. Eac
 
 Start with low-effort presence. The goal is to make your pub feel part of daily life again before you ask anyone for anything.
 
-- Post a weekly update in local Facebook groups, following [the same rules that make Facebook marketing work for pubs](/licensees-guide/facebook-marketing-local-pubs). Read the group rules first and message the admin before you post anything promotional. Give three genuinely useful posts (a lost dog, a road closure, a local fundraiser) for every one that mentions your pub.
+- Post a weekly update in local Facebook groups, following [the same rules that make Facebook marketing work for pubs](/guides/facebook-marketing-local-pubs). Read the group rules first and message the admin before you post anything promotional. Give three genuinely useful posts (a lost dog, a road closure, a local fundraiser) for every one that mentions your pub.
 - Offer your space as a free meeting room to one local group, in hours you are not busy. A Tuesday morning from ten until twelve costs you nothing and puts fifteen people in a room that would otherwise be empty. Ask only that they buy their own drinks.
 - Put a community noticeboard near the bar and give one person on the team responsibility for clearing it every month. A board of curled, out-of-date flyers tells people you stopped paying attention two years ago.
 - Get your events into the channels that already reach the whole village: the parish magazine, the parish council newsletter, the school newsletter and the local paper's what's-on listing. All are free and all reach the people who are not on Instagram.
@@ -63,7 +63,7 @@ Start with low-effort presence. The goal is to make your pub feel part of daily 
 
 ## Layer 2: Collaborate with local partners
 
-Pick two partners and build a simple shared offer, much like [partnering with local brands to share the marketing effort](/licensees-guide/partnering-local-brands-share-marketing). The right partner has three things: a real audience, a reason to talk to that audience, and a person who actually replies.
+Pick two partners and build a simple shared offer, much like [partnering with local brands to share the marketing effort](/guides/partnering-local-brands-share-marketing). The right partner has three things: a real audience, a reason to talk to that audience, and a person who actually replies.
 
 | Partner | What they bring | What you offer |
 |---|---|---|
@@ -104,7 +104,7 @@ Every group you host for free is a group that now knows your rooms, your parking
 
 Do the arithmetic before you agree to anything. As an example, a group of 20 meeting on a Tuesday afternoon and spending an average of £12 a head puts £240 through a till that would otherwise be dead, on staff you are already paying. That is a good trade. The same group asking for exclusive use of your main bar on a Friday night is not.
 
-Rebuilding a lapsed local base takes more than events alone, and our guide on [winning back locals after a slow spell](/licensees-guide/win-back-locals-after-slow-trade) covers the rest of the picture.
+Rebuilding a lapsed local base takes more than events alone, and our guide on [winning back locals after a slow spell](/guides/win-back-locals-after-slow-trade) covers the rest of the picture.
 
 ## Say yes to this, no to that
 
@@ -118,9 +118,9 @@ Two practical limits sit under that question. It has to run on a normal rota, wi
 
 **Month 1: show up.** Week one, rebuild the noticeboard and message two Facebook group admins. Week two, offer your space free to one group. Week three, get listed in the parish magazine and the school newsletter. Week four, attend one community meeting.
 
-**Month 2: collaborate.** Shortlist four partners, contact all four, expect two to reply. Agree one co-branded event in writing and set a date at least six weeks out. If you want an easy first fundraiser, the [Macmillan Coffee Morning](/licensees-guide/macmillan-coffee-morning-pub-guide), traditionally held on the last Friday in September, is about as low-risk as it gets.
+**Month 2: collaborate.** Shortlist four partners, contact all four, expect two to reply. Agree one co-branded event in writing and set a date at least six weeks out. If you want an easy first fundraiser, the [Macmillan Coffee Morning](/guides/macmillan-coffee-morning-pub-guide), traditionally held on the last Friday in September, is about as low-risk as it gets.
 
-**Month 3: become essential.** Launch one repeating monthly ritual, run it using [the run sheet behind a successful pub event](/licensees-guide/how-to-run-successful-pub-events), and promote it as a local tradition from day one. Then hold the date for a year.
+**Month 3: become essential.** Launch one repeating monthly ritual, run it using [the run sheet behind a successful pub event](/guides/how-to-run-successful-pub-events), and promote it as a local tradition from day one. Then hold the date for a year.
 
 ## How to measure it
 

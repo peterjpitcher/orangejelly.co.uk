@@ -6,7 +6,7 @@ import mapping from '../../tasks/repositioning/data/article-next-steps.json';
 /**
  * Where each hospitality article leads.
  *
- * Every article on `/licensees-guide/*` ends with one or two curated links: the
+ * Every article on `/guides/*` ends with one or two curated links: the
  * growth problem underneath its hospitality surface, and where one genuinely
  * applies, a case study showing it move. The job is to take somebody who arrived
  * from Google asking a pub question and offer them the business problem beneath it.

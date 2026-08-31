@@ -73,7 +73,7 @@ Your Google Business Profile is your pub's shop window for everyone searching on
 
 At The Anchor, our Google Business Profile drives more first-time visitors than our website, social media, and word of mouth combined. It is the front door of your online presence, and it needs to look as good as your actual front door.
 
-If you want to understand how your website and Google profile work together, read our guide on [whether your pub needs a website](/licensees-guide/does-your-pub-need-a-website).
+If you want to understand how your website and Google profile work together, read our guide on [whether your pub needs a website](/guides/does-your-pub-need-a-website).
 
 ## Step 1: Claim or create your listing
 
@@ -303,7 +303,7 @@ Ask. That is it. The pubs that get the most reviews are the ones that ask consis
 
 **Fake or malicious reviews:** Report them to Google. If someone has never visited your pub and leaves a one-star review, you can flag it. Google does not always remove them, but it is worth trying.
 
-For a deeper dive into handling difficult reviews, read our [online reviews damage control guide](/licensees-guide/terrible-online-reviews-damage-control).
+For a deeper dive into handling difficult reviews, read our [online reviews damage control guide](/guides/terrible-online-reviews-damage-control).
 
 ## Step 8: Add menus, products, and services
 
@@ -405,7 +405,7 @@ This is not a one-off project. The pubs that dominate local search are the ones 
 
 Your profile is only as good as the last time you touched it. Going into summer, run a five-minute check: update your **opening hours** (including later closes and bank holidays), confirm **food service times**, add **fresh photos** of the garden in full swing, reply to every recent **review**, and make sure your **booking link** still works. Then publish your summer events as Google Posts so they show on the profile.
 
-A listing that looks current and active builds confidence before anyone visits. It is the front door to all five summer moves. See the full [summer pub marketing playbook](/licensees-guide/summer-pub-marketing).
+A listing that looks current and active builds confidence before anyone visits. It is the front door to all five summer moves. See the full [summer pub marketing playbook](/guides/summer-pub-marketing).
 
 ## Common mistakes to avoid
 

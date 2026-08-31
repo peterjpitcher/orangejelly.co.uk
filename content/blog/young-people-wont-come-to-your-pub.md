@@ -44,7 +44,7 @@ Remember when pubs were the default social hub for young people? Those days migh
 
 Young people aren't avoiding pubs - they're avoiding boring pubs. They've got unlimited entertainment in their pocket, Deliveroo at their fingertips, and a cost-of-living crisis hitting them harder than any generation before. Your warm beer and sticky carpets aren't competing with other pubs anymore - you're competing with everything.
 
-But here's the encouraging bit: when you give them a genuine reason to come, they become your most loyal, vocal advocates. They'll Instagram every visit, bring their entire friend group, and turn one of your [quiet Tuesday nights](/licensees-guide/pub-empty-tuesday-nights) into their weekly tradition.
+But here's the encouraging bit: when you give them a genuine reason to come, they become your most loyal, vocal advocates. They'll Instagram every visit, bring their entire friend group, and turn one of your [quiet Tuesday nights](/guides/pub-empty-tuesday-nights) into their weekly tradition.
 
 ## Create Instagram-Worthy Moments (Without Being Cringe)
 
@@ -55,7 +55,7 @@ Between 5-7pm, your pub should photograph like a dream. It's not about renovatin
 - Keep your glassware spotless - it photographs better
 - Serve drinks that look as good as they taste
 
-Young customers take 5-10 photos per visit. Make sure they've got something worth sharing, and that [your own Instagram feed](/licensees-guide/instagram-marketing-for-pubs) is doing the same job.
+Young customers take 5-10 photos per visit. Make sure they've got something worth sharing, and that [your own Instagram feed](/guides/instagram-marketing-for-pubs) is doing the same job.
 
 The Signature Serve
 Create one drink that's uniquely yours:
@@ -79,7 +79,7 @@ What Actually Works
 
 ## The Non-Alcoholic Revolution
 
-This isn't about designated drivers anymore. Many under-30s are reducing alcohol consumption, so [a proper low and no alcohol range](/licensees-guide/sober-october-low-no-alcohol-pubs) is now a basic expectation. If your non-alcoholic offering is J2O and Coke, you're already losing.
+This isn't about designated drivers anymore. Many under-30s are reducing alcohol consumption, so [a proper low and no alcohol range](/guides/sober-october-low-no-alcohol-pubs) is now a basic expectation. If your non-alcoholic offering is J2O and Coke, you're already losing.
 
 Build a Proper Zero-Proof Menu
 - Stock at least 5 craft alcohol-free beers

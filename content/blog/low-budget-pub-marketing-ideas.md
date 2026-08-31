@@ -58,7 +58,7 @@ Do not try all 25. Pick one from each pillar, run those five for six weeks, then
 
 **1. Post weekly in local Facebook groups, properly.** Read the pinned rules first. Most village and town groups ban straight adverts but allow event posts on a set day, or allow anything that is genuinely useful. Post from your personal profile rather than the page: people reply to a landlord, not a logo. A post that says "the road is shut at the bridge until Thursday, park round the back if you are coming for the quiz" reliably outperforms "quiz night 8pm", because the useful bit gets shared and your pub travels with it.
 
-**2. Finish your Google Business Profile and then feed it.** Do this before anything else on the list, because it is what shows when someone searches "pub near me" or types your name, and it is free. Fill in every attribute: dog friendly, step-free access, beer garden, live sport, real ale, outside seating, car park. Add photos every week. Set holiday opening hours before every bank holiday. Answer the Q&A section yourself with the questions you get asked at the bar. Getting this right, alongside a proper website, is a large part of how we grew Google Search visibility by 828% at The Anchor. Our [Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide) walks through each field.
+**2. Finish your Google Business Profile and then feed it.** Do this before anything else on the list, because it is what shows when someone searches "pub near me" or types your name, and it is free. Fill in every attribute: dog friendly, step-free access, beer garden, live sport, real ale, outside seating, car park. Add photos every week. Set holiday opening hours before every bank holiday. Answer the Q&A section yourself with the questions you get asked at the bar. Getting this right, alongside a proper website, is a large part of how we grew Google Search visibility by 828% at The Anchor. Our [Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide) walks through each field.
 
 **3. Make your A-board carry one message.** One offer, one date, one reason to come in. Three messages on a board is zero messages. Change it twice a week so regulars actually read it rather than walking past furniture.
 
@@ -106,7 +106,7 @@ Do not try all 25. Pick one from each pillar, run those five for six weeks, then
 
 **21. Run a loyalty card that rewards frequency, not spend.** Five visits, sixth drink on the house. Rewarding frequency brings people back on quiet nights, which is where you need them.
 
-**22. Send one short email a week.** What is on, one photo, one link to book. Short beats clever. Our guide to [email marketing for pub retention](/licensees-guide/email-marketing-pub-retention) covers structure and timing.
+**22. Send one short email a week.** What is on, one photo, one link to book. Short beats clever. Our guide to [email marketing for pub retention](/guides/email-marketing-pub-retention) covers structure and timing.
 
 **23. Use a WhatsApp broadcast list, never a group.** A broadcast sends one message to many people privately. A group turns into forty notifications and everyone leaves.
 
@@ -120,7 +120,7 @@ If you do have a small budget, spend it in this order. First, better photos: an 
 
 Marketing spend is the last thing to cut and the last thing to add. Get the free work running first, then amplify what is already working.
 
-For a deeper dive into what to post and when, see our [content marketing ideas for pubs](/licensees-guide/content-marketing-ideas-pubs).
+For a deeper dive into what to post and when, see our [content marketing ideas for pubs](/guides/content-marketing-ideas-pubs).
 
 ## Common mistakes
 
@@ -141,4 +141,4 @@ Tell the team what you are testing and why. Ideas 6, 8 and 20 on this list all d
 ## Mini FAQ
 
 **Should I be on every platform?**
-No. Two channels done every week beat five done occasionally, and for most pubs that is Facebook plus your Google Business Profile. Our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) covers how to pick your two and how to keep them going through a busy month.
+No. Two channels done every week beat five done occasionally, and for most pubs that is Facebook plus your Google Business Profile. Our [social media strategy for pubs](/guides/social-media-strategy-for-pubs) covers how to pick your two and how to keep them going through a busy month.

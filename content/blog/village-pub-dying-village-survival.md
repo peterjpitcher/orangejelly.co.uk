@@ -63,7 +63,7 @@ Now count the village honestly. Ward populations from the census are published f
 
 That gap is the whole article. It is not a failure of hospitality, it is arithmetic, and no amount of being lovely closes it.
 
-**This week:** run those two sums, then pull twelve months of till data and work out which days and dayparts actually cover their own labour. Our guide to [turning EPOS data into a revenue comeback](/licensees-guide/epos-data-revenue-comeback) walks through the reports worth running.
+**This week:** run those two sums, then pull twelve months of till data and work out which days and dayparts actually cover their own labour. Our guide to [turning EPOS data into a revenue comeback](/guides/epos-data-revenue-comeback) walks through the reports worth running.
 
 The mistake here is cutting hours to match the shrinking village. Closing a session that loses £40 feels sensible, but if you shut the sessions visitors could use, you have shrunk the only market capable of growing.
 
@@ -103,13 +103,13 @@ Rural pubs sit on a market most of them ignore: people who are already out for t
 - **Walkers and cyclists.** Get your pub named as the start or finish point on route apps and local walking group listings, then print a one page route card with your postcode, a what3words location and a stamp on the back for a free coffee on return. Talk to the parish footpath officer; they will tell you which paths actually get used.
 - **Accommodation partners.** Every B&B, holiday let, campsite and small hotel within twenty minutes is sending guests somewhere for dinner. Walk in with menus and a simple deal: their guests get a free welcome drink, you get the referral. Ask them to put your card in the welcome folder.
 - **Touring caravans.** Some pubs with a spare field host small five van sites through club exemption certificate schemes. That is a genuine trade builder because those guests eat with you. Speak to the clubs directly before assuming your field qualifies, as the rules on site licensing are specific.
-- **Packages, not discounts.** A "walk and lunch" at a fixed price, or a "stay and dine" with a nearby B&B, sells better than money off and protects your margin. Our guide to [off-season revenue packages](/licensees-guide/survive-off-season-revenue-packages) has the pricing logic.
+- **Packages, not discounts.** A "walk and lunch" at a fixed price, or a "stay and dine" with a nearby B&B, sells better than money off and protects your margin. Our guide to [off-season revenue packages](/guides/survive-off-season-revenue-packages) has the pricing logic.
 
 ## Step 5: Strengthen digital presence
 
 Rural trade is search trade. Nobody wanders past a village pub. They search "Sunday roast near me", "dog friendly country pub" or "pub with garden Staines", they look at photos, they check the opening hours, and they decide before they get in the car.
 
-That makes your Google Business Profile the most valuable asset you own after the building. Get the categories right, keep hours accurate including bank holidays, add photos monthly, answer questions, and link straight to a booking page rather than a phone number. Our [Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide) covers the settings that move the needle.
+That makes your Google Business Profile the most valuable asset you own after the building. Get the categories right, keep hours accurate including bank holidays, add photos monthly, answer questions, and link straight to a booking page rather than a phone number. Our [Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide) covers the settings that move the needle.
 
 Then give your website a page for each thing people actually search: Sunday lunch, the garden, the function room, dog friendly, parking. One page per intent beats one clever page about everything.
 
@@ -121,7 +121,7 @@ Chasing visitors while quietly dropping the locals is the fastest way to end up 
 
 Protect one fixed weekly night that belongs to the village and never move it. Keep the darts team, the dominoes, the noticeboard, the collection tin. Learn names and use them. Run a simple loyalty card for people with a local postcode so regulars get recognised without you cutting your headline prices.
 
-Then go and ask. A twenty minute conversation with the parish council about what the village has lost will hand you your next three ideas, and our guide to [reintroducing your pub to the community](/licensees-guide/community-outreach-reintroduce-pub) sets out how to run that properly.
+Then go and ask. A twenty minute conversation with the parish council about what the village has lost will hand you your next three ideas, and our guide to [reintroducing your pub to the community](/guides/community-outreach-reintroduce-pub) sets out how to run that properly.
 
 ## Common mistakes
 

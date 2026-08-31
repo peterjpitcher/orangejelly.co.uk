@@ -53,7 +53,7 @@ schema:
 
 # Oktoberfest Ideas for Pubs: How to Host Your Own
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 Late September is a funny old patch. The summer beer-garden crowd has gone home, Christmas is too far off to mention, and the diary's got that thin, quiet look about it. Which is exactly why Oktoberfest is one of the best ideas for pubs going. It's a ready-made theme, everyone already knows what it is, and it drops right into the deadest weekend of the autumn and gives people a reason to come out.
 
@@ -116,7 +116,7 @@ The shortlist that does the heavy lifting:
 - **Currywurst.** Sliced sausage, curried ketchup, a shake of curry powder, chips on the side. A cult favourite and dead cheap to put out.
 - **A Bavarian sharing board.** Cured meats, a couple of cheeses, pickles, pretzel pieces, a pot of mustard. Made to order, ideal for the big group tables, and it makes a small spread look generous.
 
-That's a menu a normal pub kitchen can actually deliver on a heaving Saturday. Resist the urge to gold-plate it. If you want to think more broadly about how the food and drink work together on the night, our guide to [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) covers laying it out so it sells itself.
+That's a menu a normal pub kitchen can actually deliver on a heaving Saturday. Resist the urge to gold-plate it. If you want to think more broadly about how the food and drink work together on the night, our guide to [pub drinks menu design](/guides/pub-drinks-menu-design-guide) covers laying it out so it sells itself.
 
 ## Music, decoration and atmosphere
 
@@ -163,10 +163,10 @@ A few moves to make it stick:
 
 - **Capture who came.** Every group booking is a contact worth keeping. The lot who booked a long table for Oktoberfest are exactly the people to tell about your Christmas dates, and they're already in a booking frame of mind.
 - **Plant the Christmas seed on the night.** A little card on each table, a line from the staff, a mention on the chalkboard: "Loved tonight? Get your Christmas table in early." You'll never have a warmer audience for it.
-- **Line up the next reason.** Oktoberfest doesn't stand alone: it's one thread in a busy autumn that runs through Halloween, Bonfire Night and into December. If you sort the calendar properly, each event feeds the next instead of being a fresh scramble. The [full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) pulls the whole season together.
+- **Line up the next reason.** Oktoberfest doesn't stand alone: it's one thread in a busy autumn that runs through Halloween, Bonfire Night and into December. If you sort the calendar properly, each event feeds the next instead of being a fresh scramble. The [full Autumn Pub Playbook](/guides/autumn-pub-event-ideas) pulls the whole season together.
 - **Make it an annual fixture.** The pubs that win at this run the same event every year so it becomes a thing people wait for. Year two is always easier: you've got the photos, the suppliers and the regulars who already know to book.
 
-Oktoberfest also sits nicely alongside the other autumn drinks occasions. If you're leaning into beer this season, our guide to [Cask Ale Week](/licensees-guide/cask-ale-week-pub-guide) shows how to make your handpulls the hero, and our [national drinks days guide](/licensees-guide/national-drinks-days-pub-guide) maps out the other dated hooks worth building a night around.
+Oktoberfest also sits nicely alongside the other autumn drinks occasions. If you're leaning into beer this season, our guide to [Cask Ale Week](/guides/cask-ale-week-pub-guide) shows how to make your handpulls the hero, and our [national drinks days guide](/guides/national-drinks-days-pub-guide) maps out the other dated hooks worth building a night around.
 
 ## Your first move
 

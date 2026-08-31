@@ -49,7 +49,7 @@ export function generateRSSFeed(): string {
 
   const rssItems = posts
     .map((post) => {
-      const postUrl = `${siteConfig.url}/licensees-guide/${post.slug}`;
+      const postUrl = `${siteConfig.url}/guides/${post.slug}`;
       const pubDate = new Date(post.publishedDate || Date.now()).toUTCString();
 
       return `
@@ -123,8 +123,8 @@ export function generateJSONFeed(): string {
     icon: `${siteConfig.url}/icon-512.png`,
     favicon: `${siteConfig.url}/favicon.ico`,
     items: posts.map((post) => ({
-      id: `${siteConfig.url}/licensees-guide/${post.slug}`,
-      url: `${siteConfig.url}/licensees-guide/${post.slug}`,
+      id: `${siteConfig.url}/guides/${post.slug}`,
+      url: `${siteConfig.url}/guides/${post.slug}`,
       title: post.title || 'Untitled',
       content_html: post.content || '',
       summary: post.excerpt || 'No description available',
@@ -158,7 +158,7 @@ export function generateSitemap(): string {
     { url: '/services', priority: 0.9, changefreq: 'monthly' },
     { url: '/contact', priority: 0.7, changefreq: 'monthly' },
     { url: '/results', priority: 0.8, changefreq: 'monthly' },
-    { url: '/licensees-guide', priority: 0.9, changefreq: 'daily' },
+    { url: '/guides', priority: 0.9, changefreq: 'daily' },
   ];
 
   const currentDate = new Date().toISOString();
@@ -179,7 +179,7 @@ export function generateSitemap(): string {
     .map(
       (category) => `
   <url>
-    <loc>${siteConfig.url}/licensees-guide/category/${category.slug}</loc>
+    <loc>${siteConfig.url}/guides/category/${category.slug}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -192,7 +192,7 @@ export function generateSitemap(): string {
       const lastmod = post.updatedDate || post.publishedDate || new Date().toISOString();
       return `
   <url>
-    <loc>${siteConfig.url}/licensees-guide/${post.slug}</loc>
+    <loc>${siteConfig.url}/guides/${post.slug}</loc>
     <lastmod>${new Date(lastmod).toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -224,7 +224,7 @@ User-agent: *
 Allow: /
 
 # Important pages
-Allow: /licensees-guide/
+Allow: /guides/
 Allow: /services/
 Allow: /results/
 Allow: /about/

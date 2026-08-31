@@ -32,7 +32,7 @@ const navigationContent = {
     },
     {
       label: "Licensee's Guide",
-      href: '/licensees-guide',
+      href: '/guides',
       order: 3,
       external: false,
     },

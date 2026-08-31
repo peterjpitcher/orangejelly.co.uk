@@ -51,7 +51,7 @@ Live music can turn a dead Friday into the night people plan their week around. 
 
 The difference is almost never the act. It is whether you built the night as a business decision or as a hopeful punt.
 
-What follows is the progression I would use in any pub, and the same one behind [any successful pub event](/licensees-guide/how-to-run-successful-pub-events): start small, prove demand, then scale. Each step happens only once the one before it has earned it.
+What follows is the progression I would use in any pub, and the same one behind [any successful pub event](/guides/how-to-run-successful-pub-events): start small, prove demand, then scale. Each step happens only once the one before it has earned it.
 
 ## Step 1: Decide if live music fits your pub
 
@@ -75,13 +75,13 @@ Two completely separate things get muddled here.
 
 Two caveats. Anything past 11pm falls outside the exemption and needs authorisation, either on your licence or through a Temporary Event Notice. And conditions can be reimposed after a licence review, so read your actual licence rather than assuming what it says.
 
-**Permission to use the music itself.** That is TheMusicLicence, run jointly by PPL and PRS for Music since 2018. It covers recorded music and live performances of other people's songs, whether that music comes from a radio, a playlist or a bloke with a guitar. Our breakdown of [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) explains the tariffs. Display the licence behind the bar.
+**Permission to use the music itself.** That is TheMusicLicence, run jointly by PPL and PRS for Music since 2018. It covers recorded music and live performances of other people's songs, whether that music comes from a radio, a playlist or a bloke with a guitar. Our breakdown of [PRS and PPL music licensing for pubs](/guides/prs-ppl-music-licensing-pubs) explains the tariffs. Display the licence behind the bar.
 
 Two bits of admin worth ten minutes: ask every act for their public liability certificate and PAT test confirmation, and check your own policy mentions live entertainment.
 
 ## Step 2: Start with open mic or acoustic sets
 
-Open mic is the cheapest market research in hospitality. For the price of one host you find out whether your town has musicians, whether they bring people, and whether your room works. It builds a music reputation the way a [karaoke night](/licensees-guide/karaoke-night-101) builds a singalong crowd, by letting your customers supply the entertainment.
+Open mic is the cheapest market research in hospitality. For the price of one host you find out whether your town has musicians, whether they bring people, and whether your room works. It builds a music reputation the way a [karaoke night](/guides/karaoke-night-101) builds a singalong crowd, by letting your customers supply the entertainment.
 
 The format that works:
 
@@ -126,7 +126,7 @@ Flow matters as much as sound. Keep a clear path from door to bar to toilets, mo
 
 Three levers: more people, longer stays, higher spend per head. Pull all three.
 
-**Take bookings, and give people a reason to make one.** Reserve the best tables and hold them with a £5 per head deposit that comes off the bar bill. It costs the customer nothing and turns a maybe into a commitment. At The Anchor, our own venue, we increased table bookings by 403%, largely by making booking easy and clearly worth doing rather than leaving people to chance it. If your regulars have stopped booking at all, we have written separately about [why nobody books tables any more](/licensees-guide/nobody-books-tables-anymore).
+**Take bookings, and give people a reason to make one.** Reserve the best tables and hold them with a £5 per head deposit that comes off the bar bill. It costs the customer nothing and turns a maybe into a commitment. At The Anchor, our own venue, we increased table bookings by 403%, largely by making booking easy and clearly worth doing rather than leaving people to chance it. If your regulars have stopped booking at all, we have written separately about [why nobody books tables any more](/guides/nobody-books-tables-anymore).
 
 **Feed them.** A short music-night menu of sharing boards and one-tray dishes lets the kitchen cope with a compressed rush. Run it to 9pm, then keep bar snacks going so nobody leaves to find chips.
 
@@ -140,7 +140,7 @@ An unpromoted band is just an expensive noise.
 
 Run a three-part cadence: announce three weeks out, remind one week out, post on the day. Ask every act for a twenty-second video clip and their social handles when you confirm the booking, and put that in the contract. A clip of the act playing outperforms a poster every time, and when they share it you reach people who have never heard of your pub.
 
-Add the gig to your Google Business Profile as a post so it surfaces when someone searches for pubs near you on the day; our [Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide) covers the setup.
+Add the gig to your Google Business Profile as a post so it surfaces when someone searches for pubs near you on the day; our [Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide) covers the setup.
 
 Then the bit almost everyone forgets: announce the next date from the stage before the last song, chalk it up before you lock the doors, and take email addresses while people are still enjoying themselves.
 

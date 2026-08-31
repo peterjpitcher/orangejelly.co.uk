@@ -79,8 +79,8 @@ describe('MainGate', () => {
   it('stands back on the guides, which now open their own main', () => {
     // The guides adopted the oj chrome on 30 August 2026. They render OjHeader and
     // OjFooter themselves, so a main opened here would wrap the header too, and two
-    // main landmarks is a 1.3.1 failure. src/app/licensees-guide carries the id.
-    pathname.mockReturnValue('/licensees-guide/karaoke-night-101');
+    // main landmarks is a 1.3.1 failure. src/app/guides carries the id.
+    pathname.mockReturnValue('/guides/karaoke-night-101');
     render(
       <MainGate>
         <p>content</p>

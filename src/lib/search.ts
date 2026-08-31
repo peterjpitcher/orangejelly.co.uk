@@ -6,7 +6,7 @@ import { getAllPosts } from './blog-md';
 /**
  * Which content collection an item belongs to.
  *
- * The site runs two: the hospitality guides at /licensees-guide/*, which carry 900
+ * The site runs two: the hospitality guides at /guides/*, which carry 900
  * of the site's 969 annual clicks and do not move, and the new-positioning articles
  * at /insights/*. The URL is derived from this rather than hard-coded, so a new
  * collection cannot silently end up advertising the wrong path.
@@ -49,7 +49,7 @@ const SEARCH_INDEX_PATH = path.join(process.cwd(), 'public', 'search-index.json'
 const INDEXED_CONTENT_CHARS = 1200;
 
 const COLLECTION_BASE: Record<SearchCollection, string> = {
-  'licensees-guide': '/licensees-guide',
+  'licensees-guide': '/guides',
   insights: '/insights',
 };
 

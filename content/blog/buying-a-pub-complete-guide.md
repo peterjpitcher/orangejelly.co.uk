@@ -111,7 +111,7 @@ You agree to run the pub under terms set by the brewery or pub company. Ingoings
 
 **Best for:** First-time operators, career changers, and anyone who wants support while they learn the trade. This is the route I took with Greene King at The Anchor.
 
-If you want to understand how to work within a tied agreement and still protect your margins, read our guide on [improving your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal).
+If you want to understand how to work within a tied agreement and still protect your margins, read our guide on [improving your brewery tie deal](/guides/brewery-tie-improve-your-deal).
 
 ### Management agreement
 
@@ -183,7 +183,7 @@ This is where most first-time buyers cut corners and it costs them dearly.
 - Check for outstanding enforcement notices from environmental health or fire safety.
 - If leasehold, get independent advice on the lease. Do not rely on the seller's solicitor to highlight unfavourable terms.
 
-For a deeper look at the operational fundamentals you should be assessing, see our [pub health check guide](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success).
+For a deeper look at the operational fundamentals you should be assessing, see our [pub health check guide](/guides/pub-health-check-essential-fundamentals-licensee-success).
 
 ## Financing your pub
 
@@ -288,9 +288,9 @@ The first three months set the tone for everything that follows. Do not try to c
 - Review your first full month of trading data against your business plan forecast.
 - What worked? Do more of it. What flopped? Drop it or rethink it.
 - Start planning seasonal promotions two to three months ahead.
-- Get a [pub health check](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success) done by an independent set of eyes. Fresh perspective catches blind spots.
+- Get a [pub health check](/guides/pub-health-check-essential-fundamentals-licensee-success) done by an independent set of eyes. Fresh perspective catches blind spots.
 
-For ideas on which revenue levers to pull first, our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) is a practical starting point.
+For ideas on which revenue levers to pull first, our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) is a practical starting point.
 
 ## Common mistakes to avoid
 

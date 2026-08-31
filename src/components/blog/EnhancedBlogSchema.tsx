@@ -38,7 +38,7 @@ export default function EnhancedBlogSchema({ post, baseUrl, imageUrl }: Enhanced
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    url: `${baseUrl}/licensees-guide/${post.slug}`,
+    url: `${baseUrl}/guides/${post.slug}`,
     ...(imageUrl && {
       image: {
         '@type': 'ImageObject',
@@ -64,7 +64,7 @@ export default function EnhancedBlogSchema({ post, baseUrl, imageUrl }: Enhanced
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${baseUrl}/licensees-guide/${post.slug}`,
+      '@id': `${baseUrl}/guides/${post.slug}`,
     },
     // Add speakable for voice search optimization
     ...(post.quickAnswer && {

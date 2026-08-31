@@ -69,9 +69,9 @@ Let us be direct about the three audiences your business plan serves.
 
 **Banks and lenders** will not release funds without one. They want evidence you understand the numbers, the risks, and the local market. A vague pitch about "creating a community hub" will not get past the first meeting.
 
-**Breweries and pub companies** use your business plan to decide whether to offer you a tenancy. Greene King, Ei Group, Stonegate, Marston's -- they all have application processes that require detailed plans. The better your plan, the more negotiating power you have on rent and tie terms. If you are navigating a brewery relationship, our guide to [improving your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal) explains what is negotiable.
+**Breweries and pub companies** use your business plan to decide whether to offer you a tenancy. Greene King, Ei Group, Stonegate, Marston's -- they all have application processes that require detailed plans. The better your plan, the more negotiating power you have on rent and tie terms. If you are navigating a brewery relationship, our guide to [improving your brewery tie deal](/guides/brewery-tie-improve-your-deal) explains what is negotiable.
 
-**You** need it for personal clarity. Whether you are [buying a pub](/licensees-guide/buying-a-pub-complete-guide) or taking on a tenancy, running without a business plan is like driving without a sat nav. You might get there eventually, but you will waste fuel, take wrong turns, and probably arrive late. The plan forces you to confront uncomfortable questions about money, staffing, and competition before they become crises.
+**You** need it for personal clarity. Whether you are [buying a pub](/guides/buying-a-pub-complete-guide) or taking on a tenancy, running without a business plan is like driving without a sat nav. You might get there eventually, but you will waste fuel, take wrong turns, and probably arrive late. The plan forces you to confront uncomfortable questions about money, staffing, and competition before they become crises.
 
 ## The Six Essential Sections
 
@@ -99,7 +99,7 @@ This is where most amateur plans fall apart. "There are lots of people nearby wh
 
 **Customer profiling.** Who are your target customers? Be specific. "Everyone" is not a customer profile. Think in segments: weekday lunch workers, Friday night couples, Saturday families, Sunday roast regulars, midweek event-goers. Assign a realistic spend-per-head and visit frequency to each segment.
 
-**Trends and threats.** Acknowledge the headwinds -- cost of living pressures, off-trade competition, delivery apps, changing drinking habits. Then explain how your concept addresses them. If you want to understand how independents can compete effectively, read our guide to [pub differentiation strategies](/licensees-guide/pub-differentiation-strategies).
+**Trends and threats.** Acknowledge the headwinds -- cost of living pressures, off-trade competition, delivery apps, changing drinking habits. Then explain how your concept addresses them. If you want to understand how independents can compete effectively, read our guide to [pub differentiation strategies](/guides/pub-differentiation-strategies).
 
 ### 3. Operations Plan
 
@@ -111,7 +111,7 @@ This section proves you can actually run the pub day-to-day, not just dream abou
 
 **Supplier relationships.** If you are in a brewery tie, detail what is tied and what is free-of-tie. For free trade pubs, identify your key suppliers for wet stock, food, and consumables. Get indicative quotes before you write the plan -- it shows lenders you have done the legwork.
 
-**Stock management.** Explain your approach to ordering, stock rotation, wastage control, and cellar management. If you are serious about running tight, our guide to [zero-waste stock management](/licensees-guide/zero-waste-stock-management-pubs) gives you the systems. Banks do not expect perfection, but they want to see you understand that uncontrolled waste kills profit.
+**Stock management.** Explain your approach to ordering, stock rotation, wastage control, and cellar management. If you are serious about running tight, our guide to [zero-waste stock management](/guides/zero-waste-stock-management-pubs) gives you the systems. Banks do not expect perfection, but they want to see you understand that uncontrolled waste kills profit.
 
 **Compliance.** Cover the basics: premises licence, personal licence, food hygiene, fire safety, allergen management, and data protection. This is not exciting, but missing it signals inexperience.
 
@@ -121,13 +121,13 @@ You do not need a 30-page marketing strategy, but you do need to show you have t
 
 **Brand positioning.** In one sentence, what makes your pub different? This is harder than it sounds, but it shapes every marketing decision. Are you the best quiz night in town? The family-friendly Sunday spot? The craft beer destination?
 
-**Digital presence.** At minimum: Google Business Profile optimised and maintained, a simple website or landing page, active Facebook and Instagram accounts. If you want a structured approach, our guide to [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) has a weekly system you can follow.
+**Digital presence.** At minimum: Google Business Profile optimised and maintained, a simple website or landing page, active Facebook and Instagram accounts. If you want a structured approach, our guide to [social media strategy for pubs](/guides/social-media-strategy-for-pubs) has a weekly system you can follow.
 
-**Events programme.** List your planned weekly and monthly events. Pubs that run consistent events fill midweek gaps that would otherwise bleed cash. Quiz nights, live music, themed food evenings, tasting events -- map them out with projected attendance and revenue. If you need inspiration for what to include, our guide to [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) covers nine immediate options.
+**Events programme.** List your planned weekly and monthly events. Pubs that run consistent events fill midweek gaps that would otherwise bleed cash. Quiz nights, live music, themed food evenings, tasting events -- map them out with projected attendance and revenue. If you need inspiration for what to include, our guide to [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) covers nine immediate options.
 
 **Local SEO.** Make sure you appear when locals search "pubs near me." This means consistent NAP (name, address, phone) across all directories, regular Google reviews, and local content.
 
-**Community engagement.** Sponsoring the local football team, hosting charity evenings, partnering with nearby businesses -- these are low-cost, high-impact marketing activities that build loyalty over time. Our guide to [community outreach](/licensees-guide/community-outreach-reintroduce-pub) covers this in detail.
+**Community engagement.** Sponsoring the local football team, hosting charity evenings, partnering with nearby businesses -- these are low-cost, high-impact marketing activities that build loyalty over time. Our guide to [community outreach](/guides/community-outreach-reintroduce-pub) covers this in detail.
 
 **Loyalty and retention.** How will you turn first-time visitors into regulars? A simple stamp card, a WhatsApp broadcast list, a birthday club -- pick something and commit to it.
 
@@ -139,7 +139,7 @@ This is the section banks read most carefully. Get the numbers wrong and everyth
 
 **Gross profit targets.** These are the benchmarks your plan should hit:
 
-- **Food GP: 65 to 70 percent.** Below 65 percent and your food operation is leaking money. Above 70 percent is strong. If you want to understand how menu design affects GP, our guide to [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) walks through the tactics.
+- **Food GP: 65 to 70 percent.** Below 65 percent and your food operation is leaking money. Above 70 percent is strong. If you want to understand how menu design affects GP, our guide to [menu engineering](/guides/menu-engineering-lift-average-spend) walks through the tactics.
 - **Wet GP: 60 to 65 percent.** This varies by tie arrangements. Free-of-tie pubs can hit higher margins. Tied pubs need to maximise free-of-tie categories (wines, spirits, soft drinks) to compensate.
 - **Overall blended GP: 60 to 65 percent** is a healthy target for a balanced food-and-wet pub.
 
@@ -157,7 +157,7 @@ This is the section banks read most carefully. Get the numbers wrong and everyth
 - Accountancy and legal fees
 - Marketing budget (allocate at least 3 to 5 percent of revenue)
 
-**Cash flow projection.** This is different from profit. You can be profitable on paper and still run out of cash if your timing is wrong. Build a 12-month cash flow showing when money comes in and when it goes out. Flag the months where cash dips -- typically January, February, and the post-summer lull. For practical cash management techniques, see our guide to [breaking the cash flow crisis cycle](/licensees-guide/cash-flow-crisis-breaking-cycle).
+**Cash flow projection.** This is different from profit. You can be profitable on paper and still run out of cash if your timing is wrong. Build a 12-month cash flow showing when money comes in and when it goes out. Flag the months where cash dips -- typically January, February, and the post-summer lull. For practical cash management techniques, see our guide to [breaking the cash flow crisis cycle](/guides/cash-flow-crisis-breaking-cycle).
 
 **Break-even analysis.** Calculate the weekly revenue needed to cover all fixed and variable costs. Express it as covers per day or revenue per session so it feels tangible, not just a spreadsheet number.
 
@@ -199,7 +199,7 @@ Your business plan is not a filing cabinet filler. It is a living management too
 
 **Annual update.** Rewrite your financial projections annually based on actual trading data. This also prepares you for any refinancing conversations, tenancy renewals, or new site applications.
 
-**Team alignment.** Share relevant sections with your management team. When your supervisor understands the GP targets and knows why upselling matters, they become part of the solution instead of just pulling pints. For ideas on team engagement without increasing payroll, see our guide to [staff motivation without pay rises](/licensees-guide/staff-motivation-hacks-no-pay-rise).
+**Team alignment.** Share relevant sections with your management team. When your supervisor understands the GP targets and knows why upselling matters, they become part of the solution instead of just pulling pints. For ideas on team engagement without increasing payroll, see our guide to [staff motivation without pay rises](/guides/staff-motivation-hacks-no-pay-rise).
 
 ## Get Your Free Pub Business Plan Template
 

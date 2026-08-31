@@ -65,7 +65,7 @@ Do not just tell people you are open. Give them a reason to choose you. A garden
 
 People are busy, especially in the school holidays, so make the decision simple. Name the moment, put a time on it, and make it bookable. A named, bookable moment beats a vague "we're open" every single day of the week.
 
-Build your summer line-up with our guide to [summer pub events that actually make money](/licensees-guide/summer-pub-event-ideas).
+Build your summer line-up with our guide to [summer pub events that actually make money](/guides/summer-pub-event-ideas).
 
 ## 2. Make every post lead somewhere
 
@@ -73,7 +73,7 @@ Social media should not just be noise. Every post should have a job to do. Are y
 
 A nice photo of a pint in the sun is fine. A nice photo with a clear reason to visit and a direct booking link is better. Treat every post as part of the customer journey, not a piece of content for its own sake. Posting is easy; building momentum that leads to a booking is the work.
 
-Put it into practice with our [social media strategy guide for pubs](/licensees-guide/social-media-strategy-for-pubs).
+Put it into practice with our [social media strategy guide for pubs](/guides/social-media-strategy-for-pubs).
 
 ## 3. Keep your Google listing fresh
 
@@ -81,7 +81,7 @@ For many customers, your Google Business Profile is your front door. Before they
 
 Make sure your summer opening hours, food service times, event information, images and booking links are all current. Add fresh photos regularly. Reply to reviews. A listing that looks active, current and welcoming builds confidence before a customer has even stepped inside.
 
-Get it right with our [complete Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide).
+Get it right with our [complete Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide).
 
 ## 4. Capture customer details while trade is high
 
@@ -89,7 +89,7 @@ Summer footfall is valuable. Customer data is even more valuable. Use bookings, 
 
 This does not need to be complicated. Even a small, well-managed customer list helps you fill quieter nights, promote future events and rely far less on social media algorithms. The busiest weeks of the year are exactly when you should be building the list that carries you through the quiet ones.
 
-Build yours with our guide to [building a pub customer database](/licensees-guide/email-marketing-pub-retention).
+Build yours with our guide to [building a pub customer database](/guides/email-marketing-pub-retention).
 
 ## 5. Follow up and bring people back
 
@@ -97,7 +97,7 @@ The visit should not end when the customer leaves the building. Thank them, invi
 
 The biggest shift in modern pub marketing is to stop treating it as something that happens only before a visit. It should happen before, during and after. That is where loyalty and repeat revenue come from.
 
-Turn first visits into regulars with our guide to [building a loyalty habit that fills the pub](/licensees-guide/build-loyalty-scheme-fill-pub).
+Turn first visits into regulars with our guide to [building a loyalty habit that fills the pub](/guides/build-loyalty-scheme-fill-pub).
 
 ## The summer that pays you back
 

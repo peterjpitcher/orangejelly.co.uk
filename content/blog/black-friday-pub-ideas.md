@@ -55,7 +55,7 @@ schema:
 
 # Black Friday Ideas for Pubs: Turn It Into Bookings
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas): a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas): a September-to-November plan for filling your pub.*
 
 Here's the best of the **Black Friday ideas for pubs**: don't run a sale, build your December. Black Friday lands on **Friday 27 November 2026**, the whole country's in a spending mood, and the weekend sits right at the front of the most valuable conversion window in your year. Your job isn't to be the cheapest pub on the road. It's to turn that footfall into confirmed Christmas bookings and full-price revenue: party deposits, pre-orders, a gift card people are already out shopping for, and a January bounce-back.
 
@@ -96,7 +96,7 @@ Use the Black Friday traffic to chase every party lead you've got and convert it
 - Take a per-head deposit on every confirmed booking. It cuts no-shows and brings cash in now.
 - Make the weekend the prompt: "Booking your Christmas do? Lock your date this weekend with a deposit before the good slots go."
 
-If filling December is the real goal here, and it should be, work through it properly with our guide to [fill your December bookings](/licensees-guide/pub-christmas-bookings-fill-december). The deposit conversation is where a busy autumn turns into a booked-out December.
+If filling December is the real goal here, and it should be, work through it properly with our guide to [fill your December bookings](/guides/pub-christmas-bookings-fill-december). The deposit conversation is where a busy autumn turns into a booked-out December.
 
 ## Push a January bounce-back voucher
 
@@ -139,7 +139,7 @@ It's a small, cheap layer of effort that turns a flat Cyber Monday into a reason
 
 None of this lives on its own. Black Friday weekend is the on-ramp to your whole festive season, and it works best when it's part of a plan rather than a one-off scramble.
 
-Everything you bank this weekend (the gift vouchers, the deposits, the bounce-back vouchers) feeds straight into December. So line it up with the bigger picture. Our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) cover the wider festive campaign that this weekend kicks off, and gift cards keep selling right up to Christmas Eve. Both that and the deposit work above sit inside [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), which maps the whole run from September through to the festive push.
+Everything you bank this weekend (the gift vouchers, the deposits, the bounce-back vouchers) feeds straight into December. So line it up with the bigger picture. Our [Christmas pub promotion ideas](/guides/christmas-pub-promotion-ideas) cover the wider festive campaign that this weekend kicks off, and gift cards keep selling right up to Christmas Eve. Both that and the deposit work above sit inside [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas), which maps the whole run from September through to the festive push.
 
 At The Anchor in Stanwell Moor, the autumn weekends that pay off are the ones aimed at selling gifts, booking December and protecting January, not at being the cheapest pub on the road. Black Friday is the clearest example of that: a weekend you can either give margin away on, or use to put cash in the till and set up your strongest December.
 

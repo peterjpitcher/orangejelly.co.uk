@@ -183,7 +183,7 @@ export function generatePageMeta(
         'pub business advice',
         'free pub marketing',
       ],
-      canonical: '/licensees-guide',
+      canonical: '/guides',
     },
   };
 

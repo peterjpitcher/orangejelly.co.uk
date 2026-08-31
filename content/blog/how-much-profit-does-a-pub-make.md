@@ -104,7 +104,7 @@ If your blended wet GP is below 58%, you have a problem. The usual culprits are:
 - **Wrong pricing**: not reviewing prices when suppliers increase theirs
 - **Tied pricing**: if you are a tied tenant, your buy prices are higher than open market, so your selling prices need to reflect that
 
-For a deeper look at how to restructure your drinks range for better margins, read our guide on [rescuing your margins through a better drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
+For a deeper look at how to restructure your drinks range for better margins, read our guide on [rescuing your margins through a better drinks mix](/guides/rescue-your-margins-drinks-mix).
 
 ### Food GP targets
 
@@ -145,7 +145,7 @@ If you are above 30% and you are not running a serious food operation, your rota
 - Agency staff plugging gaps that better recruitment would prevent
 - The owner working 70 hours a week and not counting their own time as a cost
 
-For more on controlling staffing costs, see our guide on [pub wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide).
+For more on controlling staffing costs, see our guide on [pub wages and labour costs](/guides/pub-wages-labour-costs-guide).
 
 ### Rent: 10 to 15% of turnover
 
@@ -257,7 +257,7 @@ Every pub has quiet periods. The question is whether your rota reflects them. Re
 
 ### 3. Stock shrinkage and waste
 
-If you are not doing a weekly stock take on your top 20 lines, you do not know what you are losing. Shrinkage above 3% on wet stock is a red flag. It means either waste, theft, over-pouring, or poor record-keeping. Read our guide on [zero-waste stock management](/licensees-guide/zero-waste-stock-management-pubs) for a practical system.
+If you are not doing a weekly stock take on your top 20 lines, you do not know what you are losing. Shrinkage above 3% on wet stock is a red flag. It means either waste, theft, over-pouring, or poor record-keeping. Read our guide on [zero-waste stock management](/guides/zero-waste-stock-management-pubs) for a practical system.
 
 ### 4. Not reviewing supplier prices
 
@@ -290,7 +290,7 @@ You do not need a consultant to start improving your pub's profitability. You ne
 - Track your GP weekly, not monthly. Monthly is too late to fix problems
 - Share the targets with your team. When staff understand GP, behaviour changes
 
-For a broader set of strategies to lift revenue alongside margin, our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs) is a practical next step. And if you are working on a business plan to present to a brewery or lender, our [pub business plan template and guide](/licensees-guide/pub-business-plan-template-guide) walks you through the financial projections step by step.
+For a broader set of strategies to lift revenue alongside margin, our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs) is a practical next step. And if you are working on a business plan to present to a brewery or lender, our [pub business plan template and guide](/guides/pub-business-plan-template-guide) walks you through the financial projections step by step.
 
 ## Results you can expect
 

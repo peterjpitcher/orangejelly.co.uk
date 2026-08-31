@@ -3,7 +3,7 @@
 /**
  * Slugs claimed by both content collections.
  *
- * `content/blog` renders at `/licensees-guide/<slug>` and `content/insights` at
+ * `content/blog` renders at `/guides/<slug>` and `content/insights` at
  * `/insights/<slug>`. A slug in both is not an error either collection can see:
  * each renders its own page perfectly well, and the only symptom is two pages
  * competing for the same subject with different canonical URLs, plus a search index
@@ -39,7 +39,7 @@ if (collisions.length > 0) {
   console.error(`\nSlug collision between the two content collections:\n`);
   for (const slug of collisions) {
     console.error(`  ${slug}`);
-    console.error(`    content/blog/${slug}.md      -> /licensees-guide/${slug}`);
+    console.error(`    content/blog/${slug}.md      -> /guides/${slug}`);
     console.error(`    content/insights/${slug}.md  -> /insights/${slug}\n`);
   }
   console.error(

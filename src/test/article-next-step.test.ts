@@ -28,7 +28,13 @@ const TIERS = new Map<string, string>(
     .filter(Boolean)
     .map((line) => {
       const cells = line.split(',');
-      return [cells[0].replace('/licensees-guide/', ''), cells[2]] as [string, string];
+      // The register records each post by the URL it had when it was captured, which is
+      // the old prefix, and the section has since been renamed. Take the slug rather
+      // than assuming a prefix: the slug is the part a rename does not move, and a
+      // register of what was true in August should not be rewritten every time a
+      // section is renamed.
+      const slug = cells[0].split('/').filter(Boolean).pop() ?? '';
+      return [slug, cells[2]] as [string, string];
     })
 );
 

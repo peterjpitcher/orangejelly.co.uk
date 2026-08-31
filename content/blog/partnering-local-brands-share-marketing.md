@@ -49,7 +49,7 @@ The cheapest marketing you will ever run is somebody else telling their customer
 
 Partnerships also fail in predictable ways. Somebody pays for the leaflets and somebody does not. The offer gets complicated. The partner posts once, at 11pm, with the wrong date. None of that is bad luck, it is just missing paperwork.
 
-The framework below is what I use at The Anchor. It is deliberately dull in the right places, because the boring parts are what make the fun parts work twice. It also costs very little, so it belongs alongside the other [low-budget marketing ideas](/licensees-guide/low-budget-pub-marketing-ideas) worth running.
+The framework below is what I use at The Anchor. It is deliberately dull in the right places, because the boring parts are what make the fun parts work twice. It also costs very little, so it belongs alongside the other [low-budget marketing ideas](/guides/low-budget-pub-marketing-ideas) worth running.
 
 ## Step 1: Define the audience gap
 
@@ -63,7 +63,7 @@ Then write one sentence: "I want more [audience] on [day] and I am willing to sp
 
 ## Step 2: Shortlist and pitch
 
-Look for local businesses with active communities: gyms, bakers, florists, breweries, coffee roasters, butchers, barbers, dog groomers, garden centres, running clubs, choirs, amateur dramatics groups. These are the same names worth knowing when you [reintroduce your pub to the community](/licensees-guide/community-outreach-reintroduce-pub).
+Look for local businesses with active communities: gyms, bakers, florists, breweries, coffee roasters, butchers, barbers, dog groomers, garden centres, running clubs, choirs, amateur dramatics groups. These are the same names worth knowing when you [reintroduce your pub to the community](/guides/community-outreach-reintroduce-pub).
 
 Three filters before you approach anyone:
 
@@ -100,7 +100,7 @@ Build a simple offer both sides can promote in one sentence.
 
 Keep it time-bound. "All month" is not an offer, it is wallpaper.
 
-One warning if you are tied, as I am as a Greene King tenant: check your product range and any guest beer rights before you promise a local brewer a tap. A tap takeover you cannot legally pour is an embarrassing conversation, and it is worth understanding [what your tie does and does not allow](/licensees-guide/brewery-tie-improve-your-deal) before you make the call. If the beer is off the table, run the same collaboration with a food producer or a maker instead.
+One warning if you are tied, as I am as a Greene King tenant: check your product range and any guest beer rights before you promise a local brewer a tap. A tap takeover you cannot legally pour is an embarrassing conversation, and it is worth understanding [what your tie does and does not allow](/guides/brewery-tie-improve-your-deal) before you make the call. If the beer is off the table, run the same collaboration with a food producer or a maker instead.
 
 **Worked example.** Say you run a post-parkrun brunch with a gym. Forty covers at £14 a head is £560. Food cost at 30% is £168. You split a £120 print and boosted post spend, so £60 each. Two staff for four hours at a true £15 an hour, including employer's National Insurance and holiday pay, is £120. That leaves roughly £212 of contribution on a morning that usually takes nothing, plus forty people who now know your coffee is decent. This is an illustration, not a promise: put your own numbers in before you commit.
 
@@ -128,7 +128,7 @@ What works instead:
 - Use one sign-up form on the night that names both businesses in plain words, with a separate tick box for each. Paper on a clipboard is fine.
 - If you genuinely need to share data, put a short data sharing agreement in place and take advice first.
 
-Everything you collect properly feeds the list you own, which is the real long-term prize here and the engine behind [email marketing that brings people back](/licensees-guide/email-marketing-pub-retention).
+Everything you collect properly feeds the list you own, which is the real long-term prize here and the engine behind [email marketing that brings people back](/guides/email-marketing-pub-retention).
 
 ## Step 7: Share marketing assets
 
@@ -136,7 +136,7 @@ Create one shared asset pack and put it somewhere both sides can grab it: a shar
 
 Include three or four photos sized square and portrait, two ready-written captions, the booking link, the hashtags, and the exact dates you both post. Assign the posting days. "We'll both share it" means neither of you does.
 
-The single biggest lift is a booking link that works on a phone in two taps. If your partner's audience has to ring you during service, you will lose most of them. Slot the whole thing into your [social media strategy](/licensees-guide/social-media-strategy-for-pubs) rather than treating it as a one-off.
+The single biggest lift is a booking link that works on a phone in two taps. If your partner's audience has to ring you during service, you will lose most of them. Slot the whole thing into your [social media strategy](/guides/social-media-strategy-for-pubs) rather than treating it as a one-off.
 
 ## Step 8: Measure and debrief
 

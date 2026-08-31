@@ -73,7 +73,7 @@ Your dine-in menu and your delivery menu are not the same document. Delivery nee
 
 What survives the journey: pies, curries, chilli, slow-cooked ragu, wings, loaded fries with the sauce on the side, burgers where the bun is toasted and the salad is bagged separately, roasts with the gravy in its own pot. What does not: battered fish in a sealed box, poached eggs, dressed leaves, anything finished with an emulsion that splits, and steak cooked to order. Vent your hot boxes, because trapped steam ruins any crust you worked for.
 
-Two rules hold the line. Keep it to eight to twelve items, and insist every delivery dish uses ingredients already on your dine-in menu, with no new stock lines, so the channel cannot quietly create waste in your walk-in. The same [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend) picks which survivors earn a place: high margin, high popularity, fast to plate.
+Two rules hold the line. Keep it to eight to twelve items, and insist every delivery dish uses ingredients already on your dine-in menu, with no new stock lines, so the channel cannot quietly create waste in your walk-in. The same [menu engineering that lifts average spend](/guides/menu-engineering-lift-average-spend) picks which survivors earn a place: high margin, high popularity, fast to plate.
 
 Then leave it alone for four weeks. Stability produces consistent ratings, and ratings produce orders.
 
@@ -103,7 +103,7 @@ Give it a dedicated point away from the bar queue: the end of the counter, a sid
 
 Text customers when the order is genuinely ready rather than giving a fixed time. Then hand over in under a minute: name, order number, sealed bag, thank them.
 
-Taking collection orders through [your own website rather than a platform](/licensees-guide/does-your-pub-need-a-website) keeps the commission out of it entirely. On the numbers in the next section it is worth more per order than anything else here, so put the direct ordering link on your Google Business Profile, your socials and every bag.
+Taking collection orders through [your own website rather than a platform](/guides/does-your-pub-need-a-website) keeps the commission out of it entirely. On the numbers in the next section it is worth more per order than anything else here, so put the direct ordering link on your Google Business Profile, your socials and every bag.
 
 ## Step 5: Track profit per channel
 
@@ -122,7 +122,7 @@ Two things follow. First, delivery only works if it is genuinely incremental: if
 
 Second, run the table on your own VAT position rather than borrowing this one. If you are VAT registered, you hand over the 20% on the sale but you reclaim the VAT charged on platform commission, so the headline commission rate is the real bite. If you are below the registration threshold, the table looks different in both directions: you do not account for output VAT at all, so the whole £30 stays with you rather than £25, but you also cannot reclaim the VAT on commission, so commission costs you a fifth more than the headline rate suggests.
 
-Pull channel-level numbers weekly from [the reports your EPOS already produces](/licensees-guide/epos-data-revenue-comeback) and set a floor: a minimum cash margin per delivery item after commission and packaging. Anything below it gets repriced or removed. Plenty of operators price the delivery menu above the dine-in menu to absorb commission, which is sound, but read your platform contract first because some include price parity terms.
+Pull channel-level numbers weekly from [the reports your EPOS already produces](/guides/epos-data-revenue-comeback) and set a floor: a minimum cash margin per delivery item after commission and packaging. Anything below it gets repriced or removed. Plenty of operators price the delivery menu above the dine-in menu to absorb commission, which is sound, but read your platform contract first because some include price parity terms.
 
 ## Step 6: Cross-pollinate marketing
 
@@ -134,9 +134,9 @@ Ask for reviews in the right places: platform reviews protect your delivery rank
 
 ## The rules you cannot skip
 
-- **Allergens.** Distance selling rules require allergen information at two points: before the order is placed, in writing on your website or menu, and again at delivery, on a label or an enclosed menu. The FSA advises keeping it no more than one click from the online menu. Our guide to [food allergies, labelling and data compliance](/licensees-guide/food-allergies-gdpr-compliance) covers how to structure it.
+- **Allergens.** Distance selling rules require allergen information at two points: before the order is placed, in writing on your website or menu, and again at delivery, on a label or an enclosed menu. The FSA advises keeping it no more than one click from the online menu. Our guide to [food allergies, labelling and data compliance](/guides/food-allergies-gdpr-compliance) covers how to structure it.
 - **Temperature.** Hot food must be held at 63°C or above. Use insulated bags and keep routes short. If a batch does drop below 63°C you may hold it there for up to two hours, once, and at the end of that window it has to be served, chilled quickly to 8°C or below, or thrown away.
-- **VAT.** Hot takeaway is standard-rated at 20%, while genuinely cold takeaway food is usually zero-rated with exceptions. That changes the real margin per dish, so cost the menu on net prices; our [pub VAT and accounting guide](/licensees-guide/pub-vat-accounting-guide) explains the split.
+- **VAT.** Hot takeaway is standard-rated at 20%, while genuinely cold takeaway food is usually zero-rated with exceptions. That changes the real margin per dish, so cost the menu on net prices; our [pub VAT and accounting guide](/guides/pub-vat-accounting-guide) explains the split.
 - **Insurance.** Staff delivering in their own cars need hire-and-reward cover. A standard social, domestic and commuting policy does not cover paid deliveries, and the driver is uninsured the moment they leave the car park.
 - **Your hygiene rating.** It is displayed on the platforms, next to your name.
 

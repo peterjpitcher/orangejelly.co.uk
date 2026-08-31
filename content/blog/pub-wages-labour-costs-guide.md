@@ -155,7 +155,7 @@ Pull your hourly sales reports for the last eight weeks. You will almost certain
 
 Build your rota around what the till actually tells you, not what feels right.
 
-For more on using your till data to drive decisions, our guide on [EPOS data and revenue](/licensees-guide/epos-data-revenue-comeback) walks through exactly how to pull and act on these reports.
+For more on using your till data to drive decisions, our guide on [EPOS data and revenue](/guides/epos-data-revenue-comeback) walks through exactly how to pull and act on these reports.
 
 ### Stagger shifts
 
@@ -202,7 +202,7 @@ That is 45 per week back in your pocket, or over 2,300 per year, and you get a f
 
 The tipping point is usually around 8 to 10 regular overtime hours per week. Below that, overtime is fine as a flex tool. Above that, recruit.
 
-If you are struggling to find good people, our [pub recruitment guide](/licensees-guide/pub-recruitment-hiring-bar-staff) covers where to look, what to put in job ads, and how to spot the right candidates.
+If you are struggling to find good people, our [pub recruitment guide](/guides/pub-recruitment-hiring-bar-staff) covers where to look, what to put in job ads, and how to spot the right candidates.
 
 ## Tips legislation: what you need to know
 
@@ -260,7 +260,7 @@ Some practical retention strategies that cost little or nothing:
 - **Flexible shift patterns** for parents, students, and people with second jobs
 - **Staff meals and drinks** during shifts. A small cost that signals respect
 
-For a deeper dive into keeping your team motivated when budgets are tight, read our guide on [staff motivation without pay rises](/licensees-guide/staff-motivation-hacks-no-pay-rise).
+For a deeper dive into keeping your team motivated when budgets are tight, read our guide on [staff motivation without pay rises](/guides/staff-motivation-hacks-no-pay-rise).
 
 ## Your action plan
 
@@ -303,7 +303,7 @@ At The Anchor, getting serious about rota management and cross-training was one 
 
 **"I do not have time to track labour percentage every week."** It takes ten minutes. Pull your total wage cost from your payroll system, pull your total revenue from your EPOS, divide one by the other. If you do not have ten minutes for the number that determines your profitability, that is the real problem.
 
-For broader strategies on improving your pub's financial position, see our guide on [revenue levers for struggling pubs](/licensees-guide/revenue-levers-struggling-pubs).
+For broader strategies on improving your pub's financial position, see our guide on [revenue levers for struggling pubs](/guides/revenue-levers-struggling-pubs).
 
 ## The bottom line
 

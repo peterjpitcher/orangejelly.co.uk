@@ -52,7 +52,7 @@ Three months later, that same reviewer became a regular. Here's exactly how we t
 
 - One thoughtful response can neutralize ten bad reviews
 
-The game isn't avoiding bad reviews - it's [showing future customers how you handle problems](/licensees-guide/how-to-respond-bad-pub-reviews).
+The game isn't avoiding bad reviews - it's [showing future customers how you handle problems](/guides/how-to-respond-bad-pub-reviews).
 
 ## The 24-Hour Response Framework
 
@@ -130,7 +130,7 @@ Result: Higher review volume and stronger ratings
 ## Platform-Specific Strategies
 
 Google Reviews (Most Important)
-- Respond to everything quickly on your [Google Business Profile](/licensees-guide/google-business-profile-pub-guide)
+- Respond to everything quickly on your [Google Business Profile](/guides/google-business-profile-pub-guide)
 - Use owner's name in responses
 - Include one specific detail showing you remember them
 - Always invite them back
@@ -167,7 +167,7 @@ For false reviews:
 When you're being targeted:
 1. **Don't panic** - platforms recognise patterns
 2. **Document everything** - screenshots, dates, usernames
-3. **Rally your supporters** - one [email to your regulars](/licensees-guide/email-marketing-pub-retention) asking for honest reviews
+3. **Rally your supporters** - one [email to your regulars](/guides/email-marketing-pub-retention) asking for honest reviews
 4. **Stay professional** - respond to each calmly
 5. **Report to platforms** - bulk false reviews often get removed
 

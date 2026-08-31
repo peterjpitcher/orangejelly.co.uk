@@ -63,7 +63,7 @@ Spend an hour making your page accurate before you post anything else. Most of t
 - **A booking link on the action button.** Set the button to "Book now" and send it straight to your booking form, not your homepage. Every extra click loses you covers.
 - **Special hours for bank holidays and Christmas.** Enter them properly rather than mentioning them in a post that scrolls away by Tuesday.
 - **Twenty current photos.** Phone camera, daylight, real food, the real bar, the garden, the fire lit. Delete anything from a previous chef or a previous carpet.
-- **The map pin on your actual door**, and your name, address and phone number written identically to how they appear on your [Google Business Profile](/licensees-guide/google-business-profile-pub-guide). Mismatched details confuse both customers and search engines.
+- **The map pin on your actual door**, and your name, address and phone number written identically to how they appear on your [Google Business Profile](/guides/google-business-profile-pub-guide). Mismatched details confuse both customers and search engines.
 
 A quick test: hand your phone to someone who has never been in, open your page, and ask them to work out whether you serve food on a Wednesday evening and how they would book. If they hesitate, fix what made them hesitate.
 
@@ -81,7 +81,7 @@ Then do the things most pubs skip:
 - **Post inside the event three times:** when you announce it, three days out, and on the morning itself with something live from the room.
 - **Ask the team to press "Interested" and invite friends.** Attendees can invite their own friends, which is how an event reaches people who have never heard of you.
 
-One warning. "Interested" is a maybe, not a booking. Take names for tables anyway. If you want the mechanics of building nights worth promoting in the first place, our guide on [running successful pub events](/licensees-guide/how-to-run-successful-pub-events) covers the format side.
+One warning. "Interested" is a maybe, not a booking. Take names for tables anyway. If you want the mechanics of building nights worth promoting in the first place, our guide on [running successful pub events](/guides/how-to-run-successful-pub-events) covers the format side.
 
 ## Step 3: Be present in local groups
 
@@ -128,7 +128,7 @@ Aim for three posts that give something for every one that asks for something.
 | What's on | One graphic a week with the whole week on it | Gets screenshotted and stuck on fridges |
 | Proof | A screenshot of a five-star review, thanked properly | Social proof without boasting |
 
-Whatever you post, reply to every comment within a few hours. Comments tell Facebook the post is worth showing to more people, and they cost you nothing but attention. The same instincts apply next door on Instagram, though the format differs; our [Instagram marketing guide for pubs](/licensees-guide/instagram-marketing-for-pubs) covers that.
+Whatever you post, reply to every comment within a few hours. Comments tell Facebook the post is worth showing to more people, and they cost you nothing but attention. The same instincts apply next door on Instagram, though the format differs; our [Instagram marketing guide for pubs](/guides/instagram-marketing-for-pubs) covers that.
 
 ## Weekly rhythm
 
@@ -145,7 +145,7 @@ Reach is a vanity number. Bookings are the real one.
 
 Once a month, open your page insights, sort your last 90 days of posts by reach, and look at the top three. Do more of exactly those. Then check the bottom three and stop making them.
 
-For attribution, keep it crude but honest: use a distinct booking link for Facebook so you can count clicks, and train the team to ask "how did you hear about tonight?" and write the answer on the sheet. If you are working with almost no budget, the same discipline underpins our wider list of [low budget pub marketing ideas](/licensees-guide/low-budget-pub-marketing-ideas).
+For attribution, keep it crude but honest: use a distinct booking link for Facebook so you can count clicks, and train the team to ask "how did you hear about tonight?" and write the answer on the sheet. If you are working with almost no budget, the same discipline underpins our wider list of [low budget pub marketing ideas](/guides/low-budget-pub-marketing-ideas).
 
 ## Common mistakes
 

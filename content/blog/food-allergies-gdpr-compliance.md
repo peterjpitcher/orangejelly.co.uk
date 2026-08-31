@@ -51,7 +51,7 @@ Compliance is not exciting, but it is the part of the job that can end the busin
 
 Both problems are solved by the same thing: writing down what you do, once, and making it easy for a busy team to follow at seven on a Friday. That is an afternoon with a spreadsheet, not a consultant's fee.
 
-I run The Anchor in Stanwell Moor as a Greene King tenant, so this is written from the same side of the bar as you: practical, not legal advice. Rules change, so check the current Food Standards Agency and ICO guidance before you finalise anything. The same discipline that keeps a [health and safety routine](/licensees-guide/pub-health-safety-checklist) tight is what makes this work.
+I run The Anchor in Stanwell Moor as a Greene King tenant, so this is written from the same side of the bar as you: practical, not legal advice. Rules change, so check the current Food Standards Agency and ICO guidance before you finalise anything. The same discipline that keeps a [health and safety routine](/guides/pub-health-safety-checklist) tight is what makes this work.
 
 ## Part 1: Allergen safety system
 
@@ -89,7 +89,7 @@ Then run one flow every time, in this order. Guest declares the allergy. It goes
 
 ### Control cross-contact
 
-Separate colour-coded boards, dedicated utensils, and allergen-free prep done first in the day on a cleaned surface. Be honest about the fryer: if the same oil cooks battered fish, you cannot describe anything from it as gluten free, and saying so plainly builds far more trust than fudging it. This is exactly what an inspector examines when setting [your food hygiene rating](/licensees-guide/food-hygiene-rating-five-star-guide).
+Separate colour-coded boards, dedicated utensils, and allergen-free prep done first in the day on a cleaned surface. Be honest about the fryer: if the same oil cooks battered fish, you cannot describe anything from it as gluten free, and saying so plainly builds far more trust than fudging it. This is exactly what an inspector examines when setting [your food hygiene rating](/guides/food-hygiene-rating-five-star-guide).
 
 ### Make the information visible
 
@@ -99,7 +99,7 @@ Put allergen information on the menu itself, or put a clear line on the menu tel
 
 Every new starter before their first shift, everyone refreshed at least quarterly, and a signed and dated sheet in the folder. If you are ever asked to demonstrate your system, that sheet is the evidence.
 
-The £5,000 cap on magistrates' court fines was removed in 2015, so a breach of the food information rules carries an unlimited fine, and where an allergen failure has led to a death, operators have faced gross negligence manslaughter charges. Your [pub insurance cover](/licensees-guide/pub-insurance-cover-guide) is far more likely to respond cleanly when you can show a documented system that was actually followed.
+The £5,000 cap on magistrates' court fines was removed in 2015, so a breach of the food information rules carries an unlimited fine, and where an allergen failure has led to a death, operators have faced gross negligence manslaughter charges. Your [pub insurance cover](/guides/pub-insurance-cover-guide) is far more likely to respond cleanly when you can show a documented system that was actually followed.
 
 ## Part 2: GDPR basics for pubs
 
@@ -117,7 +117,7 @@ For bookings, your lawful basis is normally the contract with the guest. For mar
 
 ### Collect consent properly
 
-No pre-ticked boxes, no adding the business card from the raffle jar. A simple form that says what you will send and how often, with a record of when and how the person opted in. That record is the whole defence if anyone ever asks. If you are building a list to run [email marketing that keeps regulars coming back](/licensees-guide/email-marketing-pub-retention), get this right at the start rather than cleaning it up later.
+No pre-ticked boxes, no adding the business card from the raffle jar. A simple form that says what you will send and how often, with a record of when and how the person opted in. That record is the whole defence if anyone ever asks. If you are building a list to run [email marketing that keeps regulars coming back](/guides/email-marketing-pub-retention), get this right at the start rather than cleaning it up later.
 
 Held properly, that data pays for itself. Using the contact details guests give at the point of booking to confirm and remind is how we cut booking no-shows by 89% at The Anchor.
 

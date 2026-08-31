@@ -108,7 +108,7 @@ None of this is complicated, but two things catch pubs out.
 
 **A straight quiz is a test of skill, so it sits outside the gaming rules in the Gambling Act 2005.** The moment the winner is decided purely by chance, you are running something different. It is safest to avoid settling a tie with a coin toss, a card cut or a name out of a hat when there is a prize attached. Use a "closest to" tiebreak question instead, which keeps the whole night a contest of skill. If you want to run a raffle alongside the quiz, that is a lottery, and lotteries cannot be run for private profit, so it needs to be for a good cause with tickets sold and drawn at the event. If you are unsure how your particular set-up reads, your licensing authority will tell you.
 
-**Recorded music needs a licence.** If you run a music round, you are playing recorded music in a public setting, which normally requires TheMusicLicence from PPL PRS. That is a single joint licence covering PRS for Music, which represents songwriters and publishers, and PPL, which represents performers and record labels. Most pubs already hold it for background music, but check it reflects what you actually do. The cost varies by venue type, size and how you use music. Our guide to [PRS and PPL music licensing for pubs](/licensees-guide/prs-ppl-music-licensing-pubs) walks through the detail.
+**Recorded music needs a licence.** If you run a music round, you are playing recorded music in a public setting, which normally requires TheMusicLicence from PPL PRS. That is a single joint licence covering PRS for Music, which represents songwriters and publishers, and PPL, which represents performers and record labels. Most pubs already hold it for background music, but check it reflects what you actually do. The cost varies by venue type, size and how you use music. Our guide to [PRS and PPL music licensing for pubs](/guides/prs-ppl-music-licensing-pubs) walks through the detail.
 
 ## The money: what quiz night actually earns
 
@@ -148,7 +148,7 @@ Tell your existing regulars personally, by name, three weeks out. Put a chalkboa
 
 Make it bookable too. At The Anchor we grew table bookings by 403%, and a big part of that was letting people reserve a table for an event instead of hoping there would be room. A team that has booked turns up.
 
-A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-midweek-solutions). If you are starting from scratch, our [quiz night starter guide](/licensees-guide/quiz-night-101) covers the basics, and for the wider picture see [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events).
+A strong quiz is one of the best ways to [solve quiet midweek nights](/quiet-midweek-solutions). If you are starting from scratch, our [quiz night starter guide](/guides/quiz-night-101) covers the basics, and for the wider picture see [how to run successful pub events](/guides/how-to-run-successful-pub-events).
 
 ## Common mistakes
 

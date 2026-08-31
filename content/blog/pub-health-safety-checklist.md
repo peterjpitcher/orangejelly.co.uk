@@ -142,7 +142,7 @@ Never let anyone work alone in the cellar during a delivery. Two people minimum.
 
 ### Cellar cleanliness
 
-A clean cellar is a safe cellar and a profitable one. Beer stored at the wrong temperature or in dirty conditions costs you money in waste and complaints. Keep the floor clean and dry, maintain your cooling system, and clean your beer lines every seven days without fail. For a deeper look at how cellar standards connect to your food hygiene rating, see our guide on [how to get and keep a 5-star food hygiene rating](/licensees-guide/food-hygiene-rating-five-star-guide).
+A clean cellar is a safe cellar and a profitable one. Beer stored at the wrong temperature or in dirty conditions costs you money in waste and complaints. Keep the floor clean and dry, maintain your cooling system, and clean your beer lines every seven days without fail. For a deeper look at how cellar standards connect to your food hygiene rating, see our guide on [how to get and keep a 5-star food hygiene rating](/guides/food-hygiene-rating-five-star-guide).
 
 ## Glass management
 
@@ -217,7 +217,7 @@ Noise complaints are one of the fastest routes to losing your licence conditions
 
 ### If you receive a complaint
 
-Do not ignore it. Respond promptly, show that you take it seriously, and document everything you do. For detailed guidance on handling noise complaints and protecting your licence, see our [pub licensing guide](/licensees-guide/pub-licensing-premises-personal-licence-guide).
+Do not ignore it. Respond promptly, show that you take it seriously, and document everything you do. For detailed guidance on handling noise complaints and protecting your licence, see our [pub licensing guide](/guides/pub-licensing-premises-personal-licence-guide).
 
 ## Outdoor areas and beer gardens
 
@@ -242,7 +242,7 @@ Keep a single folder (physical or digital) containing:
 - COSHH data sheets
 - Accident book (or access to it)
 - Employers liability insurance certificate
-- Food hygiene records (if applicable, see our [food hygiene rating guide](/licensees-guide/food-hygiene-rating-five-star-guide))
+- Food hygiene records (if applicable, see our [food hygiene rating guide](/guides/food-hygiene-rating-five-star-guide))
 - Training records for staff (first aid, food hygiene, fire safety, manual handling)
 - Gas safety certificates for cellar systems
 - Electrical installation certificate (EICR)
@@ -310,7 +310,7 @@ Build that culture by:
 - **Encouraging reporting.** Staff should feel comfortable flagging issues without fear of being seen as difficult. A near-miss reported today prevents an accident tomorrow.
 - **Reviewing incidents properly.** When something does go wrong, investigate it, fix the root cause, and share the learning. Do not just patch it and move on.
 
-For more on how compliance fits into the bigger picture of running a well-managed pub, our [pub insurance guide](/licensees-guide/pub-insurance-cover-guide) covers what your insurer expects you to have in place, and where gaps in your safety systems could leave you exposed.
+For more on how compliance fits into the bigger picture of running a well-managed pub, our [pub insurance guide](/guides/pub-insurance-cover-guide) covers what your insurer expects you to have in place, and where gaps in your safety systems could leave you exposed.
 
 ## The bottom line
 

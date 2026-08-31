@@ -65,7 +65,7 @@ Five jobs, all doable this week:
 4. Point the bio link at your booking page, not your homepage. Every extra tap costs you covers.
 5. Pin three posts to the top of the grid: your menu, your next event, your best roast photo. Those three slots are your shop window and they stay put.
 
-If your website is the thing letting you down at that final step, sort that first. It is worth reading [whether your pub actually needs a website](/licensees-guide/does-your-pub-need-a-website) before you spend money on either.
+If your website is the thing letting you down at that final step, sort that first. It is worth reading [whether your pub actually needs a website](/guides/does-your-pub-need-a-website) before you spend money on either.
 
 ## Step 1: Set a visual standard
 
@@ -94,7 +94,7 @@ Deciding what to post is what kills pub accounts. Take the decision away by rota
 
 Two rules. Photograph your best margin dishes, not your favourite dish. And get verbal permission before you post a customer's face, then take it down without argument if they ask.
 
-If you want a bigger bank of ideas to draw on, our guide to [content marketing ideas for pubs](/licensees-guide/content-marketing-ideas-pubs) has formats you can slot straight into these three pillars.
+If you want a bigger bank of ideas to draw on, our guide to [content marketing ideas for pubs](/guides/content-marketing-ideas-pubs) has formats you can slot straight into these three pillars.
 
 ## Step 3: Post with a clear CTA
 
@@ -130,7 +130,7 @@ Instagram rewards local relevance, and so do your customers.
 - **Reply to every comment and DM within the hour where you can.** An unanswered DM asking about Sunday availability is a lost booking, and it happens more than licensees think.
 - **Tag your suppliers, your brewery and nearby businesses.** Collaborative posts show in both audiences, which is free reach.
 
-Instagram works best as part of a broader plan. For the full picture, read our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) and our companion guide on [Facebook marketing for local pubs](/licensees-guide/facebook-marketing-local-pubs). And make sure your Google Business Profile is doing its job too, because "pub near me" searches land there as well as on social.
+Instagram works best as part of a broader plan. For the full picture, read our [social media strategy for pubs](/guides/social-media-strategy-for-pubs) and our companion guide on [Facebook marketing for local pubs](/guides/facebook-marketing-local-pubs). And make sure your Google Business Profile is doing its job too, because "pub near me" searches land there as well as on social.
 
 ## Step 6: Let Reels do the discovery work
 

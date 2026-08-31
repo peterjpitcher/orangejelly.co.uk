@@ -66,7 +66,7 @@ Dig into EPOS history, or even scribbled diaries, to find the last quiz, themed 
 
 The ticket is not a revenue line, it is a commitment device. A fiver that costs you about £1.50 in goods buys you a confirmed head, a phone number and someone who now feels rude if they do not turn up.
 
-Promote it every second day for a fortnight and treat it like a product launch. Our [pub event template](/licensees-guide/pub-event-template-profit-nights) gives you the full six-week run sheet, including how to price the ticket so the night cannot lose money.
+Promote it every second day for a fortnight and treat it like a product launch. Our [pub event template](/guides/pub-event-template-profit-nights) gives you the full six-week run sheet, including how to price the ticket so the night cannot lose money.
 
 ## 2. Bundle plates and pints
 
@@ -74,7 +74,7 @@ Create one hero bundle for lunch and one for early evening, and price them on ca
 
 Here is the arithmetic people skip. Say a pie is £10.95, a pint £5.20 and a pudding £6.50, so £22.65 separately, or £18.88 net of VAT. If your goods cost across the three is £6.55, you keep £12.33. Sell the same three as an £18.95 bundle and the net is £15.79, so you keep £9.24.
 
-You have given away £3.09 a head. That is fine if the bundle brings in someone who would not have come, or turns a two-item visit into a three-item one. It is a bad deal if your existing customers simply buy the same food cheaper. Discount only the lowest-cost item in the bundle, and put a start and end date on it. Our guide to [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) covers how to build offers that protect margin rather than erode it.
+You have given away £3.09 a head. That is fine if the bundle brings in someone who would not have come, or turns a two-item visit into a three-item one. It is a bad deal if your existing customers simply buy the same food cheaper. Discount only the lowest-cost item in the bundle, and put a start and end date on it. Our guide to [menu engineering](/guides/menu-engineering-lift-average-spend) covers how to build offers that protect margin rather than erode it.
 
 ## 3. Sell premium pours on purpose
 
@@ -82,7 +82,7 @@ Brief the team on three profitable swaps: house gin to local craft, standard lag
 
 The maths is better than most licensees expect. A house gin measure costing you around 39p and selling at £3.60 leaves £2.61 of cash gross profit. A craft gin costing 79p and selling at £5.40 leaves £3.71. That is £1.10 more per serve. Twenty swaps a night, five nights a week, is £110 a week from a conversation, with no extra footfall.
 
-Our guide to [upselling secrets and training scripts](/licensees-guide/upselling-secrets-training-scripts) gives you ready-made phrases your team can use tonight.
+Our guide to [upselling secrets and training scripts](/guides/upselling-secrets-training-scripts) gives you ready-made phrases your team can use tonight.
 
 ## 4. Monetise dead space
 
@@ -122,7 +122,7 @@ Audit every keg, spirit and garnish. Remove the four slowest movers, standardise
 
 Then get on a weekly stocktake rather than a monthly one. Monthly numbers tell you a problem existed; weekly numbers tell you which shift it happened on.
 
-Two percentage points of margin on £4,000 of net weekly wet sales is £80 a week, or over £4,000 a year, without a single extra customer. Our guide to [rescuing your margins through the drinks mix](/licensees-guide/rescue-your-margins-drinks-mix) goes deeper on where those points hide.
+Two percentage points of margin on £4,000 of net weekly wet sales is £80 a week, or over £4,000 a year, without a single extra customer. Our guide to [rescuing your margins through the drinks mix](/guides/rescue-your-margins-drinks-mix) goes deeper on where those points hide.
 
 ## 9. Make every staff member a rainmaker
 

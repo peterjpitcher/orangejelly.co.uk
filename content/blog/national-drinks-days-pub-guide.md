@@ -61,7 +61,7 @@ schema:
 
 # National Vodka Day & Drinks Days: A Pub Calendar to Pick From
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 National Vodka Day is Sunday 4 October 2026, and it's the easiest place to start with national drinks days in your pub. There's a recognised day for nearly every spirit and style now, which sounds like a lot until you realise you don't have to run them all. You just pick the handful that suit your crowd and treat each one as a single featured serve, not a full event.
 
@@ -75,7 +75,7 @@ Here's the shortlist worth a pub's attention. Dates that move around are describ
 
 - **World Cocktail Day: Wednesday 13 May 2026.** The internationally recognised one (the UK also nods to National Cocktail Day on 24 March). A single signature cocktail on the board is plenty.
 - **World Gin Day: Saturday 13 June 2026** (the second Saturday of June). A Saturday, so it suits a proper gin board and a local distillery spotlight.
-- **National Beer Day: Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask, and a natural warm-up for going bigger with your own beer festival come [Cask Ale Week](/licensees-guide/cask-ale-week-pub-guide) in September.
+- **National Beer Day: Monday 15 June 2026.** Also called Beer Day Britain, fixed to 15 June and tied to Magna Carta, with a 7pm Cheers to Beer toast. A gift if you keep cask, and a natural warm-up for going bigger with your own beer festival come [Cask Ale Week](/guides/cask-ale-week-pub-guide) in September.
 - **National Prosecco Day: Thursday 13 August 2026.** High summer, fizz by the glass, garden weather. Easy yes for a treat.
 - **National Vodka Day: Sunday 4 October 2026.** Lands on a Sunday, so it rides alongside your roast trade. The pick of the bunch to start with.
 - **International Gin and Tonic Day: Monday 19 October 2026.** A quiet Monday, which is exactly why a G&T lift earns its keep.
@@ -124,7 +124,7 @@ International Champagne Day always falls on the fourth Friday of October, which 
 Fizz is the highest-margin pour on this list, and the one people most associate with "treating themselves," so it suits a weekend perfectly.
 
 - **Fizz by the glass.** The single most important move is making it available by the glass, not just the bottle. Most people won't commit to a full bottle on a whim, but a single glass to mark the occasion is an easy yes. That's where the volume is.
-- **A sparkling tasting.** A small, relaxed flight, two or three sparkling wines side by side with a card explaining each, gives people a reason to linger and order a second round. It doesn't need to be formal. A board, three small pours, a few lines of description. It's the same format as a full [wine and cheese evening](/licensees-guide/wine-tasting-evenings-for-pubs), so if it flies you've already got the next event half-built.
+- **A sparkling tasting.** A small, relaxed flight, two or three sparkling wines side by side with a card explaining each, gives people a reason to linger and order a second round. It doesn't need to be formal. A board, three small pours, a few lines of description. It's the same format as a full [wine and cheese evening](/guides/wine-tasting-evenings-for-pubs), so if it flies you've already got the next event half-built.
 - **A premium treat.** Offer one genuinely nice option for the people who do want to push the boat out. An anniversary, a birthday, a Friday that's earned a celebration. Having something premium on the board gives that moment somewhere to land.
 
 A weekend gives the occasion room to breathe and means you're not relying on one night going well. If Friday is quiet, Saturday catches it.
@@ -147,7 +147,7 @@ The point of these days isn't to discount, it's to trade people up. So price for
 - **Make the upgrade feel worth it.** The garnish, the glassware, the story on the board, that's what justifies the price. People pay for the serve, not just the liquid, so give them a reason the better version is worth the extra.
 - **Bundle where it makes sense.** A Bloody Mary with brunch, a glass of fizz with a Saturday celebration. Pairing the drink with food the customer was buying anyway lifts the whole bill without feeling like a hard sell.
 
-If your wider drinks list isn't laid out to make people trade up day-to-day, these days will expose it. It's worth getting the everyday menu right too, our [pub drinks menu design](/licensees-guide/pub-drinks-menu-design-guide) guide covers how to structure a list that nudges spend in the right direction without anyone noticing.
+If your wider drinks list isn't laid out to make people trade up day-to-day, these days will expose it. It's worth getting the everyday menu right too, our [pub drinks menu design](/guides/pub-drinks-menu-design-guide) guide covers how to structure a list that nudges spend in the right direction without anyone noticing.
 
 At The Anchor, the days that consistently lift spend per head are the ones we keep simplest, one serve, priced with confidence, put clearly in front of people. The fuss never pays for itself; the focus does.
 
@@ -159,7 +159,7 @@ Don't plan all three at once. Pick the one date that fits your week best, most l
 2. Price it for margin and write the chalkboard line.
 3. Brief your team and schedule the social post for that morning.
 
-Run that one, see how the spend lands, and add the next date the following time it comes round. These three are part of a much bigger autumn calendar, so if you want the full run of dates and event ideas through the season, work from [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas).
+Run that one, see how the spend lands, and add the next date the following time it comes round. These three are part of a much bigger autumn calendar, so if you want the full run of dates and event ideas through the season, work from [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas).
 
 If you'd like a hand building a drinks offer that genuinely lifts spend rather than just shifting it about, that's the kind of thing we help with at Orange Jelly, see [how we work with pubs](/ways-to-work).
 

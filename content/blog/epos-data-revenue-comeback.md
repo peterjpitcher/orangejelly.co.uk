@@ -65,7 +65,7 @@ Look for these five faults, all of which are common:
 - **Staff drinks, comps and wastage rung through as sales**, or worse, not rung through at all. Every one of those needs its own reason code.
 - **Cost prices never loaded.** Many EPOS systems can hold a cost price against each product. If yours does and the field is blank, your margin reports are guesses.
 
-Fix the buttons, tell the team what changed, and give it a fortnight before you draw conclusions. If your current system genuinely cannot produce item-level reporting, that is a real constraint and our [guide to choosing a pub EPOS system](/licensees-guide/pub-epos-system-guide) covers what to look for.
+Fix the buttons, tell the team what changed, and give it a fortnight before you draw conclusions. If your current system genuinely cannot produce item-level reporting, that is a real constraint and our [guide to choosing a pub EPOS system](/guides/pub-epos-system-guide) covers what to look for.
 
 ## The four core metrics that matter
 
@@ -111,7 +111,7 @@ Treat each week as a small test. Change one thing, hold everything else steady, 
 
 Examples worth trying:
 
-- [Move a high-margin item to the top of the menu](/licensees-guide/menu-engineering-lift-average-spend) and track units against the previous fortnight.
+- [Move a high-margin item to the top of the menu](/guides/menu-engineering-lift-average-spend) and track units against the previous fortnight.
 - Bundle a drink with a midweek dish at a price that protects your cash margin per cover.
 - Change one price point by a pound and watch units, not just revenue. If units hold, the pound is free.
 - Brief the team on one specific upsell for seven days, such as a premium mixer or a dessert, and count attachment rate.
@@ -134,7 +134,7 @@ Most pubs have a quiet goldmine sitting in one category. Very often it is premiu
 
 Find it by ranking every product by **total gross profit contribution**, which is cash margin per unit multiplied by units sold. That ranking looks nothing like the ranking by units, and it is the one that should drive your specials board, your staff briefings and your stock investment.
 
-Then train for it. A one-line script at the point of order shifts more product than a poster ever will, and our [upselling scripts guide](/licensees-guide/upselling-secrets-training-scripts) has wording your team can actually use without sounding pushy.
+Then train for it. A one-line script at the point of order shifts more product than a poster ever will, and our [upselling scripts guide](/guides/upselling-secrets-training-scripts) has wording your team can actually use without sounding pushy.
 
 ## Share insights with the team
 
@@ -149,8 +149,8 @@ Tell them the result the following week too, including when it did not work. Tea
 - **Tracking too many metrics.** Twenty numbers means nobody looks at any of them. Four is enough for the first quarter.
 - **Making changes without measuring.** Three changes in one week means you learn nothing about any of them.
 - **Calculating gross profit on inc-VAT prices.** It flatters every figure you produce.
-- **Ignoring [labour cost by shift](/licensees-guide/pub-wages-labour-costs-guide).** The monthly average hides the session that is losing money.
-- **Leaving slow movers on the menu for months.** Every dead line ties up stock, adds prep, and lengthens the menu for no return. Pair the product mix with tighter [stock and waste control](/licensees-guide/zero-waste-stock-management-pubs) and the effect on margin is immediate.
+- **Ignoring [labour cost by shift](/guides/pub-wages-labour-costs-guide).** The monthly average hides the session that is losing money.
+- **Leaving slow movers on the menu for months.** Every dead line ties up stock, adds prep, and lengthens the menu for no return. Pair the product mix with tighter [stock and waste control](/guides/zero-waste-stock-management-pubs) and the effect on margin is immediate.
 - **Reacting to one day.** One wet Wednesday is weather, not a trend. Compare like weeks.
 
 ## Quick checklist

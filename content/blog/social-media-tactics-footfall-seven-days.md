@@ -51,7 +51,7 @@ A single pretty post rarely changes trade. A short, tight sprint can. The goal i
 
 Most licensees post because they feel they ought to. There is no target, no deadline and no way of telling whether it worked. Trade stays flat and social media gets the blame, when the real problem is that nobody was ever asked to do anything.
 
-This seven-day plan gives you a repeatable burst that turns social posts into bookings, and it sits neatly on top of your [everyday social media strategy](/licensees-guide/social-media-strategy-for-pubs). One offer, one week, one number you are trying to hit.
+This seven-day plan gives you a repeatable burst that turns social posts into bookings, and it sits neatly on top of your [everyday social media strategy](/guides/social-media-strategy-for-pubs). One offer, one week, one number you are trying to hit.
 
 ## Pick the sprint target before you pick the posts
 
@@ -69,7 +69,7 @@ Block one hour. Do not spread this over the week, because that is how sprints di
 
 **Pick one event or offer and write it as one sentence.** "Thursday steak night, two 8oz sirloins and a bottle of house red for £45, tables from 6pm." That sentence does not change for seven days. Not the wording, not the price, not the times.
 
-**Set the booking link and the cap.** If you take online bookings, use a link that lands on that specific date rather than your homepage. If you do not, use WhatsApp or Messenger with a pre-written reply your team can send in one tap. If your booking journey takes more than three taps on a phone, fix that before you spend a penny on ads. Plenty of pubs lose bookings at the link rather than at the post, which is worth reading up on if [nobody seems to book tables any more](/licensees-guide/nobody-books-tables-anymore).
+**Set the booking link and the cap.** If you take online bookings, use a link that lands on that specific date rather than your homepage. If you do not, use WhatsApp or Messenger with a pre-written reply your team can send in one tap. If your booking journey takes more than three taps on a phone, fix that before you spend a penny on ads. Plenty of pubs lose bookings at the link rather than at the post, which is worth reading up on if [nobody seems to book tables any more](/guides/nobody-books-tables-anymore).
 
 **Capture ten photos and five short clips.** Shoot vertical, 9:16, on your phone, during a real service if you can, because empty rooms photograph badly. Wipe the table first, shoot the plate you actually serve rather than a styled version, and use a window seat at around 5pm for natural light. Get one clip of a plate landing on the pass, one of the room with people in it, one of a member of staff talking straight to camera about the offer, one of a drink being poured, and one wide shot of the frontage or garden.
 
@@ -91,7 +91,7 @@ Film your chef explaining why the steak is cut the way it is. Film a bar member 
 
 Keep the call to action identical. Same sentence, same link. It will feel repetitive to you because you have read it forty times. Your followers have seen it perhaps twice.
 
-Use Stories on both days for the smaller stuff: the delivery arriving, the specials board being written, a countdown sticker. Stories carry urgency in a way that feed posts do not. Our [Instagram marketing guide for pubs](/licensees-guide/instagram-marketing-for-pubs) covers the day-to-day formats in more detail.
+Use Stories on both days for the smaller stuff: the delivery arriving, the specials board being written, a countdown sticker. Stories carry urgency in a way that feed posts do not. Our [Instagram marketing guide for pubs](/guides/instagram-marketing-for-pubs) covers the day-to-day formats in more detail.
 
 ## Day 5: Paid push
 
@@ -107,11 +107,11 @@ Practical settings for a local pub:
 | Age range | Match who actually comes | Steak night skews older than a live music night. Do not target 18 to 65 by default. |
 | Objective | Traffic or engagement | Pick traffic if the booking link is the goal, engagement if you want messages. |
 
-Even £20 across two days can move bookings when the offer is clear and the radius is tight. If Meta advertising is new to you, work through our guide to [targeted local Facebook ads](/licensees-guide/facebook-marketing-local-pubs) first. The two most expensive mistakes are a radius that is too wide and a landing page that is not the booking page.
+Even £20 across two days can move bookings when the offer is clear and the radius is tight. If Meta advertising is new to you, work through our guide to [targeted local Facebook ads](/guides/facebook-marketing-local-pubs) first. The two most expensive mistakes are a radius that is too wide and a landing page that is not the booking page.
 
 ## Day 6: Partner or swap
 
-Reach you do not pay for is the best reach there is. Ask a [local brand you already work with](/licensees-guide/partnering-local-brands-share-marketing) to share your post: the butcher supplying the steak, the brewery, the coffee roaster, the florist next door. Offer to share something of theirs in return so it is a swap rather than a favour.
+Reach you do not pay for is the best reach there is. Ask a [local brand you already work with](/guides/partnering-local-brands-share-marketing) to share your post: the butcher supplying the steak, the brewery, the coffee roaster, the florist next door. Offer to share something of theirs in return so it is a swap rather than a favour.
 
 Also post into the two or three local community Facebook groups that matter in your area. Read the rules first: many ban straight promotion but allow event posts or business posts on a set day. Post as a human being, not as a page with a poster.
 

@@ -49,8 +49,8 @@ export function getStickyBarConfig(pathname: string): StickyBarConfig {
     };
   }
 
-  // Starts with /licensees-guide/ (but not just /licensees-guide)
-  if (pathname.startsWith('/licensees-guide/') && pathname !== '/licensees-guide/') {
+  // Starts with /guides/ (but not just /guides)
+  if (pathname.startsWith('/guides/') && pathname !== '/guides/') {
     return {
       message: 'Want help putting this into practice?',
       ctaText: 'See Our Packages',

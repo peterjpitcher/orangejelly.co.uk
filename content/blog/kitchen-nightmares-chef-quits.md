@@ -212,7 +212,7 @@ The "emergency menu" ready:
 - Anyone can cook
 - Ingredients always stocked
 
-Tested quarterly. Staff hate it. But it works, and the discipline of a short, deliverable menu carries straight into your everyday [profitable pub food menu planning](/licensees-guide/profitable-pub-food-menu-ideas).
+Tested quarterly. Staff hate it. But it works, and the discipline of a short, deliverable menu carries straight into your everyday [profitable pub food menu planning](/guides/profitable-pub-food-menu-ideas).
 
 Plan D: The Nuclear Option
 When everything fails:
@@ -234,7 +234,7 @@ Pay properly or pay the price:
 - Holiday pay
 - Sick pay (yes, really)
 
-Underpaying chefs costs more than overpaying, so build the real number into your [wages and labour costs](/licensees-guide/pub-wages-labour-costs-guide) plan.
+Underpaying chefs costs more than overpaying, so build the real number into your [wages and labour costs](/guides/pub-wages-labour-costs-guide) plan.
 
 The Respect System
 Chefs aren't just "the kitchen":
@@ -244,7 +244,7 @@ Chefs aren't just "the kitchen":
 - Regular praise publicly
 - Mistakes handled privately
 
-Respected chefs don't walk out, and most of the [ways to motivate staff without a pay rise](/licensees-guide/staff-motivation-hacks-no-pay-rise) work just as well in the kitchen.
+Respected chefs don't walk out, and most of the [ways to motivate staff without a pay rise](/guides/staff-motivation-hacks-no-pay-rise) work just as well in the kitchen.
 
 The Development Deal
 Growth opportunities:

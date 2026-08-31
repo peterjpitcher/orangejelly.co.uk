@@ -80,7 +80,7 @@ Now sort every dish into the classic matrix:
 - **Puzzles**: high profit, low popularity. Something is wrong with the name, the description or the position. Fix one of those before you give up on it.
 - **Dogs**: low profit, low popularity. Remove them. They tie up stock, add prep and slow the kitchen.
 
-For inspiration on what to put in the star slots, see our [profitable pub food menu ideas](/licensees-guide/profitable-pub-food-menu-ideas).
+For inspiration on what to put in the star slots, see our [profitable pub food menu ideas](/guides/profitable-pub-food-menu-ideas).
 
 ## Step 2: Put your stars where eyes land
 
@@ -129,7 +129,7 @@ Most pubs never suggest a drink on the food menu, which is odd given that drink 
 
 If a dish pairs with a specific drink, name it on the page: "Great with the house Malbec" or "Try it with our session IPA". A named suggestion converts far better than a general invitation to look at the drinks list, because it removes the decision.
 
-Do the same in reverse on the drinks side. Our [pub drinks menu design guide](/licensees-guide/pub-drinks-menu-design-guide) covers how to lay a drinks list out so the premium pours actually get chosen, and pairing works hardest when both menus point at each other.
+Do the same in reverse on the drinks side. Our [pub drinks menu design guide](/guides/pub-drinks-menu-design-guide) covers how to lay a drinks list out so the premium pours actually get chosen, and pairing works hardest when both menus point at each other.
 
 ## Step 6: Train the team on three scripts
 
@@ -143,7 +143,7 @@ Three lines, learned by everyone, used the same way:
 
 Note what these do. They are specific, they name one thing, and they give permission rather than pressure. "Would you like any sides?" invites a no. "Most people add the rosemary fries" gives the guest something to agree with. Track the attach rate on your own EPOS for a fortnight and you will see the difference in your own numbers rather than taking mine.
 
-Run it as a two minute pre-service drill for a fortnight until it stops feeling scripted. Our guide to [upselling scripts and training](/licensees-guide/upselling-secrets-training-scripts) has more lines you can drop in, including how to handle the ones that get a polite refusal.
+Run it as a two minute pre-service drill for a fortnight until it stops feeling scripted. Our guide to [upselling scripts and training](/guides/upselling-secrets-training-scripts) has more lines you can drop in, including how to handle the ones that get a polite refusal.
 
 ## Keep it legal while you tighten the menu
 
@@ -161,7 +161,7 @@ The number to track is spend per head, which is net food and drink sales divided
 
 Also pull the item-level sales mix report. If you moved a dish to the top of a section, you want to see that dish's share of section sales rise. If it did not move, the problem is the description, not the position.
 
-Menu engineering is one of [nine revenue levers struggling pubs should pull](/licensees-guide/revenue-levers-struggling-pubs). Combine it with the others and the effects compound.
+Menu engineering is one of [nine revenue levers struggling pubs should pull](/guides/revenue-levers-struggling-pubs). Combine it with the others and the effects compound.
 
 ## Common mistakes
 

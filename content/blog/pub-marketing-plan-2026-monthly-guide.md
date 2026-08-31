@@ -79,7 +79,7 @@ January is quiet. Accept it. But "quiet" does not mean "do nothing." It means lo
 
 **Dry January and health-focused options.** The alcohol-free beer and spirit market has exploded. If you do not have at least three decent alcohol-free options on your menu, you are losing January trade to pubs that do. Promote them without being preachy. "Great taste, no hangover" works better than lecturing people about health.
 
-**Quiz night relaunch.** If your quiz runs weekly, January is the month to refresh the format, promote it hard, and bring back teams who drifted away over Christmas. New year, new quizmaster energy. For ideas on formats that fill rooms, see our [quiz night guide](/licensees-guide/quiz-night-101).
+**Quiz night relaunch.** If your quiz runs weekly, January is the month to refresh the format, promote it hard, and bring back teams who drifted away over Christmas. New year, new quizmaster energy. For ideas on formats that fill rooms, see our [quiz night guide](/guides/quiz-night-101).
 
 **Burns Night (25 January).** A haggis supper evening is simple to execute and gives you a reason to promote. It does not need to be elaborate: a set menu, a reading of the Address to a Haggis, and a dram of whisky. Ticket it to guarantee covers and manage waste.
 
@@ -88,7 +88,7 @@ January is quiet. Accept it. But "quiet" does not mean "do nothing." It means lo
 ### What to plan ahead
 
 - Book entertainment for March and April.
-- Plan your Six Nations screening setup if rugby is relevant to your audience (see our [Six Nations pub guide](/licensees-guide/pub-six-nations-rugby-marketing)).
+- Plan your Six Nations screening setup if rugby is relevant to your audience (see our [Six Nations pub guide](/guides/pub-six-nations-rugby-marketing)).
 - Review last year's performance data and identify your weakest month. That is where you focus marketing effort this year.
 
 ### Social media focus
@@ -111,7 +111,7 @@ February is when trade starts to recover, driven by two reliable anchors.
 
 - Mother's Day is in March. Book your menu, brief the kitchen, and start promoting now.
 - Easter may fall in April. Check the dates and plan accordingly.
-- Review your [seasonal events calendar](/licensees-guide/seasonal-pub-events-calendar) for spring events.
+- Review your [seasonal events calendar](/guides/seasonal-pub-events-calendar) for spring events.
 
 ### Social media focus
 
@@ -155,7 +155,7 @@ April is a transition month. Easter brings families and bank holidays bring oppo
 
 - May bank holidays (4 May and 25 May) need events and staffing planned now.
 - Summer entertainment programme: book bands, DJs, and acts for June through August.
-- For ideas on summer events that work, read our [summer pub event ideas](/licensees-guide/summer-pub-event-ideas) guide.
+- For ideas on summer events that work, read our [summer pub event ideas](/guides/summer-pub-event-ideas) guide.
 
 ### Social media focus
 
@@ -176,7 +176,7 @@ May is two bank holidays and the start of the summer build-up.
 ### What to plan ahead
 
 - Father's Day is in June. Start planning now.
-- Review your [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas), yes, in May. The best pubs start thinking about December six months out.
+- Review your [Christmas pub promotion ideas](/guides/christmas-pub-promotion-ideas), yes, in May. The best pubs start thinking about December six months out.
 - Book any summer festivals, charity events, or community partnerships.
 
 ### Social media focus
@@ -269,7 +269,7 @@ September is the second most important planning month of the year after December
 ### What to plan ahead
 
 - Christmas bookings should be open by mid-September. Promote party packages, set menus, and group booking incentives.
-- For a detailed Christmas promotion timeline, see our [Christmas pub promotion ideas](/licensees-guide/christmas-pub-promotion-ideas) guide.
+- For a detailed Christmas promotion timeline, see our [Christmas pub promotion ideas](/guides/christmas-pub-promotion-ideas) guide.
 - November events: bonfire night, Remembrance Sunday.
 - New Year's Eve: start planning now.
 
@@ -372,7 +372,7 @@ Every event, every promotion, every interaction is an opportunity to capture a c
 
 You do not need to post every day. Three to four quality posts per week is enough for most pubs. The key is consistency: same day, same time, same quality. Showing up regularly with authentic content helped grow our Google Search visibility by 828%.
 
-For a detailed social media system, read our guide on [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs).
+For a detailed social media system, read our guide on [social media strategy for pubs](/guides/social-media-strategy-for-pubs).
 
 ### Track what works
 

@@ -106,7 +106,7 @@ These signals are what parents look for within the first 30 seconds. Get them ri
 
 ## Family Events That Actually Work
 
-Once you've got the basics right, events are what turn occasional family visitors into regulars. For a complete system on planning, promoting, and running any pub event, read our guide on [how to run successful pub events](/licensees-guide/how-to-run-successful-pub-events). But forget anything elaborate. The best family events are simple, repeatable and low-cost.
+Once you've got the basics right, events are what turn occasional family visitors into regulars. For a complete system on planning, promoting, and running any pub event, read our guide on [how to run successful pub events](/guides/how-to-run-successful-pub-events). But forget anything elaborate. The best family events are simple, repeatable and low-cost.
 
 ### Sunday Afternoon Quiz (3pm Start)
 
@@ -118,7 +118,7 @@ At The Anchor, getting events and bookings right grew our table bookings by 403%
 
 ### School Holiday Craft Sessions
 
-During half-terms and summer holidays, run a simple craft session on a weekday morning. 10:30am-12pm works well. Parents need something to do with the kids, and you get covers for lunch afterwards. Our [family craft hour guide](/licensees-guide/family-craft-hour-101) has a step-by-step plan for running your first session.
+During half-terms and summer holidays, run a simple craft session on a weekday morning. 10:30am-12pm works well. Parents need something to do with the kids, and you get covers for lunch afterwards. Our [family craft hour guide](/guides/family-craft-hour-101) has a step-by-step plan for running your first session.
 
 Keep it simple. Seasonal crafts work brilliantly: paper plate pumpkins in October, Christmas decorations in December, Easter bonnets in March. Budget £2-3 per child in materials. Charge nothing. The food and drink spend more than pays for it.
 

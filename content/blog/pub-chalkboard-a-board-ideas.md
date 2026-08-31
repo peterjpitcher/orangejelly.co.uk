@@ -61,7 +61,7 @@ At The Anchor in Stanwell Moor, we treat our boards as part of our [local market
 
 ## Why your A-board matters more than you think
 
-Most pub marketing happens online. Social media, Google listings, email campaigns. That is all important, and we have written about [low-budget pub marketing ideas](/licensees-guide/low-budget-pub-marketing-ideas) that work brilliantly. But your A-board does something digital cannot: it catches people at the exact moment they are physically near your front door.
+Most pub marketing happens online. Social media, Google listings, email campaigns. That is all important, and we have written about [low-budget pub marketing ideas](/guides/low-budget-pub-marketing-ideas) that work brilliantly. But your A-board does something digital cannot: it catches people at the exact moment they are physically near your front door.
 
 Think about it. Someone walking past your pub has already done the hardest part of any marketing funnel. They are there. They are within ten metres of your bar. All you need to do is give them a reason to turn the handle.
 
@@ -125,7 +125,7 @@ If you run regular events, your A-board is where you sell them.
 - "Music bingo Wednesday: no singing required"
 - "Steak night Thursday: 8oz rump, chips, drink, £14"
 
-Cross-link these with your [community outreach](/licensees-guide/community-outreach-reintroduce-pub) efforts and your board becomes part of a wider campaign.
+Cross-link these with your [community outreach](/guides/community-outreach-reintroduce-pub) efforts and your board becomes part of a wider campaign.
 
 ## How to design a chalkboard that gets noticed
 
@@ -232,7 +232,7 @@ Shoot at a slight angle with the pub frontage visible behind. Natural daylight w
 
 Your A-board photo works on Facebook, Instagram, and even WhatsApp broadcasts. Caption it with whatever the message says and add a call to action: "Swing by this evening" or "Tables free from 6."
 
-This ties directly into your broader [social media strategy](/licensees-guide/social-media-strategy-for-pubs). Your board gives you ready-made content every single day without having to think of something new to post.
+This ties directly into your broader [social media strategy](/guides/social-media-strategy-for-pubs). Your board gives you ready-made content every single day without having to think of something new to post.
 
 ### Encourage customer shares
 
@@ -281,7 +281,7 @@ A chalkboard is not going to transform your business overnight. But it is a comp
 
 - **Immediate:** More people read your board and walk in on impulse. Even converting one extra customer per day is meaningful over a month.
 - **Month one:** Your social media content pipeline gets easier because you have a new photo every day. Engagement grows as people start following your board updates.
-- **Month three to six:** Your pub develops a local reputation for its board. People mention it to friends. It becomes part of your identity. Combined with other [low-budget marketing tactics](/licensees-guide/low-budget-pub-marketing-ideas), it contributes to a noticeable uptick in midweek footfall.
+- **Month three to six:** Your pub develops a local reputation for its board. People mention it to friends. It becomes part of your identity. Combined with other [low-budget marketing tactics](/guides/low-budget-pub-marketing-ideas), it contributes to a noticeable uptick in midweek footfall.
 
 ## The bottom line
 

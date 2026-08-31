@@ -115,7 +115,7 @@ Before diving into solutions, understand why customers choose tables:
 
 - Midweek table packages
 
-**Key Success**: Noticeable lift in Tuesday-Thursday 5pm bookings. For more ideas on filling those midweek gaps, see our guide to [midweek pub offers that actually work](/licensees-guide/midweek-pub-offers-that-work).
+**Key Success**: Noticeable lift in Tuesday-Thursday 5pm bookings. For more ideas on filling those midweek gaps, see our guide to [midweek pub offers that actually work](/guides/midweek-pub-offers-that-work).
 
 ### 3. Create Instagram-Worthy Table Settings
 

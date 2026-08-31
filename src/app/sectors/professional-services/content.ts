@@ -2,7 +2,7 @@
  * `/sectors/professional-services`.
  *
  * The sector Peter named as the primary target, alongside trades. This is the
- * mirror of what `/licensees-guide` is for hospitality, with one enormous
+ * mirror of what `/guides` is for hospitality, with one enormous
  * difference that the page has to be honest about: there is no professional
  * services case study, because there is not yet a professional services client.
  *

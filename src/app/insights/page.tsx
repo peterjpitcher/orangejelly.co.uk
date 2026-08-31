@@ -72,7 +72,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
             </p>
             <p className="measure mt-4 text-[16px] leading-relaxed text-oj-ink-3">
               Running a pub or a restaurant? The hospitality library is over at{' '}
-              <Anchor href="/licensees-guide" className="font-semibold underline">
+              <Anchor href="/guides" className="font-semibold underline">
                 The Licensee&rsquo;s Guide
               </Anchor>
               , where there are {105} of these.
@@ -85,7 +85,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
             <EmptyState
               title="Nothing here yet."
               body="We're writing the first pieces. In the meantime the hospitality library has a hundred and five, and most of it isn't hospitality-shaped."
-              action={{ label: "Read The Licensee's Guide", href: '/licensees-guide' }}
+              action={{ label: "Read The Licensee's Guide", href: '/guides' }}
             />
           ) : (
             <>

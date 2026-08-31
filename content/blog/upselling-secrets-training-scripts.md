@@ -53,7 +53,7 @@ Upselling is not about pressure. It is about guiding somebody to a better versio
 
 Most pub upselling fails for one of two reasons. Either the team was told to "push the specials" without being told which specials actually make money, or they were handed a script that sounds like a call centre. Both feel awful to deliver and worse to receive.
 
-This is the training structure I use behind the bar at The Anchor, and it works hand in hand with the [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend). Short sessions, one focus at a time, and language your team would use with a friend.
+This is the training structure I use behind the bar at The Anchor, and it works hand in hand with the [menu engineering that lifts average spend](/guides/menu-engineering-lift-average-spend). Short sessions, one focus at a time, and language your team would use with a friend.
 
 ## Step 0: Decide what you actually want sold
 
@@ -61,7 +61,7 @@ Before any script, work out what is worth pushing. The answer is cash gross prof
 
 Here is a worked example, and the first move is always to take the VAT out, because the price on the pump includes it. Say a house lager sells at £5.20 and costs you £1.82. Divide £5.20 by 1.2 and the net price is £4.33, so your cash gross profit is £2.51 and your GP is 58%. A craft keg line sells at £6.60 and costs £2.71. That nets to £5.50, giving £2.79 of cash profit at a weaker 50.7% GP. The percentage falls, the cash rises, and every switched pint puts 28p more in your pocket. Run that sum for every line, rank them, and you will often find the "expensive" products are the ones you want in your team's mouth.
 
-Two practical notes when you build the list. Keep it to six lines a week at most, because nobody remembers twelve. And favour draught over packaged where you have the choice: qualifying draught products under 8.5% ABV served from containers of at least 20 litres attract a lower rate of alcohol duty than their packaged equivalents, which protects your margin on exactly the products you most want to move. If your drinks mix has drifted, fix that before you train anyone, using the same approach as [rescuing your margins through the drinks mix](/licensees-guide/rescue-your-margins-drinks-mix).
+Two practical notes when you build the list. Keep it to six lines a week at most, because nobody remembers twelve. And favour draught over packaged where you have the choice: qualifying draught products under 8.5% ABV served from containers of at least 20 litres attract a lower rate of alcohol duty than their packaged equivalents, which protects your margin on exactly the products you most want to move. If your drinks mix has drifted, fix that before you train anyone, using the same approach as [rescuing your margins through the drinks mix](/guides/rescue-your-margins-drinks-mix).
 
 ## Step 1: Start with questions
 
@@ -77,7 +77,7 @@ Timing is everything. The question has to come before the guest names a drink, n
 
 ## Step 2: Offer two curated options
 
-Give a clear choice of two. Three or more creates decision paralysis at a busy bar, and one alone feels like a hard sell. Two feels like help, which is exactly what it is, especially when your [drinks menu is designed to guide the eye](/licensees-guide/pub-drinks-menu-design-guide) towards the same lines.
+Give a clear choice of two. Three or more creates decision paralysis at a busy bar, and one alone feels like a hard sell. Two feels like help, which is exactly what it is, especially when your [drinks menu is designed to guide the eye](/guides/pub-drinks-menu-design-guide) towards the same lines.
 
 Always name the one you want sold second, because that is the one people remember. Keep the price gap small: under about £1.50 on a pint and under about £2 on a glass of wine. A gap wider than that turns a recommendation into an obvious upsell.
 
@@ -118,14 +118,14 @@ Pick one category a week: beer, wine, spirits, low and no alcohol, food add-ons,
 
 ## Step 6: Track and celebrate
 
-Pick one upsell focus each week and measure exactly one number against it. Your EPOS will give you all of these, and if it does not, that is a good reason to revisit [what your EPOS system should be doing for you](/licensees-guide/pub-epos-system-guide).
+Pick one upsell focus each week and measure exactly one number against it. Your EPOS will give you all of these, and if it does not, that is a good reason to revisit [what your EPOS system should be doing for you](/guides/pub-epos-system-guide).
 
 - Average spend per head: net sales divided by covers.
 - Items per transaction.
 - Percentage of spirit serves sold as doubles.
 - Share of total pints taken by the target line.
 
-Post the number on the staff noticeboard on a Monday and again on a Sunday. Celebrate wins publicly and by name. Recognition makes the habit stick, and it sits neatly with the other [ways to motivate staff without a pay rise](/licensees-guide/staff-motivation-hacks-no-pay-rise).
+Post the number on the staff noticeboard on a Monday and again on a Sunday. Celebrate wins publicly and by name. Recognition makes the habit stick, and it sits neatly with the other [ways to motivate staff without a pay rise](/guides/staff-motivation-hacks-no-pay-rise).
 
 If you run a cash incentive, fund it from the business and keep it entirely separate from tips. Since October 2024 the Employment (Allocation of Tips) Act 2023 has required qualifying tips and service charges to go to staff in full, with a written policy they can read, so the tip pot is not available to bankroll a sales competition.
 

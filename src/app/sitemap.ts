@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPages = getAllPosts()
     .filter((post) => !redirectedGuideSlugs.has(post.slug))
     .map((post) => ({
-      url: `${baseUrl}/licensees-guide/${post.slug}`,
+      url: `${baseUrl}/guides/${post.slug}`,
       lastModified: post.updatedDate || post.publishedDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const categoryPages = blogCategories.map((category) => ({
-    url: `${baseUrl}/licensees-guide/category/${category.slug}`,
+    url: `${baseUrl}/guides/category/${category.slug}`,
     lastModified: '2026-08-09',
     changeFrequency: 'weekly' as const,
     priority: 0.5,

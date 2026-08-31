@@ -58,7 +58,7 @@ export default function SeriesHubGrid({
     itemListElement: posts.map((post, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: `${baseUrl}/licensees-guide/${post.slug}`,
+      url: `${baseUrl}/guides/${post.slug}`,
       name: post.title,
     })),
   };

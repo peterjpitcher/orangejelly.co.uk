@@ -53,11 +53,11 @@ The test is simple. If a local described your pub to a friend in one sentence, w
 
 I run The Anchor in Stanwell Moor as a Greene King tenant, and that was the question I had to answer for myself before anything else we tried started working.
 
-If chain competition is your main concern, our guide on [competing with Wetherspoons](/licensees-guide/compete-with-wetherspoons) goes deeper on that specific challenge. What follows is the wider version: five themes, three concrete ideas inside each, and a way to choose between them.
+If chain competition is your main concern, our guide on [competing with Wetherspoons](/guides/compete-with-wetherspoons) goes deeper on that specific challenge. What follows is the wider version: five themes, three concrete ideas inside each, and a way to choose between them.
 
 ## Theme 1: Experience and atmosphere
 
-**1. Own one night of the week completely.** Not a rotating schedule of things. One night, same time, same host, fifty-two weeks a year. Give it a name that is yours, not "Quiz Night". The repetition is what turns it into a habit, and habits are what fill a Tuesday. If you want a structure for building one that actually makes money, our [profit night event template](/licensees-guide/pub-event-template-profit-nights) sets out the numbers.
+**1. Own one night of the week completely.** Not a rotating schedule of things. One night, same time, same host, fifty-two weeks a year. Give it a name that is yours, not "Quiz Night". The repetition is what turns it into a habit, and habits are what fill a Tuesday. If you want a structure for building one that actually makes money, our [profit night event template](/guides/pub-event-template-profit-nights) sets out the numbers.
 
 **2. Build a signature ritual.** Something small that only happens in your pub. The fire lit at four o'clock from the first of October. A bowl of crisps split down the middle with the first round on a Sunday. A bell for the last table of the night. Rituals are cheap and people tell other people about them.
 
@@ -69,7 +69,7 @@ If chain competition is your main concern, our guide on [competing with Wethersp
 
 **5. Build a menu around one hero dish.** Be the place people drive past two other pubs for. Here is the arithmetic, as an example. Say your pie sells at £14.50 on the menu. Take the VAT off and you are holding £12.08. If the plate costs you £4.20 in food, your gross profit is £7.88, or about 65%, which sits inside the 65% to 70% band most pubs target on food. A hero dish is only a hero if the margin survives the fame.
 
-**6. Make something that is genuinely yours.** A house beer badged with the pub name through a local micro-brewery, your own bloody mary mix, a pickle you make on site. [Premium positioning](/licensees-guide/premium-pub-positioning) can justify higher prices when paired with genuine quality, and something you make yourself cannot be price-checked against anywhere else.
+**6. Make something that is genuinely yours.** A house beer badged with the pub name through a local micro-brewery, your own bloody mary mix, a pickle you make on site. [Premium positioning](/guides/premium-pub-positioning) can justify higher prices when paired with genuine quality, and something you make yourself cannot be price-checked against anywhere else.
 
 ## Theme 3: Community integration
 
@@ -83,7 +83,7 @@ If chain competition is your main concern, our guide on [competing with Wethersp
 
 **10. Run a regulars book.** A cheap notebook behind the bar. Name, usual drink, one personal detail. New staff read it on their first shift. Being greeted by name after three visits is one of the most powerful things you can do for retention, and it costs the price of a pad.
 
-**11. Do dog-friendly or family-friendly properly, not grudgingly.** Dogs means water bowls at the door, a treat jar on the bar, a towel for wet paws, and a dog of the month photo board. Families means clean high chairs, a real children's menu rather than reheated nuggets, baby change in both toilets, and staff who do not sigh at a pram. Tolerating a group is not the same as being their destination, and our guide on [attracting families to your pub](/licensees-guide/how-to-attract-families-to-your-pub) goes through that in detail.
+**11. Do dog-friendly or family-friendly properly, not grudgingly.** Dogs means water bowls at the door, a treat jar on the bar, a towel for wet paws, and a dog of the month photo board. Families means clean high chairs, a real children's menu rather than reheated nuggets, baby change in both toilets, and staff who do not sigh at a pram. Tolerating a group is not the same as being their destination, and our guide on [attracting families to your pub](/guides/how-to-attract-families-to-your-pub) goes through that in detail.
 
 **12. Make accessibility a stated speciality.** A ramp, a clear step-free route to a table, large-print menus, allergen information the team knows without checking, and a quiet hour with the music off. Say it out loud on your website. Very few pubs do, which is exactly why it works as a differentiator.
 

@@ -212,7 +212,7 @@ export function generateBlogBreadcrumbs(
 ): BreadcrumbItem[] {
   const breadcrumbs: BreadcrumbItem[] = [
     { label: 'Home', href: '/' },
-    { label: "The Licensee's Guide", href: '/licensees-guide' },
+    { label: "The Licensee's Guide", href: '/guides' },
   ];
 
   if (type === 'category' && category) {
@@ -223,7 +223,7 @@ export function generateBlogBreadcrumbs(
     if (category) {
       breadcrumbs.push({
         label: category.name,
-        href: `/licensees-guide/category/${category.slug}`,
+        href: `/guides/category/${category.slug}`,
       });
     }
     if (postTitle) {

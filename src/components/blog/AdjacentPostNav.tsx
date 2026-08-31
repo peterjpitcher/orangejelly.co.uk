@@ -63,7 +63,7 @@ function PostCard({ label, post, align, highlight = false }: PostCardProps) {
       </Heading>
       <Text className="text-sm text-brand-base/70">{post.excerpt}</Text>
       <Button
-        href={`/licensees-guide/${post.slug}`}
+        href={`/guides/${post.slug}`}
         variant="ghost"
         className={clsx('mt-auto text-sm font-semibold text-orange-dark', alignmentClass)}
       >

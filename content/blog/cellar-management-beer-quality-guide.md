@@ -137,7 +137,7 @@ FIFO (first in, first out) is the golden rule of stock rotation. The oldest prod
 
 **Match your order to your sales.** The most common cause of stock going out of date is over-ordering. If you sell two casks of Best Bitter a week, do not order four because the delivery driver offered a deal. Dead stock is dead money.
 
-For a more detailed look at stock control discipline, read our guide on [zero-waste stock management for pubs](/licensees-guide/zero-waste-stock-management-pubs).
+For a more detailed look at stock control discipline, read our guide on [zero-waste stock management for pubs](/guides/zero-waste-stock-management-pubs).
 
 ## Cask versus keg: managing both properly
 
@@ -198,7 +198,7 @@ Review the log weekly as part of your stock take routine. Look for patterns.
 - Is fobbing waste high? Check gas pressures, line condition, and cellar temperature.
 - Is line cleaning waste creeping up? The person cleaning may not be following the correct procedure, or the lines need replacing.
 
-Your wastage data feeds directly into your drinks GP calculation. If you want to understand how your drinks range affects your overall margins, our guide on [rescuing your margins through drinks mix](/licensees-guide/rescue-your-margins-drinks-mix) is worth reading alongside this one.
+Your wastage data feeds directly into your drinks GP calculation. If you want to understand how your drinks range affects your overall margins, our guide on [rescuing your margins through drinks mix](/guides/rescue-your-margins-drinks-mix) is worth reading alongside this one.
 
 ## Cellar safety
 
@@ -216,7 +216,7 @@ A pub cellar is a workplace. It carries real risks, and you have a legal duty to
 
 **Chemical storage.** Line cleaning chemicals are caustic. Store them in a locked cupboard, away from food and drink products. Ensure COSHH data sheets are available in the cellar.
 
-For a broader look at health and safety obligations, see our [pub health check guide](/licensees-guide/pub-health-check-essential-fundamentals-licensee-success).
+For a broader look at health and safety obligations, see our [pub health check guide](/guides/pub-health-check-essential-fundamentals-licensee-success).
 
 ## The pub stock take: tying it all together
 
@@ -239,7 +239,7 @@ Once a month, go deeper:
 - Review your product range. Is every line earning its place? If a product is not selling, it is costing you in wastage, tied capital, and lost opportunity for something that would sell.
 - Compare your wet GP month on month. A downward trend needs investigating immediately.
 
-If you want to explore how [menu engineering](/licensees-guide/menu-engineering-lift-average-spend) principles apply to your drinks list, not just food, that guide walks through the layout and pricing psychology that lifts average spend.
+If you want to explore how [menu engineering](/guides/menu-engineering-lift-average-spend) principles apply to your drinks list, not just food, that guide walks through the layout and pricing psychology that lifts average spend.
 
 ## Weekly and monthly cellar routines
 

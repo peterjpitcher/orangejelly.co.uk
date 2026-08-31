@@ -93,7 +93,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
       </div>
 
       {/* Share buttons (floating on desktop) */}
-      <ShareButtons url={`/licensees-guide/${post.slug}`} title={post.title} variant="floating" />
+      <ShareButtons url={`/guides/${post.slug}`} title={post.title} variant="floating" />
 
       {/* Sticky CTA */}
       {/*
@@ -115,7 +115,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         <header className="mb-8">
           <div className="flex flex-wrap items-center gap-4 text-sm text-brand-base/75 mb-6">
             <Button
-              href={`/licensees-guide/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
+              href={`/guides/category/${typeof post.category === 'string' ? post.category : post.category.slug}`}
               variant="ghost"
               size="small"
               className="text-blue-support hover:text-brand-base font-medium text-sm p-0"
@@ -145,7 +145,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
           {/* Share buttons (inline on mobile) */}
           <div className="lg:hidden mb-6">
             <ShareButtons
-              url={`/licensees-guide/${post.slug}`}
+              url={`/guides/${post.slug}`}
               title={post.title}
               variant="inline"
             />
@@ -252,7 +252,7 @@ export default function BlogPost({ post, relatedPosts = [], adjacentPosts }: Blo
         </Card>
 
         <div className="mt-8">
-          <ShareRow url={`${getBaseUrl()}/licensees-guide/${post.slug}`} title={post.title} />
+          <ShareRow url={`${getBaseUrl()}/guides/${post.slug}`} title={post.title} />
         </div>
 
         {/* Tags */}

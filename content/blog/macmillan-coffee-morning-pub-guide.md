@@ -56,7 +56,7 @@ schema:
 
 # Coffee Morning Ideas for Pubs: Fundraising That Works
 
-*Part of the [Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
+*Part of the [Autumn Pub Playbook](/guides/autumn-pub-event-ideas), a September-to-November plan for filling your pub.*
 
 Most pubs treat the daytime as a write-off. The doors are open, the lights are on, a member of staff is leaning on the bar, and barely anyone comes in until lunch. That quiet stretch between opening and the first proper rush is where a surprising amount of money quietly leaks away every single week.
 
@@ -96,7 +96,7 @@ Have a clearly labelled jar on the bar, but don't rely on cash alone: fewer peop
 
 This is what turns a quiet coffee morning into a busy one. Invite a local group to make your pub their home for the morning: the WI, a baby-and-toddler group, a walking club, the local history society, a knit-and-natter. They get a warm room and a focus; you get a crowd that arrives together, stays a while, and brings people who've never set foot in your pub before. Pick a group whose timing suits a daytime and whose members are exactly the kind of new faces you'd love to see again.
 
-For more on the mechanics that apply to any event like this (hosting it properly, running a clean run-sheet, promoting it early), our guide to [running successful pub events](/licensees-guide/how-to-run-successful-pub-events) is worth a read alongside this one.
+For more on the mechanics that apply to any event like this (hosting it properly, running a clean run-sheet, promoting it early), our guide to [running successful pub events](/guides/how-to-run-successful-pub-events) is worth a read alongside this one.
 
 ## Beyond the coffee morning: charity event ideas for pubs
 
@@ -143,7 +143,7 @@ The first coffee morning is the hard one. By the second or third, people know wh
 
 You don't have to wait a full year between them, either. The Macmillan morning in September is a brilliant launchpad, but the format works any month. A monthly or seasonal coffee morning (tied to a different local group each time, or to a seasonal moment) keeps that quiet daytime working for you all year round and gives a whole crowd of people a standing reason to choose your pub before lunch.
 
-It also slots neatly into a wider plan. A late-September coffee morning is the gentle opener; a few weeks later your [Halloween and Bonfire Night events](/licensees-guide/pub-halloween-bonfire-night-events) bring the louder, family-and-evening trade, and the two together carry a quiet autumn from daytime right through to the dark nights. If you want to build out the rest of your autumn around it, [the full Autumn Pub Playbook](/licensees-guide/autumn-pub-event-ideas) maps out a September-to-November calendar you can drop a coffee morning straight into.
+It also slots neatly into a wider plan. A late-September coffee morning is the gentle opener; a few weeks later your [Halloween and Bonfire Night events](/guides/pub-halloween-bonfire-night-events) bring the louder, family-and-evening trade, and the two together carry a quiet autumn from daytime right through to the dark nights. If you want to build out the rest of your autumn around it, [the full Autumn Pub Playbook](/guides/autumn-pub-event-ideas) maps out a September-to-November calendar you can drop a coffee morning straight into.
 
 ## A quick word on doing it properly
 

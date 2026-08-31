@@ -146,7 +146,7 @@ describe('internal links resolve', () => {
     // "Insights", which is now a different collection at a different URL.
     render(<HomePage />);
     const hrefs = screen.getAllByRole('link').map((l) => l.getAttribute('href'));
-    expect(hrefs).toContain('/licensees-guide');
+    expect(hrefs).toContain('/guides');
     expect(hrefs).toContain('/insights');
   });
 

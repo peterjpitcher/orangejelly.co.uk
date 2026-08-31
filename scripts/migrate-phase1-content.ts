@@ -87,7 +87,7 @@ async function migrateNavigation() {
     mainMenu: [
       { label: 'Home', href: '/', order: 1 },
       { label: 'Services', href: '/services', order: 2 },
-      { label: "Licensee's Guide", href: '/licensees-guide', order: 3 },
+      { label: "Licensee's Guide", href: '/guides', order: 3 },
       { label: 'Success Stories', href: '/results', order: 4 },
       { label: 'About', href: '/about', order: 5 },
       { label: 'Contact', href: '/contact', order: 6 },

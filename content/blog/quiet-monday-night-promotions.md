@@ -67,7 +67,7 @@ One hero dish at a fixed price, promoted by name. Pie night, curry night, burger
 
 Watch what a bundle does to your margin. Say you sell a pie and a pint at £13.50 including VAT. That is £11.25 net. If the pie costs you £3.10 in ingredients and the pint costs £1.90, your gross profit is £6.25, which is 55.6% of net sales. That is roughly nine points below a normal trading night.
 
-The bundle only wins on volume, and the volume needed is bigger than it looks. Twenty covers at £14 net spend on 65% GP gives you £182 of gross profit. On the bundle you make £6.25 a head, so you need thirty covers just to match that, and thirty-four to be genuinely ahead at £212.50. So the question is not "does the offer feel generous", it is "will it bring me half as many people again". Cost it out before you print it, and pick a hero dish with a genuinely low food cost so the compression is bearable. Our guide to [menu engineering that lifts average spend](/licensees-guide/menu-engineering-lift-average-spend) covers how to choose that dish properly.
+The bundle only wins on volume, and the volume needed is bigger than it looks. Twenty covers at £14 net spend on 65% GP gives you £182 of gross profit. On the bundle you make £6.25 a head, so you need thirty covers just to match that, and thirty-four to be genuinely ahead at £212.50. So the question is not "does the offer feel generous", it is "will it bring me half as many people again". Cost it out before you print it, and pick a hero dish with a genuinely low food cost so the compression is bearable. Our guide to [menu engineering that lifts average spend](/guides/menu-engineering-lift-average-spend) covers how to choose that dish properly.
 
 **2) Community club night**
 
@@ -79,7 +79,7 @@ The mistake is handing over your best snug to twelve people drinking tea. Give t
 
 **3) Low-key entertainment**
 
-Board games, cards, an acoustic session in the corner. Nothing that needs a stage or a PA. A [board game night runs on almost nothing](/licensees-guide/boardgame-night-101) once you have twenty decent games in a cupboard, and it holds people for three hours rather than one.
+Board games, cards, an acoustic session in the corner. Nothing that needs a stage or a PA. A [board game night runs on almost nothing](/guides/boardgame-night-101) once you have twenty decent games in a cupboard, and it holds people for three hours rather than one.
 
 **4) Early week treat**
 
@@ -98,7 +98,7 @@ Discounting is the reflex and it is usually the wrong one. A 20% cut on drinks h
 
 Three rules I would hold to. Fix the price rather than the percentage, so guests remember it. Include one item you have real margin on, usually a soft drink, a coffee or a house wine. And never let the offer run all week, because the whole point is that Monday is the only night it exists.
 
-If you are building a full week of weeknight trade rather than a single night, our guide to [midweek pub offers that work](/licensees-guide/midweek-pub-offers-that-work) covers how to sequence them so they do not cannibalise each other.
+If you are building a full week of weeknight trade rather than a single night, our guide to [midweek pub offers that work](/guides/midweek-pub-offers-that-work) covers how to sequence them so they do not cannibalise each other.
 
 ## The legal bits to check before you print the poster
 
@@ -162,4 +162,4 @@ Only if your audience already wants one and nobody nearby has claimed the night.
 **What if Monday still loses money after a fair run at it?**
 Then close on Mondays and put the hours into a night that works. That is a legitimate answer, and it is the one I would rather you reached deliberately than by drifting.
 
-If you want a plan that covers the whole quiet stretch rather than one night, start with our [quiet midweek solutions](/quiet-midweek-solutions), and use the [profit night event template](/licensees-guide/pub-event-template-profit-nights) to cost whatever you choose before you commit to it.
+If you want a plan that covers the whole quiet stretch rather than one night, start with our [quiet midweek solutions](/quiet-midweek-solutions), and use the [profit night event template](/guides/pub-event-template-profit-nights) to cost whatever you choose before you commit to it.

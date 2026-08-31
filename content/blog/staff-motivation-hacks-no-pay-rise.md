@@ -47,7 +47,7 @@ faqs:
 
 # Staff Motivation Hacks When You Can't Afford Pay Rises
 
-A wage freeze does not have to mean a motivation crash. People stay for respect, growth and clarity as much as cash, and keeping them costs far less than [hiring and training replacements](/licensees-guide/pub-recruitment-hiring-bar-staff).
+A wage freeze does not have to mean a motivation crash. People stay for respect, growth and clarity as much as cash, and keeping them costs far less than [hiring and training replacements](/guides/pub-recruitment-hiring-bar-staff).
 
 The National Living Wage rose to £12.71 an hour for workers aged 21 and over in April 2026. For a lot of us that increase swallowed the entire wage budget before we got anywhere near rewarding the people who actually earned it. So the question stops being "how do I pay more" and becomes "what else do people want, and can I give it to them without cash".
 
@@ -89,7 +89,7 @@ Publish a swap rule so people are not asking your permission at 11pm: swaps are 
 
 ## 3. Invest in development time
 
-Twenty minutes before service, once a week, is enough. Rotate the topics: line cleaning and why it changes the pint, three wine styles and what to say about them, coffee extraction, allergen questions, and your [upsell scripts](/licensees-guide/upselling-secrets-training-scripts).
+Twenty minutes before service, once a week, is enough. Rotate the topics: line cleaning and why it changes the pint, three wine styles and what to say about them, coffee extraction, allergen questions, and your [upsell scripts](/guides/upselling-secrets-training-scripts).
 
 You do not have to deliver these yourself. Your brewery business development manager, your wine supplier and your coffee roaster will almost all run a free session for your team, because it sells more of their product. Ask three of them this week and you have filled a quarter of the calendar for nothing.
 
@@ -109,7 +109,7 @@ Worked example, purely illustrative: a proper shift meal that costs you £2.20 i
 
 ## 5. Share the numbers
 
-When the team understands the targets, and how [wages fit into the weekly numbers](/licensees-guide/pub-wages-labour-costs-guide), they stop seeing an upsell as a trick and start seeing it as the thing that pays for their hours.
+When the team understands the targets, and how [wages fit into the weekly numbers](/guides/pub-wages-labour-costs-guide), they stop seeing an upsell as a trick and start seeing it as the thing that pays for their hours.
 
 Put a whiteboard in the cellar corridor and update it every Monday with four figures: last week's wet sales, last week's food sales, covers, and this week's target. Add one line on what you are trying differently.
 
@@ -132,7 +132,7 @@ Write down three named steps: bar team, shift leader, duty manager. Under each, 
 
 Even with the pay frozen, a real title with real responsibility and the training to go with it is worth having, and it tells people they are somewhere with a future.
 
-Then hand over genuine ownership. One person runs the socials. One person owns the cellar. One person owns [events from planning to follow-up](/licensees-guide/how-to-run-successful-pub-events), with a budget and the authority to spend it. Autonomy is the thing the chain down the road cannot copy, and when the money does come back you already know exactly who to pay first.
+Then hand over genuine ownership. One person runs the socials. One person owns the cellar. One person owns [events from planning to follow-up](/guides/how-to-run-successful-pub-events), with a budget and the authority to spend it. Autonomy is the thing the chain down the road cannot copy, and when the money does come back you already know exactly who to pay first.
 
 ## Have the stay conversation
 
@@ -140,7 +140,7 @@ Do not wait for the resignation. Once a quarter, fifteen minutes each, three que
 
 Write the answers down. Act on one of them within a fortnight, and tell the person you did it because they said so. That single loop does more for morale than any incentive scheme.
 
-The same applies in the kitchen, where the warning signs usually appear weeks before anyone hands in notice. If you have ever had a [chef walk out mid-service](/licensees-guide/kitchen-nightmares-chef-quits), you will recognise the pattern in hindsight.
+The same applies in the kitchen, where the warning signs usually appear weeks before anyone hands in notice. If you have ever had a [chef walk out mid-service](/guides/kitchen-nightmares-chef-quits), you will recognise the pattern in hindsight.
 
 ## Common mistakes
 

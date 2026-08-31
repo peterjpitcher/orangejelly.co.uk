@@ -97,7 +97,7 @@ export function buildLlmsTxt(): string {
       `- [How we work](${base}/how-we-work): the method in full.`,
       `- [Results](${base}/results): the case studies and how each was measured.`,
       `- [About](${base}/about): the company, and what it will not do.`,
-      `- [The Licensee's Guide](${base}/licensees-guide): the hospitality article library.`,
+      `- [The Licensee's Guide](${base}/guides): the hospitality article library.`,
       `- [Full detail](${base}/llms-full.txt): case studies and the article index.`,
     ]),
     section('Contact', [
@@ -136,7 +136,7 @@ export function buildLlmsFullTxt(): string {
 
   const posts = getAllPosts()
     .filter((post) => post?.title && post.slug)
-    .map((post) => `- [${post.title}](${base}/licensees-guide/${post.slug})`);
+    .map((post) => `- [${post.title}](${base}/guides/${post.slug})`);
 
   return [
     buildLlmsTxt(),

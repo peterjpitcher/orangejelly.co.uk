@@ -128,7 +128,7 @@ A pop-up with no audience is just an expensive Tuesday. Start promoting at least
 
 Lean on the partner's reach as hard as your own. Tag the trader, the local market, and nearby community accounts. Offer a couple of free bundles to local parent groups or micro-influencers who'll cover the night. Inside the pub, put a photo card with the date and a booking link on the bar and by the toilets from the start of the week.
 
-Your social media is doing more here than you might think. The point of pop-ups is reach, and consistent posting is what builds it. (Our [social media strategy for pubs](/licensees-guide/social-media-strategy-for-pubs) guide has the weekly system if posting feels like a chore.)
+Your social media is doing more here than you might think. The point of pop-ups is reach, and consistent posting is what builds it. (Our [social media strategy for pubs](/guides/social-media-strategy-for-pubs) guide has the weekly system if posting feels like a chore.)
 
 ## Licensing, allergens and safety
 
@@ -159,7 +159,7 @@ If the spend per head and the new-face count both move, you've found a keeper. R
 
 That's it. One format, one partner, one date in the diary that people learn to expect.
 
-If you want a hand picking the right format for your pub or sorting the promotion, that's the kind of thing we help with at Orange Jelly. Have a look at [how we work with pubs](/ways-to-work), or read the wider [guide to running successful pub events](/licensees-guide/how-to-run-successful-pub-events) first. Daytime crowd more your thing? Our [family craft hour guide](/licensees-guide/family-craft-hour-101) is a pop-up in its own right.
+If you want a hand picking the right format for your pub or sorting the promotion, that's the kind of thing we help with at Orange Jelly. Have a look at [how we work with pubs](/ways-to-work), or read the wider [guide to running successful pub events](/guides/how-to-run-successful-pub-events) first. Daytime crowd more your thing? Our [family craft hour guide](/guides/family-craft-hour-101) is a pop-up in its own right.
 
 ## FAQs
 

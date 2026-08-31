@@ -88,7 +88,7 @@ Useful content removes friction. Most people are not deciding whether to like yo
 
 List the questions you get asked at the bar and on the phone every week: parking, dogs, children, allergens, whether the match is on, what time the kitchen closes, whether you take bookings for six. Each one is a post, and each one should also be a permanent answer on your website and your Google Business Profile.
 
-That last point matters more than most licensees expect. Social posts reach people who already know you exist. Search reaches people deciding right now. At The Anchor, our own pub, we grew Google Search visibility by 828%, and the foundation was answering the practical questions properly and keeping the profile current. Our [Google Business Profile guide for pubs](/licensees-guide/google-business-profile-pub-guide) walks through the setup.
+That last point matters more than most licensees expect. Social posts reach people who already know you exist. Search reaches people deciding right now. At The Anchor, our own pub, we grew Google Search visibility by 828%, and the foundation was answering the practical questions properly and keeping the profile current. Our [Google Business Profile guide for pubs](/guides/google-business-profile-pub-guide) walks through the setup.
 
 Two habits worth building: update your hours the moment they change, including bank holidays, and write real alt text on every image so the post works for people using a screen reader.
 
@@ -116,9 +116,9 @@ Posting the same thing everywhere is fine. Expecting the same result from each i
 | Email or SMS | The people who already like you, with the highest conversion | Event invitations, booking windows, seasonal menus |
 | Your website | The place every link lands and every booking completes | Menus, opening hours, booking, the answers to common questions |
 
-Two channel-specific notes. Local Facebook groups are the cheapest reach a pub has, but read the group rules and speak to the admin before posting anything promotional; get that wrong and you lose the channel. The rules that make this work are in our guide to [Facebook marketing for local pubs](/licensees-guide/facebook-marketing-local-pubs). On Instagram, short vertical video gets shown to people who do not follow you, while a photo mostly reaches people who already do, so use video when you want new faces and photos when you want to talk to regulars. Our [Instagram marketing guide for pubs](/licensees-guide/instagram-marketing-for-pubs) covers the formats.
+Two channel-specific notes. Local Facebook groups are the cheapest reach a pub has, but read the group rules and speak to the admin before posting anything promotional; get that wrong and you lose the channel. The rules that make this work are in our guide to [Facebook marketing for local pubs](/guides/facebook-marketing-local-pubs). On Instagram, short vertical video gets shown to people who do not follow you, while a photo mostly reaches people who already do, so use video when you want new faces and photos when you want to talk to regulars. Our [Instagram marketing guide for pubs](/guides/instagram-marketing-for-pubs) covers the formats.
 
-An email or SMS list is the only audience you own outright. Collect it properly, with clear consent and an easy way to opt out, and treat it as your highest-value channel. Our guide to [email marketing for pub retention](/licensees-guide/email-marketing-pub-retention) covers the consent rules and the sequence.
+An email or SMS list is the only audience you own outright. Collect it properly, with clear consent and an easy way to opt out, and treat it as your highest-value channel. Our guide to [email marketing for pub retention](/guides/email-marketing-pub-retention) covers the consent rules and the sequence.
 
 ## Simple weekly rhythm
 

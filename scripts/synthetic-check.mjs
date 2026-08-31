@@ -31,7 +31,7 @@ async function get(path, options = {}) {
 }
 
 /* The pages a stranger actually lands on. */
-for (const path of ['/', '/start-here', '/growth-problems', '/results', '/licensees-guide']) {
+for (const path of ['/', '/start-here', '/growth-problems', '/results', '/guides']) {
   check(`${path} serves a page`, async () => {
     const { status, body } = await get(path);
     if (status !== 200) throw new Error(`expected 200, got ${status}`);
@@ -42,7 +42,7 @@ for (const path of ['/', '/start-here', '/growth-problems', '/results', '/licens
 
 check('the highest-earning article still serves', async () => {
   // 159 clicks a year, the single most valuable URL on the site.
-  const { status, body } = await get('/licensees-guide/summer-pub-event-ideas');
+  const { status, body } = await get('/guides/summer-pub-event-ideas');
   if (status !== 200) throw new Error(`expected 200, got ${status}`);
   if (!body.includes('application/ld+json')) throw new Error('structured data has gone');
   if (!body.includes('rel="canonical"')) throw new Error('canonical has gone');

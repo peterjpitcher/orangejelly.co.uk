@@ -62,7 +62,7 @@ Be honest about the problem you actually have. If Fridays are busy and Tuesdays 
 
 Do the arithmetic first. Say 40 regulars each add one extra visit a month at £22 average spend. That is £880 a month through the till, which is £733 of net sales once the VAT comes off, and at 65% gross profit roughly £477 of margin. That number is your budget. If a reward costs more than the margin on the visit it creates, the scheme is a hobby.
 
-This works hardest alongside the graft of [winning back locals after a slow patch](/licensees-guide/win-back-locals-after-slow-trade): the scheme keeps people coming once you have got them back through the door.
+This works hardest alongside the graft of [winning back locals after a slow patch](/guides/win-back-locals-after-slow-trade): the scheme keeps people coming once you have got them back through the door.
 
 ## Step 2: Keep the mechanics simple
 
@@ -77,7 +77,7 @@ Choose one mechanic and stick to it for at least eight weeks.
 |----------|----------|---------------|---------------|
 | Stamp card | Frequency from wet-led regulars | Very low | Cards left at home, staff forgetting to stamp |
 | Spend ladder | Lifting average spend and food attachment | Medium, needs till discipline | Rewarding big spenders you already had |
-| Event streak | Filling specific quiet nights | Low, tie it to your event list | Only works if the [events themselves are worth attending](/licensees-guide/how-to-run-successful-pub-events) |
+| Event streak | Filling specific quiet nights | Low, tie it to your event list | Only works if the [events themselves are worth attending](/guides/how-to-run-successful-pub-events) |
 | Booking tier | Groups, Sunday lunch, functions | Low if your booking system tags guests | Ignores walk-ins entirely |
 
 One mechanic only. Two schemes running at once is the fastest way to confuse both the team and the guest.
@@ -111,7 +111,7 @@ Whatever you choose, train the team to mention it every time.
 
 Keep the cards behind the bar in an index box filed by surname. Guests never lose them, staff find them in seconds, and flicking through the box gives you a physical count of active members.
 
-Capture the minimum you will genuinely use: first name, mobile or email, date joined. Every extra field lowers your sign-up rate and adds something else to look after. When you are ready to use those contacts, [email marketing built around retention](/licensees-guide/email-marketing-pub-retention) is where the scheme starts paying for itself.
+Capture the minimum you will genuinely use: first name, mobile or email, date joined. Every extra field lowers your sign-up rate and adds something else to look after. When you are ready to use those contacts, [email marketing built around retention](/guides/email-marketing-pub-retention) is where the scheme starts paying for itself.
 
 ## Step 5: Launch loudly and locally
 
@@ -152,7 +152,7 @@ Goal: drive Friday bookings without discounting the menu.
 
 The booking angle is the part I can speak to directly. Table bookings at The Anchor, the pub I run in Stanwell Moor, are up 403%, and a fair share of that came from making booking the normal thing regulars do rather than something reserved for special occasions. A reserved table with a name card on it is a surprisingly powerful reward, and it costs nothing but the discipline to hold it.
 
-There is a second benefit in the kitchen: known bookings mean accurate prep, less waste and a calmer service. If your covers are still unpredictable, pair this with the tactics for [filling empty tables](/licensees-guide/fill-empty-pub-tables) before adding a loyalty layer on top.
+There is a second benefit in the kitchen: known bookings mean accurate prep, less waste and a calmer service. If your covers are still unpredictable, pair this with the tactics for [filling empty tables](/guides/fill-empty-pub-tables) before adding a loyalty layer on top.
 
 ## Get the data side right
 
@@ -177,7 +177,7 @@ The visit should not end when people leave, and the follow-up is where loyalty i
 
 The window matters. A message that lands within 24 hours arrives while the guest still remembers the night; one that lands a fortnight later arrives as advertising.
 
-Seasonal pushes run on the same mechanic, and this is the closing move in the [summer pub marketing playbook](/licensees-guide/summer-pub-marketing) too.
+Seasonal pushes run on the same mechanic, and this is the closing move in the [summer pub marketing playbook](/guides/summer-pub-marketing) too.
 
 ## Common mistakes
 

@@ -24,8 +24,8 @@ const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
 };
 
 const RETIRED_CONTENT_PATHS = new Set([
-  '/licensees-guide/README',
-  '/licensees-guide/readme',
+  '/guides/README',
+  '/guides/readme',
   // cash-flow-crisis-breaking-cycle now 301-redirects to /fix-my-pub (see next.config.js)
   // instead of returning 410, so it is intentionally no longer listed here.
 ]);
@@ -99,7 +99,7 @@ function applySecurityHeaders(response: NextResponse, pathname: string) {
 export function middleware(request: NextRequest) {
   const canonicalHostname = 'www.orangejelly.co.uk';
   const url = request.nextUrl.clone();
-  const categoryPrefix = '/licensees-guide/category/';
+  const categoryPrefix = '/guides/category/';
 
   // Captured before the redirect branches below mutate url.pathname. The
   // Referrer-Policy decision must be made on the path the client actually

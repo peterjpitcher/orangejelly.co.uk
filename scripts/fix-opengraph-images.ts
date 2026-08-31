@@ -5,19 +5,19 @@ import path from 'path';
 const fixes = [
   // Licensees Guide main page
   {
-    file: 'src/app/licensees-guide/page.tsx',
-    find: "images: ['/images/og/licensees-guide.svg'],",
+    file: 'src/app/guides/page.tsx',
+    find: "images: ['/images/og/guides.svg'],",
     replace: "images: ['/logo.png'],",
   },
   // Licensees Guide article pages (fallback)
   {
-    file: 'src/app/licensees-guide/[slug]/page.tsx',
+    file: 'src/app/guides/[slug]/page.tsx',
     find: "images: [post.featuredImage || '/images/og/default.svg'],",
     replace: "images: [post.featuredImage || '/logo.png'],",
   },
   // Twitter card in article pages
   {
-    file: 'src/app/licensees-guide/[slug]/page.tsx',
+    file: 'src/app/guides/[slug]/page.tsx',
     find: "images: [post.featuredImage || '/images/og/default.svg'],",
     replace: "images: [post.featuredImage || '/logo.png'],",
     occurrence: 2,
@@ -30,23 +30,23 @@ const fixes = [
   },
   // Blog post card images in licensees guide
   {
-    file: 'src/app/licensees-guide/page.tsx',
+    file: 'src/app/guides/page.tsx',
     find: "image: typeof post.featuredImage === 'string' ? post.featuredImage : '/images/blog/default.svg'",
     replace: "image: typeof post.featuredImage === 'string' ? post.featuredImage : '/logo.png'",
   },
   {
-    file: 'src/app/licensees-guide/page.tsx',
+    file: 'src/app/guides/page.tsx',
     find: "src: typeof post.featuredImage === 'string' ? post.featuredImage : '/images/blog/default.svg',",
     replace: "src: typeof post.featuredImage === 'string' ? post.featuredImage : '/logo.png',",
   },
   // Category pages
   {
-    file: 'src/app/licensees-guide/category/[category]/page.tsx',
+    file: 'src/app/guides/category/[category]/page.tsx',
     find: "image: post.featuredImage || '/images/blog/default.svg'",
     replace: "image: post.featuredImage || '/logo.png'",
   },
   {
-    file: 'src/app/licensees-guide/category/[category]/page.tsx',
+    file: 'src/app/guides/category/[category]/page.tsx',
     find: "src: post.featuredImage || '/images/blog/default.svg',",
     replace: "src: post.featuredImage || '/logo.png',",
   },

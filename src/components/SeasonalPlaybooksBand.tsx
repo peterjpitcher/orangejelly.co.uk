@@ -52,7 +52,7 @@ export default function SeasonalPlaybooksBand({
             return (
               <Card key={hub.hubSlug} variant="bordered" asChild>
                 <Link
-                  href={`/licensees-guide/${hub.hubSlug}`}
+                  href={`/guides/${hub.hubSlug}`}
                   color="inherit"
                   className="group block h-full"
                 >

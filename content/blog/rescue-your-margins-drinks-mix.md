@@ -100,7 +100,7 @@ Do not do this across the board on the same day. Move three or four lines at a t
 
 Two rules keep the peace. Never move your headline pint and your headline house wine in the same week, because those are the two prices regulars know by heart. And avoid crossing a round-number barrier by a penny: £5.90 to £6.00 feels far bigger to a customer than the 10p it is.
 
-If you are tied and your supplier has just pushed prices up sharply, check where you stand. Under the Pubs Code, a significant increase in the price of tied products is one of the four events that gives a tied tenant of a large pub company the right to request a market rent only offer, and the request must be made in writing within 21 days. Even if you never intend to go free of tie, knowing the clock exists changes the conversation. Our guide to [improving your brewery tie deal](/licensees-guide/brewery-tie-improve-your-deal) covers how to use that leverage properly.
+If you are tied and your supplier has just pushed prices up sharply, check where you stand. Under the Pubs Code, a significant increase in the price of tied products is one of the four events that gives a tied tenant of a large pub company the right to request a market rent only offer, and the request must be made in writing within 21 days. Even if you never intend to go free of tie, knowing the clock exists changes the conversation. Our guide to [improving your brewery tie deal](/guides/brewery-tie-improve-your-deal) covers how to use that leverage properly.
 
 ## Step 5: Fix the pour before you blame the price
 
@@ -111,13 +111,13 @@ Repricing will not rescue a bar that is giving drink away by accident. Spend one
 - Watch how staff pour lager. An extra centimetre of head given away on every pint to avoid a complaint is real money over a weekend.
 - Reconcile your till stock report against your physical stocktake monthly, line by line, and investigate anything over 2% variance.
 
-Clean lines matter commercially, not just for compliance. Beer that tastes flat gets left, and the guest orders something else next time. Our [cellar management and beer quality guide](/licensees-guide/cellar-management-beer-quality-guide) sets out the routine.
+Clean lines matter commercially, not just for compliance. Beer that tastes flat gets left, and the guest orders something else next time. Our [cellar management and beer quality guide](/guides/cellar-management-beer-quality-guide) sets out the routine.
 
 Going from 5% draught waste to 2% on that example keg takes your cost per pint from £1.73 to about £1.69 and adds roughly a point of GP. Note the scale: pour control tidies the edges, pricing and mix do the heavy lifting.
 
 ## Step 6: Train the team on round crafting
 
-Script three swaps that lift margin, the kind covered in our guide to [upselling scripts for bar teams](/licensees-guide/upselling-secrets-training-scripts):
+Script three swaps that lift margin, the kind covered in our guide to [upselling scripts for bar teams](/guides/upselling-secrets-training-scripts):
 
 - House gin to premium gin, offered as a choice rather than a question: "House gin or the Cotswolds?"
 - Standard lager to local craft, sold on the story: "The pale ale is brewed six miles away, want to try a taste?"
@@ -133,7 +133,7 @@ One technical point worth knowing when you negotiate range. Qualifying draught p
 
 ## Step 8: Design menus that sell for you
 
-Put premium options where eyes land, following the [drinks menu design principles](/licensees-guide/pub-drinks-menu-design-guide) that make people trade up. Use short descriptors of six to ten words. People buy the story as much as the drink.
+Put premium options where eyes land, following the [drinks menu design principles](/guides/pub-drinks-menu-design-guide) that make people trade up. Use short descriptors of six to ten words. People buy the story as much as the drink.
 
 Practical rules: put the price straight after the description rather than in a right-hand column, because a price column invites people to shop the cheapest line. Drop the pound signs. Put your target mid-tier item at the top of each section, where the eye lands first. Keep each section to five or six choices, because longer lists push guests back to the safe thing they always order.
 
@@ -162,4 +162,4 @@ Build the same ladder into alcohol-free. Low and no carries no alcohol duty, and
 Replace, do not remove. Offer a clear alternative, put a taster in their hand, and explain why the new one is better. The complaints come when a line vanishes with no conversation and no substitute.
 
 **How often should I review the mix?**
-Monthly for fast-moving items and anything with a price change from your supplier, quarterly for the full list. Diarise it, because the review that happens when you remember it is the review that never happens. If you want the next layer, our guide to [doubling drinks profit without selling more](/licensees-guide/double-drinks-profit-without-selling-more) picks up where this one ends.
+Monthly for fast-moving items and anything with a price change from your supplier, quarterly for the full list. Diarise it, because the review that happens when you remember it is the review that never happens. If you want the next layer, our guide to [doubling drinks profit without selling more](/guides/double-drinks-profit-without-selling-more) picks up where this one ends.

@@ -224,7 +224,7 @@ describe('redirect destinations', () => {
     if (live.has(target)) return true;
     // Guide articles are content rather than routes, so the manifest does not list
     // them individually.
-    return target.startsWith('/licensees-guide/');
+    return target.startsWith('/guides/');
   }
 
   it('sends every active redirect to a live route', () => {
