@@ -916,6 +916,41 @@ select:focus-visible {
    * Scoped to a class, article body headings keep their sentence case and the rule
    * cannot escape the marketing templates that ask for it.
    */
+  /*
+   * The repositioning typeface, applied to a whole page rather than a component.
+   *
+   * The port brought over `.oj-display` and `.oj-prose`, both of which name the
+   * family, and stopped there. Everything else on the redesigned pages, which is
+   * most of them, kept inheriting `font-sans` from `<body>` and rendered in Open
+   * Sans, and every heading that was not `.oj-display` fell through to the base
+   * rule that gives h1 to h6 the Fraunces serif. The design system handback is
+   * explicit that the site builds on one family, Schibsted Grotesk, so both were
+   * simply misses: 1,714 elements across 20 routes were still on the old faces
+   * and nothing could see it, because the fault is in the cascade rather than in
+   * any file. `audit-typography.mjs` is what found it and is what holds it.
+   *
+   * Scoped to a class rather than fixed on `<body>` for the reason the whole
+   * `oj-*` namespace exists: /admin, /availability and the legacy pub pages are
+   * still on the old design and must not move until they are redesigned too.
+   * `MainGate` puts this on the redesigned routes and nothing else.
+   *
+   * The heading reset is `inherit`, not the family again. That way a heading takes
+   * the family of whatever it sits in, so `.oj-prose` and any future scoped
+   * typeface keep working, and the only thing this rule does is stop the legacy
+   * base rule reaching in.
+   */
+  .oj-root {
+    font-family:
+      var(--font-oj),
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  .oj-root :is(h1, h2, h3, h4, h5, h6) {
+    font-family: inherit;
+  }
+
   .oj-display {
     /*
      * The family is set here, not left to the caller. The base stylesheet gives
@@ -1082,7 +1117,14 @@ select:focus-visible {
     color: var(--oj-ink);
   }
 
+  /*
+   * `font-family` here is not decoration: the bundle's own prose.css sets it and
+   * the port dropped it, which is how every article heading on 105 guides ended up
+   * in the old serif. `.oj-root` now covers it as well, and this stays so that
+   * `.oj-prose` is still correct anywhere it is used on its own.
+   */
   .oj-prose h2 {
+    font-family: inherit;
     font-weight: 900;
     font-size: 29px;
     line-height: 1.1;

@@ -26,7 +26,20 @@ export default function MainGate({ children }: { children: React.ReactNode }): J
   const pathname = usePathname();
 
   if (isOjRoute(pathname)) {
-    return <>{children}</>;
+    /*
+     * `oj-root` is the typeface scope, and this is the only place it goes on.
+     *
+     * The redesigned pages render their own header, main and footer, so there was
+     * no single element around them to hang the new family on, and every one of
+     * them inherited Open Sans from `<body>` instead. The wrapper is a plain block
+     * that sets nothing but the font, so it does not disturb the sticky header or
+     * any layout beneath it.
+     *
+     * It goes here rather than on `<body>` because the layout is a server component
+     * with no pathname, and putting it there with an effect would repaint the whole
+     * site in the old face on first load. See `.oj-root` in globals.css.
+     */
+    return <div className="oj-root">{children}</div>;
   }
 
   /*

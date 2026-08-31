@@ -32,6 +32,7 @@
     "check:synthetic": "node scripts/synthetic-check.mjs",
     "audit:contrast": "node scripts/audit-contrast.mjs",
     "audit:images": "node scripts/audit-images.mjs",
+    "audit:typography": "node scripts/audit-typography.mjs",
     "audit:redirects": "node scripts/audit-redirects.mjs"
   },
   "lint-staged": {
