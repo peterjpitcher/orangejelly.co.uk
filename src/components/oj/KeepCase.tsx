@@ -17,17 +17,68 @@ import * as React from 'react';
  * emphasis from ordinary words, and a long list would quietly undo it.
  */
 const PRESERVED = [
+  // Acronyms and initialisms.
   'AI',
   'UK',
   'VAT',
   'EPOS',
   'SEO',
   'GDPR',
+  'PRS',
+  'PPL',
+
+  // Brands and organisations, ours and other people's.
   'Google',
+  'Facebook',
+  'Instagram',
   'The Anchor',
   'Orange Jelly',
   'Greene King',
+  'Wetherspoons',
   'BII',
+
+  /*
+   * Names of days, months and occasions.
+   *
+   * Added 31 August 2026, when the guides moved onto the oj design system and brought
+   * 105 article titles with them. About a dozen h1s came out reading "christmas pub
+   * event ideas" and "compete with wetherspoons", which reads as a typo rather than as
+   * a style. The rendered DOM text is unchanged, so there was never an SEO cost, but a
+   * lowercase proper noun is the kind of thing a reader notices and a client mentions.
+   *
+   * This is still not a capitalise-important-words rule. Every entry here is a proper
+   * noun that would be wrong in lower case in any English sentence, which is the line
+   * that keeps the list from quietly undoing the display style.
+   */
+  'Christmas',
+  'Easter',
+  'Halloween',
+  'Bonfire Night',
+  'New Year',
+  'Black Friday',
+  'Six Nations',
+  'Oktoberfest',
+  'Macmillan',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+  // "May" is deliberately absent. It is a modal verb far more often than a month, and
+  // "May" mid-sentence would be wrong more often than right.
+  'January',
+  'February',
+  'March',
+  'April',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
 
 // Longest first, so "The Anchor" is matched before a shorter token inside it, and

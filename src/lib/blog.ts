@@ -1,4 +1,5 @@
 import { type BreadcrumbItem } from '@/components/Breadcrumb';
+import type { CategoryId } from '@/components/oj/editorial';
 
 // Blog post type definitions
 export interface Author {
@@ -92,17 +93,26 @@ export const defaultAuthor: Author = {
   image: '/images/peter-pitcher.jpg',
 };
 
-// Blog categories: simplified 8-category taxonomy
+/*
+ * Blog categories: simplified 8-category taxonomy.
+ *
+ * The slugs are in the URLs and on printed QR codes, so they never change. The
+ * descriptions are copy and do change: five of them named pubs, breweries or
+ * licensing in a section the company now presents as small business writing, while
+ * the articles underneath them were always about cash flow, systems, events and
+ * suppliers. The description is what a search result shows, so it is the half that
+ * had to move.
+ */
 export const blogCategories: Category[] = [
   {
     slug: 'revenue-growth',
     name: 'Revenue & Growth',
-    description: 'Cash flow, pricing, sales tactics, and financial planning for pubs',
+    description: 'Cash flow, pricing, sales tactics and financial planning for small businesses',
   },
   {
     slug: 'operations',
     name: 'Operations',
-    description: 'Day-to-day pub management, systems, compliance, and licensing',
+    description: 'Day-to-day management, systems, compliance and licensing',
   },
   {
     slug: 'marketing',
@@ -112,7 +122,7 @@ export const blogCategories: Category[] = [
   {
     slug: 'events',
     name: 'Events',
-    description: 'Planning and running successful pub events, promotions, and entertainment',
+    description: 'Planning and running events, promotions and entertainment that fill quiet nights',
   },
   {
     slug: 'food-drink',
@@ -127,14 +137,43 @@ export const blogCategories: Category[] = [
   {
     slug: 'property',
     name: 'Property',
-    description: 'Location challenges, refurbishment, supplier and brewery relations',
+    description: 'Location, refurbishment, and relationships with landlords and suppliers',
   },
   {
     slug: 'turnaround',
     name: 'Turnaround',
-    description: 'Crisis management, empty pub recovery, and community reconnection',
+    description: 'Crisis management, winning trade back, and reconnecting with a local community',
   },
 ];
+
+/**
+ * The colour a category wears in the oj design system.
+ *
+ * The blog has eight categories and the design system has seven hue ids, and they
+ * do not map one to one. The eight names stay: they are what the URLs use, what the
+ * content is filed under, and what a reader recognises. This map exists only so a
+ * category looks the same on the index, the category listing and the article, and
+ * lives here rather than in three page files so it cannot drift between them.
+ *
+ * Pairs are by the shape of the problem, not by the wording: marketing sits with
+ * revenue because both are about creating demand, property sits with events because
+ * both are about what the visit feels like.
+ */
+export const CATEGORY_HUES: Record<string, CategoryId> = {
+  'revenue-growth': 'demand',
+  marketing: 'demand',
+  events: 'experience',
+  property: 'experience',
+  'food-drink': 'margin',
+  turnaround: 'margin',
+  operations: 'operations',
+  people: 'operations',
+};
+
+/** Falls back to the hospitality hue, which is the right answer for this library. */
+export function getCategoryHue(slug: string): CategoryId {
+  return CATEGORY_HUES[slug] ?? 'hospitality';
+}
 
 // Get category by slug
 export function getCategoryBySlug(slug: string): Category | undefined {
