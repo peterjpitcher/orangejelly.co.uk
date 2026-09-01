@@ -1,131 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <title>Orange Jelly Email Signature</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orange Jelly email signature</title>
+<style>
+  :root {
+    --ink: #23252e; --ink-2: #4a4c58; --ink-3: #666873;
+    --orange: #f76b0c; --orange-deep: #b34e08;
+    --cream: #f7f5f1; --paper: #fcfbf9; --line: #e5e2dc;
+  }
+  body {
+    margin: 0; padding: 40px 24px 80px;
+    font-family: 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--ink); background: var(--cream); line-height: 1.55;
+  }
+  .page { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 6px; }
+  h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 4px; }
+  .lede { color: var(--ink-2); margin: 0 0 34px; max-width: 56ch; }
+  .note { color: var(--ink-2); font-size: 14px; margin: 0 0 14px; max-width: 62ch; }
+  .block { background: #fff; border: 1.5px solid var(--ink); border-radius: 6px; padding: 26px; margin: 0 0 14px; }
+  section { margin: 0 0 44px; }
+  .head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 0 0 10px; }
+  button {
+    font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+    background: var(--orange-deep); color: #fff; border: 1.5px solid var(--ink);
+    border-radius: 5px; padding: 8px 16px; box-shadow: 2px 2px 0 var(--ink);
+  }
+  button:active { box-shadow: 0 0 0 var(--ink); transform: translate(2px, 2px); }
+  button.done { background: #1e7a3c; }
+  pre {
+    background: var(--ink); color: var(--cream); padding: 18px; border-radius: 6px;
+    overflow-x: auto; font-size: 12.5px; line-height: 1.6; margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap;
+  }
+  ol, ul { color: var(--ink-2); font-size: 14.5px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  code { background: var(--cream); border: 1px solid var(--line); border-radius: 3px; padding: 1px 5px; font-size: 13px; }
+  .rule { height: 2px; background: var(--orange); border: 0; margin: 0 0 34px; }
+  .flag { border-left: 3px solid var(--orange); background: #fff; padding: 14px 18px; font-size: 14px; color: var(--ink-2); border-radius: 0 5px 5px 0; }
+  .flag strong { color: var(--ink); }
+</style>
 </head>
-<body style="margin: 0; padding: 0;">
-  <!-- Email Signature -->
-  <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; color: #1e1e1e; font-size: 14px; line-height: 1.4;">
-    <tr>
-      <td style="padding-right: 20px; border-right: 2px solid #FF6B35; vertical-align: top;">
-        <!-- Logo -->
-        <img src="https://www.orangejelly.co.uk/logo.png" alt="Orange Jelly" width="80" height="80" style="display: block; border-radius: 8px;">
-      </td>
-      <td style="padding-left: 20px;">
-        <!-- Name and Title -->
-        <div style="margin-bottom: 8px;">
-          <strong style="font-size: 18px; color: #1e1e1e;">Peter Pitcher</strong><br>
-          <span style="color: #FF6B35; font-weight: 600;">Founder, Orange Jelly Limited</span><br>
-          <span style="font-size: 13px; color: #666; font-style: italic;">Helping pubs save up to 25 hours a week with AI</span>
-        </div>
-        
-        <!-- Contact Details -->
-        <div style="margin-bottom: 10px; font-size: 13px;">
-          <div style="margin-bottom: 2px;">
-            📱 <a href="https://wa.me/447990587315" style="color: #008B7D; text-decoration: none;">07990 587315</a> (WhatsApp preferred)
-          </div>
-          <div style="margin-bottom: 2px;">
-            ✉️ <a href="mailto:peter@orangejelly.co.uk" style="color: #008B7D; text-decoration: none;">peter@orangejelly.co.uk</a>
-          </div>
-          <div style="margin-bottom: 2px;">
-            🌐 <a href="https://www.orangejelly.co.uk" style="color: #008B7D; text-decoration: none;">orangejelly.co.uk</a>
-          </div>
-        </div>
-        
-        <!-- Tagline -->
-        <div style="margin-bottom: 10px;">
-          <table cellpadding="4" cellspacing="0" border="0" style="background-color: #FFF5F0; border-radius: 4px;">
-            <tr>
-              <td style="font-size: 12px; color: #FF6B35; font-weight: 600;">
-                🍺 licensee at The Anchor, Stanwell Moor
-              </td>
-            </tr>
-          </table>
-        </div>
-        
-        <!-- CTA Button -->
-        <div style="margin-bottom: 10px;">
-          <a href="https://wa.me/447990587315?text=Hi%20Peter,%20got%20time%20for%20a%20quick%20chat?" 
-             style="display: inline-block; background-color: #FF6B35; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 600;">
-            Let's Chat About Your Pub
-          </a>
-        </div>
-        
-        <!-- Footer -->
-        <div style="font-size: 11px; color: #999; padding-top: 8px; border-top: 1px solid #eee;">
-          <em>Proven at The Anchor • Honest pricing • No tech jargon</em>
-        </div>
-      </td>
-    </tr>
-  </table>
-  
-  <!-- Alternative Minimal Version -->
-  <br><br>
-  <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0;">
-  <p style="font-family: Arial, sans-serif; color: #666; font-size: 14px;">Alternative Minimal Version:</p>
-  
-  <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; color: #1e1e1e; font-size: 14px;">
-    <tr>
-      <td>
-        <strong style="color: #1e1e1e;">Peter Pitcher</strong> | <span style="color: #FF6B35;">Orange Jelly</span><br>
-        <span style="font-size: 13px;">
-          📱 <a href="https://wa.me/447990587315" style="color: #008B7D; text-decoration: none;">07990 587315</a> | 
-          🌐 <a href="https://www.orangejelly.co.uk" style="color: #008B7D; text-decoration: none;">orangejelly.co.uk</a><br>
-          <em style="color: #666;">Helping pubs save up to 25 hours a week with AI</em>
-        </span>
-      </td>
-    </tr>
-  </table>
-  
-  <!-- Mobile-Friendly Version -->
-  <br><br>
-  <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0;">
-  <p style="font-family: Arial, sans-serif; color: #666; font-size: 14px;">Mobile-Friendly Version:</p>
-  
-  <div style="font-family: Arial, sans-serif; color: #1e1e1e; font-size: 14px; line-height: 1.6;">
-    <div style="margin-bottom: 8px;">
-      <img src="https://www.orangejelly.co.uk/logo.png" alt="Orange Jelly" width="60" height="60" style="display: block; border-radius: 8px; margin-bottom: 10px;">
-      <strong style="font-size: 16px;">Peter Pitcher</strong><br>
-      <span style="color: #FF6B35; font-weight: 600;">Orange Jelly Limited</span>
+<body>
+<div class="page">
+
+  <h1>Email signature</h1>
+  <p class="lede">Built on the repositioned brand. Same palette, same typeface stack and the same
+  words as the site footer, so an email and the website read as one company.</p>
+  <hr class="rule">
+
+  <!-- ==================================================================
+       1. FULL SIGNATURE
+       For a first email to someone new.
+       ================================================================== -->
+  <section>
+    <div class="head">
+      <h2>1. Full signature</h2>
+      <button data-copy="sig-full">Copy signature</button>
     </div>
-    
-    <div style="margin-bottom: 8px; font-size: 13px;">
-      📱 <a href="https://wa.me/447990587315" style="color: #008B7D; text-decoration: none;">07990 587315</a><br>
-      🌐 <a href="https://www.orangejelly.co.uk" style="color: #008B7D; text-decoration: none;">orangejelly.co.uk</a>
+    <p class="note">For the first email to someone new. Use this as the "new message" signature.</p>
+    <div class="block">
+<!--COPY:sig-full:START-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;color:#23252e;">
+  <tr>
+    <td style="padding:0 0 13px 0;">
+      <a href="https://www.orangejelly.co.uk" style="text-decoration:none;border:0;"><img src="https://www.orangejelly.co.uk/brand/email-signature-logo.png" alt="Orange Jelly" width="180" height="39" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color:#f76b0c;font-size:0;line-height:0;height:2px;mso-line-height-rule:exactly;">&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="padding:14px 0 0 0;font-size:17px;line-height:1.25;font-weight:700;letter-spacing:-0.01em;color:#23252e;">Peter Pitcher</td>
+  </tr>
+  <tr>
+    <td style="padding:3px 0 0 0;font-size:14px;line-height:1.4;color:#4a4c58;">Founder, Orange Jelly Limited</td>
+  </tr>
+  <tr>
+    <td style="padding:11px 0 0 0;font-size:13.5px;line-height:1.5;color:#4a4c58;max-width:330px;">A strategic growth partner for ambitious small and mid&#8209;sized businesses.</td>
+  </tr>
+  <tr>
+    <td style="padding:13px 0 0 0;font-size:13.5px;line-height:1.65;color:#4a4c58;">
+      <a href="mailto:peter@orangejelly.co.uk" style="color:#b34e08;text-decoration:none;font-weight:600;">peter@orangejelly.co.uk</a><br>
+      <a href="tel:+447990587315" style="color:#b34e08;text-decoration:none;">07990 587315</a><br>
+      <a href="https://www.orangejelly.co.uk" style="color:#b34e08;text-decoration:none;font-weight:600;">orangejelly.co.uk</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:15px 0 0 0;font-size:0;line-height:0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" style="border-collapse:collapse;"><tr><td style="background-color:#e5e2dc;font-size:0;line-height:0;height:1px;mso-line-height-rule:exactly;">&nbsp;</td></tr></table></td>
+  </tr>
+  <tr>
+    <td style="padding:13px 0 0 0;font-size:13px;line-height:1.5;font-weight:600;color:#23252e;max-width:330px;">Your business is capable of more. Our job is finding what is stopping it.</td>
+  </tr>
+  <tr>
+    <td style="padding:13px 0 0 0;font-size:11px;line-height:1.5;color:#666873;max-width:400px;">Orange Jelly Limited, registered in England and Wales, company number 10537179. Registered office: College House, 17 King Edwards Road, Ruislip, Middlesex, HA4 7AE.</td>
+  </tr>
+</table>
+<!--COPY:sig-full:END-->
     </div>
-    
-    <div style="font-size: 12px; color: #666; font-style: italic;">
-      Helping pubs save up to 25 hours a week with AI<br>
-      🍺 The Anchor, Stanwell Moor
+  </section>
+
+  <!-- ==================================================================
+       2. REPLY SIGNATURE
+       ================================================================== -->
+  <section>
+    <div class="head">
+      <h2>2. Reply signature</h2>
+      <button data-copy="sig-reply">Copy signature</button>
     </div>
-  </div>
-  
-  <!-- Instructions -->
-  <br><br>
-  <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0;">
-  <div style="font-family: Arial, sans-serif; color: #666; font-size: 14px; line-height: 1.6; max-width: 600px;">
-    <h3 style="color: #1e1e1e;">How to Use This Signature:</h3>
-    <ol>
-      <li>Choose the version you prefer (full, minimal, or mobile-friendly)</li>
-      <li>Copy the HTML code for that version</li>
-      <li>In your email client:
-        <ul>
-          <li><strong>Gmail:</strong> Settings → See all settings → General → Signature → Create new → Paste HTML</li>
-          <li><strong>Outlook:</strong> Settings → View all settings → Mail → Compose and reply → Signature → New → Paste HTML</li>
-          <li><strong>Apple Mail:</strong> Mail → Preferences → Signatures → Add → Paste HTML</li>
-        </ul>
-      </li>
-      <li>Make sure the logo image is hosted at https://www.orangejelly.co.uk/logo.png</li>
-    </ol>
-    
-    <h3 style="color: #1e1e1e;">Brand Guidelines Used:</h3>
+    <p class="note">For replies and ongoing threads. No logo, so a long thread does not turn into a
+    column of repeated images. Set this as the "reply/forward" signature.</p>
+    <div class="block">
+<!--COPY:sig-reply:START-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;color:#23252e;">
+  <tr>
+    <td style="border-left:3px solid #f76b0c;padding:1px 0 1px 13px;">
+      <div style="font-size:15px;line-height:1.3;font-weight:700;letter-spacing:-0.01em;color:#23252e;">Peter Pitcher</div>
+      <div style="font-size:13.5px;line-height:1.45;color:#4a4c58;padding-top:2px;">Founder, <a href="https://www.orangejelly.co.uk" style="color:#b34e08;text-decoration:none;font-weight:600;">Orange Jelly</a></div>
+      <div style="font-size:13.5px;line-height:1.5;padding-top:5px;"><a href="mailto:peter@orangejelly.co.uk" style="color:#b34e08;text-decoration:none;">peter@orangejelly.co.uk</a> <span style="color:#666873;">&middot;</span> <a href="tel:+447990587315" style="color:#b34e08;text-decoration:none;">07990 587315</a></div>
+      <div style="font-size:10.5px;line-height:1.45;color:#666873;padding-top:8px;">Orange Jelly Limited, registered in England and Wales no. 10537179. Registered office: College House, 17 King Edwards Road, Ruislip, Middlesex, HA4 7AE.</div>
+    </td>
+  </tr>
+</table>
+<!--COPY:sig-reply:END-->
+    </div>
+  </section>
+
+  <!-- ==================================================================
+       3. PLAIN TEXT
+       ================================================================== -->
+  <section>
+    <div class="head">
+      <h2>3. Plain text</h2>
+      <button data-copy="sig-text">Copy text</button>
+    </div>
+    <p class="note">For anything that strips formatting: a plain&#8209;text client, a CRM, a calendar
+    invite, an automated message.</p>
+    <pre id="sig-text">Peter Pitcher
+Founder, Orange Jelly Limited
+A strategic growth partner for ambitious small and mid-sized businesses.
+
+peter@orangejelly.co.uk
+07990 587315
+orangejelly.co.uk
+
+Your business is capable of more. Our job is finding what is stopping it.
+
+Orange Jelly Limited, registered in England and Wales, company number
+10537179. Registered office: College House, 17 King Edwards Road,
+Ruislip, Middlesex, HA4 7AE.</pre>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ==================================================================
+       INSTALLING
+       ================================================================== -->
+  <section>
+    <h2>Installing it</h2>
+    <p class="note">Press the copy button, then paste. The button copies the rendered signature
+    rather than the code, which is what every mail client expects. Do not paste the HTML source:
+    Gmail and Outlook will show it as text.</p>
     <ul>
-      <li><strong>Colors:</strong> Orange (#FF6B35), Teal (#008B7D), Charcoal (#1e1e1e)</li>
-      <li><strong>Tone:</strong> Friendly, approachable, licensee-to-licensee</li>
-      <li><strong>Key Message:</strong> "Save up to 25 hours a week"</li>
-      <li><strong>Trust Elements:</strong> WhatsApp preferred, The Anchor reference, real hospitality results</li>
+      <li><strong>Gmail:</strong> Settings, See all settings, General, Signature. Create one called
+        "New" and one called "Reply", then set the defaults underneath so new mail uses the full
+        signature and replies use the short one.</li>
+      <li><strong>Outlook (web):</strong> Settings, Mail, Compose and reply, Email signature. Same
+        two, with the dropdowns below choosing which goes where.</li>
+      <li><strong>Outlook (desktop):</strong> File, Options, Mail, Signatures.</li>
+      <li><strong>Apple Mail:</strong> Settings, Signatures. Untick "Always match my default message
+        font", or it will strip the styling.</li>
     </ul>
-  </div>
+    <p class="flag"><strong>The logo has to be hosted, not attached.</strong> It loads from
+    <code>orangejelly.co.uk/brand/email-signature-logo.png</code>, so it only appears once that file
+    is live on the site. If you would rather not wait for a deploy, Gmail and Outlook will both host
+    it for you: delete the broken image in the signature editor, then use the editor's own insert
+    image control and pick <code>public/brand/email-signature-logo.png</code> off the Mac. Set it to
+    180 pixels wide either way.</p>
+  </section>
+
+  <section>
+    <h2>Decisions behind it</h2>
+    <ul>
+      <li><strong>Palette straight from the site.</strong> Ink <code>#23252e</code>, orange
+        <code>#f76b0c</code> for the rules, deep orange <code>#b34e08</code> for links. Deep orange
+        rather than brand orange for anything that is text: brand orange on white measures 2.97:1,
+        which fails WCAG AA, while deep orange measures 5.24:1 and passes.</li>
+      <li><strong>Logo rebuilt at email weight.</strong> The site file is 194KB. A signature rides on
+        every message you send, so it is served at 6.9KB from
+        <code>/brand/email-signature-logo.png</code>, at twice its display size so it stays sharp on
+        a retina screen.</li>
+      <li><strong>Flattened onto white, not transparent.</strong> Outlook composites transparent PNGs
+        against black.</li>
+      <li><strong>Tables and inline styles only.</strong> Outlook renders mail through Word, which
+        has no flexbox, no grid and no stylesheet.</li>
+      <li><strong>Schibsted Grotesk first, then Helvetica and Arial.</strong> Mail clients will not
+        load a webfont. Where the brand face is installed it is used, and elsewhere it falls back to
+        something of the same character.</li>
+      <li><strong>No emoji and no WhatsApp badge.</strong> Both belonged to the old hospitality
+        positioning. Emoji also render differently on every platform and read as informal in a first
+        approach to a business owner.</li>
+      <li><strong>The words are the site's own.</strong> The descriptor is the footer category line
+        and the closing line is the footer strapline, so the two surfaces cannot drift apart.</li>
+    </ul>
+    <p class="flag"><strong>The legal line is not decoration.</strong> A UK limited company has to
+    give its registered name, company number, place of registration and registered office address on
+    its business email. Those details are taken from the public register: Orange Jelly Limited,
+    10537179, incorporated 22 December 2016. Worth a glance in case the registered office has moved
+    since the last filing.</p>
+  </section>
+
+</div>
+
+<script>
+  document.querySelectorAll('button[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', async function () {
+      var id = btn.getAttribute('data-copy');
+      var label = btn.textContent;
+      var html = null, text = null;
+
+      if (id === 'sig-text') {
+        text = document.getElementById('sig-text').textContent;
+      } else {
+        var source = document.documentElement.innerHTML;
+        var start = source.indexOf('<!--COPY:' + id + ':START-->');
+        var end = source.indexOf('<!--COPY:' + id + ':END-->');
+        html = source.slice(start + ('<!--COPY:' + id + ':START-->').length, end).trim();
+        // The plain-text half of the clipboard is the tidy version, not the table's
+        // own innerText. A table read as text is mostly the whitespace between its
+        // cells, so a client that takes the text/plain flavour would paste a column
+        // of blank lines.
+        text = document.getElementById('sig-text').textContent;
+      }
+
+      try {
+        if (html) {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              'text/html': new Blob([html], { type: 'text/html' }),
+              'text/plain': new Blob([text], { type: 'text/plain' })
+            })
+          ]);
+        } else {
+          await navigator.clipboard.writeText(text);
+        }
+        btn.textContent = 'Copied';
+        btn.classList.add('done');
+      } catch (err) {
+        btn.textContent = 'Select it and copy';
+      }
+      setTimeout(function () {
+        btn.textContent = label;
+        btn.classList.remove('done');
+      }, 2200);
+    });
+  });
+</script>
 </body>
 </html>
