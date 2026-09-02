@@ -1,7 +1,7 @@
 ---
-title: "What is a fractional CMO, and when do you actually need one?"
+title: "What is a fractional CMO, and when is it the right hire?"
 slug: what-is-a-fractional-cmo
-excerpt: "A fractional CMO is a senior marketer on your leadership team part time. Here is what the job actually involves, what it costs you in practice, and the three questions that tell you whether it is the right shape of hire."
+excerpt: "A fractional CMO is a senior marketer on your leadership team part time. Here is what the job actually involves, what it costs you in practice, and the three questions that tell you whether it is the right kind of hire."
 publishedDate: 2026-08-28
 status: published
 collection: insights
@@ -31,7 +31,7 @@ faqs:
 
 If you have found this page you are probably somewhere specific: growth has flattened, the marketing that used to work has stopped working, and hiring a full-time marketing director feels like a bigger commitment than the problem currently justifies.
 
-That is exactly the gap the fractional model was built for. It is a real, sensible answer. It is also, quite often, the wrong shape of answer, and it is worth knowing which before you sign anything.
+That is exactly the gap the fractional model was built for. It is a real, sensible answer. It is also, quite often, the wrong kind of answer, and it is worth knowing which before you sign anything.
 
 ## What the job actually is
 

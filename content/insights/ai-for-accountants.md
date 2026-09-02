@@ -1,5 +1,5 @@
 ---
-title: "AI for accountants: where it actually pays, and where it is theatre"
+title: "AI for accountants: where it helps, and where it does not"
 slug: ai-for-accountants
 excerpt: "AI pays in an accountancy practice where volume, repetition and chasing meet. It does almost nothing for realisation, client mix or the fee conversation nobody is having. Here is how to tell which one you have before you buy anything."
 publishedDate: 2026-08-28
@@ -70,7 +70,7 @@ Take two practices with identical revenue and identical headcount. Both feel str
 
 In the first, the team is genuinely at capacity. Compliance work is arriving faster than it can be produced, year-end and the January crunch are managed by overtime, and WIP sits because nobody has time to bill it. Capacity is the constraint. AI helps, immediately and measurably, because faster production converts directly into either more work or fewer hours.
 
-In the second, the team is busy but the practice is not capacity-constrained at all. It is realisation-constrained. Work is done and under-billed. Scope creeps and nobody re-quotes. Fees on the long-standing clients have not been properly reviewed in years because the conversation is uncomfortable. There is a tail of small clients absorbing partner time at a fee that never made sense.
+In the second, the team is busy but the practice is not capacity-constrained at all. It is realisation-constrained: realisation being the gap between what the work was worth at charge-out rates and what was actually invoiced. Work is done and under-billed. Scope creeps and nobody re-quotes. Fees on the long-standing clients have not been properly reviewed in years because the conversation is uncomfortable. There is a tail of small clients absorbing partner time at a fee that never made sense.
 
 Make that second practice twenty per cent faster and you get twenty per cent more unbilled work. The bottom line barely moves, and in six months somebody concludes that AI does not work.
 
@@ -79,7 +79,7 @@ Make that second practice twenty per cent faster and you get twenty per cent mor
 ## Three questions before you buy anything
 
 1. **If everyone in the practice had ten hours back next week, what would happen to those hours?** If the honest answer is that they would absorb into existing work, efficiency is not your constraint. If the answer is a specific piece of advisory work you keep failing to start, you have a case.
-2. **What proportion of the work you do actually gets billed?** Realisation and lock-up tell you more about the health of a practice than utilisation does. If either is poor, fix the commercial process before you accelerate the production one.
+2. **What proportion of the work you do actually gets billed?** Realisation (how much of the work's value gets invoiced) and lock-up (how long work sits unbilled or unpaid) tell you more about the health of a practice than utilisation (how many hours get charged) does. If either is poor, fix the commercial process before you accelerate the production one.
 3. **Which clients do you wish you did not have, and why do you still have them?** Client mix is the slowest problem to fix and the one AI touches least. It is also usually where the money is.
 
 If those three come back clean and the constraint really is production volume, buy something. Start with the narrowest possible use, on one process, with one person accountable for it. Broad rollouts of general-purpose tools are how firms end up with licences nobody uses.

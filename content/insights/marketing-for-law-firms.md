@@ -1,5 +1,5 @@
 ---
-title: "Marketing for law firms: the problem is usually attribution, not marketing"
+title: "Marketing for law firms: find out where instructions come from"
 slug: marketing-for-law-firms
 excerpt: "Most law firms cannot say where their last hundred instructions came from. That is not a marketing problem, it is a measurement problem, and it is the reason nothing ever gets cut from the budget."
 publishedDate: 2026-08-28
@@ -76,7 +76,7 @@ Which produces a specific and expensive failure: **the firm can add marketing bu
 
 Think about what it takes to stop something. You have to show it is not working. In an unmeasured system, that means proving a negative, and nobody can. So the directory entry renews. The sponsorship renews, because a partner likes it and nobody can demonstrate that it does nothing. The agency retainer rolls on. The budget only ever ratchets upward, and every new idea is funded on top of everything that came before rather than instead of it.
 
-That is not a marketing problem. Marketing might well be fine. It is an attribution problem, and it has been quietly setting the budget for years.
+That is not a marketing problem. Marketing might well be fine. It is an attribution problem, meaning nobody can say which activity genuinely produced which instruction, and it has been quietly setting the budget for years.
 
 ## Where the credit goes wrong
 

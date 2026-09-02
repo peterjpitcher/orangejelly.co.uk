@@ -1,5 +1,5 @@
 ---
-title: "Why professional services marketing is so bad, and what to fix first"
+title: "Professional services marketing: why it gets neglected"
 slug: professional-services-marketing
 excerpt: "Professional services firms do not market badly because the people in them are careless. They market badly because of how the firm is built. Here is the structural reason, and why the first fix is measurement rather than more activity."
 publishedDate: 2026-08-28
