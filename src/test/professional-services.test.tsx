@@ -55,7 +55,7 @@ describe('/sectors/professional-services', () => {
   });
 
   it('makes the transferability argument rather than asserting it', () => {
-    expect(body()).toMatch(/Demand, conversion, margin and drag do not care what you sell/);
+    expect(body()).toMatch(/do not care what you sell/);
   });
 
   it('quotes no price and shows no unapproved number', () => {

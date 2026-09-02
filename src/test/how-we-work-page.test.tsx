@@ -38,8 +38,10 @@ describe('/how-we-work', () => {
   it('puts measurement inside OPTIMISE rather than in a fifth step', () => {
     const optimise = METHOD_DETAIL[3];
     expect(optimise.word).toBe('OPTIMISE.');
-    expect(optimise.line).toMatch(/baseline/i);
-    expect(optimise.outcome).toMatch(/impact report/i);
+    // "Baseline" became "where you started" in the plain-English pass; the
+    // substance, measuring against the numbers taken first, is what is asserted.
+    expect(optimise.line).toMatch(/where you started/i);
+    expect(optimise.outcome).toMatch(/before-and-after report/i);
   });
 
   it('gives every step a discipline, which is the part that binds', () => {
@@ -61,7 +63,7 @@ describe('/how-we-work', () => {
   it('refuses to score the pressure map', () => {
     // A total invites a league table and false precision, which is the argument the
     // Scorecard component makes too. The two must not disagree.
-    expect(body()).toMatch(/not a generic scorecard with a total at the bottom/);
+    expect(body()).toMatch(/not a scorecard with a total at the bottom/);
   });
 
   it('lists what is agreed before anything is built', () => {

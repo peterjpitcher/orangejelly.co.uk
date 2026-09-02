@@ -10,6 +10,7 @@ import {
   OjHeader,
   PressureCard,
 } from '@/components/oj';
+import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { CAPABILITIES, DECLINED } from './content';
@@ -32,7 +33,7 @@ import { CAPABILITIES, DECLINED } from './content';
  */
 const TITLE = 'What we build | Orange Jelly';
 const DESCRIPTION =
-  'Orange Jelly builds fixes, not services. What a fix is made of depends on what is blocking growth, so this starts with the problem, not a list.';
+  'Once we know what is stopping growth, we build the fix. What that is made of depends on the problem, so this page starts there, not with a list of services.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -65,13 +66,12 @@ export default function SolutionsPage(): JSX.Element {
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
                 what we build
               </p>
-              <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
-                the problem decides the tool.
+              <h1 className="oj-display mt-2.5 max-w-[16ch] text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
+                once we know the problem, we build the fix.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Orange Jelly builds fixes, not services. What a fix is made of depends entirely on
-                what's actually blocking growth, which is why this page starts with the problem and
-                not with a list of things we sell.
+                What you end up buying depends entirely on what's actually stopping growth. That is
+                why this page starts with the problem and not with a list of things we sell.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -85,16 +85,26 @@ export default function SolutionsPage(): JSX.Element {
           </section>
         </GroundProvider>
 
-        <Band heading="start with where it's stuck." tone="paper">
+        <Band
+          heading="start with where it's stuck."
+          intro="Six areas we check in every business. Most problems are a mix of two or three."
+          tone="paper"
+        >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {PRESSURE_POINTS.map((point) => (
               <PressureCard
                 key={point.title}
+                eyebrow={point.area}
                 title={point.title}
                 desc={point.desc}
                 href={point.href}
               />
             ))}
+          </div>
+          <div className="mt-8">
+            <Button variant="ghost" href="/growth-problems">
+              See all eight growth problems
+            </Button>
           </div>
         </Band>
 
@@ -132,9 +142,12 @@ export default function SolutionsPage(): JSX.Element {
         <Band heading="it always starts the same way.">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              Nobody buys a solution from this page. Every engagement starts with a conversation
-              about what's actually happening, and the first one is an hour and free. What gets
-              built, and what it costs, is agreed after that and in writing.
+              Nobody buys a solution from this page. Every piece of work starts with a conversation
+              about what's actually happening, and the first one is an hour and free.
+            </p>
+            <p>
+              On cost: the rate is {PRICING.hourly.display}, and that is the only number we
+              advertise. You get the hours for any piece of work in writing before it starts.
             </p>
           </div>
           <div className="mt-7">
@@ -146,7 +159,7 @@ export default function SolutionsPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            the tool is the last decision, not the first.
+            what to build is the last decision, not the first.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
             Tell us what's happening and we'll tell you what we think it needs.

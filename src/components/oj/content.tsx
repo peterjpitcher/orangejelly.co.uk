@@ -53,6 +53,15 @@ export function Card({
 export interface PressureCardProps {
   title: React.ReactNode;
   desc?: React.ReactNode;
+  /**
+   * The growth area this card belongs to, as a small label above the title.
+   *
+   * The title is the problem in the reader's own words ("Busy, but not making
+   * money"); the eyebrow is the category the rest of the site files it under
+   * ("Protect margin"). The plain line leads because that is what somebody
+   * recognises; the category stays so the vocabulary still joins up.
+   */
+  eyebrow?: React.ReactNode;
   href?: string;
   className?: string;
 }
@@ -60,6 +69,7 @@ export interface PressureCardProps {
 export function PressureCard({
   title,
   desc,
+  eyebrow,
   href = '#',
   className,
 }: PressureCardProps): JSX.Element {
@@ -73,6 +83,11 @@ export function PressureCard({
         className
       )}
     >
+      {eyebrow ? (
+        <span className="text-xs font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+          {eyebrow}
+        </span>
+      ) : null}
       <span className="flex items-center justify-between gap-2.5">
         <span className="font-oj text-[19px] font-black tracking-[-0.01em]">{title}</span>
         <span

@@ -55,8 +55,8 @@ describe('EnquiryForm, step one', () => {
   it('labels every field and marks the required ones for a screen reader', () => {
     render(<EnquiryForm />);
     expect(screen.getByLabelText(/Your name/)).toBeInTheDocument();
-    expect(screen.getByLabelText(/Work email/)).toBeInTheDocument();
-    expect(screen.getByLabelText(/^Company/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/^Email/)).toBeInTheDocument();
+    expect(screen.getByLabelText(/^Business or venue/)).toBeInTheDocument();
     expect(screen.getByLabelText(/What's going on/)).toBeInTheDocument();
     // Four required fields, each announcing it in words rather than by an asterisk.
     expect(screen.getAllByText('(required)')).toHaveLength(4);
@@ -65,8 +65,11 @@ describe('EnquiryForm, step one', () => {
   it('gives the browser the right autocomplete hints', () => {
     render(<EnquiryForm />);
     expect(screen.getByLabelText(/Your name/)).toHaveAttribute('autocomplete', 'name');
-    expect(screen.getByLabelText(/Work email/)).toHaveAttribute('autocomplete', 'email');
-    expect(screen.getByLabelText(/^Company/)).toHaveAttribute('autocomplete', 'organization');
+    expect(screen.getByLabelText(/^Email/)).toHaveAttribute('autocomplete', 'email');
+    expect(screen.getByLabelText(/^Business or venue/)).toHaveAttribute(
+      'autocomplete',
+      'organization'
+    );
   });
 
   it('names its fields the way the action reads them', () => {
@@ -88,7 +91,7 @@ describe('EnquiryForm, step one', () => {
     render(<EnquiryForm entryPoint="sticky" />);
 
     await user.type(screen.getByLabelText(/Your name/), 'Sam');
-    await user.type(screen.getByLabelText(/^Company/), 'Barton Reed');
+    await user.type(screen.getByLabelText(/^Business or venue/), 'Barton Reed');
 
     expect(track).toHaveBeenCalledTimes(1);
     expect(track).toHaveBeenCalledWith('enquiry_started', {
@@ -154,13 +157,13 @@ describe('EnquiryForm, when step one is rejected', () => {
     // Without JavaScript the page is re-rendered from scratch, and a form that
     // clears itself on a validation error is the fastest way to lose an enquiry.
     expect(screen.getByLabelText(/Your name/)).toHaveValue('Sam Whitfield');
-    expect(screen.getByLabelText(/^Company/)).toHaveValue('Barton Reed');
+    expect(screen.getByLabelText(/^Business or venue/)).toHaveValue('Barton Reed');
     expect(screen.getByLabelText(/What's going on/)).toHaveValue('help');
   });
 
   it('marks the failing fields invalid and leaves the others alone', () => {
     renderAt(REJECTED);
-    expect(screen.getByLabelText(/Work email/)).toHaveAttribute('aria-invalid', 'true');
+    expect(screen.getByLabelText(/^Email/)).toHaveAttribute('aria-invalid', 'true');
     expect(screen.getByLabelText(/Your name/)).not.toHaveAttribute('aria-invalid');
   });
 });

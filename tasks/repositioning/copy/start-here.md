@@ -172,3 +172,9 @@ read them. The [privacy notice](/privacy) has the detail.
 **Line:** Tell us what's happening, what you've tried, and what needs to change.
 
 **Action:** Let's talk
+
+## Amendments, 2 September 2026: plain-English pass
+
+The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+
+- Our first read on what is actually blocking growth, said plainly. A full answer takes longer, and we say which is which.

@@ -92,16 +92,16 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
                 items={[{ label: 'Home', href: '/' }, { label: 'Why revenue is falling' }]}
               />
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
-                a direction, not a verdict
+                falling revenue
               </p>
-              <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
-                find out why revenue is falling.
+              <h1 className="oj-display mt-2.5 max-w-[15ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-on-band">
+                revenue is falling. find out why before you spend.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
                 Takings are down week on week and the wage bill is not. What makes that hard to fix
-                is rarely the fall itself, it's that nobody can say what is causing it. The cause is
-                findable, and once you have it, everything after is easier to decide, quicker to do
-                and cheaper to get right.
+                is rarely the fall itself, it's that nobody can say what is causing it. The cause
+                can be found, and once you have it, everything after is easier to decide, quicker to
+                do and cheaper to get right.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -121,7 +121,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
               There's a point at which knowing the cause is not the thing you need next. If the
               business genuinely cannot pay its bills this month, the useful calls are to your
               accountant and to a licensed insolvency practitioner rather than to us. If you run a
-              pub, your BDM and the{' '}
+              pub, your pubco's business development manager and the{' '}
               <a
                 href="https://www.licensedtradecharity.org.uk"
                 target="_blank"
@@ -144,7 +144,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
 
         <Band
           heading="the six that account for most of it."
-          intro="It's usually one or two of these, rather than the economy and rather than everything at once. Each one is revenue the business is already capable of and is not currently getting, which is why it can come back. Read them as a shortlist to check your own numbers against, not as a diagnosis."
+          intro="It's usually one or two of these, rather than the economy and rather than everything at once. Each one is revenue the business is already capable of and is not currently getting, which is why it can come back. Read them as a shortlist to check your own numbers against, not as a verdict."
         >
           <dl className="measure-wide grid gap-x-10 gap-y-6 sm:grid-cols-2">
             {CAUSES.map((cause) => (
@@ -161,15 +161,16 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
         <Band heading="what we would actually do." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              A week or two of looking, properly, before anything is changed. The baseline first:
-              revenue by week, by line and by source, where enquiries come from and where they stop,
-              and what each one is worth. Then the one or two changes with the largest effect, built
-              and measured against that baseline.
+              Two to three weeks of looking, properly, before anything is changed. The numbers
+              first: takings by week, by product and by where they came from, where enquiries come
+              from and where they stop, and what each one is worth. Then the one or two changes with
+              the largest effect, built and measured against those numbers.
             </p>
             <p>
-              It's not fast in the way a promise is fast. It's fast in the way that stops you paying
-              for the wrong fix.
+              You leave that fortnight with a written answer to one question: what is causing the
+              fall, and what we would do about it first.
             </p>
+            <p>It's not instant. It does stop you paying for the wrong fix.</p>
           </div>
         </Band>
 
@@ -189,7 +190,7 @@ export default function WhyRevenueIsFallingPage(): JSX.Element {
         <Band
           heading="three times we did exactly that."
           tone="paper"
-          intro="All three are The Anchor, our own venue. That's the whole of our evidence, and we'd rather say so than dress it up."
+          intro="All three are The Anchor, our own venue. That's the whole of our evidence."
         >
           <div className="grid gap-5 sm:grid-cols-3">
             {CASE_STUDIES.map((study) => (

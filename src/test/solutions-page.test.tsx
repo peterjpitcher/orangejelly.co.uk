@@ -16,7 +16,7 @@ describe('/solutions', () => {
   it('leads with the problem, not with the capability list', () => {
     render(<SolutionsPage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'the problem decides the tool.'
+      'once we know the problem, we build the fix.'
     );
 
     // Thirteen capabilities as a headline reads as a company that will do
@@ -33,10 +33,9 @@ describe('/solutions', () => {
     // Two lists of the same six things drift, and the day they drift the site
     // disagrees with itself about what it works on.
     for (const point of PRESSURE_POINTS) {
-      expect(screen.getByRole('link', { name: new RegExp(`^${point.title}`) })).toHaveAttribute(
-        'href',
-        point.href
-      );
+      expect(
+        screen.getByRole('link', { name: new RegExp(`^${point.area} ${point.title}`) })
+      ).toHaveAttribute('href', point.href);
     }
   });
 
@@ -48,7 +47,9 @@ describe('/solutions', () => {
 
   it('lists what it declines, including work it would be second best at', () => {
     render(<SolutionsPage />);
-    expect(DECLINED).toHaveLength(5);
+    // Five became three on 2 September 2026: the two dropped are said on Start
+    // here, and this page had become the fifth list of refusals on the site.
+    expect(DECLINED).toHaveLength(3);
     for (const item of DECLINED) expect(screen.getByText(item)).toBeInTheDocument();
     expect(document.body.textContent).toMatch(/second-best supplier/);
   });
@@ -61,9 +62,10 @@ describe('/solutions', () => {
     }
   });
 
-  it('quotes no price and names no package', () => {
+  it('quotes the hourly rate once and names no package', () => {
     const text = body();
-    expect(text).not.toMatch(/£/);
+    expect(text).toMatch(/£62\.50 plus VAT an hour/);
+    expect(text.match(/£/g)).toHaveLength(1);
     expect(text).not.toMatch(/Growth Fix|Momentum Month|Turnaround Intensive/);
   });
 

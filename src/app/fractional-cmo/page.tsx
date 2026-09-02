@@ -63,11 +63,11 @@ export default function FractionalCmoPage(): JSX.Element {
                 fractional leadership
               </p>
               <h1 className="oj-display mt-2.5 max-w-[16ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
-                you might not need a fractional <span className="oj-keep-case">CMO</span>.
+                do you really need a fractional <span className="oj-keep-case">CMO</span>?
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
                 People search for one when growth has stalled and the in-house team is stretched.
-                It's a sensible instinct and often the wrong shape of answer. Here's when it works,
+                It's a sensible instinct and often the wrong kind of answer. Here's when it works,
                 when it does not, and what to ask before you hire either of us.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -122,7 +122,7 @@ export default function FractionalCmoPage(): JSX.Element {
           </p>
         </Band>
 
-        <Band heading="when it's the wrong shape." tone="ink">
+        <Band heading="when it's the wrong kind of answer." tone="ink">
           <div className="flex flex-col gap-7">
             {WRONG_SHAPE.map((item) => (
               <div key={item.title}>
@@ -143,13 +143,13 @@ export default function FractionalCmoPage(): JSX.Element {
               We are not a fractional anything and we do not want a seat on your leadership team.
             </p>
             <p>
-              We take the problem, work out what is actually causing it across every function it
-              touches, and build the fix. Sometimes that's marketing. Often it's a pricing change, a
-              process, a system, or three small things in three different places that only make
-              sense together.
+              We take the problem, work out what is actually causing it across every part of the
+              business it touches, and build the fix. Sometimes that's marketing. Often it's a
+              pricing change, a process, a system, or three small things in three different places
+              that only make sense together.
             </p>
             <p>
-              Then we leave. An engagement that has done its job should end, which is not what a
+              Then we leave. A piece of work that has done its job should end, which is not what a
               monthly retainer for a seat is designed to do.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function FractionalCmoPage(): JSX.Element {
 
         <Band
           heading="the questions to ask either of us."
-          intro="Ask these of a fractional CMO and of us. The answers will tell you which shape you need."
+          intro="Ask these of a fractional CMO and of us. The answers will tell you which kind of help you need."
         >
           <ol className="measure flex list-none flex-col gap-3 p-0">
             {QUESTIONS_TO_ASK.map((question, index) => (
@@ -180,7 +180,7 @@ export default function FractionalCmoPage(): JSX.Element {
             describe the problem, not the role.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what is actually happening and we'll tell you what shape of help it needs, even
+            Tell us what is actually happening and we'll tell you what kind of help it needs, even
             when that is not us. The first conversation is an hour and it's free.
           </p>
           <div className="mt-8">

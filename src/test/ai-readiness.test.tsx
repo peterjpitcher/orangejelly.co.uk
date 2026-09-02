@@ -65,7 +65,7 @@ describe('the page', () => {
   it('says up front what it will not tell you', () => {
     render(<AiReadinessPage />);
     const text = document.body.textContent ?? '';
-    expect(text).toMatch(/There is no score at the end/);
+    expect(text).toMatch(/no score at the end/i);
     expect(text).toMatch(/what this will not tell you/);
     expect(text).toMatch(/That you need AI\./);
   });
@@ -142,18 +142,29 @@ describe('running the assessment', () => {
     expect(screen.getAllByRole('link', { name: /Let's talk/ })).toHaveLength(1);
   });
 
-  it('respects the reverse-scored statements rather than straight-lining', async () => {
+  it('points every statement the same way, so "Always" is always the healthy answer', async () => {
+    /*
+     * The two operations statements used to be reverse-scored, which stopped
+     * straight-lining and confused the people answering honestly: ten statements
+     * where Always was good, then two where it was bad, on the same scale with no
+     * warning. They were reworded on 2 September 2026 so that Always is healthy
+     * everywhere. So: Always on everything except operations, Never on those two,
+     * and operations must be the only area under pressure.
+     */
     const user = userEvent.setup();
     render(<AiReadinessTool />);
-    // "Always" is healthy on the positive statements and the WORST answer on the
-    // two operations ones, which are the reverse-scored pair. So operations must
-    // come out pressed while the others do not.
-    await answerAll(user, 'Always');
+    for (const question of SCORECARD_QUESTIONS) {
+      expect(question.reverse).toBeUndefined();
+      const group = screen.getByText(question.text).closest('fieldset') as HTMLElement;
+      await user.click(
+        within(group).getByText(question.area === 'operations' ? 'Never' : 'Always')
+      );
+    }
 
     await screen.findByText('This is a signal, not a diagnosis.');
-    // The AI detail panel only renders areas under pressure, so Operations having
-    // its own heading there is the proof that reverse scoring was applied.
+    // The AI detail panel only renders areas under pressure.
     expect(screen.getByRole('heading', { name: 'Operations' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Demand' })).not.toBeInTheDocument();
   });
 
   it('sends the pressed areas to the enquiry so nobody retypes them', async () => {

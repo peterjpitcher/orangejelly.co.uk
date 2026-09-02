@@ -74,9 +74,9 @@ export default function ResultsPage(): JSX.Element {
                 proven where the risk was ours.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Every number on this page comes from The Anchor, our own venue and a real trading
-                business we run. It's where this way of working was built and tested before it was
-                ever sold to anybody, and where getting it wrong cost us rather than a client.
+                Every number on this page comes from The Anchor, our own venue. It's where this way
+                of working was built and tested before it was ever sold to anybody, and where
+                getting it wrong cost us rather than a client.
               </p>
             </div>
           </section>
@@ -159,20 +159,15 @@ export default function ResultsPage(): JSX.Element {
         <Band heading="why they're all one business.">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              Because that is the truth, and the alternative is worse. We could show you a wall of
-              logos from work we can't describe, or numbers with no baseline behind them. Neither
-              would tell you anything.
+              Because that is the truth. We could show you a wall of logos from work we can't
+              describe, or numbers with nothing to compare them against. Neither would tell you
+              anything.
             </p>
             <p>
-              The Anchor is where the method was built, and it's the one place we can show you the
-              before as well as the after, say exactly how it was measured, and answer any question
-              about it. Client work joins this page as it becomes publishable, with permission, and
-              not before.
-            </p>
-            <p>
-              A pub is not a professional services firm. Demand, conversion and margin behave the
-              same way in both, which is why each of these ends with what the mechanism actually
-              was, rather than what industry it happened in.
+              The Anchor is the one place we can show you the before as well as the after, say
+              exactly how it was measured, and answer any question about it. Client work joins this
+              page as it becomes publishable, with permission, and not before. Each case ends with
+              why it applies to other businesses, because it does.
             </p>
           </div>
         </Band>

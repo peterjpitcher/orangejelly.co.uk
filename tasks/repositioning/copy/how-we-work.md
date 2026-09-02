@@ -159,3 +159,11 @@ is the list of things that, left unsaid, turn into the argument at the end.
 what we think.
 
 **Action:** Let's talk
+
+## Amendments, 2 September 2026: plain-English pass
+
+The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+
+- Understand what is really happening, not what everyone says is happening.
+- Measure it against where you started, then keep going until it moves.
+- The numbers we are starting from, or the honest admission that there are none yet.

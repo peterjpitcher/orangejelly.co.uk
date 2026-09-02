@@ -94,3 +94,12 @@ that and in writing.
 **Line:** Tell us what is happening and we will tell you what we think it needs.
 
 **Action:** Let's talk
+
+## Amendments, 2 September 2026: plain-English pass
+
+The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+
+- What you actually sell, in words a customer would use.
+- Closing the gap between someone asking and someone buying.
+- Staying useful to people who have already bought, so they come back.
+- Removing the jobs that should not exist.

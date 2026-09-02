@@ -40,8 +40,13 @@ export interface EnquiryFormProps {
 
 const STEP_ONE_FIELDS = [
   { name: 'name', id: 'enquiry-name', label: 'Your name' },
-  { name: 'email', id: 'enquiry-email', label: 'Work email' },
-  { name: 'company', id: 'enquiry-company', label: 'Company' },
+  /*
+   * "Email", not "Work email". A publican's business email is often a Gmail
+   * address, and "work email" made some of them pause over whether it counted.
+   * "Business or venue", not "Company", for the same reader.
+   */
+  { name: 'email', id: 'enquiry-email', label: 'Email' },
+  { name: 'company', id: 'enquiry-company', label: 'Business or venue' },
   { name: 'situation', id: 'enquiry-situation', label: "What's going on?" },
 ] as const;
 
@@ -197,7 +202,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
         </Field>
 
         <Field
-          label="Work email"
+          label="Email"
           htmlFor="enquiry-email"
           required
           announceError={false}
@@ -214,7 +219,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
         </Field>
 
         <Field
-          label="Company"
+          label="Business or venue"
           htmlFor="enquiry-company"
           required
           announceError={false}

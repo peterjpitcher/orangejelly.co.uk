@@ -28,7 +28,7 @@ import { FACTS, LESSONS, REFUSALS } from './content';
  */
 const TITLE = 'About | Orange Jelly';
 const DESCRIPTION =
-  'A strategic growth partner for ambitious businesses, small on purpose. Where the thinking came from, what we will not do, and who you would be dealing with.';
+  'A small team that works directly with you. Where the thinking came from, what we will not do, and who you would be dealing with.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -66,9 +66,10 @@ export default function AboutPage(): JSX.Element {
                 small on purpose.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Orange Jelly is a strategic growth partner for ambitious small and mid-sized
-                businesses. There's no account team, no layer between you and the people doing the
-                work, and no incentive to sell you more of something that isn't working.
+                Orange Jelly is two people: Peter Pitcher, who leads the growth work, and Billy
+                Summers, who runs our pub. There's no account team, no layer between you and the
+                people doing the work, and no incentive to sell you more of something that isn't
+                working.
               </p>
             </div>
           </section>
@@ -83,9 +84,9 @@ export default function AboutPage(): JSX.Element {
               The problem decides, and it isn't usually what the brief says it is.
             </p>
             <p>
-              That range is only defensible because of the method. Without it, a company that does
-              marketing, commercial change, operations and technology reads as a company that will
-              do anything. Four steps, in the same order, every time:{' '}
+              We can only cover that range because we always work the same way. Without that, a
+              company that does marketing, pricing, operations and technology reads as a company
+              that will do anything. Four steps, in the same order, every time:{' '}
               <Anchor href="/how-we-work" className="font-semibold underline">
                 hear, challenge, build, optimise
               </Anchor>
@@ -94,7 +95,7 @@ export default function AboutPage(): JSX.Element {
           </div>
         </Band>
 
-        <Band heading="we run a business, not just a practice.">
+        <Band heading="we run a pub, not just a consultancy.">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
               The Anchor is our own venue in Stanwell Moor, run as a Greene King tenancy since 2019.
@@ -105,8 +106,8 @@ export default function AboutPage(): JSX.Element {
             <p>
               Everything on this site was built and tested there first. Search visibility grew 828%,
               table bookings 403%, private hire 567%, food revenue 98% in three months and no-shows
-              fell 89%: all measured against a baseline, all in a business where getting it wrong
-              cost us rather than a client.
+              fell 89%: all measured against the numbers before we started, all in a business where
+              getting it wrong cost us rather than a client.
             </p>
             <p>
               That's a different kind of experience from advising. It's the difference between
@@ -170,8 +171,8 @@ export default function AboutPage(): JSX.Element {
             </p>
             <p>
               Day to day, The Anchor is run by Billy Summers and the growth work is led by Peter
-              Pitcher. That's the whole company, and it's a constraint we are honest about: we take
-              on what we can do properly and say no to the rest.
+              Pitcher. That's the whole company, and it's a limit we are honest about: we take on
+              what we can do properly and say no to the rest.
             </p>
           </div>
         </Band>

@@ -25,9 +25,9 @@ import { GROWTH_PROBLEMS } from './content';
  * Copy from the design team's hub template, with the closing call to action changed
  * per D11.
  */
-const TITLE = 'Unlock growth: eight places it gets stuck | Orange Jelly';
+const TITLE = 'Eight growth problems, in plain words | Orange Jelly';
 const DESCRIPTION =
-  "Eight growth problems in plain words. Start from the symptom and we'll show you what it's connected to, before anyone talks about a solution.";
+  "Which of these sounds like your business? Eight growth problems in plain words. Start from what you can see and we'll show you what it's connected to.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -60,18 +60,18 @@ export default function GrowthProblemsHubPage(): JSX.Element {
               <Breadcrumb
                 tone="ink"
                 className="mb-7"
-                items={[{ label: 'Home', href: '/' }, { label: 'Unlock growth' }]}
+                items={[{ label: 'Home', href: '/' }, { label: 'Growth problems' }]}
               />
               {/* Orange-deep is 2.92:1 on ink. Peach is 11.03:1, as in the footer. */}
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
-                unlock growth
+                growth problems
               </p>
               <h1 className="oj-display mt-2.5 max-w-[18ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
                 which of these sounds like your business?
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
                 You don't need more activity. You need to know what will move the numbers. Start
-                from the symptom and we'll show you what it's connected to.
+                from what you can see and we'll show you what it's connected to.
               </p>
             </div>
           </section>
@@ -108,14 +108,14 @@ export default function GrowthProblemsHubPage(): JSX.Element {
           It also stops the page being an orphan, which is what its predecessor was:
           the July crawl found /pub-rescue with no contextual inbound links at all.
         */}
-        <Band heading="falling rather than flat?" tone="paper">
+        <Band heading="is revenue actually going down?" tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
-            These eight are written for growth that has stopped. If revenue is actively going
-            backwards, the clock changes and so does the order things should be done in, so{' '}
+            These eight are written for growth that has stopped. If takings are going backwards week
+            on week, that is more urgent and the order changes, so{' '}
             <Anchor href="/why-revenue-is-falling" className="font-semibold">
               finding out why has its own page
             </Anchor>
-            , including the part where we say who we are not the right people for.
+            .
           </p>
         </Band>
 

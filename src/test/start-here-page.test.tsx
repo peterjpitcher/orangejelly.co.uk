@@ -30,7 +30,9 @@ function body(): string {
 describe('/start-here', () => {
   it('opens on the conversation, not on a service', () => {
     render(<StartHerePage />);
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('start here.');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      "tell us what's happening. we'll tell you where to look first."
+    );
     expect(screen.getByText('the first conversation')).toBeInTheDocument();
   });
 
@@ -45,12 +47,15 @@ describe('/start-here', () => {
     expect(text).toContain('It makes us the wrong supplier');
   });
 
-  it('names all six poor-fit behaviours, not a hedged summary', () => {
-    expect(FIT.doesNot).toHaveLength(6);
+  it('names the poor-fit behaviours, not a hedged summary', () => {
+    // Six became four on 2 September 2026. The page was spending more words on
+    // who it turns away than on what it offers; the four that stay are the ones
+    // that actually decide whether a piece of work can happen.
+    expect(FIT.doesNot).toHaveLength(4);
     const text = body();
     expect(text).toMatch(/post three times a week/);
     expect(text).toMatch(/pair of hands/);
-    expect(text).toMatch(/AI because it is AI/);
+    expect(text).toMatch(/Nothing inside the business can actually change/);
   });
 
   /*

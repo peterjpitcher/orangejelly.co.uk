@@ -10,7 +10,7 @@
  * EIGHT PROBLEMS, SIX AREAS. The homepage names six AREAS, which is where growth
  * gets stuck. These are eight SYMPTOMS, which is how it presents. Six map one to
  * one; the other two are "growth has stalled", the umbrella most people arrive
- * with, and "using AI intelligently", which the keyword research found is the
+ * with, and "where would AI help", which the keyword research found is the
  * strongest entry cluster the company has. Each problem tags itself with the areas
  * it touches, so the two vocabularies stay joined rather than competing.
  *
@@ -22,6 +22,14 @@
  * shared closing section also said EXPOSE, which the method no longer uses, and
  * sold a named diagnostic rather than a conversation.
  *
+ * PLAIN ENGLISH, 2 SEPTEMBER 2026. The titles are now what a business owner would
+ * say ("Sales are up, profit is not"), not the category ("Margin is under
+ * pressure"). The search terms the old titles carried live on in `metaTitle`, which
+ * is what the browser tab and the search result show. The proof paragraphs on the
+ * three pages with no measured result came down from a hundred and fifty words of
+ * explanation to three sentences: honest is good, and one sentence of honest is
+ * enough.
+ *
  * @see tasks/repositioning/data/designer-growth-problem-variants.json for the source
  * @see tasks/repositioning/copy/growth-problems.md for the audit
  */
@@ -29,7 +37,14 @@ export interface GrowthProblem {
   slug: string;
   /** Position in the hub listing, zero-padded. */
   number: string;
+  /** The problem in the reader's words. Hub card, breadcrumb, links. */
   title: string;
+  /**
+   * The browser tab and search result. Carries the search term the plain title
+   * dropped ("leads not converting", "margin under pressure") so the page keeps
+   * ranking for what people actually type.
+   */
+  metaTitle: string;
   /** One line for the hub card. */
   line: string;
   titleLead: string;
@@ -49,27 +64,28 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     slug: 'growth-has-stalled',
     number: '01',
     title: 'Growth has stalled',
-    line: 'Flat revenue, busy team, no agreed cause.',
-    titleLead: 'Growth has',
-    titleMark: 'stalled.',
+    metaTitle: 'Growth has stalled: busy, but not growing',
+    line: 'Busy team, flat sales, and nobody agrees why.',
+    titleLead: 'Busy, but sales',
+    titleMark: 'have stopped growing.',
     intro:
-      "Revenue is flat, the team is busy, and nobody agrees on why. More activity is the reflex. It's rarely the answer.",
+      "Sales are flat, the team is busy, and nobody agrees on why. Doing more is the reflex. It's rarely the answer.",
     symptoms: [
-      "Revenue has been flat for long enough that it's no longer a blip.",
+      "Sales have been flat for long enough that it's no longer a blip.",
       'Everyone has a different theory about the cause.',
-      'New initiatives launch, spike, then fade.',
+      'New ideas launch, spike, then fade.',
       'The market grew and you did not.',
     ],
     causes:
-      'Stalled growth is rarely one thing. It usually pairs weak demand creation with a conversion journey that leaks, capped by systems that cannot absorb more volume.',
+      'Stalled growth is rarely one thing. Usually not enough new people are finding you, too many of the ones who do are slipping away before they buy, and the way the business runs could not handle more anyway.',
     areas: ['demand', 'conversion', 'scale'],
     examine: [
       {
         what: 'Where growth actually stopped',
-        why: 'Pipeline, conversion or capacity: the flat line usually starts in one of the three.',
+        why: 'New customers, people who ask but do not buy, or the business being at capacity: the flat line usually starts in one of the three.',
       },
       {
-        what: 'What the data can prove',
+        what: 'What the numbers can prove',
         why: 'Confident explanations rarely survive contact with the numbers.',
       },
       {
@@ -78,134 +94,138 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       },
     ],
     proof: {
-      heading: 'What stalled in our own venue, and what moved it.',
-      body: 'The Anchor, our own venue, was flat, and the explanation everybody offered was the economy. It was not the economy. Once we found what was actually causing it, Google Search visibility grew 828%, private hire bookings grew 567%, table bookings grew 403%, food revenue grew 98% in three months, and booking no-shows fell 89%. Every figure is from The Anchor, measured against a baseline taken before any work started. It is one business, and it is ours, so the risk of getting it wrong was ours too. One honest limit: the third leg of a stall, systems that cannot absorb more volume, is something we diagnose but have no measured result for. If that turns out to be your constraint, we will tell you, and we will not point at a number to prove it.',
+      heading: 'What stalled in our own pub, and what moved it.',
+      body: 'The Anchor was flat, and the explanation everybody offered was the economy. It was not the economy. Once we found what was actually causing it, Google Search visibility grew 828%, private hire bookings grew 567%, table bookings grew 403%, food revenue grew 98% in three months, and booking no-shows fell 89%, all measured against the numbers before any work started. One honest limit: the third leg of a stall, a business that could not handle more volume, is something we can find but have no measured result for yet.',
       hasNumbers: true,
     },
   },
   {
     slug: 'weak-demand',
     number: '02',
-    title: 'Demand or pipeline is weak',
-    line: 'The pipeline dries up when you stop pushing.',
-    titleLead: 'Demand is',
-    titleMark: 'too thin.',
+    title: 'Not enough new customers',
+    metaTitle: 'Weak demand: not enough new customers',
+    line: 'Enquiries dry up the moment you stop pushing.',
+    titleLead: 'Not enough',
+    titleMark: 'new customers.',
     intro:
-      'The pipeline dries up the moment you stop pushing. Demand depends on effort, not on a system that creates it.',
+      'Enquiries dry up the moment you stop pushing. New business depends on effort, not on anything that brings people in by itself.',
     symptoms: [
-      'New business relies on the same few channels or customers.',
-      'Referrals are welcome but unplanned.',
-      'Marketing activity spikes and troughs with your attention.',
-      'You are invisible where buyers actually look.',
+      'New business comes from the same few places or the same few customers.',
+      'Referrals are welcome but nobody plans for them.',
+      'Marketing happens in bursts, when somebody has time.',
+      'You are invisible where your customers actually look.',
     ],
     causes:
-      'Weak demand usually pairs an unclear proposition with channel dependence, and it drags conversion down with it: thin pipelines make every deal feel desperate.',
+      'Not enough new customers usually comes from two things: people cannot tell what you are for, and you rely on one or two ways of being found. It drags everything after it down too, because a thin pipeline makes every sale feel desperate.',
     areas: ['demand', 'conversion'],
     examine: [
       {
-        what: 'Where buyers actually look',
-        why: 'Search, referral and repeat: measured against where you show up.',
+        what: 'Where your customers actually look',
+        why: 'Search, word of mouth and people coming back, measured against where you actually show up.',
       },
       {
-        what: 'The proposition, tested',
-        why: "Whether the market can tell what you're for in one pass.",
+        what: 'Whether people can tell what you are for',
+        why: 'Whether a stranger could say in one sentence what you offer and why they would pick you.',
       },
       {
-        what: 'What compounds',
-        why: 'Channels that build an asset versus activity that evaporates.',
+        what: 'What keeps working after you stop',
+        why: 'Ways of being found that build up over time, against activity that stops the day you stop.',
       },
     ],
     proof: {
-      heading: 'The demand that was going somewhere else.',
-      body: "The Anchor, our own venue, had a demand problem it couldn't see, because the demand was going somewhere else entirely. The site described the venue in the language the venue used about itself, while people nearby were searching in completely different words for completely different things. Rebuilt around what people actually search for, Google Search visibility grew 828% against a Search Console baseline taken before any of it, and private hire bookings grew 567%, from about six a year to twenty confirmed in six months. That second figure is what the visibility was worth in money. The mechanism has nothing to do with pubs: a business describes itself in its own words, its customers search in theirs, and the gap between the two is demand somebody else is collecting.",
+      heading: 'The customers who were going somewhere else.',
+      body: "The Anchor had a demand problem it couldn't see, because the demand was going somewhere else entirely. The website described the pub in the words the pub used about itself, while people nearby were searching in completely different words for completely different things. Rebuilt around what people actually search for, Google Search visibility grew 828% against the numbers before, and private hire bookings grew 567%, from about six a year to twenty confirmed in six months. That second figure is what the visibility was worth in money. The lesson has nothing to do with pubs: a business describes itself in its own words, its customers search in theirs, and the gap between the two is customers somebody else is collecting.",
       hasNumbers: true,
     },
   },
   {
     slug: 'leads-not-converting',
     number: '03',
-    title: 'Leads are not converting',
-    line: 'Enquiries arrive and quietly die in the journey.',
-    titleLead: 'Leads are',
-    titleMark: 'not converting.',
+    title: "Enquiries don't turn into customers",
+    metaTitle: 'Leads not converting into customers',
+    line: 'People get in touch, then quietly go quiet.',
+    titleLead: "Enquiries don't",
+    titleMark: 'turn into customers.',
     intro:
-      'Enquiries arrive and quietly die. The leads are usually fine. What happens between first contact and decision is not.',
+      'People get in touch, then go quiet. The enquiries are usually fine. What happens between the first contact and the decision is not.',
     symptoms: [
       'Enquiries go quiet after the first reply.',
-      'You could not say what your conversion rate is at each step.',
-      'Follow-up depends on someone remembering.',
-      'Price objections arrive before value was ever shown.',
+      'You could not say how many enquiries turn into customers, or where the rest drop out.',
+      'Following up depends on someone remembering.',
+      "People ask the price before they know what they'd get.",
     ],
     causes:
-      'Conversion problems usually live in the journey, not the leads: slow follow-up, unclear next steps, and an experience that talks people out of buying.',
+      'The problem usually lives in what happens after someone asks, not in the enquiries themselves: slow replies, no clear next step, and an experience that talks people out of buying.',
     areas: ['conversion', 'experience'],
     examine: [
       {
-        what: 'The journey, step by step',
-        why: 'Where enquiries actually stall, measured, not assumed.',
+        what: 'The steps from asking to buying',
+        why: 'Where enquiries actually drop out, measured, not assumed. A call, a form, a booking, a quote: each has a place people give up.',
       },
       {
-        what: 'Speed and clarity of follow-up',
-        why: 'How fast an enquiry gets a real answer, and what happens when nobody picks it up.',
+        what: 'How fast and how clearly you follow up',
+        why: 'How quickly an enquiry gets a real answer, and what happens when nobody picks it up.',
       },
       {
-        what: 'What the buyer experiences',
-        why: 'The gap between what you promise and what an enquiry feels like.',
+        what: 'What it feels like to be the customer',
+        why: 'The gap between what you promise and what an enquiry actually feels like.',
       },
     ],
     proof: {
       heading: 'The gap between wanting to come and having a table.',
-      body: "At The Anchor, our own venue, plenty of people wanted to come. The booking route was a phone number during service, and nobody was counting how many tried and gave up. We rebuilt the journey from interest to confirmed table, then added confirmations and reminders. Table bookings grew 403% against the previous run rate, and no-shows fell 89%, from about one in five to about one in fifty. The second number is the one that changed the economics: the table was held and the food was prepped whether or not anyone arrived. Every business has a version of the held table, whether it's a slot, a quote, an appointment or a sample. Almost nobody measures the drop-off between interest and confirmation.",
+      body: "At The Anchor, plenty of people wanted to come. The only way to book was a phone number during service, and nobody was counting how many tried and gave up. We rebuilt the steps from interest to confirmed table, then added confirmations and reminders. Table bookings grew 403% compared with before, and no-shows fell 89%, from about one in five to about one in fifty. The second number is the one that changed the money: the table was held and the food was prepped whether or not anyone arrived. Every business has a version of the held table, whether it's a slot, a quote, an appointment or a sample. Almost nobody measures the drop-off between interest and confirmation.",
       hasNumbers: true,
     },
   },
   {
     slug: 'margin-under-pressure',
     number: '04',
-    title: 'Margin is under pressure',
-    line: 'Revenue grows but profit does not.',
-    titleLead: 'Margin is under',
-    titleMark: 'pressure.',
+    title: 'Sales are up, profit is not',
+    metaTitle: 'Margin under pressure: sales up, profit not',
+    line: 'Turnover grows and the bank balance does not.',
+    titleLead: 'Sales are up.',
+    titleMark: 'Profit is not.',
     intro:
-      'Revenue grows but profit does not. Somewhere between price, mix, cost and manual work, the margin is leaking.',
+      'Turnover grows and the bank balance does not. Somewhere between what you charge, what sells, what it costs and the hours spent by hand, the profit is leaking.',
     symptoms: [
       'Turnover is up and the bank balance is not.',
       'Discounting is the default response to a quiet period.',
-      'Prices have not been tested against value in years.',
-      'Cost-to-serve creeps up with every workaround.',
+      'Prices have not been checked against what people would pay in years.',
+      'Every workaround adds a little to what each job costs you.',
     ],
     causes:
-      'Margin leaks compound: discounting to create demand, manual work inflating cost-to-serve, and pricing that has never been tested against value.',
+      'Profit leaks add up: discounting to bring people in, manual work quietly adding to the cost of every job, and prices that were set by looking at the competition rather than at what the product is worth.',
     areas: ['margin', 'operations', 'demand'],
     examine: [
       {
-        what: 'Price and mix, against value',
-        why: 'What customers would actually pay, not what feels safe.',
+        what: 'What you charge, and what sells',
+        why: 'What customers would actually pay, not what feels safe, and which products make money against which just make work.',
       },
       {
-        what: 'Where cost-to-serve hides',
-        why: 'Manual work and workarounds that inflate every order.',
+        what: 'What each job really costs you',
+        why: 'The manual steps and workarounds that quietly add to the cost of every order.',
       },
       {
         what: 'The discount habit',
-        why: 'What each promotion really costs once the discount comes off the margin rather than the price.',
+        why: 'What each promotion really costs once the discount comes off the profit rather than the price.',
       },
     ],
     proof: {
-      heading: 'Mix rebuilt around what each line actually contributes.',
-      body: "At The Anchor, our own venue, the kitchen was busy and the contribution didn't match the effort. Pricing had been set by looking at what everyone else charged and taking a bit off. We rebuilt the menu around what each dish actually contributes rather than what it costs, rewrote the descriptions to sell rather than to list, and gave the pricing a reason. Food revenue grew 98% within three months, and the growth came from the lines worth selling rather than from volume across the board. Now be exact about what that number is. It measures revenue, not margin percentage. We do not publish a gross margin figure and we are not going to imply one from a revenue result. What this case proves is the mechanism: the thing that sells most is rarely the thing worth selling most, and nobody finds that out from the revenue line.",
+      heading: 'A menu rebuilt around what each dish actually makes.',
+      body: "At The Anchor, the kitchen was busy and the profit didn't match the effort. Prices had been set by looking at what everyone else charged and taking a bit off. We rebuilt the menu around what each dish actually makes rather than what it costs, rewrote the descriptions to sell rather than to list, and gave the pricing a reason. Food revenue grew 98% within three months, and the growth came from the dishes worth selling rather than from selling more of everything. To be exact, that number measures revenue, not margin percentage. We do not publish a margin figure and we will not imply one from a revenue result. What this shows is the lesson: the thing that sells most is rarely the thing worth selling most, and nobody finds that out from the sales line.",
       hasNumbers: true,
     },
   },
   {
     slug: 'operations-slowing-us-down',
     number: '05',
-    title: 'Operations are slowing the business',
-    line: 'Manual effort is absorbing the capacity growth needs.',
-    titleLead: 'Operations are slowing',
-    titleMark: 'the business.',
+    title: 'Too much of the work is manual',
+    metaTitle: 'Operations slowing the business down',
+    line: 'The team works hard and the business still moves slowly.',
+    titleLead: 'Too much of the work',
+    titleMark: 'is done by hand.',
     intro:
-      'The team works hard and the business moves slowly. Manual effort is absorbing the capacity growth needs.',
+      'The team works hard and the business moves slowly. The hours that growth needs are going on work a system should be doing.',
     symptoms: [
       'Key work depends on one person or their spreadsheet.',
       'Hours go on tasks a system should do.',
@@ -213,73 +233,75 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       'Hiring is the answer to every capacity question.',
     ],
     causes:
-      'Operational drag is a scale problem in disguise. Work that depends on effort or memory sets a hard ceiling on how big the business can get.',
+      'Work that depends on effort or memory puts a hard ceiling on how big the business can get. This is a growth problem in disguise: rekeying orders, chasing paperwork, copying figures between systems, and nobody with the time to fix any of it.',
     areas: ['operations', 'scale'],
     examine: [
       {
         what: 'Where the hours actually go',
-        why: 'The real workflow, walked through, not the org chart version.',
+        why: 'The real way work gets done, walked through step by step, not the version on the org chart.',
       },
       {
         what: 'What should be a system',
-        why: 'The manual work that automation or better process removes outright.',
+        why: 'The manual work that software or a better process removes outright.',
       },
       {
-        what: 'The single points of failure',
-        why: 'What stops if one person is away for a fortnight.',
+        what: 'What stops if one person is away',
+        why: 'The jobs that only one person knows how to do, and what happens to them in a fortnight off.',
       },
     ],
     proof: {
       heading: 'What we would look at before hiring again.',
-      body: "We have no number for this one, and we are not going to borrow one from somewhere else on this site. Every figure we publish comes from The Anchor, our own venue, and all five measure demand, bookings or revenue. Not one of them measures hours reclaimed, cost-to-serve, or capacity released. We used to quote a time-reclaimed figure and we withdrew it, because it was a raw count nobody could check rather than a measured result. So here's what we bring instead of a percentage. We walk the real workflow rather than the org chart version, find where the hours actually go, name the work a system should be doing outright, and find what stops if one person is away for a fortnight. Then we agree the measure and take the baseline before any work starts, so the number that ends up in this section next time is yours and you can check it.",
+      body: "No number for this one yet, and we won't borrow one from elsewhere on this site: every figure we publish measures customers, bookings or revenue, not hours freed up. What we bring instead is the looking. We walk the real workflow, find where the hours go, name the work a system should be doing, and find what stops if one person is away. Then we agree how to measure it before any work starts, so the number that ends up here next time is yours and you can check it.",
       hasNumbers: false,
     },
   },
   {
     slug: 'experience-leaking-value',
     number: '06',
-    title: 'Customer experience is leaking value',
-    line: 'Customers buy once and drift away.',
-    titleLead: 'Experience is',
-    titleMark: 'leaking value.',
+    title: "Customers don't come back",
+    metaTitle: "Customer experience: they don't come back",
+    line: 'People buy once, then drift away.',
+    titleLead: 'Customers buy once,',
+    titleMark: "then don't come back.",
     intro:
-      'Customers buy once and drift away. Retention is an experience problem before it is a marketing problem.',
+      'People buy once, then drift away. Getting them back is about what it was like to be a customer, before it is about marketing.',
     symptoms: [
-      'First-time buyers rarely come back.',
-      'Problems surface in reviews, not in conversations.',
-      'Repeat rate is a mystery number.',
-      'Service quality depends on who is on shift.',
+      'First-time customers rarely come back.',
+      'You hear about problems in reviews, not in conversations.',
+      'Nobody could say what proportion of customers return.',
+      'How good the service is depends on who is working that day.',
     ],
     causes:
-      'Experience leaks show up as conversion and demand problems: a business that has to win every customer twice never gets ahead of its own pipeline.',
+      "A business that has to win every customer twice never gets ahead. What looks like a marketing problem is usually about what happens after the sale, which is nobody in particular's job.",
     areas: ['experience', 'conversion'],
     examine: [
       {
-        what: 'The journey after the sale',
-        why: 'What actually happens between first purchase and the second that never comes.',
+        what: 'What happens after the sale',
+        why: 'What actually happens between the first purchase and the second one that never comes.',
       },
       {
-        what: 'Where promises break',
-        why: 'The gap between marketing and the experienced reality.',
+        what: 'Where the promise breaks',
+        why: 'The gap between what the marketing says and what the customer actually gets.',
       },
       {
-        what: 'What customers would say',
-        why: 'Direct feedback, gathered before the review goes public.',
+        what: 'What customers would tell you',
+        why: 'Asked directly, before the review goes public.',
       },
     ],
     proof: {
       heading: 'The part of that journey we have actually measured.',
-      body: 'Straight answer first: we have no retention number. None of the five figures we publish measures repeat purchase, repeat rate or lifetime value, and the retention figure we used to quote was withdrawn because we could not stand behind how it was counted. What we have measured is one part of the journey after a customer commits. At The Anchor, our own venue, adding confirmations and reminders after a booking cut no-shows by 89%, from about one in five to about one in fifty. That proves what staying in contact is worth between the yes and the arrival. It does not prove anyone came back a second time, and we will not present it as though it does. On retention itself we would start where most businesses have nothing: finding your actual repeat rate, and agreeing the baseline before any work starts.',
+      body: 'Straight answer first: we have no retention number, no figure for how many customers come back, and we will not present one we cannot stand behind. What we have measured is one part of what happens after a customer says yes. At The Anchor, adding confirmations and reminders after a booking cut no-shows by 89%, from about one in five to about one in fifty. That proves what staying in touch is worth between the booking and the arrival. It does not prove anyone came back a second time. On that, we would start where most businesses have nothing: finding out your actual repeat rate, and agreeing the starting number before any work begins.',
       hasNumbers: true,
     },
   },
   {
     slug: 'using-ai-intelligently',
     number: '07',
-    title: 'Using AI intelligently',
+    title: 'Where would AI actually help?',
+    metaTitle: 'Using AI intelligently: where it would help',
     line: 'Tools everywhere, payoff nowhere obvious.',
-    titleLead: 'You want AI that',
-    titleMark: 'earns its place.',
+    titleLead: 'Where would AI',
+    titleMark: 'actually help?',
     intro:
       'Everyone says AI. Almost nobody says where it pays. The question is not which tool, it is which problem.',
     symptoms: [
@@ -289,63 +311,64 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       'Every supplier pitch starts with the technology.',
     ],
     causes:
-      'AI-shaped confusion is usually an operations and scale question: where manual work, decisions or response times are the constraint, AI can pay. Anywhere else it is theatre.',
+      'AI pays where the same repetitive work, the same decisions or slow replies are holding the business back. Anywhere else it is for show. Which means the question is really about how the work gets done, not about the technology.',
     areas: ['operations', 'scale'],
     examine: [
       {
-        what: 'Where hours and errors cluster',
-        why: 'AI pays where repetitive judgement and manual work meet volume.',
+        what: 'Where the hours and the mistakes pile up',
+        why: 'AI pays where repetitive judgement and manual work meet volume: chasing, drafting, checking, sorting.',
       },
       {
-        what: 'What your data can support',
-        why: 'AI ideas die on data quality more often than on the technology. Better to know that before you build.',
+        what: 'Whether your data is good enough',
+        why: 'AI ideas fail on messy or missing data more often than on the technology. Better to know that before you build anything.',
       },
       {
-        what: 'The build-versus-buy line',
-        why: 'What a tool solves, what needs building, what needs neither.',
+        what: 'What to buy, what to build, what to leave alone',
+        why: 'What an off-the-shelf tool solves, what needs building for you, and what needs neither.',
       },
     ],
     proof: {
       heading: 'How we use AI, and what we will not claim for it.',
-      body: "We have no AI number, and the honest reason is that we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor, our own venue: the research, the drafting, the analysis, the repetitive judgement. It is not the reason those figures moved. Menu economics moved food revenue by 98%. Search intent moved visibility by 828%. AI made that work fast enough to be worth doing at all. We used to quote a time-reclaimed figure for it, and we withdrew it, because it was a raw count nobody could verify. So what's on offer here is not a result, it is a filter. We will tell you where AI would pay in your business, where your data will not support the idea yet, and where the honest answer is that it would be theatre. That third answer is the one most suppliers will not give you.",
+      body: 'We have no AI number, because we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor: the research, the drafting, the analysis, the repetitive checking. It is not the reason those figures moved. Menu pricing moved food revenue by 98%. Writing for what people search for moved visibility by 828%. AI made that work fast enough to be worth doing at all. So what is on offer here is not a result, it is a filter: where AI would pay in your business, where your data will not support it yet, and where the honest answer is that it would be theatre.',
       hasNumbers: false,
     },
   },
   {
     slug: 'systems-cannot-keep-up',
     number: '08',
-    title: "Systems can't support the next stage",
+    title: "Your systems can't cope with more",
+    metaTitle: "Systems can't support the next stage",
     line: 'What got you here creaks at higher volume.',
-    titleLead: "Your systems can't support",
-    titleMark: 'the next stage.',
+    titleLead: "Your systems can't",
+    titleMark: 'cope with more.',
     intro:
-      'What got you here creaks at higher volume. Growth is being rationed by spreadsheets, workarounds and heroics.',
+      'What got you here creaks at higher volume. Growth is being held back by spreadsheets, workarounds and people going the extra mile every week.',
     symptoms: [
-      'Volume spikes cause errors, not just work.',
-      'Reporting takes days and trusts nobody.',
-      'Adding revenue means adding headcount at the same rate.',
+      'Busy periods cause mistakes, not just more work.',
+      'Reporting takes days and nobody trusts it.',
+      'More sales means more staff at the same rate.',
       'Nobody wants to touch the systems that work.',
     ],
     causes:
-      'Scale limits drag operations and erode margin at exactly the moment the business needs both: teams patch by hand what systems should absorb.',
+      'When the systems cannot keep up, people patch the gaps by hand, which eats the hours and the profit at exactly the moment the business needs both.',
     areas: ['scale', 'operations', 'margin'],
     examine: [
       {
         what: 'Where volume breaks things',
-        why: 'The workflows that break as volume climbs, found before it does.',
+        why: 'The parts of the business that break as it gets busier, found before they do. Usually the till, the bookings, the stock, or the reporting.',
       },
       {
-        what: 'The data foundation',
-        why: 'Whether numbers exist once, in one place, or many times in many spreadsheets.',
+        what: 'Whether your numbers live in one place',
+        why: 'Whether each figure exists once, in one system, or many times in many spreadsheets that disagree.',
       },
       {
-        what: 'Sequence of the fix',
+        what: 'What to fix first',
         why: 'What must change first so everything after it gets easier.',
       },
     ],
     proof: {
       heading: 'What we would look at before volume finds the cracks.',
-      body: 'No number here either, and we would rather say so than dress one up. The five figures we publish all come from The Anchor, our own venue, and all five measure demand, bookings or revenue. None of them measures what happened to a system at higher volume. The Anchor is a single site, so we have not tested our own work against the kind of volume that breaks reporting or forces headcount up in step with revenue. If anyone claims otherwise from these numbers, that is the first thing you should not trust. What we do bring is the sequencing question, which is the one most businesses get wrong: which workflows fail at twice the volume, whether your numbers exist once in one place or many times in many spreadsheets, and what has to change first so everything after it gets easier. We agree the measures and take the baseline before any work starts, so the result is yours to check.',
+      body: 'No number here yet, and we would rather say so than dress one up: every figure we publish measures customers, bookings or revenue, and The Anchor is a single site that has not been tested at the volume that breaks reporting. What we bring is the order of the fix, which is the thing most businesses get wrong: which parts fail first at twice the volume, whether your numbers exist once or in many places, and what has to change first so everything after it gets easier. We agree how to measure it before any work starts, so the result is yours to check.',
       hasNumbers: false,
     },
   },

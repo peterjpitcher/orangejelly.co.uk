@@ -51,11 +51,19 @@ export function generateMetadata({ params }: Params): Metadata {
   };
 }
 
+/*
+ * Plain headings, with the method word as a small label beside each.
+ *
+ * The four capitals used to be the headings. Unless the reader had been to How we
+ * work first they carried no meaning, and a case study is the page most likely to
+ * be arrived at cold from a search result. The stage label stays so the pages
+ * still visibly follow the method.
+ */
 const STEPS = [
-  { word: 'HEAR.', key: 'hear' },
-  { word: 'CHALLENGE.', key: 'challenge' },
-  { word: 'BUILD.', key: 'build' },
-  { word: 'OPTIMISE.', key: 'optimise' },
+  { heading: 'what was happening.', word: 'HEAR', key: 'hear' },
+  { heading: 'what we found.', word: 'CHALLENGE', key: 'challenge' },
+  { heading: 'what we did.', word: 'BUILD', key: 'build' },
+  { heading: 'what changed.', word: 'OPTIMISE', key: 'optimise' },
 ] as const;
 
 export default function CaseStudyPage({ params }: Params): JSX.Element {
@@ -117,21 +125,26 @@ export default function CaseStudyPage({ params }: Params): JSX.Element {
         {STEPS.map((step, index) => (
           <Band key={step.word} tone={index % 2 === 0 ? 'page' : 'paper'}>
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-              <h2 className="oj-display text-[clamp(30px,5vw,46px)] leading-[0.95] text-oj-ink">
-                {step.word}
-              </h2>
+              <div>
+                <p className="font-oj text-[13px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+                  {step.word}
+                </p>
+                <h2 className="oj-display mt-1.5 text-[clamp(30px,5vw,46px)] leading-[0.95] text-oj-ink">
+                  {step.heading}
+                </h2>
+              </div>
               <p className="text-[18px] leading-relaxed text-oj-ink-2">{study[step.key]}</p>
             </div>
           </Band>
         ))}
 
-        <Band heading="why this travels." tone="ink">
+        <Band heading="why this matters in other businesses." tone="ink">
           <p className="measure text-[18px] leading-relaxed text-oj-cream/85">{study.transfer}</p>
         </Band>
 
         <Band tone="orange" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95]">
-            recognise any of that?
+            does this sound familiar?
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed">
             The first conversation is an hour, it's free, and it's not a pitch.

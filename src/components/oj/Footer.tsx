@@ -124,7 +124,8 @@ export function Footer({
               no way to contact anybody is a gap rather than a clean design.
             */}
             <p className="m-0 max-w-[32ch] text-[14px] leading-relaxed text-oj-cream/60">
-              A strategic growth partner for ambitious small and mid-sized businesses.
+              We find what is stopping a business growing, then fix it. Any sector, any size, if you
+              are open to change.
             </p>
             <Anchor
               href="mailto:peter@orangejelly.co.uk"

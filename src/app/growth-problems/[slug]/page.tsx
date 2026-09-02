@@ -45,7 +45,7 @@ export function generateMetadata({ params }: Params): Metadata {
   const problem = getGrowthProblem(params.slug);
   if (!problem) return {};
 
-  const title = `${problem.title} | Orange Jelly`;
+  const title = `${problem.metaTitle} | Orange Jelly`;
   const url = `${getBaseUrl()}/growth-problems/${problem.slug}`;
 
   return {
@@ -87,7 +87,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
                 className="mb-7"
                 items={[
                   { label: 'Home', href: '/' },
-                  { label: 'Unlock growth', href: '/growth-problems' },
+                  { label: 'Growth problems', href: '/growth-problems' },
                   { label: problem.title },
                 ]}
               />
@@ -118,7 +118,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
           </section>
         </GroundProvider>
 
-        <Band heading="sound familiar?" tone="paper">
+        <Band heading="does this sound familiar?" tone="paper">
           <ul className="measure-wide grid list-none gap-4 p-0 sm:grid-cols-2">
             {problem.symptoms.map((symptom) => (
               <li
@@ -131,7 +131,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
           </ul>
         </Band>
 
-        <Band heading="the connected causes." tone="ink">
+        <Band heading="what is usually causing it." tone="ink">
           <p className="measure text-[18px] leading-relaxed text-oj-cream/85">{problem.causes}</p>
           <div className="mt-9">
             <PressureMap
@@ -160,7 +160,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
           </div>
         </Band>
 
-        <Band heading="what we would examine first.">
+        <Band heading="what we would check first.">
           <ol className="measure-wide grid list-none gap-6 p-0 sm:grid-cols-3">
             {problem.examine.map((item, index) => (
               <li key={item.what}>
@@ -175,8 +175,7 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
             ))}
           </ol>
           <p className="measure mt-9 text-[16.5px] font-semibold leading-relaxed text-oj-ink">
-            This is the HEAR and CHALLENGE half of the method. The build comes after the evidence,
-            not before it.
+            We find the cause first. The fix comes after the evidence, not before it.
           </p>
         </Band>
 
@@ -196,9 +195,8 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
             tell us what's happening.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed">
-            It starts as a conversation, and the first one is free. We work out what's actually
-            causing this against your numbers, then tell you what would move them. No service list,
-            no pitch deck.
+            It starts as a conversation, and the first one is an hour and free. We work out what's
+            actually causing this against your numbers, then tell you what would move them.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button size="lg" arrow href="/start-here">

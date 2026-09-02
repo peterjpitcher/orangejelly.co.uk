@@ -56,61 +56,51 @@ describe('the eight problems', () => {
     }
   });
 
-  it('keeps every line of the designer copy that no decision forced us to change', () => {
+  it('keeps the shape of the designer copy: four symptoms, three checks, one proof each', () => {
     /*
-     * The port is a transform of the supplied template, not a retype, and this is
-     * what proves it stayed one. Retyping a supplied asset is how all seven
-     * taxonomy tints drifted from the pack, silently, for a fortnight.
-     *
-     * Every deliberate divergence is listed with its reason. Anything not listed
-     * has to match the source byte for byte, so a stray edit fails here rather
-     * than quietly becoming the new original.
+     * Until 2 September 2026 this compared every intro, cause and symptom to the
+     * designer's JSON byte for byte, with a named exception list. The plain-English
+     * rewrite on that date replaced the wording on purpose: read as a pub owner,
+     * "pipeline", "proposition", "cost-to-serve" and "operational drag" were the
+     * problem, and Peter approved rewriting all eight pages in the reader's own
+     * words. The structure the designer set is what survives, so that is what is
+     * asserted now.
      */
-    const CHANGED = new Set([
-      // Unsupported numbers. Every one would have shipped as fact.
-      'stalled.symptoms.0', // "flat for three quarters or more": arbitrary threshold
-      'stalled.examine.1.why', // "Half of stall diagnoses collapse"
-      'ai.examine.1.why', // "Half of AI ideas die on data quality"
-      'conversion.examine.1.why', // "the strongest single conversion lever"
-      'margin.examine.2.why', // "once the uplift is halved"
-      'scale.examine.0.why', // "fail at 2x": CLAIMS.md bans multiples
-      // Framing the repo's own gates reject.
-      'scale.examine.2.what', // "gets cheaper": cost-reduction language
-      'stalled.examine.2.what', // "The cheapest unlock": a price signal, with no prices on the site
-      'experience.causes', // "costs more than keeping them ever would": unsupported, and cost framing
-      // Unsupported absolutes, one of them used on two pages.
-      'stalled.intro',
-      'conversion.intro',
-      'stalled.examine.0.why',
-      // British register.
-      'ai.symptoms.3', // "vendor"
-    ]);
-
-    const mismatches: string[] = [];
-    for (const [key, source] of Object.entries(SOURCE)) {
-      const ported =
-        GROWTH_PROBLEMS.find((p) => p.intro === source.intro || p.causes === source.causes) ??
-        GROWTH_PROBLEMS[Object.keys(SOURCE).indexOf(key)];
-      if (!ported) continue;
-
-      const compare = (field: string, from: string, to: string) => {
-        if (CHANGED.has(`${key}.${field}`)) return;
-        if (from !== to) mismatches.push(`${key}.${field}`);
-      };
-
-      compare('intro', source.intro, ported.intro);
-      compare('causes', source.causes, ported.causes);
-      source.symptoms.forEach((symptom, i) =>
-        compare(`symptoms.${i}`, symptom, ported.symptoms[i])
-      );
+    expect(Object.keys(SOURCE)).toHaveLength(8);
+    for (const problem of GROWTH_PROBLEMS) {
+      expect(problem.symptoms, problem.slug).toHaveLength(4);
+      expect(problem.examine, problem.slug).toHaveLength(3);
+      expect(problem.title.length, problem.slug).toBeLessThan(45);
+      // Plus " | Orange Jelly" this has to survive a search result.
+      expect(problem.metaTitle.length, problem.slug).toBeLessThanOrEqual(50);
     }
-
-    expect(mismatches).toEqual([]);
   });
 
-  it('changed only what a decision or a gate forced', () => {
-    // Guards the list above from growing quietly. Thirteen changes across eight
-    // pages, and every one of them is named.
+  it('uses plain words in the titles, and keeps the search terms in the browser title', () => {
+    const titles = GROWTH_PROBLEMS.map((p) => p.title).join(' ');
+    for (const jargon of [
+      'pipeline',
+      'converting',
+      'Margin',
+      'Operations',
+      'Systems can',
+      'value',
+    ]) {
+      expect(titles).not.toContain(jargon);
+    }
+    const metas = GROWTH_PROBLEMS.map((p) => p.metaTitle).join(' ');
+    for (const term of [
+      'Leads not converting',
+      'Margin under pressure',
+      'Using AI intelligently',
+    ]) {
+      expect(metas).toContain(term);
+    }
+  });
+
+  it('changed the designer lines a decision or a gate forced', () => {
+    // The supplied copy carried phrases the repo's own rules reject. They must
+    // stay in the source record and stay out of the site.
     const source = JSON.stringify(SOURCE);
     for (const gone of ['three quarters', 'Half of', '2x', 'cheapest unlock', 'vendor pitch']) {
       expect(source, `${gone} should be in the source`).toContain(gone);
@@ -185,15 +175,17 @@ describe('proof, including where there is none', () => {
   });
 
   it('states the provenance wherever it does show a number', () => {
+    // The page header already says whose venue it is; the proof paragraph names
+    // it again rather than leaving a percentage floating.
     for (const problem of GROWTH_PROBLEMS.filter((p) => p.proof.hasNumbers)) {
-      expect(problem.proof.body, problem.slug).toMatch(/The Anchor, our own venue/);
+      expect(problem.proof.body, problem.slug).toMatch(/The Anchor/);
     }
   });
 
   it('does not let the margin page imply a margin percentage it cannot evidence', () => {
     // The approved claim is +98% food REVENUE. The old food GP figure was retired.
     const margin = getGrowthProblem('margin-under-pressure');
-    expect(margin?.proof.body).toMatch(/It measures revenue, not margin percentage/);
+    expect(margin?.proof.body).toMatch(/measures revenue, not margin percentage/);
   });
 
   it('does not let the experience page imply a retention result', () => {
@@ -243,16 +235,18 @@ describe('a growth problem page', () => {
     // would do first would make it a service page.
     const text = textOf(<GrowthProblemPage params={{ slug: 'leads-not-converting' }} />);
     const at = (needle: string) => text.indexOf(needle);
-    expect(at('sound familiar?')).toBeLessThan(at('the connected causes.'));
-    expect(at('the connected causes.')).toBeLessThan(at('what we would examine first.'));
-    expect(at('what we would examine first.')).toBeLessThan(
+    expect(at('does this sound familiar?')).toBeLessThan(at('what is usually causing it.'));
+    expect(at('what is usually causing it.')).toBeLessThan(at('what we would check first.'));
+    expect(at('what we would check first.')).toBeLessThan(
       at('The gap between wanting to come and having a table.')
     );
   });
 
-  it('names the method with the word the pack retired', () => {
+  it('says the cause comes before the fix, in plain words', () => {
+    // This used to name the HEAR and CHALLENGE half of the method. The method
+    // words mean nothing to a reader who has not been to How we work first.
     expect(textOf(<GrowthProblemPage params={{ slug: 'weak-demand' }} />)).toMatch(
-      /the HEAR and CHALLENGE half of the method/
+      /We find the cause first\. The fix comes after the evidence/
     );
   });
 
@@ -285,7 +279,7 @@ describe('a growth problem page', () => {
   it('marks growth problems as the current section', () => {
     render(<GrowthProblemPage params={{ slug: 'weak-demand' }} />);
     const nav = screen.getByRole('navigation', { name: 'Primary' });
-    expect(within(nav).getByRole('link', { name: 'Unlock growth' })).toHaveAttribute(
+    expect(within(nav).getByRole('link', { name: 'Growth problems' })).toHaveAttribute(
       'aria-current',
       'page'
     );

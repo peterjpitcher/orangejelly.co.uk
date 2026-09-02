@@ -28,9 +28,9 @@ import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from './home-content';
  *
  * Copy: `tasks/repositioning/copy/homepage.md`, held to it by a test.
  */
-const TITLE = 'Orange Jelly | For owners ready to take control of growth.';
+const TITLE = 'Orange Jelly | Find what stops your business growing. Fix it.';
 const DESCRIPTION =
-  'Growth partner for ambitious small and mid-sized businesses. We work out what is actually blocking growth, then build the thing that fixes it.';
+  'We find what is stopping your business growing, then fix it. Sometimes that is marketing. Often it is not. Proven first in a business we run ourselves.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -59,12 +59,11 @@ export default function HomePage(): JSX.Element {
                 strategic growth partner for ambitious businesses
               </p>
               <h1 className="oj-display mt-3 max-w-[16ch] text-[clamp(42px,8.5vw,88px)] leading-[0.92] text-oj-on-band">
-                for business owners ready to take control of growth.
+                find what's stopping your business growing, and fix it.
               </h1>
               <p className="measure mt-6 text-[19px] leading-relaxed text-oj-on-band">
-                We get under the skin of a business, work out what is actually blocking growth,
-                build the strategy to move it, and turn that into action. Sometimes that's
-                marketing. Often it isn't.
+                We work out what is really holding a business back, agree the plan, and then do the
+                work. Sometimes that's marketing. Often it isn't.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -98,7 +97,7 @@ export default function HomePage(): JSX.Element {
               ))}
             </ul>
             <p className="measure mt-8 text-[17px] font-semibold leading-relaxed">
-              Any one of those is worth an hour of our time and none of yours until it is.
+              Any one of those is worth an hour. The hour is free.
             </p>
           </div>
         </section>
@@ -106,17 +105,32 @@ export default function HomePage(): JSX.Element {
         <section className="border-b-1.5 border-oj-ink bg-oj-paper py-14 sm:py-20">
           <div className="page-shell">
             <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
-              six places growth gets stuck.
+              where growth usually gets stuck.
             </h2>
+            <p className="measure mt-5 text-[17px] leading-relaxed text-oj-ink-2">
+              Six areas we check in every business. Most problems are a mix of two or three.
+            </p>
             <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {PRESSURE_POINTS.map((point) => (
                 <PressureCard
                   key={point.title}
+                  eyebrow={point.area}
                   title={point.title}
                   desc={point.desc}
                   href={point.href}
                 />
               ))}
+            </div>
+            {/*
+              The site has six areas and eight problem pages. The two extra pages,
+              "growth has stalled" and "where would AI help", are combinations, and a
+              reader who counted six here and eight on the next page assumed they had
+              missed two. Saying so is cheaper than making them wonder.
+            */}
+            <div className="mt-8">
+              <Button variant="ghost" href="/growth-problems">
+                See all eight growth problems
+              </Button>
             </div>
           </div>
         </section>
@@ -125,10 +139,11 @@ export default function HomePage(): JSX.Element {
           <section className="border-b-1.5 border-oj-ink bg-oj-ink py-14 text-oj-cream sm:py-20">
             <div className="page-shell">
               <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
-                hear. challenge. build. optimise.
+                how it works.
               </h2>
               <p className="measure mt-5 text-[17px] leading-relaxed text-oj-cream/80">
-                Four steps, in that order, every time. The order is the method.
+                Listen, check the numbers, build the fix, measure it. Four steps, in that order,
+                every time.
               </p>
               <ol className="mt-9 grid list-none gap-6 p-0 sm:grid-cols-2">
                 {METHOD.map((step, index) => (
@@ -168,12 +183,15 @@ export default function HomePage(): JSX.Element {
               ))}
             </div>
             <p className="measure mt-9 text-[17px] leading-relaxed">
-              A pub is not a professional services firm. Demand, conversion, margin and drag behave
-              the same way in both, which is why the method travels and the tactics do not.
+              We proved this in a pub. The same problems, and the same fixes, show up in every kind
+              of business.
             </p>
-            <div className="mt-7">
+            <div className="mt-7 flex flex-wrap gap-4">
               <Button variant="ghost" href="/results">
                 See the work
+              </Button>
+              <Button variant="ghost" href="/pub-marketing">
+                Run a pub? Start here
               </Button>
             </div>
           </div>
@@ -182,13 +200,13 @@ export default function HomePage(): JSX.Element {
         <section className="border-b-1.5 border-oj-ink bg-oj-paper py-14 sm:py-20">
           <div className="page-shell">
             <h2 className="oj-display max-w-[20ch] text-[clamp(30px,5.5vw,52px)] leading-[0.98]">
-              big enough to have real problems. small enough to move fast.
+              for anyone who is open to change.
             </h2>
             <div className="measure mt-6 space-y-4 text-[17px] leading-relaxed">
               <p>
-                This works best for a business that has built something real, feels a ceiling, and
-                can act once a direction is agreed. Roughly 10 to 500 people, as a guide rather than
-                a rule.
+                This works for any business that has built something real, feels a ceiling, and can
+                act once a direction is agreed. Any sector, any size. The only thing we need is that
+                something inside the business can actually change.
               </p>
               <p>
                 It doesn't work if you want three posts a week, a pair of hands for a plan already
@@ -217,7 +235,7 @@ export default function HomePage(): JSX.Element {
               </h2>
               <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
                 Tell us what's happening, what you've tried, and what needs to change. The first
-                conversation is an hour, it's free, and it is not a pitch.
+                conversation is an hour, and it's free.
               </p>
               <div className="mt-8">
                 <Button size="lg" arrow href="/start-here">
