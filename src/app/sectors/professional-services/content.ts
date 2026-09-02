@@ -31,7 +31,7 @@ export const TRANSLATIONS = [
     area: 'margin',
     label: 'Protect margin',
     heading: 'Realisation is quietly eating the year',
-    body: 'The rate card says one thing and the invoices say another. Scope creeps because saying no to a good client is hard, write-offs get approved one at a time because each is small, and nobody adds them up until the year end does it for them.',
+    body: 'Realisation is the gap between what you charge out and what you actually bill, and it is where the year goes. The rate card says one thing and the invoices say another. Scope creeps because saying no to a good client is hard, write-offs get approved one at a time because each is small, and nobody adds them up until the year end does it for them.',
     tell: 'You know your charge-out rates precisely and your realised rate approximately.',
   },
   {
@@ -52,7 +52,7 @@ export const TRANSLATIONS = [
     area: 'scale',
     label: 'Build for scale',
     heading: 'Growth means hiring, and hiring is the constraint',
-    body: 'Every additional pound of revenue needs an additional person, because the way the work gets done has not changed since the firm was half the size. Utilisation is the only lever anyone reaches for, and it is the one with a ceiling and a resignation attached.',
+    body: "Every additional pound of revenue needs an additional person, because the way the work gets done has not changed since the firm was half the size. Utilisation, how many of each person's hours get billed, is the only lever anyone reaches for, and it is the one with a ceiling and a resignation attached.",
     tell: 'Your growth plan and your recruitment plan are the same document.',
   },
 ] as const;

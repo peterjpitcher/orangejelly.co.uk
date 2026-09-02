@@ -118,3 +118,12 @@ It doesn't work if you want three posts a week, a pair of hands for a plan alrea
 **Line:** Tell us what's happening, what you've tried, and what needs to change. The first conversation is an hour, it's free, and it is not a pitch.
 
 **Action:** Let's talk → `/start-here`
+
+## Amendments, 2 September 2026: plain-English pass
+
+The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+
+- Enquiries come in, then go quiet after the first reply.
+- They get as far as asking, then go quiet. Usually the problem is what happens after they get in touch.
+- The sales are there. The profit is leaking out somewhere between the till and the bank.
+- We measure it against the numbers we took before we started, and we keep going until it moves.

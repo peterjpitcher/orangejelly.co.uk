@@ -50,13 +50,15 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     headline: {
       value: '+828%',
       label: 'Google Search visibility',
-      context: 'Search Console clicks and impressions, at The Anchor.',
+      context:
+        'How often people found The Anchor on Google: clicks and impressions, against before.',
     },
     stats: [
       {
         value: '+828%',
         label: 'Google Search visibility',
-        context: 'Search Console clicks and impressions, at The Anchor.',
+        context:
+          'How often people found The Anchor on Google: clicks and impressions, against before.',
       },
       {
         value: '+567%',
@@ -70,7 +72,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     build:
       'The site was rebuilt around what people actually search for, page by page, with the answer on the page rather than a phone number and a hope. The enquiry route for private hire was made obvious instead of buried, because that was the search with the highest intent and the least competition.',
     optimise:
-      'Measured against the Search Console baseline taken before any of it. Visibility grew 828%, and private hire went from about six bookings a year to twenty confirmed in six months, which is what the visibility was worth in money.',
+      'Measured against the Google Search Console numbers taken before any of it started. Visibility grew 828%, and private hire went from about six bookings a year to twenty confirmed in six months, which is what the visibility was worth in money.',
     transfer:
       'The mechanism has nothing to do with pubs. A business describes itself in its own words, its customers search in theirs, and the gap between the two is demand somebody else is collecting.',
     featured: true,
@@ -84,13 +86,13 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     headline: {
       value: '+403%',
       label: 'Table bookings',
-      context: 'Bookings taken at The Anchor, against the previous run rate.',
+      context: 'Bookings taken at The Anchor, compared with before the work started.',
     },
     stats: [
       {
         value: '+403%',
         label: 'Table bookings',
-        context: 'Bookings taken at The Anchor, against the previous run rate.',
+        context: 'Bookings taken at The Anchor, compared with before the work started.',
       },
       {
         value: '89%',
@@ -104,7 +106,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
     build:
       'A reason to book on the quiet sessions, and a booking journey that took the interest and turned it into a confirmed table rather than an intention. Then confirmations and reminders, because a booking that does not turn up costs more than one that never existed: the table was held and the food was prepped.',
     optimise:
-      'Table bookings grew 403% against the previous run rate, and no-shows fell from around one in five to around one in fifty, an 89% reduction. The second number is the one that changed the economics.',
+      'Table bookings grew 403% compared with before, and no-shows fell from around one in five to around one in fifty, an 89% reduction. The second number is the one that changed the economics.',
     transfer:
       'Every business has a version of the held table: the slot, the quote, the appointment, the sample. It costs whether or not anyone turns up, and almost nobody measures the drop-off between interest and confirmation.',
   },

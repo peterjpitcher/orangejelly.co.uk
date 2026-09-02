@@ -25,32 +25,47 @@ describe('/pub-marketing', () => {
     // stays out of the company description, which is what the positioning gate
     // enforces everywhere else.
     render(<PubMarketingPage />);
+    expect(screen.getByText('pub marketing')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'pub marketing that starts with the numbers.'
+      'find out why trade is quiet, and what to fix.'
     );
   });
 
-  it('says what the company is before it says what the sector is', () => {
-    expect(textOf(<PubMarketingPage />)).toMatch(
-      /strategic growth partner for ambitious small and mid-sized businesses, and hospitality is the sector we know best/
-    );
+  it("says whose pub the evidence comes from, in a licensee's words", () => {
+    // The hero used to open with the company category line. Read as a pub owner,
+    // that said "not for me". The sector is one market the company works in, and
+    // the page says so by saying what it runs rather than what it is.
+    expect(textOf(<PubMarketingPage />)).toMatch(/We run a pub\. The Anchor is our own venue/);
   });
 
   it('opens on the diagnosis rather than the campaign', () => {
     expect(textOf(<PubMarketingPage />)).toMatch(/most pubs do not have a marketing problem/i);
   });
 
-  it('answers the cost question without a price', () => {
+  it('answers the cost question with the one rate the site advertises, and nothing else priced', () => {
+    // This used to assert "no price list". Start here said the hourly rate was the
+    // whole price list, and a reader who saw both trusted neither. One sentence,
+    // the same everywhere.
     const answer = FAQS.find((faq) => faq.q === 'What does it cost?');
-    expect(answer?.a).toMatch(/no price list/);
-    expect(answer?.a).not.toMatch(/£/);
-    expect(textOf(<PubMarketingPage />)).not.toMatch(/£/);
+    expect(answer?.a).toMatch(/£62\.50 plus VAT an hour/);
+    expect(answer?.a).toMatch(/only number we advertise/);
+    const text = textOf(<PubMarketingPage />);
+    expect(text.match(/£/g)).toHaveLength(1);
+    expect(text).not.toMatch(/packages? (from|start|at) /i);
   });
 
   it('keeps the five questions the old page ranked for', () => {
     render(<PubMarketingPage />);
-    expect(FAQS).toHaveLength(5);
-    for (const faq of FAQS) expect(screen.getByText(faq.q)).toBeInTheDocument();
+    for (const q of [
+      'Do you do it for me, or show me how?',
+      'How quickly does pub marketing work?',
+      'Can you help with Google Business Profile and reviews?',
+      'What does it cost?',
+      'Will this work for a tied pub or a managed house?',
+    ]) {
+      expect(FAQS.map((faq) => faq.q)).toContain(q);
+      expect(screen.getByText(q)).toBeInTheDocument();
+    }
   });
 
   it('makes no promise about how quickly it works', () => {
@@ -98,8 +113,8 @@ describe('/why-revenue-is-falling', () => {
     // offers, not how gently it says it: the promise is a findable cause, and the
     // word rescue is gone from the page entirely.
     const text = textOf(<WhyRevenueIsFallingPage />);
-    expect(text).toMatch(/find out why revenue is falling/);
-    expect(text).toMatch(/The cause is findable/);
+    expect(text).toMatch(/revenue is falling\. find out why before you spend/);
+    expect(text).toMatch(/The cause can be found/);
     expect(text).not.toMatch(/\brescue\b/i);
   });
 
@@ -117,15 +132,21 @@ describe('/why-revenue-is-falling', () => {
     for (const item of WOULD_NOT_DO) expect(screen.getByText(item)).toBeInTheDocument();
   });
 
-  it('insists on a baseline before anything changes', () => {
+  it('insists on the starting numbers before anything changes', () => {
+    // "Baseline" became "the numbers first" in the plain-English pass. The
+    // substance, nothing changes until there is something to compare against, is
+    // what is asserted.
     const text = textOf(<WhyRevenueIsFallingPage />);
-    expect(text).toMatch(/The baseline first/);
-    expect(text).toMatch(/Start before there is a baseline/);
+    expect(text).toMatch(/The numbers first/);
+    expect(text).toMatch(/Start before we have the numbers from before/);
   });
 
-  it('quotes no price and promises no timescale', () => {
+  it('quotes only the hourly rate and promises no timescale', () => {
     const text = textOf(<WhyRevenueIsFallingPage />);
-    expect(text).not.toMatch(/£/);
+    // The FAQ schema repeats the FAQ text, so the rate appears twice in the body:
+    // once rendered, once in the JSON-LD. Nothing else may carry a pound sign.
+    expect(text).toMatch(/£62\.50 plus VAT an hour/);
+    expect((text.match(/£/g) ?? []).length).toBeLessThanOrEqual(2);
     expect(text).not.toMatch(/within \d+ (hours|days)|30-day|guarantee/i);
   });
 });

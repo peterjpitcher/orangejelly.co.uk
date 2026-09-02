@@ -115,10 +115,20 @@ describe('/results', () => {
 });
 
 describe('/results/[slug]', () => {
-  it('renders a case study through the four method words', () => {
+  it('renders a case study through the four method stages, with plain headings', () => {
     render(<CaseStudyPage params={{ slug: 'nobody-could-find-us' }} />);
-    for (const word of ['HEAR.', 'CHALLENGE.', 'BUILD.', 'OPTIMISE.']) {
+    // The stage label stays so the page visibly follows the method; the heading is
+    // what a reader arriving cold from a search result can actually use.
+    for (const word of ['HEAR', 'CHALLENGE', 'BUILD', 'OPTIMISE']) {
       expect(screen.getByText(word)).toBeInTheDocument();
+    }
+    for (const heading of [
+      'what was happening.',
+      'what we found.',
+      'what we did.',
+      'what changed.',
+    ]) {
+      expect(screen.getByRole('heading', { name: heading })).toBeInTheDocument();
     }
   });
 
@@ -134,7 +144,7 @@ describe('/results/[slug]', () => {
     const study = getCaseStudy('interest-that-did-not-turn-up');
     render(<CaseStudyPage params={{ slug: study!.slug }} />);
     expect(screen.getByText(study!.transfer)).toBeInTheDocument();
-    expect(screen.getByText('why this travels.')).toBeInTheDocument();
+    expect(screen.getByText('why this matters in other businesses.')).toBeInTheDocument();
   });
 
   it('says the same words as the approved copy', () => {

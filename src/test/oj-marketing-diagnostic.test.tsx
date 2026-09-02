@@ -88,8 +88,8 @@ describe('oj/diagnostic', () => {
         ]}
       />
     );
-    expect(screen.getByText('critical')).toBeInTheDocument();
-    expect(screen.getByText('steady')).toBeInTheDocument();
+    expect(screen.getByText('usually part of it')).toBeInTheDocument();
+    expect(screen.getByText('usually fine')).toBeInTheDocument();
   });
 
   it('never shows a total or a score', () => {
@@ -131,21 +131,23 @@ describe('oj/diagnostic', () => {
     expect(screen.getByText(`1 of ${SCORECARD_QUESTIONS.length} answered`)).toBeInTheDocument();
   });
 
-  it('reverse-scores the operations statements so straight-lining does not work', async () => {
+  it('scores every statement the same way, with Always as the healthy answer', async () => {
     const user = userEvent.setup();
     const onComplete = vi.fn();
     render(<Scorecard onComplete={onComplete} />);
 
-    // Answer everything "Always". On the positive statements that is healthy; on the
-    // two reverse-scored operations statements it is the worst possible answer.
+    // The operations pair used to be reverse-scored. They were reworded on
+    // 2 September 2026 so Always is healthy on all twelve, because two statements
+    // scored the other way on the same scale confused honest answerers. So: Never
+    // on operations, Always everywhere else, and operations must come out heaviest.
     for (const question of SCORECARD_QUESTIONS) {
       const group = screen.getByText(question.text).closest('fieldset') as HTMLElement;
-      await user.click(within(group).getByText('Always'));
+      await user.click(
+        within(group).getByText(question.area === 'operations' ? 'Never' : 'Always')
+      );
     }
 
     expect(onComplete).toHaveBeenCalled();
-    // Operations must not come out steady when both its statements were answered
-    // "always" and both are the bad direction.
     expect(screen.getByText(/The heaviest pressure looks like/)).toHaveTextContent('operations');
   });
 

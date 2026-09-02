@@ -110,3 +110,11 @@ talking to.
 when that is not us. The first conversation is an hour and it is free.
 
 **Action:** Let's talk
+
+## Amendments, 2 September 2026: plain-English pass
+
+The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+
+- Not enough demand is genuinely the thing holding you back, the rest of the business works, and what is missing is somebody senior to own it.
+- This is the common case and it is the reason this page exists. A business decides it needs marketing leadership because not enough demand is the symptom it can see. Underneath, enquiries are not turning into customers because nobody follows them up properly, margin is thin because pricing was never revisited, and the team is doing by hand what a system should do. A fractional CMO will spot that correctly and then be able to act on roughly a third of it. The other two thirds are somebody else's job, and the honest ones will tell you so. Now you are hiring a fractional COO as well, and the two of them are working out the boundary between them at your expense.
+- Split the problem across two part-time department heads and you have split the accountability with it. Each can succeed at their own job while the thing you actually wanted does not move.

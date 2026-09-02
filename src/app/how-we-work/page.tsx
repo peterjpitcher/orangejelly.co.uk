@@ -3,7 +3,13 @@ import type { Metadata } from 'next';
 import { Band, Breadcrumb, Button, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { METHOD_DETAIL, PRESSURE_AREAS_EXPLAINED, PREVENTS, STARTING_AGREEMENT } from './content';
+import {
+  METHOD_DETAIL,
+  PRESSURE_AREAS_EXPLAINED,
+  PREVENTS,
+  STARTING_AGREEMENT,
+  TIMELINE,
+} from './content';
 
 /**
  * `/how-we-work`. The method in full.
@@ -17,7 +23,7 @@ import { METHOD_DETAIL, PRESSURE_AREAS_EXPLAINED, PREVENTS, STARTING_AGREEMENT }
  */
 const TITLE = 'How we work | Orange Jelly';
 const DESCRIPTION =
-  'Hear, challenge, build, optimise. Four steps in that order, every time, because the order is what stops us fixing the loudest symptom instead of the cause.';
+  'First we find the problem. Then we fix it. Four steps in the same order every time, how long each takes, and what we agree in writing before anything is built.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -48,15 +54,14 @@ export default function HowWeWorkPage(): JSX.Element {
                 items={[{ label: 'Home', href: '/' }, { label: 'How we work' }]}
               />
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
-                the method
+                the method: hear, challenge, build, optimise
               </p>
-              <h1 className="oj-display mt-2.5 text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
-                hear. challenge. build. optimise.
+              <h1 className="oj-display mt-2.5 max-w-[14ch] text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
+                first we find the problem. then we fix it.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Four steps, in that order, every time. Not because process is comforting, but
-                because the order is what stops us solving the loudest symptom instead of the real
-                problem.
+                Four steps, in the same order, every time. The order matters because it is what
+                stops us fixing the loudest symptom instead of the real problem.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -67,20 +72,36 @@ export default function HowWeWorkPage(): JSX.Element {
           </section>
         </GroundProvider>
 
-        <Band heading="why a method, and not just experience." tone="paper">
+        <Band heading="why the same four steps every time." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              Orange Jelly works across marketing, commercial change, operations, systems and AI.
-              Without a method, that looks like a company that will do anything, which is another
-              way of saying a company that's good at nothing.
+              The fix might turn out to be marketing, a price change, a new way of working, a
+              system, or a piece of software. Without a fixed way of getting there, that range looks
+              like a company that will do anything, which is another way of saying a company that's
+              good at nothing.
             </p>
             <p>
-              The method is what connects them. It starts with the problem and ends with evidence,
-              and it's the same sequence whether the answer turns out to be a campaign, a pricing
-              change or a piece of software.
+              The four steps are what connect it. They start with the problem and end with evidence,
+              whatever the answer turns out to be. They also decide when to stop, which most
+              consultancy work never does.
             </p>
-            <p>It also decides when to stop, which most engagements never do.</p>
           </div>
+        </Band>
+
+        <Band heading="how long it takes.">
+          <dl className="measure-wide grid gap-6 sm:grid-cols-3">
+            {TIMELINE.map((item) => (
+              <div key={item.stage} className="border-t-1.5 border-oj-ink pt-3.5">
+                <dt className="font-oj text-[18px] font-black leading-snug text-oj-ink">
+                  {item.stage}
+                </dt>
+                <dd className="mt-1.5 text-[17px] font-semibold text-oj-orange-deep">
+                  {item.length}
+                </dd>
+                <dd className="mt-2 text-[16px] leading-relaxed text-oj-ink-2">{item.body}</dd>
+              </div>
+            ))}
+          </dl>
         </Band>
 
         {METHOD_DETAIL.map((step, index) => (
@@ -112,7 +133,7 @@ export default function HowWeWorkPage(): JSX.Element {
 
         <Band
           heading="the growth pressure map."
-          intro="The artefact that comes out of CHALLENGE. It maps the business across six connected areas and says, for each one, where the pressure actually is."
+          intro="What comes out of CHALLENGE: a one-page map of your business across six connected areas, saying for each one where the pressure actually is."
           tone="ink"
         >
           <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -124,9 +145,9 @@ export default function HowWeWorkPage(): JSX.Element {
             ))}
           </dl>
           <p className="measure mt-9 text-[17px] leading-relaxed text-oj-cream/80">
-            It's not a generic scorecard with a total at the bottom. A score invites a league table
-            and false precision. The map is built around your business model and is there to focus
-            the next move, not to grade you.
+            It's not a scorecard with a total at the bottom. A score invites a league table and
+            false precision. The map is built around how your business actually works and is there
+            to focus the next move, not to grade you.
           </p>
         </Band>
 
@@ -147,7 +168,7 @@ export default function HowWeWorkPage(): JSX.Element {
           </p>
         </Band>
 
-        <Band heading="what this stops happening." tone="paper">
+        <Band heading="what this avoids." tone="paper">
           <ul className="measure-wide grid list-none gap-x-10 gap-y-3 p-0 sm:grid-cols-2">
             {PREVENTS.map((item) => (
               <li key={item} className="flex gap-3 text-[17px] leading-relaxed">
@@ -162,11 +183,10 @@ export default function HowWeWorkPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            the order is the method.
+            it starts with an hour, free.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            It starts with an hour on the phone and no charge. Tell us what's happening and we'll
-            tell you what we think.
+            Tell us what's happening and we'll tell you what we think.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

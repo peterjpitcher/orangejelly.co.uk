@@ -11,6 +11,7 @@ import {
   GroundProvider,
   OjHeader,
 } from '@/components/oj';
+import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
 import { FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
@@ -63,13 +64,13 @@ export default function StartHerePage(): JSX.Element {
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-on-band">
                 the first conversation
               </p>
-              <h1 className="oj-display mt-2.5 text-[clamp(44px,9vw,84px)] leading-[0.92] text-oj-on-band">
-                start here.
+              <h1 className="oj-display mt-2.5 max-w-[14ch] text-[clamp(40px,8vw,76px)] leading-[0.92] text-oj-on-band">
+                tell us what's happening. we'll tell you where to look first.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
-                Every piece of work we do starts the same way. A conversation about what is actually
-                happening in your business, before anyone says the word solution. This page tells
-                you what that involves, what you get out of it, and who it doesn't work for.
+                Every piece of work we do starts the same way: a conversation about what is actually
+                happening in your business, before anyone talks about a solution. This page tells
+                you what that involves, what you get out of it, and what it costs.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="#enquiry">
@@ -123,8 +124,8 @@ export default function StartHerePage(): JSX.Element {
         </Band>
 
         <Band
-          heading="big enough to have real problems. small enough to move fast."
-          intro="We work best with ambitious owners who are ready to act. You'll get the most from this if:"
+          heading="who this works for."
+          intro="We work best with owners who are ready to act. You'll get the most from this if:"
         >
           <ul className="measure flex list-none flex-col gap-3 p-0">
             {FIT.works.map((item) => (
@@ -137,8 +138,8 @@ export default function StartHerePage(): JSX.Element {
             ))}
           </ul>
           <p className="measure mt-7 text-[16px] leading-relaxed text-oj-ink-2">
-            Roughly, that tends to mean 10 to 500 people. It's a guide rather than a rule: a smaller
-            business with real scale, urgency and something to invest fits fine.
+            Any sector, any size. A two-person business with something to change fits as well as a
+            two-hundred-person one.
           </p>
         </Band>
 
@@ -177,16 +178,16 @@ export default function StartHerePage(): JSX.Element {
               <strong>The conversation</strong> is an hour, and it is free.
             </p>
             <p>
-              <strong>A diagnostic</strong> is normally two to three weeks. Longer work depends
-              entirely on what we find, and we agree the shape of it with you before it starts
-              rather than after.
+              <strong>The first proper look</strong> normally takes two to three weeks. Anything
+              after that depends on what we find, and we agree the shape of it with you before it
+              starts rather than after.
             </p>
             <p>
-              <strong>On cost:</strong> the rate is £62.50 plus VAT an hour, and that is the whole
-              price list. We do not sell packages, because what a company of eight with a conversion
-              problem needs looks nothing like what a company of two hundred with a margin problem
-              needs, and quoting either before we have looked would be a guess. What changes is how
-              many hours a piece of work takes, and you get that in writing before anything starts.
+              <strong>On cost:</strong> the rate is {PRICING.hourly.display}, and that is the only
+              number we advertise. There are no packages, because a business of eight with a booking
+              problem needs something very different from a business of two hundred with a profit
+              problem. What changes is how many hours a piece of work takes, and you get that in
+              writing before anything starts.
             </p>
           </div>
         </Band>

@@ -15,7 +15,7 @@
 export const RIGHT_ANSWER = [
   {
     title: 'You know the problem is marketing.',
-    body: 'Demand is genuinely the constraint, the rest of the business works, and what is missing is somebody senior to own it.',
+    body: 'Not enough demand is genuinely the thing holding you back, the rest of the business works, and what is missing is somebody senior to own it.',
   },
   {
     title: 'You have a team to lead.',
@@ -30,11 +30,11 @@ export const RIGHT_ANSWER = [
 export const WRONG_SHAPE = [
   {
     title: 'The problem crosses functions and only one of them gets a seat.',
-    body: "This is the common case and it is the reason this page exists. A business comes to the conclusion that it needs marketing leadership because demand is the symptom it can see. Underneath, enquiries are not converting because the handover is broken, margin is thin because pricing was never revisited, and the team is doing by hand what a system should do. A fractional CMO will diagnose that correctly and then be able to act on roughly a third of it. The other two thirds are somebody else's remit, and the honest ones will tell you so. Now you are hiring a fractional COO as well, and the two of them are negotiating the boundary between them at your expense.",
+    body: "This is the common case and it is the reason this page exists. A business decides it needs marketing leadership because not enough demand is the symptom it can see. Underneath, enquiries are not turning into customers because nobody follows them up properly, margin is thin because pricing was never revisited, and the team is doing by hand what a system should do. A fractional CMO will spot that correctly and then be able to act on roughly a third of it. The other two thirds are somebody else's job, and the honest ones will tell you so. Now you are hiring a fractional COO as well, and the two of them are working out the boundary between them at your expense.",
   },
   {
     title: 'Nobody is accountable for the whole number.',
-    body: 'Split the problem across two part-time functional leaders and you have split the accountability with it. Each can succeed at their remit while the thing you actually wanted does not move.',
+    body: 'Split the problem across two part-time department heads and you have split the accountability with it. Each can succeed at their own job while the thing you actually wanted does not move.',
   },
   {
     title: 'A seat is not a diagnosis.',

@@ -68,7 +68,7 @@ export default function AiReadinessPage(): JSX.Element {
                 assessment
               </p>
               <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
-                is your business ready for <span className="oj-keep-case">AI</span>?
+                would <span className="oj-keep-case">AI</span> actually help your business?
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
                 Not a technical assessment. This asks whether the business is in a state where{' '}
@@ -76,9 +76,10 @@ export default function AiReadinessPage(): JSX.Element {
                 useful question and the one most tools skip.
               </p>
               <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
-                Twelve statements, about two minutes. There is no score at the end, nothing is
-                stored unless you decide to get in touch, and the result tells you where AI would
-                not help as well as where it would.
+                Twelve statements, about two minutes. Answer how often each one is true of your
+                business; "always" is the good answer every time. Nothing is stored unless you
+                decide to get in touch, and the result says where AI would not help as well as where
+                it would.
               </p>
             </div>
           </section>
@@ -133,8 +134,8 @@ export default function AiReadinessPage(): JSX.Element {
                 body: 'There is no number and no mark out of anything. A score invites a league table and false precision, and neither would tell you what to do on Monday.',
               },
               {
-                title: 'A diagnosis.',
-                body: "Twelve statements cannot diagnose a business. It's a signal about where to look, which is a genuinely different thing and worth having.",
+                title: 'A full answer.',
+                body: 'Twelve statements cannot tell you what is wrong with a business. What they give you is a pointer to where to look, which is a genuinely different thing and worth having.',
               },
               {
                 title: 'That you need AI.',
@@ -167,7 +168,7 @@ export default function AiReadinessPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            a signal, not a diagnosis.
+            a pointer, not an answer.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
             Whatever it says, the useful next step is the same: an hour on the phone, free, where

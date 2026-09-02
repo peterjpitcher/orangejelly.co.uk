@@ -32,7 +32,7 @@ import { AREAS, FAQS, LOOK_AT_FIRST } from './content';
  */
 const TITLE = 'Pub marketing | Orange Jelly';
 const DESCRIPTION =
-  'Most pubs do not have a marketing problem, they have a diagnosis problem. What we look at first, what it costs to find out, and the numbers from our own venue.';
+  'Find out why trade is quiet, and what to fix. What we look at first, what it costs, and the numbers from the pub we run ourselves.';
 
 const METHOD = [
   {
@@ -49,7 +49,7 @@ const METHOD = [
   },
   {
     word: 'OPTIMISE.',
-    text: 'Measured against the baseline we took before we started, and kept at until it moves.',
+    text: 'Measured against the numbers we took before we started, and kept at until it moves.',
   },
 ] as const;
 
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 export default function PubMarketingPage(): JSX.Element {
   return (
     <>
-      <OjHeader />
+      <OjHeader current="pubs" />
 
       <main id="main-content">
         <GroundProvider value="ink">
@@ -79,19 +79,18 @@ export default function PubMarketingPage(): JSX.Element {
               <Breadcrumb
                 tone="ink"
                 className="mb-7"
-                items={[{ label: 'Home', href: '/' }, { label: 'Pub marketing' }]}
+                items={[{ label: 'Home', href: '/' }, { label: 'Pubs' }]}
               />
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
-                hospitality
+                pub marketing
               </p>
-              <h1 className="oj-display mt-2.5 text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
-                pub marketing that starts with the numbers.
+              <h1 className="oj-display mt-2.5 max-w-[15ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
+                find out why trade is quiet, and what to fix.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Orange Jelly is a strategic growth partner for ambitious small and mid-sized
-                businesses, and hospitality is the sector we know best, because we run one. The
-                Anchor is our own venue. Everything here was tested there before it was offered to
-                anybody else.
+                We run a pub. The Anchor is our own venue, and everything on this page was tested
+                there before it was offered to anybody else. Written for pubs, and it applies just
+                as well to restaurants, bars and cafés.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -132,7 +131,7 @@ export default function PubMarketingPage(): JSX.Element {
 
         <Band
           heading="proven in our own venue."
-          intro="Every figure below is from The Anchor, measured against a baseline, in a business where getting it wrong cost us rather than a client."
+          intro="Every figure below is from The Anchor, measured against the numbers before we started."
           tone="paper"
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -163,15 +162,14 @@ export default function PubMarketingPage(): JSX.Element {
           </div>
         </Band>
 
-        <Band heading="if it's not marketing, and it's urgent." tone="paper">
+        <Band heading="if takings are actually falling." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
             Everything above assumes there's time to look properly. If takings are falling week on
-            week and the wage bill is not, there's{' '}
+            week and the wage bill is not, that is more urgent, and there's{' '}
             <Anchor href="/why-revenue-is-falling" className="font-semibold">
               a page on finding out why
             </Anchor>
-            . It starts by saying what we are not, which matters more in that situation than in this
-            one.
+            .
           </p>
         </Band>
 

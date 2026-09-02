@@ -5,10 +5,16 @@
  * Source of truth for the wording: `tasks/repositioning/copy/homepage.md`.
  * Every figure comes from `CLAIMS.md` and is expressed as a percentage, with its
  * provenance stated on the card.
+ *
+ * REWRITTEN 2 SEPTEMBER 2026 for plain English. The language review, read as a pub
+ * owner, found the site written in the vocabulary of a strategy consultancy:
+ * "handover", "run rate", "Search Console", "operational drag". The rule now is that
+ * the category term ("Create demand") is a small label and the heading is the
+ * problem in the reader's own words ("Not enough new customers").
  */
 export const SYMPTOMS = [
   'Growth has stalled, and nobody can say exactly when it did.',
-  "Leads arrive and don't convert, and the handover is where they go quiet.",
+  'Enquiries come in, then go quiet after the first reply.',
   "Sales look healthy and the profit doesn't follow.",
   'The team is busy doing things a system should be doing.',
   'The business has outgrown the way it was set up to run.',
@@ -18,40 +24,45 @@ export const SYMPTOMS = [
 /**
  * The six areas, and the problem page each one leads to.
  *
- * The card titles are the areas (where growth gets stuck). The destinations are
- * symptom-shaped, because that is how somebody recognises their own situation:
- * nobody types "protect margin", they think "we are busy and not much better off".
- * The eight problem pages carry the symptom language and tag themselves with the
- * areas they touch, so the two vocabularies stay joined rather than competing.
+ * The card title is the problem in plain words, because that is how somebody
+ * recognises their own situation: nobody types "protect margin", they think "we are
+ * busy and not much better off". The area name sits above it as a label so the
+ * vocabulary the rest of the site uses stays joined to it rather than competing.
  */
 export const PRESSURE_POINTS = [
   {
-    title: 'Create demand',
+    area: 'Create demand',
+    title: 'Not enough new customers',
     desc: 'Not enough of the right people know you exist, or care yet.',
     href: '/growth-problems/weak-demand',
   },
   {
-    title: 'Convert more',
-    desc: "They arrive, they look, and they don't buy. Usually the fault is in the handover.",
+    area: 'Convert more',
+    title: "People look, but don't buy",
+    desc: 'They get as far as asking, then go quiet. Usually the problem is what happens after they get in touch.',
     href: '/growth-problems/leads-not-converting',
   },
   {
-    title: 'Protect margin',
-    desc: "The revenue is there. It's leaking out somewhere between the sale and the bank.",
+    area: 'Protect margin',
+    title: 'Busy, but not making money',
+    desc: 'The sales are there. The profit is leaking out somewhere between the till and the bank.',
     href: '/growth-problems/margin-under-pressure',
   },
   {
-    title: 'Remove operational drag',
+    area: 'Remove operational drag',
+    title: 'Too much admin, not enough time',
     desc: 'People doing by hand what a system should do, and no time left to improve anything.',
     href: '/growth-problems/operations-slowing-us-down',
   },
   {
-    title: 'Improve the experience',
+    area: 'Improve the experience',
+    title: "Customers don't come back",
     desc: 'What you deliver is fine. What people remember is not the same thing.',
     href: '/growth-problems/experience-leaking-value',
   },
   {
-    title: 'Build for scale',
+    area: 'Build for scale',
+    title: "It only works because you're there",
     desc: "It works at this size. It won't work at twice this size, and you can feel it.",
     href: '/growth-problems/systems-cannot-keep-up',
   },
@@ -72,7 +83,7 @@ export const METHOD = [
   },
   {
     word: 'OPTIMISE.',
-    text: 'We measure it against the baseline we agreed at the start, and we keep going until it moves.',
+    text: 'We measure it against the numbers we took before we started, and we keep going until it moves.',
   },
 ] as const;
 
@@ -82,18 +93,21 @@ export const METHOD = [
  * Improvement is always a percentage, never a raw number or a multiple: "+403%"
  * relates better than "fivefold", and a multiple invites the reader to work out the
  * base, which is not the point being made.
+ *
+ * The context line says how it was measured in words a reader would use. "Search
+ * Console clicks and impressions" is accurate and meant nothing to a publican.
  */
 export const PROOF = [
   {
     value: '+828%',
     label: 'Google Search visibility',
-    context: 'Search Console clicks and impressions, at The Anchor.',
+    context: 'How often people found The Anchor on Google: clicks and impressions, against before.',
     area: 'Create demand',
   },
   {
     value: '+403%',
     label: 'Table bookings',
-    context: 'Bookings taken at The Anchor, against the previous run rate.',
+    context: 'Bookings taken at The Anchor, compared with before the work started.',
     area: 'Convert more',
   },
   {

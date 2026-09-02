@@ -15,7 +15,7 @@ describe('the homepage', () => {
   it('leads with the promise, not with a service', () => {
     render(<HomePage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'for business owners ready to take control of growth.'
+      "find what's stopping your business growing, and fix it."
     );
   });
 
@@ -39,10 +39,10 @@ describe('the homepage', () => {
     render(<HomePage />);
     expect(PRESSURE_POINTS).toHaveLength(6);
     for (const point of PRESSURE_POINTS) {
-      // The whole card is the link, so its accessible name is the title followed by
-      // the description. That is deliberate: a bare arrow as the only link is what
-      // the reference did, and it reads as "link" and nothing else.
-      const link = screen.getByRole('link', { name: new RegExp(`^${point.title}`) });
+      // The whole card is the link, so its accessible name is the area label, the
+      // plain title and the description. That is deliberate: a bare arrow as the
+      // only link is what the reference did, and it reads as "link" and nothing else.
+      const link = screen.getByRole('link', { name: new RegExp(`^${point.area} ${point.title}`) });
       expect(link).toHaveAttribute('href', point.href);
     }
   });

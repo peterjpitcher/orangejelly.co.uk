@@ -6,8 +6,10 @@
  * THIS IS WHERE THE SECTOR LANGUAGE BELONGS. "Pub marketing" is the strongest term
  * the keyword research found and it is accurate here. What changed is that it now
  * describes a market Orange Jelly works in rather than what the company is, and the
- * page says so in its first paragraph rather than leaving it implied.
+ * page says so rather than leaving it implied.
  */
+import { PRICING } from '@/lib/constants';
+
 export const LOOK_AT_FIRST = [
   {
     title: 'Whether people can find you',
@@ -18,11 +20,11 @@ export const LOOK_AT_FIRST = [
     body: 'A clear midweek hook beats a full content calendar. One repeatable reason is worth more than thirty posts.',
   },
   {
-    title: 'Whether the booking survives the interest',
+    title: 'Whether people who want to come can actually book',
     body: 'Most venues lose people between wanting to come and having a table. That gap is measurable and almost nobody measures it.',
   },
   {
-    title: 'Whether the spend is worth having',
+    title: 'Whether the extra trade is worth having',
     body: 'More covers at the wrong margin is more work for the same money.',
   },
 ] as const;
@@ -41,12 +43,21 @@ export const FAQS = [
     a: "Yes, and it's usually where we start. It is the quickest win for local footfall: accuracy, photos, replies, and posts that actually get seen.",
   },
   {
+    /*
+     * The one price sentence, the same one Start here uses. This answer used to
+     * say "there is no price list", and Start here said the hourly rate "is the
+     * whole price list". A reader who saw both trusted neither.
+     */
     q: 'What does it cost?',
-    a: "There is no price list, because there is no package. What we would quote for a single quiet midweek session is nothing like what we would quote for a venue where the whole week has slipped. The first conversation is an hour and it's free, and you get a number in writing before anything starts.",
+    a: `The rate is ${PRICING.hourly.display}, and that is the only number we advertise. There are no packages, because what a single quiet midweek session needs is nothing like what a venue where the whole week has slipped needs. The first conversation is an hour and it's free, and you get the hours in writing before anything starts.`,
   },
   {
     q: 'Will this work for a tied pub or a managed house?',
-    a: 'Yes. Almost every win here is operational or about messaging: events, positioning, local visibility, repeat visits. None of it depends on who supplies the beer.',
+    a: 'Yes. Almost every win here is about how the place runs or what it says about itself: events, local visibility, the booking route, repeat visits. None of it depends on who supplies the beer.',
+  },
+  {
+    q: 'Do you work with restaurants, bars and cafés too?',
+    a: 'Yes. The page says pub because that is what we run and what most people search for, but finding you, giving people a reason to come, taking the booking and keeping the margin are the same job in any venue that serves food and drink.',
   },
 ] as const;
 

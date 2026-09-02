@@ -43,7 +43,17 @@ const PRESSURE_FILL = [
   'bg-oj-ember text-oj-cream',
 ] as const;
 
-const PRESSURE_WORD = ['steady', 'watch', 'under pressure', 'critical'] as const;
+/*
+ * Plain words, not a severity scale. "Steady" read as either "fine" or "stuck"
+ * depending on who was looking, and "critical" sounded like a hospital. These say
+ * what the colour means in words a reader would use.
+ */
+const PRESSURE_WORD = [
+  'usually fine',
+  'worth a look',
+  'under pressure',
+  'usually part of it',
+] as const;
 
 export interface PressureMapProps {
   areas?: PressureArea[];

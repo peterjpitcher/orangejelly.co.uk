@@ -17,17 +17,21 @@ const FULL = buildLlmsFullTxt();
 
 describe('llms.txt', () => {
   it('describes the company by what it does', () => {
-    expect(SHORT).toMatch(/strategic growth partner for ambitious small and mid-sized businesses/i);
+    expect(SHORT).toMatch(/finds what is stopping a business growing, then fixes it/i);
   });
 
-  it('carries no price, no package and no retired claim', () => {
+  it('carries the hourly rate and nothing else priced, no package and no retired claim', () => {
     // Everything Orange Jelly says about itself. The article index below it is
     // excluded because it reproduces guide titles verbatim, and one of those is
     // "What to Fix First for Under £5K", which is a refurbishment budget in a
     // hospitality article and not a fee anybody is being quoted.
+    //
+    // One price is allowed: the hourly rate, which is the only number the site
+    // advertises. Anything else with a pound sign is a package by another name.
     const selfDescription = FULL.split('## Guides')[0];
     for (const text of [SHORT, selfDescription]) {
-      expect(text).not.toMatch(/£/);
+      expect(text).toMatch(/£62\.50 plus VAT an hour/);
+      expect(text.match(/£/g)).toHaveLength(1);
       expect(text).not.toMatch(/Growth Fix|Momentum Month|Turnaround Intensive/);
       expect(text).not.toMatch(/25 hours|5 hours a week|save/i);
     }

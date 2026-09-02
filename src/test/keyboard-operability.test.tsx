@@ -99,7 +99,7 @@ describe('the enquiry form', () => {
     await user.tab();
     // Walk forward until the first real field has focus, then check the rest
     // follow in the order they are read.
-    const order = ['Your name', 'Work email', 'Company', "What's going on"];
+    const order = ['Your name', 'Email', 'Business or venue', "What's going on"];
     for (const label of order) {
       const field = screen.getByLabelText(new RegExp(label));
       // Focus by tabbing rather than by calling focus(), so this fails if a
@@ -123,7 +123,7 @@ describe('the enquiry form', () => {
 
   it('associates every field with its label, which is what a screen reader reads', () => {
     render(<EnquiryForm />);
-    for (const label of ['Your name', 'Work email', 'Company', "What's going on"]) {
+    for (const label of ['Your name', 'Email', 'Business or venue', "What's going on"]) {
       expect(screen.getByLabelText(new RegExp(label))).toBeInTheDocument();
     }
   });

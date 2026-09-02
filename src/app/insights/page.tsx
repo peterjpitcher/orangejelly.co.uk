@@ -28,7 +28,7 @@ import { getBaseUrl } from '@/lib/site-config';
  */
 const TITLE = 'Insights | Orange Jelly';
 const DESCRIPTION =
-  'Writing about what actually blocks growth in small and mid-sized businesses, and what to do about it. Each piece ends at the problem underneath it.';
+  'Practical thinking on the problems that stop a business growing, and what to do about them. Each piece ends with the problem underneath, not a sales pitch.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -70,8 +70,8 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
                 insights.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Writing about what actually blocks growth, and what to do about it. Every piece ends
-                at the problem underneath it rather than at a contact form.
+                Practical thinking on the problems that stop a business growing, and what to do
+                about them. Each piece ends with the problem underneath, not a sales pitch.
               </p>
               <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
                 Running a pub or a restaurant? The hospitality library is over in the{' '}

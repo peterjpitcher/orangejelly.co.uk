@@ -75,12 +75,12 @@ export default function ProfessionalServicesPage(): JSX.Element {
                 professional services
               </p>
               <h1 className="oj-display mt-2.5 max-w-[17ch] text-[clamp(38px,7.5vw,72px)] leading-[0.94] text-oj-cream">
-                the growth problem is rarely the one on the agenda.
+                your firm is busy, but growth is still stuck.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
                 Accountancy practices, law firms, consultancies and agencies. Businesses built on
-                expertise and referral, where the constraint is almost never expertise and almost
-                always something nobody has had time to look at.
+                expertise and referral, where the thing holding growth back is almost never
+                expertise and almost always something nobody has had time to look at.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -95,8 +95,8 @@ export default function ProfessionalServicesPage(): JSX.Element {
         </GroundProvider>
 
         <Band
-          heading="six problems, in your language."
-          intro="The same six areas the rest of this site talks about, translated into what they look like inside a firm."
+          heading="the six areas, in your language."
+          intro="The same six areas we check in every business, translated into what they look like inside a firm."
           tone="paper"
         >
           <div className="flex flex-col gap-7">
@@ -142,8 +142,9 @@ export default function ProfessionalServicesPage(): JSX.Element {
           </ul>
           <p className="measure mt-8 text-[17px] leading-relaxed text-oj-cream">
             What we do have is a way of working that was built and measured in a business we own,
-            and six problems that behave the same way in a practice as they do in a pub. Demand,
-            conversion, margin and drag do not care what you sell.{' '}
+            and six areas that behave the same way in a practice as they do in a pub. Finding
+            customers, winning the work, keeping the profit and losing hours to admin do not care
+            what you sell.{' '}
             <Anchor href="/results" className="font-semibold underline">
               The numbers, and how they were measured
             </Anchor>
@@ -176,7 +177,7 @@ export default function ProfessionalServicesPage(): JSX.Element {
         <Band heading="where to start." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
             If one of the six above made you wince, that's the one. Each has its own page with what
-            we would examine first.
+            we would check first.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             {GROWTH_PROBLEMS.slice(0, 6).map((problem) => (

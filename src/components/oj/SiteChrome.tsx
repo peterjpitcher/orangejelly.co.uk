@@ -33,6 +33,7 @@ export type OjNavKey =
   | 'how-we-work'
   | 'solutions'
   | 'results'
+  | 'pubs'
   | 'insights'
   | 'guides'
   | 'start-here';
@@ -52,19 +53,19 @@ export type OjNavKey =
  */
 const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   /*
-   * "Unlock growth", not "Growth problems".
+   * "Growth problems", not "Unlock growth".
    *
-   * The header carried the word "problem" twice a few pixels apart, once as this
-   * label and once on the button beside it. D11 fixes the button wording, so the
-   * label is the half that moves. Section 34 of the positioning overview flags
-   * "problem" as overused in customer-facing copy, and section 33 lists "unlock" as
-   * language that fits, because it points at the outcome rather than the symptom.
+   * "Unlock growth" was chosen because it points at the outcome, and it read well
+   * to the people who wrote it. To a reader it said nothing: the September 2026
+   * language review, read as a pub owner, found it was the one menu label nobody
+   * could guess the destination of. The button beside it is now "Let's talk", so
+   * the two-problems-in-a-row objection that moved it no longer applies.
    *
    * The URL stays `/growth-problems`. It is accurate, people search that way, and
    * moving it would mean redirects, eight child pages and the mapping that connects
    * all 105 guide articles to a growth problem, for nothing a visitor would notice.
    */
-  { key: 'growth-problems', label: 'Unlock growth', href: '/growth-problems' },
+  { key: 'growth-problems', label: 'Growth problems', href: '/growth-problems' },
   { key: 'how-we-work', label: 'How we work', href: '/how-we-work' },
   /*
    * `/solutions` was unreachable from the site's own navigation.
@@ -81,6 +82,16 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
    */
   { key: 'solutions', label: 'What we build', href: '/solutions' },
   { key: 'results', label: 'Results', href: '/results' },
+  /*
+   * The hospitality page, in the bar.
+   *
+   * Every published number on the site is from a pub, the guides that earn most of
+   * the search traffic are for pubs, and the one page written in a licensee's own
+   * words was reachable only from the guides page and a search result. A publican
+   * landing on the homepage read "small and mid-sized businesses" and left. One
+   * word in the bar fixes that.
+   */
+  { key: 'pubs', label: 'Pubs', href: '/pub-marketing' },
   { key: 'insights', label: 'Insights', href: '/insights' },
   { key: 'guides', label: 'Guides', href: '/guides' },
   /*
@@ -208,7 +219,7 @@ export function OjFooter(): JSX.Element {
           title: 'Start',
           links: [
             { label: 'Start here', href: '/start-here' },
-            { label: 'Unlock growth', href: '/growth-problems' },
+            { label: 'Growth problems', href: '/growth-problems' },
             { label: 'How we work', href: '/how-we-work' },
             { label: 'Results', href: '/results' },
           ],
@@ -219,6 +230,7 @@ export function OjFooter(): JSX.Element {
           // different URL, so the one link to 105 articles pointed at the wrong idea.
           title: 'Reading',
           links: [
+            { label: 'Pubs', href: '/pub-marketing' },
             { label: 'Guides', href: '/guides' },
             { label: 'Insights', href: '/insights' },
             { label: 'For professional services', href: '/sectors/professional-services' },

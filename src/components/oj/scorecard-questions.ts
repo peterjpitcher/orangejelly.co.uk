@@ -33,15 +33,22 @@ export const SCORECARD_QUESTIONS: ScorecardQuestion[] = [
     area: 'margin',
     text: 'We review pricing on a schedule rather than when something goes wrong.',
   },
+  /*
+   * Every statement now points the same way: "Always" is always the healthy answer.
+   *
+   * These two used to be reverse-scored ("the same information gets typed into more
+   * than one system"), which stopped straight-lining but confused the people
+   * answering honestly: ten statements where Always was good, then two where it was
+   * bad, on the same scale with no warning. The `reverse` flag stays in the type
+   * and the scoring for anyone who needs it later; no statement uses it.
+   */
   {
     area: 'operations',
-    text: 'The same information gets typed into more than one system.',
-    reverse: true,
+    text: 'Information gets typed in once. Nobody re-keys it into a second system.',
   },
   {
     area: 'operations',
-    text: "Work stalls because it's waiting on one particular person.",
-    reverse: true,
+    text: 'Work keeps moving when one particular person is busy or away.',
   },
   {
     area: 'experience',

@@ -1,5 +1,6 @@
 import { CASE_STUDIES } from '@/app/results/case-studies';
 import { getAllPosts } from '@/lib/blog-md';
+import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
 /**
@@ -19,15 +20,15 @@ import { getBaseUrl } from '@/lib/site-config';
  * @see https://llmstxt.org
  */
 const INTRO =
-  'Orange Jelly Limited is a strategic growth partner for ambitious small and mid-sized businesses. ' +
-  'We work out what is actually blocking growth in a business and build the thing that fixes it, ' +
-  'using marketing, commercial change, operations, systems and AI according to what the problem needs.';
+  'Orange Jelly Limited finds what is stopping a business growing, then fixes it. ' +
+  'The fix might be marketing, a pricing change, a new way of working, a system or a piece of software with some AI in it; the problem decides. ' +
+  'Any sector, any size, for owners who are open to change. Everything was built and tested first in The Anchor, the pub Orange Jelly runs itself.';
 
 const METHOD = [
   'HEAR: understand what is really happening, not what the brief says.',
   'CHALLENGE: test what everyone assumes, against the evidence.',
   'BUILD: build the fix, not a document about the fix.',
-  'OPTIMISE: measure against the baseline agreed at the start, then keep going until it moves.',
+  'OPTIMISE: measure against the numbers taken at the start, then keep going until it moves.',
 ];
 
 const FACTS = [
@@ -36,7 +37,7 @@ const FACTS = [
   'First client outside its own business: September 2025.',
   'Deliberately small. There is no account management layer.',
   'The first conversation is an hour and is free.',
-  'No published prices. Every engagement is priced to the problem and agreed in writing before work starts.',
+  `The rate is ${PRICING.hourly.display}, and that is the only number advertised. No packages. The hours for any piece of work are agreed in writing before it starts.`,
 ];
 
 const NOT_FOR = [
@@ -67,12 +68,12 @@ export function buildLlmsTxt(): string {
     section(
       'Where growth gets stuck',
       [
-        'Create demand',
-        'Convert more',
-        'Protect margin',
-        'Remove operational drag',
-        'Improve the experience',
-        'Build for scale',
+        'Create demand: not enough new customers',
+        'Convert more: people look, but do not buy',
+        'Protect margin: busy, but not making money',
+        'Remove operational drag: too much admin, not enough time',
+        'Improve the experience: customers do not come back',
+        'Build for scale: it only works because the owner is there',
       ].map((area) => `- ${area}`)
     ),
     section(
@@ -96,6 +97,7 @@ export function buildLlmsTxt(): string {
       `- [Start here](${base}/start-here): what the first conversation involves, and who it is not for.`,
       `- [How we work](${base}/how-we-work): the method in full.`,
       `- [Results](${base}/results): the case studies and how each was measured.`,
+      `- [Pubs](${base}/pub-marketing): the hospitality page, for pubs, bars, restaurants and cafés.`,
       `- [About](${base}/about): the company, and what it will not do.`,
       `- [Guides](${base}/guides): the hospitality article library.`,
       `- [Full detail](${base}/llms-full.txt): case studies and the article index.`,

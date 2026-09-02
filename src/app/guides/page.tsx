@@ -233,9 +233,8 @@ export default async function GuidesPage(): Promise<JSX.Element> {
                   : 'Written for pubs, bars and restaurants, and tested at The Anchor before any of it went out.'}
               </p>
               <p className="measure mt-4 text-[17px] leading-relaxed text-oj-cream/85">
-                The tactics are hospitality, because that is the sector we know best: we run one.
-                The thinking underneath is the same commercial thinking we bring to any ambitious
-                small business. Find what is actually holding growth back, then act on it.
+                Written by people who run a pub, for people who run one. Find what is actually
+                holding the place back, then act on it.
               </p>
               <p className="measure mt-4 text-[16px] leading-relaxed text-oj-cream/60">
                 Not running a venue? The same thinking, applied to every other sector, is over at{' '}
@@ -314,7 +313,7 @@ export default async function GuidesPage(): Promise<JSX.Element> {
         {SEASON_HUBS.length > 0 ? (
           <Band tone="paper">
             <SeasonalBand
-              heading="seasonal playbooks."
+              heading="guides for the season."
               viewAll={null}
               items={SEASON_HUBS.map((hub) => ({
                 month: hub.dateRangeLabel,
