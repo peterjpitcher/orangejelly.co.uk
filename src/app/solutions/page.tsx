@@ -13,7 +13,7 @@ import {
 import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { CAPABILITIES, DECLINED } from './content';
+import { CAPABILITIES, CAPABILITY_GROUPS, DECLINED } from './content';
 
 /**
  * `/solutions`.
@@ -110,20 +110,49 @@ export default function SolutionsPage(): JSX.Element {
 
         <Band
           heading="what a fix can be made of."
-          intro="Thirteen things we build with. Nobody buys one of them on its own, and if somebody asks us for one before we've understood the problem, we'll say so."
+          intro="Thirteen things we build with, in five groups. Nobody buys one of them on its own, and if somebody asks us for one before we've understood the problem, we'll say so."
         >
-          <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CAPABILITIES.map((capability) => (
-              <div key={capability.name} className="border-t-1.5 border-oj-ink pt-3.5">
-                <dt className="font-oj text-[17px] font-black leading-snug text-oj-ink">
-                  {capability.name}
-                </dt>
-                <dd className="mt-1.5 text-[15.5px] leading-relaxed text-oj-ink-2">
-                  {capability.body}
-                </dd>
-              </div>
+          {/*
+            Five groups, in the order an owner thinks about the business, rather
+            than thirteen tiles in a grid. A flat grid of thirteen read as a menu,
+            which is the one thing this page argues it is not.
+          */}
+          <div className="flex flex-col gap-12">
+            {CAPABILITY_GROUPS.map((group) => (
+              <section key={group.id} aria-labelledby={`capability-group-${group.id}`}>
+                <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+                  <div>
+                    <p className="font-oj text-[13px] font-bold uppercase tracking-[0.14em] text-oj-orange-deep">
+                      {group.areas}
+                    </p>
+                    <h3
+                      id={`capability-group-${group.id}`}
+                      className="oj-display mt-1.5 text-[clamp(24px,4vw,34px)] leading-[1.02] text-oj-ink"
+                    >
+                      {group.heading}
+                    </h3>
+                    <p className="measure mt-3 text-[16px] leading-relaxed text-oj-ink-2">
+                      {group.intro}
+                    </p>
+                  </div>
+                  <dl className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    {CAPABILITIES.filter((capability) => capability.group === group.id).map(
+                      (capability) => (
+                        <div key={capability.name} className="border-t-1.5 border-oj-ink pt-3.5">
+                          <dt className="font-oj text-[17px] font-black leading-snug text-oj-ink">
+                            {capability.name}
+                          </dt>
+                          <dd className="mt-1.5 text-[15.5px] leading-relaxed text-oj-ink-2">
+                            {capability.body}
+                          </dd>
+                        </div>
+                      )
+                    )}
+                  </dl>
+                </div>
+              </section>
             ))}
-          </dl>
+          </div>
         </Band>
 
         <Band heading="what we normally decline." tone="paper">

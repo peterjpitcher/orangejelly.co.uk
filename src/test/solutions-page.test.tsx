@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 
 import { PRESSURE_POINTS } from '@/app/home-content';
 import SolutionsPage from '@/app/solutions/page';
-import { CAPABILITIES, DECLINED } from '@/app/solutions/content';
+import { CAPABILITIES, CAPABILITY_GROUPS, DECLINED } from '@/app/solutions/content';
 
 function body(): string {
   render(<SolutionsPage />);
@@ -54,11 +54,23 @@ describe('/solutions', () => {
     expect(document.body.textContent).toMatch(/second-best supplier/);
   });
 
-  it('names all thirteen capabilities', () => {
+  it('names all thirteen capabilities, each under one of five groups', () => {
     render(<SolutionsPage />);
     expect(CAPABILITIES).toHaveLength(13);
+    expect(CAPABILITY_GROUPS).toHaveLength(5);
+    const groupIds = new Set(CAPABILITY_GROUPS.map((group) => group.id));
     for (const capability of CAPABILITIES) {
+      expect(groupIds.has(capability.group), capability.name).toBe(true);
       expect(screen.getByText(capability.name)).toBeInTheDocument();
+    }
+    // Every group has something in it, and the headings render in the agreed order.
+    const text = document.body.textContent ?? '';
+    let last = -1;
+    for (const group of CAPABILITY_GROUPS) {
+      expect(CAPABILITIES.some((capability) => capability.group === group.id)).toBe(true);
+      const at = text.indexOf(group.heading);
+      expect(at, group.heading).toBeGreaterThan(last);
+      last = at;
     }
   });
 
