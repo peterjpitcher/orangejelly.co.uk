@@ -190,6 +190,24 @@ export default function GrowthProblemPage({ params }: Params): JSX.Element {
           ) : null}
         </Band>
 
+        {problem.relatedBuilds?.length ? (
+          <Band heading="what we can build around this." tone="paper">
+            <div className="flex flex-wrap gap-4">
+              {problem.relatedBuilds.map((build) => (
+                <Button
+                  key={build.href}
+                  href={build.href}
+                  variant="ghost"
+                  arrow
+                  className="max-w-full whitespace-normal text-left"
+                >
+                  {build.label}
+                </Button>
+              ))}
+            </div>
+          </Band>
+        ) : null}
+
         <Band tone="orange" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(32px,6.5vw,58px)] leading-[0.95]">
             tell us what's happening.
