@@ -200,3 +200,64 @@ describe('the client tracker', () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('versioned guide enquiry events', () => {
+  beforeEach(() => vi.mocked(storeConversionEvent).mockClear());
+
+  it('rejects invalid placements without recording a click', async () => {
+    expect(
+      await trackConversionEvent({
+        eventName: 'whatsapp_click',
+        properties: { version: 'guide-enquiry-v1', placement: 'private message' },
+      })
+    ).toEqual({ error: 'Invalid guide placement.' });
+    expect(storeConversionEvent).not.toHaveBeenCalled();
+  });
+
+  it('allows generic contact WhatsApp intent and discards unapproved free text', async () => {
+    await trackConversionEvent({
+      eventName: 'whatsapp_click',
+      properties: {
+        version: 'guide-enquiry-v1',
+        placement: 'contact',
+        channel: 'whatsapp',
+        message: 'private message',
+      },
+    });
+    expect(vi.mocked(storeConversionEvent).mock.calls[0][0].properties).toEqual({
+      version: 'guide-enquiry-v1',
+      placement: 'contact',
+      channel: 'whatsapp',
+    });
+  });
+
+  it('does not permit mismatched channels or pretend a click is a lead', async () => {
+    expect(
+      (
+        await trackConversionEvent({
+          eventName: 'whatsapp_click',
+          properties: { version: 'guide-enquiry-v1', placement: 'contact', channel: 'form' },
+        })
+      ).error
+    ).toBeTruthy();
+    expect(
+      (
+        await trackConversionEvent({
+          eventName: 'enquiry_submitted',
+          properties: { version: 'guide-enquiry-v1', placement: 'contact' },
+        })
+      ).error
+    ).toBeTruthy();
+    expect(storeConversionEvent).not.toHaveBeenCalled();
+  });
+});
+
+it('does not let a malformed guide version use legacy free-text properties', async () => {
+  vi.mocked(storeConversionEvent).mockClear();
+  const result = await trackConversionEvent({
+    eventName: 'whatsapp_click',
+    properties: { version: 'unknown', placement: 'private text' },
+  });
+  expect(result.error).toBe('Unsupported guide event version.');
+  expect(storeConversionEvent).not.toHaveBeenCalled();
+});

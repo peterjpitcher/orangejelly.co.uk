@@ -175,6 +175,39 @@ export function trackClientEvent(
   }
 
   const leadSource = getBrowserLeadSource({ persist: consented });
+  if (options.properties?.version === 'guide-enquiry-v1') {
+    // The new journey carries public context only, including on the GTM path.
+    for (const key of ['sourcePage', 'landingPage'] as const) {
+      const value = leadSource[key];
+      if (!value) continue;
+      try {
+        const url = new URL(value, window.location.origin);
+        const query = new URLSearchParams();
+        const guide = options.properties.guide_slug;
+        const placement = options.properties.placement;
+        if (
+          ['/start-here', '/contact'].includes(url.pathname) &&
+          typeof guide === 'string' &&
+          /^[a-z0-9-]{1,160}$/.test(guide) &&
+          typeof placement === 'string' &&
+          ['early', 'end', 'sticky', 'enquiry', 'contact'].includes(placement)
+        ) {
+          query.set('guide', guide);
+          query.set('placement', placement);
+        }
+        leadSource[key] = url.pathname + (query.size ? `?${query.toString()}` : '');
+      } catch {
+        delete leadSource[key];
+      }
+    }
+    if (leadSource.referrer) {
+      try {
+        leadSource.referrer = new URL(leadSource.referrer).origin;
+      } catch {
+        delete leadSource.referrer;
+      }
+    }
+  }
   const sessionId = consented ? getSessionId() : undefined;
   const properties = {
     ...(options.properties || {}),

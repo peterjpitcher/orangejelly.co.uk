@@ -21,6 +21,7 @@ import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
 import { storeConversionEvent } from '@/lib/db/leads';
 import { sendLeadNotification, escapeHtml } from '@/lib/email';
 import { type LeadSourceInput } from '@/lib/lead-source';
+import { cleanEnquirySource } from '@/lib/enquiry-source';
 import {
   RATE_LIMIT_MESSAGE,
   checkRateLimit,
@@ -109,7 +110,7 @@ export async function submitEnquiryStep1(input: unknown): Promise<EnquiryStep1Re
     return { success: true };
   }
 
-  const source = (input as { leadSource?: LeadSourceInput })?.leadSource;
+  const source = cleanEnquirySource((input as { leadSource?: unknown })?.leadSource);
 
   // FAIL CLOSED. This action sends mail and writes personal data, so an
   // unavailable limiter must not degrade to unlimited. That is the opposite of the
@@ -167,7 +168,7 @@ async function afterEnquiryStored(
   source?: LeadSourceInput
 ): Promise<void> {
   try {
-    await storeConversionEvent({
+    const conversion = await storeConversionEvent({
       eventName: 'enquiry_submitted',
       ownerType: 'contact',
       ownerId: leadId,
@@ -175,6 +176,8 @@ async function afterEnquiryStored(
       leadSource: source,
       properties: { source_page: source?.sourcePage ?? null },
     });
+    if (!conversion.stored)
+      console.error('[enquiry] stored, but the conversion event was not recorded.');
   } catch (error) {
     console.error('[enquiry] stored, but the conversion event failed:', error);
   }

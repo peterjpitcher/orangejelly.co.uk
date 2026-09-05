@@ -43,3 +43,15 @@
 
 ## Notes / results
 - (filled in as work progresses)
+
+
+## Guide-to-enquiry conversion specification, 5 September 2026
+
+- [x] Review existing guide, enquiry, attribution and tracking code.
+- [x] Write the complete specification in `tasks/plan-2026-09-05-lead-conversion.md`.
+- [x] Check coverage of all five recommendations and identify release evidence.
+- [x] Implement the five recommendations, with the three-guide pilot enabled and broader rollout gated.
+- [x] Run production-build, browser, fixture submission and read-only aggregate checks.
+- [ ] Verify the deployed release and obtain explicit permission for a real test message.
+
+Status: implementation complete with pilot enabled; release verification pending. No production test messages or writes, no migration drafted or applied.

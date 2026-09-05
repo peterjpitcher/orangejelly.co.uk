@@ -11,7 +11,7 @@
 export const STEPS = [
   {
     word: 'YOU TELL US.',
-    text: 'Four questions on the form below. A couple of sentences on each is plenty.',
+    text: 'Your contact details and a line about what is happening. We can ask the rest when we talk.',
   },
   {
     word: 'WE REPLY.',
@@ -116,3 +116,8 @@ export const FAQS = [
     a: 'It is used to have one useful conversation and nothing else. No list, no sequence, no sharing it. What you write about the business is commercially sensitive and is kept where only we can read it. The privacy notice has the detail.',
   },
 ] as const;
+
+export const ENQUIRY_INTRO =
+  'Tell Peter what is happening and what you would like to change. A line is enough to start.';
+export const ENQUIRY_REASSURANCE =
+  'Sending a message does not commit you to a call or paid work. The first conversation is free. Any paid work is agreed before it starts.';
