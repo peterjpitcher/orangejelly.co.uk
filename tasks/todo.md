@@ -67,17 +67,34 @@ Branch `fix/gsc-indexing-repairs`, cut from `origin/main` (3d801e3f, the deploye
 - [x] Correct the specification: totals, image absolutes, causal language, the redirect claim,
       the `/dev/components` diagnosis, token privacy, the Validate fix reasoning, monitoring.
 - [x] Write the implementation plan with one owner per file.
-- [ ] WS1 Unblock `/_next/`, `/icon`, `/apple-icon` and `/opengraph-image` in robots.txt,
+- [x] WS1 Unblock `/_next/`, `/icon`, `/apple-icon` and `/opengraph-image` in robots.txt,
       with an effective-matching regression test and a red-before-green proof.
-- [ ] WS2 Link the two orphaned pages from the two insight bodies and the footer, with an
+- [x] WS2 Link the two orphaned pages from the two insight bodies and the footer, with an
       offline orphan and reachability gate and a mutation proof.
-- [ ] WS3 Return real 404s for `/dev/components`, `/results/[slug]` and
+- [x] WS3 Return real 404s for `/dev/components`, `/results/[slug]` and
       `/growth-problems/[slug]`, correct the two false comments, and add the missing
       guide-category redirect test.
-- [ ] WS4 Extend the synthetic check to prove the live rules, then run the full gate.
-- [ ] Push the branch and open a PR. Do not merge without an explicit yes.
+- [x] WS4 Extend the synthetic check to prove the live rules, then run the full gate.
+- [x] Push the branch and open a PR (#56), then merge on Peter's explicit yes.
 - [ ] Peter: change the apex domain redirect from temporary to permanent in Vercel.
 
-Status: spec and plan written, branch cut, nothing implemented yet. Read-only up to this
-point. No migration needed. Two decisions are open and carry recommended defaults in spec
-section 7: `dynamicParams` on `/insights/[slug]` and on `/guides/category/[category]`.
+Status: LIVE. Merged as 3b7acf8b and deployed as dpl_6TBXmoBFfBAERW8bPdBQSrxghZRy on
+5 September 2026. Verified against production: robots.txt now carries only the four intended
+rules; all 10 /_next/image URLs on a guide, including all 6 hero variants, return 200 to
+Googlebot; /icon.png, /apple-icon.png, /opengraph-image and /manifest.webmanifest all 200;
+/dev/components, /dev, /results/<unknown> and /growth-problems/<unknown> all return a real
+404 with the not-found page in the served HTML; /api/admin/enquiries still 401s; /admin keeps
+its noindex; /guides/README still 410s and the legacy redirects still resolve to a 200.
+check:synthetic 16 of 17, with llms.txt the only red and failing since before this release.
+check:token-privacy passed across 3 token routes with its control detecting 9 third-party
+requests. No migration.
+
+An adversarial review raised 27 findings across five lenses; 19 were refuted on independent
+verification and 6 were fixed in 8e76e338, the most serious being that the robots matcher
+kept only the first record naming a crawler, so a file with two "User-agent: *" records would
+have read as permissive while Googlebot was blocked from every stylesheet.
+
+Outstanding: the apex still serves 307, which only Peter can change in the Vercel dashboard.
+Two decisions remain open with recommended defaults in SPEC section 7 (dynamicParams on
+/insights/[slug] and on /guides/category/[category]). Follow-up crawl and index checks at 7,
+14 and 28 days are not scheduled.

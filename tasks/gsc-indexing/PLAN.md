@@ -348,16 +348,16 @@ Deploy only on Peter's explicit yes. Push and open a PR; do not merge to `main`,
 merge is a production deploy.
 
 - [x] **R1** Commit in four increments, one per work stream, staging exact paths.
-- [ ] **R2** Push `fix/gsc-indexing-repairs` and open a PR against `main`. Record in the body:
+- [x] **R2** Push `fix/gsc-indexing-repairs` and open a PR against `main`. Record in the body:
       the files changed and the files deliberately not changed; the red-before-green output
       from 1.13; both mutation proofs from 2.18; the two open decisions from spec section 7;
       and the assumption that `origin/main` is still the deployed commit.
-- [ ] **R3** After merge, record the deployment id and the production alias. Do not assume
+- [x] **R3** After merge, record the deployment id and the production alias. Do not assume
       the newest deployment is the one under test.
-- [ ] **R4** Run the release checks in spec section 6, items 2 to 10, against that
+- [x] **R4** Run the release checks in spec section 6, items 2 to 10, against that
       deployment. Fetch `/robots.txt` with a cache-busting query string: it is served behind
       the Vercel edge cache with an observed age of hours.
-- [ ] **R5** Run `npm run check:synthetic`. **Read the named per-check output, not the exit
+- [x] **R5** Run `npm run check:synthetic`. **Read the named per-check output, not the exit
       code.** One check, `llms.txt describes the current company`, has been failing on
       production since before this branch and cannot pass against the current code: it
       asserts the body contains "growth partner" and no pound sign, while `src/lib/llms.ts`
@@ -376,7 +376,7 @@ merge is a production deploy.
       Record the before and after values. Then verify apex and www, http and https, across
       root, a deep guide path and a query-bearing path, checking the status, that the path
       and query survive, and that there is no loop.
-- [ ] **R7** Rollback. Code and infrastructure roll back separately and a code revert cannot
+- [~] **R7** Rollback. Code and infrastructure roll back separately and a code revert cannot
       undo a domain setting. Revert the relevant commit for a demonstrated code regression;
       restore the previous domain redirect value for a loop or a lost path. Slow Google
       reporting is not a rollback trigger.
