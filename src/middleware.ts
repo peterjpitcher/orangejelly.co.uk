@@ -123,9 +123,10 @@ export function middleware(request: NextRequest) {
   // sits at the app root, so Next 14 wraps every route in a Suspense boundary and
   // flushes the shell with a 200 before the page component runs. Once the headers are
   // sent the status cannot change, so production answered 200 carrying the loading
-  // fallback, with the 404 UI reaching the browser only inside the RSC payload. Google
-  // Search Console counted it as a soft 404 in September 2026. Middleware runs before
-  // rendering begins, so a response returned here has a status Next never overwrites.
+  // fallback, with the 404 UI reaching the browser only inside the RSC payload. Found
+  // by inspection on 5 September 2026; it is not one of the 81 rows in the 28 August
+  // Search Console report. Middleware runs before rendering begins, so a response
+  // returned here has a status Next never overwrites.
   //
   // NODE_ENV rather than VERCEL_ENV, so this matches the guard inside the page and no
   // environment can diverge from the other. Not gated on GET or HEAD either: a

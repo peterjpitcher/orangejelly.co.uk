@@ -280,8 +280,9 @@ check('a URL that never existed returns 404, not 200', async () => {
 });
 
 check('the component harness is not served in production', async () => {
-  // An internal component gallery, indexable and linked to nothing, competing with the
-  // real pages for crawl budget.
+  // A development-only path answering 200 in production. The page is noindex and
+  // renders no specimens there, so what is wrong is the status code, and only
+  // middleware can set it.
   const { status } = await get('/dev/components');
   if (status !== 404) throw new Error(`expected 404, got ${status}`);
 });

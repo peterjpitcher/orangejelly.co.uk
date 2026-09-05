@@ -101,6 +101,49 @@ describe('the matcher itself, before anything trusts it', () => {
     expect(isAllowed(text, '/ab')).toBe(true);
   });
 
+  it('anchors patterns to the start of the path, so a prefix is not a substring', () => {
+    // Without this, dropping the leading `^` from the compiled pattern turns the whole
+    // matcher into a substring matcher and every test above still passes, because no
+    // real URL on this site contains `/api/` or `/private/` anywhere but the start.
+    // The matcher is what the robots gate and the release check both trust, so its own
+    // failure mode has to be caught here rather than discovered in production.
+    const text = 'User-agent: *\nDisallow: /a/\n';
+    expect(isAllowed(text, '/x/a/b')).toBe(true);
+    expect(isAllowed('User-agent: *\nDisallow: /private/\n', '/guides/private/x')).toBe(true);
+  });
+
+  it('combines separate records that name the same crawler', () => {
+    // RFC 9309 section 2.2.1. Keeping only the first record is the mistake that would
+    // let this matcher report the site's stylesheets as fetchable while Googlebot was
+    // blocked from every one of them.
+    const text = [
+      'User-agent: *',
+      'Allow: /',
+      'Disallow: /api/',
+      '',
+      'User-agent: *',
+      'Disallow: /_next/',
+    ].join('\n');
+    expect(parseRobots(text)).toHaveLength(2);
+    expect(isAllowed(text, '/_next/static/css/a.css', 'Googlebot')).toBe(false);
+    expect(explain(text, '/_next/static/css/a.css', 'Googlebot').rule).toBe('Disallow: /_next/');
+    expect(isAllowed(text, '/api/events', 'Googlebot')).toBe(false);
+    expect(isAllowed(text, '/guides/anything', 'Googlebot')).toBe(true);
+  });
+
+  it('combines two records naming the same specific crawler', () => {
+    const text = [
+      'User-agent: Googlebot',
+      'Allow: /',
+      '',
+      'User-agent: Googlebot',
+      'Disallow: /_next/',
+    ].join('\n');
+    expect(isAllowed(text, '/_next/static/css/a.css', 'Googlebot')).toBe(false);
+    // A crawler no record claims is governed by nothing, so it is allowed everything.
+    expect(isAllowed(text, '/_next/static/css/a.css', 'Bingbot')).toBe(true);
+  });
+
   it('lets the longest matching pattern win rather than the first one', () => {
     const text = 'User-agent: *\nDisallow: /files/\nAllow: /files/public/\n';
     expect(isAllowed(text, '/files/private/x')).toBe(false);
@@ -182,7 +225,9 @@ describe('the matcher itself, before anything trusts it', () => {
     const text = 'USER-AGENT: GoogleBot\nDISALLOW: /api/\n';
     const groups = parseRobots(text);
     expect(groups[0].rules).toEqual([{ type: 'disallow', value: '/api/' }]);
-    expect(selectGroup(groups, 'googlebot')).toBe(groups[0]);
+    // Compared by value, not identity: selectGroup returns a combined group, because
+    // separate records naming the same crawler are merged rather than first-wins.
+    expect(selectGroup(groups, 'googlebot')?.rules).toEqual(groups[0].rules);
     expect(isAllowed(text, '/api/events', 'googlebot')).toBe(false);
   });
 });

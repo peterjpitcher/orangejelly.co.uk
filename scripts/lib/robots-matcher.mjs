@@ -23,6 +23,12 @@
  *   allow beats a disallow.
  * - An empty `Disallow:` value is a no-op, not a rule matching everything.
  * - Consecutive `User-agent` lines share one group of rules.
+ * - Separate records naming the same crawler are COMBINED, not first-wins. RFC 9309
+ *   section 2.2.1 is explicit, and Google does combine them. Returning only the first
+ *   is the mistake that makes this whole tool lie: a file with two `User-agent: *`
+ *   records, the first allowing everything and the second disallowing `/_next/`, would
+ *   be read as permissive while Googlebot was in fact blocked from every stylesheet on
+ *   the site, and `scripts/synthetic-check.mjs` would print `ok` on release day.
  *
  * @see tasks/gsc-indexing/SPEC.md section 4, P1
  */
@@ -92,11 +98,16 @@ export function parseRobots(text) {
 }
 
 /**
- * Pick the group that governs a crawler: the longest matching specific agent token,
- * falling back to the `*` group, falling back to nothing at all.
+ * Pick the rules that govern a crawler: the longest matching specific agent token,
+ * falling back to the `*` groups, falling back to nothing at all.
  *
  * A group token matches when the crawler's name starts with it, case-insensitively, so
  * a `Googlebot` group governs `Googlebot-Image` unless a longer token claims it first.
+ *
+ * EVERY group that ties for the winning token length is combined into one, because a
+ * robots.txt may name the same crawler in more than one record and RFC 9309 section
+ * 2.2.1 says those records are merged. Keeping only the first would silently discard
+ * the rules in the second, which is the failure mode this matcher exists to catch.
  *
  * @param {RobotsGroup[]} groups
  * @param {string} userAgent
@@ -104,27 +115,33 @@ export function parseRobots(text) {
  */
 export function selectGroup(groups, userAgent = '*') {
   const wanted = String(userAgent).toLowerCase();
-  /** @type {RobotsGroup | null} */
-  let best = null;
-  let bestLength = -1;
-  /** @type {RobotsGroup | null} */
-  let wildcard = null;
 
+  // The length of the most specific token that claims this crawler, across every
+  // record in the file. Collected first so the merge below can take all the ties.
+  let bestLength = -1;
   for (const group of groups) {
     for (const agent of group.agents) {
       const token = agent.toLowerCase();
-      if (token === '*') {
-        if (!wildcard) wildcard = group;
-        continue;
-      }
-      if (wanted.startsWith(token) && token.length > bestLength) {
-        best = group;
-        bestLength = token.length;
-      }
+      if (token === '*') continue;
+      if (wanted.startsWith(token) && token.length > bestLength) bestLength = token.length;
     }
   }
 
-  return best ?? wildcard ?? null;
+  const claims = (/** @type {RobotsGroup} */ group) =>
+    group.agents.some((agent) => {
+      const token = agent.toLowerCase();
+      return bestLength >= 0
+        ? token !== '*' && token.length === bestLength && wanted.startsWith(token)
+        : token === '*';
+    });
+
+  const winning = groups.filter(claims);
+  if (winning.length === 0) return null;
+
+  return {
+    agents: winning.flatMap((group) => group.agents),
+    rules: winning.flatMap((group) => group.rules),
+  };
 }
 
 /**

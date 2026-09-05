@@ -298,11 +298,29 @@ describe('no advertised page is an orphan', () => {
     // Named for the history. /fractional-cmo and /tools/ai-readiness sat in the
     // sitemap for a week with zero inbound links and were never crawled. A future
     // failure here should say which pages and why they matter, not just "orphan".
-    const inbound = (target: string): Edge[] =>
-      edges.filter((edge) => edge.to === target && edge.from !== target);
+    //
+    // Both halves of the fix are required, not either one. The repair was a contextual
+    // link from one insight AND a sitewide footer entry, and a bare "at least one
+    // inbound link" assertion is satisfied by the insight alone: someone tidying the
+    // footer could take sitewide discovery for these two pages from 143 sources back
+    // down to one and every assertion in this file would still pass. Counting distinct
+    // sources is what makes the footer entries load-bearing rather than decorative.
+    const sources = (target: string): string[] => [
+      ...new Set(
+        edges.filter((edge) => edge.to === target && edge.from !== target).map((e) => e.from)
+      ),
+    ];
 
-    expect(inbound('/fractional-cmo').map((edge) => edge.from)).not.toEqual([]);
-    expect(inbound('/tools/ai-readiness').map((edge) => edge.from)).not.toEqual([]);
+    for (const target of ['/fractional-cmo', '/tools/ai-readiness']) {
+      const from = sources(target);
+      expect(from, `${target} has no inbound link at all`).not.toEqual([]);
+      // The footer puts a link on every rendered page, so losing it collapses this to
+      // the single insight that carries the contextual link.
+      expect(
+        from.length,
+        `${target} is reachable from only ${from.join(', ')}. Both the contextual link and the footer entry are part of the fix.`
+      ).toBeGreaterThan(1);
+    }
   });
 
   it('renders the two contextual links as real anchors', async () => {
