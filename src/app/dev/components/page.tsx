@@ -30,9 +30,11 @@ import {
  * This renders the real components inside the real app, with the real tokens and the
  * real fonts, which is the context that matters.
  *
- * It 404s outside development. /test-shadcn was deleted on 27 August precisely because
- * it was a publicly routable development artefact, and reintroducing one would be
- * daft. The noindex metadata is belt and braces on top of the 404.
+ * Production answers 404 from the /dev guard in src/middleware.ts, which runs before
+ * rendering begins and is the only layer here that can set a status code. /test-shadcn
+ * was deleted on 27 August precisely because it was a publicly routable development
+ * artefact, and reintroducing one would be daft. The notFound() guard below and the
+ * noindex metadata are the second and third layers.
  *
  * Add a specimen when you build a component. The legacy Button, Heading, Text and Card specimens came out on 31 August 2026 with the components themselves. A component that has no specimen here is
  * not finished, because nobody has looked at its states.
@@ -43,10 +45,15 @@ export const metadata: Metadata = {
 };
 
 /**
- * Rendered per request rather than prerendered. Calling notFound() during static
- * generation bakes the 404 page into a statically served route, which answers 200 with
- * 404 content: a soft 404, and worse for search than a real one. Forcing dynamic makes
- * notFound() run at request time and return an actual 404 status.
+ * Rendered per request rather than prerendered, so the guard below is a request-time
+ * decision. Prerendering would settle it at build time, where NODE_ENV is production,
+ * baking the not-found page into a statically served route.
+ *
+ * It does not set the status code, which is what this comment used to claim.
+ * src/app/loading.tsx sits at the app root, so Next 14 wraps every route in a Suspense
+ * boundary and flushes the shell with a 200 before this component runs, and once the
+ * headers are sent notFound() cannot change them. The status comes from the /dev guard
+ * in src/middleware.ts.
  */
 export const dynamic = 'force-dynamic';
 
@@ -102,6 +109,8 @@ function BothGrounds({ children }: { children: React.ReactNode }): JSX.Element {
 }
 
 export default function ComponentHarness(): JSX.Element {
+  // Second layer, kept deliberately. The middleware guard sets the status; this makes
+  // sure no specimen markup is ever rendered in production even if that guard changes.
   if (process.env.NODE_ENV === 'production') notFound();
 
   return (

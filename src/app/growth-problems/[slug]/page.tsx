@@ -41,6 +41,20 @@ export function generateStaticParams(): Array<{ slug: string }> {
   return GROWTH_PROBLEMS.map((problem) => ({ slug: problem.slug }));
 }
 
+/**
+ * Closes the set, so an unknown slug is resolved at routing time and answers a genuine
+ * 404. Without it the notFound() below cannot set a status: src/app/loading.tsx sits at
+ * the app root, so Next 14 wraps every route in a Suspense boundary and flushes the
+ * shell with a 200 before this component runs, which is how /growth-problems/anything
+ * came to answer 200 with a loading spinner and two contradicting robots tags.
+ *
+ * GROWTH_PROBLEMS is a static array with no drafts and no legacy slugs, so closing the
+ * set costs nothing here.
+ *
+ * @see src/app/guides/[slug]/page.tsx, the in-repo precedent
+ */
+export const dynamicParams = false;
+
 export function generateMetadata({ params }: Params): Metadata {
   const problem = getGrowthProblem(params.slug);
   if (!problem) return {};
