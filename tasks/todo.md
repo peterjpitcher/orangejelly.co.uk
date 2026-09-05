@@ -54,4 +54,4 @@
 - [x] Run production-build, browser, fixture submission and read-only aggregate checks.
 - [ ] Verify the deployed release and obtain explicit permission for a real test message.
 
-Status: specification local only. No product code changed, no production messages or writes, no migration drafted or applied.
+Status: implementation complete with pilot enabled; release verification pending. No production test messages or writes, no migration drafted or applied.

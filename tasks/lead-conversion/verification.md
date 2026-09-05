@@ -18,7 +18,7 @@
 
 - Production build passed, including page generation. An initial build caught optional page-argument signatures; both were corrected and the build rerun.
 - Type-check passed.
-- Full suite: 89 files, 1,660 tests passed, three existing tests skipped.
+- Full suite on the original checkout: 89 files, 1,660 tests passed, three existing tests skipped. Clean release branch excludes unrelated security commits and passed 88 files with 1,645 tests.
 - Lint and all six content gates passed. One pre-existing GoogleTagManager beforeInteractive lint warning remains; the unchanged file was deliberately not rewritten for this feature. Existing Browserslist data-age notices also remain.
 - Independent agent review identified contact-route attribution and malformed event-version handling. Both were corrected, with tests.
 - Supabase live columns inspected read-only for contacts, conversion_events and lead_sources; no dependent views returned. No schema changes required.
