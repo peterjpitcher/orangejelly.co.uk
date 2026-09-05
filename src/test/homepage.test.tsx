@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import HomePage from '@/app/page';
-import { METHOD, PRESSURE_POINTS, PROOF, SYMPTOMS } from '@/app/home-content';
+import { BUILDS, METHOD, PRESSURE_POINTS, PROOF, WORK_EXAMPLES } from '@/app/home-content';
 
 function body(): string {
   render(<HomePage />);
@@ -12,16 +12,16 @@ function body(): string {
 }
 
 describe('the homepage', () => {
-  it('leads with the promise, not with a service', () => {
+  it('makes the website and connected-system offer explicit', () => {
     render(<HomePage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      "find what's stopping your business growing, and fix it."
+      'Websites and connected systems that grow your business.'
     );
   });
 
   it('describes the company by market, not by sector', () => {
     const text = body();
-    expect(text).toContain('strategic growth partner for ambitious businesses');
+    expect(text).toContain('websites, applications and useful AI');
     // The old homepage called Orange Jelly a hospitality marketing company. The
     // sector is now one market it works in, not the company's definition.
     expect(text).not.toMatch(/hospitality marketing/i);
@@ -109,15 +109,32 @@ describe('the homepage', () => {
     expect(within(nav).queryByRole('link', { current: 'page' })).not.toBeInTheDocument();
   });
 
-  it('renders every symptom', () => {
-    const text = body();
-    expect(SYMPTOMS).toHaveLength(6);
-    for (const symptom of SYMPTOMS) expect(text).toContain(symptom);
+  it('puts the three builds and real work before broad diagnostic content', () => {
+    render(<HomePage />);
+    const main = screen.getByRole('main');
+    const text = main.textContent ?? '';
+    expect(text.indexOf('what we build.')).toBeLessThan(
+      text.indexOf('where growth usually gets stuck.')
+    );
+    for (const build of BUILDS) {
+      expect(
+        within(main).getByRole('link', { name: new RegExp(`^${build.area} ${build.title}`) })
+      ).toHaveAttribute('href', build.href);
+    }
+    for (const work of WORK_EXAMPLES)
+      expect(within(main).getByRole('link', { name: new RegExp(work.title) })).toHaveAttribute(
+        'href',
+        work.href
+      );
+    expect(
+      within(main).getByRole('link', { name: 'Tell us what you want to build or improve' })
+    ).toHaveAttribute('href', '/start-here#enquiry');
+    expect(text).toContain('not results from a website or an AI feature alone');
   });
 
   it('says the same words as the approved copy', () => {
     const copy = readFileSync(join(process.cwd(), 'tasks/repositioning/copy/homepage.md'), 'utf8');
-    for (const symptom of SYMPTOMS) expect(copy).toContain(symptom);
+    for (const build of BUILDS) expect(copy).toContain(build.desc);
     for (const point of PRESSURE_POINTS) expect(copy).toContain(point.desc);
     for (const step of METHOD) expect(copy).toContain(step.text);
   });

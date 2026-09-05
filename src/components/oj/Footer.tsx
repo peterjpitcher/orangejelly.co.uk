@@ -30,10 +30,10 @@ export interface FooterProps {
 
 export function Footer({
   logo,
-  tagline = 'Your business is capable of more. Our job is finding what is stopping it.',
+  tagline = 'Websites and connected systems that grow your business.',
   columns = [],
   legal,
-  note = 'AI is part of the toolkit, not the product.',
+  note = 'Useful AI. Connected systems. Business growth.',
   children,
   className,
 }: FooterProps): JSX.Element {
@@ -124,8 +124,8 @@ export function Footer({
               no way to contact anybody is a gap rather than a clean design.
             */}
             <p className="m-0 max-w-[32ch] text-[14px] leading-relaxed text-oj-cream/60">
-              We find what is stopping a business growing, then fix it. Any sector, any size, if you
-              are open to change.
+              We build websites, bespoke applications and AI-powered workflows that connect the
+              customer experience, from first enquiry to repeat business.
             </p>
             <Anchor
               href="mailto:peter@orangejelly.co.uk"

@@ -1,3 +1,19 @@
+# Approved positioning refinement: 5 September 2026
+
+Orange Jelly builds websites, bespoke applications and connected customer systems, using AI where it adds value, to drive business growth. This is the current public offer and takes precedence over the earlier exploratory positioning below.
+
+Lead with what a customer can buy. Websites connect discovery to enquiries and bookings. Applications connect customer records, portals and everyday workflows. Useful AI performs a defined task with suitable human checks. Explain "digital backbone" through these examples.
+
+The audience remains small and mid-sized businesses across sectors. Hospitality provides strong evidence through The Anchor, our own venue, without defining the entire business. A customer with a clear website or application project is welcome.
+
+Discovery establishes the right scope, existing-system fit and measures. It does not obscure the build offer. AI used in development does not make an ordinary website an AI-powered product. No new delivery deadline, guarantee, package, support commitment or price is introduced.
+
+Public headline: **Websites and connected systems that grow your business.**
+
+## Historical positioning record
+
+The original discussion follows for context. Its facts remain subject to CLAIMS.md and current company records; its broad consultancy-first messaging is superseded by the approved refinement above.
+
 Orange Jelly
 Business, Brand & Positioning Overview
 1. The simplest definition
