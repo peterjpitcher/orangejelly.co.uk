@@ -111,7 +111,7 @@ describe('oj/Footer', () => {
 
   it('carries the signature line by default', () => {
     render(<Footer />);
-    expect(screen.getByText('AI is part of the toolkit, not the product.')).toBeInTheDocument();
+    expect(screen.getByText('Useful AI. Connected systems. Business growth.')).toBeInTheDocument();
   });
 
   it('renders link columns', () => {
