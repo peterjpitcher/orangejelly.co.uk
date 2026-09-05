@@ -10,7 +10,7 @@
 
 **Spec:** This document records Peter's agreed positioning from the 5 September conversation, the supplied positioning draft and five Keyword Planner rounds. It is the controlling specification for the next phase. `tasks/plan-2026-09-05-lead-conversion.md` continues to govern the implemented enquiry work.
 
-**Status:** Peter authorised this phase in full on 5 September 2026. Implementation and release verification are underway; see `tasks/digital-growth/verification.md`. No new migration or live test message is authorised.
+**Status:** Peter authorised this phase in full on 5 September 2026. Implementation is live on deployment `dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh`; see `tasks/digital-growth/verification.md`. No new migration or live test message is authorised.
 
 ## 1. Agreed direction and scope
 

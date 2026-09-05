@@ -13,7 +13,7 @@ Three reviewable increments: commercial pages and routes; homepage/hub/shared id
 - UTC: all 26 enquiry source and summary tests passed.
 - Independent read-only review found no blocking route, claim, canonical or enquiry-code issue and requested narrow-screen button checks.
 - Browser on built app: homepage and three new commercial pages measured 320 px document width at 320 px viewport. Start-here also fitted.
-- Browser identified professional-services button overflow to 401 px and growth-problem buttons to 348 px. Those new related-build buttons now wrap within their available width; final rebuilt browser verification follows.
+- Browser identified professional-services button overflow to 401 px and growth-problem buttons to 348 px. Those new related-build buttons now wrap within their available width; the rebuilt browser recheck measured all three at 320 px document width on a 320 px viewport.
 - Browser: booking service invitation reached the enquiry form. A successful fixture submission displayed `that has arrived.` with the status focused.
 - Browser: injected database failure displayed `We could not send that`, preserved input values and provided the real email fallback.
 - Native HTML submission without executing JavaScript returned HTTP 200 with confirmation and preserved autumn guide context.
@@ -27,4 +27,8 @@ All guide articles, insights, published case studies, pricing/contact/claim cons
 
 ## Release
 
-Final release gate and production identity are recorded after verification. This document does not yet assert deployment.
+Final integrated gate passed: lint/content checks, type-check, 1,657 tests and production build. Desktop layout, keyboard focus progression and the generated share image were inspected. All internal link destinations on the three service pages returned their intended pages; canonicals were checked. Native browser 200% zoom was not separately exercised.
+
+PRs 53, 54 and 55 merged in order, preserving their reviewed commits. Final production commit: `3d801e3f86f8088b9e3adc33085ff820fa461bfb`. Preview `dpl_FBLCWp5W54iRMeqnQzfaLQfGVsst` was READY for source commit `30d365745b1fe1ca6f7fee326d1531f6013ac9bd`; its booking page was verified with the correct production canonical. Production `dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh` reached READY for exact merge commit `3d801e3f86f8088b9e3adc33085ff820fa461bfb`. Direct inspection of `www.orangejelly.co.uk` resolved to that same deployment. Live browser checked the new homepage heading and metadata, all three service headings/canonicals, hub links and booking-service invitation to the revised enquiry form. The live sitemap includes each service URL exactly once. Bounded recent runtime-error retrieval returned no logs.
+
+See `changed-files.txt` for the full implementation inventory. Release evidence updates are local only.

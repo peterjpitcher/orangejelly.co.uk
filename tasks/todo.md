@@ -63,8 +63,8 @@ Status: pilot live on deployment dpl_HwdsuBMwuJJkyAjMdP9WUScR8Cod. Final release
 - [x] Incorporate the agreed websites, applications, connected systems and useful AI positioning.
 - [x] Incorporate five Keyword Planner rounds with demand and intent limitations.
 - [x] Write the follow-on plan in `tasks/plan-2026-09-05-digital-growth-offer.md` and connect the original enquiry plan.
-- [ ] Validate page ownership, search intent and public project evidence.
-- [ ] Implement the approved messaging and commercial destinations after authorisation.
-- [ ] Verify enquiry journeys, release identity and measurement baseline.
+- [x] Validate page ownership, search intent and public project evidence.
+- [x] Implement the approved messaging and commercial destinations after authorisation.
+- [x] Verify enquiry journeys, release identity and measurement baseline.
 
-Status: plan updated locally only; no site code, deployment or migration changed.
+Status: implementation live as dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh, commit 3d801e3f86f8088b9e3adc33085ff820fa461bfb. No migration. Fixture enquiry checks passed; real inbox receipt remains unverified pending explicit permission. Future measurement reviews are not scheduled.
