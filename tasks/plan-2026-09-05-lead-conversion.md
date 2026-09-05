@@ -12,6 +12,10 @@
 
 **Status:** Implementation authorised by Peter on 5 September 2026. Implementation and local verification are recorded in `tasks/lead-conversion/verification.md`. Production message tests still require explicit authorisation. No migration has been drafted or applied.
 
+## Follow-on phase: clarified digital growth offer
+
+The agreed positioning and five keyword research rounds are now recorded in `tasks/plan-2026-09-05-digital-growth-offer.md`. That plan governs the proposed homepage, commercial pages and offer refinement. The constraints below describe the original guide-conversion phase; its exclusions of homepage work and new routes do not exclude those items from the separate follow-on plan. Completed enquiry improvements remain in place. New implementation is not authorised by this cross-reference.
+
 ## 1. Evidence and intended outcome
 
 The supplied Search Console exports end on 2 September 2026. The latest seven days contain 82 Google clicks, of which 79 reached guides. Matching legacy and current guide paths gives 16 clicks for autumn pub event ideas, eight for Oktoberfest and six for profitable pub food menu ideas. These three guides account for 30 of 82 clicks. Mobile supplied 53 clicks.

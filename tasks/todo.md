@@ -56,3 +56,15 @@
 - [ ] Obtain explicit permission for a real test message and confirm inbox receipt.
 
 Status: pilot live on deployment dpl_HwdsuBMwuJJkyAjMdP9WUScR8Cod. Final release verified. Real test enquiry and inbox receipt await explicit permission. Broader rollout follows the specified 28-day review. No migration drafted or applied.
+
+
+## Digital growth offer plan, 5 September 2026
+
+- [x] Incorporate the agreed websites, applications, connected systems and useful AI positioning.
+- [x] Incorporate five Keyword Planner rounds with demand and intent limitations.
+- [x] Write the follow-on plan in `tasks/plan-2026-09-05-digital-growth-offer.md` and connect the original enquiry plan.
+- [ ] Validate page ownership, search intent and public project evidence.
+- [ ] Implement the approved messaging and commercial destinations after authorisation.
+- [ ] Verify enquiry journeys, release identity and measurement baseline.
+
+Status: plan updated locally only; no site code, deployment or migration changed.
