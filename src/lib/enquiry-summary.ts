@@ -176,7 +176,8 @@ export function aggregateEnquiries(
     const validContext =
       props?.version === GUIDE_CONVERSION_VERSION &&
       isEnquiryPlacement(props.placement) &&
-      props.channel === (row.event_name === 'whatsapp_click' ? 'whatsapp' : 'form') &&
+      ((row.event_name === 'enquiry_started' && props.channel === undefined) ||
+        props.channel === (row.event_name === 'whatsapp_click' ? 'whatsapp' : 'form')) &&
       (props.guide_slug === undefined ||
         (isGuideSlug(props.guide_slug) && publishedSlugs.has(props.guide_slug))) &&
       (row.event_name !== 'guide_cta_click' || props.guide_slug !== undefined);
