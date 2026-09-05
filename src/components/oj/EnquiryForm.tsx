@@ -8,6 +8,8 @@ import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/lib/schemas/enqu
 import { getBrowserLeadSource } from '@/lib/lead-source';
 import { hasAnalyticsConsent, trackClientEvent } from '@/lib/tracking';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/constants';
+import { getGuideConversion, type GuideConversionContext } from '@/lib/guide-conversion';
 
 import { Anchor } from './Anchor';
 import { Button } from './Button';
@@ -36,6 +38,9 @@ export type EnquiryEntryPoint = 'nav' | 'sticky' | 'cta_band' | 'next_step' | 's
 export interface EnquiryFormProps {
   entryPoint?: EnquiryEntryPoint;
   className?: string;
+  context?: GuideConversionContext;
+  sourcePath?: '/start-here' | '/contact';
+  formPlacement?: 'enquiry' | 'contact';
 }
 
 const STEP_ONE_FIELDS = [
@@ -54,7 +59,7 @@ function SubmitButton({ children }: { children: React.ReactNode }): JSX.Element 
   const { pending } = useFormStatus();
   return (
     <Button type="submit" size="lg" arrow disabled={pending}>
-      {pending ? 'Sending…' : children}
+      {pending ? 'Sending...' : children}
     </Button>
   );
 }
@@ -107,9 +112,21 @@ function ErrorSummary({ state }: { state: EnquiryFormState }): JSX.Element | nul
   );
 }
 
-export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps): JSX.Element {
+export function EnquiryForm({
+  entryPoint = 'page',
+  className,
+  context,
+  sourcePath = '/start-here',
+  formPlacement = 'enquiry',
+}: EnquiryFormProps): JSX.Element {
+  const config = context
+    ? getGuideConversion(context.guideSlug, context.category, context.title)
+    : undefined;
+  const sourcePage = context
+    ? `${sourcePath}?${new URLSearchParams({ guide: context.guideSlug, placement: context.placement })}`
+    : sourcePath;
   const [state, formAction] = useFormState(submitEnquiry, ENQUIRY_INITIAL_STATE);
-  const [leadSource, setLeadSource] = React.useState('');
+  const [leadSource, setLeadSource] = React.useState(() => JSON.stringify({ sourcePage }));
   const startedRef = React.useRef(false);
   const doneRef = React.useRef<HTMLDivElement>(null);
 
@@ -117,8 +134,10 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
   // may read sessionStorage, neither of which exists on the server, and doing it
   // during render would make the first client pass disagree with the server one.
   React.useEffect(() => {
-    setLeadSource(JSON.stringify(getBrowserLeadSource({ persist: hasAnalyticsConsent() })));
-  }, []);
+    setLeadSource(
+      JSON.stringify({ ...getBrowserLeadSource({ persist: hasAnalyticsConsent() }), sourcePage })
+    );
+  }, [sourcePage]);
 
   // The success state has to be announced. Without this, submitting the form on a
   // screen reader is silent: the page does not navigate and focus stays on a button
@@ -130,11 +149,20 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
   const onFirstInput = React.useCallback(() => {
     if (startedRef.current) return;
     startedRef.current = true;
-    trackClientEvent('enquiry_started', {
-      properties: { entry_point: entryPoint },
-      dedupeKey: entryPoint,
-    });
-  }, [entryPoint]);
+    try {
+      trackClientEvent('enquiry_started', {
+        properties: {
+          entry_point: entryPoint,
+          ...(context ? { guide_slug: context.guideSlug } : {}),
+          placement: context?.placement ?? formPlacement,
+          version: 'guide-enquiry-v1',
+        },
+        dedupeKey: `${entryPoint}:${context?.guideSlug ?? sourcePath}:${context?.placement ?? formPlacement}:guide-enquiry-v1`,
+      });
+    } catch {
+      // Contact remains usable if the analytics dependency is unavailable.
+    }
+  }, [entryPoint, context, sourcePath, formPlacement]);
 
   if (state.step === 'done') {
     return (
@@ -162,8 +190,8 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
         </p>
         <p className="mt-3 text-[15px] text-oj-ink-3">
           If anything changes in the meantime, reply to that email or write to{' '}
-          <a href="mailto:peter@orangejelly.co.uk" className="font-semibold underline">
-            peter@orangejelly.co.uk
+          <a href={`mailto:${CONTACT.email}`} className="font-semibold underline">
+            {CONTACT.email}
           </a>
           .
         </p>
@@ -177,6 +205,15 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
   return (
     <form action={formAction} className={className} noValidate>
       <ErrorSummary state={state} />
+      {state.error && (
+        <p className="mb-5 text-[15px] text-oj-ink-2">
+          You can also{' '}
+          <a className="font-semibold underline" href={`mailto:${CONTACT.email}`}>
+            email Peter
+          </a>
+          .
+        </p>
+      )}
 
       {/* Attribution and the honeypot. Both are hidden from people and from screen
           readers: one is not information, the other is a trap. */}
@@ -239,7 +276,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
           required
           announceError={false}
           error={fieldErrors.situation}
-          hint="A line is plenty. We'll ask the rest when we talk."
+          hint={config?.messageHint ?? "A line is plenty. We'll ask the rest when we talk."}
         >
           <Textarea
             name="situation"
@@ -251,7 +288,7 @@ export function EnquiryForm({ entryPoint = 'page', className }: EnquiryFormProps
         </Field>
 
         <div className="mt-1">
-          <SubmitButton>Let's talk</SubmitButton>
+          <SubmitButton>Send my enquiry</SubmitButton>
         </div>
 
         <p className="text-[13.5px] leading-relaxed text-oj-ink-3">

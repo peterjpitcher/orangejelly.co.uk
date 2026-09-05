@@ -23,6 +23,13 @@ import {
   Toc,
 } from '@/components/oj';
 import { BreadcrumbJsonLd } from '@/components/seo/BreadcrumbJsonLd';
+import { GuideEnquiryCallout } from '@/components/oj/GuideEnquiryCallout';
+import {
+  getGuideConversion,
+  getGuideEnquiryHref,
+  isGuideConversionEnabled,
+  type GuideConversionContext,
+} from '@/lib/guide-conversion';
 import { getNextStepFor } from '@/lib/article-next-step';
 import { type Category, getCategoryBySlug, getCategoryHue } from '@/lib/blog';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
@@ -382,6 +389,18 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
   const guide = loadGuide(params.slug, isEnabled);
   if (!guide) notFound();
 
+  const conversionContext: GuideConversionContext | undefined =
+    !isEnabled && isGuideConversionEnabled(guide.slug)
+      ? {
+          guideSlug: guide.slug,
+          category: guide.category.slug,
+          title: guide.title,
+          placement: 'early',
+        }
+      : undefined;
+  const conversion = conversionContext
+    ? getGuideConversion(guide.slug, guide.category.slug, guide.title)
+    : undefined;
   const baseUrl = getBaseUrl();
   const url = `${baseUrl}/guides/${guide.slug}`;
   const html = await renderMarkdownToHtml(preprocessMarkdown(guide.content));
@@ -520,9 +539,10 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
         />
 
         <StickyCTA
-          note="Not sure this is your actual problem?"
-          label="Let's talk"
-          href="/start-here"
+          note={conversion?.heading ?? 'Not sure this is your actual problem?'}
+          label={conversion?.primaryLabel ?? "Let's talk"}
+          href={conversionContext ? getGuideEnquiryHref(guide.slug, 'sticky') : '/start-here'}
+          guideContext={conversionContext}
         />
 
         <GroundProvider value="ink">
@@ -662,6 +682,10 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                 </div>
               ) : null}
 
+              {conversionContext ? (
+                <GuideEnquiryCallout context={conversionContext} placement="early" />
+              ) : null}
+
               {hasRail ? (
                 <div className="mb-10 rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 lg:hidden">
                   <Toc items={toc} />
@@ -679,6 +703,10 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
                     <FAQ items={guide.faqs.map((faq) => ({ q: faq.question, a: faq.answer }))} />
                   </div>
                 </div>
+              ) : null}
+
+              {conversionContext ? (
+                <GuideEnquiryCallout context={conversionContext} placement="end" />
               ) : null}
 
               {nextStepLinks.length > 0 ? (
@@ -817,20 +845,23 @@ export default async function GuidePage({ params }: GuidePageProps): Promise<JSX
           </Band>
         ) : null}
 
-        <Band tone="ink" size="lg" divider={false}>
-          <h2 className="oj-display text-[clamp(32px,6.5vw,56px)] leading-[0.95] text-oj-cream">
-            not sure this is your actual problem?
-          </h2>
-          <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            That's the more common situation, and it's what the first conversation is for. An hour,
-            free, going through what's happening in your business before anybody suggests a fix.
-          </p>
-          <div className="mt-8">
-            <Button size="lg" arrow href="/start-here">
-              Let's talk
-            </Button>
-          </div>
-        </Band>
+        {!conversionContext ? (
+          <Band tone="ink" size="lg" divider={false}>
+            <h2 className="oj-display text-[clamp(32px,6.5vw,56px)] leading-[0.95] text-oj-cream">
+              not sure this is your actual problem?
+            </h2>
+            <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
+              That's the more common situation, and it's what the first conversation is for. An
+              hour, free, going through what's happening in your business before anybody suggests a
+              fix.
+            </p>
+            <div className="mt-8">
+              <Button size="lg" arrow href="/start-here">
+                Let's talk
+              </Button>
+            </div>
+          </Band>
+        ) : null}
       </main>
 
       <OjFooter />

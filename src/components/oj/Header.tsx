@@ -138,7 +138,7 @@ export function Header({
             orange ? 'bg-oj-band' : 'bg-oj-cream'
           )}
         >
-          <div className="mx-auto flex h-16 max-w-[1160px] items-center gap-6 px-8">
+          <div className="mx-auto flex h-16 max-w-[1160px] items-center gap-4 px-4 sm:gap-6 sm:px-8">
             {/*
               `flex-none`, or the mark gets squeezed rather than the bar wrapping.
               
