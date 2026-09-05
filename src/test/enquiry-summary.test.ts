@@ -273,3 +273,23 @@ describe('complete database reads', () => {
     await expect(actual.getEnquirySummary(period)).rejects.toThrow('changed while loading');
   });
 });
+
+it('counts the form-start contract without an optional channel as current version', () => {
+  const summary = aggregateEnquiries(
+    [],
+    [
+      {
+        id,
+        created_at: '2026-08-20T12:00:00Z',
+        event_name: 'enquiry_started',
+        owner_id: null,
+        properties: { version: 'guide-enquiry-v1', placement: 'enquiry', entry_point: 'page' },
+      },
+    ],
+    period,
+    published,
+    observed
+  );
+  expect(summary.events.currentVersion.enquiry_started).toBe(1);
+  expect(summary.events.legacy.enquiry_started).toBe(0);
+});
