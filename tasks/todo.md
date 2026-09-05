@@ -52,6 +52,7 @@
 - [x] Check coverage of all five recommendations and identify release evidence.
 - [x] Implement the five recommendations, with the three-guide pilot enabled and broader rollout gated.
 - [x] Run production-build, browser, fixture submission and read-only aggregate checks.
-- [ ] Verify the deployed release and obtain explicit permission for a real test message.
+- [x] Verify the deployed release and its canonical production domain.
+- [ ] Obtain explicit permission for a real test message and confirm inbox receipt.
 
-Status: implementation complete with pilot enabled; release verification pending. No production test messages or writes, no migration drafted or applied.
+Status: pilot live on deployment dpl_HwdsuBMwuJJkyAjMdP9WUScR8Cod. Final release verified. Real test enquiry and inbox receipt await explicit permission. Broader rollout follows the specified 28-day review. No migration drafted or applied.
