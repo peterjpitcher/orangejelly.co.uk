@@ -14,7 +14,7 @@ import {
 import { getAllInsights } from '@/lib/insights';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { TRANSLATIONS, WHAT_WE_DO_NOT_HAVE } from './content';
+import { TRANSLATIONS, WHAT_WE_DO_NOT_HAVE, RELATED_BUILDS } from './content';
 
 /**
  * `/sectors/professional-services`.
@@ -94,6 +94,27 @@ export default function ProfessionalServicesPage(): JSX.Element {
           </section>
         </GroundProvider>
 
+        <Band heading="websites and applications for the client journey." tone="paper">
+          <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
+            A clearer website, a customer portal or a connected follow-up workflow can make it
+            easier to enquire and work with your firm. These are possible applications of our work,
+            not claims of sector-specific results.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            {RELATED_BUILDS.map((build) => (
+              <Button
+                key={build.href}
+                href={build.href}
+                variant="ghost"
+                arrow
+                className="max-w-full whitespace-normal text-left"
+              >
+                {build.label}
+              </Button>
+            ))}
+          </div>
+        </Band>
+
         <Band
           heading="the six areas, in your language."
           intro="The same six areas we check in every business, translated into what they look like inside a firm."
@@ -134,7 +155,7 @@ export default function ProfessionalServicesPage(): JSX.Element {
             {WHAT_WE_DO_NOT_HAVE.map((item) => (
               <li key={item} className="flex gap-3 text-[17px] leading-relaxed text-oj-cream/85">
                 <span aria-hidden="true" className="font-black text-oj-orange">
-                  &mdash;
+                  &#8226;
                 </span>
                 <span>{item}</span>
               </li>

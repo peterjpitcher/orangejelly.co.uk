@@ -56,6 +56,7 @@ export interface GrowthProblem {
   areas: readonly string[];
   examine: ReadonlyArray<{ what: string; why: string }>;
   /** What we can honestly show. Some of these have no number behind them yet. */
+  relatedBuilds?: ReadonlyArray<{ label: string; href: string }>;
   proof: { heading: string; body: string; hasNumbers: boolean };
 }
 
@@ -140,6 +141,9 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
   },
   {
     slug: 'leads-not-converting',
+    relatedBuilds: [
+      { label: 'Explore connected booking systems', href: '/solutions/booking-systems' },
+    ],
     number: '03',
     title: "Enquiries don't turn into customers",
     metaTitle: 'Leads not converting into customers',
@@ -218,6 +222,9 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
   },
   {
     slug: 'operations-slowing-us-down',
+    relatedBuilds: [
+      { label: 'Explore bespoke applications', href: '/solutions/bespoke-applications' },
+    ],
     number: '05',
     title: 'Too much of the work is manual',
     metaTitle: 'Operations slowing the business down',
@@ -296,14 +303,17 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
   },
   {
     slug: 'using-ai-intelligently',
+    relatedBuilds: [
+      { label: 'Explore bespoke applications', href: '/solutions/bespoke-applications' },
+    ],
     number: '07',
     title: 'Where would AI actually help?',
-    metaTitle: 'Using AI intelligently: where it would help',
+    metaTitle: 'AI consultant for small business',
     line: 'Tools everywhere, payoff nowhere obvious.',
     titleLead: 'Where would AI',
     titleMark: 'actually help?',
     intro:
-      'Everyone says AI. Almost nobody says where it pays. The question is not which tool, it is which problem.',
+      'We assess and build useful AI into business workflows: drafting enquiry replies for review, organising information or preparing follow-up. The task, data and human checks come first.',
     symptoms: [
       'Tools were bought and quietly abandoned.',
       'The team is curious but nobody owns it.',
@@ -311,7 +321,7 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
       'Every supplier pitch starts with the technology.',
     ],
     causes:
-      'AI pays where the same repetitive work, the same decisions or slow replies are holding the business back. Anywhere else it is for show. Which means the question is really about how the work gets done, not about the technology.',
+      'Start with a task and a clear limit on what AI may do. A draft reply needs a person to check it. A booking confirmation may only need a reliable rule and accurate booking data. We assess the fit before adding AI to a website or application.',
     areas: ['operations', 'scale'],
     examine: [
       {
@@ -329,12 +339,16 @@ export const GROWTH_PROBLEMS: readonly GrowthProblem[] = [
     ],
     proof: {
       heading: 'How we use AI, and what we will not claim for it.',
-      body: 'We have no AI number, because we have never separated one out. AI is how a two-person business did the work behind the five figures we publish from The Anchor: the research, the drafting, the analysis, the repetitive checking. It is not the reason those figures moved. Menu pricing moved food revenue by 98%. Writing for what people search for moved visibility by 828%. AI made that work fast enough to be worth doing at all. So what is on offer here is not a result, it is a filter: where AI would pay in your business, where your data will not support it yet, and where the honest answer is that it would be theatre.',
+      body: 'We have no AI number: its contribution has not been measured separately from the wider work. At The Anchor, our own venue, we use AI for research, drafting, analysis and repetitive checking. Using AI during development is also different from building AI into an application. We agree the task, data requirements and human checks before implementing a customer-facing AI feature.',
       hasNumbers: false,
     },
   },
   {
     slug: 'systems-cannot-keep-up',
+    relatedBuilds: [
+      { label: 'Explore bespoke applications', href: '/solutions/bespoke-applications' },
+      { label: 'Explore connected booking systems', href: '/solutions/booking-systems' },
+    ],
     number: '08',
     title: "Your systems can't cope with more",
     metaTitle: "Systems can't support the next stage",

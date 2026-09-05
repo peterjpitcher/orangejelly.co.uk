@@ -86,3 +86,8 @@ export const AREAS = [
   'Hampshire',
   'Oxfordshire',
 ] as const;
+
+export const RELATED_BUILDS = [
+  { label: 'Hospitality website design', href: '/solutions/hospitality-websites' },
+  { label: 'Connected booking systems', href: '/solutions/booking-systems' },
+] as const;

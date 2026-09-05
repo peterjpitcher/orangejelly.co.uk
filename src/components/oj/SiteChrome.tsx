@@ -219,6 +219,7 @@ export function OjFooter(): JSX.Element {
           title: 'Start',
           links: [
             { label: 'Start here', href: '/start-here' },
+            { label: 'What we build', href: '/solutions' },
             { label: 'Growth problems', href: '/growth-problems' },
             { label: 'How we work', href: '/how-we-work' },
             { label: 'Results', href: '/results' },

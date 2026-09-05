@@ -1,24 +1,25 @@
-/**
- * `/solutions` copy.
- *
- * Source of truth for the wording: `tasks/repositioning/copy/solutions.md`.
- *
- * The page refuses to lead with the capability list. Thirteen capabilities read as
- * a company that will do anything, which is the exact impression the method exists
- * to correct, so the problems come first and these sit underneath as the things a
- * fix might be made of.
- *
- * Names rewritten 2 September 2026 for plain English. "Brand and proposition",
- * "CRM and communications", "Procurement and supplier terms" and "playbooks and
- * SOPs" are trade terms; a business owner reading the list should recognise every
- * line without translating it.
- *
- * GROUPED, same day. Thirteen items in one flat grid read as a menu. They now sit
- * under five headings in the order an owner thinks about the business: decide
- * where to go, get found, turn interest into sales, keep the money, make the place
- * run without you. Each group names the growth areas it serves, so the grouping
- * joins up with the six areas above it rather than adding a third vocabulary.
- */
+/** Build overview first, with retained wider capabilities as supporting work. */
+export const CORE_BUILDS = [
+  {
+    area: 'Websites',
+    title: 'Hospitality websites',
+    desc: 'Websites that make it easier for guests to find answers, choose your venue and book with you.',
+    href: '/solutions/hospitality-websites',
+  },
+  {
+    area: 'Applications',
+    title: 'Bespoke applications',
+    desc: 'Browser applications, customer portals and internal tools built around the way your business works.',
+    href: '/solutions/bespoke-applications',
+  },
+  {
+    area: 'Connected systems',
+    title: 'Booking systems',
+    desc: 'Connect your existing booking tools or build the parts your customer journey is missing.',
+    href: '/solutions/booking-systems',
+  },
+] as const;
+
 export interface CapabilityGroup {
   id: string;
   /** Plain heading, in the owner's words. */

@@ -92,7 +92,7 @@ describe('the eight problems', () => {
     for (const term of [
       'Leads not converting',
       'Margin under pressure',
-      'Using AI intelligently',
+      'AI consultant for small business',
     ]) {
       expect(metas).toContain(term);
     }
@@ -170,8 +170,12 @@ describe('proof, including where there is none', () => {
 
   it('keeps the AI page honest about what AI did and did not do', () => {
     const ai = getGrowthProblem('using-ai-intelligently');
-    expect(ai?.proof.body).toMatch(/It is not the reason those figures moved/);
-    expect(ai?.proof.body).toMatch(/would be theatre/);
+    expect(ai?.proof.body).toMatch(/contribution has not been measured separately/);
+    expect(ai?.proof.body).toMatch(
+      /Using AI during development is also different from building AI into an application/
+    );
+    expect(ai?.proof.body).toMatch(/human checks/);
+    expect(ai?.proof.body).not.toMatch(/\d+%/);
   });
 
   it('states the provenance wherever it does show a number', () => {
@@ -282,6 +286,23 @@ describe('a growth problem page', () => {
     expect(within(nav).getByRole('link', { name: 'Growth problems' })).toHaveAttribute(
       'aria-current',
       'page'
+    );
+  });
+});
+
+// Commercial links complement the retained problem pages without new attribution fields.
+describe('relevant build destinations', () => {
+  it('connects AI to applications and conversion to booking systems', () => {
+    const { unmount } = render(<GrowthProblemPage params={{ slug: 'using-ai-intelligently' }} />);
+    expect(screen.getByRole('link', { name: 'Explore bespoke applications' })).toHaveAttribute(
+      'href',
+      '/solutions/bespoke-applications'
+    );
+    unmount();
+    render(<GrowthProblemPage params={{ slug: 'leads-not-converting' }} />);
+    expect(screen.getByRole('link', { name: 'Explore connected booking systems' })).toHaveAttribute(
+      'href',
+      '/solutions/booking-systems'
     );
   });
 });

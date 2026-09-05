@@ -62,3 +62,7 @@ export const WHAT_WE_DO_NOT_HAVE = [
   'Sector accreditation, a compliance specialism, or a view on your professional indemnity.',
   'A view on your technical work. What an accountant, a solicitor or a surveyor actually does is not our field and we will not pretend otherwise.',
 ] as const;
+
+export const RELATED_BUILDS = [
+  { label: 'Bespoke applications and customer portals', href: '/solutions/bespoke-applications' },
+] as const;

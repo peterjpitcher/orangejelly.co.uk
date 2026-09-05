@@ -15,7 +15,7 @@ import {
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { AREAS, FAQS, LOOK_AT_FIRST } from './content';
+import { AREAS, FAQS, LOOK_AT_FIRST, RELATED_BUILDS } from './content';
 
 /**
  * `/pub-marketing`. The hospitality sector landing page.
@@ -103,6 +103,26 @@ export default function PubMarketingPage(): JSX.Element {
             </div>
           </section>
         </GroundProvider>
+
+        <Band heading="websites and booking systems for your venue." tone="paper">
+          <p className="measure text-[17px] leading-relaxed text-oj-ink-2">
+            Turn the marketing into a clear route to booking. We build hospitality websites and
+            connect the systems behind the guest experience.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            {RELATED_BUILDS.map((build) => (
+              <Button
+                key={build.href}
+                href={build.href}
+                variant="ghost"
+                arrow
+                className="max-w-full whitespace-normal text-left"
+              >
+                {build.label}
+              </Button>
+            ))}
+          </div>
+        </Band>
 
         <Band heading="most pubs do not have a marketing problem." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">

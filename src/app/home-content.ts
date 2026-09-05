@@ -1,17 +1,40 @@
-/**
- * Homepage copy, kept out of the page so the words can be reviewed and tested
- * without reading JSX.
- *
- * Source of truth for the wording: `tasks/repositioning/copy/homepage.md`.
- * Every figure comes from `CLAIMS.md` and is expressed as a percentage, with its
- * provenance stated on the card.
- *
- * REWRITTEN 2 SEPTEMBER 2026 for plain English. The language review, read as a pub
- * owner, found the site written in the vocabulary of a strategy consultancy:
- * "handover", "run rate", "Search Console", "operational drag". The rule now is that
- * the category term ("Create demand") is a small label and the heading is the
- * problem in the reader's own words ("Not enough new customers").
- */
+/** Homepage offer and evidence, aligned with the approved September build focus. */
+export const BUILDS = [
+  {
+    area: 'Websites',
+    title: 'Websites that turn interest into bookings',
+    desc: 'Clear pages, useful answers and a straightforward route to enquire or book. See our hospitality website work.',
+    href: '/solutions/hospitality-websites',
+  },
+  {
+    area: 'Applications',
+    title: 'Applications that connect the business',
+    desc: 'Bespoke browser applications, customer portals and internal tools that bring everyday work together.',
+    href: '/solutions/bespoke-applications',
+  },
+  {
+    area: 'Useful AI',
+    title: 'AI that does a useful job',
+    desc: 'Workflows for enquiries, customer information and follow-up, with human checks where they matter.',
+    href: '/growth-problems/using-ai-intelligently',
+  },
+] as const;
+
+export const WORK_EXAMPLES = [
+  {
+    area: 'The Anchor, our own venue',
+    title: 'A website built around customer searches',
+    desc: 'We rebuilt the website around what customers wanted to find and made the private-hire enquiry route clear.',
+    href: '/results/nobody-could-find-us',
+  },
+  {
+    area: 'The Anchor, our own venue',
+    title: 'A clearer route from interest to a booking',
+    desc: 'We changed the booking journey, added confirmations and reminders, and gave people reasons to visit quieter sessions.',
+    href: '/results/interest-that-did-not-turn-up',
+  },
+] as const;
+
 export const SYMPTOMS = [
   'Growth has stalled, and nobody can say exactly when it did.',
   'Enquiries come in, then go quiet after the first reply.',
@@ -71,19 +94,19 @@ export const PRESSURE_POINTS = [
 export const METHOD = [
   {
     word: 'HEAR.',
-    text: "We start by listening. The people running the business already know most of what is wrong, and it's rarely written down anywhere.",
+    text: 'Tell us what you want to build or what needs to work better. We look at the customer journey and the systems you already use.',
   },
   {
     word: 'CHALLENGE.',
-    text: "We test what everyone assumes, against the numbers. This is the uncomfortable part and it's the part that pays.",
+    text: 'We agree what the build needs to achieve, what can stay and how we will measure progress.',
   },
   {
     word: 'BUILD.',
-    text: 'We build the fix, not a slide about the fix. Marketing, process, systems, automation, AI, whatever the problem turns out to need.',
+    text: 'We build and connect the website, application or workflow, then test the journeys customers and your team will use.',
   },
   {
     word: 'OPTIMISE.',
-    text: 'We measure it against the numbers we took before we started, and we keep going until it moves.',
+    text: 'We compare results with the starting point and agree which changes to make next. Further work is scoped together.',
   },
 ] as const;
 
@@ -113,13 +136,14 @@ export const PROOF = [
   {
     value: '+567%',
     label: 'Private hire bookings',
-    context: 'Twenty confirmed in six months, against about six a year before.',
+    context: 'Private hire bookings at The Anchor, compared with the previous booking rate.',
     area: 'Create demand',
   },
   {
     value: '89%',
     label: 'Fewer booking no-shows',
-    context: 'No-show rate fell from around 20% to around 2%.',
+    context:
+      'The reduction in booking no-shows at The Anchor after changes to the booking journey.',
     area: 'Protect margin',
   },
   {

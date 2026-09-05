@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 
 import { PRESSURE_POINTS } from '@/app/home-content';
 import SolutionsPage from '@/app/solutions/page';
-import { CAPABILITIES, CAPABILITY_GROUPS, DECLINED } from '@/app/solutions/content';
+import { CAPABILITIES, CAPABILITY_GROUPS, CORE_BUILDS, DECLINED } from '@/app/solutions/content';
 
 function body(): string {
   render(<SolutionsPage />);
@@ -13,18 +13,18 @@ function body(): string {
 }
 
 describe('/solutions', () => {
-  it('leads with the problem, not with the capability list', () => {
+  it('leads with concrete build destinations before supporting capabilities', () => {
     render(<SolutionsPage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'once we know the problem, we build the fix.'
+      'websites, applications and the systems behind them.'
     );
-
-    // Thirteen capabilities as a headline reads as a company that will do
-    // anything, which is the impression the method exists to correct. The order of
-    // the two sections is the argument.
+    for (const build of CORE_BUILDS)
+      expect(
+        screen.getByRole('link', { name: new RegExp(`^${build.area} ${build.title}`) })
+      ).toHaveAttribute('href', build.href);
     const text = document.body.textContent ?? '';
-    expect(text.indexOf('start with where it is stuck.')).toBeLessThan(
-      text.indexOf('what a fix can be made of.')
+    expect(text.indexOf('choose what you want to build.')).toBeLessThan(
+      text.indexOf('the wider work that supports a build.')
     );
   });
 
@@ -39,10 +39,13 @@ describe('/solutions', () => {
     }
   });
 
-  it('says nobody buys a capability on its own', () => {
+  it('welcomes defined projects and distinguishes AI features from development tools', () => {
     const text = body();
-    expect(text).toMatch(/Nobody buys one of them on its own/);
-    expect(text).toMatch(/Nobody buys a solution from this page/);
+    expect(text).toContain('Bring a defined project');
+    expect(text).toContain(
+      'Using AI during development is different from delivering an application with AI features.'
+    );
+    expect(text).not.toMatch(/Nobody buys a solution|Nobody buys one of them/);
   });
 
   it('lists what it declines, including work it would be second best at', () => {

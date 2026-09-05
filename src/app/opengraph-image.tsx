@@ -7,7 +7,7 @@ export const size = {
 
 export const contentType = 'image/png';
 
-export const alt = 'Orange Jelly: for business owners ready to take control of growth';
+export const alt = 'Orange Jelly: websites, applications and AI for business growth';
 
 /**
  * The default share card.
@@ -50,11 +50,11 @@ export default function OGImage() {
           maxWidth: 940,
         }}
       >
-        for business owners ready to take control of growth.
+        websites and systems built for growth.
       </div>
 
       <div style={{ display: 'flex', fontSize: 30, color: '#23252E' }}>
-        Growth partner for ambitious small and mid-sized businesses
+        Websites. Bespoke applications. Useful AI.
       </div>
     </div>,
     {

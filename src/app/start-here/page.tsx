@@ -23,7 +23,7 @@ import { ENQUIRY_INTRO, ENQUIRY_REASSURANCE, FIT, FAQS, NEEDS, STEPS, TAKEAWAYS 
 
 const TITLE = 'Start here | Orange Jelly';
 const DESCRIPTION =
-  "Every piece of work starts with a conversation about what is actually happening. What that involves, what you get from it, and who it doesn't work for.";
+  'Discuss a website, bespoke application or connected booking system. Bring a clear brief or tell us what you want to improve.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -65,7 +65,7 @@ export default function StartHerePage({ searchParams = {} }: StartHerePageProps)
                 the first conversation
               </p>
               <h1 className="oj-display mt-2.5 max-w-[14ch] text-[clamp(40px,8vw,76px)] leading-[0.92] text-oj-on-band">
-                tell us what's happening. we'll tell you where to look first.
+                tell us what you want to build or improve.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
                 {ENQUIRY_INTRO}
@@ -137,16 +137,14 @@ export default function StartHerePage({ searchParams = {} }: StartHerePageProps)
               <strong>The conversation</strong> is an hour, and it is free.
             </p>
             <p>
-              <strong>The first proper look</strong> normally takes two to three weeks. Anything
-              after that depends on what we find, and we agree the shape of it with you before it
-              starts rather than after.
+              <strong>The shape of the work</strong> depends on your brief and the systems involved.
+              A clear website or application brief can start with agreeing the build. Where more
+              discovery is needed, we agree that work and its timing first.
             </p>
             <p>
               <strong>On cost:</strong> the rate is {PRICING.hourly.display}, and that is the only
-              number we advertise. There are no packages, because a business of eight with a booking
-              problem needs something very different from a business of two hundred with a profit
-              problem. What changes is how many hours a piece of work takes, and you get that in
-              writing before anything starts.
+              number we advertise. There are no packages. You receive the agreed deliverables and
+              hours in writing before paid work starts. Any ongoing changes are agreed separately.
             </p>
           </div>
         </Band>
@@ -186,7 +184,7 @@ export default function StartHerePage({ searchParams = {} }: StartHerePageProps)
 
         <Band
           heading="who this doesn't work for."
-          intro="We'd rather say this now than three weeks in. This is not a fit if:"
+          intro="A few practical limits help us agree the right work:"
           tone="paper"
         >
           <ul className="measure-wide grid list-none gap-5 p-0 sm:grid-cols-2">
@@ -203,8 +201,8 @@ export default function StartHerePage({ searchParams = {} }: StartHerePageProps)
             ))}
           </ul>
           <p className="measure mt-8 text-[17px] font-semibold leading-relaxed text-oj-ink">
-            None of that makes yours a bad business. It makes us the wrong supplier, which is a
-            different thing and a much cheaper one to find out early.
+            We will say plainly if the project needs a different supplier or a different starting
+            point.
           </p>
         </Band>
 
@@ -216,10 +214,10 @@ export default function StartHerePage({ searchParams = {} }: StartHerePageProps)
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            stop circling the problem.
+            let’s talk about your build.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what's happening, what you've tried, and what needs to change.
+            Bring your brief, your idea or the customer experience you want to improve.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="#enquiry">

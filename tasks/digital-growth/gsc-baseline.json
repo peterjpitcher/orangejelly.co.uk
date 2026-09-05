@@ -1,0 +1,90 @@
+[
+  {
+    "source": "orangejelly.co.uk-Performance-on-Search-2026-09-05.zip",
+    "filters": [
+      {
+        "Filter": "Search type",
+        "Value": "Web"
+      },
+      {
+        "Filter": "Date",
+        "Value": "Last 16 months"
+      }
+    ],
+    "chartFirst": {
+      "Date": "2025-08-01",
+      "Clicks": "0",
+      "Impressions": "0",
+      "CTR": "",
+      "Position": ""
+    },
+    "chartLast": {
+      "Date": "2026-09-02",
+      "Clicks": "30",
+      "Impressions": "1534",
+      "CTR": "1.96%",
+      "Position": "9.5"
+    },
+    "existingPageRows": [
+      {
+        "Top pages": "https://www.orangejelly.co.uk/",
+        "Clicks": "28",
+        "Impressions": "1124",
+        "CTR": "2.49%",
+        "Position": "14.24"
+      },
+      {
+        "Top pages": "https://www.orangejelly.co.uk/pub-marketing",
+        "Clicks": "0",
+        "Impressions": "168",
+        "CTR": "0%",
+        "Position": "19.25"
+      }
+    ],
+    "limitation": "Separate page/query totals do not support query-by-page attribution. Missing rows are unavailable, not zero."
+  },
+  {
+    "source": "orangejelly.co.uk-Performance-on-Search-2026-09-05 (1).zip",
+    "filters": [
+      {
+        "Filter": "Search type",
+        "Value": "Web"
+      },
+      {
+        "Filter": "Date",
+        "Value": "Last 7 days"
+      }
+    ],
+    "chartFirst": {
+      "Date": "2026-08-27",
+      "Clicks": "8",
+      "Impressions": "687",
+      "CTR": "1.16%",
+      "Position": "9.3"
+    },
+    "chartLast": {
+      "Date": "2026-09-02",
+      "Clicks": "30",
+      "Impressions": "1534",
+      "CTR": "1.96%",
+      "Position": "9.5"
+    },
+    "existingPageRows": [
+      {
+        "Top pages": "https://www.orangejelly.co.uk/pub-marketing",
+        "Clicks": "0",
+        "Impressions": "70",
+        "CTR": "0%",
+        "Position": "20.93"
+      },
+      {
+        "Top pages": "https://www.orangejelly.co.uk/",
+        "Clicks": "0",
+        "Impressions": "8",
+        "CTR": "0%",
+        "Position": "12.75"
+      }
+    ],
+    "limitation": "Separate page/query totals do not support query-by-page attribution. Missing rows are unavailable, not zero."
+  }
+]

@@ -13,27 +13,11 @@ import {
 import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { CAPABILITIES, CAPABILITY_GROUPS, DECLINED } from './content';
+import { CAPABILITIES, CAPABILITY_GROUPS, CORE_BUILDS, DECLINED } from './content';
 
-/**
- * `/solutions`.
- *
- * Built ahead of its place in the plan because the phase 4 redirect table sends
- * `/capabilities` here, so the release could not ship without it.
- *
- * The page leads with the six places growth gets stuck and puts the capabilities
- * underneath. Thirteen capabilities as a headline reads as a company that will do
- * anything, which is the impression the method exists to correct.
- *
- * The pressure points are imported from the homepage rather than restated. Two
- * lists of the same six things drift, and the day they drift the site disagrees
- * with itself about what it works on.
- *
- * Copy: `tasks/repositioning/copy/solutions.md`.
- */
-const TITLE = 'What we build | Orange Jelly';
+const TITLE = 'Websites, Applications & Connected Systems | Orange Jelly';
 const DESCRIPTION =
-  'Once we know what is stopping growth, we build the fix. What that is made of depends on the problem, so this page starts there, not with a list of services.';
+  'Website builds, bespoke applications and connected booking systems. Explore practical work that turns customer interest into bookings and repeat business.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -67,11 +51,12 @@ export default function SolutionsPage(): JSX.Element {
                 what we build
               </p>
               <h1 className="oj-display mt-2.5 max-w-[16ch] text-[clamp(40px,8vw,78px)] leading-[0.92] text-oj-cream">
-                once we know the problem, we build the fix.
+                websites, applications and the systems behind them.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                What you end up buying depends entirely on what's actually stopping growth. That is
-                why this page starts with the problem and not with a list of things we sell.
+                We build the websites customers see and the applications and workflows behind them.
+                The aim is a clearer customer experience, more bookings and a business that works
+                better. AI is part of the build where it has a useful job to do.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">
@@ -86,31 +71,53 @@ export default function SolutionsPage(): JSX.Element {
         </GroundProvider>
 
         <Band
-          heading="start with where it's stuck."
-          intro="Six areas we check in every business. Most problems are a mix of two or three."
+          heading="choose what you want to build."
           tone="paper"
+          intro="Bring a defined project or a customer journey that needs to work better. These are the main ways we can build it."
         >
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {PRESSURE_POINTS.map((point) => (
+            {CORE_BUILDS.map((build) => (
               <PressureCard
-                key={point.title}
-                eyebrow={point.area}
-                title={point.title}
-                desc={point.desc}
-                href={point.href}
+                key={build.title}
+                eyebrow={build.area}
+                title={build.title}
+                desc={build.desc}
+                href={build.href}
               />
             ))}
           </div>
-          <div className="mt-8">
-            <Button variant="ghost" href="/growth-problems">
-              See all eight growth problems
+        </Band>
+        <Band
+          heading="AI with a clear purpose."
+          intro="AI can be part of an application or workflow, for example to organise enquiry information or draft a reply for someone to check. We agree the task, data and human checks before building it."
+        >
+          <p className="measure text-[17px] leading-relaxed">
+            Using AI during development is different from delivering an application with AI
+            features. A website does not need AI functionality to be useful.
+          </p>
+          <div className="mt-7">
+            <Button variant="ghost" href="/growth-problems/using-ai-intelligently">
+              Explore useful AI
             </Button>
           </div>
         </Band>
-
         <Band
-          heading="what a fix can be made of."
-          intro="Thirteen things we build with, in five groups. Nobody buys one of them on its own, and if somebody asks us for one before we've understood the problem, we'll say so."
+          heading="see what changed at The Anchor."
+          tone="paper"
+          intro="Our public case studies explain the work in our own venue: a website rebuilt around customer searches, clearer booking journeys, confirmations and reminders. The results reflect the combined work, not a website or AI feature alone."
+        >
+          <div className="flex flex-wrap gap-4">
+            <Button variant="ghost" href="/results/nobody-could-find-us">
+              Website case study
+            </Button>
+            <Button variant="ghost" href="/results/interest-that-did-not-turn-up">
+              Booking case study
+            </Button>
+          </div>
+        </Band>
+        <Band
+          heading="the wider work that supports a build."
+          intro="A website or application also depends on clear offers, sound processes and useful measures. These retained capabilities support the core build where the project needs them."
         >
           {/*
             Five groups, in the order an owner thinks about the business, rather
@@ -155,12 +162,35 @@ export default function SolutionsPage(): JSX.Element {
           </div>
         </Band>
 
+        <Band
+          heading="start with where it's stuck."
+          intro="Six areas we check in every business. Most problems are a mix of two or three."
+          tone="paper"
+        >
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PRESSURE_POINTS.map((point) => (
+              <PressureCard
+                key={point.title}
+                eyebrow={point.area}
+                title={point.title}
+                desc={point.desc}
+                href={point.href}
+              />
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button variant="ghost" href="/growth-problems">
+              See all eight growth problems
+            </Button>
+          </div>
+        </Band>
+
         <Band heading="what we normally decline." tone="paper">
           <ul className="measure-wide grid list-none gap-3 p-0">
             {DECLINED.map((item) => (
               <li key={item} className="flex gap-3 text-[17px] leading-relaxed">
                 <span aria-hidden="true" className="font-black text-oj-orange-deep">
-                  &mdash;
+                  •
                 </span>
                 <span>{item}</span>
               </li>
@@ -171,8 +201,8 @@ export default function SolutionsPage(): JSX.Element {
         <Band heading="it always starts the same way.">
           <div className="measure space-y-4 text-[17px] leading-relaxed">
             <p>
-              Nobody buys a solution from this page. Every piece of work starts with a conversation
-              about what's actually happening, and the first one is an hour and free.
+              Tell us what you want to build or improve. We discuss the scope, existing systems and
+              what success would mean. The first conversation is an hour and free.
             </p>
             <p>
               On cost: the rate is {PRICING.hourly.display}, and that is the only number we
@@ -188,10 +218,11 @@ export default function SolutionsPage(): JSX.Element {
 
         <Band tone="ink" size="lg" divider={false}>
           <h2 className="oj-display text-[clamp(34px,7vw,64px)] leading-[0.95] text-oj-cream">
-            what to build is the last decision, not the first.
+            bring us the build you have in mind.
           </h2>
           <p className="measure mt-4 text-[18px] leading-relaxed text-oj-cream/80">
-            Tell us what's happening and we'll tell you what we think it needs.
+            A new website, a bespoke application or a booking journey that needs attention: tell us
+            what you want to achieve.
           </p>
           <div className="mt-8">
             <Button size="lg" arrow href="/start-here">

@@ -70,9 +70,9 @@ const baseUrl = getBaseUrl();
  * search term the research found is "hospitality marketing agency", and it lives on
  * the sector hub where it is still accurate, not in the company description.
  */
-const SITE_TITLE = 'Orange Jelly | For owners ready to take control of growth.';
+const SITE_TITLE = 'Websites, Applications & AI for Business Growth | Orange Jelly';
 const SITE_DESCRIPTION =
-  'Growth partner for ambitious small and mid-sized businesses. We get under the skin of a business, work out what is actually blocking growth, and build the thing that fixes it.';
+  'Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -154,7 +154,7 @@ export default function RootLayout({
     },
     image: `${baseUrl}/logo.png`,
     description:
-      'Growth partner for ambitious small and mid-sized businesses. Orange Jelly works out what is blocking growth and builds the fix, using marketing, commercial change, operations, systems and AI according to what the problem needs.',
+      'Orange Jelly builds websites, bespoke applications and connected systems for business growth, using AI where it adds value to customer experiences and everyday work.',
     /*
      * The founder stays as a `founder` property and nothing more. D21 makes the
      * brand the company, and the previous entry described Peter as a hospitality

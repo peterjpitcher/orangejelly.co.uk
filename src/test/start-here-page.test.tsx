@@ -28,23 +28,20 @@ function body(): string {
 }
 
 describe('/start-here', () => {
-  it('opens on the conversation, not on a service', () => {
+  it('welcomes a clear build brief or an improvement enquiry', () => {
     render(<StartHerePage />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      "tell us what's happening. we'll tell you where to look first."
+      'tell us what you want to build or improve.'
     );
     expect(screen.getByText('the first conversation')).toBeInTheDocument();
   });
 
-  it('carries the fit language, which is what replaced the price', () => {
-    // D3 took pricing off the site, and the price was the filter. Being specific
-    // about who this is not for is the only honest filter left, so it is not
-    // decoration and it does not get softened.
+  it('sets practical limits without rejecting clear project briefs', () => {
     const text = body();
     for (const item of FIT.doesNot) {
       expect(text).toContain(item.title);
     }
-    expect(text).toContain('It makes us the wrong supplier');
+    expect(text).toContain('We will say plainly if the project needs a different supplier');
   });
 
   it('names the poor-fit behaviours, not a hedged summary', () => {
@@ -53,9 +50,12 @@ describe('/start-here', () => {
     // that actually decide whether a piece of work can happen.
     expect(FIT.doesNot).toHaveLength(4);
     const text = body();
-    expect(text).toMatch(/post three times a week/);
-    expect(text).toMatch(/pair of hands/);
-    expect(text).toMatch(/Nothing inside the business can actually change/);
+    expect(text).toMatch(/routine social posting/);
+    expect(text).toMatch(/guaranteed business result/);
+    expect(text).not.toMatch(/decided the plan and need a pair of hands/);
+    expect(text).toContain(
+      'You have an application idea or a clear build brief you want to discuss.'
+    );
   });
 
   /*
@@ -88,7 +88,7 @@ describe('/start-here', () => {
   it('uses the approved personal invitation without changing the business positioning', () => {
     const text = body();
     expect(text).toContain(
-      'Tell Peter what is happening and what you would like to change. A line is enough to start.'
+      'Tell Peter what you want to build or improve: a website, an application or the systems behind your customer experience. A line is enough to start.'
     );
     expect(text).toContain('Any sector, any size.');
     expect(screen.getByRole('button', { name: 'Send my enquiry' })).toBeInTheDocument();

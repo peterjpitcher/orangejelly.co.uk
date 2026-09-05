@@ -283,7 +283,7 @@ export function EnquiryForm({
             rows={5}
             maxLength={2000}
             defaultValue={values.situation}
-            placeholder="Enquiries have halved since the spring and nobody can agree why."
+            placeholder="We need a better website, a booking system or an application to connect our work."
           />
         </Field>
 
