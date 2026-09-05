@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import EnquirySummary from '@/components/admin/EnquirySummary';
 import { getValidAccessToken } from '@/lib/admin-session';
 import type { AdminEnquiry } from '@/lib/db/enquiries';
 import { LEAD_STATES, LEAD_STATE_LABELS, type LeadState } from '@/lib/schemas/enquiry';
@@ -62,7 +63,7 @@ export default function EnquiriesPanel() {
   const [filter, setFilter] = useState<LeadState | 'all'>('all');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState<string | null>(null);
+  const [updating, setUpdating] = useState<string | null>(null);
 
   const load = useCallback(async (status: LeadState | 'all') => {
     const token = await getValidAccessToken();
@@ -98,7 +99,7 @@ export default function EnquiriesPanel() {
     // enquiries feel like ten round trips.
     const previous = enquiries;
     setEnquiries((rows) => rows.map((row) => (row.id === id ? { ...row, status } : row)));
-    setSaving(id);
+    setUpdating(id);
 
     try {
       const response = await fetch('/api/admin/enquiries', {
@@ -117,12 +118,13 @@ export default function EnquiriesPanel() {
       setEnquiries(previous);
       setError(err instanceof Error ? err.message : 'Could not update.');
     } finally {
-      setSaving(null);
+      setUpdating(null);
     }
   }
 
   return (
     <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
+      <EnquirySummary />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-lg font-semibold text-brand-base">Enquiries</h2>
         <label className="text-sm">
@@ -160,7 +162,7 @@ export default function EnquiriesPanel() {
             <li
               key={enquiry.id}
               className="rounded-lg border border-brand-base/10 p-4"
-              aria-busy={saving === enquiry.id}
+              aria-busy={updating === enquiry.id}
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
