@@ -221,6 +221,23 @@ export function OjFooter(): JSX.Element {
             { label: 'Start here', href: '/start-here' },
             { label: 'What we build', href: '/solutions' },
             { label: 'Growth problems', href: '/growth-problems' },
+            /*
+             * This entry and the "Fractional CMO" one further down are here to fix
+             * orphans, not to balance the columns. On 5 September 2026 both
+             * /tools/ai-readiness and /fractional-cmo were in the sitemap, served
+             * 200, and had no inbound internal link from any of the 145 sitemap
+             * pages, so Google had never crawled either.
+             *
+             * They sit in DIFFERENT columns on purpose. This one belongs under
+             * Start because it is something a visitor does. A bare "Fractional CMO"
+             * label under Start would read as a service on offer, which is the
+             * thing that page exists to argue against, so it goes under Reading
+             * beside the other topics. A fourth column is not an option: Footer.tsx
+             * hard-codes three link tracks.
+             *
+             * src/test/orphan-pages.test.tsx is the gate that stops this recurring.
+             */
+            { label: 'AI readiness', href: '/tools/ai-readiness' },
             { label: 'How we work', href: '/how-we-work' },
             { label: 'Results', href: '/results' },
           ],
@@ -235,6 +252,8 @@ export function OjFooter(): JSX.Element {
             { label: 'Guides', href: '/guides' },
             { label: 'Insights', href: '/insights' },
             { label: 'For professional services', href: '/sectors/professional-services' },
+            // The second of the two orphan fixes described in the Start column above.
+            { label: 'Fractional CMO', href: '/fractional-cmo' },
           ],
         },
         {
