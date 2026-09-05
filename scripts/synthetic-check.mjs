@@ -258,11 +258,60 @@ check('robots lets Googlebot fetch the rendering assets', async () => {
   }
 });
 
-check('llms.txt describes the current company', async () => {
+/** The only number the site advertises, and so the only one allowed in this file. */
+const THE_RATE = '£62.50 plus VAT an hour';
+
+/**
+ * llms.txt: served, pointing at this site, and carrying no price but the rate.
+ *
+ * This asserted the literal phrase "growth partner". That was true when it was written
+ * on 28 August 2026 and false by 2 September, when the plain-English pass replaced the
+ * "strategic growth partner" body copy with the problem in the reader's own words. It
+ * also rejected every pound sign, which the rate reinstated on 31 August then tripped,
+ * invisibly, because the phrase assertion threw first. Two stale assertions, one of
+ * them never once reported.
+ *
+ * Both were the same mistake: a monitoring script keeping its own copy of a rule a
+ * build gate already owns. scripts/check-positioning.mjs rejects the old sector
+ * self-description and every price but the rate, and src/test/llms.test.ts asserts the
+ * current opening line and that exactly one price appears. Both run on every build and
+ * are updated in the same commit as the copy, so restating them out here cannot catch
+ * anything earlier. All it does is turn approved copy changes into a red monitoring
+ * run, which is how a check gets ignored and then switched off.
+ *
+ * What is left is the part no build gate can see. The file is generated with
+ * getBaseUrl(), which falls back to production when NEXT_PUBLIC_BASE_URL is unset, so
+ * a misconfigured deployment publishes a file written for machines to believe with
+ * every link in it pointing somewhere else.
+ */
+check('llms.txt is served and points at this site', async () => {
   const { status, body } = await get('/llms.txt');
   if (status !== 200) throw new Error(`expected 200, got ${status}`);
-  if (!body.includes('growth partner')) throw new Error('not the current positioning');
-  if (/£/.test(body)) throw new Error('a price has reappeared');
+  if (!body.startsWith('# Orange Jelly')) {
+    throw new Error('does not open with the generated heading, so this is not llms.txt');
+  }
+
+  const links = [...body.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map((match) => match[1]);
+  if (links.length === 0) throw new Error('no links, so the file points at nothing');
+  /*
+   * Checked by hostname rather than against BASE. A local run legitimately sees
+   * production URLs here, because getBaseUrl() falls back to them, and failing that run
+   * would train everybody to ignore this check. What must never appear is localhost or
+   * a domain the company no longer owns.
+   */
+  const elsewhere = links.filter((link) => {
+    const { hostname } = new URL(link);
+    return hostname !== 'orangejelly.co.uk' && !hostname.endsWith('.orangejelly.co.uk');
+  });
+  if (elsewhere.length > 0) {
+    throw new Error(`${elsewhere.length} links leave the site, first ${elsewhere[0]}`);
+  }
+
+  if (!body.includes(THE_RATE)) throw new Error(`the rate is not "${THE_RATE}"`);
+  const pounds = body.match(/£/g) ?? [];
+  if (pounds.length !== 1) {
+    throw new Error(`${pounds.length} prices in a file that advertises one rate`);
+  }
 });
 
 check('a retired URL redirects rather than 404s', async () => {

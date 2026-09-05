@@ -25,7 +25,7 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   title: 'Guides | Orange Jelly',
   description:
-    'Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, a growth partner for ambitious small and mid-sized businesses.',
+    'Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, which builds websites, bespoke applications and connected systems for business growth.',
   url: getBaseUrl(),
   author: {
     name: 'Peter Pitcher',
