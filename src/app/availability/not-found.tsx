@@ -5,15 +5,31 @@ import { Button } from '@/components/oj';
  * ONE outcome for every dead poll link.
  *
  * Unknown, expired, consumed, deleted and draft all land here, and they all get
- * a byte-identical response with an HTTP 404. That is the whole point: these
- * tokens are bearer credentials with no login behind them, so any difference
- * between "no such poll" and "that poll isn't live yet" is an oracle telling a
- * guesser they guessed right. There is deliberately nothing here to tell the
- * causes apart: not the copy, not the status code, not the page title.
+ * a byte-identical response. That is the whole point: these tokens are bearer
+ * credentials with no login behind them, so any difference between "no such
+ * poll" and "that poll isn't live yet" is an oracle telling a guesser they
+ * guessed right. There is deliberately nothing here to tell the causes apart:
+ * not the copy, not the status code, not the page title.
  *
- * Reached via `notFound()` from the poll routes. It must be `notFound()` and not
- * inline error copy: rendering a message returns 200, which is a soft-404 that
- * both leaks the distinction and invites indexing.
+ * The anti-oracle property is the identical outcome, and it holds. THE STATUS IS
+ * NOT PART OF IT, whatever this comment said before 5 September 2026. These
+ * routes answer HTTP 200, not 404: `src/app/loading.tsx` sits at the app root,
+ * so Next 14 wraps every route in a Suspense boundary and flushes the shell with
+ * a 200 before the page runs, and a render-time `notFound()` cannot change a
+ * status once the headers are sent. Every invalid token gets the same 200, so
+ * nothing leaks, but do not reason about token enumeration on the basis of a 404
+ * that is not there.
+ *
+ * Fixing it means a route-segment `loading.tsx` under `/availability`, or
+ * narrowing the app-root one. Both are user-experience decisions rather than
+ * security ones, and neither was made in the 5 September indexing release, which
+ * fixed the same defect on `/results/[slug]`, `/growth-problems/[slug]` and
+ * `/dev/components` where it cost search visibility. Recorded in
+ * `tasks/gsc-indexing/SPEC.md` section 7.
+ *
+ * Still reached via `notFound()` from the poll routes, and it must stay
+ * `notFound()` rather than inline error copy, because that is what routes every
+ * cause to this one page.
  *
  * This file covers everything under `/availability`, which is why it names no
  * screen in particular.

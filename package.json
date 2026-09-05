@@ -39,7 +39,7 @@
       "node scripts/check-growth-language.mjs",
       "node scripts/check-british-english.mjs"
     ],
-    "*.{js,jsx,ts,tsx,json,css}": [
+    "*.{js,cjs,mjs,jsx,ts,tsx,json,css}": [
       "prettier --write"
     ],
     "*.{js,jsx,ts,tsx}": [

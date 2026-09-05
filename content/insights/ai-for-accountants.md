@@ -84,6 +84,8 @@ Make that second practice twenty per cent faster and you get twenty per cent mor
 
 If those three come back clean and the constraint really is production volume, buy something. Start with the narrowest possible use, on one process, with one person accountable for it. Broad rollouts of general-purpose tools are how firms end up with licences nobody uses.
 
+If you would rather work through that as a set of statements than as three questions, the [AI readiness assessment](/tools/ai-readiness) asks twelve of them about how the business actually runs. It takes about two minutes and there is no score at the end.
+
 ## What we will and will not claim
 
 We should be straight about our own position. Orange Jelly has not run this work inside an accountancy practice, so nothing above is drawn from experience in your sector. It is drawn from how the mechanism works and from what is verifiably true about the shape of the business.

@@ -65,6 +65,8 @@ At that point you are either living with a third of the answer, or you are hirin
 
 **The underlying problem is that a seat is not a diagnosis.** Deciding you need a CMO is deciding what the answer is before anybody has established what the question was.
 
+We have set the same argument out as a decision on its own page, including the three situations where a fractional CMO genuinely is the right hire: [when a fractional CMO is the right answer, and when it is not](/fractional-cmo).
+
 ## What to ask before you hire one
 
 Ask these of any fractional CMO you are considering. Ask them of anybody else you are considering too, including us.

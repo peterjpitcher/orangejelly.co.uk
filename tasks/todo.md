@@ -55,3 +55,29 @@
 - [ ] Verify the deployed release and obtain explicit permission for a real test message.
 
 Status: implementation complete with pilot enabled; release verification pending. No production test messages or writes, no migration drafted or applied.
+
+
+## GSC indexing repairs, 5 September 2026
+
+Spec: `tasks/gsc-indexing/SPEC.md` revision 2. Plan: `tasks/gsc-indexing/PLAN.md`.
+Branch `fix/gsc-indexing-repairs`, cut from `origin/main` (3d801e3f, the deployed commit).
+
+- [x] Triage all 81 not-indexed URLs from the Search Console drill-downs, row by row.
+- [x] Verify the independent developer review's corrections against the code and production.
+- [x] Correct the specification: totals, image absolutes, causal language, the redirect claim,
+      the `/dev/components` diagnosis, token privacy, the Validate fix reasoning, monitoring.
+- [x] Write the implementation plan with one owner per file.
+- [ ] WS1 Unblock `/_next/`, `/icon`, `/apple-icon` and `/opengraph-image` in robots.txt,
+      with an effective-matching regression test and a red-before-green proof.
+- [ ] WS2 Link the two orphaned pages from the two insight bodies and the footer, with an
+      offline orphan and reachability gate and a mutation proof.
+- [ ] WS3 Return real 404s for `/dev/components`, `/results/[slug]` and
+      `/growth-problems/[slug]`, correct the two false comments, and add the missing
+      guide-category redirect test.
+- [ ] WS4 Extend the synthetic check to prove the live rules, then run the full gate.
+- [ ] Push the branch and open a PR. Do not merge without an explicit yes.
+- [ ] Peter: change the apex domain redirect from temporary to permanent in Vercel.
+
+Status: spec and plan written, branch cut, nothing implemented yet. Read-only up to this
+point. No migration needed. Two decisions are open and carry recommended defaults in spec
+section 7: `dynamicParams` on `/insights/[slug]` and on `/guides/category/[category]`.

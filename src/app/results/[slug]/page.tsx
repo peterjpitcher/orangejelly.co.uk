@@ -29,6 +29,20 @@ export function generateStaticParams(): Array<{ slug: string }> {
   return CASE_STUDIES.map((study) => ({ slug: study.slug }));
 }
 
+/**
+ * Closes the set, so an unknown slug is resolved at routing time and answers a genuine
+ * 404. Without it the notFound() below cannot set a status: src/app/loading.tsx sits at
+ * the app root, so Next 14 wraps every route in a Suspense boundary and flushes the
+ * shell with a 200 before this component runs, which is how /results/anything came to
+ * answer 200 with a loading spinner and two contradicting robots tags.
+ *
+ * CASE_STUDIES is a static array with no drafts and no legacy slugs, so closing the set
+ * costs nothing here.
+ *
+ * @see src/app/guides/[slug]/page.tsx, the in-repo precedent
+ */
+export const dynamicParams = false;
+
 export function generateMetadata({ params }: Params): Metadata {
   const study = getCaseStudy(params.slug);
   if (!study) return {};

@@ -285,7 +285,7 @@ const ROUTES = [
     path: '/dev/components',
     disposition: 'live',
     sitemap: false,
-    note: 'Component harness. Dynamic so notFound() returns a real 404 in production rather than a soft one. Never indexed.',
+    note: 'Component harness, development only. The /dev guard in src/middleware.ts answers 404 in production; the page notFound() cannot, because the root loading.tsx flushes a 200 shell before it runs. Never indexed.',
   },
   {
     path: '/admin',
