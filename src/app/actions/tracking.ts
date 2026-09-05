@@ -2,6 +2,8 @@
 
 import { storeConversionEvent } from '@/lib/db/leads';
 import { type LeadSourceInput } from '@/lib/lead-source';
+import { cleanEnquirySource } from '@/lib/enquiry-source';
+import { resolveGuideConversionContext } from '@/lib/guide-conversion-server';
 
 /**
  * The server side of the event dictionary.
@@ -118,17 +120,67 @@ export async function trackConversionEvent({
   leadSource,
   properties,
 }: TrackConversionEventInput): Promise<{ success?: boolean; error?: string }> {
+  if (typeof eventName !== 'string') return { error: 'Unknown event.' };
   const legacy = LEGACY_EVENTS.has(eventName);
   if (!legacy && !(eventName in EVENT_PROPERTIES)) {
     return { error: 'Unknown event.' };
   }
 
+  const contextual = properties?.version === 'guide-enquiry-v1';
+  if (
+    !contextual &&
+    properties &&
+    ['version', 'guide_slug', 'placement', 'channel'].some((key) => key in properties) &&
+    ['guide_cta_click', 'whatsapp_click', 'enquiry_started'].includes(eventName)
+  ) {
+    return { error: 'Unsupported guide event version.' };
+  }
+  let contextualProperties: Record<string, unknown> = {};
+  if (contextual) {
+    if (!['guide_cta_click', 'whatsapp_click', 'enquiry_started'].includes(eventName)) {
+      return { error: 'Invalid guide event.' };
+    }
+    const placement = properties?.placement;
+    if (
+      typeof placement !== 'string' ||
+      !['early', 'end', 'sticky', 'enquiry', 'contact'].includes(placement)
+    ) {
+      return { error: 'Invalid guide placement.' };
+    }
+    const guide = properties?.guide_slug;
+    if (guide !== undefined) {
+      const context = resolveGuideConversionContext({
+        guide: typeof guide === 'string' ? guide : '',
+        placement,
+      });
+      if (!context) return { error: 'Invalid guide context.' };
+      contextualProperties.guide_slug = context.guideSlug;
+    } else if (eventName === 'guide_cta_click') return { error: 'Missing guide context.' };
+    const channel = properties?.channel;
+    const expectedChannel = eventName === 'whatsapp_click' ? 'whatsapp' : 'form';
+    if (channel !== undefined && channel !== expectedChannel)
+      return { error: 'Invalid guide channel.' };
+    contextualProperties = { ...contextualProperties, placement, version: 'guide-enquiry-v1' };
+    if (channel !== undefined) contextualProperties.channel = channel;
+    if (
+      eventName === 'enquiry_started' &&
+      ['page', 'contact', 'guide', 'sticky'].includes(String(properties?.entry_point))
+    ) {
+      contextualProperties.entry_point = properties?.entry_point;
+    }
+    const sessionId = properties?.session_id;
+    if (typeof sessionId === 'string' && /^[a-z0-9-]{1,80}$/i.test(sessionId))
+      contextualProperties.session_id = sessionId;
+  }
+
   const result = await storeConversionEvent({
     eventName,
-    leadSource,
-    properties: legacy
-      ? sanitizeProperties(properties)
-      : allowlistProperties(eventName, properties),
+    leadSource: contextual ? cleanEnquirySource(leadSource) : leadSource,
+    properties: contextual
+      ? contextualProperties
+      : legacy
+        ? sanitizeProperties(properties)
+        : allowlistProperties(eventName, properties),
   });
 
   if (!result.stored) {

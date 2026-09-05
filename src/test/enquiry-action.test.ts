@@ -3,6 +3,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { submitEnquiry } from '@/app/actions/enquiry';
 import { ENQUIRY_INITIAL_STATE } from '@/lib/schemas/enquiry';
 import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
+import { storeConversionEvent } from '@/lib/db/leads';
+import { sendLeadNotification } from '@/lib/email';
 import type * as RateLimit from '@/lib/rate-limit';
 
 /**
@@ -168,5 +170,27 @@ describe('submitEnquiry, after the second step was removed', () => {
 
     expect(storeEnquiryStep2).not.toHaveBeenCalled();
     expect(next.step).toBe(1);
+  });
+});
+
+describe('stored enquiry secondary failures', () => {
+  it('reports event and mail failure operationally without losing the stored enquiry', async () => {
+    vi.mocked(storeEnquiryStep1).mockResolvedValue({ stored: true, id: 'lead-secondary' });
+    vi.mocked(storeConversionEvent).mockResolvedValueOnce({ stored: false });
+    vi.mocked(sendLeadNotification).mockResolvedValueOnce({ error: 'Fixture delivery failure' });
+    const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      const result = await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
+      expect(result).toEqual({ step: 'done', leadId: 'lead-secondary' });
+      expect(log).toHaveBeenCalledWith(
+        '[enquiry] stored, but the conversion event was not recorded.'
+      );
+      expect(log).toHaveBeenCalledWith(
+        '[enquiry] stored, but the notification was not sent:',
+        'Fixture delivery failure'
+      );
+    } finally {
+      log.mockRestore();
+    }
   });
 });
