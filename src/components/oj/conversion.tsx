@@ -3,6 +3,8 @@
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import { type GuideConversionContext } from '@/lib/guide-conversion';
+import { trackEnquiryAction } from './EnquiryActions';
 
 import { GroundProvider } from './Ground';
 
@@ -18,6 +20,7 @@ import { Button } from './Button';
  * no dark pattern. That is not politeness, it is what makes consent valid.
  */
 export interface StickyCTAProps {
+  guideContext?: GuideConversionContext;
   note?: React.ReactNode;
   label?: string;
   href?: string;
@@ -29,6 +32,7 @@ export interface StickyCTAProps {
 }
 
 export function StickyCTA({
+  guideContext,
   note = "Growth stuck? Tell us what's happening.",
   label = "Let's talk",
   href = '/start-here',
@@ -65,8 +69,17 @@ export function StickyCTA({
       >
         <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-3 px-8 py-3">
           <p className="m-0 text-[15px] font-bold text-oj-on-band">{note}</p>
-          <div className="flex items-center gap-2">
-            <Button size="sm" href={href} onClick={onClick} arrow>
+          <div className="flex min-w-0 max-w-full items-center gap-2">
+            <Button
+              size="sm"
+              href={href}
+              onClick={() => {
+                if (guideContext) trackEnquiryAction(guideContext, 'sticky', 'form');
+                onClick?.();
+              }}
+              className="min-w-0 max-w-full whitespace-normal text-center"
+              arrow
+            >
               {label}
             </Button>
             {dismissible ? (

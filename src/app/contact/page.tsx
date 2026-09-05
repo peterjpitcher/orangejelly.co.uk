@@ -11,19 +11,12 @@ import {
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
 
-/**
- * `/contact`. A reduced `/start-here`.
- *
- * It is not the main conversion route and should not compete with one: same form,
- * same server action, no fit language, no FAQ, no method. Somebody who arrived here
- * from a footer link or an old bookmark wants to send a message, not read an
- * argument, and the argument already exists one link away.
- *
- * The old page led with WhatsApp and a phone number and described Orange Jelly by
- * its founder. Both are still offered, below the form rather than instead of it,
- * because a message sent through the form is recorded as a lead and a WhatsApp is
- * not.
- */
+import { EnquiryActions } from '@/components/oj/EnquiryActions';
+import { EnquiryProof } from '@/components/oj/EnquiryProof';
+import { getGuideConversion } from '@/lib/guide-conversion';
+import { resolveGuideConversionContext } from '@/lib/guide-conversion-server';
+import { ENQUIRY_INTRO, ENQUIRY_REASSURANCE } from '../start-here/content';
+
 const TITLE = 'Contact | Orange Jelly';
 const DESCRIPTION =
   "Tell us what's happening. A person reads every enquiry and replies. No list, no sequence, no account manager.";
@@ -42,7 +35,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage(): JSX.Element {
+interface ContactPageProps {
+  searchParams?: { guide?: string | string[]; placement?: string | string[] };
+}
+
+export default function ContactPage({ searchParams = {} }: ContactPageProps): JSX.Element {
+  const context = resolveGuideConversionContext(searchParams);
+  const config = context
+    ? getGuideConversion(context.guideSlug, context.category, context.title)
+    : undefined;
   return (
     <>
       <OjHeader />
@@ -65,28 +66,35 @@ export default function ContactPage(): JSX.Element {
                 tell us what's happening.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                A person reads every enquiry and replies. Not a filter, not a sequence, and not an
-                account manager.
+                {ENQUIRY_INTRO}
               </p>
             </div>
           </section>
         </GroundProvider>
 
         <Band tone="paper">
-          <div className="measure">
-            <EnquiryForm entryPoint="page" />
+          <div id="enquiry" className="measure scroll-mt-28">
+            {config && (
+              <h2 className="oj-display mb-4 text-[32px] leading-tight">{config.heading}</h2>
+            )}
+            <p className="mb-7 text-[17px] leading-relaxed text-oj-ink-2">{ENQUIRY_REASSURANCE}</p>
+            <EnquiryForm
+              entryPoint="page"
+              context={context}
+              sourcePath="/contact"
+              formPlacement="contact"
+            />
+            <div className="mt-8">
+              <EnquiryActions context={context} placement="contact" showPrimary={false} />
+            </div>
+            <div className="mt-7">
+              <EnquiryProof proof={config?.proof ?? 'none'} />
+            </div>
           </div>
         </Band>
 
-        <Band heading="if you'd rather not use a form." divider={false}>
+        <Band heading="what happens next." divider={false}>
           <div className="measure space-y-4 text-[17px] leading-relaxed">
-            <p>
-              Email{' '}
-              <a href="mailto:peter@orangejelly.co.uk" className="font-semibold underline">
-                peter@orangejelly.co.uk
-              </a>
-              . It's the only mailbox we have, so it reaches the same person either way.
-            </p>
             <p>
               If you want to know what happens next, who this works for and who it doesn't, that's
               all on{' '}

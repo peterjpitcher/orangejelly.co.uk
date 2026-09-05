@@ -14,21 +14,13 @@ import {
 import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 
-import { FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
+import { EnquiryActions } from '@/components/oj/EnquiryActions';
+import { EnquiryProof } from '@/components/oj/EnquiryProof';
+import { getGuideConversion } from '@/lib/guide-conversion';
+import { resolveGuideConversionContext } from '@/lib/guide-conversion-server';
 
-/**
- * `/start-here`. The conversion page for the repositioning.
- *
- * It carries the fit language, which is the qualification filter that replaced the
- * price when D3 took pricing off the site. That is why the "who this does not work
- * for" section is specific rather than hedged: with no number to filter on, the
- * only honest filter left is saying plainly who this is not for.
- *
- * Chrome is the `oj` Header and Footer, not the legacy site chrome. `ChromeGate`
- * suppresses the old one here, driven by `src/lib/oj-routes.ts`.
- *
- * Copy: `tasks/repositioning/copy/start-here.md`, held to it by a test.
- */
+import { ENQUIRY_INTRO, ENQUIRY_REASSURANCE, FIT, FAQS, NEEDS, STEPS, TAKEAWAYS } from './content';
+
 const TITLE = 'Start here | Orange Jelly';
 const DESCRIPTION =
   "Every piece of work starts with a conversation about what is actually happening. What that involves, what you get from it, and who it doesn't work for.";
@@ -47,7 +39,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function StartHerePage(): JSX.Element {
+interface StartHerePageProps {
+  searchParams?: { guide?: string | string[]; placement?: string | string[] };
+}
+
+export default function StartHerePage({ searchParams = {} }: StartHerePageProps): JSX.Element {
+  const context = resolveGuideConversionContext(searchParams);
+  const config = context
+    ? getGuideConversion(context.guideSlug, context.category, context.title)
+    : undefined;
   return (
     <>
       <OjHeader tone="orange" current="start-here" ctaHref="#enquiry" />
@@ -68,9 +68,7 @@ export default function StartHerePage(): JSX.Element {
                 tell us what's happening. we'll tell you where to look first.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-on-band">
-                Every piece of work we do starts the same way: a conversation about what is actually
-                happening in your business, before anyone talks about a solution. This page tells
-                you what that involves, what you get out of it, and what it costs.
+                {ENQUIRY_INTRO}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="#enquiry">
@@ -84,15 +82,28 @@ export default function StartHerePage(): JSX.Element {
           </section>
         </GroundProvider>
 
-        <Band heading="what actually happens." tone="ink">
-          <ol className="grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
-            {STEPS.map((step, index) => (
-              <li key={step.word}>
-                <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
-              </li>
-            ))}
-          </ol>
-        </Band>
+        <section
+          id="enquiry"
+          className="scroll-mt-28 border-b-1.5 border-oj-ink bg-oj-cream-2 py-10 sm:py-14"
+        >
+          <div className="page-shell">
+            <div className="measure">
+              {config && (
+                <h2 className="oj-display mb-4 text-[32px] leading-tight">{config.heading}</h2>
+              )}
+              <p className="mb-7 text-[17px] leading-relaxed text-oj-ink-2">
+                {ENQUIRY_REASSURANCE}
+              </p>
+              <EnquiryForm entryPoint="page" context={context} />
+              <div className="mt-8">
+                <EnquiryActions context={context} placement="enquiry" showPrimary={false} />
+              </div>
+              <div className="mt-7">
+                <EnquiryProof proof={config?.proof ?? 'none'} />
+              </div>
+            </div>
+          </div>
+        </section>
 
         <Band
           heading="what you get from the hour."
@@ -110,6 +121,56 @@ export default function StartHerePage(): JSX.Element {
           </ul>
         </Band>
 
+        <Band heading="what actually happens." tone="ink">
+          <ol className="grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
+            {STEPS.map((step, index) => (
+              <li key={step.word}>
+                <MethodStep index={index + 1} word={step.word} text={step.text} tone="dark" />
+              </li>
+            ))}
+          </ol>
+        </Band>
+
+        <Band heading="how long, and what it costs.">
+          <div className="measure space-y-4 text-[17px] leading-relaxed">
+            <p>
+              <strong>The conversation</strong> is an hour, and it is free.
+            </p>
+            <p>
+              <strong>The first proper look</strong> normally takes two to three weeks. Anything
+              after that depends on what we find, and we agree the shape of it with you before it
+              starts rather than after.
+            </p>
+            <p>
+              <strong>On cost:</strong> the rate is {PRICING.hourly.display}, and that is the only
+              number we advertise. There are no packages, because a business of eight with a booking
+              problem needs something very different from a business of two hundred with a profit
+              problem. What changes is how many hours a piece of work takes, and you get that in
+              writing before anything starts.
+            </p>
+          </div>
+        </Band>
+
+        <Band
+          heading="who this works for."
+          intro="We work best with owners who are ready to act. You'll get the most from this if:"
+        >
+          <ul className="measure flex list-none flex-col gap-3 p-0">
+            {FIT.works.map((item) => (
+              <li key={item} className="flex gap-3 text-[17px] leading-relaxed">
+                <span aria-hidden="true" className="font-black text-oj-orange-deep">
+                  &#8226;
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="measure mt-7 text-[16px] leading-relaxed text-oj-ink-2">
+            Any sector, any size. A two-person business with something to change fits as well as a
+            two-hundred-person one.
+          </p>
+        </Band>
+
         <Band heading="what we need from you." tone="paper">
           <dl className="measure-wide grid gap-6 sm:grid-cols-3">
             {NEEDS.map((need) => (
@@ -123,31 +184,6 @@ export default function StartHerePage(): JSX.Element {
           </dl>
         </Band>
 
-        <Band
-          heading="who this works for."
-          intro="We work best with owners who are ready to act. You'll get the most from this if:"
-        >
-          <ul className="measure flex list-none flex-col gap-3 p-0">
-            {FIT.works.map((item) => (
-              <li key={item} className="flex gap-3 text-[17px] leading-relaxed">
-                <span aria-hidden="true" className="font-black text-oj-orange-deep">
-                  &mdash;
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="measure mt-7 text-[16px] leading-relaxed text-oj-ink-2">
-            Any sector, any size. A two-person business with something to change fits as well as a
-            two-hundred-person one.
-          </p>
-        </Band>
-
-        {/*
-         * The fit language, and the reason this page exists in this shape. It is the
-         * qualification filter that replaced the price, so it is specific and it
-         * names behaviours rather than hedging about "the right partnership".
-         */}
         <Band
           heading="who this doesn't work for."
           intro="We'd rather say this now than three weeks in. This is not a fit if:"
@@ -171,34 +207,6 @@ export default function StartHerePage(): JSX.Element {
             different thing and a much cheaper one to find out early.
           </p>
         </Band>
-
-        <Band heading="how long, and what it costs.">
-          <div className="measure space-y-4 text-[17px] leading-relaxed">
-            <p>
-              <strong>The conversation</strong> is an hour, and it is free.
-            </p>
-            <p>
-              <strong>The first proper look</strong> normally takes two to three weeks. Anything
-              after that depends on what we find, and we agree the shape of it with you before it
-              starts rather than after.
-            </p>
-            <p>
-              <strong>On cost:</strong> the rate is {PRICING.hourly.display}, and that is the only
-              number we advertise. There are no packages, because a business of eight with a booking
-              problem needs something very different from a business of two hundred with a profit
-              problem. What changes is how many hours a piece of work takes, and you get that in
-              writing before anything starts.
-            </p>
-          </div>
-        </Band>
-
-        <section id="enquiry" className="border-b-1.5 border-oj-ink bg-oj-cream-2 py-14 sm:py-20">
-          <div className="page-shell">
-            <div className="measure">
-              <EnquiryForm entryPoint="page" />
-            </div>
-          </div>
-        </section>
 
         <Band heading="questions people ask first." tone="paper">
           <div className="measure">

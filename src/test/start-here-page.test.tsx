@@ -85,11 +85,43 @@ describe('/start-here', () => {
     expect(text).not.toMatch(/within \d+ (hours|days|working)|24 hours|same day|by return/i);
   });
 
-  it('speaks as the company, never as the founder', () => {
-    // D21. The brand is Orange Jelly, not Peter.
+  it('uses the approved personal invitation without changing the business positioning', () => {
     const text = body();
-    expect(text).not.toMatch(/\bPeter\b/);
-    expect(text).not.toMatch(/\bI \b|\bmy \b/);
+    expect(text).toContain(
+      'Tell Peter what is happening and what you would like to change. A line is enough to start.'
+    );
+    expect(text).toContain('Any sector, any size.');
+    expect(screen.getByRole('button', { name: 'Send my enquiry' })).toBeInTheDocument();
+  });
+
+  it('places first contact before process, price and qualification, with one visible anchor', () => {
+    render(<StartHerePage />);
+    const enquiry = document.getElementById('enquiry')!;
+    expect(document.querySelectorAll('#enquiry')).toHaveLength(1);
+    expect(enquiry).toHaveClass('scroll-mt-28');
+    const headings = [
+      'what you get from the hour.',
+      'what actually happens.',
+      'how long, and what it costs.',
+      'who this works for.',
+      'what we need from you.',
+      "who this doesn't work for.",
+      'questions people ask first.',
+    ];
+    let previous: Element = enquiry;
+    for (const name of headings) {
+      const heading = screen.getByRole('heading', { name });
+      expect(
+        previous.compareDocumentPosition(heading) & Node.DOCUMENT_POSITION_FOLLOWING
+      ).toBeTruthy();
+      previous = heading;
+    }
+    expect(enquiry).toHaveTextContent(
+      'Sending a message does not commit you to a call or paid work.'
+    );
+    expect(
+      within(enquiry).getByRole('link', { name: 'Message Peter on WhatsApp' })
+    ).toHaveAttribute('href', expect.stringContaining('wa.me/'));
   });
 
   it('frames the Anchor as our own venue rather than a pub', () => {

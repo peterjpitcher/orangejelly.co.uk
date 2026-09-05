@@ -49,7 +49,10 @@ describe('EnquiryForm, step one', () => {
     // If step one were driven by an onClick handler it would be JavaScript-only, and
     // step one is the half that writes the lead.
     expect(container.querySelector('form')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Let's talk/ })).toHaveAttribute('type', 'submit');
+    expect(screen.getByRole('button', { name: /Send my enquiry/ })).toHaveAttribute(
+      'type',
+      'submit'
+    );
   });
 
   it('labels every field and marks the required ones for a screen reader', () => {
@@ -95,8 +98,8 @@ describe('EnquiryForm, step one', () => {
 
     expect(track).toHaveBeenCalledTimes(1);
     expect(track).toHaveBeenCalledWith('enquiry_started', {
-      properties: { entry_point: 'sticky' },
-      dedupeKey: 'sticky',
+      properties: { entry_point: 'sticky', placement: 'enquiry', version: 'guide-enquiry-v1' },
+      dedupeKey: 'sticky:/start-here:enquiry:guide-enquiry-v1',
     });
   });
 
@@ -210,5 +213,77 @@ describe('EnquiryForm, confirmation', () => {
       'href',
       'mailto:peter@orangejelly.co.uk'
     );
+  });
+});
+
+const guideContext = {
+  guideSlug: 'autumn-pub-event-ideas',
+  category: 'events',
+  title: 'Autumn Pub Event Ideas',
+  placement: 'early' as const,
+};
+
+describe('EnquiryForm guide context', () => {
+  beforeEach(() => {
+    currentState = ENQUIRY_INITIAL_STATE;
+    track.mockReset();
+  });
+
+  it('provides topic guidance without writing an answer for the visitor', () => {
+    render(<EnquiryForm context={guideContext} />);
+    expect(screen.getByLabelText(/What's going on/)).toHaveValue('');
+    expect(screen.getByLabelText(/What's going on/)).toHaveAccessibleDescription(
+      expect.stringContaining('events')
+    );
+  });
+
+  it('retains the selected topic and visitor input after validation fails', () => {
+    currentState = {
+      step: 1,
+      error: 'Check your email.',
+      values: {
+        name: 'Sam',
+        email: 'sam@',
+        company: 'Example',
+        situation: 'Planning autumn events.',
+      },
+    };
+    const { container } = render(<EnquiryForm context={guideContext} />);
+    expect(screen.getByLabelText(/What's going on/)).toHaveValue('Planning autumn events.');
+    const source = container.querySelector<HTMLInputElement>('input[name="leadSource"]')!;
+    expect(JSON.parse(source.value).sourcePage).toBe(
+      '/start-here?guide=autumn-pub-event-ideas&placement=early'
+    );
+    expect(screen.getByRole('alert')).toHaveFocus();
+    expect(screen.getByRole('link', { name: 'email Peter' })).toHaveAttribute(
+      'href',
+      'mailto:peter@orangejelly.co.uk'
+    );
+  });
+
+  it('records the selected topic once and never passes the message into telemetry', async () => {
+    const user = userEvent.setup();
+    render(<EnquiryForm context={guideContext} />);
+    await user.type(screen.getByLabelText(/What's going on/), 'Planning an event.');
+    expect(track).toHaveBeenCalledTimes(1);
+    expect(track).toHaveBeenCalledWith('enquiry_started', {
+      properties: {
+        entry_point: 'page',
+        guide_slug: guideContext.guideSlug,
+        placement: 'early',
+        version: 'guide-enquiry-v1',
+      },
+      dedupeKey: 'page:autumn-pub-event-ideas:early:guide-enquiry-v1',
+    });
+  });
+
+  it('keeps text entry usable if analytics throws', async () => {
+    track.mockImplementationOnce(() => {
+      throw new Error('Unavailable');
+    });
+    const user = userEvent.setup();
+    render(<EnquiryForm context={guideContext} />);
+    await user.type(screen.getByLabelText(/Your name/), 'Sam');
+    expect(screen.getByLabelText(/Your name/)).toHaveValue('Sam');
   });
 });
