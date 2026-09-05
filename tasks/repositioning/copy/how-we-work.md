@@ -1,169 +1,127 @@
 # `/how-we-work` copy
 
-**Task:** T051. **Built as:** `src/app/how-we-work/page.tsx`. A test holds the page to these words.
+Approved digital-growth offer, 5 September 2026. Discovery is proportionate to the brief.
 
-The method words are **HEAR. CHALLENGE. BUILD. OPTIMISE.** The pack's version-one draft said
-HEAR EXPOSE BUILD PROVE. Peter changed EXPOSE to CHALLENGE, because challenge is what actually happens
-in the room, and PROVE to OPTIMISE, because proving is a moment and optimising is the job. Measurement
-lives inside OPTIMISE rather than standing as its own step.
+## METHOD_DETAIL
 
----
+HEAR.
 
-## Hero
+Understand what you want to build and what it needs to achieve.
 
-**Eyebrow:** the method
+Bring a clear brief or a problem to work through. We look at the website, customer journey and systems involved, and speak to the people who will use the result.
 
-**H1:** hear. challenge. build. optimise.
+A shared brief, the existing systems involved and the result we will measure.
 
-**Standfirst:**
-Four steps, in that order, every time. Not because process is comforting, but because the order is what
-stops us solving the loudest symptom instead of the real problem.
+Discovery should answer the questions needed for the build. Its depth depends on the project.
 
-**Primary action:** Let's talk
-**Secondary:** Start here → `/start-here`
+CHALLENGE.
 
----
+Check the proposed build against the way your business works.
 
-## Why there is a method at all
+We test the assumptions that matter: what customers need, what your current software can do and where a connection or bespoke application is justified. A clear brief is welcome. We refine it with you before agreeing the work.
 
-**Heading:** why a method, and not just experience.
+Agreed deliverables, boundaries, hours and measures, with decisions about what to build or connect.
 
-Orange Jelly works across marketing, commercial change, operations, systems and AI. Without a method that
-looks like a company that will do anything, which is another way of saying a company that is good at
-nothing.
+Use existing software where it fits. Build something bespoke where the business needs it.
 
-The method is what connects them. It starts with the problem and ends with evidence, and it is the same
-sequence whether the answer turns out to be a campaign, a pricing change or a piece of software.
+BUILD.
 
-It also decides when to stop, which most engagements never do.
+Build and test the website, application or connected workflow.
 
----
+We create the agreed website, browser application or booking workflow and connect the systems it depends on. We test the customer journey and the everyday tasks your team will use, with measurement built in. AI is included where it has a useful role, with human checks appropriate to that role.
 
-## 1. HEAR
+The agreed build, tested journeys and the information your team needs to use it.
 
-**Line:** Understand what is really happening, not what the brief says.
+Using AI to write code does not make a website AI-powered. The customer should understand what AI actually does.
 
-We get close to the operating reality: the leader, the people doing the work, the data, and where it
-helps, the customer. Leadership interviews, staff conversations, a walk through the journey and the
-systems, and a proper look at the numbers.
+OPTIMISE.
 
-**What you end up with:** a problem statement in plain words, a map of how it works today, the baseline we
-will measure against, and an honest list of what the evidence does not cover.
+Measure the result against where you started.
 
-**The discipline:** listening is not enough. The job is to hear the difference between what people say is
-happening and what the numbers show.
+We compare the agreed measures with the starting point, review how people use the build and explain what to change next. Further development and ongoing improvement are agreed pieces of work.
 
-## 2. CHALLENGE
+A before-and-after report where the data supports it, an honest handover and recommendations for the next step.
 
-**Line:** Test what everyone assumes, against the evidence.
+Separate completed work from measured business outcomes. Do not claim a result the evidence cannot support.
 
-This is the uncomfortable part and it is the part that pays. We connect the visible symptom to the rest of
-the business, take apart the comfortable explanation, and make the trade-offs explicit. Root cause,
-funnel, margin, process, journey, systems and data, then sizing and prioritising what is actually worth
-doing.
+## TIMELINE
 
-**What you end up with:** a Growth Pressure Map, an agreed definition of the problem, a prioritised short
-list, and the measures we will judge it by.
+The first conversation
 
-**The discipline:** do not solve the loudest symptom. Find the few pressure points that can change the
-outcome, and say so even when it is not what anybody wanted to hear.
+An hour. Free.
 
-## 3. BUILD
+You leave with our first read on where to look, and a straight answer on whether we are the right people.
 
-**Line:** Build the fix, not a document about the fix.
+Agreeing the build
 
-The solution might be a proposition, a conversion journey, a pricing change, a booking system, a
-dashboard, an automation, an operating rhythm, or an AI tool that earns its place. The problem decides.
+Matched to your brief.
 
-We start with the smallest intervention capable of making a material difference, prototype early where we
-are unsure, design it for the people who have to use it, build the measurement in rather than bolting it
-on, and write down what you need to run it after we have gone.
+HEAR and CHALLENGE. We agree how much discovery is needed, the deliverables and the hours before paid work starts.
 
-**The discipline:** avoid unnecessary technology. If the answer is a pricing change and a phone call, that
-is the answer.
+Building and measuring
 
-## 4. OPTIMISE
+Depends on what we find.
 
-**Line:** Measure it against the baseline, then keep going until it moves.
+BUILD and OPTIMISE. The shape and the hours are agreed in writing before this starts, never after.
 
-Success is agreed before anything is built, so there is nothing to argue about afterwards. Then we compare
-against the baseline, look at the leading indicators as well as the lagging ones, fix the adoption
-problems that always appear, and iterate.
+## PRESSURE_AREAS_EXPLAINED
 
-**What you end up with:** an impact report with before and after, a learning log, an honest handover, and a
-recommendation to scale it, change it or stop.
+Demand
 
-**The discipline:** work is not finished because something was delivered. It is finished when the change is
-implemented, understood, and measured as far as the engagement allows.
+Whether enough of the right people know you exist and care.
 
----
+Conversion
 
-## The Growth Pressure Map
+What happens between someone being interested and someone buying.
 
-**Heading:** the growth pressure map.
+Margin
 
-**Intro:** The artefact that comes out of CHALLENGE. It maps the business across six connected areas and
-says, for each one, where the pressure actually is.
+What is left after the sale, and where it leaks.
 
-- **Demand.** Whether enough of the right people know and care.
-- **Conversion.** What happens between interest and a decision.
-- **Margin.** What is left after the sale, and where it leaks.
-- **Operations.** What the business spends effort on that it should not.
-- **Experience.** What people remember, as opposed to what you deliver.
-- **Scale.** What breaks first at twice the size.
+Operations
 
-**Close:** It is not a generic scorecard with a total at the bottom. A score invites a league table and
-false precision. The map is built around your business model and is there to focus the next move, not to
-grade you.
+What the business spends effort on that it should not.
 
----
+Experience
 
-## What we agree before any work starts
+What people remember, as opposed to what you deliver.
 
-**Heading:** what we agree before anything is built.
+Scale
 
-- The problem we are solving, in one sentence we both recognise.
-- Why it matters now.
-- The baseline, or the honest admission that there is not one yet.
-- What success looks like, as a number where possible.
-- What is in scope and what is not.
-- Who can make the decisions, and who owns implementation.
-- What data and access we need.
-- How we will review progress.
-- What would make us stop, change direction or expand.
+What breaks first at twice the size.
 
-**Close:** Every one of those is agreed in writing before the first day of build. It is not paperwork: it
-is the list of things that, left unsaid, turn into the argument at the end.
+## STARTING_AGREEMENT
 
----
+The problem we are solving, in one sentence we both recognise.
 
-## What the method is there to prevent
+Why it matters now.
 
-**Heading:** what this stops happening.
+The numbers we are starting from, or the honest admission that there are none yet.
 
-- Starting with a tactic somebody asked for before anyone has understood the problem.
-- Treating every problem as a marketing problem.
-- Using AI where it adds nothing.
-- Handing over a strategy the business cannot actually implement.
-- Measuring activity instead of impact.
-- Carrying on after the useful outcome has already been reached.
-- Letting everyone avoid the decision the business actually needs to make.
+What success looks like, as a number where possible.
 
----
+What is in scope and what is not.
 
-## Final band
+Who can make the decisions, and who owns implementation.
 
-**Heading:** the order is the method.
+What data and access we need.
 
-**Line:** It starts with an hour on the phone and no charge. Tell us what is happening and we will tell you
-what we think.
+How we will review progress.
 
-**Action:** Let's talk
+What would make us stop, change direction or expand.
 
-## Amendments, 2 September 2026: plain-English pass
+## PREVENTS
 
-The site was reviewed as a hospitality business owner would read it, and Peter approved a plain-English rewrite. The lines below are the wording now on the page and supersede the earlier versions above where they differ. Consultancy terms (baseline, run rate, proposition, conversion journey, operational drag, diagnostic) came out; the one price sentence is used everywhere cost comes up; the category terms stay as small labels and the headings say the problem in the reader's words.
+Building before the brief, users and intended result are understood.
 
-- Understand what is really happening, not what everyone says is happening.
-- Measure it against where you started, then keep going until it moves.
-- The numbers we are starting from, or the honest admission that there are none yet.
+Treating every problem as a marketing problem.
+
+Using AI where it adds nothing.
+
+Handing over a strategy the business cannot actually implement.
+
+Measuring activity instead of impact.
+
+Carrying on after the useful outcome has already been reached.
+
+Letting everyone avoid the decision the business actually needs to make.

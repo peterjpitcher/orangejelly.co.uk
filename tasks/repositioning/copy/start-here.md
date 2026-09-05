@@ -1,142 +1,121 @@
 # `/start-here` copy
 
-Approved lead-conversion implementation, 5 September 2026. This document mirrors the page order and wording. The hourly rate remains £62.50 plus VAT an hour. The first conversation remains free. The enquiry button and direct contact alternatives follow the lead-conversion specification.
+Approved digital-growth offer, 5 September 2026. Preserves the early enquiry form and guide context.
 
 ## Hero
 
-**Eyebrow:** the first conversation
+tell us what you want to build or improve.
 
-**H1:** tell us what's happening. we'll tell you where to look first.
-
-Tell Peter what is happening and what you would like to change. A line is enough to start.
-
-**Primary action:** Let's talk, to `#enquiry`.
-
-**Secondary:** See how we work, to `/how-we-work`.
-
-## Enquiry
+Tell Peter what you want to build or improve: a website, an application or the systems behind your customer experience. A line is enough to start.
 
 Sending a message does not commit you to a call or paid work. The first conversation is free. Any paid work is agreed before it starts.
 
-Contextual headings and message hints come from `src/lib/guide-conversion.ts` for validated published guides. Generic visitors see the normal form.
+## TAKEAWAYS
 
-**Form legend:** tell us what's happening.
+An initial view of your website, application or connected-system project and what needs checking.
 
-**Required fields:** Your name, Email, Business or venue, What's going on?
+A practical next step, whether you have a clear brief or need help shaping one.
 
-**Message hint:** A line is plenty. We'll ask the rest when we talk.
+A straight answer on whether we are the right people for it.
 
-**Submit:** Send my enquiry
+## STEPS
 
-**Pending:** Sending...
+YOU TELL US.
 
-**Alternatives:** Message Peter on WhatsApp. Email Peter.
+Tell us what you want to build or improve. Your contact details and a line about the business are enough to start.
 
-Relevant proof follows the alternatives. Quantified proof comes from approved constants and is attributed to The Anchor, our own venue. Generic visitors receive a link to results.
+WE REPLY.
 
-## What you get from the hour
+A person reads it and replies about your project or situation.
 
-**Section heading:** what you get from the hour.
+WE TALK.
 
-You're not buying anything in that conversation, and we're not asking you to.
+An hour, free, to discuss the website, application or workflow you have in mind, the systems you already use and the result you want.
 
-- Our first read on what is actually blocking growth, said plainly. A full answer takes longer, and we say which is which.
-- The two or three things we would look at first, and why those.
-- A straight answer on whether we are the right people for it.
+WE RECOMMEND.
 
-## What actually happens
+We explain what looks worth building, what existing software may already handle and whether we are the right people for the work.
 
-**Section heading:** what actually happens.
+WE AGREE THE WORK.
 
-1. **YOU TELL US.** Your contact details and a line about what is happening. We can ask the rest when we talk.
+The deliverables, hours, responsibilities and measures are agreed in writing before paid work starts.
 
-2. **WE REPLY.** A person reads it, not a filter, and the reply is about your situation rather than a brochure.
+## NEEDS
 
-3. **WE TALK.** An hour, free, and not a pitch. We ask about the numbers, the history and what has already been tried. Most of that hour is us listening.
+Someone who can agree the work.
 
-4. **WE SAY IT.** What we think, including when the answer is that you don't need us. That happens, and saying so is worth more than three weeks of finding out.
+Bring the person who knows what the business needs and can make decisions about the project.
 
-5. **WE AGREE THE WORK.** If it's worth going further: a defined piece of work, the hours quoted in writing before anything starts, and a measure we both sign up to.
+A picture of what you use today.
 
-## How long, and what it costs
+Your website, booking tools, customer systems and the parts that need to work together. We agree any access needed before work begins.
 
-**Section heading:** how long, and what it costs.
+The result you want.
 
-**The conversation** is an hour, and it is free.
+More bookings, clearer enquiries, a better customer experience or a workflow your team can rely on. We agree how to measure it.
 
-**The first proper look** normally takes two to three weeks. Anything after that depends on what we find, and we agree the shape of it with you before it starts rather than after.
+## Fit
 
-**On cost:** the rate is £62.50 plus VAT an hour, and that is the only number we advertise. There are no packages, because a business of eight with a booking problem needs something very different from a business of two hundred with a profit problem. What changes is how many hours a piece of work takes, and you get that in writing before anything starts.
+You want a new website or a better route from interest to enquiry or booking.
 
-## Who this works for
+You have an application idea or a clear build brief you want to discuss.
 
-**Section heading:** who this works for.
+You want customer records, bookings and everyday workflows to work together.
 
-We work best with owners who are ready to act. You'll get the most from this if:
+You want useful AI with a clear job and appropriate human checks.
 
-- You believe the business is capable of more than it's currently doing.
-- You want to know what's actually driving the numbers, rather than what everyone assumes.
-- You're ready to change how the business works, not only how it's marketed.
-- You want the systems built for the business you're becoming, not the one you started.
-- You want someone to challenge the thinking, not agree with it.
-- You can act once a direction is agreed.
+You need help deciding what to build, connect or keep.
 
-Any sector, any size. A two-person business with something to change fits as well as a two-hundred-person one.
+You can act once the work is agreed.
 
-## What we need from you
+You only need routine social posting.
 
-**Section heading:** what we need from you.
+Our core work is websites, applications and connected systems. We can explain where that fits with your marketing.
 
-- **An hour with someone who can act on the answer.** Not a gatekeeper taking notes back to a committee.
+You need a guaranteed business result.
 
-- **The real numbers.** Takings and costs, not just the sales figure. We cannot find a profit problem in a business that will only show us its revenue.
+We agree the work and how to measure it. We cannot guarantee demand, bookings or revenue.
 
-- **A willingness to be told something you disagree with.** Politely, with the reasoning, and only when we think it matters. But we will say it.
+The project cannot get the access it needs.
 
-## Who this does not work for
+We agree the necessary access to people and systems before work begins. Without it, we cannot test the whole customer journey.
 
-**Section heading:** who this doesn't work for.
+Nobody can make decisions about the build.
 
-We'd rather say this now than three weeks in. This is not a fit if:
+Someone needs to agree the brief, review the work and decide when it is ready to use.
 
-- **You want someone to post three times a week.** Posting more will not fix what you offer, how people book, or the price. If posting is genuinely the gap we will say so, but it's not what you'd be hiring us for.
+## Questions
 
-- **You have decided the plan and need a pair of hands.** We're not the cheapest way to carry out a decision that is already made, and we would be bad value doing it.
+Is the first conversation really free?
 
-- **You cannot give us access to the people, the numbers or the customers.** Finding the cause without access is guessing, and we will not charge for guessing.
+Yes. You get an hour to discuss the work and there is no obligation. Any paid work is agreed before it starts.
 
-- **Nothing inside the business can actually change.** Growth that requires no change is not something anyone can sell you.
+Can we come with a website or application brief?
 
-None of that makes yours a bad business. It makes us the wrong supplier, which is a different thing and a much cheaper one to find out early.
+Yes. Tell us what you want to build, who will use it and what it needs to achieve. If you are still deciding, we can help shape the brief and check what your existing systems can already do.
 
-## Questions people ask first
+Do you only work with hospitality?
 
-**Section heading:** questions people ask first.
+No. We build websites, applications and connected systems for small and mid-sized businesses. Our published measured results come from The Anchor, our own venue, and we make that distinction clear.
 
-**Is the first conversation really free?**
+Who will we actually be dealing with?
 
-Yes, and there's no follow-up sequence attached to it. You get an hour, our honest read, and no obligation. If we both think there's something worth doing, we will tell you what that would look like.
+You speak to the people doing the work. There is no account manager between you and the build.
 
-**What if we're not sure what the problem is?**
+What happens to what we tell you?
 
-That's the normal case, and it's why the first step is a conversation rather than a quote. Most businesses can describe the symptom precisely and the cause not at all. Working out which is which is the job.
+We use your enquiry to discuss the work with you. It does not sign you up to a marketing list. The privacy notice explains how your information is handled.
 
-**Do you only work with hospitality?**
+## Page order and commercial terms
 
-No. The thinking was built and tested in our own venue, a pub we run ourselves, which is why the examples on this site are specific rather than theoretical. The same problems show up in every kind of business: not enough customers, people who look but don't buy, sales without profit, too much admin, customers who don't come back, and systems that can't cope with more.
+The enquiry form appears immediately after the hero, before takeaways, process, pricing, fit and FAQs. The four required fields and contextual guide reassurance remain in place, with WhatsApp and email alternatives.
 
-**Who will we actually be dealing with?**
+The conversation is an hour, and it is free.
 
-Orange Jelly is deliberately small, so you're dealing with the people doing the work. There is no account manager between you and the thinking.
+The shape of the work depends on your brief and the systems involved. A clear website or application brief can start with agreeing the build. Where more discovery is needed, we agree that work and its timing first.
 
-**What happens to what we tell you?**
+On cost: the rate is £62.50 plus VAT an hour, and that is the only number we advertise. There are no packages. You receive the agreed deliverables and hours in writing before paid work starts. Any ongoing changes are agreed separately.
 
-It is used to have one useful conversation and nothing else. No list, no sequence, no sharing it. What you write about the business is commercially sensitive and is kept where only we can read it. The privacy notice has the detail.
+Closing invitation: let’s talk about your build.
 
-## Final invitation
-
-**Heading:** stop circling the problem.
-
-Tell us what's happening, what you've tried, and what needs to change.
-
-**Action:** Let's talk, to `#enquiry`.
+Bring your brief, your idea or the customer experience you want to improve.
