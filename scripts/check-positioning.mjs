@@ -35,11 +35,21 @@ const ROOT = process.cwd();
  * The two hospitality sector pages are NOT here. They are the pages where "pub
  * marketing" is accurate and valuable, which is the whole point of keeping the
  * scope narrow. Their own test asserts what they must and must not say.
+ *
+ * THE MACHINE-READABLE SURFACES WERE ADDED ON 6 SEPTEMBER 2026. The manifest and the
+ * feed both describe the company, and neither was covered, so both were still calling
+ * it a growth partner four days after the plain-English pass replaced that wording.
+ * Nobody reads them, which is exactly why they need a gate: the manifest description
+ * is the name a person keeps on a home screen, and the feed description goes out to
+ * every subscriber. src/lib/llms.ts is deliberately still absent, because its own
+ * unit test asserts the current opening line sentence by sentence.
  */
 const SURFACES = [
   'src/app/layout.tsx',
+  'src/app/manifest.ts',
   'src/app/page.tsx',
   'src/app/home-content.ts',
+  'src/lib/feeds.ts',
   'src/app/about',
   'src/app/how-we-work',
   'src/app/fractional-cmo',
@@ -220,7 +230,9 @@ async function collect(file) {
   }
 
   const stale = pending
-    ? pending.rules.filter((rule) => !usedExemptions.has(rule)).map((rule) => ({ file: relative, rule, task: pending.task }))
+    ? pending.rules
+        .filter((rule) => !usedExemptions.has(rule))
+        .map((rule) => ({ file: relative, rule, task: pending.task }))
     : [];
 
   return { violations, stale };
