@@ -7,9 +7,9 @@
      xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
      xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
   <channel>
-    <title><![CDATA[The Licensee's Guide | Orange Jelly]]></title>
+    <title><![CDATA[Guides | Orange Jelly]]></title>
     <link>https://www.orangejelly.co.uk</link>
-    <description><![CDATA[Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, a growth partner for ambitious small and mid-sized businesses.]]></description>
+    <description><![CDATA[Practical guides for people running pubs: filling quiet sessions, protecting margin, and getting found locally. Published by Orange Jelly, which builds websites, bespoke applications and connected systems for business growth.]]></description>
     <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
     <language>en-GB</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -20,7 +20,7 @@
     <atom:link href="https://www.orangejelly.co.uk/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://www.orangejelly.co.uk/logo.png</url>
-      <title><![CDATA[The Licensee's Guide | Orange Jelly]]></title>
+      <title><![CDATA[Guides | Orange Jelly]]></title>
       <link>https://www.orangejelly.co.uk</link>
       <width>144</width>
       <height>144</height>
