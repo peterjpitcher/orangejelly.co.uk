@@ -41,9 +41,24 @@ function runOn(files: Record<string, string>): { code: number; output: string } 
 describe('the positioning gate', () => {
   it('passes a page that describes the company by what it does', () => {
     const result = runOn({
-      'src/app/about/page.tsx': 'export const copy = "Growth partner for ambitious businesses.";',
+      'src/app/about/page.tsx':
+        'export const copy = "Websites, bespoke applications and connected systems that help businesses grow.";',
     });
     expect(result.code).toBe(0);
+  });
+
+  /*
+   * This fixture used to be the PASSING one, which is the whole point of writing it
+   * down. "Growth partner" was the approved position in August 2026 and the gate was
+   * built to allow it. It stopped being the position on 2 September and nothing
+   * noticed, because a gate that allows a phrase cannot tell you when it should not.
+   */
+  it('fails the retired growth-partner self-description', () => {
+    const result = runOn({
+      'src/app/about/page.tsx': 'export const copy = "Growth partner for ambitious businesses.";',
+    });
+    expect(result.code).toBe(1);
+    expect(result.output).toMatch(/retired self-description/);
   });
 
   it('fails a page that describes the company by its sector', () => {

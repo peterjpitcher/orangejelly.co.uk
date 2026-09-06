@@ -114,6 +114,24 @@ const RULES = [
       'The only price the site publishes is £62.50 plus VAT an hour. Anything else is a package, and packages went with D3.',
   },
   {
+    name: 'retired self-description',
+    /*
+     * Retired on 6 September 2026, and the second time this phrase has changed status.
+     * It was the NEW position in August, which is why the gate was built to allow it
+     * and why its own test asserted it passed. The plain-English pass on 2 September
+     * replaced it in body copy and the September build focus replaced it again, so by
+     * the time anyone looked, the only places still saying it were the ones nothing
+     * read: the manifest, the feed, a dead component and four SEO overrides for pages
+     * that had been deleted.
+     *
+     * The rule exists because "not used any more" and "must not come back" are
+     * different things, and only the second one survives a copy review.
+     */
+    pattern: /\bgrowth partners?(?:hip)?\b/gi,
+    message:
+      'Retired self-description. Orange Jelly says what it does, not what to call it. See src/app/layout.tsx for the current wording.',
+  },
+  {
     name: 'retired package',
     pattern: /\b(Growth Fix|Momentum Month|Turnaround Intensive)\b/g,
     message: 'The named packages went with D3. There is no menu.',
