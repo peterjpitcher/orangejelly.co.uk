@@ -45,7 +45,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a hand planning your autumn?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

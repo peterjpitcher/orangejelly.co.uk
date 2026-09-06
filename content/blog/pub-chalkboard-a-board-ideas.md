@@ -44,7 +44,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Growing Your Pub's Local Visibility?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

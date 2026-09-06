@@ -98,24 +98,4 @@ export const breadcrumbPaths = {
     { label: 'Guides', href: '/guides' },
   ],
   // Package-specific breadcrumbs
-  growthFix: [
-    { label: 'Home', href: '/' },
-    { label: 'Ways to Work', href: '/ways-to-work' },
-    { label: 'Growth Fix' },
-  ],
-  momentumMonth: [
-    { label: 'Home', href: '/' },
-    { label: 'Ways to Work', href: '/ways-to-work' },
-    { label: 'Momentum Month' },
-  ],
-  growthPartner: [
-    { label: 'Home', href: '/' },
-    { label: 'Ways to Work', href: '/ways-to-work' },
-    { label: 'Growth Partner' },
-  ],
-  turnaroundIntensive: [
-    { label: 'Home', href: '/' },
-    { label: 'Ways to Work', href: '/ways-to-work' },
-    { label: 'Turnaround Intensive' },
-  ],
 };

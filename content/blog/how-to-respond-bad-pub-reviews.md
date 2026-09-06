@@ -41,7 +41,6 @@ faqs:
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Need Help With Your Pub's Online Reputation?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

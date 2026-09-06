@@ -48,7 +48,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help building your wine offer?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

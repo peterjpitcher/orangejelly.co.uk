@@ -44,7 +44,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want Help Building Your 2026 Marketing Plan?"
-  ctaButtonText: "Explore Momentum Month"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
@@ -392,7 +391,7 @@ One of the biggest changes we made at The Anchor was using AI tools to handle ro
 
 **Not capturing customer data.** Every event without a sign-up mechanism is a missed opportunity. You filled the room once. Now make sure you can fill it again.
 
-**Doing everything yourself.** Marketing takes time. If you are running the pub, managing staff, ordering stock, and doing the books, marketing often falls to the bottom of the list. Consider getting support, whether that is a Momentum Month package from us or simply delegating social media to a capable team member.
+**Doing everything yourself.** Marketing takes time. If you are running the pub, managing staff, ordering stock, and doing the books, marketing often falls to the bottom of the list. Consider getting support, whether that is help from us or simply delegating social media to a capable team member.
 
 ## The bottom line
 

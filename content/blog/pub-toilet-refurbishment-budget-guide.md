@@ -43,7 +43,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Need a Plan to Refresh Your Pub?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

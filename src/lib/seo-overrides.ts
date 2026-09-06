@@ -23,31 +23,6 @@ export type SeoOverride = {
  * reader) rather than what Orange Jelly charges. D3 is about our prices, not theirs.
  */
 export const seoOverrides: Record<string, SeoOverride> = {
-  '/ways-to-work': {
-    title: 'Pub Marketing Packages and Prices From £375 + VAT',
-    description:
-      'Four clear pub marketing packages, from a one-off Growth Fix to ongoing partner support. Transparent pricing, payment plans available, no hidden fees.',
-  },
-  '/ways-to-work/growth-fix': {
-    title: 'Growth Fix: Solve One Pub Problem Fast From £375 + VAT',
-    description:
-      'Solve one clear pub problem fast. The Growth Fix gives you a focused action plan and one targeted intervention in just 5 hours. From £375 + VAT.',
-  },
-  '/ways-to-work/momentum-month': {
-    title: 'Momentum Month: Ongoing Pub Marketing, £900/mo + VAT',
-    description:
-      'Monthly pub marketing support that builds real momentum. Strategy, content planning, and hands-on execution. £900/mo + VAT.',
-  },
-  '/ways-to-work/growth-partner': {
-    title: 'Growth Partner: Full Pub Marketing Support | Orange Jelly',
-    description:
-      'Full-service pub marketing partnership. Strategy, execution, and continuous optimisation to grow your venue. From £1,800/mo + VAT.',
-  },
-  '/ways-to-work/turnaround-intensive': {
-    title: 'Pub Turnaround Intensive: a 30-Day Commercial Reset',
-    description:
-      'A 30-day intensive to reset your pub commercially. Full diagnostic, action plan, website rebuild, and hands-on support.',
-  },
   '/capabilities': {
     title: 'Pub Marketing Capabilities: Social, Events, SEO and More',
     description:

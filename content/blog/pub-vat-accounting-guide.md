@@ -47,7 +47,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a Second Pair of Eyes on Your Pub Finances?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

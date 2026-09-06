@@ -429,4 +429,4 @@ The pubs that appear in the local 3-pack are not necessarily the best pubs. They
 
 You can be one of those pubs. Start this week.
 
-If you want help optimising your Google Business Profile or building a broader local marketing strategy, [explore how we work](/how-we-work). From a one-off Growth Fix to ongoing Growth Partner support, we help pubs get found and get busy.
+If you want help optimising your Google Business Profile or building a broader local marketing strategy, [explore how we work](/how-we-work). We help pubs get found and get busy.

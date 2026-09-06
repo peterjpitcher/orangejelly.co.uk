@@ -46,7 +46,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want a Christmas booking machine, not a discount war?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

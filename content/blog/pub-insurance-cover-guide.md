@@ -46,7 +46,6 @@ faqs:
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Not Sure Your Pub Is Properly Protected?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
