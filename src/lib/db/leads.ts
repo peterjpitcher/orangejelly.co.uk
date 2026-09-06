@@ -5,16 +5,6 @@ import { type LeadSourceInput } from '@/lib/lead-source';
 
 type LeadOwnerType = 'contact' | 'newsletter_subscriber';
 
-interface ContactLeadInput {
-  name: string;
-  email: string;
-  phone?: string;
-  pubName: string;
-  package?: string;
-  message: string;
-  leadSource?: LeadSourceInput;
-}
-
 interface NewsletterSignupInput {
   email: string;
   leadSource?: LeadSourceInput;
@@ -263,41 +253,6 @@ async function storeNewsletterSignupWithSupabase({
   return { stored: true, id: subscriberId };
 }
 
-async function storeContactLeadWithSupabase(data: ContactLeadInput): Promise<StoredResult> {
-  const supabase = getSupabaseAdminClient();
-  const id = randomUUID();
-
-  const { error } = await supabase.from('contacts').insert({
-    id,
-    name: data.name.trim(),
-    email: data.email.trim(),
-    email_normalized: normalizeEmail(data.email),
-    phone: cleanText(data.phone),
-    pub_name: data.pubName.trim(),
-    package_interest: cleanText(data.package),
-    message: data.message.trim(),
-    ...sourceRecord(data.leadSource),
-  });
-
-  if (error) {
-    throw error;
-  }
-
-  await insertSupabaseLeadSource('contact', id, data.leadSource);
-  await insertSupabaseConversionEvent({
-    eventName: 'contact_submit',
-    ownerType: 'contact',
-    ownerId: id,
-    email: data.email,
-    leadSource: data.leadSource,
-    properties: {
-      package: cleanText(data.package),
-    },
-  });
-
-  return { stored: true, id };
-}
-
 export async function storeNewsletterSignup({
   email,
   leadSource,
@@ -354,60 +309,6 @@ export async function storeNewsletterSignup({
   } catch (error) {
     console.error('[db] Failed to store newsletter signup:', error);
     return { stored: false, error: 'Failed to store newsletter signup.' };
-  }
-}
-
-export async function storeContactLead(data: ContactLeadInput): Promise<StoredResult> {
-  try {
-    if (isSupabaseAdminConfigured()) {
-      return await storeContactLeadWithSupabase(data);
-    }
-
-    if (!isDatabaseConfigured()) {
-      return { stored: false, error: 'Lead database is not configured.' };
-    }
-
-    const id = randomUUID();
-    const emailNormalized = normalizeEmail(data.email);
-
-    await dbQuery(
-      `
-        INSERT INTO contacts (
-          id, name, email, email_normalized, phone, pub_name, package_interest,
-          message, source_page, landing_page, referrer, utm_source, utm_medium,
-          utm_campaign, utm_term, utm_content
-        )
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
-      `,
-      [
-        id,
-        data.name.trim(),
-        data.email.trim(),
-        emailNormalized,
-        cleanText(data.phone),
-        data.pubName.trim(),
-        cleanText(data.package),
-        data.message.trim(),
-        ...sourceValues(data.leadSource),
-      ]
-    );
-
-    await insertLeadSource('contact', id, data.leadSource);
-    await insertConversionEvent({
-      eventName: 'contact_submit',
-      ownerType: 'contact',
-      ownerId: id,
-      email: data.email,
-      leadSource: data.leadSource,
-      properties: {
-        package: cleanText(data.package),
-      },
-    });
-
-    return { stored: true, id };
-  } catch (error) {
-    console.error('[db] Failed to store contact lead:', error);
-    return { stored: false, error: 'Failed to store contact lead.' };
   }
 }
 
