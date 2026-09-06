@@ -46,7 +46,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Not Sure Which Revenue Model Suits Your Pub?"
-  ctaButtonText: "Talk to a Growth Partner"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

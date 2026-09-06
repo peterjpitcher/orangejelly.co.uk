@@ -51,7 +51,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want help making cask your hero?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

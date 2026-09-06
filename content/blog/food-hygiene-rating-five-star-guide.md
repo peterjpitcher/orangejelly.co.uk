@@ -49,7 +49,6 @@ faqs:
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Get Your Pub Operating at Five Stars"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

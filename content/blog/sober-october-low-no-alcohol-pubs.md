@@ -48,7 +48,6 @@ faqs:
 ctaSettings:
   ctaType: "contact"
   ctaHeading: "Want an alcohol free bar that actually sells?"
-  ctaButtonText: "Book a Growth Fix"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"

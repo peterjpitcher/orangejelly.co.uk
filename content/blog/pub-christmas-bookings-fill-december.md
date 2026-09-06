@@ -49,7 +49,6 @@ faqs:
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Ready to Fill Your December Calendar?"
-  ctaButtonText: "Explore Momentum Month"
   ctaButtonLink: "/how-we-work"
 schema:
   "@context": "https://schema.org"
