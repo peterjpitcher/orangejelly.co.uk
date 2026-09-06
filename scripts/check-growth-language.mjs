@@ -31,7 +31,8 @@ const BANNED_RULES = [
   },
   {
     pattern: /\bsavings\b/gi,
-    message: 'Use outcome language like margin growth, margin gains, revenue growth, or growth capacity.',
+    message:
+      'Use outcome language like margin growth, margin gains, revenue growth, or growth capacity.',
   },
 ];
 
@@ -189,7 +190,15 @@ async function run() {
      * match /save/i, which is this rule enforced one layer down. A gate that fails
      * on the test written to uphold it is a gate that gets bypassed.
      */
-    .filter((f) => !/\.test\.(ts|tsx)$/.test(f));
+    .filter((f) => !/\.test\.(ts|tsx)$/.test(f))
+    /*
+     * And the agent instruction files. AGENTS.md states this very rule by quoting the
+     * words it bans, so the gate fires on the sentence telling people not to write
+     * them. Only reachable from lint-staged, which passes explicit paths; the
+     * directory walk below never reached these files, so this was invisible until a
+     * commit happened to touch one. Same reasoning as the tests above.
+     */
+    .filter((f) => !/(^|\/)(AGENTS|CLAUDE)\.md$/.test(f));
 
   for (const arg of cliFileArgs) {
     const absolutePath = path.resolve(ROOT, arg);
