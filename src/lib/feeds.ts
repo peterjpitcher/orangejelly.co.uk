@@ -1,7 +1,23 @@
-import fs from 'fs';
-import path from 'path';
-import { getAllPosts, getCategories } from './blog-md';
+import { getAllPosts } from './blog-md';
 import { getBaseUrl } from './site-config';
+
+/**
+ * The two feeds, built from the same posts the pages are.
+ *
+ * These were written to `public/rss.xml` and `public/feed.json` by `npm run
+ * build:feeds`, which `npm run build` never called. Whether a subscriber saw the
+ * current site depended on somebody remembering to run a second command, and on
+ * 5 September 2026 nobody had for five days. They are routes now, in
+ * `src/app/rss.xml` and `src/app/feed.json`, so a build cannot produce a site and a
+ * stale feed at the same time.
+ *
+ * Deleted with that change: `saveFeeds()`, which wrote the files, and three functions
+ * nothing had ever called. `generateSitemap()` and `generateRobotsTxt()` were second
+ * copies of rules that `src/app/sitemap.ts` and `src/app/robots.ts` own, and the
+ * robots one still allowed `/services/`, a path retired in the repositioning, and
+ * disallowed `/*.json, which would have blocked the JSON feed. `src/test/robots.test.ts`
+ * had already flagged it as needing to go. `getFeedStats()` had no caller either.
+ */
 
 export interface SiteConfig {
   title: string;
@@ -143,170 +159,4 @@ export function generateJSONFeed(): string {
   };
 
   return JSON.stringify(jsonFeed, null, 2);
-}
-
-/**
- * Generate XML sitemap
- */
-export function generateSitemap(): string {
-  const posts = getAllPosts().filter((post) => post && post.slug); // Filter out invalid posts
-  const categories = getCategories();
-
-  const staticPages = [
-    { url: '', priority: 1.0, changefreq: 'weekly' },
-    { url: '/about', priority: 0.8, changefreq: 'monthly' },
-    { url: '/services', priority: 0.9, changefreq: 'monthly' },
-    { url: '/contact', priority: 0.7, changefreq: 'monthly' },
-    { url: '/results', priority: 0.8, changefreq: 'monthly' },
-    { url: '/guides', priority: 0.9, changefreq: 'daily' },
-  ];
-
-  const currentDate = new Date().toISOString();
-
-  const staticUrls = staticPages
-    .map(
-      (page) => `
-  <url>
-    <loc>${siteConfig.url}${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`
-    )
-    .join('');
-
-  const categoryUrls = categories
-    .map(
-      (category) => `
-  <url>
-    <loc>${siteConfig.url}/guides/category/${category.slug}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>`
-    )
-    .join('');
-
-  const postUrls = posts
-    .map((post) => {
-      const lastmod = post.updatedDate || post.publishedDate || new Date().toISOString();
-      return `
-  <url>
-    <loc>${siteConfig.url}/guides/${post.slug}</loc>
-    <lastmod>${new Date(lastmod).toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
-    })
-    .join('');
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  ${staticUrls}
-  ${categoryUrls}
-  ${postUrls}
-</urlset>`;
-
-  return sitemap.trim();
-}
-
-/**
- * Generate robots.txt content
- */
-export function generateRobotsTxt(): string {
-  return `# Orange Jelly - Pub Marketing
-User-agent: *
-Allow: /
-
-# Important pages
-Allow: /guides/
-Allow: /services/
-Allow: /results/
-Allow: /about/
-
-# Sitemaps
-Sitemap: ${siteConfig.url}/sitemap.xml
-
-# Crawl-delay for politeness
-Crawl-delay: 1
-
-# Specific bot instructions
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Block admin and private areas
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-Disallow: /private/
-
-# Block sensitive files
-Disallow: /*.json$
-Disallow: /search-index.json`;
-}
-
-/**
- * Save feeds and sitemap to public directory
- */
-export function saveFeeds(): void {
-  const publicDir = path.join(process.cwd(), 'public');
-
-  // Ensure public directory exists
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
-  }
-
-  try {
-    // Generate and save RSS feed
-    const rss = generateRSSFeed();
-    fs.writeFileSync(path.join(publicDir, 'rss.xml'), rss, 'utf8');
-    console.log('RSS feed generated: /public/rss.xml');
-
-    // Generate and save JSON feed
-    const jsonFeed = generateJSONFeed();
-    fs.writeFileSync(path.join(publicDir, 'feed.json'), jsonFeed, 'utf8');
-    console.log('JSON feed generated: /public/feed.json');
-
-    console.log(`\nFeeds generated successfully:`);
-    console.log(`- RSS Feed: ${siteConfig.url}/rss.xml`);
-    console.log(`- JSON Feed: ${siteConfig.url}/feed.json`);
-    console.log(`- Sitemap route: ${siteConfig.url}/sitemap.xml`);
-    console.log(`- Robots route: ${siteConfig.url}/robots.txt`);
-  } catch (error) {
-    console.error('Error generating feeds:', error);
-    throw error;
-  }
-}
-
-/**
- * Get feed statistics
- */
-export function getFeedStats() {
-  const posts = getAllPosts();
-  const categories = getCategories();
-
-  return {
-    totalPosts: posts.length,
-    totalCategories: categories.length,
-    latestPost: posts.length > 0 ? posts[0].publishedDate : null,
-    oldestPost: posts.length > 0 ? posts[posts.length - 1].publishedDate : null,
-    postsThisMonth: posts.filter((post) => {
-      const postDate = new Date(post.publishedDate);
-      const now = new Date();
-      return postDate.getMonth() === now.getMonth() && postDate.getFullYear() === now.getFullYear();
-    }).length,
-    categoriesWithPosts: categories.map((cat) => ({
-      name: cat.name,
-      slug: cat.slug,
-      count: posts.filter((post) => post.category === cat.slug).length,
-    })),
-  };
 }

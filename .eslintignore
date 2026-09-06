@@ -1,6 +1,9 @@
 # Ignore all JSON files
 *.json
 **/*.json
+# ...but /feed.json is a route directory, not a JSON file, and its handler must be linted.
+!src/app/feed.json
+!src/app/feed.json/route.ts
 
 # Ignore config files
 next.config.js

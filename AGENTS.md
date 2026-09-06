@@ -9,7 +9,7 @@ The Next.js app lives in `src/app`, with shared UI in `src/components`, hooks in
 - `npm run lint`, `npm run format`, `npm run format:check`: ESLint and Prettier enforcement.
 - `npm run type-check`: strict TypeScript validation.
 - `npm run test`, `npm run test:coverage`: Vitest suites and coverage report.
-- `npm run build:search`, `npm run build:feeds`, `npm run build:all`: regenerate search index and feed JSON before deploys.
+- `npm run build:search`, `npm run build:all`: regenerate the committed search index. The feeds are routes and need no build step.
 
 ## Coding Style & Naming Conventions
 Use TypeScript with 2-space indentation, favour functional React components, and keep files in ASCII. Component files adopt `PascalCase.tsx`; hooks use the `useThing` prefix; helpers in `src/lib` use camelCase. Prefer Tailwind utility classes over ad-hoc CSS, and compose class names via `clsx` or `cva`. Run `npm run format` plus `npm run lint` before committing; Husky guards the same checks.

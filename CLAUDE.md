@@ -581,8 +581,7 @@ const imageMap: Record<string, string> = {
 | **Type Check** | `npm run type-check` | TypeScript validation |
 | **Run Dev** | `npm run dev` | Start Next.js dev server |
 | **Search Build** | `npm run build:search` | Build search index |
-| **Feed Build** | `npm run build:feeds` | Generate RSS/JSON feeds |
-| **Full Build** | `npm run build:all` | Search + feeds + build |
+| **Full Build** | `npm run build:all` | Regenerate the committed search index |
 
 ---
 
