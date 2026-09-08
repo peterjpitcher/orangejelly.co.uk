@@ -1,0 +1,256 @@
+{
+  "run_id": "2026-08-09-01-legacy",
+  "mode": "expansion",
+  "created_at": "2026-08-09T08:00:00+00:00",
+  "profile": "established-nonlocal",
+  "reporting_country": "GB",
+  "total_pulls": 9,
+  "pulls": [
+    {
+      "pull_id": "gkp-volumes-01",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-01-family-and-kids.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "family friendly pub ideas",
+        "kids activities in pubs",
+        "pub family day ideas",
+        "children's entertainment for pubs",
+        "school holiday pub events",
+        "kids eat free pub",
+        "family pub marketing",
+        "pub soft play area",
+        "kids craft events pub",
+        "attract families to pub"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-02",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-02-marketing-services.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub marketing agency",
+        "hospitality marketing agency uk",
+        "social media management for pubs",
+        "pub social media agency",
+        "content creation for hospitality",
+        "marketing for bars and restaurants",
+        "pub advertising services",
+        "freelance pub marketing"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-03",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-03-events-entertainment.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub entertainment ideas",
+        "pub entertainment budget",
+        "how much to pay a pub band",
+        "pub events calendar",
+        "weekly pub event schedule",
+        "pub entertainment licence",
+        "booking entertainment for pubs",
+        "pub event roi"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-04",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-04-quiz-mechanics.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub quiz format",
+        "how to run a pub quiz",
+        "pub quiz round ideas",
+        "pub quiz question rounds",
+        "pub quiz scoring system",
+        "quiz night rules",
+        "pub quiz answer sheet",
+        "picture round ideas",
+        "pub quiz prizes"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-05",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-05-bingo.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub bingo",
+        "bingo night in pubs",
+        "how to run bingo in a pub",
+        "bingo licence uk pub",
+        "bingo equipment for pubs"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-06",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-06-refurbishment.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "bar refurbishment cost",
+        "pub refurbishment cost uk",
+        "pub refit ideas",
+        "pub maintenance checklist",
+        "pub interior design",
+        "brewery refurbishment funding"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-07",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-07-loyalty-branding.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub loyalty card scheme",
+        "pub loyalty app",
+        "pub branding ideas",
+        "pub rebrand",
+        "premiumisation hospitality",
+        "pub brand identity"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-08",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-08-staffing.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "pub staff recruitment",
+        "how to retain bar staff",
+        "bar staff training",
+        "pub rota planning",
+        "tronc scheme pubs",
+        "hospitality staff shortage",
+        "pub staff handbook",
+        "bar staff interview questions",
+        "national minimum wage hospitality"
+      ],
+      "lens": "country"
+    },
+    {
+      "pull_id": "gkp-volumes-09",
+      "source": "gkp-volumes",
+      "required": true,
+      "purpose": "text",
+      "target_file": "raw/gkp-volumes-09-turnaround.csv",
+      "url_seed": "",
+      "expected": {
+        "layout": "volumes",
+        "location": "United Kingdom",
+        "language": "English",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "verified_facts": ["layout", "date_range"],
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "keywords": [
+        "fix my pub",
+        "struggling pub help",
+        "pub turnaround",
+        "failing pub advice",
+        "pub business support uk"
+      ],
+      "lens": "country"
+    }
+  ]
+}

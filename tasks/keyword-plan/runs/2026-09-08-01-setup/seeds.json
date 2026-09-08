@@ -1,0 +1,133 @@
+{
+  "_note": "Discovery seeds, programme set-up, 8 September 2026. The nine cluster exports of 9 August 2026 already cover the pub content clusters (quiz, bingo, events, staffing, refurbishment, loyalty, turnaround, marketing services and the family theme that returned nothing). Those are not re-seeded here. What has never been measured is the positioning the company moved to on 31 August 2026: websites, applications, booking systems and AI. That gap is what these batches are for.",
+  "batches": [
+    {
+      "slug": "website-build",
+      "seeds": [
+        "website design for small business",
+        "small business website developer",
+        "website redesign agency uk",
+        "web design agency uk",
+        "custom website development",
+        "website development company uk",
+        "small business web design cost",
+        "website designer for small business uk"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "web-applications",
+      "seeds": [
+        "bespoke software development uk",
+        "custom application development",
+        "bespoke web application",
+        "internal business systems",
+        "custom software for small business",
+        "workflow automation software uk",
+        "business process automation small business",
+        "bespoke app development uk"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "booking-systems",
+      "seeds": [
+        "online booking system",
+        "table booking system uk",
+        "booking system for small business",
+        "reservation system for restaurants",
+        "appointment booking software uk",
+        "booking software for pubs",
+        "custom booking system",
+        "online booking system cost"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "ai-for-business",
+      "seeds": [
+        "ai for small business uk",
+        "ai automation for business",
+        "ai tools for small business",
+        "how to use ai in my business",
+        "ai workflow automation",
+        "practical ai for small business",
+        "ai consultant uk",
+        "ai readiness assessment"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "fractional-marketing",
+      "seeds": [
+        "fractional cmo uk",
+        "fractional marketing director",
+        "part time marketing director",
+        "interim marketing director uk",
+        "outsourced marketing director",
+        "fractional cmo cost",
+        "marketing director for hire"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "professional-services-web",
+      "seeds": [
+        "website for accountants",
+        "website for solicitors",
+        "marketing for professional services",
+        "website design for consultants",
+        "lead generation for professional services",
+        "accountancy practice marketing",
+        "law firm website design uk"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "hospitality-websites",
+      "seeds": [
+        "pub website design",
+        "restaurant website design uk",
+        "hospitality website design",
+        "website for a pub",
+        "restaurant web design cost",
+        "hotel website design uk"
+      ],
+      "url": ""
+    },
+    {
+      "slug": "christmas-pub",
+      "seeds": [
+        "christmas pub ideas",
+        "christmas pub promotions",
+        "pub christmas menu ideas",
+        "christmas events for pubs",
+        "pub christmas decorations",
+        "festive pub offers"
+      ],
+      "url": ""
+    }
+  ],
+  "url_batches": [
+    {
+      "slug": "site",
+      "url": "https://www.orangejelly.co.uk/",
+      "seeds": []
+    },
+    {
+      "slug": "solutions-hub",
+      "url": "https://www.orangejelly.co.uk/solutions",
+      "seeds": ["bespoke applications", "website development"]
+    },
+    {
+      "slug": "booking-systems-page",
+      "url": "https://www.orangejelly.co.uk/solutions/booking-systems",
+      "seeds": ["online booking system", "table booking system"]
+    },
+    {
+      "slug": "pub-marketing-page",
+      "url": "https://www.orangejelly.co.uk/pub-marketing",
+      "seeds": ["pub marketing agency", "marketing for pubs"]
+    }
+  ]
+}

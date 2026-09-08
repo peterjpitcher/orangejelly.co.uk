@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "property": "sc-domain:orangejelly.co.uk",
+    "volume_mode": "banded",
+    "gkp_location": "United Kingdom",
+    "gkp_language": "English",
+    "gkp_network": "Google Search"
+  },
+  "pulls": {}
+}

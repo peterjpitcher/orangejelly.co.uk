@@ -1,0 +1,75 @@
+# Orange Jelly keyword programme, configuration.
+# Written at programme set-up, 8 September 2026. Change a setting only with a reason
+# recorded in run-log.md; changing gkp.location or gkp.window starts a new lens and
+# breaks comparability with every observation gathered before the change.
+
+schema_version = 1
+
+# established-nonlocal: the site has a 12-month footprint of roughly a thousand ranked
+# queries, and it sells to businesses across the United Kingdom rather than to a
+# catchment. There is no local pack to compete in and no Google Business Profile in play.
+profile = "established-nonlocal"
+
+site = "orangejelly.co.uk"
+
+# CONFIRM BEFORE THE FIRST PULL. Search Console shows either a domain property
+# (sc-domain:orangejelly.co.uk) or a URL-prefix property
+# (https://www.orangejelly.co.uk/). The legacy page exports carry the www host, which
+# suggests a URL-prefix property, but that is inference and not attestation.
+gsc_property = "sc-domain:orangejelly.co.uk"
+
+reporting_country = "GB"
+audience_countries = ["GB"]
+language = "en"
+
+brand_terms = ["orange jelly", "orangejelly"]
+
+# Named in the site's own positioning work rather than measured here. Treated as
+# context for discovery seeds only; no competitor metric is ever quoted as fact.
+competitors = []
+
+[gkp]
+location = "United Kingdom"
+local_lens_location = ""          # empty: no local lens, the business is not local
+language = "English"
+network = "Google Search"
+window = "last 12 months"
+
+# banded, established from the 9 August 2026 exports: every individual keyword returned
+# 50.0 or 500.0 and nothing else, which is the band encoding, not a search count. The
+# account carries no active spend, so this will stay banded until it does.
+volume_mode = "banded"
+
+[gsc]
+search_type = "web"
+country_filter = "GB"
+run_day_earliest = 5
+
+[cadence]
+review_months = 1
+expansion_months = 3
+
+[gbp]
+enabled = false
+location_id = ""
+
+[repo]
+# The GitHub repository is public and the 9 August 2026 raw exports are already
+# committed to it. Setting raw_in_git = false now would not unpublish them, so the
+# setting records current practice rather than pretending to a privacy it does not have.
+# Question 1 in the run reply asks whether to keep it this way.
+visibility = "public"
+raw_in_git = true
+
+[thresholds]
+# No overrides. The defaults in scripts/common.py apply.
+
+[[avoid]]
+term = "family kids pub"
+reason = "Ten seeds returned no data at all on 9 August 2026 while GSC impressions on the same intent earned zero clicks in twelve months. SEO-135 closed as unsupported by demand. Revisit only if the existing family guide starts converting impressions to clicks."
+scope = "all"
+
+[[avoid]]
+term = "national vodka day"
+reason = "Consumer intent. The drinks-days guide earns impressions from drinkers looking for a date, not from licensees, and those clicks do not convert. Impressions here are expected to stay high and clicks modest, deliberately."
+scope = "cl_0015"
