@@ -19,6 +19,35 @@ const FILE_TARGETS = [
 
 const DIRECTORY_TARGETS = ['content/data', 'content/faqs', 'content/case-studies'];
 
+/*
+ * The published surface: the only place this gate has any business looking.
+ *
+ * The rule is about what a customer reads, so the scope is the app plus the content
+ * and data files that feed pages. Everything else in the repo is working material.
+ * `tasks/`, `docs/reports/`, `docs/plans/` and `scripts/` are where we plan the work,
+ * quote the banned words in order to explain the rule, and write operator
+ * instructions like "Save as `raw/gsc-month-all.zip`". None of that reaches a reader.
+ *
+ * It was reading all of it as copy, because lint-staged hands over every staged
+ * `js,jsx,ts,tsx,json,md` file and nothing here narrowed the list. On 8 September
+ * 2026 that blocked a keyword-plan run over 34 instances of "save" in its own
+ * operator instructions, and the run had to be left uncommitted. It had already bent
+ * an earlier evidence note, `tasks/keyword-plan/2026-08-09-ctr-reclaim.md`, which
+ * says out loud that it cannot quote the words it is describing. Swept across the
+ * tracked tree the gate found 295 matches and 7 of them were on the published
+ * surface, so it was almost entirely a tax on internal writing, and narrowing costs
+ * nothing: the same 7 still fail. Same reasoning as the vendored and test
+ * exclusions: a gate that fires on working files is a gate that gets bypassed with
+ * --no-verify, and then it is not protecting the copy either.
+ *
+ * This subsumes two exclusions that used to be filtered separately below, because
+ * neither is on the surface any more: `docs/brand/`, the vendored pack whose own
+ * prose ("Save important decisions and artefacts") must stay byte-identical to the
+ * delivery, and the root `AGENTS.md` / `CLAUDE.md`, which state this very rule by
+ * quoting the words it bans.
+ */
+const PUBLISHED_SURFACE = ['src/', 'content/'];
+
 const ALLOWED_EXTENSIONS = new Set(['.json', '.md', '.ts', '.tsx']);
 
 const BANNED_RULES = [
@@ -35,6 +64,19 @@ const BANNED_RULES = [
       'Use outcome language like margin growth, margin gains, revenue growth, or growth capacity.',
   },
 ];
+
+/*
+ * lint-staged passes absolute paths and a manual run usually passes relative ones,
+ * and either can carry a `..`. Normalising before the prefix test means
+ * `src/../docs/brand/x.md` is still recognised as `docs/brand/x.md`.
+ */
+function toRepoRelative(filePath) {
+  return path.relative(ROOT, path.resolve(ROOT, filePath)).replace(/\\/g, '/');
+}
+
+function isPublishedSurface(relativePath) {
+  return PUBLISHED_SURFACE.some((prefix) => relativePath.startsWith(prefix));
+}
 
 async function exists(filePath) {
   try {
@@ -72,22 +114,44 @@ function lineAndColumn(text, index) {
 }
 
 /*
- * Blanks out code comments, leaving the text length and every newline intact so the
- * reported line and column still point at the right place.
+ * Matches the opening of a `console.error(` style call, sticky so it can be tested at
+ * one offset rather than by slicing the source at every character.
+ */
+const CONSOLE_CALL = /console\s*\.\s*[A-Za-z]+\s*\(/y;
+
+/*
+ * Blanks out the parts of a source file no reader ever sees, leaving the text length
+ * and every newline intact so the reported line and column still point at the right
+ * place.
  *
- * The gate governs what a reader sees, and a reader never sees a comment. Without
- * this it fails on `// Generate and save RSS feed` in `feeds.ts`, which is a note
- * about writing a file to disk, and the only way past it is `--no-verify` on an
- * unrelated commit. That is the same reason `docs/brand/` is excluded above.
+ * Two kinds of developer-facing text. Comments first: without this the gate fails on
+ * `// Generate and save RSS feed` in `feeds.ts`, which is a note about writing a file
+ * to disk, and the only way past it is `--no-verify` on an unrelated commit. That is
+ * the same reason the scope above stops at the published surface.
+ *
+ * Then `console.*` arguments, for the same reason one layer along. A console string is
+ * developer-facing by definition: it goes to a browser devtools panel, not to a page.
+ * `ROICalculatorContext.tsx` logs "Failed to save ROI calculator state", which is
+ * about writing to localStorage and has nothing to do with the offer. It was the last
+ * false positive left on the published surface after the scope was narrowed on
+ * 8 September 2026, and it would have blocked the next commit that touched the file.
+ * Only `console.*` is stripped, because a sweep of `src/` found no other
+ * developer-facing string with a banned word in it; widening this on speculation
+ * would start hiding real copy.
  *
  * Quote state is tracked rather than regexed, because `'https://...'` contains `//`
  * and a naive strip would blank the rest of that line along with anything real
- * sitting after it.
+ * sitting after it. The same tracking runs inside a console call, so the `)` in
+ * `console.error('oops :)')` does not close the call early.
  */
-function withoutComments(source) {
+function withoutDeveloperText(source) {
   let out = '';
   let quote = null;
   let comment = null;
+  // Open bracket depth inside a console call, so nested calls close in the right place.
+  let consoleDepth = 0;
+
+  const blank = (character) => (character === '\n' ? '\n' : ' ');
 
   for (let i = 0; i < source.length; i += 1) {
     const c = source[i];
@@ -115,9 +179,10 @@ function withoutComments(source) {
     }
 
     if (quote) {
-      out += c;
+      out += consoleDepth > 0 ? blank(c) : c;
       if (c === '\\') {
-        out += next ?? '';
+        const escaped = next ?? '';
+        out += consoleDepth > 0 ? blank(escaped) : escaped;
         i += 1;
       } else if (c === quote) {
         quote = null;
@@ -127,7 +192,7 @@ function withoutComments(source) {
 
     if (c === "'" || c === '"' || c === '`') {
       quote = c;
-      out += c;
+      out += consoleDepth > 0 ? blank(c) : c;
       continue;
     }
 
@@ -145,6 +210,29 @@ function withoutComments(source) {
       continue;
     }
 
+    if (consoleDepth > 0) {
+      if (c === '(') {
+        consoleDepth += 1;
+      } else if (c === ')') {
+        consoleDepth -= 1;
+      }
+      out += blank(c);
+      continue;
+    }
+
+    // `c` first as a cheap guard, and the preceding character so `myconsole.log(`
+    // is left alone.
+    if (c === 'c' && (i === 0 || !/[\w$.]/.test(source[i - 1]))) {
+      CONSOLE_CALL.lastIndex = i;
+      const call = CONSOLE_CALL.exec(source);
+      if (call) {
+        consoleDepth = 1;
+        out += call[0].replace(/[^\n]/g, ' ');
+        i += call[0].length - 1;
+        continue;
+      }
+    }
+
     out += c;
   }
 
@@ -153,7 +241,7 @@ function withoutComments(source) {
 
 function collectViolations(relativePath, content) {
   const violations = [];
-  const source = /\.(ts|tsx)$/.test(relativePath) ? withoutComments(content) : content;
+  const source = /\.(ts|tsx)$/.test(relativePath) ? withoutDeveloperText(content) : content;
 
   for (const rule of BANNED_RULES) {
     for (const match of source.matchAll(rule.pattern)) {
@@ -177,28 +265,17 @@ function collectViolations(relativePath, content) {
 
 async function run() {
   const targetFiles = new Set();
-  // Vendored brand and design-system files are excluded. They are third-party and
-  // must stay byte-identical to the delivery, so the pack's own prose ("Save
-  // important decisions and artefacts") must not fail the gate and force
-  // --no-verify on unrelated commits.
   const cliFileArgs = process.argv
     .slice(2)
-    .map((f) => f.replace(/\\/g, '/'))
-    .filter((f) => !f.includes('docs/brand/'))
+    .map(toRepoRelative)
+    .filter(isPublishedSurface)
     /*
-     * And test files. `llms.test.ts` asserts that the generated llms.txt does not
-     * match /save/i, which is this rule enforced one layer down. A gate that fails
-     * on the test written to uphold it is a gate that gets bypassed.
+     * Test files are on the surface but are not copy. `llms.test.ts` asserts that the
+     * generated llms.txt does not match /save/i, which is this rule enforced one
+     * layer down. A gate that fails on the test written to uphold it is a gate that
+     * gets bypassed.
      */
-    .filter((f) => !/\.test\.(ts|tsx)$/.test(f))
-    /*
-     * And the agent instruction files. AGENTS.md states this very rule by quoting the
-     * words it bans, so the gate fires on the sentence telling people not to write
-     * them. Only reachable from lint-staged, which passes explicit paths; the
-     * directory walk below never reached these files, so this was invisible until a
-     * commit happened to touch one. Same reasoning as the tests above.
-     */
-    .filter((f) => !/(^|\/)(AGENTS|CLAUDE)\.md$/.test(f));
+    .filter((f) => !/\.test\.(ts|tsx)$/.test(f));
 
   for (const arg of cliFileArgs) {
     const absolutePath = path.resolve(ROOT, arg);

@@ -186,6 +186,27 @@ function collectViolations(relativePath, content) {
   return violations;
 }
 
+/*
+ * The published surface: the only place this gate has any business looking.
+ *
+ * Spelling is a rule about what a customer reads, so the scope is `content/` plus the
+ * named pages above. Everything else lint-staged hands over is working material.
+ * `tasks/`, `docs/reports/` and `docs/plans/` are where we plan the work and quote
+ * copy in order to discuss it, and none of it reaches a reader; this gate should
+ * never be the reason an internal note cannot be committed. That is the same failure
+ * the growth-language gate had, where an unscoped file list blocked a keyword-plan
+ * run in September 2026 over operator instructions nobody outside the team sees.
+ *
+ * `src/` is deliberately a named list rather than a prefix. Sweeping it would fail on
+ * code identifiers that are correctly American: the schema.org `Organization` type,
+ * the iCalendar `ORGANIZER` property, and Next.js `optimization` config keys. Twenty
+ * such matches sit in `src/` today and every one of them is right.
+ *
+ * The scope rule also covers `docs/brand/`, the vendored pack that must stay
+ * byte-identical to the delivery. It used to be filtered separately above; that
+ * filter was dead, because a `docs/brand/` path was never on the surface to begin
+ * with.
+ */
 function shouldCheckCliPath(relativePath) {
   if (relativePath.startsWith('content/')) {
     return true;
@@ -196,17 +217,13 @@ function shouldCheckCliPath(relativePath) {
 
 async function run() {
   const targetFiles = new Set();
-  // Vendored brand and design-system files are excluded. They are third-party and
-  // must stay byte-identical to the delivery, so the pack's own prose ("Save
-  // important decisions and artefacts") must not fail the gate and force
-  // --no-verify on unrelated commits.
-  const cliFileArgs = process.argv
-    .slice(2)
-    .filter((f) => !f.replace(/\\/g, '/').includes('docs/brand/'));
+  const cliFileArgs = process.argv.slice(2);
 
   for (const arg of cliFileArgs) {
+    // lint-staged passes absolute paths and a manual run usually passes relative
+    // ones, so both are normalised before the scope test below reads the prefix.
     const absolutePath = path.resolve(ROOT, arg);
-    const relativePath = path.relative(ROOT, absolutePath);
+    const relativePath = path.relative(ROOT, absolutePath).replace(/\\/g, '/');
     const extension = path.extname(absolutePath);
 
     if (!ALLOWED_EXTENSIONS.has(extension)) {
