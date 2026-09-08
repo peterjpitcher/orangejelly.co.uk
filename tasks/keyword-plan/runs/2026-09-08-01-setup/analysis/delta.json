@@ -1,0 +1,105 @@
+{
+  "baseline_established": true,
+  "incident_flags": {
+    "3m": [],
+    "gsc-16m-all": [
+      {
+        "end": "2026-04-27",
+        "handling": "not comparable across or within the period",
+        "incident_id": "gsc-2025-impressions-logging-error",
+        "metric": "impressions",
+        "relation": "crosses",
+        "start": "2025-05-13"
+      },
+      {
+        "end": "2026-04-27",
+        "handling": "not comparable across or within the period",
+        "incident_id": "gsc-2025-impressions-logging-error",
+        "metric": "ctr",
+        "relation": "crosses",
+        "start": "2025-05-13"
+      },
+      {
+        "end": "2026-04-27",
+        "handling": "not comparable across or within the period",
+        "incident_id": "gsc-2025-impressions-logging-error",
+        "metric": "position",
+        "relation": "crosses",
+        "start": "2025-05-13"
+      },
+      {
+        "end": "2025-09-14",
+        "handling": "not comparable across the boundary",
+        "incident_id": "gsc-2025-num100-removal",
+        "metric": "impressions",
+        "relation": "crosses",
+        "start": "2025-09-12"
+      },
+      {
+        "end": "2025-09-14",
+        "handling": "not comparable across the boundary",
+        "incident_id": "gsc-2025-num100-removal",
+        "metric": "ctr",
+        "relation": "crosses",
+        "start": "2025-09-12"
+      },
+      {
+        "end": "2025-09-14",
+        "handling": "not comparable across the boundary",
+        "incident_id": "gsc-2025-num100-removal",
+        "metric": "position",
+        "relation": "crosses",
+        "start": "2025-09-12"
+      }
+    ],
+    "month": []
+  },
+  "property": {
+    "3m": {
+      "clicks": 515,
+      "ctr": 0.015875951786429914,
+      "export_id": "gsc-3m-all",
+      "impressions": 32439,
+      "position": 11.225947162366284,
+      "window_end": "2026-09-06",
+      "window_start": "2026-06-07"
+    },
+    "gsc-16m-all": {
+      "clicks": 904,
+      "ctr": 0.015929515418502203,
+      "export_id": "gsc-16m-all",
+      "impressions": 56750,
+      "position": 12.387746255506608,
+      "window_end": "2026-09-06",
+      "window_start": "2025-08-01"
+    },
+    "month": {
+      "clicks": 213,
+      "ctr": 0.013713623486994592,
+      "export_id": "gsc-month-all",
+      "impressions": 15532,
+      "position": 10.545254957507083,
+      "window_end": "2026-09-06",
+      "window_start": "2026-08-10"
+    }
+  },
+  "run_id": "2026-09-08-01-setup",
+  "windows": {
+    "3m": {
+      "window_end": "2026-09-06",
+      "window_start": "2026-06-07"
+    },
+    "gsc-16m-all": {
+      "window_end": "2026-09-06",
+      "window_start": "2025-08-01"
+    },
+    "month": {
+      "window_end": "2026-09-06",
+      "window_start": "2026-08-10"
+    }
+  },
+  "year_on_year": {
+    "reason": "no finalised snapshot or prior-year pull covers 2025-08-01 to 2025-08-31",
+    "status": "not available"
+  }
+}

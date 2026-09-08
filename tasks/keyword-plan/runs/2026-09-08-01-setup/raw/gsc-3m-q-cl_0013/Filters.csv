@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,"+(?i)((pub|bar)\b.{0,20}\b(social media|instagram|facebook|tiktok)|social media (strategy|idea|post|content) for (pubs|bars))"

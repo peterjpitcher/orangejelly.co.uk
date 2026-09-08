@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,"+(?i)((pub )?quiz\b.{0,25}\b(night|round|format|question|answer|topic|scoring|prize|rule|idea)|picture round|quiz night)"

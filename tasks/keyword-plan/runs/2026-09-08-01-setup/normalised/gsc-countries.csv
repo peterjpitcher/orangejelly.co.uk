@@ -1,0 +1,14 @@
+export_id,country,clicks,impressions,ctr,position,scope,window_start,window_end,filter_type,filter_value,source_file
+gsc-16m-all,United Kingdom,904,56750,0.0159,12.39,property,2025-08-01,2026-09-06,none,,raw/gsc-16m-all/Countries.csv
+gsc-3m-all,United Kingdom,515,32439,0.0159,11.23,property,2026-06-07,2026-09-06,none,,raw/gsc-3m-all/Countries.csv
+gsc-3m-q-cl_0004,United Kingdom,0,1634,0,19.68,query-filter,2026-06-07,2026-09-06,query,"+(?i)((pub|bar|hospitality)\b.{0,25}\b(marketing|advertising|agency)|(marketing|advertising|instagram|facebook|content creation|paid social|social video)\b.{0,12}\bfor (pubs|bars))",raw/gsc-3m-q-cl_0004/Countries.csv
+gsc-3m-q-cl_0007,United Kingdom,15,687,0.0218,11.1,query-filter,2026-06-07,2026-09-06,query,"+(?i)((pub )?quiz\b.{0,25}\b(night|round|format|question|answer|topic|scoring|prize|rule|idea)|picture round|quiz night)",raw/gsc-3m-q-cl_0007/Countries.csv
+gsc-3m-q-cl_0008,United Kingdom,6,1374,0.0044,10.92,query-filter,2026-06-07,2026-09-06,query,"+(?i)((pub|music|cash) bingo|bingo\b.{0,20}\b(pub|night|licence|equipment|idea))",raw/gsc-3m-q-cl_0008/Countries.csv
+gsc-3m-q-cl_0009,United Kingdom,0,179,0,21.49,query-filter,2026-06-07,2026-09-06,query,+(?i)((pub|bar|gastropub) (food|menu)|profitable (menu|food|bar food)|menu (idea|profit|margin|cost|engineering)|food (gp|margin|cost)),raw/gsc-3m-q-cl_0009/Countries.csv
+gsc-3m-q-cl_0010,United Kingdom,4,1637,0.0024,23.28,query-filter,2026-06-07,2026-09-06,query,"+(?i)((pub|bar)\b.{0,20}\b(event|entertainment)|event ideas for (pub|bar)|pop[- ]?up event)",raw/gsc-3m-q-cl_0010/Countries.csv
+gsc-3m-q-cl_0012,United Kingdom,0,148,0,7.62,query-filter,2026-06-07,2026-09-06,query,+(?i)(fix my pub|struggling pub|pub turnaround|failing pub|quiet pub|empty pub|pub business support),raw/gsc-3m-q-cl_0012/Countries.csv
+gsc-3m-q-cl_0013,United Kingdom,0,27,0,16.22,query-filter,2026-06-07,2026-09-06,query,"+(?i)((pub|bar)\b.{0,20}\b(social media|instagram|facebook|tiktok)|social media (strategy|idea|post|content) for (pubs|bars))",raw/gsc-3m-q-cl_0013/Countries.csv
+gsc-3m-q-cl_0014,United Kingdom,3,1040,0.0029,9.83,query-filter,2026-06-07,2026-09-06,query,+(?i)(cellar|beer (quality|line)|draught|keg|cask|line clean),raw/gsc-3m-q-cl_0014/Countries.csv
+gsc-3m-q-cl_0015,United Kingdom,1,402,0.0025,11.38,query-filter,2026-06-07,2026-09-06,query,"+(?i)(national\b.{0,20}\bday|drinks day|awareness day|promotion calendar)",raw/gsc-3m-q-cl_0015/Countries.csv
+gsc-3m-q-cl_0016,United Kingdom,0,174,0,39.55,query-filter,2026-06-07,2026-09-06,query,"+(?i)(pub|bar)\b.{0,15}\b(refurb|refit|interior|maintenance|decor)",raw/gsc-3m-q-cl_0016/Countries.csv
+gsc-month-all,United Kingdom,213,15532,0.0137,10.55,property,2026-08-10,2026-09-06,none,,raw/gsc-month-all/Countries.csv

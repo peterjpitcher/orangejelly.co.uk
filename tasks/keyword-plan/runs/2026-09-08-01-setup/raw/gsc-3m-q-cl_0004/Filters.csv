@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,"+(?i)((pub|bar|hospitality)\b.{0,25}\b(marketing|advertising|agency)|(marketing|advertising|instagram|facebook|content creation|paid social|social video)\b.{0,12}\bfor (pubs|bars))"

@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,"+(?i)(national\b.{0,20}\bday|drinks day|awareness day|promotion calendar)"

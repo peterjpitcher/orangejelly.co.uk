@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,+(?i)(cellar|beer (quality|line)|draught|keg|cask|line clean)

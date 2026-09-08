@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,+(?i)((pub|bar|gastropub) (food|menu)|profitable (menu|food|bar food)|menu (idea|profit|margin|cost|engineering)|food (gp|margin|cost))

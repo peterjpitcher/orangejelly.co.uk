@@ -1,0 +1,5 @@
+Filter,Value
+Search type,Web
+Date,Last 3 months
+Country,United Kingdom
+Query,"+(?i)(pub|bar)\b.{0,15}\b(refurb|refit|interior|maintenance|decor)"
