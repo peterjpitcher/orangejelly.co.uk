@@ -5,9 +5,9 @@ import { CONTENT } from './content';
 
 export const metadata = generateMetadata({
   ogImage: '/opengraph-image',
-  title: 'Custom Booking Systems',
+  title: 'Online and Table Booking Systems',
   description:
-    'Custom booking workflows that connect enquiries, confirmations and guest communication. Improve existing software or build the missing connection.',
+    'Online booking and table reservation systems for restaurants, pubs and venues. Connect the booking software you already have, or build the missing part.',
   path: '/solutions/booking-systems',
 });
 

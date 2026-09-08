@@ -15,9 +15,9 @@ import { getBaseUrl } from '@/lib/site-config';
 
 import { CAPABILITIES, CAPABILITY_GROUPS, CORE_BUILDS, DECLINED } from './content';
 
-const TITLE = 'Websites, Applications & Connected Systems | Orange Jelly';
+const TITLE = 'Website Development & Bespoke Applications | Orange Jelly';
 const DESCRIPTION =
-  'Website builds, bespoke applications and connected booking systems. Explore practical work that turns customer interest into bookings and repeat business.';
+  'Website development, bespoke applications and connected booking systems. Practical work that turns customer interest into bookings and repeat business.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -54,9 +54,10 @@ export default function SolutionsPage(): JSX.Element {
                 websites, applications and the systems behind them.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                We build the websites customers see and the applications and workflows behind them.
-                The aim is a clearer customer experience, more bookings and a business that works
-                better. AI is part of the build where it has a useful job to do.
+                We do website development and build bespoke applications: the websites customers
+                see, and the workflows behind them. The aim is a clearer customer experience, more
+                bookings and a business that works better. AI is part of the build where it has a
+                useful job to do.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">

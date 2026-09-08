@@ -85,3 +85,22 @@ Technology chosen before the problem was defined, including ours.
 Anything we would be the second-best supplier for. There is usually somebody better and we would rather say who.
 
 Existing published hourly terms remain unchanged. No new support or delivery promise is introduced.
+## Amendments, 8 September 2026: search vocabulary
+
+Peter approved a vocabulary pass after the keyword programme found the page never used the words
+its customers search with. Brief:
+`tasks/keyword-plan/handoffs/2026-09-08-editorial-team-vocabulary.md`. Demand is banded, United
+Kingdom, English, measured 8 September 2026: `websites development` 1,000 to 10,000 a month at Low
+competition, `website development in uk` 1,000 to 10,000 at Medium, `website development agency uk`
+100 to 1,000 at Low.
+
+- **Standfirst, now on the page:** We do website development and build bespoke applications: the
+  websites customers see, and the workflows behind them. The aim is a clearer customer experience,
+  more bookings and a business that works better. AI is part of the build where it has a useful job
+  to do.
+- **Title:** Website Development & Bespoke Applications | Orange Jelly
+- **Meta description:** Website development, bespoke applications and connected booking systems.
+  Practical work that turns customer interest into bookings and repeat business.
+- **Build card, Bespoke applications:** "Browser applications" became "Custom web applications".
+
+The eyebrow, the H1, the capability groups and the declined list are untouched.

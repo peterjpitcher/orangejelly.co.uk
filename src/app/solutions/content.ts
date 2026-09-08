@@ -9,7 +9,7 @@ export const CORE_BUILDS = [
   {
     area: 'Applications',
     title: 'Bespoke applications',
-    desc: 'Browser applications, customer portals and internal tools built around the way your business works.',
+    desc: 'Custom web applications, customer portals and internal tools built around the way your business works.',
     href: '/solutions/bespoke-applications',
   },
   {

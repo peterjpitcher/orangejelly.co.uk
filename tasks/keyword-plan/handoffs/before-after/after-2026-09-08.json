@@ -1,0 +1,23 @@
+{
+  "/solutions": {
+    "captured": "2026-09-08",
+    "source": "production build output, not yet deployed",
+    "title": "Website Development & Bespoke Applications | Orange Jelly",
+    "description": "Website development, bespoke applications and connected booking systems. Practical work that turns customer interest into bookings and repeat business.",
+    "h1": "websites, applications and the systems behind them."
+  },
+  "/solutions/booking-systems": {
+    "captured": "2026-09-08",
+    "source": "production build output, not yet deployed",
+    "title": "Online and Table Booking Systems | Orange Jelly",
+    "description": "Online booking and table reservation systems for restaurants, pubs and venues. Connect the booking software you already have, or build the missing part.",
+    "h1": "Online booking systems that connect the guest and the team."
+  },
+  "/fractional-cmo": {
+    "captured": "2026-09-08",
+    "source": "production build output, not yet deployed",
+    "title": "Fractional CMO or Marketing Director? | Orange Jelly",
+    "description": "When a fractional CMO or fractional marketing director is the right hire, when it is not, and what to ask before you hire either of us.",
+    "h1": "do you really need a fractional CMO?"
+  }
+}

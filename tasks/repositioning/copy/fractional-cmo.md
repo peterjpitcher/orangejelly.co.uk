@@ -118,3 +118,27 @@ The site was reviewed as a hospitality business owner would read it, and Peter a
 - Not enough demand is genuinely the thing holding you back, the rest of the business works, and what is missing is somebody senior to own it.
 - This is the common case and it is the reason this page exists. A business decides it needs marketing leadership because not enough demand is the symptom it can see. Underneath, enquiries are not turning into customers because nobody follows them up properly, margin is thin because pricing was never revisited, and the team is doing by hand what a system should do. A fractional CMO will spot that correctly and then be able to act on roughly a third of it. The other two thirds are somebody else's job, and the honest ones will tell you so. Now you are hiring a fractional COO as well, and the two of them are working out the boundary between them at your expense.
 - Split the problem across two part-time department heads and you have split the accountability with it. Each can succeed at their own job while the thing you actually wanted does not move.
+## Amendments, 8 September 2026: search vocabulary
+
+Peter approved a vocabulary pass after the keyword programme found the page carried the primary
+term and none of its synonyms. Brief: `tasks/keyword-plan/handoffs/2026-09-08-editorial-team-vocabulary.md`.
+Demand is banded, United Kingdom, English, measured 8 September 2026: `fractional marketing
+director` 100 to 1,000 a month at Medium competition, `fractional cmo uk` 100 to 1,000 at Low,
+`part time marketing director` 10 to 100 at Low.
+
+Peter's instruction was "fix it": the page competes for the term rather than argues against it.
+The argument itself stays, because it is the reason the page converts and because the test suite
+protects it. What changed is the framing of the opening and the vocabulary.
+
+- **Standfirst, now on the page:** A fractional CMO, or fractional marketing director, is what
+  people look for when growth has stalled and the in-house team is stretched. It's a sensible
+  instinct. Here's when hiring one works, when a part time marketing director is the wrong shape of
+  answer, and what to ask before you hire either of us.
+- **Title:** Fractional CMO or Marketing Director? | Orange Jelly
+- **Meta description:** When a fractional CMO or fractional marketing director is the right hire,
+  when it is not, and five questions to ask first. Including when we would say hire one instead of us.
+
+The previous standfirst reached its verdict in its second sentence ("often the wrong kind of
+answer"), which read as talking the reader out of the search before answering it. The new one
+leads with what the reader came for and keeps the honesty in the same breath. No price was added:
+`src/test/fractional-cmo.test.tsx` asserts the page contains no price, and that rule stands.

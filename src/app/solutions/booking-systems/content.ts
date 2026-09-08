@@ -2,11 +2,11 @@ import type { ServicePageContent } from '@/components/oj/ServicePage';
 
 export const CONTENT: ServicePageContent = {
   label: 'Booking systems',
-  heading: 'Booking systems that connect the guest and the team.',
+  heading: 'Online booking systems that connect the guest and the team.',
   intro:
-    'We build and connect booking workflows, from the first enquiry to confirmation, changes and follow-up, so guests and staff know what happens next.',
+    'We build and connect online booking and table reservation workflows, from the first enquiry to confirmation, changes and follow-up, so guests and staff know what happens next.',
   audience:
-    'For businesses with a booking journey that depends on manual handovers or disconnected tools.',
+    'For restaurants, pubs and venues whose booking journey depends on manual handovers or disconnected tools.',
   evidence: {
     heading: 'A booking journey tested in our own venue',
     body: 'At The Anchor, our own venue, we worked on the reason to book, the route to a confirmed table, and confirmations and reminders. The published case study explains those changes together.',
@@ -17,7 +17,7 @@ export const CONTENT: ServicePageContent = {
   },
   deliverables: [
     {
-      title: 'Connect the journey you already have',
+      title: 'Connect the table booking system you already have',
       body: 'Link the website, booking provider and team workflow where supported. Establish which system holds the confirmed booking and how changes reach the people who need them.',
     },
     {

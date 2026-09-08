@@ -19,9 +19,9 @@ import { QUESTIONS_TO_ASK, RIGHT_ANSWER, WRONG_SHAPE } from './content';
  * unbelievable as one that said "always", and it would fail the same honesty test
  * the rest of the site is built on.
  */
-const TITLE = 'Do you need a fractional CMO? | Orange Jelly';
+const TITLE = 'Fractional CMO or Marketing Director? | Orange Jelly';
 const DESCRIPTION =
-  "When a fractional CMO is the right hire, when it's the wrong answer, and five questions to ask first. Including when we would say hire one instead of us.";
+  'When a fractional CMO or fractional marketing director is the right hire, when it is not, and what to ask before you hire either of us.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -66,9 +66,10 @@ export default function FractionalCmoPage(): JSX.Element {
                 do you really need a fractional <span className="oj-keep-case">CMO</span>?
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                People search for one when growth has stalled and the in-house team is stretched.
-                It's a sensible instinct and often the wrong kind of answer. Here's when it works,
-                when it does not, and what to ask before you hire either of us.
+                A fractional CMO, or fractional marketing director, is what people look for when
+                growth has stalled and the in-house team is stretched. It's a sensible instinct.
+                Here's when hiring one works, when a part time marketing director is the wrong shape
+                of answer, and what to ask before you hire either of us.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" arrow href="/start-here">

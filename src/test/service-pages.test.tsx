@@ -31,8 +31,8 @@ const pages = [
     Page: BookingPage,
     metadata: bookingMetadata,
     path: '/solutions/booking-systems',
-    title: 'Custom Booking Systems | Orange Jelly',
-    heading: 'Booking systems that connect the guest and the team.',
+    title: 'Online and Table Booking Systems | Orange Jelly',
+    heading: 'Online booking systems that connect the guest and the team.',
     proof: 'interest-that-did-not-turn-up',
   },
 ];
