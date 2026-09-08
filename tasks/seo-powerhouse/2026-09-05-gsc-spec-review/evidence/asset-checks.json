@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.orangejelly.co.uk/_next/image?url=%2Fbrand%2Flogo-horizontal.png&w=1920&q=75&dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh",
+    "result": "200 image/png",
+    "exit": 0
+  },
+  {
+    "url": "https://www.orangejelly.co.uk/_next/static/chunks/fd9d1056-95064cc97645a564.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh",
+    "result": "200 application/javascript; charset=utf-8",
+    "exit": 0
+  },
+  {
+    "url": "https://www.orangejelly.co.uk/_next/static/media/91601dd83defba07-s.p.woff2",
+    "result": "200 font/woff2",
+    "exit": 0
+  },
+  {
+    "url": "https://www.orangejelly.co.uk/_next/static/css/0153974b8a439660.css?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh",
+    "result": "200 text/css; charset=utf-8",
+    "exit": 0
+  }
+]

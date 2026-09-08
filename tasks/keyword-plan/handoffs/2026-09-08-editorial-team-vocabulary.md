@@ -1,9 +1,10 @@
 # Editorial brief: the vocabulary pass on three service pages
 
 Raised by the seo-powerhouse investigation of 8 September 2026
-(`tasks/seo-powerhouse/2026-09-08-keyword-plan-investigations/findings.md`). **This is new work,
-not part of the eleven tickets Peter approved.** It needs his explicit yes before anything is
-edited, because these are the company's main service pages and they carry the repositioning.
+(`tasks/seo-powerhouse/2026-09-08-keyword-plan-investigations/findings.md`).
+
+**Approved by Peter on 8 September 2026**, along with the three decisions this brief had put to
+him. His answers are recorded in place below, so the writer does not have to go looking.
 
 ## The problem in one line
 
@@ -69,16 +70,17 @@ team".
 **Secondary:** web booking system, restaurant booking system, restaurant reservation system
 **Intent:** commercial
 
-Two judgement calls for the writer, not for me:
+Two decisions, both settled by Peter on 8 September 2026:
 
-1. **Do not chase the "free" terms.** `free online booking system` and `free booking system` sit in
-   the 1,000 to 10,000 band, higher than anything else here, and they are the wrong visitor for a
-   bespoke build. Leaving that traffic alone is the right trade. Say so in the draft notes so
-   nobody "fixes" it later.
-2. **Sector words carry the demand.** The measured terms are shaped as `restaurant booking system`,
-   `salon booking system`, `table reservation system for restaurants`. If the page names the kinds
-   of business it serves, it earns those words honestly. If Orange Jelly does not want to be read
-   as a restaurant-only supplier, that is a positioning decision and it belongs to Peter.
+1. **Do not chase the "free" terms. DECIDED: leave them.** Peter's words: "we don't offer a free
+   booking system". `free online booking system` and `free booking system` sit in the 1,000 to
+   10,000 band, higher than anything else here, and they are the wrong visitor for a bespoke build.
+   Say so in the draft notes so nobody "fixes" it later.
+2. **Name the sectors. DECIDED: yes.** Peter's words: "go with it, search must win". The measured
+   terms are shaped as `restaurant booking system`, `salon booking system`,
+   `table reservation system for restaurants`, so name the kinds of business the page serves and
+   earn those words honestly. Keep it truthful: name sectors Orange Jelly has actually built for or
+   would take on, not a padded list.
 
 ### /fractional-cmo
 
@@ -92,10 +94,15 @@ Uses "fractional CMO" five times, which is right. Never says "marketing director
 One sentence naming the alternative phrasing would cover it, for example "a fractional CMO, or
 fractional marketing director, is...". That is a small change.
 
-**Flag for Peter before writing.** The page currently argues a fractional CMO is "often the wrong
-kind of answer". That may be the right sales position and better for conversion. It also means the
-page is not competing for the term it is named after. Decide which job the page is doing before
-optimising it for a term it is arguing against. Do not resolve this in the copy.
+**DECIDED by Peter on 8 September 2026: "fix it".** The page is to compete for the term rather
+than argue against it. It currently says a fractional CMO is "often the wrong kind of answer",
+and that framing goes.
+
+This is the largest of the three changes and the only one that is more than vocabulary. Handle it
+with care: the honest version is a page that answers "do you need a fractional CMO" with a genuine
+yes-and-here-is-when, not one that pretends there is never a wrong case. Losing the scepticism
+entirely would cost the page the credibility that makes it convert. Aim for a page that wins the
+search and still sounds like Peter.
 
 ## Rules that bind this brief
 

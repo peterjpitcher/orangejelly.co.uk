@@ -1,0 +1,338 @@
+{
+  "checked_at_utc": "2026-09-05T16:10:54.518576+00:00",
+  "method": "Public GET without automatic redirects, 4 workers, sitemap URLs only for link sources; raw HTML anchors, remove query/fragment/trailing slash; distinct source pages; exclude self-links; no browser JS execution; links from outside sitemap not surveyed.",
+  "sitemap_count": 145,
+  "status_counts": {
+    "200": 145
+  },
+  "errors": [],
+  "orphans": [
+    "https://www.orangejelly.co.uk/fractional-cmo",
+    "https://www.orangejelly.co.uk/tools/ai-readiness"
+  ],
+  "priority_inbound": {
+    "https://www.orangejelly.co.uk/fractional-cmo": [],
+    "https://www.orangejelly.co.uk/tools/ai-readiness": [],
+    "https://www.orangejelly.co.uk/insights/ai-for-accountants": [
+      "https://www.orangejelly.co.uk/insights",
+      "https://www.orangejelly.co.uk/sectors/professional-services"
+    ],
+    "https://www.orangejelly.co.uk/insights/marketing-for-law-firms": [
+      "https://www.orangejelly.co.uk/insights",
+      "https://www.orangejelly.co.uk/sectors/professional-services"
+    ],
+    "https://www.orangejelly.co.uk/insights/professional-services-marketing": [
+      "https://www.orangejelly.co.uk/insights",
+      "https://www.orangejelly.co.uk/sectors/professional-services"
+    ],
+    "https://www.orangejelly.co.uk/insights/what-is-a-fractional-cmo": [
+      "https://www.orangejelly.co.uk/insights",
+      "https://www.orangejelly.co.uk/sectors/professional-services"
+    ]
+  },
+  "extra": [
+    {
+      "url": "https://www.orangejelly.co.uk/dev/components",
+      "status": 200,
+      "location": null,
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
+        },
+        {
+          "name": "description",
+          "content": "Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences."
+        },
+        {
+          "name": "robots",
+          "content": "noindex, nofollow"
+        },
+        {
+          "name": "mobile-web-app-capable",
+          "content": "yes"
+        },
+        {
+          "name": "apple-mobile-web-app-capable",
+          "content": "yes"
+        },
+        {
+          "name": "apple-mobile-web-app-status-bar-style",
+          "content": "default"
+        },
+        {
+          "name": "format-detection",
+          "content": "telephone=no"
+        },
+        {
+          "rel": "canonical",
+          "href": "https://www.orangejelly.co.uk"
+        },
+        {
+          "property": "og:title",
+          "content": "Websites, Applications & AI for Business Growth | Orange Jelly"
+        },
+        {
+          "property": "og:description",
+          "content": "Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.orangejelly.co.uk"
+        },
+        {
+          "property": "og:site_name",
+          "content": "Orange Jelly"
+        },
+        {
+          "property": "og:locale",
+          "content": "en_GB"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Orange Jelly: websites, applications and AI for business growth"
+        },
+        {
+          "property": "og:image:type",
+          "content": "image/png"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.orangejelly.co.uk/opengraph-image?4dcc1321b00b2b65"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Websites, Applications & AI for Business Growth | Orange Jelly"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.orangejelly.co.uk/opengraph-image"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?9e068de9ff0ddf0e",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?7f5056b7fe1cc4ee",
+          "type": "image/png",
+          "sizes": "180x180"
+        },
+        {
+          "name": "next-size-adjust"
+        },
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "body_text_excerpt": "Component harness {\"@context\":\"https://schema.org\",\"@graph\":[{\"@context\":\"https://schema.org\",\"@type\":\"ProfessionalService\",\"@id\":\"https://www.orangejelly.co.uk/#organization\",\"name\":\"Orange Jelly Limited\",\"alternateName\":\"Orange Jelly\",\"url\":\"https://www.orangejelly.co.uk\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://www.orangejelly.co.uk/logo.png\",\"width\":800,\"height\":800},\"image\":\"https://www.orangejelly.co.uk/logo.png\",\"description\":\"Orange Jelly builds websites, bespoke applications and connected systems for business growth, using AI where it adds value to customer experiences and everyday work.\",\"founder\":{\"@type\":\"Person\",\"@id\":\"https://www.orangejelly.co.uk/#peter-pitcher\",\"name\":\"Peter Pitcher\",\"jobTitle\":\"Founder\"},\"foundingDate\":\"2019-03-05\",\"areaServed\":\"GB\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"telephone\":\"+447990587315\",\"contactType\":\"Customer Service\",\"email\":\"peter@orangejelly.co.uk\",\"availableLanguage\":\"English\",\"contactOption\":[\"HearingImpairedSupported\"],\"areaServed\":\"GB\"},\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"The Anchor, 20 High Street\",\"addressLocality\":\"Stanwell Moor\",\"addressRegion\":\"Staines\",\"postalCode\":\"TW19 6AQ\",\"addressCountry\":\"GB\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":51.4583,\"longitude\":-0.4867},\"sameAs\":[\"https://www.the-anchor.pub\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":\"https://www.orangejelly.co.uk/#website\",\"url\":\"https://www.orangejelly.co.uk\",\"name\":\"Orange Jelly\",\"description\":\"Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences.\",\"publisher\":{\"@id\":\"https://www.orangejelly.co.uk/#organization\"},\"inLanguage\":\"en-GB\"}]} (self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            window.dataLayer = window.dataLayer || [];\\n            function gtag(){dataLayer.push(arguments);}\\n            gtag('consent', 'default', {\\n              'analytics_storage': 'denied',\\n              'ad_storage': 'denied',\\n              'ad_user_data': 'denied',\\n              'ad_personalization': 'denied',\\n              'wait_for_update': 500\\n            });\\n          \",\"id\":\"gtm-consent-defaults\"}]) Skip to main content Loading Orange Jelly... (self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null]) self.__next_f.push([1,\"1:HL[\\\"/_next/static/media/91601dd83defba07-s.p.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n2:HL[\\\"/_next/static/media/af4bf8399d1aacdf-s.p.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n3:HL[\\\"/_next/static/media/e807dee2426166ad-s.p.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n4:HL[\\\"/_next/static/css/0153974b8a439660.css?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"style\\\"]\\n5:HL[\\\"/_next/static/css/acbef39c43ac97ff.css?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"style\\\"]\\n\"]) self.__next_f.push([1,\"6:I[2846,[],\\\"\\\"]\\n9:I[4707,[],\\\"\\\"]\\na:I[6423,[],\\\"\\\"]\\nb:I[3220,[\\\"4046\\\",\\\"static/chunks/4046-4c792af59b043fd8.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"3386\\\",\\\"static/chunks/3386-a8f2de71998a3223.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"5032\\\",\\\"static/chunks/5032-73dde08ecc80cbdf.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"3185\\\",\\\"static/chunks/app/layout-ce4f1946865864f6.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\"],\\\"PreloadResources\\\"]\\nd:I[3596,[\\\"4046\\\",\\\"static/chunks/4046-4c792af59b043fd8.js?dpl=dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh\\\",\\\"3386\\\",\\\"static/chunks/3386-a8f2de719"
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/favicon.ico",
+      "status": 404,
+      "location": null,
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
+        },
+        {
+          "name": "robots",
+          "content": "noindex"
+        },
+        {
+          "name": "description",
+          "content": "That page is not here. These probably are."
+        },
+        {
+          "name": "robots",
+          "content": "noindex, follow"
+        },
+        {
+          "name": "mobile-web-app-capable",
+          "content": "yes"
+        },
+        {
+          "name": "apple-mobile-web-app-capable",
+          "content": "yes"
+        },
+        {
+          "name": "apple-mobile-web-app-status-bar-style",
+          "content": "default"
+        },
+        {
+          "name": "format-detection",
+          "content": "telephone=no"
+        },
+        {
+          "rel": "canonical",
+          "href": "https://www.orangejelly.co.uk"
+        },
+        {
+          "property": "og:title",
+          "content": "Websites, Applications & AI for Business Growth | Orange Jelly"
+        },
+        {
+          "property": "og:description",
+          "content": "Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.orangejelly.co.uk"
+        },
+        {
+          "property": "og:site_name",
+          "content": "Orange Jelly"
+        },
+        {
+          "property": "og:locale",
+          "content": "en_GB"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Orange Jelly: websites, applications and AI for business growth"
+        },
+        {
+          "property": "og:image:type",
+          "content": "image/png"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.orangejelly.co.uk/opengraph-image?4dcc1321b00b2b65"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Websites, Applications & AI for Business Growth | Orange Jelly"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Websites, bespoke applications and connected systems that help businesses grow. Useful AI, clearer booking journeys and better customer experiences."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.orangejelly.co.uk/opengraph-image"
+        },
+        {
+          "rel": "icon",
+          "href": "/icon.png?9e068de9ff0ddf0e",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-icon.png?7f5056b7fe1cc4ee",
+          "type": "image/png",
+          "sizes": "180x180"
+        },
+        {
+          "name": "next-size-adjust"
+        }
+      ]
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/icon.png",
+      "status": 200,
+      "location": null,
+      "meta": []
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/apple-icon.png",
+      "status": 200,
+      "location": null,
+      "meta": []
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/opengraph-image",
+      "status": 200,
+      "location": null,
+      "meta": []
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/licensees-guide/pub-health-safety-checklist",
+      "status": 308,
+      "location": "/guides/pub-health-safety-checklist",
+      "meta": []
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/licensees-guide/kitchen-nightmares-chef-quits",
+      "status": 308,
+      "location": "/guides/kitchen-nightmares-chef-quits",
+      "meta": []
+    },
+    {
+      "url": "https://www.orangejelly.co.uk/licensees-guide/brewery-tie-improve-your-deal",
+      "status": 308,
+      "location": "/guides/brewery-tie-improve-your-deal",
+      "meta": []
+    },
+    {
+      "url": "http://orangejelly.co.uk/",
+      "status": 308,
+      "location": "https://orangejelly.co.uk/",
+      "meta": []
+    },
+    {
+      "url": "https://orangejelly.co.uk/",
+      "status": 307,
+      "location": "https://www.orangejelly.co.uk/",
+      "meta": []
+    },
+    {
+      "url": "http://www.orangejelly.co.uk/",
+      "status": 308,
+      "location": "https://www.orangejelly.co.uk/",
+      "meta": []
+    },
+    {
+      "url": "https://orangejelly.co.uk/guides/pub-health-safety-checklist?utm_source=spec-review",
+      "status": 307,
+      "location": "https://www.orangejelly.co.uk/guides/pub-health-safety-checklist?utm_source=spec-review",
+      "meta": []
+    }
+  ]
+}

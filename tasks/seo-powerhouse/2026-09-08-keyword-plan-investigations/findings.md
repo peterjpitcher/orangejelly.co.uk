@@ -3,8 +3,8 @@
 Quick Checkup, read-only. 8 September 2026. Handed over from keyword-plan run
 `2026-09-08-01-setup` (`tasks/keyword-plan/handoffs/2026-09-08-seo-powerhouse.md`).
 
-No changes were made. Five of the seven are answered. Two need a human to look at a Google
-results page and cannot be automated.
+No changes were made. **Six of the seven are answered.** One (tk_000010, cellar) still needs a
+human to look at a Google results page, which cannot be automated.
 
 ## Diagnosis in three sentences
 
@@ -137,28 +137,50 @@ title. One named-query impression over three months for `orange jelly` is almost
 query being too rare to clear Google's naming threshold, not a visibility fault. Nothing to fix.
 If brand search matters commercially, that is a demand problem, not an SEO one.
 
-## The two SERP checks: not done, and not automatable
+## tk_000004, fix my pub: answered 8 September 2026, and I predicted it wrong
 
-`tk_000004` (`/why-revenue-is-falling`, position 7.6, no clicks) and `tk_000010`
-(`/guides/cellar-management-beer-quality-guide`, position 8.6, 3 clicks) both need someone to look
-at a live Google results page. Automated scraping of Google Search is against its terms and the
-method forbids it, so this is a two-minute human job, not a tooling gap.
+Peter searched `fix my pub` from TW19 6BB on desktop with personalised results on, and supplied
+screenshots.
 
-**For tk_000004,** search `why is my pub revenue falling` and `fix my pub`. **For tk_000010,**
-search `cellar management` and `cask ale week 2026`. For each, note:
+**There is no feature block.** No AI overview, no featured snippet, no People Also Ask. I had
+predicted a feature block above the fold as the most likely explanation for a click-through gap at
+position 7.6. That was wrong.
 
-1. What sits above the site: an AI overview, People Also Ask, videos, a featured snippet, ads.
-2. Whether the first organic result answers the question on the results page itself.
-3. What kind of page ranks first: a guide, a supplier, a forum, a brewery.
-4. Date, device and location you searched from.
+**The real cause is intent.** The query is substantially navigational for Punch Pubs. Ranking on
+page one: Punch Pubs "Support", "A Guide To Your Punch Services" (PDF), Punch Taverns Buying Club,
+Punch Taverns, and the Punch Pubs Publicans' Forum twice. The "People also search for" block is led
+by **Punch Pubs, Punch pubs contact number, Punch pubs login**. A second intent is physical repair:
+Vidette UK commercial refurbishment, and Masterfix "Pub Maintenance London".
 
-Tell me what you see and I will record it as a `check-done` event on the ticket in
-`tasks/keyword-plan/changes.jsonl`, with source, locale, device, date and features. Until that
-event exists, `diagnose.py` will not propose snippet work for those two clusters, by design.
+Only a minority of that page is business turnaround, and there the one direct competitor is
+`simonmckenzie.co.uk`, "Pub Turnaround Specialist UK", offering thirty five years of turning around
+failing pubs and to "restore profitability within 90 days".
 
-My expectation, worth testing rather than trusting: at position 7.6 and 8.6 with almost no clicks,
-a feature block above the fold is the most likely explanation, and `cask ale week 2026` in
-particular looks like people wanting a date rather than a guide, which no rewrite will convert.
+So 59 impressions at average position 4.95 earning zero clicks is not a snippet failure. Most of
+the people searching that phrase want a repair portal or a landlord's helpdesk, and they are never
+going to click a marketing guide. **No snippet work is warranted.** The honest read is that this
+term is worth less than its impression count suggests.
+
+Two further observations from the same SERP:
+
+1. **Orange Jelly ranked with the wrong page.** In Peter's view the site appeared around position 3
+   with "Pub VAT and Accounting: The Landlord's Plain-English Guide", not with the cluster's target
+   page. Treat that position with care: results were personalised and searched from the owner's own
+   postcode, so it is not a neutral read. Search Console's average of 4.95 is the reliable figure.
+2. **The cluster is pointed at the wrong page anyway.** `cl_0012` targets `/why-revenue-is-falling`,
+   which earns nothing directly in this window. The page actually carrying the cluster is
+   `/guides/why-is-my-pub-empty` (144 impressions, position 7.95). `/pub-rescue` contributes 10
+   impressions at 4.6 and correctly 308s into `/why-revenue-is-falling`. The mapping should move to
+   `/guides/why-is-my-pub-empty` at the next review.
+
+## tk_000010, cellar: still open
+
+Needs the same treatment: search `cellar management` and `cask ale week 2026`, and note what sits
+above the site, whether the first result answers on the page, and what kind of page ranks first.
+
+Given what `fix my pub` turned out to be, the honest prior is now weaker than before: `cask ale week
+2026` carries 641 of that cluster's impressions and is almost certainly people wanting a date, which
+no rewrite converts.
 
 ## Limitations
 

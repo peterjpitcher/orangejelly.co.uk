@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /search-index.json
+Disallow: /icon
+Disallow: /apple-icon
+Disallow: /opengraph-image
+
+Sitemap: https://www.orangejelly.co.uk/sitemap.xml
