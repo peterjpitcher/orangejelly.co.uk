@@ -1,0 +1,52 @@
+run_id,finalised_at,cluster_id,window,clicks,impressions,ctr,position_weighted,evidence_tier,tags,action,priority_score,scenario_clicks_monthly,incident_flags,mapping_version,score_version
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0001,3m,0,2,0,6,B,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),investigate-visibility,37.5,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0001,gsc-16m-all,0,2,0,6,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0001,month,0,2,0,6,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0002,3m,0,5,0,7.8,B,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),investigate-visibility,37.5,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0002,gsc-16m-all,0,5,0,7.8,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0002,month,0,5,0,7.8,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0003,3m,,,,,D,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN,research,,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0003,gsc-16m-all,,,,,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0003,month,,,,,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0004,3m,0,1618,0,19.6528,B,STRIKING_DISTANCE_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),strengthen-page,32.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0004,gsc-16m-all,1,4655,0.000215,19.1629,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0004,month,0,586,0,18.2087,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0005,3m,0,18,0,26.7772,B,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),investigate-visibility,30.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0005,gsc-16m-all,0,17,0,27.7641,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0005,month,0,18,0,26.7772,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0006,3m,,,,,D,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN,research,,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0006,gsc-16m-all,,,,,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0006,month,,,,,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0007,3m,15,687,0.021834,11.0993,B,STRIKING_DISTANCE_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),strengthen-page,24.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0007,gsc-16m-all,25,1282,0.019501,12.8631,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0007,month,5,248,0.020161,9.6585,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0008,3m,6,1374,0.004367,10.9182,B,STRIKING_DISTANCE_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),strengthen-page,24.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0008,gsc-16m-all,6,1407,0.004264,10.9275,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0008,month,4,459,0.008715,9.0847,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0009,3m,0,179,0,21.4907,B,DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),hold,9.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0009,gsc-16m-all,1,491,0.002037,18.3886,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0009,month,0,68,0,21.354,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0010,3m,4,1637,0.002443,23.2786,B,DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),hold,9.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0010,gsc-16m-all,11,4334,0.002538,21.94,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0010,month,3,595,0.005042,20.7062,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0011,3m,0,16,0,15.44,B,DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),hold,3.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0011,gsc-16m-all,0,32,0,17.5,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0011,month,,,,,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0012,3m,0,148,0,7.6226,B,STRIKING_DISTANCE_CANDIDATE|CTR_GAP_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),serp-check,36.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0012,gsc-16m-all,1,300,0.003333,8.3238,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0012,month,0,32,0,8.9041,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0013,3m,0,11,0,7.3645,B,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),investigate-visibility,22.5,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0013,gsc-16m-all,1,47,0.021277,7.8323,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0013,month,0,9,0,6.6678,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0014,3m,3,957,0.003135,8.5749,B,STRIKING_DISTANCE_CANDIDATE|CTR_GAP_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),serp-check,18.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0014,gsc-16m-all,3,973,0.003083,8.4674,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0014,month,3,565,0.00531,8.7773,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0015,3m,1,402,0.002488,11.3821,B,STRIKING_DISTANCE_CANDIDATE|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),strengthen-page,16.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0015,gsc-16m-all,1,394,0.002538,11.0777,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0015,month,1,127,0.007874,10.8513,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0016,3m,0,91,0,53.4931,B,DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),hold,3.0,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0016,gsc-16m-all,0,529,0,46.0988,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0016,month,0,42,0,39.4298,,,,,,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0017,3m,0,1,0,12,B,LOW_OBSERVED_VISIBILITY|DEMAND_UNKNOWN|EVIDENCE_INSUFFICIENT (cannibalisation),investigate-visibility,37.5,not estimable,,2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0017,gsc-16m-all,0,2,0,14.5,,,,,,"gsc-2025-impressions-logging-error:crosses:ctr,impressions,position|gsc-2025-num100-removal:crosses:ctr,impressions,position",2,2.1.0
+2026-09-08-01-setup,2026-09-08T16:45:13+00:00,cl_0017,month,,,,,,,,,,,2,2.1.0

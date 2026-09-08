@@ -1,0 +1,54 @@
+{
+  "actor": "Peter Pitcher",
+  "at": "2026-09-08T18:15:00+00:00",
+  "scope": "backlog",
+  "approved": [
+    {
+      "ticket_id": "tk_000001",
+      "version": "c4ea3164a34addf0d342404047aa1eb33d08a87349db8d06b9ac4ada0d8c39ca"
+    },
+    {
+      "ticket_id": "tk_000002",
+      "version": "a0d1301dfdb44144e9383ce14ce3c811b05154665193326c4c23ab2074a1568e"
+    },
+    {
+      "ticket_id": "tk_000003",
+      "version": "b4e0dd0f569750ca1b3ee314b49ec4ec9298f35efd9f18bda573f340937e8e53"
+    },
+    {
+      "ticket_id": "tk_000004",
+      "version": "66102db2b0cf25c6be32add494a19ba9f69273f39edf242422482ff572f5b3e2"
+    },
+    {
+      "ticket_id": "tk_000005",
+      "version": "74eb99386484cb65d1ebef5214bd2cc0c5d8514cb25038b45a2826e1f9eafb78"
+    },
+    {
+      "ticket_id": "tk_000006",
+      "version": "a7f61fc07addfe3b5e63b6dd0f13d16a2fc73a0569f527de78aeddeb80179c4f"
+    },
+    {
+      "ticket_id": "tk_000007",
+      "version": "a00c40bb0edce15a511c9830a9a7638fa43632e1dc9bc0cac0b80dc391f37e0c"
+    },
+    {
+      "ticket_id": "tk_000008",
+      "version": "83d3c2ee03ac175c18d6aec0aa2afbe6c2bed775500dbf66d36482b7a0a2c89c"
+    },
+    {
+      "ticket_id": "tk_000009",
+      "version": "a4abc17508c8364906108b913657fe620332aa16637fc25a1b830fd2800cb598"
+    },
+    {
+      "ticket_id": "tk_000010",
+      "version": "3dff4e0c65e5b0b610b7413c3e3e1098484ecb7fa4c72109b6df1bb2c7fbd5bb"
+    },
+    {
+      "ticket_id": "tk_000011",
+      "version": "a8a970116045948b8ab19d23b87c77c594a7a259b7892b1405683303d27e9fc6"
+    }
+  ],
+  "deferred": [],
+  "rejected": [],
+  "note": "Approved in full on 8 September 2026: all eleven tickets, seven investigations and four content jobs. Each version is the sha256 of the backlog row as it was presented, so the approval is bound to the evidence that was shown and not to a later rescoring."
+}
