@@ -12,10 +12,9 @@ profile = "established-nonlocal"
 
 site = "orangejelly.co.uk"
 
-# CONFIRM BEFORE THE FIRST PULL. Search Console shows either a domain property
-# (sc-domain:orangejelly.co.uk) or a URL-prefix property
-# (https://www.orangejelly.co.uk/). The legacy page exports carry the www host, which
-# suggests a URL-prefix property, but that is inference and not attestation.
+# Confirmed by Peter, 8 September 2026: Search Console lists it as "orangejelly.co.uk"
+# with no scheme or host prefix, which is how a domain property is displayed. A
+# URL-prefix property would read "https://www.orangejelly.co.uk/".
 gsc_property = "sc-domain:orangejelly.co.uk"
 
 reporting_country = "GB"
@@ -57,7 +56,7 @@ location_id = ""
 # The GitHub repository is public and the 9 August 2026 raw exports are already
 # committed to it. Setting raw_in_git = false now would not unpublish them, so the
 # setting records current practice rather than pretending to a privacy it does not have.
-# Question 1 in the run reply asks whether to keep it this way.
+# Confirmed by Peter, 8 September 2026: keep committing raw exports.
 visibility = "public"
 raw_in_git = true
 

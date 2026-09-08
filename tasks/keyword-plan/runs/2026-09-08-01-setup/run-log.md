@@ -68,18 +68,50 @@ The running order survives, because quiz holds three of the four top-band terms 
 fourth. The magnitude does not. Nothing measured on this site so far exceeds a band of 100 to
 1,000 searches a month.
 
-## Assumptions, each of which changes the plan if wrong
+## Decisions Peter made on 8 September 2026
 
-These are recorded here as the state the run proceeded on. They were put to Peter in the chat
-reply of 8 September 2026 and this file will be updated with his answers as decisions.
+1. **Property type: domain property.** Search Console lists it as `orangejelly.co.uk` with no
+   scheme or host, which is how a domain property displays. `config.toml` is correct as written.
+2. **The new positioning outranks the guide library.** `cl_0005` and `cl_0006` raised to business
+   value 4, so every new-positioning service now sits above every content cluster.
+3. **Keep committing raw exports** to the public repository.
+4. **Narrow the growth-language guard** to published content. Handed to a separate session.
 
-1. `gsc_property` is written as `sc-domain:orangejelly.co.uk`. The legacy page exports carry the
-   `www` host, which would point at a URL-prefix property instead.
-2. `business_value` on all 17 clusters is inference from the site's own navigation and the
-   31 August repositioning, not something Peter has stated. It sets the running order of the plan.
-3. The priority service order in `business-brief.md` is inferred from the same source.
-4. `repo.raw_in_git = true` records current practice: the repository is public and the 9 August
-   raw exports are already committed to it.
+## Changes made to the request after Peter read it
+
+**Preset date ranges instead of exact dates.** Every Search Console pull now names a preset
+(Last 16 months, Last 3 months, Last 28 days) and its expected window is a container the preset
+falls inside. `validate-run.py` records `WINDOW_SHORTER`, which is limiting and expected, not an
+error. The cost is deferred, not avoided: preset windows drift with the export date, so
+year-on-year comparison and the decay check both want calendar-aligned windows and will report
+"not available" if the programme stays on presets. Neither is available on a first run anyway, so
+nothing is lost today. Revisit at the second or third review.
+
+**No renaming.** Every Search Console export records its own filters and dates in `Filters.csv`
+and `Chart.csv`, and every Keyword Planner export carries its layout and keywords, so exports are
+identified by content rather than filename. `sort-inbox.py` in the workspace root does the filing.
+It was tested against three real exports (a 16-month zip, a 28-day folder and a Keyword Planner
+volumes CSV) and placed all three correctly. Where the query filter text does not match, it scores
+each candidate regex against the export's own `Queries.csv` and takes the best, refusing to guess
+on a tie.
+
+**39 pulls cut to 26.** Two reductions, both evidence-led rather than cosmetic:
+
+- **Six cluster pulls dropped** because the clusters have no footprint to export. Against the
+  twelve-month query file, `cl_0001` matched one query with one impression, and `cl_0002`,
+  `cl_0003`, `cl_0005`, `cl_0006`, `cl_0011` and `cl_0017` matched almost nothing. That is a
+  finding about the new positioning, not a reason to click through empty exports. The ten clusters
+  that remain all have real footprint, from 221 to 4,197 impressions over twelve months.
+- **All eleven page pulls dropped.** Every URL in the window is a pre-rebuild URL, and the
+  property-scope Pages tab already gives complete page totals for all 148 pages. Cannibalisation
+  and unattributed-traffic analysis wait for the October review, when a page filter will describe
+  the site that is actually live.
+
+**The page map was wrong about the biggest page in the site.** `cl_0010` targeted
+`/guides/pub-event-ideas`, which earned 20 impressions over twelve months, while
+`/licensees-guide/summer-pub-event-ideas` earned 9,704 and is the single largest page on the
+site. Retargeted, and the eight highest-impression guides missing from `pages.csv` were added,
+taking it from 30 pages to 38.
 
 ## Data quality carried into the plan
 
