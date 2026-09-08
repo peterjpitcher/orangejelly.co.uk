@@ -114,23 +114,44 @@ function lineAndColumn(text, index) {
 }
 
 /*
- * Blanks out code comments, leaving the text length and every newline intact so the
- * reported line and column still point at the right place.
+ * Matches the opening of a `console.error(` style call, sticky so it can be tested at
+ * one offset rather than by slicing the source at every character.
+ */
+const CONSOLE_CALL = /console\s*\.\s*[A-Za-z]+\s*\(/y;
+
+/*
+ * Blanks out the parts of a source file no reader ever sees, leaving the text length
+ * and every newline intact so the reported line and column still point at the right
+ * place.
  *
- * The gate governs what a reader sees, and a reader never sees a comment. Without
- * this it fails on `// Generate and save RSS feed` in `feeds.ts`, which is a note
- * about writing a file to disk, and the only way past it is `--no-verify` on an
- * unrelated commit. That is the same reason the scope above stops at the published
- * surface.
+ * Two kinds of developer-facing text. Comments first: without this the gate fails on
+ * `// Generate and save RSS feed` in `feeds.ts`, which is a note about writing a file
+ * to disk, and the only way past it is `--no-verify` on an unrelated commit. That is
+ * the same reason the scope above stops at the published surface.
+ *
+ * Then `console.*` arguments, for the same reason one layer along. A console string is
+ * developer-facing by definition: it goes to a browser devtools panel, not to a page.
+ * `ROICalculatorContext.tsx` logs "Failed to save ROI calculator state", which is
+ * about writing to localStorage and has nothing to do with the offer. It was the last
+ * false positive left on the published surface after the scope was narrowed on
+ * 8 September 2026, and it would have blocked the next commit that touched the file.
+ * Only `console.*` is stripped, because a sweep of `src/` found no other
+ * developer-facing string with a banned word in it; widening this on speculation
+ * would start hiding real copy.
  *
  * Quote state is tracked rather than regexed, because `'https://...'` contains `//`
  * and a naive strip would blank the rest of that line along with anything real
- * sitting after it.
+ * sitting after it. The same tracking runs inside a console call, so the `)` in
+ * `console.error('oops :)')` does not close the call early.
  */
-function withoutComments(source) {
+function withoutDeveloperText(source) {
   let out = '';
   let quote = null;
   let comment = null;
+  // Open bracket depth inside a console call, so nested calls close in the right place.
+  let consoleDepth = 0;
+
+  const blank = (character) => (character === '\n' ? '\n' : ' ');
 
   for (let i = 0; i < source.length; i += 1) {
     const c = source[i];
@@ -158,9 +179,10 @@ function withoutComments(source) {
     }
 
     if (quote) {
-      out += c;
+      out += consoleDepth > 0 ? blank(c) : c;
       if (c === '\\') {
-        out += next ?? '';
+        const escaped = next ?? '';
+        out += consoleDepth > 0 ? blank(escaped) : escaped;
         i += 1;
       } else if (c === quote) {
         quote = null;
@@ -170,7 +192,7 @@ function withoutComments(source) {
 
     if (c === "'" || c === '"' || c === '`') {
       quote = c;
-      out += c;
+      out += consoleDepth > 0 ? blank(c) : c;
       continue;
     }
 
@@ -188,6 +210,29 @@ function withoutComments(source) {
       continue;
     }
 
+    if (consoleDepth > 0) {
+      if (c === '(') {
+        consoleDepth += 1;
+      } else if (c === ')') {
+        consoleDepth -= 1;
+      }
+      out += blank(c);
+      continue;
+    }
+
+    // `c` first as a cheap guard, and the preceding character so `myconsole.log(`
+    // is left alone.
+    if (c === 'c' && (i === 0 || !/[\w$.]/.test(source[i - 1]))) {
+      CONSOLE_CALL.lastIndex = i;
+      const call = CONSOLE_CALL.exec(source);
+      if (call) {
+        consoleDepth = 1;
+        out += call[0].replace(/[^\n]/g, ' ');
+        i += call[0].length - 1;
+        continue;
+      }
+    }
+
     out += c;
   }
 
@@ -196,7 +241,7 @@ function withoutComments(source) {
 
 function collectViolations(relativePath, content) {
   const violations = [];
-  const source = /\.(ts|tsx)$/.test(relativePath) ? withoutComments(content) : content;
+  const source = /\.(ts|tsx)$/.test(relativePath) ? withoutDeveloperText(content) : content;
 
   for (const rule of BANNED_RULES) {
     for (const match of source.matchAll(rule.pattern)) {

@@ -111,6 +111,59 @@ describe('the growth-language gate', () => {
   });
 });
 
+describe('the growth-language gate and developer-facing strings', () => {
+  it('passes a console call that mentions saving to storage', () => {
+    /*
+     * The last false positive on the published surface after the scope was narrowed.
+     * A console string goes to devtools, not to a page, so it is no more customer
+     * copy than the comment above it.
+     */
+    const result = runOn(GROWTH, {
+      'src/contexts/Store.tsx':
+        "try { write(); } catch (error) { console.error('Failed to save state:', error); }",
+    });
+    expect(result.code).toBe(0);
+  });
+
+  it('still fails real copy sitting beside a console call', () => {
+    // The risk in blanking a call is blanking past the end of it. This is the test
+    // that would catch that, because the offer is on the very next statement.
+    const result = runOn(GROWTH, {
+      'src/components/Offer.tsx':
+        "console.error('Failed to save state:', error);\nexport const copy = 'We save you money.';",
+    });
+    expect(result.code).toBe(1);
+    expect(result.output).toContain('src/components/Offer.tsx');
+  });
+
+  it('does not let a bracket inside a console string close the call early', () => {
+    // `console.error('oops :)')` would end the call at the smiley if quote state were
+    // not tracked inside it, and everything after would be scanned as copy.
+    const result = runOn(GROWTH, {
+      'src/components/Smiley.tsx':
+        "console.error('oops :) saving', wrap(inner));\nexport const ok = 1;",
+    });
+    expect(result.code).toBe(0);
+  });
+
+  it('does not treat an identifier ending in console as a console call', () => {
+    const result = runOn(GROWTH, {
+      'src/lib/logger.tsx': "myconsole.log('We save you money.');",
+    });
+    expect(result.code).toBe(1);
+  });
+
+  it('reports the right line number after a console call', () => {
+    // Blanking has to preserve newlines, or every line number after it is wrong.
+    const result = runOn(GROWTH, {
+      'src/components/Multi.tsx':
+        "console.error(\n  'Failed to save state:',\n  error\n);\nexport const copy = 'We save you money.';",
+    });
+    expect(result.code).toBe(1);
+    expect(result.output).toContain('src/components/Multi.tsx:5:');
+  });
+});
+
 describe('the British English gate', () => {
   it('still fails an American spelling in content/', () => {
     const result = runOn(BRITISH, {
