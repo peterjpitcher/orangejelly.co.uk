@@ -83,12 +83,22 @@ position 26.8 reflects a thin page, no internal links, or no authority for the t
 ## tk_000009, priority 22.5, cluster cl_0013, pub social media marketing
 
 **Target page:** `/guides/social-media-strategy-for-pubs`
-**Evidence:** 11 named-query impressions at position 7.4 in this window. The same page carried
-4,352 impressions and 42 clicks in the twelve months to 9 August 2026.
+**ANSWERED 8 September 2026, and the premise below was wrong.** See
+`tasks/seo-powerhouse/2026-09-08-keyword-plan-investigations/findings.md`. There is no collapse:
+4,352 was the page's twelve-month all-countries impressions and 11 was the cluster's named-query
+count over three months, UK only, at 9% coverage. Different measures. The page earned 289
+impressions over three months across both its URLs, has 17 inbound links and is technically sound.
+Closed as no change needed. The real observation is hundreds of impressions and no clicks at
+position 25 to 35, which is a position problem, not a snippet one.
 
-The collapse from 4,352 impressions to 11 is the thing to explain. It may be the URL rename, it may
-be the country filter restricting the named subset, or it may be real. Check the page under both
-its old and new paths.
+Original text, kept so the error is visible rather than tidied away:
+
+> **Evidence:** 11 named-query impressions at position 7.4 in this window. The same page carried
+> 4,352 impressions and 42 clicks in the twelve months to 9 August 2026.
+>
+> The collapse from 4,352 impressions to 11 is the thing to explain. It may be the URL rename, it
+> may be the country filter restricting the named subset, or it may be real. Check the page under
+> both its old and new paths.
 
 ## tk_000010, priority 18.0, cluster cl_0014, cellar and drinks operations, SERP check
 

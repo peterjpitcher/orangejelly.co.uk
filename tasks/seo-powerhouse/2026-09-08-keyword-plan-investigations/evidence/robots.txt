@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /search-index.json
+
+Sitemap: https://www.orangejelly.co.uk/sitemap.xml
