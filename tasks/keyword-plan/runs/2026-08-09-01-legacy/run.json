@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-08-09T08:00:00+00:00",
+  "finalised_at": "",
+  "imports": {
+    "gkp": true
+  },
+  "interpreter": "python3",
+  "legacy": true,
+  "legacy_note": "Nine Keyword Planner discovery exports pulled by hand on 9 August 2026, migrated into the v2.1 workspace on 8 September 2026. The Search Console files of the same date are single-tab CSVs with no Chart or Filters tab, so they carry no window, country filter or property totals and are NOT migrated: they cannot anchor a baseline and are kept as context in evidence/gsc-2026-08-09/ only. Declared as volumes pulls, not discovery: validate-run.py identified the layout as 'volumes' and each export returns exactly the submitted seeds, so the 9 August exercise measured demand for terms already chosen and never asked Google what else is searched. No discovery pull has ever been run against this site.",
+  "legacy_provenance": [
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_58_13.csv",
+      "pull_id": "gkp-volumes-01",
+      "sha256": "81b675c5a839ff51c85acb89a63a9567bd6ab9b27483b73aed8ce0ce541a016f"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_58_28.csv",
+      "pull_id": "gkp-volumes-02",
+      "sha256": "34ac12b2284d8f9d33df8034524f3ea49710ede4b73e770564608b52247fa0f8"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_58_42.csv",
+      "pull_id": "gkp-volumes-03",
+      "sha256": "8badcdae6bf8bf6baf5a3f9a1d87585d7c3a71a0c7d5e5dc70f5147bed7d9243"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_58_58.csv",
+      "pull_id": "gkp-volumes-04",
+      "sha256": "176dfdf256cc7203f631045ea50742ce4e95974c051b815273acf8bd54751df7"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_59_20.csv",
+      "pull_id": "gkp-volumes-05",
+      "sha256": "5781bca184f9c2f301969b483b02c4a04ac70d2fb7a1c267c2db94fa6fc7adb2"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_59_34.csv",
+      "pull_id": "gkp-volumes-06",
+      "sha256": "bd103fa8619d14d1b717b948b6e6205acc8c020db0b3c218f890a80659c5e55d"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 07_59_49.csv",
+      "pull_id": "gkp-volumes-07",
+      "sha256": "cf0e4972e3f0ed3cbd078e2840d09346c674027db728e2127efc04e196d590cc"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 08_00_05.csv",
+      "pull_id": "gkp-volumes-08",
+      "sha256": "87708c7c8f5f4529da377182b5109b5965c0d683c729afdb8b3aa7a5a2cc5e30"
+    },
+    {
+      "original_path": "evidence/gkp-2026-08-09/Keyword Stats 2026-08-09 at 08_00_19.csv",
+      "pull_id": "gkp-volumes-09",
+      "sha256": "ea48df212d08b2efbb88f349199986182ef52494ac22223a4214b0e6c43b4aef"
+    }
+  ],
+  "mode": "expansion",
+  "run_id": "2026-08-09-01-legacy",
+  "stage": "migrated",
+  "stage_history": [
+    {
+      "at": "2026-09-08T15:57:43+00:00",
+      "stage": "validated"
+    },
+    {
+      "at": "2026-09-08T15:57:46+00:00",
+      "stage": "imported"
+    }
+  ],
+  "status": "ok",
+  "supersedes": "",
+  "promotion_note": "keywords.csv, aliases.csv, demand-observations.csv and demand-monthly.csv were copied from this run's staged/ to the workspace root by hand on 8 September 2026. Normally only finalise-run.py writes to the root, but a legacy migration produces no diagnostics and no plan, so it cannot satisfy that script's preconditions. Promoting here means the setup run's demand gap list skips the 23 keywords already measured on 9 August 2026 and keeps the 44 that returned nothing eligible for a re-ask."
+}
