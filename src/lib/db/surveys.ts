@@ -325,3 +325,149 @@ export async function sweepSurveyContacts(now: Date = new Date()): Promise<Surve
 
   return { deleted: removed.count ?? 0 };
 }
+
+export interface AdminSurveyVolunteer {
+  name: string;
+  email: string;
+  businessName: string | null;
+  volunteeredFor: string[];
+  createdAt: string;
+  /** The volunteer's own answers, so Peter knows what they picked before he calls. */
+  answers: Record<string, Answer>;
+}
+
+export interface AdminSurvey {
+  survey: Survey;
+  previewToken: string;
+  openedAt: string | null;
+  closedAt: string | null;
+  /** Real responses only. Preview answers are counted separately. */
+  responses: number;
+  previewResponses: number;
+  tallies: TallyRow[];
+  /** Free-text answers per question key, newest first. */
+  texts: Record<string, Array<{ text: string; createdAt: string }>>;
+  /** Where real responses came from: utm_source, else the referring host, else "direct". */
+  sources: Array<{ source: string; responses: number }>;
+  volunteers: AdminSurveyVolunteer[];
+  /** True when the response read hit ADMIN_RESPONSE_LIMIT: texts and sources are partial. */
+  truncated: boolean;
+}
+
+/** Enough for any survey this site will run; the admin view says when it is reached. */
+export const ADMIN_RESPONSE_LIMIT = 5000;
+
+/**
+ * Everything the admin view shows about every survey. Personal data included, so
+ * this is reached only through /api/admin/surveys, behind requireAdmin.
+ */
+export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
+  const client = getSupabaseAdminClient();
+
+  const surveys = await client
+    .from('surveys')
+    .select(`${SURVEY_SELECT}, opened_at, closed_at, created_at`)
+    .order('created_at', { ascending: false });
+  if (surveys.error) throw new Error(`Could not list surveys: ${surveys.error.message}`);
+
+  const rows = (surveys.data ?? []) as unknown as Array<
+    SurveyRow & { opened_at: string | null; closed_at: string | null }
+  >;
+
+  return Promise.all(
+    rows.map(async (row): Promise<AdminSurvey> => {
+      const survey = mapSurveyRow(row);
+      const [responses, tallies, contacts] = await Promise.all([
+        client
+          .from('survey_responses')
+          .select('answers, is_preview, utm_source, referrer_host, created_at')
+          .eq('survey_id', row.id)
+          .order('created_at', { ascending: false })
+          .limit(ADMIN_RESPONSE_LIMIT),
+        client.rpc('survey_tallies', { p_survey_id: row.id }),
+        client
+          .from('survey_contacts')
+          .select(
+            'name, email, business_name, volunteered_for, created_at, survey_responses ( answers )'
+          )
+          .eq('survey_id', row.id)
+          .order('created_at', { ascending: false }),
+      ]);
+      if (responses.error) throw new Error(`Could not read responses: ${responses.error.message}`);
+      if (tallies.error) throw new Error(`Could not tally responses: ${tallies.error.message}`);
+      if (contacts.error) throw new Error(`Could not read volunteers: ${contacts.error.message}`);
+
+      const textKeys = survey.questions.filter((q) => q.kind === 'text').map((q) => q.key);
+      const texts: AdminSurvey['texts'] = Object.fromEntries(textKeys.map((key) => [key, []]));
+      const sourceCounts = new Map<string, number>();
+      let real = 0;
+      let preview = 0;
+
+      for (const response of (responses.data ?? []) as Array<{
+        answers: Record<string, Answer>;
+        is_preview: boolean;
+        utm_source: string | null;
+        referrer_host: string | null;
+        created_at: string;
+      }>) {
+        if (response.is_preview) {
+          preview += 1;
+          continue;
+        }
+        real += 1;
+        const source = response.utm_source ?? response.referrer_host ?? 'direct';
+        sourceCounts.set(source, (sourceCounts.get(source) ?? 0) + 1);
+        for (const key of textKeys) {
+          const value = response.answers[key];
+          if (typeof value === 'string' && value.trim()) {
+            texts[key].push({ text: value, createdAt: response.created_at });
+          }
+        }
+      }
+
+      const volunteers = (
+        (contacts.data ?? []) as unknown as Array<{
+          name: string;
+          email: string;
+          business_name: string | null;
+          volunteered_for: string[] | null;
+          created_at: string;
+          survey_responses: { answers: Record<string, Answer> } | null;
+        }>
+      ).map((contact) => ({
+        name: contact.name,
+        email: contact.email,
+        businessName: contact.business_name,
+        volunteeredFor: contact.volunteered_for ?? [],
+        createdAt: contact.created_at,
+        answers: contact.survey_responses?.answers ?? {},
+      }));
+
+      return {
+        survey,
+        previewToken: row.preview_token,
+        openedAt: row.opened_at,
+        closedAt: row.closed_at,
+        responses: real,
+        previewResponses: preview,
+        tallies: (
+          (tallies.data ?? []) as Array<{
+            question_key: string;
+            option_key: string;
+            picks: number | string;
+          }>
+        ).map((t) => ({
+          questionKey: t.question_key,
+          optionKey: t.option_key,
+          picks: Number(t.picks),
+        })),
+        texts,
+        sources: [...sourceCounts.entries()]
+          .map(([source, count]) => ({ source, responses: count }))
+          .sort((a, b) => b.responses - a.responses),
+        volunteers,
+        truncated: (responses.data?.length ?? 0) >= ADMIN_RESPONSE_LIMIT,
+      };
+    })
+  );
+}

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import AuthedNav from '@/components/admin/AuthedNav';
 import EnquiriesPanel from '@/components/admin/EnquiriesPanel';
+import SurveysPanel from '@/components/admin/SurveysPanel';
 import { Alert, Button, Field, Input, Stat, Tag } from '@/components/oj';
 import {
   readSession,
@@ -317,6 +318,8 @@ export default function AdminDashboard() {
               </div>
 
               <EnquiriesPanel />
+
+              <SurveysPanel />
 
               <section className={`mt-6 ${CARD}`}>
                 <h2 className={`text-lg ${PANEL_HEADING}`}>Recent newsletter signups</h2>
