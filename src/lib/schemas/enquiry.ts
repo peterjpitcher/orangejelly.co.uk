@@ -60,6 +60,15 @@ export const enquiryStep1Schema = z.object({
    * it and answers as though the submission worked.
    */
   subject: z.string().max(200).optional(),
+  /**
+   * Cloudflare Turnstile. Optional in the shape and required in effect: the server
+   * action refuses the enquiry without a token Cloudflare confirms. It is checked
+   * there rather than here so a missing token is a whole-form message with Peter's
+   * email beside it, not an error against a field nobody can see.
+   *
+   * 2048 is Cloudflare's documented maximum token length.
+   */
+  turnstileToken: z.string().max(2048).optional(),
 });
 
 export const ENQUIRY_ROLES = [

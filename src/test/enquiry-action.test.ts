@@ -5,6 +5,7 @@ import { ENQUIRY_INITIAL_STATE } from '@/lib/schemas/enquiry';
 import { storeEnquiryStep1, storeEnquiryStep2 } from '@/lib/db/enquiries';
 import { storeConversionEvent } from '@/lib/db/leads';
 import { sendLeadNotification } from '@/lib/email';
+import { verifyTurnstileToken } from '@/lib/turnstile';
 import type * as RateLimit from '@/lib/rate-limit';
 
 /**
@@ -30,6 +31,10 @@ vi.mock('@/lib/email', () => ({
   escapeHtml: (value: string) => value,
 }));
 
+vi.mock('@/lib/turnstile', () => ({
+  verifyTurnstileToken: vi.fn(),
+}));
+
 vi.mock('next/headers', () => ({
   headers: () => new Headers({ 'x-forwarded-for': '203.0.113.9' }),
 }));
@@ -51,6 +56,10 @@ const VALID = {
   company: 'Barton Reed',
   situation: 'Enquiries have halved since the spring and nobody can agree why.',
 };
+
+beforeEach(() => {
+  vi.mocked(verifyTurnstileToken).mockReset().mockResolvedValue({ success: true });
+});
 
 describe('submitEnquiry, step one', () => {
   beforeEach(() => {
@@ -121,7 +130,52 @@ describe('submitEnquiry, step one', () => {
     // Telling a bot it failed only teaches it. It gets the thank-you and no lead id,
     // so it is not walked through step two either.
     expect(storeEnquiryStep1).not.toHaveBeenCalled();
+    expect(verifyTurnstileToken).not.toHaveBeenCalled();
     expect(next).toEqual({ step: 'done' });
+  });
+
+  it("checks the token Cloudflare's widget wrote into the form, with the client IP", async () => {
+    await submitEnquiry(
+      ENQUIRY_INITIAL_STATE,
+      formData({ ...VALID, 'cf-turnstile-response': 'widget-token' })
+    );
+
+    expect(verifyTurnstileToken).toHaveBeenCalledWith('widget-token', '203.0.113.9');
+    expect(storeEnquiryStep1).toHaveBeenCalled();
+  });
+
+  /*
+   * Fails closed. Six spam enquiries in September came from something that never
+   * ran the page's JavaScript, which is exactly what this refuses. A person caught
+   * by it (JavaScript off, or Cloudflare down) must see that it failed and be
+   * given another way to reach Peter, never a thank-you for an enquiry that was
+   * not kept.
+   */
+  it('refuses the enquiry, keeps what was typed and offers the email, when the check fails', async () => {
+    vi.mocked(verifyTurnstileToken).mockResolvedValue({ success: false });
+    vi.mocked(sendLeadNotification).mockClear();
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const next = await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
+
+      expect(storeEnquiryStep1).not.toHaveBeenCalled();
+      expect(sendLeadNotification).not.toHaveBeenCalled();
+      expect(next.step).toBe(1);
+      expect(next.error).toMatch(/peter@orangejelly.co.uk/);
+      expect(next.values).toMatchObject({ email: 'sam@bartonreed.co.uk' });
+      // Visible on our side too, in the function logs.
+      expect(warn).toHaveBeenCalledWith('[enquiry] refused: the Turnstile check did not pass.');
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
+  it('sends an enquiry with no token to Cloudflare as empty, never as missing', async () => {
+    // What a script posting straight at the action sends. The verifier refuses an
+    // empty token, so it must arrive as one rather than slip past as undefined.
+    await submitEnquiry(ENQUIRY_INITIAL_STATE, formData(VALID));
+    expect(verifyTurnstileToken).toHaveBeenCalledWith('', '203.0.113.9');
   });
 
   it('keeps the form on step one when the row could not be written', async () => {

@@ -1,6 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ENQUIRY_INITIAL_STATE, type EnquiryFormState } from '@/lib/schemas/enquiry';
 import { EnquiryForm } from '@/components/oj/EnquiryForm';
@@ -44,7 +44,7 @@ describe('EnquiryForm, step one', () => {
     track.mockReset();
   });
 
-  it('posts through a real form element, so it works without JavaScript', () => {
+  it('posts through a real form element, not a click handler', () => {
     const { container } = render(<EnquiryForm />);
     // If step one were driven by an onClick handler it would be JavaScript-only, and
     // step one is the half that writes the lead.
@@ -106,6 +106,46 @@ describe('EnquiryForm, step one', () => {
   it('does not record anything before someone starts typing', () => {
     render(<EnquiryForm />);
     expect(track).not.toHaveBeenCalled();
+  });
+});
+
+/*
+ * The widget is mounted on first focus, not on page load, so a visitor who only
+ * reads the page makes no request to Cloudflare. Its script tag is the evidence:
+ * the widget appends it to the head the moment it mounts.
+ */
+describe('EnquiryForm, the bot check', () => {
+  const script = (): Element | null => document.getElementById('cf-turnstile-script');
+
+  beforeEach(() => {
+    currentState = ENQUIRY_INITIAL_STATE;
+    vi.stubEnv('NEXT_PUBLIC_TURNSTILE_SITE_KEY', 'test-site-key');
+  });
+
+  afterEach(() => {
+    script()?.remove();
+    vi.unstubAllEnvs();
+  });
+
+  it('loads nothing from Cloudflare until someone uses the form', async () => {
+    const user = userEvent.setup();
+    render(<EnquiryForm />);
+    expect(script()).toBeNull();
+
+    await user.click(screen.getByLabelText(/Your name/));
+    expect(script()).toHaveAttribute(
+      'src',
+      'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+    );
+  });
+
+  it('is there after a failed send even without a fresh focus, so a retry can pass', () => {
+    renderAt({
+      step: 1,
+      error: 'We could not confirm this came from a person.',
+      values: {},
+    });
+    expect(script()).not.toBeNull();
   });
 });
 

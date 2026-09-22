@@ -16,8 +16,8 @@ import { generateStaticMetadata } from '@/lib/metadata';
  * Everything here is deliberately limited to what the code actually does. The
  * processors named are the ones this repo genuinely calls: Supabase
  * (`src/lib/db`), Resend (`src/lib/email.ts`), Vercel (the host), Cloudflare
- * Turnstile (the poll-create bot check only, see the CSP note in
- * `src/middleware.ts`) and Google Tag Manager (site analytics, which
+ * Turnstile (the bot check on poll creation and the enquiry form, see the CSP
+ * note in `src/middleware.ts`) and Google Tag Manager (site analytics, which
  * `src/components/GoogleTagManager.tsx` switches off entirely on poll routes).
  * Do not add a processor here that the code does not use, and do not drop one it
  * does.
@@ -227,8 +227,9 @@ export default function PrivacyPage(): JSX.Element {
                 </li>
                 <li>
                   <strong>Cloudflare</strong>: its Turnstile check confirms a person, not a bot, is
-                  setting up a poll. It runs on the poll set-up form only, and never on the page
-                  where you answer a poll.
+                  setting up a poll or sending an enquiry. It runs on the poll set-up form, and on
+                  the enquiry form once you start filling it in. It never runs on the page where you
+                  answer a poll.
                 </li>
                 <li>
                   <strong>Google</strong>: analytics on the marketing pages, never on poll pages.

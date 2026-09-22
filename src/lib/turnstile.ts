@@ -10,7 +10,7 @@
  * and a proxy pool defeats a per-IP limit outright. Turnstile is what makes the
  * IP bucket mean something.
  *
- * Gates poll creation only: no other form on the site uses it.
+ * Gates poll creation and the enquiry form. No other form on the site uses it.
  */
 
 const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
@@ -39,8 +39,9 @@ interface SiteverifyResponse {
  * one, which is the whole property Turnstile provides.
  *
  * Returns `{ success: false }` on an unset secret, a network error, a non-200, a
- * malformed body, or a timeout. Callers fail closed on all of them: refusing to
- * create a poll is recoverable, and an unthrottled endpoint that sends mail on a
+ * malformed body, a timeout or an empty token. Callers fail closed on all of
+ * them: refusing a poll or an enquiry is recoverable (the enquiry form offers
+ * Peter's email instead), and an unthrottled endpoint that sends mail on a
  * shared sending domain is not.
  *
  * @param token    The `cf-turnstile-response` value from the widget.
@@ -55,14 +56,20 @@ export async function verifyTurnstileToken(
 
   if (!secret) {
     // Local development escape, gated identically to the rate limiter (SPEC
-    // §3.4.3) so a fresh clone can still create a poll. NODE_ENV is 'production'
+    // §3.4.3) so a fresh clone can still use both forms. NODE_ENV is 'production'
     // on every Vercel deployment including previews, so this cannot be switched
     // on from the dashboard.
     if (process.env.NODE_ENV !== 'production') {
-      console.warn('[polls] Turnstile not configured, allowing in development.');
+      console.warn('[turnstile] Not configured, allowing in development.');
       return { success: true };
     }
-    console.error('[polls] Turnstile unavailable, refusing to create.');
+    console.error('[turnstile] Unavailable: no secret key, refusing.');
+    return { success: false };
+  }
+
+  // An empty token cannot pass, so there is no point spending a round trip
+  // asking Cloudflare. It is also what a script that never ran the widget sends.
+  if (!token) {
     return { success: false };
   }
 
@@ -82,7 +89,7 @@ export async function verifyTurnstileToken(
     });
 
     if (!response.ok) {
-      console.error('[polls] Turnstile unavailable, refusing to create.', response.status);
+      console.error('[turnstile] Unavailable, refusing.', response.status);
       return { success: false };
     }
 
@@ -92,7 +99,7 @@ export async function verifyTurnstileToken(
     // literal true (absent, truthy-but-not-true, an error payload) is a failure.
     return { success: json.success === true };
   } catch (error) {
-    console.error('[polls] Turnstile unavailable, refusing to create.', error);
+    console.error('[turnstile] Unavailable, refusing.', error);
     return { success: false };
   }
 }

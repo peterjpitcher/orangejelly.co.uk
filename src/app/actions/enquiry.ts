@@ -34,12 +34,20 @@ import {
   enquiryStep1Schema,
   enquiryStep2Schema,
 } from '@/lib/schemas/enquiry';
+import { verifyTurnstileToken } from '@/lib/turnstile';
 
 /**
  * The enquiry server actions.
  *
  * @see tasks/repositioning/SUB-SPECS.md part 1
  */
+
+/**
+ * One message for a failed check and an unavailable one. A bot learns nothing
+ * from it, and a person is given a way through either way.
+ */
+const TURNSTILE_FAILED_MESSAGE =
+  'We could not confirm this came from a person. Please try again, or email peter@orangejelly.co.uk.';
 
 export interface EnquiryStep1Result {
   success?: true;
@@ -111,13 +119,34 @@ export async function submitEnquiryStep1(input: unknown): Promise<EnquiryStep1Re
   }
 
   const source = cleanEnquirySource((input as { leadSource?: unknown })?.leadSource);
+  const ip = getClientIp(headers());
+
+  /*
+   * Cloudflare Turnstile, added 22 September 2026 on the owner's instruction.
+   *
+   * The honeypot was not enough. Between 4 and 21 September it let through six
+   * spam enquiries: SEO sales pitches and two links to scam sites. None of them
+   * carried a landing page, which the browser fills in, so they were posted by
+   * something that never ran the page's JavaScript. Turnstile needs the widget to
+   * have run, so a script posting straight at this action has no token and stops
+   * here.
+   *
+   * FAIL CLOSED, before the limiter for the same reason as poll creation: the
+   * limiter is keyed per IP and a proxy pool walks straight past it. The cost is
+   * that a person with JavaScript switched off can no longer send the form, so the
+   * message gives them Peter's email, and the form says so before they start.
+   */
+  const turnstile = await verifyTurnstileToken(data.turnstileToken ?? '', ip);
+  if (!turnstile.success) {
+    console.warn('[enquiry] refused: the Turnstile check did not pass.');
+    return { error: TURNSTILE_FAILED_MESSAGE };
+  }
 
   // FAIL CLOSED. This action sends mail and writes personal data, so an
   // unavailable limiter must not degrade to unlimited. That is the opposite of the
   // poll actions, which fail open because being unable to vote is worse than being
   // rate limited.
   if (isRateLimitConfigured()) {
-    const ip = getClientIp(headers());
     const byIp = await checkRateLimit('enquiry_ip', hashKey(ip));
     if (!byIp.allowed) return { error: RATE_LIMIT_MESSAGE };
 
@@ -296,6 +325,8 @@ export async function submitEnquiry(
   const result = await submitEnquiryStep1({
     ...values,
     subject: text(formData, 'subject'),
+    // Cloudflare's widget writes this hidden input itself, inside the form.
+    turnstileToken: text(formData, 'cf-turnstile-response'),
     leadSource: leadSourceFrom(formData),
   });
 
