@@ -1,3 +1,5 @@
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Skeleton } from '@/components/oj';
 
 /**
@@ -12,12 +14,16 @@ import { Skeleton } from '@/components/oj';
  */
 export default function OrganiserLoading(): JSX.Element {
   return (
-    <div className="min-h-screen bg-oj-paper py-10">
-      <div className="page-shell space-y-8">
-        <Skeleton variant="text" lines={2} width="55%" />
-        <Skeleton variant="card" />
-        <Skeleton variant="card" />
-      </div>
+    // The results page's own shape: its ink hero, then the paper band the
+    // blocks will land on, so nothing jumps when the data arrives.
+    <div className="min-h-screen bg-oj-paper">
+      <BackOfficeHero eyebrow="poll results" title="one moment." />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="space-y-8">
+          <Skeleton variant="card" />
+          <Skeleton variant="card" />
+        </div>
+      </BackOfficeBand>
     </div>
   );
 }

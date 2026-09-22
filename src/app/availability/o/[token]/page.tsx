@@ -6,6 +6,8 @@ import type { Metadata } from 'next';
 
 import { Alert, Button, EmptyState } from '@/components/oj';
 import AuthedNav from '@/components/admin/AuthedNav';
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import BestOptionCard from '@/components/polls/organiser/best-option-card';
 import ClosePollControl from '@/components/polls/organiser/close-poll-control';
 import DeletePollControl from '@/components/polls/organiser/delete-poll-control';
@@ -128,21 +130,31 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
       <AuthedNav />
       {/* Rendered outside <Section>: Section.tsx applies `overflow-hidden`, which
           would clip the sticky headers and kill the horizontal scroll. */}
-      <main id="main-content" className="min-h-screen bg-oj-paper py-8">
+      <main id="main-content" className="min-h-screen bg-oj-paper">
+        {/* The poll's title is the organiser's own words, so the hero keeps its
+            case rather than lowercasing it the way it does a line we wrote. */}
+        <BackOfficeHero
+          eyebrow="poll results"
+          title={poll.title}
+          keepCase
+          intro={replyCountLine(responderCount)}
+        />
         {/*
-        One column, in flow. This was a 2fr/1fr grid with the card in the right
+        One band, in flow. This was a 2fr/1fr grid with the card in the right
         column, which floated it as an island beside a near-empty header column:
         a short title, a reply count, and a page of whitespace underneath. The
         card caps its own width instead, so it reads as the next thing to look
         at rather than furniture parked beside nothing.
-      */}
-        <div className="page-shell">
-          <div>
-            {/* Sentence case and no `.oj-display`: this is a tool screen, and the
-                heading is somebody's poll title rather than a marketing line. */}
-            <h1 className="text-3xl font-black tracking-[-0.02em] text-oj-ink">{poll.title}</h1>
-            <p className="mt-2 text-oj-ink-2">{replyCountLine(responderCount)}</p>
 
+        Paper, because the matrix's sticky headers and cream cells were drawn
+        against it. Rendered outside <Section>: Section.tsx applies
+        `overflow-hidden`, which would clip the sticky headers and kill the
+        horizontal scroll.
+      */}
+        <BackOfficeBand tone="paper" divider={false}>
+          {/* The first block in the band takes no top margin of its own: the band
+              already pads it. Whichever of these renders first is that block. */}
+          <div className="[&>*:first-child]:mt-0">
             {poll.status === 'closed' && (
               <Alert tone="info" role="status" className="mt-4" title="Closed">
                 Nobody can vote or change their answer.
@@ -187,120 +199,120 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
                 Build a fresh poll with different times.
               </Alert>
             )}
-          </div>
 
-          {showBest && (
-            <div className="max-w-xl">
-              <BestOptionCard
-                organiserToken={params.token}
-                optionKind={poll.option_kind}
-                best={best}
-                options={options}
-                responderCount={responderCount}
-              />
-            </div>
-          )}
+            {showBest && (
+              <div className="mt-6 max-w-xl">
+                <BestOptionCard
+                  organiserToken={params.token}
+                  optionKind={poll.option_kind}
+                  best={best}
+                  options={options}
+                  responderCount={responderCount}
+                />
+              </div>
+            )}
 
-          {isConfirmed && (
-            <div className="mt-6">
-              {/* There is no un-confirm control, and there will not be one:
+            {isConfirmed && (
+              <div className="mt-6">
+                {/* There is no un-confirm control, and there will not be one:
                 twenty people already hold the date. A fresh poll is the honest
                 route. */}
-              <Button variant="ghost" size="md" href="/availability/new">
-                Build a fresh poll
-              </Button>
-            </div>
-          )}
-        </div>
+                <Button variant="ghost" size="md" href="/availability/new">
+                  Build a fresh poll
+                </Button>
+              </div>
+            )}
+          </div>
 
-        <div className="page-shell mt-8 space-y-6">
-          {/* The share block renders above the matrix in EVERY state: the empty
+          <div className="mt-8 space-y-6">
+            {/* The share block renders above the matrix in EVERY state: the empty
             state is precisely when the organiser needs this link most. */}
-          <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
+            <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
 
-          {hasReplies ? (
-            <>
-              <ResultsTable
-                optionKind={poll.option_kind}
-                options={options}
-                participants={participants}
-                responses={responses}
-                attendance={view.attendance}
-                tallies={tallies}
-                confirmedOptionId={poll.confirmed_option_id}
-              />
-              <ResultsLegend />
+            {hasReplies ? (
+              <>
+                <ResultsTable
+                  optionKind={poll.option_kind}
+                  options={options}
+                  participants={participants}
+                  responses={responses}
+                  attendance={view.attendance}
+                  tallies={tallies}
+                  confirmedOptionId={poll.confirmed_option_id}
+                />
+                <ResultsLegend />
 
-              {/* Not rendered once confirmed: the matrix is a read-only record
+                {/* Not rendered once confirmed: the matrix is a read-only record
                 from that point, and `deleteResponse` refuses server-side too. */}
-              {!isConfirmed && (
-                <section
-                  aria-labelledby="remove-heading"
-                  className="border-t-1.5 border-oj-ink/20 pt-6"
-                >
-                  <h2
-                    id="remove-heading"
-                    className="text-lg font-black tracking-[-0.02em] text-oj-ink"
+                {!isConfirmed && (
+                  <section
+                    aria-labelledby="remove-heading"
+                    className="border-t-1.5 border-oj-ink/20 pt-6"
                   >
-                    Remove someone&rsquo;s answers
-                  </h2>
-                  <p className="mt-1 text-sm text-oj-ink-2">
-                    Deletes them and everything they answered. They can vote again with your
-                    team&rsquo;s link.
-                  </p>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {participants.map((participant) => (
-                      // Cream needs a rule to exist. Cream on paper is 1.05:1,
-                      // so a borderless chip is not a quiet chip, it is no chip
-                      // at all: the name floats loose beside a bordered button.
-                      // The soft ink rule is the same treatment the create
-                      // screen's unselected slots use, and it stays out of the
-                      // way of the ghost button's full-strength ink border.
-                      <li
-                        key={participant.id}
-                        className="flex items-center gap-2 rounded-oj border-1.5 border-oj-ink/20 bg-oj-cream px-2 py-1"
-                      >
-                        <span className="pl-1 text-sm font-semibold text-oj-ink">
-                          {participant.display_name}
-                        </span>
-                        <DeleteResponseControl
-                          organiserToken={params.token}
-                          participantId={participant.id}
-                          displayName={participant.display_name}
-                        />
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-            </>
-          ) : (
-            // Never an empty <tbody> with sticky headers: that is a confusing
-            // artefact, not an empty state.
-            <div>
-              {/* The heading stays outside the EmptyState, which renders its own
+                    <h2
+                      id="remove-heading"
+                      className="text-lg font-black tracking-[-0.02em] text-oj-ink"
+                    >
+                      Remove someone&rsquo;s answers
+                    </h2>
+                    <p className="mt-1 text-sm text-oj-ink-2">
+                      Deletes them and everything they answered. They can vote again with your
+                      team&rsquo;s link.
+                    </p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {participants.map((participant) => (
+                        // Cream needs a rule to exist. Cream on paper is 1.05:1,
+                        // so a borderless chip is not a quiet chip, it is no chip
+                        // at all: the name floats loose beside a bordered button.
+                        // The soft ink rule is the same treatment the create
+                        // screen's unselected slots use, and it stays out of the
+                        // way of the ghost button's full-strength ink border.
+                        <li
+                          key={participant.id}
+                          className="flex items-center gap-2 rounded-oj border-1.5 border-oj-ink/20 bg-oj-cream px-2 py-1"
+                        >
+                          <span className="pl-1 text-sm font-semibold text-oj-ink">
+                            {participant.display_name}
+                          </span>
+                          <DeleteResponseControl
+                            organiserToken={params.token}
+                            participantId={participant.id}
+                            displayName={participant.display_name}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+              </>
+            ) : (
+              // Never an empty <tbody> with sticky headers: that is a confusing
+              // artefact, not an empty state.
+              <div>
+                {/* The heading stays outside the EmptyState, which renders its own
                   title as a paragraph. That is right for a block on a page that
                   already has an h1, and it is right here too: this is a real
                   section of the page and wants a real h2. */}
-              <h2 className="mb-4 text-center text-xl font-black tracking-[-0.02em] text-oj-ink">
-                Nobody has voted yet
-              </h2>
-              <EmptyState
-                glyph="0"
-                body="Here’s your participant link again, and a nudge is usually all it takes."
-              />
-            </div>
-          )}
-
-          <div className="flex flex-col gap-4 border-t-1.5 border-oj-ink/20 pt-6 sm:flex-row sm:items-start sm:justify-between">
-            {/* Confirm stays available on a closed poll, so closing stays
-              reversible and non-destructive. */}
-            {!isConfirmed && (
-              <ClosePollControl organiserToken={params.token} isOpen={poll.status === 'open'} />
+                <h2 className="mb-4 text-center text-xl font-black tracking-[-0.02em] text-oj-ink">
+                  Nobody has voted yet
+                </h2>
+                <EmptyState
+                  glyph="0"
+                  body="Here’s your participant link again, and a nudge is usually all it takes."
+                />
+              </div>
             )}
-            <DeletePollControl organiserToken={params.token} pollTitle={poll.title} />
+
+            <div className="flex flex-col gap-4 border-t-1.5 border-oj-ink/20 pt-6 sm:flex-row sm:items-start sm:justify-between">
+              {/* Confirm stays available on a closed poll, so closing stays
+              reversible and non-destructive. */}
+              {!isConfirmed && (
+                <ClosePollControl organiserToken={params.token} isOpen={poll.status === 'open'} />
+              )}
+              <DeletePollControl organiserToken={params.token} pollTitle={poll.title} />
+            </div>
           </div>
-        </div>
+        </BackOfficeBand>
       </main>
     </>
   );

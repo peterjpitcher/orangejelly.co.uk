@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import BackOfficeBand, { CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Alert, Button } from '@/components/oj';
 import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
 
@@ -50,40 +52,25 @@ export default async function VerifyPage({ params }: VerifyPageProps): Promise<J
 }
 
 /**
- * The shell both outcomes sit in.
- *
- * It opens the `<main>` landmark itself. `MainGate` passes the tool routes
- * straight through without one, so before this the skip link at the top of every
- * page pointed at nothing on this screen and there was no main region to jump to.
- * The vote and 404 screens under /availability already carry their own.
+ * The frame both outcomes share: the ink hero, then the message on a paper band,
+ * the shape the public 404 takes. It used to be a centred column with a round
+ * tick or cross above the heading; the public pages carry no badge, and the
+ * alert's green or red rule and the heading already say which way it went.
  */
-function Outcome({ children }: { children: React.ReactNode }): JSX.Element {
+function Outcome({
+  title,
+  children,
+}: {
+  title: React.ReactNode;
+  children: React.ReactNode;
+}): JSX.Element {
   return (
-    <main id="main-content" className="py-14 md:py-20">
-      <div className="page-shell">
-        <div className="mx-auto max-w-md space-y-6 text-center">{children}</div>
-      </div>
+    <main id="main-content">
+      <BackOfficeHero eyebrow="confirm your email" title={title} />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="max-w-xl space-y-6">{children}</div>
+      </BackOfficeBand>
     </main>
-  );
-}
-
-/**
- * The outcome badge. Decoration: the meaning is carried by the H1 beneath it, so
- * the glyph is hidden from assistive technology.
- *
- * White on the deep orange is 5.24:1. The brand orange would be 2.97:1, which is
- * why the fill is never that one.
- */
-function OutcomeBadge({ glyph, tone }: { glyph: string; tone: 'ok' | 'danger' }): JSX.Element {
-  return (
-    <span
-      aria-hidden="true"
-      className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full border-1.5 border-oj-ink text-2xl shadow-press-sm ${
-        tone === 'ok' ? 'bg-oj-orange-deep text-oj-on-band' : 'bg-oj-cream-2 text-oj-danger'
-      }`}
-    >
-      {glyph}
-    </span>
   );
 }
 
@@ -104,7 +91,7 @@ function LinkBlock({
   url: string;
 }): JSX.Element {
   return (
-    <div className="rounded-oj border-1.5 border-oj-ink bg-oj-cream p-4 text-left shadow-press-sm">
+    <div className={CARD_ON_PAPER}>
       <p className="oj-eyebrow m-0">{label}</p>
       {note ? <p className="mt-2 text-[14px] leading-normal text-oj-ink-2">{note}</p> : null}
       <p className="mt-2 select-all break-all font-mono text-[14px] leading-normal text-oj-ink">
@@ -117,13 +104,8 @@ function LinkBlock({
 /** Success. Renders both links, clearly separated and labelled. */
 function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
   return (
-    <Outcome>
-      <OutcomeBadge glyph="✓" tone="ok" />
-      <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
-        You&apos;re all set
-      </h1>
-
-      <Alert tone="ok" role="status" title="Your poll is live" className="text-left">
+    <Outcome title="you're all set.">
+      <Alert tone="ok" role="status" title="Your poll is live">
         Share the link below with your team. They don&apos;t need an account, they just tap three
         buttons and they&apos;re done.
       </Alert>
@@ -156,13 +138,8 @@ function SuccessOutcome({ links }: { links: PollLinks }): JSX.Element {
  */
 function InvalidOutcome(): JSX.Element {
   return (
-    <Outcome>
-      <OutcomeBadge glyph="✕" tone="danger" />
-      <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
-        That link didn&apos;t work
-      </h1>
-
-      <Alert tone="danger" title="We couldn't confirm your email" className="text-left">
+    <Outcome title="that link didn't work.">
+      <Alert tone="danger" title="We couldn't confirm your email">
         Confirmation links work once and last a day. If you&apos;ve already used it, your links are
         in the email we sent straight afterwards. Otherwise, set up a new poll.
       </Alert>

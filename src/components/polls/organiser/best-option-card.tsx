@@ -1,6 +1,4 @@
-import Card from '@/components/Card';
-import Heading from '@/components/Heading';
-import Text from '@/components/Text';
+import { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
 import type { OptionTally } from '@/lib/poll-aggregate';
 import type { PollOptionRow } from '@/lib/db/polls';
 import type { OptionKind } from '@/components/polls/vote/poll-display';
@@ -63,16 +61,14 @@ export default function BestOptionCard({
         )}% said if need be`;
 
   return (
-    <Card variant="bordered" padding="medium" className="mt-6">
-      <Heading level={2} className="text-xl">
-        Best so far
-      </Heading>
-      <Text className="mt-2 font-semibold">
+    // The back office's raised block. Its spacing belongs to the page, which
+    // knows whether a status alert sits above it.
+    <div className={CARD_ON_PAPER}>
+      <h2 className={`text-xl ${BLOCK_HEADING}`}>Best so far</h2>
+      <p className="mt-2 font-bold text-oj-ink">
         {optionKind === 'slots' ? `${label} UK time` : label}
-      </Text>
-      <Text size="sm" color="muted" className="mt-1">
-        {statLine}.
-      </Text>
+      </p>
+      <p className="mt-1 text-sm text-oj-ink-2">{statLine}.</p>
 
       <ConfirmControl
         organiserToken={organiserToken}
@@ -88,12 +84,12 @@ export default function BestOptionCard({
           and those render as outline buttons: subordinate to the leader's, not
           three identical slabs of orange competing for the same click. */}
       {best.length > 1 && (
-        <div className="mt-5 border-t border-brand-base/15 pt-4">
-          <Text size="sm" color="muted">
+        <div className="mt-5 border-t border-oj-ink/20 pt-4">
+          <p className="text-sm text-oj-ink-2">
             {best.length === 2
               ? 'One more is level with it. Pick whichever suits you:'
               : `${best.length - 1} more are level with it. Pick whichever suits you:`}
-          </Text>
+          </p>
           <ul className="mt-3 space-y-4">
             {best.slice(1).map((tally) => {
               const option = optionById.get(tally.option_id);
@@ -103,9 +99,7 @@ export default function BestOptionCard({
 
               return (
                 <li key={tally.option_id}>
-                  <Text size="sm" className="font-medium">
-                    {display}
-                  </Text>
+                  <p className="text-sm font-semibold text-oj-ink">{display}</p>
                   <ConfirmControl
                     organiserToken={organiserToken}
                     optionId={tally.option_id}
@@ -120,6 +114,6 @@ export default function BestOptionCard({
           </ul>
         </div>
       )}
-    </Card>
+    </div>
   );
 }
