@@ -57,20 +57,6 @@ export function answerLabel(state: CellState): string {
   }
 }
 
-/** The cell fill. Reinforces the glyph; never carries meaning on its own. */
-export function cellClass(state: CellState): string {
-  switch (state) {
-    case 'yes':
-      return 'bg-orange-light text-brand-base';
-    case 'if_need_be':
-      return 'bg-surface-alt text-brand-base';
-    case 'no':
-      return 'bg-surface text-brand-base-light';
-    default:
-      return 'text-brand-base-light';
-  }
-}
-
 /**
  * The column header's two lines.
  *
