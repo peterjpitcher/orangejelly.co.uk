@@ -100,7 +100,11 @@ Each lands green (lint, type-check, tests, build) and is committed on its own.
 ## Going live
 
 1. Apply `20260922120000_surveys.sql` to production (before the code, or /survey and the
-   cron will error on a missing table).
+   cron will error on a missing table). **Done 22 September 2026**: applied to
+   `miqqkllqfyvaomzgujed` through the Supabase MCP as history version `20260922113213 surveys`
+   (repo file checksum `097e2fc0…aec9f`). Verified: RLS on all five tables, no anon or
+   authenticated grants, functions executable by service_role only, and a rolled-back smoke
+   test of every function path.
 2. Merge and deploy.
 3. `npx tsx scripts/survey-to-sql.ts content/surveys/pub-apps.json` and run the output against
    production. It lands as `draft`.
