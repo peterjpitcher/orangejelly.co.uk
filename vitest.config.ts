@@ -11,9 +11,16 @@ import path from 'path';
  * platform with no extra dependency. It is a default, not an override: a TZ given on
  * the command line wins, which is how `test:utc` gets UTC. An empty TZ counts as
  * unset, because Node would otherwise read it as UTC. The test workers are started
- * after this runs and inherit it.
+ * after this runs and inherit both variables.
+ *
+ * REQUESTED_TEST_TZ keeps the zone the command line asked for (empty for none), so
+ * src/test/timezone-gate.test.ts can check that the zone asked for is the zone the
+ * suite really ran in. Without that check, a config that overrode TZ instead of
+ * defaulting it would run both scripts in London and still report green.
  */
-process.env.TZ ||= 'Europe/London';
+const requestedTimeZone = process.env.TZ || '';
+process.env.REQUESTED_TEST_TZ = requestedTimeZone;
+process.env.TZ = requestedTimeZone || 'Europe/London';
 
 export default defineConfig({
   plugins: [react()],
