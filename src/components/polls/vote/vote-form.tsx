@@ -1,10 +1,9 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Button from '@/components/Button';
-import Text from '@/components/Text';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Loader2 } from 'lucide-react';
+import { CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import { Alert, Button, Field, Input } from '@/components/oj';
 import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
 import { submitResponse } from '@/app/actions/poll-responses';
 import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
@@ -133,20 +132,18 @@ export default function VoteForm({
 
   if (emptyPoll) {
     return (
-      <div className="rounded-lg border-2 border-brand-base/15 bg-white p-6" role="status">
-        <Text color="muted">
+      <div className={CARD_ON_PAPER} role="status">
+        <p className="text-oj-ink-2">
           This poll has no times on it yet. {organiserName} will need to add some before you can
           answer.
-        </Text>
+        </p>
       </div>
     );
   }
 
   return (
     <form className="space-y-4" noValidate onSubmit={handleSubmit}>
-      <Text size="sm" color="muted">
-        {formatReplyCount(responderCount)}
-      </Text>
+      <p className="text-sm text-oj-ink-2">{formatReplyCount(responderCount)}</p>
 
       <div className="space-y-4">
         {options.map((option) => (
@@ -165,42 +162,42 @@ export default function VoteForm({
         ))}
       </div>
 
-      <div className="space-y-4 rounded-lg border-2 border-brand-base/15 bg-white p-4">
-        <div>
-          <Label htmlFor="poll-name">
-            Your name <span aria-hidden="true">*</span>
-            <span className="sr-only">(required)</span>
-          </Label>
+      <div className={`space-y-4 ${CARD_ON_PAPER}`}>
+        {/* The design system's Field and Input, as on the create form. Field
+            carries the orange asterisk and the "(required)" for the name; the
+            email label keeps its literal asterisk and no required attribute,
+            exactly as before. */}
+        <Field label="Your name" htmlFor="poll-name" required>
           <Input
             id="poll-name"
             name="displayName"
-            className="mt-1 h-11"
-            required
             autoComplete="name"
             maxLength={50}
             value={displayName}
             onChange={(event) => setDisplayName(event.target.value)}
           />
-        </div>
+        </Field>
 
-        <div>
-          <Label htmlFor="poll-email">Your email *</Label>
+        <Field
+          label="Your email *"
+          htmlFor="poll-email"
+          hint={
+            <>
+              So we can tell you the time once it&rsquo;s picked, and send you the calendar invite.
+              That&rsquo;s the only thing it&rsquo;s used for.
+            </>
+          }
+        >
           <Input
             id="poll-email"
             name="email"
             type="email"
-            className="mt-1 h-11"
             autoComplete="email"
             maxLength={254}
-            aria-describedby="poll-email-help"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
-          <Text size="sm" color="muted" className="mt-1" id="poll-email-help">
-            So we can tell you the time once it&rsquo;s picked, and send you the calendar invite.
-            That&rsquo;s the only thing it&rsquo;s used for.
-          </Text>
-        </div>
+        </Field>
 
         {/* Honeypot. Hidden from people, irresistible to bots. Not `display:none`
             on the field alone (some bots skip those), and never tab-reachable. */}
@@ -228,20 +225,28 @@ export default function VoteForm({
         className="focus-visible:outline-none"
         role="alert"
       >
+        {/* The wrapper above already announces, so the Alert drops its own role
+            rather than reading the error out twice. */}
         {error && (
-          <div className="rounded-lg border-2 border-destructive bg-white p-3">
-            <Text size="sm" className="font-medium text-destructive">
-              {error}
-            </Text>
-          </div>
+          <Alert tone="danger" role={undefined}>
+            {error}
+          </Alert>
         )}
       </div>
 
       <div
-        className="sticky bottom-0 z-50 -mx-4 border-t border-brand-base/15 bg-white/95 px-4 pt-3 backdrop-blur"
+        className="sticky bottom-0 z-50 -mx-4 border-t-1.5 border-oj-ink bg-oj-paper/95 px-4 pt-3 backdrop-blur"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
-        <Button type="submit" variant="primary" size="large" fullWidth loading={submitting}>
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          className="w-full"
+          disabled={submitting}
+          aria-busy={submitting || undefined}
+        >
+          {submitting && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
           {submitting ? 'Sending your answer' : 'Send my answer'}
         </Button>
       </div>

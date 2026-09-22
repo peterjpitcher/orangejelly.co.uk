@@ -1,10 +1,9 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Button from '@/components/Button';
-import Text from '@/components/Text';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Loader2 } from 'lucide-react';
+import { CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import { Alert, Button, Field, Input } from '@/components/oj';
 import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
 import { updateResponse } from '@/app/actions/poll-responses';
 import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
@@ -157,12 +156,8 @@ export default function EditAnswersForm({
   if (readOnly) {
     return (
       <div className="space-y-4">
-        <Text size="sm" color="muted">
-          {formatReplyCount(responderCount)}
-        </Text>
-        <Text size="sm" color="muted">
-          These are the answers you gave.
-        </Text>
+        <p className="text-sm text-oj-ink-2">{formatReplyCount(responderCount)}</p>
+        <p className="text-sm text-oj-ink-2">These are the answers you gave.</p>
         {cards}
       </div>
     );
@@ -170,29 +165,23 @@ export default function EditAnswersForm({
 
   return (
     <form className="space-y-4" noValidate onSubmit={handleSubmit}>
-      <Text size="sm" color="muted">
-        {formatReplyCount(responderCount)}
-      </Text>
+      <p className="text-sm text-oj-ink-2">{formatReplyCount(responderCount)}</p>
 
       {cards}
 
-      <div className="space-y-4 rounded-lg border-2 border-brand-base/15 bg-white p-4">
-        <div>
-          <Label htmlFor="poll-name">
-            Your name <span aria-hidden="true">*</span>
-            <span className="sr-only">(required)</span>
-          </Label>
+      <div className={`space-y-4 ${CARD_ON_PAPER}`}>
+        {/* Field carries the orange asterisk, the "(required)" and the required
+            attribute, which the hand-built label and input here each did by hand. */}
+        <Field label="Your name" htmlFor="poll-name" required>
           <Input
             id="poll-name"
             name="displayName"
-            className="mt-1 h-11"
-            required
             autoComplete="name"
             maxLength={50}
             value={displayName}
             onChange={(event) => setDisplayName(event.target.value)}
           />
-        </div>
+        </Field>
 
         <div
           aria-hidden="true"
@@ -212,39 +201,49 @@ export default function EditAnswersForm({
       </div>
 
       <div ref={errorRef} tabIndex={-1} aria-live="assertive" role="alert">
+        {/* The wrapper already announces, so the Alert drops its own role. */}
         {error && (
-          <div className="rounded-lg border-2 border-destructive bg-white p-3">
-            <Text size="sm" className="font-medium text-destructive">
-              {error}
-            </Text>
-          </div>
+          <Alert tone="danger" role={undefined}>
+            {error}
+          </Alert>
         )}
       </div>
 
       {updated && (
         <div
-          className="rounded-lg border-2 border-orange bg-orange-light p-4"
+          // Peach, the one warm fill that carries ink at full contrast, with the
+          // block's ink border and hard shadow: the same success block the vote
+          // screen shows once an answer is in.
+          className={'rounded-oj border-1.5 border-oj-ink bg-oj-peach p-5 shadow-press-sm'}
           role="status"
           aria-live="polite"
         >
           <h2
             ref={successRef}
             tabIndex={-1}
-            className="text-lg font-semibold text-brand-base focus-visible:outline-none"
+            className="font-oj text-lg font-black tracking-[-0.02em] text-oj-ink focus-visible:outline-none"
           >
             Updated
           </h2>
-          <Text size="sm" color="brand-base" className="mt-1">
+          <p className="mt-1 text-sm text-oj-ink">
             That&rsquo;s your answers changed. This link still works if you need to come back.
-          </Text>
+          </p>
         </div>
       )}
 
       <div
-        className="sticky bottom-0 z-50 -mx-4 border-t border-brand-base/15 bg-white/95 px-4 pt-3 backdrop-blur"
+        className="sticky bottom-0 z-50 -mx-4 border-t-1.5 border-oj-ink bg-oj-paper/95 px-4 pt-3 backdrop-blur"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
-        <Button type="submit" variant="primary" size="large" fullWidth loading={submitting}>
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          className="w-full"
+          disabled={submitting}
+          aria-busy={submitting || undefined}
+        >
+          {submitting && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
           {submitting ? 'Updating your answers' : 'Update my answers'}
         </Button>
       </div>

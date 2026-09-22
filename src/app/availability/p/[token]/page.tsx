@@ -6,6 +6,7 @@ import OptionResults from '@/components/polls/vote/option-results';
 import PollHeader from '@/components/polls/vote/poll-header';
 import PollPrivacyNotice from '@/components/polls/vote/privacy-notice';
 import { formatOptionLabel, type TallyCounts } from '@/components/polls/vote/poll-display';
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
 import { Alert } from '@/components/oj';
 import { canVote } from '@/lib/poll-state';
 
@@ -73,65 +74,68 @@ export default async function VotePage({ params }: VotePageProps): Promise<JSX.E
     : undefined;
 
   return (
-    // The ground is painted once, by the segment layout. This sets rhythm only.
-    <main id="main-content" className="py-10 sm:py-14">
-      <div className="page-shell space-y-6">
-        <PollHeader
-          title={poll.title}
-          organiserName={poll.organiser_name}
-          description={poll.description}
-          location={poll.location}
-          agenda={poll.agenda}
-        />
+    // The poll's own title and details open on the ink hero, as every public
+    // reading page does; the answering happens on the paper band below it.
+    <main id="main-content">
+      <PollHeader
+        title={poll.title}
+        organiserName={poll.organiser_name}
+        description={poll.description}
+        location={poll.location}
+        agenda={poll.agenda}
+      />
 
-        {/* The heading stays an <h2> inside the Alert rather than moving to the
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="space-y-6">
+          {/* The heading stays an <h2> inside the Alert rather than moving to the
             component's `title` prop, which renders a <p>: it is a real section
             heading under the poll title and a screen-reader user navigates by it. */}
-        {poll.status === 'confirmed' && confirmedOption && (
-          <Alert tone="ok" role="status">
-            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
-              Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
-            </h2>
-            <p className="mt-1 text-oj-ink-2">This time is confirmed. The voting is done.</p>
-          </Alert>
-        )}
+          {poll.status === 'confirmed' && confirmedOption && (
+            <Alert tone="ok" role="status">
+              <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
+                Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
+              </h2>
+              <p className="mt-1 text-oj-ink-2">This time is confirmed. The voting is done.</p>
+            </Alert>
+          )}
 
-        {/* `closed` and a passed deadline read the same to a participant: replies
+          {/* `closed` and a passed deadline read the same to a participant: replies
             are over and the organiser is deciding. The distinction between the two
             is the organiser's, and it is not this screen's to explain. */}
-        {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
-          <Alert tone="info" role="status">
-            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
-              Voting has closed
-            </h2>
-            <p className="mt-1 text-oj-ink-2">{poll.organiser_name} is picking a time.</p>
-          </Alert>
-        )}
+          {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
+            <Alert tone="info" role="status">
+              <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
+                Voting has closed
+              </h2>
+              <p className="mt-1 text-oj-ink-2">{poll.organiser_name} is picking a time.</p>
+            </Alert>
+          )}
 
-        {open && (
-          <>
-            <VoteForm
-              participantToken={params.token}
+          {open && (
+            <>
+              <VoteForm
+                participantToken={params.token}
+                optionKind={poll.option_kind}
+                options={options}
+                tallies={tallyMap}
+                responderCount={responderCount}
+                organiserName={poll.organiser_name}
+              />
+              <PollPrivacyNotice organiserName={poll.organiser_name} />
+            </>
+          )}
+
+          {!open && (
+            <OptionResults
               optionKind={poll.option_kind}
               options={options}
               tallies={tallyMap}
               responderCount={responderCount}
-              organiserName={poll.organiser_name}
+              confirmedOptionId={poll.confirmed_option_id}
             />
-            <PollPrivacyNotice organiserName={poll.organiser_name} />
-          </>
-        )}
-
-        {!open && (
-          <OptionResults
-            optionKind={poll.option_kind}
-            options={options}
-            tallies={tallyMap}
-            responderCount={responderCount}
-            confirmedOptionId={poll.confirmed_option_id}
-          />
-        )}
-      </div>
+          )}
+        </div>
+      </BackOfficeBand>
     </main>
   );
 }

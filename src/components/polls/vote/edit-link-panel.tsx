@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Text from '@/components/Text';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/oj';
 
 /**
  * The success state, and the ONLY delivery of the edit link.
@@ -45,53 +44,43 @@ export default function EditLinkPanel({ editUrl }: EditLinkPanelProps): JSX.Elem
 
   return (
     <div
-      className="rounded-lg border-2 border-orange bg-orange-light p-5"
+      // Peach with the block's ink border and hard shadow: the success block, the
+      // same one the edit screen shows after an update.
+      className="rounded-oj border-1.5 border-oj-ink bg-oj-peach p-5 shadow-press-sm"
       role="status"
       aria-live="polite"
     >
       <h2
         ref={headingRef}
         tabIndex={-1}
-        className="text-xl font-semibold text-brand-base focus-visible:outline-none"
+        className="font-oj text-xl font-black tracking-[-0.02em] text-oj-ink focus-visible:outline-none"
       >
         That&rsquo;s your answer in, thank you
       </h2>
 
       {editUrl === '' ? (
-        <Text className="mt-2" color="brand-base">
-          Thanks for answering.
-        </Text>
+        <p className="mt-2 text-oj-ink">Thanks for answering.</p>
       ) : (
         <>
-          <Text className="mt-2" color="brand-base">
+          <p className="mt-2 text-oj-ink">
             Keep this link if you need to change your answer. It&rsquo;s the only copy: if you lose
             it, just answer again and let the organiser know.
-          </Text>
+          </p>
 
-          <div className="mt-4 rounded-md border border-brand-base/20 bg-white p-3">
+          <div className="mt-4 rounded-oj border-1.5 border-oj-ink/20 bg-oj-paper p-3">
             <a
-              className="block break-all text-sm font-medium text-brand-base underline hover:no-underline"
+              className="block break-all text-sm font-semibold text-oj-ink underline hover:no-underline"
               href={editUrl}
             >
               {editUrl}
             </a>
           </div>
 
-          <button
-            type="button"
-            onClick={copy}
-            className={cn(
-              'mt-3 inline-flex min-h-tap items-center justify-center rounded-md border-2 px-4 py-2',
-              'text-sm font-semibold transition-colors',
-              'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-              'focus-visible:outline-brand-base',
-              copied
-                ? 'border-brand-base bg-surface-alt text-brand-base'
-                : 'border-brand-base bg-white text-brand-base hover:bg-surface'
-            )}
-          >
+          {/* The design system's ghost button, which brings the ink outline and
+              focus ring the hand-built one here spelt out in the old palette. */}
+          <Button variant="ghost" size="md" type="button" onClick={copy} className="mt-3">
             {copied ? '✓ Link copied' : 'Copy link'}
-          </button>
+          </Button>
         </>
       )}
     </div>

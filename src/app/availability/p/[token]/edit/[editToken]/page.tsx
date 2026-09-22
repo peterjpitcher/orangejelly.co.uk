@@ -4,6 +4,7 @@ import { getEditView } from '../../../poll-data';
 import EditAnswersForm from '@/components/polls/vote/edit-answers-form';
 import PollHeader from '@/components/polls/vote/poll-header';
 import { formatOptionLabel, type TallyCounts } from '@/components/polls/vote/poll-display';
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
 import { Alert } from '@/components/oj';
 import { canEditResponse } from '@/lib/poll-state';
 
@@ -65,60 +66,64 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
     : undefined;
 
   return (
-    // The ground is painted once, by the segment layout. This sets rhythm only.
-    <main id="main-content" className="py-10 sm:py-14">
-      <div className="page-shell space-y-6">
-        <PollHeader
-          title={poll.title}
-          organiserName={poll.organiser_name}
-          description={poll.description}
-          location={poll.location}
-          agenda={poll.agenda}
-          subline={
-            editable
-              ? `You're updating your answers. ${poll.organiser_name} will see the change straight away.`
-              : undefined
-          }
-        />
+    // The poll's own title and details open on the ink hero, as every public
+    // reading page does; the answering happens on the paper band below it.
+    <main id="main-content">
+      <PollHeader
+        eyebrow="change your answer"
+        title={poll.title}
+        organiserName={poll.organiser_name}
+        description={poll.description}
+        location={poll.location}
+        agenda={poll.agenda}
+        subline={
+          editable
+            ? `You're updating your answers. ${poll.organiser_name} will see the change straight away.`
+            : undefined
+        }
+      />
 
-        {/* The heading stays an <h2> inside the Alert rather than moving to the
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="space-y-6">
+          {/* The heading stays an <h2> inside the Alert rather than moving to the
             component's `title` prop, which renders a <p>: it is a real section
             heading under the poll title and a screen-reader user navigates by it. */}
-        {poll.status === 'confirmed' && confirmedOption && (
-          <Alert tone="ok" role="status">
-            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
-              Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
-            </h2>
-            <p className="mt-1 text-oj-ink-2">The time is picked, so answers are locked.</p>
-          </Alert>
-        )}
+          {poll.status === 'confirmed' && confirmedOption && (
+            <Alert tone="ok" role="status">
+              <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
+                Confirmed for {formatOptionLabel(confirmedOption, poll.option_kind)} UK time
+              </h2>
+              <p className="mt-1 text-oj-ink-2">The time is picked, so answers are locked.</p>
+            </Alert>
+          )}
 
-        {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
-          <Alert tone="info" role="status">
-            <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
-              This poll is closed, so answers are locked
-            </h2>
-            <p className="mt-1 text-oj-ink-2">{poll.organiser_name} is picking a time.</p>
-          </Alert>
-        )}
+          {(poll.status === 'closed' || (pastDeadline && poll.status === 'open')) && (
+            <Alert tone="info" role="status">
+              <h2 className="m-0 text-[19px] font-black leading-snug tracking-[-0.02em] text-oj-ink">
+                This poll is closed, so answers are locked
+              </h2>
+              <p className="mt-1 text-oj-ink-2">{poll.organiser_name} is picking a time.</p>
+            </Alert>
+          )}
 
-        {/* Locked or not, the same component renders the same answers: the
+          {/* Locked or not, the same component renders the same answers: the
             read-only mode simply offers no way to change them, and drops the
             Update control entirely rather than disabling it (§1 P2.6).
             `updateResponse` re-reads `status` server-side regardless: a missing
             control is a courtesy, not a defence. */}
-        <EditAnswersForm
-          editToken={params.editToken}
-          optionKind={poll.option_kind}
-          options={options}
-          tallies={tallyMap}
-          responderCount={responderCount}
-          initialAnswers={answers}
-          initialAttendance={attendance}
-          initialDisplayName={displayName}
-          readOnly={!editable}
-        />
-      </div>
+          <EditAnswersForm
+            editToken={params.editToken}
+            optionKind={poll.option_kind}
+            options={options}
+            tallies={tallyMap}
+            responderCount={responderCount}
+            initialAnswers={answers}
+            initialAttendance={attendance}
+            initialDisplayName={displayName}
+            readOnly={!editable}
+          />
+        </div>
+      </BackOfficeBand>
     </main>
   );
 }
