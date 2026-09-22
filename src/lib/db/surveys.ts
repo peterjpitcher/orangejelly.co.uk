@@ -1,0 +1,491 @@
+import { timingSafeEqual } from 'crypto';
+import { getSupabaseAdminClient, isSupabaseAdminConfigured } from './supabase-admin';
+import type {
+  Answer,
+  QuestionKind,
+  Survey,
+  SurveyQuestion,
+  SurveyStatus,
+  TallyRow,
+} from '@/lib/surveys/logic';
+
+/**
+ * Data access for surveys.
+ *
+ * Supabase-only, like polls, and for the same reason: the dual Supabase and raw
+ * Postgres path in `leads.ts` has never run. Every function uses the
+ * service-role client; the survey tables have RLS on with no policies.
+ *
+ * @see supabase/migrations/20260922120000_surveys.sql
+ */
+
+interface OptionRow {
+  key: string;
+  position: number;
+  label: string;
+  hint: string | null;
+  icon: string | null;
+}
+
+interface QuestionRow {
+  key: string;
+  position: number;
+  kind: QuestionKind;
+  prompt: string;
+  hint: string | null;
+  required: boolean;
+  min_choices: number | null;
+  max_choices: number | null;
+  max_length: number | null;
+  options_from: string[] | null;
+  show_if: string[] | null;
+  survey_options: OptionRow[] | null;
+}
+
+interface SurveyRow {
+  id: string;
+  slug: string;
+  status: SurveyStatus;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  minutes: number;
+  share_text: string;
+  thank_you_heading: string;
+  thank_you_body: string;
+  results_question_key: string | null;
+  results_heading: string | null;
+  results_min_responses: number;
+  consent_text: string | null;
+  preview_token: string;
+  survey_questions: QuestionRow[] | null;
+}
+
+const SURVEY_SELECT = `
+  id, slug, status, eyebrow, title, intro, minutes, share_text,
+  thank_you_heading, thank_you_body, results_question_key, results_heading,
+  results_min_responses, consent_text, preview_token,
+  survey_questions (
+    key, position, kind, prompt, hint, required, min_choices, max_choices,
+    max_length, options_from, show_if,
+    survey_options ( key, position, label, hint, icon )
+  )
+`;
+
+const byPosition = (a: { position: number }, b: { position: number }): number =>
+  a.position - b.position;
+
+/** Row to domain type. The preview token never leaves this module. */
+export function mapSurveyRow(row: SurveyRow): Survey {
+  const questions: SurveyQuestion[] = [...(row.survey_questions ?? [])]
+    .sort(byPosition)
+    .map((q) => ({
+      key: q.key,
+      kind: q.kind,
+      prompt: q.prompt,
+      hint: q.hint,
+      required: q.required,
+      minChoices: q.min_choices,
+      maxChoices: q.max_choices,
+      maxLength: q.max_length,
+      optionsFrom: q.options_from ?? [],
+      showIf: q.show_if ?? [],
+      options: [...(q.survey_options ?? [])].sort(byPosition).map((o) => ({
+        key: o.key,
+        label: o.label,
+        hint: o.hint,
+        icon: o.icon,
+      })),
+    }));
+
+  return {
+    id: row.id,
+    slug: row.slug,
+    status: row.status,
+    eyebrow: row.eyebrow,
+    title: row.title,
+    intro: row.intro,
+    minutes: row.minutes,
+    shareText: row.share_text,
+    thankYouHeading: row.thank_you_heading,
+    thankYouBody: row.thank_you_body,
+    resultsQuestionKey: row.results_question_key,
+    resultsHeading: row.results_heading,
+    resultsMinResponses: row.results_min_responses,
+    consentText: row.consent_text,
+    questions,
+  };
+}
+
+function tokensMatch(expected: string, given: string): boolean {
+  const a = Buffer.from(expected);
+  const b = Buffer.from(given);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+
+export type SurveyAccess =
+  /** Answering for real. */
+  | { survey: Survey; mode: 'live' }
+  /** Answering through the preview link: answers are stored flagged and never counted. */
+  | { survey: Survey; mode: 'preview' }
+  /** A shared link that outlived the survey. Shown a closed message, not a 404. */
+  | { survey: Survey; mode: 'closed' };
+
+/**
+ * The survey a visitor may see at /survey/<slug>, or null for a 404.
+ *
+ * A draft is visible only with its preview token, and a draft without one is
+ * indistinguishable from a slug that does not exist. The preview token also
+ * works on a live survey, so Peter can test the real thing without his answers
+ * landing in the counts.
+ *
+ * Throws when the database cannot be reached, so the page shows the error
+ * boundary rather than a 404 that would tell a respondent the survey is gone.
+ */
+export async function getSurveyForVisitor(
+  slug: string,
+  previewToken?: string
+): Promise<SurveyAccess | null> {
+  if (!isSupabaseAdminConfigured()) {
+    throw new Error('Surveys need Supabase, and it is not configured.');
+  }
+
+  const { data, error } = await getSupabaseAdminClient()
+    .from('surveys')
+    .select(SURVEY_SELECT)
+    .eq('slug', slug)
+    .maybeSingle<SurveyRow>();
+
+  if (error) throw new Error(`Could not load survey "${slug}": ${error.message}`);
+  if (!data) return null;
+
+  const survey = mapSurveyRow(data);
+  if (previewToken && tokensMatch(data.preview_token, previewToken)) {
+    return { survey, mode: 'preview' };
+  }
+  if (data.status === 'live') return { survey, mode: 'live' };
+  if (data.status === 'closed') return { survey, mode: 'closed' };
+  return null;
+}
+
+export interface SubmissionInput {
+  responseId: string;
+  surveyId: string;
+  answers: Record<string, Answer>;
+  isPreview: boolean;
+  referrerHost?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmTerm?: string;
+  utmContent?: string;
+  contact?: {
+    id: string;
+    name: string;
+    email: string;
+    businessName?: string;
+    volunteeredFor: string[];
+    consentText: string;
+  };
+}
+
+export type SubmissionResult =
+  /** `duplicate`: this response id was stored by an earlier attempt, so nothing new was. */
+  | { stored: true; duplicate?: boolean }
+  | { stored: false; reason: 'not_open' | 'unavailable' | 'failed' };
+
+/**
+ * Stores one response and, when given, the volunteer's details, in one
+ * transaction (`submit_survey_response`). Never throws: the caller turns the
+ * result into what the respondent sees, and every failure is logged here.
+ */
+export async function submitSurveyResponse(input: SubmissionInput): Promise<SubmissionResult> {
+  if (!isSupabaseAdminConfigured()) {
+    console.error('[surveys] a response arrived and Supabase is not configured.');
+    return { stored: false, reason: 'unavailable' };
+  }
+
+  try {
+    const { error } = await getSupabaseAdminClient().rpc('submit_survey_response', {
+      p_response_id: input.responseId,
+      p_survey_id: input.surveyId,
+      p_answers: input.answers,
+      p_is_preview: input.isPreview,
+      p_referrer_host: input.referrerHost ?? null,
+      p_utm_source: input.utmSource ?? null,
+      p_utm_medium: input.utmMedium ?? null,
+      p_utm_campaign: input.utmCampaign ?? null,
+      p_utm_term: input.utmTerm ?? null,
+      p_utm_content: input.utmContent ?? null,
+      p_contact: input.contact
+        ? {
+            id: input.contact.id,
+            name: input.contact.name,
+            email: input.contact.email,
+            email_normalized: input.contact.email.trim().toLowerCase(),
+            business_name: input.contact.businessName ?? null,
+            volunteered_for: input.contact.volunteeredFor,
+            consent_text: input.contact.consentText,
+          }
+        : null,
+    });
+
+    if (!error) return { stored: true };
+    if (error.message.includes('survey_not_open')) return { stored: false, reason: 'not_open' };
+    // A unique violation can only be the response id: the contact id is new on
+    // every attempt and its response_id is this same id. So an earlier attempt
+    // already stored these answers and its reply was lost. Report it as stored;
+    // the transaction rolled back, so nothing was written twice.
+    if (error.code === '23505' && error.message.includes('survey_responses_pkey')) {
+      return { stored: true, duplicate: true };
+    }
+    console.error('[surveys] the response was not stored:', error.message);
+    return { stored: false, reason: 'failed' };
+  } catch (error) {
+    console.error('[surveys] the response write threw:', error);
+    return { stored: false, reason: 'failed' };
+  }
+}
+
+export interface SurveyResults {
+  responses: number;
+  tallies: TallyRow[];
+}
+
+/**
+ * Real responses and every tally for one survey. Preview answers are excluded
+ * by the database function and by the count, so the two always agree.
+ */
+export async function getSurveyResults(surveyId: string): Promise<SurveyResults> {
+  const client = getSupabaseAdminClient();
+  const [count, tallies] = await Promise.all([
+    client
+      .from('survey_responses')
+      .select('id', { count: 'exact', head: true })
+      .eq('survey_id', surveyId)
+      .eq('is_preview', false),
+    client.rpc('survey_tallies', { p_survey_id: surveyId }),
+  ]);
+
+  if (count.error) throw new Error(`Could not count responses: ${count.error.message}`);
+  if (tallies.error) throw new Error(`Could not tally responses: ${tallies.error.message}`);
+
+  const rows = (tallies.data ?? []) as Array<{
+    question_key: string;
+    option_key: string;
+    picks: number | string;
+  }>;
+
+  return {
+    responses: count.count ?? 0,
+    tallies: rows.map((row) => ({
+      questionKey: row.question_key,
+      optionKey: row.option_key,
+      // bigint arrives as a number from PostgREST today; Number() keeps it one if that changes.
+      picks: Number(row.picks),
+    })),
+  };
+}
+
+/**
+ * How long a volunteer's details are kept after their survey closes. Stated in
+ * the privacy notice; change both together.
+ */
+export const CONTACT_RETENTION_MONTHS = 12;
+
+export interface SurveyContactSweep {
+  deleted: number;
+  error?: string;
+}
+
+/**
+ * Deletes volunteers' details from surveys that closed more than
+ * CONTACT_RETENTION_MONTHS ago. The anonymous answers stay: they cannot be
+ * linked to anybody once the contact row has gone.
+ *
+ * An instant comparison, not a calendar date shown to anyone, so UTC arithmetic
+ * is correct here and a London wall-clock conversion would add nothing.
+ */
+export async function sweepSurveyContacts(now: Date = new Date()): Promise<SurveyContactSweep> {
+  if (!isSupabaseAdminConfigured()) {
+    return { deleted: 0, error: 'Supabase is not configured.' };
+  }
+
+  const cutoff = new Date(now.getTime());
+  cutoff.setUTCMonth(cutoff.getUTCMonth() - CONTACT_RETENTION_MONTHS);
+
+  const client = getSupabaseAdminClient();
+  const expired = await client
+    .from('surveys')
+    .select('id')
+    .eq('status', 'closed')
+    .lt('closed_at', cutoff.toISOString());
+  if (expired.error) return { deleted: 0, error: expired.error.message };
+
+  const ids = (expired.data ?? []).map((row: { id: string }) => row.id);
+  if (ids.length === 0) return { deleted: 0 };
+
+  const removed = await client
+    .from('survey_contacts')
+    .delete({ count: 'exact' })
+    .in('survey_id', ids);
+  if (removed.error) return { deleted: 0, error: removed.error.message };
+
+  return { deleted: removed.count ?? 0 };
+}
+
+export interface AdminSurveyVolunteer {
+  name: string;
+  email: string;
+  businessName: string | null;
+  volunteeredFor: string[];
+  createdAt: string;
+  /** The volunteer's own answers, so Peter knows what they picked before he calls. */
+  answers: Record<string, Answer>;
+}
+
+export interface AdminSurvey {
+  survey: Survey;
+  previewToken: string;
+  openedAt: string | null;
+  closedAt: string | null;
+  /** Real responses only. Preview answers are counted separately. */
+  responses: number;
+  previewResponses: number;
+  tallies: TallyRow[];
+  /** Free-text answers per question key, newest first. */
+  texts: Record<string, Array<{ text: string; createdAt: string }>>;
+  /** Where real responses came from: utm_source, else the referring host, else "direct". */
+  sources: Array<{ source: string; responses: number }>;
+  volunteers: AdminSurveyVolunteer[];
+  /** True when the response read hit ADMIN_RESPONSE_LIMIT: texts and sources are partial. */
+  truncated: boolean;
+}
+
+/** Enough for any survey this site will run; the admin view says when it is reached. */
+export const ADMIN_RESPONSE_LIMIT = 5000;
+
+/**
+ * Everything the admin view shows about every survey. Personal data included, so
+ * this is reached only through /api/admin/surveys, behind requireAdmin.
+ */
+export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
+  const client = getSupabaseAdminClient();
+
+  const surveys = await client
+    .from('surveys')
+    .select(`${SURVEY_SELECT}, opened_at, closed_at, created_at`)
+    .order('created_at', { ascending: false });
+  if (surveys.error) throw new Error(`Could not list surveys: ${surveys.error.message}`);
+
+  const rows = (surveys.data ?? []) as unknown as Array<
+    SurveyRow & { opened_at: string | null; closed_at: string | null }
+  >;
+
+  return Promise.all(
+    rows.map(async (row): Promise<AdminSurvey> => {
+      const survey = mapSurveyRow(row);
+      const [realCount, previewCount, responses, tallies, contacts] = await Promise.all([
+        client
+          .from('survey_responses')
+          .select('id', { count: 'exact', head: true })
+          .eq('survey_id', row.id)
+          .eq('is_preview', false),
+        client
+          .from('survey_responses')
+          .select('id', { count: 'exact', head: true })
+          .eq('survey_id', row.id)
+          .eq('is_preview', true),
+        client
+          .from('survey_responses')
+          .select('answers, is_preview, utm_source, referrer_host, created_at')
+          .eq('survey_id', row.id)
+          .order('created_at', { ascending: false })
+          .limit(ADMIN_RESPONSE_LIMIT),
+        client.rpc('survey_tallies', { p_survey_id: row.id }),
+        // Preview volunteers are Peter's own tests, so they are left out.
+        client
+          .from('survey_contacts')
+          .select(
+            'name, email, business_name, volunteered_for, created_at, survey_responses!inner ( answers, is_preview )'
+          )
+          .eq('survey_id', row.id)
+          .eq('survey_responses.is_preview', false)
+          .order('created_at', { ascending: false }),
+      ]);
+      if (realCount.error) throw new Error(`Could not count responses: ${realCount.error.message}`);
+      if (previewCount.error) {
+        throw new Error(`Could not count previews: ${previewCount.error.message}`);
+      }
+      if (responses.error) throw new Error(`Could not read responses: ${responses.error.message}`);
+      if (tallies.error) throw new Error(`Could not tally responses: ${tallies.error.message}`);
+      if (contacts.error) throw new Error(`Could not read volunteers: ${contacts.error.message}`);
+
+      const textKeys = survey.questions.filter((q) => q.kind === 'text').map((q) => q.key);
+      const texts: AdminSurvey['texts'] = Object.fromEntries(textKeys.map((key) => [key, []]));
+      const sourceCounts = new Map<string, number>();
+
+      for (const response of (responses.data ?? []) as Array<{
+        answers: Record<string, Answer>;
+        is_preview: boolean;
+        utm_source: string | null;
+        referrer_host: string | null;
+        created_at: string;
+      }>) {
+        if (response.is_preview) continue;
+        const source = response.utm_source ?? response.referrer_host ?? 'direct';
+        sourceCounts.set(source, (sourceCounts.get(source) ?? 0) + 1);
+        for (const key of textKeys) {
+          const value = response.answers[key];
+          if (typeof value === 'string' && value.trim()) {
+            texts[key].push({ text: value, createdAt: response.created_at });
+          }
+        }
+      }
+
+      const volunteers = (
+        (contacts.data ?? []) as unknown as Array<{
+          name: string;
+          email: string;
+          business_name: string | null;
+          volunteered_for: string[] | null;
+          created_at: string;
+          survey_responses: { answers: Record<string, Answer> } | null;
+        }>
+      ).map((contact) => ({
+        name: contact.name,
+        email: contact.email,
+        businessName: contact.business_name,
+        volunteeredFor: contact.volunteered_for ?? [],
+        createdAt: contact.created_at,
+        answers: contact.survey_responses?.answers ?? {},
+      }));
+
+      return {
+        survey,
+        previewToken: row.preview_token,
+        openedAt: row.opened_at,
+        closedAt: row.closed_at,
+        responses: realCount.count ?? 0,
+        previewResponses: previewCount.count ?? 0,
+        tallies: (
+          (tallies.data ?? []) as Array<{
+            question_key: string;
+            option_key: string;
+            picks: number | string;
+          }>
+        ).map((t) => ({
+          questionKey: t.question_key,
+          optionKey: t.option_key,
+          picks: Number(t.picks),
+        })),
+        texts,
+        sources: [...sourceCounts.entries()]
+          .map(([source, count]) => ({ source, responses: count }))
+          .sort((a, b) => b.responses - a.responses),
+        volunteers,
+        truncated: (responses.data?.length ?? 0) >= ADMIN_RESPONSE_LIMIT,
+      };
+    })
+  );
+}

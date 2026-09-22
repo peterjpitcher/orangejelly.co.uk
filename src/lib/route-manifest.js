@@ -299,6 +299,18 @@ const ROUTES = [
     sitemap: false,
     note: 'Separate poll product. Out of scope. Token routes must never receive third-party scripts.',
   },
+  {
+    path: '/survey/[slug]',
+    disposition: 'live',
+    sitemap: false,
+    note: 'Surveys served from the database, for sharing on social media. noindex, and out of the sitemap on purpose: a survey closes, and a search result for a closed survey is a dead end. See tasks/survey/PLAN.md.',
+  },
+  {
+    path: '/survey/[slug]/preview/[token]',
+    disposition: 'live',
+    sitemap: false,
+    note: 'A survey preview link. The token is a capability: a token route in src/lib/token-routes.ts, so no referrer and no third-party scripts. Never indexed.',
+  },
 
   // ------------------------------------------------------------ active redirects
   ...CONSOLIDATED_COUNTIES.map((county) => ({

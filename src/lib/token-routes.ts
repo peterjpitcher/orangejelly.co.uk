@@ -18,11 +18,13 @@
  * `/availability/p/<token>`:      a participant's ballot and edit capability
  * `/availability/o/<token>`:      the organiser's full control of the poll
  * `/availability/verify/<token>`: the magic link, equally a capability
+ * `/survey/<slug>/preview/<token>`: a survey's preview link, which shows a draft
+ *   before it is public and answers without being counted
  *
  * Anyone holding one of these URLs *is* the person it was issued to, permanently.
  * There is no login to fall back on.
  */
-export const TOKEN_PATH_PATTERN = /^\/availability\/(p|o|verify)\//;
+export const TOKEN_PATH_PATTERN = /^\/(availability\/(p|o|verify)|survey\/[^/]+\/preview)\//;
 
 /**
  * The whole poll feature, token-bearing or not, including `/availability/new`.
@@ -54,4 +56,17 @@ export function isTokenRoute(pathname: string): boolean {
  */
 export function isPollRoute(pathname: string): boolean {
   return POLL_PATH_PATTERN.test(pathname);
+}
+
+/**
+ * True where no third-party script may run: the whole poll feature, and every
+ * route whose path carries a token.
+ *
+ * The script gate (GTM, Vercel Analytics, Speed Insights, the analytics
+ * preconnects) uses this rather than isPollRoute, so a new token route is kept
+ * free of third-party JavaScript the moment it is added to TOKEN_PATH_PATTERN,
+ * without anybody having to remember a second list.
+ */
+export function isScriptFreeRoute(pathname: string): boolean {
+  return isPollRoute(pathname) || isTokenRoute(pathname);
 }

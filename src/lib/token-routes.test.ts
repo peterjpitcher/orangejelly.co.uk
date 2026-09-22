@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isTokenRoute, isPollRoute } from './token-routes';
+import { isTokenRoute, isPollRoute, isScriptFreeRoute } from './token-routes';
 
 const TOKEN = '0123456789abcdef0123456789abcdef';
 
@@ -8,6 +8,7 @@ describe('isTokenRoute', () => {
     [`/availability/o/${TOKEN}`, 'organiser'],
     [`/availability/p/${TOKEN}`, 'participant'],
     [`/availability/verify/${TOKEN}`, 'verify'],
+    [`/survey/pub-apps/preview/${TOKEN}`, 'survey preview'],
   ])('should be true for %s when the path carries a %s token', (pathname) => {
     expect(isTokenRoute(pathname)).toBe(true);
   });
@@ -18,6 +19,7 @@ describe('isTokenRoute', () => {
     ['/guides/some-article'],
     ['/'],
     ['/contact'],
+    ['/survey/pub-apps'],
   ])('should be false for %s when the path carries no token', (pathname) => {
     expect(isTokenRoute(pathname)).toBe(false);
   });
@@ -64,6 +66,24 @@ describe('isPollRoute', () => {
     ]) {
       expect(isTokenRoute(pathname)).toBe(true);
       expect(isPollRoute(pathname)).toBe(true);
+    }
+  });
+});
+
+describe('isScriptFreeRoute', () => {
+  it('should cover every token route and the whole poll feature, and nothing else', () => {
+    for (const pathname of [
+      `/availability/o/${TOKEN}`,
+      `/availability/p/${TOKEN}`,
+      `/availability/verify/${TOKEN}`,
+      '/availability/new',
+      `/survey/pub-apps/preview/${TOKEN}`,
+    ]) {
+      expect(isScriptFreeRoute(pathname)).toBe(true);
+    }
+    // A live survey is shared on social media and measured like any other page.
+    for (const pathname of ['/survey/pub-apps', '/', '/contact']) {
+      expect(isScriptFreeRoute(pathname)).toBe(false);
     }
   });
 });

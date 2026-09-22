@@ -44,6 +44,9 @@ const EVENT_PROPERTIES: Record<string, readonly string[]> = {
   bring_us_the_problem_click: ['surface', 'page_template'],
   search_performed: ['result_count', 'had_results'],
   article_to_problem: ['from_slug', 'to_slug'],
+  survey_started: ['survey'],
+  survey_completed: ['survey', 'volunteered'],
+  survey_shared: ['survey', 'channel'],
 };
 
 const ALWAYS_ALLOWED = ['session_id'];

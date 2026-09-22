@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { isPollRoute } from '@/lib/token-routes';
+import { isScriptFreeRoute } from '@/lib/token-routes';
 
 // Web Vitals monitoring component
 export default function PerformanceMonitor() {
@@ -60,7 +60,7 @@ export function PreloadResources() {
   // pointless as well as unwanted. Keeping it would also make "no third-party
   // request fires on a token route" untrue, and that property is worth being able
   // to state without an asterisk.
-  const analyticsPreconnectsAllowed = !isPollRoute(pathname);
+  const analyticsPreconnectsAllowed = !isScriptFreeRoute(pathname);
 
   return (
     <>

@@ -32,7 +32,12 @@ export type TrackableEvent =
   | 'next_step_click'
   | 'bring_us_the_problem_click'
   | 'search_performed'
-  | 'article_to_problem';
+  | 'article_to_problem'
+  // Surveys. Which survey, how far people get, and where the link travels next.
+  // Never an answer: those are research data and live in survey_responses only.
+  | 'survey_started'
+  | 'survey_completed'
+  | 'survey_shared';
 
 interface TrackClientEventOptions {
   properties?: Record<string, unknown>;

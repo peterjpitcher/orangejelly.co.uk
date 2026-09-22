@@ -28,6 +28,7 @@ const ALL_BUCKETS: RateLimitBucket[] = [
   'poll_update_ip',
   'poll_organiser_ip',
   'poll_send_fanout',
+  'survey_submit_ip',
 ];
 
 function headersWith(values: Record<string, string>): { get(name: string): string | null } {
