@@ -8,7 +8,7 @@ import { GroundProvider } from './Ground';
 
 import { Anchor } from './Anchor';
 
-import { Button } from './Button';
+import { Button, type ButtonProps } from './Button';
 
 /**
  * Site header: brand, primary nav, one call to action.
@@ -48,7 +48,12 @@ export interface HeaderItem {
 
 export interface HeaderProps {
   items?: HeaderItem[];
-  cta?: { label: string; href?: string; onClick?: () => void };
+  /**
+   * The one action in the bar. `variant` defaults to primary, which is what every
+   * public page wants. The signed-in back office passes `ghost`, because its action
+   * is Sign out, and an orange button that ends your session is the wrong way round.
+   */
+  cta?: { label: string; href?: string; onClick?: () => void; variant?: ButtonProps['variant'] };
   /** Pass the horizontal logo. Defaults to the type wordmark. */
   logo?: React.ReactNode;
   home?: string;
@@ -178,25 +183,30 @@ export function Header({
 
             {cta ? (
               <span className="hidden flex-none min-[881px]:inline-flex">
-                <Button size="sm" href={cta.href} onClick={cta.onClick}>
+                <Button size="sm" variant={cta.variant} href={cta.href} onClick={cta.onClick}>
                   {cta.label}
                 </Button>
               </span>
             ) : null}
 
-            <button
-              ref={toggleRef}
-              type="button"
-              onClick={() => (open ? close() : setOpen(true))}
-              aria-expanded={open}
-              aria-controls={MENU_ID}
-              className={cn(
-                'ml-auto min-h-tap rounded-oj border-1.5 px-[13px] py-1.5 font-oj text-[14.5px] font-bold min-[881px]:hidden',
-                orange ? 'border-oj-on-band text-oj-on-band' : 'border-oj-ink text-oj-ink'
-              )}
-            >
-              {open ? 'Close ×' : 'Menu'}
-            </button>
+            {/* No toggle when there is nothing to open. The signed-out back office
+                uses the bar for the logo alone, and a Menu button there opens an
+                empty ink screen. Every public page has items, so it keeps its toggle. */}
+            {items.length > 0 || cta ? (
+              <button
+                ref={toggleRef}
+                type="button"
+                onClick={() => (open ? close() : setOpen(true))}
+                aria-expanded={open}
+                aria-controls={MENU_ID}
+                className={cn(
+                  'ml-auto min-h-tap rounded-oj border-1.5 px-[13px] py-1.5 font-oj text-[14.5px] font-bold min-[881px]:hidden',
+                  orange ? 'border-oj-on-band text-oj-on-band' : 'border-oj-ink text-oj-ink'
+                )}
+              >
+                {open ? 'Close ×' : 'Menu'}
+              </button>
+            ) : null}
           </div>
         </header>
       </GroundProvider>
@@ -258,7 +268,14 @@ export function Header({
 
             {cta ? (
               <div className="mt-[26px]">
-                <Button size="lg" arrow href={cta.href} onClick={cta.onClick}>
+                {/* The arrow says "go somewhere". Only the primary call to action does. */}
+                <Button
+                  size="lg"
+                  variant={cta.variant}
+                  arrow={!cta.variant || cta.variant === 'primary'}
+                  href={cta.href}
+                  onClick={cta.onClick}
+                >
                   {cta.label}
                 </Button>
               </div>

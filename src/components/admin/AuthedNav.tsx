@@ -1,8 +1,9 @@
 'use client';
 
-import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { Header } from '@/components/oj';
 import { clearSession, readSession } from '@/lib/admin-session';
 
 /**
@@ -18,7 +19,33 @@ import { clearSession, readSession } from '@/lib/admin-session';
  * The session is only known on the client (localStorage), so the bar renders
  * nothing on the server and on first paint, then appears once mount confirms a
  * session. That avoids a hydration mismatch and a flash of the wrong nav.
+ *
+ * It is the public site's own Header rather than a bar of its own. This was the
+ * last place still showing the navy bar and the OJ roundel the public pages
+ * dropped on 31 August, and a second header component is how that happened: the
+ * public one moved on and nothing told this one. Same cream bar, same logo at the
+ * same size, same orange marker under the current item, same ink drawer on a
+ * phone. Only the items and the action differ.
  */
+
+/**
+ * The horizontal logo at the public header's size. Exported for the signed-out
+ * sign-in screen, which shows the bar with the logo and nothing else.
+ */
+export function BackOfficeLogo(): JSX.Element {
+  // The same asset and size as the public header. See OjHeader in SiteChrome for
+  // why it is next/image and why 44px.
+  return (
+    <Image
+      src="/brand/logo-horizontal.png"
+      alt="Orange Jelly"
+      width={1200}
+      height={260}
+      priority
+      className="h-11 w-auto"
+    />
+  );
+}
 
 interface NavItem {
   href: string;
@@ -61,43 +88,17 @@ export default function AuthedNav(): JSX.Element | null {
   }
 
   return (
-    <nav aria-label="Organiser navigation" className="bg-brand-base">
-      <div className="page-shell flex flex-wrap items-center justify-between gap-3 py-3">
-        <Link
-          href="/availability"
-          className="flex items-center gap-2 font-heading text-lg font-bold text-white"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange text-sm text-brand-base">
-            OJ
-          </span>
-          <span className="hidden sm:inline">Orange Jelly</span>
-        </Link>
-        <ul className="flex flex-wrap items-center gap-1">
-          {ITEMS.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                aria-current={isActive(item) ? 'page' : undefined}
-                className={
-                  isActive(item)
-                    ? 'inline-flex items-center rounded-md bg-white/15 px-3 py-2 text-sm font-semibold text-white'
-                    : 'inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white'
-                }
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <button
-          type="button"
-          onClick={handleSignOut}
-          className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-        >
-          Sign out
-        </button>
-      </div>
-    </nav>
+    <Header
+      // The logo goes to the dashboard, not the marketing home page: from in here,
+      // home is the back office.
+      home="/admin"
+      logo={<BackOfficeLogo />}
+      items={ITEMS.map((item) => ({
+        label: item.label,
+        href: item.href,
+        current: isActive(item),
+      }))}
+      cta={{ label: 'Sign out', onClick: handleSignOut, variant: 'ghost' }}
+    />
   );
 }
