@@ -13,7 +13,8 @@ import { Button, type ButtonProps } from './Button';
 /**
  * Site header: brand, primary nav, one call to action.
  *
- * Collapses below 880px to a full-screen ink drawer. Mobile is 78% of this site's
+ * Collapses below 1024px to a full-screen ink drawer (880px until 22 September 2026:
+ * see the note on the nav below). Mobile is 78% of this site's
  * search clicks and ranks eight positions better than desktop, so the drawer is not
  * a fallback, it is the main event.
  *
@@ -44,6 +45,25 @@ export interface HeaderItem {
   current?: boolean;
   /** Rendered as a grouped section in the drawer. Desktop keeps the flat bar. */
   sub?: HeaderSubItem[];
+  /**
+   * Marks the item with the orange pressure dot, for the one thing the site is
+   * pushing at the moment (the pub survey, 22 September 2026). Decorative: the label
+   * already says what the item is, so the dot is hidden from assistive technology.
+   */
+  highlight?: boolean;
+}
+
+/*
+ * The Tag component's pressure dot, at the size a nav label can carry. Ink ring on
+ * the cream bar, the on-band colour on the orange one, cream in the ink drawer.
+ */
+function HighlightDot({ ring }: { ring: string }): JSX.Element {
+  return (
+    <span
+      aria-hidden="true"
+      className={cn('inline-block h-2 w-2 flex-none rounded-full border-1.5 bg-oj-orange', ring)}
+    />
+  );
 }
 
 export interface HeaderProps {
@@ -163,26 +183,41 @@ export function Header({
               {brand}
             </Anchor>
 
-            <nav className="ml-auto hidden gap-0.5 min-[881px]:flex" aria-label="Primary">
+            {/*
+              One line or the drawer, never two lines.
+
+              Until 22 September 2026 the bar switched to the drawer at 881px and the
+              labels were free to wrap, so "Growth problems", "How we work" and "What
+              we build" each broke onto two lines at every desktop width, 1440
+              included: eight items needed 808px against a 755px budget. Peter called
+              it cluttered. The labels now never wrap, the public nav went to six
+              items (594px), and the drawer takes over below 1024px, where six items
+              still fit with 15px to spare. Measured, not estimated.
+            */}
+            <nav className="ml-auto hidden gap-0.5 min-[1024px]:flex" aria-label="Primary">
               {items.map((item) => (
                 <Anchor
                   key={item.label}
                   href={item.href}
                   aria-current={item.current ? 'page' : undefined}
                   className={cn(
-                    'rounded-oj px-[11px] py-[7px] text-[15px] font-semibold no-underline',
+                    'whitespace-nowrap rounded-oj px-[11px] py-[7px] text-[15px] font-semibold no-underline',
+                    item.highlight && 'inline-flex items-center gap-1.5',
                     orange
                       ? 'text-oj-on-band hover:text-oj-cream aria-[current]:shadow-[inset_0_-3px_0_currentColor]'
                       : 'text-oj-ink hover:text-oj-orange-deep aria-[current]:shadow-[inset_0_-3px_0_var(--oj-orange)]'
                   )}
                 >
+                  {item.highlight ? (
+                    <HighlightDot ring={orange ? 'border-oj-on-band' : 'border-oj-ink'} />
+                  ) : null}
                   {item.label}
                 </Anchor>
               ))}
             </nav>
 
             {cta ? (
-              <span className="hidden flex-none min-[881px]:inline-flex">
+              <span className="hidden flex-none min-[1024px]:inline-flex">
                 <Button size="sm" variant={cta.variant} href={cta.href} onClick={cta.onClick}>
                   {cta.label}
                 </Button>
@@ -200,7 +235,7 @@ export function Header({
                 aria-expanded={open}
                 aria-controls={MENU_ID}
                 className={cn(
-                  'ml-auto min-h-tap rounded-oj border-1.5 px-[13px] py-1.5 font-oj text-[14.5px] font-bold min-[881px]:hidden',
+                  'ml-auto min-h-tap rounded-oj border-1.5 px-[13px] py-1.5 font-oj text-[14.5px] font-bold min-[1024px]:hidden',
                   orange ? 'border-oj-on-band text-oj-on-band' : 'border-oj-ink text-oj-ink'
                 )}
               >
@@ -258,9 +293,11 @@ export function Header({
                   onClick={close}
                   className={cn(
                     'block border-b border-oj-cream/15 py-3 font-oj text-[31px] font-black tracking-[-0.02em] no-underline',
+                    item.highlight && 'flex items-center gap-3',
                     item.current ? 'text-oj-orange' : 'text-oj-cream'
                   )}
                 >
+                  {item.highlight ? <HighlightDot ring="border-oj-cream" /> : null}
                   {item.label}
                 </Anchor>
               )

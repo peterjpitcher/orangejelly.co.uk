@@ -249,3 +249,12 @@ The site was reviewed as a hospitality business owner would read it, and Peter a
 - Yes, within one limit. The six causes above behave the same way in a professional services firm, a trade business, a shop and a venue, because they are about customers, profit and systems rather than about what you sell. Where it does not transfer is anything needing sector accreditation or technical knowledge of your field. If that is you, we will say so inside the first hour and point you at someone better placed.
 - We look before we propose. It is easy to arrive with the answer already chosen and treat the looking as a formality, and that is how businesses end up paying for the wrong fix. We would rather spend two to three weeks finding out and then tell you the job is smaller than you feared. That is easier to say when you run a business yourself: The Anchor is our own venue, and everything on this site was tested there first.
 - We agree the measure and take the numbers before anything is built, so that question has an answer rather than an argument. We stay close through the first month, review against those numbers rather than against activity, and change direction when the number says to. If it is not moving we will say that too.
+
+## Amendments, 22 September 2026: the pub survey band
+
+Peter asked for the pub-apps survey to be promoted across the site, this page included. A band under the hero carries the survey's own wording, shortened, from `src/lib/promoted-survey.ts`. It comes down with the rest of the promotion when that constant is set to null.
+
+- Pub survey
+- Which tools would make running your pub easier?
+- We run our own pub and we build software. Tell us which tools to build first. About three minutes, mostly taps.
+- Take the survey

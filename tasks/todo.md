@@ -175,3 +175,25 @@ Suspense boundary, so the shell is sent with a 200 before `notFound()` runs. Sam
 - Dead links show "this link isn't live." in the browser, with no third-party requests.
 - Type-check clean; Vitest 107 files green in London and UTC; ESLint 0 errors on the project config
   (`npm run lint` cannot run inside a nested worktree: the parent folder's ESLint config clashes).
+
+
+## Promote the pub-apps survey across the site, 22 September 2026
+
+**Ask (Peter):** a primary nav link, a popup or lightbox on all pages, and champion it
+everywhere, the homepage included. Branch `feat/survey-promotion`, worktree
+`.claude/worktrees/survey-promotion`.
+
+**Decisions (mine, to confirm with Peter in the PR):**
+- One switch, `src/lib/promoted-survey.ts`: set it to null and the nav item, footer link,
+  bands and popup all come down together when the survey closes.
+- The popup checks the survey is still live before it opens and fails closed.
+- It waits until the cookie choice is made, opens after 8 seconds, and once seen stays away for
+  14 days (never again after "Take the survey" or a visit to the survey).
+- Desktop gets a centred lightbox. Phones get a small card at the bottom, because Google demotes
+  pages whose popups cover the content on phones and most search visits are on phones.
+- Not shown on the survey itself, the back office or the enquiry page (/start-here).
+
+- [ ] Config, nav item (highlighted), footer link, survey page marks itself current
+- [ ] SurveyBand on the homepage, Pubs page and guides library
+- [ ] Status endpoint and the SurveyPrompt popup in MarketingChrome
+- [ ] Tests, copy-doc amendments, type-check, lint, both test zones, build, screenshots
