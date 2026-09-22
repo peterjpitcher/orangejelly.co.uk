@@ -19,7 +19,8 @@ import {
   type Survey,
 } from '@/lib/surveys/logic';
 import { cleanEnquirySource } from '@/lib/enquiry-source';
-import { escapeHtml, sendLeadNotification } from '@/lib/email';
+import { sendLeadNotification } from '@/lib/email';
+import { surveyResponseEmail, type SurveyResponseEmailInput } from '@/lib/surveys/notification';
 import {
   RATE_LIMIT_MESSAGE,
   checkRateLimit,
@@ -45,7 +46,6 @@ export type { SurveySubmitResult };
 const FALLBACK = 'Please try again in a moment, or email peter@orangejelly.co.uk.';
 const NOT_SENT = `We couldn't send your answers. ${FALLBACK}`;
 const CLOSED = "This survey has closed, so your answers weren't sent.";
-const ADMIN_URL = 'https://www.orangejelly.co.uk/admin';
 
 export async function submitSurvey(input: unknown): Promise<SurveySubmitResult> {
   const parsed = surveySubmissionSchema.safeParse(input);
@@ -140,10 +140,21 @@ export async function submitSurvey(input: unknown): Promise<SurveySubmitResult> 
   }
 
   // Nothing below may turn stored answers into an error for the respondent.
-  // A repeat of an attempt that was already stored has already emailed Peter.
-  if (contact && !isPreview && !stored.duplicate) await notifyVolunteer(survey, contact);
+  const results = await loadResults(survey);
 
-  return { success: true, results: await loadResults(survey) };
+  // A repeat of an attempt that was already stored has already emailed Peter.
+  if (!stored.duplicate) {
+    await notifyResponse({
+      survey,
+      answers: checked.answers,
+      contact,
+      source: source.utmSource ?? (source.referrer ? new URL(source.referrer).host : undefined),
+      isPreview,
+      responses: results?.responses ?? null,
+    });
+  }
+
+  return { success: true, results };
 }
 
 async function loadResults(survey: Survey): Promise<SurveyResultsView | null> {
@@ -165,42 +176,20 @@ async function loadResults(survey: Survey): Promise<SurveyResultsView | null> {
 }
 
 /**
- * Tells Peter someone volunteered. Awaited for the reason given in
- * actions/enquiry.ts (Vercel can freeze the function once the response is
- * sent), and contained, so a failed email is logged and never reported to the
- * respondent as a failed submission.
+ * Emails Peter about every response (his request, 22 September 2026), preview
+ * answers included and marked, so a preview run tests the email as well.
+ *
+ * Awaited for the reason given in actions/enquiry.ts (Vercel can freeze the
+ * function once the response is sent), and contained: a failed email is logged
+ * and never reported to the respondent as a failed submission.
  */
-async function notifyVolunteer(
-  survey: Survey,
-  contact: NonNullable<Parameters<typeof submitSurveyResponse>[0]['contact']>
-): Promise<void> {
-  const labels = new Map(
-    survey.questions.flatMap((q) => q.options.map((o) => [o.key, o.label] as const))
-  );
-  const rows: Array<[string, string]> = [
-    ['Survey', survey.title],
-    ['Name', contact.name],
-    ['Business', contact.businessName ?? 'Not given'],
-    ['Email', contact.email],
-    ['Said yes to', contact.volunteeredFor.map((key) => labels.get(key) ?? key).join('; ')],
-  ];
-  const tail = 'Their answers are in the admin view.';
-
+async function notifyResponse(input: SurveyResponseEmailInput): Promise<void> {
   try {
-    const result = await sendLeadNotification({
-      subject: `Survey volunteer: ${(contact.businessName ?? contact.name).replace(/[\r\n]+/g, ' ').trim()}`,
-      html: [
-        ...rows.map(
-          ([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`
-        ),
-        `<p>${escapeHtml(tail)}</p>`,
-        `<p><a href="${ADMIN_URL}">${ADMIN_URL}</a></p>`,
-      ].join('\n'),
-      text: [...rows.map(([label, value]) => `${label}: ${value}`), '', tail, ADMIN_URL].join('\n'),
-      replyTo: contact.email,
-    });
-    if (result.error)
+    const email = surveyResponseEmail(input);
+    const result = await sendLeadNotification(email);
+    if (result.error) {
       console.error('[surveys] stored, but the notification was not sent:', result.error);
+    }
   } catch (error) {
     console.error('[surveys] stored, but the notification threw:', error);
   }

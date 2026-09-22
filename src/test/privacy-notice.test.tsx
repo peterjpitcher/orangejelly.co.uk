@@ -85,6 +85,7 @@ describe('the privacy notice', () => {
     expect(body).toMatch(/Your answers are anonymous unless you choose to give us your details/);
     expect(body).toMatch(/We\s+never keep your IP address/);
     expect(body).toMatch(/Your details are kept alongside your answers/);
+    expect(body).toMatch(/We get an email each time someone answers a survey/);
     expect(body).toMatch(/Our lawful basis is your consent/);
     expect(body).toMatch(/delete them 24 months after that survey closes, automatically/);
   });
