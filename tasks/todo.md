@@ -98,3 +98,45 @@ Outstanding: the apex still serves 307, which only Peter can change in the Verce
 Two decisions remain open with recommended defaults in SPEC section 7 (dynamicParams on
 /insights/[slug] and on /guides/category/[category]). Follow-up crawl and index checks at 7,
 14 and 28 days are not scheduled.
+
+
+## Back office onto the public page styling, 22 September 2026
+
+**Ask:** bring /admin and every back-office page into line with the current public pages.
+Branch `feat/back-office-styling`, worktree `.claude/worktrees/back-office-styling`.
+
+**Gap found (screenshots, fixture data, no live calls):** the signed-in bar is still the old navy
+bar with the OJ roundel; the enquiries list and the enquiry measurement panel are on the old
+white-card palette (`brand-base`, `surface`, `bg-white`); twelve poll components still use it;
+page titles are plain sentence case on paper where the public pages open on an ink hero with a
+lowercase display heading and alternate paper and cream bands.
+
+**Decisions**
+- Header: the public `Header` itself (cream bar, 44px horizontal logo, orange current marker,
+  ink mobile drawer). Sign out is a ghost button, not the orange primary. Still hidden for guests.
+- Page intro: an ink hero, as on the eighteen public reading pages. Poll titles are somebody's
+  own words, so they keep their case and get no added full stop.
+- Sections: `Band`, alternating paper and cream with the ink rule. Cards flip to the opposite
+  surface so they stay visible.
+- No marketing footer on tool screens. No copy, field names, fetch bodies or behaviour change.
+
+**Complexity:** 4 (L, 25 files, no schema). Split into three commits that each deploy alone:
+- [x] 1. Shared header + hero, /admin (sign-in, dashboard, enquiries, enquiry measurement, surveys)
+- [x] 2. Organiser poll screens (/availability, /availability/new, results, verify, their components)
+- [x] 3. Guest poll screens (vote, edit answers, not found, error and loading states)
+- [x] Each: type-check, lint, both test zones, build, screenshots at 1440 and 375
+
+**Results**
+- Commits `6d30f752` (admin), `2d9b8ef4` (organiser polls), `c852734a` (guest polls), on
+  `feat/back-office-styling`, local only.
+- New shared pieces: `src/components/admin/BackOfficeHero.tsx` (ink hero) and
+  `BackOfficeBand.tsx` (the public Band at tool padding, plus the two card surfaces and the block
+  heading). `Header` gained `cta.variant` and hides its Menu toggle when it has nothing to open.
+- Every back-office screen is off the old palette and the legacy `Text`, `Heading`, `Card`,
+  `Button` and shadcn `ui/*` components; a grep of `src/app/admin`, `src/app/availability`,
+  `src/components/admin` and `src/components/polls` finds none in code.
+- Verified with fixture data only (no live API, database or server action): screenshots at 1440
+  and 375; phone drawer, Sign out, delete dialogue and vote validation driven in a browser.
+  Vitest 1856/1857 in both zones, lint (one existing GoogleTagManager warning), build green.
+- Left alone: `cellClass` in `src/components/polls/organiser/results-display.ts` still names the
+  old palette, but nothing imports it.
