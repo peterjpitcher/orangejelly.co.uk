@@ -103,6 +103,7 @@ These results reflect combined work, not a website or AI feature alone. They are
 89% Fewer booking no-shows. The reduction in booking no-shows at The Anchor after changes to the booking journey.
 
 +98% Food revenue. Within three months, at The Anchor.
+
 ## Amendments, 22 September 2026: the pub survey band
 
 Peter asked for the pub-apps survey to be promoted across the site, this page included. A band under the hero carries the survey's own wording, shortened, from `src/lib/promoted-survey.ts`. It comes down with the rest of the promotion when that constant is set to null.
