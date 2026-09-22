@@ -193,7 +193,9 @@ export default function PrivacyPage(): JSX.Element {
                 <li>
                   <strong>Only if you agree</strong>: Google Tag Manager and Google Analytics, which
                   do set a cookie. If you decline, or ignore the banner, they never load. You can
-                  change your mind at any time, and withdrawing stops the collection straight away.
+                  change your mind at any time with <strong>Cookie settings</strong> at the foot of
+                  every page. Switching analytics off stops the collection straight away and removes
+                  Google Analytics&apos; cookies.
                 </li>
               </ul>
               <p>
