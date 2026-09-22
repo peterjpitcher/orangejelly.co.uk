@@ -1,0 +1,231 @@
+{
+  "slug": "pub-apps",
+  "eyebrow": "Pub survey",
+  "title": "Which tools would make running your pub easier?",
+  "intro": "We run our own pub, The Anchor in Stanwell Moor, and we build software. We're planning a set of simple tools for independent pubs, and we'd rather the trade told us which to build first than guess. About three minutes, mostly taps.",
+  "minutes": 3,
+  "shareText": "Which tools would make running your pub easier? A quick survey for licensees, about three minutes.",
+  "thankYouHeading": "Thank you, that's really useful",
+  "thankYouBody": "Every answer goes into deciding what we build first. The more pubs that answer, the clearer the picture, so if you know another licensee, send them the link.",
+  "results": {
+    "questionKey": "top_pick",
+    "heading": "What the trade has picked so far",
+    "minResponses": 20
+  },
+  "consentText": "I'm happy for Orange Jelly to contact me about these tools. I can ask you to stop at any time.",
+  "questions": [
+    {
+      "key": "front",
+      "kind": "multi",
+      "prompt": "Customers and bookings: which of these would you use?",
+      "hint": "Pick up to three, or none.",
+      "minChoices": 0,
+      "maxChoices": 3,
+      "options": [
+        {
+          "key": "customers",
+          "label": "Customer list",
+          "hint": "Sign-ups, birthdays, offers clubs and who comes in when",
+          "icon": "users"
+        },
+        {
+          "key": "tables",
+          "label": "Table bookings",
+          "hint": "A booking button for your website, with deposits and reminders",
+          "icon": "calendar-check"
+        },
+        {
+          "key": "events",
+          "label": "Event bookings",
+          "hint": "Quiz nights and live music, with tickets or deposits",
+          "icon": "ticket"
+        },
+        {
+          "key": "private_bookings",
+          "label": "Private parties",
+          "hint": "Party enquiries, quotes, deposits and run sheets",
+          "icon": "party-popper"
+        },
+        {
+          "key": "parking",
+          "label": "Parking bookings",
+          "hint": "Let people book and pay for spaces in your car park",
+          "icon": "car"
+        },
+        {
+          "key": "marketing",
+          "label": "Email and text campaigns",
+          "hint": "Message the right customers, like everyone who booked Mother's Day last year",
+          "icon": "megaphone"
+        },
+        {
+          "key": "vouchers",
+          "label": "Gift vouchers",
+          "hint": "Sell gift vouchers online",
+          "icon": "gift"
+        },
+        {
+          "key": "reviews",
+          "label": "Review replies",
+          "hint": "See and answer your Google reviews in one place",
+          "icon": "star"
+        }
+      ]
+    },
+    {
+      "key": "back",
+      "kind": "multi",
+      "prompt": "Running the pub: which of these would you use?",
+      "hint": "Pick up to three, or none.",
+      "minChoices": 0,
+      "maxChoices": 3,
+      "options": [
+        {
+          "key": "tasks",
+          "label": "Daily checks",
+          "hint": "Opening, closing, cellar and fridge temperature checks, with photos",
+          "icon": "clipboard-check"
+        },
+        {
+          "key": "people",
+          "label": "Staff records",
+          "hint": "Contracts, right-to-work documents, training and expiry reminders",
+          "icon": "id-card"
+        },
+        {
+          "key": "recruit",
+          "label": "Recruitment",
+          "hint": "A jobs page, applications and trial shifts in one place",
+          "icon": "user-plus"
+        },
+        {
+          "key": "rotas",
+          "label": "Staff rotas",
+          "hint": "Rotas, availability, shift swaps and holiday requests",
+          "icon": "calendar-days"
+        },
+        {
+          "key": "money",
+          "label": "Receipts and expenses",
+          "hint": "Receipts, mileage, petty cash and a monthly pack for your accountant",
+          "icon": "receipt"
+        },
+        {
+          "key": "stock",
+          "label": "Stock and ordering",
+          "hint": "Stock counts, par levels and supplier orders",
+          "icon": "package"
+        },
+        {
+          "key": "tips",
+          "label": "Tips and tronc",
+          "hint": "Share tips fairly and keep a record of it",
+          "icon": "coins"
+        }
+      ]
+    },
+    {
+      "key": "top_pick",
+      "kind": "single",
+      "prompt": "If you could only have one, which would it be?",
+      "optionsFrom": ["front", "back"]
+    },
+    {
+      "key": "price",
+      "kind": "single",
+      "prompt": "Your top pick: {{top_pick}}. What would it be worth to you each month?",
+      "hint": "Per pub, before VAT.",
+      "showIf": ["top_pick"],
+      "options": [
+        { "key": "price_free", "label": "Nothing, it would need to be free" },
+        { "key": "price_up_to_10", "label": "Up to £10" },
+        { "key": "price_10_30", "label": "£10 to £30" },
+        { "key": "price_30_50", "label": "£30 to £50" },
+        { "key": "price_50_100", "label": "£50 to £100" },
+        { "key": "price_over_100", "label": "More than £100" },
+        { "key": "price_unsure", "label": "It depends what it replaces" }
+      ]
+    },
+    {
+      "key": "pay_model",
+      "kind": "single",
+      "prompt": "How would you rather pay for tools like these?",
+      "showIf": ["top_pick"],
+      "options": [
+        { "key": "pay_per_tool", "label": "Per tool, only for the ones I use" },
+        { "key": "pay_bundle", "label": "One monthly price for everything" },
+        { "key": "pay_free_start", "label": "Free to start, then pay for extras" },
+        { "key": "pay_unsure", "label": "Not sure yet" }
+      ]
+    },
+    {
+      "key": "must_do",
+      "kind": "text",
+      "prompt": "What would your top pick have to do well for you to switch to it?",
+      "hint": "Optional. A sentence is plenty.",
+      "required": false,
+      "maxLength": 400,
+      "showIf": ["top_pick"]
+    },
+    {
+      "key": "missing",
+      "kind": "text",
+      "prompt": "Is there a tool you wish existed that isn't on our list?",
+      "hint": "Optional.",
+      "required": false,
+      "maxLength": 400
+    },
+    {
+      "key": "venue",
+      "kind": "single",
+      "prompt": "What kind of pub is it?",
+      "options": [
+        { "key": "venue_local", "label": "A community local", "icon": "beer" },
+        { "key": "venue_food", "label": "Food-led", "icon": "utensils" },
+        { "key": "venue_wet", "label": "Wet-led", "icon": "beer" },
+        { "key": "venue_music_sport", "label": "Live music or sport", "icon": "music" },
+        { "key": "venue_rooms", "label": "Pub with rooms", "icon": "bed-double" },
+        { "key": "venue_other", "label": "Something else", "icon": "store" }
+      ]
+    },
+    {
+      "key": "run",
+      "kind": "single",
+      "prompt": "How do you run it?",
+      "options": [
+        { "key": "run_tenant", "label": "Tenant or leaseholder" },
+        { "key": "run_free_house", "label": "Free house owner" },
+        { "key": "run_managed", "label": "Manager in a managed pub" },
+        { "key": "run_group", "label": "Operator with several pubs" },
+        { "key": "run_other", "label": "Something else" }
+      ]
+    },
+    {
+      "key": "say",
+      "kind": "single",
+      "prompt": "Would you like a say in how these get built?",
+      "options": [
+        { "key": "say_call", "label": "Yes, I'd happily have a short call" },
+        { "key": "say_email", "label": "Yes, email me the odd question" },
+        { "key": "say_no", "label": "Not right now" }
+      ]
+    },
+    {
+      "key": "test",
+      "kind": "single",
+      "prompt": "Would you try an early version in your pub?",
+      "options": [
+        { "key": "test_early", "label": "Yes, I'd test it early" },
+        { "key": "test_ready", "label": "Just tell me when it's ready" },
+        { "key": "test_no", "label": "No thanks" }
+      ]
+    },
+    {
+      "key": "contact",
+      "kind": "contact",
+      "prompt": "Where can we reach you?",
+      "hint": "We'll only contact you about these tools, and you can tell us to stop at any time.",
+      "showIf": ["say_call", "say_email", "test_early", "test_ready"]
+    }
+  ]
+}
