@@ -36,6 +36,7 @@ const HEX_ALLOWLIST = [
   'src/lib/category-colours.ts',
   // next/og renders these at the edge, without Tailwind.
   'src/app/opengraph-image.tsx',
+  'src/app/survey/[slug]/opengraph-image.tsx',
   'src/app/icon.tsx',
   'src/app/apple-icon.tsx',
   // global-error.tsx replaces the root layout, so it renders without the

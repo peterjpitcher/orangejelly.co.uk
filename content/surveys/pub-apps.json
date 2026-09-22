@@ -18,9 +18,9 @@
       "key": "front",
       "kind": "multi",
       "prompt": "Customers and bookings: which of these would you use?",
-      "hint": "Pick up to three, or none.",
+      "hint": "Pick as many as you like, or none.",
       "minChoices": 0,
-      "maxChoices": 3,
+      "maxChoices": 8,
       "options": [
         {
           "key": "customers",
@@ -76,9 +76,9 @@
       "key": "back",
       "kind": "multi",
       "prompt": "Running the pub: which of these would you use?",
-      "hint": "Pick up to three, or none.",
+      "hint": "Pick as many as you like, or none.",
       "minChoices": 0,
-      "maxChoices": 3,
+      "maxChoices": 7,
       "options": [
         {
           "key": "tasks",

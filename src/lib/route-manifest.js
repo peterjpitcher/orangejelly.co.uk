@@ -299,6 +299,12 @@ const ROUTES = [
     sitemap: false,
     note: 'Separate poll product. Out of scope. Token routes must never receive third-party scripts.',
   },
+  {
+    path: '/survey/[slug]',
+    disposition: 'live',
+    sitemap: false,
+    note: 'Surveys served from the database, for sharing on social media. noindex, and out of the sitemap on purpose: a survey closes, and a search result for a closed survey is a dead end. See tasks/survey/PLAN.md.',
+  },
 
   // ------------------------------------------------------------ active redirects
   ...CONSOLIDATED_COUNTIES.map((county) => ({

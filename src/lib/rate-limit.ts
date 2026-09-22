@@ -29,7 +29,10 @@ export type RateLimitBucket =
   // mail is a standing spam target, and unlike the poll buckets there is no token
   // in the URL to slow anyone down.
   | 'enquiry_ip'
-  | 'enquiry_email';
+  | 'enquiry_email'
+  // Surveys. Public, shared on social media, and the answers are the research,
+  // so a script replaying one submission would quietly skew the counts.
+  | 'survey_submit_ip';
 
 interface BucketConfig {
   limit: number;
@@ -51,6 +54,9 @@ const BUCKETS: Record<RateLimitBucket, BucketConfig> = {
   // three a day from one address covers a person with two companies.
   enquiry_ip: { limit: 5, windowSeconds: 3600 },
   enquiry_email: { limit: 3, windowSeconds: 86400 },
+  // Ten an hour from one address. A pub's staff on the same Wi-Fi can all answer;
+  // a script cannot fill the survey with one opinion.
+  survey_submit_ip: { limit: 10, windowSeconds: 3600 },
 };
 
 /** One second. A limiter must never be the reason a form feels broken. */
