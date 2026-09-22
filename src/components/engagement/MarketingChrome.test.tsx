@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render } from '@testing-library/react';
+import { act, render } from '@testing-library/react';
 import { readFileSync } from 'fs';
 import path from 'path';
 
@@ -33,6 +33,10 @@ const THIRD_PARTY_HOSTS = [
   'doubleclick.net',
   'gstatic.com',
 ];
+
+/** CookieNotice's storage key and the value an Accept click writes. */
+const CONSENT_KEY = 'oj-cookie-consent';
+const ACCEPTED = JSON.stringify({ analytics: true, timestamp: '2026-09-22T12:00:00.000Z' });
 
 const TOKEN_ROUTE = '/availability/o/0123456789abcdef0123456789abcdef';
 const PARTICIPANT_ROUTE = '/availability/p/0123456789abcdef0123456789abcdef';
@@ -81,7 +85,7 @@ vi.mock('@vercel/speed-insights/next', () => ({
 }));
 
 import MarketingChrome from './MarketingChrome';
-import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
+import { GoogleTagManager, updateGtagConsent } from '@/components/GoogleTagManager';
 import { PreloadResources } from '@/components/PerformanceMonitor';
 
 /** Every URL the rendered markup would cause the browser to contact. */
@@ -95,7 +99,6 @@ function renderAllLayoutChrome(): string {
     <>
       <PreloadResources />
       <GoogleTagManager />
-      <GoogleTagManagerNoscript />
       <MarketingChrome />
     </>
   );
@@ -107,8 +110,8 @@ function renderAllLayoutChrome(): string {
  * the marketing-route cases reach it. On a token route the gate stops it mounting
  * at all, which is itself a small confirmation the gate works.
  */
-function stubLocalStorage(): void {
-  const store = new Map<string, string>();
+function stubLocalStorage(initial: Record<string, string> = {}): void {
+  const store = new Map<string, string>(Object.entries(initial));
   vi.stubGlobal('localStorage', {
     getItem: (key: string) => store.get(key) ?? null,
     setItem: (key: string, value: string) => void store.set(key, value),
@@ -146,30 +149,75 @@ describe('third-party scripts on token routes', () => {
     }
   });
 
+  it('should fire no third-party request on a token route even after analytics is accepted', () => {
+    stubLocalStorage({ [CONSENT_KEY]: ACCEPTED });
+    pathnameMock.mockReturnValue(TOKEN_ROUTE);
+
+    const html = renderAllLayoutChrome();
+
+    expect(externalUrlsIn(html)).toEqual([]);
+    expect(html).not.toContain('gtm-script');
+  });
+
   it('should never embed the token in the rendered chrome when on a token route', () => {
     pathnameMock.mockReturnValue(TOKEN_ROUTE);
 
     expect(renderAllLayoutChrome()).not.toContain('0123456789abcdef');
   });
 
-  it('should still load Google Tag Manager when on a marketing route', () => {
-    // The inverse assertion. Without it, a gate that disabled analytics site-wide
-    // would pass every test above while silently breaking the business.
+  /*
+   * GTM loads only after consent, since 22 September 2026. The privacy notice says
+   * Google's tools never load if someone declines or ignores the banner, and these
+   * four assertions are what hold it to that. The inverse ones matter as much: a
+   * gate that disabled analytics site-wide would pass the first and silently break
+   * the business.
+   */
+  it('should load nothing from Google on a marketing route before anyone has chosen', () => {
     pathnameMock.mockReturnValue(MARKETING_ROUTE);
 
     const html = renderAllLayoutChrome();
 
-    expect(html).toContain('googletagmanager.com');
+    expect(html).not.toContain('gtm-script');
+    expect(html).not.toContain('googletagmanager.com');
+    expect(html).not.toContain('google-analytics.com');
   });
 
-  it('should still load Vercel analytics and preconnects when on a marketing route', () => {
+  it('should load Google Tag Manager on a marketing route when analytics was accepted before', () => {
+    stubLocalStorage({ [CONSENT_KEY]: ACCEPTED });
+    pathnameMock.mockReturnValue(MARKETING_ROUTE);
+
+    const { container } = render(<GoogleTagManager />);
+
+    expect(container.querySelector('[data-testid="gtm-script"]')).not.toBeNull();
+  });
+
+  it('should load Google Tag Manager the moment Accept is clicked, without a reload', () => {
+    pathnameMock.mockReturnValue(MARKETING_ROUTE);
+    const { container } = render(<GoogleTagManager />);
+    expect(container.querySelector('[data-testid="gtm-script"]')).toBeNull();
+
+    act(() => updateGtagConsent(true));
+
+    expect(container.querySelector('[data-testid="gtm-script"]')).not.toBeNull();
+  });
+
+  it('should never load Google Tag Manager when analytics is rejected', () => {
+    stubLocalStorage({ [CONSENT_KEY]: JSON.stringify({ analytics: false }) });
+    pathnameMock.mockReturnValue(MARKETING_ROUTE);
+    const { container } = render(<GoogleTagManager />);
+
+    act(() => updateGtagConsent(false));
+
+    expect(container.querySelector('[data-testid="gtm-script"]')).toBeNull();
+  });
+
+  it('should still load Vercel analytics when on a marketing route', () => {
     pathnameMock.mockReturnValue(MARKETING_ROUTE);
 
     const html = renderAllLayoutChrome();
 
     expect(html).toContain('vercel-scripts.com');
     expect(html).toContain('vitals.vercel-insights.com');
-    expect(html).toContain('google-analytics.com');
   });
 });
 

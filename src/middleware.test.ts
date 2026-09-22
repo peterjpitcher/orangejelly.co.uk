@@ -88,6 +88,16 @@ describe('Content-Security-Policy', () => {
     expect(connectSrc).not.toContain('challenges.cloudflare.com');
   });
 
+  it('should not allow Microsoft Clarity anywhere, so a leftover GTM tag cannot run', () => {
+    // Clarity recorded visits without consent and was removed on 22 September
+    // 2026. Its tags live in the GTM container, outside this repo, so the CSP is
+    // the part of the removal the code can guarantee.
+    const csp = middleware(requestFor('/')).headers.get('Content-Security-Policy');
+
+    expect(csp).toBeTruthy();
+    expect(csp).not.toContain('clarity.ms');
+  });
+
   it('should keep the existing security headers unweakened', () => {
     const headers = middleware(requestFor('/')).headers;
 
