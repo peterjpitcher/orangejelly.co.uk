@@ -22,6 +22,7 @@ import { getCategoryBySlug, getCategoryHue } from '@/lib/blog';
 import { getAllBlogPosts } from '@/lib/markdown/markdown';
 import { generateStaticMetadata } from '@/lib/metadata';
 import { SEASON_HUBS } from '@/lib/seasonal-hubs';
+import SurveyBand from '@/components/survey/SurveyBand';
 
 /**
  * `/guides`.
@@ -257,6 +258,10 @@ export default async function GuidesPage(): Promise<JSX.Element> {
             </div>
           </section>
         </GroundProvider>
+
+        {/* Most publicans reach the site through a guide, so the library carries the
+            promoted survey under its hero, orange against the ink. */}
+        <SurveyBand tone="orange" />
 
         <Band tone="paper">
           <div className="grid gap-8 sm:grid-cols-3">

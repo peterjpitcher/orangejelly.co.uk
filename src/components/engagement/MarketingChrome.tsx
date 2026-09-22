@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import PerformanceMonitor from '@/components/PerformanceMonitor';
 import CookieNotice from '@/components/CookieNotice';
+import SurveyPrompt from '@/components/survey/SurveyPrompt';
 import { isScriptFreeRoute } from '@/lib/token-routes';
 
 /**
@@ -57,6 +58,9 @@ export default function MarketingChrome(): React.ReactElement | null {
     <>
       <PerformanceMonitor />
       <CookieNotice />
+      {/* The promoted survey's prompt. It waits for the cookie choice above and keeps
+          itself off the survey, the back office and the enquiry page. */}
+      <SurveyPrompt />
       <Analytics />
       <SpeedInsights />
     </>

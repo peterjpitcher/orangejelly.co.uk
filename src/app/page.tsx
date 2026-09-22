@@ -12,6 +12,7 @@ import {
 import { getBaseUrl } from '@/lib/site-config';
 
 import { BUILDS, METHOD, PRESSURE_POINTS, PROOF, WORK_EXAMPLES } from './home-content';
+import SurveyBand from '@/components/survey/SurveyBand';
 
 const TITLE = 'Websites, Applications & AI for Business Growth | Orange Jelly';
 const DESCRIPTION =
@@ -70,6 +71,10 @@ export default function HomePage(): JSX.Element {
             </div>
           </section>
         </GroundProvider>
+
+        {/* The promoted survey, straight under the hero (Peter, 22 September 2026).
+            Ink, so it stands clear of the orange hero above it. */}
+        <SurveyBand tone="ink" />
 
         <section className="border-b-1.5 border-oj-ink bg-oj-cream py-14 sm:py-20">
           <div className="page-shell">

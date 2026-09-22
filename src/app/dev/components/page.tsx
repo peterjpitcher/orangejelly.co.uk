@@ -298,7 +298,7 @@ export default function ComponentHarness(): JSX.Element {
 
       <Specimen
         name="oj / Header"
-        note="Cream is the default. Orange is conversion pages only. Narrow the window below 880px for the drawer."
+        note="Cream is the default. Orange is conversion pages only. Narrow the window below 1024px for the drawer."
       >
         <div className="w-full space-y-8">
           <div className="border-1.5 border-oj-ink">

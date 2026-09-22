@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { cache } from 'react';
 
 import { Alert, Button, GroundProvider, OjFooter, OjHeader } from '@/components/oj';
+import { PROMOTED_SURVEY } from '@/lib/promoted-survey';
 import { getSurveyForVisitor, type SurveyAccess } from '@/lib/db/surveys';
 import { getBaseUrl } from '@/lib/site-config';
 
@@ -66,7 +67,8 @@ export function SurveyPageBody({ access, previewToken }: SurveyPageBodyProps): J
 
   return (
     <>
-      <OjHeader />
+      {/* The promoted survey is in the nav, so its own page marks that item current. */}
+      <OjHeader current={survey.slug === PROMOTED_SURVEY?.slug ? 'survey' : undefined} />
 
       <main id="main-content">
         <GroundProvider value="ink">

@@ -16,6 +16,7 @@ import {
 import { getBaseUrl } from '@/lib/site-config';
 
 import { AREAS, FAQS, LOOK_AT_FIRST, RELATED_BUILDS } from './content';
+import SurveyBand from '@/components/survey/SurveyBand';
 
 /**
  * `/pub-marketing`. The hospitality sector landing page.
@@ -103,6 +104,10 @@ export default function PubMarketingPage(): JSX.Element {
             </div>
           </section>
         </GroundProvider>
+
+        {/* The promoted survey is for publicans, so this page carries it first.
+            Orange against the ink hero: the site's colour for "act". */}
+        <SurveyBand tone="orange" />
 
         <Band heading="websites and booking systems for your venue." tone="paper">
           <p className="measure text-[17px] leading-relaxed text-oj-ink-2">

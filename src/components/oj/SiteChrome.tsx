@@ -6,6 +6,8 @@ import * as React from 'react';
 
 import { CookieSettingsButton } from '@/components/CookieSettingsButton';
 
+import { PROMOTED_SURVEY } from '@/lib/promoted-survey';
+
 import { Footer } from './Footer';
 import { Header } from './Header';
 
@@ -38,20 +40,26 @@ export type OjNavKey =
   | 'pubs'
   | 'insights'
   | 'guides'
+  | 'survey'
   | 'start-here';
 
 /**
- * BOTH LIBRARIES ARE IN HERE, and that is deliberate.
+ * SIX ITEMS, ON ONE LINE (22 September 2026).
  *
- * The first version of this nav had four items and neither of them. The 105
- * hospitality guides earn 92.9% of the site's search clicks and were reachable only
- * through a footer link mislabelled "Insights", and the insights collection was not
- * linked from the chrome at all. Peter went looking for the guides and could not
- * find them, which is the only test that matters.
+ * The guides are in the bar and that is deliberate. The first version of this nav had
+ * neither library: the 105 hospitality guides earn 92.9% of the site's search clicks
+ * and were reachable only through a footer link mislabelled "Insights". Peter went
+ * looking for the guides and could not find them, which is the only test that
+ * matters.
  *
- * Six items is more than I would choose from nothing. The old navigation carried
- * seven, and burying the biggest content asset the business owns to keep a tidier
- * bar is the wrong trade.
+ * The bar then grew to eight items with the pub survey, and eight do not fit: they
+ * needed 808px against the 755px the bar has at full width, so labels broke onto two
+ * lines at every desktop size and Peter called it cluttered. "How we work" and
+ * "Insights" came out of the bar to make room. Both stay in the footer, and both keys
+ * stay in OjNavKey so their pages still type-check when they pass `current`, the same
+ * way "start-here" does. Insights is four articles against the guides' 105; How we
+ * work is reachable from every page that describes the method. The Header measures
+ * the rest: see the note on its nav.
  */
 const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
   /*
@@ -68,7 +76,7 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
    * all 105 guide articles to a growth problem, for nothing a visitor would notice.
    */
   { key: 'growth-problems', label: 'Growth problems', href: '/growth-problems' },
-  { key: 'how-we-work', label: 'How we work', href: '/how-we-work' },
+  // "How we work" was here until 22 September 2026. See the note above ITEMS.
   /*
    * `/solutions` was unreachable from the site's own navigation.
    *
@@ -94,7 +102,7 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
    * word in the bar fixes that.
    */
   { key: 'pubs', label: 'Pubs', href: '/pub-marketing' },
-  { key: 'insights', label: 'Insights', href: '/insights' },
+  // "Insights" was here until 22 September 2026. See the note above ITEMS.
   { key: 'guides', label: 'Guides', href: '/guides' },
   /*
    * "Start here" is deliberately NOT in the bar.
@@ -109,6 +117,15 @@ const ITEMS: Array<{ key: OjNavKey; label: string; href: string }> = [
    * mark itself current, and the footer keeps a link for anyone reading the site as a
    * sitemap.
    */
+  /*
+   * The survey the site is promoting, last before the call to action and marked with
+   * the orange dot, at Peter's request (22 September 2026): "champion it everywhere".
+   * It comes and goes with PROMOTED_SURVEY, so closing the survey takes it out of the
+   * bar without anyone editing this list.
+   */
+  ...(PROMOTED_SURVEY
+    ? [{ key: 'survey' as const, label: PROMOTED_SURVEY.navLabel, href: PROMOTED_SURVEY.href }]
+    : []),
 ];
 
 export interface OjHeaderProps {
@@ -178,6 +195,7 @@ export function OjHeader({ current, tone, ctaHref = '/start-here' }: OjHeaderPro
         label: item.label,
         href: item.href,
         current: item.key === current,
+        highlight: item.key === 'survey',
       }))}
       cta={{ label: "Let's talk", href: ctaHref }}
     />
@@ -221,6 +239,10 @@ export function OjFooter(): JSX.Element {
           title: 'Start',
           links: [
             { label: 'Start here', href: '/start-here' },
+            // The promoted survey, beside the other things a visitor does. See ITEMS.
+            ...(PROMOTED_SURVEY
+              ? [{ label: PROMOTED_SURVEY.navLabel, href: PROMOTED_SURVEY.href }]
+              : []),
             { label: 'What we build', href: '/solutions' },
             { label: 'Growth problems', href: '/growth-problems' },
             /*
