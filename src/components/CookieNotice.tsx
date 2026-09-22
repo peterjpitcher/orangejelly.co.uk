@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { updateGtagConsent } from '@/components/GoogleTagManager';
 
@@ -11,10 +11,51 @@ interface ConsentPreferences {
   timestamp: string;
 }
 
+/** Fired on window by the footer's Cookie settings button. */
+const OPEN_SETTINGS_EVENT = 'oj:open-cookie-settings';
+
+/**
+ * Reopens the consent panel so a stored choice can be changed.
+ *
+ * The privacy notice says you can change your mind at any time. Until 22 September
+ * 2026 the panel only ever appeared to someone who had not chosen yet, so once a
+ * choice was stored there was no way back to it short of clearing browser storage.
+ */
+export function openCookieSettings(): void {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new Event(OPEN_SETTINGS_EVENT));
+}
+
+/**
+ * Removes Google Analytics' own cookies when analytics is switched off.
+ *
+ * GA sets `_ga` and `_ga_<id>` on the widest domain it can, so each name is
+ * cleared on the bare host and on the registrable domain. Clearing one that is
+ * not there does nothing.
+ */
+function clearGoogleAnalyticsCookies(): void {
+  const names = document.cookie
+    .split(';')
+    .map((cookie) => cookie.trim().split('=')[0])
+    .filter((name) => name === '_ga' || name.startsWith('_ga_'));
+  const host = window.location.hostname;
+  const domains = ['', host, `.${host.replace(/^www\./, '')}`];
+
+  for (const name of names) {
+    for (const domain of domains) {
+      document.cookie = `${name}=; Max-Age=0; path=/${domain ? `; domain=${domain}` : ''}`;
+    }
+  }
+}
+
 export default function CookieNotice() {
   const [visible, setVisible] = useState(false);
   const [preferences, setPreferences] = useState<ConsentPreferences | null>(null);
   const [showDetails, setShowDetails] = useState(false);
+  // True when the panel was opened from Cookie settings rather than shown to
+  // somebody who has not chosen yet.
+  const [reopened, setReopened] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -54,7 +95,29 @@ export default function CookieNotice() {
     }
   }, []);
 
+  useEffect(() => {
+    const onOpen = (): void => {
+      setShowDetails(false);
+      setReopened(true);
+      setVisible(true);
+    };
+    window.addEventListener(OPEN_SETTINGS_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_SETTINGS_EVENT, onOpen);
+  }, []);
+
+  // Opened from the footer, the panel appears at the bottom of the screen, well
+  // away from the button that opened it. Focus goes with it so a keyboard or
+  // screen-reader user lands on the choice they asked for.
+  useEffect(() => {
+    if (visible && reopened) panelRef.current?.focus();
+  }, [visible, reopened]);
+
   const savePreferences = (analytics: boolean) => {
+    // Switching analytics off after it was on. GTM is already running on this page
+    // and a loaded script cannot be taken back out, so the page reloads without it:
+    // that is what makes "withdrawing stops the collection straight away" true.
+    const withdrawing = preferences?.analytics === true && !analytics;
+
     if (typeof window !== 'undefined') {
       const payload: ConsentPreferences = {
         analytics,
@@ -66,12 +129,18 @@ export default function CookieNotice() {
       updateGtagConsent(analytics);
     }
     setVisible(false);
+    setReopened(false);
+
+    if (withdrawing) {
+      clearGoogleAnalyticsCookies();
+      window.location.reload();
+    }
   };
 
   const handleAccept = () => savePreferences(true);
   const handleReject = () => savePreferences(false);
 
-  if (!visible || preferences) {
+  if (!visible) {
     return null;
   }
 
@@ -93,11 +162,18 @@ export default function CookieNotice() {
   return (
     <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-auto sm:right-6 sm:max-w-md">
       <div
-        className="font-oj space-y-3 rounded-oj border-1.5 border-oj-cream bg-oj-ink px-4 py-4 text-oj-cream shadow-press"
+        ref={panelRef}
+        tabIndex={-1}
+        className="font-oj space-y-3 rounded-oj border-1.5 border-oj-cream bg-oj-ink px-4 py-4 text-oj-cream shadow-press outline-none"
         role="dialog"
         aria-modal="false"
         aria-label="Cookie preferences"
       >
+        {reopened && preferences ? (
+          <p className="text-xs font-bold sm:text-sm">
+            Analytics is currently switched {preferences.analytics ? 'on' : 'off'}.
+          </p>
+        ) : null}
         <p className="text-xs leading-relaxed sm:text-sm">
           We use essential cookies to keep the site running and optional analytics to understand how
           people find and use Orange Jelly. You can accept or reject analytics below. Questions?{' '}

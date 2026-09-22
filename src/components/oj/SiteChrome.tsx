@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import * as React from 'react';
 
+import { CookieSettingsButton } from '@/components/CookieSettingsButton';
+
 import { Footer } from './Footer';
 import { Header } from './Header';
 
@@ -263,6 +265,11 @@ export function OjFooter(): JSX.Element {
             { label: 'Privacy', href: '/privacy' },
             { label: 'Contact', href: '/contact' },
           ],
+          // Beside Privacy, where people look for it. It reopens the consent panel,
+          // so it is a button styled to sit with the links rather than a link.
+          extra: (
+            <CookieSettingsButton className="text-[14.5px] font-medium text-oj-cream/75 no-underline hover:text-oj-orange" />
+          ),
         },
       ]}
       /*

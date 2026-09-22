@@ -14,6 +14,8 @@ import { Anchor } from './Anchor';
 export interface FooterColumn {
   title: string;
   links: Array<{ label: string; href: string }>;
+  /** Rendered after the links, for a control that is not a link. */
+  extra?: React.ReactNode;
 }
 
 export interface FooterProps {
@@ -150,6 +152,7 @@ export function Footer({
                   {link.label}
                 </Anchor>
               ))}
+              {column.extra}
             </div>
           ))}
         </div>
