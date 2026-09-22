@@ -22,7 +22,7 @@ a link preview that sells the survey.
 - **Survey format first.** The first survey is research, not a personality quiz. The schema leaves room for scored quizzes later as additive tables.
 - **Answers are anonymous; contact details are optional and separate.** Contact details are asked for only when someone says yes to having a say or testing. They live in their own table, not `contacts`, so research volunteers never land in the sales pipeline or its stats.
 - **No automatic email to respondents.** Peter gets a notification per volunteer through the existing Resend path. Nothing is sent to the public.
-- **Volunteers' details are deleted 12 months after their survey closes**, by a daily cron. The anonymous answers stay.
+- **Volunteers' details are deleted 24 months after their survey closes**, by a daily cron, matching enquiries (Peter, 22 September 2026; he declined 12 months). The anonymous answers stay.
 - **Price bands on the survey are the respondent's answer ranges, not Orange Jelly prices.** Pending Peter's yes, as an exception to "the only number on the site is the hourly rate".
 - **Survey pages are `noindex`** and stay out of the sitemap. They are for sharing, not search.
 - **Drafts are previewable** through a secret link, `/survey/<slug>/preview/<token>`. The token is in the path so the token-route rules apply (no referrer, no third-party scripts), and nothing is measured there. Preview answers are flagged and left out of every count.
@@ -64,7 +64,7 @@ Each lands green (lint, type-check, tests, build) and is committed on its own.
 - [x] Contact step (name, email, pub or business, consent tick). No phone: not asked for, and less personal data to hold
 - [x] Privacy notice: a "When you answer one of our surveys" subsection, retention line, updated date and its test
 - [x] Notification to Peter per volunteer via `sendLeadNotification`, rendered with fixture data in a test
-- [x] Daily cron `/api/cron/surveys` deletes volunteers' details 12 months after the survey closes
+- [x] Daily cron `/api/cron/surveys` deletes volunteers' details 24 months after the survey closes
 
 ### 4. Admin
 - [x] `/api/admin/surveys` behind `requireAdmin`

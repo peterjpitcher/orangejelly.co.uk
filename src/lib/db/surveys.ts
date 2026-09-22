@@ -288,10 +288,11 @@ export async function getSurveyResults(surveyId: string): Promise<SurveyResults>
 }
 
 /**
- * How long a volunteer's details are kept after their survey closes. Stated in
- * the privacy notice; change both together.
+ * How long a volunteer's details are kept after their survey closes: 24 months,
+ * matching enquiries (Peter, 22 September 2026). Stated in the privacy notice,
+ * and src/lib/db/survey-sweep.test.ts holds the two together.
  */
-export const CONTACT_RETENTION_MONTHS = 12;
+export const CONTACT_RETENTION_MONTHS = 24;
 
 export interface SurveyContactSweep {
   deleted: number;

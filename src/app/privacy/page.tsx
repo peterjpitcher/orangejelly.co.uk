@@ -251,7 +251,7 @@ export default function PrivacyPage(): JSX.Element {
               </p>
               <p>
                 <strong>Surveys</strong>: if you gave us your details at the end of a survey, we
-                delete them 12 months after that survey closes, automatically. Ask us to remove them
+                delete them 24 months after that survey closes, automatically. Ask us to remove them
                 sooner and we will. The anonymous answers are kept, because once your details have
                 gone nothing links them to you.
               </p>
