@@ -68,11 +68,44 @@ export function answerKey(participantId: string, optionId: string): string {
 }
 
 /**
+ * Whether a poll the organiser token found may be shown. The one home for the
+ * rule, so the gate and the results read cannot disagree about which links are
+ * dead.
+ */
+function isLiveOrganiserPoll(poll: Pick<PollRow, 'status' | 'expires_at'>): boolean {
+  // A draft has not proved the organiser's address. The link is real but the
+  // poll is not live, and saying so would confirm a guess.
+  if (poll.status === 'draft') return false;
+  // Expiry is applied here rather than left to the periodic sweep, exactly as the
+  // vote screen does.
+  return new Date(poll.expires_at).getTime() > Date.now();
+}
+
+/**
+ * Whether an organiser token opens a live poll, from one indexed row.
+ *
+ * Used by `o/[token]/layout.tsx`, which must decide before anything is sent: the
+ * page's skeleton is a Suspense boundary, and once it streams the status is 200
+ * whatever happens next. It reads two columns rather than the whole results so
+ * the skeleton still covers the slow part.
+ */
+export async function isLiveOrganiserToken(organiserToken: string): Promise<boolean> {
+  if (!isSupabaseAdminConfigured()) return false;
+
+  const { data } = await getSupabaseAdminClient()
+    .from('polls')
+    .select('status, expires_at')
+    .eq('organiser_token', organiserToken)
+    .maybeSingle();
+
+  return data ? isLiveOrganiserPoll(data as Pick<PollRow, 'status' | 'expires_at'>) : false;
+}
+
+/**
  * Everything the organiser results screen renders.
  *
  * Returns null for an unknown token, an expired poll AND a draft: one outcome,
- * so a token guesser learns nothing from the difference. Expiry is applied at
- * render rather than left to the periodic sweep, exactly as the vote screen does.
+ * so a token guesser learns nothing from the difference.
  */
 export async function getOrganiserResults(
   organiserToken: string
@@ -80,12 +113,7 @@ export async function getOrganiserResults(
   if (!isSupabaseAdminConfigured()) return null;
 
   const view = await getOrganiserView(organiserToken);
-  if (!view) return null;
-
-  // A draft has not proved the organiser's address. The link is real but the
-  // poll is not live, and saying so would confirm a guess.
-  if (view.poll.status === 'draft') return null;
-  if (new Date(view.poll.expires_at).getTime() <= Date.now()) return null;
+  if (!view || !isLiveOrganiserPoll(view.poll)) return null;
 
   const supabase = getSupabaseAdminClient();
 

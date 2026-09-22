@@ -1,7 +1,19 @@
 import OptimizedImage from '@/components/OptimizedImage';
 
 /**
- * The root loading screen.
+ * The public site's loading screen.
+ *
+ * It used to be `src/app/loading.tsx`, at the app root. It moved on 22 September
+ * 2026 because a `loading.tsx` is a Suspense boundary, and Next 14 sends the 200
+ * headers as soon as everything outside a Suspense boundary is ready. Anything
+ * under the root one could never answer a real 404: dead poll links, unknown
+ * surveys and unknown insights all returned 200. It is now re-exported by the
+ * `loading.tsx` of each public page that renders on request (`/contact`,
+ * `/start-here` and the `/insights` list), which is the only place it ever showed:
+ * static pages arrive complete, so it never appeared on them.
+ *
+ * DO NOT put a `loading.tsx` back at the app root, or above any route that calls
+ * `notFound()`. `src/test/loading-boundaries.test.ts` fails if you do.
  *
  * It covers the viewport rather than sitting in the layout's content slot, because
  * a route segment's `loading.tsx` is swapped in before that route's own header
@@ -14,7 +26,7 @@ import OptimizedImage from '@/components/OptimizedImage';
  * so the mark now sits in a bordered block casting `shadow-press`. The behaviour,
  * the copy and the image are unchanged.
  */
-export default function Loading() {
+export default function SiteLoadingScreen(): JSX.Element {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-oj-paper">
       <div className="text-center">

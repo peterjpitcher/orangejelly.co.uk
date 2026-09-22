@@ -135,8 +135,13 @@ describe('route manifest', () => {
 
     // A path is served either by its own directory or by a dynamic sibling, so
     // /ways-to-work/growth-fix is satisfied by src/app/ways-to-work/[slug]/page.tsx.
-    const hasPage = (dir: string) =>
-      existsSync(path.join(dir, 'page.tsx')) || existsSync(path.join(dir, 'page.ts'));
+    // A route group adds nothing to the URL, so /insights is served by
+    // src/app/insights/(list)/page.tsx.
+    const hasPage = (dir: string): boolean =>
+      existsSync(path.join(dir, 'page.tsx')) ||
+      existsSync(path.join(dir, 'page.ts')) ||
+      (existsSync(dir) &&
+        readdirSync(dir).some((entry) => entry.startsWith('(') && hasPage(path.join(dir, entry))));
 
     const isServed = (routePath: string) => {
       const segments = routePath === '/' ? [] : routePath.slice(1).split('/');

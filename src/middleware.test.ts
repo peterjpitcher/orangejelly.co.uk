@@ -113,10 +113,10 @@ describe('Content-Security-Policy', () => {
  * P5: /dev in production.
  *
  * The component harness answered HTTP 200 in production, carrying the root loading
- * fallback, because src/app/loading.tsx wraps every route in a Suspense boundary and
- * Next 14 flushes that shell with a 200 before the page component runs. The page's own
- * notFound() therefore never sets a status, however correct it is about what to render.
- * Middleware runs before rendering begins, so this is where the status is decided.
+ * fallback, because src/app/loading.tsx wrapped every route in a Suspense boundary and
+ * Next 14 flushed that shell with a 200 before the page component ran (it moved off the
+ * app root on 22 September 2026). The page's own notFound() therefore never set a
+ * status. Middleware runs before rendering begins, so this is where the status is decided.
  */
 describe('/dev guard', () => {
   afterEach(() => {

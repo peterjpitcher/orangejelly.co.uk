@@ -345,6 +345,24 @@ check('an unknown case study or growth problem returns 404, not a soft one', asy
   }
 });
 
+check('a dead poll link or an unknown survey returns 404, not a soft one', async () => {
+  // Each route calls notFound(). All of them answered 200 until 22 September 2026,
+  // because src/app/loading.tsx sat at the app root and sent the headers first;
+  // src/test/loading-boundaries.test.ts guards the layout, this guards the result.
+  // /availability/verify is left out on purpose: it answers a used or unknown link
+  // with its own "that link didn't work" page, deliberately, at 200.
+  const junk = 'synthetic-check-not-a-real-token';
+  for (const path of [
+    `/availability/p/${junk}`,
+    `/availability/p/${junk}/edit/${junk}`,
+    `/availability/o/${junk}`,
+    '/survey/synthetic-check-no-such-survey',
+  ]) {
+    const { status } = await get(path);
+    if (status !== 404) throw new Error(`${path} returned ${status}, expected 404`);
+  }
+});
+
 check('the admin area is not open', async () => {
   const { status, body } = await get('/api/admin/enquiries');
   if (status === 200) throw new Error('the enquiry list answered without authentication');

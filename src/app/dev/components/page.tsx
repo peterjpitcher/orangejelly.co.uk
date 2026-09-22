@@ -49,11 +49,10 @@ export const metadata: Metadata = {
  * decision. Prerendering would settle it at build time, where NODE_ENV is production,
  * baking the not-found page into a statically served route.
  *
- * It does not set the status code, which is what this comment used to claim.
- * src/app/loading.tsx sits at the app root, so Next 14 wraps every route in a Suspense
- * boundary and flushes the shell with a 200 before this component runs, and once the
- * headers are sent notFound() cannot change them. The status comes from the /dev guard
- * in src/middleware.ts.
+ * The status code comes from the /dev guard in src/middleware.ts, which answers before
+ * rendering starts. This page could not set it while src/app/loading.tsx sat at the app
+ * root (until 22 September 2026): Next 14 flushed the shell with a 200 before this
+ * component ran, and once the headers are sent notFound() cannot change them.
  */
 export const dynamic = 'force-dynamic';
 

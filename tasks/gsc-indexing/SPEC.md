@@ -357,10 +357,15 @@ answer comes.
 1. **`dynamicParams = false` on `/insights/[slug]`?** It would make unknown insight slugs
    return a real 404, and would end draft preview for insights. Recommended default: leave it
    as it is, because a working preview is worth more than a soft 404 on URLs nobody requests.
+   **Overtaken 22 September 2026:** with the root `loading.tsx` gone, an unknown insight
+   slug answers 404 without `dynamicParams = false`, and the preview code is not changed.
+   See item 5.
 2. **`dynamicParams = false` on `/guides/category/[category]`?** Same benefit, but it would
    make the in-page legacy-slug `permanentRedirect()` unreachable, leaving middleware as the
    only cover. Recommended default: leave it as it is; this release adds the missing
    middleware test either way.
+   **Overtaken 22 September 2026:** an unknown category now answers 404 without it, so the
+   in-page redirect stays reachable. See item 5.
 3. **Draft-mode preview.** `/guides/[slug]` already pairs `dynamicParams = false` with a
    `generateStaticParams` that excludes drafts, so an unpublished guide 404s before the
    `draftMode()` read at line 387 can matter. `PREVIEW_SECRET` is documented as live.
@@ -379,6 +384,14 @@ answer comes.
    Recommended default: leave it, because these routes are `noindex` bearer-token URLs
    where a soft 404 carries no search cost, and the security property does not depend on
    the status.
+   **Resolved 22 September 2026** (branch `fix/poll-links-real-404`): Peter asked for real
+   404s. `src/app/loading.tsx` moved off the app root into the three public pages that
+   render on request (`/contact`, `/start-here`, the `/insights` list), and
+   `/availability/o/[token]` checks its token in a layout above its skeleton. Dead poll
+   links and unknown surveys now answer 404. `/availability/verify/[token]` is unchanged:
+   it never called `notFound()` and answers a used link with its own page, at 200, by design.
+   `src/test/loading-boundaries.test.ts` stops a loading boundary going back above a
+   `notFound()`.
 
 Follow-ups with no decision needed, logged so they are not rediscovered:
 
