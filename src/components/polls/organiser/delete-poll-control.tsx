@@ -2,18 +2,8 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from '@/components/Button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+import { Loader2 } from 'lucide-react';
+import { Alert, Button, Field, Input, Modal } from '@/components/oj';
 import { deletePoll } from '@/app/actions/poll-organiser';
 
 /**
@@ -26,8 +16,9 @@ import { deletePoll } from '@/app/actions/poll-organiser';
  * erase eleven other people's answers. Typing the title is the cheapest control
  * that makes the action deliberate.
  *
- * Uses `ui/dialog.tsx`, which exists. There is no `alert-dialog.tsx` in this
- * repo, so do not import one.
+ * The dialogue is the design system's `Modal`, as ConfirmControl's is: it traps
+ * focus and closes on Escape the way the Radix one did, and it wears the same
+ * ink border and hard shadow as everything else on the screen.
  *
  * Allowed in EVERY status, including 'confirmed'. Refusing erasure on a
  * confirmed poll would make it conditional on the poll's state, which is not a
@@ -67,78 +58,84 @@ export default function DeletePollControl({
     });
   }
 
+  function close(): void {
+    // Never dismiss mid-flight: the deletion is already running and its result
+    // still has to land somewhere.
+    if (isPending) return;
+    setOpen(false);
+    setTyped('');
+    setError(null);
+  }
+
   return (
     <>
+      {/* Destructive, so it keeps the outline of its neighbours but drops to the
+          muted ink and only turns danger red under the pointer, as the delete on
+          the polls list does. */}
       <Button
         variant="ghost"
-        size="medium"
+        size="md"
         type="button"
         onClick={() => setOpen(true)}
-        className="text-brand-base-light"
+        className="text-oj-ink-3 hover:text-oj-danger"
       >
         Delete this poll
       </Button>
 
-      <Dialog
+      <Modal
         open={open}
-        onOpenChange={(next) => {
-          if (isPending) return;
-          setOpen(next);
-          if (!next) {
-            setTyped('');
-            setError(null);
-          }
-        }}
-      >
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Delete this poll?</DialogTitle>
-            <DialogDescription>
-              This deletes the poll, every option and everyone&rsquo;s answers, including their
-              names and email addresses. It cannot be undone, and the links stop working for
-              everybody.
-            </DialogDescription>
-          </DialogHeader>
-
-          <div className="space-y-2">
-            <Label htmlFor="delete-poll-title">
-              Type <span className="font-semibold">{pollTitle}</span> to confirm
-            </Label>
-            <Input
-              id="delete-poll-title"
-              value={typed}
-              autoComplete="off"
-              onChange={(event) => setTyped(event.target.value)}
-              aria-describedby="delete-poll-hint"
-            />
-            <p id="delete-poll-hint" className="text-sm text-brand-base-light">
-              We ask for the title because this erases other people&rsquo;s details, not just yours.
-            </p>
-          </div>
-
-          {error && (
-            <Alert variant="destructive" role="alert">
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-
-          <DialogFooter>
-            <Button variant="ghost" size="medium" type="button" onClick={() => setOpen(false)}>
+        onClose={close}
+        // `Modal` titles with the lowercase display face; a tool dialogue keeps
+        // sentence case, as ConfirmControl's does.
+        title={<span className="normal-case">Delete this poll?</span>}
+        actions={
+          <>
+            <Button variant="ghost" size="md" type="button" onClick={close}>
               Cancel
             </Button>
             <Button
               variant="primary"
-              size="medium"
+              size="md"
               type="button"
-              loading={isPending}
-              disabled={!matches}
+              disabled={!matches || isPending}
+              aria-busy={isPending || undefined}
               onClick={handleDelete}
             >
+              {isPending && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
               Delete it for good
             </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+          </>
+        }
+      >
+        <p className="m-0">
+          This deletes the poll, every option and everyone&rsquo;s answers, including their names
+          and email addresses. It cannot be undone, and the links stop working for everybody.
+        </p>
+
+        <Field
+          className="mt-4"
+          htmlFor="delete-poll-title"
+          label={
+            <>
+              Type <span className="font-black">{pollTitle}</span> to confirm
+            </>
+          }
+          hint="We ask for the title because this erases other people’s details, not just yours."
+        >
+          <Input
+            id="delete-poll-title"
+            value={typed}
+            autoComplete="off"
+            onChange={(event) => setTyped(event.target.value)}
+          />
+        </Field>
+
+        {error && (
+          <Alert tone="danger" role="alert" className="mt-4">
+            {error}
+          </Alert>
+        )}
+      </Modal>
     </>
   );
 }

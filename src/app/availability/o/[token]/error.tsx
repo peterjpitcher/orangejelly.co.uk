@@ -1,5 +1,7 @@
 'use client';
 
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Alert, Button } from '@/components/oj';
 
 /**
@@ -25,20 +27,18 @@ export default function OrganiserError({
   reset: () => void;
 }): JSX.Element {
   return (
-    <main id="main-content" className="min-h-screen bg-oj-paper py-16">
-      <div className="page-shell">
-        <div className="mx-auto max-w-md space-y-6 text-center">
-          <h1 className="text-3xl font-black tracking-[-0.02em] text-oj-ink">
-            Something went wrong
-          </h1>
-          <Alert tone="danger" title={<>That&apos;s at our end, not yours</>} className="text-left">
+    <main id="main-content" className="min-h-screen bg-oj-paper">
+      <BackOfficeHero eyebrow="poll results" title="something went wrong." />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="max-w-xl space-y-6">
+          <Alert tone="danger" title={<>That&apos;s at our end, not yours</>}>
             Your poll and everyone&apos;s answers are safe. Try again in a minute.
           </Alert>
           <Button variant="ghost" size="md" type="button" onClick={reset}>
             Try again
           </Button>
         </div>
-      </div>
+      </BackOfficeBand>
     </main>
   );
 }

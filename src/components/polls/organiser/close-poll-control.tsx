@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import Button from '@/components/Button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Loader2 } from 'lucide-react';
+import { Alert, Button } from '@/components/oj';
 import { setPollOpen } from '@/app/actions/poll-organiser';
 
 /**
@@ -38,25 +38,31 @@ export default function ClosePollControl({
 
   return (
     <div>
+      {/* Ghost, the design system's outline role: this is reversible, so it
+          stays quieter than the orange confirm above it. The spinner and
+          aria-busy stand in for the old Button's `loading`, as ConfirmControl
+          does. */}
       <Button
-        variant="outline"
-        size="medium"
+        variant="ghost"
+        size="md"
         type="button"
-        loading={isPending}
+        disabled={isPending}
+        aria-busy={isPending || undefined}
         onClick={handleClick}
       >
+        {isPending && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />}
         {isOpen ? 'Close the poll' : 'Reopen the poll'}
       </Button>
 
       {isOpen && (
-        <p className="mt-2 text-sm text-brand-base-light">
+        <p className="mt-2 text-sm text-oj-ink-2">
           Stops replies. You can reopen it whenever you like.
         </p>
       )}
 
       {error && (
-        <Alert variant="destructive" role="alert" className="mt-3">
-          <AlertDescription>{error}</AlertDescription>
+        <Alert tone="danger" role="alert" className="mt-3">
+          {error}
         </Alert>
       )}
     </div>

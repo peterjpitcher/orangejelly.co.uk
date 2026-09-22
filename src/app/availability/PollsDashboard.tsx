@@ -2,8 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-import AuthedNav from '@/components/admin/AuthedNav';
-import { Alert, Button, EmptyState, Skeleton, Tag, type TagProps } from '@/components/oj';
+import AuthedNav, { BackOfficeLogo } from '@/components/admin/AuthedNav';
+import BackOfficeBand, { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
+import { Alert, Button, EmptyState, Header, Skeleton, Tag, type TagProps } from '@/components/oj';
 import { getValidAccessToken } from '@/lib/admin-session';
 import { deletePoll } from '@/app/actions/poll-organiser';
 
@@ -39,16 +41,6 @@ interface PollListItem {
 }
 
 type LoadState = 'loading' | 'anon' | 'ready' | 'error';
-
-/*
- * One card treatment, matching /admin, because the organiser crosses between the
- * two through AuthedNav: cream block on the paper page, ink border, the 3px
- * radius and the small hard shadow rather than a blurred one.
- */
-const CARD = 'rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm';
-
-/* Tool screens take sentence case at the tool weight, not the display face. */
-const TOOL_HEADING = 'font-black tracking-[-0.02em] text-oj-ink';
 
 /*
  * Status as Tag props rather than a colour pair.
@@ -164,141 +156,141 @@ export default function PollsDashboard(): JSX.Element {
   }
 
   if (state === 'anon') {
+    // The signed-out sign-in screen's shape: the logo bar alone, then the ink hero.
     return (
-      <main id="main-content" className="mx-auto max-w-md px-4 py-16 text-center">
-        <h1 className={`text-2xl ${TOOL_HEADING}`}>Sign in to see your polls</h1>
-        <p className="mt-3 text-oj-ink-2">
-          Your polls live behind the same sign-in as the admin dashboard.
-        </p>
-        <div className="mt-6 flex justify-center">
-          <Button href="/admin">Go to sign in</Button>
-        </div>
-      </main>
+      <>
+        <Header home="/" logo={<BackOfficeLogo />} />
+        <main id="main-content">
+          <BackOfficeHero
+            eyebrow="polls"
+            title="sign in to see your polls."
+            intro="Your polls live behind the same sign-in as the admin dashboard."
+            actions={<Button href="/admin">Go to sign in</Button>}
+          />
+        </main>
+      </>
     );
   }
 
   return (
     <>
       <AuthedNav />
-      <main id="main-content" className="measure px-4 py-8 sm:px-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h1 className={`text-3xl ${TOOL_HEADING}`}>Your polls</h1>
-            <p className="mt-1 text-sm text-oj-ink-2">
-              Every poll you have set up. Tap one to see the answers.
-            </p>
-          </div>
-          <Button href="/availability/new" size="sm">
-            New poll
-          </Button>
-        </div>
+      <main id="main-content">
+        <BackOfficeHero
+          eyebrow="polls"
+          title="your polls."
+          intro="Every poll you have set up. Tap one to see the answers."
+          actions={<Button href="/availability/new">New poll</Button>}
+        />
 
-        {/* The skeleton stands in for the list that is coming rather than
+        <BackOfficeBand tone="paper" divider={false}>
+          {/* The skeleton stands in for the list that is coming rather than
             describing it, so the page does not reflow around a line of text.
             Skeleton announces "Loading" once to a screen reader instead of
             reading out the placeholder blocks. */}
-        {state === 'loading' && (
-          <div className="mt-10 space-y-4">
-            <Skeleton variant="card" />
-            <Skeleton variant="card" />
-            <Skeleton variant="card" />
-          </div>
-        )}
+          {state === 'loading' && (
+            <div className="space-y-4">
+              <Skeleton variant="card" />
+              <Skeleton variant="card" />
+              <Skeleton variant="card" />
+            </div>
+          )}
 
-        {state === 'error' && (
-          <Alert tone="danger" className="mt-10">
-            Something went wrong.{' '}
-            <button
-              type="button"
-              onClick={() => void load()}
-              // The same inline text control EmptyState uses for its action, plus
-              // the system focus ring: this is the one control on the screen that
-              // is not a Button, so nothing else was giving it one.
-              className="oj-focus rounded-oj font-bold text-oj-orange-deep underline underline-offset-4"
-            >
-              Try again
-            </button>
-            .
-          </Alert>
-        )}
+          {state === 'error' && (
+            <Alert tone="danger">
+              Something went wrong.{' '}
+              <button
+                type="button"
+                onClick={() => void load()}
+                // The same inline text control EmptyState uses for its action, plus
+                // the system focus ring: this is the one control on the screen that
+                // is not a Button, so nothing else was giving it one.
+                className="oj-focus rounded-oj font-bold text-oj-orange-deep underline underline-offset-4"
+              >
+                Try again
+              </button>
+              .
+            </Alert>
+          )}
 
-        {state === 'ready' && polls.length === 0 && (
-          <div className="mt-10">
-            <EmptyState
-              body="You have not made a poll yet."
-              action={{ label: 'Make your first poll', href: '/availability/new' }}
-            />
-          </div>
-        )}
+          {state === 'ready' && polls.length === 0 && (
+            <div>
+              <EmptyState
+                body="You have not made a poll yet."
+                action={{ label: 'Make your first poll', href: '/availability/new' }}
+              />
+            </div>
+          )}
 
-        {state === 'ready' && polls.length > 0 && (
-          <ul className="mt-8 space-y-4">
-            {polls.map((poll) => {
-              const status = STATUS[poll.status];
-              const isConfirmed = poll.status === 'confirmed';
-              const isOpen = poll.status === 'open';
+          {state === 'ready' && polls.length > 0 && (
+            <ul className="space-y-4">
+              {polls.map((poll) => {
+                const status = STATUS[poll.status];
+                const isConfirmed = poll.status === 'confirmed';
+                const isOpen = poll.status === 'open';
 
-              return (
-                <li key={poll.id} className={CARD}>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                    <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <h2 className={`text-lg ${TOOL_HEADING}`}>{poll.title}</h2>
-                        <Tag size="sm" variant={status.variant} dot={status.dot}>
-                          {status.label}
-                        </Tag>
+                return (
+                  <li key={poll.id} className={CARD_ON_PAPER}>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div className="min-w-0">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <h2 className={`text-lg ${BLOCK_HEADING}`}>{poll.title}</h2>
+                          <Tag size="sm" variant={status.variant} dot={status.dot}>
+                            {status.label}
+                          </Tag>
+                        </div>
+
+                        {isConfirmed && poll.confirmedLabel ? (
+                          <p className="mt-1 text-sm font-bold text-oj-ok">
+                            {poll.confirmedLabel}
+                            {poll.optionKind === 'slots' ? ' UK time' : ''}
+                          </p>
+                        ) : (
+                          <p className="mt-1 text-sm text-oj-ink-2">
+                            {repliesLine(poll.responderCount)}
+                          </p>
+                        )}
                       </div>
 
-                      {isConfirmed && poll.confirmedLabel ? (
-                        <p className="mt-1 text-sm font-bold text-oj-ok">
-                          {poll.confirmedLabel}
-                          {poll.optionKind === 'slots' ? ' UK time' : ''}
-                        </p>
-                      ) : (
-                        <p className="mt-1 text-sm text-oj-ink-2">
-                          {repliesLine(poll.responderCount)}
-                        </p>
-                      )}
-                    </div>
+                      <div className="flex flex-shrink-0 flex-wrap gap-2">
+                        <Button href={`/availability/o/${poll.organiserToken}`} size="sm">
+                          See answers
+                        </Button>
 
-                    <div className="flex flex-shrink-0 flex-wrap gap-2">
-                      <Button href={`/availability/o/${poll.organiserToken}`} size="sm">
-                        See answers
-                      </Button>
-
-                      {/* Sharing only makes sense while a poll is still taking
+                        {/* Sharing only makes sense while a poll is still taking
                           answers. On a closed or confirmed poll it would send
                           people to a page that no longer accepts a vote. */}
-                      {isOpen && (
+                        {isOpen && (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => void copyParticipantLink(poll)}
+                          >
+                            {copiedId === poll.id ? 'Copied' : 'Copy sharing link'}
+                          </Button>
+                        )}
+
+                        {/* Destructive, so it keeps the outline of its neighbours
+                          but drops to the muted ink and only turns danger red
+                          under the pointer. */}
                         <Button
                           variant="ghost"
                           size="sm"
-                          onClick={() => void copyParticipantLink(poll)}
+                          onClick={() => void removePoll(poll)}
+                          disabled={deletingId === poll.id}
+                          aria-label={`Delete ${poll.title}`}
+                          className="text-oj-ink-3 hover:text-oj-danger"
                         >
-                          {copiedId === poll.id ? 'Copied' : 'Copy sharing link'}
+                          {deletingId === poll.id ? 'Deleting…' : 'Delete'}
                         </Button>
-                      )}
-
-                      {/* Destructive, so it keeps the outline of its neighbours
-                          but drops to the muted ink and only turns danger red
-                          under the pointer. */}
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => void removePoll(poll)}
-                        disabled={deletingId === poll.id}
-                        aria-label={`Delete ${poll.title}`}
-                        className="text-oj-ink-3 hover:text-oj-danger"
-                      >
-                        {deletingId === poll.id ? 'Deleting…' : 'Delete'}
-                      </Button>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </BackOfficeBand>
       </main>
     </>
   );

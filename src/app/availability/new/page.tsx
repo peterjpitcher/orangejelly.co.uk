@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import CreatePollForm from '@/components/polls/create/create-poll-form';
 import AuthedNav from '@/components/admin/AuthedNav';
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 
 /**
  * Create a poll.
@@ -35,21 +37,20 @@ export default function NewPollPage(): JSX.Element {
         inside the form is wider than the column on a small screen, and dropping it
         would turn that into a horizontally scrolling page.
       */}
-      <main id="main-content" className="overflow-hidden py-14 md:py-20">
-        <div className="page-shell">
-          {/* Sentence case and the tool weight, not the lowercase display face.
-              This is a working screen, not a marketing page. */}
-          <h1 className="text-[clamp(28px,4.5vw,40px)] font-black leading-[1.05] tracking-[-0.02em] text-oj-ink">
-            Find a time that works
-          </h1>
-          {/* `measure-prose`, not `measure`: the latter is the 72rem shell width,
-              so an intro paragraph carrying it would run the full page. */}
-          <p className="measure-prose mt-4 text-[17px] leading-relaxed text-oj-ink-2">
-            Put up to eight options to your team, send them one link, and see who can make what. No
-            accounts, no app, nothing for them to download.
-          </p>
+      <main id="main-content" className="overflow-hidden">
+        {/* The ink hero the public reading pages open on. The line is ours, not
+            somebody's poll title, so it takes the lowercase display face. */}
+        <BackOfficeHero
+          eyebrow="new poll"
+          title="find a time that works."
+          intro="Put up to eight options to your team, send them one link, and see who can make what. No accounts, no app, nothing for them to download."
+        />
+        {/* Paper, the surface the calendar grid and its cream cells were drawn
+            for. The form starts with its own top margin, so the band drops its
+            top padding to match the other screens. */}
+        <BackOfficeBand tone="paper" divider={false} className="pt-4 sm:pt-6">
           <CreatePollForm />
-        </div>
+        </BackOfficeBand>
       </main>
     </>
   );

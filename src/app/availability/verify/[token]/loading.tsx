@@ -1,3 +1,5 @@
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Skeleton } from '@/components/oj';
 
 /**
@@ -13,12 +15,15 @@ import { Skeleton } from '@/components/oj';
  */
 export default function VerifyLoading(): JSX.Element {
   return (
-    <main id="main-content" className="py-14 md:py-20">
-      <div className="page-shell">
-        <div className="mx-auto max-w-md">
+    // The same ink hero the outcome opens on, so the page does not jump from
+    // paper to ink when verification lands.
+    <main id="main-content">
+      <BackOfficeHero eyebrow="confirm your email" title="one moment." />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="max-w-xl">
           <Skeleton variant="article" lines={3} />
         </div>
-      </div>
+      </BackOfficeBand>
     </main>
   );
 }

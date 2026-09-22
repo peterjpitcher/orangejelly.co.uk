@@ -1,4 +1,4 @@
-import Text from '@/components/Text';
+import { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
 import CopyButton from '@/components/polls/copy-button';
 
 /**
@@ -29,17 +29,17 @@ export default function ShareBlock({
   invitationText,
 }: ShareBlockProps): JSX.Element {
   return (
-    <section
-      aria-labelledby="share-heading"
-      className="rounded-lg border border-brand-base/15 bg-surface p-4"
-    >
-      <h2 id="share-heading" className="mb-1 text-base font-semibold text-brand-base">
+    // The back office's raised block, on the paper results band.
+    <section aria-labelledby="share-heading" className={CARD_ON_PAPER}>
+      <h2 id="share-heading" className={`mb-1 text-lg ${BLOCK_HEADING}`}>
         Your team&rsquo;s link
       </h2>
-      <Text size="sm" color="muted" className="mb-3">
+      <p className="mb-3 text-sm text-oj-ink-2">
         Send this to anyone you still need an answer from.
-      </Text>
-      <p className="select-all break-all rounded-md border border-brand-base/15 bg-white p-3 font-mono text-sm text-brand-base">
+      </p>
+      {/* Paper inside the cream block, with the soft ink rule the create
+          screen's link boxes use. */}
+      <p className="select-all break-all rounded-oj border-1.5 border-oj-ink/20 bg-oj-paper p-3 font-mono text-sm text-oj-ink">
         {participantUrl}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -50,10 +50,10 @@ export default function ShareBlock({
           copiedLabel="Invitation copied"
         />
       </div>
-      <Text size="sm" color="muted" className="mt-2">
+      <p className="mt-2 text-sm text-oj-ink-2">
         The invitation is the whole message: what the meeting is, the times on offer, the link and
         the deadline, ready to paste into WhatsApp or an email.
-      </Text>
+      </p>
     </section>
   );
 }

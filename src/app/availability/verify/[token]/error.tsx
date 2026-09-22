@@ -1,5 +1,7 @@
 'use client';
 
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Alert, Button } from '@/components/oj';
 
 /**
@@ -17,14 +19,11 @@ import { Alert, Button } from '@/components/oj';
  */
 export default function VerifyError({ reset }: { error: Error; reset: () => void }): JSX.Element {
   return (
-    <main id="main-content" className="py-14 md:py-20">
-      <div className="page-shell">
-        <div className="mx-auto max-w-md space-y-6 text-center">
-          <h1 className="text-[34px] font-black leading-tight tracking-[-0.02em] text-oj-ink">
-            Something went wrong
-          </h1>
-
-          <Alert tone="danger" title="That's at our end, not yours" className="text-left">
+    <main id="main-content">
+      <BackOfficeHero eyebrow="confirm your email" title="something went wrong." />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="max-w-xl space-y-6">
+          <Alert tone="danger" title="That's at our end, not yours">
             Try the link from your email again in a minute.
           </Alert>
 
@@ -32,7 +31,7 @@ export default function VerifyError({ reset }: { error: Error; reset: () => void
             Try again
           </Button>
         </div>
-      </div>
+      </BackOfficeBand>
     </main>
   );
 }
