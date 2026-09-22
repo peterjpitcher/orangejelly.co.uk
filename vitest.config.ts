@@ -2,6 +2,26 @@ import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+/*
+ * The suite runs in two zones on purpose: `npm test` in Europe/London, the business
+ * zone, and `npm run test:utc` in UTC, which is what the serverless runtime uses. A
+ * date computed without an explicit zone passes in one and fails in the other.
+ *
+ * Set here rather than in the npm script so `npm test` pins the zone on every
+ * platform with no extra dependency. It is a default, not an override: a TZ given on
+ * the command line wins, which is how `test:utc` gets UTC. An empty TZ counts as
+ * unset, because Node would otherwise read it as UTC. The test workers are started
+ * after this runs and inherit both variables.
+ *
+ * REQUESTED_TEST_TZ keeps the zone the command line asked for (empty for none), so
+ * src/test/timezone-gate.test.ts can check that the zone asked for is the zone the
+ * suite really ran in. Without that check, a config that overrode TZ instead of
+ * defaulting it would run both scripts in London and still report green.
+ */
+const requestedTimeZone = process.env.TZ || '';
+process.env.REQUESTED_TEST_TZ = requestedTimeZone;
+process.env.TZ = requestedTimeZone || 'Europe/London';
+
 export default defineConfig({
   plugins: [react()],
   test: {
