@@ -85,6 +85,15 @@ describe('verifyTurnstileToken', () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it('should refuse an empty token without asking Cloudflare', async () => {
+    // What a script that never ran the widget sends. It cannot pass, so it is not
+    // worth a round trip.
+    const fetchMock = mockFetchResolving({ success: true });
+
+    await expect(verifyTurnstileToken('')).resolves.toEqual({ success: false });
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
   it('should allow when the secret is unset outside production', async () => {
     vi.stubEnv('TURNSTILE_SECRET_KEY', '');
     vi.stubEnv('NODE_ENV', 'development');

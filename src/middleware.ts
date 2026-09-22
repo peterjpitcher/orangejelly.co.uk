@@ -72,7 +72,7 @@ function applySecurityHeaders(response: NextResponse, pathname: string) {
     [
       "default-src 'self'",
       // Use next/script and nonces in future to remove 'unsafe-inline'. Kept temporarily for GTM bootstrap.
-      // challenges.cloudflare.com is Turnstile, used by the poll create form only.
+      // challenges.cloudflare.com is Turnstile, used by the poll create form and the enquiry form.
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms https://vercel.live https://challenges.cloudflare.com",
       "style-src 'self' 'unsafe-inline' https://tagmanager.google.com https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",

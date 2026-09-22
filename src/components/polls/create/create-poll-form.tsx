@@ -29,7 +29,7 @@ import {
 } from '@/lib/poll-invitation';
 import AvailabilityGrid from './availability-grid';
 import DurationSelector from './duration-selector';
-import TurnstileWidget from './turnstile-widget';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 /**
  * The create-poll form.

@@ -10,6 +10,7 @@ import { hasAnalyticsConsent, trackClientEvent } from '@/lib/tracking';
 import { cn } from '@/lib/utils';
 import { CONTACT } from '@/lib/constants';
 import { getGuideConversion, type GuideConversionContext } from '@/lib/guide-conversion';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 import { Anchor } from './Anchor';
 import { Button } from './Button';
@@ -25,6 +26,13 @@ import { Input, Textarea } from './inputs';
  * re-renders with the new state. Splitting it into two components with a client
  * router push would have made step one JavaScript-only, and step one is the half
  * that must never fail.
+ *
+ * THE BOT CHECK, since 22 September 2026. Sending now needs Cloudflare Turnstile,
+ * which needs JavaScript, so the no-JavaScript path renders and posts but is
+ * refused with Peter's email as the way through, and a `<noscript>` note says so
+ * before anyone types. The widget is mounted on the first focus inside the form,
+ * not on page load: nobody who only reads the page makes a request to Cloudflare,
+ * and the check runs while the person is typing rather than when they press send.
  *
  * Ids are fixed strings rather than `useId` so the error summary can link to them
  * and so the server-rendered no-JS pass produces the same markup as the client.
@@ -128,6 +136,7 @@ export function EnquiryForm({
   const [state, formAction] = useFormState(submitEnquiry, ENQUIRY_INITIAL_STATE);
   const [leadSource, setLeadSource] = React.useState(() => JSON.stringify({ sourcePage }));
   const startedRef = React.useRef(false);
+  const [checkStarted, setCheckStarted] = React.useState(false);
   const doneRef = React.useRef<HTMLDivElement>(null);
 
   // Attribution is read in an effect rather than during render: it reads the URL and
@@ -203,7 +212,12 @@ export function EnquiryForm({
   const fieldErrors = state.fieldErrors ?? {};
 
   return (
-    <form action={formAction} className={className} noValidate>
+    <form
+      action={formAction}
+      className={className}
+      noValidate
+      onFocus={() => setCheckStarted(true)}
+    >
       <ErrorSummary state={state} />
       {state.error && (
         <p className="mb-5 text-[15px] text-oj-ink-2">
@@ -286,6 +300,22 @@ export function EnquiryForm({
             placeholder="We need a better website, a booking system or an application to connect our work."
           />
         </Field>
+
+        {/* After a failed send it is shown regardless of focus, so a retry always has
+            a check to pass. `state` changes on every reply from the server, which is
+            what resets it: a token the server has verified is spent. */}
+        {(checkStarted || state.error) && (
+          <TurnstileWidget resetKey={state} className="min-h-[65px]" />
+        )}
+        <noscript>
+          <p className="text-[15px] text-oj-ink-2">
+            This form needs JavaScript switched on to check you are not a bot. You can email{' '}
+            <a href={`mailto:${CONTACT.email}`} className="font-semibold underline">
+              {CONTACT.email}
+            </a>{' '}
+            instead.
+          </p>
+        </noscript>
 
         <div className="mt-1">
           <SubmitButton>Send my enquiry</SubmitButton>
