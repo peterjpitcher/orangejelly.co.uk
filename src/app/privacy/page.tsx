@@ -172,9 +172,9 @@ export default function PrivacyPage(): JSX.Element {
                 ticked and when you ticked it, and we use them only to contact you about what that
                 survey was about. Our lawful basis is your consent, and you can withdraw it at any
                 time by emailing us. Your details are kept alongside your answers, so we know what
-                you picked when we get in touch. When someone volunteers, we get an email with their
-                name, business and email address; their answers stay in our password-protected admin
-                area.
+                you picked when we get in touch. We get an email each time someone answers a survey,
+                with their answers and, if they volunteered, their name, business and email address.
+                Everything is also kept in our password-protected admin area.
               </p>
 
               <p className="font-bold text-oj-ink">When you browse the site</p>

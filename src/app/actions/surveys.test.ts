@@ -115,7 +115,8 @@ describe('submitSurvey', () => {
     // real inboxes before.
     const mail = vi.mocked(sendLeadNotification).mock.calls[0][0];
     expect(mail.text).toContain('Said yes to: Yes, email me the odd question');
-    expect(mail.text).toContain('Survey: Which tools would make running your pub easier?');
+    expect(mail.text).toContain('New answer to: Which tools would make running your pub easier?');
+    expect(mail.text).toContain('Real responses so far: 3');
     expect(`${mail.subject}${mail.html}${mail.text}`).not.toMatch(
       /undefined|NaN|Invalid Date|null/
     );
@@ -145,6 +146,20 @@ describe('submitSurvey', () => {
       error: NOT_SENT,
     });
     expect(submitSurveyResponse).not.toHaveBeenCalled();
+  });
+
+  it('emails Peter about every response, not only volunteers, with where it came from', async () => {
+    await submitSurvey({
+      slug: 'pub-apps',
+      responseId: RID,
+      answers: { ...ANSWERS, say: ['say_no'] },
+      leadSource: { utmSource: 'whatsapp' },
+    });
+    expect(sendLeadNotification).toHaveBeenCalledTimes(1);
+    const mail = vi.mocked(sendLeadNotification).mock.calls[0][0];
+    expect(mail.subject).toBe('Survey response: Which tools would make running your pub easier?');
+    expect(mail.text).toContain('Came from: whatsapp');
+    expect(mail.text).toContain('What kind of pub is it?\n  A community local');
   });
 
   it('FAILS CLOSED: a failed database write is reported to the respondent, never as success', async () => {
@@ -225,7 +240,11 @@ describe('submitSurvey', () => {
       contact: CONTACT,
     });
     expect(vi.mocked(submitSurveyResponse).mock.calls[0][0].contact).toBeUndefined();
-    expect(sendLeadNotification).not.toHaveBeenCalled();
+    // Still an email about the answers, but with no details and no one to reply to.
+    const mail = vi.mocked(sendLeadNotification).mock.calls[0][0];
+    expect(mail.subject).toBe('Survey response: Which tools would make running your pub easier?');
+    expect(mail.replyTo).toBeUndefined();
+    expect(mail.text).not.toContain('sam@testarms.example');
   });
 
   it('asks for the consent tick rather than storing details without it', async () => {
@@ -253,7 +272,7 @@ describe('submitSurvey', () => {
     log.mockRestore();
   });
 
-  it('stores a preview answer flagged, and does not email Peter about his own test', async () => {
+  it('stores a preview answer flagged, and emails it marked as a preview', async () => {
     vi.mocked(getSurveyForVisitor).mockResolvedValue({ survey: SURVEY, mode: 'preview' });
     await submitSurvey({
       slug: 'pub-apps',
@@ -263,7 +282,9 @@ describe('submitSurvey', () => {
       contact: CONTACT,
     });
     expect(vi.mocked(submitSurveyResponse).mock.calls[0][0].isPreview).toBe(true);
-    expect(sendLeadNotification).not.toHaveBeenCalled();
+    expect(vi.mocked(sendLeadNotification).mock.calls[0][0].subject).toBe(
+      '[Preview] Survey volunteer: The Test Arms'
+    );
   });
 
   it('never turns stored answers into an error: a failed email or results load still succeeds', async () => {
@@ -294,6 +315,7 @@ describe('submitSurvey', () => {
     });
     expect(submitSurveyResponse).not.toHaveBeenCalled();
     expect(checkRateLimit).not.toHaveBeenCalled();
+    expect(sendLeadNotification).not.toHaveBeenCalled();
   });
 
   it('keeps the referrer to a host and drops UTM values that are not labels', async () => {
