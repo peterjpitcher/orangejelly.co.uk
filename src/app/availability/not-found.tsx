@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import BackOfficeBand from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import { Button } from '@/components/oj';
 
 /**
@@ -48,21 +50,18 @@ export const metadata: Metadata = {
 export default function AvailabilityNotFound(): JSX.Element {
   return (
     /*
-      The same centred column the two error boundaries under /availability use, so
-      every dead end in this app is one shape. An EmptyState was tried here and is
-      wrong for a whole page: it is a dashed block for a hole inside a screen, and
-      run at the page measure it becomes an empty panel with a lost sentence in it.
+      The same shape as every other dead end under /availability, and as the
+      public 404: the ink hero says what happened, the paper band says what to do.
+      An EmptyState was tried here and is wrong for a whole page: it is a dashed
+      block for a hole inside a screen.
 
-      A real `h1`, not the EmptyState title, which renders as a paragraph. A 404
-      with no h1 gives a screen-reader user nothing to land on.
+      The hero's heading is a real `h1`. A 404 with no h1 gives a screen-reader
+      user nothing to land on.
     */
-    <main id="main-content" className="py-14 md:py-20">
-      <div className="page-shell">
-        <div className="mx-auto max-w-md space-y-6 text-center">
-          <h1 className="text-3xl font-black tracking-[-0.02em] text-oj-ink">
-            This link isn&rsquo;t live
-          </h1>
-
+    <main id="main-content">
+      <BackOfficeHero eyebrow="availability poll" title="this link isn’t live." />
+      <BackOfficeBand tone="paper" divider={false}>
+        <div className="max-w-xl space-y-6">
           <div className="space-y-3 text-oj-ink-2">
             <p>
               It might have expired, or the poll might have been removed. Polls are deleted 60 days
@@ -78,7 +77,7 @@ export default function AvailabilityNotFound(): JSX.Element {
             Go to the Orange Jelly home page
           </Button>
         </div>
-      </div>
+      </BackOfficeBand>
     </main>
   );
 }

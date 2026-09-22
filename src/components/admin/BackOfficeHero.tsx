@@ -24,10 +24,8 @@ export interface BackOfficeHeroProps {
   /** Buttons beside the heading on a wide screen, under it on a phone. */
   actions?: React.ReactNode;
   keepCase?: boolean;
-  /** Anything else that belongs in the band, such as a status line under the heading. */
+  /** Anything else that belongs in the band, such as the poll's details under its title. */
   children?: React.ReactNode;
-  /** Centres the band's content, for the short single-message screens. */
-  align?: 'left' | 'center';
 }
 
 export default function BackOfficeHero({
@@ -37,20 +35,12 @@ export default function BackOfficeHero({
   actions,
   keepCase = false,
   children,
-  align = 'left',
 }: BackOfficeHeroProps): JSX.Element {
-  const centred = align === 'center';
-
   return (
     <GroundProvider value="ink">
       <section className="border-b-1.5 border-oj-ink bg-oj-ink py-10 text-oj-cream sm:py-14">
         <div className="page-shell">
-          <div
-            className={cn(
-              'flex flex-col gap-6',
-              centred ? 'items-center text-center' : 'sm:flex-row sm:items-end sm:justify-between'
-            )}
-          >
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="min-w-0">
               <p className="font-oj text-[14px] font-bold uppercase tracking-[0.14em] text-oj-peach">
                 {eyebrow}
@@ -64,12 +54,7 @@ export default function BackOfficeHero({
                 {title}
               </h1>
               {intro ? (
-                <p
-                  className={cn(
-                    'mt-4 max-w-[62ch] text-[17px] leading-relaxed text-oj-cream/85',
-                    centred && 'mx-auto'
-                  )}
-                >
+                <p className="mt-4 max-w-[62ch] text-[17px] leading-relaxed text-oj-cream/85">
                   {intro}
                 </p>
               ) : null}

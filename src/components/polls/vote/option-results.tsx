@@ -1,4 +1,5 @@
-import Text from '@/components/Text';
+import { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import { cn } from '@/lib/utils';
 import {
   formatOptionLabel,
   formatReplyCount,
@@ -42,9 +43,7 @@ export default function OptionResults({
 }: OptionResultsProps): JSX.Element {
   return (
     <div className="space-y-4">
-      <Text size="sm" color="muted">
-        {formatReplyCount(responderCount)}
-      </Text>
+      <p className="text-sm text-oj-ink-2">{formatReplyCount(responderCount)}</p>
 
       <ul className="space-y-3">
         {options.map((option) => {
@@ -54,25 +53,19 @@ export default function OptionResults({
           return (
             <li
               key={option.id}
-              className={
-                isConfirmed
-                  ? 'rounded-lg border-2 border-orange bg-orange-light p-4'
-                  : 'rounded-lg border-2 border-brand-base/15 bg-white p-4'
-              }
+              // The chosen time takes the peach fill, which carries ink at full
+              // contrast, and the words below say so: never colour alone.
+              className={cn(CARD_ON_PAPER, isConfirmed && 'bg-oj-peach')}
             >
-              <p className="text-lg font-semibold text-brand-base">
-                {formatOptionLabel(option, optionKind)}
-              </p>
+              <p className={`text-lg ${BLOCK_HEADING}`}>{formatOptionLabel(option, optionKind)}</p>
 
               {isConfirmed && (
                 // Word plus colour, never colour alone.
-                <p className="mt-1 text-sm font-semibold text-brand-base">✓ This is the time</p>
+                <p className="mt-1 text-sm font-bold text-oj-ink">✓ This is the time</p>
               )}
 
               {responderCount > 0 && (
-                <Text size="sm" color="muted" className="mt-2">
-                  {formatTallyLine(tally)}
-                </Text>
+                <p className="mt-2 text-sm text-oj-ink-2">{formatTallyLine(tally)}</p>
               )}
             </li>
           );

@@ -1,6 +1,6 @@
 'use client';
 
-import Text from '@/components/Text';
+import { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
 import { cn } from '@/lib/utils';
 import type { AttendanceAnswer, AvailabilityAnswer } from '@/lib/validation/poll-responses';
 import AnswerRadioGroup from './answer-radio-group';
@@ -60,13 +60,13 @@ export default function OptionCard({
 
   return (
     <fieldset
-      className={cn(
-        'rounded-lg border-2 bg-white p-4',
-        invalid ? 'border-destructive' : 'border-brand-base/15'
-      )}
+      // The back office's raised block on the paper band. An unanswered option
+      // after a failed submit swaps the ink border for danger red, beside the
+      // message below: colour is never the only signal.
+      className={cn(CARD_ON_PAPER, invalid && 'border-oj-danger')}
       aria-describedby={invalid ? errorId : undefined}
     >
-      <legend className="px-1 text-lg font-semibold text-brand-base">{label}</legend>
+      <legend className={`px-1 text-lg ${BLOCK_HEADING}`}>{label}</legend>
 
       <div className="mt-2">
         <AnswerRadioGroup
@@ -89,7 +89,7 @@ export default function OptionCard({
           role="group"
           aria-label="How would you join?"
         >
-          <span className="text-sm text-brand-base/70">Joining:</span>
+          <span className="text-sm text-oj-ink-2">Joining:</span>
           {(
             [
               { mode: 'in_person', label: 'In person' },
@@ -101,11 +101,13 @@ export default function OptionCard({
               <label
                 key={mode}
                 className={cn(
-                  'flex min-h-tap cursor-pointer select-none items-center rounded-md border-2 px-3 text-sm font-medium transition-colors',
-                  'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand-base',
+                  'flex min-h-tap cursor-pointer select-none items-center rounded-oj border-1.5 px-3 font-oj text-sm font-semibold transition-colors',
+                  'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-oj-ink',
+                  // The ink chip for the chosen mode: the one status fill in the
+                  // system that is neither an answer colour nor brand orange.
                   selected
-                    ? 'border-blue-support bg-blue-support text-white'
-                    : 'border-brand-base/25 bg-white text-brand-base hover:border-brand-base/50',
+                    ? 'border-oj-ink bg-oj-ink text-oj-cream'
+                    : 'border-oj-ink/25 bg-oj-paper text-oj-ink hover:border-oj-ink/60',
                   disabled && 'cursor-default opacity-90'
                 )}
               >
@@ -132,16 +134,12 @@ export default function OptionCard({
 
       {invalid && (
         // Text plus the red border: colour is never the only signal.
-        <p id={errorId} className="mt-2 text-sm font-medium text-destructive">
+        <p id={errorId} className="mt-2 text-sm font-semibold text-oj-danger">
           Pick one of the three.
         </p>
       )}
 
-      {responderCount > 0 && (
-        <Text size="sm" color="muted" className="mt-3">
-          {formatTallyLine(tally)}
-        </Text>
-      )}
+      {responderCount > 0 && <p className="mt-3 text-sm text-oj-ink-2">{formatTallyLine(tally)}</p>}
     </fieldset>
   );
 }

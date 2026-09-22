@@ -36,19 +36,32 @@ interface AnswerOption {
  * Wire values are fixed by `poll_responses.availability`'s CHECK constraint.
  * 'if_need_be', never 'if_needed'. The database rejects anything else.
  */
+/*
+ * The chosen fills follow the organiser's results screen, so a voter and the
+ * organiser read the same colour for the same answer: deep orange with white for
+ * yes (5.24:1; ink on brand orange is the pairing that came off every button),
+ * peach for if need be, as in the results totals bar, and cream for no. A chosen
+ * answer also takes the full ink border and the small hard shadow, so the choice
+ * is carried by shape as well as by fill.
+ */
 const ANSWERS: readonly AnswerOption[] = [
-  { value: 'yes', label: 'Yes', glyph: '✓', selected: 'border-orange bg-orange text-brand-base' },
+  {
+    value: 'yes',
+    label: 'Yes',
+    glyph: '✓',
+    selected: 'border-oj-ink bg-oj-orange-deep text-oj-on-band shadow-press-sm',
+  },
   {
     value: 'if_need_be',
     label: 'If need be',
     glyph: '~',
-    selected: 'border-brand-highlight bg-brand-highlight text-brand-base',
+    selected: 'border-oj-ink bg-oj-peach text-oj-ink shadow-press-sm',
   },
   {
     value: 'no',
     label: 'No',
     glyph: '✗',
-    selected: 'border-brand-base bg-surface-alt text-brand-base',
+    selected: 'border-oj-ink bg-oj-cream-2 text-oj-ink shadow-press-sm',
   },
 ];
 
@@ -79,12 +92,12 @@ export default function AnswerRadioGroup({
               // 56px, comfortably over the 44px floor. These are the only
               // controls on the screen, so thumb accuracy beats density.
               'relative flex min-h-control-lg select-none flex-col items-center justify-center gap-1',
-              'rounded-md border-2 px-2 py-3 text-sm font-semibold transition-colors',
+              'rounded-oj border-1.5 px-2 py-3 font-oj text-sm font-bold transition-colors',
               'focus-within:outline focus-within:outline-2 focus-within:outline-offset-2',
-              'focus-within:outline-brand-base',
+              'focus-within:outline-oj-ink',
               disabled ? 'cursor-default opacity-90' : 'cursor-pointer',
-              isSelected ? answer.selected : 'border-brand-base/25 bg-white text-brand-base',
-              !isSelected && !disabled && 'hover:border-brand-base/50'
+              isSelected ? answer.selected : 'border-oj-ink/25 bg-oj-paper text-oj-ink',
+              !isSelected && !disabled && 'hover:border-oj-ink/60'
             )}
           >
             <input
