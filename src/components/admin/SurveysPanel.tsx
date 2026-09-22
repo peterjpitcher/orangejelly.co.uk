@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import BackOfficeBand, { BLOCK_HEADING, CARD_ON_PAPER } from '@/components/admin/BackOfficeBand';
+import { Alert } from '@/components/oj';
 import { getValidAccessToken } from '@/lib/admin-session';
 import { formatSlotInLondon } from '@/lib/dateUtils';
 // Types only: the module itself is server code (service-role client, crypto).
@@ -17,8 +19,6 @@ import { resultBars, type Answer, type Survey } from '@/lib/surveys/logic';
  *
  * @see tasks/survey/PLAN.md
  */
-
-const CARD = 'rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm';
 
 function labelFor(survey: Survey, key: string): string {
   for (const question of survey.questions) {
@@ -58,10 +58,10 @@ function SurveyCard({ data }: { data: AdminSurvey }): JSX.Element {
   const textQuestions = survey.questions.filter((q) => q.kind === 'text');
 
   return (
-    <article className={`mt-6 ${CARD}`}>
+    <article className={`mt-6 first:mt-0 ${CARD_ON_PAPER}`}>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h3 className="text-lg font-black text-oj-ink">{survey.title}</h3>
+          <h3 className={`text-lg ${BLOCK_HEADING}`}>{survey.title}</h3>
           <p className="mt-1 text-sm text-oj-ink-2">
             <StatusBadge status={survey.status} /> <span className="ml-2">{publicUrl}</span>
           </p>
@@ -249,14 +249,14 @@ export default function SurveysPanel(): JSX.Element {
   }, [load]);
 
   return (
-    <section className="mt-10">
-      <h2 className="text-xl font-black tracking-[-0.02em] text-oj-ink">Surveys</h2>
-      {error ? <p className="mt-3 text-sm font-bold text-oj-danger">{error}</p> : null}
-      {surveys === null && !error ? <p className="mt-3 text-oj-ink-2">Loading surveys...</p> : null}
-      {surveys?.length === 0 ? <p className="mt-3 text-oj-ink-2">No surveys yet.</p> : null}
+    // Paper, between the cream enquiries band and the cream signups band.
+    <BackOfficeBand tone="paper" heading="surveys.">
+      {error ? <Alert tone="danger">{error}</Alert> : null}
+      {surveys === null && !error ? <p className="text-oj-ink-2">Loading surveys...</p> : null}
+      {surveys?.length === 0 ? <p className="text-oj-ink-2">No surveys yet.</p> : null}
       {surveys?.map((data) => (
         <SurveyCard key={data.survey.id} data={data} />
       ))}
-    </section>
+    </BackOfficeBand>
   );
 }

@@ -1,11 +1,16 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import AuthedNav from '@/components/admin/AuthedNav';
+import AuthedNav, { BackOfficeLogo } from '@/components/admin/AuthedNav';
+import BackOfficeBand, {
+  BLOCK_HEADING,
+  CARD_ON_CREAM,
+  CARD_ON_PAPER,
+} from '@/components/admin/BackOfficeBand';
+import BackOfficeHero from '@/components/admin/BackOfficeHero';
 import EnquiriesPanel from '@/components/admin/EnquiriesPanel';
 import SurveysPanel from '@/components/admin/SurveysPanel';
-import { Alert, Button, Field, Input, Stat, Tag } from '@/components/oj';
+import { Alert, Button, Field, Header, Input, KeepCase, Stat, Tag } from '@/components/oj';
 import {
   readSession,
   writeSession,
@@ -49,20 +54,6 @@ type AdminStats = {
   generatedAt: string;
 };
 
-/*
- * The one card treatment on this screen, so a stat block, a count list and the
- * signups table cannot drift apart. Cream on the paper page, ink border, the
- * 3px radius and the small hard shadow: the same block the rebuilt marketing
- * pages use, at the smaller shadow because a tool screen stacks a lot of them.
- */
-const CARD = 'rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press-sm';
-
-/*
- * Tool screens take sentence case headings rather than the lowercase display
- * face. This is an internal console, not a marketing page.
- */
-const PANEL_HEADING = 'font-black tracking-[-0.02em] text-oj-ink';
-
 function formatDate(value: string): string {
   return new Intl.DateTimeFormat('en-GB', {
     day: '2-digit',
@@ -74,7 +65,7 @@ function formatDate(value: string): string {
 
 function StatCard({ label, value, sub }: { label: string; value: number; sub: string }) {
   return (
-    <div className={CARD}>
+    <div className={CARD_ON_PAPER}>
       <Stat value={value} label={label} sub={sub} size="sm" />
     </div>
   );
@@ -82,8 +73,8 @@ function StatCard({ label, value, sub }: { label: string; value: number; sub: st
 
 function CountList({ title, rows }: { title: string; rows: CountRow[] }) {
   return (
-    <section className={CARD}>
-      <h2 className={`text-lg ${PANEL_HEADING}`}>{title}</h2>
+    <section className={CARD_ON_PAPER}>
+      <h2 className={`text-lg ${BLOCK_HEADING}`}>{title}</h2>
       <div className="mt-4 space-y-3">
         {rows.length === 0 ? (
           <p className="text-sm text-oj-ink-3">No data yet.</p>
@@ -209,52 +200,49 @@ export default function AdminDashboard() {
 
   if (!session) {
     return (
-      <main id="main-content" className="min-h-screen bg-oj-paper px-4 py-12">
-        <div className="mx-auto max-w-md rounded-oj-lg border-1.5 border-oj-ink bg-oj-cream p-7 shadow-press">
-          {/*
-           * The logo says whose console this is before the heading does. The
-           * supplied asset is 1200x260 and around 194KB, so next/image sizes it
-           * down rather than shipping the raw file for something 28px tall.
-           */}
-          <Image
-            src="/brand/logo-horizontal.png"
-            alt="Orange Jelly"
-            width={1200}
-            height={260}
-            priority
-            className="h-7 w-auto"
-          />
-          <h1 className={`mt-6 text-2xl ${PANEL_HEADING}`}>Orange Jelly admin</h1>
-          <form onSubmit={handleLogin} className="mt-6 space-y-4">
-            <Field label="Email" htmlFor="email">
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                autoComplete="email"
-                required
-              />
-            </Field>
-            <Field label="Password" htmlFor="password">
-              <Input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                autoComplete="current-password"
-                required
-              />
-            </Field>
-            {/* Alert carries role="alert" on the danger tone, so a failed sign-in
-                announces itself on a submit that did not move the page. */}
-            {error && <Alert tone="danger">{error}</Alert>}
-            <Button type="submit" disabled={loading} className="w-full">
-              {loading ? 'Signing in...' : 'Sign in'}
-            </Button>
-          </form>
-        </div>
-      </main>
+      <>
+        {/*
+         * The public bar with the logo alone: it says whose console this is before
+         * the heading does, in the same place the rest of the site puts it. No
+         * items and no action, because there is nowhere to go until you are in.
+         */}
+        <Header home="/" logo={<BackOfficeLogo />} />
+        <main id="main-content" className="min-h-screen bg-oj-cream">
+          <BackOfficeHero eyebrow="back office" title={<KeepCase>Orange Jelly admin.</KeepCase>} />
+          {/* The form sits on the cream band with paper fields, as the public
+              enquiry form does, rather than in a box of its own. */}
+          <BackOfficeBand tone="page" divider={false}>
+            <form onSubmit={handleLogin} className="max-w-md space-y-4">
+              <Field label="Email" htmlFor="email">
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  autoComplete="email"
+                  required
+                />
+              </Field>
+              <Field label="Password" htmlFor="password">
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  autoComplete="current-password"
+                  required
+                />
+              </Field>
+              {/* Alert carries role="alert" on the danger tone, so a failed sign-in
+                  announces itself on a submit that did not move the page. */}
+              {error && <Alert tone="danger">{error}</Alert>}
+              <Button type="submit" disabled={loading} className="w-full">
+                {loading ? 'Signing in...' : 'Sign in'}
+              </Button>
+            </form>
+          </BackOfficeBand>
+        </main>
+      </>
     );
   }
 
@@ -264,35 +252,38 @@ export default function AdminDashboard() {
           It also carries the create-poll link that used to live in this header,
           so the poll tool is reachable without editing the URL. */}
       <AuthedNav />
-      <main id="main-content" className="min-h-screen bg-oj-paper px-4 py-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col gap-4 border-b-1.5 border-oj-ink pb-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h1 className={`text-3xl ${PANEL_HEADING}`}>Admin dashboard</h1>
-              <p className="mt-1 text-sm text-oj-ink-2">
-                Leads, signups, and tracked conversion events.
-              </p>
-            </div>
-            {/* Ghost is the tertiary role: this sits beside the page title and
-                should not compete with anything the panels below offer. The
-                component centres its own label, which is what the hand-rolled
-                button here had to be patched to do. */}
-            <Button variant="ghost" size="sm" onClick={() => loadStats()} className="self-start">
+      <main id="main-content" className="min-h-screen bg-oj-paper">
+        <BackOfficeHero
+          eyebrow="back office"
+          title="dashboard."
+          intro="Leads, signups, and tracked conversion events."
+          actions={
+            // Ghost is the tertiary role: it sits beside the page title and should
+            // not compete with anything the panels below offer. On the ink band it
+            // takes the white outline from the ground, not from this call site.
+            <Button variant="ghost" size="sm" onClick={() => loadStats()}>
               Refresh
             </Button>
-          </div>
+          }
+        />
 
+        {/*
+         * The page is a stack of bands, paper and cream in turn with the ink rule
+         * between them, the way the public pages are. The numbers need no heading
+         * of their own: they are the first thing under "dashboard".
+         */}
+        <BackOfficeBand tone="paper">
           {error && (
-            <Alert tone="danger" className="mt-6">
+            <Alert tone="danger" className="mb-6">
               {error}
             </Alert>
           )}
 
           {loading && !stats ? (
-            <p className="mt-8 text-oj-ink-2">Loading dashboard...</p>
+            <p className="text-oj-ink-2">Loading dashboard...</p>
           ) : stats ? (
             <>
-              <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                 <StatCard
                   label="Contacts"
                   value={stats.totals.contacts}
@@ -316,14 +307,19 @@ export default function AdminDashboard() {
                 <CountList title="Source pages" rows={stats.sourcePages} />
                 <CountList title="Campaigns" rows={stats.campaigns} />
               </div>
+            </>
+          ) : null}
+        </BackOfficeBand>
 
-              <EnquiriesPanel />
+        {stats ? (
+          <>
+            <EnquiriesPanel />
 
-              <SurveysPanel />
+            <SurveysPanel />
 
-              <section className={`mt-6 ${CARD}`}>
-                <h2 className={`text-lg ${PANEL_HEADING}`}>Recent newsletter signups</h2>
-                <div className="mt-4 overflow-x-auto">
+            <BackOfficeBand tone="page" heading="recent newsletter signups." divider={false}>
+              <div className={CARD_ON_CREAM}>
+                <div className="overflow-x-auto">
                   {/* The compare table's treatment, in full: the block is bounded
                       by the 1.5px ink rule and stands on paper, so the ink header
                       is the top of a block rather than a bar floating on the card.
@@ -366,14 +362,14 @@ export default function AdminDashboard() {
                     </tbody>
                   </table>
                 </div>
-              </section>
+              </div>
 
               <p className="mt-4 text-xs text-oj-ink-3">
                 Last updated {formatDate(stats.generatedAt)}.
               </p>
-            </>
-          ) : null}
-        </div>
+            </BackOfficeBand>
+          </>
+        ) : null}
       </main>
     </>
   );

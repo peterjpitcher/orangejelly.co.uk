@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import BackOfficeBand, { BLOCK_HEADING, CARD_ON_CREAM } from '@/components/admin/BackOfficeBand';
 import EnquirySummary from '@/components/admin/EnquirySummary';
+import { Alert, Field, Select, Tag, type TagProps } from '@/components/oj';
 import { getValidAccessToken } from '@/lib/admin-session';
 import type { AdminEnquiry } from '@/lib/db/enquiries';
 import { LEAD_STATES, LEAD_STATE_LABELS, type LeadState } from '@/lib/schemas/enquiry';
@@ -29,22 +31,31 @@ function formatWhen(value: string): string {
   }).format(new Date(value));
 }
 
-function StateBadge({ state }: { state: LeadState }) {
-  // Brand tokens only: tailwind.config.js replaces the numeric orange scale with a
-  // named ramp, so bg-orange-100 would silently emit no CSS at all.
-  const tone =
-    state === 'client'
-      ? 'bg-brand-base text-white'
-      : state === 'declined'
-        ? 'bg-surface-alt text-brand-base/70'
-        : state === 'new'
-          ? 'bg-orange-light text-orange-darker'
-          : 'bg-surface text-brand-base';
+/*
+ * Lead state as Tag props, the way the polls list shows a poll's state.
+ *
+ * Each state is told apart by the label and by the shape beside it, never by
+ * colour alone. A new enquiry is the one that wants you, so it is the filled ink
+ * chip and carries down a long list. The three in-progress states keep the orange
+ * pressure dot; a declined lead wants nothing, so it has no dot; a client takes the
+ * green dot. Nothing uses the orange chip: a status chip is small bold text, and
+ * brand orange is the one fill the palette cannot carry it on.
+ */
+const STATE_TAG: Record<LeadState, { variant: TagProps['variant']; dot: TagProps['dot'] }> = {
+  new: { variant: 'ink', dot: true },
+  contacted: { variant: 'outline', dot: true },
+  qualified: { variant: 'outline', dot: true },
+  conversation_booked: { variant: 'outline', dot: true },
+  declined: { variant: 'outline', dot: false },
+  client: { variant: 'outline', dot: 'ok' },
+};
 
+function StateBadge({ state }: { state: LeadState }) {
+  const { variant, dot } = STATE_TAG[state];
   return (
-    <span className={`inline-block rounded px-2 py-0.5 text-xs font-semibold ${tone}`}>
+    <Tag size="sm" variant={variant} dot={dot}>
       {LEAD_STATE_LABELS[state]}
-    </span>
+    </Tag>
   );
 }
 
@@ -52,8 +63,8 @@ function Answer({ label, value }: { label: string; value?: string | null }) {
   if (!value) return null;
   return (
     <div className="mt-2">
-      <dt className="text-xs font-semibold uppercase tracking-wide text-brand-base/60">{label}</dt>
-      <dd className="whitespace-pre-wrap break-words text-sm">{value}</dd>
+      <dt className="text-xs font-bold uppercase tracking-[0.14em] text-oj-ink-2">{label}</dt>
+      <dd className="whitespace-pre-wrap break-words text-sm text-oj-ink">{value}</dd>
     </div>
   );
 }
@@ -123,16 +134,16 @@ export default function EnquiriesPanel() {
   }
 
   return (
-    <section className="mt-6 rounded-lg border border-brand-base/10 bg-white p-5">
+    // Cream, between the paper numbers above and the paper surveys below.
+    <BackOfficeBand tone="page" heading="enquiries.">
       <EnquirySummary />
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-lg font-semibold text-brand-base">Enquiries</h2>
-        <label className="text-sm">
-          <span className="mr-2 text-brand-base/75">Show</span>
-          <select
+
+      <div className="mt-10 max-w-xs">
+        <Field label="Show" htmlFor="enquiry-filter">
+          <Select
+            id="enquiry-filter"
             value={filter}
             onChange={(event) => setFilter(event.target.value as LeadState | 'all')}
-            className="min-h-tap rounded border border-brand-base/20 px-2 py-1"
           >
             <option value="all">Everything</option>
             {LEAD_STATES.map((state) => (
@@ -140,44 +151,43 @@ export default function EnquiriesPanel() {
                 {LEAD_STATE_LABELS[state]}
               </option>
             ))}
-          </select>
-        </label>
+          </Select>
+        </Field>
       </div>
 
       {error ? (
-        <p role="alert" className="mt-3 text-sm font-semibold text-red-700">
+        <Alert tone="danger" className="mt-4">
           {error}
-        </p>
+        </Alert>
       ) : null}
 
       {loading ? (
-        <p className="mt-4 text-sm text-brand-base/75">Loading…</p>
+        <p className="mt-4 text-sm text-oj-ink-2">Loading…</p>
       ) : enquiries.length === 0 ? (
-        <p className="mt-4 text-sm text-brand-base/75">
+        <p className="mt-4 text-sm text-oj-ink-2">
           {filter === 'all' ? 'No enquiries yet.' : `Nothing in ${LEAD_STATE_LABELS[filter]}.`}
         </p>
       ) : (
         <ul className="mt-4 flex flex-col gap-4">
           {enquiries.map((enquiry) => (
-            <li
-              key={enquiry.id}
-              className="rounded-lg border border-brand-base/10 p-4"
-              aria-busy={updating === enquiry.id}
-            >
+            <li key={enquiry.id} className={CARD_ON_CREAM} aria-busy={updating === enquiry.id}>
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="font-semibold text-brand-base">
+                <div className="min-w-0">
+                  <p className={`text-lg ${BLOCK_HEADING}`}>
                     {enquiry.company || enquiry.legacy.pubName || 'No company given'}
                   </p>
-                  <p className="text-sm text-brand-base/75">
+                  <p className="text-sm text-oj-ink-2">
                     {enquiry.name} ·{' '}
-                    <a href={`mailto:${enquiry.email}`} className="hover:underline">
+                    <a
+                      href={`mailto:${enquiry.email}`}
+                      className="font-semibold text-oj-ink underline"
+                    >
                       {enquiry.email}
                     </a>
                     {enquiry.role ? ` · ${enquiry.role}` : ''}
                     {enquiry.sizeBand ? ` · ${enquiry.sizeBand} people` : ''}
                   </p>
-                  <p className="mt-1 text-xs text-brand-base/60">
+                  <p className="mt-1 text-xs text-oj-ink-2">
                     {formatWhen(enquiry.createdAt)}
                     {enquiry.sourcePage ? ` · from ${enquiry.sourcePage}` : ''}
                     {enquiry.utmCampaign ? ` · ${enquiry.utmCampaign}` : ''}
@@ -185,23 +195,22 @@ export default function EnquiriesPanel() {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <StateBadge state={enquiry.status} />
-                  <label className="text-sm">
+                  <label className="block w-52">
                     <span className="sr-only">Lead state for {enquiry.name}</span>
-                    <select
+                    <Select
                       value={enquiry.status}
                       onChange={(event) =>
                         void updateStatus(enquiry.id, event.target.value as LeadState)
                       }
-                      className="min-h-tap rounded border border-brand-base/20 px-2 py-1"
                     >
                       {LEAD_STATES.map((state) => (
                         <option key={state} value={state}>
                           {LEAD_STATE_LABELS[state]}
                         </option>
                       ))}
-                    </select>
+                    </Select>
                   </label>
                 </div>
               </div>
@@ -222,17 +231,17 @@ export default function EnquiriesPanel() {
                     href={enquiry.website}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="font-semibold underline"
+                    className="font-semibold text-oj-ink underline"
                   >
                     {enquiry.website}
                   </a>{' '}
-                  <span className="text-brand-base/60">(opens in a new tab)</span>
+                  <span className="text-oj-ink-2">(opens in a new tab)</span>
                 </p>
               ) : null}
             </li>
           ))}
         </ul>
       )}
-    </section>
+    </BackOfficeBand>
   );
 }
