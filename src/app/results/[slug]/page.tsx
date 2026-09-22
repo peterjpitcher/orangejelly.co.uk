@@ -31,10 +31,13 @@ export function generateStaticParams(): Array<{ slug: string }> {
 
 /**
  * Closes the set, so an unknown slug is resolved at routing time and answers a genuine
- * 404. Without it the notFound() below cannot set a status: src/app/loading.tsx sits at
- * the app root, so Next 14 wraps every route in a Suspense boundary and flushes the
- * shell with a 200 before this component runs, which is how /results/anything came to
+ * 404 with the not-found page in the served HTML. It was first added because the
+ * notFound() below could not set a status while src/app/loading.tsx sat at the app
+ * root: Next 14 wrapped every route in a Suspense boundary and flushed the shell with
+ * a 200 before this component ran, which is how /results/anything came to
  * answer 200 with a loading spinner and two contradicting robots tags.
+ * That root boundary went on 22 September 2026. Closing the set still earns its place:
+ * a render-time notFound() answers 404 with an empty body, this answers it with the page.
  *
  * CASE_STUDIES is a static array with no drafts and no legacy slugs, so closing the set
  * costs nothing here.

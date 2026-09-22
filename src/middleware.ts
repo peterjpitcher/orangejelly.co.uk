@@ -118,14 +118,15 @@ export function middleware(request: NextRequest) {
     return applySecurityHeaders(new NextResponse('Gone', { status: 410 }), requestPathname);
   }
 
-  // /dev is the development-only component harness, and this is the only layer that
-  // can keep it out of production with a real status code.
+  // /dev is the development-only component harness, and this is the layer that keeps
+  // it out of production with a real status code before any rendering starts.
   //
   // The page already calls notFound() when NODE_ENV is production, and it does stop
-  // any specimen markup being served, but it cannot set the status: src/app/loading.tsx
-  // sits at the app root, so Next 14 wraps every route in a Suspense boundary and
-  // flushes the shell with a 200 before the page component runs. Once the headers are
-  // sent the status cannot change, so production answered 200 carrying the loading
+  // any specimen markup being served, but it could not set the status while
+  // src/app/loading.tsx sat at the app root (it moved on 22 September 2026): Next 14
+  // wrapped every route in that Suspense boundary and flushed the shell with a 200
+  // before the page component ran. Once the headers are sent the status cannot
+  // change, so production answered 200 carrying the loading
   // fallback, with the 404 UI reaching the browser only inside the RSC payload. Found
   // by inspection on 5 September 2026; it is not one of the 81 rows in the 28 August
   // Search Console report. Middleware runs before rendering begins, so a response

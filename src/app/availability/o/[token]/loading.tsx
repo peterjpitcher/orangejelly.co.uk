@@ -8,6 +8,9 @@ import { Skeleton } from '@/components/oj';
  * mirror the finished layout (heading and sub-line, then the summary card and the
  * matrix) so the page does not visibly jump when the data lands.
  *
+ * It only shows once `layout.tsx` has found a live poll for the token. That order
+ * is what lets a dead link answer a real 404: see the layout.
+ *
  * Three `Skeleton`s, one per block, and no more than that. Each one is its own
  * `role="status"` announcing "Loading", so a bar-per-element layout would make a
  * screen-reader user hear it once per rectangle.

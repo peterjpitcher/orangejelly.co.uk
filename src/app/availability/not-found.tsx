@@ -13,21 +13,21 @@ import { Button } from '@/components/oj';
  * guessed right. There is deliberately nothing here to tell the causes apart:
  * not the copy, not the status code, not the page title.
  *
- * The anti-oracle property is the identical outcome, and it holds. THE STATUS IS
- * NOT PART OF IT, whatever this comment said before 5 September 2026. These
- * routes answer HTTP 200, not 404: `src/app/loading.tsx` sits at the app root,
- * so Next 14 wraps every route in a Suspense boundary and flushes the shell with
- * a 200 before the page runs, and a render-time `notFound()` cannot change a
- * status once the headers are sent. Every invalid token gets the same 200, so
- * nothing leaks, but do not reason about token enumeration on the basis of a 404
- * that is not there.
+ * The anti-oracle property is the identical outcome, and it holds. Every dead link
+ * answers HTTP 404, since 22 September 2026. Before that they all answered 200:
+ * `src/app/loading.tsx` sat at the app root, Next 14 wrapped every route in its
+ * Suspense boundary and sent the 200 headers before the page ran, and a
+ * `notFound()` cannot change a status once the headers are sent. The root loading
+ * screen now lives per page, on public pages only.
  *
- * Fixing it means a route-segment `loading.tsx` under `/availability`, or
- * narrowing the app-root one. Both are user-experience decisions rather than
- * security ones, and neither was made in the 5 September indexing release, which
- * fixed the same defect on `/results/[slug]`, `/growth-problems/[slug]` and
- * `/dev/components` where it cost search visibility. Recorded in
- * `tasks/gsc-indexing/SPEC.md` section 7.
+ * The 404 depends on there being NO `loading.tsx` above the `notFound()` call,
+ * here or at the app root. `o/[token]` keeps its skeleton by checking the token in
+ * its own `layout.tsx`, which sits outside that skeleton's boundary.
+ * `src/test/loading-boundaries.test.ts` fails if a boundary goes back above one.
+ *
+ * Next 14 sends a render-time 404 with an empty HTML body and draws this page from
+ * the data that comes with it, so a visitor sees it once scripts run. The status
+ * and the page are the same for every cause either way.
  *
  * Still reached via `notFound()` from the poll routes, and it must stay
  * `notFound()` rather than inline error copy, because that is what routes every

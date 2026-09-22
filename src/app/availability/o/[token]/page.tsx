@@ -73,9 +73,11 @@ interface OrganiserPageProps {
 export default async function OrganiserPage({ params }: OrganiserPageProps): Promise<JSX.Element> {
   const view = await getOrganiserResults(params.token);
 
-  // ONE outcome for unknown, expired, deleted and draft alike. `notFound()`
-  // renders a real 404; rendering error copy inline would return 200 and make a
-  // soft-404 that tells a token guesser they guessed right.
+  // ONE outcome for unknown, expired, deleted and draft alike. The real 404 is
+  // answered by `layout.tsx`, before the skeleton streams. This check covers a
+  // poll deleted between the gate and this read: by then the status is sent, so
+  // it can only show the same not-found screen. It must stay `notFound()` rather
+  // than inline error copy, which would read differently from every other dead link.
   if (!view) {
     notFound();
   }

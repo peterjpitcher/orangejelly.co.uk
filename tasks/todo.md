@@ -140,3 +140,38 @@ lowercase display heading and alternate paper and cream bands.
   Vitest 1856/1857 in both zones, lint (one existing GoogleTagManager warning), build green.
 - Left alone: `cellClass` in `src/components/polls/organiser/results-display.ts` still names the
   old palette, but nothing imports it.
+
+---
+
+# Dead poll links answer a real 404 (22 September 2026)
+
+**Problem:** `/availability/p/<unknown>` answers 200. `src/app/loading.tsx` wraps every route in a
+Suspense boundary, so the shell is sent with a 200 before `notFound()` runs. Same defect on
+`/availability/p/.../edit/...`, `/availability/o/...`, `/survey/...` and unknown slugs under
+`/insights/` and `/guides/category/`. `/availability/verify/...` never calls `notFound()`.
+
+- [x] Reproduce on a local production build (all token routes 200, HTML is only the loading cover)
+- [x] Work out what the root loading screen gives public pages (a cover on client-side navigation
+      to the three dynamic pages, `/contact`, `/start-here`, `/insights`; nothing on static pages
+      or on any first load)
+- [x] Move the cover to a shared component; delete the root `loading.tsx`
+- [x] Give `/contact`, `/start-here` and `/insights` (list only, via a route group) their own
+      `loading.tsx`, so they keep the cover
+- [x] Resolve the organiser token in a layout above `o/[token]/loading.tsx`, so the results
+      skeleton stays and a dead link still 404s
+- [x] Correct every comment that says the root `loading.tsx` exists or that these routes are 200
+- [x] Unit test: no `loading.tsx` above a `notFound()` caller
+- [x] Synthetic check: dead poll links and an unknown survey return 404 on the live site
+- [x] Type-check, lint, `npx vitest run`, `npm run test:utc`, build, curl every route
+
+**Results (local production build, 22 September 2026):**
+
+- No database settings: every dead poll link 404 (was 200).
+- Local stand-in database: unknown and draft tokens 404 on `p`, `p/.../edit/...` and `o`; unknown
+  survey and survey preview 404; unknown insight and category 404; live `p` and `o` 200. The live
+  organiser page sends its first byte in 14 ms and streams the skeleton, then the results.
+- Prefetch data still carries the site cover for `/contact`, `/start-here`, `/insights`, and the
+  organiser skeleton for `/availability/o/...`.
+- Dead links show "this link isn't live." in the browser, with no third-party requests.
+- Type-check clean; Vitest 107 files green in London and UTC; ESLint 0 errors on the project config
+  (`npm run lint` cannot run inside a nested worktree: the parent folder's ESLint config clashes).

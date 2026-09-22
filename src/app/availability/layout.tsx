@@ -10,9 +10,9 @@ import type { Metadata } from 'next';
  *    `notFound()` thrown in `p/[token]/page.tsx` bubbled past
  *    `availability/not-found.tsx` to the root one, and a participant with a dead
  *    link got the marketing 404 ("Oops! This Page Got Lost") instead of the
- *    considered "This link isn't live" page. The status was correct throughout;
- *    only the words were wrong, which is exactly the kind of defect a test suite
- *    reports as green.
+ *    considered "This link isn't live" page. That is exactly the kind of defect
+ *    a test suite reports as green. (The status was wrong too, 200 rather than
+ *    404, until 22 September 2026: see `not-found.tsx`.)
  *
  * 2. **noindex.** Poll URLs carry a bearer token in the path. A secret URL must
  *    not depend on a crawler's goodwill or on nobody ever pasting a link

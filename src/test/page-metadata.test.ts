@@ -35,7 +35,7 @@ const PAGES: Array<[string, () => Promise<{ metadata?: unknown }>]> = [
   ['/why-revenue-is-falling', () => import('@/app/why-revenue-is-falling/page')],
   ['/sectors/professional-services', () => import('@/app/sectors/professional-services/page')],
   ['/tools/ai-readiness', () => import('@/app/tools/ai-readiness/page')],
-  ['/insights', () => import('@/app/insights/page')],
+  ['/insights', () => import('@/app/insights/(list)/page')],
   ['/contact', () => import('@/app/contact/page')],
 ];
 

@@ -8,7 +8,7 @@ import ContactPage from '@/app/contact/page';
 import FractionalCmoPage from '@/app/fractional-cmo/page';
 import GuidesPage from '@/app/guides/page';
 import HowWeWorkPage from '@/app/how-we-work/page';
-import InsightsPage from '@/app/insights/page';
+import InsightsPage from '@/app/insights/(list)/page';
 import HomePage from '@/app/page';
 import PubMarketingPage from '@/app/pub-marketing/page';
 import ResultsPage from '@/app/results/page';

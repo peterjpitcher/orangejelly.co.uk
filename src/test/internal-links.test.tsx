@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -74,10 +74,22 @@ const liveRoutes = new Set(
 );
 const redirectSources = new Set(getRedirects().map((redirect) => redirect.source));
 
+/**
+ * Does this folder hold a page, directly or inside a route group? A group adds
+ * nothing to the URL, so /insights is served by src/app/insights/(list)/page.tsx.
+ */
+function folderHasPage(dir: string): boolean {
+  if (existsSync(join(dir, 'page.tsx'))) return true;
+  return (
+    existsSync(dir) &&
+    readdirSync(dir).some((entry) => entry.startsWith('(') && folderHasPage(join(dir, entry)))
+  );
+}
+
 /** Is there a real page file behind this path, statically or via a dynamic segment? */
 function hasPageFile(path: string): boolean {
   const segments = path === '/' ? [] : path.slice(1).split('/');
-  if (existsSync(join(process.cwd(), 'src/app', ...segments, 'page.tsx'))) return true;
+  if (folderHasPage(join(process.cwd(), 'src/app', ...segments))) return true;
 
   // Content routes are not enumerated in the manifest; a dynamic segment covers them.
   for (let depth = segments.length; depth > 0; depth -= 1) {
