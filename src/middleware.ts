@@ -73,11 +73,14 @@ function applySecurityHeaders(response: NextResponse, pathname: string) {
       "default-src 'self'",
       // Use next/script and nonces in future to remove 'unsafe-inline'. Kept temporarily for GTM bootstrap.
       // challenges.cloudflare.com is Turnstile, used by the poll create form and the enquiry form.
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.clarity.ms https://scripts.clarity.ms https://vercel.live https://challenges.cloudflare.com",
+      // clarity.ms is deliberately absent, since 22 September 2026: Microsoft Clarity
+      // recorded visits without consent and was removed. Leaving it out here means a
+      // Clarity tag still sitting in the GTM container cannot load or upload.
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://vercel.live https://challenges.cloudflare.com",
       "style-src 'self' 'unsafe-inline' https://tagmanager.google.com https://fonts.googleapis.com",
       "font-src 'self' data: https://fonts.gstatic.com",
       "img-src 'self' data: blob: https: https://www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com",
-      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://vercel.live https://www.clarity.ms https://h.clarity.ms https://j.clarity.ms",
+      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com https://vercel.live",
       // Turnstile renders its challenge in an iframe. Deliberately NOT added to
       // connect-src: the widget's own network calls originate inside that iframe
       // and are governed by Cloudflare's CSP, not ours, and siteverify is a

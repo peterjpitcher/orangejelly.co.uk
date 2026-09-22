@@ -5,7 +5,7 @@ import './globals.css';
 import MainGate from '@/components/MainGate';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { PreloadResources } from '@/components/PerformanceMonitor';
-import { GoogleTagManager, GoogleTagManagerNoscript } from '@/components/GoogleTagManager';
+import { GoogleTagManager } from '@/components/GoogleTagManager';
 import { CONTACT } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
 // Analytics, Speed Insights, the cookie notice and the marketing overlays are all
@@ -234,7 +234,6 @@ export default function RootLayout({
         className={`${fraunces.variable} ${openSans.variable} ${schibstedGrotesk.variable} font-sans antialiased`}
       >
         <GoogleTagManager />
-        <GoogleTagManagerNoscript />
         {/*
           Skip to main content link for keyboard navigation.
 

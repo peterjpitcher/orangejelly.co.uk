@@ -121,8 +121,7 @@ export default function CookieNotice() {
           <div>
             <p className="font-bold">Analytics (optional)</p>
             <p className="text-oj-cream/80">
-              Google Tag Manager, GA4, and first-party conversion events. Runs in cookieless mode
-              until you accept.
+              Google Tag Manager and Google Analytics. Nothing from Google loads unless you accept.
             </p>
           </div>
         </div>
