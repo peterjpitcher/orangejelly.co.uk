@@ -190,7 +190,8 @@ export interface SubmissionInput {
 }
 
 export type SubmissionResult =
-  | { stored: true }
+  /** `duplicate`: this response id was stored by an earlier attempt, so nothing new was. */
+  | { stored: true; duplicate?: boolean }
   | { stored: false; reason: 'not_open' | 'unavailable' | 'failed' };
 
 /**
@@ -231,6 +232,13 @@ export async function submitSurveyResponse(input: SubmissionInput): Promise<Subm
 
     if (!error) return { stored: true };
     if (error.message.includes('survey_not_open')) return { stored: false, reason: 'not_open' };
+    // A unique violation can only be the response id: the contact id is new on
+    // every attempt and its response_id is this same id. So an earlier attempt
+    // already stored these answers and its reply was lost. Report it as stored;
+    // the transaction rolled back, so nothing was written twice.
+    if (error.code === '23505' && error.message.includes('survey_responses_pkey')) {
+      return { stored: true, duplicate: true };
+    }
     console.error('[surveys] the response was not stored:', error.message);
     return { stored: false, reason: 'failed' };
   } catch (error) {
@@ -377,7 +385,17 @@ export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
   return Promise.all(
     rows.map(async (row): Promise<AdminSurvey> => {
       const survey = mapSurveyRow(row);
-      const [responses, tallies, contacts] = await Promise.all([
+      const [realCount, previewCount, responses, tallies, contacts] = await Promise.all([
+        client
+          .from('survey_responses')
+          .select('id', { count: 'exact', head: true })
+          .eq('survey_id', row.id)
+          .eq('is_preview', false),
+        client
+          .from('survey_responses')
+          .select('id', { count: 'exact', head: true })
+          .eq('survey_id', row.id)
+          .eq('is_preview', true),
         client
           .from('survey_responses')
           .select('answers, is_preview, utm_source, referrer_host, created_at')
@@ -385,14 +403,20 @@ export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
           .order('created_at', { ascending: false })
           .limit(ADMIN_RESPONSE_LIMIT),
         client.rpc('survey_tallies', { p_survey_id: row.id }),
+        // Preview volunteers are Peter's own tests, so they are left out.
         client
           .from('survey_contacts')
           .select(
-            'name, email, business_name, volunteered_for, created_at, survey_responses ( answers )'
+            'name, email, business_name, volunteered_for, created_at, survey_responses!inner ( answers, is_preview )'
           )
           .eq('survey_id', row.id)
+          .eq('survey_responses.is_preview', false)
           .order('created_at', { ascending: false }),
       ]);
+      if (realCount.error) throw new Error(`Could not count responses: ${realCount.error.message}`);
+      if (previewCount.error) {
+        throw new Error(`Could not count previews: ${previewCount.error.message}`);
+      }
       if (responses.error) throw new Error(`Could not read responses: ${responses.error.message}`);
       if (tallies.error) throw new Error(`Could not tally responses: ${tallies.error.message}`);
       if (contacts.error) throw new Error(`Could not read volunteers: ${contacts.error.message}`);
@@ -400,8 +424,6 @@ export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
       const textKeys = survey.questions.filter((q) => q.kind === 'text').map((q) => q.key);
       const texts: AdminSurvey['texts'] = Object.fromEntries(textKeys.map((key) => [key, []]));
       const sourceCounts = new Map<string, number>();
-      let real = 0;
-      let preview = 0;
 
       for (const response of (responses.data ?? []) as Array<{
         answers: Record<string, Answer>;
@@ -410,11 +432,7 @@ export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
         referrer_host: string | null;
         created_at: string;
       }>) {
-        if (response.is_preview) {
-          preview += 1;
-          continue;
-        }
-        real += 1;
+        if (response.is_preview) continue;
         const source = response.utm_source ?? response.referrer_host ?? 'direct';
         sourceCounts.set(source, (sourceCounts.get(source) ?? 0) + 1);
         for (const key of textKeys) {
@@ -448,8 +466,8 @@ export async function getSurveysForAdmin(): Promise<AdminSurvey[]> {
         previewToken: row.preview_token,
         openedAt: row.opened_at,
         closedAt: row.closed_at,
-        responses: real,
-        previewResponses: preview,
+        responses: realCount.count ?? 0,
+        previewResponses: previewCount.count ?? 0,
         tallies: (
           (tallies.data ?? []) as Array<{
             question_key: string;

@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import SurveyPlayer from './SurveyPlayer';
 import { submitSurvey } from '@/app/actions/surveys';
+import { trackClientEvent } from '@/lib/tracking';
 import type { Survey } from '@/lib/surveys/logic';
 
 vi.mock('@/app/actions/surveys', () => ({ submitSurvey: vi.fn() }));
@@ -50,6 +51,7 @@ const SURVEY: Survey = {
 
 beforeEach(() => {
   vi.mocked(submitSurvey).mockReset();
+  vi.mocked(trackClientEvent).mockReset();
 });
 
 async function answerEverything(user: ReturnType<typeof userEvent.setup>): Promise<void> {
@@ -85,9 +87,14 @@ describe('SurveyPlayer', () => {
     await user.click(screen.getByRole('button', { name: 'Try again' }));
     expect(await screen.findByRole('heading', { name: 'Thank you' })).toBeInTheDocument();
 
-    // Both attempts carried the same answers: nothing was lost to the failure.
+    // Both attempts carried the same answers and the same response id: nothing
+    // was lost to the failure, and a stored-but-unanswered first attempt would be
+    // recognised by the server rather than stored twice.
     const [first, second] = vi.mocked(submitSurvey).mock.calls.map(([input]) => input);
     expect(first).toEqual(second);
+    expect((first as { responseId: string }).responseId).toMatch(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
+    );
     expect(first).toMatchObject({
       slug: 'pub-apps',
       answers: { apps: ['rotas', 'stock', 'events', 'parking'], venue: ['food'] },
@@ -126,5 +133,39 @@ describe('SurveyPlayer', () => {
     await waitFor(() => expect(screen.getByText('What the trade picked')).toBeInTheDocument());
     expect(screen.getByText('75%')).toBeInTheDocument();
     expect(screen.getByText('Based on 40 responses so far.')).toBeInTheDocument();
+  });
+
+  it('clears a failed attempt, and its Try again, once the respondent goes back to change an answer', async () => {
+    const user = userEvent.setup();
+    vi.mocked(submitSurvey).mockResolvedValue({ error: 'Not stored.' });
+
+    render(
+      <SurveyPlayer survey={SURVEY} shareUrl="https://www.orangejelly.co.uk/survey/pub-apps" />
+    );
+    await answerEverything(user);
+    expect(await screen.findByText('Not sent yet')).toBeInTheDocument();
+    // Focus lands on the message, not the top of the page.
+    expect(screen.getByText('Not sent yet').closest('[tabindex="-1"]')).toHaveFocus();
+
+    await user.click(screen.getByRole('button', { name: 'Back' }));
+    expect(screen.queryByText('Not sent yet')).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Try again' })).not.toBeInTheDocument();
+  });
+
+  it('measures nothing on the preview link', async () => {
+    const user = userEvent.setup();
+    vi.mocked(submitSurvey).mockResolvedValue({ success: true, results: null });
+
+    render(
+      <SurveyPlayer
+        survey={SURVEY}
+        previewToken={'p'.repeat(24)}
+        shareUrl="https://www.orangejelly.co.uk/survey/pub-apps"
+      />
+    );
+    await answerEverything(user);
+    expect(await screen.findByRole('heading', { name: 'Thank you' })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Copy link' }));
+    expect(trackClientEvent).not.toHaveBeenCalled();
   });
 });

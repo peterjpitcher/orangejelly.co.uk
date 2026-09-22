@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { isPollRoute } from '@/lib/token-routes';
+import { isScriptFreeRoute } from '@/lib/token-routes';
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -19,7 +19,7 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 export function GoogleTagManager() {
   const pathname = usePathname();
 
-  if (!GTM_ID || isPollRoute(pathname)) {
+  if (!GTM_ID || isScriptFreeRoute(pathname)) {
     return null;
   }
 
@@ -65,7 +65,7 @@ export function GoogleTagManagerNoscript() {
 
   // Same gate as GoogleTagManager: the noscript iframe is still a request to
   // Google from a page whose URL is a credential.
-  if (!GTM_ID || isPollRoute(pathname)) {
+  if (!GTM_ID || isScriptFreeRoute(pathname)) {
     return null;
   }
 

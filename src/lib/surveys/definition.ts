@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { SURVEY_ICONS } from './icons';
+import { isSurveyIcon } from './icons';
 import type { Survey } from './logic';
 
 /**
@@ -95,6 +95,13 @@ export function checkDefinition(input: unknown): string[] {
       problems.push(`${where} is ${question.kind} and cannot have options`);
     }
 
+    // A piped screen appears once there are two things to choose between, so it
+    // can never promise more than that: a higher minimum would leave Next
+    // disabled for good for anyone who picked exactly two.
+    if (question.kind === 'multi' && piped && (question.minChoices ?? 0) > 1) {
+      problems.push(`${where} pipes its options, so minChoices cannot be more than 1`);
+    }
+
     if (question.kind === 'multi') {
       if (question.minChoices === undefined || question.maxChoices === undefined) {
         problems.push(`${where} is multi and needs minChoices and maxChoices`);
@@ -138,7 +145,7 @@ export function checkDefinition(input: unknown): string[] {
       if (questionKeys.has(option.key) || option.key === question.key) {
         problems.push(`option "${option.key}" has the same key as a question`);
       }
-      if (option.icon !== undefined && !(option.icon in SURVEY_ICONS)) {
+      if (option.icon !== undefined && !isSurveyIcon(option.icon)) {
         problems.push(
           `option "${option.key}" uses icon "${option.icon}", which is not in src/lib/surveys/icons.ts`
         );
@@ -159,6 +166,11 @@ export function checkDefinition(input: unknown): string[] {
 
   const contactSteps = def.questions.filter((q) => q.kind === 'contact');
   if (contactSteps.length > 1) problems.push('a survey can have one contact step at most');
+  // The contact step sends the answers, so anything after it would never be asked
+  // and a required question there would fail every honest submission.
+  if (contactSteps.length === 1 && def.questions[def.questions.length - 1].kind !== 'contact') {
+    problems.push('the contact step must be the last question');
+  }
 
   if (def.results) {
     const target = def.questions.find((q) => q.key === def.results?.questionKey);

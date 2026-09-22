@@ -20,6 +20,8 @@ interface SurveyShareProps {
   shareText: string;
   /** The survey's public URL, without query. */
   shareUrl: string;
+  /** False on the preview link, where nothing is measured. */
+  measured: boolean;
 }
 
 export function shareLink(shareUrl: string, slug: string, channel: Channel): string {
@@ -33,7 +35,12 @@ export function shareLink(shareUrl: string, slug: string, channel: Channel): str
   return url.toString();
 }
 
-export default function SurveyShare({ slug, shareText, shareUrl }: SurveyShareProps): JSX.Element {
+export default function SurveyShare({
+  slug,
+  shareText,
+  shareUrl,
+  measured,
+}: SurveyShareProps): JSX.Element {
   const [canShare, setCanShare] = React.useState(false);
   const [copied, setCopied] = React.useState<'idle' | 'copied' | 'failed'>('idle');
 
@@ -44,6 +51,7 @@ export default function SurveyShare({ slug, shareText, shareUrl }: SurveySharePr
   }, []);
 
   function tracked(channel: Channel): void {
+    if (!measured) return;
     trackClientEvent('survey_shared', {
       properties: { survey: slug, channel },
       dedupeKey: `survey_shared:${slug}:${channel}`,

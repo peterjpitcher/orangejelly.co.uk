@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import PerformanceMonitor from '@/components/PerformanceMonitor';
 import CookieNotice from '@/components/CookieNotice';
-import { isPollRoute } from '@/lib/token-routes';
+import { isScriptFreeRoute } from '@/lib/token-routes';
 
 /**
  * Every analytics and marketing component that the root layout used to render
@@ -34,9 +34,10 @@ import { isPollRoute } from '@/lib/token-routes';
 export default function MarketingChrome(): React.ReactElement | null {
   const pathname = usePathname();
 
-  // Fail closed for the leak: anything under /availability gets nothing. The
-  // predicate is shared with middleware so the two cannot drift apart.
-  if (isPollRoute(pathname)) {
+  // Fail closed for the leak: anything under /availability, and any route with a
+  // token in its path, gets nothing. The predicate is shared with middleware so
+  // the two cannot drift apart.
+  if (isScriptFreeRoute(pathname)) {
     return null;
   }
 

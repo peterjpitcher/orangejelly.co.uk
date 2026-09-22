@@ -53,6 +53,21 @@ type Stage = { kind: 'asking'; key: string } | { kind: 'done'; results: SurveyRe
 /** Long enough to see the tile change, short enough to feel instant. */
 const ADVANCE_DELAY_MS = 180;
 
+/**
+ * A v4 uuid for this respondent's answers, made once and sent with every
+ * attempt. If an attempt is stored but its reply never arrives (a timeout after
+ * the commit), "Try again" carries the same id and the server recognises it
+ * instead of storing the answers, and emailing Peter, a second time.
+ */
+function newResponseId(): string {
+  if (typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
 export default function SurveyPlayer({
   survey,
   previewToken,
@@ -80,7 +95,12 @@ export default function SurveyPlayer({
 
   const containerRef = React.useRef<HTMLDivElement>(null);
   const headingRef = React.useRef<HTMLHeadingElement>(null);
+  const errorRef = React.useRef<HTMLDivElement>(null);
   const advanceTimer = React.useRef<number | null>(null);
+  const responseId = React.useRef<string | null>(null);
+
+  // Preview answers are Peter testing, not people answering: nothing is measured.
+  const measured = !previewToken;
 
   const answers = React.useMemo(() => effectiveAnswers(survey, raw), [survey, raw]);
   const visible = React.useMemo(() => visibleQuestions(survey, answers), [survey, answers]);
@@ -114,6 +134,24 @@ export default function SurveyPlayer({
     []
   );
 
+  // A failed send disables the control that had focus, which drops focus to the
+  // top of the page. Put it on the message instead, where "Try again" is.
+  React.useEffect(() => {
+    if (error) errorRef.current?.focus();
+  }, [error]);
+
+  function cancelPendingAdvance(): void {
+    if (advanceTimer.current !== null) window.clearTimeout(advanceTimer.current);
+    advanceTimer.current = null;
+  }
+
+  /** An answer changed, so an earlier failed attempt no longer describes what to send. */
+  function forgetFailedSend(): void {
+    setError(null);
+    setFieldErrors({});
+    setLastSend(null);
+  }
+
   /** The first visible question after `key` in survey order, given these answers. */
   function nextAfter(key: string, nextRaw: Record<string, Answer>): SurveyQuestion | undefined {
     const from = position.get(key) ?? -1;
@@ -123,6 +161,7 @@ export default function SurveyPlayer({
   }
 
   function markStarted(): void {
+    if (!measured) return;
     trackClientEvent('survey_started', {
       properties: { survey: survey.slug },
       dedupeKey: `survey_started:${survey.slug}`,
@@ -135,11 +174,13 @@ export default function SurveyPlayer({
     setError(null);
     setFieldErrors({});
     setLastSend({ answers: finalRaw, withContact });
+    responseId.current ??= newResponseId();
 
     try {
       const result = await submitSurvey({
         slug: survey.slug,
         previewToken,
+        responseId: responseId.current,
         answers: finalAnswers,
         contact: withContact
           ? {
@@ -154,10 +195,12 @@ export default function SurveyPlayer({
       });
 
       if (result.success) {
-        trackClientEvent('survey_completed', {
-          properties: { survey: survey.slug, volunteered: withContact },
-          dedupeKey: `survey_completed:${survey.slug}`,
-        });
+        if (measured) {
+          trackClientEvent('survey_completed', {
+            properties: { survey: survey.slug, volunteered: withContact },
+            dedupeKey: `survey_completed:${survey.slug}`,
+          });
+        }
         setStage({ kind: 'done', results: result.results ?? null });
         return;
       }
@@ -176,6 +219,7 @@ export default function SurveyPlayer({
   function answerAndAdvance(question: SurveyQuestion, value: Answer, delay = 0): void {
     const nextRaw = { ...raw, [question.key]: value };
     setRaw(nextRaw);
+    forgetFailedSend();
     markStarted();
     const go = (): void => {
       const next = nextAfter(question.key, nextRaw);
@@ -189,10 +233,12 @@ export default function SurveyPlayer({
 
   function back(): void {
     if (stage.kind !== 'asking') return;
+    // A tap on the way out must not carry the respondent forward again.
+    cancelPendingAdvance();
     const from = position.get(stage.key) ?? 0;
     const previous = [...visible].reverse().find((q) => (position.get(q.key) ?? 0) < from);
     if (previous) {
-      setError(null);
+      forgetFailedSend();
       setStage({ kind: 'asking', key: previous.key });
     }
   }
@@ -205,6 +251,7 @@ export default function SurveyPlayer({
           results={stage.results}
           headingRef={headingRef}
           shareUrl={shareUrl}
+          measured={measured}
         />
       </div>
     );
@@ -225,6 +272,7 @@ export default function SurveyPlayer({
   }
 
   const index = visible.findIndex((q) => q.key === question.key);
+  const prompt = renderPrompt(survey, question.prompt, answers);
   const isFirst = index === 0;
   // Progress through the whole survey, not through the questions visible so far.
   // Follow-ups appear as people answer, and a bar measured against what is
@@ -270,7 +318,7 @@ export default function SurveyPlayer({
           tabIndex={-1}
           className="font-oj text-[clamp(24px,4.5vw,32px)] font-black leading-tight text-oj-ink outline-none"
         >
-          {renderPrompt(survey, question.prompt, answers)}
+          {prompt}
         </h2>
         {question.hint ? (
           <p className="mt-2 text-[16px] leading-relaxed text-oj-ink-2">{question.hint}</p>
@@ -281,9 +329,11 @@ export default function SurveyPlayer({
             <SingleChoice
               survey={survey}
               question={question}
+              label={prompt}
               answers={answers}
               disabled={sending}
               onPick={(key) => answerAndAdvance(question, [key], ADVANCE_DELAY_MS)}
+              onSkip={() => answerAndAdvance(question, [])}
             />
           ) : null}
 
@@ -291,6 +341,7 @@ export default function SurveyPlayer({
             <MultiChoice
               survey={survey}
               question={question}
+              label={prompt}
               answers={answers}
               disabled={sending}
               onDone={(keys) => answerAndAdvance(question, keys)}
@@ -328,7 +379,7 @@ export default function SurveyPlayer({
         ) : null}
 
         {error ? (
-          <div className="mt-6">
+          <div ref={errorRef} tabIndex={-1} className="mt-6 outline-none">
             <Alert tone="danger" title="Not sent yet">
               <p>{error}</p>
               {lastSend && !fieldErrors.name && !fieldErrors.email && !fieldErrors.consent ? (
@@ -354,6 +405,8 @@ export default function SurveyPlayer({
 interface ChoiceProps {
   survey: Survey;
   question: SurveyQuestion;
+  /** The prompt as shown, placeholders filled in, for the list's accessible name. */
+  label: string;
   answers: Readonly<Record<string, Answer>>;
   disabled: boolean;
 }
@@ -418,17 +471,19 @@ function OptionTile({
 function SingleChoice({
   survey,
   question,
+  label,
   answers,
   disabled,
   onPick,
-}: ChoiceProps & { onPick: (key: string) => void }): JSX.Element {
+  onSkip,
+}: ChoiceProps & { onPick: (key: string) => void; onSkip: () => void }): JSX.Element {
   const current = answers[question.key];
   const picked = Array.isArray(current) ? current[0] : undefined;
   const options = resolveOptions(survey, question, answers);
   return (
     <ul
       className={cn('grid list-none gap-3 p-0', options.length > 4 && 'sm:grid-cols-2')}
-      aria-label={question.prompt}
+      aria-label={label}
     >
       {options.map((option) => (
         <li key={option.key}>
@@ -442,6 +497,13 @@ function SingleChoice({
           />
         </li>
       ))}
+      {question.required ? null : (
+        <li className="sm:col-span-2">
+          <Button variant="ghost" onClick={onSkip} disabled={disabled}>
+            Skip this one
+          </Button>
+        </li>
+      )}
     </ul>
   );
 }
@@ -449,6 +511,7 @@ function SingleChoice({
 function MultiChoice({
   survey,
   question,
+  label,
   answers,
   disabled,
   onDone,
@@ -471,7 +534,7 @@ function MultiChoice({
 
   return (
     <div>
-      <ul className="grid list-none gap-3 p-0 sm:grid-cols-2" aria-label={question.prompt}>
+      <ul className="grid list-none gap-3 p-0 sm:grid-cols-2" aria-label={label}>
         {options.map((option) => {
           const selected = picked.includes(option.key);
           return (
@@ -661,11 +724,13 @@ function ThankYou({
   results,
   headingRef,
   shareUrl,
+  measured,
 }: {
   survey: Survey;
   results: SurveyResultsView | null;
   headingRef: React.RefObject<HTMLHeadingElement>;
   shareUrl: string;
+  measured: boolean;
 }): JSX.Element {
   return (
     <div className="animate-in fade-in duration-200 motion-reduce:animate-none">
@@ -709,7 +774,12 @@ function ThankYou({
         </p>
       ) : null}
 
-      <SurveyShare slug={survey.slug} shareText={survey.shareText} shareUrl={shareUrl} />
+      <SurveyShare
+        slug={survey.slug}
+        shareText={survey.shareText}
+        shareUrl={shareUrl}
+        measured={measured}
+      />
     </div>
   );
 }

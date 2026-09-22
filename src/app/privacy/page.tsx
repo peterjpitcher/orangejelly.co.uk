@@ -156,13 +156,14 @@ export default function PrivacyPage(): JSX.Element {
                 When you answer one of our surveys
               </p>
               <p>
-                Your answers are anonymous. We keep what you picked, anything you type into the open
-                questions, and the name of the website or link that brought you to the survey, such
-                as &ldquo;facebook&rdquo;. We do not keep your name, your email address or your IP
-                address with them. We use the answers to decide what to build and, once enough
-                people have answered, to show everyone the overall results. Our lawful basis is
-                legitimate interests: finding out what the people we build for actually need. Please
-                leave personal details out of the open questions.
+                Your answers are anonymous unless you choose to give us your details at the end. We
+                keep what you picked, anything you type into the open questions, and the name of the
+                website or link that brought you to the survey, such as &ldquo;facebook&rdquo;. We
+                never keep your IP address, and we do not ask for your name or email address unless
+                you volunteer. We use the answers to decide what to build and, once enough people
+                have answered, to show everyone the overall results. Our lawful basis is legitimate
+                interests: finding out what the people we build for actually need. Please leave
+                personal details out of the open questions.
               </p>
               <p>
                 Some surveys end by asking whether you would like a say in what we build, or to try
@@ -170,8 +171,10 @@ export default function PrivacyPage(): JSX.Element {
                 you like, the name of your business. We keep these with a record of the box you
                 ticked and when you ticked it, and we use them only to contact you about what that
                 survey was about. Our lawful basis is your consent, and you can withdraw it at any
-                time by emailing us. When someone volunteers, we get an email with their name,
-                business and email address; their answers stay in our password-protected admin area.
+                time by emailing us. Your details are kept alongside your answers, so we know what
+                you picked when we get in touch. When someone volunteers, we get an email with their
+                name, business and email address; their answers stay in our password-protected admin
+                area.
               </p>
 
               <p className="font-bold text-oj-ink">When you browse the site</p>

@@ -82,8 +82,9 @@ describe('the privacy notice', () => {
 
   it('describes surveys: anonymous answers, volunteers by consent, and when their details go', () => {
     const body = text();
-    expect(body).toMatch(/Your answers are anonymous/);
-    expect(body).toMatch(/We do not keep your name, your email address or your\s+IP address/);
+    expect(body).toMatch(/Your answers are anonymous unless you choose to give us your details/);
+    expect(body).toMatch(/We\s+never keep your IP address/);
+    expect(body).toMatch(/Your details are kept alongside your answers/);
     expect(body).toMatch(/Our lawful basis is your consent/);
     expect(body).toMatch(/delete them 12 months after that survey closes, automatically/);
   });

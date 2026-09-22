@@ -69,6 +69,11 @@ export const SURVEY_ICONS: Readonly<Record<string, LucideIcon>> = {
   wrench: Wrench,
 };
 
+/** True only for names in the list, never for inherited names such as "constructor". */
+export function isSurveyIcon(name: string): boolean {
+  return Object.prototype.hasOwnProperty.call(SURVEY_ICONS, name);
+}
+
 export function surveyIcon(name: string | null): LucideIcon | null {
-  return name ? (SURVEY_ICONS[name] ?? null) : null;
+  return name && isSurveyIcon(name) ? SURVEY_ICONS[name] : null;
 }

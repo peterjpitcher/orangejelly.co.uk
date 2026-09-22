@@ -135,6 +135,44 @@ describe('checkDefinition', () => {
     );
   });
 
+  it('catches the shapes that would strand an honest respondent', () => {
+    const problems = checkDefinition({
+      ...base,
+      consentText: 'Contact me.',
+      questions: [
+        {
+          key: 'apps',
+          kind: 'multi',
+          prompt: 'P',
+          minChoices: 0,
+          maxChoices: 4,
+          options: [
+            { key: 'a', label: 'A', icon: 'constructor' },
+            { key: 'b', label: 'B' },
+            { key: 'c', label: 'C' },
+          ],
+        },
+        {
+          key: 'fav',
+          kind: 'multi',
+          prompt: 'P',
+          minChoices: 3,
+          maxChoices: 3,
+          optionsFrom: ['apps'],
+        },
+        { key: 'contact', kind: 'contact', prompt: 'Where?', showIf: ['a'] },
+        { key: 'after', kind: 'single', prompt: 'P', options: [{ key: 'x', label: 'X' }] },
+      ],
+    });
+    expect(problems).toEqual(
+      expect.arrayContaining([
+        'option "a" uses icon "constructor", which is not in src/lib/surveys/icons.ts',
+        'question "fav" pipes its options, so minChoices cannot be more than 1',
+        'the contact step must be the last question',
+      ])
+    );
+  });
+
   it('reports a malformed file field by field rather than throwing', () => {
     expect(checkDefinition({ ...base, slug: 'Not A Slug', questions: [] })).toEqual(
       expect.arrayContaining([

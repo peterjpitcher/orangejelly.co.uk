@@ -122,7 +122,7 @@ export async function submitSurvey(input: unknown): Promise<SurveySubmitResult> 
 
   const source = cleanEnquirySource(data.leadSource);
   const stored = await submitSurveyResponse({
-    responseId: randomUUID(),
+    responseId: data.responseId,
     surveyId: survey.id,
     answers: checked.answers,
     isPreview,
@@ -140,7 +140,8 @@ export async function submitSurvey(input: unknown): Promise<SurveySubmitResult> 
   }
 
   // Nothing below may turn stored answers into an error for the respondent.
-  if (contact && !isPreview) await notifyVolunteer(survey, contact);
+  // A repeat of an attempt that was already stored has already emailed Peter.
+  if (contact && !isPreview && !stored.duplicate) await notifyVolunteer(survey, contact);
 
   return { success: true, results: await loadResults(survey) };
 }

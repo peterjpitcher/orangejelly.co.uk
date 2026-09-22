@@ -62,6 +62,8 @@ const CONTACT = {
   consent: true,
 };
 
+const RID = '3f0c9a52-6d1e-4b8a-9c2d-7e5f1a0b4c6d';
+
 const NOT_SENT =
   "We couldn't send your answers. Please try again in a moment, or email peter@orangejelly.co.uk.";
 
@@ -78,7 +80,12 @@ beforeEach(() => {
 
 describe('submitSurvey', () => {
   it('stores the answers and a volunteer, tells Peter, and returns the results', async () => {
-    const result = await submitSurvey({ slug: 'pub-apps', answers: ANSWERS, contact: CONTACT });
+    const result = await submitSurvey({
+      slug: 'pub-apps',
+      responseId: RID,
+      answers: ANSWERS,
+      contact: CONTACT,
+    });
 
     expect(result).toEqual({
       success: true,
@@ -114,9 +121,40 @@ describe('submitSurvey', () => {
     );
   });
 
+  it('stores the id the browser sent, so a retry is recognised', async () => {
+    await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS });
+    expect(vi.mocked(submitSurveyResponse).mock.calls[0][0].responseId).toBe(RID);
+  });
+
+  it('treats a retry of an already stored attempt as success, without emailing Peter again', async () => {
+    vi.mocked(submitSurveyResponse).mockResolvedValue({ stored: true, duplicate: true });
+    const result = await submitSurvey({
+      slug: 'pub-apps',
+      responseId: RID,
+      answers: ANSWERS,
+      contact: CONTACT,
+    });
+    expect(result.success).toBe(true);
+    expect(sendLeadNotification).not.toHaveBeenCalled();
+  });
+
+  it('refuses a submission without a proper response id', async () => {
+    expect(
+      await submitSurvey({ slug: 'pub-apps', responseId: 'not-a-uuid', answers: ANSWERS })
+    ).toEqual({
+      error: NOT_SENT,
+    });
+    expect(submitSurveyResponse).not.toHaveBeenCalled();
+  });
+
   it('FAILS CLOSED: a failed database write is reported to the respondent, never as success', async () => {
     vi.mocked(submitSurveyResponse).mockResolvedValue({ stored: false, reason: 'failed' });
-    const result = await submitSurvey({ slug: 'pub-apps', answers: ANSWERS, contact: CONTACT });
+    const result = await submitSurvey({
+      slug: 'pub-apps',
+      responseId: RID,
+      answers: ANSWERS,
+      contact: CONTACT,
+    });
     expect(result).toEqual({ error: NOT_SENT });
     expect(sendLeadNotification).not.toHaveBeenCalled();
   });
@@ -124,7 +162,9 @@ describe('submitSurvey', () => {
   it('FAILS CLOSED: a database that cannot even load the survey is reported, not swallowed', async () => {
     const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     vi.mocked(getSurveyForVisitor).mockRejectedValue(new Error('connection refused'));
-    expect(await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).toEqual({ error: NOT_SENT });
+    expect(await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).toEqual({
+      error: NOT_SENT,
+    });
     expect(submitSurveyResponse).not.toHaveBeenCalled();
     log.mockRestore();
   });
@@ -135,16 +175,18 @@ describe('submitSurvey', () => {
       retryAfterSeconds: 0,
       reason: 'unavailable',
     });
-    expect(await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).toEqual({ error: NOT_SENT });
+    expect(await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).toEqual({
+      error: NOT_SENT,
+    });
 
     vi.mocked(checkRateLimit).mockResolvedValue({
       allowed: false,
       retryAfterSeconds: 60,
       reason: 'limited',
     });
-    expect((await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).error).toMatch(
-      /Too many attempts/
-    );
+    expect(
+      (await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).error
+    ).toMatch(/Too many attempts/);
     expect(submitSurveyResponse).not.toHaveBeenCalled();
   });
 
@@ -152,7 +194,9 @@ describe('submitSurvey', () => {
     const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     vi.stubEnv('NODE_ENV', 'production');
     vi.mocked(isRateLimitConfigured).mockReturnValue(false);
-    expect(await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).toEqual({ error: NOT_SENT });
+    expect(await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).toEqual({
+      error: NOT_SENT,
+    });
     vi.unstubAllEnvs();
     log.mockRestore();
   });
@@ -162,16 +206,21 @@ describe('submitSurvey', () => {
       survey: { ...SURVEY, status: 'closed' },
       mode: 'closed',
     });
-    expect((await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).error).toMatch(/closed/);
+    expect(
+      (await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).error
+    ).toMatch(/closed/);
 
     vi.mocked(getSurveyForVisitor).mockResolvedValue({ survey: SURVEY, mode: 'live' });
     vi.mocked(submitSurveyResponse).mockResolvedValue({ stored: false, reason: 'not_open' });
-    expect((await submitSurvey({ slug: 'pub-apps', answers: ANSWERS })).error).toMatch(/closed/);
+    expect(
+      (await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS })).error
+    ).toMatch(/closed/);
   });
 
   it('keeps contact details only when the contact step was shown', async () => {
     await submitSurvey({
       slug: 'pub-apps',
+      responseId: RID,
       answers: { ...ANSWERS, say: ['say_no'], test: ['test_no'] },
       contact: CONTACT,
     });
@@ -182,6 +231,7 @@ describe('submitSurvey', () => {
   it('asks for the consent tick rather than storing details without it', async () => {
     const result = await submitSurvey({
       slug: 'pub-apps',
+      responseId: RID,
       answers: ANSWERS,
       contact: { ...CONTACT, consent: false },
     });
@@ -195,6 +245,7 @@ describe('submitSurvey', () => {
     const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     const result = await submitSurvey({
       slug: 'pub-apps',
+      responseId: RID,
       answers: { ...ANSWERS, front: ['free_beer'] },
     });
     expect(result.error).toMatch(/didn't go through/);
@@ -206,6 +257,7 @@ describe('submitSurvey', () => {
     vi.mocked(getSurveyForVisitor).mockResolvedValue({ survey: SURVEY, mode: 'preview' });
     await submitSurvey({
       slug: 'pub-apps',
+      responseId: RID,
       previewToken: 'x'.repeat(24),
       answers: ANSWERS,
       contact: CONTACT,
@@ -218,7 +270,9 @@ describe('submitSurvey', () => {
     const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
     vi.mocked(sendLeadNotification).mockResolvedValue({ error: 'Resend is down' });
     vi.mocked(getSurveyResults).mockRejectedValue(new Error('timeout'));
-    expect(await submitSurvey({ slug: 'pub-apps', answers: ANSWERS, contact: CONTACT })).toEqual({
+    expect(
+      await submitSurvey({ slug: 'pub-apps', responseId: RID, answers: ANSWERS, contact: CONTACT })
+    ).toEqual({
       success: true,
       results: null,
     });
@@ -227,7 +281,14 @@ describe('submitSurvey', () => {
   });
 
   it('answers a honeypot as though it worked, and stores nothing', async () => {
-    expect(await submitSurvey({ slug: 'pub-apps', answers: ANSWERS, subject: 'buy now' })).toEqual({
+    expect(
+      await submitSurvey({
+        slug: 'pub-apps',
+        responseId: RID,
+        answers: ANSWERS,
+        subject: 'buy now',
+      })
+    ).toEqual({
       success: true,
       results: null,
     });
@@ -238,6 +299,7 @@ describe('submitSurvey', () => {
   it('keeps the referrer to a host and drops UTM values that are not labels', async () => {
     await submitSurvey({
       slug: 'pub-apps',
+      responseId: RID,
       answers: ANSWERS,
       leadSource: {
         referrer: 'https://m.facebook.com/groups/licensees/posts/123?fbclid=abc',

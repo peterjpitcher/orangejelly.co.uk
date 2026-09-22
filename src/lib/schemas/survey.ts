@@ -25,6 +25,11 @@ export type SurveyContactInput = z.input<typeof surveyContactSchema>;
 export const surveySubmissionSchema = z.object({
   slug: z.string().max(60),
   previewToken: z.string().max(64).optional(),
+  /**
+   * Made once in the browser and sent with every attempt, so a retry after a
+   * reply that never arrived is recognised rather than stored twice.
+   */
+  responseId: z.uuid(),
   answers: z.record(
     z.string().max(40),
     z.union([z.array(z.string().max(40)).max(40), z.string().max(2000)])

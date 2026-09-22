@@ -167,6 +167,25 @@ describe('submitSurveyResponse', () => {
     expect(state.rpc.mock.calls[0][1].p_contact).toBeNull();
   });
 
+  it('recognises a retry of an attempt that was already stored', async () => {
+    state.rpc.mockResolvedValue({
+      error: {
+        code: '23505',
+        message: 'duplicate key value violates unique constraint "survey_responses_pkey"',
+      },
+    });
+    expect(await submitSurveyResponse(input)).toEqual({ stored: true, duplicate: true });
+  });
+
+  it('does not mistake any other unique violation for a retry', async () => {
+    const log = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    state.rpc.mockResolvedValue({
+      error: { code: '23505', message: 'duplicate key value violates unique constraint "other"' },
+    });
+    expect(await submitSurveyResponse(input)).toEqual({ stored: false, reason: 'failed' });
+    log.mockRestore();
+  });
+
   it('reports a survey that closed mid-answer as not open', async () => {
     state.rpc.mockResolvedValue({ error: { message: 'survey_not_open' } });
     expect(await submitSurveyResponse(input)).toEqual({ stored: false, reason: 'not_open' });

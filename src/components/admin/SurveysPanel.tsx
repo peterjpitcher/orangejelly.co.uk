@@ -78,11 +78,11 @@ function SurveyCard({ data }: { data: AdminSurvey }): JSX.Element {
         Preview link, answers never counted:{' '}
         <a
           className="font-bold text-oj-ink underline"
-          href={`${publicUrl}?preview=${data.previewToken}`}
+          href={`${publicUrl}/preview/${data.previewToken}`}
           target="_blank"
           rel="noreferrer"
         >
-          {publicUrl}?preview=…
+          {publicUrl}/preview/…
         </a>
       </p>
       {data.truncated ? (
