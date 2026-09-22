@@ -79,7 +79,7 @@ export default function PrivacyPage(): JSX.Element {
                 Privacy policy
               </h1>
               <p className="mt-4 text-[15px] leading-relaxed text-oj-cream/60">
-                Last updated: 28 August 2026
+                Last updated: 22 September 2026
               </p>
               <p className="measure-prose mt-4 text-[19px] leading-relaxed text-oj-cream/85">
                 This explains what personal data Orange Jelly Limited collects through{' '}
@@ -152,6 +152,28 @@ export default function PrivacyPage(): JSX.Element {
                 interests: arranging a meeting people have chosen to take part in.
               </p>
 
+              <p id="surveys" className="font-bold text-oj-ink">
+                When you answer one of our surveys
+              </p>
+              <p>
+                Your answers are anonymous. We keep what you picked, anything you type into the open
+                questions, and the name of the website or link that brought you to the survey, such
+                as &ldquo;facebook&rdquo;. We do not keep your name, your email address or your IP
+                address with them. We use the answers to decide what to build and, once enough
+                people have answered, to show everyone the overall results. Our lawful basis is
+                legitimate interests: finding out what the people we build for actually need. Please
+                leave personal details out of the open questions.
+              </p>
+              <p>
+                Some surveys end by asking whether you would like a say in what we build, or to try
+                it early. Only if you say yes do we ask for your name, your email address and, if
+                you like, the name of your business. We keep these with a record of the box you
+                ticked and when you ticked it, and we use them only to contact you about what that
+                survey was about. Our lawful basis is your consent, and you can withdraw it at any
+                time by emailing us. When someone volunteers, we get an email with their name,
+                business and email address; their answers stay in our password-protected admin area.
+              </p>
+
               <p className="font-bold text-oj-ink">When you browse the site</p>
               <p>
                 We split this by whether something is stored on your device, not by whether it is
@@ -190,7 +212,8 @@ export default function PrivacyPage(): JSX.Element {
               </p>
               <ul className="list-disc">
                 <li>
-                  <strong>Supabase</strong>: stores enquiries, polls, answers and email addresses.
+                  <strong>Supabase</strong>: stores enquiries, polls and their answers, survey
+                  answers, and email addresses.
                 </li>
                 <li>
                   <strong>Vercel</strong>: runs and serves the site, and provides the cookieless
@@ -221,6 +244,12 @@ export default function PrivacyPage(): JSX.Element {
                 <strong>Availability polls</strong>: we delete the whole poll, including every
                 answer, every name and every email address on it, 60 days after the last answer or
                 the last proposed date, whichever is later. That deletion runs automatically.
+              </p>
+              <p>
+                <strong>Surveys</strong>: if you gave us your details at the end of a survey, we
+                delete them 12 months after that survey closes, automatically. Ask us to remove them
+                sooner and we will. The anonymous answers are kept, because once your details have
+                gone nothing links them to you.
               </p>
               <p>
                 <strong>Enquiries</strong>: we keep these for 24 months from the last time we were

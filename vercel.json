@@ -16,6 +16,10 @@
     {
       "path": "/api/cron/polls",
       "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/cron/surveys",
+      "schedule": "30 3 * * *"
     }
   ],
   "redirects": [

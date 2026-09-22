@@ -278,3 +278,50 @@ export async function getSurveyResults(surveyId: string): Promise<SurveyResults>
     })),
   };
 }
+
+/**
+ * How long a volunteer's details are kept after their survey closes. Stated in
+ * the privacy notice; change both together.
+ */
+export const CONTACT_RETENTION_MONTHS = 12;
+
+export interface SurveyContactSweep {
+  deleted: number;
+  error?: string;
+}
+
+/**
+ * Deletes volunteers' details from surveys that closed more than
+ * CONTACT_RETENTION_MONTHS ago. The anonymous answers stay: they cannot be
+ * linked to anybody once the contact row has gone.
+ *
+ * An instant comparison, not a calendar date shown to anyone, so UTC arithmetic
+ * is correct here and a London wall-clock conversion would add nothing.
+ */
+export async function sweepSurveyContacts(now: Date = new Date()): Promise<SurveyContactSweep> {
+  if (!isSupabaseAdminConfigured()) {
+    return { deleted: 0, error: 'Supabase is not configured.' };
+  }
+
+  const cutoff = new Date(now.getTime());
+  cutoff.setUTCMonth(cutoff.getUTCMonth() - CONTACT_RETENTION_MONTHS);
+
+  const client = getSupabaseAdminClient();
+  const expired = await client
+    .from('surveys')
+    .select('id')
+    .eq('status', 'closed')
+    .lt('closed_at', cutoff.toISOString());
+  if (expired.error) return { deleted: 0, error: expired.error.message };
+
+  const ids = (expired.data ?? []).map((row: { id: string }) => row.id);
+  if (ids.length === 0) return { deleted: 0 };
+
+  const removed = await client
+    .from('survey_contacts')
+    .delete({ count: 'exact' })
+    .in('survey_id', ids);
+  if (removed.error) return { deleted: 0, error: removed.error.message };
+
+  return { deleted: removed.count ?? 0 };
+}
