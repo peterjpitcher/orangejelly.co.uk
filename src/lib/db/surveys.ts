@@ -16,7 +16,7 @@ import type {
  * Postgres path in `leads.ts` has never run. Every function uses the
  * service-role client; the survey tables have RLS on with no policies.
  *
- * @see supabase/migrations/20260922120000_surveys.sql
+ * @see supabase/migrations/20260922113213_surveys.sql
  */
 
 interface OptionRow {

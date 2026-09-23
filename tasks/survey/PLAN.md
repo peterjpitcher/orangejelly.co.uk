@@ -30,7 +30,7 @@ a link preview that sells the survey.
 - **Bot protection is a honeypot plus a rate limit** (the enquiry form's pattern). No Turnstile: it would be one more thing that can stop a real respondent.
 - **Survey copy is authored as JSON in `content/surveys/`** so the repo's language checks (British English, the growth-language ban) run on it, then a script turns it into SQL. Database content escapes every build check otherwise.
 
-## Data model (migration `20260922120000_surveys.sql`)
+## Data model (migration `20260922113213_surveys.sql`)
 
 - `surveys`: slug, status (`draft|live|closed`), copy, `preview_token`, results threshold, which question the results screen tallies, the consent line.
 - `survey_questions`: stable `key`, position, kind (`single|multi|text|contact`), prompt, hint, `min_choices`, `max_choices`, `options_from` (question keys whose picks become this question's options), `show_if` (show only when any listed option was picked).
@@ -99,7 +99,7 @@ Each lands green (lint, type-check, tests, build) and is committed on its own.
 
 ## Going live
 
-1. Apply `20260922120000_surveys.sql` to production (before the code, or /survey and the
+1. Apply `20260922113213_surveys.sql` to production (before the code, or /survey and the
    cron will error on a missing table). **Done 22 September 2026**: applied to
    `miqqkllqfyvaomzgujed` through the Supabase MCP as history version `20260922113213 surveys`
    (repo file checksum `097e2fc0…aec9f`). Verified: RLS on all five tables, no anon or
