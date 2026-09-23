@@ -18,7 +18,7 @@
 
 - Production build passed, including page generation. An initial build caught optional page-argument signatures; both were corrected and the build rerun.
 - Type-check passed.
-- Full suite on the original checkout: 89 files, 1,660 tests passed, three existing tests skipped. Clean release branch excludes unrelated security commits and passed 88 files with 1,645 tests.
+- Full suite on the original checkout: 89 files, 1,660 tests passed, three existing tests skipped. Clean release branch excludes unrelated security commits and passed 88 files with 1,645 tests. The final form-start reporting correction passed all 1,646 tests, lint/content checks, type-check and build; its 23 summary tests also passed under UTC.
 - Lint and all six content gates passed. One pre-existing GoogleTagManager beforeInteractive lint warning remains; the unchanged file was deliberately not rewritten for this feature. Existing Browserslist data-age notices also remain.
 - Independent agent review identified contact-route attribution and malformed event-version handling. Both were corrected, with tests.
 - Supabase live columns inspected read-only for contacts, conversion_events and lead_sources; no dependent views returned. No schema changes required.
@@ -40,4 +40,14 @@ The pilot review and all-guide enablement are intentionally deferred until the m
 
 ## Change scope
 
-See `changed-files.txt` for the exact implementation inventory. All guide Markdown, insights, URL manifest, redirects, article metadata, claims, pricing/contact constants, case-study content, auth implementation and migrations were deliberately left unchanged. The branch started from a checkout containing three unrelated local commits; release preparation must exclude those commits.
+See `changed-files.txt` for the exact implementation inventory. All guide Markdown, insights, URL manifest, redirects, article metadata, claims, pricing/contact constants, case-study content, auth implementation and migrations were deliberately left unchanged. The branch started from a checkout containing three unrelated local commits; the release excluded those commits and retained them locally.
+
+## Final release
+
+- Main implementation: PR 51, merged as `b23b7f11f9c6dbe4737a65b93f598deabdf8c714`.
+- Reporting correction: PR 52, merged as `0c1a8bdf4e061a714acfd61308980e477486dca7`. Form-start events omit an optional channel; the summary now recognises their actual contract. Regression and independent review completed.
+- Live browser followed the autumn invitation to the contextual form and confirmed all four required fields, WhatsApp destination, approved booking proof and case-study link. The live contact page also showed the enquiry form and WhatsApp alternative.
+- Live unauthenticated summary request returned HTTP 401.
+- No production enquiry or notification was sent. Real inbox receipt remains unverified pending explicit permission.
+- Production commit `0c1a8bdf4e061a714acfd61308980e477486dca7` reached READY as `dpl_HwdsuBMwuJJkyAjMdP9WUScR8Cod`. Direct inspection of `www.orangejelly.co.uk` resolved to that same deployment. The final production food-menu enquiry page showed the contextual heading, form and approved +98% proof in the browser.
+- This final release record is local only; implementation is merged and deployed. No feature migration is outstanding.

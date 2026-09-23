@@ -52,9 +52,21 @@
 - [x] Check coverage of all five recommendations and identify release evidence.
 - [x] Implement the five recommendations, with the three-guide pilot enabled and broader rollout gated.
 - [x] Run production-build, browser, fixture submission and read-only aggregate checks.
-- [ ] Verify the deployed release and obtain explicit permission for a real test message.
+- [x] Verify the deployed release and its canonical production domain.
+- [ ] Obtain explicit permission for a real test message and confirm inbox receipt.
 
-Status: implementation complete with pilot enabled; release verification pending. No production test messages or writes, no migration drafted or applied.
+Status: pilot live on deployment dpl_HwdsuBMwuJJkyAjMdP9WUScR8Cod. Final release verified. Real test enquiry and inbox receipt await explicit permission. Broader rollout follows the specified 28-day review. No migration drafted or applied.
+
+## Digital growth offer plan, 5 September 2026
+
+- [x] Incorporate the agreed websites, applications, connected systems and useful AI positioning.
+- [x] Incorporate five Keyword Planner rounds with demand and intent limitations.
+- [x] Write the follow-on plan in `tasks/plan-2026-09-05-digital-growth-offer.md` and connect the original enquiry plan.
+- [x] Validate page ownership, search intent and public project evidence.
+- [x] Implement the approved messaging and commercial destinations after authorisation.
+- [x] Verify enquiry journeys, release identity and measurement baseline.
+
+Status: implementation live as dpl_Qnjnu9oeg4HmnDTa9tNJZ3aaziEh, commit 3d801e3f86f8088b9e3adc33085ff820fa461bfb. No migration. Fixture enquiry checks passed; real inbox receipt remains unverified pending explicit permission. Future measurement reviews are not scheduled.
 
 
 ## GSC indexing repairs, 5 September 2026
