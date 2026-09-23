@@ -230,18 +230,9 @@ export const ANON_ALLOWLIST: readonly AnonAllowlistEntry[] = [
     privileges: SUPABASE_DEFAULT_TABLE_GRANT,
     why: `${RLS_CLOSED} Organiser name, organiser email, and the participant, organiser, verify and resend tokens. Those tokens are the whole access control model for the availability feature, so an anon read here would be equivalent to publishing them.`,
   },
-  {
-    kind: 'function',
-    name: 'contacts_touch_updated_at()',
-    privileges: ['EXECUTE'],
-    why: 'Unwanted residue of the default ACL rather than a granted capability: anon gets EXECUTE on every new function in public, and create function also grants PUBLIC its own EXECUTE. It is a trigger function returning `trigger`, so Postgres refuses a direct call and PostgREST does not expose functions of that return type. Reviewed as not exploitable and left alone. The clean fix is the default-privileges revoke migration that does not yet exist, not a one-off revoke here.',
-  },
-  {
-    kind: 'function',
-    name: 'set_updated_at()',
-    privileges: ['EXECUTE'],
-    why: 'Same as contacts_touch_updated_at(): a trigger function that anon holds EXECUTE on purely through the default ACL and the PUBLIC grant. Returns `trigger`, so it cannot be called directly or reached over PostgREST. Reviewed as not exploitable.',
-  },
+  // contacts_touch_updated_at() and set_updated_at() were listed here until
+  // migration 20260905053124 revoked anon's EXECUTE on them. Leaving them listed
+  // would let that grant come back unnoticed, so they are gone.
 ];
 
 /**
