@@ -43,6 +43,11 @@ const ROOT = process.cwd();
  * is the name a person keeps on a home screen, and the feed description goes out to
  * every subscriber. src/lib/llms.ts is deliberately still absent, because its own
  * unit test asserts the current opening line sentence by sentence.
+ *
+ * src/lib/metadata.ts WAS ADDED ON 26 SEPTEMBER 2026. It builds the title and
+ * description for pages across the site, and it was still exporting a table of
+ * per-page copy with a £375 package price and a hospitality self-description that
+ * nothing imported, so no page showed it and no check read it.
  */
 const SURFACES = [
   'src/app/layout.tsx',
@@ -50,6 +55,7 @@ const SURFACES = [
   'src/app/page.tsx',
   'src/app/home-content.ts',
   'src/lib/feeds.ts',
+  'src/lib/metadata.ts',
   'src/app/about',
   'src/app/how-we-work',
   'src/app/fractional-cmo',
