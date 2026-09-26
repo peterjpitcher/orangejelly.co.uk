@@ -73,7 +73,6 @@ export async function generateMetadata() {
     description:
       'Essential guides for pub owners covering marketing, events, food, and business strategy. Practical advice that also applies to restaurants and bars.',
     path: '/guides',
-    ogImage: '/images/og-default.jpg',
     ogType: 'website',
   });
 }

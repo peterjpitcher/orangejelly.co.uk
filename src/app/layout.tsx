@@ -8,6 +8,7 @@ import { PreloadResources } from '@/components/PerformanceMonitor';
 import { GoogleTagManager } from '@/components/GoogleTagManager';
 import { CONTACT } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 // Analytics, Speed Insights, the cookie notice and the marketing overlays are all
 // rendered by MarketingChrome, which gates them on the pathname. They must NOT be
 // imported directly here: poll URLs carry a bearer token in the path, and a
@@ -85,20 +86,17 @@ export const metadata: Metadata = {
     url: baseUrl,
     locale: 'en_GB',
     siteName: 'Orange Jelly',
-    images: [
-      {
-        url: `${baseUrl}/opengraph-image`,
-        width: 1200,
-        height: 630,
-        alt: 'Orange Jelly: for business owners ready to take control of growth',
-      },
-    ],
+    // src/app/opengraph-image.tsx draws this card, for every page that inherits this
+    // block. A page that sets its own `openGraph` loses it, so each one names
+    // DEFAULT_SHARE_IMAGE (or its own card) again: see src/lib/share-card/constants.ts.
+    images: [DEFAULT_SHARE_IMAGE],
   },
+  // No `images`: Next.js fills twitter:image from each page's og:image when the twitter
+  // block has none, so the two cannot disagree.
   twitter: {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [`${baseUrl}/opengraph-image`],
   },
   robots: {
     index: true,

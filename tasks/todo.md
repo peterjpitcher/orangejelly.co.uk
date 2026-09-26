@@ -209,3 +209,34 @@ everywhere, the homepage included. Branch `feat/survey-promotion`, worktree
 - [ ] SurveyBand on the homepage, Pubs page and guides library
 - [ ] Status endpoint and the SurveyPrompt popup in MarketingChrome
 - [ ] Tests, copy-doc amendments, type-check, lint, both test zones, build, screenshots
+
+
+## Square share cards on the new brand, 26 September 2026
+
+Peter: "The opengraph images look horrible. Can you fix them so they're square and use our
+new logo/branding?" Branch `feat/square-share-cards`, worktree `.claude/worktrees/share-cards`.
+
+What production sent before the change (crawl of all 145 sitemap URLs, 26 September):
+104 guides sent their 1600x900 hero photo; 28 pages (about, contact, results, growth
+problems, insights and more) sent no og:image at all, because a page-level `openGraph`
+replaces the root layout's and none of them re-declared `images`; 9 guide listing pages
+sent `og-default.jpg`, the retired "AI-Powered Marketing for UK Pubs" picture; the home page
+and three solutions pages sent the 1200x630 orange card with a system font and no logo.
+
+- [x] Crawl production and record what every URL sends.
+- [x] Extract Schibsted Grotesk (the site's face, SIL OFL) from the build cache as static
+      700 and 900 TTFs, so the cards can use it without a network fetch.
+- [x] Design panel: four square directions rendered and judged for brand fit, phone-preview
+      legibility and 1.91:1 crop survival. The judges split three ways; the chosen layout is the
+      colour-block anatomy (orange header, cream page, ink footer) with their grafts.
+- [x] One shared card renderer (fonts, logo, palette, 1200x1200) in `src/lib/share-card/`.
+- [x] Default card (`app/opengraph-image.tsx`), survey card, and a per-guide card
+      (`app/guides/[slug]/opengraph-image.tsx`) built at build time.
+- [x] Every page that sets `openGraph` declares the default card; `metadata.ts` default and the
+      guides listing stop using `og-default.jpg`; twitter images follow og via Next's autofill.
+- [x] Guard test so a page cannot set `openGraph` without an image again; palette pinned to
+      the tokens; the card renders at 1200x1200; logo and title measured inside the safe band.
+- [x] Lint, type-check, tests (London and UTC), build; crawl the local production build: all
+      148 pages send one 1200x1200 PNG og:image and twitter:image that loads.
+- [ ] Crawl the Vercel preview the same way, including the per-request survey card.
+- [ ] PR, preview check, merge on Peter's yes, verify production.

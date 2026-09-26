@@ -19,6 +19,7 @@ import { GROWTH_PROBLEMS } from '@/app/growth-problems/content';
 import { getAllInsights, getInsightBySlug } from '@/lib/insights';
 import { markdownToHtml } from '@/lib/markdown/markdown';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 /**
  * One insight.
@@ -64,6 +65,7 @@ export function generateMetadata({ params }: Params): Metadata {
       locale: 'en_GB',
       siteName: 'Orange Jelly',
       publishedTime: insight.publishedDate,
+      images: [DEFAULT_SHARE_IMAGE],
     },
   };
 }

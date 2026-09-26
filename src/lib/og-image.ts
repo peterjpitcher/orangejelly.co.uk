@@ -1,11 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 
+import { DEFAULT_SHARE_IMAGE } from './share-card/constants';
+
 /**
- * Site-wide fallback. Guaranteed to exist in /public and is a raster, so every
- * social platform can render it.
+ * Site-wide fallback: the square default share card, a PNG route that always renders.
+ * It was `/images/og-default.jpg` until 26 September 2026, a picture still selling
+ * "AI-Powered Marketing for UK Pubs".
  */
-const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
+const DEFAULT_OG_IMAGE = DEFAULT_SHARE_IMAGE.url;
 
 /**
  * Extensions tried in preference order when a post has no usable featuredImage.
@@ -25,7 +28,11 @@ function publicFileExists(relativePath: string): boolean {
 }
 
 /**
- * Resolve the og:image for a blog post.
+ * Resolve the hero image for a guide, which is also the image its Article schema names.
+ *
+ * It was the guide's og:image too until 26 September 2026. Guides now share a square
+ * card drawn from their title (src/app/guides/[slug]/opengraph-image.tsx); the photo
+ * stays on the page and in the schema, where a large photograph is what Google wants.
  *
  * The previous behaviour assumed `/images/blog/<slug>.svg` always existed. It did
  * not for 23 of 105 guides, which shipped a 404 to every crawler and social

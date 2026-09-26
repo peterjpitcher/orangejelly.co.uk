@@ -12,6 +12,7 @@ import {
 } from '@/components/oj';
 import { PRICING } from '@/lib/constants';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { CAPABILITIES, CAPABILITY_GROUPS, CORE_BUILDS, DECLINED } from './content';
 
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     siteName: 'Orange Jelly',
+    images: [DEFAULT_SHARE_IMAGE],
   },
 };
 

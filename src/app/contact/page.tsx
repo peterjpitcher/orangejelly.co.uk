@@ -15,6 +15,7 @@ import { EnquiryActions } from '@/components/oj/EnquiryActions';
 import { EnquiryProof } from '@/components/oj/EnquiryProof';
 import { getGuideConversion } from '@/lib/guide-conversion';
 import { resolveGuideConversionContext } from '@/lib/guide-conversion-server';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 import { ENQUIRY_INTRO, ENQUIRY_REASSURANCE } from '../start-here/content';
 
 const TITLE = 'Contact | Orange Jelly';
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     siteName: 'Orange Jelly',
+    images: [DEFAULT_SHARE_IMAGE],
   },
 };
 

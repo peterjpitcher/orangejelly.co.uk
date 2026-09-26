@@ -5,6 +5,7 @@ import { Band, Breadcrumb, Button, GroundProvider, OjFooter, OjHeader } from '@/
 // components, and this page renders the statements on the server.
 import { SCORECARD_QUESTIONS } from '@/components/oj/scorecard-questions';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import AiReadinessTool from './AiReadinessTool';
 import { AREA_RESULTS } from './content';
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     siteName: 'Orange Jelly',
+    images: [DEFAULT_SHARE_IMAGE],
   },
 };
 

@@ -34,9 +34,10 @@ const HEX_ALLOWLIST = [
   // expressed as Tailwind classes. Its contrast claim is asserted by
   // src/test/design-tokens.contrast.test.ts.
   'src/lib/category-colours.ts',
-  // next/og renders these at the edge, without Tailwind.
-  'src/app/opengraph-image.tsx',
-  'src/app/survey/[slug]/opengraph-image.tsx',
+  // next/og draws the share cards without the stylesheet, so there are no CSS variables
+  // to read. One file holds every colour the cards use, pinned to globals.css by
+  // src/test/design-tokens.contrast.test.ts.
+  'src/lib/share-card/palette.ts',
   'src/app/icon.tsx',
   'src/app/apple-icon.tsx',
   // global-error.tsx replaces the root layout, so it renders without the

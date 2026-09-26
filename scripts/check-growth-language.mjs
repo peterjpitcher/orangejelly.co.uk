@@ -11,6 +11,7 @@ const FILE_TARGETS = [
   'src/app/results/page.tsx',
   'src/app/why-revenue-is-falling/page.tsx',
   'src/app/opengraph-image.tsx',
+  'src/lib/share-card/constants.ts',
   'src/app/pub-marketing-no-budget/page.tsx',
   'src/components/Meta.tsx',
   'src/components/ROICalculator.tsx',

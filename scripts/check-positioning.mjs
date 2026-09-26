@@ -67,6 +67,7 @@ const SURFACES = [
   'src/app/start-here',
   'src/app/tools',
   'src/app/opengraph-image.tsx',
+  'src/lib/share-card',
   'src/components/oj',
   'src/lib/constants.ts',
   'content/data/navigation.json',

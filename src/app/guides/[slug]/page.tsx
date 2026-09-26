@@ -31,7 +31,7 @@ import {
   type GuideConversionContext,
 } from '@/lib/guide-conversion';
 import { getNextStepFor } from '@/lib/article-next-step';
-import { type Category, getCategoryBySlug, getCategoryHue } from '@/lib/blog';
+import { type Category, getCategoryHue, guideCategoryOf } from '@/lib/blog';
 import { getAllBlogPosts, getMarkdownBySlug, parseMarkdownFile } from '@/lib/markdown/index';
 import { type BlogPost as MarkdownBlogPost } from '@/lib/markdown/markdown-types';
 import { preprocessMarkdown } from '@/lib/markdown/preprocess';
@@ -40,6 +40,7 @@ import { resolveOgImage } from '@/lib/og-image';
 import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
 import { seoOverrides } from '@/lib/seo-overrides';
 import { getBaseUrl } from '@/lib/site-config';
+import { guideCardEyebrow, shareImage } from '@/lib/share-card/constants';
 
 /**
  * One guide.
@@ -115,14 +116,7 @@ const toFaqs = (value: unknown): Array<{ question: string; answer: string }> => 
 };
 
 /** An unknown category slug still gets a name and a listing URL rather than a blank. */
-const toCategory = (candidate?: string): Category => {
-  if (!candidate) return { slug: 'general', name: 'General', description: '' };
-  const slug = candidate.toLowerCase().replace(/\s+/g, '-');
-  return getCategoryBySlug(slug) ?? { slug, name: candidate, description: '' };
-};
-
-const categoryOf = (frontMatter: Record<string, unknown>): Category =>
-  toCategory(str(frontMatter.category) ?? strArray(frontMatter.categories)[0]);
+const categoryOf = guideCategoryOf;
 
 const publishedOf = (entry: MarkdownBlogPost): string | undefined =>
   str(entry.publishedAt) ??
@@ -224,12 +218,6 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   const canonicalPath = `/guides/${params.slug}`;
   const override = seoOverrides[canonicalPath];
 
-  // Resolve to an image that actually exists and that social platforms can render.
-  // See src/lib/og-image.ts: the old `/images/blog/<slug>.svg` assumption 404'd for
-  // 23 of 105 guides and SVG is not renderable as an og:image anyway.
-  const ogImage = resolveOgImage(params.slug, guide.featuredImage);
-  const absoluteImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
-
   const title = override?.title || guide.metaTitle || guide.title;
   const description = override?.description || guide.metaDescription || guide.excerpt;
   const canonicalUrl = override?.canonical || `${baseUrl}${canonicalPath}`;
@@ -247,21 +235,22 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       siteName: 'Orange Jelly',
       locale: 'en_GB',
       url: canonicalUrl,
+      // ./opengraph-image.tsx draws each guide its own square card. Named here, with the
+      // title and category in its `?v=`, so a retitled guide gets a new image URL rather
+      // than the one social platforms already cached. Next.js copies it to twitter:image.
       images: [
-        {
-          url: absoluteImageUrl,
-          width: 1600,
-          height: 900,
-          alt: guide.title,
-          type: 'image/webp',
-        },
+        shareImage(
+          `/guides/${params.slug}/opengraph-image`,
+          guide.title,
+          guideCardEyebrow(guide.category.name),
+          guide.title
+        ),
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [absoluteImageUrl],
       creator: '@orangejelly_uk',
       site: '@orangejelly_uk',
     },

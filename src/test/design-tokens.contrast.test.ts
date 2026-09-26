@@ -12,6 +12,7 @@ import {
   BRAND_SURFACE,
 } from '@/lib/poll-emails/shell';
 import { THEME_COLORS } from '@/lib/theme-colors';
+import { SHARE_CARD_COLOURS } from '@/lib/share-card/palette';
 import { getAllCategoryConfigs } from '@/lib/category-colours';
 
 /**
@@ -470,6 +471,27 @@ describe('repositioning palette contrast', () => {
       // Those are fine; the failure is specific to the label at 12.5px.
       expect(contrast(cssVar('--cat-ops'), cssVar('--cat-ops-soft'))).toBeGreaterThanOrEqual(3);
     });
+  });
+});
+
+describe('the share cards', () => {
+  it('use the real palette values, since next/og draws them without the stylesheet', () => {
+    // Each key names the --oj-* token it copies, so a palette change that does not
+    // reach the cards fails here rather than in a WhatsApp preview.
+    for (const [name, hex] of Object.entries(SHARE_CARD_COLOURS)) {
+      expect(hex.toLowerCase(), name).toBe(cssVar(`--oj-${name}`).toLowerCase());
+    }
+  });
+
+  it('keep every text pairing they use readable', () => {
+    const { orange, ink, cream, peach } = SHARE_CARD_COLOURS;
+    // The running head on the orange band, the title on the cream page, and the two
+    // footer lines on the ink band. The white logo on orange is a logotype, which
+    // WCAG exempts, and is the same pairing as the site's orange header.
+    expect(contrast(ink, orange)).toBeGreaterThanOrEqual(AA_BODY);
+    expect(contrast(ink, cream)).toBeGreaterThanOrEqual(AA_BODY);
+    expect(contrast(cream, ink)).toBeGreaterThanOrEqual(AA_BODY);
+    expect(contrast(peach, ink)).toBeGreaterThanOrEqual(AA_BODY);
   });
 });
 
