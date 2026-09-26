@@ -6,8 +6,9 @@ export const size = SHARE_CARD_SIZE;
 export const contentType = 'image/png';
 export const alt = 'An Orange Jelly survey';
 
-// Drawn per request from the database, so a survey renamed in a row gets a new
-// card without a release. Social sites cache the card themselves once fetched.
+// Drawn per request from the database, so a survey renamed in a row gets a new card
+// without a release. The page names it with the title in its `?v=` (survey-page.tsx),
+// so the renamed card also arrives at a new URL rather than behind a cached one.
 export const dynamic = 'force-dynamic';
 
 /**
@@ -27,6 +28,7 @@ export default async function SurveyOGImage({
   let eyebrow = 'Survey';
   let note: string | undefined;
   let address: string | undefined;
+  let fellBack = false;
 
   try {
     const access = await getSurveyForVisitor(params.slug);
@@ -39,7 +41,13 @@ export default async function SurveyOGImage({
   } catch (error) {
     // A card with the generic title is better than no card at all.
     console.error('[surveys] share card could not load the survey:', error);
+    fellBack = true;
   }
 
-  return renderShareCard({ kind: 'titled', eyebrow, title, note, address });
+  // Next.js serves every card `immutable` for a year. The stand-in drawn during an outage
+  // must not be kept like that, or the survey's real question never replaces it.
+  return renderShareCard(
+    { kind: 'titled', eyebrow, title, note, address },
+    fellBack ? { headers: { 'cache-control': 'no-store' } } : undefined
+  );
 }

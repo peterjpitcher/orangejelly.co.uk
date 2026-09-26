@@ -40,6 +40,7 @@ import { resolveOgImage } from '@/lib/og-image';
 import { getHubBySlug, getHubForSpoke } from '@/lib/seasonal-hubs';
 import { seoOverrides } from '@/lib/seo-overrides';
 import { getBaseUrl } from '@/lib/site-config';
+import { guideCardEyebrow, shareImage } from '@/lib/share-card/constants';
 
 /**
  * One guide.
@@ -234,8 +235,17 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       siteName: 'Orange Jelly',
       locale: 'en_GB',
       url: canonicalUrl,
-      // No `images` here or on twitter: ./opengraph-image.tsx draws each guide its own
-      // square card, and Next.js fills both tags from that file.
+      // ./opengraph-image.tsx draws each guide its own square card. Named here, with the
+      // title and category in its `?v=`, so a retitled guide gets a new image URL rather
+      // than the one social platforms already cached. Next.js copies it to twitter:image.
+      images: [
+        shareImage(
+          `/guides/${params.slug}/opengraph-image`,
+          guide.title,
+          guideCardEyebrow(guide.category.name),
+          guide.title
+        ),
+      ],
     },
     twitter: {
       card: 'summary_large_image',

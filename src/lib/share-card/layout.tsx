@@ -64,7 +64,7 @@ const LOGO_SCALE = 600 / 1154;
 const LOGO_VISIBLE_TOP = 322;
 
 /**
- * Title size from its length, measured against all 106 guide titles on 26 September
+ * Title size from its length, measured against all 105 guide titles on 26 September
  * 2026: every one fits the box on at most four lines. The second rule stops a single
  * long word running past the measure, since satori will not break inside a word.
  */
@@ -82,12 +82,17 @@ const at = (style: CSSProperties): CSSProperties => ({
   ...style,
 });
 
-/** The brand's display setting: weight 900, tight leading, -0.025em tracking. */
+/**
+ * The brand's display setting, as `.oj-display` sets it on the site: weight 900, tight
+ * leading, -0.025em tracking, and lowercase (decision D10, lowercase display headings
+ * site-wide). A guide's card then reads exactly like the heading it opens on.
+ */
 const display = (size: number): CSSProperties => ({
   fontSize: size,
   fontWeight: 900,
   lineHeight: 1,
   letterSpacing: '-0.025em',
+  textTransform: 'lowercase',
   color: C.ink,
 });
 

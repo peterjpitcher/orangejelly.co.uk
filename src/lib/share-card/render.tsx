@@ -9,9 +9,10 @@ import { SHARE_CARD_FONT, ShareCardLayout, type ShareCard, type ShareCardAssets 
 export type { ShareCard } from './layout';
 
 /*
- * Every path is a literal joined to `process.cwd()`, the form Next.js traces into the
- * serverless bundle. The survey card is drawn per request, so a file the trace misses
- * would be missing at runtime, not at build.
+ * Next.js does not trace these reads into the serverless bundle on its own. The
+ * `outputFileTracingIncludes` entry in next.config.js is what ships them, and it must
+ * stay: the survey card is drawn per request, so without it the survey card 500s in
+ * production while every card drawn at build time still looks fine.
  */
 const FONT_700 = path.join(process.cwd(), 'src/lib/share-card/fonts/SchibstedGrotesk-700.ttf');
 const FONT_900 = path.join(process.cwd(), 'src/lib/share-card/fonts/SchibstedGrotesk-900.ttf');
@@ -44,11 +45,18 @@ function loadAssets(): Promise<ShareCardAssets> {
   return loading;
 }
 
-/** Draws a share card: a 1200 by 1200 PNG in the brand face, with the supplied logo. */
-export async function renderShareCard(card: ShareCard): Promise<ImageResponse> {
+/**
+ * Draws a share card: a 1200 by 1200 PNG in the brand face, with the supplied logo.
+ * `init.headers` replaces the response headers, for a card that must not be cached.
+ */
+export async function renderShareCard(
+  card: ShareCard,
+  init?: { headers?: Record<string, string> }
+): Promise<ImageResponse> {
   const assets = await loadAssets();
   return new ImageResponse(<ShareCardLayout card={card} assets={assets} />, {
     ...SHARE_CARD_SIZE,
     fonts: assets.fonts,
+    ...init,
   });
 }

@@ -4,7 +4,6 @@ import { generateMetadata } from '@/lib/metadata';
 import { CONTENT } from './content';
 
 export const metadata = generateMetadata({
-  ogImage: '/opengraph-image',
   title: 'Hospitality Website Design',
   description:
     'Hospitality website design: pubs, restaurants and venues. Clear guest information, booking connections and enquiry journeys built around your venue.',

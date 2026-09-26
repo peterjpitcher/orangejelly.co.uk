@@ -5,6 +5,7 @@ import { Alert, Button, GroundProvider, OjFooter, OjHeader } from '@/components/
 import { PROMOTED_SURVEY } from '@/lib/promoted-survey';
 import { getSurveyForVisitor, type SurveyAccess } from '@/lib/db/surveys';
 import { getBaseUrl } from '@/lib/site-config';
+import { shareImage } from '@/lib/share-card/constants';
 
 import SurveyPlayer from './SurveyPlayer';
 
@@ -47,6 +48,18 @@ export function surveyMetadata(access: SurveyAccess | null): Metadata {
       type: 'website',
       locale: 'en_GB',
       siteName: 'Orange Jelly',
+      // ./opengraph-image.tsx draws the card from the row. Everything it draws is in the
+      // `?v=`, so a renamed survey reaches WhatsApp and LinkedIn as a new image URL
+      // rather than the one they cached. Next.js copies it to twitter:image.
+      images: [
+        shareImage(
+          `/survey/${survey.slug}/opengraph-image`,
+          survey.title,
+          survey.eyebrow,
+          survey.title,
+          String(survey.minutes)
+        ),
+      ],
     },
     twitter: {
       card: 'summary_large_image',

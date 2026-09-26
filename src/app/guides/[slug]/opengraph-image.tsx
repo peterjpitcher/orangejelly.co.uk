@@ -2,7 +2,7 @@ import path from 'node:path';
 
 import { guideCategoryOf } from '@/lib/blog';
 import { getAllBlogPosts } from '@/lib/markdown/index';
-import { SHARE_CARD_SIZE } from '@/lib/share-card/constants';
+import { guideCardEyebrow, SHARE_CARD_SIZE } from '@/lib/share-card/constants';
 import { renderShareCard } from '@/lib/share-card/render';
 
 /**
@@ -18,6 +18,7 @@ import { renderShareCard } from '@/lib/share-card/render';
  */
 export const size = SHARE_CARD_SIZE;
 export const contentType = 'image/png';
+// Only a fallback: the guide page names its card with the guide's title as the alt text.
 export const alt = 'An Orange Jelly guide';
 export const dynamicParams = false;
 
@@ -39,7 +40,7 @@ export default async function GuideShareCard({
 
   return renderShareCard({
     kind: 'titled',
-    eyebrow: `Guides · ${guideCategoryOf(guide.frontMatter as Record<string, unknown>).name}`,
+    eyebrow: guideCardEyebrow(guideCategoryOf(guide.frontMatter as Record<string, unknown>).name),
     title: guide.frontMatter.title,
   });
 }

@@ -3,6 +3,8 @@ Copyright 2023 The Schibsted-Grotesk Project Authors (https://github.com/schibst
 The two files in this folder are static instances (weights 700 and 900) of the
 Schibsted Grotesk variable font, Latin subset, as served to the site by next/font. They
 were made with fontTools' instancer because next/og cannot read WOFF2 or variable fonts.
+The kern feature was then removed: next/og measures words without kerning and draws them
+with it, which left visibly wide gaps after words such as "Young" and "Average".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

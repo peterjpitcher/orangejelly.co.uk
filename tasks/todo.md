@@ -225,7 +225,7 @@ and three solutions pages sent the 1200x630 orange card with a system font and n
 
 - [x] Crawl production and record what every URL sends.
 - [x] Extract Schibsted Grotesk (the site's face, SIL OFL) from the build cache as static
-      500/700/900 TTFs, so the cards can use it without a network fetch.
+      700 and 900 TTFs, so the cards can use it without a network fetch.
 - [x] Design panel: four square directions rendered and judged for brand fit, phone-preview
       legibility and 1.91:1 crop survival. The judges split three ways; the chosen layout is the
       colour-block anatomy (orange header, cream page, ink footer) with their grafts.

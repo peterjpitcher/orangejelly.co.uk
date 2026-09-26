@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 
@@ -7,6 +8,8 @@ import {
   DEFAULT_SHARE_IMAGE,
   SHARE_CARD_SAFE_BAND,
   SHARE_CARD_SIZE,
+  SHARE_CARD_VERSION,
+  shareImage,
 } from '@/lib/share-card/constants';
 
 /**
@@ -20,9 +23,10 @@ import {
  * so nothing caught it until a link was pasted into WhatsApp.
  *
  * Read from source, like src/test/canonical-urls.test.ts and for the same reason: the
- * literal is what a reviewer reads and the literal is what went wrong. A segment with
- * its own `opengraph-image.tsx` is exempt, because Next.js lets that file win over any
- * `openGraph.images` in the same segment.
+ * literal is what a reviewer reads and the literal is what went wrong. There are no
+ * exemptions, not even for a segment with its own `opengraph-image.tsx`: a page's
+ * `openGraph.images` overrides that file, and the file's automatic `?<hash>` covers only
+ * its own source, so every page names its card with a version that changes with it.
  */
 const APP = path.resolve(__dirname, '../app');
 
@@ -52,18 +56,15 @@ function openGraphBlocks(source: string): string[] {
   return blocks;
 }
 
-const hasOwnCard = (file: string): boolean =>
-  existsSync(path.join(path.dirname(file), 'opengraph-image.tsx'));
-
 describe('share images in page metadata', () => {
   const declaring = sourceFiles(APP)
     .map((file) => ({ file, blocks: openGraphBlocks(readFileSync(file, 'utf8')) }))
     .filter(({ blocks }) => blocks.length > 0);
 
   it('finds the metadata it is meant to be checking', () => {
-    // A guard that matches nothing passes forever. The layout and the pages fixed on
-    // 26 September must all be in view.
-    expect(declaring.length).toBeGreaterThanOrEqual(18);
+    // A guard that matches nothing passes forever. The layout, the home page, the guide
+    // and survey pages and the pages fixed on 26 September must all be in view.
+    expect(declaring.length).toBeGreaterThanOrEqual(20);
   });
 
   it.each(
@@ -72,10 +73,21 @@ describe('share images in page metadata', () => {
       .map((file) => path.relative(APP, file))
   )('%s names an image in every openGraph block', (relative) => {
     const file = path.join(APP, relative);
-    if (hasOwnCard(file)) return;
     for (const block of openGraphBlocks(readFileSync(file, 'utf8'))) {
       expect(block, `${relative} sets openGraph without images`).toMatch(/\bimages\s*:/);
     }
+  });
+
+  it('never names a card route without its version', () => {
+    // A bare '/opengraph-image' is the URL that served the old 1200x630 card, marked
+    // immutable for a year. Anything that bypasses shareImage() brings that back.
+    // Catches the three shapes the old URL was written in: `ogImage: '/opengraph-image'`,
+    // `url: \`${baseUrl}/opengraph-image\`` and `images: [\`${baseUrl}/opengraph-image\`]`.
+    const bare = /\b(?:url|ogImage|images)\s*:\s*\[?\s*['"`][^'"`]*\/opengraph-image['"`]/;
+    const offenders = sourceFiles(path.resolve(__dirname, '..')).filter((file) =>
+      bare.test(readFileSync(file, 'utf8'))
+    );
+    expect(offenders.map((file) => path.relative(APP, file))).toEqual([]);
   });
 
   it('no longer points anything at the retired picture', () => {
@@ -103,8 +115,46 @@ describe('the share card constants', () => {
     expect(SHARE_CARD_SAFE_BAND.bottom).toBeLessThan(top + kept);
   });
 
-  it('points at the default card route', () => {
+  it('points at the default card route, versioned', () => {
     expect(existsSync(path.join(APP, 'opengraph-image.tsx'))).toBe(true);
-    expect(DEFAULT_SHARE_IMAGE.url).toBe('/opengraph-image');
+    expect(DEFAULT_SHARE_IMAGE.url).toMatch(/^\/opengraph-image\?v=[0-9a-z]+$/);
+  });
+
+  it('changes a card URL when what the card draws changes', () => {
+    const before = shareImage('/guides/x/opengraph-image', 'alt', 'Guides · Events', 'Old title');
+    const after = shareImage('/guides/x/opengraph-image', 'alt', 'Guides · Events', 'New title');
+    expect(after.url).not.toBe(before.url);
+    expect(shareImage('/r', 'alt', 'same').url).toBe(shareImage('/r', 'alt', 'same').url);
+  });
+});
+
+describe('the card design version', () => {
+  /*
+   * Every card is served immutable for a year and social platforms cache it by URL, so a
+   * change to how the cards look has to change their URLs too. SHARE_CARD_VERSION is in
+   * every card's `?v=`; this pins it to the files that decide the look.
+   *
+   * If this fails because you changed the layout, palette, fonts or logo: set
+   * SHARE_CARD_VERSION in src/lib/share-card/constants.ts to today's date, then copy the
+   * new version and fingerprint into DESIGN below.
+   */
+  const DESIGN = {
+    version: '2026-09-26',
+    fingerprint: '186a6e19da6e88d8',
+  };
+
+  const files = [
+    'src/lib/share-card/layout.tsx',
+    'src/lib/share-card/palette.ts',
+    'src/lib/share-card/fonts/SchibstedGrotesk-700.ttf',
+    'src/lib/share-card/fonts/SchibstedGrotesk-900.ttf',
+    'public/brand/logo-horizontal-white.png',
+  ];
+
+  it('moves the version whenever the look moves', () => {
+    const hash = createHash('sha256');
+    for (const file of files) hash.update(readFileSync(path.resolve(__dirname, '../..', file)));
+    const current = hash.digest('hex').slice(0, 16);
+    expect({ version: SHARE_CARD_VERSION, fingerprint: current }).toEqual(DESIGN);
   });
 });

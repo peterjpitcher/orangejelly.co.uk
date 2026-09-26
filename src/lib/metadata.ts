@@ -7,7 +7,10 @@ interface GenerateMetadataProps {
   title: string;
   description: string;
   path: string;
-  /** A share card route. Declared as 1200 by 1200, so it has to be one of the square cards. */
+  /**
+   * A share card route, declared as 1200 by 1200, so it has to be one of the square cards.
+   * Leave it out for the default card, which carries the version that busts caches.
+   */
   ogImage?: string;
   noIndex?: boolean;
   ogType?: 'website' | 'article' | 'profile';
@@ -20,7 +23,7 @@ export function generateMetadata({
   title,
   description,
   path,
-  ogImage = DEFAULT_SHARE_IMAGE.url,
+  ogImage,
   noIndex = false,
   ogType = 'website',
   publishedTime,
@@ -53,12 +56,14 @@ export function generateMetadata({
       type: ogType,
       locale: 'en_GB',
       images: [
-        {
-          url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
-          ...SHARE_CARD_SIZE,
-          type: 'image/png',
-          alt: resolvedTitle,
-        },
+        ogImage
+          ? {
+              url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
+              ...SHARE_CARD_SIZE,
+              type: 'image/png',
+              alt: resolvedTitle,
+            }
+          : DEFAULT_SHARE_IMAGE,
       ],
       ...(publishedTime && { publishedTime }),
       ...(modifiedTime && { modifiedTime }),

@@ -86,9 +86,9 @@ export const metadata: Metadata = {
     url: baseUrl,
     locale: 'en_GB',
     siteName: 'Orange Jelly',
-    // src/app/opengraph-image.tsx draws this, and Next.js serves it with a content hash
-    // on the pages that inherit this block. A page that sets its own `openGraph` loses
-    // it, which is why DEFAULT_SHARE_IMAGE exists: see src/lib/share-card/constants.ts.
+    // src/app/opengraph-image.tsx draws this card, for every page that inherits this
+    // block. A page that sets its own `openGraph` loses it, so each one names
+    // DEFAULT_SHARE_IMAGE (or its own card) again: see src/lib/share-card/constants.ts.
     images: [DEFAULT_SHARE_IMAGE],
   },
   // No `images`: Next.js fills twitter:image from each page's og:image when the twitter

@@ -63,8 +63,9 @@ describe('renderShareCard', () => {
 /**
  * Where the logo and the words actually landed, read back from the pixels.
  *
- * The logo is the only white on the card and the title the only ink between the running
- * head and the footer band, so their rows can be found by colour alone.
+ * The logo is the only pure white on the orange band, which ends at row 460 (cream,
+ * below it, is 247/245/241 and must not count), and the title is the only ink between
+ * the running head and the footer band, so both can be found by colour alone.
  */
 async function footprint(card: ShareCard) {
   const response = await renderShareCard(card);
@@ -77,7 +78,7 @@ async function footprint(card: ShareCard) {
     for (let x = 0; x < info.width; x += 1) {
       const i = (y * info.width + x) * info.channels;
       const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
-      if (r > 240 && g > 240 && b > 240 && y < 600) {
+      if (r >= 252 && g >= 252 && b >= 252 && y < 460) {
         logo.top = Math.min(logo.top, y);
         logo.bottom = Math.max(logo.bottom, y);
       }
@@ -114,6 +115,8 @@ describe('the crop-safe band', () => {
         ? { kind: 'titled', eyebrow: 'Guides · Revenue & Growth', title }
         : { kind: 'brand' };
       const { logo, words } = await footprint(card);
+      // Found at all, and at the size it is drawn (a 600px-wide lockup is about 111 rows).
+      expect(logo.bottom - logo.top).toBeGreaterThan(100);
       expect(logo.top).toBeGreaterThanOrEqual(SHARE_CARD_SAFE_BAND.top);
       expect(logo.bottom).toBeLessThanOrEqual(SHARE_CARD_SAFE_BAND.bottom);
       expect(words.top).toBeGreaterThanOrEqual(SHARE_CARD_SAFE_BAND.top);
@@ -151,8 +154,25 @@ describe('the card routes', () => {
     }));
     const logged = vi.spyOn(console, 'error').mockImplementation(() => {});
     const route = await import('@/app/survey/[slug]/opengraph-image');
-    expect(await png(await route.default({ params: { slug: 'pub-apps' } }))).toEqual(SQUARE);
+    const response = await route.default({ params: { slug: 'pub-apps' } });
+    // Every other card is immutable for a year. The stand-in must not be, or the real
+    // question never replaces it.
+    expect(response.headers.get('cache-control')).toBe('no-store');
+    expect(await png(response)).toEqual(SQUARE);
     expect(logged).toHaveBeenCalled();
     logged.mockRestore();
+  });
+
+  it('draws a live survey with the normal cache policy', async () => {
+    vi.doMock('@/lib/db/surveys', () => ({
+      getSurveyForVisitor: vi.fn().mockResolvedValue({
+        mode: 'live',
+        survey: { slug: 'pub-apps', eyebrow: 'Pub survey', title: 'Which tools?', minutes: 3 },
+      }),
+    }));
+    const route = await import('@/app/survey/[slug]/opengraph-image');
+    const response = await route.default({ params: { slug: 'pub-apps' } });
+    expect(response.headers.get('cache-control')).not.toBe('no-store');
+    expect(await png(response)).toEqual(SQUARE);
   });
 });
