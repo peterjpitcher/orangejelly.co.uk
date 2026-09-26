@@ -238,5 +238,15 @@ and three solutions pages sent the 1200x630 orange card with a system font and n
       the tokens; the card renders at 1200x1200; logo and title measured inside the safe band.
 - [x] Lint, type-check, tests (London and UTC), build; crawl the local production build: all
       148 pages send one 1200x1200 PNG og:image and twitter:image that loads.
-- [ ] Crawl the Vercel preview the same way, including the per-request survey card.
-- [ ] PR, preview check, merge on Peter's yes, verify production.
+- [x] Adversarial review (four reviewers, each finding verified): 11 confirmed and fixed,
+      notably versioned card URLs, lowercase display type (D10) and the kern feature
+      removed from the fonts.
+- [x] PR #77 merged on Peter's yes. The Vercel preview built but was not crawled: it is
+      behind Deployment Protection and Peter declined a standing bypass secret.
+- [x] Production verified: all 147 pages (145 sitemap URLs plus the survey and privacy
+      pages) send one versioned 1200x1200 PNG og:image with a matching twitter:image,
+      the survey card is drawn on Vercel with the survey's real question, and the
+      deployment logged no runtime errors.
+
+Status: live on deployment dpl_A9mKeE4ryRjQuUngsh1JyL5a7NPd, merge commit
+520e6fa52dc6013b54832c003c470fbaa04c6176. No migration.
