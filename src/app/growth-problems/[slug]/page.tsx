@@ -13,6 +13,7 @@ import {
   PressureMap,
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { GROWTH_PROBLEMS, getGrowthProblem } from '../content';
 
@@ -76,6 +77,7 @@ export function generateMetadata({ params }: Params): Metadata {
       type: 'article',
       locale: 'en_GB',
       siteName: 'Orange Jelly',
+      images: [DEFAULT_SHARE_IMAGE],
     },
   };
 }

@@ -8,6 +8,17 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   trailingSlash: false,
+  experimental: {
+    // The share cards read their fonts and logo from disk (src/lib/share-card/render.tsx)
+    // and the file trace does not follow those reads. The survey card is drawn per
+    // request, so without this its serverless bundle ships without them and 500s.
+    outputFileTracingIncludes: {
+      '/**/opengraph-image': [
+        './src/lib/share-card/fonts/*.ttf',
+        './public/brand/logo-horizontal-white.png',
+      ],
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],

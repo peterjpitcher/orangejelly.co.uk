@@ -180,6 +180,31 @@ export function getCategoryBySlug(slug: string): Category | undefined {
   return blogCategories.find((cat) => cat.slug === slug);
 }
 
+/**
+ * A guide's category, read from its front matter.
+ *
+ * Shared by the guide page and the guide's share card, so the label on the card is the
+ * label on the page. It lived inside the page until the card needed it, and a page file
+ * may not export helpers. An unknown slug still gets a name rather than a blank.
+ */
+export function guideCategoryOf(frontMatter: Record<string, unknown>): Category {
+  const named = (value: unknown): string | undefined =>
+    typeof value === 'string' && value.trim().length > 0 ? value : undefined;
+  const listed = frontMatter.categories;
+  const candidate =
+    named(frontMatter.category) ??
+    (Array.isArray(listed)
+      ? listed.find((item): item is string => named(item) !== undefined)
+      : named(listed)
+          ?.split(',')
+          .map((item) => item.trim())
+          .find(Boolean));
+
+  if (!candidate) return { slug: 'general', name: 'General', description: '' };
+  const slug = candidate.toLowerCase().replace(/\s+/g, '-');
+  return getCategoryBySlug(slug) ?? { slug, name: candidate, description: '' };
+}
+
 // Sort posts by date (newest first)
 export function sortPostsByDate(posts: BlogPost[]): BlogPost[] {
   return posts.sort((a, b) => {

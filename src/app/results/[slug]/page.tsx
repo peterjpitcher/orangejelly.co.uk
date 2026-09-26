@@ -11,6 +11,7 @@ import {
   ProofCard,
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { CASE_STUDIES, getCaseStudy } from '../case-studies';
 
@@ -64,6 +65,7 @@ export function generateMetadata({ params }: Params): Metadata {
       type: 'article',
       locale: 'en_GB',
       siteName: 'Orange Jelly',
+      images: [DEFAULT_SHARE_IMAGE],
     },
   };
 }

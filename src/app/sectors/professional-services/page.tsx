@@ -13,6 +13,7 @@ import {
 } from '@/components/oj';
 import { getAllInsights } from '@/lib/insights';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { TRANSLATIONS, WHAT_WE_DO_NOT_HAVE, RELATED_BUILDS } from './content';
 
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     siteName: 'Orange Jelly',
+    images: [DEFAULT_SHARE_IMAGE],
   },
 };
 

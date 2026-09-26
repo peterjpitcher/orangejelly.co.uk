@@ -14,6 +14,7 @@ import {
   ProofCard,
 } from '@/components/oj';
 import { getBaseUrl } from '@/lib/site-config';
+import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { AREAS, FAQS, LOOK_AT_FIRST, RELATED_BUILDS } from './content';
 import SurveyBand from '@/components/survey/SurveyBand';
@@ -65,6 +66,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     siteName: 'Orange Jelly',
+    images: [DEFAULT_SHARE_IMAGE],
   },
 };
 

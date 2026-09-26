@@ -1,11 +1,13 @@
 import { type Metadata } from 'next';
 import { getBaseUrl } from './site-config';
 import { seoOverrides } from './seo-overrides';
+import { DEFAULT_SHARE_IMAGE, SHARE_CARD_SIZE } from './share-card/constants';
 
 interface GenerateMetadataProps {
   title: string;
   description: string;
   path: string;
+  /** A share card route. Declared as 1200 by 1200, so it has to be one of the square cards. */
   ogImage?: string;
   noIndex?: boolean;
   ogType?: 'website' | 'article' | 'profile';
@@ -18,7 +20,7 @@ export function generateMetadata({
   title,
   description,
   path,
-  ogImage = '/images/og-default.jpg',
+  ogImage = DEFAULT_SHARE_IMAGE.url,
   noIndex = false,
   ogType = 'website',
   publishedTime,
@@ -53,8 +55,8 @@ export function generateMetadata({
       images: [
         {
           url: ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`,
-          width: 1200,
-          height: 630,
+          ...SHARE_CARD_SIZE,
+          type: 'image/png',
           alt: resolvedTitle,
         },
       ],
@@ -64,11 +66,11 @@ export function generateMetadata({
         authors: [author],
       }),
     },
+    // No `images`: Next.js fills twitter:image from og:image when the twitter block has none.
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
       description: resolvedDescription,
-      images: [ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`],
     },
     alternates: {
       canonical: canonicalUrl,
@@ -103,7 +105,6 @@ export function generateStaticMetadata(overrides: Partial<GenerateMetadataProps>
       'Transformative, action-first marketing for hospitality partners. Practical systems that accelerate bookings, footfall, repeat visits, and revenue.',
     path: '/',
     ogType: 'website',
-    ogImage: '/images/og-default.jpg', // Standard OG image for non-article pages
   };
 
   return generateMetadata({ ...defaults, ...overrides });
