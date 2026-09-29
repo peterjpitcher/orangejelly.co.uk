@@ -21,6 +21,11 @@ vi.mock('@/lib/db/polls', () => ({
   getParticipantView: (...args: unknown[]) => getParticipantView(...args),
 }));
 
+const notifyOrganiserOfResponse = vi.fn();
+vi.mock('@/lib/poll-digest', () => ({
+  notifyOrganiserOfResponse: (...args: unknown[]) => notifyOrganiserOfResponse(...args),
+}));
+
 const resolveEditParticipant = vi.fn();
 vi.mock('@/app/availability/p/poll-data', () => ({
   resolveEditParticipant: (...args: unknown[]) => resolveEditParticipant(...args),
@@ -280,6 +285,19 @@ describe('submitResponse', () => {
 
     expect(result.error).toBe('Your answer was not recorded. Please try again.');
     expect(result.editUrl).toBeUndefined();
+    // Nothing was stored, so there is nothing to tell the organiser.
+    expect(notifyOrganiserOfResponse).not.toHaveBeenCalled();
+  });
+
+  it('should tell the organiser once the answer is stored', async () => {
+    // The trigger for the digest. Until 29 September 2026 nothing called it, and
+    // no organiser was ever emailed about a response.
+    await submitResponse(TOKEN, submission());
+
+    expect(notifyOrganiserOfResponse).toHaveBeenCalledWith('poll-1');
+    expect(storeResponse.mock.invocationCallOrder[0]).toBeLessThan(
+      notifyOrganiserOfResponse.mock.invocationCallOrder[0]
+    );
   });
 
   it('should revalidate the participant path so the counts are current next load', async () => {
@@ -375,6 +393,14 @@ describe('updateResponse', () => {
     const result = await updateResponse(EDIT_TOKEN, update());
 
     expect(result.error).toBe('Your changes were not recorded. Please try again.');
+    expect(notifyOrganiserOfResponse).not.toHaveBeenCalled();
+  });
+
+  it('should tell the organiser about a changed answer too', async () => {
+    // §4.2 counts edits: someone changing their mind is news to the organiser.
+    await updateResponse(EDIT_TOKEN, update());
+
+    expect(notifyOrganiserOfResponse).toHaveBeenCalledWith('poll-1');
   });
 
   it('should allow the change when the limiter is not configured', async () => {

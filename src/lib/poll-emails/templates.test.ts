@@ -37,6 +37,7 @@ const digestInput = {
   ],
   totalResponders: 5,
   organiserUrl: 'https://www.orangejelly.co.uk/availability/o/otok',
+  manageEmailsUrl: 'https://www.orangejelly.co.uk/availability/o/otok#emails',
 };
 
 const confirmInput = {
@@ -60,6 +61,7 @@ const nudgeInput = {
   bestOption: { label: 'Saturday, 4 July 2026, 7:30pm – 9:00pm (UK time)', yesCount: 4 },
   participantUrl: 'https://www.orangejelly.co.uk/availability/p/ptok',
   organiserUrl: 'https://www.orangejelly.co.uk/availability/o/otok',
+  manageEmailsUrl: 'https://www.orangejelly.co.uk/availability/o/otok#emails',
 };
 
 /** Every template, so the shared rules can be asserted once over all of them. */
@@ -244,6 +246,15 @@ describe('buildDigestEmail', () => {
     expect(email.html).toContain('1 person has responded');
     expect(email.text).toContain('1 person has responded');
   });
+
+  it('should print a visible way to turn the emails off, in both parts', () => {
+    // The List-Unsubscribe header only helps a reader whose client shows a
+    // button. The link in the body is for everyone else.
+    const email = buildDigestEmail(digestInput);
+    expect(email.text).toContain('Turn them off here');
+    expect(email.text).toContain(digestInput.manageEmailsUrl);
+    expect(email.html).toContain(`href="${digestInput.manageEmailsUrl}"`);
+  });
 });
 
 describe('buildConfirmEmail', () => {
@@ -400,6 +411,13 @@ describe('buildNudgeEmail', () => {
     const email = buildNudgeEmail(nudgeInput);
     expect(email.text).toContain("This is the only nudge we'll send about this poll.");
     expect(email.html).toContain('the only nudge we&rsquo;ll send about this poll');
+  });
+
+  it('should print a visible way to turn the emails off, in both parts', () => {
+    const email = buildNudgeEmail(nudgeInput);
+    expect(email.text).toContain('Turn them off here');
+    expect(email.text).toContain(nudgeInput.manageEmailsUrl);
+    expect(email.html).toContain(`href="${nudgeInput.manageEmailsUrl}"`);
   });
 });
 

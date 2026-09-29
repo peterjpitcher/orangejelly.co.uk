@@ -15,6 +15,7 @@ import DeleteResponseControl from '@/components/polls/organiser/delete-response-
 import ResultsLegend from '@/components/polls/organiser/results-legend';
 import ResultsTable from '@/components/polls/organiser/results-table';
 import ShareBlock from '@/components/polls/organiser/share-block';
+import UpdateEmailsControl from '@/components/polls/organiser/update-emails-control';
 import { optionFullLabel, replyCountLine } from '@/components/polls/organiser/results-display';
 import { bestOption } from '@/lib/poll-aggregate';
 import { getAbsoluteUrl } from '@/lib/site-config';
@@ -303,6 +304,13 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
                   body="Here’s your participant link again, and a nudge is usually all it takes."
                 />
               </div>
+            )}
+
+            {/* Where the emails' unsubscribe link lands (#emails). Not shown once
+              confirmed: a confirmed poll takes no answers, so there is nothing
+              left to send an update about. */}
+            {!isConfirmed && (
+              <UpdateEmailsControl organiserToken={params.token} emailsOn={!poll.digest_opt_out} />
             )}
 
             <div className="flex flex-col gap-4 border-t-1.5 border-oj-ink/20 pt-6 sm:flex-row sm:items-start sm:justify-between">

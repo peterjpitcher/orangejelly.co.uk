@@ -110,3 +110,26 @@ export function fallbackLink(url: string, lead: string): string {
     <a href="${escapeHtml(url)}" style="color:${BRAND_BLUE};word-break:break-all;">${escapeHtml(url)}</a>
   </p>`;
 }
+
+/** The lead-in both recurring emails use for their way out. One wording, two parts. */
+const MANAGE_EMAILS_LEAD = 'Don’t want these emails? Turn them off here:';
+
+/**
+ * The visible way out of the two recurring emails, the digest and the nudge.
+ *
+ * The List-Unsubscribe header serves mail clients that show an unsubscribe
+ * button; this serves the reader, who should not have to know that button
+ * exists. It points at the organiser's own page, where the switch lives and can
+ * be turned back on.
+ */
+export function manageEmailsHtml(url: string): string {
+  return `<p style="margin:0 0 16px;font-size:13px;color:${MUTED};">
+    ${MANAGE_EMAILS_LEAD.replace('’', '&rsquo;')}<br>
+    <a href="${escapeHtml(url)}" style="color:${BRAND_BLUE};word-break:break-all;">${escapeHtml(url)}</a>
+  </p>`;
+}
+
+/** The plain-text counterpart to manageEmailsHtml. */
+export function manageEmailsText(url: string): string {
+  return `${MANAGE_EMAILS_LEAD}\n\n  ${url}`;
+}

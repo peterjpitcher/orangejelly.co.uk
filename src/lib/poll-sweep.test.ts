@@ -43,6 +43,12 @@ let selectErrors: Record<string, string> = {};
 /** Every update the passes wrote, so bookkeeping can be asserted. */
 let updates: Array<{ table: string; values: Record<string, unknown> }> = [];
 
+/**
+ * Whether the digest's claim (a conditional update returning the row) wins. It
+ * loses when another request already holds the window.
+ */
+let claimWins = true;
+
 vi.mock('./db/polls', async (importOriginal) => {
   const actual = await importOriginal<typeof PollsModule>();
   return {
@@ -66,20 +72,49 @@ vi.mock('./email', async (importOriginal) => {
   };
 });
 
-function resolveSelect(table: string): { data: unknown[]; error: { message: string } | null } {
+function resolveSelect(
+  table: string,
+  after: Array<[string, string]>
+): { data: unknown[]; error: { message: string } | null } {
   if (selectErrors[table]) return { data: [], error: { message: selectErrors[table] } };
   if (table === 'polls') return { data: pollSelectQueue.shift() ?? [], error: null };
-  return { data: tableRows[table] ?? [], error: null };
+  // `gt` is honoured because the digest re-checks for responses that landed
+  // after its claim; every other filter is ignored.
+  const rows = (tableRows[table] ?? []) as Array<Record<string, string>>;
+  return {
+    data: rows.filter((row) => after.every(([column, value]) => row[column] > value)),
+    error: null,
+  };
 }
 
 /** A thenable chain: every filter returns itself, awaiting it resolves the rows. */
 function makeChain(table: string): Record<string, unknown> {
   const chain: Record<string, unknown> = {};
-  for (const method of ['eq', 'lt', 'gt', 'not', 'is', 'in', 'order', 'limit', 'range']) {
+  const after: Array<[string, string]> = [];
+  for (const method of ['eq', 'lt', 'not', 'is', 'in', 'order', 'limit', 'range']) {
     chain[method] = () => chain;
   }
+  chain.gt = (column: string, value: string) => {
+    after.push([column, value]);
+    return chain;
+  };
   chain.then = (resolve: (value: unknown) => unknown, reject?: (reason: unknown) => unknown) =>
-    Promise.resolve(resolveSelect(table)).then(resolve, reject);
+    Promise.resolve(resolveSelect(table, after)).then(resolve, reject);
+  return chain;
+}
+
+/**
+ * An update chain. Awaited directly it resolves `{ error: null }`; ended with
+ * `.select().maybeSingle()` it is the digest's claim, and returns the row only
+ * when `claimWins`.
+ */
+function makeUpdateChain(): Record<string, unknown> {
+  const chain: Record<string, unknown> = {};
+  for (const method of ['eq', 'is', 'select']) chain[method] = () => chain;
+  chain.maybeSingle = () =>
+    Promise.resolve({ data: claimWins ? { id: 'poll-1' } : null, error: null });
+  chain.then = (resolve: (value: unknown) => unknown) =>
+    Promise.resolve({ error: null }).then(resolve);
   return chain;
 }
 
@@ -90,7 +125,7 @@ vi.mock('./db/supabase-admin', () => ({
       select: () => makeChain(table),
       update: (values: Record<string, unknown>) => {
         updates.push({ table, values });
-        return { eq: () => Promise.resolve({ error: null }) };
+        return makeUpdateChain();
       },
     }),
   }),
@@ -115,12 +150,15 @@ const options = [
   { id: 'option-2', position: 2, option_date: '2026-08-02', starts_at: null, ends_at: null },
 ];
 
-/** A response that is newer than any watermark a test sets. */
+/**
+ * A response newer than the poll's watermark (its created_at) but older than
+ * the moment a digest claims, so the re-check after sending finds nothing.
+ */
 const recentResponse = {
   participant_id: 'participant-1',
   option_id: 'option-1',
   availability: 'yes' as const,
-  updated_at: '2099-01-01T00:00:00.000Z',
+  updated_at: new Date(Date.now() - 60_000).toISOString(),
 };
 
 beforeEach(() => {
@@ -134,6 +172,7 @@ beforeEach(() => {
   pollSelectQueue = [[], []];
   selectErrors = {};
   updates = [];
+  claimWins = true;
 
   sweepExpiredPolls.mockImplementation(() => {
     callLog.push('expired');
@@ -356,12 +395,43 @@ describe('runPollSweep: the digest flush', () => {
     expect(report.digests).toEqual({ sent: 1, failed: 0, backlog: false });
     expect(sendPollEmail).toHaveBeenCalledTimes(1);
     expect(sendPollEmail.mock.calls[0][0]).toMatchObject({ to: 'peter@orangejelly.co.uk' });
-    expect(updates).toContainEqual(
-      expect.objectContaining({
-        table: 'polls',
-        values: expect.objectContaining({ digest_pending_since: null }),
-      })
-    );
+    expect(updates).toEqual([
+      // The claim, then the marker cleared. Nothing arrived after the claim, so
+      // the marker is not put back.
+      { table: 'polls', values: { last_digest_at: expect.any(String) } },
+      { table: 'polls', values: { digest_pending_since: null } },
+    ]);
+  });
+
+  it('should send nothing when another request holds the window', async () => {
+    // The claim is what stops the cron and a vote at 03:00 both mailing the
+    // same news. Losing it is not a failure: the winner sends.
+    claimWins = false;
+
+    const report = await runPollSweep();
+
+    expect(sendPollEmail).not.toHaveBeenCalled();
+    expect(report.digests).toEqual({ sent: 0, failed: 0, backlog: false });
+  });
+
+  it('should put the marker back when a response lands after the claim', async () => {
+    // That response found the marker already set, so its own mark did nothing.
+    // Clearing blindly would drop its news until somebody else answered.
+    tableRows.poll_responses = [
+      recentResponse,
+      {
+        ...recentResponse,
+        participant_id: 'participant-2',
+        updated_at: '2099-01-01T00:00:00.000Z',
+      },
+    ];
+
+    await runPollSweep();
+
+    expect(updates.at(-1)).toEqual({
+      table: 'polls',
+      values: { digest_pending_since: expect.any(String) },
+    });
   });
 
   it('should carry a List-Unsubscribe header, because a digest is recurring mail', async () => {
@@ -390,6 +460,8 @@ describe('runPollSweep: the digest flush', () => {
 
     expect(sendPollEmail).not.toHaveBeenCalled();
     expect(report.digests.sent).toBe(0);
+    // The window is handed back, so the next real news is not held up an hour.
+    expect(updates).toContainEqual({ table: 'polls', values: { last_digest_at: null } });
     expect(updates).toContainEqual({ table: 'polls', values: { digest_pending_since: null } });
   });
 
@@ -399,7 +471,8 @@ describe('runPollSweep: the digest flush', () => {
     const report = await runPollSweep();
 
     expect(report.digests).toEqual({ sent: 0, failed: 1, backlog: false });
-    expect(updates).toEqual([]);
+    // Only the claim. The marker is left set, so tomorrow's pass retries.
+    expect(updates).toEqual([{ table: 'polls', values: { last_digest_at: expect.any(String) } }]);
     // A failed send is a per-poll fault, not a failed pass: the cron must not
     // 500 because one organiser's address bounced.
     expect(report.errors).toEqual([]);

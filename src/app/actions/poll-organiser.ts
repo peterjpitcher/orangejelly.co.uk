@@ -12,8 +12,10 @@ import {
   deletePoll as storeDeletePoll,
   getConfirmRecipients,
   getOrganiserView,
+  POLL_NOT_FOUND,
   recordConfirmNotifyFailures,
   reopenPoll,
+  setDigestOptOut,
   type ConfirmedPollResult,
 } from '@/lib/db/polls';
 import { sendPollEmails, type PollEmail } from '@/lib/email';
@@ -36,8 +38,8 @@ import { tokenSchema } from '@/lib/validation/poll-tokens';
 import type { PollActionResult } from './polls';
 
 /**
- * The organiser's four controls: stop the voting, pick the time, remove one
- * person's answers, and delete the poll outright.
+ * The organiser's controls: stop the voting, pick the time, remove one
+ * person's answers, delete the poll outright, and switch the update emails.
  *
  * Shape follows `src/app/actions/polls.ts`: `'use server'`, a zod parse first,
  * an explicit `PollActionResult`, and a store-then-notify order where a failed
@@ -49,8 +51,8 @@ import type { PollActionResult } from './polls';
  * which is exactly why every delete is scoped by the poll the token resolved to
  * and never by an id the client supplied.
  *
- * FAIL-OPEN vs FAIL-CLOSED, deliberately split. `setPollOpen`, `deleteResponse`
- * and `deletePoll` fail OPEN on an unavailable rate limiter: they send no mail,
+ * FAIL-OPEN vs FAIL-CLOSED, deliberately split. `setPollOpen`, `setUpdateEmails`,
+ * `deleteResponse` and `deletePoll` fail OPEN on an unavailable rate limiter: they send no mail,
  * and locking an organiser out of their own poll because Upstash is down is the
  * worse failure. `confirmOption` fails CLOSED: it is a mail fan-out, and an
  * unthrottled endpoint that sends mail on our own sending domain is an open
@@ -62,6 +64,11 @@ const organiserTokenSchema = z.object({ organiserToken: tokenSchema });
 const setPollOpenSchema = z.object({
   organiserToken: tokenSchema,
   open: z.boolean(),
+});
+
+const setUpdateEmailsSchema = z.object({
+  organiserToken: tokenSchema,
+  on: z.boolean(),
 });
 
 const confirmOptionSchema = z.object({
@@ -194,6 +201,41 @@ export async function setPollOpen(
 
     console.error(
       '[polls] Poll status not updated:',
+      scrubTokens(result.error ?? 'Unknown error.')
+    );
+    return { error: UPDATE_FAILED };
+  }
+
+  revalidatePoll(organiserToken);
+  return { success: true };
+}
+
+/**
+ * Turns the organiser's update emails (the digest and the nudge) on or off.
+ *
+ * The switch the unsubscribe link lands on, so it goes both ways: an organiser
+ * who unsubscribed by accident, or whose mail filter did it for them, can see
+ * that and undo it. Fails OPEN on the limiter like `setPollOpen`: it sends
+ * nothing, and only changes whether we send.
+ */
+export async function setUpdateEmails(
+  organiserToken: string,
+  on: boolean
+): Promise<PollActionResult> {
+  const parsed = setUpdateEmailsSchema.safeParse({ organiserToken, on });
+  if (!parsed.success) {
+    return { error: LINK_NOT_VALID };
+  }
+
+  const limited = await checkOrganiserLimit();
+  if (limited) return { error: limited };
+
+  const result = await setDigestOptOut(organiserToken, !on);
+
+  if (!result.stored) {
+    if (result.error === POLL_NOT_FOUND) return { error: LINK_NOT_VALID };
+    console.error(
+      '[polls] Update emails not switched:',
       scrubTokens(result.error ?? 'Unknown error.')
     );
     return { error: UPDATE_FAILED };

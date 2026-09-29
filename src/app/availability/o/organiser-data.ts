@@ -20,6 +20,7 @@ import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll
  * things this screen needs:
  *   - `participant_token`, for the share block
  *   - `confirm_notify_failures`, for the "we couldn't reach n people" note
+ *   - `digest_opt_out`, for the update-emails switch
  *   - `poll_participants.created_at`, to disambiguate duplicate display names
  * It also returns no per-option tallies, which the totals row needs.
  *
@@ -48,6 +49,8 @@ export interface OrganiserPollExtras {
    * never a list of addresses. See `recordConfirmNotifyFailures`.
    */
   confirm_notify_failures: number;
+  /** True when the organiser has turned off the digest and the nudge. */
+  digest_opt_out: boolean;
 }
 
 export interface OrganiserResultsView {
@@ -120,7 +123,7 @@ export async function getOrganiserResults(
   const [{ data: extras }, { data: participants }, { data: responses }] = await Promise.all([
     supabase
       .from('polls')
-      .select('participant_token, confirm_notify_failures')
+      .select('participant_token, confirm_notify_failures, digest_opt_out')
       .eq('id', view.poll.id)
       .maybeSingle(),
     supabase
@@ -147,6 +150,7 @@ export async function getOrganiserResults(
       ...view.poll,
       participant_token: extras.participant_token as string,
       confirm_notify_failures: (extras.confirm_notify_failures as number) ?? 0,
+      digest_opt_out: extras.digest_opt_out === true,
     },
     options: view.options,
     participants: (participants ?? []) as OrganiserParticipant[],
