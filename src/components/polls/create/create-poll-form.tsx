@@ -174,6 +174,7 @@ export default function CreatePollForm(): JSX.Element {
   const [links, setLinks] = useState<PollLinks | null>(null);
   const [invitation, setInvitation] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState('');
+  const [mailFailed, setMailFailed] = useState(false);
   const [duration, setDuration] = useState<DurationChoice>(DEFAULT_DURATION_MINUTES);
   const [pendingDuration, setPendingDuration] = useState<DurationChoice | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
@@ -331,6 +332,7 @@ export default function CreatePollForm(): JSX.Element {
 
       setSentTo(values.organiserEmail);
       setResendToken(result.resendToken ?? null);
+      setMailFailed(result.verificationMailFailed === true);
       // Present only when a signed-in admin created it, in which case the poll
       // is already live and no email was ever sent.
       setLinks(result.links ?? null);
@@ -378,6 +380,7 @@ export default function CreatePollForm(): JSX.Element {
       <SuccessState
         email={sentTo}
         resendToken={resendToken}
+        mailFailed={mailFailed}
         links={links}
         invitation={invitation}
       />
@@ -700,15 +703,24 @@ export default function CreatePollForm(): JSX.Element {
  * so no link is shown. The resend token is client state and never reaches a URL;
  * reloading loses it, and the control with it, which is correct: at that point
  * the recovery route is a fresh poll, not an unbounded resend.
+ *
+ * Exported for its test: what this screen says when the email did not go is the
+ * user-facing half of a fail-closed write path.
  */
-function SuccessState({
+export function SuccessState({
   email,
   resendToken,
+  mailFailed = false,
   links,
   invitation,
 }: {
   email: string;
   resendToken: string | null;
+  /**
+   * The verification email did not send. The poll exists but is not live, so
+   * the screen says so and leads with the resend control.
+   */
+  mailFailed?: boolean;
   /** Set only when a signed-in admin created the poll: it is already live. */
   links: PollLinks | null;
   /** The pasteable message, built from the submitted values. Admin path only. */
@@ -782,22 +794,40 @@ function SuccessState({
 
   return (
     <div className="max-w-2xl mt-8">
-      <h1 className={TOOL_HEADING}>Check your inbox</h1>
+      {mailFailed && resendState !== 'sent' ? (
+        <>
+          <h1 className={TOOL_HEADING}>Your email didn&apos;t go</h1>
 
-      {/* The design system has a success tone, so this is that rather than the
-          orange-tinted stand-in the poll screens used to share. */}
-      <Alert tone="ok" title="We've sent your links" className="mt-4">
-        We&apos;ve emailed <strong>{email}</strong> a link to confirm your address. Tap it and your
-        poll goes live, then you&apos;ll get your team&apos;s link and your own private one.
-      </Alert>
+          <Alert tone="danger" title="We couldn't send your confirmation email" className="mt-4">
+            Your poll is set up, but the email to <strong>{email}</strong> didn&apos;t send, so it
+            isn&apos;t live yet. Try sending it again below. If that fails too, message Peter on
+            WhatsApp.
+          </Alert>
+        </>
+      ) : (
+        <>
+          <h1 className={TOOL_HEADING}>Check your inbox</h1>
+
+          {/* The design system has a success tone, so this is that rather than the
+              orange-tinted stand-in the poll screens used to share. */}
+          <Alert tone="ok" title="We've sent your links" className="mt-4">
+            We&apos;ve emailed <strong>{email}</strong> a link to confirm your address. Tap it and
+            your poll goes live, then you&apos;ll get your team&apos;s link and your own private
+            one.
+          </Alert>
+        </>
+      )}
 
       {resendToken && resendState !== 'sent' && (
         <div className="mt-6 space-y-3">
-          <p className="text-[14.5px] leading-normal text-oj-ink-3">
-            Nothing there? Have a look in your spam folder first.
-          </p>
+          {!mailFailed && (
+            <p className="text-[14.5px] leading-normal text-oj-ink-3">
+              Nothing there? Have a look in your spam folder first.
+            </p>
+          )}
+          {/* Primary when the first email failed: it is the one thing to do next. */}
           <Button
-            variant="ghost"
+            variant={mailFailed ? 'primary' : 'ghost'}
             type="button"
             disabled={resendState === 'sending'}
             aria-busy={resendState === 'sending' || undefined}

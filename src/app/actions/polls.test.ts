@@ -296,23 +296,26 @@ describe('createPoll', () => {
     expect(message.html).not.toContain('p-token');
   });
 
-  it('should still report success when the verification mail fails', async () => {
+  it('should say the verification mail failed, and keep the resend route, when it fails', async () => {
     sendPollEmail.mockResolvedValue({ error: 'resend is down' });
 
     const result = await createPoll(validInput());
 
-    // The poll is stored. A failed notification must never turn a stored record
-    // into a user-facing error, and the resend token is the recovery route.
+    // The poll is stored, so this is not an error (the form would offer to
+    // create it twice). But it must not read as "sent" either: the screen has
+    // to tell the organiser, and the resend token is how they recover.
     expect(result.success).toBe(true);
+    expect(result.verificationMailFailed).toBe(true);
     expect(result.resendToken).toBe('r-token');
   });
 
-  it('should still report success when the verification mail throws', async () => {
+  it('should say the verification mail failed when the send throws', async () => {
     sendPollEmail.mockRejectedValue(new Error('network'));
 
     const result = await createPoll(validInput());
 
     expect(result.success).toBe(true);
+    expect(result.verificationMailFailed).toBe(true);
     expect(result.resendToken).toBe('r-token');
   });
 

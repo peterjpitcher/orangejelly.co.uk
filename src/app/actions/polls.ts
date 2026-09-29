@@ -71,6 +71,15 @@ export interface PollActionResult {
    * A member of the public cannot reach this field by claiming anything.
    */
   links?: PollLinks;
+  /**
+   * True when the poll was stored but its verification email did not go.
+   *
+   * The poll exists and the resend control can still deliver it, so this is
+   * not an `error`: the form must not offer to create the poll again. But the
+   * success screen must not say "we've sent your links" either, which is what
+   * it said before 29 September 2026 whatever happened to the send.
+   */
+  verificationMailFailed?: boolean;
 }
 
 /** The two links verification reveals, ready to render. */
@@ -296,10 +305,12 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     );
   }
 
-  // Best-effort, exactly as contact.ts states: the poll is already stored, so a
-  // failed or unconfigured send must never turn a stored poll into a user-facing
-  // error. The success state carries the "Send it again" control, which is the
-  // recovery route.
+  // The poll is already stored, so a failed or unconfigured send does not turn
+  // it into an error: the form would then offer to create it a second time. It
+  // is reported instead, as `verificationMailFailed`, so the success screen says
+  // the email did not go and puts the "Send it again" control first. A public
+  // write that fails must show the person it failed; telling them to check an
+  // inbox nothing reached is the silent failure this used to be.
   //
   // Note what this email does NOT carry: the participant link or the organiser
   // link. Neither exists to the user until the poll is live, and this is the most
@@ -327,6 +338,7 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     );
   }
 
+  let mailSent = false;
   try {
     const email = buildVerifyEmail({
       organiserName: data.organiserName,
@@ -340,6 +352,8 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
         '[polls] Poll created but verification mail not sent:',
         scrubTokens(sent.error)
       );
+    } else {
+      mailSent = true;
     }
   } catch (error) {
     console.error('[polls] Poll created but verification mail threw:', scrubTokens(String(error)));
@@ -350,7 +364,9 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   // the verify email exists to gate.
   void participantToken;
 
-  return { success: true, resendToken };
+  return mailSent
+    ? { success: true, resendToken }
+    : { success: true, resendToken, verificationMailFailed: true };
 }
 
 /**
