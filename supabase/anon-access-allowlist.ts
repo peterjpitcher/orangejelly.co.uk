@@ -15,14 +15,18 @@
  * WHY IT EXISTS
  *   Anon reach has drifted repeatedly across this workspace, silently, because
  *   `pg_default_acl` widens the surface on its own. On this project the default
- *   privileges for schema `public` hand `anon` every table privilege on every
+ *   privileges for schema `public` handed `anon` every table privilege on every
  *   new table, EXECUTE on every new function and read plus write on every new
  *   sequence, under both the `postgres` and `supabase_admin` owner roles. Nobody
  *   writes those grants. They arrive with the next `create table`.
  *
- *   No migration in this repository revokes those default privileges, so this
- *   allowlist is the detection that stands in for a fix that has not been made.
- *   Writing that revoke migration is a separate, deliberate piece of work.
+ *   20260905053047 took anon out of the `postgres` defaults, which stopped it
+ *   for tables and sequences. It did not stop it for functions: a per-schema
+ *   default cannot revoke the built-in global EXECUTE that PUBLIC gets, and anon
+ *   is a member of PUBLIC. 20260929112421 revokes that globally for postgres.
+ *   The `supabase_admin` defaults still grant anon everything and no migration
+ *   can change them, so this allowlist remains the detection for what the
+ *   defaults no longer prevent.
  *
  *   What this database holds raises the stakes. `contacts` carries the name,
  *   email address, phone number, pub name and free-text message of real
