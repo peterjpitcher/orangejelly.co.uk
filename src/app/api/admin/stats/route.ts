@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { getAllowedAdminEmails, isAllowedAdmin } from '@/lib/admin-auth';
-import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supabase-admin';
+import { requireAdmin } from '@/lib/admin-auth';
+import { getSupabaseAdminClient } from '@/lib/db/supabase-admin';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -49,33 +49,11 @@ async function countTable(table: LeadDataTable, since?: string): Promise<number>
 }
 
 export async function GET(request: Request) {
-  if (!isSupabaseAdminConfigured()) {
-    return NextResponse.json({ error: 'Supabase is not configured.' }, { status: 500 });
-  }
-
-  const allowedEmails = getAllowedAdminEmails();
-  if (allowedEmails.length === 0) {
-    return NextResponse.json(
-      { error: 'Admin email allowlist is not configured.' },
-      { status: 500 }
-    );
-  }
-
-  const authHeader = request.headers.get('authorization');
-  const token = authHeader?.replace(/^Bearer\s+/i, '').trim();
-  if (!token) {
-    return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
-  }
+  // The shared gate, never an inline copy of it (see requireAdmin).
+  const auth = await requireAdmin(request);
+  if ('response' in auth) return auth.response;
 
   const supabase = getSupabaseAdminClient();
-  const { data: authData, error: authError } = await supabase.auth.getUser(token);
-  if (authError || !authData.user) {
-    return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
-  }
-
-  if (!isAllowedAdmin(authData.user.email, allowedEmails)) {
-    return NextResponse.json({ error: 'Not authorised.' }, { status: 403 });
-  }
 
   const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
 
@@ -136,7 +114,7 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     user: {
-      email: authData.user.email,
+      email: auth.email,
     },
     totals: {
       contacts: totalContacts,

@@ -14,10 +14,16 @@ import { getSupabaseAdminClient, isSupabaseAdminConfigured } from '@/lib/db/supa
 import { aggregateByOption, bestOption, countResponders } from '@/lib/poll-aggregate';
 import {
   buildDeadlineReminderEmail,
-  buildDigestEmail,
   buildNudgeEmail,
   buildUnsubscribeHeaders,
 } from '@/lib/poll-emails';
+import {
+  DIGEST_POLL_COLUMNS,
+  DIGEST_WINDOW_MINUTES,
+  deliverDigest,
+  type DigestOutcome,
+  type DigestPollRow,
+} from '@/lib/poll-digest';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 import { scrubTokens } from '@/lib/poll-tokens';
 import { getAbsoluteUrl } from '@/lib/site-config';
@@ -47,8 +53,8 @@ import type { IsoDate } from '@/lib/dateUtils';
  * that quietly stopped being kept.
  */
 
-/** Minutes a digest waits before the cron flushes it. Matches the lazy window in §4.2. */
-export const DIGEST_FLUSH_DELAY_MINUTES = 60;
+/** Minutes a digest waits before the cron flushes it. The lazy window in §4.2, not a second number. */
+export const DIGEST_FLUSH_DELAY_MINUTES = DIGEST_WINDOW_MINUTES;
 
 /** Days of no response activity before an open poll earns its one nudge. */
 export const NUDGE_QUIET_DAYS = 7;
@@ -90,17 +96,6 @@ export interface PollSweepReport {
   deadlineReminders: SweepEmailResult;
   /** One scrubbed message per FAILED pass. Non-empty means the route returns 500. */
   errors: string[];
-}
-
-interface DigestPollRow {
-  id: string;
-  title: string;
-  organiser_name: string;
-  organiser_email: string;
-  organiser_token: string;
-  option_kind: OptionKind;
-  last_digest_at: string | null;
-  created_at: string;
 }
 
 interface NudgePollRow {
@@ -213,9 +208,7 @@ async function runDigestPass(): Promise<SweepEmailResult> {
 
   const { data: polls, error } = await supabase
     .from('polls')
-    .select(
-      'id, title, organiser_name, organiser_email, organiser_token, option_kind, last_digest_at, created_at'
-    )
+    .select(DIGEST_POLL_COLUMNS)
     .eq('status', 'open')
     .eq('digest_opt_out', false)
     .lt('digest_pending_since', minutesAgo(DIGEST_FLUSH_DELAY_MINUTES))
@@ -227,95 +220,23 @@ async function runDigestPass(): Promise<SweepEmailResult> {
   const due = (polls ?? []) as DigestPollRow[];
 
   for (const [index, poll] of due.entries()) {
-    // `since` is the previous watermark: everything the organiser has not been
-    // told about. created_at is the fallback for a poll that has never had one.
-    const since = poll.last_digest_at ?? poll.created_at;
-
-    const [{ data: options }, { data: responses }, { data: participants }] = await Promise.all([
-      supabase
-        .from('poll_options')
-        .select('id, position, option_date, starts_at, ends_at')
-        .eq('poll_id', poll.id)
-        .order('position'),
-      supabase
-        .from('poll_responses')
-        .select('participant_id, option_id, availability, updated_at')
-        .eq('poll_id', poll.id),
-      supabase.from('poll_participants').select('id, display_name').eq('poll_id', poll.id),
-    ]);
-
-    const optionRows = (options ?? []) as OptionRow[];
-    const responseRows = (responses ?? []) as ResponseRow[];
-    const participantRows = (participants ?? []) as Array<{ id: string; display_name: string }>;
-
-    // Count from poll_responses.updated_at, NOT poll_participants.created_at.
-    // An edit mutates a response for a participant who already exists, so their
-    // created_at never moves; counting participants would send a digest reading
-    // "0 new responses" above an empty list every time somebody changed their mind.
-    const movedIds = new Set(
-      responseRows.filter((row) => row.updated_at > since).map((row) => row.participant_id)
-    );
-
-    const newNames = participantRows
-      .filter((row) => movedIds.has(row.id))
-      .map((row) => row.display_name)
-      .sort((a, b) => a.localeCompare(b, 'en-GB'));
-
-    if (newNames.length === 0) {
-      // Nothing to report: a concurrent lazy send already covered this window.
-      // Clear the marker so the poll stops appearing in this pass, and send no
-      // mail: a digest saying "0 new responses" is worse than no digest.
-      await supabase.from('polls').update({ digest_pending_since: null }).eq('id', poll.id);
-      continue;
-    }
-
-    const tallies = aggregateByOption(
-      optionRows.map((option) => ({ id: option.id, position: option.position })),
-      responseRows
-    );
-    const labels = new Map(
-      optionRows.map((option) => [option.id, labelFor(option, poll.option_kind)])
-    );
-
-    const email = buildDigestEmail({
-      organiserName: poll.organiser_name,
-      pollTitle: poll.title,
-      newNames,
-      tallies: tallies.map((tally) => ({
-        label: labels.get(tally.option_id) ?? '',
-        yes: tally.yes,
-        ifNeedBe: tally.if_need_be,
-        no: tally.no,
-      })),
-      totalResponders: countResponders(responseRows),
-      organiserUrl: getAbsoluteUrl(`/availability/o/${poll.organiser_token}`),
-    });
-
-    const result = await sendPollEmail({
-      to: poll.organiser_email,
-      subject: email.subject,
-      html: email.html,
-      text: email.text,
-      headers: buildUnsubscribeHeaders(poll.organiser_token),
-    });
-
-    if (result.error) {
-      // Leave digest_pending_since set so tomorrow's pass retries. The address
-      // is not logged. §4.3 promises it is disclosed to nobody, and a log line
-      // naming it undoes that.
-      failed++;
+    // The same claim-then-send the lazy path uses, so a vote landing at 03:00
+    // and this pass cannot both mail the same window. A failed send leaves the
+    // marker set, so tomorrow's pass retries it. One poll's database error is
+    // that poll's failure, not the pass's.
+    let outcome: DigestOutcome;
+    try {
+      outcome = await deliverDigest(poll);
+    } catch (digestError) {
       console.error(
-        `[poll-email] Digest not flushed for poll ${poll.id}: ${scrubTokens(result.error)}`
+        `[poll-email] Digest not flushed for poll ${poll.id}: ${errorMessage(digestError)}`
       );
-    } else {
-      sent++;
-      await supabase
-        .from('polls')
-        .update({ digest_pending_since: null, last_digest_at: new Date().toISOString() })
-        .eq('id', poll.id);
+      outcome = 'failed';
     }
+    if (outcome === 'sent') sent++;
+    if (outcome === 'failed') failed++;
 
-    if (index < due.length - 1) await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
+    if (outcome === 'sent' && index < due.length - 1) await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
   }
 
   return { sent, failed, backlog: due.length === EMAIL_PASS_LIMIT };
@@ -406,6 +327,7 @@ async function runNudgePass(): Promise<SweepEmailResult> {
           : null,
       participantUrl: getAbsoluteUrl(`/availability/p/${poll.participant_token}`),
       organiserUrl: getAbsoluteUrl(`/availability/o/${poll.organiser_token}`),
+      manageEmailsUrl: getAbsoluteUrl(`/availability/o/${poll.organiser_token}#emails`),
     });
 
     const result = await sendPollEmail({

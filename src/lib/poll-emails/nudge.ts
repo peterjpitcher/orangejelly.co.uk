@@ -2,6 +2,8 @@ import { escapeHtml } from '@/lib/email';
 import {
   MUTED,
   fallbackLink,
+  manageEmailsHtml,
+  manageEmailsText,
   primaryButton,
   sanitiseSubjectValue,
   wrapHtml,
@@ -23,6 +25,8 @@ export interface NudgeEmailInput {
   bestOption: { label: string; yesCount: number } | null;
   participantUrl: string;
   organiserUrl: string;
+  /** The organiser page's email switch. Printed so the way out is visible, not only a header. */
+  manageEmailsUrl: string;
 }
 
 /**
@@ -40,8 +44,15 @@ export interface NudgeEmailInput {
  * into one poll, not a mailing list. Carries List-Unsubscribe (see unsubscribe.ts).
  */
 export function buildNudgeEmail(input: NudgeEmailInput): BuiltEmail {
-  const { organiserName, pollTitle, responderCount, bestOption, participantUrl, organiserUrl } =
-    input;
+  const {
+    organiserName,
+    pollTitle,
+    responderCount,
+    bestOption,
+    participantUrl,
+    organiserUrl,
+    manageEmailsUrl,
+  } = input;
 
   const subject = `A quick nudge: "${sanitiseSubjectValue(pollTitle)}" is still open`;
 
@@ -66,7 +77,9 @@ Happy with what you've got? Confirm the time and everyone gets told:
 
   ${organiserUrl}
 
-This is the only nudge we'll send about this poll.`);
+This is the only nudge we'll send about this poll.
+
+${manageEmailsText(manageEmailsUrl)}`);
 
   const standingHtml =
     responderCount === 0 || !bestOption
@@ -93,7 +106,8 @@ This is the only nudge we'll send about this poll.`);
 
   <p style="margin:0 0 16px;font-size:14px;color:${MUTED};">
     This is the only nudge we&rsquo;ll send about this poll.
-  </p>`);
+  </p>
+  ${manageEmailsHtml(manageEmailsUrl)}`);
 
   return { subject, html, text };
 }

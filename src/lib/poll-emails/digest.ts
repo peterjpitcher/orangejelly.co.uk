@@ -3,6 +3,8 @@ import {
   HAIRLINE,
   MUTED,
   fallbackLink,
+  manageEmailsHtml,
+  manageEmailsText,
   primaryButton,
   sanitiseSubjectValue,
   wrapHtml,
@@ -32,6 +34,8 @@ export interface DigestEmailInput {
   /** Everyone who has responded at all, not just since the last digest. */
   totalResponders: number;
   organiserUrl: string;
+  /** The organiser page's email switch. Printed so the way out is visible, not only a header. */
+  manageEmailsUrl: string;
 }
 
 /**
@@ -47,7 +51,15 @@ export interface DigestEmailInput {
  * exposed in one.
  */
 export function buildDigestEmail(input: DigestEmailInput): BuiltEmail {
-  const { organiserName, pollTitle, newNames, tallies, totalResponders, organiserUrl } = input;
+  const {
+    organiserName,
+    pollTitle,
+    newNames,
+    tallies,
+    totalResponders,
+    organiserUrl,
+    manageEmailsUrl,
+  } = input;
 
   const newCount = newNames.length;
   const countPhrase = newCount === 1 ? '1 new response' : `${newCount} new responses`;
@@ -83,7 +95,9 @@ See the full picture and confirm a time:
 That link is private to you. Anyone who has it can confirm the time, close the
 poll and delete responses.
 
-We batch these, so you'll get at most one an hour, however many people respond.`);
+We batch these, so you'll get at most one an hour, however many people respond.
+
+${manageEmailsText(manageEmailsUrl)}`);
 
   // Every count carries a glyph AND a word ("✓ Yes 4"), never a colour swatch
   // alone. Email clients strip CSS unpredictably, so a count that only reads as
@@ -127,7 +141,8 @@ ${htmlTallies}
   </p>
   <p style="margin:0 0 16px;font-size:14px;color:${MUTED};">
     We batch these, so you&rsquo;ll get at most one an hour, however many people respond.
-  </p>`);
+  </p>
+  ${manageEmailsHtml(manageEmailsUrl)}`);
 
   return { subject, html, text };
 }

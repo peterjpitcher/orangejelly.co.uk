@@ -26,6 +26,7 @@ import {
   type UpdateResponseInput,
 } from '@/lib/validation/poll-responses';
 import { getParticipantView } from '@/lib/db/polls';
+import { notifyOrganiserOfResponse } from '@/lib/poll-digest';
 import { resolveEditParticipant } from '@/app/availability/p/poll-data';
 
 /**
@@ -184,6 +185,11 @@ export async function submitResponse(
 
   revalidateParticipantPaths(participantToken);
 
+  // After the write, never before it, and it never throws: the answer is already
+  // stored, so a failed digest must not become an error for the person answering.
+  // It is awaited because a serverless function stops once the response is sent.
+  await notifyOrganiserOfResponse(view.poll.id);
+
   // The edit link is returned for the screen and delivered nowhere else. There
   // is no participant email, dropped deliberately (Peter, 16 July 2026),
   // because it would have mailed an address that an anonymous caller typed into
@@ -268,6 +274,10 @@ export async function updateResponse(
 
   revalidateParticipantPaths(resolved.poll.participant_token);
   revalidatePath(`/availability/p/${resolved.poll.participant_token}/edit/${editToken}`);
+
+  // An edit is news too (§4.2 counts from poll_responses.updated_at). Same rules
+  // as a first answer: after the write, and never an error for the participant.
+  await notifyOrganiserOfResponse(resolved.poll.id);
 
   return { success: true };
 }

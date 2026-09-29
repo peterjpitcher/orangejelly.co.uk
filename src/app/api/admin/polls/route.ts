@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { getAllowedAdminEmails, isAllowedAdmin } from '@/lib/admin-auth';
+import { requireAdmin } from '@/lib/admin-auth';
 import { getSupabaseAdminClient } from '@/lib/db/supabase-admin';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 
@@ -17,40 +17,29 @@ export const fetchCache = 'force-no-store';
  *
  * This returns organiser tokens, which are the strongest capability the poll
  * feature issues: whoever holds one can confirm the time, delete responses and
- * delete the poll. So the endpoint is gated exactly like every other /api/admin
- * route: a bearer token verified WITH Supabase and checked against the email
- * allowlist. A member of the public cannot reach this list, and the dashboard
- * that renders it is only useful to the person who can.
+ * delete the poll. So the endpoint sits behind the shared gate every /api/admin
+ * route uses, `requireAdmin`, and never an inline copy of it.
+ *
+ * ONLY THE ADMIN'S OWN POLLS. `/availability/new` is public, so the table also
+ * holds polls members of the public set up, with their organiser tokens. Until
+ * 29 September 2026 this listed all of them, which handed every stranger's poll
+ * controls to the dashboard. The dashboard says "every poll you have set up",
+ * and now that is what it gets: polls whose organiser address is the one
+ * Supabase verified for this session. Addresses are stored lowercased
+ * (normaliseEmail in the data layer), so the comparison is too.
  */
 export async function GET(request: Request) {
-  const allowedEmails = getAllowedAdminEmails();
-  if (allowedEmails.length === 0) {
-    return NextResponse.json({ error: 'Admin allowlist is not configured.' }, { status: 500 });
-  }
-
-  const token = request.headers
-    .get('authorization')
-    ?.replace(/^Bearer\s+/i, '')
-    .trim();
-  if (!token) {
-    return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
-  }
+  const auth = await requireAdmin(request);
+  if ('response' in auth) return auth.response;
 
   const supabase = getSupabaseAdminClient();
-
-  const { data: authData, error: authError } = await supabase.auth.getUser(token);
-  if (authError || !authData.user) {
-    return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
-  }
-  if (!isAllowedAdmin(authData.user.email, allowedEmails)) {
-    return NextResponse.json({ error: 'Not authorised.' }, { status: 403 });
-  }
 
   const { data: polls, error } = await supabase
     .from('polls')
     .select(
       'id, title, status, organiser_token, participant_token, option_kind, confirmed_option_id, expires_at, created_at'
     )
+    .eq('organiser_email', auth.email.trim().toLowerCase())
     .order('created_at', { ascending: false });
 
   if (error) {

@@ -1,6 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { confirmOption, deletePoll, deleteResponse, setPollOpen } from './poll-organiser';
+import {
+  confirmOption,
+  deletePoll,
+  deleteResponse,
+  setPollOpen,
+  setUpdateEmails,
+} from './poll-organiser';
 
 /**
  * Organiser action tests.
@@ -23,6 +29,7 @@ const storeDeletePoll = vi.fn();
 const getOrganiserView = vi.fn();
 const getConfirmRecipients = vi.fn();
 const recordConfirmNotifyFailures = vi.fn();
+const setDigestOptOut = vi.fn();
 
 vi.mock('@/lib/db/polls', () => ({
   ALREADY_CONFIRMED: 'ALREADY_CONFIRMED',
@@ -34,6 +41,8 @@ vi.mock('@/lib/db/polls', () => ({
   getOrganiserView: (...args: unknown[]) => getOrganiserView(...args),
   getConfirmRecipients: (...args: unknown[]) => getConfirmRecipients(...args),
   recordConfirmNotifyFailures: (...args: unknown[]) => recordConfirmNotifyFailures(...args),
+  POLL_NOT_FOUND: 'POLL_NOT_FOUND',
+  setDigestOptOut: (...args: unknown[]) => setDigestOptOut(...args),
 }));
 
 const sendPollEmails = vi.fn();
@@ -227,6 +236,50 @@ describe('setPollOpen', () => {
 
     expect(result.error).toContain('Too many attempts');
     expect(closePoll).not.toHaveBeenCalled();
+  });
+});
+
+describe('setUpdateEmails', () => {
+  it('should turn the update emails off', async () => {
+    setDigestOptOut.mockResolvedValue({ stored: true });
+
+    const result = await setUpdateEmails(TOKEN, false);
+
+    expect(result).toEqual({ success: true });
+    expect(setDigestOptOut).toHaveBeenCalledWith(TOKEN, true);
+  });
+
+  it('should turn them back on, because an unsubscribe can be a mistake', async () => {
+    setDigestOptOut.mockResolvedValue({ stored: true });
+
+    const result = await setUpdateEmails(TOKEN, true);
+
+    expect(result).toEqual({ success: true });
+    expect(setDigestOptOut).toHaveBeenCalledWith(TOKEN, false);
+  });
+
+  it('should refuse a malformed token without touching the database', async () => {
+    const result = await setUpdateEmails('not a token', false);
+
+    expect(result.error).toBe('That link is not valid.');
+    expect(setDigestOptOut).not.toHaveBeenCalled();
+  });
+
+  it('should give the dead-link answer for a poll that is gone', async () => {
+    setDigestOptOut.mockResolvedValue({ stored: false, error: 'POLL_NOT_FOUND' });
+
+    const result = await setUpdateEmails(TOKEN, false);
+
+    expect(result.error).toBe('That link is not valid.');
+  });
+
+  it('should show a failure rather than pretend it switched', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    setDigestOptOut.mockResolvedValue({ stored: false, error: 'connection reset' });
+
+    const result = await setUpdateEmails(TOKEN, false);
+
+    expect(result.error).toBe('The poll was not updated. Please try again.');
   });
 });
 

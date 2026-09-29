@@ -779,6 +779,41 @@ export async function reopenPoll(organiserToken: string): Promise<StoredResult> 
 }
 
 /**
+ * The sentinel `setDigestOptOut` returns when no poll holds the token. Lets the
+ * one-click unsubscribe tell a dead link (404) from a database fault (500).
+ */
+export const POLL_NOT_FOUND = 'POLL_NOT_FOUND';
+
+/**
+ * Turns the organiser's recurring emails, the digest and the nudge, off or on.
+ *
+ * Scoped by organiser token and nothing else, like every organiser write. Both
+ * directions are idempotent, because a mail client may send the one-click POST
+ * more than once. The one-off emails (verify, links, confirmation, and the
+ * deadline reminder the organiser asked for by setting a deadline) ignore it.
+ */
+export async function setDigestOptOut(
+  organiserToken: string,
+  optOut: boolean
+): Promise<StoredResult> {
+  try {
+    const supabase = requireAdminClient();
+    const { data, error } = await supabase
+      .from('polls')
+      .update({ digest_opt_out: optOut })
+      .eq('organiser_token', organiserToken)
+      .select('id')
+      .maybeSingle();
+
+    if (error) return { stored: false, error: error.message };
+    if (!data) return { stored: false, error: POLL_NOT_FOUND };
+    return { stored: true };
+  } catch (error) {
+    return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
+  }
+}
+
+/**
  * The sentinel `confirmOption` returns when its conditional update matched no
  * row. The action maps it to user-facing copy; nothing else should match on it.
  */
