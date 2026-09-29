@@ -1,3 +1,29 @@
+# Availability poll: production readiness (29 September 2026)
+
+**Goal:** close the four gaps a read-only audit of `/availability` found, then ship. Peter approved
+"fix everything ... then deploy" on 29 September 2026. Branch `fix/poll-production-readiness`.
+
+- [x] Digest: nothing ever set `digest_pending_since`, so the "new responses" email never sent.
+      Mark it on every vote and edit, send lazily with an atomic claim (SPEC §4.2), and have the
+      cron flush through the same code.
+- [x] Unsubscribe: `List-Unsubscribe` pointed at a route that did not exist. Add the one-click
+      POST route, a GET that lands on the organiser page, an on/off control there, and a visible
+      link in the digest and nudge bodies.
+- [x] Verification email failure: the organiser was told "we've sent your links" when nothing
+      went. Say so on screen, keep the resend control, test with a failing sender.
+- [x] Admin gate: `/api/admin/polls` and `/api/admin/stats` inline their own bearer check. Move
+      both to `requireAdmin`; the polls dashboard lists only the signed-in admin's own polls,
+      which is what its copy ("every poll you have set up") already says.
+- [x] Lint, type-check, tests in London and UTC, build.
+- [ ] PR, merge, confirm the production deploy, probe the live routes.
+
+**Results (29 September 2026):** lint, type-check and build pass; the full suite passes in London
+and UTC (117 files, 2,000 tests, 4 skipped). New tests cover the digest trigger and its window,
+the one-click route, the email switch, the failed-email screen and the admin poll filter.
+
+**Not done here, on purpose:** a live test poll on production. Creating one needs the Turnstile
+bot check, which an agent must not complete, so it is left for Peter.
+
 # BII Summer Hub 2026 — task plan
 
 **Goal:** A summer hub for the BII ("British Institute of Innkeeping") magazine feature *"Five ways to turn summer footfall into summer revenue"*, reachable via a printed QR code. Reuse the existing seasonal-hub structure; do NOT duplicate existing guides — link each idea to its (renovated) existing guide.
