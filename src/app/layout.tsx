@@ -181,18 +181,23 @@ export default function RootLayout({
       contactOption: ['HearingImpairedSupported'],
       areaServed: 'GB',
     },
+    /*
+     * Address and coordinates match The Anchor's own record (SSOT.json in the
+     * the-anchor.pub repo, coordinates confirmed 2026-03-22). The Anchor is on
+     * Horton Road; an earlier "20 High Street" here was never its address.
+     */
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'The Anchor, 20 High Street',
+      streetAddress: 'The Anchor, Horton Road',
       addressLocality: 'Stanwell Moor',
-      addressRegion: 'Staines',
+      addressRegion: 'Surrey',
       postalCode: 'TW19 6AQ',
       addressCountry: 'GB',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 51.4583,
-      longitude: -0.4867,
+      latitude: 51.462509,
+      longitude: -0.502067,
     },
     sameAs: ['https://www.the-anchor.pub'],
   };
