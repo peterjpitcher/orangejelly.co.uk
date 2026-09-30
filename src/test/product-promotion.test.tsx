@@ -38,6 +38,17 @@ describe('the promoted product', () => {
     expect(copy).not.toMatch(/\bsav(e|es|ed|ing|ings)\b/i);
   });
 
+  it('promises no launch date until Meta approves the App Review', () => {
+    // Peter, 30 September 2026: "coming soon" only. Cheers cannot open to everyone
+    // before Meta's review, so a month here would be a promise the site cannot keep.
+    // Change this test deliberately when the review is approved.
+    const copy = Object.values(PROMOTED_PRODUCT ?? {}).join(' ');
+    expect(PROMOTED_PRODUCT?.eyebrow).toBe('Coming soon');
+    expect(copy).not.toMatch(
+      /\b(January|February|March|April|May|June|July|August|September|October|November|December|20\d\d)\b/
+    );
+  });
+
   it.each([
     ['the homepage', () => <HomePage />],
     ['the Pubs page', () => <PubMarketingPage />],

@@ -15,8 +15,9 @@
  * hospitality", because the homepage describes the company by market, not by sector.
  * "Venues" is the word that works on both the homepage and the Pubs page.
  *
- * The launch month is Peter's expectation (30 September 2026). Cheers can only open to
- * everyone once Meta approves its App Review, so if that slips, change the eyebrow.
+ * No launch month, on purpose (Peter, 30 September 2026). Cheers can only open to
+ * everyone once Meta approves its App Review, so a date here would be a promise the
+ * site cannot keep. Add the month to the eyebrow once the review is approved.
  */
 export interface PromotedProduct {
   name: string;
@@ -35,7 +36,7 @@ export const PROMOTED_PRODUCT: PromotedProduct | null = {
   name: 'Cheers',
   href: 'https://cheers.orangejelly.co.uk/',
   footerLabel: 'Cheers (coming soon)',
-  eyebrow: 'Coming soon · expected November 2026',
+  eyebrow: 'Coming soon',
   title: 'Meet Cheers, the social media tool we built for venues.',
   blurb:
     "Cheers turns one idea into posts for Facebook and Instagram, written in your venue's voice and published on time. You approve every post before it goes out. It already runs at The Anchor, our own venue.",
