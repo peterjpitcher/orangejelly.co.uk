@@ -635,3 +635,39 @@ describe('invitee notices and headers', () => {
     expect(headers['List-Unsubscribe-Post']).toBe('List-Unsubscribe=One-Click');
   });
 });
+
+describe('buildConfirmEmail for people invited by email', () => {
+  it('should greet an invitee who never gave a name without a blank', () => {
+    const email = buildConfirmEmail({ ...confirmInput, displayName: '', isInviteeCopy: true });
+    expect(email.text).toMatch(/^Hi,$/m);
+    expect(email.html).toContain('Hi,</p>');
+    expect(email.text).not.toContain('Hi ,');
+  });
+
+  it('should say why they are hearing about a time they did not vote on', () => {
+    const email = buildConfirmEmail({ ...confirmInput, displayName: '', isInviteeCopy: true });
+    expect(email.text).toContain('Peter Pitcher invited you, so here is the time');
+  });
+
+  it('should carry the Article 14 notice to an invitee and Article 13 to a voter', () => {
+    const invitee = buildConfirmEmail({ ...confirmInput, displayName: '', isInviteeCopy: true });
+    expect(invitee.text).toContain('Peter Pitcher gave us your email address');
+    expect(invitee.text).not.toContain('You gave us these details yourself');
+
+    const voter = buildConfirmEmail(confirmInput);
+    expect(voter.text).toContain('You gave us these details yourself');
+    expect(voter.text).not.toContain('gave us your email address');
+  });
+
+  it('should tell the organiser truthfully who has been emailed', () => {
+    const withInvites = buildConfirmEmail({
+      ...confirmInput,
+      isOrganiserCopy: true,
+      invitedByEmail: true,
+    });
+    expect(withInvites.text).toContain('everyone you invited');
+
+    const without = buildConfirmEmail({ ...confirmInput, isOrganiserCopy: true });
+    expect(without.text).not.toContain('everyone you invited');
+  });
+});

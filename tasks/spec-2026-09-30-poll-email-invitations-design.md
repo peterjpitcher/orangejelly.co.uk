@@ -48,6 +48,17 @@ happened. Deleted with the poll (60-day retention). RLS on, no anon or authentic
 
 ## Delivery
 
-Two deployable parts. Part 1: table, invitations, personal links, tracking, stop switch. Part 2:
-the reminder pass and the confirmation to invitees who never answered, which also respects the
-stop switch for people who did answer.
+Built as two parts (part 1: table, invitations, personal links, tracking, stop switch; part 2: the
+reminder pass and the confirmation to invitees who never answered, respecting the stop switch).
+They ship in one deploy, because part 1's copy promises the reminder and the confirmation.
+
+## Changes after independent review (30 September 2026)
+
+- `answered_via` (migration `20260930114525`): only an answer through the personal link unlocks
+  "change your answers" there. An answer on the shared link with the same address marks the person
+  answered but cannot take over or lock out their invite link.
+- Invitations are claimed before sending and sent in one Resend batch request, so two overlapping
+  sends cannot email anyone twice and 50 invitations no longer take 45 seconds.
+- Duplicate adds are skipped (upsert), and a failed read of existing answers stops the add.
+- On the verify path the organiser's links email goes before queued invitations, and the fallback
+  verify email goes to the address Supabase verified, not the one typed.

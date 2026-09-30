@@ -8,23 +8,32 @@ import type * as EmailModule from './email';
  * real, so the assertions are on the message people actually get.
  */
 
-const sendPollEmail = vi.fn();
+const sendPollEmailBatch = vi.fn();
 const listUnsentInvitees = vi.fn();
-const markInvited = vi.fn();
+const claimInvitees = vi.fn();
+const releaseInvitees = vi.fn();
 
 vi.mock('./email', async (importOriginal) => {
   const actual = await importOriginal<typeof EmailModule>();
   return {
     ...actual,
-    sendPollEmail: (message: unknown) => sendPollEmail(message),
-    POLL_EMAIL_SEND_INTERVAL_MS: 0,
+    sendPollEmailBatch: (messages: unknown) => sendPollEmailBatch(messages),
   };
 });
 
 vi.mock('./db/poll-invitees', () => ({
   listUnsentInvitees: (pollId: string) => listUnsentInvitees(pollId),
-  markInvited: (id: string) => markInvited(id),
+  claimInvitees: (ids: string[], at: string) => claimInvitees(ids, at),
+  releaseInvitees: (ids: string[], at: string) => releaseInvitees(ids, at),
 }));
+
+/** The messages the one batch call carried. */
+const sent = (): Array<{
+  to: string;
+  text: string;
+  replyTo?: string;
+  headers: Record<string, string>;
+}> => sendPollEmailBatch.mock.calls[0][0];
 
 let pollRow: Record<string, unknown> | null = null;
 
@@ -72,61 +81,62 @@ beforeEach(() => {
     entries_close_at: null,
   };
   listUnsentInvitees.mockResolvedValue([invitee(1), invitee(2)]);
-  markInvited.mockResolvedValue(undefined);
-  sendPollEmail.mockResolvedValue({ success: true });
+  claimInvitees.mockImplementation(async (ids: string[]) => new Set(ids));
+  releaseInvitees.mockResolvedValue(undefined);
+  sendPollEmailBatch.mockImplementation(async (messages: unknown[]) => messages.map(() => true));
 });
 
 describe('sendPendingInvitations', () => {
-  it('should email each person their own link, one email each', async () => {
+  it('should email each person their own link, one message each, in one batch', async () => {
     const result = await sendPendingInvitations('poll-1');
 
     expect(result).toEqual({ sent: 2, failed: 0 });
-    expect(sendPollEmail).toHaveBeenCalledTimes(2);
-    const first = sendPollEmail.mock.calls[0][0];
-    expect(first.to).toBe('person1@example.com');
-    expect(first.text).toContain(`/availability/i/${invitee(1).invite_token}`);
+    expect(sendPollEmailBatch).toHaveBeenCalledTimes(1);
+    expect(sent()).toHaveLength(2);
+    expect(sent()[0].to).toBe('person1@example.com');
+    expect(sent()[0].text).toContain(`/availability/i/${invitee(1).invite_token}`);
     // Never anyone else's link, and never everyone in one "to".
-    expect(first.text).not.toContain(invitee(2).invite_token);
+    expect(sent()[0].text).not.toContain(invitee(2).invite_token);
   });
 
   it("should send replies to the organiser and carry the invitee's own unsubscribe", async () => {
     await sendPendingInvitations('poll-1');
 
-    const message = sendPollEmail.mock.calls[0][0];
-    expect(message.replyTo).toBe('peter@orangejelly.co.uk');
-    expect(message.headers['List-Unsubscribe']).toContain(
+    expect(sent()[0].replyTo).toBe('peter@orangejelly.co.uk');
+    expect(sent()[0].headers['List-Unsubscribe']).toContain(
       `/availability/i/${invitee(1).invite_token}/unsubscribe`
     );
   });
 
-  it('should stamp a person only once their email has gone', async () => {
-    sendPollEmail
-      .mockResolvedValueOnce({ success: true })
-      .mockResolvedValueOnce({ error: 'Failed to send email.' });
+  it('should claim people before sending, so an overlapping send cannot email them twice', async () => {
+    // The other run won invitee-1.
+    claimInvitees.mockResolvedValue(new Set(['invitee-2']));
+
+    const result = await sendPendingInvitations('poll-1');
+
+    expect(result).toEqual({ sent: 1, failed: 0 });
+    expect(sent().map((message) => message.to)).toEqual(['person2@example.com']);
+    expect(claimInvitees.mock.invocationCallOrder[0]).toBeLessThan(
+      sendPollEmailBatch.mock.invocationCallOrder[0]
+    );
+  });
+
+  it('should release anyone Resend refused, so they show as unsent and retry', async () => {
+    sendPollEmailBatch.mockResolvedValue([true, false]);
 
     const result = await sendPendingInvitations('poll-1');
 
     expect(result).toEqual({ sent: 1, failed: 1 });
-    expect(markInvited).toHaveBeenCalledTimes(1);
-    expect(markInvited).toHaveBeenCalledWith('invitee-1');
+    expect(releaseInvitees).toHaveBeenCalledWith(['invitee-2'], expect.any(String));
   });
 
-  it('should carry on past a send that throws', async () => {
-    sendPollEmail.mockRejectedValueOnce(new Error('network')).mockResolvedValueOnce({
-      success: true,
-    });
+  it('should report everyone as failed when the whole batch is refused', async () => {
+    sendPollEmailBatch.mockResolvedValue([false, false]);
 
     const result = await sendPendingInvitations('poll-1');
 
-    expect(result).toEqual({ sent: 1, failed: 1 });
-  });
-
-  it('should count a sent email as sent even if stamping it fails', async () => {
-    markInvited.mockRejectedValue(new Error('database down'));
-
-    const result = await sendPendingInvitations('poll-1');
-
-    expect(result).toEqual({ sent: 2, failed: 0 });
+    expect(result).toEqual({ sent: 0, failed: 2 });
+    expect(releaseInvitees).toHaveBeenCalledWith(['invitee-1', 'invitee-2'], expect.any(String));
   });
 
   it('should send nothing for a poll that is not live', async () => {
@@ -136,7 +146,8 @@ describe('sendPendingInvitations', () => {
     const result = await sendPendingInvitations('poll-1');
 
     expect(result).toEqual({ sent: 0, failed: 0 });
-    expect(sendPollEmail).not.toHaveBeenCalled();
+    expect(claimInvitees).not.toHaveBeenCalled();
+    expect(sendPollEmailBatch).not.toHaveBeenCalled();
   });
 
   it('should name the deadline when the organiser set one', async () => {
@@ -145,7 +156,7 @@ describe('sendPendingInvitations', () => {
     await sendPendingInvitations('poll-1');
 
     // 16:00 UTC is 5pm in London in October (BST).
-    expect(sendPollEmail.mock.calls[0][0].text).toContain('Please answer by');
-    expect(sendPollEmail.mock.calls[0][0].text).toContain('5:00pm');
+    expect(sent()[0].text).toContain('Please answer by');
+    expect(sent()[0].text).toContain('5:00pm');
   });
 });

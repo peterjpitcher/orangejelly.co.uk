@@ -1,6 +1,11 @@
-import { sendPollEmail, POLL_EMAIL_SEND_INTERVAL_MS } from '@/lib/email';
+import { sendPollEmailBatch, type PollEmail } from '@/lib/email';
 import { getSupabaseAdminClient } from '@/lib/db/supabase-admin';
-import { listUnsentInvitees, markInvited, type InviteeRow } from '@/lib/db/poll-invitees';
+import {
+  claimInvitees,
+  listUnsentInvitees,
+  releaseInvitees,
+  type InviteeRow,
+} from '@/lib/db/poll-invitees';
 import type { OptionKind } from '@/lib/db/polls';
 import { buildInvitationEmail, buildInviteeUnsubscribeHeaders } from '@/lib/poll-emails';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
@@ -11,11 +16,14 @@ import { getAbsoluteUrl } from '@/lib/site-config';
 /**
  * Sends the invitations a signed-in admin asked for. See migration 20260930113639.
  *
- * Works through the invitees not yet sent, not answered and not opted out, one
- * email each, paced for Resend's rate limit. A person is stamped as invited only
- * after Resend accepts their email, so a failure leaves them in the "not sent"
- * set that the organiser's page shows and retries. Nothing here throws on a
- * single bad send: one address must not stop the rest.
+ * Works through the invitees not yet sent, not answered and not opted out: one
+ * email each, sent through Resend's batch API so fifty invitations are one
+ * request rather than forty-five seconds of paced sends inside a server action.
+ *
+ * Each person is claimed (stamped) before their email is built, so two sends
+ * overlapping cannot both email them; anyone whose email Resend refuses is
+ * released again, back into the "not sent" set the organiser's page shows and
+ * retries. Nothing here throws on a single bad address.
  *
  * Only for a live poll. Invitations for a poll still waiting on its organiser's
  * email confirmation stay queued and go when verification opens it.
@@ -42,10 +50,6 @@ interface InvitationOption {
   option_date: IsoDate | null;
   starts_at: string | null;
   ends_at: string | null;
-}
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /** Everything the invitation says that is the same for every person on the poll. */
@@ -95,7 +99,7 @@ export function buildInvitationMessage(
   context: NonNullable<Awaited<ReturnType<typeof readInvitationPoll>>>,
   invitee: Pick<InviteeRow, 'email' | 'invite_token'>,
   isReminder = false
-): Parameters<typeof sendPollEmail>[0] {
+): PollEmail {
   const { poll, optionLabels, deadlineLabel } = context;
   const inviteUrl = getAbsoluteUrl(`/availability/i/${invitee.invite_token}`);
 
@@ -127,44 +131,35 @@ export async function sendPendingInvitations(pollId: string): Promise<Invitation
   if (!context || context.poll.status !== 'open') return { sent: 0, failed: 0 };
 
   const pending = await listUnsentInvitees(pollId);
-  let sent = 0;
-  let failed = 0;
+  if (pending.length === 0) return { sent: 0, failed: 0 };
 
-  for (const [index, invitee] of pending.entries()) {
-    let delivered = false;
+  const claimedAt = new Date().toISOString();
+  const won = await claimInvitees(
+    pending.map((invitee) => invitee.id),
+    claimedAt
+  );
+  const mine = pending.filter((invitee) => won.has(invitee.id));
+  if (mine.length === 0) return { sent: 0, failed: 0 };
+
+  const accepted = await sendPollEmailBatch(
+    mine.map((invitee) => buildInvitationMessage(context, invitee))
+  );
+
+  const refused = mine.filter((_invitee, index) => !accepted[index]).map((invitee) => invitee.id);
+  if (refused.length > 0) {
+    // The address is never logged: it is someone else's, given to us by the organiser.
+    console.error(
+      `[poll-email] ${refused.length} of ${mine.length} invitations failed for poll ${pollId}.`
+    );
     try {
-      const result = await sendPollEmail(buildInvitationMessage(context, invitee));
-      delivered = !result.error;
+      await releaseInvitees(refused, claimedAt);
     } catch (error) {
-      // The address is never logged: it is someone else's, given to us by the organiser.
+      // They would then read as sent. Loud, because the organiser cannot see it.
       console.error(
-        `[poll-email] Invitation not sent for poll ${pollId}: ${scrubTokens(String(error))}`
+        `[poll-email] Failed invitations not released for poll ${pollId}: ${scrubTokens(String(error))}`
       );
     }
-
-    if (delivered) {
-      sent++;
-      try {
-        await markInvited(invitee.id);
-      } catch (error) {
-        // The email went. Failing to stamp it only risks a duplicate if the
-        // organiser retries, which is better than reporting a sent email as failed.
-        console.error(
-          `[poll-email] Invitation sent but not stamped for poll ${pollId}: ${scrubTokens(String(error))}`
-        );
-      }
-    } else {
-      failed++;
-    }
-
-    if (index < pending.length - 1) await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
   }
 
-  if (failed > 0) {
-    console.error(
-      `[poll-email] ${failed} of ${pending.length} invitations failed for poll ${pollId}.`
-    );
-  }
-
-  return { sent, failed };
+  return { sent: mine.length - refused.length, failed: refused.length };
 }

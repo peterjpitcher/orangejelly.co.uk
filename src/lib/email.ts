@@ -125,30 +125,11 @@ function resolvePollSender(): string | undefined {
 }
 
 /**
- * Send one availability-poll email via Resend.
- *
- * Best-effort, exactly like sendLeadNotification: the database write has already
- * committed by the time this is called, so a failed send returns `{ error }` and
- * logs. It must never throw and never undo a write.
- *
- * Configuration (see .env.example):
- *   RESEND_API_KEY:     Resend API key
- *   POLL_FROM_EMAIL:    optional; defaults to CONTACT_FROM_EMAIL
- *   CONTACT_FROM_EMAIL: the verified sender on auth.orangejelly.co.uk
- *
- * Every log line is scrubbed: the html and text bodies carry capability URLs,
- * and Resend echoes request detail back in its errors. An unscrubbed dump of one
- * would put a poll token in the logs, which is the one leak we control.
+ * The three things every poll send must have before it may call Resend: a key,
+ * a verified sender, and a production base URL. Shared by the single and the
+ * batch sender so neither can skip one.
  */
-export async function sendPollEmail({
-  to,
-  subject,
-  html,
-  text,
-  replyTo,
-  attachments,
-  headers,
-}: PollEmail): Promise<{ success?: boolean; error?: string }> {
+function resolvePollSendConfig(): { apiKey: string; from: string } | { error: string } {
   const apiKey = process.env.RESEND_API_KEY;
   const from = resolvePollSender();
 
@@ -174,6 +155,38 @@ export async function sendPollEmail({
     );
     return { error: 'Refusing to send: base URL is not the production host.' };
   }
+
+  return { apiKey, from };
+}
+
+/**
+ * Send one availability-poll email via Resend.
+ *
+ * Best-effort, exactly like sendLeadNotification: the database write has already
+ * committed by the time this is called, so a failed send returns `{ error }` and
+ * logs. It must never throw and never undo a write.
+ *
+ * Configuration (see .env.example):
+ *   RESEND_API_KEY:     Resend API key
+ *   POLL_FROM_EMAIL:    optional; defaults to CONTACT_FROM_EMAIL
+ *   CONTACT_FROM_EMAIL: the verified sender on auth.orangejelly.co.uk
+ *
+ * Every log line is scrubbed: the html and text bodies carry capability URLs,
+ * and Resend echoes request detail back in its errors. An unscrubbed dump of one
+ * would put a poll token in the logs, which is the one leak we control.
+ */
+export async function sendPollEmail({
+  to,
+  subject,
+  html,
+  text,
+  replyTo,
+  attachments,
+  headers,
+}: PollEmail): Promise<{ success?: boolean; error?: string }> {
+  const config = resolvePollSendConfig();
+  if ('error' in config) return { error: config.error };
+  const { apiKey, from } = config;
 
   try {
     const resend = new Resend(apiKey);
@@ -259,4 +272,77 @@ export async function sendPollEmails(
   }
 
   return { sent, failed };
+}
+
+/** Resend's ceiling on one batch request. */
+export const POLL_EMAIL_BATCH_SIZE = 100;
+
+/**
+ * Send many poll emails in as few requests as possible: Resend's batch API, up
+ * to 100 per request, one message per recipient.
+ *
+ * For the invitations, where one poll can mean 50 emails. Paced one at a time
+ * that is about 45 seconds inside a server action, close enough to the platform
+ * limit that a slow day would cut it off halfway. A batch is one request.
+ *
+ * Still one message per recipient, never everyone in one `to`. No attachments:
+ * the batch API does not take them, so the confirmation fan-out, which carries
+ * the .ics, stays on sendPollEmails.
+ *
+ * Returns whether each message was accepted, in the order given. Validation is
+ * permissive, so one bad address fails alone rather than taking the batch with
+ * it. Never throws.
+ */
+export async function sendPollEmailBatch(messages: PollEmail[]): Promise<boolean[]> {
+  const accepted = messages.map(() => false);
+  if (messages.length === 0) return accepted;
+
+  const config = resolvePollSendConfig();
+  if ('error' in config) return accepted;
+
+  const resend = new Resend(config.apiKey);
+
+  for (let start = 0; start < messages.length; start += POLL_EMAIL_BATCH_SIZE) {
+    const chunk = messages.slice(start, start + POLL_EMAIL_BATCH_SIZE);
+
+    try {
+      const { data, error } = await resend.batch.send(
+        chunk.map(({ to, subject, html, text, replyTo, headers }) => ({
+          from: config.from,
+          to,
+          subject,
+          html,
+          text,
+          replyTo,
+          headers,
+        })),
+        { batchValidation: 'permissive' }
+      );
+
+      if (error) {
+        console.error(
+          '[poll-email] Resend rejected the batch:',
+          scrubTokens(JSON.stringify(error))
+        );
+        continue;
+      }
+
+      const failedIndexes = new Set((data?.errors ?? []).map((failure) => failure.index));
+      chunk.forEach((_message, index) => {
+        accepted[start + index] = !failedIndexes.has(index);
+      });
+
+      if (failedIndexes.size > 0) {
+        console.error(
+          `[poll-email] ${failedIndexes.size} of ${chunk.length} batch emails were refused.`
+        );
+      }
+      // Recipients are not logged, as with the single sender.
+      console.info('[poll-email] Batch sent', { accepted: chunk.length - failedIndexes.size });
+    } catch (err) {
+      console.error('[poll-email] Unexpected error sending a batch:', scrubTokens(String(err)));
+    }
+  }
+
+  return accepted;
 }

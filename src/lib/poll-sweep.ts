@@ -25,12 +25,15 @@ import {
   type DigestPollRow,
 } from '@/lib/poll-digest';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
+import { findInviteesDueForReminder, markReminded } from '@/lib/db/poll-invitees';
+import { buildInvitationMessage, readInvitationPoll } from '@/lib/poll-invitations';
 import { scrubTokens } from '@/lib/poll-tokens';
 import { getAbsoluteUrl } from '@/lib/site-config';
 import type { IsoDate } from '@/lib/dateUtils';
 
 /**
- * The six passes behind the daily poll cron. See SPEC §3.8.
+ * The seven passes behind the daily poll cron. See SPEC §3.8; the seventh, the
+ * invitation reminder, came with email invitations on 30 September 2026.
  *
  * Split out of the route handler because a route handler that also contains the
  * work cannot be tested without a request, and this is the one unattended job in
@@ -94,6 +97,7 @@ export interface PollSweepReport {
   digests: SweepEmailResult;
   nudges: SweepEmailResult;
   deadlineReminders: SweepEmailResult;
+  inviteReminders: SweepEmailResult;
   /** One scrubbed message per FAILED pass. Non-empty means the route returns 500. */
   errors: string[];
 }
@@ -374,6 +378,64 @@ async function runNudgePass(): Promise<SweepEmailResult> {
  * runs both stamping. The organiser address is verified, so a permanent failure
  * that would loop is close to impossible.
  */
+/**
+ * Reminders a night may send to invited people.
+ *
+ * Higher than EMAIL_PASS_LIMIT because one poll can invite up to 50 people and
+ * a reminder a night late may land after the deadline it is reminding about.
+ * Still bounded, because this pass runs last inside the route's 60 seconds:
+ * each send is stamped as it goes, so a timeout loses nothing and the rest go
+ * tomorrow. The nearest deadlines go first.
+ */
+export const INVITE_REMINDER_LIMIT = 40;
+
+/**
+ * Pass 7, the one reminder to invited people who have not answered. Peter's
+ * decision, 30 September 2026. Timing lives in findInviteesDueForReminder.
+ *
+ * Stamped only after a successful send, so a failure retries tomorrow and a
+ * success never repeats.
+ */
+async function runInviteReminderPass(): Promise<SweepEmailResult> {
+  const due = await findInviteesDueForReminder(INVITE_REMINDER_LIMIT);
+  let sent = 0;
+  let failed = 0;
+
+  const contexts = new Map<string, Awaited<ReturnType<typeof readInvitationPoll>>>();
+
+  for (const [index, invitee] of due.entries()) {
+    if (!contexts.has(invitee.poll_id)) {
+      contexts.set(invitee.poll_id, await readInvitationPoll(invitee.poll_id));
+    }
+    const context = contexts.get(invitee.poll_id);
+    if (!context || context.poll.status !== 'open') continue;
+
+    const result = await sendPollEmail(buildInvitationMessage(context, invitee, true));
+    if (result.error) {
+      failed++;
+      // The address is not logged: it is someone else's, given to us by the organiser.
+      console.error(
+        `[poll-email] Invitation reminder not sent for poll ${invitee.poll_id}: ${scrubTokens(result.error)}`
+      );
+    } else {
+      sent++;
+      try {
+        await markReminded(invitee.id);
+      } catch (stampError) {
+        // The reminder went. Failing to stamp it risks a second one tomorrow,
+        // which is better than stopping every reminder after it tonight.
+        console.error(
+          `[poll-email] Invitation reminder sent but not stamped for poll ${invitee.poll_id}: ${errorMessage(stampError)}`
+        );
+      }
+    }
+
+    if (index < due.length - 1) await sleep(POLL_EMAIL_SEND_INTERVAL_MS);
+  }
+
+  return { sent, failed, backlog: due.length === INVITE_REMINDER_LIMIT };
+}
+
 async function runDeadlineReminderPass(): Promise<SweepEmailResult> {
   const supabase = getSupabaseAdminClient();
   let sent = 0;
@@ -441,7 +503,7 @@ const NO_DELETES: SweepDeleteResult = { deleted: 0, backlog: false };
 const NO_EMAILS: SweepEmailResult = { sent: 0, failed: 0, backlog: false };
 
 /**
- * Runs all six passes and reports what actually happened.
+ * Runs all seven passes and reports what actually happened.
  *
  * Never throws. A pass that fails is recorded in `errors` and the next one still
  * runs; the caller turns a non-empty `errors` into a 500.
@@ -460,6 +522,7 @@ export async function runPollSweep(): Promise<PollSweepReport> {
       digests: NO_EMAILS,
       nudges: NO_EMAILS,
       deadlineReminders: NO_EMAILS,
+      inviteReminders: NO_EMAILS,
       errors: ['The poll database is not configured.'],
     };
   }
@@ -498,6 +561,16 @@ export async function runPollSweep(): Promise<PollSweepReport> {
   const digests = await runEmail('digest flush', runDigestPass);
   const nudges = await runEmail('nudge', runNudgePass);
   const deadlineReminders = await runEmail('deadline reminder', runDeadlineReminderPass);
+  const inviteReminders = await runEmail('invitation reminder', runInviteReminderPass);
 
-  return { expired, drafts, rateLimits, digests, nudges, deadlineReminders, errors };
+  return {
+    expired,
+    drafts,
+    rateLimits,
+    digests,
+    nudges,
+    deadlineReminders,
+    inviteReminders,
+    errors,
+  };
 }

@@ -452,6 +452,23 @@ describe('createPoll: email invitations', () => {
     expect(verifyAndOpenPoll).not.toHaveBeenCalled();
   });
 
+  it('should send the fallback verify email to the verified admin address, not the typed one', async () => {
+    // Otherwise whoever holds the typed address could release the admin's poll
+    // and its queued invitations.
+    resolveAdminIdentity.mockResolvedValue({ email: 'peter@orangejelly.co.uk' });
+    verifyAndOpenPoll.mockResolvedValue({ stored: false, error: 'boom' });
+
+    await createPoll(
+      validInput({
+        organiserEmail: 'someone.else@example.com',
+        inviteEmails: 'sam@example.com',
+      } as Partial<CreatePollFormValues>)
+    );
+
+    expect(sendPollEmail).toHaveBeenCalledTimes(1);
+    expect(sendPollEmail.mock.calls[0][0].to).toBe('peter@orangejelly.co.uk');
+  });
+
   it('should leave invitations out entirely when the box is empty', async () => {
     asAdmin();
 
@@ -549,12 +566,16 @@ describe('verifyOrganiserEmail', () => {
     expect(result.links).toBeDefined();
   });
 
-  it('should send any invitations queued while the poll was a draft', async () => {
+  it('should send any invitations queued while the poll was a draft, after the organiser links', async () => {
+    // The verify token is spent by now; the organiser's own links must go first.
     verifyAndOpenPoll.mockResolvedValue(verified);
 
     await verifyOrganiserEmail(TOKEN);
 
     expect(sendPendingInvitations).toHaveBeenCalledWith('poll-1');
+    expect(sendPollEmail.mock.invocationCallOrder[0]).toBeLessThan(
+      sendPendingInvitations.mock.invocationCallOrder[0]
+    );
   });
 
   it('should still report the poll live when the queued invitations throw', async () => {

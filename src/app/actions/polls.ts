@@ -406,7 +406,12 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
       verifyUrl,
     });
 
-    const sent = await sendPollEmail({ to: data.organiserEmail, ...email });
+    // The address the poll is stamped with, not the one typed in the form. They
+    // differ only for a signed-in admin whose fast path fell back to this email,
+    // and then the proof must go to the address Supabase verified: otherwise
+    // whoever holds the typed address could release the admin's poll and its
+    // queued invitations.
+    const sent = await sendPollEmail({ to: organiserEmail, ...email });
     if (sent.error) {
       console.error(
         '[polls] Poll created but verification mail not sent:',
@@ -467,16 +472,6 @@ export async function verifyOrganiserEmail(token: string): Promise<VerifyActionR
   const participantUrl = getAbsoluteUrl(`/availability/p/${poll.participantToken}`);
   const organiserUrl = getAbsoluteUrl(`/availability/o/${poll.organiserToken}`);
 
-  // Invitations queued while the poll was a draft go now it is live. Only a
-  // signed-in admin can queue any, and only when their fast path fell back to
-  // this email, so this is usually a no-op. A failure shows on the organiser's
-  // page as "not sent", with a retry.
-  try {
-    await sendPendingInvitations(poll.id);
-  } catch (error) {
-    console.error('[poll-email] Invitations threw on verify:', scrubTokens(String(error)));
-  }
-
   // Best-effort, and the reason a scanner prefetch consuming the token is
   // survivable: the organiser's links reach them by mail regardless of who or
   // what clicked first.
@@ -494,6 +489,18 @@ export async function verifyOrganiserEmail(token: string): Promise<VerifyActionR
     }
   } catch (error) {
     console.error('[polls] Poll live but links mail threw:', scrubTokens(String(error)));
+  }
+
+  // Invitations queued while the poll was a draft go now it is live, AFTER the
+  // organiser's own links: the verify token is already spent, so if anything
+  // here ran long, the one email the organiser cannot get again must already
+  // be away. Only a signed-in admin can queue any, and only when their fast
+  // path fell back to this email, so this is usually a no-op. A failure shows
+  // on the organiser's page as "not sent", with a retry.
+  try {
+    await sendPendingInvitations(poll.id);
+  } catch (error) {
+    console.error('[poll-email] Invitations threw on verify:', scrubTokens(String(error)));
   }
 
   return {
