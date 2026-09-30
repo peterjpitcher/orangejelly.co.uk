@@ -172,6 +172,8 @@ export const LEAD_BEARING_RELATIONS: readonly string[] = [
   'poll_participants',
   // Joins a named participant to what they answered.
   'poll_responses',
+  // Addresses an organiser typed in to invite people, and their personal tokens.
+  'poll_invitees',
 ];
 
 /**

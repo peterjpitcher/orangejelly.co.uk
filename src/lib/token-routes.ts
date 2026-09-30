@@ -17,6 +17,7 @@
  *
  * `/availability/p/<token>`:      a participant's ballot and edit capability
  * `/availability/o/<token>`:      the organiser's full control of the poll
+ * `/availability/i/<token>`:      one invited person's own ballot link
  * `/availability/verify/<token>`: the magic link, equally a capability
  * `/survey/<slug>/preview/<token>`: a survey's preview link, which shows a draft
  *   before it is public and answers without being counted
@@ -24,7 +25,7 @@
  * Anyone holding one of these URLs *is* the person it was issued to, permanently.
  * There is no login to fall back on.
  */
-export const TOKEN_PATH_PATTERN = /^\/(availability\/(p|o|verify)|survey\/[^/]+\/preview)\//;
+export const TOKEN_PATH_PATTERN = /^\/(availability\/(p|o|i|verify)|survey\/[^/]+\/preview)\//;
 
 /**
  * The whole poll feature, token-bearing or not, including `/availability/new`.

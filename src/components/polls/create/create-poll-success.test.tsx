@@ -99,4 +99,43 @@ describe('create poll success screen', () => {
     expect(await screen.findByText(/We could not send that email/)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: "Your email didn't go" })).toBeInTheDocument();
   });
+
+  it('should say how many invitations went when every one did', () => {
+    render(
+      <SuccessState
+        email="peter@orangejelly.co.uk"
+        resendToken={null}
+        invitations={{ total: 3, sent: 3, failed: 0 }}
+        links={{
+          participantUrl: 'https://www.orangejelly.co.uk/availability/p/p',
+          organiserUrl: 'https://www.orangejelly.co.uk/availability/o/o',
+          organiserToken: 'o',
+        }}
+        invitation={null}
+      />
+    );
+
+    expect(screen.getByText('Invitations sent')).toBeInTheDocument();
+    expect(screen.getByText(/emailed 3 people/)).toBeInTheDocument();
+  });
+
+  it('should say which invitations did not send, never fold them into a success', () => {
+    render(
+      <SuccessState
+        email="peter@orangejelly.co.uk"
+        resendToken={null}
+        invitations={{ total: 3, sent: 2, failed: 1 }}
+        links={{
+          participantUrl: 'https://www.orangejelly.co.uk/availability/p/p',
+          organiserUrl: 'https://www.orangejelly.co.uk/availability/o/o',
+          organiserToken: 'o',
+        }}
+        invitation={null}
+      />
+    );
+
+    expect(screen.getByText("1 invitation didn't send")).toBeInTheDocument();
+    expect(screen.getByText(/We emailed 2 of 3/)).toBeInTheDocument();
+    expect(screen.queryByText('Invitations sent')).toBeNull();
+  });
 });

@@ -55,6 +55,21 @@ vi.mock('@/lib/rate-limit', () => ({
 
 vi.mock('next/headers', () => ({ headers: () => new Map() }));
 
+const resolveAdminIdentity = vi.fn();
+vi.mock('@/lib/admin-identity', () => ({
+  resolveAdminIdentity: (token: unknown) => resolveAdminIdentity(token),
+}));
+
+const addInvitees = vi.fn();
+vi.mock('@/lib/db/poll-invitees', () => ({
+  addInvitees: (...args: unknown[]) => addInvitees(...args),
+}));
+
+const sendPendingInvitations = vi.fn();
+vi.mock('@/lib/poll-invitations', () => ({
+  sendPendingInvitations: (pollId: unknown) => sendPendingInvitations(pollId),
+}));
+
 const FUTURE = '2099-07-04';
 const TOKEN = 'aaaaaaaaaaaaaaaaaaaaaa'; // 22 chars, a well-formed token shape.
 const OTHER_TOKEN = 'bbbbbbbbbbbbbbbbbbbbbb';
@@ -95,6 +110,9 @@ beforeEach(() => {
     data: { verifyToken: 'v-token', resendToken: 'r-token' },
   });
   claimResendSlot.mockResolvedValue(true);
+  resolveAdminIdentity.mockResolvedValue(null);
+  addInvitees.mockResolvedValue({ stored: true, data: { added: [], alreadyInvited: 0 } });
+  sendPendingInvitations.mockResolvedValue({ sent: 0, failed: 0 });
 });
 
 describe('createPoll', () => {
@@ -330,6 +348,121 @@ describe('createPoll', () => {
   });
 });
 
+describe('createPoll: email invitations', () => {
+  const opened = {
+    stored: true,
+    data: {
+      id: 'poll-1',
+      title: 'Quiz night briefing',
+      participantToken: 'p-token',
+      organiserToken: 'o-token',
+      organiserName: 'Peter',
+      organiserEmail: 'peter@orangejelly.co.uk',
+    },
+  };
+
+  function asAdmin(): void {
+    resolveAdminIdentity.mockResolvedValue({ email: 'peter@orangejelly.co.uk' });
+    verifyAndOpenPoll.mockResolvedValue(opened);
+  }
+
+  it('should refuse an invite list from anyone who is not a signed-in admin, storing nothing', async () => {
+    // The form is public. A list of addresses anyone could type in is how a
+    // stranger would use our sending domain to mail people who never asked.
+    const result = await createPoll(
+      validInput({ inviteEmails: 'sam@example.com' } as Partial<CreatePollFormValues>)
+    );
+
+    expect(result.error).toContain('Sign in to invite people by email');
+    expect(storePoll).not.toHaveBeenCalled();
+    expect(addInvitees).not.toHaveBeenCalled();
+  });
+
+  it('should name a typo in the list before storing anything', async () => {
+    asAdmin();
+
+    const result = await createPoll(
+      validInput({ inviteEmails: 'sam@example.com\nalex@example' } as Partial<CreatePollFormValues>)
+    );
+
+    expect(result.error).toContain('"alex@example" is not an email address');
+    expect(storePoll).not.toHaveBeenCalled();
+  });
+
+  it('should store the list, open the poll and email everyone, saying how many went', async () => {
+    asAdmin();
+    sendPendingInvitations.mockResolvedValue({ sent: 2, failed: 0 });
+
+    const result = await createPoll(
+      validInput({
+        inviteEmails: 'sam@example.com, alex@example.com',
+        adminToken: 'admin-jwt',
+      } as Partial<CreatePollFormValues>)
+    );
+
+    expect(addInvitees).toHaveBeenCalledWith('poll-1', ['sam@example.com', 'alex@example.com']);
+    expect(sendPendingInvitations).toHaveBeenCalledWith('poll-1');
+    expect(result.links).toBeDefined();
+    expect(result.invitations).toEqual({ total: 2, sent: 2, failed: 0 });
+    // Stored before the poll opened, so nothing can be sent for a list that is not there.
+    expect(addInvitees.mock.invocationCallOrder[0]).toBeLessThan(
+      verifyAndOpenPoll.mock.invocationCallOrder[0]
+    );
+  });
+
+  it('should report the invitations that did not send rather than hide them', async () => {
+    asAdmin();
+    sendPendingInvitations.mockResolvedValue({ sent: 1, failed: 1 });
+
+    const result = await createPoll(
+      validInput({
+        inviteEmails: 'sam@example.com, alex@example.com',
+      } as Partial<CreatePollFormValues>)
+    );
+
+    expect(result.success).toBe(true);
+    expect(result.invitations).toEqual({ total: 2, sent: 1, failed: 1 });
+  });
+
+  it('should count every invitation as failed when the sender throws, and keep the poll live', async () => {
+    asAdmin();
+    sendPendingInvitations.mockRejectedValue(new Error('Resend down'));
+
+    const result = await createPoll(
+      validInput({
+        inviteEmails: 'sam@example.com, alex@example.com',
+      } as Partial<CreatePollFormValues>)
+    );
+
+    expect(result.links).toBeDefined();
+    expect(result.invitations).toEqual({ total: 2, sent: 0, failed: 2 });
+  });
+
+  it('should remove the poll and say so when the list cannot be stored', async () => {
+    // Never "your invitations are on their way" for a list that is not there.
+    asAdmin();
+    addInvitees.mockResolvedValue({ stored: false, error: 'connection reset' });
+
+    const result = await createPoll(
+      validInput({ inviteEmails: 'sam@example.com' } as Partial<CreatePollFormValues>)
+    );
+
+    expect(result.error).toContain('Your poll was not created');
+    expect(deletePoll).toHaveBeenCalledWith('o-token');
+    expect(verifyAndOpenPoll).not.toHaveBeenCalled();
+  });
+
+  it('should leave invitations out entirely when the box is empty', async () => {
+    asAdmin();
+
+    const result = await createPoll(validInput());
+
+    expect(addInvitees).not.toHaveBeenCalled();
+    expect(sendPendingInvitations).not.toHaveBeenCalled();
+    expect(result.invitations).toBeUndefined();
+  });
+});
+
 describe('verifyOrganiserEmail', () => {
   const verified = {
     stored: true,
@@ -414,6 +547,23 @@ describe('verifyOrganiserEmail', () => {
 
     expect(result.success).toBe(true);
     expect(result.links).toBeDefined();
+  });
+
+  it('should send any invitations queued while the poll was a draft', async () => {
+    verifyAndOpenPoll.mockResolvedValue(verified);
+
+    await verifyOrganiserEmail(TOKEN);
+
+    expect(sendPendingInvitations).toHaveBeenCalledWith('poll-1');
+  });
+
+  it('should still report the poll live when the queued invitations throw', async () => {
+    verifyAndOpenPoll.mockResolvedValue(verified);
+    sendPendingInvitations.mockRejectedValue(new Error('Resend down'));
+
+    const result = await verifyOrganiserEmail(TOKEN);
+
+    expect(result.success).toBe(true);
   });
 
   it('should allow verification through when the rate limiter throws', async () => {

@@ -21,6 +21,11 @@ vi.mock('@/lib/db/polls', () => ({
   getParticipantView: (...args: unknown[]) => getParticipantView(...args),
 }));
 
+const linkInviteeToParticipant = vi.fn();
+vi.mock('@/lib/db/poll-invitees', () => ({
+  linkInviteeToParticipant: (...args: unknown[]) => linkInviteeToParticipant(...args),
+}));
+
 const notifyOrganiserOfResponse = vi.fn();
 vi.mock('@/lib/poll-digest', () => ({
   notifyOrganiserOfResponse: (...args: unknown[]) => notifyOrganiserOfResponse(...args),
@@ -92,7 +97,11 @@ beforeEach(() => {
   isRateLimitConfigured.mockReturnValue(true);
   checkRateLimit.mockResolvedValue({ allowed: true, retryAfterSeconds: 0, reason: 'ok' });
   getParticipantView.mockResolvedValue(pollView());
-  storeResponse.mockResolvedValue({ stored: true, data: { editToken: EDIT_TOKEN } });
+  storeResponse.mockResolvedValue({
+    stored: true,
+    data: { editToken: EDIT_TOKEN, participantId: 'participant-9' },
+  });
+  linkInviteeToParticipant.mockResolvedValue(undefined);
   storeUpdatedResponse.mockResolvedValue({ stored: true });
   resolveEditParticipant.mockResolvedValue({
     participantId: 'participant-1',
@@ -287,6 +296,44 @@ describe('submitResponse', () => {
     expect(result.editUrl).toBeUndefined();
     // Nothing was stored, so there is nothing to tell the organiser.
     expect(notifyOrganiserOfResponse).not.toHaveBeenCalled();
+  });
+
+  it('should mark the invited person answered, by their personal link', async () => {
+    const INVITE = 'cccccccccccccccccccccc';
+    await submitResponse(TOKEN, submission({ inviteToken: INVITE }));
+
+    expect(linkInviteeToParticipant).toHaveBeenCalledWith({
+      pollId: 'poll-1',
+      participantId: 'participant-9',
+      inviteToken: INVITE,
+      email: 'billy@example.com',
+    });
+  });
+
+  it('should fall back to the address when the answer came through the shared link', async () => {
+    await submitResponse(TOKEN, submission());
+
+    expect(linkInviteeToParticipant).toHaveBeenCalledWith(
+      expect.objectContaining({ inviteToken: undefined, email: 'billy@example.com' })
+    );
+  });
+
+  it('should ignore an invite token that is not token-shaped', async () => {
+    await submitResponse(TOKEN, submission({ inviteToken: 'not a token' }));
+
+    expect(linkInviteeToParticipant).toHaveBeenCalledWith(
+      expect.objectContaining({ inviteToken: undefined })
+    );
+  });
+
+  it('should keep the answer when linking it to the invitation fails', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    linkInviteeToParticipant.mockRejectedValue(new Error('database down'));
+
+    const result = await submitResponse(TOKEN, submission());
+
+    expect(result.success).toBe(true);
+    expect(result.editUrl).toBeDefined();
   });
 
   it('should tell the organiser once the answer is stored', async () => {

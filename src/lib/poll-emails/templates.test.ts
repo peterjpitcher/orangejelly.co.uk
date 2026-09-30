@@ -2,9 +2,14 @@ import { describe, expect, it } from 'vitest';
 import { generateToken } from '@/lib/poll-tokens';
 import { buildConfirmEmail } from './confirm';
 import { buildDigestEmail } from './digest';
+import { buildInvitationEmail } from './invitation';
 import { buildNudgeEmail } from './nudge';
-import { buildPrivacyNoticeHtml, buildPrivacyNoticeText } from './privacyNotice';
-import { buildUnsubscribeHeaders } from './unsubscribe';
+import {
+  buildInviteePrivacyNoticeText,
+  buildPrivacyNoticeHtml,
+  buildPrivacyNoticeText,
+} from './privacyNotice';
+import { buildInviteeUnsubscribeHeaders, buildUnsubscribeHeaders } from './unsubscribe';
 import { buildLinksEmail, buildVerifyEmail } from './verify';
 import type { BuiltEmail } from './shell';
 
@@ -64,6 +69,20 @@ const nudgeInput = {
   manageEmailsUrl: 'https://www.orangejelly.co.uk/availability/o/otok#emails',
 };
 
+const invitationInput = {
+  organiserName: 'Peter Pitcher',
+  pollTitle: 'July planning call',
+  description: 'A quick catch-up on the summer plan.',
+  location: 'The Anchor, Stanwell Moor',
+  optionLabels: [
+    'Saturday, 4 July 2026, 7:30pm – 9:00pm (UK time)',
+    'Sunday, 5 July 2026, 2:00pm – 4:00pm (UK time)',
+  ],
+  deadlineLabel: 'Friday 3 July 2026 at 5:00pm',
+  inviteUrl: 'https://www.orangejelly.co.uk/availability/i/itok',
+  stopEmailsUrl: 'https://www.orangejelly.co.uk/availability/i/itok#emails',
+};
+
 /** Every template, so the shared rules can be asserted once over all of them. */
 const allTemplates: Array<{ name: string; build: () => BuiltEmail }> = [
   { name: 'verify', build: () => buildVerifyEmail(verifyInput) },
@@ -71,6 +90,11 @@ const allTemplates: Array<{ name: string; build: () => BuiltEmail }> = [
   { name: 'digest', build: () => buildDigestEmail(digestInput) },
   { name: 'confirm', build: () => buildConfirmEmail(confirmInput) },
   { name: 'nudge', build: () => buildNudgeEmail(nudgeInput) },
+  { name: 'invitation', build: () => buildInvitationEmail(invitationInput) },
+  {
+    name: 'invitation reminder',
+    build: () => buildInvitationEmail({ ...invitationInput, isReminder: true }),
+  },
 ];
 
 describe('every poll email template', () => {
@@ -527,5 +551,87 @@ describe('buildUnsubscribeHeaders', () => {
     expect(buildUnsubscribeHeaders('otok')['List-Unsubscribe']).toContain(
       '<mailto:peter@orangejelly.co.uk?subject=unsubscribe>'
     );
+  });
+});
+
+describe('buildInvitationEmail', () => {
+  it('should say who is asking in the subject', () => {
+    expect(buildInvitationEmail(invitationInput).subject).toBe(
+      'Peter Pitcher wants to find a time for "July planning call"'
+    );
+  });
+
+  it('should list every option and the deadline in both parts', () => {
+    const email = buildInvitationEmail(invitationInput);
+    for (const label of invitationInput.optionLabels) {
+      expect(email.text).toContain(label);
+      expect(email.html).toContain(label);
+    }
+    expect(email.text).toContain('Please answer by Friday 3 July 2026 at 5:00pm.');
+    expect(email.html).toContain('Please answer by Friday 3 July 2026 at 5:00pm.');
+  });
+
+  it('should carry the personal link and a visible way to stop', () => {
+    const email = buildInvitationEmail(invitationInput);
+    expect(email.html).toContain(`href="${invitationInput.inviteUrl}"`);
+    expect(email.text).toContain(invitationInput.inviteUrl);
+    expect(email.html).toContain(`href="${invitationInput.stopEmailsUrl}"`);
+    expect(email.text).toContain(invitationInput.stopEmailsUrl);
+  });
+
+  it('should carry the Article 14 notice: the organiser gave us the address', () => {
+    // The one poll email sent to an address the recipient did not give us, so
+    // the notice must say where it came from and must not claim they gave it.
+    const email = buildInvitationEmail(invitationInput);
+    expect(email.text).toContain('Peter Pitcher gave us your email address');
+    expect(email.text).not.toContain('You gave us these details yourself');
+    expect(email.text).toContain('60 days');
+    expect(email.text).toContain('peter@orangejelly.co.uk');
+  });
+
+  it('should escape everything the organiser typed', () => {
+    const { html } = buildInvitationEmail({
+      ...invitationInput,
+      organiserName: XSS,
+      pollTitle: XSS,
+      description: XSS,
+      location: XSS,
+      optionLabels: [XSS],
+    });
+    expect(html).not.toContain('<script>');
+  });
+
+  it('should leave out the deadline, location and description when there are none', () => {
+    const email = buildInvitationEmail({
+      ...invitationInput,
+      deadlineLabel: null,
+      location: null,
+      description: null,
+    });
+    expect(email.text).not.toContain('Please answer by');
+    expect(email.text).not.toContain('undefined');
+    expect(email.text).not.toContain('null');
+    expect(email.html).not.toContain('undefined');
+  });
+
+  it('should word the reminder as a reminder', () => {
+    const email = buildInvitationEmail({ ...invitationInput, isReminder: true });
+    expect(email.subject).toBe('Reminder: when can you make "July planning call"?');
+    expect(email.text).toContain('still waiting to hear');
+  });
+});
+
+describe('invitee notices and headers', () => {
+  it('should keep the Article 14 notice to the same retention and rights address', () => {
+    const text = buildInviteePrivacyNoticeText({ organiserName: 'Peter' });
+    expect(text).toContain('60 days');
+    expect(text).toContain('peter@orangejelly.co.uk');
+    expect(text).toContain('Peter gave us your email address');
+  });
+
+  it('should point one-click unsubscribe at the invitee, not the organiser', () => {
+    const headers = buildInviteeUnsubscribeHeaders('itok');
+    expect(headers['List-Unsubscribe']).toContain('/availability/i/itok/unsubscribe');
+    expect(headers['List-Unsubscribe-Post']).toBe('List-Unsubscribe=One-Click');
   });
 });

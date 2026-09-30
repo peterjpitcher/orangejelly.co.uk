@@ -27,6 +27,7 @@ import {
 } from '@/lib/validation/poll-responses';
 import { getParticipantView } from '@/lib/db/polls';
 import { notifyOrganiserOfResponse } from '@/lib/poll-digest';
+import { linkInviteeToParticipant } from '@/lib/db/poll-invitees';
 import { resolveEditParticipant } from '@/app/availability/p/poll-data';
 
 /**
@@ -184,6 +185,23 @@ export async function submitResponse(
   }
 
   revalidateParticipantPaths(participantToken);
+
+  // Marks this person answered on the organiser's invite list, by their personal
+  // link or, failing that, by the address they typed. Best-effort: the answer is
+  // stored, and a missed link only means one extra reminder, never a lost answer.
+  try {
+    await linkInviteeToParticipant({
+      pollId: view.poll.id,
+      participantId: stored.data.participantId,
+      inviteToken:
+        parsed.data.inviteToken && isWellFormedToken(parsed.data.inviteToken)
+          ? parsed.data.inviteToken
+          : undefined,
+      email,
+    });
+  } catch (error) {
+    console.error('[polls] Answer not linked to its invitation:', scrubTokens(String(error)));
+  }
 
   // After the write, never before it, and it never throws: the answer is already
   // stored, so a failed digest must not become an error for the person answering.

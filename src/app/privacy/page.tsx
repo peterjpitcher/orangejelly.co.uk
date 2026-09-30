@@ -143,13 +143,23 @@ export default function PrivacyPage(): JSX.Element {
                 When you answer someone&rsquo;s availability poll
               </p>
               <p>
-                We hold the name you type, your answers, and your email address if you choose to
-                give one. You give us all of this yourself, directly, by typing it into the form.
-                Nobody hands us a list of invitees, and we have no address book. Your name and
-                answers are visible to the person who set the poll up. Everyone else answering sees
-                the totals only, never who answered what. Your email address is used for exactly one
-                thing: telling you the time once it is picked. Our lawful basis is legitimate
-                interests: arranging a meeting people have chosen to take part in.
+                We hold the name you type, your answers, and your email address. If you found the
+                poll through a link someone shared, you give us all of this yourself, directly, by
+                typing it into the form. Your name and answers are visible to the person who set the
+                poll up. Everyone else answering sees the totals only, never who answered what. Your
+                email address is used for exactly one thing: telling you the time once it is picked.
+                Our lawful basis is legitimate interests: arranging a meeting people have chosen to
+                take part in.
+              </p>
+
+              <p className="font-bold text-oj-ink">When someone invites you to a poll by email</p>
+              <p>
+                The person arranging the meeting gave us your email address so we could invite you.
+                We use it for that one poll only: the invitation, one reminder if you have not
+                answered, and the time once it is picked. Every one of those emails has a link to
+                stop them, and nobody else invited sees your address. If you answer, we hold your
+                name and answers as above. We delete the address with the poll. Our lawful basis is
+                legitimate interests: arranging a meeting you have been invited to.
               </p>
 
               <p id="surveys" className="font-bold text-oj-ink">

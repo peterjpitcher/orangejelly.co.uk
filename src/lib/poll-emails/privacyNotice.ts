@@ -6,12 +6,12 @@ import { BRAND_BLUE, HAIRLINE, MUTED } from './shell';
  *
  * THIS IS ARTICLE 13, NOT ARTICLE 14, and the distinction is the whole point.
  * Article 14 covers data obtained from someone other than the data subject, and
- * its notice says "here is where we got your details". We have no invitee list
- * and no address book: a participant opens the shared poll link and types their
- * own name, their own answers and, optionally, their own email address into
- * our form. That is direct collection from the data subject. Any wording
- * claiming the organiser supplied their details is a false statement about our
- * own processing, shipped to a third party's inbox.
+ * its notice says "here is where we got your details". A participant who opens
+ * the shared poll link types their own name, their own answers and their own
+ * email address into our form. That is direct collection from the data subject,
+ * and wording claiming the organiser supplied their details would be false for
+ * them. People a signed-in admin invites by email are the exception, and get
+ * their own Article 14 notice below.
  *
  * One exported wording source, rendered two ways, so the confirmation email and
  * the poll page cannot drift apart. The poll page carrying this notice is what
@@ -65,11 +65,45 @@ function privacyNoticeParagraphs({ organiserName }: PrivacyNoticeInput): string[
   ];
 }
 
+/**
+ * The Article 14 notice, for someone the organiser invited by email.
+ *
+ * THIS ONE IS ARTICLE 14, and that is not a contradiction of the note above.
+ * From 30 September 2026 a signed-in admin can type in the addresses of the
+ * people they are inviting, and for those people we did NOT collect the address
+ * from them: the organiser gave it to us. So this notice says exactly that,
+ * names who gave it, and says what we will and will not send. The Article 13
+ * notice above stays true for everyone who found the poll through the shared
+ * link and typed their own details.
+ */
+function inviteePrivacyNoticeParagraphs({ organiserName }: PrivacyNoticeInput): string[] {
+  return [
+    `Orange Jelly Limited runs this poll tool at www.orangejelly.co.uk and is the controller of your data. ${organiserName} gave us your email address so we could invite you to this poll.`,
+
+    'We hold your email address and, if you answer, the name you type and your answers. We use the address for this poll only: this invitation, one reminder if you have not answered, and the time once it is picked. Our lawful basis is legitimate interests: arranging a meeting you have been invited to.',
+
+    `Your name and answers are visible to ${organiserName}, who set the poll up. We do not show your email address to anyone else invited. (If you reply to this email it goes to ${organiserName}.)`,
+
+    'Trusted providers host the poll and deliver this email on our behalf; the full list is at www.orangejelly.co.uk/privacy. We do not sell your details and we do not use them for marketing.',
+
+    'We delete the whole poll, your address included, 60 days after the last response or the last proposed date, whichever is later.',
+
+    `To see, correct or delete your data, write to ${PRIVACY_RIGHTS_EMAIL}. Please don't reply to this email for that; replies go to ${organiserName}, not to us. Your full rights are at www.orangejelly.co.uk/privacy.`,
+  ];
+}
+
+function renderNoticeText(paragraphs: string[]): string {
+  return `--\n${PRIVACY_NOTICE_HEADING}\n\n${paragraphs.join('\n\n')}\n\nFull privacy policy: ${PRIVACY_POLICY_URL}`;
+}
+
 /** The notice as plain text, for the text part of an email or a page. */
 export function buildPrivacyNoticeText(input: PrivacyNoticeInput): string {
-  const body = privacyNoticeParagraphs(input).join('\n\n');
+  return renderNoticeText(privacyNoticeParagraphs(input));
+}
 
-  return `--\n${PRIVACY_NOTICE_HEADING}\n\n${body}\n\nFull privacy policy: ${PRIVACY_POLICY_URL}`;
+/** The Article 14 notice as plain text, for an invitation, reminder or invitee's confirmation. */
+export function buildInviteePrivacyNoticeText(input: PrivacyNoticeInput): string {
+  return renderNoticeText(inviteePrivacyNoticeParagraphs(input));
 }
 
 /**
@@ -80,7 +114,15 @@ export function buildPrivacyNoticeText(input: PrivacyNoticeInput): string {
  * either side of the anchors: the links add affordance, never meaning.
  */
 export function buildPrivacyNoticeHtml(input: PrivacyNoticeInput): string {
-  const paragraphs = privacyNoticeParagraphs(input);
+  return renderNoticeHtml(privacyNoticeParagraphs(input));
+}
+
+/** The Article 14 notice as HTML. */
+export function buildInviteePrivacyNoticeHtml(input: PrivacyNoticeInput): string {
+  return renderNoticeHtml(inviteePrivacyNoticeParagraphs(input));
+}
+
+function renderNoticeHtml(paragraphs: string[]): string {
   const escaped = paragraphs.map((paragraph) => escapeHtml(paragraph));
 
   // Turn the two addresses in the final paragraph into links. Done after

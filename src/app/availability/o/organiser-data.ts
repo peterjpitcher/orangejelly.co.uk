@@ -7,6 +7,7 @@ import {
   type PollRow,
 } from '@/lib/db/polls';
 import { aggregateByOption, countResponders, type OptionTally } from '@/lib/poll-aggregate';
+import { listInvitees, type InviteeRow } from '@/lib/db/poll-invitees';
 
 /**
  * Server-side reads for the organiser results screen.
@@ -53,8 +54,30 @@ export interface OrganiserPollExtras {
   digest_opt_out: boolean;
 }
 
+/** Where one invited person has got to, as the organiser's list shows it. */
+export type InviteeStatus = 'answered' | 'waiting' | 'unsent' | 'stopped';
+
+/** One row of the organiser's invite list. The token is deliberately not carried. */
+export interface InviteeListItem {
+  id: string;
+  email: string;
+  status: InviteeStatus;
+}
+
+/** Answered wins over everything: someone who replied then opted out still replied. */
+export function inviteeStatus(
+  row: Pick<InviteeRow, 'participant_id' | 'opted_out_at' | 'invited_at'>
+): InviteeStatus {
+  if (row.participant_id) return 'answered';
+  if (row.opted_out_at) return 'stopped';
+  if (!row.invited_at) return 'unsent';
+  return 'waiting';
+}
+
 export interface OrganiserResultsView {
   poll: PollRow & OrganiserPollExtras;
+  /** People invited by email, oldest first. Empty for most polls. */
+  invitees: InviteeListItem[];
   options: PollOptionRow[];
   participants: OrganiserParticipant[];
   /** `${participant_id}:${option_id}` -> availability. Absence means "not answered". */
@@ -139,6 +162,19 @@ export async function getOrganiserResults(
 
   if (!extras) return null;
 
+  // A failed read of the invite list must not take the results page down with
+  // it: the results are the page's job. It is logged, and the list reads empty.
+  let invitees: InviteeListItem[] = [];
+  try {
+    invitees = (await listInvitees(view.poll.id)).map((row) => ({
+      id: row.id,
+      email: row.email,
+      status: inviteeStatus(row),
+    }));
+  } catch (error) {
+    console.error('[polls] Invite list not read:', error instanceof Error ? error.message : error);
+  }
+
   const tallyRows = (responses ?? []) as Array<{
     option_id: string;
     participant_id: string;
@@ -152,6 +188,7 @@ export async function getOrganiserResults(
       confirm_notify_failures: (extras.confirm_notify_failures as number) ?? 0,
       digest_opt_out: extras.digest_opt_out === true,
     },
+    invitees,
     options: view.options,
     participants: (participants ?? []) as OrganiserParticipant[],
     responses: view.responses,

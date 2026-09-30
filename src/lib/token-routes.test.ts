@@ -7,6 +7,7 @@ describe('isTokenRoute', () => {
   it.each([
     [`/availability/o/${TOKEN}`, 'organiser'],
     [`/availability/p/${TOKEN}`, 'participant'],
+    [`/availability/i/${TOKEN}`, 'invited person'],
     [`/availability/verify/${TOKEN}`, 'verify'],
     [`/survey/pub-apps/preview/${TOKEN}`, 'survey preview'],
   ])('should be true for %s when the path carries a %s token', (pathname) => {
