@@ -14,7 +14,7 @@ import {
   type RateLimitBucket,
 } from '@/lib/rate-limit';
 import { isWellFormedToken, scrubTokens } from '@/lib/poll-tokens';
-import { canVote } from '@/lib/poll-state';
+import { acceptsAnswers } from '@/lib/poll-state';
 import { VALIDATION_MESSAGES } from '@/lib/validation-messages';
 import { COMPANY } from '@/lib/constants';
 import {
@@ -147,13 +147,10 @@ export async function submitResponse(
     return { error: LINK_NOT_VALID };
   }
 
-  if (!canVote(view.poll.status)) {
-    return { error: VALIDATION_MESSAGES.poll.votingClosed };
-  }
-
-  // `closes_at` is advisory (nothing flips `status` when it passes), so this
-  // check is what makes the organiser's deadline real without a cron.
-  if (view.poll.closes_at && new Date(view.poll.closes_at).getTime() <= Date.now()) {
+  // Open, not closed, and before the organiser's deadline. Nothing flips
+  // `status` when a deadline passes, so this request-time check is what makes
+  // the deadline real without a cron.
+  if (!acceptsAnswers(view.poll)) {
     return { error: VALIDATION_MESSAGES.poll.votingClosed };
   }
 
@@ -256,11 +253,8 @@ export async function updateResponse(
     return { error: LINK_NOT_VALID };
   }
 
-  if (!canVote(resolved.poll.status)) {
-    return { error: VALIDATION_MESSAGES.poll.votingClosed };
-  }
-
-  if (resolved.poll.closes_at && new Date(resolved.poll.closes_at).getTime() <= Date.now()) {
+  // The same rule as a first answer: a change after the deadline is a late answer.
+  if (!acceptsAnswers(resolved.poll)) {
     return { error: VALIDATION_MESSAGES.poll.votingClosed };
   }
 

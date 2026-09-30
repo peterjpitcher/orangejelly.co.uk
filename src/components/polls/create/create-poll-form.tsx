@@ -588,8 +588,8 @@ export default function CreatePollForm(): JSX.Element {
             Close entries automatically (optional)
           </legend>
           <p className="mb-3 text-[14.5px] leading-normal text-oj-ink-2">
-            We&rsquo;ll email you when this passes so you can pick a time. We never send the invite
-            for you.
+            Answers stop at this time, and we email you so you can pick one. We never send the
+            invite for you.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <Controller

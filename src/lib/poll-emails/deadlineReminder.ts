@@ -62,8 +62,10 @@ answered then gets the calendar invite.
 That link is private to you. Anyone who has it can confirm the time, close the
 poll and delete responses.
 
-We won't send this reminder again. The poll stays open until you confirm or
-close it, so there's no rush if you'd rather wait for a few more answers.`);
+Answers stopped at your deadline. If you'd like a few more first, reopen the
+poll from that page, which removes the deadline.
+
+We won't send this reminder again.`);
 
   const html = wrapHtml(`  <p style="margin:0 0 16px;">Hi ${escapeHtml(organiserName)},</p>
   <p style="margin:0 0 8px;font-size:18px;font-weight:700;">Time to pick a time</p>
@@ -84,8 +86,8 @@ close it, so there's no rush if you'd rather wait for a few more answers.`);
     poll and delete responses.
   </p>
   <p style="margin:0 0 16px;font-size:14px;color:${MUTED};">
-    We won&rsquo;t send this reminder again. The poll stays open until you confirm or close
-    it, so there&rsquo;s no rush if you&rsquo;d rather wait for a few more answers.
+    Answers stopped at your deadline. If you&rsquo;d like a few more first, reopen the poll
+    from that page, which removes the deadline. We won&rsquo;t send this reminder again.
   </p>`);
 
   return { subject, html, text };

@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { requireAdmin } from '@/lib/admin-auth';
 import { getSupabaseAdminClient } from '@/lib/db/supabase-admin';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
+import { deadlinePassed } from '@/lib/poll-state';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -37,7 +38,7 @@ export async function GET(request: Request) {
   const { data: polls, error } = await supabase
     .from('polls')
     .select(
-      'id, title, status, organiser_token, participant_token, option_kind, confirmed_option_id, expires_at, created_at'
+      'id, title, status, closes_at, entries_close_at, organiser_token, participant_token, option_kind, confirmed_option_id, expires_at, created_at'
     )
     .eq('organiser_email', auth.email.trim().toLowerCase())
     .order('created_at', { ascending: false });
@@ -96,7 +97,9 @@ export async function GET(request: Request) {
   const items = (polls ?? []).map((p) => ({
     id: p.id,
     title: p.title,
-    status: p.status,
+    // An open poll past its deadline takes no answers (Peter, 30 September
+    // 2026), so the dashboard shows it as closed rather than "Taking answers".
+    status: deadlinePassed(p) ? 'closed' : p.status,
     optionKind: p.option_kind,
     organiserToken: p.organiser_token,
     participantToken: p.participant_token,

@@ -48,6 +48,8 @@ export interface EditPollRef {
   organiser_name: string;
   confirmed_option_id: string | null;
   closes_at: string | null;
+  /** The organiser's deadline; answers stop when it passes. */
+  entries_close_at: string | null;
   expires_at: string;
   /**
    * Selected explicitly: `PollRow` does not declare it, even though `select('*')`
@@ -148,7 +150,7 @@ export async function resolveEditParticipant(
   const { data: poll } = await supabase
     .from('polls')
     .select(
-      'id, status, option_kind, title, description, location, agenda, organiser_name, confirmed_option_id, closes_at, expires_at, participant_token'
+      'id, status, option_kind, title, description, location, agenda, organiser_name, confirmed_option_id, closes_at, entries_close_at, expires_at, participant_token'
     )
     .eq('id', participant.poll_id)
     .maybeSingle();

@@ -6,7 +6,8 @@ import {
   releaseInvitees,
   type InviteeRow,
 } from '@/lib/db/poll-invitees';
-import type { OptionKind } from '@/lib/db/polls';
+import type { OptionKind, PollStatus } from '@/lib/db/polls';
+import { acceptsAnswers } from '@/lib/poll-state';
 import { buildInvitationEmail, buildInviteeUnsubscribeHeaders } from '@/lib/poll-emails';
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 import { formatSlotInLondon, type IsoDate } from '@/lib/dateUtils';
@@ -36,7 +37,8 @@ export interface InvitationSendResult {
 
 interface InvitationPoll {
   id: string;
-  status: string;
+  status: PollStatus;
+  closes_at: string | null;
   title: string;
   description: string | null;
   location: string | null;
@@ -64,7 +66,7 @@ export async function readInvitationPoll(pollId: string): Promise<{
     supabase
       .from('polls')
       .select(
-        'id, status, title, description, location, organiser_name, organiser_email, option_kind, entries_close_at'
+        'id, status, closes_at, title, description, location, organiser_name, organiser_email, option_kind, entries_close_at'
       )
       .eq('id', pollId)
       .maybeSingle(),
@@ -128,7 +130,8 @@ export function buildInvitationMessage(
 
 export async function sendPendingInvitations(pollId: string): Promise<InvitationSendResult> {
   const context = await readInvitationPoll(pollId);
-  if (!context || context.poll.status !== 'open') return { sent: 0, failed: 0 };
+  // Only while it takes answers: never invite someone to a poll past its deadline.
+  if (!context || !acceptsAnswers(context.poll)) return { sent: 0, failed: 0 };
 
   const pending = await listUnsentInvitees(pollId);
   if (pending.length === 0) return { sent: 0, failed: 0 };

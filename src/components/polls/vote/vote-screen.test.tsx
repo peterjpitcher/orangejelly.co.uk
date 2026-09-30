@@ -83,6 +83,18 @@ describe('VoteScreen', () => {
     expect(screen.queryByLabelText(/Your email/)).toBeNull();
   });
 
+  it('should stop taking answers once the deadline has passed', () => {
+    const lapsed = {
+      ...view,
+      poll: { ...view.poll, entries_close_at: new Date(Date.now() - 60_000).toISOString() },
+    } as typeof view;
+
+    render(<VoteScreen view={lapsed} participantToken="p-token" />);
+
+    expect(screen.getByRole('heading', { name: 'Voting has closed' })).toBeInTheDocument();
+    expect(screen.queryByLabelText(/Your email/)).toBeNull();
+  });
+
   it('should show the switch as off once they have asked us to stop', () => {
     render(
       <VoteScreen view={view} participantToken="p-token" invite={{ ...invite, emailsOn: false }} />

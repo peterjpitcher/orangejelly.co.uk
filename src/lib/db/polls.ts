@@ -758,11 +758,24 @@ export async function closePoll(organiserToken: string): Promise<StoredResult> {
   }
 }
 
-/** Reopens a closed poll, clearing the advisory deadline that stopped voting. */
+/**
+ * Reopens a poll that has stopped taking answers.
+ *
+ * Two ways a poll stops, so two conditional updates, each a no-op when it does
+ * not apply:
+ *  - closed by the organiser: back to open, clearing closes_at. A deadline still
+ *    to come is KEPT (see migration 20260717090000): reopening is not a reason
+ *    to lose a date the organiser set.
+ *  - past its deadline: the deadline goes. Since 30 September 2026 a passed
+ *    deadline closes entries, so reopening such a poll can only mean "take
+ *    answers again", and that needs the deadline out of the way.
+ * A poll closed AND past its deadline gets both.
+ */
 export async function reopenPoll(organiserToken: string): Promise<StoredResult> {
   try {
     const supabase = requireAdminClient();
-    const { data, error } = await supabase
+
+    const { data: closed, error: closedError } = await supabase
       .from('polls')
       .update({ status: 'open', closes_at: null })
       .eq('organiser_token', organiserToken)
@@ -770,8 +783,19 @@ export async function reopenPoll(organiserToken: string): Promise<StoredResult> 
       .select('id')
       .maybeSingle();
 
-    if (error) return { stored: false, error: error.message };
-    if (!data) return { stored: false, error: 'This poll cannot be reopened.' };
+    if (closedError) return { stored: false, error: closedError.message };
+
+    const { data: lapsed, error: lapsedError } = await supabase
+      .from('polls')
+      .update({ entries_close_at: null })
+      .eq('organiser_token', organiserToken)
+      .eq('status', 'open')
+      .lte('entries_close_at', new Date().toISOString())
+      .select('id')
+      .maybeSingle();
+
+    if (lapsedError) return { stored: false, error: lapsedError.message };
+    if (!closed && !lapsed) return { stored: false, error: 'This poll cannot be reopened.' };
     return { stored: true };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };

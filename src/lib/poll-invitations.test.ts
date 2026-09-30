@@ -72,6 +72,7 @@ beforeEach(() => {
   pollRow = {
     id: 'poll-1',
     status: 'open',
+    closes_at: null,
     title: 'Quiz night planning',
     description: null,
     location: 'The Anchor',
@@ -150,12 +151,22 @@ describe('sendPendingInvitations', () => {
     expect(sendPollEmailBatch).not.toHaveBeenCalled();
   });
 
+  it('should send nothing once the deadline has passed', async () => {
+    pollRow = { ...pollRow, entries_close_at: new Date(Date.now() - 60_000).toISOString() };
+
+    const result = await sendPendingInvitations('poll-1');
+
+    expect(result).toEqual({ sent: 0, failed: 0 });
+    expect(sendPollEmailBatch).not.toHaveBeenCalled();
+  });
+
   it('should name the deadline when the organiser set one', async () => {
-    pollRow = { ...pollRow, entries_close_at: '2026-10-07T16:00:00.000Z' };
+    // Far in the future and in winter, so the test never goes stale and the
+    // London time is plain GMT: 17:00 UTC is 5pm.
+    pollRow = { ...pollRow, entries_close_at: '2099-01-15T17:00:00.000Z' };
 
     await sendPendingInvitations('poll-1');
 
-    // 16:00 UTC is 5pm in London in October (BST).
     expect(sent()[0].text).toContain('Please answer by');
     expect(sent()[0].text).toContain('5:00pm');
   });

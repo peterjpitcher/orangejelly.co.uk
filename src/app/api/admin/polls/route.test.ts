@@ -91,4 +91,27 @@ describe('GET /api/admin/polls', () => {
     expect(body.polls).toHaveLength(1);
     expect(body.polls[0]).toMatchObject({ id: 'poll-1', responderCount: 0 });
   });
+
+  it('should show an open poll past its deadline as closed, not taking answers', async () => {
+    vi.mocked(requireAdmin).mockResolvedValue({ email: 'peter@orangejelly.co.uk' });
+    pollRows = [
+      {
+        id: 'poll-2',
+        title: 'Lapsed',
+        status: 'open',
+        closes_at: null,
+        entries_close_at: new Date(Date.now() - 60_000).toISOString(),
+        organiser_token: 'o-token',
+        participant_token: 'p-token',
+        option_kind: 'dates',
+        confirmed_option_id: null,
+        expires_at: '2026-12-01T00:00:00.000Z',
+        created_at: '2026-09-01T00:00:00.000Z',
+      },
+    ];
+
+    const body = await (await GET(request())).json();
+
+    expect(body.polls[0].status).toBe('closed');
+  });
 });

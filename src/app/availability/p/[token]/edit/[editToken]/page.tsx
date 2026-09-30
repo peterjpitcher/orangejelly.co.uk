@@ -6,7 +6,7 @@ import PollHeader from '@/components/polls/vote/poll-header';
 import { formatOptionLabel, type TallyCounts } from '@/components/polls/vote/poll-display';
 import BackOfficeBand from '@/components/admin/BackOfficeBand';
 import { Alert } from '@/components/oj';
-import { canEditResponse } from '@/lib/poll-state';
+import { acceptsAnswers, deadlinePassed } from '@/lib/poll-state';
 
 /**
  * Screen 3b: change my answers.
@@ -58,8 +58,12 @@ export default async function EditPage({ params }: EditPageProps): Promise<JSX.E
     tallyMap[tally.option_id] = { yes: tally.yes, if_need_be: tally.if_need_be, no: tally.no };
   }
 
-  const pastDeadline = Boolean(poll.closes_at && new Date(poll.closes_at).getTime() <= Date.now());
-  const editable = canEditResponse(poll.status) && !pastDeadline;
+  // The same rule as the vote itself: open, not closed, and before the
+  // organiser's deadline. A change after the deadline is a late answer.
+  const editable = acceptsAnswers(poll);
+  const pastDeadline =
+    deadlinePassed(poll) ||
+    Boolean(poll.closes_at && new Date(poll.closes_at).getTime() <= Date.now());
 
   const confirmedOption = poll.confirmed_option_id
     ? options.find((option) => option.id === poll.confirmed_option_id)
