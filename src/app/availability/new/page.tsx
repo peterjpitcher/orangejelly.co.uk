@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/**
+ * createPoll runs as this page's server action, and a signed-in admin's poll can
+ * email up to 50 invitations before it returns, paced at 600ms for Resend's rate
+ * limit: about 30 seconds. Stated rather than left to the platform default.
+ */
+export const maxDuration = 60;
+
 export default function NewPollPage(): JSX.Element {
   return (
     <>

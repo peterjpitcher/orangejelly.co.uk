@@ -22,3 +22,17 @@ export function buildUnsubscribeHeaders(organiserToken: string): Record<string, 
     'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
   };
 }
+
+/**
+ * The same pair for an invited person's emails (the invitation and its one
+ * reminder), pointing at their own link rather than the organiser's. One-click
+ * stops emails about this poll for this person only.
+ */
+export function buildInviteeUnsubscribeHeaders(inviteToken: string): Record<string, string> {
+  const unsubscribeUrl = getAbsoluteUrl(`/availability/i/${inviteToken}/unsubscribe`);
+
+  return {
+    'List-Unsubscribe': `<${unsubscribeUrl}>, <mailto:${PRIVACY_RIGHTS_EMAIL}?subject=unsubscribe>`,
+    'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+  };
+}

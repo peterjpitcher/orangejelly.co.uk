@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm, type FieldErrors } from 'react-hook-form';
 import { Loader2 } from 'lucide-react';
@@ -20,7 +20,12 @@ import {
   MAX_POLL_OPTIONS,
   type CreatePollFormValues,
 } from '@/lib/validation/polls';
-import { createPoll, resendVerification, type PollLinks } from '@/app/actions/polls';
+import {
+  createPoll,
+  resendVerification,
+  type PollActionResult,
+  type PollLinks,
+} from '@/app/actions/polls';
 import CopyButton from '@/components/polls/copy-button';
 import {
   buildInvitationText,
@@ -30,6 +35,12 @@ import {
 import AvailabilityGrid from './availability-grid';
 import DurationSelector from './duration-selector';
 import TurnstileWidget from '@/components/TurnstileWidget';
+import { getValidAccessToken, readSession } from '@/lib/admin-session';
+import {
+  MAX_INVITEES_PER_POLL,
+  inviteEmailsProblem,
+  parseInviteEmails,
+} from '@/lib/validation/poll-invitees';
 
 /**
  * The create-poll form.
@@ -132,6 +143,7 @@ const FIELD_IDS = {
   location: 'poll-location',
   organiserName: 'poll-organiser-name',
   organiserEmail: 'poll-organiser-email',
+  inviteEmails: 'poll-invite-emails',
   deadlineDate: 'poll-deadline-date',
   deadlineTime: 'poll-deadline-time',
 } as const;
@@ -163,6 +175,7 @@ const DEFAULT_VALUES: CreatePollFormValues = {
   slots: [],
   deadlineDate: '',
   deadlineTime: '',
+  inviteEmails: '',
   turnstileToken: '',
   website: '',
 };
@@ -175,6 +188,14 @@ export default function CreatePollForm(): JSX.Element {
   const [invitation, setInvitation] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState('');
   const [mailFailed, setMailFailed] = useState(false);
+  const [invitations, setInvitations] = useState<PollActionResult['invitations'] | null>(null);
+  // Whether to offer the email-invitations box. A signed-in session is only
+  // knowable in the browser, so it is read after mount; the server re-checks it
+  // with Supabase and refuses the list from anyone else.
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    setIsAdmin(Boolean(readSession()));
+  }, []);
   const [duration, setDuration] = useState<DurationChoice>(DEFAULT_DURATION_MINUTES);
   const [pendingDuration, setPendingDuration] = useState<DurationChoice | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
@@ -290,26 +311,25 @@ export default function CreatePollForm(): JSX.Element {
   }
 
   /**
-   * The signed-in admin's Supabase token, if there is one.
+   * The signed-in admin's Supabase token, if there is one, refreshed first if it
+   * is about to expire.
    *
-   * Read at submit time rather than on render: sessionStorage does not exist on
-   * the server, so touching it during render is a hydration mismatch waiting to
-   * happen. Absent for the public, which is the normal case.
+   * Read at submit time rather than on render: browser storage does not exist on
+   * the server. Absent for the public, which is the normal case. Until
+   * 30 September 2026 this read sessionStorage, but the admin session moved to
+   * localStorage (src/lib/admin-session.ts), so no admin was ever recognised
+   * here and every signed-in organiser got the verify email anyway.
    *
    * Sending this is not a claim the server trusts. It is verified with Supabase
    * inside the action, and anything short of a live token for an allowlisted
    * address is treated as a member of the public and gets the verify email.
    */
-  function readAdminToken(): string | undefined {
+  async function readAdminToken(): Promise<string | undefined> {
     try {
-      const raw = window.sessionStorage.getItem('oj-admin-session');
-      if (!raw) return undefined;
-      const parsed: unknown = JSON.parse(raw);
-      const token = (parsed as { access_token?: unknown })?.access_token;
-      return typeof token === 'string' && token.length > 0 ? token : undefined;
+      return (await getValidAccessToken()) ?? undefined;
     } catch {
-      // Malformed or unavailable storage means "not an admin", never a throw
-      // that costs someone the poll they just filled in.
+      // Unavailable storage or a failed refresh means "not an admin", never a
+      // throw that costs someone the poll they just filled in.
       return undefined;
     }
   }
@@ -319,7 +339,7 @@ export default function CreatePollForm(): JSX.Element {
     setError(null);
 
     try {
-      const result = await createPoll({ ...values, adminToken: readAdminToken() });
+      const result = await createPoll({ ...values, adminToken: await readAdminToken() });
 
       if (result.error) {
         setError(result.error);
@@ -333,6 +353,7 @@ export default function CreatePollForm(): JSX.Element {
       setSentTo(values.organiserEmail);
       setResendToken(result.resendToken ?? null);
       setMailFailed(result.verificationMailFailed === true);
+      setInvitations(result.invitations ?? null);
       // Present only when a signed-in admin created it, in which case the poll
       // is already live and no email was ever sent.
       setLinks(result.links ?? null);
@@ -381,6 +402,7 @@ export default function CreatePollForm(): JSX.Element {
         email={sentTo}
         resendToken={resendToken}
         mailFailed={mailFailed}
+        invitations={invitations}
         links={links}
         invitation={invitation}
       />
@@ -513,6 +535,46 @@ export default function CreatePollForm(): JSX.Element {
             </Field>
           )}
         />
+
+        {/*
+          Email invitations, for a signed-in admin only (Peter's decision,
+          30 September 2026). This form is public, so the box is not even shown to
+          anyone else, and the action refuses a list from anyone who is not a
+          signed-in admin. Copying the link yourself works exactly as before.
+        */}
+        {isAdmin && (
+          <Controller
+            control={form.control}
+            name="inviteEmails"
+            render={({ field: { ref: _ref, ...field }, fieldState }) => {
+              const list = parseInviteEmails(field.value);
+              const problem = inviteEmailsProblem(list);
+              const count = list.emails.length;
+              return (
+                <Field
+                  htmlFor={FIELD_IDS.inviteEmails}
+                  label="Email the invitation for me (optional)"
+                  hint={`Paste up to ${MAX_INVITEES_PER_POLL} addresses, one per line or separated by commas. As soon as the poll is live we email each person their own link, and replies come to you. You still get the link to share yourself.`}
+                  error={fieldState.error?.message ?? problem ?? undefined}
+                >
+                  <Textarea
+                    {...field}
+                    value={field.value ?? ''}
+                    rows={3}
+                    maxLength={10000}
+                    placeholder={'sam@example.com\nalex@example.com'}
+                    disabled={isSubmitting}
+                  />
+                  {!problem && count > 0 && (
+                    <p className="mt-1 text-[14px] text-oj-ink-2" aria-live="polite">
+                      {count === 1 ? '1 person' : `${count} people`} will get their own link.
+                    </p>
+                  )}
+                </Field>
+              );
+            }}
+          />
+        )}
 
         {/*
           Optional deadline. Leaving it blank keeps the old behaviour: the poll
@@ -711,11 +773,14 @@ export function SuccessState({
   email,
   resendToken,
   mailFailed = false,
+  invitations = null,
   links,
   invitation,
 }: {
   email: string;
   resendToken: string | null;
+  /** The email invitations sent as the poll went live. Admin path only. */
+  invitations?: PollActionResult['invitations'] | null;
   /**
    * The verification email did not send. The poll exists but is not live, so
    * the screen says so and leads with the resend control.
@@ -755,6 +820,28 @@ export function SuccessState({
           You were already signed in, so we did not make you confirm an address you had just proved.
           Your poll is open and taking answers now.
         </Alert>
+
+        {invitations && invitations.failed === 0 && (
+          <Alert tone="ok" title="Invitations sent" className="mt-4">
+            We&apos;ve emailed {invitations.sent === 1 ? '1 person' : `${invitations.sent} people`}{' '}
+            their own link. Your results page shows who has answered.
+          </Alert>
+        )}
+
+        {invitations && invitations.failed > 0 && (
+          <Alert
+            tone="danger"
+            title={
+              invitations.failed === 1
+                ? "1 invitation didn't send"
+                : `${invitations.failed} invitations didn't send`
+            }
+            className="mt-4"
+          >
+            We emailed {invitations.sent} of {invitations.total}. Open your poll and use &ldquo;Try
+            the unsent ones again&rdquo;, or send those people the link yourself.
+          </Alert>
+        )}
 
         <div className="mt-6 space-y-6">
           <div>

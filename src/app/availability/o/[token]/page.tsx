@@ -15,6 +15,7 @@ import DeleteResponseControl from '@/components/polls/organiser/delete-response-
 import ResultsLegend from '@/components/polls/organiser/results-legend';
 import ResultsTable from '@/components/polls/organiser/results-table';
 import ShareBlock from '@/components/polls/organiser/share-block';
+import InviteesSection from '@/components/polls/organiser/invitees-section';
 import UpdateEmailsControl from '@/components/polls/organiser/update-emails-control';
 import { optionFullLabel, replyCountLine } from '@/components/polls/organiser/results-display';
 import { bestOption } from '@/lib/poll-aggregate';
@@ -231,6 +232,14 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
             {/* The share block renders above the matrix in EVERY state: the empty
             state is precisely when the organiser needs this link most. */}
             <ShareBlock participantUrl={participantUrl} invitationText={invitationText} />
+
+            {/* The other way to invite: we email each person their own link.
+              Renders nothing unless there is a list or a signed-in admin. */}
+            <InviteesSection
+              organiserToken={params.token}
+              pollOpen={poll.status === 'open'}
+              invitees={view.invitees}
+            />
 
             {hasReplies ? (
               <>

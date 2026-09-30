@@ -5,6 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
  * API: a test suite that sends mail is a test suite nobody dares run.
  */
 const sendMock = vi.fn();
+const batchMock = vi.fn();
 
 // A class, not vi.fn().mockImplementation(): restoreAllMocks() strips a vi.fn()'s
 // implementation, which would leave `new Resend()` returning undefined and every
@@ -12,10 +13,17 @@ const sendMock = vi.fn();
 vi.mock('resend', () => ({
   Resend: class {
     emails = { send: sendMock };
+    batch = { send: batchMock };
   },
 }));
 
-import { escapeHtml, sendPollEmail, sendPollEmails, type PollEmail } from './email';
+import {
+  escapeHtml,
+  sendPollEmail,
+  sendPollEmailBatch,
+  sendPollEmails,
+  type PollEmail,
+} from './email';
 
 /** Env is process-wide; snapshot it so one test cannot leak into the next. */
 const originalEnv = { ...process.env };
@@ -319,5 +327,80 @@ describe('sendPollEmails', () => {
 
   it('should return zeroes and never throw on an empty list', async () => {
     await expect(runFanOut([])).resolves.toEqual({ sent: 0, failed: 0 });
+  });
+});
+
+describe('sendPollEmailBatch', () => {
+  const many = (count: number): PollEmail[] =>
+    Array.from({ length: count }, (_, i) => ({ ...message, to: `person${i}@example.com` }));
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'info').mockImplementation(() => {});
+    resetEnv();
+    batchMock.mockImplementation(async (payload: unknown[]) => ({
+      data: { data: payload.map((_, i) => ({ id: `id-${i}` })), errors: [] },
+      error: null,
+    }));
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    process.env = { ...originalEnv };
+  });
+
+  it('should send every message in one request, one recipient each, from the verified sender', async () => {
+    const accepted = await sendPollEmailBatch(many(3));
+
+    expect(accepted).toEqual([true, true, true]);
+    expect(batchMock).toHaveBeenCalledTimes(1);
+    const [payload, options] = batchMock.mock.calls[0];
+    expect(payload.map((m: { to: string }) => m.to)).toEqual([
+      'person0@example.com',
+      'person1@example.com',
+      'person2@example.com',
+    ]);
+    expect(payload[0].from).toContain('noreply@auth.orangejelly.co.uk');
+    // One bad address must fail alone, not take the whole batch with it.
+    expect(options).toEqual({ batchValidation: 'permissive' });
+  });
+
+  it('should report exactly the messages Resend refused', async () => {
+    batchMock.mockResolvedValue({
+      data: { data: [{ id: 'a' }, { id: 'c' }], errors: [{ index: 1, message: 'invalid' }] },
+      error: null,
+    });
+
+    expect(await sendPollEmailBatch(many(3))).toEqual([true, false, true]);
+  });
+
+  it('should report every message failed when the request is refused or throws', async () => {
+    batchMock.mockResolvedValueOnce({ data: null, error: { message: 'rate limited' } });
+    expect(await sendPollEmailBatch(many(2))).toEqual([false, false]);
+
+    batchMock.mockRejectedValueOnce(new Error('network'));
+    expect(await sendPollEmailBatch(many(2))).toEqual([false, false]);
+  });
+
+  it('should refuse to send from anywhere but production, as the single sender does', async () => {
+    process.env.NEXT_PUBLIC_BASE_URL = 'http://localhost:3000';
+
+    expect(await sendPollEmailBatch(many(2))).toEqual([false, false]);
+    expect(batchMock).not.toHaveBeenCalled();
+  });
+
+  it('should split more than 100 messages into requests of 100', async () => {
+    const accepted = await sendPollEmailBatch(many(150));
+
+    expect(batchMock).toHaveBeenCalledTimes(2);
+    expect(batchMock.mock.calls[0][0]).toHaveLength(100);
+    expect(batchMock.mock.calls[1][0]).toHaveLength(50);
+    expect(accepted.every(Boolean)).toBe(true);
+  });
+
+  it('should make no request for an empty list', async () => {
+    expect(await sendPollEmailBatch([])).toEqual([]);
+    expect(batchMock).not.toHaveBeenCalled();
   });
 });

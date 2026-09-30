@@ -32,6 +32,13 @@ export interface VoteFormProps {
   tallies: Record<string, TallyCounts>;
   responderCount: number;
   organiserName: string;
+  /**
+   * Set when this is an invited person's own link (/availability/i/<token>).
+   * Sent with the answer so the organiser sees they have replied.
+   */
+  inviteToken?: string;
+  /** The address they were invited at, filled in for them and still editable. */
+  defaultEmail?: string;
 }
 
 type AnswerState = Record<string, AvailabilityAnswer | null>;
@@ -44,6 +51,8 @@ export default function VoteForm({
   tallies,
   responderCount,
   organiserName,
+  inviteToken,
+  defaultEmail,
 }: VoteFormProps): JSX.Element {
   const [answers, setAnswers] = useState<AnswerState>(() =>
     Object.fromEntries(options.map((option) => [option.id, null]))
@@ -55,7 +64,7 @@ export default function VoteForm({
     Object.fromEntries(options.map((option) => [option.id, 'in_person']))
   );
   const [displayName, setDisplayName] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(defaultEmail ?? '');
   const [website, setWebsite] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -96,6 +105,7 @@ export default function VoteForm({
         displayName,
         email,
         website,
+        inviteToken,
         votes: options.map((option) => ({
           optionId: option.id,
           // Proven non-null by the guard above; the cast keeps the wire type honest.

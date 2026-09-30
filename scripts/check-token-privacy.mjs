@@ -51,6 +51,7 @@ const FAKE_TOKEN = 'aaaaaaaabbbbccccddddeeeeeeeeeeee';
 const TOKEN_ROUTES = [
   `/availability/o/${FAKE_TOKEN}`,
   `/availability/p/${FAKE_TOKEN}`,
+  `/availability/i/${FAKE_TOKEN}`,
   `/availability/verify/${FAKE_TOKEN}`,
 ];
 

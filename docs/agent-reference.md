@@ -172,7 +172,7 @@ The four that behave in non-obvious ways are in `CLAUDE.md`; read those before c
 
 ### Supabase tables
 
-Nine, created by the migrations in `supabase/migrations/`: `contacts`, `newsletter_subscribers`, `conversion_events` and `lead_sources` (the lead data layer, June 2026, RLS enabled in a follow-up migration), then `polls`, `poll_options`, `poll_participants`, `poll_responses` and `poll_rate_limits` (availability polls, July 2026). Nothing else in the site touches a database.
+Fifteen, created by the migrations in `supabase/migrations/`: `contacts`, `newsletter_subscribers`, `conversion_events` and `lead_sources` (the lead data layer, June 2026, RLS enabled in a follow-up migration), then `polls`, `poll_options`, `poll_participants`, `poll_responses` and `poll_rate_limits` (availability polls, July 2026), `surveys`, `survey_questions`, `survey_options`, `survey_responses` and `survey_contacts` (surveys, September 2026), and `poll_invitees` (email invitations for signed-in admins, 30 September 2026). Nothing else in the site touches a database.
 
 ## 7. Quality targets
 

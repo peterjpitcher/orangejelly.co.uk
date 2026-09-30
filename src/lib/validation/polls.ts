@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { inviteEmailsFieldSchema } from './poll-invitees';
 import {
   compareIsoDates,
   getTodayIsoDate,
@@ -180,6 +181,12 @@ export const createPollSchema = z
       .regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Enter the deadline time as HH:mm.')
       .optional()
       .or(z.literal('')),
+    /**
+     * People to email an invitation to, as pasted: one per line or comma
+     * separated. Signed-in admins only; the action refuses it from anyone else,
+     * and parses and checks each address there (parseInviteEmails).
+     */
+    inviteEmails: inviteEmailsFieldSchema,
     /** Cloudflare Turnstile. See SPEC §3.4.3: the keys exist; this is not optional. */
     turnstileToken: z.string().min(1, 'Please complete the verification check.'),
     /** Honeypot. Mirrors contact-form.tsx. */

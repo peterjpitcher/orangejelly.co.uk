@@ -5,14 +5,13 @@ import { CONTACT } from '@/lib/constants';
 /**
  * The Article 13 privacy notice, shown on the vote screen before you submit.
  *
- * ARTICLE 13, NOT ARTICLE 14. The distinction is the whole point.
- * Article 14 covers data obtained from someone OTHER than the data subject, and
- * its notice says "here is where we got your details". We have no invitee list
- * and no address book: a participant opens a shared link and types their own
- * name, their own answers and, if they choose, their own email into our form.
- * That is direct collection from the data subject, which is Article 13. Any
- * wording claiming the organiser supplied their details is a false statement
- * about our own processing, made to a third party. It must never appear.
+ * ARTICLE 13 FOR THE SHARED LINK, ARTICLE 14 FOR AN INVITATION. The
+ * distinction is the whole point. Someone who opens the shared link types their
+ * own name, answers and email into our form: direct collection, Article 13, and
+ * telling them the organiser supplied their details would be false. Someone a
+ * signed-in admin invited by email (from 30 September 2026) arrives on their
+ * own link, and the organiser DID give us their address, so `invited` switches
+ * the two sentences that differ and says so.
  *
  * This is on the page because most participants never receive an email at all,
  * so the page is what discharges the obligation for them (§1 P1.12).
@@ -26,9 +25,14 @@ import { CONTACT } from '@/lib/constants';
 
 export interface PollPrivacyNoticeProps {
   organiserName: string;
+  /** True on an invited person's own link: the organiser gave us their address. */
+  invited?: boolean;
 }
 
-export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticeProps): JSX.Element {
+export default function PollPrivacyNotice({
+  organiserName,
+  invited = false,
+}: PollPrivacyNoticeProps): JSX.Element {
   return (
     <section
       aria-labelledby="poll-privacy-heading"
@@ -42,8 +46,10 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
 
       <div className="space-y-2">
         <p className="text-sm text-oj-ink-2">
-          Orange Jelly Limited runs this poll tool and is the controller of your data. You give us
-          these details yourself when you answer this poll.
+          Orange Jelly Limited runs this poll tool and is the controller of your data.{' '}
+          {invited
+            ? `${organiserName} gave us your email address to invite you. Your name and answers you give us yourself when you answer.`
+            : 'You give us these details yourself when you answer this poll.'}
         </p>
 
         <p className="text-sm text-oj-ink-2">
@@ -55,8 +61,10 @@ export default function PollPrivacyNotice({ organiserName }: PollPrivacyNoticePr
         <p className="text-sm text-oj-ink-2">
           Your name and your answers are visible to {organiserName}, who set this poll up. Other
           people answering see the totals only, never who answered what. Your email address is not
-          shown to anyone else, and it is used for exactly one thing: telling you the time once it
-          is picked. Nothing else emails you.
+          shown to anyone else.{' '}
+          {invited
+            ? 'We use it for this poll only: your invitation, one reminder if you have not answered, and the time once it is picked.'
+            : 'It is used for exactly one thing: telling you the time once it is picked. Nothing else emails you.'}
         </p>
 
         <p className="text-sm text-oj-ink-2">

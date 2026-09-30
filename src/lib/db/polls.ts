@@ -586,7 +586,7 @@ export async function submitResponse(input: {
   displayName: string;
   email?: string;
   answers: Array<{ optionId: string; availability: Availability; attendance?: AttendanceMode }>;
-}): Promise<StoredResult<{ editToken: string }>> {
+}): Promise<StoredResult<{ editToken: string; participantId: string }>> {
   try {
     const supabase = requireAdminClient();
     const poll = await fetchPollByToken('participant_token', input.participantToken);
@@ -630,7 +630,7 @@ export async function submitResponse(input: {
 
     await touchExpiry(poll.id);
 
-    return { stored: true, data: { editToken } };
+    return { stored: true, data: { editToken, participantId } };
   } catch (error) {
     return { stored: false, error: error instanceof Error ? error.message : 'Unknown error.' };
   }

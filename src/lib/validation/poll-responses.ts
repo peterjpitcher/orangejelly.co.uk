@@ -90,6 +90,12 @@ export const submitResponseSchema = z.object({
   votes: votesSchema,
   /** Honeypot. Never rendered to a person, so anything in it is a bot. */
   website: z.string().optional(),
+  /**
+   * Present when the answer came through a personal invitation link, so the
+   * organiser sees that this person has answered. The action checks its shape;
+   * the data layer only matches it within the poll being answered.
+   */
+  inviteToken: z.string().max(64).optional(),
 });
 
 /**

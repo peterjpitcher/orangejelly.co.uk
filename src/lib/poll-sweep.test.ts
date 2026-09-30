@@ -1,9 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { EMAIL_PASS_LIMIT, runPollSweep } from './poll-sweep';
+import { EMAIL_PASS_LIMIT, INVITE_REMINDER_LIMIT, runPollSweep } from './poll-sweep';
 import { SWEEP_LIMIT } from './db/polls';
 import type * as PollsModule from './db/polls';
 import type * as EmailModule from './email';
+import type * as InvitationsModule from './poll-invitations';
 
 /**
  * The passes behind the daily cron.
@@ -21,6 +22,19 @@ const sweepRateLimitWindows = vi.fn();
 const findPollsDueForDeadlineReminder = vi.fn();
 const markDeadlineReminded = vi.fn();
 const sendPollEmail = vi.fn();
+const findInviteesDueForReminder = vi.fn();
+const markReminded = vi.fn();
+const readInvitationPoll = vi.fn();
+
+vi.mock('./db/poll-invitees', () => ({
+  findInviteesDueForReminder: (...args: unknown[]) => findInviteesDueForReminder(...args),
+  markReminded: (id: unknown) => markReminded(id),
+}));
+
+vi.mock('./poll-invitations', async (importOriginal) => {
+  const actual = await importOriginal<typeof InvitationsModule>();
+  return { ...actual, readInvitationPoll: (id: unknown) => readInvitationPoll(id) };
+});
 
 /** Every pass that ran, in order. The order is a requirement, not an accident. */
 let callLog: string[] = [];
@@ -150,6 +164,34 @@ const options = [
   { id: 'option-2', position: 2, option_date: '2026-08-02', starts_at: null, ends_at: null },
 ];
 
+const invitationContext = {
+  poll: {
+    id: 'poll-1',
+    status: 'open',
+    title: 'Quiz night planning',
+    description: null,
+    location: null,
+    organiser_name: 'Peter',
+    organiser_email: 'peter@orangejelly.co.uk',
+    option_kind: 'dates',
+    entries_close_at: '2026-10-07T16:00:00.000Z',
+  },
+  optionLabels: ['Thursday 8 October 2026'],
+  deadlineLabel: 'Wednesday 7 October 2026 at 5:00pm',
+};
+
+const dueInvitee = {
+  id: 'invitee-1',
+  poll_id: 'poll-1',
+  email: 'sam@example.com',
+  invite_token: 'invite-token-aaaaaaaaaa',
+  participant_id: null,
+  invited_at: '2026-10-01T10:00:00.000Z',
+  reminded_at: null,
+  opted_out_at: null,
+  created_at: '2026-10-01T10:00:00.000Z',
+};
+
 /**
  * A response newer than the poll's watermark (its created_at) but older than
  * the moment a digest claims, so the re-check after sending finds nothing.
@@ -192,6 +234,9 @@ beforeEach(() => {
   findPollsDueForDeadlineReminder.mockResolvedValue({ stored: true, data: [] });
   markDeadlineReminded.mockResolvedValue({ stored: true });
   sendPollEmail.mockResolvedValue({ success: true });
+  findInviteesDueForReminder.mockResolvedValue([]);
+  markReminded.mockResolvedValue(undefined);
+  readInvitationPoll.mockResolvedValue(invitationContext);
 });
 
 describe('runPollSweep: the passes and their order', () => {
@@ -542,5 +587,55 @@ describe('runPollSweep: the nudge', () => {
     const { text } = sendPollEmail.mock.calls[0][0];
     expect(text).toContain('1 person has responded so far');
     expect(text).toContain('Saturday, 1 August 2026');
+  });
+});
+
+describe('runPollSweep: the invitation reminder', () => {
+  it('should remind each invited person once, by their own link, and stamp it', async () => {
+    findInviteesDueForReminder.mockResolvedValue([dueInvitee]);
+
+    const report = await runPollSweep();
+
+    expect(findInviteesDueForReminder).toHaveBeenCalledWith(INVITE_REMINDER_LIMIT);
+    expect(report.inviteReminders).toEqual({ sent: 1, failed: 0, backlog: false });
+    const message = sendPollEmail.mock.calls.at(-1)?.[0];
+    expect(message.to).toBe('sam@example.com');
+    expect(message.subject).toContain('Reminder');
+    expect(message.text).toContain(`/availability/i/${dueInvitee.invite_token}`);
+    expect(message.replyTo).toBe('peter@orangejelly.co.uk');
+    expect(markReminded).toHaveBeenCalledWith('invitee-1');
+  });
+
+  it('should leave a failed reminder unstamped, so tomorrow retries', async () => {
+    findInviteesDueForReminder.mockResolvedValue([dueInvitee]);
+    sendPollEmail.mockResolvedValue({ error: 'Failed to send email.' });
+
+    const report = await runPollSweep();
+
+    expect(report.inviteReminders).toEqual({ sent: 0, failed: 1, backlog: false });
+    expect(markReminded).not.toHaveBeenCalled();
+    expect(report.errors).toEqual([]);
+  });
+
+  it('should skip a poll that stopped taking answers since the query', async () => {
+    findInviteesDueForReminder.mockResolvedValue([dueInvitee]);
+    readInvitationPoll.mockResolvedValue({
+      ...invitationContext,
+      poll: { ...invitationContext.poll, status: 'closed' },
+    });
+
+    const report = await runPollSweep();
+
+    expect(report.inviteReminders.sent).toBe(0);
+    expect(sendPollEmail).not.toHaveBeenCalled();
+  });
+
+  it('should report a failed pass without taking the retention delete with it', async () => {
+    findInviteesDueForReminder.mockRejectedValue(new Error('invitee query failed'));
+
+    const report = await runPollSweep();
+
+    expect(report.errors).toContain('invitation reminder: invitee query failed');
+    expect(sweepExpiredPolls).toHaveBeenCalled();
   });
 });

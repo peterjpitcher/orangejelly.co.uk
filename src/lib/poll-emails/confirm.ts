@@ -1,5 +1,10 @@
 import { escapeHtml } from '@/lib/email';
-import { buildPrivacyNoticeHtml, buildPrivacyNoticeText } from './privacyNotice';
+import {
+  buildInviteePrivacyNoticeHtml,
+  buildInviteePrivacyNoticeText,
+  buildPrivacyNoticeHtml,
+  buildPrivacyNoticeText,
+} from './privacyNotice';
 import {
   BRAND_BLUE,
   BRAND_ORANGE,
@@ -50,6 +55,18 @@ export interface ConfirmEmailInput {
    * dropped and the opening line changes. Everything else is identical.
    */
   isOrganiserCopy?: boolean;
+  /**
+   * Someone invited by email who never answered. We did not collect their
+   * address from them, so they get the Article 14 notice, and the opening says
+   * why they are hearing about a time they did not vote on. Peter's decision,
+   * 30 September 2026: everyone invited is told the outcome.
+   */
+  isInviteeCopy?: boolean;
+  /**
+   * The organiser's copy only: whether this poll invited anyone by email, so
+   * "who has been told" is described truthfully.
+   */
+  invitedByEmail?: boolean;
 }
 
 /**
@@ -79,20 +96,28 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
     outlookUrl,
     icsAttached,
     isOrganiserCopy = false,
+    isInviteeCopy = false,
+    invitedByEmail = false,
   } = input;
 
   const subject = `Confirmed: "${sanitiseSubjectValue(pollTitle)}", ${whenShort}`;
 
   const opening = isOrganiserCopy
-    ? "You've confirmed the time. Everyone who gave us an email address has been told."
-    : "It's confirmed.";
+    ? invitedByEmail
+      ? "You've confirmed the time. We've emailed everyone who answered and everyone you invited, apart from anyone who asked us to stop."
+      : "You've confirmed the time. Everyone who gave us an email address has been told."
+    : isInviteeCopy
+      ? `It's confirmed. ${organiserName} invited you, so here is the time in case you can make it.`
+      : "It's confirmed.";
+
+  const greeting = displayName ? `Hi ${displayName},` : 'Hi,';
 
   const calendarLead = icsAttached
     ? "There's a calendar file attached. Open it and the time drops into your diary.\nOr use one of these:"
     : 'Add it to your calendar:';
 
   const textParts = [
-    `Hi ${displayName},`,
+    greeting,
     '',
     opening,
     '',
@@ -117,7 +142,9 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
       `Can't make it after all? Reply to this email and it goes straight to`,
       `${organiserName}.`,
       '',
-      buildPrivacyNoticeText({ organiserName })
+      isInviteeCopy
+        ? buildInviteePrivacyNoticeText({ organiserName })
+        : buildPrivacyNoticeText({ organiserName })
     );
   }
 
@@ -130,7 +157,7 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
   </p>`
     : `<p style="margin:0 0 16px;">Add it to your calendar:</p>`;
 
-  const htmlBody = `  <p style="margin:0 0 16px;">Hi ${escapeHtml(displayName)},</p>
+  const htmlBody = `  <p style="margin:0 0 16px;">${escapeHtml(greeting)}</p>
   <p style="margin:0 0 24px;font-size:22px;font-weight:700;">${escapeHtml(opening)}</p>
 
   <table role="presentation" cellpadding="0" cellspacing="0" border="0"
@@ -172,7 +199,7 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
     ${escapeHtml(organiserName)}.
   </p>
 
-${buildPrivacyNoticeHtml({ organiserName })}`;
+${isInviteeCopy ? buildInviteePrivacyNoticeHtml({ organiserName }) : buildPrivacyNoticeHtml({ organiserName })}`;
 
   return { subject, html: wrapHtml(`${htmlBody}${htmlTail}`), text };
 }

@@ -12,6 +12,9 @@ import {
   verifyAndOpenPoll,
 } from '@/lib/db/polls';
 import { sendPollEmail } from '@/lib/email';
+import { addInvitees } from '@/lib/db/poll-invitees';
+import { sendPendingInvitations } from '@/lib/poll-invitations';
+import { inviteEmailsProblem, parseInviteEmails } from '@/lib/validation/poll-invitees';
 import { buildLinksEmail, buildVerifyEmail } from '@/lib/poll-emails';
 import { scrubTokens } from '@/lib/poll-tokens';
 import { londonWallClockToInstant } from '@/lib/dateUtils';
@@ -80,6 +83,12 @@ export interface PollActionResult {
    * it said before 29 September 2026 whatever happened to the send.
    */
   verificationMailFailed?: boolean;
+  /**
+   * The email invitations, when a signed-in admin listed people to invite and
+   * the poll went live straight away. `failed` is shown, not hidden: those
+   * people can be retried from the organiser's page.
+   */
+  invitations?: { total: number; sent: number; failed: number };
 }
 
 /** The two links verification reveals, ready to render. */
@@ -162,6 +171,14 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   }
   const data = parsed.data;
 
+  // Checked before anything costs a round trip: a typo in the list is the
+  // organiser's to fix, and nothing should be stored until it is.
+  const inviteList = parseInviteEmails(data.inviteEmails);
+  const inviteProblem = inviteEmailsProblem(inviteList);
+  if (inviteProblem) {
+    return { error: inviteProblem };
+  }
+
   const ip = clientIp();
 
   // Turnstile before the limiter: the limiter is keyed per IP, and a proxy pool
@@ -236,6 +253,15 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
   // proved by a verification email anyway.
   const organiserEmail = admin ? admin.email : data.organiserEmail;
 
+  // Email invitations are for signed-in admins only (Peter's decision,
+  // 30 September 2026). This form is public, and a list of addresses anyone
+  // could type in would let a stranger use our sending domain to mail people
+  // who never asked. The form only shows the box to a signed-in admin; this is
+  // the check that counts.
+  if (inviteList.emails.length > 0 && !admin) {
+    return { error: 'Sign in to invite people by email, or leave that box empty.' };
+  }
+
   const stored = await storePoll({
     title: data.title,
     description: data.description,
@@ -270,6 +296,22 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
 
   const { verifyToken, resendToken } = tokens.data;
 
+  // Stored now, sent once the poll is live: straight away on the admin fast
+  // path below, or when verification opens it if that path falls back. A list
+  // that cannot be stored takes the poll with it, so the organiser is never
+  // told their invitations are queued when they are not.
+  if (inviteList.emails.length > 0) {
+    const invitees = await addInvitees(pollId, inviteList.emails);
+    if (!invitees.stored) {
+      console.error(
+        '[polls] Invitees not stored; removing the poll:',
+        scrubTokens(invitees.error ?? 'Unknown error.')
+      );
+      await deletePoll(organiserToken);
+      return { error: WRITE_FAILED };
+    }
+  }
+
   // The admin fast path.
   //
   // Verification exists to prove the creator owns the address they typed. A
@@ -289,14 +331,32 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
     const opened = await verifyAndOpenPoll(verifyToken);
 
     if (opened.stored && opened.data) {
-      return {
-        success: true,
-        links: {
-          participantUrl: getAbsoluteUrl(`/availability/p/${opened.data.participantToken}`),
-          organiserUrl: getAbsoluteUrl(`/availability/o/${opened.data.organiserToken}`),
-          organiserToken: opened.data.organiserToken,
-        },
+      const links = {
+        participantUrl: getAbsoluteUrl(`/availability/p/${opened.data.participantToken}`),
+        organiserUrl: getAbsoluteUrl(`/availability/o/${opened.data.organiserToken}`),
+        organiserToken: opened.data.organiserToken,
       };
+
+      if (inviteList.emails.length === 0) {
+        return { success: true, links };
+      }
+
+      // The poll is live and stays live whatever happens here. A failed send is
+      // reported on the success screen and retried from the organiser's page.
+      let invitations = { total: inviteList.emails.length, sent: 0, failed: 0 };
+      try {
+        const result = await sendPendingInvitations(pollId);
+        invitations = { total: inviteList.emails.length, ...result };
+      } catch (error) {
+        console.error('[poll-email] Invitations threw on create:', scrubTokens(String(error)));
+        invitations = {
+          total: inviteList.emails.length,
+          sent: 0,
+          failed: inviteList.emails.length,
+        };
+      }
+
+      return { success: true, links, invitations };
     }
 
     console.error(
@@ -346,7 +406,12 @@ export async function createPoll(input: CreatePollInput): Promise<PollActionResu
       verifyUrl,
     });
 
-    const sent = await sendPollEmail({ to: data.organiserEmail, ...email });
+    // The address the poll is stamped with, not the one typed in the form. They
+    // differ only for a signed-in admin whose fast path fell back to this email,
+    // and then the proof must go to the address Supabase verified: otherwise
+    // whoever holds the typed address could release the admin's poll and its
+    // queued invitations.
+    const sent = await sendPollEmail({ to: organiserEmail, ...email });
     if (sent.error) {
       console.error(
         '[polls] Poll created but verification mail not sent:',
@@ -424,6 +489,18 @@ export async function verifyOrganiserEmail(token: string): Promise<VerifyActionR
     }
   } catch (error) {
     console.error('[polls] Poll live but links mail threw:', scrubTokens(String(error)));
+  }
+
+  // Invitations queued while the poll was a draft go now it is live, AFTER the
+  // organiser's own links: the verify token is already spent, so if anything
+  // here ran long, the one email the organiser cannot get again must already
+  // be away. Only a signed-in admin can queue any, and only when their fast
+  // path fell back to this email, so this is usually a no-op. A failure shows
+  // on the organiser's page as "not sent", with a retry.
+  try {
+    await sendPendingInvitations(poll.id);
+  } catch (error) {
+    console.error('[poll-email] Invitations threw on verify:', scrubTokens(String(error)));
   }
 
   return {

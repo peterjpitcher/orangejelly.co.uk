@@ -29,10 +29,15 @@ export type { ConfirmEmailInput } from './confirm';
 export { buildNudgeEmail } from './nudge';
 export type { NudgeEmailInput } from './nudge';
 
+export { buildInvitationEmail } from './invitation';
+export type { InvitationEmailInput } from './invitation';
+
 export { buildDeadlineReminderEmail } from './deadlineReminder';
 export type { DeadlineReminderInput } from './deadlineReminder';
 
 export {
+  buildInviteePrivacyNoticeHtml,
+  buildInviteePrivacyNoticeText,
   buildPrivacyNoticeHtml,
   buildPrivacyNoticeText,
   PRIVACY_NOTICE_HEADING,
@@ -41,6 +46,6 @@ export {
 } from './privacyNotice';
 export type { PrivacyNoticeInput } from './privacyNotice';
 
-export { buildUnsubscribeHeaders } from './unsubscribe';
+export { buildInviteeUnsubscribeHeaders, buildUnsubscribeHeaders } from './unsubscribe';
 
 export type { BuiltEmail } from './shell';

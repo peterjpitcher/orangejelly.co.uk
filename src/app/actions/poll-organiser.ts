@@ -18,6 +18,7 @@ import {
   setDigestOptOut,
   type ConfirmedPollResult,
 } from '@/lib/db/polls';
+import { getInviteeConfirmationAudience } from '@/lib/db/poll-invitees';
 import { sendPollEmails, type PollEmail } from '@/lib/email';
 import {
   buildConfirmEmail,
@@ -258,11 +259,17 @@ interface ConfirmPayload {
   icsValue?: string;
   build: (
     displayName: string,
-    isOrganiserCopy: boolean
+    audience: ConfirmAudience
   ) => { subject: string; html: string; text: string };
 }
 
-function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
+/** Who a confirmation is for, which decides its opening and its privacy notice. */
+type ConfirmAudience = 'organiser' | 'participant' | 'invitee';
+
+function buildConfirmPayload(
+  confirmed: ConfirmedPollResult,
+  invitedByEmail: boolean
+): ConfirmPayload {
   const { poll, option, confirmSequence, participantToken } = confirmed;
 
   const optionForEmail = {
@@ -311,7 +318,7 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
   const { googleUrl, outlookUrl } = buildCalendarLinks(icsInput);
   const icsAttached = Boolean(icsValue);
 
-  const build = (displayName: string, isOrganiserCopy: boolean) =>
+  const build = (displayName: string, audience: ConfirmAudience) =>
     buildConfirmEmail({
       displayName,
       pollTitle: poll.title,
@@ -324,22 +331,23 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
       googleUrl,
       outlookUrl,
       icsAttached,
-      isOrganiserCopy,
+      isOrganiserCopy: audience === 'organiser',
+      isInviteeCopy: audience === 'invitee',
+      invitedByEmail,
     });
 
-  return { subject: build('', false).subject, icsAttached, icsValue, build };
+  return { subject: build('', 'participant').subject, icsAttached, icsValue, build };
 }
 
 /**
- * Builds the recipient set: the organiser, plus everyone who voted AND gave an
- * address.
+ * Builds the recipient set: the organiser, everyone who voted and gave an
+ * address, and everyone a signed-in admin invited by email who never answered.
  *
- * "EVERYONE INVITED" IS NOT A SET THIS FEATURE CAN ADDRESS, and no wording
- * anywhere may imply otherwise. There is no invitee list and no address book: a
- * `poll_participants` row exists only because someone voted, and an address is
- * on it only because that person typed it in. Someone who was sent the link and
- * never voted gets nothing, because we have never held their address. That is a
- * property of the design, not a gap in it: an address book is the open relay.
+ * Until 30 September 2026 there was no invite list, so someone sent the link
+ * who never voted got nothing: we had never held their address. Invitations
+ * changed that for the people an admin typed in, and Peter decided they are
+ * told the outcome. Anyone who asked us to stop emailing them about this poll
+ * is left out, including under the address they answered with.
  *
  * The organiser is seeded FIRST so their `organiser_name` wins over whatever
  * `display_name` they happened to vote under, and so the dedupe is on the
@@ -348,27 +356,34 @@ function buildConfirmPayload(confirmed: ConfirmedPollResult): ConfirmPayload {
 async function buildRecipients(
   pollId: string,
   organiserEmail: string,
-  organiserName: string
-): Promise<Array<{ email: string; displayName: string; isOrganiser: boolean }>> {
+  organiserName: string,
+  audience: { unanswered: string[]; stopped: Set<string> }
+): Promise<Array<{ email: string; displayName: string; audience: ConfirmAudience }>> {
   const recipients = new Map<
     string,
-    { email: string; displayName: string; isOrganiser: boolean }
+    { email: string; displayName: string; audience: ConfirmAudience }
   >();
 
   const organiserKey = organiserEmail.trim().toLowerCase();
   recipients.set(organiserKey, {
     email: organiserKey,
     displayName: organiserName,
-    isOrganiser: true,
+    audience: 'organiser',
   });
 
   for (const row of await getConfirmRecipients(pollId)) {
-    if (!recipients.has(row.email)) {
+    if (!recipients.has(row.email) && !audience.stopped.has(row.email)) {
       recipients.set(row.email, {
         email: row.email,
         displayName: row.display_name,
-        isOrganiser: false,
+        audience: 'participant',
       });
+    }
+  }
+
+  for (const email of audience.unanswered) {
+    if (!recipients.has(email) && !audience.stopped.has(email)) {
+      recipients.set(email, { email, displayName: '', audience: 'invitee' });
     }
   }
 
@@ -462,8 +477,31 @@ export async function confirmOption(
 async function fanOutConfirmation(confirmed: ConfirmedPollResult): Promise<void> {
   const { poll } = confirmed;
 
-  const payload = buildConfirmPayload(confirmed);
-  const recipients = await buildRecipients(poll.id, poll.organiser_email, poll.organiser_name);
+  // The invite list, read once. A failed read must not stop the people who
+  // answered hearing the time, so it falls back to "no invitees" and is logged.
+  let audience: { unanswered: string[]; stopped: Set<string> } = {
+    unanswered: [],
+    stopped: new Set(),
+  };
+  try {
+    audience = await getInviteeConfirmationAudience(poll.id);
+  } catch (error) {
+    console.error(
+      `[poll-email] Invite list not read for confirmation of poll ${poll.id}:`,
+      scrubTokens(String(error))
+    );
+  }
+
+  const payload = buildConfirmPayload(
+    confirmed,
+    audience.unanswered.length > 0 || audience.stopped.size > 0
+  );
+  const recipients = await buildRecipients(
+    poll.id,
+    poll.organiser_email,
+    poll.organiser_name,
+    audience
+  );
 
   // Per §3.4 every send is gated on the per-poll fan-out bucket. The tokens are
   // taken here, before the loop, rather than interleaved with it: the bucket is
@@ -494,7 +532,7 @@ async function fanOutConfirmation(confirmed: ConfirmedPollResult): Promise<void>
       continue;
     }
 
-    const built = payload.build(recipient.displayName, recipient.isOrganiser);
+    const built = payload.build(recipient.displayName, recipient.audience);
 
     messages.push({
       to: recipient.email,

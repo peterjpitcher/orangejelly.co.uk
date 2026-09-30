@@ -25,6 +25,13 @@ import { verifyOrganiserEmail, type PollLinks } from '@/app/actions/polls';
 
 // This page mutates state. It must never be cached or statically rendered.
 export const dynamic = 'force-dynamic';
+
+/**
+ * Verification can send the invitations an admin queued (see verifyOrganiserEmail).
+ * They go as one batch request, but the limit is stated rather than left to the
+ * platform default, because the token is spent before they go.
+ */
+export const maxDuration = 60;
 // Verification consumes a single-use token and must read the poll's live state,
 // never a cached one. See the organiser page for the Data Cache reasoning.
 export const fetchCache = 'force-no-store';

@@ -30,6 +30,11 @@ const getOrganiserView = vi.fn();
 const getConfirmRecipients = vi.fn();
 const recordConfirmNotifyFailures = vi.fn();
 const setDigestOptOut = vi.fn();
+const getInviteeConfirmationAudience = vi.fn();
+
+vi.mock('@/lib/db/poll-invitees', () => ({
+  getInviteeConfirmationAudience: (pollId: unknown) => getInviteeConfirmationAudience(pollId),
+}));
 
 vi.mock('@/lib/db/polls', () => ({
   ALREADY_CONFIRMED: 'ALREADY_CONFIRMED',
@@ -132,6 +137,7 @@ beforeEach(() => {
   isRateLimitConfigured.mockReturnValue(true);
   sendPollEmails.mockResolvedValue({ sent: 1, failed: 0 });
   getConfirmRecipients.mockResolvedValue([]);
+  getInviteeConfirmationAudience.mockResolvedValue({ unanswered: [], stopped: new Set() });
   recordConfirmNotifyFailures.mockResolvedValue(undefined);
 });
 
@@ -359,6 +365,63 @@ describe('confirmOption', () => {
         'sarah@example.com',
         'billy@example.com',
       ]);
+    });
+
+    it('should tell invitees who never answered, with the notice that fits them', async () => {
+      // Peter's decision, 30 September 2026: everyone invited hears the outcome.
+      storeConfirmOption.mockResolvedValue(confirmedResult());
+      getConfirmRecipients.mockResolvedValue([
+        { email: 'sarah@example.com', display_name: 'Sarah' },
+      ]);
+      getInviteeConfirmationAudience.mockResolvedValue({
+        unanswered: ['kim@example.com'],
+        stopped: new Set(),
+      });
+
+      await confirmOption(TOKEN, OPTION_ID);
+
+      const messages = sendPollEmails.mock.calls[0][0];
+      expect(messages.map((m: { to: string }) => m.to)).toEqual([
+        'peter@orangejelly.co.uk',
+        'sarah@example.com',
+        'kim@example.com',
+      ]);
+      const invitee = messages[2];
+      expect(invitee.text).toContain('invited you, so here is the time');
+      expect(invitee.text).toContain('gave us your email address');
+      expect(messages[1].text).toContain('You gave us these details yourself');
+      expect(messages[0].text).toContain('everyone you invited');
+    });
+
+    it('should leave out anyone who asked us to stop, even though they answered', async () => {
+      storeConfirmOption.mockResolvedValue(confirmedResult());
+      getConfirmRecipients.mockResolvedValue([
+        { email: 'sarah@example.com', display_name: 'Sarah' },
+        { email: 'stopped@example.com', display_name: 'Stopped' },
+      ]);
+      getInviteeConfirmationAudience.mockResolvedValue({
+        unanswered: [],
+        stopped: new Set(['stopped@example.com']),
+      });
+
+      await confirmOption(TOKEN, OPTION_ID);
+
+      const recipients = sendPollEmails.mock.calls[0][0].map((m: { to: string }) => m.to);
+      expect(recipients).not.toContain('stopped@example.com');
+    });
+
+    it('should still tell the people who answered when the invite list cannot be read', async () => {
+      storeConfirmOption.mockResolvedValue(confirmedResult());
+      getConfirmRecipients.mockResolvedValue([
+        { email: 'sarah@example.com', display_name: 'Sarah' },
+      ]);
+      getInviteeConfirmationAudience.mockRejectedValue(new Error('database down'));
+
+      const result = await confirmOption(TOKEN, OPTION_ID);
+
+      expect(result.success).toBe(true);
+      const recipients = sendPollEmails.mock.calls[0][0].map((m: { to: string }) => m.to);
+      expect(recipients).toEqual(['peter@orangejelly.co.uk', 'sarah@example.com']);
     });
 
     it('should not email the organiser twice when they also voted under a different name', async () => {
