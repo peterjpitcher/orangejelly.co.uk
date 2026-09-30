@@ -70,6 +70,8 @@ const SURFACES = [
   'src/lib/share-card',
   'src/components/oj',
   'src/lib/constants.ts',
+  // The promoted product's copy renders on the homepage and in the footer.
+  'src/lib/promoted-product.ts',
   'content/data/navigation.json',
   'content/data/footer.json',
 ];

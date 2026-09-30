@@ -18,6 +18,7 @@ import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { AREAS, FAQS, LOOK_AT_FIRST, RELATED_BUILDS } from './content';
 import SurveyBand from '@/components/survey/SurveyBand';
+import ProductBand from '@/components/product/ProductBand';
 
 /**
  * `/pub-marketing`. The hospitality sector landing page.
@@ -130,6 +131,10 @@ export default function PubMarketingPage(): JSX.Element {
             ))}
           </div>
         </Band>
+
+        {/* Cheers, the promoted product, beside the other things we build for venues
+            (Peter, 30 September 2026). Ink, between two paper bands. */}
+        <ProductBand tone="ink" />
 
         <Band heading="most pubs do not have a marketing problem." tone="paper">
           <div className="measure space-y-4 text-[17px] leading-relaxed">

@@ -16,6 +16,7 @@ const FILE_TARGETS = [
   'src/components/Meta.tsx',
   'src/components/ROICalculator.tsx',
   'src/lib/constants.ts',
+  'src/lib/promoted-product.ts',
 ];
 
 const DIRECTORY_TARGETS = ['content/data', 'content/faqs', 'content/case-studies'];

@@ -12,6 +12,7 @@ const FILE_TARGETS = new Set([
   'src/app/results/page.tsx',
   'src/app/guides/page.tsx',
   'src/app/test-shadcn/page.tsx',
+  'src/lib/promoted-product.ts',
 ]);
 
 // Walked recursively on every run. Poll email copy goes to third parties, so it
