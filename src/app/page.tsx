@@ -14,6 +14,7 @@ import { DEFAULT_SHARE_IMAGE } from '@/lib/share-card/constants';
 
 import { BUILDS, METHOD, PRESSURE_POINTS, PROOF, WORK_EXAMPLES } from './home-content';
 import SurveyBand from '@/components/survey/SurveyBand';
+import ProductBand from '@/components/product/ProductBand';
 
 const TITLE = 'Websites, Applications & AI for Business Growth | Orange Jelly';
 const DESCRIPTION =
@@ -110,6 +111,11 @@ export default function HomePage(): JSX.Element {
             </div>
           </div>
         </section>
+
+        {/* The promoted product, Cheers (Peter, 30 September 2026). After "what we
+            build" because it is something we built. Ink, between two light sections. */}
+        <ProductBand tone="ink" />
+
         <section className="border-b-1.5 border-oj-ink bg-oj-paper py-14 sm:py-20">
           <div className="page-shell">
             <h2 className="oj-display text-[clamp(30px,5.5vw,52px)] leading-[0.98]">

@@ -6,6 +6,7 @@ import * as React from 'react';
 
 import { CookieSettingsButton } from '@/components/CookieSettingsButton';
 
+import { PROMOTED_PRODUCT } from '@/lib/promoted-product';
 import { PROMOTED_SURVEY } from '@/lib/promoted-survey';
 
 import { Footer } from './Footer';
@@ -244,6 +245,11 @@ export function OjFooter(): JSX.Element {
               ? [{ label: PROMOTED_SURVEY.navLabel, href: PROMOTED_SURVEY.href }]
               : []),
             { label: 'What we build', href: '/solutions' },
+            // The promoted product, beside what we build. It lives on its own origin, so
+            // it is a plain link that leaves the site. See src/lib/promoted-product.ts.
+            ...(PROMOTED_PRODUCT
+              ? [{ label: PROMOTED_PRODUCT.footerLabel, href: PROMOTED_PRODUCT.href }]
+              : []),
             { label: 'Growth problems', href: '/growth-problems' },
             /*
              * This entry and the "Fractional CMO" one further down are here to fix
