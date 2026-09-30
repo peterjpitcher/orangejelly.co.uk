@@ -119,6 +119,19 @@ describe('inviteByEmail', () => {
     expect(addInvitees).not.toHaveBeenCalled();
   });
 
+  it("should refuse to invite anyone once the poll's deadline has passed", async () => {
+    // The deadline closes entries (Peter, 30 September 2026): an invitation
+    // would ask for an answer the poll then refuses.
+    getOrganiserView.mockResolvedValue(
+      organiserView({ entries_close_at: new Date(Date.now() - 60_000).toISOString() })
+    );
+
+    const result = await inviteByEmail(TOKEN, 'admin-jwt', 'sam@example.com');
+
+    expect(result.error).toContain('not taking answers');
+    expect(addInvitees).not.toHaveBeenCalled();
+  });
+
   it('should name a typo rather than drop it', async () => {
     const result = await inviteByEmail(TOKEN, 'admin-jwt', 'sam@example.com\nalex@example');
 

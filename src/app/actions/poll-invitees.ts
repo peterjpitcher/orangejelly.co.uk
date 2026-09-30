@@ -14,6 +14,7 @@ import {
   setInviteeOptOut,
 } from '@/lib/db/poll-invitees';
 import { sendPendingInvitations } from '@/lib/poll-invitations';
+import { acceptsAnswers } from '@/lib/poll-state';
 import { isWellFormedToken, scrubTokens } from '@/lib/poll-tokens';
 import { checkRateLimit, getClientIp, hashKey } from '@/lib/rate-limit';
 import { tokenSchema } from '@/lib/validation/poll-tokens';
@@ -75,7 +76,7 @@ function clientIp(): string {
 async function resolveOwnPoll(
   organiserToken: string,
   adminToken: string | undefined
-): Promise<{ pollId: string; status: string } | { error: string }> {
+): Promise<{ pollId: string; takingAnswers: boolean } | { error: string }> {
   const admin = await resolveAdminIdentity(adminToken);
   if (!admin) return { error: SIGN_IN_TO_INVITE };
 
@@ -87,7 +88,9 @@ async function resolveOwnPoll(
     return { error: NOT_YOUR_POLL };
   }
 
-  return { pollId: view.poll.id, status: view.poll.status };
+  // Open, not closed, and before the organiser's deadline: inviting someone to a
+  // poll that has stopped taking answers would ask them for something we refuse.
+  return { pollId: view.poll.id, takingAnswers: acceptsAnswers(view.poll) };
 }
 
 /** Fail closed: these actions send mail. */
@@ -121,7 +124,7 @@ export async function inviteByEmail(
 
   const poll = await resolveOwnPoll(organiserToken, adminToken);
   if ('error' in poll) return { error: poll.error };
-  if (poll.status !== 'open') return { error: NOT_TAKING_ANSWERS };
+  if (!poll.takingAnswers) return { error: NOT_TAKING_ANSWERS };
 
   const limited = await sendingAllowed();
   if (limited) return { error: limited };
@@ -166,7 +169,7 @@ export async function retryInvitations(
 
   const poll = await resolveOwnPoll(organiserToken, adminToken);
   if ('error' in poll) return { error: poll.error };
-  if (poll.status !== 'open') return { error: NOT_TAKING_ANSWERS };
+  if (!poll.takingAnswers) return { error: NOT_TAKING_ANSWERS };
 
   const limited = await sendingAllowed();
   if (limited) return { error: limited };

@@ -336,6 +336,25 @@ describe('submitResponse', () => {
     expect(result.editUrl).toBeDefined();
   });
 
+  it("should refuse an answer once the organiser's deadline has passed", async () => {
+    // Peter, 30 September 2026: the deadline closes entries. It used to only
+    // remind the organiser, and late answers were still taken.
+    getParticipantView.mockResolvedValue(pollView({ entries_close_at: PAST }));
+
+    const result = await submitResponse(TOKEN, submission());
+
+    expect(result.error).toBe(VALIDATION_MESSAGES.poll.votingClosed);
+    expect(storeResponse).not.toHaveBeenCalled();
+  });
+
+  it('should still take an answer before the deadline', async () => {
+    getParticipantView.mockResolvedValue(pollView({ entries_close_at: FAR_FUTURE }));
+
+    const result = await submitResponse(TOKEN, submission());
+
+    expect(result.success).toBe(true);
+  });
+
   it('should tell the organiser once the answer is stored', async () => {
     // The trigger for the digest. Until 29 September 2026 nothing called it, and
     // no organiser was ever emailed about a response.
@@ -441,6 +460,27 @@ describe('updateResponse', () => {
 
     expect(result.error).toBe('Your changes were not recorded. Please try again.');
     expect(notifyOrganiserOfResponse).not.toHaveBeenCalled();
+  });
+
+  it('should refuse a change once the deadline has passed, as it would a late answer', async () => {
+    resolveEditParticipant.mockResolvedValue({
+      participantId: 'participant-1',
+      displayName: 'Billy Summers',
+      poll: {
+        id: 'poll-1',
+        status: 'open',
+        closes_at: null,
+        entries_close_at: PAST,
+        expires_at: FAR_FUTURE,
+        participant_token: TOKEN,
+      },
+      options: [{ id: OPTION_A }, { id: OPTION_B }],
+    });
+
+    const result = await updateResponse(EDIT_TOKEN, update());
+
+    expect(result.error).toBe(VALIDATION_MESSAGES.poll.votingClosed);
+    expect(storeUpdatedResponse).not.toHaveBeenCalled();
   });
 
   it('should tell the organiser about a changed answer too', async () => {

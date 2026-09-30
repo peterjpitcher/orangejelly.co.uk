@@ -6,7 +6,7 @@ import InviteeEmailsControl from '@/components/polls/vote/invitee-emails-control
 import { formatOptionLabel, type TallyCounts } from '@/components/polls/vote/poll-display';
 import BackOfficeBand from '@/components/admin/BackOfficeBand';
 import { Alert, Button } from '@/components/oj';
-import { canVote } from '@/lib/poll-state';
+import { acceptsAnswers, deadlinePassed } from '@/lib/poll-state';
 import type { getVoteView } from '@/app/availability/p/poll-data';
 
 /**
@@ -46,10 +46,12 @@ export default function VoteScreen({
     tallyMap[tally.option_id] = { yes: tally.yes, if_need_be: tally.if_need_be, no: tally.no };
   }
 
-  // `closes_at` is advisory (nothing flips `status` when it passes) so the
-  // page has to apply the deadline itself, exactly as `submitResponse` does.
-  const pastDeadline = Boolean(poll.closes_at && new Date(poll.closes_at).getTime() <= Date.now());
-  const open = canVote(poll.status) && !pastDeadline;
+  // Nothing flips `status` when a deadline passes, so the page applies the same
+  // rule `submitResponse` does: open, not closed, and before the deadline.
+  const open = acceptsAnswers(poll);
+  const pastDeadline =
+    deadlinePassed(poll) ||
+    Boolean(poll.closes_at && new Date(poll.closes_at).getTime() <= Date.now());
   const alreadyAnswered = Boolean(invite?.answeredEditUrl);
 
   const confirmedOption = poll.confirmed_option_id

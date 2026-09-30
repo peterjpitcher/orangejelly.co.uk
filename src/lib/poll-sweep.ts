@@ -27,6 +27,7 @@ import {
 import { formatOptionForEmail } from '@/lib/poll-emails/formatOptionForEmail';
 import { findInviteesDueForReminder, markReminded } from '@/lib/db/poll-invitees';
 import { buildInvitationMessage, readInvitationPoll } from '@/lib/poll-invitations';
+import { acceptsAnswers } from '@/lib/poll-state';
 import { scrubTokens } from '@/lib/poll-tokens';
 import { getAbsoluteUrl } from '@/lib/site-config';
 import type { IsoDate } from '@/lib/dateUtils';
@@ -408,7 +409,7 @@ async function runInviteReminderPass(): Promise<SweepEmailResult> {
       contexts.set(invitee.poll_id, await readInvitationPoll(invitee.poll_id));
     }
     const context = contexts.get(invitee.poll_id);
-    if (!context || context.poll.status !== 'open') continue;
+    if (!context || !acceptsAnswers(context.poll)) continue;
 
     const result = await sendPollEmail(buildInvitationMessage(context, invitee, true));
     if (result.error) {

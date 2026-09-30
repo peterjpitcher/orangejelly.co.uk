@@ -173,8 +173,9 @@ export async function setPollOpen(
   const limited = await checkOrganiserLimit();
   if (limited) return { error: limited };
 
-  // One conditional update, so there is no read-then-write window. `closePoll`
-  // filters on status = 'open'; `reopenPoll` on status = 'closed'.
+  // Conditional updates, so there is no read-then-write window. `closePoll`
+  // filters on status = 'open'; `reopenPoll` on status = 'closed', or on an open
+  // poll whose deadline has passed, which it reopens by removing the deadline.
   const result = open ? await reopenPoll(organiserToken) : await closePoll(organiserToken);
 
   if (!result.stored) {

@@ -19,6 +19,7 @@ import InviteesSection from '@/components/polls/organiser/invitees-section';
 import UpdateEmailsControl from '@/components/polls/organiser/update-emails-control';
 import { optionFullLabel, replyCountLine } from '@/components/polls/organiser/results-display';
 import { bestOption } from '@/lib/poll-aggregate';
+import { acceptsAnswers, deadlinePassed } from '@/lib/poll-state';
 import { getAbsoluteUrl } from '@/lib/site-config';
 import { getOrganiserResults } from '../organiser-data';
 
@@ -165,6 +166,16 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               </Alert>
             )}
 
+            {/* The deadline closes entries by itself (Peter, 30 September 2026).
+              Nothing flips `status` when it passes, so the screen says so. */}
+            {deadlinePassed(poll) && poll.entries_close_at && (
+              <Alert tone="info" role="status" className="mt-4" title="Entries closed">
+                Your deadline, {formatSlotInLondon(poll.entries_close_at)}, has passed, so nobody
+                can vote or change their answer. Pick a time below, or reopen the poll to take more
+                answers, which removes the deadline.
+              </Alert>
+            )}
+
             {isConfirmed && confirmedOption && (
               <Alert
                 tone="ok"
@@ -237,7 +248,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               Renders nothing unless there is a list or a signed-in admin. */}
             <InviteesSection
               organiserToken={params.token}
-              pollOpen={poll.status === 'open'}
+              pollOpen={acceptsAnswers(poll)}
               invitees={view.invitees}
             />
 
@@ -326,7 +337,7 @@ export default async function OrganiserPage({ params }: OrganiserPageProps): Pro
               {/* Confirm stays available on a closed poll, so closing stays
               reversible and non-destructive. */}
               {!isConfirmed && (
-                <ClosePollControl organiserToken={params.token} isOpen={poll.status === 'open'} />
+                <ClosePollControl organiserToken={params.token} isOpen={acceptsAnswers(poll)} />
               )}
               <DeletePollControl organiserToken={params.token} pollTitle={poll.title} />
             </div>

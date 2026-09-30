@@ -93,6 +93,41 @@ export function canVote(status: PollStatus): boolean {
   return status === 'open';
 }
 
+/** What decides whether a poll is still taking answers. */
+export interface AnswerWindow {
+  status: PollStatus;
+  /** When the poll actually closed, if it has. */
+  closes_at: string | null;
+  /** The organiser's deadline, if they set one. */
+  entries_close_at?: string | null;
+}
+
+/**
+ * Whether a poll is taking answers right now: open, not closed, and its
+ * deadline (if any) still to come. The one rule every vote, edit, invitation
+ * and screen uses, so they cannot disagree.
+ *
+ * Nothing flips `status` when a deadline passes, so the time is checked here, at
+ * request time. Until 30 September 2026 the organiser's deadline only triggered
+ * a reminder: the form said "Close entries automatically" and late answers were
+ * still taken. Peter decided that day that the deadline closes entries.
+ */
+export function acceptsAnswers(poll: AnswerWindow, now: number = Date.now()): boolean {
+  if (!canVote(poll.status)) return false;
+  if (poll.closes_at && new Date(poll.closes_at).getTime() <= now) return false;
+  if (poll.entries_close_at && new Date(poll.entries_close_at).getTime() <= now) return false;
+  return true;
+}
+
+/** True when an open poll has stopped taking answers because its deadline passed. */
+export function deadlinePassed(poll: AnswerWindow, now: number = Date.now()): boolean {
+  return Boolean(
+    poll.status === 'open' &&
+    poll.entries_close_at &&
+    new Date(poll.entries_close_at).getTime() <= now
+  );
+}
+
 /** Editing an existing answer is voting by another name, so it follows the same rule. */
 export function canEditResponse(status: PollStatus): boolean {
   return status === 'open';

@@ -64,3 +64,15 @@ describe('buildDeadlineReminderEmail', () => {
     expect(email.html).toContain('&lt;script&gt;');
   });
 });
+
+describe('buildDeadlineReminderEmail after the deadline closes entries', () => {
+  it('should say answers have stopped and how to take more, never that the poll stays open', () => {
+    // Since 30 September 2026 the deadline closes entries. The old line, "the
+    // poll stays open until you confirm or close it", became untrue that day.
+    const email = buildDeadlineReminderEmail(base);
+    expect(email.text).toContain('Answers stopped at your deadline');
+    expect(email.text).toContain('reopen the');
+    expect(email.text).not.toMatch(/stays open/i);
+    expect(email.html).not.toMatch(/stays open/i);
+  });
+});

@@ -174,7 +174,8 @@ const invitationContext = {
     organiser_name: 'Peter',
     organiser_email: 'peter@orangejelly.co.uk',
     option_kind: 'dates',
-    entries_close_at: '2026-10-07T16:00:00.000Z',
+    // Far in the future, so the poll is still taking answers whenever this runs.
+    entries_close_at: '2099-01-15T17:00:00.000Z',
   },
   optionLabels: ['Thursday 8 October 2026'],
   deadlineLabel: 'Wednesday 7 October 2026 at 5:00pm',

@@ -2,12 +2,14 @@ import { describe, expect, it } from 'vitest';
 
 import type { PollStatus } from './db/polls';
 import {
+  acceptsAnswers,
   canClose,
   canConfirm,
   canEditResponse,
   canTransition,
   canVote,
   checkTransition,
+  deadlinePassed,
   isKnownStatus,
 } from './poll-state';
 
@@ -257,5 +259,64 @@ describe('canClose', () => {
 
   it('should refuse a close when the poll is confirmed', () => {
     expect(canClose('confirmed')).toBe(false);
+  });
+});
+
+describe('acceptsAnswers', () => {
+  const NOW = Date.parse('2026-10-05T12:00:00.000Z');
+  const open = { status: 'open' as const, closes_at: null, entries_close_at: null };
+
+  it('should take answers on an open poll with no deadline', () => {
+    expect(acceptsAnswers(open, NOW)).toBe(true);
+  });
+
+  it('should take answers before the deadline and stop at it', () => {
+    // Peter, 30 September 2026: the deadline closes entries, it does not only
+    // remind the organiser.
+    expect(acceptsAnswers({ ...open, entries_close_at: '2026-10-05T12:00:01.000Z' }, NOW)).toBe(
+      true
+    );
+    expect(acceptsAnswers({ ...open, entries_close_at: '2026-10-05T12:00:00.000Z' }, NOW)).toBe(
+      false
+    );
+    expect(acceptsAnswers({ ...open, entries_close_at: '2026-10-01T09:00:00.000Z' }, NOW)).toBe(
+      false
+    );
+  });
+
+  it('should refuse a poll that is closed, confirmed or not yet live', () => {
+    expect(acceptsAnswers({ ...open, status: 'closed' }, NOW)).toBe(false);
+    expect(acceptsAnswers({ ...open, status: 'confirmed' }, NOW)).toBe(false);
+    expect(acceptsAnswers({ ...open, status: 'draft' }, NOW)).toBe(false);
+    expect(acceptsAnswers({ ...open, closes_at: '2026-10-01T09:00:00.000Z' }, NOW)).toBe(false);
+  });
+});
+
+describe('deadlinePassed', () => {
+  const NOW = Date.parse('2026-10-05T12:00:00.000Z');
+
+  it('should be true only for an open poll whose deadline has passed', () => {
+    expect(
+      deadlinePassed(
+        { status: 'open', closes_at: null, entries_close_at: '2026-10-01T09:00:00.000Z' },
+        NOW
+      )
+    ).toBe(true);
+    expect(
+      deadlinePassed(
+        { status: 'open', closes_at: null, entries_close_at: '2026-10-09T09:00:00.000Z' },
+        NOW
+      )
+    ).toBe(false);
+    expect(deadlinePassed({ status: 'open', closes_at: null, entries_close_at: null }, NOW)).toBe(
+      false
+    );
+    // A closed poll is "closed", whatever its deadline says.
+    expect(
+      deadlinePassed(
+        { status: 'closed', closes_at: null, entries_close_at: '2026-10-01T09:00:00.000Z' },
+        NOW
+      )
+    ).toBe(false);
   });
 });
