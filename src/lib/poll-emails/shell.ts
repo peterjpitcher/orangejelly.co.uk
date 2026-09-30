@@ -80,16 +80,26 @@ export function wrapText(body: string): string {
 }
 
 /**
- * A primary call-to-action button.
+ * The vertical padding and line-height every email button uses. Together they
+ * make a 48px button, over the 44px touch target the accessibility baseline
+ * requires, with the label centred.
  *
- * min-height and line-height together clear the 44px touch target the
- * accessibility baseline requires; a bare padded anchor does not on every client.
+ * NO min-height. It was here until 30 September 2026, and in email it adds to
+ * the padding rather than including it (content-box sizing, and box-sizing is
+ * not honoured everywhere), so the 44px minimum became the height of the label
+ * area alone: a 72px button with the label pinned to the top and an empty band
+ * below it, which is how it rendered in Outlook. Height comes from padding and
+ * line-height, which every client centres the same way.
  */
+export const BUTTON_VERTICAL_PADDING_PX = 14;
+export const BUTTON_LINE_HEIGHT_PX = 20;
+
+/** A primary call-to-action button. */
 export function primaryButton(url: string, label: string): string {
   return `<p style="margin:0 0 24px;">
     <a href="${escapeHtml(url)}"
        style="display:inline-block;background:${BRAND_ORANGE_DARK};color:#ffffff;text-decoration:none;
-              padding:14px 28px;border-radius:6px;font-weight:700;min-height:44px;line-height:20px;">
+              padding:${BUTTON_VERTICAL_PADDING_PX}px 28px;border-radius:6px;font-weight:700;line-height:${BUTTON_LINE_HEIGHT_PX}px;">
       ${label}
     </a>
   </p>`;

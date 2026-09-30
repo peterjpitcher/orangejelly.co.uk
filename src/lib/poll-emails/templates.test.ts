@@ -116,6 +116,25 @@ describe('every poll email template', () => {
       expect(build().html).not.toContain('<img');
     }
   );
+
+  it.each(allTemplates)(
+    'should size every button by padding and line-height, never min-height ($name)',
+    ({ build }) => {
+      // min-height adds to the padding in email, so a 44px minimum made a 72px
+      // button with its label pinned to the top (Outlook, 30 September 2026).
+      const buttons = build().html.match(/<a [^>]*display:inline-block[^>]*>/g) ?? [];
+      // Every template here has at least one, so an empty match means the
+      // pattern broke, not that the rule holds.
+      expect(buttons.length).toBeGreaterThan(0);
+      for (const button of buttons) {
+        expect(button).not.toMatch(/min-height/);
+        const padding = Number(/padding:(\d+)px/.exec(button)?.[1]);
+        const lineHeight = Number(/line-height:(\d+)px/.exec(button)?.[1]);
+        // The 44px touch target, from the parts every client agrees on.
+        expect(padding * 2 + lineHeight).toBeGreaterThanOrEqual(44);
+      }
+    }
+  );
 });
 
 describe('buildVerifyEmail', () => {

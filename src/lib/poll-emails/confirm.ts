@@ -3,6 +3,8 @@ import { buildPrivacyNoticeHtml, buildPrivacyNoticeText } from './privacyNotice'
 import {
   BRAND_BLUE,
   BRAND_ORANGE,
+  BUTTON_LINE_HEIGHT_PX,
+  BUTTON_VERTICAL_PADDING_PX,
   MUTED,
   sanitiseSubjectValue,
   wrapHtml,
@@ -149,12 +151,12 @@ export function buildConfirmEmail(input: ConfirmEmailInput): BuiltEmail {
   <p style="margin:0 0 24px;">
     <a href="${escapeHtml(googleUrl)}"
        style="display:inline-block;background:${BRAND_BLUE};color:#ffffff;text-decoration:none;
-              padding:12px 20px;border-radius:6px;font-weight:600;min-height:44px;
-              line-height:20px;margin:0 8px 8px 0;">Add to Google Calendar</a>
+              padding:${BUTTON_VERTICAL_PADDING_PX}px 20px;border-radius:6px;font-weight:600;
+              line-height:${BUTTON_LINE_HEIGHT_PX}px;margin:0 8px 8px 0;">Add to Google Calendar</a>
     <a href="${escapeHtml(outlookUrl)}"
        style="display:inline-block;background:${BRAND_BLUE};color:#ffffff;text-decoration:none;
-              padding:12px 20px;border-radius:6px;font-weight:600;min-height:44px;
-              line-height:20px;margin:0 8px 8px 0;">Add to Outlook</a>
+              padding:${BUTTON_VERTICAL_PADDING_PX}px 20px;border-radius:6px;font-weight:600;
+              line-height:${BUTTON_LINE_HEIGHT_PX}px;margin:0 8px 8px 0;">Add to Outlook</a>
   </p>
 
   <p style="margin:0 0 24px;font-size:14px;">
