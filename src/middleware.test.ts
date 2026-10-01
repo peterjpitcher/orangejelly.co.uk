@@ -88,14 +88,25 @@ describe('Content-Security-Policy', () => {
     expect(connectSrc).not.toContain('challenges.cloudflare.com');
   });
 
-  it('should not allow Microsoft Clarity anywhere, so a leftover GTM tag cannot run', () => {
-    // Clarity recorded visits without consent and was removed on 22 September
-    // 2026. Its tags live in the GTM container, outside this repo, so the CSP is
-    // the part of the removal the code can guarantee.
+  it('should allow Microsoft Clarity to load and upload, and nothing more', () => {
+    // Clarity came back on 1 October 2026. This assertion was the opposite from 22
+    // September, when Clarity was blocked for recording visits without consent, and
+    // nobody could work out afterwards why no recordings arrived. What keeps it
+    // behind consent now is the GTM gate (MarketingChrome.test.tsx), not this
+    // header: the container that loads Clarity is only on the page after Accept.
     const csp = middleware(requestFor('/')).headers.get('Content-Security-Policy');
+    const directives = Object.fromEntries(
+      (csp ?? '').split('; ').map((directive) => {
+        const [name, ...values] = directive.split(' ');
+        return [name, values];
+      })
+    );
 
-    expect(csp).toBeTruthy();
-    expect(csp).not.toContain('clarity.ms');
+    expect(directives['script-src']).toContain('https://*.clarity.ms');
+    expect(directives['connect-src']).toContain('https://*.clarity.ms');
+    // Clarity needs no frame, and a frame is the one place it could show a visitor
+    // something we did not write.
+    expect(directives['frame-src']).not.toContain('https://*.clarity.ms');
   });
 
   it('should keep the existing security headers unweakened', () => {

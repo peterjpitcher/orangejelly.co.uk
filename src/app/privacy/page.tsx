@@ -17,8 +17,10 @@ import { generateStaticMetadata } from '@/lib/metadata';
  * processors named are the ones this repo genuinely calls: Supabase
  * (`src/lib/db`), Resend (`src/lib/email.ts`), Vercel (the host), Cloudflare
  * Turnstile (the bot check on poll creation and the enquiry form, see the CSP
- * note in `src/middleware.ts`) and Google Tag Manager (site analytics, which
- * `src/components/GoogleTagManager.tsx` switches off entirely on poll routes).
+ * note in `src/middleware.ts`), Google Tag Manager (site analytics, which
+ * `src/components/GoogleTagManager.tsx` switches off entirely on poll routes) and
+ * Microsoft Clarity (visit recordings, loaded by the GTM container and so behind
+ * the same consent and the same switch-off; back since 1 October 2026).
  * Do not add a processor here that the code does not use, and do not drop one it
  * does.
  *
@@ -79,7 +81,7 @@ export default function PrivacyPage(): JSX.Element {
                 Privacy policy
               </h1>
               <p className="mt-4 text-[15px] leading-relaxed text-oj-cream/60">
-                Last updated: 22 September 2026
+                Last updated: 1 October 2026
               </p>
               <p className="measure-prose mt-4 text-[19px] leading-relaxed text-oj-cream/85">
                 This explains what personal data Orange Jelly Limited collects through{' '}
@@ -202,10 +204,14 @@ export default function PrivacyPage(): JSX.Element {
                 </li>
                 <li>
                   <strong>Only if you agree</strong>: Google Tag Manager and Google Analytics, which
-                  do set a cookie. If you decline, or ignore the banner, they never load. You can
-                  change your mind at any time with <strong>Cookie settings</strong> at the foot of
-                  every page. Switching analytics off stops the collection straight away and removes
-                  Google Analytics&apos; cookies.
+                  do set a cookie, and Microsoft Clarity, which also sets one. Clarity records how a
+                  visit goes: the pages you open, where you click and how far you scroll, played
+                  back to us so we can see where the site is confusing. It blanks out anything you
+                  type into a form before the recording leaves your browser, so we never see your
+                  words. If you decline, or ignore the banner, none of these load. You can change
+                  your mind at any time with <strong>Cookie settings</strong> at the foot of every
+                  page. Switching analytics off stops the collection straight away and removes the
+                  Google Analytics and Clarity cookies.
                 </li>
               </ul>
               <p>
@@ -213,8 +219,8 @@ export default function PrivacyPage(): JSX.Element {
                 address bar is itself a credential and we will not hand it to a third party.
               </p>
               <p>
-                The records we keep of what happened on the site never contain anything you typed.
-                They hold counts, yes-or-no answers and page names, and nothing else. Your enquiry
+                Our own records of what happened on the site never contain anything you typed. They
+                hold counts, yes-or-no answers and page names, and nothing else. Your enquiry
                 answers do not go into analytics, ever.
               </p>
             </Section>
@@ -245,6 +251,10 @@ export default function PrivacyPage(): JSX.Element {
                 </li>
                 <li>
                   <strong>Google</strong>: analytics on the marketing pages, never on poll pages.
+                </li>
+                <li>
+                  <strong>Microsoft</strong>: Clarity, the visit recordings described above, on the
+                  marketing pages only, and only if you agreed to analytics.
                 </li>
               </ul>
               <p>

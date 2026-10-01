@@ -71,3 +71,20 @@ export function isPollRoute(pathname: string): boolean {
 export function isScriptFreeRoute(pathname: string): boolean {
   return isPollRoute(pathname) || isTokenRoute(pathname);
 }
+
+/**
+ * The admin area, where enquiries and survey answers are shown in full.
+ */
+export const ADMIN_PATH_PATTERN = /^\/admin(\/|$)/;
+
+/**
+ * True where Google Tag Manager, and everything its container loads, must not run.
+ *
+ * Wider than isScriptFreeRoute by the admin area. Microsoft Clarity runs from
+ * inside the GTM container and records what is on the screen, and the admin screen
+ * is people's enquiries. The privacy notice says enquiry answers never go into
+ * analytics, so GTM does not load there whatever the admin's own cookie choice is.
+ */
+export function isTagManagerFreeRoute(pathname: string): boolean {
+  return isScriptFreeRoute(pathname) || ADMIN_PATH_PATTERN.test(pathname);
+}

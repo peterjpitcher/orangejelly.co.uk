@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { isScriptFreeRoute } from '@/lib/token-routes';
+import { isTagManagerFreeRoute } from '@/lib/token-routes';
 import { hasAnalyticsConsent } from '@/lib/tracking';
 
 /** Fired on window by updateGtagConsent, so the loader hears an Accept click. */
@@ -28,9 +28,17 @@ const ANALYTICS_CONSENT_EVENT = 'oj:analytics-consent';
  * analytics is allowed. The consent defaults still run first, so GTM starts from
  * denied and reads the granted update already waiting in the dataLayer.
  *
- * The container also carried three Microsoft Clarity tags, which recorded visits
- * without consent. Clarity is removed: its hosts are gone from the CSP in
- * src/middleware.ts, so it cannot run even from a stale container.
+ * MICROSOFT CLARITY RUNS FROM INSIDE THIS CONTAINER, since 1 October 2026, on the
+ * owner's instruction. It was blocked on 22 September because the container
+ * loaded it for everyone, before any choice. This gate is what changed that: the
+ * container only exists on a page after consent, so Clarity does too, and it
+ * never reaches a poll route. Clarity picks up the granted update below through
+ * Google Consent Mode and sets its own cookies only then. Its hosts are allowed
+ * in the CSP in src/middleware.ts, and the cookie notice and privacy notice both
+ * name it.
+ *
+ * Not on the admin area either. Clarity records what is on the screen, and the
+ * admin screen is people's enquiries.
  */
 export function GoogleTagManager() {
   const pathname = usePathname();
@@ -55,7 +63,7 @@ export function GoogleTagManager() {
     return () => window.removeEventListener(ANALYTICS_CONSENT_EVENT, onConsent);
   }, []);
 
-  if (!gtmId || isScriptFreeRoute(pathname)) {
+  if (!gtmId || isTagManagerFreeRoute(pathname)) {
     return null;
   }
 

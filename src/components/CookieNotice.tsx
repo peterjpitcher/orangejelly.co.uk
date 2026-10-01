@@ -27,17 +27,19 @@ export function openCookieSettings(): void {
 }
 
 /**
- * Removes Google Analytics' own cookies when analytics is switched off.
+ * Removes the analytics tools' own cookies when analytics is switched off.
  *
- * GA sets `_ga` and `_ga_<id>` on the widest domain it can, so each name is
- * cleared on the bare host and on the registrable domain. Clearing one that is
- * not there does nothing.
+ * GA sets `_ga` and `_ga_<id>`, and Microsoft Clarity sets `_clck` and `_clsk`.
+ * Each goes on the widest domain it can, so each name is cleared on the bare host
+ * and on the registrable domain. Clearing one that is not there does nothing.
  */
-function clearGoogleAnalyticsCookies(): void {
+function clearAnalyticsCookies(): void {
   const names = document.cookie
     .split(';')
     .map((cookie) => cookie.trim().split('=')[0])
-    .filter((name) => name === '_ga' || name.startsWith('_ga_'));
+    .filter(
+      (name) => name === '_ga' || name.startsWith('_ga_') || name === '_clck' || name === '_clsk'
+    );
   const host = window.location.hostname;
   const domains = ['', host, `.${host.replace(/^www\./, '')}`];
 
@@ -132,7 +134,7 @@ export default function CookieNotice() {
     setReopened(false);
 
     if (withdrawing) {
-      clearGoogleAnalyticsCookies();
+      clearAnalyticsCookies();
       window.location.reload();
     }
   };
@@ -175,8 +177,9 @@ export default function CookieNotice() {
           </p>
         ) : null}
         <p className="text-xs leading-relaxed sm:text-sm">
-          We use essential cookies to keep the site running and optional analytics to understand how
-          people find and use Orange Jelly. You can accept or reject analytics below. Questions?{' '}
+          We use essential cookies to keep the site running and optional analytics, including
+          recordings of how a visit goes, to understand how people find and use Orange Jelly. You
+          can accept or reject analytics below. Questions?{' '}
           <Link href="/contact" className="font-semibold underline underline-offset-2">
             Contact us
           </Link>
@@ -197,7 +200,9 @@ export default function CookieNotice() {
           <div>
             <p className="font-bold">Analytics (optional)</p>
             <p className="text-oj-cream/80">
-              Google Tag Manager and Google Analytics. Nothing from Google loads unless you accept.
+              Google Tag Manager and Google Analytics count visits. Microsoft Clarity records how
+              a visit goes: pages, clicks and scrolling, never what you type. None of them load
+              unless you accept.
             </p>
           </div>
         </div>
