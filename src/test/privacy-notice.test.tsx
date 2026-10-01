@@ -63,6 +63,21 @@ describe('the privacy notice', () => {
     expect(body).toMatch(/Google Tag Manager and Google Analytics/);
   });
 
+  /*
+   * ADDED 1 October 2026, when Microsoft Clarity came back behind consent. It was
+   * taken off the site on 22 September partly because neither the banner nor this
+   * notice mentioned it. A tool that records visits has to be named here, said to
+   * need agreement, and listed among the suppliers.
+   */
+  it('names Microsoft Clarity, says it records visits only with agreement, and lists Microsoft', () => {
+    const body = text();
+    expect(body).toMatch(/Microsoft Clarity/);
+    expect(body).toMatch(/Clarity records how a\s+visit goes/);
+    expect(body).toMatch(/blanks out anything you\s+type into a form/);
+    expect(body).toMatch(/none of these load/);
+    expect(body).toMatch(/Microsoft: Clarity/);
+  });
+
   it('promises that enquiry answers never reach analytics', () => {
     expect(text()).toMatch(/enquiry answers do not go into analytics/i);
   });
@@ -91,6 +106,6 @@ describe('the privacy notice', () => {
   });
 
   it('is dated the day it was rewritten', () => {
-    expect(text()).toMatch(/Last updated: 22 September 2026/);
+    expect(text()).toMatch(/Last updated: 1 October 2026/);
   });
 });

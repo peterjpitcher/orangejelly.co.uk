@@ -159,6 +159,25 @@ describe('third-party scripts on token routes', () => {
     expect(html).not.toContain('gtm-script');
   });
 
+  /*
+   * ADDED 1 October 2026. Microsoft Clarity runs from inside the GTM container and
+   * records what is on the screen, and the admin screen is people's enquiries. The
+   * privacy notice says enquiry answers never go into analytics, so GTM stays off
+   * the admin area even for an admin who accepted analytics on the public site.
+   */
+  it.each(['/admin', '/admin/leads'])(
+    'should not load Google Tag Manager on %s even after analytics is accepted',
+    (route) => {
+      stubLocalStorage({ [CONSENT_KEY]: ACCEPTED });
+      pathnameMock.mockReturnValue(route);
+
+      const { container } = render(<GoogleTagManager />);
+
+      expect(container.querySelector('[data-testid="gtm-script"]')).toBeNull();
+      expect(container.innerHTML).not.toContain('googletagmanager.com');
+    }
+  );
+
   it('should never embed the token in the rendered chrome when on a token route', () => {
     pathnameMock.mockReturnValue(TOKEN_ROUTE);
 

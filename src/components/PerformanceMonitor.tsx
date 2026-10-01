@@ -55,9 +55,9 @@ export function PreloadResources() {
    *
    * There were four here, to Google Analytics, GTM and Microsoft Clarity. A
    * preconnect opens a real TCP/TLS connection, so every visitor's browser
-   * contacted Google before they had answered the consent banner. GTM now loads
-   * only after consent and Clarity is gone, so the connections were both unwanted
-   * and pointless.
+   * contacted Google and Microsoft before they had answered the consent banner.
+   * GTM now loads only after consent, and Clarity only from inside GTM, so the
+   * connections were both unwanted and pointless. Do not bring them back.
    */
   return (
     <>

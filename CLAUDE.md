@@ -67,7 +67,7 @@ Thirty guides carry 95% of the site's search traffic, and the blog is 92.9% of t
 - Every canonical must point at a URL that serves a page (`src/test/canonical-urls.test.ts`). Sitemap, robots and `llms.txt` derive from the route manifest.
 - Page security headers live in `src/middleware.ts`; API routes get theirs from `headers()` in `next.config.js`, because middleware excludes them.
 - Token routes (`/availability/p/<token>`, `/o/<token>`, `/verify/<token>`) carry a bearer capability in the URL. `src/lib/token-routes.ts` is the single source of truth for the middleware Referrer-Policy and for the script gate that keeps GTM and all third-party JavaScript off those pages. `npm run check:token-privacy` proves it against production.
-- Analytics: GTM, consent-gated through `src/lib/tracking.ts` (`hasAnalyticsConsent`, `trackClientEvent`), plus Vercel Analytics and Speed Insights.
+- Analytics: GTM, consent-gated through `src/lib/tracking.ts` (`hasAnalyticsConsent`, `trackClientEvent`), plus Vercel Analytics and Speed Insights. Microsoft Clarity (project `ybvvjuugxb`) is a tag inside the GTM container, so it loads only after consent, never on poll routes and never on `/admin` (`isTagManagerFreeRoute`). It needs `https://*.clarity.ms` in the CSP: that was removed on 22 September 2026 and nobody could tell why recordings had stopped.
 
 ## Environment variables
 

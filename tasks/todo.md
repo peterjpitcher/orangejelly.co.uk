@@ -1,3 +1,27 @@
+# Microsoft Clarity back behind consent (1 October 2026)
+
+**Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September
+(PR 68) for recording without consent. Bring it back for visitors who accept analytics only.
+Branch `feat/clarity-after-consent`.
+
+- [x] Find the cause: `clarity.ms` is absent from the CSP, and the GTM container (version 6) still
+      carries three Clarity tags (project `ybvvjuugxb` twice, project `splb2wuxka` once).
+- [x] CSP: allow `https://*.clarity.ms` in `script-src` and `connect-src` only.
+- [x] Keep GTM, and so Clarity, off `/admin`, and mask the admin screen as a second lock.
+- [x] Cookie notice and privacy notice name Clarity; switching analytics off clears its cookies.
+- [x] Tests for each of the above.
+- [x] Lint, type-check, tests in London and UTC, build.
+- [x] Browser check with the real container on a local server.
+- [ ] GTM: leave one Clarity tag for `ybvvjuugxb`, pause the other two, publish. Needs Peter's
+      Google sign-in, and must happen before this branch is deployed.
+- [ ] PR, merge, confirm the production deploy, confirm a recording arrives in Clarity.
+
+**Results (1 October 2026):** lint, type-check and build pass; the full suite passes in London
+(2,181) and UTC (2,182). On a local server with the real container: nothing from Google or
+Microsoft before a choice; after Accept, Clarity 0.8.70 loads, sets `_clck` and `_clsk` and its
+upload returns 204; `/admin` and `/availability/new` load neither GTM nor Clarity with analytics
+accepted; switching analytics off clears every cookie and the reload loads nothing.
+
 # Availability poll: production readiness (29 September 2026)
 
 **Goal:** close the four gaps a read-only audit of `/availability` found, then ship. Peter approved

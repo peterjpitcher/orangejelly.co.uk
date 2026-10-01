@@ -71,10 +71,12 @@ describe('Cookie settings', () => {
     expect(panel).toHaveFocus();
   });
 
-  it('stops Google straight away when analytics is switched off: cookies cleared, page reloaded', async () => {
+  it('stops Google and Clarity straight away when analytics is switched off: cookies cleared, page reloaded', async () => {
     store.set(KEY, stored(true));
     document.cookie = '_ga=GA1.1.123.456; path=/';
     document.cookie = '_ga_TEST=GS1.1.789; path=/';
+    document.cookie = '_clck=abc123; path=/';
+    document.cookie = '_clsk=def456; path=/';
     const user = userEvent.setup();
     render(<CookieNotice />);
 
@@ -83,7 +85,7 @@ describe('Cookie settings', () => {
 
     expect(JSON.parse(store.get(KEY) ?? '{}').analytics).toBe(false);
     expect(updateGtagConsent).toHaveBeenLastCalledWith(false);
-    expect(document.cookie).not.toMatch(/_ga/);
+    expect(document.cookie).not.toMatch(/_ga|_clck|_clsk/);
     // GTM cannot be unloaded from a running page, so the page reloads without it.
     expect(reload).toHaveBeenCalledTimes(1);
   });

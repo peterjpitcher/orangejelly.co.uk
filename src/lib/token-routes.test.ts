@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { isTokenRoute, isPollRoute, isScriptFreeRoute } from './token-routes';
+import {
+  isTokenRoute,
+  isPollRoute,
+  isScriptFreeRoute,
+  isTagManagerFreeRoute,
+} from './token-routes';
 
 const TOKEN = '0123456789abcdef0123456789abcdef';
 
@@ -86,5 +91,29 @@ describe('isScriptFreeRoute', () => {
     for (const pathname of ['/survey/pub-apps', '/', '/contact']) {
       expect(isScriptFreeRoute(pathname)).toBe(false);
     }
+  });
+});
+
+describe('isTagManagerFreeRoute', () => {
+  it('should cover everything the script gate covers, plus the admin area', () => {
+    for (const pathname of [
+      `/availability/o/${TOKEN}`,
+      '/availability/new',
+      `/survey/pub-apps/preview/${TOKEN}`,
+      '/admin',
+      '/admin/leads',
+    ]) {
+      expect(isTagManagerFreeRoute(pathname)).toBe(true);
+    }
+  });
+
+  it('should leave the marketing pages measured, including one that only starts with "admin"', () => {
+    for (const pathname of ['/', '/contact', '/survey/pub-apps', '/administration-guide']) {
+      expect(isTagManagerFreeRoute(pathname)).toBe(false);
+    }
+  });
+
+  it('should keep the admin area out of the script gate, so its other chrome is unchanged', () => {
+    expect(isScriptFreeRoute('/admin')).toBe(false);
   });
 });
