@@ -80,7 +80,7 @@ export default function InsightsPage({ searchParams }: PageProps): JSX.Element {
                 <Anchor href="/guides" className="font-semibold underline">
                   guides
                 </Anchor>
-                , where there are {106} of these.
+                , where there are {107} of these.
               </p>
             </div>
           </section>

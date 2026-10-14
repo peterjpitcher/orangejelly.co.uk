@@ -243,6 +243,10 @@
     "caseStudy": "busy-and-not-much-better-off",
     "problem": "systems-cannot-keep-up"
   },
+  "pub-event-food-safety-allergens": {
+    "caseStudy": null,
+    "problem": "operations-slowing-us-down"
+  },
   "pub-event-ideas": {
     "caseStudy": "interest-that-did-not-turn-up",
     "problem": "weak-demand"
