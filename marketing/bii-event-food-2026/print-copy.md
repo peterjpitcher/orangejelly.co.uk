@@ -1,6 +1,6 @@
 # BII article: Seven food checks before your next party booking (print copy)
 
-**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** draft v1, 14 October 2026
+**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** draft v2, 14 October 2026, after Peter's feedback round 1
 
 > **For the BII: please verify before printing.** Please have this article's food safety and allergen content checked before it goes to print. Each check is marked as the law or as Food Standards Agency (FSA) advice, and the sources are below. If you change any statement, please tell Peter, so that the full guide online says the same. This note is not for print.
 >
@@ -16,21 +16,21 @@ Designer notes are backticked labels in square brackets. They are not for print 
 <!-- PRINT-BLOCK id="a2-print" min="260" max="300" must="Peter Pitcher MBII" -->
 
 `[INTRODUCTION, bold, above the headline]`
-A party booking is where a well-run kitchen gets caught out: one person orders for forty, weeks ahead, and extra hands join the shift.
+Food rules protect guests and let a pub run more functions safely. Parties test them: one person orders for forty, weeks ahead.
 
 `[HEADLINE]`
 # Seven food checks before your next party booking
 
 `[BYLINE SENTENCE, bold]`
-Here, Peter Pitcher MBII sets out seven checks, and says which are law and which are Food Standards Agency (FSA) advice:
+Here, Peter Pitcher MBII sets out seven checks, each marked as law or Food Standards Agency (FSA) advice:
 
 `[SECTION 1]`
 ## 1. Ask every guest
-**FSA advice:** ask all customers whether they have any allergen requirements. Put that question on every booking form and pre-order sheet.
+**FSA advice:** ask all customers whether they have any allergen requirements. Put it on the booking form.
 
 `[SECTION 2]`
 ## 2. Ask again on the day
-**FSA advice:** for a pre-ordered group booking, allergen information should also be discussed with individuals on the day, before the food is served.
+**FSA advice:** for a group pre-order, discuss allergens with each guest on the day, before food is served.
 
 `[SECTION 3]`
 ## 3. Know every dish and drink
@@ -38,11 +38,11 @@ Here, Peter Pitcher MBII sets out seven checks, and says which are law and which
 
 `[SECTION 4]`
 ## 4. Label the buffet dish by dish
-**FSA advice:** give allergen information for each item separately, not for the buffet as a whole.
+**FSA advice:** give allergen information for each item separately, not for the buffet as a whole. At The Anchor, each dish gets an A4 sheet: name, ingredients, allergens.
 
 `[SECTION 5]`
 ## 5. Recheck the delivery
-**FSA advice:** check deliveries are what you ordered. A different product may contain different allergens.
+**FSA advice:** check deliveries are what you ordered. A different product may contain different allergens. Shop-bought sausage rolls too: keep the packaging.
 
 `[SECTION 6]`
 ## 6. One plate, one name
@@ -53,7 +53,7 @@ Here, Peter Pitcher MBII sets out seven checks, and says which are law and which
 **The law** in England, Wales and Northern Ireland: cold food at 8°C or below, hot food at 63°C or above. A buffet gets one spell outside that: under four hours cold, under two hours hot.
 
 `[LAST LINES]`
-Brief everyone on shift: nobody guesses. FSA advice covers England, Wales and Northern Ireland; Scotland's guidance and temperature rules differ. Scan the code for booking questions, a team briefing and an event-day checklist.
+Brief everyone on shift: nobody guesses. FSA advice covers England, Wales and Northern Ireland; Scotland's guidance and temperature rules differ. Scan the code for booking questions, a team briefing, a checklist and our dish sheets.
 
 <!-- /PRINT-BLOCK -->
 

@@ -1,8 +1,10 @@
 # BII News: event food and allergens, handover
 
-Print article for BII News, the British Institute of Innkeeping's members' magazine: **"Seven food checks before your next party booking"** (292 words). Copy deadline: Friday 13 November 2026.
+Print article for BII News, the British Institute of Innkeeping's members' magazine: **"Seven food checks before your next party booking"** (299 words, limit 300). Copy deadline: Friday 13 November 2026.
 
 The BII verifies this article's food safety and allergen content before it prints. The note at the top of `print-copy.md` asks them to and gives the source for each check. If they change anything, the guide at `/guides/pub-event-food-safety-allergens` is changed to match.
+
+Peter is supplying The Anchor's real A4 buffet dish sheet; the guide gets a downloadable template once it arrives.
 
 ## Files
 

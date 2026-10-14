@@ -1,10 +1,10 @@
 # BII News: AI in hospitality, handover
 
-Print article for BII News, the British Institute of Innkeeping's members' magazine: **"Five ways to put AI to work in your pub"** (long version, 542 words) or **"Three ways to put AI to work in your pub"** (short version, 292 words). Only one version is printed. Copy deadline: Friday 13 November 2026.
+Print article for BII News, the British Institute of Innkeeping's members' magazine: **"Five ways to put AI to work in your pub"** (547 words, limit 550). It ends with Peter's invitation to call or email him. Copy deadline: Friday 13 November 2026.
 
 ## Files
 
-- `print-copy.md`: both versions, the bio box and the footer strip, with designer notes.
+- `print-copy.md`: the article, the bio box and the footer strip, with designer notes.
 - `bii-ai-2026-qr.svg` and `bii-ai-2026-qr.png`: not made yet. They are made from Peter's short link once it exists (see below). Use the SVG for print.
 
 ## What the code encodes
