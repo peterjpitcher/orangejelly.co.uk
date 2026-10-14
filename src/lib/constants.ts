@@ -41,12 +41,8 @@ export const MESSAGES = {
   // WhatsApp Messages
   whatsapp: {
     default: "Hi Peter, I'd like help building momentum for my venue.",
-    services: "Hi Peter, I'd like to discuss your hospitality growth services.",
     training: "Hi Peter, I'm interested in practical AI workflows for my venue.",
-    recovery: 'Hi Peter, I need help improving trade and momentum at my venue.',
-    blog: "Hi Peter, I just read your guide and I'd like help applying it.",
     notListed: 'Hi Peter, I need help with something not on your services list...',
-    caseStudies: 'Hi Peter, just read your results from The Anchor. Can we chat?',
     lostPage: 'Hi Peter, I got lost on your site. Can you point me in the right direction?',
   },
 

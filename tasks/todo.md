@@ -1,3 +1,47 @@
+# Remove dead code that points at retired addresses (14 October 2026)
+
+**Goal:** remove code that still points at pages phase 4 retired (`/fix-my-pub`,
+`/quiet-midweek-solutions`, `/services` and the rest), found 14 October 2026. Code only, no data;
+the redirects in `src/lib/route-manifest.js` stay. Branch `chore/remove-dead-retired-route-code`,
+from main `a8747c8f` (after PRs 93 to 96).
+
+- [x] Check the two cleanup branches: `chore/remove-orphaned-retired-files` (data files and
+      outreach drafts) and `chore/remove-dead-retired-copy` (homepage components and data files).
+      Neither touched these files; both have since merged (PRs 94 and 95).
+- [x] Confirm each candidate is dead: static and dynamic imports, `require`, `vi.mock`, tests,
+      scripts, config, and whether `seo-overrides.ts` feeds the sitemap, feeds, `llms.txt` or the
+      search index (it does not).
+- [x] Sweep `src` for every path literal that an emitted redirect catches.
+- [x] Baseline on unchanged code: lint, type-check, build, tests in London and UTC.
+- [x] Peter approves the list: "1 yes, 2 all, 3 yes, 4 yes" on 14 October 2026, relayed by the
+      project management session (the guide bridge; all three pop-ups, their config, exports and
+      four WhatsApp messages; twelve overrides; the middleware comment; a leftover-override test;
+      push and PR without merging).
+- [x] Snapshot every built page's title, description and canonical on main `a8747c8f`.
+- [x] Add the test first and watch it fail on the ten redirected overrides.
+- [x] Delete the approved code.
+- [x] Lint, type-check, build, test:run, test:utc; diff the built metadata against the snapshot.
+- [x] Commit, staging exact files (`e5d98f35`).
+- [ ] The project management session pushes, opens the PR and merges.
+
+**Results (14 October 2026):** the new test failed on exactly the ten redirected overrides
+before the deletion and passes after it (104 entries). Lint passes (the one `next/script`
+warning predates this change), type-check passes, build passes with 278 static pages and the
+same 91 routes. `test:run`: 129 files, 2,285 passed, 4 skipped. `test:utc`: 129 files, 2,286
+passed, 3 skipped. Against a build of main `a8747c8f`, all 147 built pages keep the same title,
+description, canonical, Open Graph and Twitter tags, and the sitemap, robots, feeds, `llms.txt`
+and share images are byte-identical. The CSS loses 20 classes, each used only by the deleted
+pop-ups.
+
+**Also changed:** the `tailwind.config.js` comment listed `MobileScrollPrompt` among the
+components that need `tailwindcss-animate`; it no longer names the deleted file.
+**Left alone:** the redirects and the tests that check them; `MarketingChrome` and its test,
+which checks by wording that the pop-ups stay gone (its sample route `/ways-to-work` now
+redirects, which does not matter to what it tests); one-off `scripts/` that name the old pages;
+the scan lists in `check-british-english.mjs` and `check-growth-language.mjs`, which still name
+two deleted page files. `MESSAGES` in `src/lib/constants.ts` now has no reader at all, because
+PR 95 deleted `CTASection.tsx`; it was not on the approved list.
+
 # Remove dead copy that still carries retired claims (14 October 2026)
 
 **Goal:** delete components and data files that no page renders but which still say "All using

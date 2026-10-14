@@ -18,21 +18,22 @@ export type SeoOverride = {
  * hospitality position and a price the site does not publish ship to Google in the
  * same commit, silently, and look deliberate. Deleting them removes the trap.
  *
- * Prices remaining in this file belong to pages that retire at launch, and to three
- * guide articles where the figure is editorial (what a refurbishment costs the
- * reader) rather than what Orange Jelly charges. D3 is about our prices, not theirs.
+ * Twelve more went on 14 October 2026, for the same reason. Ten belonged to pages
+ * phase 4 retired, whose addresses now redirect before anything renders; four of
+ * those still quoted the old package price. The other two, `/about` and `/results`,
+ * are live pages that export their own `metadata`, and `/about` still described
+ * Peter as a hospitality consultant.
+ *
+ * An entry only renders where something looks it up: the guide route reads
+ * `/guides/<slug>`, and `generateMetadata` in `src/lib/metadata.ts` reads the path
+ * its page passes in. `src/test/seo-overrides.test.ts` fails on an entry for an
+ * address that redirects.
+ *
+ * Any price left in this file belongs to a guide article, where the figure is
+ * editorial (what a refurbishment costs the reader) rather than what Orange Jelly
+ * charges. D3 is about our prices, not theirs.
  */
 export const seoOverrides: Record<string, SeoOverride> = {
-  '/capabilities': {
-    title: 'Pub Marketing Capabilities: Social, Events, SEO and More',
-    description:
-      'Full-stack pub marketing: social media, events, paid ads, local visibility, content and website work. See what is included in each package.',
-  },
-  '/pub-marketing-agency': {
-    title: 'Pub Marketing Agency for Independent Pubs & Bars',
-    description:
-      'A pub marketing agency run by a working licensee, not account managers. Social, events, paid ads and local SEO for independent pubs. From £375 + VAT.',
-  },
   /*
    * The rescue page's override is deleted rather than renamed.
    *
@@ -41,16 +42,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
    * metadata, but it names a package at a price on a site that has neither (D3), and
    * carrying it through the rename would have kept a live breach one refactor away.
    */
-  '/empty-pub-solutions': {
-    title: 'Empty Pub? A Proven Plan to Fill Tables Again',
-    description:
-      'An empty pub is a fixable problem. A practical plan to bring footfall back: events, offers and local visibility, from a working licensee. From £375 + VAT.',
-  },
-  '/quiet-midweek-solutions': {
-    title: 'Quiet Midweek? Fill Tuesday & Wednesday Nights',
-    description:
-      'Turn dead midweek nights into reliable trade with Tuesday and Wednesday formats tested at The Anchor, tailored to your pub. From £375 + VAT.',
-  },
   '/guides/profitable-pub-food-menu-ideas': {
     title: 'Profitable Pub Food: 12 Dish Types and the GP Maths',
     description:
@@ -717,18 +708,10 @@ export const seoOverrides: Record<string, SeoOverride> = {
   // --- 2026-08-09 CTR reclaim: pages earning impressions well below the click-through
   // rate expected for their position. Evidence: GSC 12-month export, see
   // tasks/keyword-plan/2026-08-09-ctr-reclaim.md ---
-  // No '/services' entry: next.config 301s /services to /ways-to-work, so an override
-  // here would never render. GSC still shows impressions against the old URL, which is
-  // historical rather than a live page.
   '/guides': {
     title: 'Guides: 100+ Practical Playbooks for UK Pubs | Orange Jelly',
     description:
       'Over 100 practical guides for UK licensees: filling tables, running events, menu margins, staffing, compliance and marketing. From a working publican.',
-  },
-  '/results': {
-    title: 'Pub Marketing Results: What Actually Moved the Numbers',
-    description:
-      'Real results from The Anchor: Google Search visibility up 828%, table bookings up 403% and food revenue up 98%. The work behind each number.',
   },
   '/guides/national-drinks-days-pub-guide': {
     title: 'National Drinks Days 2026: A Pub Promotion Calendar',
@@ -749,44 +732,6 @@ export const seoOverrides: Record<string, SeoOverride> = {
     title: 'Autumn Internationals 2026: Fill Your Pub for the Rugby',
     description:
       'Fill your pub for the November 2026 autumn internationals: fixtures, table bookings, match platters and a screen and sound checklist for licensees.',
-  },
-  // --- 2026-08-09 truncation fix: pages with no override had "| Orange Jelly"
-  // appended, pushing the rendered title past the ~60-char SERP limit (and repeating
-  // the brand twice on /about). An override is used verbatim, with no suffix. ---
-  '/about': {
-    title: 'Hospitality Consultant: Meet the Team Behind Orange Jelly',
-    description:
-      'Meet Peter Pitcher, hospitality consultant and founder, who runs The Anchor in Stanwell Moor. Hands-on, action-first marketing help for UK pubs.',
-  },
-  '/fix-my-pub': {
-    title: 'Fix My Pub: Emergency Turnaround Help From a Licensee',
-    description:
-      'Pub in crisis or just struggling? I run one myself. Tell me what is wrong and I will show you the fastest fix. Packages from £375 + VAT.',
-  },
-  '/compete-with-pub-chains': {
-    title: 'Compete With Pub Chains: a Challenger Strategy',
-    description:
-      'How independent pubs win against the chains: pick the ground you can own, price with intent, and build the things a chain cannot copy.',
-  },
-  '/pub-marketing-no-budget': {
-    title: 'No-Budget Pub Marketing: Practical Free Strategies',
-    description:
-      'Pub marketing when there is no budget: the free levers that actually move trade, in the order to pull them. From a working licensee.',
-  },
-  '/services/social-media-marketing-for-pubs': {
-    title: 'Social Media Marketing for Pubs: Instagram and Facebook',
-    description:
-      'Social media marketing for pubs across Instagram and Facebook: a repeatable plan, templates and an execution rhythm that drives bookings.',
-  },
-  '/services/content-creation-for-pubs': {
-    title: 'Content Creation for Pubs: Phone-First, Done in Hours',
-    description:
-      'Photos, Reels, captions and a batching system so you create a week of pub content in one session. Phone-first, no editing skills needed.',
-  },
-  '/services/paid-social-for-pubs': {
-    title: 'Paid Social for Pubs: Meta Ads That Fill Quiet Nights',
-    description:
-      'Facebook and Instagram ads that sell one specific night: your quiet Tuesday, Sunday lunch or event. Locally targeted, measured on real bookings.',
   },
   // The seven county overrides that sat here were removed when those pages were
   // consolidated into /pub-marketing. An override for a URL that 301s never renders.
