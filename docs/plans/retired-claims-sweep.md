@@ -9,6 +9,8 @@
 
 ### Headline
 
+**Update, 14 October 2026:** the four Greene King handover drafts are deleted, together with the letter's PDF and the script that generated it (branch `chore/remove-orphaned-retired-files`). Nothing read them and the site never served them. Their entries below are kept as history, and git history keeps the files.
+
 The four `content/data` files named as SSOT implementation targets in CLAIMS.md — `claims.json`, `social-proof.json`, `results.json`, `case-studies.json` — have **already been re-based** onto the approved claims. **No retired figures remain in them.** The surviving retired claims are concentrated in four un-rendered Greene King handover templates, one rendered trust-badge, one FAQ line, and a stale example block in `CLAUDE.md`.
 
 ---
@@ -166,13 +168,13 @@ The four `content/data` files named as SSOT implementation targets in CLAIMS.md 
 
 Sorted by number of distinct retired claims, descending. Work top-to-bottom.
 
-- [ ] `content/greene-king-email-template.md` — claims: AI time reclaimed, Social reach / views, Value added, Monthly cost reductions, SMS contacts, Sunday waste / margin, Quiz regulars
+- [x] `content/greene-king-email-template.md`: deleted 14 October 2026. Claims it carried: AI time reclaimed, Social reach / views, Value added, Monthly cost reductions, SMS contacts, Sunday waste / margin, Quiz regulars
   - _STATIC handover doc — tracked in git, NOT rendered by the app. Epicentre: carries almost every retired claim verbatim._
-- [ ] `content/greene-king-email-v2.html` — claims: AI time reclaimed, Monthly cost reductions, Food waste, Sunday waste / margin, Quiz regulars
+- [x] `content/greene-king-email-v2.html`: deleted 14 October 2026. Claims it carried: AI time reclaimed, Monthly cost reductions, Food waste, Sunday waste / margin, Quiz regulars
   - _STATIC handover doc — not rendered. Retired claims in body + metric tiles._
-- [ ] `content/greene-king-partnership-email.html` — claims: Value added, Monthly cost reductions, Sunday waste / margin
+- [x] `content/greene-king-partnership-email.html`: deleted 14 October 2026. Claims it carried: Value added, Monthly cost reductions, Sunday waste / margin
   - _STATIC handover doc — not rendered. Retired claims in metric tiles + body._
-- [ ] `content/greene-king-partnership-letter.html` — claims: Value added, Monthly cost reductions, Sunday waste / margin
+- [x] `content/greene-king-partnership-letter.html`: deleted 14 October 2026, with its PDF (`content/greene-king-partnership-proposal.pdf`) and `scripts/generate-partnership-pdf.js`. Claims it carried: Value added, Monthly cost reductions, Sunday waste / margin
   - _STATIC handover doc — not rendered. Retired claims in metric tiles + body._
 - [ ] `CLAUDE.md` — claims: Value added, Quiz regulars
   - _AI-guidance file — stale example blocks (test_metrics, business) still show "25 regulars" / "£75K" / "58% → 71%". Not user-facing, but should be synced to CLAIMS.md._

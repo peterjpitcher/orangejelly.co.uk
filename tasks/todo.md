@@ -1,3 +1,28 @@
+# Remove orphaned retired data files and outreach drafts (14 October 2026)
+
+**Goal:** delete files left behind by retired pages and old outreach, found while removing dead
+homepage components. Files only, no database data. Branch `chore/remove-orphaned-retired-files`.
+
+- [x] Confirm each candidate is unused: imports, fs reads of `content/`, `package.json` scripts,
+      Husky and lint-staged, tests, `next.config.js`. Only the two content gates walk them.
+- [x] Baseline on unchanged code: lint, type-check, build, tests in London and UTC.
+- [x] Peter approves the deletion list (relayed by the managing session, 14 October): delete the
+      seven retired data files and all six Greene King outreach files; keep both partner logos.
+- [x] Delete the 13 approved files; mark the deleted drafts in `docs/plans/retired-claims-sweep.md`.
+- [x] Lint, type-check, test:run, test:utc, build.
+- [x] Commit: the seven data files, then the Greene King drafts with the checklist update.
+- [ ] Push and open the PR. The managing session reviews and merges.
+
+**Baseline (14 October 2026, unchanged code):** lint passes (one existing warning,
+`src/components/GoogleTagManager.tsx:73`); type-check passes; build passes with 278 static pages;
+tests pass in London (2,181) and UTC (2,182). In a fresh worktree `search-index.test.ts` fails
+until a build has generated `public/search-index.json`, so run the build before the tests.
+
+**Results (14 October 2026, after the deletions):** identical to the baseline. Lint passes with
+the same single warning, type-check passes, build passes with 278 static pages, tests pass in
+London (2,181) and UTC (2,182). `public/partners/bii-logo.png` and `greene-king-logo.png` are
+kept: sent emails or the Greene King toolkit may link to them.
+
 # Food hygiene guide: three factual corrections (14 October 2026)
 
 **Goal:** correct the re-inspection timing and fee, the display law and the unsourced search figure
