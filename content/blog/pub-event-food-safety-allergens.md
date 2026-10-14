@@ -51,7 +51,9 @@ faqs:
 
 This guide is for licensees who take party bookings: birthdays, christenings, wakes, weddings, work parties, buffets and set-menu functions. A party is not normal service. One person orders for many, often weeks ahead, the food goes out on a buffet or all at once, and extra hands join the shift. A kitchen that copes well every day can still be caught out.
 
-The guide separates law from advice throughout. Where something is a legal requirement, it says so. Where it is Food Standards Agency advice, or our own recommendation, it says that instead. This guide is general information, not legal advice.
+Event food in a pub is not home cooking. Even when the buffet is simple, or bought in from a shop, you are supplying food to the public from a commercial kitchen, and the same rules apply. Sourcing, preparation, safe holding and allergen information all deserve the attention you give your everyday menu. The rules exist to protect your guests, and they are also what let a pub run functions confidently, at pace and at scale. So this guide explains the reason behind each precaution, not only the precaution itself.
+
+The guide separates law from advice throughout. Where something is a legal requirement, it says so. Where it is Food Standards Agency advice, or our own recommendation, it says that instead. This guide is general information, not legal advice. For the full rules, or whenever you are unsure, read the official guidance linked throughout and listed at the end, or ask your council's food safety team.
 
 Food Standards Agency guidance covers England, Wales and Northern Ireland. Scotland has its own regulator, Food Standards Scotland, and some of its rules differ. Where they do, this guide says so.
 
@@ -166,6 +168,10 @@ If staff give the information in conversation and not in writing, the law requir
 
 If cross-contamination cannot be avoided, the Food Standards Agency says to tell customers that you cannot provide an allergen-free dish.
 
+**What we do at The Anchor.** For every finished dish on a buffet, we prepare a readable A4 sheet that sits with the dish. It gives the name of the food, what is in it and its allergens, checked against the recipe and the suppliers' packaging, and a dietary or "free from" claim only where we can stand behind it. Guests can read it while they choose, and a member of staff is there to talk through any individual allergy.
+
+This is how we choose to meet the buffet guidance, not a legal form. The legal minimum is set out above: the information has to be available for each dish, and if staff give it in conversation, a notice must tell guests to ask. A sheet does not replace the conversation with a guest who has an allergy. Food packed before guests choose it needs its own full label under the prepacked for direct sale rules below, and any "free from" claim carries the strict controls described in the menu section.
+
 **Plate allergy guests from the kitchen.** We recommend plating food for a guest with an allergy in the kitchen and not from the buffet, where shared spoons and tongs carry one dish into another.
 
 **Control the clock.** In England, Wales and Northern Ireland the law sets the temperatures and one exception for display:
@@ -200,6 +206,13 @@ The agency's allergen checklist asks whether a responsible member of staff is av
 ## Other people's food
 
 **Food you buy in.** Each food business is responsible for the food it supplies and for the accuracy of the allergen information it gives. A business that supplies non-prepacked food to another food business must pass on the information that business needs. If you buy in desserts, canapés or a cake and serve them as part of your own package, get the allergen information from the supplier in writing and put it on the event's chart.
+
+Do not let a familiar name reassure you. Two sausage rolls or two sandwiches from different shops can have different recipes, and one may contain an allergen the other does not. A shop can change a recipe, and a substitute can arrive in place of what you ordered. When you buy in buffet food:
+
+- keep the packaging, or the supplier's ingredient information, for everything you serve;
+- record the actual ingredients and allergens of the finished dish, including anything you add to it;
+- check any substitution before it goes out;
+- make sure the allergen chart and the sheet or label for that dish say the same thing.
 
 The Food Standards Agency's pack suggests asking a supplier three questions: are they registered with the local authority, do they provide allergen information, and do they have a food safety management system.
 
@@ -309,14 +322,15 @@ Print this and keep it with each booking.
 - [ ] Allergen chart made for this event's menu: every dish, sauce, garnish, canapé and bar-mixed drink
 - [ ] Each allergy guest's meal agreed with the kitchen, in writing
 - [ ] Recipes fixed, with any change going back through the chart
+- [ ] Packaging or supplier ingredient information kept for every bought-in item
 - [ ] Food safety pack checked: does it cover everything this event involves?
 
 **On the day, before service**
 
 - [ ] Deliveries checked against the order, and any substitution checked against the chart
-- [ ] Buffet labels written, one for each dish
+- [ ] Allergen information for each buffet dish prepared or updated (at The Anchor, an A4 sheet per finished dish), checked against the recipe and the packaging, and placed where guests can read it while they choose
 - [ ] Notice on display telling guests to ask about allergens
-- [ ] Whole team briefed, extra staff included
+- [ ] Whole team briefed, extra staff included: check the chart and the sheets, never guess
 - [ ] Time written down for anything going out on display
 
 **During service**
@@ -326,6 +340,7 @@ Print this and keep it with each booking.
 - [ ] Server says at the table what the dish is free from
 - [ ] Display times kept: in England, Wales and Northern Ireland, under four hours for cold food and under two hours for hot food, once only
 - [ ] Nothing topped up: a fresh dish replaces an empty one
+- [ ] Chart and buffet information updated together after any last-minute change
 
 **Afterwards**
 

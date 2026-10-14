@@ -4,7 +4,7 @@ slug: "ai-for-pubs"
 publishedDate: 2026-10-14
 updatedDate: 2026-10-14
 excerpt: "AI for pubs, from a working licensee: what has changed, the jobs it does well, the shortcuts worth knowing and the house rules that keep you out of trouble."
-quickAnswer: "Start with one assistant and one job. Tell it who you are in its custom instructions, show it photographs instead of typing, and give it a weekly task. Keep guests' details, staff records and allergen decisions away from it, and have a named person check everything before it is used. Then look at how AI describes your pub to guests."
+quickAnswer: "Start with a conversation: open ChatGPT, tap the Voice icon and talk to it about your pub. Then hand over one job, tell it who you are in its custom instructions and keep guests' details, staff records and allergen decisions away from it. Control the facts at source, and keep complaints and sensitive messages with a person. When you are ready, join up your information so AI can help you decide and grow."
 author: "Peter Pitcher"
 category: "operations"
 featuredImage: "/images/blog/default.svg"
@@ -41,20 +41,20 @@ faqs:
   - question: "Do customers really use AI to choose a pub?"
     answer: "Some do. A survey of more than 5,000 British consumers for Zonal and NIQ, published in October 2026, found that 19% already use AI tools to plan a visit to a pub, bar or restaurant, mainly to check reviews, prices, menus and opening times. Half said they were considering it."
   - question: "Can I use AI to reply to reviews?"
-    answer: "You can use it to draft your own reply to a genuine review, then check it and send it as yourself. What the law bans is fake reviews: since April 2025 it has been unlawful to write or commission a review that is not based on a real person's experience, and that covers reviews created by any means, AI included."
+    answer: "Yes, for genuine reviews. Start by having it draft your own reply, then check it and send it as yourself. Once you trust the drafts, thanks for straightforward five-star reviews can follow a process you have approved, but complaints and criticism should always go to a person. What the law bans is fake reviews: since April 2025 it has been unlawful to write or commission a review that is not based on a real person's experience, and that covers reviews created by any means, AI included."
   - question: "Do I have to say when a poster or advert was made with AI?"
     answer: "There is no general legal requirement in the UK to say so, the advertising regulator says. But its rules apply however an advert was made, so a picture must not mislead: show the dish and the room a guest will actually get. Some customers dislike AI artwork, as the BBC reported in August 2026."
 ---
 
 # AI for Pubs: What Is New, What Works and Where to Start
 
-This guide is for licensees who have tried ChatGPT once or twice and want to know what is worth doing with it now. It is not another getting-started piece. It assumes you can open an assistant and type a question, and goes from there.
+This guide is for every licensee, whether you have never opened ChatGPT or already use it every week. It starts with a conversation you can have today, moves through the jobs worth handing over and the settings that keep you safe, and ends with what it looks like when a pub goes all in: its information joined up, and AI helping to run and grow the business.
 
-It covers what has changed for pubs, how to set an assistant up once, twelve jobs worth handing over with prompts you can copy, what the slash, at and hash signs really do, and the house rules that keep you out of trouble. It does not recommend paid software, quote prices or forecast what AI will do next.
+Along the way it covers what has changed for pubs, twelve prompts you can copy, what the slash, at and hash signs really do, and the house rules that keep hospitality human. It does not recommend paid software, quote prices or forecast what AI will do next.
 
-Start with a job, not a tool. Pick something that eats your week, such as the posts, the specials board or the replies to party enquiries, and give that job to the assistant you already have. Shopping for software comes later, if at all.
+Start with a job, not a tool. Have a conversation, solve one small problem, make the fix repeatable, then join up the information across the business so you can make better decisions. Take each step when the last one is working.
 
-AI makes your own ideas happen faster, but it does not supply them. The section near the end shows how we use it at The Anchor, our own venue.
+AI works best as a well-managed business partner. The vision, the standards and the decisions stay yours. AI brings a fresh perspective, helps develop an idea once you have set the direction, and does a great deal of the work. The last sections show how we use it at The Anchor, our own venue, and what going all in looks like.
 
 The details about each tool in this guide were checked on 14 October 2026. AI products change often, so a menu or a setting may have moved by the time you read this.
 
@@ -73,6 +73,12 @@ The details about each tool in this guide were checked on 14 October 2026. AI pr
 **Features come and go.** OpenAI has announced that custom GPTs will be retired on 11 December 2026. Build your habits around the basics, which last, rather than around the newest button.
 
 What guests read about you matters more than which tool you pick, so that is where to begin.
+
+## Start with a conversation
+
+You do not need to learn prompts to begin. Open the ChatGPT app, tap the Voice icon and talk to it about your pub as you would to someone you trust: a quiet Tuesday, a dish that will not sell, a function room that sits empty too often. The Voice icon starts a spoken conversation, so it talks back. The microphone icon only dictates what you say as text. Both are on all plans, with limits on free accounts.
+
+Ask questions, push back on its answers and ask it for options you had not thought of. Leave out names and personal details (the house rules below explain why). When something useful comes out of the conversation, that is your first job to hand over.
 
 ## See your pub the way AI does
 
@@ -257,12 +263,12 @@ Everything worth knowing, in one table:
 Agree these before anyone uses AI for the pub. Each one comes with its reason.
 
 1. **Guests' details, staff records and allergy information stay out of free and personal AI accounts.** Data protection law applies in full to AI tools: the [Information Commissioner's Office says](https://ico.org.uk/about-the-ico/what-we-do/our-work-on-artificial-intelligence/response-to-the-consultation-series-on-generative-ai/tackling-misconceptions/) there is no AI exemption. A guest's allergy is information about their health, which data protection law protects more strictly. If you want help with a reply, take the name and details out first. The guide to [food allergies and data protection](/guides/food-allergies-gdpr-compliance) covers the rest.
-2. **A named person checks every date, price, opening time and claim before anything an AI tool wrote is used.** The [National Cyber Security Centre warns](https://www.ncsc.gov.uk/guidance/ai-and-cyber-security-what-you-need-to-know) that these tools can get things wrong and present incorrect statements as facts.
+2. **Control the facts at source, and check what matters.** The [National Cyber Security Centre warns](https://www.ncsc.gov.uk/guidance/ai-and-cyber-security-what-you-need-to-know) that these tools can get things wrong and present incorrect statements as facts. So a named person owns every date, price, opening time and claim, and the simplest way to make that work is one approved source. At The Anchor each event starts with a brief that we write and approve, and the posts, emails, event page and booking details all come from it. When something changes, we change the brief. Routine messages built from an approved brief can then go out with suitable checks, while anything sensitive goes to a person. Allergen and safety information is always checked by a person.
 3. **AI never decides what is in a dish.** The food business is legally responsible for the accuracy of its allergen information, however that information is produced ([Regulation (EU) No 1169/2011, Article 8](https://www.legislation.gov.uk/eur/2011/1169/article/8)). AI can lay out a table you have already checked, and nothing more.
-4. **AI never writes a review.** Since 6 April 2025 it has been unlawful to write, or to commission, a fake review: one that claims to be, but is not, based on a person's genuine experience. [The law](https://www.legislation.gov.uk/ukpga/2024/13/schedule/20) says writing includes "creating by any means", so a review produced by AI is covered, as the [Competition and Markets Authority's guidance](https://www.gov.uk/government/publications/fake-reviews-cma208) sets out. Using an AI tool to help draft your own reply to a genuine review is a different thing. Check it and send it as yourself, and see [how to respond to bad reviews](/guides/how-to-respond-bad-pub-reviews).
+4. **AI never writes a review, but it can help you reply to one.** Since 6 April 2025 it has been unlawful to write, or to commission, a fake review: one that claims to be, but is not, based on a person's genuine experience. [The law](https://www.legislation.gov.uk/ukpga/2024/13/schedule/20) says writing includes "creating by any means", so a review produced by AI is covered, as the [Competition and Markets Authority's guidance](https://www.gov.uk/government/publications/fake-reviews-cma208) sets out. Replying to a genuine review is a different thing, and there is a natural progression. Start by having AI draft your reply, then check it and send it as yourself. Once you trust the drafts, thanking guests for straightforward five-star reviews can follow a process you have approved; check the review platform's own rules before you automate anything. Complaints, criticism and any review where someone may feel hurt or unheard go to a person, because that is where hospitality matters most. See [how to respond to bad reviews](/guides/how-to-respond-bad-pub-reviews).
 5. **Pictures show what a guest will actually get.** The [advertising regulator says](https://www.asa.org.uk/news/disclosure-of-ai-in-advertising-striking-the-balance-between-creativity-and-responsibility.html) there is no general legal requirement in the UK to say that an advert used AI, and that its existing rules apply however an advert was made. A picture of food or of your pub must not mislead. Given the backlash the BBC reported, photographs of your own food and your own rooms avoid the question altogether.
 6. **People decide about people.** Do not use an AI tool to choose who to hire, discipline or dismiss. For a question about a member of the team, BII members have an HR and Employment Law helpline; the number is on the [BII's helplines page](https://bii.org/resources-hub/helplines/).
-7. **AI is a junior member of the team.** Treat it like one: it drafts, and you approve the final version.
+7. **AI is a business partner, well managed.** Let it bring an outside view, challenge your assumptions, analyse your figures and do substantial work. You set the direction, the standards and who decides what. It never acts alone on allergens, personal data, employment or a sensitive conversation with a guest.
 
 Switch off training on whichever assistant you use:
 
@@ -290,6 +296,8 @@ Write your rules on one page and go through them with the team. Here is a starti
 
 ## Ask your suppliers what is already included
 
+The test for any tool, new or old, is not only whether it gives you hours back. Ask whether it helps you serve guests better, create revenue, make sounder decisions or move faster. If it does more than it costs, it is worth paying for.
+
 Before you pay for a new AI tool, talk to the suppliers you already pay: your till, your booking system, your rota app and your accounts package. Ask each of them three questions:
 
 1. What AI features are included in what I already pay?
@@ -302,7 +310,7 @@ Ask for the answers in writing, and keep them with the contract. A feature you a
 
 Four weeks, one step at a time:
 
-1. **Week one: settings and house rules.** Switch off training, write your custom instructions and agree the one-page policy with the team.
+1. **Week one: a conversation, then settings and house rules.** Talk to it about your pub using the Voice icon, then switch off training, write your custom instructions and agree the one-page policy with the team.
 2. **Week two: one job from the twelve.** Pick the one that takes most of your time now, use it every day, and check every answer before it goes anywhere.
 3. **Week three: a weekly scheduled task.** Set up the Monday posts as a scheduled task, and edit what it drafts before anything is posted.
 4. **Week four: see your pub the way AI does.** Ask the three questions from earlier in this guide, then fix what they throw up on your website and your Business Profile. Ask them again a month later and note what has changed.
@@ -311,17 +319,39 @@ Keep the weeks in that order. The settings and the rules come first because ever
 
 If you want a structured course alongside this, the BII's training pages list a free video course for members called [AI For Publicans](https://bii.org/training-course/ai-for-publicans/).
 
-## Bring your own idea: how we use it
+## How we use it at The Anchor
 
-We have run tasting nights at The Anchor for years. The ideas are ours. AI does not come up with them, and it does not run the night by itself.
+We work with AI every day at The Anchor, our own venue. It is a business partner for us, and the ideas and the personality of the pub stay ours.
 
-What it does now is the legwork. AI helps us turn each idea into a full plan, handle messages with suppliers, design the artwork and build an app to run the night, with guests rating each drink live on their own phones.
+**Ideas, developed further.** We have run tasting nights at The Anchor for years, and the ideas are ours. AI helps us turn each one into a full plan, handle messages with suppliers, design the artwork and build an app to run the night, with guests rating each drink live on their own phones. It works the same way with food. When something catches our eye, such as black garlic, AI helps us explore how we might adapt dishes we already serve, compare what suppliers offer and choose something that still feels like The Anchor. We use it to flesh out our ideas, not to decide who we are.
 
-That is the lesson worth taking from it. Bring AI an idea you believe in and let it do the legwork. Asking it for the idea, and expecting it to run the night for you, gets the order the wrong way round.
+**A website in our own voice.** We built our website with AI, setting the direction ourselves so that it still sounds and feels like The Anchor.
 
 More widely, at The Anchor, our own venue, we use AI for research, drafting, analysis and repetitive checking. We have no AI number: its contribution has not been measured separately from the wider work.
 
-For an honest read on where AI would and would not pay in your business, try the [AI readiness assessment](/tools/ai-readiness), or read about [using AI intelligently](/growth-problems/using-ai-intelligently).
+## What going all in looks like
+
+Most pubs will not start here, and nobody needs to build a system tomorrow. But it helps to see where the road leads:
+
+1. **Have a conversation.** Talk an idea or a problem through.
+2. **Solve one small problem.** Hand over one of the twelve jobs.
+3. **Make it repeatable.** A project, a scheduled task, an approved brief for each event.
+4. **Join up your information.** Bookings, events, marketing and takings in one place.
+5. **Decide better.** Use AI to analyse the joined-up picture, then act on what it shows.
+
+At The Anchor we have reached the fifth step. With AI's help we built one back-office system that brings together table and private bookings, events, marketing emails and text messages, customer records, pre-paid parking, receipts and customer invoices, mileage, Machine Games Duty submissions, short links and performance reporting.
+
+The value is in seeing it all together. Instead of looking at takings on their own, we look at bookings, attendance, campaign results and revenue side by side, and AI helps us review trading, private hire, events and the results of our messages as one picture. That is what lets us spot what is working and move faster.
+
+A system like this holds guests' personal data, so it needs proper data protection controls: who can see what, a lawful basis for everything it holds, and a clear decision on how long it is kept. That is a different thing entirely from pasting a guest's details into a free or personal chatbot, which the house rules rule out.
+
+## When you want to go further
+
+Do as much of this yourself as you can. Everything in this guide is free to use, and much of it works on a free account.
+
+When you are ready to go further, whether that means developing an idea, moving faster or joining up your systems, and you want a partner who can help, give me a call. I would love to talk through what you want to achieve. Call me on 07990 587315 or email [peter@orangejelly.co.uk](mailto:peter@orangejelly.co.uk).
+
+For background reading, there is an [AI readiness assessment](/tools/ai-readiness) and a page on [using AI intelligently](/growth-problems/using-ai-intelligently).
 
 ## Sources
 
