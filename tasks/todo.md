@@ -1,3 +1,31 @@
+# Remove dead copy that still carries retired claims (14 October 2026)
+
+**Goal:** delete components and data files that no page renders but which still say "All using
+AI" and "Featured in BII magazine for AI innovation" (found 13 October 2026). Code and content
+files only, no database data. Peter approves the file list once before anything is deleted.
+Branch `chore/remove-dead-retired-copy`.
+
+- [x] Confirm each file is unused: static and dynamic imports, `require`, `vi.mock` and runtime
+      reads of `content/data` across `src`, `scripts` and config.
+- [x] Find what deleting `src/app/HomePage.tsx` leaves with no importer (seven components).
+- [x] Baseline on the unchanged branch: lint, type-check, `test:run` and `test:utc` (128 files,
+      2,181 passed, 4 skipped), build (278 pages).
+- [x] Peter approves the list: "all yes" on 14 October 2026, given in the project management
+      session (the six files, the seven components, the comment, push and PR without merging).
+- [x] Delete the 13 approved files; note in `src/app/about/content.ts` that `about.json` is gone.
+- [x] Lint, type-check, `test:run`, `test:utc`, build; compare the route list with the baseline.
+- [ ] Push and open a PR. The project management session reviews and merges.
+
+**Results:** lint and type-check pass (the one `next/script` warning predates this change).
+`test:run`: 128 files, 2,181 passed, 4 skipped. `test:utc`: 128 files, 2,182 passed, 3 skipped;
+the extra pass is the timezone gate, which runs only under `npm run test:utc`. Build: 278 pages,
+the same 91 routes as before, and none of the 147 built pages contains either retired sentence.
+
+**Left alone:** old docs; one-off `scripts/` that name these files; the provenance line in
+`tasks/repositioning/copy/about.md`; the `public/partners/` logos, which are public addresses.
+**Parked:** the unread `content/data/services/*.json`, `quiet-midweek.json` and old outreach
+drafts, now a separate conversation.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September

@@ -7,6 +7,8 @@
  * tenancy, BII membership, the dates in content/data/about.json and the project
  * profile, and the approved claims. Nothing about motivation or belief is invented,
  * because inventing it is exactly the thing the pack's own evidence rule forbids.
+ * content/data/about.json was deleted on 14 October 2026 because nothing read it; the
+ * year it gave, 2019, is also in the organisation schema in src/app/layout.tsx.
  *
  * D21 applies throughout: company voice, no founder story as a page structure, and
  * The Anchor is our own venue rather than anybody's pub. The section naming who you
