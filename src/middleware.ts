@@ -23,12 +23,7 @@ const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
   'location-challenges': 'property',
 };
 
-const RETIRED_CONTENT_PATHS = new Set([
-  '/guides/README',
-  '/guides/readme',
-  // cash-flow-crisis-breaking-cycle now 301-redirects to /fix-my-pub (see next.config.js)
-  // instead of returning 410, so it is intentionally no longer listed here.
-]);
+const RETIRED_CONTENT_PATHS = new Set(['/guides/README', '/guides/readme']);
 
 function normalizePathSegment(value: string): string {
   return value

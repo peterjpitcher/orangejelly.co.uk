@@ -438,7 +438,7 @@ module.exports = {
   },
   // tailwindcss-animate supplies animate-in/animate-out/fade-in/zoom-in/
   // slide-in-from-*, which ui/sheet, ui/navigation-menu, ui/tooltip, ui/dialog,
-  // ui/select, MobileScrollPrompt and AlertAdapter all ship. Without the plugin
+  // ui/select and AlertAdapter all ship. Without the plugin
   // registered those class names generated no CSS at all (`animation-name: none`),
   // so every Radix enter/exit transition snapped instantly.
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
