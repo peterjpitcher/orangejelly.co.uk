@@ -98,6 +98,15 @@ These are settled. Build to them.
 | A5 | What format does the BII want? | Not asked. Still assumed: the Markdown file in section 4.2. | Do not create Word or PDF files unless Peter asks. |
 | A6 | Who checks Article 2? | The BII verifies it itself. Peter signs off both articles. | Put the note from the Article 2 spec at the top of its print copy (D12). |
 
+### Feedback round 1, 14 October 2026
+
+Peter's feedback (gathered by an interview agent, `feedback-round-1.md`) changed these rules. Where they conflict with anything below, they win.
+
+- **AI pieces:** only the long print version goes to the BII. AI is framed as a well-managed business partner: the publican sets direction, standards and decisions. Both AI pieces end with Peter's personal invitation to call 07990 587315 or email peter@orangejelly.co.uk (contact details from `CONTACT` in `src/lib/constants.ts`). The AI readiness assessment is background reading, not the main next step.
+- **New first-hand facts, from Peter on 14 October 2026:** The Anchor's website was built with AI, with Peter setting the direction; AI helps develop food ideas once something catches his eye (his example: black garlic, not a claimed trend); each event starts from one approved brief that feeds posts, emails, event pages and booking details; one back-office system, built with AI's help, covers table and private bookings, events, marketing email and SMS, customer records, pre-paid parking, receipts and customer invoices, mileage, Machine Games Duty, short links and reporting (scope checked against the management app's sections the same day).
+- **Not used:** Peter's estimate of £4,000 to £5,000 a year in reduced software costs (unverified, and not one of the approved claims), and any revenue figure tied to AI. Automated review replies are described as an option under an approved process, not as something The Anchor does: no such automation was found in the management app.
+- **Food pieces:** strictly educational, with no Orange Jelly invitation. They add The Anchor's practice of an A4 information sheet for every finished buffet dish, and a bought-in food example (sausage rolls and sandwiches). Peter will supply his real sheet; the downloadable template waits for it, and nobody invents its layout.
+
 ## 4. The printed copy: rules for both articles
 
 ### 4.1 How BII News lays out a page

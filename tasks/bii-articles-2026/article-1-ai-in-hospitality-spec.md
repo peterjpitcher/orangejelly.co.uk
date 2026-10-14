@@ -338,7 +338,7 @@ faqs:
 
 ### 6.2 Length
 
-2,400 to 3,400 words of prose in the body, not counting tables, block quotes (the prompts and Blocks A to D) or the Sources section. (The upper limit rose by 200 on 14 October 2026 to make room for the tasting-night example in section 9. On the same day the build showed that the locked prompts, tables and blocks alone add about 1,000 words, so the range cannot include them and still match the section budgets in 6.3. The guide as built: 2,662 words of prose.)
+2,400 to 3,400 words of prose in the body, not counting tables, block quotes (the prompts and Blocks A to D) or the Sources section. (The upper limit rose by 200 on 14 October 2026 to make room for the tasting-night example in section 9. On the same day the build showed that the locked prompts, tables and blocks alone add about 1,000 words, so the range cannot include them and still match the section budgets in 6.3. The guide as built: 2,662 words of prose.) After Peter's feedback round 1 the range is 2,400 to 3,600, to make room for the sections he asked for; the revised guide has 3,444 words of prose.
 
 ### 6.3 Section order
 
@@ -597,7 +597,7 @@ swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr
 
 Run these after README section 8.
 
-- [ ] The body is 2,400 to 3,400 words of prose, counted as section 6.2 says.
+- [ ] The body is 2,400 to 3,600 words of prose, counted as section 6.2 says.
 - [ ] `publishedDate` and `updatedDate` are the day you built: not 2026-10-13 unless that is today, and not a future date.
 - [ ] Tables C and D, Blocks A to D, the twelve prompts and all eight FAQ answers are word for word.
 - [ ] Every statistic names its source in the same sentence and links to it.
