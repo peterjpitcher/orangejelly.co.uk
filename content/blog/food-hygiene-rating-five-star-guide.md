@@ -37,7 +37,7 @@ faqs:
   - question: "Can I refuse an EHO inspection?"
     answer: "Technically an officer needs your consent or a warrant to enter, but refusing or obstructing an inspection is a criminal offence under the Food Safety Act 1990. It also looks terrible and will likely result in a formal follow-up with enforcement action. There is no scenario where refusing helps you."
   - question: "How long does it take to get a re-inspection after a bad rating?"
-    answer: "You can request a re-inspection once you have addressed the issues raised. Most councils allow a re-inspection request after a minimum of three months. You usually pay a fee, typically between 150 and 200 pounds. Only request it when you are genuinely confident the problems are fixed. A second poor score is worse than waiting."
+    answer: "You can request a re-inspection once the issues are fixed (in Northern Ireland, after the 21-day appeal period). Your council should then visit within three months (six in England if it does not charge). Most councils charge a fee. Only ask when you are genuinely confident: a second poor score is worse than waiting."
   - question: "Do I need a food hygiene certificate to run a pub kitchen?"
     answer: "There is no legal requirement for a specific certificate, but you must be able to demonstrate that food handlers are trained in food hygiene. In practice, a Level 2 Award in Food Safety is the industry minimum for kitchen staff, and a Level 3 is expected for the person managing food safety. Inspectors will ask about training records."
   - question: "What happens if I get a food hygiene rating of 0?"
@@ -45,7 +45,7 @@ faqs:
   - question: "Does my food hygiene rating affect my premises licence?"
     answer: "Not directly, but persistent poor hygiene can lead to enforcement action that creates problems with your licence. If environmental health makes a formal complaint to the licensing authority about your premises, it could trigger a licence review. It also gives ammunition to anyone who wants to object to a licence variation or renewal."
   - question: "Can I hide a bad food hygiene rating?"
-    answer: "No. Your rating is published on the Food Standards Agency website and is publicly searchable. In Wales, displaying your rating sticker is a legal requirement. In England, display is currently voluntary but strongly encouraged, and customers who do not see a sticker will check online. Hiding a bad score does not hide the problem. It just looks like you have something to hide."
+    answer: "No. Your rating is published on the Food Standards Agency website. Displaying your sticker is required by law in Wales and Northern Ireland, and voluntary but strongly encouraged in England (Scotland runs a different scheme). Customers who do not see a sticker will check online. Hiding a bad score does not hide the problem. It just looks like you have something to hide."
 ctaSettings:
   ctaType: "services"
   ctaHeading: "Get Your Pub Operating at Five Stars"
@@ -77,9 +77,9 @@ This covers how you handle, prepare, cook, cool, reheat, and store food. The ins
 
 They look at:
 
-- **Temperature control.** Are your fridges running between 1 and 5 degrees? Are you checking and recording temperatures daily? Is hot food held above 63 degrees? Are you cooling food properly (down to 8 degrees within 90 minutes, then into the fridge)?
+- **Temperature control.** Is chilled food kept at 8°C or below (law in England, Wales and Northern Ireland; advice in Scotland)? Are you checking and recording temperatures daily? Is hot food held above 63°C (UK law)? Are you cooling food as quickly as possible (UK law, no time limit), then into the fridge?
 - **Cross-contamination prevention.** Are raw and cooked foods stored separately? Do you have separate chopping boards, clearly colour-coded? Are staff washing hands between tasks?
-- **Cooking and reheating.** Is food cooked to a safe core temperature (75 degrees or above)? Is reheated food brought to at least 82 degrees in Scotland, or 75 degrees in England and Wales?
+- **Cooking and reheating.** Is food cooked thoroughly (advice, not law: 70°C for 2 minutes in England, Wales and Northern Ireland; 75°C in Scotland)? Is reheated food steaming hot throughout (advice), or at least 82°C in Scotland (law, unless that would spoil the food)?
 - **Personal hygiene.** Are staff wearing clean clothing? Is there evidence of proper handwashing: soap, hot water, paper towels (not shared cloth towels)?
 - **Allergen management.** Can you demonstrate that you know the 14 allergens and can communicate them to customers? If you need to strengthen this area, our guide on [food allergen and GDPR compliance](/guides/food-allergies-gdpr-compliance) covers the practical systems.
 
@@ -132,7 +132,7 @@ You cannot predict when the inspector will arrive, which is exactly the point. B
 
 ### The standing checklist (do this every day)
 
-- [ ] Check and record all fridge and freezer temperatures (target: 1 to 5 degrees for fridges, minus 18 or below for freezers)
+- [ ] Check and record all fridge and freezer temperatures (UK-wide advice: 5°C or below for fridges, minus 18°C or below for freezers)
 - [ ] Check and record hot-hold temperatures if applicable
 - [ ] Verify all food is date-labelled with use-by or prepared-on dates
 - [ ] Ensure raw and cooked items are stored separately (raw below cooked, always)
@@ -225,19 +225,19 @@ If you receive a rating below 5 and you have addressed the issues, you can reque
 **When it makes sense:**
 
 - You have genuinely fixed every issue in the inspection report
-- Enough time has passed for you to demonstrate sustained improvement (typically three months minimum)
+- Enough time has passed for you to demonstrate sustained improvement
 - You have evidence of the changes: new equipment, completed training records, updated SFBB, professional cleaning receipts
 
 **When it does not make sense:**
 
 - You have only fixed some of the issues
 - You are hoping the next inspector will be more lenient (they will not be)
-- It has been less than three months since your last inspection
+- You are still appealing the rating
 
 **The process:**
 
 1. Contact your local authority's environmental health team and request a re-inspection
-2. Pay the fee (typically 150 to 200 pounds; check with your council)
+2. Pay the fee, if your council charges one
 3. The re-inspection will still be unannounced: you are requesting it, not scheduling it
 4. Your new rating replaces the old one on the Food Standards Agency website
 
@@ -295,7 +295,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 
 2. **The three things the inspector checks.** Food safety procedures (how we handle food), structural condition (how clean and well-maintained the kitchen is), and confidence in management (whether our systems work and our team understands them).
 
-3. **Temperature control.** Fridges must be between 1 and 5 degrees. Hot food held above 63 degrees. Reheated food to 75 degrees core. Check and record daily, no exceptions.
+3. **Temperature control.** Fridges at 5°C or below (UK-wide advice). Hot food held above 63°C (UK law). Reheated food steaming hot throughout (advice), or at least 82°C in Scotland (law). Check and record daily, no exceptions.
 
 4. **Cross-contamination.** Raw and cooked foods are always separated. Colour-coded boards are always used correctly. Hands are washed between tasks, after handling raw food, after using the toilet, after touching your face, after handling waste.
 
@@ -330,4 +330,4 @@ A 5-star food hygiene rating is not about perfection. It is about consistent, we
 
 ## The bottom line
 
-Fifty thousand people search "food hygiene rating" every month in the UK. When someone types your pub's name into that search, the number they see shapes their decision before they have tasted a bite of your food. A 5-star rating is earned through daily discipline, not last-minute panic. Build the routines, train your team, keep the paperwork current, and you will never dread the knock on the door.
+When someone looks up your pub's food hygiene rating, the number they see shapes their decision before they have tasted a bite of your food. A 5-star rating is earned through daily discipline, not last-minute panic. Build the routines, train your team, keep the paperwork current, and you will never dread the knock on the door.

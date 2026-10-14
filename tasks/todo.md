@@ -26,6 +26,120 @@ the same 91 routes as before, and none of the 147 built pages contains either re
 **Parked:** the unread `content/data/services/*.json`, `quiet-midweek.json` and old outreach
 drafts, now a separate conversation.
 
+# Remove orphaned retired data files and outreach drafts (14 October 2026)
+
+**Goal:** delete files left behind by retired pages and old outreach, found while removing dead
+homepage components. Files only, no database data. Branch `chore/remove-orphaned-retired-files`.
+
+- [x] Confirm each candidate is unused: imports, fs reads of `content/`, `package.json` scripts,
+      Husky and lint-staged, tests, `next.config.js`. Only the two content gates walk them.
+- [x] Baseline on unchanged code: lint, type-check, build, tests in London and UTC.
+- [x] Peter approves the deletion list (relayed by the managing session, 14 October): delete the
+      seven retired data files and all six Greene King outreach files; keep both partner logos.
+- [x] Delete the 13 approved files; mark the deleted drafts in `docs/plans/retired-claims-sweep.md`.
+- [x] Lint, type-check, test:run, test:utc, build.
+- [x] Commit: the seven data files, then the Greene King drafts with the checklist update.
+- [ ] Push and open the PR. The managing session reviews and merges.
+
+**Baseline (14 October 2026, unchanged code):** lint passes (one existing warning,
+`src/components/GoogleTagManager.tsx:73`); type-check passes; build passes with 278 static pages;
+tests pass in London (2,181) and UTC (2,182). In a fresh worktree `search-index.test.ts` fails
+until a build has generated `public/search-index.json`, so run the build before the tests.
+
+**Results (14 October 2026, after the deletions):** identical to the baseline. Lint passes with
+the same single warning, type-check passes, build passes with 278 static pages, tests pass in
+London (2,181) and UTC (2,182). `public/partners/bii-logo.png` and `greene-king-logo.png` are
+kept: sent emails or the Greene King toolkit may link to them.
+
+# Food hygiene guide: three factual corrections (14 October 2026)
+
+**Goal:** correct the re-inspection timing and fee, the display law and the unsourced search figure
+in `content/blog/food-hygiene-rating-five-star-guide.md` (tier 3-review: slug and file fixed, body
+and FAQ answers may change) without lengthening the guide. Peter approves the exact wording before
+any commit. Branch `claude/strange-vaughan-7aa87c` from main `a0d04e57`. The temperature edits on
+`claude/determined-lumiere-082716` are uncommitted in another worktree and touch other lines.
+
+- [x] Re-open sources: FSA Brand Standard Revision 8 (Section 8, Q&A 1, 4, 5, 7, 12, 15), Food
+      Hygiene Rating (Wales) Act 2013 ss 5, 7, 12, 13, Food Hygiene Rating Act (Northern Ireland)
+      2016 ss 3, 4, 7, NI SR 2016/425, gov.uk/food-hygiene-ratings and the FSA re-visit form page.
+- [x] Draft the wording: two FAQ answers, the re-inspection section, The bottom line.
+- [x] Checks: growth language on the file, British English, lint, tests, build.
+- [x] Three-way merge test against the temperature edits.
+- [x] Peter approves the wording (14 October, relayed by the managing session).
+- [ ] Commit, rerun the checks, push and open the PR. The managing session reviews and merges.
+
+**Results (14 October 2026):** the guide is 26 words shorter (4,240 to 4,214); no passage grew.
+Growth-language check on the file, British English, lint (one existing warning in
+`GoogleTagManager.tsx`), build (278 pages) and tests in London (2,181) and UTC (2,182) pass. The
+first test run failed only on `search-index.test.ts`, because a fresh worktree has no
+`public/search-index.json` until the build makes one. `git merge-file` with the temperature edits
+over main gives no conflicts. The local page shows the new section, bottom line and both FAQ
+answers, and the FAQPage schema carries the new answers.
+
+# BII articles: research and specs (13 October 2026)
+
+**Goal:** Peter asked for research, then one build-ready spec per article, for two printed BII
+articles that each link by QR code to a full guide on orangejelly.co.uk. Article 1: AI in
+hospitality (500 to 550 words, plus a 300 word option). Article 2: event food compliance and
+allergen handling (300 words at most). A separate, less capable agent will write and build from
+the specs, so they must stand alone. Branch `docs/bii-article-specs`. Spec and research only: no
+article copy, no guide, no redirect and no QR code is created here.
+
+- [x] Read the repo rules a new guide must meet (content gates, front matter, next-step mapping,
+      campaign redirects, the BII summer 2026 precedent).
+- [x] Web research, one topic per agent: AI tool shortcuts; AI in UK hospitality; AI rules and
+      risks; allergen law; event food safety law; the BII and its publication.
+- [x] Check the safety-critical legal facts myself against legislation.gov.uk and GOV.UK (the
+      Food Standards Agency moved its guidance there from food.gov.uk in June 2026).
+- [x] Write `tasks/bii-articles-2026/` with one spec per article and the shared production rules.
+- [x] Prove the build recipe in the specs with throwaway stub guides (checks, tests, build), then
+      remove the stubs.
+- [x] Commit the specs on this branch. Do not push without Peter's say-so.
+
+**Results (13 October 2026):** `tasks/bii-articles-2026/` holds the shared rules (`README.md`), one
+spec per article, three small tools (word counter, QR maker, QR reader), a proof of each print
+plan and the six research dossiers. Two dry runs, both reverted. In the second, both guides were
+built from the specs' own wording and the repo edits were made exactly as the specs describe:
+lint, type-check and build passed, and the full suite passed in London (2,187) and UTC (2,188),
+128 files each. Every web address in the specs (69) passes the British English and
+growth-language gates. All five print blocks pass the word counter. Both QR codes read back to
+the right address.
+
+**Found by the dry run:** a guide dated in the future is silently left out of the build while
+every test still passes, so a printed short link would lead nowhere. The specs now say so and the
+README's first post-build check catches it.
+
+**Not done here, on purpose:** no article copy, guide, short link or QR code exists. That is the
+build agent's job, from the specs. OpenAI's help pages refuse automated readers, so the ChatGPT
+menu names in Article 1 rest on the research pass reading them in a browser: Peter confirms three
+of them on a signed-in account before print. Article 2 needs a food safety check by a qualified
+person before it is printed.
+
+## Peter's answers applied (14 October 2026)
+
+Peter answered the seven open questions: the word limits cover the article only; copy deadline
+Friday 13 November 2026, first draft wanted this week; printed links go through his
+`l.the-anchor.pub` shortener to the standard guide addresses; the bio is approved and The Anchor
+is a tenancy, not a lease; the BII verifies Article 2 itself, with a note at the top of the copy;
+Article 1 gets his tasting-night example (his idea, which AI makes happen faster); push and open
+a PR.
+
+- [x] README: decisions D2 to D4 rewritten for the shortener, D11 and D12 added, the assumptions
+      table replaced with his answers, section 6 rewritten (Peter creates the link; `CODE`
+      placeholder until he does), the site redirect and its two test edits dropped.
+- [x] Prove the replacement test edit: the guide path in `PRINTED` fails the test while the guide
+      is missing and passes (25 of 25) once it exists. Reverted.
+- [x] `make-qr.py` accepts only `https://l.the-anchor.pub/<code>`; tested with the summer 2026
+      code (reads back PASS) and three refusals.
+- [x] Article 1: facts T1 to T4 from Peter and The Anchor's event page; locked tasting-night
+      section in both print versions; guide section 9 rebuilt around it; Greene King named nowhere.
+- [x] Article 2: locked note to the BII with a source per check; Peter's list updated.
+- [x] Both proofs re-run: 542, 292 and 292 words, all PASS.
+- [x] Commit, push, open the PR: https://github.com/peterjpitcher/orangejelly.co.uk/pull/90
+
+**Left to Peter:** create the two short links (destinations in README section 1), send Article
+2 to the BII with its note, and confirm the tasting-night wording.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September

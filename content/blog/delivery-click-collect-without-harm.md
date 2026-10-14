@@ -135,7 +135,7 @@ Ask for reviews in the right places: platform reviews protect your delivery rank
 ## The rules you cannot skip
 
 - **Allergens.** Distance selling rules require allergen information at two points: before the order is placed, in writing on your website or menu, and again at delivery, on a label or an enclosed menu. The FSA advises keeping it no more than one click from the online menu. Our guide to [food allergies, labelling and data compliance](/guides/food-allergies-gdpr-compliance) covers how to structure it.
-- **Temperature.** Hot food must be held at 63°C or above. Use insulated bags and keep routes short. If a batch does drop below 63°C you may hold it there for up to two hours, once, and at the end of that window it has to be served, chilled quickly to 8°C or below, or thrown away.
+- **Temperature.** Keep hot food above 63°C (UK law). Use insulated bags and keep routes short. In England, Wales and Northern Ireland, not Scotland, the law lets food stay below 63°C once, for less than two hours. After that, the FSA advises cooling it as quickly as possible to 8°C or below, or throwing it away.
 - **VAT.** Hot takeaway is standard-rated at 20%, while genuinely cold takeaway food is usually zero-rated with exceptions. That changes the real margin per dish, so cost the menu on net prices; our [pub VAT and accounting guide](/guides/pub-vat-accounting-guide) explains the split.
 - **Insurance.** Staff delivering in their own cars need hire-and-reward cover. A standard social, domestic and commuting policy does not cover paid deliveries, and the driver is uninsured the moment they leave the car park.
 - **Your hygiene rating.** It is displayed on the platforms, next to your name.
