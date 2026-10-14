@@ -1,3 +1,28 @@
+# Food hygiene guide: three factual corrections (14 October 2026)
+
+**Goal:** correct the re-inspection timing and fee, the display law and the unsourced search figure
+in `content/blog/food-hygiene-rating-five-star-guide.md` (tier 3-review: slug and file fixed, body
+and FAQ answers may change) without lengthening the guide. Peter approves the exact wording before
+any commit. Branch `claude/strange-vaughan-7aa87c` from main `a0d04e57`. The temperature edits on
+`claude/determined-lumiere-082716` are uncommitted in another worktree and touch other lines.
+
+- [x] Re-open sources: FSA Brand Standard Revision 8 (Section 8, Q&A 1, 4, 5, 7, 12, 15), Food
+      Hygiene Rating (Wales) Act 2013 ss 5, 7, 12, 13, Food Hygiene Rating Act (Northern Ireland)
+      2016 ss 3, 4, 7, NI SR 2016/425, gov.uk/food-hygiene-ratings and the FSA re-visit form page.
+- [x] Draft the wording: two FAQ answers, the re-inspection section, The bottom line.
+- [x] Checks: growth language on the file, British English, lint, tests, build.
+- [x] Three-way merge test against the temperature edits.
+- [x] Peter approves the wording (14 October, relayed by the managing session).
+- [ ] Commit, rerun the checks, push and open the PR. The managing session reviews and merges.
+
+**Results (14 October 2026):** the guide is 26 words shorter (4,240 to 4,214); no passage grew.
+Growth-language check on the file, British English, lint (one existing warning in
+`GoogleTagManager.tsx`), build (278 pages) and tests in London (2,181) and UTC (2,182) pass. The
+first test run failed only on `search-index.test.ts`, because a fresh worktree has no
+`public/search-index.json` until the build makes one. `git merge-file` with the temperature edits
+over main gives no conflicts. The local page shows the new section, bottom line and both FAQ
+answers, and the FAQPage schema carries the new answers.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September
