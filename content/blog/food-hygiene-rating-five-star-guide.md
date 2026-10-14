@@ -35,7 +35,7 @@ faqs:
   - question: "How often do EHO inspections happen?"
     answer: "It depends on your current rating and risk category. A premises rated 5 with low risk might not see an inspector for two years. A premises rated 0 to 2, or one flagged as high risk, could be re-inspected within six months. You will not get advance warning of the date. Inspections are unannounced."
   - question: "Can I refuse an EHO inspection?"
-    answer: "Technically an officer needs your consent or a warrant to enter, but refusing or obstructing an inspection is a criminal offence under the Food Safety Act 1990. It also looks terrible and will likely result in a formal follow-up with enforcement action. There is no scenario where refusing helps you."
+    answer: "No. An authorised officer has a legal right to enter at any reasonable hour, and a magistrate can grant a warrant if you refuse. Obstructing an officer is a criminal offence under the Food Safety Act 1990. It also looks terrible. There is no scenario where refusing helps you."
   - question: "How long does it take to get a re-inspection after a bad rating?"
     answer: "You can request a re-inspection once you have addressed the issues raised. Most councils allow a re-inspection request after a minimum of three months. You usually pay a fee, typically between 150 and 200 pounds. Only request it when you are genuinely confident the problems are fixed. A second poor score is worse than waiting."
   - question: "Do I need a food hygiene certificate to run a pub kitchen?"
@@ -208,7 +208,7 @@ The inspector asks your commis chef what temperature chicken needs to reach. Bla
 
 ### Damaged or worn surfaces
 
-Cracked tiles, chipped worktops, peeling paint, and damaged fridge seals all create surfaces that cannot be properly cleaned. These are structural compliance issues. Fix them promptly. A tube of food-safe sealant and a tin of kitchen-grade paint solve most of them for under 50 pounds.
+Cracked tiles, chipped worktops, peeling paint, and damaged fridge seals all create surfaces that cannot be properly cleaned. These are structural compliance issues. Fix them promptly. A tube of food-safe sealant and a tin of kitchen-grade paint solve most of them.
 
 ### Pest evidence
 
