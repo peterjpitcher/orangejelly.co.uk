@@ -388,7 +388,7 @@ It is 105 before either article, 106 after the first and 107 after the second.
 | # | File | Change |
 |---|---|---|
 | 1 | `content/blog/<slug>.md` | New file: the guide. |
-| 2 | `tasks/repositioning/data/article-next-steps.json` | Add one entry for the slug. The file is sorted by slug and indented with one space: keep both. The spec gives the entry and the neighbours it sits between. |
+| 2 | `tasks/repositioning/data/article-next-steps.json` | Add one entry for the slug. The file is sorted by slug: keep it sorted. Since Article 1 was committed on 14 October 2026 it is indented with two spaces (the commit hook's Prettier reformatted it); match whatever indentation you find. The spec gives the entry and the neighbours it sits between. |
 | 3 | `src/test/article-next-step.test.ts` | In the test named `covers all 105 articles` (the number in the name will be whatever it is now), change both `toHaveLength(...)` numbers to `N`, and change the number in the test's name to match. |
 | 4 | `src/test/printed-urls.test.ts` | Add the guide's path to the end of the `PRINTED` array, with the comment line the spec gives (D11). This test is what stops anyone breaking a printed code later. Article 1 also changes one paragraph of the comment above the array; its spec gives the wording. |
 | 5 | `src/app/insights/(list)/page.tsx` | The sentence "where there are {105} of these" prints the guide count. Change the number to `N`. |
