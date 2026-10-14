@@ -49,9 +49,9 @@ describe('the mapping', () => {
     expect(validateNextSteps(ARTICLE_SLUGS)).toEqual([]);
   });
 
-  it('covers all 105 articles', () => {
-    expect(ARTICLE_SLUGS).toHaveLength(105);
-    expect(Object.keys(ARTICLE_NEXT_STEPS)).toHaveLength(105);
+  it('covers all 106 articles', () => {
+    expect(ARTICLE_SLUGS).toHaveLength(106);
+    expect(Object.keys(ARTICLE_NEXT_STEPS)).toHaveLength(106);
   });
 
   it('covers all thirty protected posts, which are the ones that matter most', () => {
@@ -66,28 +66,25 @@ describe('the mapping', () => {
      * A problem page with no article pointing at it can only be reached by somebody
      * already on the site, which wastes the one asset that brings strangers to it.
      *
-     * One is orphaned and it is the right answer rather than a mapping error.
-     * Nothing in 105 hospitality articles is about AI, tooling payoff or
-     * automation. The nearest candidates were the EPOS guides, which are about
-     * tills and till data, and pointing those at the AI page would be a dishonest
-     * handoff for a reader who came to find out about a till.
+     * None is orphaned now. `using-ai-intelligently` was until October 2026, because
+     * nothing in the hospitality library was about AI, and pointing an EPOS guide at
+     * the AI page would have been a dishonest handoff for a reader who came to find
+     * out about a till. `content/blog/ai-for-pubs.md` is about exactly that subject,
+     * so it leads there honestly.
      *
-     * It was a CONTENT gap rather than a mapping gap, and it is now filled from the
-     * other side: `content/insights/ai-for-accountants.md` points at that page, so
-     * it has a way in from search that is not borrowed hospitality traffic. The
-     * assertion below proves that, and this list stays because no HOSPITALITY
-     * article should be forced there.
+     * The list stays, empty, so that the next problem page added without an article
+     * behind it fails here and has to be written down, not discovered.
      */
-    const KNOWN_ORPHANS = ['using-ai-intelligently'];
+    const KNOWN_ORPHANS: string[] = [];
 
     const pointedAt = new Set(Object.values(ARTICLE_NEXT_STEPS).map((entry) => entry.problem));
     const orphaned = GROWTH_PROBLEMS.filter((p) => !pointedAt.has(p.slug)).map((p) => p.slug);
     expect(orphaned).toEqual(KNOWN_ORPHANS);
   });
 
-  it('gives the AI problem its way in from the insights collection instead', async () => {
-    // The hospitality library legitimately has nothing to say about AI. The entry
-    // point is an article written for the sector that searches for it.
+  it('gives the AI problem a way in from the insights collection as well', async () => {
+    // The AI problem page has two ways in from search: the hospitality guide on AI,
+    // and an article written for the sector that searches for it most.
     const { getAllInsights } = await import('@/lib/insights');
     const pointingAtAi = getAllInsights().filter(
       (insight) => insight.problemPage === 'using-ai-intelligently'
