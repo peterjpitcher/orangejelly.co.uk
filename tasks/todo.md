@@ -62,6 +62,25 @@ a PR.
 **Left to Peter:** create the two short links (destinations in README section 1), send Article
 2 to the BII with its note, and confirm the tasting-night wording.
 
+## Both BII articles written (14 October 2026)
+
+Peter merged PR 90 and asked for the articles to be written.
+
+- [x] Article 1 on `feat/bii-ai-article`: guide `content/blog/ai-for-pubs.md` (2,662 words of
+      prose), print copy and handover in `marketing/bii-ai-2026/` (542 and 292 words), wiring.
+- [x] Article 2 on `feat/bii-event-food-article`, built on Article 1: guide
+      `content/blog/pub-event-food-safety-allergens.md` (3,588 words of prose), print copy with
+      the BII note and handover in `marketing/bii-event-food-2026/` (292 words), wiring.
+- [x] Sources: every non-OpenAI source read on the day and still says what the guides quote (23
+      for Article 1, 33 for Article 2). OpenAI's help pages refused scripts and the browser.
+- [x] Lint, type-check, build; tests 128 files in London (2,185) and UTC (2,186); both guides
+      built with one H1 and listed in the sitemap.
+- [ ] Short links and QR codes: waiting for Peter. Footers say `l.the-anchor.pub/CODE`.
+- [ ] Push and open a PR: needs Peter's yes, because merging publishes both guides.
+
+**Found:** the commit hook reformats `article-next-steps.json` to two-space indentation; the spec
+length ranges could not include the locked prompts and tables, so both now count prose only.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September
