@@ -102,7 +102,7 @@ Four things decide whether a dish earns money: ingredient cost, prep and service
 
 ### One caution on braising
 
-I have seen this go wrong. Cook in bulk during a quiet daytime shift on a timed cook, then blast-chill as quickly as possible (UK law, no time limit) and portion cold. Never leave a pot in a cooling oven overnight: slow cooling is an environmental health problem, and most pub insurance voids cover on appliances left running in unattended premises.
+I have seen this go wrong. Cook in bulk during a quiet daytime shift on a timed cook, then blast-chill as quickly as possible (UK law, no time limit) and portion cold. Never leave a pot in a cooling oven overnight: slow cooling is an environmental health problem.
 
 ### The quiet winners nobody costs
 
