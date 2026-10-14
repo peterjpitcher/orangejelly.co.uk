@@ -1,6 +1,6 @@
 # Article 1 spec: AI in hospitality
 
-**For:** BII News · **Print:** 500 to 550 words, plus a version of 300 words at most · **Guide:** `/guides/ai-for-pubs` · **Short link:** `orangejelly.co.uk/pub-ai`
+**For:** BII News · **Print:** 500 to 550 words, plus a version of 300 words at most · **Guide:** `/guides/ai-for-pubs` · **Printed link:** Peter's short link, `l.the-anchor.pub/<code>` (README section 6.1)
 
 Read `README.md` in this folder first. Its rules are part of this spec, and its section numbers are used below.
 
@@ -22,6 +22,8 @@ Two things make this piece harder than it looks. AI products change every month,
 
 **The line that holds it together.** Start with a job, not a tool. It is Peter's own line: BII News quoted him in spring 2026 saying the biggest mistake pubs make with technology is starting with tools and not outcomes.
 
+**The example that proves it.** Peter's own tasting nights (section 3.4). His point, in his words of 14 October 2026: "it's our idea that AI accelerates to success, not just expecting AI to come up with a killer concept/idea and execute." The idea comes from the pub; AI makes it happen faster. Both print versions carry it, and so does the guide.
+
 **The one thing the reader should do.** Scan the code for the prompts, the shortcut sheet and the one-page policy.
 
 **What it must not do.**
@@ -40,7 +42,7 @@ Two things make this piece harder than it looks. AI products change every month,
 | `marketing/bii-ai-2026/print-copy.md` | The print copy: two article blocks (long, then short) and one furniture block |
 | `marketing/bii-ai-2026/bii-ai-2026-qr.svg` and `.png` | The QR code |
 | `marketing/bii-ai-2026/README.md` | The handover note |
-| The repo edits in section 7 of this spec | Mapping, short link and tests |
+| The repo edits in section 7 of this spec | Mapping and tests |
 
 ## 3. The fact bank
 
@@ -106,7 +108,26 @@ ChatGPT unless another assistant is named.
 
 ### 3.4 What you may say about us
 
-Use these sentences as written, in the guide only, and nothing beyond them.
+Two sets of first-hand statements, and nothing beyond them.
+
+**The tasting nights.** Peter gave these on 14 October 2026. T4 was checked the same day against The Anchor's own event page (S36).
+
+| ID | Statement | Source |
+|---|---|---|
+| T1 | The Anchor has run tasting nights for years. | Peter, 14 October 2026 |
+| T2 | The ideas are The Anchor's own. AI does not come up with them, and it does not run the night by itself. | Peter, 14 October 2026 |
+| T3 | AI now helps The Anchor turn each idea into a full plan, handle messages with suppliers, design the artwork and build an app to run the night. | Peter, 14 October 2026 |
+| T4 | Guests rate each drink live on their own phones. | S36 |
+
+How to use them:
+
+- In print, use only the locked wording in section 5.1 (section 4 of the long version) and section 5.2 (section 2 of the short version).
+- In the guide, use them in section 9 only (section 6.3), in the present tense.
+- Report no result. The app's first night with guests is 20 November 2026, a week after the copy deadline. Never say how a night went, how many came, what guests thought or how much time AI took off.
+- Do not name the event, give its date or price, or link to its page: the page is for one night. S36 is for checking T4 only. Do not list it under the guide's Sources.
+- Do not name Greene King, in print or in the guide.
+
+**What AI does at The Anchor in general.** Use these sentences as written, in the guide only.
 
 - "At The Anchor, our own venue, we use AI for research, drafting, analysis and repetitive checking."
 - "We have no AI number: its contribution has not been measured separately from the wider work."
@@ -165,6 +186,7 @@ OpenAI's help pages refused automated readers on 13 October 2026. If you cannot 
 | S33 | Advertising Standards Authority and CAP: disclosure of AI in advertising, 29 May 2025 | `https://www.asa.org.uk/news/disclosure-of-ai-in-advertising-striking-the-balance-between-creativity-and-responsibility.html` | "There is no blanket legal requirement in the UK to disclose the use of AI in ads" |
 | S34 | BII: AI For Publicans | `https://bii.org/training-course/ai-for-publicans/` | "AI For Publicans" |
 | S35 | BII: helplines | `https://bii.org/resources-hub/helplines/` | "HR & Employment Law" |
+| S36 | The Anchor: Christmas tasting night event page. For checking T4 only: never link to it or list it in the guide (section 3.4). If the page has gone, record "could not open" and keep T4: it is Peter's own event. | `https://www.the-anchor.pub/events/christmas-night-out-tasting-night-2026-11-20` | "rate them live on your phone" |
 
 Every address above was checked on 13 October 2026 against the British English gate (README section 5.4, trap 2). All pass. One source the research used is deliberately left out because its address fails that gate: do not link to any tomsguide.com article.
 
@@ -180,35 +202,39 @@ Block id `a1-long`, `min="500" max="550" must="Peter Pitcher MBII"`.
 
 | Part | Wording | Words |
 |---|---|---|
-| Introduction | Yours, 38 to 45 words. Say that AI has moved on, that guests now use it to choose where to go, that it can read a photograph and listen, and end on the line "Start with a job, not a tool." No statistics here. Approved example you may use as it stands: "AI has moved on from writing quiz posters. Your guests now ask it where to eat and drink. It can read a photograph and listen to you talk. And the main assistants have shortcuts worth knowing. Start with a job, not a tool." | 43 |
+| Introduction | Yours, 30 to 38 words. Say that AI has moved on, that guests now use it to choose where to go, that it can read a photograph and listen, and end on the line "Start with a job, not a tool." No statistics here. Approved example you may use as it stands: "AI has moved on from writing quiz posters. Your guests now ask it where to eat and drink. It can read a photograph and listen to you talk. Start with a job, not a tool." | 35 |
 | Headline | Locked: "Five ways to put AI to work in your pub" | 10 |
-| Byline sentence | Locked: "Here, Peter Pitcher MBII sets out what has changed, five jobs worth handing over and the shortcuts that make it quicker:" | 21 |
+| Byline sentence | Locked: "Here, Peter Pitcher MBII sets out what has changed, five ways to start and the shortcuts that make it quicker:" | 20 |
 | 1 | Subhead locked: "See your pub the way AI does". Body locked: "Nearly one in five British consumers already use AI tools such as ChatGPT to plan a pub or restaurant visit, checking reviews, prices, menus and opening times (Zonal and NIQ, October 2026). Since April 2026, Google's AI Mode has linked UK searchers straight to booking partners. Ask an assistant where to go for Sunday lunch in your town and check what it says about you. Google's own advice is the basics: important content, such as menus and hours, as text on your website, and an up-to-date Business Profile." | 96 |
 | 2 | Subhead locked: "Tell it who you are, once". First sentence locked: "ChatGPT keeps standing instructions that apply to every chat: Settings, then Personalization, or Customize ChatGPT on a phone." Then two sentences of yours: what to tell it (the pub's name and town, who the customers are, how you write), and one line to add: never invent prices, dates, opening times or allergen information. | 54 |
 | 3 | Subhead locked: "Show it, don't type it". First sentence locked: "Tap the + icon and choose Add photos & files." Then yours: two or three things to photograph that carry no personal details (a specials board, a delivery note, a supplier's price list) and what to ask for; the microphone as another way in; and a last sentence telling the reader to leave out anything with a guest's or a team member's name on it. | 55 |
-| 4 | Subhead locked: "Give it a weekly job". First sentence locked: "ChatGPT can run a task on a schedule: the free plan allows three." Then yours: one example (a draft of the week's posts from the events list every Monday morning, which the reader then edits) and one sentence on keeping a job's notes and files together in a project. | 48 |
+| 4 | Subhead locked: "Bring your own idea". Body locked, from facts T1 to T4: "We have run tasting nights at The Anchor for years. Now AI helps us turn each idea into a full plan, handle messages with suppliers, design the artwork and build an app that runs the night, with guests rating each drink on their phones. The idea is still ours: AI makes it happen faster." Peter's own example and the point of the whole piece: do not add to it, cut it or name the event. | 59 |
 | 5 | Subhead locked: "Keep three rules". Body locked: "First, guests' details, staff records and allergy information stay out of free and personal accounts: the data protection regulator says there is no AI exemption. In Settings, Data controls, switch off "Improve the model for everyone". Second, a named person checks every date, price and claim, because these tools can state wrong things as fact. Third, AI never decides what is in a dish and never writes a review: allergen accuracy is your legal duty, and an invented review is a fake review in law." | 89 |
 | Box | Title locked: "Shortcuts worth knowing". Five bullets and a date line, all locked, in section 5.3. | 105 |
-| Last line | Locked: "The full guide has prompts to copy, the shortcuts for four assistants and a one-page policy for your team: scan the code below." | 23 |
+| Last line | Locked: "Scan the code below for prompts to copy, the full shortcut sheet and a one-page policy for your team." | 19 |
 
-This plan was assembled and run through the counter on 13 October 2026: it passed at 544 words. You have six words of room. If you are over, shorten your own sentences in sections 2, 3 and 4.
+This plan was assembled and run through the counter on 14 October 2026: it passed at 542 words. You have eight words of room. If you are over, shorten your own sentences in sections 2 and 3, never section 4.
+
+Scheduled tasks ("Give it a weekly job") were in this plan until 14 October 2026 and made way for Peter's example. They stay in the guide: fact K11 in section 6.3 row 4, week three of row 8, and prompt 11.
 
 ### 5.2 The short version
 
 Block id `a1-short`, `min="260" max="300" must="Peter Pitcher MBII"`.
 
-Every part is locked. There is no room for anything else: assembled, it comes to 297 words.
+Every part is locked. There is no room for anything else: assembled, it comes to 292 words (run on 14 October 2026).
 
 | Part | Wording |
 |---|---|
 | Introduction | "Your guests now ask AI where to eat and drink, and the main assistants have shortcuts worth knowing. Start with a job, not a tool." |
 | Headline | "Three ways to put AI to work in your pub" |
-| Byline sentence | "Here, Peter Pitcher MBII sets out three jobs worth handing over, and the shortcuts that make it quicker:" |
+| Byline sentence | "Here, Peter Pitcher MBII sets out three ways to start, and the shortcuts that make it quicker:" |
 | 1 | Subhead: "See your pub the way AI does". Body: "Nearly one in five British consumers already use AI tools to plan a pub or restaurant visit (Zonal and NIQ, October 2026). Ask an assistant where to go for Sunday lunch in your town and check what it says about you. Then fix the basics: menus and hours as text on your website, and an up-to-date Google Business Profile." |
-| 2 | Subhead: "Tell it once, then show it". Body: "In ChatGPT, open Settings, then Personalization (Customize ChatGPT on a phone), and say who you are and how you write. Then tap + and choose Add photos & files to turn a specials board or a delivery note into a post or a table." |
+| 2 | Subhead: "Bring your own idea". Body, from facts T1 to T3: "We have run tasting nights at The Anchor for years. Now AI helps us plan each one, handle messages with suppliers, design the artwork and build an app to run the night. The idea is still ours: AI makes it happen faster." |
 | 3 | Subhead: "Keep three rules". Body: "No guests' details, staff records or allergy information in free or personal accounts. A named person checks every date, price and claim. And AI never decides what is in a dish and never writes a review: allergen accuracy is your legal duty, and an invented review is a fake one in law." |
 | Box | Title: "Shortcuts worth knowing". Four bullets and a date line, in section 5.3. |
 | Last line | "Scan the code for prompts to copy and the full shortcut sheet." |
+
+Section 2 used to be "Tell it once, then show it" (custom instructions and photographs). It made way for Peter's example on 14 October 2026. The long version and the guide keep it.
 
 ### 5.3 The box
 
@@ -239,10 +265,11 @@ Short version:
 
 ### 5.4 The furniture block
 
-Block id `a1-furniture`, `max="60"`, `must="orangejelly.co.uk/pub-ai"`. One furniture block serves both versions.
+Block id `a1-furniture`, `max="60"`, `must="l.the-anchor.pub/"`. One furniture block serves both versions.
 
 - Bio box: the fixed bio from README section 4.7.
-- Footer strip, locked: "The full guide has prompts to copy, a shortcut sheet for four assistants and a one-page AI policy for your team. Scan the code or visit orangejelly.co.uk/pub-ai"
+- Footer strip, locked: "The full guide has prompts to copy, a shortcut sheet for four assistants and a one-page AI policy for your team. Scan the code or visit l.the-anchor.pub/CODE"
+- Replace `CODE` with the code from Peter's short link, without `https://` in front (README section 6.1). If Peter has not given it to you, leave `CODE` and say so in the hand-back.
 
 ### 5.5 Checks specific to this print piece
 
@@ -251,7 +278,7 @@ Block id `a1-furniture`, `max="60"`, `must="orangejelly.co.uk/pub-ai"`. One furn
 - [ ] Zonal and NIQ are named in the same sentence as the consumer figure.
 - [ ] No price, no product other than ChatGPT, Gemini and Google, no named booking partner.
 - [ ] The words "custom GPT", "canvas", "agent mode" and "Gems" do not appear.
-- [ ] Nothing says what The Anchor does.
+- [ ] In both article blocks, The Anchor appears only in the tasting-night section, word for word: no event name, date or result. Greene King is named nowhere.
 
 ## 6. The guide
 
@@ -311,7 +338,7 @@ faqs:
 
 ### 6.2 Length
 
-2,400 to 3,200 words in the body.
+2,400 to 3,400 words in the body. (The upper limit rose by 200 on 14 October 2026 to make room for the tasting-night example in section 9.)
 
 ### 6.3 Section order
 
@@ -319,7 +346,7 @@ Start the body with `# AI for Pubs: What Is New, What Works and Where to Start`,
 
 | # | H2 | What it does | Facts | Words |
 |---|---|---|---|---|
-| 0 | (opening, no H2) | Who this is for. That it is not another "getting started" piece. The line "Start with a job, not a tool." One sentence saying the details about each tool were checked on the date you ran README section 8.4 and that they change often. | none | 130 to 180 |
+| 0 | (opening, no H2) | Who this is for. That it is not another "getting started" piece. The line "Start with a job, not a tool." One sentence saying that AI makes your own ideas happen faster but does not supply them, and that the section near the end shows how we use it. No link: the contents list already reaches it. One sentence saying the details about each tool were checked on the date you ran README section 8.4 and that they change often. | T2 | 150 to 200 |
 | 1 | `## What has changed` | Guests using AI to choose (W1, W2). Google's AI linking to bookings (W3). How far business use has got (W5, W6, W7). The backlash against AI artwork (W8). That paid assistants can now take a job with several steps (W9, as the maker's description). That tools get withdrawn too (W10): one sentence. | W1 to W10 | 300 to 380 |
 | 2 | `## See your pub the way AI does` | The exercise: ask an assistant about your own pub. Block B from section 6.5. What to do about what it gets wrong (W4). Links to the Google Business Profile guide and the website guide. | W4 | 220 to 280 |
 | 3 | `## Set it up once` | Use the assistant you already have. Switch off training first (K3). Custom instructions (K1), then Block A from section 6.5. Projects (K8). | K1, K3, K8 | 250 to 320 |
@@ -328,7 +355,7 @@ Start the body with `# AI for Pubs: What Is New, What Works and Where to Start`,
 | 6 | `## House rules: what never goes into AI` | The rules, each with its reason. Then Table D from section 6.4 (where the training switch is). Then Block D from section 6.5 (the one-page policy). For BII members, statement B2 with a link. | R1 to R12, K3, K14 to K16, B2 | 350 to 430 plus the table and block |
 | 7 | `## Ask your suppliers what is already included` | Short. Before paying for a new tool, ask your till, booking, rota and accounts suppliers three questions: what AI features are included in what you already pay; whether your data is used to train their models; and whether you can switch a feature off. Name no supplier and no product. | none | 120 to 170 |
 | 8 | `## A first month` | A four-week plan as a numbered list: week one, settings and house rules; week two, one job from the twelve; week three, a weekly scheduled task; week four, the exercise in section 2 and the fixes it throws up. For BII members, statement B1 with a link. | B1 | 180 to 240 |
-| 9 | `## What we use it for, and what we will not claim` | The two sentences from 3.4, word for word. Then links to `/tools/ai-readiness` and `/growth-problems/using-ai-intelligently`. | 3.4 | 70 to 110 |
+| 9 | `## Bring your own idea: how we use it` | First the tasting nights, in the present tense, from T1 to T4 and nothing else: we have run them for years; the ideas are ours; AI helps us turn each one into a full plan, handle messages with suppliers, design the artwork and build an app to run the night, with guests rating each drink on their phones. Then the lesson for the reader in one or two sentences: bring AI an idea you believe in and let it do the legwork, rather than asking it for the idea and expecting it to run the night (T2). Then the two general sentences from 3.4, word for word. Then links to `/tools/ai-readiness` and `/growth-problems/using-ai-intelligently`. | T1 to T4, 3.4 | 160 to 230 |
 | 10 | `## Sources` | The source list from section 6.7. | none | list only |
 
 Internal links you may use, each at least once where it fits:
@@ -497,17 +524,34 @@ Follow README sections 6 and 7. The values for this article:
  },
 ```
 
-**Short link.** In `src/lib/route-manifest.js`, at the end of `CAMPAIGN_REDIRECTS`:
+**Printed link.** Nothing goes in `src/lib/route-manifest.js`. The printed link is Peter's short link (README section 6.1), and it points at:
 
-```js
-  {
-    source: '/pub-ai',
-    destination:
-      '/guides/ai-for-pubs?utm_source=bii&utm_medium=print-magazine&utm_campaign=ai-for-pubs-2026',
-  },
+```text
+https://www.orangejelly.co.uk/guides/ai-for-pubs?utm_source=bii&utm_medium=print-magazine&utm_campaign=ai-for-pubs-2026
 ```
 
-**Tests.** Add `'/pub-ai'` to the array in `src/test/printed-urls.test.ts` and to the array in `src/test/route-manifest.test.ts`, raising the expected length there by one. Update the guide count as README section 7 describes.
+**Tests.** In `src/test/printed-urls.test.ts`, make two changes and no others.
+
+First, in the comment above `const PRINTED = [`, find the line that begins ` * That makes these seven paths load-bearing`. Put this paragraph immediately above it:
+
+```ts
+ * BII News articles from November 2026 print a short link on Peter's own shortener,
+ * l.the-anchor.pub, and that link points straight at a guide. Only Peter can repoint
+ * it, and only once somebody notices that scans land on a 404, so those guides are
+ * listed here too.
+ *
+```
+
+Then, in that same line, change `these seven paths` to `these paths`, because the list is about to grow past seven.
+
+Second, add these two lines at the end of the `PRINTED` array, after `'/licensees-guide/autumn-pub-event-ideas',` and before the closing `];`:
+
+```ts
+  // BII News, AI in hospitality: printed short link l.the-anchor.pub, pointing here.
+  '/guides/ai-for-pubs',
+```
+
+Update the guide count as README section 7 describes.
 
 **The extra edit: the list of orphaned problems.** `src/test/article-next-step.test.ts` records that one growth problem, `using-ai-intelligently`, had no guide leading to it, because no hospitality guide was about AI. This guide is. Mapping it there empties that list, and the test's comments must say why, or the next person will read a comment that is no longer true.
 
@@ -539,21 +583,21 @@ In the next test, change its name from `gives the AI problem its way in from the
 
 Change nothing else in that file apart from the guide count.
 
-**QR code.**
+**QR code.** Only once Peter has given you the short link. Replace `<code>` with its code in both commands.
 
 ```bash
-python3 tasks/bii-articles-2026/make-qr.py https://www.orangejelly.co.uk/pub-ai marketing/bii-ai-2026 bii-ai-2026-qr
+python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/<code> marketing/bii-ai-2026 bii-ai-2026-qr
 ```
 
 ```bash
-swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://www.orangejelly.co.uk/pub-ai
+swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://l.the-anchor.pub/<code>
 ```
 
 ## 8. Checks specific to this guide
 
 Run these after README section 8.
 
-- [ ] The body is 2,400 to 3,200 words.
+- [ ] The body is 2,400 to 3,400 words.
 - [ ] `publishedDate` and `updatedDate` are the day you built: not 2026-10-13 unless that is today, and not a future date.
 - [ ] Tables C and D, Blocks A to D, the twelve prompts and all eight FAQ answers are word for word.
 - [ ] Every statistic names its source in the same sentence and links to it.
@@ -563,6 +607,8 @@ Run these after README section 8.
 - [ ] `grep -niE "custom GPT|canvas|agent mode|gems|pulse|atlas" content/blog/ai-for-pubs.md` returns only the one sentence built from fact W10.
 - [ ] `grep -niE "privacy center|saved memories" content/blog/ai-for-pubs.md` returns nothing.
 - [ ] `grep -n "tomsguide" content/blog/ai-for-pubs.md` returns nothing.
+- [ ] `grep -niE "greene king|the-anchor.pub|tinsel" content/blog/ai-for-pubs.md` returns nothing.
+- [ ] The tasting nights appear in section 9 only, and use nothing beyond facts T1 to T4.
 
 ## 9. Do not say
 
@@ -585,6 +631,9 @@ These were true once, or are repeated online, and are wrong or unsafe to print a
 | That AI "saves" time or money, in those words | Same reason. Write "gives you the hours back" or "frees up". |
 | The figures 25 hours a week, £50,000, 250 covers, or food rising from 7% to 25% | The first is a retired claim. The others were printed by BII News in spring 2026 and are not approved claims. |
 | That The Anchor's results came from AI | The site says AI's contribution has not been measured. |
+| That AI came up with the tasting night, or runs it by itself | The opposite of Peter's point (T2). |
+| How a tasting night went, how many came, what guests thought, or how much time AI took off | None of it is known: the app's first night with guests is 20 November 2026. |
+| Greene King, anywhere in this piece | Nothing here needs it, and the site never calls Greene King a partner. |
 
 ### Not settled
 
@@ -601,9 +650,7 @@ Put this list in the hand-back, as written.
 - [ ] Read and approve both print versions and say which one the BII wants.
 - [ ] On a signed-in ChatGPT account, confirm three things before print: that typing `/` opens a menu with Search in it; that custom instructions are under Settings then Personalization; and that the training switch is under Settings then Data controls. The research could not sign in to check.
 - [ ] Open the OpenAI sources that the build could not open (the hand-back lists them) and confirm they still say what the fact bank says.
-- [ ] Confirm with the BII News editor whether the word limits cover the article or the whole page.
-- [ ] Decide whether the short link stays as `orangejelly.co.uk/pub-ai`.
-- [ ] Decide whether to add a first-hand example of AI in use at The Anchor. The spec allows only the two sentences in section 3.4.
-- [ ] Say when to push the branch.
-- [ ] Scan a printed proof of the QR code with a phone before the page goes to press.
+- [ ] Create the short link in The Anchor's management app, pointing at the destination in section 7, and give its address to whoever finishes the print copy, if the build agent did not have it.
+- [ ] Check the tasting-night section in both print versions says what you want said about the nights.
+- [ ] Scan a printed proof of the QR code with a phone before the page goes to press, and check it lands on the guide.
 - [ ] Supply a hero photograph for the guide if wanted.

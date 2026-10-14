@@ -1,7 +1,8 @@
 # BII articles 2026: build specs
 
-**Written:** 13 October 2026 · **For:** the agent that writes and builds the two articles · **Owner:** Peter Pitcher
+**Written:** 13 October 2026, updated 14 October 2026 with Peter's answers · **For:** the agent that writes and builds the two articles · **Owner:** Peter Pitcher
 **Branch:** `docs/bii-article-specs` · **Status:** specs and research only. No article, guide, short link or QR code exists yet.
+**Deadline:** the copy goes to the BII by Friday 13 November 2026. Peter asked on 14 October 2026 for a first draft that week.
 
 Read this file to the end before you open either spec. Its rules are part of both specs.
 
@@ -16,7 +17,8 @@ Two short expert articles that Orange Jelly supplies to the British Institute of
 | Subject | AI in hospitality | Food compliance and allergen handling at parties and events |
 | Printed length | 500 to 550 words, plus a second version of 300 words at most | 300 words at most |
 | Full guide | `/guides/ai-for-pubs` | `/guides/pub-event-food-safety-allergens` |
-| Printed short link (also in the QR code) | `orangejelly.co.uk/pub-ai` | `orangejelly.co.uk/event-food` |
+| Printed link (also in the QR code) | A short link on Peter's shortener, `l.the-anchor.pub/<code>`. Peter creates it (section 6.1). | The same, a second short link |
+| Where Peter's short link points | `https://www.orangejelly.co.uk/guides/ai-for-pubs?utm_source=bii&utm_medium=print-magazine&utm_campaign=ai-for-pubs-2026` | `https://www.orangejelly.co.uk/guides/pub-event-food-safety-allergens?utm_source=bii&utm_medium=print-magazine&utm_campaign=event-food-2026` |
 | Spec | `article-1-ai-in-hospitality-spec.md` | `article-2-event-food-allergens-spec.md` |
 | Handover folder you create | `marketing/bii-ai-2026/` | `marketing/bii-event-food-2026/` |
 
@@ -73,28 +75,28 @@ These are settled. Build to them.
 | # | Decision | Why |
 |---|---|---|
 | D1 | Both guides go in `content/blog/` and render at `/guides/<slug>`. Not `content/insights/`. | The readers are licensees. The guides collection is the hospitality library and is where the BII summer 2026 page pointed. |
-| D2 | The QR code encodes a short link on our own domain, never the guide address. | A printed code cannot be reissued. The short link is a temporary (307) redirect we control and can repoint for as long as the magazine is in circulation. Same pattern as `/summer`, `/autumn` and `/christmas`. |
-| D3 | Short links are `/pub-ai` and `/event-food`. | Short enough to type from the page, specific to these two pieces, and not names a future page is likely to want. |
-| D4 | Tracking is `utm_source=bii&utm_medium=print-magazine&utm_campaign=<name>-2026`, added by the redirect, not printed. | Matches the BII summer 2026 link, so the campaigns compare like for like. |
+| D2 | The printed link and the QR code are a short link on Peter's shortener, `l.the-anchor.pub`. Never the guide's address. | Peter's decision, 14 October 2026. The shortener counts every click and scan, as it did for the summer 2026 page, and Peter can repoint the link in The Anchor's management app for as long as the magazine is in circulation. |
+| D3 | The guides live at their standard addresses (section 1). Nothing is added to the site for the printed link: no redirect, no alias. | Peter's short link points straight at the guide, so a second redirect on our own domain would only add a second thing to track and keep alive. |
+| D4 | Tracking is `utm_source=bii&utm_medium=print-magazine&utm_campaign=<name>-2026`, carried by the short link's destination (section 1), never printed. | The summer 2026 short link carries exactly these tags, so the campaigns compare like for like. |
 | D5 | Article 1's long and short versions share one short link and one QR code. | Only one of them is printed. |
 | D6 | The AI guide's next step is the growth problem `using-ai-intelligently`. The event food guide's is `operations-slowing-us-down`. | The first is the page about where AI pays. The second matches the two existing compliance guides. |
 | D7 | Guide categories: `operations` for the AI guide, `events` for the event food guide. | AI is used across the business, not only in marketing. The event guide belongs beside the event guides a licensee reads when planning a party. |
 | D8 | No hero photograph unless Peter supplies one. Set `featuredImage` to `/images/blog/default.svg`, a file that already exists. | Every existing guide has a photograph and you cannot make one. Pointing at a file that does not exist puts a dead address into the site's structured data. With the default the guide renders cleanly with no hero. |
 | D9 | Each article is its own branch and its own commit set. | One concern per change, and the compliance article has a slower sign-off. |
 | D10 | The printed pieces follow the layout BII News used for Orange Jelly's summer 2026 page (section 4.1). | It is the only direct evidence of what the editor expects, and it worked. |
+| D11 | Each guide's path goes into the `PRINTED` list in `src/test/printed-urls.test.ts` (section 7). | The short link points straight at the guide, so renaming or deleting the guide would send every scan to a 404, and nobody would know until Peter looked. The test fails first. Proven on 14 October 2026: with the path listed, the test fails while the guide file is missing and passes once it exists. |
+| D12 | Article 2's print copy opens with a note asking the BII to verify it (Article 2 spec, section 5.4). | Peter's decision, 14 October 2026: the BII checks the content itself. |
 
-### Working assumptions
+### Peter's answers, 14 October 2026
 
-Peter has been asked about these. Until he says otherwise, build to the assumption. Each one says what changes if the answer is different.
-
-| # | Assumption | If Peter says otherwise |
-|---|---|---|
-| A1 | The word limit covers the article itself: introduction, headline, byline sentence, body and any box. The bio box and the footer strip are supplied separately and are not counted, because that is how the summer 2026 page was built. | If the limit covers everything on the page: lower the article block's `max` by the number of words in the furniture block, then cut your own sentences (never a locked one) until the counter passes. |
-| A2 | The issue date is not known. BII News appears in late January, April, July and late October, so neither article mentions a season, a month, Christmas or "this year". | Add one seasonal sentence to the introduction. |
-| A3 | The bio is the one in section 4.7. The BII may use the bio it already holds instead. | Replace it in the furniture block. It appears nowhere else. |
-| A4 | The printed link is on orangejelly.co.uk (D3), not Peter's `l.the-anchor.pub` shortener, which the summer 2026 page used. | Peter supplies the shortened address. Print that instead, and make the QR code from it by hand: `make-qr.py` only accepts orangejelly.co.uk addresses on purpose. |
-| A5 | The BII will take the copy as the Markdown file described in section 4.2. | Peter will say which format to export. Do not create Word or PDF files unprompted. |
-| A6 | Peter signs off the print copy himself. Article 2 also needs a food safety check by a qualified person before it goes to print, which Peter arranges. | Nothing changes in the build. Record in the hand-back that Article 2 is not cleared for print until that check is done. |
+| # | Question | Answer | What it means for you |
+|---|---|---|---|
+| A1 | Does the word limit cover the bio box and footer strip? | No: the article only. | The limits in section 4.3 apply to the article blocks. The furniture block has its own limit and is supplied separately. |
+| A2 | Which issue? | Not named. The copy deadline is 13 November 2026. | Neither article mentions a season, a month, Christmas or "this year": the issue may come out after Christmas. |
+| A3 | Is the bio right? | Yes, as written in section 4.7. Peter also confirmed that The Anchor is a tenancy, not a lease. | Use the bio word for word. Section 4.7 says how The Anchor may be described. |
+| A4 | Which printed link? | Peter's `l.the-anchor.pub` shortener, pointing at the guide's standard address. | Decisions D2 to D4, and section 6. |
+| A5 | What format does the BII want? | Not asked. Still assumed: the Markdown file in section 4.2. | Do not create Word or PDF files unless Peter asks. |
+| A6 | Who checks Article 2? | The BII verifies it itself. Peter signs off both articles. | Put the note from the Article 2 spec at the top of its print copy (D12). |
 
 ## 4. The printed copy: rules for both articles
 
@@ -128,6 +130,8 @@ Write the printed copy to `marketing/<handover folder>/print-copy.md`. Use this 
 
 **For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** draft v1, <date>
 
+<Article 2 only: the note to the BII, word for word from section 5.4 of its spec. Article 1 has no note.>
+
 Designer notes are backticked labels in square brackets. They are not for print and are not counted.
 
 <!-- PRINT-BLOCK id="<article block id>" min="<min>" max="<max>" must="Peter Pitcher MBII" -->
@@ -154,7 +158,7 @@ Here, Peter Pitcher MBII <what he sets out>:
 
 <!-- /PRINT-BLOCK -->
 
-<!-- PRINT-BLOCK id="<furniture block id>" min="20" max="<max>" must="orangejelly.co.uk/<short link>" -->
+<!-- PRINT-BLOCK id="<furniture block id>" min="20" max="<max>" must="l.the-anchor.pub/" -->
 
 `[BIO BOX, with headshot]`
 <bio from section 4.7>
@@ -165,7 +169,7 @@ Here, Peter Pitcher MBII <what he sets out>:
 <!-- /PRINT-BLOCK -->
 ```
 
-- Every word between a pair of `PRINT-BLOCK` comments prints and is counted, except the backticked `[LABELS]`.
+- Every word between a pair of `PRINT-BLOCK` comments prints and is counted, except the backticked `[LABELS]`. Anything outside the blocks, such as Article 2's note to the BII, is neither printed nor counted.
 - A box title that should print goes on its own line as a `##` heading. The `[BOX: ...]` label itself never prints.
 - Use `##` for a printed subhead, `-` for a bullet inside a box, `**bold**` for emphasis. No tables: a magazine column is too narrow.
 - Article 1 has two article blocks in one file, the long version first, then one furniture block.
@@ -190,7 +194,7 @@ Every block must print `PASS`. The counter also fails a block that contains an e
 
 The counter is strict on purpose: it counts the way a word processor does, so a lone `/` or `@` is a word and so is a web address. Do not pad to reach a minimum and do not cut a locked sentence to get under a maximum. Cut your own sentences first.
 
-The files in `proofs/` are each print plan assembled once, with sample wording where a spec says "yours", to prove the plan fits. All five blocks passed on 13 October 2026. You may start from a proof, but it is not the deliverable: the sources have to be checked again first (section 8.4), the date line in Article 1's box has to be yours, and Peter has not approved a word of it.
+The files in `proofs/` are each print plan assembled once, with sample wording where a spec says "yours", to prove the plan fits. All five blocks passed on 13 October 2026, and again on 14 October 2026 after Peter's changes. You may start from a proof, but it is not the deliverable: the sources have to be checked again first (section 8.4), the date line in Article 1's box has to be yours, and Peter has not approved a word of it.
 
 ### 4.4 The parts of a printed piece
 
@@ -203,7 +207,7 @@ The files in `proofs/` are each print plan assembled once, with sample wording w
 | Box | A self-contained panel a designer can lift out. It must make sense to someone who reads nothing else on the page. |
 | Last line of the article | Says what the full guide adds and tells the reader to scan the code. It does not print the web address: that is in the footer strip. |
 | Bio box | The fixed wording in section 4.7. |
-| Footer strip | One sentence on what the guide gives, then the short link in full so it can be typed. |
+| Footer strip | One sentence on what the guide gives, then Peter's short link in full so it can be typed. |
 
 ### 4.5 Voice
 
@@ -241,11 +245,11 @@ Bio box, for both articles (assumption A3):
 
 Footer strip pattern:
 
-> <What the full guide gives, in one sentence.> Scan the code or visit orangejelly.co.uk/<short link>
+> <What the full guide gives, in one sentence.> Scan the code or visit l.the-anchor.pub/<code>
 
-The printed short link is written without `https://` and without `www.` so it is quick to type. Both forms reach the guide.
+Print the short link without `https://`, so it is quick to type. Both forms reach the guide. Until Peter gives you the code, write `l.the-anchor.pub/CODE` (section 6.1).
 
-Do not describe The Anchor as a Greene King tenancy or lease, and do not describe the BII membership in any way other than the letters MBII. How those two things are worded is Peter's decision.
+Neither article needs to say how The Anchor is held. If it ever comes up: Peter confirmed on 14 October 2026 that The Anchor is a Greene King tenancy, never a lease, and Greene King is never called a partner. Do not describe the BII membership in any way other than the letters MBII. How those things are worded is Peter's decision.
 
 ### 4.8 What never appears in print
 
@@ -334,43 +338,44 @@ Set `featuredImage: "/images/blog/default.svg"` (D8). If Peter supplies a photog
 
 Do this after the guide file exists.
 
-### 6.1 Add the short link
+### 6.1 The short link comes from Peter
 
-In `src/lib/route-manifest.js`, find `const CAMPAIGN_REDIRECTS = [`. Add one entry at the end of that array, after the last existing entry and before the closing `];`. The spec gives the exact entry. It looks like this:
+The printed link and the QR code are a short link on Peter's shortener, `l.the-anchor.pub` (D2). It lives in The Anchor's management app, which only Peter uses. You cannot create one and must not try.
 
-```js
-  {
-    source: '/pub-ai',
-    destination:
-      '/guides/ai-for-pubs?utm_source=bii&utm_medium=print-magazine&utm_campaign=ai-for-pubs-2026',
-  },
-```
+Peter creates each short link with the destination in section 1, word for word, and gives you its address. It looks like `https://l.the-anchor.pub/vj8wgo` (the summer 2026 one).
 
-Do not add it anywhere else. `next.config.js` reads this array and emits a temporary (307) redirect for every entry in it. Do not add the short link to `ROUTES`, to the sitemap or to any navigation.
+- **If Peter has given you the short link:** print it in the footer strip without `https://`, and make the QR code from it (sections 6.2 and 6.3).
+- **If he has not:** write `l.the-anchor.pub/CODE` in the footer strip, skip sections 6.2 and 6.3, and say under "Anything that did not match the spec" in the hand-back that the short link and the QR code are waiting for Peter. Never make up a code, and never make a QR code from any other address.
+
+Do not open the short link yourself, in a browser or with `curl`: every visit counts as a scan in Peter's figures. Peter checks it with a phone before press.
+
+Add nothing to the site for the short link: no entry in `src/lib/route-manifest.js`, no redirect, no alias (D3). The only repo change it needs is the test edit in section 7.
 
 ### 6.2 Make the QR code
 
 ```bash
-python3 tasks/bii-articles-2026/make-qr.py https://www.orangejelly.co.uk/pub-ai marketing/bii-ai-2026 bii-ai-2026-qr
+python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/<code> marketing/bii-ai-2026 bii-ai-2026-qr
 ```
 
-It writes `bii-ai-2026-qr.svg` and `bii-ai-2026-qr.png` and prints what it encoded. It refuses anything that is not a bare short link on `https://www.orangejelly.co.uk/`. It needs the Python package `segno`, which is installed on Peter's Mac; if the import fails, stop and report, do not install anything.
+It writes `bii-ai-2026-qr.svg` and `bii-ai-2026-qr.png` and prints what it encoded and the smallest safe print size. It refuses anything that is not a bare `https://l.the-anchor.pub/` short link. It needs the Python package `segno`, which is installed on Peter's Mac; if the import fails, stop and report, do not install anything.
 
 ### 6.3 Prove what the code says
 
 ```bash
-swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://www.orangejelly.co.uk/pub-ai
+swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://l.the-anchor.pub/<code>
 ```
 
-It must print `PASS`. This uses the QR reader built into macOS. Paste the line into the hand-back.
+It must print `PASS`. This uses the QR reader built into macOS and does not touch the network. Paste the line into the hand-back.
 
 ### 6.4 Write the handover note
 
-Create `marketing/<handover folder>/README.md`. Copy the structure of `marketing/bii-summer-2026/README.md`: what the piece is, the files, what the code encodes, where the short link goes, and the print notes. Use these print notes: print at 25 mm square or larger (these codes carry more detail than the summer one, so they need a little more room); keep the white border; keep it black on white; test a printed proof with two or three phones before going to press. Add one line: the short link only works once the branch is live on production.
+Create `marketing/<handover folder>/README.md`. Copy the structure of `marketing/bii-summer-2026/README.md`: what the piece is, the files, what the code encodes (Peter's short link), where it goes (the destination in section 1), and the print notes. Do not copy that file's statements about a redirect in `next.config.js`: they do not apply to these articles. Use these print notes: print at 25 mm square (larger than the smallest safe size `make-qr.py` prints, to leave a margin); keep the white border; keep it black on white; test a printed proof with two or three phones before going to press. Add two lines: the short link leads to a missing page until the guide is live on production; and Peter can change where the short link points in the management app, but the printed code itself can never change.
 
 ## 7. The repo edits every new guide needs
 
 Proven on 13 October 2026, twice. The second time, both guides were built from the wording in the specs themselves (every fact bank statement, table, block, prompt, FAQ and source link), the edits below were made exactly as written, and `npm run lint`, `npm run type-check`, the full test suite in both time zones (128 files) and `npm run build` all passed. Everything was then reverted. Without the edits, two tests fail.
+
+On 14 October 2026 the printed link moved to Peter's shortener. The site redirect and its two test edits were dropped, and edit 4 below replaced them. Edit 4 was proven on its own the same day: `npx vitest run src/test/printed-urls.test.ts` failed while the guide file was missing and passed, 25 of 25, once it existed. It was then reverted.
 
 Do these in order. `N` is the number of guides after you add yours. Get it from the repo, never from memory:
 
@@ -385,13 +390,13 @@ It is 105 before either article, 106 after the first and 107 after the second.
 | 1 | `content/blog/<slug>.md` | New file: the guide. |
 | 2 | `tasks/repositioning/data/article-next-steps.json` | Add one entry for the slug. The file is sorted by slug and indented with one space: keep both. The spec gives the entry and the neighbours it sits between. |
 | 3 | `src/test/article-next-step.test.ts` | In the test named `covers all 105 articles` (the number in the name will be whatever it is now), change both `toHaveLength(...)` numbers to `N`, and change the number in the test's name to match. |
-| 4 | `src/lib/route-manifest.js` | Add the short link to `CAMPAIGN_REDIRECTS` (section 6.1). |
-| 5 | `src/test/printed-urls.test.ts` | Add the short link to the `PRINTED_ALIASES` array. This test is what stops anyone breaking a printed code later. |
-| 6 | `src/test/route-manifest.test.ts` | In the test `keeps the seasonal campaign redirects temporary`, add the short link to the array and raise `toHaveLength(...)` by one. |
-| 7 | `src/app/insights/(list)/page.tsx` | The sentence "where there are {105} of these" prints the guide count. Change the number to `N`. |
-| 8 | `marketing/<handover folder>/` | New folder: `print-copy.md`, the two QR files, `README.md`. |
+| 4 | `src/test/printed-urls.test.ts` | Add the guide's path to the end of the `PRINTED` array, with the comment line the spec gives (D11). This test is what stops anyone breaking a printed code later. Article 1 also changes one paragraph of the comment above the array; its spec gives the wording. |
+| 5 | `src/app/insights/(list)/page.tsx` | The sentence "where there are {105} of these" prints the guide count. Change the number to `N`. |
+| 6 | `marketing/<handover folder>/` | New folder: `print-copy.md`, the two QR files (once Peter has given you the short link), `README.md`. |
 
-Article 1 needs one more edit, given in its spec: the same test file holds a list of growth problems that no guide leads to, and the AI guide empties it.
+Do not touch `src/lib/route-manifest.js`, `src/test/route-manifest.test.ts` or the `PRINTED_ALIASES` array: the printed link is not on this site (D3).
+
+Article 1 needs one more edit, given in its spec: `src/test/article-next-step.test.ts` also holds a list of growth problems that no guide leads to, and the AI guide empties it.
 
 Leave every other mention of "105" alone. There are about twenty in code comments. They are history, not counts, and no test reads them.
 
@@ -431,21 +436,17 @@ Expected:
 
 ### 8.3 Read what was built
 
-After `npm run build`, confirm from the built files, not from the source. Replace `<slug>` and `<short link>` first.
+After `npm run build`, confirm from the built files, not from the source. Replace `<slug>` first.
 
 ```bash
 grep -o "<h1" .next/server/app/guides/<slug>.html | wc -l
 ```
 
 ```bash
-grep -o '"source":"/<short link>"[^}]*' .next/routes-manifest.json
-```
-
-```bash
 grep -c "/guides/<slug><" .next/server/app/sitemap.xml.body
 ```
 
-Expected, in order: `1`; one line that contains your destination and `"statusCode":307`; `1`. If the first command says "No such file or directory", the guide was not built: check its date (section 5.1) and its `status`. Then delete `.next` so the worktree does not carry a stale build.
+Expected, in order: `1`; `1`. If the first command says "No such file or directory", the guide was not built: check its date (section 5.1) and its `status`. Then delete `.next` so the worktree does not carry a stale build.
 
 ### 8.4 Check the sources still say it
 
@@ -458,9 +459,10 @@ Some sites refuse automated readers (OpenAI's help pages did on 13 October 2026)
 - [ ] The guide exists at the fixed slug, follows the spec's section order and is inside the spec's word range.
 - [ ] Every fact, figure and address in the guide and the print copy is in the fact bank. Locked wording is word for word.
 - [ ] Every print block passes `count-words.mjs`, and its output is in the hand-back.
-- [ ] The short link is in `CAMPAIGN_REDIRECTS`, in both test files, and builds as a 307.
-- [ ] The QR code exists as SVG and PNG, and `read-qr.swift` prints `PASS` for it.
-- [ ] The handover folder holds `print-copy.md`, both QR files and `README.md`.
+- [ ] The guide's path is in the `PRINTED` array in `src/test/printed-urls.test.ts`. Nothing was added to `src/lib/route-manifest.js`.
+- [ ] If Peter gave you the short link: it is in the footer strip, the QR code exists as SVG and PNG, and `read-qr.swift` prints `PASS` for it. If he did not: the footer strip says `l.the-anchor.pub/CODE` and the hand-back says so.
+- [ ] Article 2 only: the note to the BII is at the top of `print-copy.md`, word for word.
+- [ ] The handover folder holds `print-copy.md`, `README.md` and, once the short link exists, both QR files.
 - [ ] All of section 8 passes, with nothing skipped.
 - [ ] `git status -sb` shows only files this spec told you to create or change.
 - [ ] Work is committed on the article's own branch. Nothing is pushed.
@@ -472,7 +474,7 @@ End with a report to Peter in this order:
 1. **Outcome** in one sentence: built and verified, or what is not done and why.
 2. **Where it is:** branch name, the branch you started from, commit ids, and "local only, not pushed".
 3. **Word counts:** the pasted output of `count-words.mjs`.
-4. **QR code:** the pasted output of `read-qr.swift`.
+4. **QR code:** the pasted output of `read-qr.swift`, or "waiting for Peter's short link".
 5. **Checks:** one line each for lint, type-check, tests (both time zones) and build, with the totals you saw.
 6. **Sources:** the yes, no or could-not-open list from section 8.4.
 7. **Anything that did not match the spec**, exactly as found.
@@ -483,7 +485,8 @@ End with a report to Peter in this order:
 - A source no longer says what the fact bank quotes.
 - A locked sentence will not fit the word limit.
 - A check fails and the cause is not in a file you created.
-- The guide count, the test names or the redirect array are not as section 7 describes.
+- The guide count, the test names or the `PRINTED` array are not as section 7 describes.
+- The short link Peter gave you does not start `https://l.the-anchor.pub/`, or `make-qr.py` refuses it.
 - You are about to write something about the law, a product feature, the BII or The Anchor that is not in a fact bank.
 
 ## 12. What these specs rest on
@@ -493,3 +496,4 @@ End with a report to Peter in this order:
 - The Food Standards Agency moved its guidance from food.gov.uk to GOV.UK in June 2026. Old food.gov.uk links found in other documents may be dead. Use only the addresses in the source lists.
 - The research ran out of web searches part way through. What that left unanswered is listed at the end of each spec under "Not settled". Nothing in a fact bank depends on those gaps.
 - AI products change monthly. Everything about them in Article 1 was true on 13 October 2026 and must be checked again on the day you write and again before print.
+- Peter answered the specs' open questions on 14 October 2026 (section 3). The tasting-night example in Article 1 comes from him, checked against The Anchor's event page and the tasting-night app's own product document the same day.

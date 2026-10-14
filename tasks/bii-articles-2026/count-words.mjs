@@ -9,7 +9,7 @@
  *
  * A print file holds one or more blocks, each wrapped like this:
  *
- *   <!-- PRINT-BLOCK id="a2-print" min="250" max="300" must="orangejelly.co.uk/x" -->
+ *   <!-- PRINT-BLOCK id="a2-furniture" min="20" max="75" must="l.the-anchor.pub/" -->
  *   ...copy...
  *   <!-- /PRINT-BLOCK -->
  *

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Print-ready QR code for a BII article short link.
 
-A printed code cannot be reissued, so it encodes the short link on our own domain
-(for example https://www.orangejelly.co.uk/pub-ai) and never the guide's own address:
-the short link is a temporary redirect in src/lib/route-manifest.js that can be
-repointed for as long as the magazine is in circulation.
+A printed code cannot be reissued, so it encodes Peter's short link on l.the-anchor.pub
+(for example https://l.the-anchor.pub/vj8wgo, the summer 2026 one) and never the guide's
+own address. Peter decided this on 14 October 2026: the shortener counts every scan,
+and he can repoint the link in The Anchor's management app for as long as the magazine
+is in circulation. A code made from any other address would scan uncounted, so the
+script refuses one.
 
 Same tool and sizes as marketing/bii-summer-2026/ (segno, 10 px modules for the SVG,
 60 px for the PNG), with two deliberate differences. Error correction is fixed at Q
@@ -20,12 +22,14 @@ Needs segno (pip show segno). It does not touch the network.
 """
 
 import math
+import re
 import sys
 from pathlib import Path
 
 import segno
 
-ALLOWED_PREFIX = "https://www.orangejelly.co.uk/"
+# One path segment after the domain: no query string, no trailing slash, no sub-path.
+SHORT_LINK = re.compile(r"^https://l\.the-anchor\.pub/[A-Za-z0-9_-]+$")
 
 
 def main() -> int:
@@ -35,9 +39,10 @@ def main() -> int:
 
     url, out_dir, stem = sys.argv[1], Path(sys.argv[2]), sys.argv[3]
 
-    if not url.startswith(ALLOWED_PREFIX) or "?" in url or url.endswith("/"):
+    if not SHORT_LINK.match(url):
         print(f"Refusing to encode {url!r}.")
-        print(f"Encode the bare short link only: {ALLOWED_PREFIX}<alias>, no query string, no trailing slash.")
+        print("Encode Peter's short link exactly as he gave it: https://l.the-anchor.pub/<code>,")
+        print("with no query string and no trailing slash.")
         return 1
 
     out_dir.mkdir(parents=True, exist_ok=True)

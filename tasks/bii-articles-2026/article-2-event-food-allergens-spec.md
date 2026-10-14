@@ -1,6 +1,6 @@
 # Article 2 spec: food compliance and allergen handling at parties and events
 
-**For:** BII News · **Print:** 300 words at most · **Guide:** `/guides/pub-event-food-safety-allergens` · **Short link:** `orangejelly.co.uk/event-food`
+**For:** BII News · **Print:** 300 words at most · **Guide:** `/guides/pub-event-food-safety-allergens` · **Printed link:** Peter's short link, `l.the-anchor.pub/<code>` (README section 6.1) · **Checked by:** the BII, before it prints (section 5.4)
 
 Read `README.md` in this folder first. Its rules are part of this spec, and its section numbers are used below.
 
@@ -30,10 +30,10 @@ This is a compliance piece. People are harmed by allergen mistakes and pubs are 
 | File | What it is |
 |---|---|
 | `content/blog/pub-event-food-safety-allergens.md` | The guide |
-| `marketing/bii-event-food-2026/print-copy.md` | The print copy: one article block and one furniture block |
+| `marketing/bii-event-food-2026/print-copy.md` | The print copy: the note to the BII (section 5.4), one article block and one furniture block |
 | `marketing/bii-event-food-2026/bii-event-food-2026-qr.svg` and `.png` | The QR code |
 | `marketing/bii-event-food-2026/README.md` | The handover note |
-| The repo edits in section 7 of this spec | Mapping, short link and tests |
+| The repo edits in section 7 of this spec | Mapping and tests |
 
 ## 3. The fact bank
 
@@ -281,10 +281,11 @@ Write the subheads as `## 1. Ask every guest`, and so on.
 
 ### 5.2 The furniture block
 
-Block id `a2-furniture`, `max="75"`, `must="orangejelly.co.uk/event-food"`.
+Block id `a2-furniture`, `max="75"`, `must="l.the-anchor.pub/"`.
 
 - Bio box: the fixed bio from README section 4.7.
-- Footer strip, locked: "General guidance, not legal advice: your council's food safety team can advise on your premises. The full guide has the booking questions, a team briefing and an event-day checklist. Scan the code or visit orangejelly.co.uk/event-food"
+- Footer strip, locked: "General guidance, not legal advice: your council's food safety team can advise on your premises. The full guide has the booking questions, a team briefing and an event-day checklist. Scan the code or visit l.the-anchor.pub/CODE"
+- Replace `CODE` with the code from Peter's short link, without `https://` in front (README section 6.1). If Peter has not given it to you, leave `CODE` and say so in the hand-back.
 
 ### 5.3 Checks specific to this print piece
 
@@ -293,6 +294,24 @@ Block id `a2-furniture`, `max="75"`, `must="orangejelly.co.uk/event-food"`.
 - [ ] The words "must" and "law" appear only in checks 3 and 7 and the byline sentence.
 - [ ] England, Wales and Northern Ireland are named in check 7, and Scotland is named in the last lines.
 - [ ] No case, no fine, no statistic, no supplier, no telephone number.
+- [ ] The note to the BII (section 5.4) is at the top of the file, outside both blocks, word for word.
+
+### 5.4 The note to the BII
+
+Peter decided on 14 October 2026 that the BII verifies this article itself, and that the copy carries a note at the top asking them to. Put this note in `print-copy.md` directly under the `**For:** ... **Status:** ...` line, above everything else (README section 4.2). It sits outside the `PRINT-BLOCK` comments, so it is neither printed nor counted. Copy it word for word. The addresses are the fact bank's own sources (section 4), one line per check, so the BII's checker can go straight to them.
+
+```markdown
+> **For the BII: please verify before printing.** Please have this article's food safety and allergen content checked before it goes to print. Each check is marked as the law or as Food Standards Agency (FSA) advice, and the sources are below. If you change any statement, please tell Peter, so that the full guide online says the same. This note is not for print.
+>
+> - Checks 1, 2 and 6, FSA advice: Allergen information for non-prepacked foods, best practice (February 2025). https://www.gov.uk/government/publications/allergen-information-for-non-prepacked-foods-best-practice/allergen-information-for-non-prepacked-foods-best-practice
+> - Check 3, the law: Food Information Regulations 2014, regulation 5. https://www.legislation.gov.uk/uksi/2014/1855/regulation/5 And the FSA's technical guidance on allergen labelling and information. https://www.gov.uk/government/publications/food-allergen-labelling-and-information-requirements-technical-guidance/food-allergen-labelling-and-information-requirements-technical-guidance
+> - Check 4, FSA advice: Allergen guidance for food businesses. https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses
+> - Check 5, FSA advice: Running a food business, allergies. https://www.gov.uk/running-food-business/allergies
+> - Check 7, the law in England, Wales and Northern Ireland: Food Safety and Hygiene (England) Regulations 2013, Schedule 4. https://www.legislation.gov.uk/uksi/2013/2996/schedule/4 And GOV.UK's chilling page, which says the 8°C rule is a legal requirement in all three nations. https://www.gov.uk/food-hygiene-businesses/chilling-and-freezing
+> - Last lines, Scotland: Food Hygiene (Scotland) Regulations 2006, Schedule 4. https://www.legislation.gov.uk/ssi/2006/3/schedule/4 And Food Standards Scotland's CookSafe guide. https://www.foodstandards.gov.scot/business-guidance/running-a-food-business/publications/cooksafe-guide
+```
+
+If README section 8.4 finds that one of these sources has changed, do not edit the note: report it, because the BII will be checking against the same page.
 
 ## 6. The guide
 
@@ -546,26 +565,29 @@ Follow README sections 6 and 7. The values for this article:
  },
 ```
 
-**Short link.** In `src/lib/route-manifest.js`, at the end of `CAMPAIGN_REDIRECTS`:
+**Printed link.** Nothing goes in `src/lib/route-manifest.js`. The printed link is Peter's short link (README section 6.1), and it points at:
 
-```js
-  {
-    source: '/event-food',
-    destination:
-      '/guides/pub-event-food-safety-allergens?utm_source=bii&utm_medium=print-magazine&utm_campaign=event-food-2026',
-  },
+```text
+https://www.orangejelly.co.uk/guides/pub-event-food-safety-allergens?utm_source=bii&utm_medium=print-magazine&utm_campaign=event-food-2026
 ```
 
-**Tests.** Add `'/event-food'` to the array in `src/test/printed-urls.test.ts` and to the array in `src/test/route-manifest.test.ts`, raising the expected length there by one. Update the guide count as README section 7 describes.
+**Tests.** In `src/test/printed-urls.test.ts`, add these two lines at the end of the `PRINTED` array, after `'/guides/ai-for-pubs',` and before the closing `];`:
 
-**QR code.**
+```ts
+  // BII News, event food and allergens: printed short link l.the-anchor.pub, pointing here.
+  '/guides/pub-event-food-safety-allergens',
+```
+
+If `'/guides/ai-for-pubs',` is not there, Article 1 has not been built on your base branch: stop and report (README section 11). Change nothing else in that file. Update the guide count as README section 7 describes.
+
+**QR code.** Only once Peter has given you the short link. Replace `<code>` with its code in both commands.
 
 ```bash
-python3 tasks/bii-articles-2026/make-qr.py https://www.orangejelly.co.uk/event-food marketing/bii-event-food-2026 bii-event-food-2026-qr
+python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/<code> marketing/bii-event-food-2026 bii-event-food-2026-qr
 ```
 
 ```bash
-swift tasks/bii-articles-2026/read-qr.swift marketing/bii-event-food-2026/bii-event-food-2026-qr.png https://www.orangejelly.co.uk/event-food
+swift tasks/bii-articles-2026/read-qr.swift marketing/bii-event-food-2026/bii-event-food-2026-qr.png https://l.the-anchor.pub/<code>
 ```
 
 ## 8. Checks specific to this guide
@@ -605,9 +627,8 @@ Also not to be stated, because no source supports them:
 Put this list in the hand-back, as written.
 
 - [ ] Read and approve the print copy.
-- [ ] Have a qualified person check the print copy and the guide before either is used: an environmental health practitioner, or the BII's Health, Safety and Fire Compliance helpline provider. This piece goes out under the BII's name.
-- [ ] Confirm with the BII News editor that the 300-word limit covers the article and not the bio box and footer strip.
-- [ ] Decide whether the short link stays as `orangejelly.co.uk/event-food`.
-- [ ] Say when to push the branch.
-- [ ] Scan a printed proof of the QR code with a phone before the page goes to press.
+- [ ] Send it to the BII with the note at the top: they verify the food safety and allergen content before it prints.
+- [ ] If the BII changes any statement, have the guide changed to match before or as the magazine comes out. The BII's check covers the print copy, not the guide.
+- [ ] Create the short link in The Anchor's management app, pointing at the destination in section 7, and give its address to whoever finishes the print copy, if the build agent did not have it.
+- [ ] Scan a printed proof of the QR code with a phone before the page goes to press, and check it lands on the guide.
 - [ ] Supply a hero photograph for the guide if wanted.

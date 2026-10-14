@@ -37,6 +37,31 @@ menu names in Article 1 rest on the research pass reading them in a browser: Pet
 of them on a signed-in account before print. Article 2 needs a food safety check by a qualified
 person before it is printed.
 
+## Peter's answers applied (14 October 2026)
+
+Peter answered the seven open questions: the word limits cover the article only; copy deadline
+Friday 13 November 2026, first draft wanted this week; printed links go through his
+`l.the-anchor.pub` shortener to the standard guide addresses; the bio is approved and The Anchor
+is a tenancy, not a lease; the BII verifies Article 2 itself, with a note at the top of the copy;
+Article 1 gets his tasting-night example (his idea, which AI makes happen faster); push and open
+a PR.
+
+- [x] README: decisions D2 to D4 rewritten for the shortener, D11 and D12 added, the assumptions
+      table replaced with his answers, section 6 rewritten (Peter creates the link; `CODE`
+      placeholder until he does), the site redirect and its two test edits dropped.
+- [x] Prove the replacement test edit: the guide path in `PRINTED` fails the test while the guide
+      is missing and passes (25 of 25) once it exists. Reverted.
+- [x] `make-qr.py` accepts only `https://l.the-anchor.pub/<code>`; tested with the summer 2026
+      code (reads back PASS) and three refusals.
+- [x] Article 1: facts T1 to T4 from Peter and The Anchor's event page; locked tasting-night
+      section in both print versions; guide section 9 rebuilt around it; Greene King named nowhere.
+- [x] Article 2: locked note to the BII with a source per check; Peter's list updated.
+- [x] Both proofs re-run: 542, 292 and 292 words, all PASS.
+- [ ] Commit, push, open the PR.
+
+**Left to Peter:** create the two short links (destinations in README section 1), send Article
+2 to the BII with its note, and confirm the tasting-night wording.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September
