@@ -2,22 +2,27 @@
 
 **For:** the agent gathering Peter's feedback · **Written:** 14 October 2026 · **Copy deadline:** Friday 13 November 2026
 
-Your job is to talk the four pieces below through with Peter and hand back one feedback document. Do not edit any of the files: the agent that wrote them makes the changes, because most of the wording is tied to sources and checks that are easy to break.
+Your job is to talk the four pieces below through with Peter and hand back one feedback document. Do not hand back edited copies of the files: the agent that wrote them makes the changes, because most of the wording is tied to sources and checks that are easy to break.
 
 ## The four pieces
 
 Two printed articles for BII News, the British Institute of Innkeeping's members' magazine, and the two full guides on orangejelly.co.uk that their QR codes lead to.
 
-| # | Piece | What it is | Where to read it |
+All four are attached to this brief as separate files.
+
+| # | Piece | What it is | File in this pack |
 |---|---|---|---|
-| 1 | AI in hospitality, print | "Five ways to put AI to work in your pub" (542 words) and a short version, "Three ways..." (292 words). Only one is printed. | `marketing/bii-ai-2026/print-copy.md` |
-| 2 | AI in hospitality, guide | "AI for Pubs: What Is New, What Works and Where to Start": what has changed, set-up, twelve prompts to copy, the shortcut signs, house rules and a one-page policy, a first month, and the tasting-night example. | http://localhost:3010/guides/ai-for-pubs (source: `content/blog/ai-for-pubs.md`) |
-| 3 | Event food and allergens, print | "Seven food checks before your next party booking" (292 words), with a note at the top asking the BII to verify it. | `marketing/bii-event-food-2026/print-copy.md` |
-| 4 | Event food and allergens, guide | "Party and Event Food: The Allergen and Safety Rules for Pubs": law and advice side by side, booking form, buffets, plated functions, other people's food, batch cooking, team briefing, what to do if something goes wrong, and an event-day checklist. | http://localhost:3010/guides/pub-event-food-safety-allergens (source: `content/blog/pub-event-food-safety-allergens.md`) |
+| 1 | AI in hospitality, print | "Five ways to put AI to work in your pub" (542 words) and a short version, "Three ways..." (292 words). Only one is printed. | `1-AI-print-article.md` |
+| 2 | AI in hospitality, guide | "AI for Pubs: What Is New, What Works and Where to Start": what has changed, set-up, twelve prompts to copy, the shortcut signs, house rules and a one-page policy, a first month, and the tasting-night example. | `2-AI-web-guide.md` |
+| 3 | Event food and allergens, print | "Seven food checks before your next party booking" (292 words), with a note at the top asking the BII to verify it. | `3-event-food-print-article.md` |
+| 4 | Event food and allergens, guide | "Party and Event Food: The Allergen and Safety Rules for Pubs": law and advice side by side, booking form, buffets, plated functions, other people's food, batch cooking, team briefing, what to do if something goes wrong, and an event-day checklist. | `4-event-food-web-guide.md` |
 
-The pages run on a local dev server from branch `feat/bii-event-food-article`. If the addresses do not load, ask Peter to have the writing agent restart it. Headings show in lower case on screen: that is the site's house style, not an error.
+How to read the files:
 
-The specs behind all four are in `tasks/bii-articles-2026/` (`README.md`, then one spec per article). Read them only if you need to know why something is worded as it is.
+- **Print articles (1 and 3).** Only the text between the `PRINT-BLOCK` comments is printed. Labels in backticks and square brackets, such as `[HEADLINE]`, are notes for the designer. `CODE` in the footer strip is a placeholder for Peter's short link.
+- **Web guides (2 and 4).** The block between the two `---` lines at the top is page settings: the title, the summary shown in search, the "quick answer" box and the FAQs that appear at the foot of the page. Everything after it is the page itself. On the live site, headings show in lower case: that is the house style, not an error.
+
+If Peter asks why something is worded as it is, note the question: the writer can answer it from the specs.
 
 ## What good feedback looks like
 
@@ -36,7 +41,7 @@ These are not off limits, but each needs a source or a decision, so flag them ra
 - **Word limits on the print pieces.** The long AI version must stay 500 to 550 words; the short version and the event food piece 300 at most. The bio box and footer strip do not count. Any addition needs an equal cut.
 - **Facts, figures, dates, laws and menu names.** Every one comes from a checked source. A new fact needs a source; a changed one needs re-checking.
 - **"The law" and "FSA advice" labels** in the event food pieces. They are the reason the piece is accurate in 300 words: never swap or drop one.
-- **Numbers about The Anchor.** Only five approved percentages exist (`/CLAIMS.md`), and none may be tied to AI. The event food guide uses one (private hire bookings up 567%).
+- **Numbers about The Anchor.** Only five approved percentages exist, and none may be tied to AI. The event food guide uses one (private hire bookings up 567%).
 - **Greene King.** Not named anywhere; Peter agreed on 14 October. The site never calls Greene King a partner.
 - **The bio**, which Peter approved on 14 October.
 - **Seasons and dates in print.** The issue date is not known, so print copy mentions no season, month or "this year".
@@ -51,7 +56,7 @@ No need to raise these:
 
 ## What to hand back
 
-One Markdown file, `tasks/bii-articles-2026/feedback-round-1.md`, with:
+One Markdown document, called `feedback-round-1.md`, for Peter to pass back to the writer, with:
 
 1. **Decisions** Peter made (for example, long or short AI version), one line each.
 2. **Changes**, grouped by piece (1 to 4). For each: the exact current text quoted, what Peter wants instead (his words if he gave them), and why. Mark each one **must** or **nice to have**.
