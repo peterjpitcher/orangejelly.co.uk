@@ -77,9 +77,9 @@ This covers how you handle, prepare, cook, cool, reheat, and store food. The ins
 
 They look at:
 
-- **Temperature control.** Are your fridges running between 1 and 5 degrees? Are you checking and recording temperatures daily? Is hot food held above 63 degrees? Are you cooling food properly (down to 8 degrees within 90 minutes, then into the fridge)?
+- **Temperature control.** Is chilled food kept at 8°C or below (law in England, Wales and Northern Ireland; advice in Scotland)? Are you checking and recording temperatures daily? Is hot food held above 63°C (UK law)? Are you cooling food as quickly as possible (UK law, no time limit), then into the fridge?
 - **Cross-contamination prevention.** Are raw and cooked foods stored separately? Do you have separate chopping boards, clearly colour-coded? Are staff washing hands between tasks?
-- **Cooking and reheating.** Is food cooked to a safe core temperature (75 degrees or above)? Is reheated food brought to at least 82 degrees in Scotland, or 75 degrees in England and Wales?
+- **Cooking and reheating.** Is food cooked thoroughly (advice, not law: 70°C for 2 minutes in England, Wales and Northern Ireland; 75°C in Scotland)? Is reheated food steaming hot throughout (advice), or at least 82°C in Scotland (law, unless that would spoil the food)?
 - **Personal hygiene.** Are staff wearing clean clothing? Is there evidence of proper handwashing: soap, hot water, paper towels (not shared cloth towels)?
 - **Allergen management.** Can you demonstrate that you know the 14 allergens and can communicate them to customers? If you need to strengthen this area, our guide on [food allergen and GDPR compliance](/guides/food-allergies-gdpr-compliance) covers the practical systems.
 
@@ -132,7 +132,7 @@ You cannot predict when the inspector will arrive, which is exactly the point. B
 
 ### The standing checklist (do this every day)
 
-- [ ] Check and record all fridge and freezer temperatures (target: 1 to 5 degrees for fridges, minus 18 or below for freezers)
+- [ ] Check and record all fridge and freezer temperatures (UK-wide advice: 5°C or below for fridges, minus 18°C or below for freezers)
 - [ ] Check and record hot-hold temperatures if applicable
 - [ ] Verify all food is date-labelled with use-by or prepared-on dates
 - [ ] Ensure raw and cooked items are stored separately (raw below cooked, always)
@@ -295,7 +295,7 @@ Use this as a basis for your food safety team briefing. Run it quarterly, or whe
 
 2. **The three things the inspector checks.** Food safety procedures (how we handle food), structural condition (how clean and well-maintained the kitchen is), and confidence in management (whether our systems work and our team understands them).
 
-3. **Temperature control.** Fridges must be between 1 and 5 degrees. Hot food held above 63 degrees. Reheated food to 75 degrees core. Check and record daily, no exceptions.
+3. **Temperature control.** Fridges at 5°C or below (UK-wide advice). Hot food held above 63°C (UK law). Reheated food steaming hot throughout (advice), or at least 82°C in Scotland (law). Check and record daily, no exceptions.
 
 4. **Cross-contamination.** Raw and cooked foods are always separated. Colour-coded boards are always used correctly. Hands are washed between tasks, after handling raw food, after using the toilet, after touching your face, after handling waste.
 
