@@ -57,7 +57,7 @@ a PR.
       section in both print versions; guide section 9 rebuilt around it; Greene King named nowhere.
 - [x] Article 2: locked note to the BII with a source per check; Peter's list updated.
 - [x] Both proofs re-run: 542, 292 and 292 words, all PASS.
-- [ ] Commit, push, open the PR.
+- [x] Commit, push, open the PR: https://github.com/peterjpitcher/orangejelly.co.uk/pull/90
 
 **Left to Peter:** create the two short links (destinations in README section 1), send Article
 2 to the BII with its note, and confirm the tasting-night wording.
