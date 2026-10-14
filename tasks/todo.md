@@ -23,6 +23,70 @@ first test run failed only on `search-index.test.ts`, because a fresh worktree h
 over main gives no conflicts. The local page shows the new section, bottom line and both FAQ
 answers, and the FAQPage schema carries the new answers.
 
+# BII articles: research and specs (13 October 2026)
+
+**Goal:** Peter asked for research, then one build-ready spec per article, for two printed BII
+articles that each link by QR code to a full guide on orangejelly.co.uk. Article 1: AI in
+hospitality (500 to 550 words, plus a 300 word option). Article 2: event food compliance and
+allergen handling (300 words at most). A separate, less capable agent will write and build from
+the specs, so they must stand alone. Branch `docs/bii-article-specs`. Spec and research only: no
+article copy, no guide, no redirect and no QR code is created here.
+
+- [x] Read the repo rules a new guide must meet (content gates, front matter, next-step mapping,
+      campaign redirects, the BII summer 2026 precedent).
+- [x] Web research, one topic per agent: AI tool shortcuts; AI in UK hospitality; AI rules and
+      risks; allergen law; event food safety law; the BII and its publication.
+- [x] Check the safety-critical legal facts myself against legislation.gov.uk and GOV.UK (the
+      Food Standards Agency moved its guidance there from food.gov.uk in June 2026).
+- [x] Write `tasks/bii-articles-2026/` with one spec per article and the shared production rules.
+- [x] Prove the build recipe in the specs with throwaway stub guides (checks, tests, build), then
+      remove the stubs.
+- [x] Commit the specs on this branch. Do not push without Peter's say-so.
+
+**Results (13 October 2026):** `tasks/bii-articles-2026/` holds the shared rules (`README.md`), one
+spec per article, three small tools (word counter, QR maker, QR reader), a proof of each print
+plan and the six research dossiers. Two dry runs, both reverted. In the second, both guides were
+built from the specs' own wording and the repo edits were made exactly as the specs describe:
+lint, type-check and build passed, and the full suite passed in London (2,187) and UTC (2,188),
+128 files each. Every web address in the specs (69) passes the British English and
+growth-language gates. All five print blocks pass the word counter. Both QR codes read back to
+the right address.
+
+**Found by the dry run:** a guide dated in the future is silently left out of the build while
+every test still passes, so a printed short link would lead nowhere. The specs now say so and the
+README's first post-build check catches it.
+
+**Not done here, on purpose:** no article copy, guide, short link or QR code exists. That is the
+build agent's job, from the specs. OpenAI's help pages refuse automated readers, so the ChatGPT
+menu names in Article 1 rest on the research pass reading them in a browser: Peter confirms three
+of them on a signed-in account before print. Article 2 needs a food safety check by a qualified
+person before it is printed.
+
+## Peter's answers applied (14 October 2026)
+
+Peter answered the seven open questions: the word limits cover the article only; copy deadline
+Friday 13 November 2026, first draft wanted this week; printed links go through his
+`l.the-anchor.pub` shortener to the standard guide addresses; the bio is approved and The Anchor
+is a tenancy, not a lease; the BII verifies Article 2 itself, with a note at the top of the copy;
+Article 1 gets his tasting-night example (his idea, which AI makes happen faster); push and open
+a PR.
+
+- [x] README: decisions D2 to D4 rewritten for the shortener, D11 and D12 added, the assumptions
+      table replaced with his answers, section 6 rewritten (Peter creates the link; `CODE`
+      placeholder until he does), the site redirect and its two test edits dropped.
+- [x] Prove the replacement test edit: the guide path in `PRINTED` fails the test while the guide
+      is missing and passes (25 of 25) once it exists. Reverted.
+- [x] `make-qr.py` accepts only `https://l.the-anchor.pub/<code>`; tested with the summer 2026
+      code (reads back PASS) and three refusals.
+- [x] Article 1: facts T1 to T4 from Peter and The Anchor's event page; locked tasting-night
+      section in both print versions; guide section 9 rebuilt around it; Greene King named nowhere.
+- [x] Article 2: locked note to the BII with a source per check; Peter's list updated.
+- [x] Both proofs re-run: 542, 292 and 292 words, all PASS.
+- [x] Commit, push, open the PR: https://github.com/peterjpitcher/orangejelly.co.uk/pull/90
+
+**Left to Peter:** create the two short links (destinations in README section 1), send Article
+2 to the BII with its note, and confirm the tasting-night wording.
+
 # Microsoft Clarity back behind consent (1 October 2026)
 
 **Goal:** Peter asked why no Clarity data is arriving. It was blocked on purpose on 22 September
