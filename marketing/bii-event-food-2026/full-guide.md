@@ -1,53 +1,8 @@
----
-title: "Party and Event Food: The Allergen and Safety Rules for Pubs"
-slug: "pub-event-food-safety-allergens"
-publishedDate: 2026-10-14
-updatedDate: 2026-10-14
-excerpt: "Hosting a party, wake or buffet? The allergen and food safety rules a pub must follow for event food, with a checklist for your team to use on the day."
-quickAnswer: "For every party or event, ask each guest about allergies in writing, give allergen information for every dish and drink before they order and again on the day, label buffet food dish by dish, and send allergy meals out separately, named and confirmed at the table. Keep cold food at 8°C or below and hot food at 63°C or above."
-author: "Peter Pitcher"
-category: "events"
-featuredImage: "/images/blog/default.svg"
-tags:
-  - "event food safety"
-  - "allergens"
-  - "pub buffets"
-  - "private hire"
-  - "food compliance"
-status: "published"
-metaDescription: "The allergen and food safety rules for pub parties, buffets and functions: what is law, what is official advice, and an event-day checklist for your team."
-keywords:
-  - "pub buffet allergen rules"
-  - "event food safety for pubs"
-  - "allergen information for parties"
-  - "pre-order allergens"
-  - "how long can buffet food be left out"
-localSEO: {"localModifiers":["pub parties","buffets","private hire","UK food law"],"targetLocation":"United Kingdom"}
-voiceSearchQueries:
-  - "do I need allergen labels on a pub buffet"
-  - "how long can buffet food be left out in a pub"
-  - "what are the allergen rules for a private party at a pub"
-  - "who is responsible for allergens when a caterer brings the food"
-faqs:
-  - question: "Do I have to give allergen information for a buffet?"
-    answer: "Yes. The duty covers every food and drink you provide, including free food. The Food Standards Agency says the information is needed for each buffet item separately, not for the buffet as a whole. A label on each dish does it. If staff give the information in person, the law requires a notice telling guests to ask."
-  - question: "Is a pre-order form enough to cover allergies at a party?"
-    answer: "No. Food Standards Agency best practice says that for a pre-ordered group booking, allergen information should also be discussed with individuals on the day, before the food is served, because ingredients could have changed or details been missed. Use the form to collect requirements, then confirm them with each guest."
-  - question: "Do pubs have to put allergen information in writing?"
-    answer: "Not by law, as of October 2026. Staff may give it in conversation, provided a notice tells guests to ask. Food Standards Agency best practice, published in February 2025 for England, Wales and Northern Ireland, is written information backed by a conversation. Scotland has its own guidance from Food Standards Scotland."
-  - question: "How long can buffet food be left out?"
-    answer: "In England, Wales and Northern Ireland the law allows cold food one period of under four hours above 8°C, and hot food one period of under two hours below 63°C. Each can only be used once. Scotland's regulations set no such periods: Food Standards Scotland's advice for food put out for a party is no more than four hours."
-  - question: "Who is responsible when an outside caterer provides the food?"
-    answer: "Each food business is responsible for the food it supplies and for the allergen information it gives. If you buy food in and serve it as part of your own package, get the allergen information from the supplier in writing. No regulator has published a statement on how responsibility divides between a venue and a caterer the customer hires, so ask your council's food safety team before the event."
-  - question: "Can a guest bring their own cake to a party?"
-    answer: "That is your decision as the venue. No regulator has published a rule on who holds the allergen duty for food a customer brings in. Agree beforehand who cuts and serves it, keep it apart from your own food, and tell guests plainly that you cannot give allergen information for food you did not supply. Ask your council's food safety team if you are unsure."
-  - question: "Does Natasha's Law apply to party food?"
-    answer: "Only to food you pack before a guest chooses or orders it, such as individually boxed lunches or wrapped cake slices put out for guests to pick. Those need a label with the name of the food and a full ingredients list with the allergens emphasised. A shared platter is not covered, and nor is specific food ordered in advance, but allergen information must still be provided for both."
-  - question: "What should staff do if a guest has an allergic reaction?"
-    answer: "Call 999 and say you think it is an anaphylactic reaction. Help the guest to use their adrenaline pen if they have one. The NHS says the person should lie down, with legs raised, or sit up slowly if struggling to breathe, and should not stand or walk even if they feel better. Send someone outside to meet the ambulance and stay with the guest."
----
-
 # Party and Event Food: The Allergen and Safety Rules for Pubs
+
+**Long version, for the BII if it wants one alongside the print article.** By Peter Pitcher MBII. Draft v3, 15 October 2026. Not published on orangejelly.co.uk.
+
+**In short:** For every party or event, ask each guest about allergies in writing, give allergen information for every dish and drink before they order and again on the day, label buffet food dish by dish, and send allergy meals out separately, named and confirmed at the table. Keep cold food at 8°C or below and hot food at 63°C or above.
 
 This guide is for licensees who take party bookings: birthdays, christenings, wakes, weddings, work parties, buffets and set-menu functions. A party is not normal service. One person orders for many, often weeks ahead, the food goes out on a buffet or all at once, and extra hands join the shift. A kitchen that copes well every day can still be caught out.
 
@@ -57,7 +12,7 @@ The guide separates law from advice throughout. Where something is a legal requi
 
 Food Standards Agency guidance covers England, Wales and Northern Ireland. Scotland has its own regulator, Food Standards Scotland, and some of its rules differ. Where they do, this guide says so.
 
-It is about events. For the allergen system you run every day, and for data protection, see [food allergies and data protection](/guides/food-allergies-gdpr-compliance). For planning and running the event itself, see [how to run successful pub events](/guides/how-to-run-successful-pub-events). It is written by a working licensee: at The Anchor, our own venue, private hire bookings have grown by 567%.
+It is about events, not the allergen system you run every day.
 
 ## Why a party catches out a well-run kitchen
 
@@ -72,7 +27,7 @@ The numbers are not small. The Food Standards Agency puts the number of UK adult
 
 One inquest shows how this happens. In February 2023 a 24-year-old woman died after a family lunch at a Dorset pub. The meal had been ordered in advance by email, and the pub had not been told of any allergy. The coroner recorded an accidental death, and the inquest heard that the council took no action because the pub had complied with all requirements. Her father said the family did not blame the pub, and suggested that more prompts about allergens at booking and ordering could prevent it happening again.
 
-The pub had broken no rule. Following the minimum did not prevent it, which is why this guide gives the advice as well as the law.
+On the evidence the inquest heard, the pub had met the requirements, and the council took no enforcement action. Meeting the minimum did not prevent the death, which is why this guide gives the advice as well as the law.
 
 ## What is law and what is advice
 
@@ -118,7 +73,7 @@ The rule for food ordered by phone or online is clear. Whether a party pre-order
 
 That also follows the agency's advice. Food ordered before an event by one person or organisation on behalf of others is non-prepacked food, and the Food Standards Agency says allergen information should be provided to anyone eating it, in conversation or in writing. For a pre-ordered group booking, the agency says allergen information should also be discussed with individuals on the day, before the food is served, because ingredients could have changed or details been missed in the original order.
 
-**Guests' details.** A named guest's allergy is information about their health, which data protection law treats as special category data. You need a lawful basis and a special category condition to hold it, and the [Information Commissioner's Office](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-are-the-rules-on-special-category-data/) says to collect and keep only the minimum. Decide how long you keep the forms, and write that decision down. The guide to [food allergies and data protection](/guides/food-allergies-gdpr-compliance) covers this in more detail, and [filling December with party bookings](/guides/pub-christmas-bookings-fill-december) covers the bookings themselves.
+**Guests' details.** A named guest's allergy is information about their health, which data protection law treats as special category data. You need a lawful basis and a special category condition to hold it, and the [Information Commissioner's Office](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-are-the-rules-on-special-category-data/) says to collect and keep only the minimum. Decide how long you keep the forms, and write that decision down. The guide to food allergies and data protection covers this in more detail, and filling December with party bookings covers the bookings themselves.
 
 ## Build the menu and its allergen chart
 
@@ -168,7 +123,9 @@ If staff give the information in conversation and not in writing, the law requir
 
 If cross-contamination cannot be avoided, the Food Standards Agency says to tell customers that you cannot provide an allergen-free dish.
 
-**What we do at The Anchor.** For every finished dish on a buffet, we prepare a readable A4 sheet that sits with the dish. It gives the name of the food, what is in it and its allergens, checked against the recipe and the suppliers' packaging, and a dietary or "free from" claim only where we can stand behind it. Guests can read it while they choose, and a member of staff is there to talk through any individual allergy.
+**What we do at The Anchor.** For every finished dish on a buffet, we put a readable A4 sheet beside it showing the dish and its allergens, checked against the recipe and the suppliers' packaging. Guests can read it while they choose, and a member of staff is there to talk through any individual allergy.
+
+**If you make your own sheets,** we recommend four things. State the status of every one of the 14 allergens, so nothing is left blank: a blank box can be read as "not in this dish" when it only means "not marked". Name the cereal, as in "cereals containing gluten (wheat)", not just "gluten". If you call the sheet ingredient information, list the ingredients as well as the allergens. And check every entry, and any dietary claim, against the current recipe, the supplier's packaging and how the dish is actually prepared, every time something changes.
 
 This is how we choose to meet the buffet guidance, not a legal form. The legal minimum is set out above: the information has to be available for each dish, and if staff give it in conversation, a notice must tell guests to ask. A sheet does not replace the conversation with a guest who has an allergy. Food packed before guests choose it needs its own full label under the prepacked for direct sale rules below, and any "free from" claim carries the strict controls described in the menu section.
 
@@ -182,9 +139,9 @@ This is how we choose to meet the buffet guidance, not a legal form. The legal m
 - Hot food held for service must be kept at 63°C or above.
 - Hot food may be kept below 63°C for one period of under two hours. This can only be done once. After that, the agency says, cool it as quickly as possible to 8°C or below, or throw it away.
 
-In England and Wales, the agency's Safer food, better business pack adds two habits for display. Do not top up a dish on display: use up the food that is out before adding new food, and do not mix new hot food with food already on display. And it is a good idea to label food with the time it came out of the fridge.
+Those display periods are a controlled exception for service, not a way to plan a buffet: your food safety procedures should say when you use them and how you record the time. In England and Wales, the agency's Safer food, better business pack adds two habits for display. Do not top up a dish on display: use up the food that is out before adding new food, and do not mix new hot food with food already on display. And it is a good idea to label food with the time it came out of the fridge.
 
-**Scotland is different.** Scotland's regulations set no 8°C figure and no four-hour or two-hour periods. Food must be kept in a fridge or a cool ventilated place, or above 63°C, and food that is reheated must reach at least 82°C unless that would spoil it. In Scotland, 8°C or below is recommended for chilled food, and Food Standards Scotland's advice for food put out for a party is no more than four hours.
+**Scotland is different.** Scotland's regulations set no 8°C figure and no four-hour or two-hour periods. Food must be kept in a fridge or a cool ventilated place, or above 63°C, and food that is reheated must reach at least 82°C unless that would spoil it; Food Standards Scotland's CookSafe guidance sets out the detail. In Scotland, 8°C or below is recommended for chilled food, and Food Standards Scotland's advice for food put out for a party is no more than four hours.
 
 **Food packed in advance.** Food that a business packs before the customer chooses or orders it, and sells from the place it was packed, is called "prepacked for direct sale". Since 1 October 2021 it must carry a label showing the name of the food and a full ingredients list with the allergens emphasised. This is often called Natasha's Law.
 
@@ -230,7 +187,7 @@ Big batches carry their own risk. The bacteria Clostridium perfringens form spor
 
 **Cooling.** Across the UK, cooked food that is to be kept must be cooled as quickly as possible. The law sets no time limit.
 
-**Reheating.** In England, Wales and Northern Ireland, the agency's advice is to reheat food until it is steaming hot all the way through, and only reheat it once. In Scotland, food that is reheated must reach at least 82°C unless that would spoil it.
+**Reheating.** In England, Wales and Northern Ireland, the agency's advice is to reheat food until it is steaming hot all the way through, and only reheat it once. In Scotland, food that is reheated must reach at least 82°C unless that would spoil it. CookSafe sets out the detail, so follow it rather than this summary.
 
 | Control | England, Wales and Northern Ireland | Scotland |
 |---|---|---|
@@ -254,7 +211,7 @@ For barbecues in England and Wales, the Food Standards Agency's pack says it is 
 
 In England, Wales and Northern Ireland, a business that intends to serve beef burgers less than thoroughly cooked must tell its local authority beforehand and be able to show that suitable controls are in place. The Food Standards Agency says this is a legal requirement because it is a significant change to the business.
 
-An outdoor event may raise licensing questions too, such as a Temporary Event Notice: see the [licensing guide](/guides/pub-licensing-premises-personal-licence-guide). For health and safety beyond food, see the [pub health and safety checklist](/guides/pub-health-safety-checklist).
+An outdoor event may raise licensing questions too, such as a Temporary Event Notice: see the licensing guide. For health and safety beyond food, see the pub health and safety checklist.
 
 ## Your team on the day
 
@@ -276,7 +233,7 @@ Brief the whole team before service, extra staff included. Copy this, fill it in
 >
 > **Allergy meals** leave the kitchen separately, labelled with the guest's name. [Named person] takes each one to the table and confirms it with the guest.
 >
-> **If a guest is having a reaction:** call 999 and say you think it is an anaphylactic reaction. Tell [named person]. Send someone outside to meet the ambulance.
+> **If a guest is having a reaction:** help them use their adrenaline auto-injector if they have one, and call 999 at once: say you think it is an anaphylactic reaction. Tell [named person]. Send someone outside to meet the ambulance.
 
 ## Paperwork: what to update and who to tell
 
@@ -288,14 +245,14 @@ A food business must keep its council's information about it up to date, includi
 
 The law does not list what counts as a significant change, and no official source names buffets, barbecues, hog roasts or outside catering. If events mean a kind of food activity you were not doing before, tell your council's food safety team in writing and let them decide.
 
-BII members have a Health, Safety and Fire Compliance helpline, which the BII describes as covering queries such as correspondence with Environmental Health Officers and food standards. The number is on the [BII's helplines page](https://bii.org/resources-hub/helplines/). For inspections and ratings, see the [guide to a five-star food hygiene rating](/guides/food-hygiene-rating-five-star-guide).
+BII members have a Health, Safety and Fire Compliance helpline, which the BII describes as covering queries such as correspondence with Environmental Health Officers and food standards. The number is on the [BII's helplines page](https://bii.org/resources-hub/helplines/). For inspections and ratings, see the guide to a five-star food hygiene rating.
 
 ## If something goes wrong
 
 **If a guest has a reaction.** The Food Standards Agency's Safer food, better business pack and the [NHS](https://www.nhs.uk/conditions/anaphylaxis/) give these steps:
 
-1. Ring 999 straight away and ask for an ambulance with a paramedic. Say you think it is an anaphylactic reaction.
-2. If the guest has an adrenaline auto-injector, help them to get it and use it.
+1. If the guest has an adrenaline auto-injector, help them to use it straight away.
+2. Ring 999 at once, without waiting to see whether it works, and ask for an ambulance with a paramedic. Say you think it is an anaphylactic reaction.
 3. Do not move them. The NHS says the person should lie down, with legs raised, or sit up slowly if struggling to breathe, and should not stand or walk at any time, even if they feel better.
 4. The NHS says to give a second injector after 5 minutes if there is no improvement.
 5. Send someone outside to wait for the ambulance.
@@ -304,7 +261,7 @@ BII members have a Health, Safety and Fire Compliance helpline, which the BII de
 
 - Leave the records exactly as they were written at the time. Do not tidy, complete or rewrite them.
 - If you believe food you have supplied may be harmful, you must tell the authorities immediately. For a single pub that means the council's food safety team, which you can [find on GOV.UK](https://www.gov.uk/find-your-local-food-safety-team).
-- We recommend telling your insurer promptly as well. See the [pub insurance guide](/guides/pub-insurance-cover-guide).
+- We recommend telling your insurer promptly as well. See the pub insurance guide.
 
 ## Event-day checklist
 
@@ -337,7 +294,7 @@ Print this and keep it with each booking.
 
 - [ ] Allergen requirements confirmed with each guest before food is served
 - [ ] Allergy meals plated separately, labelled with the guest's name and carried by one named person
-- [ ] Server says at the table what the dish is free from
+- [ ] Server confirms at the table the guest's specific requirement and how their dish was prepared for it
 - [ ] Display times kept: in England, Wales and Northern Ireland, under four hours for cold food and under two hours for hot food, once only
 - [ ] Nothing topped up: a fresh dish replaces an empty one
 - [ ] Chart and buffet information updated together after any last-minute change
@@ -347,6 +304,40 @@ Print this and keep it with each booking.
 - [ ] Menu, chart, pre-orders and briefing sheet filed together
 - [ ] Records left exactly as they were written at the time
 - [ ] A decision made, and written down, on how long guests' allergy details are kept
+
+## Questions licensees ask
+
+**Do I have to give allergen information for a buffet?**
+
+Yes. The duty covers every food and drink you provide, including free food. The Food Standards Agency says the information is needed for each buffet item separately, not for the buffet as a whole. A label on each dish does it. If staff give the information in person, the law requires a notice telling guests to ask.
+
+**Is a pre-order form enough to cover allergies at a party?**
+
+No. Food Standards Agency best practice says that for a pre-ordered group booking, allergen information should also be discussed with individuals on the day, before the food is served, because ingredients could have changed or details been missed. Use the form to collect requirements, then confirm them with each guest.
+
+**Do pubs have to put allergen information in writing?**
+
+Not by law, as of October 2026. Staff may give it in conversation, provided a notice tells guests to ask. Food Standards Agency best practice, published in February 2025 for England, Wales and Northern Ireland, is written information backed by a conversation. Scotland has its own guidance from Food Standards Scotland.
+
+**How long can buffet food be left out?**
+
+In England, Wales and Northern Ireland the law allows cold food one period of under four hours above 8°C, and hot food one period of under two hours below 63°C. Each can only be used once. Scotland's regulations set no such periods: Food Standards Scotland's advice for food put out for a party is no more than four hours.
+
+**Who is responsible when an outside caterer provides the food?**
+
+Each food business is responsible for the food it supplies and for the allergen information it gives. If you buy food in and serve it as part of your own package, get the allergen information from the supplier in writing. No regulator has published a statement on how responsibility divides between a venue and a caterer the customer hires, so ask your council's food safety team before the event.
+
+**Can a guest bring their own cake to a party?**
+
+That is your decision as the venue. No regulator has published a rule on who holds the allergen duty for food a customer brings in. Agree beforehand who cuts and serves it, keep it apart from your own food, and tell guests plainly that you cannot give allergen information for food you did not supply. Ask your council's food safety team if you are unsure.
+
+**Does Natasha's Law apply to party food?**
+
+Only to food you pack before a guest chooses or orders it, such as individually boxed lunches or wrapped cake slices put out for guests to pick. Those need a label with the name of the food and a full ingredients list with the allergens emphasised. A shared platter is not covered, and nor is specific food ordered in advance, but allergen information must still be provided for both.
+
+**What should staff do if a guest has an allergic reaction?**
+
+Help the guest to use their adrenaline auto-injector straight away if they have one, and call 999 at once: say you think it is an anaphylactic reaction. The NHS says the person should lie down, with legs raised, or sit up slowly if struggling to breathe, and should not stand or walk even if they feel better. Give a second injector after 5 minutes if there is no improvement. Send someone outside to meet the ambulance and stay with the guest.
 
 ## Sources
 

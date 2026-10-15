@@ -43,8 +43,6 @@ const PRINTED = [
   '/licensees-guide/autumn-pub-event-ideas',
   // BII News, AI in hospitality: printed short link l.the-anchor.pub, pointing here.
   '/guides/ai-for-pubs',
-  // BII News, event food and allergens: printed short link l.the-anchor.pub, pointing here.
-  '/guides/pub-event-food-safety-allergens',
 ];
 
 /** Short aliases printed on the other toolkits. Deliberately temporary redirects. */

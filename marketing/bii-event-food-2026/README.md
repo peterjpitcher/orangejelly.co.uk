@@ -2,37 +2,21 @@
 
 Print article for BII News, the British Institute of Innkeeping's members' magazine: **"Seven food checks before your next party booking"** (299 words, limit 300). Copy deadline: Friday 13 November 2026.
 
-The BII verifies this article's food safety and allergen content before it prints. The note at the top of `print-copy.md` asks them to and gives the source for each check. If they change anything, the guide at `/guides/pub-event-food-safety-allergens` is changed to match.
+**Print only.** Peter decided on 15 October 2026 not to host a guide on this subject on orangejelly.co.uk: food safety advice carries too much risk for us to publish. So there is no QR code, no short link and no web address in the print copy.
 
-Peter is supplying The Anchor's real A4 buffet dish sheet; the guide gets a downloadable template once it arrives.
+The BII verifies the food safety and allergen content before it prints. The note at the top of `print-copy.md` asks them to and gives the source for each check.
 
 ## Files
 
 - `print-copy.md`: the note to the BII, the article, the bio box and the footer strip, with designer notes.
-- `bii-event-food-2026-qr.svg` and `bii-event-food-2026-qr.png`: not made yet. They are made from Peter's short link once it exists (see below). Use the SVG for print.
+- `full-guide.md`: a long version (booking form, team briefing, event-day checklist, questions licensees ask, sources) that Peter can offer the BII. It is not on our website and must not be added to it.
 
-## What the code encodes
+## Corrections made after the food safety verification (15 October 2026)
 
-Peter's short link on `l.the-anchor.pub`, which counts every scan. It points at the full guide:
+- The Anchor's A4 sheets are described as showing each dish's allergens, not its ingredients, to match the real sheets.
+- The temperature exception is described as one controlled spell, not a routine serving arrangement.
+- Long version: the NHS order for anaphylaxis (adrenaline auto-injector first, then 999 at once), the Scottish 82°C rule pointed to CookSafe for the detail, the Dorset inquest attributed precisely, and servers confirm a guest's requirement instead of saying what a dish is free from.
 
-`https://www.orangejelly.co.uk/guides/pub-event-food-safety-allergens?utm_source=bii&utm_medium=print-magazine&utm_campaign=event-food-2026`
+## Not ready
 
-Until Peter creates it, the footer strip says `l.the-anchor.pub/CODE`. Once he has, replace `CODE` in `print-copy.md`, then make and check the code:
-
-```bash
-python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/<code> marketing/bii-event-food-2026 bii-event-food-2026-qr
-```
-
-```bash
-swift tasks/bii-articles-2026/read-qr.swift marketing/bii-event-food-2026/bii-event-food-2026-qr.png https://l.the-anchor.pub/<code>
-```
-
-- The short link leads to a missing page until the guide is live on production.
-- Peter can change where the short link points in the management app, but the printed code itself can never change.
-
-## Print notes
-
-- Print the code at 25 mm square.
-- Keep the white border around it. Do not crop into it.
-- Keep it black on white.
-- Test a printed proof with two or three phones before going to press.
+The Anchor's A4 allergen sheet PDF must not be offered as a template yet. The verifier found that blank boxes could be read as "not in this dish", that "Gluten" should read "Cereals containing gluten" with the cereal named, that the sheets show no ingredients, and that every entry needs checking against current recipes and packaging.
