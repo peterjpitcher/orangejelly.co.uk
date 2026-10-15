@@ -4,7 +4,7 @@
 
 Designer notes are backticked labels in square brackets. They are not for print and are not counted.
 
-This is the version for the BII (500 to 550 words). The 300-word short version was dropped in feedback round 1. `CODE` in the footer strip is replaced with Peter's short link code before this goes to the BII.
+This is the version for the BII (500 to 550 words). The 300-word short version was dropped in feedback round 1. The short link `l.the-anchor.pub/mkucbz` and the QR code `bii-ai-2026-qr.svg` were made on 15 October 2026.
 
 <!-- PRINT-BLOCK id="a1-long" min="500" max="550" must="Peter Pitcher MBII||07990 587315||peter@orangejelly.co.uk" -->
 
@@ -57,6 +57,6 @@ Scan the code for prompts, shortcuts and what going all in looks like. When you 
 PETER PITCHER MBII leads Orange Jelly, which builds websites, bespoke applications and connected systems that help businesses grow. He runs The Anchor in Stanwell Moor.
 
 `[FOOTER STRIP, with QR code: bii-ai-2026-qr.svg, 25 mm square, black on white, keep the white border]`
-The full guide has prompts to copy, a shortcut sheet for four assistants and a one-page AI policy for your team. Scan the code or visit l.the-anchor.pub/CODE
+The full guide has prompts to copy, a shortcut sheet for four assistants and a one-page AI policy for your team. Scan the code or visit l.the-anchor.pub/mkucbz
 
 <!-- /PRINT-BLOCK -->

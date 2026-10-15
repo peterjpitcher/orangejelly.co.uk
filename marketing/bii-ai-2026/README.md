@@ -5,7 +5,7 @@ Print article for BII News, the British Institute of Innkeeping's members' magaz
 ## Files
 
 - `print-copy.md`: the article, the bio box and the footer strip, with designer notes.
-- `bii-ai-2026-qr.svg` and `bii-ai-2026-qr.png`: not made yet. They are made from Peter's short link once it exists (see below). Use the SVG for print.
+- `bii-ai-2026-qr.svg` and `bii-ai-2026-qr.png`: the QR code for the short link. Use the SVG for print.
 
 ## What the code encodes
 
@@ -13,14 +13,14 @@ Peter's short link on `l.the-anchor.pub`, which counts every scan. It points at 
 
 `https://www.orangejelly.co.uk/guides/ai-for-pubs?utm_source=bii&utm_medium=print-magazine&utm_campaign=ai-for-pubs-2026`
 
-Until Peter creates it, the footer strip says `l.the-anchor.pub/CODE`. Once he has, replace `CODE` in `print-copy.md`, then make and check the code:
+The short link is `https://l.the-anchor.pub/mkucbz`, created on 15 October 2026 in The Anchor's management app (named "BII News: AI for Pubs guide (print QR)", owned by Peter). It is in the footer strip of `print-copy.md`. The QR code was made and read back with:
 
 ```bash
-python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/<code> marketing/bii-ai-2026 bii-ai-2026-qr
+python3 tasks/bii-articles-2026/make-qr.py https://l.the-anchor.pub/mkucbz marketing/bii-ai-2026 bii-ai-2026-qr
 ```
 
 ```bash
-swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://l.the-anchor.pub/<code>
+swift tasks/bii-articles-2026/read-qr.swift marketing/bii-ai-2026/bii-ai-2026-qr.png https://l.the-anchor.pub/mkucbz
 ```
 
 - The short link leads to a missing page until the guide is live on production.
