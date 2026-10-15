@@ -38,7 +38,7 @@ Here, Peter Pitcher MBII sets out seven checks, each marked as law or Food Stand
 
 `[SECTION 4]`
 ## 4. Label the buffet dish by dish
-**FSA advice:** give allergen information for each item separately, not for the buffet as a whole. At The Anchor, each dish gets an A4 sheet showing its allergens.
+**FSA advice:** give allergen information for each item separately, not for the buffet as a whole.
 
 `[SECTION 5]`
 ## 5. Recheck the delivery

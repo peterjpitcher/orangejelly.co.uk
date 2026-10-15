@@ -13,10 +13,9 @@ The BII verifies the food safety and allergen content before it prints. The note
 
 ## Corrections made after the food safety verification (15 October 2026)
 
-- The Anchor's A4 sheets are described as showing each dish's allergens, not its ingredients, to match the real sheets.
 - The temperature exception is described as one controlled spell, not a routine serving arrangement.
 - Long version: the NHS order for anaphylaxis (adrenaline auto-injector first, then 999 at once), the Scottish 82°C rule pointed to CookSafe for the detail, the Dorset inquest attributed precisely, and servers confirm a guest's requirement instead of saying what a dish is free from.
 
-## Not ready
+## The Anchor's allergen sheets
 
-The Anchor's A4 allergen sheet PDF must not be offered as a template yet. The verifier found that blank boxes could be read as "not in this dish", that "Gluten" should read "Cereals containing gluten" with the cereal named, that the sheets show no ingredients, and that every entry needs checking against current recipes and packaging.
+Not mentioned anywhere, in print or in the long version, and not supplied to the BII. Peter decided on 15 October 2026: he has not confirmed they are compliant. The long version keeps general advice on writing buffet labels instead.

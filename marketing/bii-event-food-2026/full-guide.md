@@ -123,11 +123,9 @@ If staff give the information in conversation and not in writing, the law requir
 
 If cross-contamination cannot be avoided, the Food Standards Agency says to tell customers that you cannot provide an allergen-free dish.
 
-**What we do at The Anchor.** For every finished dish on a buffet, we put a readable A4 sheet beside it showing the dish and its allergens, checked against the recipe and the suppliers' packaging. Guests can read it while they choose, and a member of staff is there to talk through any individual allergy.
+**Writing buffet labels.** If you write allergen labels or information cards for buffet dishes, we recommend four things. State the status of every one of the 14 allergens, so nothing is left blank: a blank box can be read as "not in this dish" when it only means "not marked". Name the cereal, as in "cereals containing gluten (wheat)", not just "gluten". If you call it ingredient information, list the ingredients as well as the allergens. And check every entry, and any dietary claim, against the current recipe, the supplier's packaging and how the dish is actually prepared, every time something changes.
 
-**If you make your own sheets,** we recommend four things. State the status of every one of the 14 allergens, so nothing is left blank: a blank box can be read as "not in this dish" when it only means "not marked". Name the cereal, as in "cereals containing gluten (wheat)", not just "gluten". If you call the sheet ingredient information, list the ingredients as well as the allergens. And check every entry, and any dietary claim, against the current recipe, the supplier's packaging and how the dish is actually prepared, every time something changes.
-
-This is how we choose to meet the buffet guidance, not a legal form. The legal minimum is set out above: the information has to be available for each dish, and if staff give it in conversation, a notice must tell guests to ask. A sheet does not replace the conversation with a guest who has an allergy. Food packed before guests choose it needs its own full label under the prepacked for direct sale rules below, and any "free from" claim carries the strict controls described in the menu section.
+A label does not replace the conversation with a guest who has an allergy. Food packed before guests choose it needs its own full label under the prepacked for direct sale rules below, and any "free from" claim carries the strict controls described in the menu section.
 
 **Plate allergy guests from the kitchen.** We recommend plating food for a guest with an allergy in the kitchen and not from the buffet, where shared spoons and tongs carry one dish into another.
 
@@ -169,7 +167,7 @@ Do not let a familiar name reassure you. Two sausage rolls or two sandwiches fro
 - keep the packaging, or the supplier's ingredient information, for everything you serve;
 - record the actual ingredients and allergens of the finished dish, including anything you add to it;
 - check any substitution before it goes out;
-- make sure the allergen chart and the sheet or label for that dish say the same thing.
+- make sure the allergen chart and the label for that dish say the same thing.
 
 The Food Standards Agency's pack suggests asking a supplier three questions: are they registered with the local authority, do they provide allergen information, and do they have a food safety management system.
 
@@ -285,9 +283,9 @@ Print this and keep it with each booking.
 **On the day, before service**
 
 - [ ] Deliveries checked against the order, and any substitution checked against the chart
-- [ ] Allergen information for each buffet dish prepared or updated (at The Anchor, an A4 sheet per finished dish), checked against the recipe and the packaging, and placed where guests can read it while they choose
+- [ ] Allergen information for each buffet dish prepared or updated, checked against the recipe and the packaging, and placed where guests can read it while they choose
 - [ ] Notice on display telling guests to ask about allergens
-- [ ] Whole team briefed, extra staff included: check the chart and the sheets, never guess
+- [ ] Whole team briefed, extra staff included: check the chart and the labels, never guess
 - [ ] Time written down for anything going out on display
 
 **During service**
