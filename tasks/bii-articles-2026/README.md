@@ -98,6 +98,16 @@ These are settled. Build to them.
 | A5 | What format does the BII want? | Not asked. Still assumed: the Markdown file in section 4.2. | Do not create Word or PDF files unless Peter asks. |
 | A6 | Who checks Article 2? | The BII verifies it itself. Peter signs off both articles. | Put the note from the Article 2 spec at the top of its print copy (D12). |
 
+### Feedback round 1, 14 October 2026
+
+Peter's feedback (gathered by an interview agent, `feedback-round-1.md`) changed these rules. Where they conflict with anything below, they win.
+
+- **AI pieces:** only the long print version goes to the BII. AI is framed as a well-managed business partner: the publican sets direction, standards and decisions. Both AI pieces end with Peter's personal invitation to call 07990 587315 or email peter@orangejelly.co.uk (contact details from `CONTACT` in `src/lib/constants.ts`). The AI readiness assessment is background reading, not the main next step.
+- **New first-hand facts, from Peter on 14 October 2026:** The Anchor's website was built with AI, with Peter setting the direction; AI helps develop food ideas once something catches his eye (his example: black garlic, not a claimed trend); each event starts from one approved brief that feeds posts, emails, event pages and booking details; one back-office system, built with AI's help, covers table and private bookings, events, marketing email and SMS, customer records, pre-paid parking, receipts and customer invoices, mileage, Machine Games Duty, short links and reporting (scope checked against the management app's sections the same day).
+- **Not used:** Peter's estimate of £4,000 to £5,000 a year in reduced software costs (unverified, and not one of the approved claims), and any revenue figure tied to AI. Automated review replies are described as an option under an approved process, not as something The Anchor does: no such automation was found in the management app.
+- **Food piece, 15 October 2026: print only.** Peter decided not to host a food safety guide on orangejelly.co.uk (too risky). The print article has no QR code, short link or web address; the long version lives in `marketing/bii-event-food-2026/full-guide.md` for the BII only. Only Article 1 needs a short link. Corrections from Peter's food safety verification are listed in `marketing/bii-event-food-2026/README.md`.
+- **Food pieces:** strictly educational, with no Orange Jelly invitation. They add a bought-in food example (sausage rolls and sandwiches). The Anchor's A4 allergen sheets are not mentioned and not supplied: Peter decided on 15 October 2026 that their compliance is unconfirmed.
+
 ## 4. The printed copy: rules for both articles
 
 ### 4.1 How BII News lays out a page
@@ -388,7 +398,7 @@ It is 105 before either article, 106 after the first and 107 after the second.
 | # | File | Change |
 |---|---|---|
 | 1 | `content/blog/<slug>.md` | New file: the guide. |
-| 2 | `tasks/repositioning/data/article-next-steps.json` | Add one entry for the slug. The file is sorted by slug and indented with one space: keep both. The spec gives the entry and the neighbours it sits between. |
+| 2 | `tasks/repositioning/data/article-next-steps.json` | Add one entry for the slug. The file is sorted by slug: keep it sorted. Since Article 1 was committed on 14 October 2026 it is indented with two spaces (the commit hook's Prettier reformatted it); match whatever indentation you find. The spec gives the entry and the neighbours it sits between. |
 | 3 | `src/test/article-next-step.test.ts` | In the test named `covers all 105 articles` (the number in the name will be whatever it is now), change both `toHaveLength(...)` numbers to `N`, and change the number in the test's name to match. |
 | 4 | `src/test/printed-urls.test.ts` | Add the guide's path to the end of the `PRINTED` array, with the comment line the spec gives (D11). This test is what stops anyone breaking a printed code later. Article 1 also changes one paragraph of the comment above the array; its spec gives the wording. |
 | 5 | `src/app/insights/(list)/page.tsx` | The sentence "where there are {105} of these" prints the guide count. Change the number to `N`. |

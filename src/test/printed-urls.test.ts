@@ -16,7 +16,12 @@ import { getRedirectsForPhases, ROUTES } from '@/lib/route-manifest';
  * of those codes has to land on a real page, for as long as the printed material is in
  * circulation, which for a toolkit distributed to licensees is indefinitely.
  *
- * That makes these seven paths load-bearing in a way no other URL on the site is. They
+ * BII News articles from November 2026 print a short link on Peter's own shortener,
+ * l.the-anchor.pub, and that link points straight at a guide. Only Peter can repoint
+ * it, and only once somebody notices that scans land on a 404, so those guides are
+ * listed here too.
+ *
+ * That makes these paths load-bearing in a way no other URL on the site is. They
  * are the reason the guide rename ships with a permanent wildcard redirect rather than
  * a tidy-up of individual entries, and the reason this file exists: to fail loudly the
  * moment somebody retires, renames or reshapes a route in a way that would leave a
@@ -36,6 +41,8 @@ const PRINTED = [
   '/licensees-guide/music-bingo-101',
   '/licensees-guide/quiz-night-101',
   '/licensees-guide/autumn-pub-event-ideas',
+  // BII News, AI in hospitality: printed short link l.the-anchor.pub, pointing here.
+  '/guides/ai-for-pubs',
 ];
 
 /** Short aliases printed on the other toolkits. Deliberately temporary redirects. */

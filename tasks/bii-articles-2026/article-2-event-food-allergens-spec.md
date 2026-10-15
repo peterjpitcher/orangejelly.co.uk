@@ -372,7 +372,7 @@ faqs:
 
 ### 6.2 Length
 
-2,800 to 3,600 words in the body. This is a reference guide and is allowed to be longer than README section 5.3 says.
+2,800 to 3,600 words of prose in the body, not counting tables, block quotes, the checklist or the Sources section. This is a reference guide and is allowed to be longer than README section 5.3 says. (Clarified on 14 October 2026, when the build showed the locked tables, blocks and checklist add about 900 words. The guide as built: 3,588 words of prose.) After Peter's feedback round 1 the range is 2,800 to 4,100, to make room for the sections he asked for; the revised guide has 3,986 words of prose.
 
 ### 6.3 Section order
 
@@ -594,7 +594,7 @@ swift tasks/bii-articles-2026/read-qr.swift marketing/bii-event-food-2026/bii-ev
 
 Run these after README section 8.
 
-- [ ] The body is 2,800 to 3,600 words.
+- [ ] The body is 2,800 to 4,100 words of prose, counted as section 6.2 says.
 - [ ] `publishedDate` and `updatedDate` are the day you built: not 2026-10-13 unless that is today, and not a future date.
 - [ ] Table A, Table B, the three locked blocks, cases C1 and C2 and all eight FAQ answers are word for word.
 - [ ] Every sentence that says "must", "law", "legal" or "offence" traces to a fact labelled LAW.
