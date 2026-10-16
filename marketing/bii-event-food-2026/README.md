@@ -8,6 +8,9 @@ The BII verifies the food safety and allergen content before it prints. The note
 
 ## Files
 
+**Send the BII the Word file:** `Event food and allergens - 300 words.docx`, a clean reading copy with no markup, made from `event-food-300-words.md` with pandoc.
+
+
 - `event-food-300-words.md`: the note to the BII, the article (287 words, limit 300), the bio box and the footer strip, with designer notes. This is the only version.
 - The long version was deleted on 16 October 2026 at Peter's request: the BII gets the 287-word article only.
 

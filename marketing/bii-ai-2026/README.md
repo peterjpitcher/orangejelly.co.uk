@@ -4,6 +4,9 @@ Print article for BII News, the British Institute of Innkeeping's members' magaz
 
 ## Files
 
+**Send the BII the two Word files and the PNG.** `AI in pubs - 550 words.docx` and `AI in pubs - 300 words.docx` are clean reading copies with no markup (Peter, 16 October 2026: the editor is not technical). They are made from the Markdown files below with pandoc; change the Markdown, recount, then remake the Word files.
+
+
 - `ai-in-pubs-550-words.md`: **"Five ways to put AI to work in your pub"**, 546 words (limit 550), with the bio box and footer strip.
 - `ai-in-pubs-300-words.md`: **"Three ways to put AI to work in your pub"**, 298 words (limit 300), with the same bio box and footer strip.
 - `QR-code-AI-in-pubs-guide.png`: the QR code for the footer strip, 2220 x 2220 px, black on white. It is the only QR file: Peter asked for PNG only on 16 October 2026.
