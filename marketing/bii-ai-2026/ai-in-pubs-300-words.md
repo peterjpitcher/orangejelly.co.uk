@@ -1,6 +1,6 @@
 # BII article: Three ways to put AI to work in your pub (print copy, 298 words)
 
-**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** final draft, 16 October 2026
+**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** first draft, 16 October 2026
 
 This is the 300-word version. A 550-word version of the same article is supplied separately: print one of the two.
 
@@ -19,7 +19,7 @@ Here, Peter Pitcher MBII sets out three ways to start and how far it can go:
 
 `[SECTION 1]`
 ## 1. Start with a conversation
-Nearly one in five British consumers use AI tools to plan a pub or restaurant visit (Zonal and NIQ, October 2026). So open ChatGPT, tap the Voice icon and talk to it about your pub. Then tell it who you are, once: Settings, then Personalization. Add one rule: never invent prices, dates or allergen information.
+Nearly one in five British consumers use AI tools to plan a pub or restaurant visit (Zonal and NIQ, October 2026). So open ChatGPT, tap the Voice icon and talk to it about your pub. Then tell it who you are, once: Settings, then Personalisation. Add one rule: never invent prices, dates or allergen information.
 
 `[SECTION 2]`
 ## 2. Make it a business partner

@@ -4,7 +4,7 @@ Print article for BII News, the British Institute of Innkeeping's members' magaz
 
 ## Files
 
-- `ai-in-pubs-550-words.md`: **"Five ways to put AI to work in your pub"**, 547 words (limit 550), with the bio box and footer strip.
+- `ai-in-pubs-550-words.md`: **"Five ways to put AI to work in your pub"**, 546 words (limit 550), with the bio box and footer strip.
 - `ai-in-pubs-300-words.md`: **"Three ways to put AI to work in your pub"**, 298 words (limit 300), with the same bio box and footer strip.
 - `QR-code-AI-in-pubs-guide.png`: the QR code for the footer strip, 2220 x 2220 px, black on white. It is the only QR file: Peter asked for PNG only on 16 October 2026.
 

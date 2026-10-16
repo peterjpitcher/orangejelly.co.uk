@@ -1,6 +1,6 @@
 # BII article: Seven food checks before your next party booking (print copy, 287 words)
 
-**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** final draft, 16 October 2026. Print only: no QR code or web link
+**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** first draft, 16 October 2026. Print only: no QR code or web link
 
 > **For the BII: please verify before printing.** Please have this article's food safety and allergen content checked before it goes to print. Each check is marked as the law or as Food Standards Agency (FSA) advice, and the sources are below. If you change any statement, please tell Peter. This note is not for print.
 >
