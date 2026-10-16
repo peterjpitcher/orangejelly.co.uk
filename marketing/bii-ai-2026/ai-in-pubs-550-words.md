@@ -1,10 +1,10 @@
-# BII article: Five ways to put AI to work in your pub (print copy)
+# BII article: Five ways to put AI to work in your pub (print copy, 546 words)
 
-**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** draft v2, 14 October 2026, after Peter's feedback round 1
+**For:** BII News, the British Institute of Innkeeping · **Supplied by:** Orange Jelly · **Status:** first draft, 16 October 2026
 
-Designer notes are backticked labels in square brackets. They are not for print and are not counted.
+This is the 550-word version. A 300-word version of the same article is supplied separately: print one of the two.
 
-This is the version for the BII (500 to 550 words). The 300-word short version was dropped in feedback round 1. The short link `l.the-anchor.pub/mkucbz` and the QR code `bii-ai-2026-qr.svg` were made on 15 October 2026.
+Designer notes are backticked labels in square brackets. They are not for print and are not counted. The QR code is the file `QR-code-AI-in-pubs-guide.png`. It leads to the full guide at www.orangejelly.co.uk/guides/ai-for-pubs through the short link l.the-anchor.pub/mkucbz.
 
 <!-- PRINT-BLOCK id="a1-long" min="500" max="550" must="Peter Pitcher MBII||07990 587315||peter@orangejelly.co.uk" -->
 
@@ -27,11 +27,11 @@ Open ChatGPT, tap the Voice icon and talk to it about your pub as you would to a
 
 `[SECTION 3]`
 ## 3. Tell it who you are, once
-ChatGPT keeps standing instructions for every chat: Settings, then Personalization, or Customize ChatGPT on a phone. Give it your pub's name, your customers and how you write, plus one rule: never invent prices, dates, opening times or allergen information. Keep one approved brief per event, and let every post, email and booking page come from it.
+ChatGPT keeps standing instructions for every chat: Settings, then Personalisation, or Customise ChatGPT on a phone. Give it your pub's name, your customers and how you write, plus one rule: never invent prices, dates, opening times or allergen information. Keep one approved brief per event, and let every post, email and booking page come from it.
 
 `[SECTION 4]`
 ## 4. Make it a business partner
-At The Anchor we work with AI every day, and the ideas and the personality stay ours. It helped us build our website in our own voice. When a trend such as black garlic catches our eye, it helps us make it our own. It helped us plan our tasting nights and build an app to run them. And it helped us build one back-office system joining bookings, events, marketing and reporting, so we see the whole business together.
+At The Anchor we work with AI every day, and the ideas and the personality stay ours. It helped us build our website in our own voice. When a food or drink trend catches our eye, it helps us make it our own. It helped us plan our tasting nights and build an app to run them. And it helped us build one back-office system joining bookings, events, marketing and reporting, so we see the whole business together.
 
 `[SECTION 5]`
 ## 5. Keep the human jobs human
@@ -56,7 +56,7 @@ Scan the code for prompts, shortcuts and what going all in looks like. When you 
 `[BIO BOX, with headshot]`
 PETER PITCHER MBII leads Orange Jelly, which builds websites, bespoke applications and connected systems that help businesses grow. He runs The Anchor in Stanwell Moor.
 
-`[FOOTER STRIP, with QR code: bii-ai-2026-qr.svg, 25 mm square, black on white, keep the white border]`
+`[FOOTER STRIP, with QR code: QR-code-AI-in-pubs-guide.png, 25 mm square, black on white, keep the white border]`
 The full guide has prompts to copy, a shortcut sheet for four assistants and a one-page AI policy for your team. Scan the code or visit l.the-anchor.pub/mkucbz
 
 <!-- /PRINT-BLOCK -->

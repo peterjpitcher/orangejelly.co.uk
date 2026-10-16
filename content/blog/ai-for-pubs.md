@@ -2,7 +2,7 @@
 title: "AI for Pubs: What Is New, What Works and Where to Start"
 slug: "ai-for-pubs"
 publishedDate: 2026-10-14
-updatedDate: 2026-10-14
+updatedDate: 2026-10-16
 excerpt: "AI for pubs, from a working licensee: what has changed, the jobs it does well, the shortcuts worth knowing and the house rules that keep you out of trouble."
 quickAnswer: "Start with a conversation: open ChatGPT, tap the Voice icon and talk to it about your pub. Then hand over one job, tell it who you are in its custom instructions and keep guests' details, staff records and allergen decisions away from it. Control the facts at source, and keep complaints and sensitive messages with a person. When you are ready, join up your information so AI can help you decide and grow."
 author: "Peter Pitcher"
@@ -106,7 +106,7 @@ Use the assistant you already have. If the team already uses ChatGPT, Gemini, Co
 
 **First, switch off training.** In ChatGPT, go to Settings, then Data controls, then switch off "Improve the model for everyone". That stops your chats being used to train the model. Do it before you type anything about the business.
 
-**Then tell it who you are, once.** ChatGPT keeps standing instructions, called custom instructions, that apply to every chat. On the web they are under Settings, then Personalization. On a phone they are under Settings, then Customize ChatGPT. Free accounts get 1,500 characters, which is plenty. Copy this, replace the words in capitals and cut anything that does not apply:
+**Then tell it who you are, once.** ChatGPT keeps standing instructions, called custom instructions, that apply to every chat. On the web they are under Settings, then Personalisation. On a phone they are under Settings, then Customise ChatGPT. Free accounts get 1,500 characters, which is plenty. Copy this, replace the words in capitals and cut anything that does not apply:
 
 > I run [PUB NAME], a [village local / town-centre pub / food-led pub] in [TOWN]. We serve [FOOD STYLE] and open [DAYS AND HOURS]. Our regulars are [WHO THEY ARE]. This year we want more [MIDWEEK DINERS / PRIVATE HIRE / SUNDAY BOOKINGS].
 >
@@ -323,7 +323,7 @@ If you want a structured course alongside this, the BII's training pages list a 
 
 We work with AI every day at The Anchor, our own venue. It is a business partner for us, and the ideas and the personality of the pub stay ours.
 
-**Ideas, developed further.** We have run tasting nights at The Anchor for years, and the ideas are ours. AI helps us turn each one into a full plan, handle messages with suppliers, design the artwork and build an app to run the night, with guests rating each drink live on their own phones. It works the same way with food. When something catches our eye, such as black garlic, AI helps us explore how we might adapt dishes we already serve, compare what suppliers offer and choose something that still feels like The Anchor. We use it to flesh out our ideas, not to decide who we are.
+**Ideas, developed further.** We have run tasting nights at The Anchor for years, and the ideas are ours. AI helps us turn each one into a full plan, handle messages with suppliers, design the artwork and build an app to run the night, with guests rating each drink live on their own phones. It works the same way with food. When a food or drink trend catches our eye, AI helps us explore how we might adapt dishes we already serve, compare what suppliers offer and choose something that still feels like The Anchor. We use it to flesh out our ideas, not to decide who we are.
 
 **A website in our own voice.** We built our website with AI, setting the direction ourselves so that it still sounds and feels like The Anchor.
 
