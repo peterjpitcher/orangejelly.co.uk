@@ -4,11 +4,11 @@ Print article for BII News, the British Institute of Innkeeping's members' magaz
 
 **Print only.** Peter decided on 15 October 2026 not to host a guide on this subject on orangejelly.co.uk: food safety advice carries too much risk for us to publish. So there is no QR code, no short link and no web address in the print copy.
 
-The BII verifies the food safety and allergen content before it prints. The note at the top of `print-copy.md` asks them to and gives the source for each check.
+The BII verifies the food safety and allergen content before it prints. The note at the top of `event-food-300-words.md` asks them to and gives the source for each check.
 
 ## Files
 
-- `print-copy.md`: the note to the BII, the article, the bio box and the footer strip, with designer notes.
+- `event-food-300-words.md`: the note to the BII, the article (287 words, limit 300), the bio box and the footer strip, with designer notes. This is the only version.
 - The long version was deleted on 16 October 2026 at Peter's request: the BII gets the 287-word article only.
 
 ## Corrections made after the food safety verification (15 October 2026)
