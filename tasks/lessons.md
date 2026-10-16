@@ -2,6 +2,17 @@
 
 Patterns from Peter's corrections. Read at the start of a session.
 
+## 16 October 2026: write for eager readers
+
+**What happened:** for the Greene King spring toolkit piece I suggested inviting businesses
+"open to change". Peter changed it to "ready for change": "I want people who are eager".
+
+**Pattern:** an Orange Jelly invitation should pick out owners who are keen to act, not
+reassure ones who are hesitant.
+
+**How to apply:** write "ready for change" in new promotional copy, in print and in guides.
+The live site still says "if you are open to change"; leave it unless Peter asks.
+
 ## 22 September 2026: do not cap what respondents can say
 
 **What happened:** the first survey's two app screens were built as "pick up to three". Peter
