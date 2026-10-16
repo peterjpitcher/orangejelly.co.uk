@@ -4,11 +4,18 @@ Two pages for Greene King's Spring Toolkit (January to April 2027), commissioned
 
 ## Files
 
-**Send Charlotte the Word file and the PNG.**
+**Send Charlotte the Word file, the QR code, the logo and the photo.**
 
-- `Greene King Spring Toolkit 2027 - Plan your spring in an afternoon.docx`: the clean reading copy, with a short note for Charlotte at the top and the designer's notes in italics. It is made from the Markdown file below with pandoc; change the Markdown, then remake the Word file.
-- `spring-toolkit-2027-two-pages.md`: the source, **"Plan your spring in an afternoon"**, about 1,080 words across two pages including the table. First draft, 16 October 2026.
+- `Greene King Spring Toolkit 2027 - Plan your spring in an afternoon.docx`: the clean reading copy, with a short note for Charlotte at the top, the designer's notes in italics and the QR code shown in place at 25 mm. It is made from the Markdown file below with pandoc; change the Markdown, then remake the Word file (command below).
+- `spring-toolkit-2027-two-pages.md`: the source, **"Plan your spring in an afternoon"**, about 1,070 words across two pages including the table. First draft, 16 October 2026.
 - `QR-code-spring-guide.png`: the QR code, 2220 x 2220 px, black on white. PNG only, as for the BII pieces.
+- `Orange-Jelly-logo.png` (497 x 479 px, a copy of `public/logo.png`) for the Orange Jelly box, and `Peter-Pitcher-headshot.jpg` (1080 x 1080 px, a copy of `public/images/peter-pitcher.jpg`) for the byline.
+
+Remake the Word file with the QR code embedded:
+
+```bash
+pandoc marketing/greene-king-spring-2027/spring-toolkit-2027-two-pages.md -f markdown-implicit_figures -t docx --resource-path=marketing/greene-king-spring-2027 -o "marketing/greene-king-spring-2027/Greene King Spring Toolkit 2027 - Plan your spring in an afternoon.docx"
+```
 
 ## Decisions (Peter, 16 October 2026)
 
@@ -16,6 +23,8 @@ Two pages for Greene King's Spring Toolkit (January to April 2027), commissioned
 - Orange Jelly is shown, not labelled: the approved bio line, and "ready for change", which Peter chose over "open to change" because he wants eager people. The retired self-description stays out.
 - The byline says The Anchor is a Greene King tenancy and gives its postcode, TW19 6AQ, so readers can look it up.
 - One approved claim (table bookings, +403%), in the Orange Jelly box only and never tied to AI.
+- Improvements approved the same day: printed prompts cut to about 30 words each (nobody types 70 words from paper), with a line about reading them out to the phone and the full versions behind the QR code; readers photograph the toolkit's own dates page and recipes as the AI's starting point; the payoff spelt out ("by teatime you will have..."); "more than 30 copy-and-paste prompts" as the reason to scan (the guide has 38); "in one quiet afternoon before Christmas" rather than "before the Christmas rush", because the toolkit lands in early December; the logo and photo supplied with the copy.
+- Still to come: a real worked example (Peter runs the Mother's Day prompt with The Anchor's details; the guide shows what AI wrote and what he changed).
 - Left out of our table, with a note to Charlotte: 7 April (National Beer Day is the American date; the UK's Beer Day Britain is 15 June).
 - The Night of Excellence (Tuesday 6 April, Greene King's awards for its pubs) is in the table: the piece is for tenants, not customers (Peter, 16 October 2026). The line suggests AI for a first draft of an entry and tells readers to ask their BDM when entries close, because the 2027 dates are not published. The website guide stays general and leaves it out.
 

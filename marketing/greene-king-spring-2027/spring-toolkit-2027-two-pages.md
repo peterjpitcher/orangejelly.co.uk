@@ -5,11 +5,12 @@ Greene King Spring Toolkit, January to April 2027. Two pages for the toolkit tem
 ## Note for Charlotte (not for print)
 
 - Notes for the designer are in italics. They are not for print.
-- The QR code is the attached file, QR-code-spring-guide.png. It opens the full guide on orangejelly.co.uk, which will be live before the toolkit goes out. Print it at least 20 mm square (25 mm is better), black on white, with its white border.
+- The QR code is shown on page 2 and attached as QR-code-spring-guide.png. It opens the full guide on orangejelly.co.uk, which will be live before the toolkit goes out. Print it at least 20 mm square (25 mm is better), black on white, with its white border.
+- Also attached: the Orange Jelly logo (Orange-Jelly-logo.png) for the Orange Jelly box, and a photo of Peter for the byline (Peter-Pitcher-headshot.jpg).
 - One date from your list is left out of our table: 7 April is National Beer Day in the United States, and the UK's Beer Day Britain is on 15 June. Happy to add it back if you would like it in.
 - Every other date was checked on 16 October 2026: the Six Nations fixtures against the official announcements, bank holidays against GOV.UK, and Mother's Day and Easter from the 2027 Easter date.
 - The legal points in the "Check before you post" box come from legislation.gov.uk and GOV.UK. The full guide lists every source.
-- It runs to about 1,080 words across the two pages, including the table. If it is too long for the template, tell me which page is tight and I will trim it.
+- It runs to about 1,070 words across the two pages, including the table. If it is too long for the template, tell me which page is tight and I will trim it.
 
 ## Page 1
 
@@ -19,9 +20,9 @@ Greene King Spring Toolkit, January to April 2027. Two pages for the toolkit tem
 
 *Under the headline:*
 
-**How to use a free AI tool to turn January to April into a campaign calendar, posts and posters, before the Christmas rush.**
+**How to use a free AI tool to turn January to April into a campaign calendar, posts and posters, in one quiet afternoon before Christmas.**
 
-*Byline:*
+*Byline, with the photo of Peter (attached file Peter-Pitcher-headshot.jpg):*
 
 By Peter Pitcher MBII, who runs The Anchor, a Greene King tenancy at Stanwell Moor, TW19 6AQ.
 
@@ -29,19 +30,21 @@ Spring is a run of reasons to visit: Dry January, Burns Night, two Six Nations c
 
 There is a quicker way. Sit down once, before Christmas, with a free AI assistant such as ChatGPT, Gemini or Copilot, and come out with the whole season drafted. You choose the moments and check the facts. The assistant does the typing. All you need is your diary, your menu and drinks list with prices, and about two hours.
 
+Pick five moments and by teatime you will have a 17-week calendar, 15 posts, the wording for five posters and five team briefings.
+
 #### The afternoon in four steps
 
 **1. Pick (15 minutes).** Choose four to six moments that suit your pub, not all of them. A sports pub might take both Six Nations; a food-led pub might take Valentine's Day, Mother's Day and Easter.
 
-**2. Plan (30 minutes).** Paste in your dates and ask for a week-by-week calendar: when to announce each one, when to open bookings and when to send reminders. As a rule of thumb, start planning a food night eight weeks out, open bookings at six and promote from four. That puts Valentine's Day planning before Christmas.
+**2. Plan (30 minutes).** Photograph this toolkit's dates page, and any recipes you want to use, or paste in your dates. Then ask for a week-by-week calendar: when to announce each one, when to open bookings and when to send reminders. As a rule of thumb, start planning a food night eight weeks out, open bookings at six and promote from four. That puts Valentine's Day planning before Christmas.
 
 **3. Write (45 minutes).** For each moment, ask for three posts: one to announce it, a reminder and a last call. Read them aloud. If one does not sound like you, tell it: "shorter", "warmer", "more like a local".
 
 **4. Make (30 minutes).** Ask for the wording for each poster: a headline, three short lines, the date and how to book. Drop it into your usual template or a free design tool such as Canva.
 
-Then put every post date in the diary and brief the team. Spring is planned.
+Then ask for a one-page team briefing for each moment, and put every post date in the diary. Spring is planned.
 
-*Highlight box:*
+*Highlight box (it can move to page 2 if page 1 is tight):*
 
 #### Let AI find the clashes
 
@@ -75,19 +78,19 @@ Paste in your dates and the fixtures, then ask: "Where do these clash, and which
 
 #### Three levels of prompt
 
-Pick your level, copy the prompt and fill in the brackets.
+Pick your level, type the prompt and fill in the brackets. On a phone, tap the microphone and read it out instead. The full versions, for every date, are behind the QR code.
 
 **Just starting out**
 
-"I run a [type of pub] in [town]. I want to promote these dates between January and April 2027: [your dates]. Make me a simple week-by-week plan of what to post and when, and when to open bookings. Use plain British English. Before you start, ask me any questions you need answered."
+"I run a [type of pub] in [town]. Week by week, plan what to post and when to open bookings for these dates: [your dates]. Ask me questions first."
 
 **Getting comfortable**
 
-"Here are my pub's details: [name, opening hours, food times, booking link, menu highlights and prices, who our guests are, how we sound]. Using the dates below, make a calendar as a table with a row for each week from 4 January to 26 April. For each date, write three short posts (announce, reminder, last call) and the wording for an A4 poster. Tell me anything you were unsure of. [your dates]"
+"Use British English. My pub: [hours, menu, prices, booking link]. For each of these dates, write three posts and the poster wording, then put it all in a weekly calendar: [your dates]."
 
 **Going further**
 
-"Here are last spring's weekly totals for covers, bookings and takings, with no customer details: [totals]. Tell me which dates earned most, which weeks were quiet and what you would change. Then build a simple booking tracker for a spreadsheet and a one-page team briefing for each event. Finally, tell me the three weakest parts of my plan."
+"Here are last spring's weekly totals, with no customer details: [covers, bookings, takings]. What earned most, and what should I change? Then name my plan's three weakest points."
 
 *Box:*
 
@@ -95,7 +98,7 @@ Pick your level, copy the prompt and fill in the brackets.
 
 AI drafts. You decide.
 
-- **Give it the facts; don't ask for them.** Ask an assistant when Mother's Day is and it may give you the American date in May. Paste in the dates, fixtures and prices yourself.
+- **Give it the facts; don't ask for them.** Ask an assistant when Mother's Day is and it may give you the American date in May. Photograph this toolkit's dates page, or paste in the dates, fixtures and prices yourself.
 - **Check every date, time and price** before anything goes out.
 - **AI doesn't know your licence.** In Scotland, two-for-one drinks deals and happy hours are against the law. In England and Wales, licence conditions ban irresponsible promotions. If AI suggests a deal, check it first.
 - **Measures are set by law.** Whisky, gin, rum and vodka by the glass come in 25ml or 35ml measures, or multiples of them. Change any smaller "tasters" AI suggests.
@@ -106,13 +109,15 @@ AI drafts. You decide.
 
 #### Want every prompt?
 
-Scan for the full guide: prompts at all three levels for every date, the clashes in full and the checks with their sources. Free at orangejelly.co.uk.
+Scan for the full guide: more than 30 copy-and-paste prompts, at all three levels for every date, plus the clashes in full and the checks with their sources. Free at orangejelly.co.uk.
 
-*QR code: use the attached file QR-code-spring-guide.png, at least 20 mm square, black on white, with its white border.*
+*QR code, shown below and also attached as QR-code-spring-guide.png: print it at least 20 mm square, black on white, with its white border.*
+
+![QR code for the full guide](QR-code-spring-guide.png){width=25mm}
 
 Scan the code, or visit orangejelly.co.uk/spring
 
-*Orange Jelly box, kept visually separate from the article:*
+*Orange Jelly box, kept visually separate from the article, with the Orange Jelly logo (attached file Orange-Jelly-logo.png):*
 
 #### Ready for more?
 

@@ -51,6 +51,8 @@ Spring is a run of reasons to visit: Dry January, Burns Night, two Six Nations c
 
 This guide shows you how to plan the lot in one afternoon with a free AI assistant. You choose the moments and you check the facts. The assistant drafts the calendar, the posts and the poster wording. The prompts come at three levels, so whether you have never opened ChatGPT or use it every day, there is somewhere to start.
 
+Pick five moments and by teatime you will have a 17-week calendar, 15 posts, the wording for five posters and five team briefings.
+
 The fixtures, bank holidays and legal points in this guide were checked on 16 October 2026 against the sources listed at the end.
 
 ## Spring 2027 at a glance
@@ -93,7 +95,7 @@ Add your own dates too: the pub's birthday, a local fixture, the school holidays
 
 ### 2. Build the calendar (30 minutes)
 
-Paste in the dates you picked and ask for a week-by-week plan:
+Paste in the dates you picked and ask for a week-by-week plan. If your pub company or a supplier has sent you a spring toolkit, photograph its dates page, and any recipes you want to use, and give it those instead of typing.
 
 > Here are the dates I want to promote between January and April 2027, between the ### marks. Make me a week-by-week calendar as a table, from the week of 4 January to the week of 26 April. Columns: the week, what is on, what to post, which bookings to open, which reminders to send, and jobs for the team. Use only the dates I have given you.
 >
@@ -259,7 +261,7 @@ Five Saturday match days: 10, 17 and 24 April, then 8 and 15 May.
 
 AI drafts; you decide. Six checks before anything goes out:
 
-1. **Give it the facts rather than asking for them.** Ask an assistant when Mother's Day is and it may give you last year's date, or the American one in May. Paste in the dates from this guide, the fixtures from the official Six Nations website and the prices from your own menu.
+1. **Give it the facts rather than asking for them.** Ask an assistant when Mother's Day is and it may give you last year's date, or the American one in May. Paste in the dates from this guide or photograph your toolkit's dates page, and take the fixtures from the official Six Nations website and the prices from your own menu.
 2. **Check every date, time and price.** The [National Cyber Security Centre warns](https://www.ncsc.gov.uk/guidance/ai-and-cyber-security-what-you-need-to-know) that these tools can get things wrong and present incorrect statements as facts.
 3. **AI does not know your licence.** In Scotland, the law bans drinks promotions such as two drinks for the price of one, and a changed price must then stay the same for at least 72 hours, which rules out happy hours ([Licensing (Scotland) Act 2005, Schedule 3](https://www.legislation.gov.uk/asp/2005/16/schedule/3)). In England and Wales, the [mandatory licence conditions](https://www.gov.uk/guidance/alcohol-licensing) ban irresponsible promotions. If an assistant suggests a drinks deal, check it with your licensing officer before you run it.
 4. **Measures are set by law.** Gin, rum, vodka and whisky sold by the glass must come in 25ml or 35ml measures, or multiples of them, and not both in the same pub ([GOV.UK](https://www.gov.uk/weights-measures-and-packaging-the-law/specified-quantities)).
