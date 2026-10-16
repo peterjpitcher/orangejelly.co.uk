@@ -7,7 +7,7 @@ Two pages for Greene King's Spring Toolkit (January to April 2027), commissioned
 **Send Charlotte the Word file and the PNG.**
 
 - `Greene King Spring Toolkit 2027 - Plan your spring in an afternoon.docx`: the clean reading copy, with a short note for Charlotte at the top and the designer's notes in italics. It is made from the Markdown file below with pandoc; change the Markdown, then remake the Word file.
-- `spring-toolkit-2027-two-pages.md`: the source, **"Plan your spring in an afternoon"**, about 1,050 words across two pages including the table. First draft, 16 October 2026.
+- `spring-toolkit-2027-two-pages.md`: the source, **"Plan your spring in an afternoon"**, about 1,080 words across two pages including the table. First draft, 16 October 2026.
 - `QR-code-spring-guide.png`: the QR code, 2220 x 2220 px, black on white. PNG only, as for the BII pieces.
 
 ## Decisions (Peter, 16 October 2026)
@@ -16,7 +16,8 @@ Two pages for Greene King's Spring Toolkit (January to April 2027), commissioned
 - Orange Jelly is shown, not labelled: the approved bio line, and "ready for change", which Peter chose over "open to change" because he wants eager people. The retired self-description stays out.
 - The byline says The Anchor is a Greene King tenancy and gives its postcode, TW19 6AQ, so readers can look it up.
 - One approved claim (table bookings, +403%), in the Orange Jelly box only and never tied to AI.
-- Left out of our table, with a note to Charlotte: 7 April (National Beer Day is the American date; the UK's Beer Day Britain is 15 June) and 6 April (Night of Excellence, Greene King's own awards).
+- Left out of our table, with a note to Charlotte: 7 April (National Beer Day is the American date; the UK's Beer Day Britain is 15 June).
+- The Night of Excellence (Tuesday 6 April, Greene King's awards for its pubs) is in the table: the piece is for tenants, not customers (Peter, 16 October 2026). The line suggests AI for a first draft of an entry and tells readers to ask their BDM when entries close, because the 2027 dates are not published. The website guide stays general and leaves it out.
 
 ## Where the code leads
 

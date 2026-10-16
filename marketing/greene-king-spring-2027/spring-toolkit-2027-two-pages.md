@@ -6,10 +6,10 @@ Greene King Spring Toolkit, January to April 2027. Two pages for the toolkit tem
 
 - Notes for the designer are in italics. They are not for print.
 - The QR code is the attached file, QR-code-spring-guide.png. It opens the full guide on orangejelly.co.uk, which will be live before the toolkit goes out. Print it at least 20 mm square (25 mm is better), black on white, with its white border.
-- Two dates from your list are left out of our table. 7 April is National Beer Day in the United States; the UK's Beer Day Britain is on 15 June. The Night of Excellence on 6 April is Greene King's own awards night rather than a date for customers. Happy to add either back if you would like them in.
+- One date from your list is left out of our table: 7 April is National Beer Day in the United States, and the UK's Beer Day Britain is on 15 June. Happy to add it back if you would like it in.
 - Every other date was checked on 16 October 2026: the Six Nations fixtures against the official announcements, bank holidays against GOV.UK, and Mother's Day and Easter from the 2027 Easter date.
 - The legal points in the "Check before you post" box come from legislation.gov.uk and GOV.UK. The full guide lists every source.
-- It runs to about 1,050 words across the two pages, including the table. If it is too long for the template, tell me which page is tight and I will trim it.
+- It runs to about 1,080 words across the two pages, including the table. If it is too long for the template, tell me which page is tight and I will trim it.
 
 ## Page 1
 
@@ -68,6 +68,7 @@ Paste in your dates and the fixtures, then ask: "Where do these clash, and which
 | Wed 17 Mar | St Patrick's Day | A plan for a midweek night |
 | Fri 26 to Mon 29 Mar | Easter weekend | One idea and one post for each day |
 | Sat 27 Mar | International Whisk(e)y Day | A tasting card for a whisky flight |
+| Tue 6 Apr | Night of Excellence | A first draft of your awards entry, from your own notes. Ask your BDM when entries close |
 | Saturdays, 10 Apr to 15 May | Women's Six Nations | A poster for the five match days |
 
 ## Page 2
