@@ -144,13 +144,19 @@ export default function RootLayout({
     name: 'Orange Jelly Limited',
     alternateName: 'Orange Jelly',
     url: baseUrl,
+    /*
+     * The current mark on its orange square, the same design as the favicon. The
+     * 2025 "OJ" logo that used to sit at /logo.png was deleted on 17 October 2026,
+     * after it was picked for a client's print pack by mistake. The old entry also
+     * claimed 800 x 800 for a 497 x 479 file.
+     */
     logo: {
       '@type': 'ImageObject',
-      url: `${baseUrl}/logo.png`,
-      width: 800,
-      height: 800,
+      url: `${baseUrl}/brand/social-avatar.png`,
+      width: 512,
+      height: 512,
     },
-    image: `${baseUrl}/logo.png`,
+    image: `${baseUrl}/brand/social-avatar.png`,
     description:
       'Orange Jelly builds websites, bespoke applications and connected systems for business growth, using AI where it adds value to customer experiences and everyday work.',
     /*

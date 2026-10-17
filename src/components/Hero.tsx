@@ -68,7 +68,7 @@ export default function Hero({
       {!isImageBackground && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <OptimizedImage
-            src="/logo.png"
+            src="/brand/social-avatar.png"
             alt=""
             width={400}
             height={400}

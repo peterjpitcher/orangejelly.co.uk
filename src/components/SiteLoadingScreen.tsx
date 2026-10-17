@@ -32,7 +32,7 @@ export default function SiteLoadingScreen(): JSX.Element {
       <div className="text-center">
         <div className="inline-block animate-pulse rounded-oj border-1.5 border-oj-ink bg-oj-cream p-5 shadow-press">
           <OptimizedImage
-            src="/logo.png"
+            src="/brand/social-avatar.png"
             alt="Orange Jelly"
             width={100}
             height={100}

@@ -75,7 +75,7 @@ export default function Navigation({ navigation }: NavigationProps) {
         {/* Mobile logo */}
         <Link href="/" className="flex md:hidden items-center space-x-2">
           <OptimizedImage
-            src="/logo.png"
+            src="/brand/social-avatar.png"
             alt="Orange Jelly"
             width={40}
             height={40}
@@ -90,7 +90,7 @@ export default function Navigation({ navigation }: NavigationProps) {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly"
               width={48}
               height={48}
@@ -235,7 +235,7 @@ export default function Navigation({ navigation }: NavigationProps) {
             <SheetContent side="left" className="bg-surface">
               <Link href="/" className="flex items-center">
                 <OptimizedImage
-                  src="/logo.png"
+                  src="/brand/social-avatar.png"
                   alt="Orange Jelly"
                   width={48}
                   height={48}

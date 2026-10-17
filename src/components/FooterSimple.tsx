@@ -70,7 +70,7 @@ export default function FooterSimple({ footerContent }: FooterSimpleProps) {
           {/* Logo and Tagline */}
           <div className="text-center mb-8">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly"
               width={60}
               height={60}

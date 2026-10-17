@@ -57,7 +57,13 @@ function ServiceCard({
 
         {/* Note: Removed the watermark here as it might clash with item images, or we can keep it if subtle enough */}
         <div className="absolute bottom-2 right-2 opacity-5 pointer-events-none">
-          <OptimizedImage src="/logo.png" alt="" width={48} height={48} className="w-12 h-12" />
+          <OptimizedImage
+            src="/brand/social-avatar.png"
+            alt=""
+            width={48}
+            height={48}
+            className="w-12 h-12"
+          />
         </div>
 
         {/* Image or Emoji */}

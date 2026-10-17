@@ -77,6 +77,7 @@ Thirty guides carry 95% of the site's search traffic, and the blog is 92.9% of t
 
 ## Gotchas and past bugs
 
+- **Logos and Peter's photo come from `public/brand/` and `public/images/peter-pitcher.jpg`, nowhere else.** The logo is the orange slice: `logo-horizontal.png` (and `-white` for dark or orange grounds) as the site header uses, `social-avatar.png` for square slots and structured data. The 2025 "OJ" logo at `public/logo.png` was put in a client's print pack on 16 October 2026 because of its file name (Peter caught it), so it and its copies were deleted on 17 October. Never supply or reintroduce it, and look at an image before sending it to anyone.
 - **Tailwind emits nothing for an unknown colour.** `bg-orange-100 text-orange-800` shipped as unstyled search results, and `text-oj-cream/80` once worked while `text-oj-cream` silently did not. Use the named `oj-*` tokens, never numeric scales, never raw hex outside the files allow-listed in `scripts/check-design-tokens.mjs`.
 - **`oj/Button` reads its ground from context, so it must be a client component.** As a server component every page fails at prerender with "u is not a function" from React's serialiser, and the jsdom tests do not catch it.
 - **Never `git add -A`, not even `git add -A src`.** It once swept five of Peter's in-flight blog files into an unrelated commit, shipping the code half of a three-part image migration without its markdown or images and blocking the deploy. Stage the exact files you changed.
