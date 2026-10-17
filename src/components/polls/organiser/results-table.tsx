@@ -29,7 +29,7 @@ import {
  * rather than merely awkward, which is strictly worse than the plain table this
  * read-only data actually wants. `<table>` with real headers is correct here.
  *
- * The markup is hand-rolled rather than built on `src/components/ui/table.tsx`:
+ * The markup is hand-rolled rather than built on the shadcn table component:
  * that component hard-wraps the table in its own bare `overflow-auto` div and
  * routes `className` to the `<table>`, leaving the wrapper unreachable, so the
  * scroll region cannot be given `tabIndex`, `role` or an accessible name, and
@@ -101,7 +101,7 @@ function TotalsBar({ tally }: { tally: OptionTally }): JSX.Element | null {
   const total = tally.yes + tally.if_need_be + tally.no;
   if (total === 0) return null;
 
-  // A plain three-div flex bar. `src/components/ui/progress.tsx` cannot do this:
+  // A plain three-div flex bar. The shadcn progress component cannot do this:
   // it takes one value and hardcodes `bg-primary`, so it physically cannot show
   // three shares. The fills echo the chips above them, so the bar reads as a
   // summary of the column rather than as a second, unrelated colour scheme.
