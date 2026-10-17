@@ -1,7 +1,8 @@
 import { render, screen, within } from '@testing-library/react';
+import Image from 'next/image';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import AboutPage from '@/app/about/page';
 import { FACTS, LESSONS, REFUSALS } from '@/app/about/content';
@@ -27,6 +28,20 @@ describe('/about', () => {
     expect(text).toMatch(/Billy Summers/);
     expect(text).toMatch(/Peter Pitcher/);
     expect(text).toMatch(/no account manager/i);
+  });
+
+  it('shows the person you would deal with, captioned as a fact', () => {
+    // Added 17 October 2026 at Peter's request, with his new headshot. A photo of
+    // who you deal with is the section's job; a caption in the first person would
+    // turn it into a founder story, which D21 rules out.
+    render(<AboutPage />);
+    // next/image is stubbed in src/test/setup.tsx and renders nothing, so check what
+    // the page hands it rather than looking for an <img>.
+    const props = vi.mocked(Image).mock.calls.map(([imageProps]) => imageProps);
+    expect(props).toContainEqual(
+      expect.objectContaining({ src: '/images/peter-pitcher.jpg', alt: 'Peter Pitcher' })
+    );
+    expect(screen.getByText('Peter Pitcher, who leads the growth work.')).toBeInTheDocument();
   });
 
   it('says what it will not do, which is the half that is worth reading', () => {

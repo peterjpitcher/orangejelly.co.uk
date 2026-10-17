@@ -113,6 +113,10 @@ Day to day, The Anchor is run by Billy Summers and the growth work is led by Pet
 whole company, which is a constraint we are honest about: it means we take on what we can do properly and
 say no to the rest.
 
+**Photo (added 17 October 2026 at Peter's request):** his headshot, `public/images/peter-pitcher.jpg`, beside
+these two paragraphs. Alt text: "Peter Pitcher". Caption: "Peter Pitcher, who leads the growth work." It
+shows who you deal with, in the third person, so it is not a founder story and D21 still holds.
+
 ---
 
 ## The facts
