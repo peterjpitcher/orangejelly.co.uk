@@ -9,7 +9,10 @@ Two pages for Greene King's Spring Toolkit (January to April 2027), commissioned
 - `Greene King Spring Toolkit 2027 - Plan your spring in an afternoon.docx`: the clean reading copy, with a short note for Charlotte at the top, the designer's notes in italics and the QR code shown in place at 25 mm. It is made from the Markdown file below with pandoc; change the Markdown, then remake the Word file (command below).
 - `spring-toolkit-2027-two-pages.md`: the source, **"Plan your spring in an afternoon"**, about 1,070 words across two pages including the table. First draft, 16 October 2026.
 - `QR-code-spring-guide.png`: the QR code, 2220 x 2220 px, black on white. PNG only, as for the BII pieces.
-- `Orange-Jelly-logo.png` (497 x 479 px, a copy of `public/logo.png`) for the Orange Jelly box, and `Peter-Pitcher-headshot.jpg` (1080 x 1080 px, a copy of `public/images/peter-pitcher.jpg`) for the byline.
+- `Orange-Jelly-logo.png` and `Orange-Jelly-logo-white.png` (1200 x 260 px, copies of `public/brand/logo-horizontal.png` and `public/brand/logo-horizontal-white.png`, the current orange-slice logo) for the Orange Jelly box. Never supply the 2025 "OJ" logo: Peter caught it in the first pack on 17 October 2026 and it has been deleted from the site.
+- `Peter-Pitcher-headshot.jpg` (1254 x 1254 px): Peter's new headshot, supplied on 17 October 2026, for the byline.
+
+Everything that goes to Charlotte is written as Peter, in the first person (Peter, 17 October 2026): "a photo of me", not "a photo of Peter".
 
 Remake the Word file with the QR code embedded:
 

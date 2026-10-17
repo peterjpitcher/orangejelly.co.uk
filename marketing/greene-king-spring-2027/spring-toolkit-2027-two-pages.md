@@ -1,16 +1,16 @@
 # Plan your spring in an afternoon
 
-Greene King Spring Toolkit, January to April 2027. Two pages for the toolkit template. First draft, 16 October 2026, from Peter Pitcher, Orange Jelly.
+Greene King Spring Toolkit, January to April 2027. Two pages for your toolkit template. First draft, 17 October 2026.
 
 ## Note for Charlotte (not for print)
 
-- Notes for the designer are in italics. They are not for print.
-- The QR code is shown on page 2 and attached as QR-code-spring-guide.png. It opens the full guide on orangejelly.co.uk, which will be live before the toolkit goes out. Print it at least 20 mm square (25 mm is better), black on white, with its white border.
-- Also attached: the Orange Jelly logo (Orange-Jelly-logo.png) for the Orange Jelly box, and a photo of Peter for the byline (Peter-Pitcher-headshot.jpg).
-- One date from your list is left out of our table: 7 April is National Beer Day in the United States, and the UK's Beer Day Britain is on 15 June. Happy to add it back if you would like it in.
-- Every other date was checked on 16 October 2026: the Six Nations fixtures against the official announcements, bank holidays against GOV.UK, and Mother's Day and Easter from the 2027 Easter date.
-- The legal points in the "Check before you post" box come from legislation.gov.uk and GOV.UK. The full guide lists every source.
-- It runs to about 1,070 words across the two pages, including the table. If it is too long for the template, tell me which page is tight and I will trim it.
+- My notes for your designer are in italics. They are not for print.
+- The QR code is on page 2, and I've attached it as QR-code-spring-guide.png. It opens my full guide on orangejelly.co.uk, which will be live before the toolkit goes out. Please print it at least 20 mm square (25 mm is better), black on white, with its white border.
+- I've also attached our logo for the Orange Jelly box (Orange-Jelly-logo.png, with a white version, Orange-Jelly-logo-white.png, for a dark or orange background) and a photo of me for the byline (Peter-Pitcher-headshot.jpg).
+- I've left one date from your list out of the table: 7 April is National Beer Day in the United States, and the UK's Beer Day Britain is on 15 June. Happy to add it back if you'd like it in.
+- I checked every other date on 16 October 2026: the Six Nations fixtures against the official announcements, the bank holidays against GOV.UK, and Mother's Day and Easter from the 2027 Easter date.
+- The legal points in the "Check before you post" box come from legislation.gov.uk and GOV.UK, and the full guide lists every source.
+- It runs to about 1,070 words across the two pages, including the table. If it's too long for the template, tell me which page is tight and I'll trim it.
 
 ## Page 1
 
@@ -22,7 +22,7 @@ Greene King Spring Toolkit, January to April 2027. Two pages for the toolkit tem
 
 **How to use a free AI tool to turn January to April into a campaign calendar, posts and posters, in one quiet afternoon before Christmas.**
 
-*Byline, with the photo of Peter (attached file Peter-Pitcher-headshot.jpg):*
+*Byline, with my photo (attached file Peter-Pitcher-headshot.jpg):*
 
 By Peter Pitcher MBII, who runs The Anchor, a Greene King tenancy at Stanwell Moor, TW19 6AQ.
 
@@ -117,13 +117,13 @@ Scan for the full guide: more than 30 copy-and-paste prompts, at all three level
 
 Scan the code, or visit orangejelly.co.uk/spring
 
-*Orange Jelly box, kept visually separate from the article, with the Orange Jelly logo (attached file Orange-Jelly-logo.png):*
+*Orange Jelly box, kept visually separate from the article, with our logo (attached file Orange-Jelly-logo.png, or Orange-Jelly-logo-white.png on a dark or orange background):*
 
 #### Ready for more?
 
 Planning is the start. Orange Jelly builds websites, bespoke applications and connected systems that help businesses grow: bookings that send their own reminders, one place for your events and messages, and figures that show what each moment earned. At The Anchor, our own pub, we grew table bookings by 403%.
 
-If you are ready for change, call Peter on 07990 587315 or email peter\@orangejelly.co.uk.
+If you are ready for change, call me on 07990 587315 or email peter\@orangejelly.co.uk.
 
 *Footer, both pages:*
 
