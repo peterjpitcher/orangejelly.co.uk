@@ -571,10 +571,6 @@ button {
 }
 
 /* Standardized transition utilities */
-.transition-normal {
-  @apply transition-all duration-300;
-}
-
 .transition-slow {
   @apply transition-all duration-500;
 }
@@ -853,12 +849,6 @@ select:focus-visible {
     /* 16px to prevent zoom on iOS */
   }
 }
-
-/* Accordion animation lives in tailwind.config.js under theme.extend.keyframes
-   and theme.extend.animation, which already generates .animate-accordion-down and
-   .animate-accordion-up. The duplicate hand-written copy that used to sit here
-   defined the same two keyframe sets and utilities a second time, so the two
-   could drift apart silently. */
 
 /* shadcn/ui CSS Variables with Orange Jelly Theme */
 @layer base {

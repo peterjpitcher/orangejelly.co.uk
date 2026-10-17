@@ -412,33 +412,12 @@ module.exports = {
           },
         },
       }),
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      },
     },
   },
   // tailwindcss-animate supplies animate-in/animate-out/fade-in/zoom-in/
-  // slide-in-from-*, which ui/dialog and ui/select ship. Without the plugin
-  // registered those class names generated no CSS at all (`animation-name: none`),
-  // so every Radix enter/exit transition snapped instantly.
+  // slide-in-from-*, which the survey player (src/app/survey/[slug]/SurveyPlayer.tsx)
+  // uses to slide each question in and fade in the thank-you screen. Without the
+  // plugin registered those class names generate no CSS at all (`animation-name: none`),
+  // so those transitions would snap instantly.
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
 };

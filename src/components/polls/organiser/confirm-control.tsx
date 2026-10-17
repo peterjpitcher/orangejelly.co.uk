@@ -23,7 +23,7 @@ import { confirmOption } from '@/app/actions/poll-organiser';
  * traps focus and closes on Escape, and so does this: the port carries a real
  * focus trap for exactly that reason. What Radix could not give us was the
  * surface, which is hardcoded to `rounded-lg`, `shadow-lg` and `bg-background`
- * in `ui/dialog.tsx` and cannot be restyled from a call site.
+ * in the shadcn dialog component and cannot be restyled from a call site.
  */
 
 export interface ConfirmControlProps {

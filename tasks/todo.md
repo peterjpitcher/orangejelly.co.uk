@@ -1,3 +1,70 @@
+# Remove more dead components (17 October 2026)
+
+**Goal:** delete the 22 component files that nothing imported on 17 October 2026 (found while
+checking PR 105), if each is really unused, plus anything that only they use. Code only, no
+data. Branch `chore/remove-more-dead-components`, cut from PR 105's branch at `247529a5` because
+both edit the `tailwind.config.js` plugin comment and the shadcn list in
+`docs/agent-reference.md`, then rebased onto main `ff548421` once PR 105 merged.
+
+- [x] Confirm each of the 22 is unused: every static, dynamic and re-exported import, `require`
+      and `vi.mock` resolved across the repo's 621 code files, plus name and path searches in
+      tests, scripts, config, `content/` and docs. None has an importer. The only mentions are
+      historical docs, two one-off scripts and three comments in the poll components.
+- [x] Find what deleting them leaves with no user: `ui/skeleton.tsx` and `Container.tsx` (only
+      `Loading`), `Link.tsx` and `Section.tsx` (only `SeasonalPlaybooksBand`), `ui/label.tsx`
+      (only `ui/form`) and `ui/accordion.tsx` (only `FAQAccordionWrapper`, once PR 105 removed
+      `FAQItem` and `ui/faq-accordion`); ten Radix packages; the `.transition-normal` rule; the
+      accordion keyframes and animations in `tailwind.config.js`. `tailwindcss-animate` stays,
+      because `SurveyPlayer.tsx` uses `animate-in fade-in slide-in-from-right-4`.
+- [x] Baseline on unchanged code (`247529a5`): lint, type-check, `test:run`, `test:utc`, build;
+      snapshot every built page and the compiled CSS.
+- [x] Peter approves the list: "Updated list, items 1 to 8 all yes" on 17 October 2026 (the 28
+      files, the ten packages, the CSS rule and accordion animation, the plugin comment, the
+      shadcn list, three poll comments; push and PR without merging).
+- [x] Delete the 28 files and the ten packages; remove `.transition-normal`, the accordion
+      keyframes and animations and the `globals.css` comment about them; the plugin comment now
+      names the survey player; the shadcn list in `docs/agent-reference.md` is now button, card,
+      image, typography; the three poll comments name the shadcn components, not deleted files.
+- [x] Lint, type-check, `test:run`, `test:utc`, build; compare the build with the baseline; load
+      pages of the production build in a browser.
+- [x] PR 105 merged meanwhile: rebase onto main `ff548421`; confirm main's new commits (PRs 104
+      and 106) import and name none of the deleted files; rerun all five checks and the build
+      comparison against a build of main, each side installed with a clean `npm ci`.
+- [x] Commit, staging exact files; push; open the PR.
+- [ ] Peter says yes to merging.
+
+**Results (17 October 2026, final commit on main `ff548421`):** lint passes (the one
+`next/script` warning in `GoogleTagManager.tsx` predates this change), type-check passes, build
+passes with 280 static pages. `test:run`: 129 files, 2,288 passed, 4 skipped. `test:utc`: 129
+files, 2,289 passed, 3 skipped. Both match main. Against the build of main: the same 64 routes
+and 269 prerendered routes; all 148 prerendered pages render the same markup once scripts and
+hashed asset names are set aside; all 122 route handler outputs are byte-identical. The
+compiled CSS loses 165 classes, each used only by the deleted files, the same list as against
+`247529a5` before the rebase. The comparison flagged two, neither a class in use: the word
+"transition" in page text, and `.8rem` from the deleted `text-[0.8rem]` (the live
+`min-w-[8rem]` stays). The lockfile loses 23 entries (the ten packages, eight nested copies and
+five transitive packages nothing else needs) and adds or upgrades none; after a clean `npm ci`
+none of the ten packages is installed. In the final commit's production build, `/`, `/about`,
+`/contact`, `/guides`, `/guides/ai-for-pubs`, `/insights`, `/start-here`, `/results` and
+`/availability` return 200 with every stylesheet and script loading, and rendering `/`,
+`/about`, `/guides/ai-for-pubs` and `/availability` in the browser logs no errors beyond the two
+`/_vercel/*` analytics scripts, which exist only on Vercel. `/survey/pub-apps` cannot render
+locally ("Surveys need Supabase, and it is not configured"), so the survey player's class
+string was checked against the served stylesheet instead: it still gets the `enter`
+animation, 0.2s, sliding in from 1rem.
+
+**Left alone:** the historical docs that mention the deleted files (`docs/migration/`,
+`docs/reports/`, `docs/ACTION-PLAN.md`, `docs/brand/design-system/`, `seo-overhaul/` and older
+`tasks/` notes); the one-off `scripts/add-react-memo.js`, which lists `Link`, `Loading`,
+`ProblemCard`, `Section` and `JourneyIcons`, and `scripts/migrate-related-links.ts` with its
+README; the `globals.css` note on `[id]` scroll margins, which mentions accordions in general;
+the `--radix-` exemption in `scripts/check-design-tokens.mjs`, which no longer matches anything.
+**Parked:** `CaseStudySelector.tsx` and `ROICalculator.tsx` are imported only by their own
+tests (without them `Grid.tsx` and `AnimatedItem.tsx` lose their last importers);
+`@radix-ui/react-dropdown-menu`, `react-popover`, `react-toast` and `react-tooltip` have no
+importer; `.transition-slow` has no user; `content/data/related-links.json` is deliberately
+unread (`src/lib/article-next-step.ts`).
+
 # Remove dead legacy components (17 October 2026)
 
 **Goal:** delete the nine legacy components in `src/components/` that PR 103 only repointed
