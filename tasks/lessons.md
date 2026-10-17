@@ -16,14 +16,14 @@ files were deleted on 17 October 2026 so this cannot recur by accident.
 
 ## 17 October 2026: write as Peter
 
-**What happened:** a note to Charlotte that Peter sends under his name said "a photo of Peter
-for the byline".
+**What happened:** a note to Charlotte that Peter sends personally said "a photo of Peter for
+the byline".
 
 **Pattern:** anything that goes out from Peter (cover notes, notes to a client or designer,
-emails, an invitation in his article) is written in his first person: "a photo of me",
-"call me".
+emails, the invitation in Peter's own article) is written in Peter's first person: "a photo of
+me", "call me".
 
-**How to apply:** before handing over any document Peter will send, read it as if he wrote it.
+**How to apply:** before handing over any document Peter will send, read it as if Peter wrote it.
 Repository documentation and handover notes for agents stay in the third person.
 
 ## 16 October 2026: write for eager readers

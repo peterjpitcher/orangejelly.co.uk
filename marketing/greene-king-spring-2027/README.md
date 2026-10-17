@@ -23,11 +23,11 @@ pandoc marketing/greene-king-spring-2027/spring-toolkit-2027-two-pages.md -f mar
 ## Decisions (Peter, 16 October 2026)
 
 - Two pages, like the autumn playbook.
-- Orange Jelly is shown, not labelled: the approved bio line, and "ready for change", which Peter chose over "open to change" because he wants eager people. The retired self-description stays out.
+- Orange Jelly is shown, not labelled: the approved bio line, and "ready for change", which Peter chose over "open to change" to attract eager people. The retired self-description stays out.
 - The byline says The Anchor is a Greene King tenancy and gives its postcode, TW19 6AQ, so readers can look it up.
 - One approved claim (table bookings, +403%), in the Orange Jelly box only and never tied to AI.
 - Improvements approved the same day: printed prompts cut to about 30 words each (nobody types 70 words from paper), with a line about reading them out to the phone and the full versions behind the QR code; readers photograph the toolkit's own dates page and recipes as the AI's starting point; the payoff spelt out ("by teatime you will have..."); "more than 30 copy-and-paste prompts" as the reason to scan (the guide has 38); "in one quiet afternoon before Christmas" rather than "before the Christmas rush", because the toolkit lands in early December; the logo and photo supplied with the copy.
-- Still to come: a real worked example (Peter runs the Mother's Day prompt with The Anchor's details; the guide shows what AI wrote and what he changed).
+- Still to come: a real worked example (Peter runs the Mother's Day prompt with The Anchor's details; the guide shows what AI wrote and what Peter changed).
 - Left out of our table, with a note to Charlotte: 7 April (National Beer Day is the American date; the UK's Beer Day Britain is 15 June).
 - The Night of Excellence (Tuesday 6 April, Greene King's awards for its pubs) is in the table: the piece is for tenants, not customers (Peter, 16 October 2026). The line suggests AI for a first draft of an entry and tells readers to ask their BDM when entries close, because the 2027 dates are not published. The website guide stays general and leaves it out.
 
