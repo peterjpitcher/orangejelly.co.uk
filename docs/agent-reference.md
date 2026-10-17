@@ -28,7 +28,7 @@ Built for the 2026 repositioning. Exported from `@/components/oj`: `Button`, `Gr
 
 ### shadcn primitives (`src/components/ui/`)
 
-Configured in `components.json` (style new-york, RSC, CSS variables): accordion, alert, avatar, badge, button, card, checkbox, dialog, faq-accordion, form, image, input, label, progress, select, separator, skeleton, table, tabs, textarea, typography.
+Configured in `components.json` (style new-york, RSC, CSS variables): accordion, alert, avatar, badge, button, card, checkbox, dialog, form, image, input, label, progress, select, separator, skeleton, table, tabs, textarea, typography.
 
 ### Design tokens
 
