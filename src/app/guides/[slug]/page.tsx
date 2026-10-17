@@ -280,7 +280,7 @@ function articleSchema(guide: Guide, baseUrl: string, imageUrl: string): Record<
     publisher: {
       '@type': 'Organization',
       name: 'Orange Jelly Limited',
-      logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
+      logo: { '@type': 'ImageObject', url: `${baseUrl}/brand/social-avatar.png` },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     ...(guide.quickAnswer && {

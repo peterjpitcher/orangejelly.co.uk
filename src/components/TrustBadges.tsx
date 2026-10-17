@@ -162,7 +162,7 @@ export function FloatingTrustBadge({ claims }: { claims?: TrustBadgeClaims }) {
         {/* Verified by Orange Jelly */}
         <div className="mt-3 pt-3 border-t flex items-center justify-between">
           <OptimizedImage
-            src="/logo.png"
+            src="/brand/social-avatar.png"
             alt="Orange Jelly"
             width={24}
             height={24}

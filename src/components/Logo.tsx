@@ -35,7 +35,7 @@ function Logo({
         return (
           <div className="relative">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly"
               width={currentSize.logo}
               height={currentSize.logo}
@@ -50,7 +50,7 @@ function Logo({
         return (
           <div className="flex items-center gap-3">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly"
               width={currentSize.logo}
               height={currentSize.logo}
@@ -74,7 +74,7 @@ function Logo({
         return (
           <div className="text-center">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly"
               width={currentSize.logo}
               height={currentSize.logo}
@@ -95,7 +95,7 @@ function Logo({
       default:
         return (
           <OptimizedImage
-            src="/logo.png"
+            src="/brand/social-avatar.png"
             alt="Orange Jelly"
             width={currentSize.logo}
             height={currentSize.logo}

@@ -31,7 +31,7 @@ export default function StickyCTA() {
           {/* Left side - Logo and message */}
           <div className="flex items-center gap-3">
             <OptimizedImage
-              src="/logo.png"
+              src="/brand/social-avatar.png"
               alt="Orange Jelly - transformative hospitality marketing"
               width={32}
               height={32}
