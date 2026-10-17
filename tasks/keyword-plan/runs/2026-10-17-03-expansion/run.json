@@ -1,4 +1,11 @@
 {
+  "analysis": {
+    "curve_name": "awr-organic-blended",
+    "diagnose": true,
+    "diagnosed_today": "2026-10-17",
+    "join": true,
+    "windows": {}
+  },
   "created_at": "2026-10-17T13:47:59+00:00",
   "finalised_at": "",
   "imports": {
@@ -7,7 +14,7 @@
   "interpreter": "3.12.8",
   "mode": "expansion",
   "run_id": "2026-10-17-03-expansion",
-  "stage": "imported",
+  "stage": "analysed",
   "stage_history": [
     {
       "at": "2026-10-17T13:47:59+00:00",
@@ -24,6 +31,10 @@
     {
       "at": "2026-10-17T16:40:12+00:00",
       "stage": "imported"
+    },
+    {
+      "at": "2026-10-17T16:46:06+00:00",
+      "stage": "analysed"
     }
   ],
   "status": "open",
