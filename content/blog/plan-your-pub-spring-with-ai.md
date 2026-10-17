@@ -51,7 +51,7 @@ Spring is a run of reasons to visit: Dry January, Burns Night, two Six Nations c
 
 This guide shows you how to plan the lot in one afternoon with a free AI assistant. You choose the moments and you check the facts. The assistant drafts the calendar, the posts and the poster wording. The prompts come at three levels, so whether you have never opened ChatGPT or use it every day, there is somewhere to start.
 
-Pick five moments and by teatime you will have a 17-week calendar, 15 posts, the wording for five posters and five team briefings.
+Pick five moments and by teatime you will have a week-by-week calendar for the season, 15 posts, the wording for five posters and five team briefings.
 
 The fixtures, bank holidays and legal points in this guide were checked on 16 October 2026 against the sources listed at the end.
 
@@ -97,7 +97,7 @@ Add your own dates too: the pub's birthday, a local fixture, the school holidays
 
 Paste in the dates you picked and ask for a week-by-week plan. If your pub company or a supplier has sent you a spring toolkit, photograph its dates page, and any recipes you want to use, and give it those instead of typing.
 
-> Here are the dates I want to promote between January and April 2027, between the ### marks. Make me a week-by-week calendar as a table, from the week of 4 January to the week of 26 April. Columns: the week, what is on, what to post, which bookings to open, which reminders to send, and jobs for the team. Use only the dates I have given you.
+> Here are the dates I want to promote this spring, between the ### marks. Make me a week-by-week calendar as a table, from the week of 4 January to the week of my last date. Columns: the week, what is on, what to post, which bookings to open, which reminders to send, and jobs for the team. Use only the dates I have given you.
 >
 > \###
 > [YOUR DATES]
@@ -153,7 +153,7 @@ Pick the level that suits you. Each prompt plans the whole season.
 
 You have never used AI, or only once or twice. Copy this and fill in the brackets:
 
-> I run a [TYPE OF PUB] in [TOWN]. I want to promote these dates between January and April 2027: [YOUR DATES]. Make me a simple week-by-week plan of what to post and when, and when to open bookings. Use plain British English. Before you start, ask me any questions you need answered.
+> I run a [TYPE OF PUB] in [TOWN]. I want to promote these dates in spring 2027: [YOUR DATES]. Make me a simple week-by-week plan of what to post and when, and when to open bookings. Use plain British English. Before you start, ask me any questions you need answered.
 
 The last line matters. Letting it ask you questions first gets you a better plan than letting it guess.
 
@@ -161,7 +161,7 @@ The last line matters. Letting it ask you questions first gets you a better plan
 
 You have used it a few times. Give it more to work with:
 
-> Here are my pub's details: [NAME, OPENING HOURS, FOOD TIMES, BOOKING LINK, MENU HIGHLIGHTS AND PRICES, WHO OUR GUESTS ARE, HOW WE SOUND]. Using the dates below, make a calendar as a table with a row for each week from 4 January to 26 April. Then, for each date, write three short social posts (announce, reminder, last call) and the wording for an A4 poster. Tell me anything you were unsure of.
+> Here are my pub's details: [NAME, OPENING HOURS, FOOD TIMES, BOOKING LINK, MENU HIGHLIGHTS AND PRICES, WHO OUR GUESTS ARE, HOW WE SOUND]. Using the dates below, make a calendar as a table with a row for each week from 4 January to the week of my last date. Then, for each date, write three short social posts (announce, reminder, last call) and the wording for an A4 poster. Tell me anything you were unsure of.
 >
 > [YOUR DATES]
 

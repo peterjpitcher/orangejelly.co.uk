@@ -30,7 +30,7 @@ Spring is a run of reasons to visit: Dry January, Burns Night, two Six Nations c
 
 There is a quicker way. Sit down once, before Christmas, with a free AI assistant such as ChatGPT, Gemini or Copilot, and come out with the whole season drafted. You choose the moments and check the facts. The assistant does the typing. All you need is your diary, your menu and drinks list with prices, and about two hours.
 
-Pick five moments and by teatime you will have a 17-week calendar, 15 posts, the wording for five posters and five team briefings.
+Pick five moments and by teatime you will have a week-by-week calendar for the season, 15 posts, the wording for five posters and five team briefings.
 
 #### The afternoon in four steps
 
