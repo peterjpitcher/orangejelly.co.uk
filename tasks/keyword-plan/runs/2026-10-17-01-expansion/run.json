@@ -5,14 +5,23 @@
   "interpreter": "3.12.8",
   "mode": "expansion",
   "run_id": "2026-10-17-01-expansion",
-  "stage": "requested",
+  "stage": "abandoned",
   "stage_history": [
     {
       "at": "2026-10-17T13:19:26+00:00",
       "stage": "requested"
+    },
+    {
+      "at": "2026-10-17T13:44:04+00:00",
+      "stage": "requested"
+    },
+    {
+      "at": "2026-10-17T13:50:00+00:00",
+      "stage": "abandoned",
+      "note": "Superseded by 2026-10-17-02-expansion: Peter asked for one combined discovery batch instead of eight."
     }
   ],
-  "status": "open",
+  "status": "closed",
   "supersedes": "",
   "windows_mode": "calendar",
   "windows_note": ""

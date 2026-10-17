@@ -1,0 +1,331 @@
+{
+  "pulls": {
+    "gkp-discover-01": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-01 not found at raw/gkp-discover-01-spring-hub.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-02": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-02 not found at raw/gkp-discover-02-burns-night.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-03": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-03 not found at raw/gkp-discover-03-valentines.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-04": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-04 not found at raw/gkp-discover-04-mothers-day.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-05": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-05 not found at raw/gkp-discover-05-st-patricks.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-06": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-06 not found at raw/gkp-discover-06-easter.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-07": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-07 not found at raw/gkp-discover-07-six-nations.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-08": {
+      "attested": {},
+      "filter_type": "",
+      "filter_value": "",
+      "found": "",
+      "messages": [
+        {
+          "code": "PULL_MISSING",
+          "severity": "fatal",
+          "text": "required pull gkp-discover-08 not found at raw/gkp-discover-08-dry-january-drinks-days.csv"
+        }
+      ],
+      "required": true,
+      "row_counts": {},
+      "scope": "",
+      "source": "gkp-discover",
+      "status": "missing",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [],
+      "unverified": [],
+      "verified": {},
+      "window_end": "",
+      "window_start": ""
+    },
+    "gkp-discover-09": {
+      "attested": {},
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-09-page-six-nations-guide.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-09-page-six-nations-guide.csv: no attestation for location, language, network, volume_mode (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 4
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": ["location", "language", "network", "volume_mode"],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 4
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 1,
+          "numeric": 3,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "config",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-10": {
+      "attested": {},
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-10-page-events-calendar-guide.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-10-page-events-calendar-guide.csv: no attestation for location, language, network, volume_mode (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 2
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": ["location", "language", "network", "volume_mode"],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 2
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 1,
+          "numeric": 1,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "config",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    }
+  },
+  "run_id": "2026-10-17-01-expansion",
+  "summary": {
+    "attestations_present": false,
+    "by_status": {
+      "limiting": 2,
+      "missing": 8
+    },
+    "pulls_total": 10,
+    "required_fatal": [
+      "gkp-discover-01",
+      "gkp-discover-02",
+      "gkp-discover-03",
+      "gkp-discover-04",
+      "gkp-discover-05",
+      "gkp-discover-06",
+      "gkp-discover-07",
+      "gkp-discover-08"
+    ],
+    "required_total": 10,
+    "stage_after": "requested",
+    "stage_before": "requested",
+    "unmatched_inputs": ["raw/ignored", "raw/inbox"]
+  }
+}

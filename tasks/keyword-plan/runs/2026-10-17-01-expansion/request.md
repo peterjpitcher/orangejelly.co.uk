@@ -2,7 +2,7 @@
 
 ## Next required input
 
-Total pulls needed now: 10 (10 Keyword Planner discovery exports).
+Total pulls needed now: 11 (11 Keyword Planner discovery exports).
 
 Save everything under `runs/2026-10-17-01-expansion/raw/` using the exact folder and file names below. Do not rename, open and re-save, or edit an export.
 
@@ -104,6 +104,14 @@ pub events calendar, seasonal pub events
 ```
 
 Your check before you save: open Keyword Planner, click **Discover new keywords**, use the **Start with keywords** tab, then **Get results**, then **Download keyword ideas**. A discovery export returns far more rows than you put in (here, many more than 2 rows). If the file holds only what you typed, the pull came from Get search volume and forecasts by mistake and has to be taken again.
+
+### raw/gkp-discover-11-spring-all.csv
+
+```
+pub event ideas, burns night menu ideas, valentines menu ideas, mothers day menu ideas, st patricks day food ideas, easter pub events, six nations pub, dry january pub ideas, national margarita day, international whisky day
+```
+
+Your check before you save: open Keyword Planner, click **Discover new keywords**, use the **Start with keywords** tab, then **Get results**, then **Download keyword ideas**. A discovery export returns far more rows than you put in (here, many more than 10 rows). If the file holds only what you typed, the pull came from Get search volume and forecasts by mistake and has to be taken again.
 
 ## What to send back
 

@@ -1,5 +1,11 @@
 # Run log: 2026-10-17-01-expansion
 
+**Abandoned on 17 October 2026, superseded by `2026-10-17-02-expansion`.** The eight themed
+discovery exports came back from Get search volume and forecasts (each held only its seeds and
+came with a forecasts export); they are kept in `raw/ignored/` and not used. Peter then asked for
+one combined discovery batch. The two website exports were valid and are copied into run 02. The
+notes below describe this run as first requested.
+
 ## Why this run
 
 Trigger: a new season. Peter approved a Spring Pub Playbook hub (the fourth seasonal hub, after

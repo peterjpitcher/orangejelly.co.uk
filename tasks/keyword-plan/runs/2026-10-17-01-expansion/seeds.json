@@ -1,130 +1,18 @@
 {
   "batches": [
     {
-      "slug": "spring-hub",
+      "slug": "spring-all",
       "seeds": [
-        "spring pub event ideas",
-        "pub events calendar 2027",
-        "pub promotion ideas spring",
-        "pub marketing calendar",
-        "pub event ideas january",
-        "february pub event ideas",
-        "march pub event ideas",
-        "seasonal pub promotions",
-        "key dates for pubs 2027",
-        "hospitality marketing calendar 2027"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "burns-night",
-      "seeds": [
-        "burns night pub ideas",
-        "burns night event ideas",
+        "pub event ideas",
         "burns night menu ideas",
-        "burns supper menu",
-        "how to host a burns night",
-        "burns night running order",
-        "burns night 2027",
-        "burns night pub",
-        "burns night food ideas",
-        "burns supper ideas"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "valentines",
-      "seeds": [
-        "valentines day pub ideas",
-        "valentines day restaurant ideas",
         "valentines menu ideas",
-        "valentines day promotion ideas",
-        "valentines day event ideas",
-        "valentines day set menu",
-        "valentines day 2027",
-        "valentines night ideas for restaurants",
-        "valentines day marketing ideas",
-        "valentines pub"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "mothers-day",
-      "seeds": [
-        "mothers day pub ideas",
         "mothers day menu ideas",
-        "mothers day lunch ideas",
-        "mothers day restaurant promotion ideas",
-        "mothers day 2027",
-        "when is mothers day 2027",
-        "mothering sunday 2027",
-        "mothers day set menu",
-        "mothers day marketing ideas",
-        "mothers day pub lunch"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "st-patricks",
-      "seeds": [
-        "st patricks day pub ideas",
-        "st patricks day bar promotions",
-        "st patricks day party ideas",
-        "st patricks day event ideas",
-        "st patricks day 2027",
         "st patricks day food ideas",
-        "st patricks day pub",
-        "st patricks day marketing ideas",
-        "irish night pub ideas",
-        "st patricks day decorations for bars"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "easter",
-      "seeds": [
-        "easter pub ideas",
-        "easter events ideas",
-        "easter promotion ideas for restaurants",
-        "easter weekend events",
-        "easter 2027 dates",
-        "easter bank holiday 2027",
-        "easter egg hunt ideas",
-        "easter menu ideas",
-        "easter marketing ideas",
-        "easter pub events"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "six-nations",
-      "seeds": [
-        "six nations 2027",
-        "six nations 2027 fixtures",
+        "easter pub events",
         "six nations pub",
-        "showing six nations in a pub",
-        "six nations pub offers",
-        "six nations food ideas",
-        "womens six nations 2027",
-        "six nations tv schedule 2027",
-        "rugby pub promotions",
-        "six nations screening"
-      ],
-      "url": ""
-    },
-    {
-      "slug": "dry-january-drinks-days",
-      "seeds": [
         "dry january pub ideas",
-        "dry january for pubs",
-        "alcohol free drinks for pubs",
-        "low and no alcohol menu",
         "national margarita day",
-        "international whisky day",
-        "whisky tasting night ideas",
-        "margarita day promotions",
-        "dry january 2027",
-        "mocktail menu ideas"
+        "international whisky day"
       ],
       "url": ""
     }
