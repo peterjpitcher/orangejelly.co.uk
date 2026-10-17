@@ -1,0 +1,629 @@
+{
+  "pulls": {
+    "gkp-discover-01": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-01-spring-hub.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-01-spring-hub.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 10
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 10
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 10,
+          "numeric": 0,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-02": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-02-burns-night.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-02-burns-night.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 85
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 85
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 1,
+          "numeric": 84,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-03": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-03-valentines.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-03-valentines.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 1676
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 1676
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 51,
+          "numeric": 1625,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-04": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-04-mothers-day.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-04-mothers-day.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 324
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 324
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 6,
+          "numeric": 318,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-05": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-05-st-patricks.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-05-st-patricks.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 776
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 776
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 37,
+          "numeric": 739,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-06": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-06-easter.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-06-easter.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 2530
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 2530
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 65,
+          "numeric": 2465,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-07": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-07-six-nations.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-07-six-nations.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 24
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 24
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 5,
+          "numeric": 19,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-08": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-08-dry-january-drinks-days.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-08-dry-january-drinks-days.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 126
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 126
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 35,
+          "numeric": 91,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-09": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-09-page-six-nations-guide.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-09-page-six-nations-guide.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 4
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 4
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 1,
+          "numeric": 3,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    },
+    "gkp-discover-10": {
+      "attested": {
+        "volume_mode": {
+          "source": "defaults",
+          "value": "banded"
+        }
+      },
+      "date_range_text": "October 1, 2025 - September 30, 2026",
+      "encoding": "utf-16",
+      "filter_type": "",
+      "filter_value": "",
+      "found": "raw/gkp-discover-10-page-events-calendar-guide.csv",
+      "layout": "discover",
+      "messages": [
+        {
+          "code": "UNATTESTED_FACT",
+          "severity": "limiting",
+          "text": "raw/gkp-discover-10-page-events-calendar-guide.csv: no attestation for location, language, network (values from config are not attestations)"
+        }
+      ],
+      "required": true,
+      "row_counts": {
+        "aggregate_rows": 0,
+        "keyword_rows": 2
+      },
+      "scope": "gkp-discover",
+      "source": "gkp-discover",
+      "status": "limiting",
+      "tabs": [],
+      "truncated": {},
+      "unattested": [
+        "location",
+        "language",
+        "network"
+      ],
+      "unverified": [],
+      "verified": {
+        "date_range": {
+          "end": "2026-09-30",
+          "start": "2025-10-01"
+        },
+        "layout": "discover",
+        "row_counts": {
+          "aggregate_rows": 0,
+          "keyword_rows": 2
+        },
+        "volume_cells": {
+          "dash": 0,
+          "empty": 1,
+          "numeric": 1,
+          "other": 0,
+          "range": 0
+        }
+      },
+      "volume_mode": {
+        "source": "defaults",
+        "value": "banded"
+      },
+      "window_end": "2026-09-30",
+      "window_start": "2025-10-01"
+    }
+  },
+  "run_id": "2026-10-17-03-expansion",
+  "summary": {
+    "attestations_present": true,
+    "by_status": {
+      "limiting": 10
+    },
+    "pulls_total": 10,
+    "required_fatal": [],
+    "required_total": 10,
+    "stage_after": "validated",
+    "stage_before": "imported",
+    "unmatched_inputs": [
+      "raw/inbox"
+    ]
+  }
+}
