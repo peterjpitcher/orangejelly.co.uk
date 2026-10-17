@@ -1,3 +1,51 @@
+# Remove dead legacy components (17 October 2026)
+
+**Goal:** delete the nine legacy components in `src/components/` that PR 103 only repointed
+from the deleted `/logo.png`, if each is really unused, plus anything that only they use. Code
+only, no data. Branch `chore/remove-dead-legacy-components`, from main `26bc4ef2` (after PR 103).
+
+- [x] Confirm each of the nine is unused: every static, dynamic and re-exported import,
+      `require` and `vi.mock` resolved across the repo's 635 code files, plus name searches in
+      tests, scripts, config, `content/` and docs. Six have no importer. Three do:
+      `PerformanceMonitor.tsx` (the root layout and `MarketingChrome`), `SiteLoadingScreen.tsx`
+      (re-exported by three `loading.tsx` files) and `Hero.tsx` (imported only by
+      `PubServiceLandingPage.tsx`, which nothing has imported since phase 4 on 31 August).
+- [x] Find what deleting the six leaves with no user: `TrackedButton.tsx`, `ui/sheet.tsx`,
+      `ui/navigation-menu.tsx`, the `@radix-ui/react-navigation-menu` package and the
+      `.transition-quick` rule in `globals.css`. `OptimizedImage`, `Heading` and `Text` stay,
+      because live files still import them (`OptimizedImage` through `SiteLoadingScreen`).
+- [x] Baseline on unchanged code: lint, type-check, `test:run`, `test:utc`, build; snapshot
+      every built page and the compiled CSS.
+- [x] Delete the nine files, the package and the CSS rule; take the deleted names out of the
+      `tailwind.config.js` plugin comment and the shadcn list in `docs/agent-reference.md`.
+- [x] Lint, type-check, `test:run`, `test:utc`, build; compare the build with the baseline; load
+      seven pages of the production build in a browser.
+- [x] Commit, staging exact files.
+- [ ] `Hero.tsx` and `PubServiceLandingPage.tsx`: left in place for Peter to decide.
+
+**Results (17 October 2026):** lint passes (the one `next/script` warning in
+`GoogleTagManager.tsx` predates this change), type-check passes (also with the incremental
+cache off), build passes with 280 static pages. `test:run`: 129 files, 2,287 passed, 4 skipped.
+`test:utc`: 129 files, 2,288 passed, 3 skipped. Both match the baseline. Against the baseline
+build: the same 64 routes and 269 prerendered routes; all 148 prerendered pages render the same
+markup once scripts and hashed asset names are set aside; all 122 route handler outputs
+(sitemap, robots, feeds, `llms.txt`, share images) are byte-identical. The compiled CSS loses
+92 classes, each used only by the deleted files (`!bg-whatsapp`, which the live `Button` uses,
+stays). The lockfile loses only the one package entry. In the browser, `/`, `/about`,
+`/contact`, `/guides`, `/guides/ai-for-pubs`, `/insights` and `/start-here` return 200 with
+every stylesheet and script loading; the only console errors are the two `/_vercel/*`
+analytics scripts, which exist only on Vercel.
+
+**Also changed:** the `tailwind.config.js` comment on `tailwindcss-animate` also named
+`ui/tooltip` and `AlertAdapter`, both deleted on 27 August; it now names `ui/dialog` and
+`ui/select` only.
+**Left alone:** `PerformanceMonitor.tsx` and `SiteLoadingScreen.tsx`, which are live; `Hero.tsx`
+and `PubServiceLandingPage.tsx` (above); the historical docs that mention the deleted files
+(`docs/migration/`, `docs/reports/`, `docs/ACTION-PLAN.md`, `seo-overhaul/`); the one-off
+`scripts/add-react-memo.js`, which lists `ServiceCard.tsx` and `Logo.tsx`; the
+`tailwind.config.js` comment on the WhatsApp colour, which records why `Navigation` once
+hardcoded its hover colour.
+
 # Remove dead code that points at retired addresses (14 October 2026)
 
 **Goal:** remove code that still points at pages phase 4 retired (`/fix-my-pub`,
