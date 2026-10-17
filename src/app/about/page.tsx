@@ -69,10 +69,10 @@ export default function AboutPage(): JSX.Element {
                 small on purpose.
               </h1>
               <p className="measure mt-5 text-[19px] leading-relaxed text-oj-cream/85">
-                Orange Jelly is two people: Peter Pitcher, who leads the growth work, and Billy
-                Summers, who runs our pub. There's no account team, no layer between you and the
-                people doing the work, and no incentive to sell you more of something that isn't
-                working.
+                Orange Jelly is three people: Peter Pitcher, who leads the growth work; Nelly, our
+                Acceleration Delivery Lead, who works with Peter day to day; and Billy Summers, who
+                runs our pub. There's no account team, no layer between you and the people doing the
+                work, and no incentive to sell you more of something that isn't working.
               </p>
             </div>
           </section>
@@ -193,9 +193,10 @@ export default function AboutPage(): JSX.Element {
                 more junior once the contract is signed.
               </p>
               <p>
-                Day to day, The Anchor is run by Billy Summers and the growth work is led by Peter
-                Pitcher. That's the whole company, and it's a limit we are honest about: we take on
-                what we can do properly and say no to the rest.
+                The growth work is led by Peter Pitcher, who works day to day with Nelly, our
+                Acceleration Delivery Lead, and The Anchor is run by Billy Summers. That's the whole
+                company, and it's a limit we are honest about: we take on what we can do properly
+                and say no to the rest.
               </p>
             </div>
           </div>
