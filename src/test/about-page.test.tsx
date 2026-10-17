@@ -22,11 +22,15 @@ describe('/about', () => {
   });
 
   it('names who you deal with without turning into a biography', () => {
-    // Naming two people in a two-person company is a feature, not a founder story:
-    // it is the answer to "who will actually be doing this".
+    // Naming everybody in a three-person company is a feature, not a founder story:
+    // it is the answer to "who will actually be doing this". Nelly joined the page
+    // on 17 October 2026 as Acceleration Delivery Lead, working with Peter day to day.
     const text = body();
+    expect(text).toMatch(/Orange Jelly is three people/);
     expect(text).toMatch(/Billy Summers/);
     expect(text).toMatch(/Peter Pitcher/);
+    expect(text).toMatch(/Nelly, our Acceleration Delivery Lead/);
+    expect(text).not.toMatch(/two people/);
     expect(text).toMatch(/no account manager/i);
   });
 
