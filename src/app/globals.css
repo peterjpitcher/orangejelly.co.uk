@@ -571,10 +571,6 @@ button {
 }
 
 /* Standardized transition utilities */
-.transition-quick {
-  @apply transition-all duration-200;
-}
-
 .transition-normal {
   @apply transition-all duration-300;
 }
