@@ -95,7 +95,7 @@ only, no data. Branch `chore/remove-dead-legacy-components`, from main `26bc4ef2
 - [x] Lint, type-check, `test:run`, `test:utc`, build; compare the build with the first
       commit's and main's; load nine pages of the production build.
 - [x] Commit, staging exact files; push to PR 105.
-- [ ] Peter says yes to merging PR 105.
+- [x] Peter says yes to merging PR 105: merged as `ff548421` on 17 October 2026.
 
 **Results (17 October 2026):** lint passes (the one `next/script` warning in
 `GoogleTagManager.tsx` predates this change), type-check passes (also with the incremental
