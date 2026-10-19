@@ -25,9 +25,15 @@ sentences: it is a feature of a small company, not a biography.
 **H1:** small on purpose.
 
 **Standfirst:**
-Orange Jelly is a growth partner for ambitious small and mid-sized businesses. There is no account team,
-no layer between you and the people doing the work, and no incentive to sell you more of something that is
+Orange Jelly is three people: Peter Pitcher, who leads the growth work; Nelly, our Acceleration Delivery
+Lead, who works with Peter day to day; and Billy Summers, who runs our pub. There is no account team, no
+layer between you and the people doing the work, and no incentive to sell you more of something that is
 not working.
+
+*Amended 17 October 2026.* The original standfirst opened "Orange Jelly is a growth partner for ambitious
+small and mid-sized businesses"; that self-description was retired on 6 September 2026 and the live page
+had already moved to "Orange Jelly is two people". Peter then added Nelly, Acceleration Delivery Lead,
+working with Peter day to day, which makes the company three people.
 
 ---
 
@@ -109,9 +115,16 @@ Orange Jelly is deliberately small, so the people you meet are the people doing 
 account manager, no team you never see, and no handover to somebody more junior once the contract is
 signed.
 
-Day to day, The Anchor is run by Billy Summers and the growth work is led by Peter Pitcher. That is the
-whole company, which is a constraint we are honest about: it means we take on what we can do properly and
-say no to the rest.
+The growth work is led by Peter Pitcher, who works day to day with Nelly, our Acceleration Delivery Lead,
+and The Anchor is run by Billy Summers. That is the whole company, which is a constraint we are honest
+about: it means we take on what we can do properly and say no to the rest.
+
+*Amended 17 October 2026:* Nelly added at Peter's request. The copy names Nelly without pronouns; none
+were given.
+
+**Photo (added 17 October 2026 at Peter's request):** Peter's headshot, `public/images/peter-pitcher.jpg`, beside
+these two paragraphs. Alt text: "Peter Pitcher". Caption: "Peter Pitcher, who leads the growth work." It
+shows who you deal with, in the third person, so it is not a founder story and D21 still holds.
 
 ---
 

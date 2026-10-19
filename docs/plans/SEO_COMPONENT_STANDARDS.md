@@ -193,7 +193,7 @@ interface ServiceProps {
   "@id": "https://www.orangejelly.co.uk/#organization",
   "name": "Orange Jelly Limited",
   "url": "https://www.orangejelly.co.uk",
-  "logo": "https://www.orangejelly.co.uk/logo.png",
+  "logo": "https://www.orangejelly.co.uk/brand/social-avatar.png",
   "sameAs": ["social media URLs"],
   "address": {
     "@type": "PostalAddress",

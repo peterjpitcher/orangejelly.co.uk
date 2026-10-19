@@ -104,7 +104,7 @@ export function generateRSSFeed(): string {
     <webMaster>${siteConfig.author.email} (${siteConfig.author.name})</webMaster>
     <atom:link href="${siteConfig.url}/rss.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>${siteConfig.url}/logo.png</url>
+      <url>${siteConfig.url}/brand/social-avatar.png</url>
       <title><![CDATA[${siteConfig.title}]]></title>
       <link>${siteConfig.url}</link>
       <width>144</width>

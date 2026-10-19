@@ -62,7 +62,7 @@ export function PreloadResources() {
   return (
     <>
       {/* Preload logo */}
-      <link rel="preload" href="/logo.png" as="image" type="image/png" />
+      <link rel="preload" href="/brand/social-avatar.png" as="image" type="image/png" />
     </>
   );
 }

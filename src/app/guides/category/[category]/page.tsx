@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }: CategoryPageProps): Promi
           description: post.excerpt,
           datePublished: post.publishedDate,
           author: 'Peter Pitcher',
-          image: post.featuredImage || '/logo.png',
+          image: post.featuredImage || '/brand/social-avatar.png',
         }))}
         breadcrumbs={[
           { name: 'Home', url: '/' },
