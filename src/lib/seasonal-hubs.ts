@@ -194,11 +194,13 @@ export const SEASON_HUBS: SeasonalHub[] = [
         date: 'All January',
         moment: 'Dry January / low and no',
         opportunity: 'A proper low-and-no range that keeps January tables full',
+        href: '/guides/sober-october-low-no-alcohol-pubs',
       },
       {
         date: 'Mon 25 Jan',
         moment: 'Burns Night',
         opportunity: 'A haggis supper, a whisky flight, a reason to book midweek',
+        href: '/guides/burns-night-pub-ideas',
       },
     ],
     featuredGuides: [
@@ -208,6 +210,112 @@ export const SEASON_HUBS: SeasonalHub[] = [
       'wine-tasting-evenings-for-pubs',
       'pub-new-years-eve-planning-guide',
       'turn-heating-costs-into-winter-wins',
+    ],
+  },
+  {
+    season: 'spring',
+    theme: 'spring',
+    hubSlug: 'spring-pub-event-ideas',
+    label: 'Spring Pub Playbook',
+    shortLabel: 'Spring Playbook',
+    // The Greene King spring toolkit's season, which starts in January rather than
+    // in March, so it overlaps the end of the Christmas playbook on purpose.
+    dateRangeLabel: 'January to April',
+    calendar: [
+      {
+        date: 'All January',
+        moment: 'Dry January',
+        opportunity: 'A proper alcohol-free range that keeps January tables full',
+        href: '/guides/sober-october-low-no-alcohol-pubs',
+      },
+      {
+        date: 'Mon 25 Jan',
+        moment: 'Burns Night',
+        opportunity: 'One sitting, one price, a haggis supper pre-ordered',
+        href: '/guides/burns-night-pub-ideas',
+      },
+      {
+        date: '5 Feb–13 Mar',
+        moment: "Men's Six Nations",
+        opportunity: 'Five rounds, all free to air, bookings for the big matches',
+        href: '/guides/pub-six-nations-rugby-marketing',
+      },
+      {
+        date: 'Tue 9 Feb',
+        moment: 'Pancake Day',
+        opportunity: 'Something new on the pudding board for a quiet Tuesday',
+      },
+      {
+        date: 'Sun 14 Feb',
+        moment: "Valentine's Day",
+        opportunity: 'A weekend of set menus, two sittings and deposits',
+        href: '/guides/valentines-day-pub-ideas',
+      },
+      {
+        date: 'Mon 22 Feb',
+        moment: 'National Margarita Day',
+        opportunity: 'A cocktail on the board for a quiet Monday',
+        href: '/guides/national-drinks-days-pub-guide',
+      },
+      {
+        date: 'Mon 1 Mar',
+        moment: "St David's Day",
+        opportunity: 'A Welsh special, and a reason for Welsh pubs to celebrate',
+      },
+      {
+        date: 'Sun 7 Mar',
+        moment: "Mother's Day",
+        opportunity: 'Fixed sittings, deposits and a set menu built round the roast',
+        href: '/guides/mothers-day-pub-ideas',
+      },
+      {
+        date: 'Wed 17 Mar',
+        moment: "St Patrick's Day",
+        opportunity: 'One headline: live music, a quiz or an Irish night',
+        href: '/guides/st-patricks-day-pub-ideas',
+      },
+      {
+        date: 'Fri 26–Mon 29 Mar',
+        moment: 'Easter weekend',
+        opportunity: 'Four days of trade, with a plan for each one',
+        href: '/guides/easter-pub-ideas',
+      },
+      {
+        date: 'Sat 27 Mar',
+        moment: 'International Whisk(e)y Day',
+        opportunity: 'A whisky flight on Easter Saturday',
+        href: '/guides/national-drinks-days-pub-guide',
+      },
+      {
+        date: 'Sun 28 Mar',
+        moment: 'The clocks go forward',
+        opportunity: 'Lighter evenings, and the start of beer garden season',
+      },
+      {
+        date: '10 Apr–15 May',
+        moment: "Women's Six Nations",
+        opportunity: 'Three matches every Saturday afternoon, all on the BBC',
+        href: '/guides/pub-six-nations-rugby-marketing',
+      },
+      {
+        date: 'Fri 23 Apr',
+        moment: "St George's Day",
+        opportunity: 'An English menu and a Friday night with a reason',
+      },
+    ],
+    // Ordered by the season, after the planning guide that leads the playbook. The
+    // drinks days and low-and-no guides are autumn spokes too; getHubForSpoke keeps
+    // their breadcrumb under autumn because that hub comes first.
+    featuredGuides: [
+      'plan-your-pub-spring-with-ai',
+      'sober-october-low-no-alcohol-pubs',
+      'burns-night-pub-ideas',
+      'pub-six-nations-rugby-marketing',
+      'valentines-day-pub-ideas',
+      'mothers-day-pub-ideas',
+      'st-patricks-day-pub-ideas',
+      'easter-pub-ideas',
+      'national-drinks-days-pub-guide',
     ],
   },
 ];
@@ -242,7 +350,8 @@ export function isHubSlug(slug: string): boolean {
 
 /**
  * Find the hub that features a given spoke slug among its `featuredGuides`.
- * Returns the first matching hub (a spoke belongs to at most one hub today).
+ * Returns the first matching hub in SEASON_HUBS order. A few spokes, such as the
+ * drinks days guide, sit in two playbooks; their breadcrumb follows the first.
  * Used to add a hub-level breadcrumb to spoke posts.
  */
 export function getHubForSpoke(slug: string): SeasonalHub | undefined {

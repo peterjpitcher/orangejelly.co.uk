@@ -59,6 +59,13 @@ const PRESERVED = [
   'Six Nations',
   'Oktoberfest',
   'Macmillan',
+  // Added 19 October 2026 with the spring playbook's guides. "Burns" stays out on its
+  // own: a kitchen has burns far more often than it has a poet.
+  'Dry January',
+  'Burns Night',
+  "Valentine's Day",
+  "Mother's Day",
+  "St Patrick's Day",
   'Monday',
   'Tuesday',
   'Wednesday',
