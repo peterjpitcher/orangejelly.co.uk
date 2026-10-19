@@ -19,9 +19,12 @@ Discover new keywords, so this run returns to the run 01 layout with the same se
 `sort-inbox.py` file each export by its seeds. The two website exports from run 01 are carried
 over unchanged.
 
-Filed on 17 October 2026: `gkp-discover-01` to `06` (spring hub, Burns Night, Valentine's Day,
-Mother's Day, St Patrick's Day, Easter) and the two website pulls `gkp-discover-09` and `10`.
-Outstanding: `gkp-discover-07` (Six Nations) and `gkp-discover-08` (Dry January and drinks days).
+Filed on 17 October 2026, in two batches. First `gkp-discover-01` to `06` (spring hub, Burns
+Night, Valentine's Day, Mother's Day, St Patrick's Day, Easter) and the two website pulls
+`gkp-discover-09` and `10`. Then, later the same day, `gkp-discover-07` (Six Nations) and
+`gkp-discover-08` (Dry January and drinks days), validated and imported at 16:40 UTC (see
+`run.json`). All ten are in `normalised/gkp-rows.csv` and hashed in `manifest.json`; none is
+outstanding.
 
 ## Mode
 
