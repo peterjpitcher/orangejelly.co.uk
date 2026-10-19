@@ -1,0 +1,108 @@
+{
+  "curve": {
+    "accessed": "2026-09-08",
+    "curve_name": "awr-organic-blended",
+    "fallback": true,
+    "source": "Advanced Web Ranking Google Organic CTR study as bundled in seo-powerhouse score-opportunities.py (sha256 caa64796b6001d61483ed8613eb993b65a23e01615da447ed616621730b52778)",
+    "values": {
+      "1": 0.275,
+      "10": 0.015,
+      "2": 0.155,
+      "3": 0.1,
+      "4": 0.07,
+      "5": 0.05,
+      "6": 0.04,
+      "7": 0.03,
+      "8": 0.025,
+      "9": 0.02
+    }
+  },
+  "finalised_at": "2026-10-19T22:01:54+00:00",
+  "hashes": {
+    "config": {
+      "business-brief.md": "b86a47fa7a8f5472380bd27318929eab133593438431f7f1153f861a2946dd0b",
+      "config.toml": "dd9bb709d3baed1039b6b60bb8084a6b65a4522a1d19cdb5e6afa3b152ecd9bc"
+    },
+    "mapping_root": {
+      "aliases.csv": "581e602a907cd0ec8c337f2a3dafdc9911859f6a807be43d18becfaf34f6baa7",
+      "clusters.csv": "f69a2b3bfed18dee9349f14a36ba5cd1213ae6ff6d41d08e84a455c3e24b49f8",
+      "demand-monthly.csv": "3886bdfaac5d72e48b23843ff750deaa3fa3b9599f193d4a7955c5f0ff1ae96e",
+      "demand-observations.csv": "2a3f06350a0b7f7e2c54bf98c389d43ef2ab9756fdb2dcffe53d8cbee8d52819",
+      "keywords.csv": "af28611b013509e36df434a275abff43080f7983a1324b6fca3f8923a4e3f3d8",
+      "overlaps.csv": "fe4197b619c524e75c94141aba2ddfd16218334a06b16e09027fe8c4409c3628",
+      "pages.csv": "ba6d9dd04803931b22e35552b0818b18b590aaf0fd063a0f0c258ac927c50d22"
+    },
+    "mapping_staged": {
+      "staged/aliases.csv": "581e602a907cd0ec8c337f2a3dafdc9911859f6a807be43d18becfaf34f6baa7",
+      "staged/clusters.csv": "eaed516a59edbb9baa36a9538dbe9a7594290950557d485a5b7da93b0935748b",
+      "staged/demand-monthly.csv": "3886bdfaac5d72e48b23843ff750deaa3fa3b9599f193d4a7955c5f0ff1ae96e",
+      "staged/demand-observations.csv": "4917b64fbb31df6fb78a016ed6c409450eb57dae5f0f103642c348f7efcb3ab9",
+      "staged/keywords.csv": "f24110d4a89688268678a191d288e12f2ebd6e9f7373802b56492deb35dc9099",
+      "staged/overlaps.csv": "12d249b2e64fbcd05785f77f69e9b7bd956f5a2578cef858a1a789741ed301b0",
+      "staged/pages.csv": "50b827adb328f91e156a07e7865cc24e128b2a4340c183400a98ba16eb3b6096"
+    },
+    "raw": {
+      "raw/gkp-discover-01-spring-hub.csv": "d7518a4bd5217338024c1dab6ca12ab2b4451977862df7ad8325424e6fb5260f",
+      "raw/gkp-discover-02-burns-night.csv": "286ffd7876d9f38b88dbd3d4afd7c069381fce046a87b6509b9326333f85e885",
+      "raw/gkp-discover-03-valentines.csv": "fbf1b3dfc97b7a4e76912c6e6fe3cbecdb4624f19e2348491472081c3c74889d",
+      "raw/gkp-discover-04-mothers-day.csv": "cafa5406e19d68592586951153e2e84ddac5ff165fa36095547aa417ea986c2d",
+      "raw/gkp-discover-05-st-patricks.csv": "104ca19914abe34723a0425c9651c97080277fd23320d9de74ee7f1be5f9563e",
+      "raw/gkp-discover-06-easter.csv": "d649b9b4787ea791d6ecd52430090e7f3c02ccba2472ad840781b15dfb70d01a",
+      "raw/gkp-discover-07-six-nations.csv": "8e3ff8c7320bff16d145cde6c7b6a890404fe1bae5e8c18eb8beb2a0c356a2aa",
+      "raw/gkp-discover-08-dry-january-drinks-days.csv": "e325d453fb97eb26404b3f67272a74822ca0f3aec9057f056f827893d6c96b43",
+      "raw/gkp-discover-09-page-six-nations-guide.csv": "68328456741926d22857b578862b288ed5845b78d734662b8806e116770c574c",
+      "raw/gkp-discover-10-page-events-calendar-guide.csv": "b2b1be1b6446ee03586ede1db8b7735953ad9794ff63c9c847a977f5c3f2cb39"
+    },
+    "references": {
+      "references/business-profile.md": "d0af036e82e5478b5abe4ecf69c2c3591334d7fa165e44b2086dc04a68deff03",
+      "references/config-schema.md": "cfefb4f2bdd36ac25478a56e8c4b3960e2545a468abd7891f416afbd06940a46",
+      "references/ctr-curves.csv": "f8001184195086defef139bac23c6f7c77f675365d341b1aa8cf8b97892fabb3",
+      "references/data-contracts.md": "6b879e415fe1658c7f8c4de7192d8f45d85f35d1564b5887e25600a6f6740769",
+      "references/diagnostics-and-priority.md": "479d32560371f223521839f76a784d2f0ea5510a4a271d9e48da5f80d83c9504",
+      "references/evidence-register.md": "e21b1ca301d1acb2726a038f157be22e62a9506a4b93fb7440d17896d9a819f8",
+      "references/gsc-incidents.toml": "1f888a390e9027dc904a4a78b731d658ddcb69bd31b3338bd152568354f6b2fb",
+      "references/handoff-contract.md": "73731da2e6b2a874a62d2807a27295b8887f6e6a6cd923cdb2ba9743f192bc6a",
+      "references/measurement-contract.md": "6e3227ef3880b21002885d08502298bab5ae4e3dc4a6f58e134601a7360ae110",
+      "references/operator-guide.md": "280c698915684a41da8381fe2ff1c02e86a31f5b5a3e1723e43b64ca7be45db1",
+      "references/regex-grammar.md": "2bdbc84236aa23192c3b60a1a29d2928806860ac4daa1d7fcd663c7a189a82b1",
+      "references/schemas.md": "29c400a9f782b3c9a20af0f2e059f15c037def9dc3b4bae4af0513631550b68f",
+      "references/site-events.md": "c09611859c283cae8f1f4029a5d136ce013d46233c3fb953f40ff08e64ab0d2d",
+      "references/uk-bank-holidays.toml": "4fbbc60fd49a0469dc903b6eded870e1ebd8d1beb241f8393a9bfd322eb60b4d"
+    },
+    "scripts": {
+      "scripts/CONTRACT.md": "f96bca63f5576cea8c8636e8e839922b0514e1cff32ea1aa578c74e957558d10",
+      "scripts/NOTES-analysis.md": "74205da999ae6584a6b5a35cc54bd1ad5b9885c77e5a4469228e0bbdfcd50d4a",
+      "scripts/NOTES-gbp.md": "cf62998b9ad7a3ea1aa6998fc8f26338cccaa5a1f9ea64d49662af4f04bae1c5",
+      "scripts/NOTES-import.md": "5c76c82d36acbc32ea15c90815cc036f624fe0245b2b9b5684565cb050027ca0",
+      "scripts/NOTES-intake.md": "d027f9fc3854634a2ff01d969ddbfdd8be39969e15f88d13cf1e17fb083a622e",
+      "scripts/analysis_common.py": "06991cb55f3e389754f1b36075c4870e3581ced0e60c395453b8d2d99585563f",
+      "scripts/build-universe.py": "0183ae83777d2fdd3b26eecd7f7d2772dad5dc55d060c53931a44baf212caad2",
+      "scripts/check-gbp.py": "ab64387d38b8484d80c754e262d54e531cac6c98447f0c9fd8eb3ee66906a632",
+      "scripts/check-regex.py": "ff66ca8ad21424b6c8264d5bcd974902f85b100e5a47cd250d020f6518013653",
+      "scripts/common.py": "aedbbef610c5eda6d8fc6c7c75d1d936dda40cdac78de5fa34572b65c052a27f",
+      "scripts/delta.py": "d4438ced706e3be4aa5e2c9b78396f21a2c481db2d4fd9e83c027a95cfcfcd45",
+      "scripts/diagnose.py": "aa7a21f22c259b74cc990e1ae56ae8acc5348b836546ba2300ffe24bf9f9c761",
+      "scripts/finalise-run.py": "f3f3c2e731b9ae1acfbac22065891459f864e0d90b2f4a1417e0a1f1f7f757a6",
+      "scripts/gbp_common.py": "02874d8dedd68dd31a6d6d6662491a4604bac4bd021ff4d8a7928f982e07dbbe",
+      "scripts/import-gbp.py": "181d92253b2c4e889c7a7c1d6130b7de2c868987f5fbc3b50bd1bdeecf6df379",
+      "scripts/import-gkp.py": "d2192a86b2a3d632eb122918d6f6b855c90173924c162690f539b2a300939288",
+      "scripts/import-gsc.py": "926423e5ae7005420a8b69c05c0158d5c7b11e0f9b74979f571617dd2246868d",
+      "scripts/incidents.py": "f584151da8db3bb73eb8a7293591f8883a69c027b7ffd1366ecdc4def2cfb5a1",
+      "scripts/join-performance.py": "f2f4ecc9fa412c31185c1e00c96c0048f5a7ea1375ff46549e0772ac32e1e5f0",
+      "scripts/lint-plan.py": "b296ac0f6cd38451a9d7585a869d11e23587c7e19b784bc46d579de7c10fdf60",
+      "scripts/make-request.py": "2eeb6338924370b16669f211c0ac63a96328a41506cf8fde4338c3f37538051d",
+      "scripts/sort-inbox.py": "501f9fbb5e4043062dc4b25e0f909770d440e61813eb2ddc10bc0f7b5a1814f9",
+      "scripts/validate-run.py": "f78b10edccd2ca8a40e5736e45a683d2eb85a92598a77635ee8e902bb72879ca"
+    }
+  },
+  "interpreter": "CPython 3.12.8",
+  "mapping_version": "2",
+  "mapping_versions": [
+    "1",
+    "2"
+  ],
+  "mode": "expansion",
+  "run_id": "2026-10-17-03-expansion",
+  "schema_version": 1,
+  "score_version": "2.1.0"
+}

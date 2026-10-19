@@ -1,0 +1,45 @@
+{
+  "actor": "Peter Pitcher",
+  "at": "2026-10-19T09:00:00+01:00",
+  "scope": "backlog",
+  "approved": [
+    {
+      "ticket_id": "tk_000021",
+      "version": "da19f099669626fe6fb1b9f608d7fbe3ce58d030da677d722d45efae6fc7e908"
+    },
+    {
+      "ticket_id": "tk_000022",
+      "version": "667abd5d88e3bd7c8caa54e4b2fc25b15968a631d9767eadc64b72cc15bc5e37"
+    },
+    {
+      "ticket_id": "tk_000023",
+      "version": "20853951fa502c6ac6ee56b295635f0016c44166846fe8a238eaf1800f273dac"
+    },
+    {
+      "ticket_id": "tk_000028",
+      "version": "94f1c6cd44f6959679c6353da40eaa6661ba30a3537cbfeb60791bbc3ad2a8a2"
+    },
+    {
+      "ticket_id": "tk_000029",
+      "version": "10ca907161bf6b54decee8394a6e1fe468f60a3048d15c91bacf8dc47a9cda3c"
+    }
+  ],
+  "deferred": [
+    "tk_000012",
+    "tk_000013",
+    "tk_000014",
+    "tk_000015",
+    "tk_000016",
+    "tk_000017",
+    "tk_000018",
+    "tk_000019",
+    "tk_000020",
+    "tk_000024",
+    "tk_000025",
+    "tk_000026",
+    "tk_000027",
+    "tk_000030"
+  ],
+  "rejected": [],
+  "note": "Peter approved the five collect-evidence tickets for Burns Night, Valentine's Day, Mother's Day, St Patrick's Day and Easter on 19 October 2026 ('1 yes'). Six Nations (tk_000030) and every ticket outside this expansion are deferred to the next review run. The content build (pg_0039 to pg_0044 and the pg_0045 refresh) was approved separately on 17 October 2026."
+}

@@ -1,316 +1,178 @@
-# Keyword Plan: orangejelly.co.uk (GB), run 2026-09-08-01-setup, mode setup
+# Keyword Plan: orangejelly.co.uk (GB)   run 2026-10-17-03-expansion, mode expansion
 
 ## Next required input
 
-Your decision on the backlog below, as one yes or no to the whole list. Nothing else is needed to
-finish this run.
+One approval from Peter of the backlog list at the end of this plan. No further exports are needed for this run.
 
 ## How to read this plan
 
-**This is a baseline, and it describes the site as it was before 31 August 2026.** The
-repositioning released that day, and `/licensees-guide` became `/guides` underneath roughly 900 of
-the site's 978 annual clicks. Every window here straddles or predates that. Nothing in this plan
-measures the site you can see today. The rebuild becomes measurable in the review of late
-October 2026.
-
-**Levels and completeness.** Property totals come from `Chart.csv` and are complete for the
-window. Query figures are always a named subset. Cluster figures are named-query evidence and are
-labelled as such; they are never the cluster's traffic.
-
-**Coverage is poor, and partly my fault.** In these exports the named-query tables carry
-**9.1% of clicks** over three months (47 of 515) and **37.2% of impressions**. The other 91% of
-clicks belong to queries Google will not name. Worse, because I asked you to apply a Country
-filter, the Pages table was restricted to the same named subset: it reports 47 clicks where the
-property total is 515. An unfiltered export of the same 16 months, taken on 31 August, has a Pages
-table covering **100.9%** of its chart total. So the country filter bought UK accuracy at the cost
-of a complete page census. Next run takes both: one unfiltered export for pages, the filtered ones
-for queries.
-
-**Demand is banded, and a band is not a number.** The Ads account has no active spend, so Keyword
-Planner returns 50, 500, 5,000 and 50,000, which encode the ranges 10 to 100, 100 to 1K, 1K to 10K
-and 10K to 100K. Every demand figure below is printed as its range. Band codes are never summed.
-
-**Evidence tiers.** 15 clusters are Tier B, 2 are Tier D. **Nothing reached Tier A**, because no
-cluster has both the named-query evidence and the head-term demand observation that Tier A
-requires. That is why every scenario below reads "not estimable" rather than a click forecast.
-
-**Curve.** The bundled `awr-organic-blended` curve is used. The site's own curve had only 5 valid
-bins (5, 6, 7, 9, 10) and needs at least 5 including bins 3 and 8. Site bins are kept in
-`analysis/curve.json` as context.
+- **Scope.** An expansion for the spring 2027 season: a Spring Pub Playbook hub, five new occasion guides (Burns Night, Valentine's Day, Mother's Day, St Patrick's Day, Easter) and a 2027 refresh of the Six Nations guide. Peter approved the build on 17 October 2026 and the keyword groups, clean-ups and rule-outs on the same day.
+- **Demand.** Keyword Planner "Discover new keywords" exports, United Kingdom, English, Google Search, window 1 October 2025 to 30 September 2026. Peter attested on 17 October 2026 that the volumes showed ranges, so every figure is a band (`encoded_band`), printed as a range and never summed. Location, language and network were requested as printed and not separately confirmed.
+- **Completeness.** No Search Console pulls in this run: the 8 September 2026 baseline is reused because it is under 60 days old. There are therefore no clicks, impressions or positions here, every spring group is evidence tier C (demand only) and the playbook is tier D (no measurable demand). No scenario is estimable.
+- **Curve.** The bundled `awr-organic-blended` fallback; no property-scope 3m export in this run.
+- **Incidents and site events.** No window overlaps an incident. `site-events.toml` does not exist yet, although the guide section was renamed from `/licensees-guide/` to `/guides/` before this run; nothing in this plan compares pages across that rename.
+- **Phases.** Phase 1 skipped (baseline reused). Phase 3 skipped (`--refresh none`): the discovery exports carried demand for the terms that matter; seeds with no data stay eligible for the next expansion.
+- **Runs.** This run supersedes `2026-10-17-02-expansion`, which superseded `2026-10-17-01-expansion`; both are abandoned and kept for the history.
 
 ## What moved since the last run
 
-Nothing, because this is the first finalised run. It establishes the baseline that the October
-review will compare against. `delta.py` recorded `BASELINE_ESTABLISHED`.
-
-Eleven changes shipped between 9 August and 6 September are recorded in `changes.jsonl` so the
-next run can say "moved after change X" honestly: the 9 August title and description rewrite on
-six mapped guides, the site-wide metadata hygiene of the same day, the 31 August repositioning and
-rename, the 2 September plain-English rewrite, the 5 September indexing repairs and GA4 events,
-and the 6 September retirement of "growth partner".
-
-## The finding that should change what you do next
-
-The positioning you moved to has **more measurable demand than everything the guide library has
-ever ranked for**, and the site has almost no footprint in it.
-
-Measured on 8 September, United Kingdom, English, Google Search:
-
-| Term | Band, searches a month | Paid competition |
-|---|---|---|
-| websites and applications | 10K to 100K | Low |
-| websites development | 1K to 10K | Low |
-| website development in uk | 1K to 10K | Medium |
-| free online booking system | 1K to 10K | High |
-| online reservation system free | 1K to 10K | High |
-| table booking system | 100 to 1K | Medium |
-| web booking system | 100 to 1K | Medium |
-| fractional marketing director | 100 to 1K | Medium |
-| fractional cmo uk | 100 to 1K | Low |
-| professional services marketing agency | 100 to 1K | Medium |
-| hospitality website design | 100 to 1K | Medium |
-
-Against that, **the highest band any pub content term has ever returned is 100 to 1K**, reached by
-four terms in total: `picture round ideas`, `pub quiz answer sheet`, `pub quiz round ideas` and
-`pub bingo`. Of the 67 pub terms measured on 9 August, 44 returned no data at all, and all 44 were
-asked again on 8 September and returned no data again.
-
-And the footprint is the mirror image. Over three months the site earned 1,618 named-query
-impressions for pub and hospitality marketing, 1,637 for pub events and 1,374 for pub bingo, but
-**5 impressions for booking systems and 2 for websites and applications**.
-
-So the site ranks where the demand is smallest and is absent where the demand is largest. That is
-the whole strategic picture in one line, and it is the first time this programme can show it,
-because no discovery pull had ever been run against this site before today.
-
-Two cautions before anyone acts on the table above. The very high bands attach to broad, ambiguous
-phrases (`websites and applications`, `websites to make websites`) that are not necessarily
-commercial intent, and several carry High competition. The specific, commercially shaped terms
-(`table booking system`, `fractional cmo uk`, `professional services marketing agency`,
-`hospitality website design`) are the honest targets. A SERP check is proposed below before any
-page is written against them.
+- Not available: this run has no month or 3m window to compare with run `2026-09-08-01-setup` (see `analysis/delta.md`).
 
 ## Cluster scoreboard
 
-Ordered by priority score. Impressions, position and clicks are named-query evidence over the
-three months to 6 September 2026, not cluster traffic.
+From `analysis/plan-skeleton.md`, spring groups first, ordered by priority score; tier C for every spring group means demand is known and performance is not yet measured.
 
-| Cluster | Demand (band) | Named clicks | Named impressions | Position | Tier | Deciding tag | Action | Priority |
-|---|---|---|---|---|---|---|---|---|
-| Website and application build (cl_0001) | 10K to 100K top term | 0 | 2 | 6.0 | B | LOW_OBSERVED_VISIBILITY | investigate-visibility | 37.5 |
-| Booking systems (cl_0002) | 1K to 10K top term | 0 | 5 | 7.8 | B | LOW_OBSERVED_VISIBILITY | investigate-visibility | 37.5 |
-| Brand (cl_0017) | unknown | 0 | 1 | 12.0 | B | LOW_OBSERVED_VISIBILITY | investigate-visibility | 37.5 |
-| Pub turnaround (cl_0012) | 10 to 100 | 0 | 148 | 7.6 | B | CTR_GAP_CANDIDATE | serp-check | 36.0 |
-| Pub and hospitality marketing (cl_0004) | 10 to 100 | 0 | 1,618 | 19.7 | B | STRIKING_DISTANCE_CANDIDATE | strengthen-page | 32.0 |
-| Fractional marketing leadership (cl_0005) | 100 to 1K top term | 0 | 18 | 26.8 | B | LOW_OBSERVED_VISIBILITY | investigate-visibility | 30.0 |
-| Pub quiz mechanics (cl_0007) | 100 to 1K top term | 15 | 687 | 11.1 | B | STRIKING_DISTANCE_CANDIDATE | strengthen-page | 24.0 |
-| Pub bingo (cl_0008) | 100 to 1K | 6 | 1,374 | 10.9 | B | STRIKING_DISTANCE_CANDIDATE | strengthen-page | 24.0 |
-| Pub social media marketing (cl_0013) | unknown | 0 | 11 | 7.4 | B | LOW_OBSERVED_VISIBILITY | investigate-visibility | 22.5 |
-| Cellar and drinks operations (cl_0014) | unknown | 3 | 957 | 8.6 | B | CTR_GAP_CANDIDATE | serp-check | 18.0 |
-| Promotional calendar (cl_0015) | unknown | 1 | 402 | 11.4 | B | STRIKING_DISTANCE_CANDIDATE | strengthen-page | 16.0 |
-| Pub food and menu profitability (cl_0009) | 10 to 100 | 0 | 179 | 21.5 | B | DEMAND_UNKNOWN | hold | 9.0 |
-| Pub events and entertainment (cl_0010) | 10 to 100 | 4 | 1,637 | 23.3 | B | DEMAND_UNKNOWN | hold | 9.0 |
-| Pub staffing and people (cl_0011) | 10 to 100 | 0 | 16 | 15.4 | B | DEMAND_UNKNOWN | hold | 3.0 |
-| Pub refurbishment and property (cl_0016) | 10 to 100 | 0 | 91 | 53.5 | B | DEMAND_UNKNOWN | hold | 3.0 |
-| Hospitality websites (cl_0003) | 100 to 1K | none | none | none | D | LOW_OBSERVED_VISIBILITY | research | not scored |
-| Professional services sector (cl_0006) | 100 to 1K | none | none | none | D | LOW_OBSERVED_VISIBILITY | research | not scored |
+| Cluster | Head term | Demand (band, mode, date) | Target page | Tier | Action | Priority |
+|---|---|---|---|---|---|---|
+| Burns Night (cl_0019) | burns night menu ideas | 100 to 1,000 (encoded_band, 2026-10-17) | pg_0040 | C | collect-evidence | 8.0 |
+| Valentine's Day (cl_0020) | valentine's day menu ideas for restaurants | 100 to 1,000 (encoded_band, 2026-10-17) | pg_0041 | C | collect-evidence | 8.0 |
+| Mother's Day (cl_0021) | mothers day menu ideas | 100 to 1,000 (encoded_band, 2026-10-17) | pg_0042 | C | collect-evidence | 8.0 |
+| St Patrick's Day (cl_0022) | st patricks day pub ideas | 10 to 100 (encoded_band, 2026-10-17) | pg_0043 | C | collect-evidence | 4.0 |
+| Easter (cl_0023) | easter pub ideas | 10 to 100 (encoded_band, 2026-10-17) | pg_0044 | C | collect-evidence | 4.0 |
+| Six Nations in the pub (cl_0024) | six nations pub | 10 to 100 (encoded_band, 2026-10-17) | pg_0045 | C | collect-evidence | 4.0 |
+| Spring pub playbook (cl_0018) | spring pub event ideas | unknown | pg_0039 | D | research | |
 
-Every scenario is "not estimable" for the reason given above. All 17 carry
-`EVIDENCE_INSUFFICIENT (cannibalisation)`, because page pulls were dropped from this run.
+The other seventeen groups appear in `analysis/plan-skeleton.md` unchanged in substance; this run gathered no new evidence for them, so their tickets are deferred to the next review run.
 
 ## Page performance
 
-The complete page census below comes from the **12-month export of 9 August 2026**, whose Pages tab
-is complete: it sums to 850 clicks against a stated property total of 850. It is all countries, not
-GB, and it ends a month before this run's windows. It is used here because no export taken today
-can reproduce it, for the reason given under "How to read this plan".
-
-| Page | Clicks | Impressions | Position |
-|---|---|---|---|
-| /licensees-guide/summer-pub-event-ideas | 145 | 9,704 | 16.5 |
-| /licensees-guide/quiz-night-ideas | 106 | 5,753 | 12.0 |
-| /licensees-guide/profitable-pub-food-menu-ideas | 98 | 5,189 | 7.7 |
-| /licensees-guide/social-media-strategy-for-pubs | 42 | 4,352 | 12.7 |
-| /licensees-guide/quiz-night-101 | 40 | 2,937 | 7.9 |
-| /licensees-guide/cash-bingo-101 | 37 | 1,979 | 9.5 |
-
-The unfiltered 16-month export of 31 August 2026 is the control that proves the point: its Pages
-tab carries 1,008 clicks against a chart total of 999, so 100.9% coverage, while today's
-country-filtered 16-month export carries 70 against 904.
-
-Within this run's own three-month window, the pages carrying the most named-query impressions were
-`summer-pub-event-ideas` (1,897 impressions, 7 clicks, position 33.1), `cash-bingo-101` (1,422, 7
-clicks, 10.8), `macmillan-coffee-morning-pub-guide` (916, 2 clicks, 11.1) and `quiz-night-ideas`
-(829, 15 clicks, 14.0).
-
-Two URLs earning impressions are absent from the page map and should be added next run:
-`/ways-to-work` (504 impressions, position 42.5) and `/guides/pub-insurance-cover-guide` (295
-impressions, position 28.6).
+- None in this run: no Search Console exports.
 
 ## Defend and repair
 
-`Brand (cl_0017)` carries one named-query impression at position 12.0 over three months. For a
-company with a live site and a public name, that is not a normal brand footprint, and it sits in
-the queue as `investigate-visibility` rather than as a content job. It may be nothing more than
-the query being too rare to be named; the investigation is what settles it.
-
-No navigational queries beyond the brand term appear in the named subset.
+- None: no group has a brand-flagged head keyword.
 
 ## Primary page targets, secondary and question terms
 
-Local terms do not apply: the profile is `established-nonlocal` and no local lens was pulled.
+Bands from `staged/demand-observations.csv`, observed 2026-10-17. Primary and secondary terms are licensee intent. Date and consumer terms are answered in passing on the page, never targeted.
 
-Primary targets follow the cluster to target page mapping in `clusters.csv`. Two changes were made
-to that mapping this run, both from evidence:
+| Page | Primary | Secondary | Answer in passing, not targeted |
+|---|---|---|---|
+| pg_0039 Spring Pub Playbook | none measurable: every season-level term returned no data | none | none |
+| pg_0040 Burns Night | burns night menu ideas (100 to 1,000) | burns night menu (1,000 to 10,000); burns supper menu (1,000 to 10,000); burns night running order (10 to 100); how to host a burns night (10 to 100); burns night pub ideas (10 to 100) | burns night 2027 (1,000 to 10,000) |
+| pg_0041 Valentine's Day | valentine's day menu ideas for restaurants (100 to 1,000) | valentines day set menu (100 to 1,000); valentines menu ideas (100 to 1,000); bar ideas for valentine's day (10 to 100); anti valentine's day bar ideas (10 to 100); business marketing ideas for valentines day (10 to 100) | none |
+| pg_0042 Mother's Day | mothers day menu ideas (100 to 1,000) | mothers day set menu (100 to 1,000); mother's day afternoon tea menu ideas (10 to 100); mother's day buffet menu ideas (10 to 100); mother's day marketing campaign ideas (10 to 100) | mothers day 2027 (10,000 to 100,000); when is mothers day 2027 (1,000 to 10,000) |
+| pg_0043 St Patrick's Day | st patricks day pub ideas (10 to 100) | ideas for st patricks day food (100 to 1,000); bar ideas for st patrick's day (10 to 100); marketing ideas for st patrick's day (10 to 100); menu ideas for st patrick's day (10 to 100); hosting a st patrick's day party (10 to 100) | st patricks day 2027 (1,000 to 10,000) |
+| pg_0044 Easter | easter pub ideas (10 to 100) | easter menu ideas (100 to 1,000); easter sunday menu ideas (100 to 1,000); easter weekend events (100 to 1,000); community easter event ideas (10 to 100); easter bank holiday events (10 to 100); best easter marketing campaigns (10 to 100) | easter 2027 dates (10,000 to 100,000); easter bank holiday 2027 (1,000 to 10,000) |
+| pg_0045 Six Nations | six nations pub (10 to 100) | six nations screening (10 to 100); watch six nations pub (10 to 100) | six nations 2027 fixtures (1,000 to 10,000); six nations 2027 (1,000 to 10,000) |
 
-- `cl_0010` (pub events) was retargeted from `/guides/pub-event-ideas`, which earned 20
-  impressions in twelve months, to `/guides/summer-pub-event-ideas`, which earned 9,704 and is the
-  largest page on the site.
-- Eight of the highest-impression guides were missing from `pages.csv` entirely and were added.
-
-Question terms are not proposed as answer blocks anywhere in this plan, because no SERP
-observation exists for any cluster. That is what the two `serp-check` tickets are for.
+Question terms: "how to host a burns night" and "when is mothers day 2027" are the only question-form terms with demand in these groups. Neither has a dated result-page observation, so neither is mapped to an answer block; the guides may answer them in their own words.
 
 ## Avoid list
 
-| Term | Scope | Reason |
-|---|---|---|
-| family kids pub | all | Ten seeds returned no data on 9 August 2026 and the same terms returned no data again on 8 September. The GSC impressions are real (229 for "how to organise events to attract families to pubs", 226 for "kids craft pop up events for pubs" over three months) but have earned no clicks. SEO-135 stays closed. |
-| national vodka day | cl_0015 | Consumer intent. The drinks-days guide earns impressions from drinkers wanting a date, not from licensees. Impressions stay high and clicks stay low, deliberately. |
+All in `config.toml`, approved by Peter on 17 October 2026, on top of the two earlier entries ("family kids pub", "national vodka day"):
 
-Eight keywords in the universe are flagged against these entries.
+- "near me", scoped to each of the seven spring groups (cl_0018 to cl_0024): people looking for a pub to visit, not licensees running one.
+- "2020", "2021", "2022", "2023", scope all: searches naming a past year are out of date.
+- "recipe", "at home", "craft", scoped to the five occasion groups (cl_0019 to cl_0023): home cooking and crafts. Scoped so that "craft beer" and recipe costing elsewhere stay eligible.
+- "bonnet", "breakfast in bed", "preschool", "eyfs", "classroom", scope all: home, children's and school terms.
+- "margarita", scope cl_0015: mostly drinkers, many American, hunting chain-restaurant deals; the same call as "national vodka day".
 
 ## Per-cluster guidance
 
-**cl_0001 Website and application build, and cl_0002 Booking systems.** Highest priority, and both
-are `investigate-visibility` rather than "write a page". The site has service pages live for both
-and 2 and 5 named-query impressions respectively. Before anything is written, find out whether
-those pages are indexed, whether they are eligible for the terms at all, and what is actually
-ranking. `/solutions/hospitality-websites` and `/solutions/booking-systems` were only published on
-5 September, so some of this may simply be that Google has not caught up.
+Every page follows `CLAUDE.md`: British English, no retired self-description, only the five approved claims, no invented facts, and dates checked against an official source. Pages are written in the Orange Jelly company voice, with The Anchor as "our own venue".
 
-**cl_0004 Pub and hospitality marketing services.** 1,618 named-query impressions at position 19.7
-and no clicks. The largest reclaimable footprint on the site, and the one place where the old
-positioning still earns attention. Position, not the title, is the constraint at 19.7.
+### pg_0039 Spring Pub Playbook (cl_0018), new, /guides/spring-pub-event-ideas
 
-**cl_0007 Pub quiz mechanics and cl_0008 Pub bingo.** The only pub clusters with demand in the 100
-to 1K band, and both sit in striking distance (11.1 and 10.9). Bingo has no hub page: `pg_0030`
-`/guides/pub-bingo` is planned, not live, and 1,374 impressions currently land on the two format
-guides.
+- **Title:** Spring Pub Playbook 2027: Every Date from Dry January to Easter
+- **H1:** the spring pub playbook (the hub design lowercases display headings)
+- **Intent:** the seasonal hub and the Greene King spring toolkit's landing page. It earns search through the guides it links to, not through its own terms.
+- **Sections:** the 2027 calendar (every date, linking to its guide); lead times; plan it all in an afternoon (the AI planning guide as the lead card); the occasion guides; the existing guides that also fit (Six Nations, drinks days, low and no alcohol, the events calendar); keep it responsible.
+- **Build:** registered as the spring hub in `src/lib/seasonal-hubs.ts` (the spring theme tokens already exist).
+- **Overlap note:** "pub events calendar" belongs to the existing events calendar guide; the hub links to it rather than competing.
 
-**cl_0012 Pub turnaround and cl_0014 Cellar.** Both tagged `CTR_GAP_CANDIDATE` at positions 7.6
-and 8.6. A SERP check comes first, because a click-through gap at position 8 is often an AI
-overview or a feature block rather than a weak title.
+### pg_0040 Burns Night (cl_0019), new, /guides/burns-night-pub-ideas
 
-**cl_0009, cl_0010, cl_0011, cl_0016.** Hold. Real impressions, positions between 15 and 53, and
-demand no better than 10 to 100. Not worth effort while the clusters above are open.
+- **Title:** Burns Night Menu Ideas for Pubs: Supper, Running Order and Promotion
+- **H1:** burns night menu ideas for pubs
+- **Intent:** informational, licensee planning a Burns supper.
+- **Sections:** why Burns Night suits a pub (Monday 25 January 2027); a Burns supper menu, traditional and modern; the running order (Selkirk Grace, piping in the haggis, the Address, the toasts, Auld Lang Syne); one sitting, one price, pre-ordered; drinks; promotion timeline; allergens from the supplier's information, never assumed.
 
-**Overlaps.** 44 queries match more than one cluster and are excluded from cluster totals until
-resolved. Most are `cl_0001` against `cl_0002` (booking terms that mention websites) or `cl_0001`
-against `cl_0006` (professional services websites). They need resolving before the October review,
-and they matter because they sit in the two highest-priority clusters.
+### pg_0041 Valentine's Day (cl_0020), new, /guides/valentines-day-pub-ideas
+
+- **Title:** Valentine's Day Menu Ideas for Pubs and Restaurants: Set Menus, Sittings and Promotion
+- **H1:** valentine's day menu ideas for pubs
+- **Intent:** informational, licensee building a Valentine's offer.
+- **Sections:** 2027 falls on a Sunday with England v France in the afternoon; set menu ideas; two sittings and deposits; a bar night for everyone else (anti-Valentine's, Galentine's); promotion timeline; keep it responsible.
+
+### pg_0042 Mother's Day (cl_0021), new, /guides/mothers-day-pub-ideas
+
+- **Title:** Mother's Day Menu Ideas for Pubs: Set Menus, Bookings and Promotion
+- **H1:** mother's day menu ideas for pubs
+- **Intent:** informational, licensee planning a Mother's Day lunch service.
+- **Sections:** the date (Sunday 7 March 2027) and the rugby weekend before it; set menu ideas; sittings and table turns; afternoon tea and buffet alternatives; bookings, deposits and reminders; the marketing campaign, week by week.
+
+### pg_0043 St Patrick's Day (cl_0022), new, /guides/st-patricks-day-pub-ideas
+
+- **Title:** St Patrick's Day Pub Ideas: Events, Food and Promotions
+- **H1:** st patrick's day pub ideas
+- **Intent:** informational, licensee planning a midweek event.
+- **Sections:** the date (Wednesday 17 March 2027, a bank holiday in Northern Ireland, four days after the Six Nations finale); event formats (music, a quiz, an Irish night); food ideas; drinks without risky promotions (the Scottish rules); promotion; staffing the night.
+
+### pg_0044 Easter (cl_0023), new, /guides/easter-pub-ideas
+
+- **Title:** Easter Pub Ideas: Menus, Events and Promotions for the Long Weekend
+- **H1:** easter pub ideas
+- **Intent:** informational, licensee planning the four-day weekend.
+- **Sections:** the dates (Good Friday 26 March to Easter Monday 29 March 2027) and bank holidays by nation; a plan for each day; Easter Sunday menu ideas; community and family events (an egg hunt); International Whisk(e)y Day on Easter Saturday; promotion.
+
+### pg_0045 Six Nations (cl_0024), refresh, /guides/pub-six-nations-rugby-marketing
+
+- **Title:** Six Nations 2027 in Your Pub: Fixtures, Screening and Match-Day Ideas
+- **H1:** six nations 2027 in your pub
+- **Intent:** informational, licensee planning the men's and women's championships. The slug stays: it is the live URL.
+- **Change:** replace 2026 references with the verified 2027 fixtures (men's 5 February to 13 March, women's on five Saturdays from 10 April to 15 May); keep the screening, food and booking guidance; link to the playbook.
 
 ## Backlog for approval
 
-One list, one decision. Eleven tickets, ordered by priority score. Six are investigations rather
-than changes, which is the right shape for a first run on a site whose evidence is this thin.
+One list, one approval.
 
-**Approval required, investigations first**
+**Already approved by Peter on 17 October 2026 (content build, not diagnose tickets):** the six new pages pg_0039 to pg_0044 and the pg_0045 refresh, written to the guidance above.
 
-| Ticket | Priority | Cluster | Action | Owner |
-|---|---|---|---|---|
-| tk_000001 | 37.5 | cl_0001 | investigate-visibility: website and application build | seo-powerhouse |
-| tk_000002 | 37.5 | cl_0002 | investigate-visibility: booking systems | seo-powerhouse |
-| tk_000003 | 37.5 | cl_0017 | investigate-visibility: brand | seo-powerhouse |
-| tk_000004 | 36.0 | cl_0012 | serp-check: pub turnaround | seo-powerhouse |
-| tk_000006 | 30.0 | cl_0005 | investigate-visibility: fractional marketing | seo-powerhouse |
-| tk_000009 | 22.5 | cl_0013 | investigate-visibility: pub social media | seo-powerhouse |
-| tk_000010 | 18.0 | cl_0014 | serp-check: cellar and drinks | seo-powerhouse |
+**Approval asked now (five, by priority score):**
 
-**Approval required, content**
+- tk_000021: collect-evidence, Burns Night (priority 8.0)
+- tk_000022: collect-evidence, Valentine's Day (priority 8.0)
+- tk_000023: collect-evidence, Mother's Day (priority 8.0)
+- tk_000028: collect-evidence, St Patrick's Day (priority 4.0)
+- tk_000029: collect-evidence, Easter (priority 4.0)
 
-| Ticket | Priority | Cluster | Action | Owner |
-|---|---|---|---|---|
-| tk_000005 | 32.0 | cl_0004 | strengthen-page: pub and hospitality marketing | editorial-team |
-| tk_000007 | 24.0 | cl_0007 | strengthen-page: pub quiz mechanics | editorial-team |
-| tk_000008 | 24.0 | cl_0008 | strengthen-page: pub bingo | editorial-team |
-| tk_000011 | 16.0 | cl_0015 | strengthen-page: promotional calendar | editorial-team |
+Collect-evidence means the next review run requests query-filtered Search Console pulls for these groups once their pages are live, so they can move from tier C to a measured tier.
 
-**Deferred, not proposed**
-
-`hold` on cl_0009, cl_0010, cl_0011 and cl_0016. `research` on cl_0003 and cl_0006, which are
-Tier D with no footprint at all.
-
-The skill's own guidance is to propose at most five actions in a run. Eleven are listed because
-seven of them are investigations that cost an hour each and unblock everything else. If you want
-it cut to five, take tk_000001, tk_000002, tk_000004, tk_000005 and tk_000008.
+**Deferred:** tk_000030 (Six Nations, over the five-a-run limit and ranked last of the ties) and every ticket for groups outside this expansion (tk_000012 to tk_000020, tk_000024 to tk_000027), to the next review run.
 
 ## Handoffs
 
-- `investigate-visibility` and `serp-check` to **seo-powerhouse**, with the evidence rows attached.
-- `strengthen-page` to **editorial-team**, with the primary and secondary keywords, intent,
-  evidence tier, deciding tag, and the note that no scenario is estimable.
-- No `plan-page` tickets. The gate for programmatic pages is not met by anything here.
-- Every shipped change through **deploy-verify**, and logged as a `shipped` event in
-  `changes.jsonl`.
+- **editorial-team:** one brief per page from the guidance above, carrying primary, secondary and answer-in-passing terms as the source of truth, the intent, evidence tier C (D for the playbook), the deciding action (collect-evidence; research for the playbook), the scenario "not estimable", the overlap notes and the checkpoint dates below.
+- **deploy-verify:** every shipped page.
+- **seo-powerhouse:** none in this run.
 
 ## Checkpoints due
 
-| When | What | Owner |
-|---|---|---|
-| 0 to 48 hours after any ship | technical verification | deploy-verify |
-| 1 to 2 weeks after any ship | indexation | the implementing workflow |
-| Late October 2026 | measurement, and the first window that describes the rebuilt site | the next keyword-plan review |
-| December 2026 to February 2027 | structural, the next expansion | keyword-plan expansion |
-
-Nothing is overdue: this is the first run.
+- Technical, within 48 hours of each deploy: deploy-verify.
+- Indexation, one to two weeks after each deploy: the implementer.
+- Measurement: the first review run with a full window after the pages go live, with paired intervention pulls. Demand for each occasion peaks in the weeks before its date, so the windows that matter fall between January and April 2027.
+- Structural: the next expansion, three to six months on.
 
 ## Data quality and limitations
 
-1. **Every window predates or straddles the 31 August rebuild.** No figure here describes the
-   live site.
-2. **Named-query coverage is 9.1% of clicks** over three months, 9.9% over 28 days, 7.7% over 16
-   months. Impression coverage is 35% to 40%.
-3. **The Country filter restricted the Pages table** to the same named subset. Proven against an
-   unfiltered control of the same 16 months, whose Pages tab covers 100.9%. Next run takes one
-   unfiltered export as well.
-4. **`gsc-16m-all` hit the 1,000 row table cap** on Queries and is truncated.
-5. **All Search Console windows are shorter than requested**, because presets end at the last day
-   with data. Recorded as `WINDOW_SHORTER` on all 13 exports, which is expected.
-6. **Two discovery pulls were not taken** (`gkp-discover-11`, `gkp-discover-12`, the URL batches
-   for `/solutions/booking-systems` and `/pub-marketing`). Both themes are covered elsewhere. They
-   stay eligible for the next expansion.
-7. **The Keyword Planner forecast export was discarded**, as the method requires. It is kept at
-   `raw/ignored/` and contributed nothing.
-8. **No conversion evidence exists for any cluster.** GA4 enquiry events only started on
-   5 September 2026.
-9. **No decay evaluation**, because no prior finalised run exists.
-10. **Two Search Console reporting incidents** overlap the 16-month window: the num=100 removal of
-    September 2025 and the impressions logging error running to 27 April 2026. Impressions,
-    position and click-through are not comparable across either boundary; clicks are.
-11. **A defect in the skill's importer was found and fixed during this run.** `pages_index` in
-    `import-gsc.py` indexed only `url` and `canonical_url`, never `redirect_from`, so a site that
-    has renamed a section could not be matched to its own history. Every page row resolved to
-    nothing and the page analysis read as zero. Fixed, the existing tests still pass, and the
-    import was re-run.
+- No Search Console data in this run; every figure is a demand band.
+- Location, language and network are unattested (limiting).
+- `pages.csv` predates the `first_published` column (limiting); the staged copy adds it.
+- The Pub food and menu profitability group (cl_0009) had its head keyword set by hand to "pub christmas menu ideas" (10 to 100) after the automatic rule picked "candle light dinner menu ideas" on a tie. Peter approved re-picking that group's head from its own terms.
+- The playbook has no measurable search demand; its value is as the toolkit's landing page and as the hub that links the season together.
+- `site-events.toml` is missing; writing it is a separate task before the next review run.
 
 ## Sources
 
-Every figure traces to a file under `runs/2026-09-08-01-setup/`. Hashes for all 24 present pulls
-are in `analysis/validation.json` and will be written into `manifest.json` at finalisation.
-
-- Search Console, property `sc-domain:orangejelly.co.uk`, Web, United Kingdom, exported
-  8 September 2026: `raw/gsc-16m-all`, `raw/gsc-3m-all`, `raw/gsc-month-all`, and ten
-  query-filtered exports `raw/gsc-3m-q-cl_0004`, `cl_0007`, `cl_0008`, `cl_0009`, `cl_0010`,
-  `cl_0012`, `cl_0013`, `cl_0014`, `cl_0015`, `cl_0016`.
-- Keyword Planner, United Kingdom, English, Google Search, August 2025 to July 2026, exported
-  8 September 2026: ten discovery exports `raw/gkp-discover-01` to `-10`, and one volume export
-  `raw/gkp-volumes-01.csv`.
-- Keyword Planner, same settings, July 2025 to June 2026, exported 9 August 2026: nine volume
-  exports migrated in `runs/2026-08-09-01-legacy/`.
-- Unfiltered Search Console control, Last 16 months, exported 31 August 2026:
-  `tasks/seo-powerhouse/orangejelly.co.uk-Performance-on-Search-2026-08-31.zip`.
-- Complete page census, 12 months to 9 August 2026: `evidence/gsc-2026-08-09/pages-12mo.csv`.
-- Derived: `analysis/cluster-performance.csv`, `analysis/page-performance.csv`,
-  `analysis/diagnostics.csv`, `analysis/backlog.csv`, `analysis/discovery-summary.md`,
-  `analysis/demand-summary.md`, `analysis/curve.json`, `analysis/delta.md`.
+- `raw/gkp-discover-01-spring-hub.csv` sha256 d7518a4bd5217338024c1dab6ca12ab2b4451977862df7ad8325424e6fb5260f
+- `raw/gkp-discover-02-burns-night.csv` sha256 286ffd7876d9f38b88dbd3d4afd7c069381fce046a87b6509b9326333f85e885
+- `raw/gkp-discover-03-valentines.csv` sha256 fbf1b3dfc97b7a4e76912c6e6fe3cbecdb4624f19e2348491472081c3c74889d
+- `raw/gkp-discover-04-mothers-day.csv` sha256 cafa5406e19d68592586951153e2e84ddac5ff165fa36095547aa417ea986c2d
+- `raw/gkp-discover-05-st-patricks.csv` sha256 104ca19914abe34723a0425c9651c97080277fd23320d9de74ee7f1be5f9563e
+- `raw/gkp-discover-06-easter.csv` sha256 d649b9b4787ea791d6ecd52430090e7f3c02ccba2472ad840781b15dfb70d01a
+- `raw/gkp-discover-07-six-nations.csv` sha256 8e3ff8c7320bff16d145cde6c7b6a890404fe1bae5e8c18eb8beb2a0c356a2aa
+- `raw/gkp-discover-08-dry-january-drinks-days.csv` sha256 e325d453fb97eb26404b3f67272a74822ca0f3aec9057f056f827893d6c96b43
+- `raw/gkp-discover-09-page-six-nations-guide.csv` sha256 68328456741926d22857b578862b288ed5845b78d734662b8806e116770c574c
+- `raw/gkp-discover-10-page-events-calendar-guide.csv` sha256 b2b1be1b6446ee03586ede1db8b7735953ad9794ff63c9c847a977f5c3f2cb39
+- `analysis/plan-skeleton.md`, `analysis/delta.md`, `analysis/backlog.csv`, `analysis/diagnostics.csv`, `analysis/discovery-summary.md`, `staged/clusters.csv`, `staged/pages.csv`, `staged/keywords.csv`, `staged/demand-observations.csv`, `staged/overlaps.csv`, `config.toml`
