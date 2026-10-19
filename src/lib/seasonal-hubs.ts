@@ -218,9 +218,10 @@ export const SEASON_HUBS: SeasonalHub[] = [
     hubSlug: 'spring-pub-event-ideas',
     label: 'Spring Pub Playbook',
     shortLabel: 'Spring Playbook',
-    // The Greene King spring toolkit's season, which starts in January rather than
-    // in March, so it overlaps the end of the Christmas playbook on purpose.
-    dateRangeLabel: 'January to April',
+    // The Greene King spring toolkit's season starts in January rather than in March,
+    // so it overlaps the end of the Christmas playbook on purpose. It runs to May
+    // because the women's Six Nations finishes on 15 May.
+    dateRangeLabel: 'January to May',
     calendar: [
       {
         date: 'All January',

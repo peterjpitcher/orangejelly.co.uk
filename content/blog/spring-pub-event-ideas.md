@@ -50,7 +50,7 @@ faqs:
 
 # Spring Pub Playbook 2027: Every Date from Dry January to Easter
 
-Spring is a run of reasons to visit. Dry January, Burns Night, two Six Nations championships, Valentine's Day, Mother's Day, St Patrick's Day and Easter, with drinks days and saints' days in between. Between the first week of January and the end of April, there is a reason for people to come out almost every week, and most pubs end up promoting each one the week before it happens.
+Spring is a run of reasons to visit. Dry January, Burns Night, two Six Nations championships, Valentine's Day, Mother's Day, St Patrick's Day and Easter, with drinks days and saints' days in between. Between the first week of January and the middle of May, there is a reason for people to come out almost every week, and most pubs end up promoting each one the week before it happens.
 
 This playbook puts the whole season in one place: every date, the clashes that matter in 2027, how far ahead to start selling, and a full guide for each moment. You do not need to run all of it. Pick the moments that fit your pub, plan them once, and sell them early.
 
@@ -93,7 +93,7 @@ March is the busiest month of the spring, with three of its biggest days in four
 
 **The Easter weekend, Friday 26 to Monday 29 March**, is four days of trade. Good Friday is a bank holiday in all four nations; Easter Monday is a bank holiday in England, Wales and Northern Ireland, but not in Scotland. Plan each day for itself: fish on Good Friday, the whisky flight on Saturday, a booked lunch on Easter Sunday and a family day with an egg hunt on the Monday. Our [Easter guide](/guides/easter-pub-ideas) covers the menus, the events and the promotion.
 
-## April: the women's Six Nations and St George's Day
+## April and May: the women's Six Nations and St George's Day
 
 **The women's Six Nations** is played on five Saturdays: 10, 17 and 24 April, then 8 and 15 May, with three matches back to back every afternoon and every one of them on the BBC. It is the easiest rugby of the year to build a whole afternoon around, and the fixtures are in our [Six Nations 2027 guide](/guides/pub-six-nations-rugby-marketing).
 

@@ -78,7 +78,7 @@ Take Dry January seriously rather than resenting it. Put three low and no serves
 
 [Valentine's](/guides/valentines-day-pub-ideas) works best as two sittings, say 6pm and 8.30pm, at a fixed price with a deposit taken at booking. [Six Nations](/guides/pub-six-nations-rugby-marketing) needs the fixture list on the wall by early January, food that survives a match crowd, and tables held on deposit rather than goodwill. [St Patrick's Day](/guides/st-patricks-day-pub-ideas) wants one clear headline and the staffing of a weekend, whatever day of the week it falls on.
 
-Every date from January to April, with the year's clashes and a full guide for each moment, is in our [Spring Pub Playbook](/guides/spring-pub-event-ideas).
+Every date from January to May, with the year's clashes and a full guide for each moment, is in our [Spring Pub Playbook](/guides/spring-pub-event-ideas).
 
 ## Q2: April to June (momentum and outdoor energy)
 
