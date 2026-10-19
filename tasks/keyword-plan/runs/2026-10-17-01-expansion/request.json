@@ -1,0 +1,307 @@
+{
+  "created_at": "2026-10-17T13:19:26+00:00",
+  "mode": "expansion",
+  "profile": "established-nonlocal",
+  "pulls": [
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-01",
+      "purpose": "Discovery batch spring-hub: 10 seeds",
+      "required": true,
+      "seeds": [
+        "spring pub event ideas",
+        "pub events calendar 2027",
+        "pub promotion ideas spring",
+        "pub marketing calendar",
+        "pub event ideas january",
+        "february pub event ideas",
+        "march pub event ideas",
+        "seasonal pub promotions",
+        "key dates for pubs 2027",
+        "hospitality marketing calendar 2027"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-01-spring-hub.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-02",
+      "purpose": "Discovery batch burns-night: 10 seeds",
+      "required": true,
+      "seeds": [
+        "burns night pub ideas",
+        "burns night event ideas",
+        "burns night menu ideas",
+        "burns supper menu",
+        "how to host a burns night",
+        "burns night running order",
+        "burns night 2027",
+        "burns night pub",
+        "burns night food ideas",
+        "burns supper ideas"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-02-burns-night.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-03",
+      "purpose": "Discovery batch valentines: 10 seeds",
+      "required": true,
+      "seeds": [
+        "valentines day pub ideas",
+        "valentines day restaurant ideas",
+        "valentines menu ideas",
+        "valentines day promotion ideas",
+        "valentines day event ideas",
+        "valentines day set menu",
+        "valentines day 2027",
+        "valentines night ideas for restaurants",
+        "valentines day marketing ideas",
+        "valentines pub"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-03-valentines.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-04",
+      "purpose": "Discovery batch mothers-day: 10 seeds",
+      "required": true,
+      "seeds": [
+        "mothers day pub ideas",
+        "mothers day menu ideas",
+        "mothers day lunch ideas",
+        "mothers day restaurant promotion ideas",
+        "mothers day 2027",
+        "when is mothers day 2027",
+        "mothering sunday 2027",
+        "mothers day set menu",
+        "mothers day marketing ideas",
+        "mothers day pub lunch"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-04-mothers-day.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-05",
+      "purpose": "Discovery batch st-patricks: 10 seeds",
+      "required": true,
+      "seeds": [
+        "st patricks day pub ideas",
+        "st patricks day bar promotions",
+        "st patricks day party ideas",
+        "st patricks day event ideas",
+        "st patricks day 2027",
+        "st patricks day food ideas",
+        "st patricks day pub",
+        "st patricks day marketing ideas",
+        "irish night pub ideas",
+        "st patricks day decorations for bars"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-05-st-patricks.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-06",
+      "purpose": "Discovery batch easter: 10 seeds",
+      "required": true,
+      "seeds": [
+        "easter pub ideas",
+        "easter events ideas",
+        "easter promotion ideas for restaurants",
+        "easter weekend events",
+        "easter 2027 dates",
+        "easter bank holiday 2027",
+        "easter egg hunt ideas",
+        "easter menu ideas",
+        "easter marketing ideas",
+        "easter pub events"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-06-easter.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-07",
+      "purpose": "Discovery batch six-nations: 10 seeds",
+      "required": true,
+      "seeds": [
+        "six nations 2027",
+        "six nations 2027 fixtures",
+        "six nations pub",
+        "showing six nations in a pub",
+        "six nations pub offers",
+        "six nations food ideas",
+        "womens six nations 2027",
+        "six nations tv schedule 2027",
+        "rugby pub promotions",
+        "six nations screening"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-07-six-nations.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-08",
+      "purpose": "Discovery batch dry-january-drinks-days: 10 seeds",
+      "required": true,
+      "seeds": [
+        "dry january pub ideas",
+        "dry january for pubs",
+        "alcohol free drinks for pubs",
+        "low and no alcohol menu",
+        "national margarita day",
+        "international whisky day",
+        "whisky tasting night ideas",
+        "margarita day promotions",
+        "dry january 2027",
+        "mocktail menu ideas"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-08-dry-january-drinks-days.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-09",
+      "purpose": "Discovery batch page-six-nations-guide: 2 seeds with the site URL",
+      "required": true,
+      "seeds": ["six nations pub", "rugby pub marketing"],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-09-page-six-nations-guide.csv",
+      "url_seed": "https://www.orangejelly.co.uk/guides/pub-six-nations-rugby-marketing",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-10",
+      "purpose": "Discovery batch page-events-calendar-guide: 2 seeds with the site URL",
+      "required": true,
+      "seeds": ["pub events calendar", "seasonal pub events"],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-10-page-events-calendar-guide.csv",
+      "url_seed": "https://www.orangejelly.co.uk/guides/seasonal-pub-events-calendar",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-11",
+      "purpose": "Discovery batch spring-all: 10 seeds",
+      "required": true,
+      "seeds": [
+        "pub event ideas",
+        "burns night menu ideas",
+        "valentines menu ideas",
+        "mothers day menu ideas",
+        "st patricks day food ideas",
+        "easter pub events",
+        "six nations pub",
+        "dry january pub ideas",
+        "national margarita day",
+        "international whisky day"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-11-spring-all.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    }
+  ],
+  "reporting_country": "GB",
+  "run_id": "2026-10-17-01-expansion",
+  "total_pulls": 11
+}

@@ -1,0 +1,7 @@
+{
+  "defaults": {
+    "volume_mode": "banded"
+  },
+  "pulls": {},
+  "notes": "Attested by Peter Pitcher on 17 October 2026: the Avg. monthly searches column showed ranges, so the volume mode is banded. Location, language, network and window were requested as United Kingdom, English, Google Search, last 12 months, and were not separately confirmed."
+}

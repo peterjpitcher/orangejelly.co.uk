@@ -1,0 +1,30 @@
+{
+  "baseline_established": false,
+  "benchmark": {
+    "changed": false,
+    "clusters": {},
+    "current_curve": "awr-organic-blended",
+    "previous_curve": "awr-organic-blended"
+  },
+  "incident_flags": {},
+  "previous": {
+    "against": "2026-09-08-01-setup",
+    "windows": {
+      "3m": {
+        "reason": "window 3m missing in one of the runs",
+        "status": "not available"
+      },
+      "month": {
+        "reason": "window month missing in one of the runs",
+        "status": "not available"
+      }
+    }
+  },
+  "run_id": "2026-10-17-03-expansion",
+  "site_event_flags": {},
+  "windows": {},
+  "year_on_year": {
+    "reason": "no month window in this run",
+    "status": "not available"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "batches": [
+    {
+      "slug": "spring-all",
+      "seeds": [
+        "pub event ideas",
+        "burns night menu ideas",
+        "valentines menu ideas",
+        "mothers day menu ideas",
+        "st patricks day food ideas",
+        "easter pub events",
+        "six nations pub",
+        "dry january pub ideas",
+        "national margarita day",
+        "international whisky day"
+      ],
+      "url": ""
+    }
+  ],
+  "url_batches": [
+    {
+      "slug": "page-six-nations-guide",
+      "url": "https://www.orangejelly.co.uk/guides/pub-six-nations-rugby-marketing",
+      "seeds": ["six nations pub", "rugby pub marketing"]
+    },
+    {
+      "slug": "page-events-calendar-guide",
+      "url": "https://www.orangejelly.co.uk/guides/seasonal-pub-events-calendar",
+      "seeds": ["pub events calendar", "seasonal pub events"]
+    }
+  ]
+}

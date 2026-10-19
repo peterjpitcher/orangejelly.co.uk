@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-10-17T13:44:37+00:00",
+  "finalised_at": "",
+  "imports": {},
+  "interpreter": "3.12.8",
+  "mode": "expansion",
+  "run_id": "2026-10-17-02-expansion",
+  "stage": "abandoned",
+  "stage_history": [
+    {
+      "at": "2026-10-17T13:44:37+00:00",
+      "stage": "requested"
+    },
+    {
+      "at": "2026-10-17T13:58:00+00:00",
+      "stage": "abandoned",
+      "note": "Superseded by 2026-10-17-03-expansion: Peter ran the eight themed batches separately with Discover new keywords after all."
+    }
+  ],
+  "status": "closed",
+  "supersedes": "2026-10-17-01-expansion",
+  "windows_mode": "calendar",
+  "windows_note": ""
+}
