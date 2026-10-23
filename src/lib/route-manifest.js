@@ -624,6 +624,11 @@ const CAMPAIGN_REDIRECTS = [
     destination:
       '/guides/summer-pub-marketing?utm_source=bii&utm_medium=print-magazine&utm_campaign=summer-2026',
   },
+  {
+    source: '/spring',
+    destination:
+      '/guides/plan-your-pub-spring-with-ai?utm_source=greene-king&utm_medium=print-toolkit&utm_campaign=spring-2027',
+  },
 ];
 
 const ALL_ENTRIES = [...ROUTES, ...PHASE_4_REDIRECTS];
