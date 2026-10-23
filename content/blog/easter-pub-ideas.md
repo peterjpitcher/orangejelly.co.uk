@@ -1,7 +1,7 @@
 ---
 title: "Easter Pub Ideas: Menus, Events and Promotions for the Long Weekend"
 slug: "easter-pub-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "Easter pub ideas for 26 to 29 March 2027: a plan for each day, Easter Sunday menu ideas, egg hunts and community events, and the bank holidays by nation."
 quickAnswer: "Easter 2027 runs from Good Friday, 26 March, to Easter Monday, 29 March. Plan each day for itself: fish on Good Friday, International Whisk(e)y Day on the Saturday, a booked lunch in fixed sittings on Easter Sunday and a family day with an egg hunt on the Monday. The clocks go forward on Easter Sunday morning."
 author: "Peter Pitcher"

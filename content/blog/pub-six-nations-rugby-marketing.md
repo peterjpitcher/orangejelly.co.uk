@@ -2,7 +2,7 @@
 title: "Six Nations 2027 in Your Pub: Fixtures, Screening and Match-Day Ideas"
 slug: "pub-six-nations-rugby-marketing"
 publishedDate: 2025-12-15
-updatedDate: 2026-10-19
+updatedDate: 2026-10-23
 excerpt: "Six Nations 2027 in your pub: every men's and women's fixture with UK kick-off times, plus screening, match-day food, bookings and turning visitors into regulars."
 quickAnswer: "The men's Six Nations 2027 runs from Friday 5 February to Saturday 13 March and the women's from Saturday 10 April to Saturday 15 May, and every match is free to air on ITV or the BBC. Put the fixtures up in January, take bookings for the big matches, run a short match-day menu and ask visitors whether they want to hear about the next one."
 author: "Peter Pitcher"

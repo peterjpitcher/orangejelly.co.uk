@@ -1,7 +1,7 @@
 ---
 title: "Plan Your Pub's Spring in an Afternoon with AI"
 slug: "plan-your-pub-spring-with-ai"
-publishedDate: 2026-10-16
+publishedDate: 2026-10-23
 excerpt: "Plan January to April in one afternoon with a free AI assistant: the 2027 dates and fixtures, a week-by-week calendar, posts and posters, at three levels."
 quickAnswer: "Give a free AI assistant your pub's details and the spring dates, then ask it for a week-by-week calendar, three posts for each date and the wording for each poster. Give it the facts rather than asking it for them, check every date, price and drinks offer against your licence, and keep guests' details out. It takes about two hours."
 author: "Peter Pitcher"

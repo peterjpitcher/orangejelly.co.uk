@@ -1,7 +1,7 @@
 ---
 title: "Valentine's Day Menu Ideas for Pubs and Restaurants: Set Menus, Sittings and Promotion"
 slug: "valentines-day-pub-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "Valentine's Day menu ideas for pubs: set menus, two sittings, deposits and bar nights for 2027, when the day falls on a Sunday with England v France."
 quickAnswer: "Plan Valentine's 2027 as a weekend, not a night: it falls on Sunday 14 February, when England play France at 3.10pm. Run a short set menu from Friday to Sunday in two sittings, take a deposit with every booking, and give everyone else a bar night of their own, from Galentine's on the Saturday to an anti-Valentine's quiz."
 author: "Peter Pitcher"

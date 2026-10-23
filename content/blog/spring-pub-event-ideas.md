@@ -1,7 +1,7 @@
 ---
 title: "Spring Pub Playbook 2027: Every Date from Dry January to Easter"
 slug: "spring-pub-event-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "The spring pub playbook for 2027: every date from Dry January to Easter, the clashes to plan around, when to start selling each one, and a guide for every moment."
 quickAnswer: "Spring 2027 runs from Dry January to Easter: Burns Night on Monday 25 January, the men's Six Nations from 5 February, Valentine's Day on Sunday 14 February, Mother's Day on 7 March, St Patrick's Day on 17 March and Easter from 26 to 29 March. Pick the moments that fit your pub and start selling the big days four to six weeks ahead."
 author: "Peter Pitcher"

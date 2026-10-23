@@ -1,7 +1,7 @@
 ---
 title: "Mother's Day Menu Ideas for Pubs: Set Menus, Bookings and Promotion"
 slug: "mothers-day-pub-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "Mother's Day menu ideas for pubs: set menus, sittings, afternoon tea and buffet ideas, bookings and a week-by-week campaign for Sunday 7 March 2027."
 quickAnswer: "Mother's Day 2027 is Sunday 7 March, the morning after Wales v England. Run a short set menu with a roast at its centre in two or three fixed sittings, take a deposit and a main-course pre-order with every booking, and open bookings in early February. Add an afternoon tea or a function-room buffet for the groups."
 author: "Peter Pitcher"

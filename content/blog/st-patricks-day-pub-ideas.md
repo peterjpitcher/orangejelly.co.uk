@@ -1,7 +1,7 @@
 ---
 title: "St Patrick's Day Pub Ideas: Events, Food and Promotions"
 slug: "st-patricks-day-pub-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "St Patrick's Day pub ideas for Wednesday 17 March 2027: event formats, Irish food and menu ideas, drinks within the rules, promotion and staffing the night."
 quickAnswer: "St Patrick's Day 2027 is Wednesday 17 March, four days after the Six Nations ends with Ireland v France, and a bank holiday in Northern Ireland. Pick one headline: live Irish music, a quiz or an Irish night. Add a short menu of dishes that go with a pint, keep every drinks offer within your licence, and staff it like a weekend."
 author: "Peter Pitcher"

@@ -1,7 +1,7 @@
 ---
 title: "Burns Night Menu Ideas for Pubs: Supper, Running Order and Promotion"
 slug: "burns-night-pub-ideas"
-publishedDate: 2026-10-19
+publishedDate: 2026-10-23
 excerpt: "Burns Night menu ideas for pubs: a Burns supper menu, the running order from the Selkirk Grace to Auld Lang Syne, and how to fill Monday 25 January 2027."
 quickAnswer: "Run Burns Night as one sitting at one price, with guests pre-ordering from a short Burns supper menu: soup, haggis, neeps and tatties with a vegetarian haggis alongside, then cranachan. Follow the traditional running order from the Selkirk Grace to Auld Lang Syne, and open bookings before Christmas. In 2027 it falls on Monday 25 January."
 author: "Peter Pitcher"
