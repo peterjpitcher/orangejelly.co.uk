@@ -31,7 +31,12 @@ both edit the `tailwind.config.js` plugin comment and the shadcn list in
       and 106) import and name none of the deleted files; rerun all five checks and the build
       comparison against a build of main, each side installed with a clean `npm ci`.
 - [x] Commit, staging exact files; push; open the PR.
-- [ ] Peter says yes to merging.
+- [x] Peter says yes to merging: "5 yes" on 23 October 2026, given in the chief of staff session
+      (checked in its transcript), with the branch to be refreshed onto main and rechecked first.
+- [x] Refresh onto main `690c3427` (30 commits: PRs 102 and 108 to 111) by merging it in;
+      confirm nothing new imports a deleted file or package or uses a removed class; rerun all
+      five checks and the build comparison against a build of main, each side installed with a
+      clean `npm ci`.
 
 **Results (17 October 2026, final commit on main `ff548421`):** lint passes (the one
 `next/script` warning in `GoogleTagManager.tsx` predates this change), type-check passes, build
@@ -52,6 +57,13 @@ none of the ten packages is installed. In the final commit's production build, `
 locally ("Surveys need Supabase, and it is not configured"), so the survey player's class
 string was checked against the served stylesheet instead: it still gets the `enter`
 animation, 0.2s, sliding in from 1rem.
+
+**Recheck (23 October 2026, after merging main `690c3427` in):** lint passes (the same one
+warning), type-check passes, build passes with 294 static pages. `test:run`: 129 files, 2,293
+passed, 4 skipped. `test:utc`: 129 files, 2,294 passed, 3 skipped. Both match main. Against the
+build of main: the same 64 routes and 283 prerendered routes; all 155 prerendered pages render
+the same markup; all 129 route handler outputs are byte-identical. The CSS loses the same 165
+classes, and the same two flagged names are again not classes in use.
 
 **Left alone:** the historical docs that mention the deleted files (`docs/migration/`,
 `docs/reports/`, `docs/ACTION-PLAN.md`, `docs/brand/design-system/`, `seo-overhaul/` and older
