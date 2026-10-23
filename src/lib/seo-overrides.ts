@@ -677,10 +677,10 @@ export const seoOverrides: Record<string, SeoOverride> = {
   },
   // --- Week 24-26: Final editorial calendar posts ---
   '/guides/pub-six-nations-rugby-marketing': {
-    title: 'Six Nations 2026: How to Make the Most of Rugby in Your Pub',
+    title: 'Six Nations 2027 in Your Pub: Fixtures, Screening and Match-Day Ideas',
     description:
-      'How to screen Six Nations rugby in your pub: setup, food and drink deals, bookings, promotion and turning match-day crowds into regulars.',
-    keywords: ['pub Six Nations', 'pub sporting events', 'screening rugby in pub', 'pub match day'],
+      "Six Nations 2027 for pubs: every men's and women's fixture with UK kick-off times, free-to-air screening, match-day food, bookings and turning crowds into regulars.",
+    keywords: ['six nations pub', 'six nations screening', 'watch six nations pub', 'pub match day'],
   },
   '/guides/wet-led-vs-food-led-pubs': {
     title: 'Wet-Led vs Food-Led Pubs: Understanding Your Revenue Model',

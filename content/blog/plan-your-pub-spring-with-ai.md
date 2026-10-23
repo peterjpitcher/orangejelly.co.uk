@@ -1,7 +1,7 @@
 ---
 title: "Plan Your Pub's Spring in an Afternoon with AI"
 slug: "plan-your-pub-spring-with-ai"
-publishedDate: 2026-10-16
+publishedDate: 2026-10-23
 excerpt: "Plan January to April in one afternoon with a free AI assistant: the 2027 dates and fixtures, a week-by-week calendar, posts and posters, at three levels."
 quickAnswer: "Give a free AI assistant your pub's details and the spring dates, then ask it for a week-by-week calendar, three posts for each date and the wording for each poster. Give it the facts rather than asking it for them, check every date, price and drinks offer against your licence, and keep guests' details out. It takes about two hours."
 author: "Peter Pitcher"
@@ -59,18 +59,20 @@ The fixtures, bank holidays and legal points in this guide were checked on 16 Oc
 
 | Date | Moment | Worth knowing |
 |---|---|---|
-| All of January | Dry January | A month for your alcohol-free range, not a month off |
-| Monday 25 January | Burns Night | A fixed-menu supper fills a Monday |
-| Friday 5 February to Saturday 13 March | Men's Six Nations | Five rounds, with no matches on 27 and 28 February |
-| Sunday 14 February | Valentine's Day | England v France kicks off at 3.10pm the same day |
-| Monday 22 February | National Margarita Day | A reason to put a cocktail on the board |
-| Sunday 7 March | Mother's Day | The Six Nations' fourth round is on the Friday and Saturday before |
-| Wednesday 17 March | St Patrick's Day | Four days after Ireland v France closes the Six Nations. A bank holiday in Northern Ireland |
-| Friday 26 to Monday 29 March | Easter weekend | Good Friday and Easter Monday are bank holidays in England, Wales and Northern Ireland. In Scotland, only Good Friday is |
-| Saturday 27 March | International Whisk(e)y Day | It falls on Easter Saturday |
-| Saturdays, 10 April to 15 May | Women's Six Nations | Five match days: 10, 17 and 24 April, then 8 and 15 May |
+| All of January | [Dry January](/guides/sober-october-low-no-alcohol-pubs) | A month for your alcohol-free range, not a month off |
+| Monday 25 January | [Burns Night](/guides/burns-night-pub-ideas) | A fixed-menu supper fills a Monday |
+| Friday 5 February to Saturday 13 March | [Men's Six Nations](/guides/pub-six-nations-rugby-marketing) | Five rounds, with no matches on 27 and 28 February |
+| Sunday 14 February | [Valentine's Day](/guides/valentines-day-pub-ideas) | England v France kicks off at 3.10pm the same day |
+| Monday 22 February | [National Margarita Day](/guides/national-drinks-days-pub-guide) | A reason to put a cocktail on the board |
+| Sunday 7 March | [Mother's Day](/guides/mothers-day-pub-ideas) | The Six Nations' fourth round is on the Friday and Saturday before |
+| Wednesday 17 March | [St Patrick's Day](/guides/st-patricks-day-pub-ideas) | Four days after Ireland v France closes the Six Nations. A bank holiday in Northern Ireland |
+| Friday 26 to Monday 29 March | [Easter weekend](/guides/easter-pub-ideas) | Good Friday and Easter Monday are bank holidays in England, Wales and Northern Ireland. In Scotland, only Good Friday is |
+| Saturday 27 March | [International Whisk(e)y Day](/guides/national-drinks-days-pub-guide) | It falls on Easter Saturday |
+| Saturdays, 10 April to 15 May | [Women's Six Nations](/guides/pub-six-nations-rugby-marketing) | Five match days: 10, 17 and 24 April, then 8 and 15 May |
 
 Mother's Day moves every year. It is the fourth Sunday of Lent, three weeks before Easter Sunday, which is 28 March in 2027.
+
+Each moment links to its full how-to guide, and the whole season is in our [Spring Pub Playbook](/guides/spring-pub-event-ideas).
 
 ## Before you start
 
