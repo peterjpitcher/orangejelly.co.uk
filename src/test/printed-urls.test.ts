@@ -43,10 +43,12 @@ const PRINTED = [
   '/licensees-guide/autumn-pub-event-ideas',
   // BII News, AI in hospitality: printed short link l.the-anchor.pub, pointing here.
   '/guides/ai-for-pubs',
+  // Greene King spring toolkit 2027: printed short link l.the-anchor.pub, pointing here.
+  '/guides/plan-your-pub-spring-with-ai',
 ];
 
 /** Short aliases printed on the other toolkits. Deliberately temporary redirects. */
-const PRINTED_ALIASES = ['/autumn', '/christmas', '/summer'];
+const PRINTED_ALIASES = ['/autumn', '/christmas', '/summer', '/spring'];
 
 const CONTENT = path.resolve(__dirname, '../../content/blog');
 const LIVE = new Set(ROUTES.filter((r) => r.disposition === 'live').map((r) => r.path));
@@ -152,7 +154,7 @@ describe.each([
 
 describe('the seasonal aliases stay temporary', () => {
   /*
-   * `/autumn`, `/christmas` and `/summer` are 307s on purpose: they are repointed every
+   * `/autumn`, `/christmas`, `/summer` and `/spring` are 307s on purpose: they are repointed every
    * year, and a permanent redirect would tell Google a mapping is final when it is not.
    * Tidying them into 308s would break the one property that lets the printed codes be
    * reused next season.

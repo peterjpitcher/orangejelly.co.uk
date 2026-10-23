@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-10-17T13:44:37+00:00",
+  "mode": "expansion",
+  "profile": "established-nonlocal",
+  "pulls": [
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-01",
+      "purpose": "Discovery batch spring-all: 10 seeds",
+      "required": true,
+      "seeds": [
+        "pub event ideas",
+        "burns night menu ideas",
+        "valentines menu ideas",
+        "mothers day menu ideas",
+        "st patricks day food ideas",
+        "easter pub events",
+        "six nations pub",
+        "dry january pub ideas",
+        "national margarita day",
+        "international whisky day"
+      ],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-01-spring-all.csv",
+      "url_seed": "",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-02",
+      "purpose": "Discovery batch page-six-nations-guide: 2 seeds with the site URL",
+      "required": true,
+      "seeds": ["six nations pub", "rugby pub marketing"],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-02-page-six-nations-guide.csv",
+      "url_seed": "https://www.orangejelly.co.uk/guides/pub-six-nations-rugby-marketing",
+      "verified_facts": ["layout", "date_range"]
+    },
+    {
+      "attested_facts": ["location", "language", "network", "volume_mode"],
+      "expected": {
+        "language": "English",
+        "layout": "discover",
+        "location": "United Kingdom",
+        "network": "Google Search",
+        "window": "last 12 months"
+      },
+      "pull_id": "gkp-discover-03",
+      "purpose": "Discovery batch page-events-calendar-guide: 2 seeds with the site URL",
+      "required": true,
+      "seeds": ["pub events calendar", "seasonal pub events"],
+      "source": "gkp-discover",
+      "target_file": "raw/gkp-discover-03-page-events-calendar-guide.csv",
+      "url_seed": "https://www.orangejelly.co.uk/guides/seasonal-pub-events-calendar",
+      "verified_facts": ["layout", "date_range"]
+    }
+  ],
+  "reporting_country": "GB",
+  "run_id": "2026-10-17-02-expansion",
+  "total_pulls": 3
+}

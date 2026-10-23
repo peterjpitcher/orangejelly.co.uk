@@ -74,17 +74,19 @@ January is not dead, it is different. People still come out, they just spend dif
 
 Take Dry January seriously rather than resenting it. Put three low and no serves on the menu that your team can make in under a minute, price them close to a full-strength equivalent, and put them on the table talker. A properly made alcohol-free serve holds a good margin and keeps the round intact, which is the point. There is more on getting the range right in our guide to [low and no alcohol done properly](/guides/sober-october-low-no-alcohol-pubs).
 
-Burns Night is the easiest fixed-menu night of the year: one sitting, one price, pre-ordered. As an example, 40 covers on a £24 fixed menu is £960 through the till, which is £800 once the VAT comes out, and at a 68% gross profit worked on that net figure you are left with roughly £544 before a drop of drink is poured. Always run gross profit on the net price rather than the menu price, or every event you plan will look better on paper than it does in the bank. You know your covers in advance, so you order to the number and reduce waste to almost nothing.
+[Burns Night](/guides/burns-night-pub-ideas) is the easiest fixed-menu night of the year: one sitting, one price, pre-ordered. As an example, 40 covers on a £24 fixed menu is £960 through the till, which is £800 once the VAT comes out, and at a 68% gross profit worked on that net figure you are left with roughly £544 before a drop of drink is poured. Always run gross profit on the net price rather than the menu price, or every event you plan will look better on paper than it does in the bank. You know your covers in advance, so you order to the number and reduce waste to almost nothing.
 
-Valentine's works best as two sittings, say 6pm and 8.30pm, at a fixed price with a deposit taken at booking. Six Nations needs the fixture list on the wall by early January, food that survives a match crowd, and tables held on deposit rather than goodwill.
+[Valentine's](/guides/valentines-day-pub-ideas) works best as two sittings, say 6pm and 8.30pm, at a fixed price with a deposit taken at booking. [Six Nations](/guides/pub-six-nations-rugby-marketing) needs the fixture list on the wall by early January, food that survives a match crowd, and tables held on deposit rather than goodwill. [St Patrick's Day](/guides/st-patricks-day-pub-ideas) wants one clear headline and the staffing of a weekend, whatever day of the week it falls on.
+
+Every date from January to May, with the year's clashes and a full guide for each moment, is in our [Spring Pub Playbook](/guides/spring-pub-event-ideas).
 
 ## Q2: April to June (momentum and outdoor energy)
 
 This quarter is about restarting outdoor trade and catching the two biggest family dates of the spring.
 
-Mothering Sunday is a covers day, not an events day. Run sittings, take pre-orders on the main course, cap the number and stop taking bookings when the kitchen is full. Turning people away politely at 11am is better than a two-hour wait at 1pm.
+[Mothering Sunday](/guides/mothers-day-pub-ideas) is a covers day, not an events day. Run sittings, take pre-orders on the main course, cap the number and stop taking bookings when the kitchen is full. Turning people away politely at 11am is better than a two-hour wait at 1pm.
 
-Easter belongs to families. Run an egg hunt at a fixed time, 11am and 2pm rather than "all day", so the kitchen gets two predictable waves instead of five hours of drip.
+[Easter](/guides/easter-pub-ideas) belongs to families. Run an egg hunt at a fixed time, 11am and 2pm rather than "all day", so the kitchen gets two predictable waves instead of five hours of drip.
 
 Treat the garden opening as an actual event with a date on it. Pick a Saturday in late April, clean and repair the furniture the week before, add lights, and launch one new drink that only exists outside. A garden that "opens when the weather is nice" never gets promoted, so it never gets busy.
 

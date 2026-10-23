@@ -49,9 +49,9 @@ describe('the mapping', () => {
     expect(validateNextSteps(ARTICLE_SLUGS)).toEqual([]);
   });
 
-  it('covers all 106 articles', () => {
-    expect(ARTICLE_SLUGS).toHaveLength(106);
-    expect(Object.keys(ARTICLE_NEXT_STEPS)).toHaveLength(106);
+  it('covers all 113 articles', () => {
+    expect(ARTICLE_SLUGS).toHaveLength(113);
+    expect(Object.keys(ARTICLE_NEXT_STEPS)).toHaveLength(113);
   });
 
   it('covers all thirty protected posts, which are the ones that matter most', () => {

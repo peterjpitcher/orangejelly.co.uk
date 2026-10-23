@@ -31,6 +31,10 @@
     "caseStudy": null,
     "problem": "experience-leaking-value"
   },
+  "burns-night-pub-ideas": {
+    "caseStudy": null,
+    "problem": "weak-demand"
+  },
   "buying-a-pub-complete-guide": {
     "caseStudy": null,
     "problem": "margin-under-pressure"
@@ -86,6 +90,10 @@
   "double-drinks-profit-without-selling-more": {
     "caseStudy": "busy-and-not-much-better-off",
     "problem": "margin-under-pressure"
+  },
+  "easter-pub-ideas": {
+    "caseStudy": null,
+    "problem": "weak-demand"
   },
   "email-marketing-pub-retention": {
     "caseStudy": null,
@@ -175,6 +183,10 @@
     "caseStudy": "busy-and-not-much-better-off",
     "problem": "margin-under-pressure"
   },
+  "mothers-day-pub-ideas": {
+    "caseStudy": "interest-that-did-not-turn-up",
+    "problem": "leads-not-converting"
+  },
   "music-bingo-101": {
     "caseStudy": null,
     "problem": "weak-demand"
@@ -194,6 +206,10 @@
   "partnering-local-brands-share-marketing": {
     "caseStudy": null,
     "problem": "weak-demand"
+  },
+  "plan-your-pub-spring-with-ai": {
+    "caseStudy": null,
+    "problem": "using-ai-intelligently"
   },
   "pop-up-events-for-pubs": {
     "caseStudy": null,
@@ -355,6 +371,14 @@
     "caseStudy": "interest-that-did-not-turn-up",
     "problem": "weak-demand"
   },
+  "spring-pub-event-ideas": {
+    "caseStudy": null,
+    "problem": "weak-demand"
+  },
+  "st-patricks-day-pub-ideas": {
+    "caseStudy": null,
+    "problem": "weak-demand"
+  },
   "staff-motivation-hacks-no-pay-rise": {
     "caseStudy": null,
     "problem": "operations-slowing-us-down"
@@ -394,6 +418,10 @@
   "upselling-secrets-training-scripts": {
     "caseStudy": "busy-and-not-much-better-off",
     "problem": "margin-under-pressure"
+  },
+  "valentines-day-pub-ideas": {
+    "caseStudy": "interest-that-did-not-turn-up",
+    "problem": "leads-not-converting"
   },
   "village-pub-dying-village-survival": {
     "caseStudy": "nobody-could-find-us",

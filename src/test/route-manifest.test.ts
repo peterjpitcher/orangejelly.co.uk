@@ -173,10 +173,10 @@ describe('route manifest', () => {
     // These repoint every year. A permanent redirect would tell Google a seasonal
     // mapping is final and the wrong target would stick.
     const campaign = getRedirects().filter((r) =>
-      ['/autumn', '/christmas', '/summer'].includes(r.source)
+      ['/autumn', '/christmas', '/summer', '/spring'].includes(r.source)
     );
 
-    expect(campaign).toHaveLength(3);
+    expect(campaign).toHaveLength(4);
     expect(campaign.every((r) => r.permanent === false)).toBe(true);
   });
 });

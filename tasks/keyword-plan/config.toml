@@ -72,3 +72,165 @@ scope = "all"
 term = "national vodka day"
 reason = "Consumer intent. The drinks-days guide earns impressions from drinkers looking for a date, not from licensees, and those clicks do not convert. Impressions here are expected to stay high and clicks modest, deliberately."
 scope = "cl_0015"
+
+# Spring 2027 expansion (run 2026-10-17-03-expansion), approved by Peter on 17 October 2026.
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0018"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0019"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0020"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0021"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0022"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0023"
+
+[[avoid]]
+term = "near me"
+reason = "People looking for a pub to visit, not licensees running one. Spring groups, Peter 17 October 2026."
+scope = "cl_0024"
+
+[[avoid]]
+term = "2020"
+reason = "Searches naming a past year are out of date. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "2021"
+reason = "Searches naming a past year are out of date. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "2022"
+reason = "Searches naming a past year are out of date. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "2023"
+reason = "Searches naming a past year are out of date. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "recipe"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0019"
+
+[[avoid]]
+term = "recipe"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0020"
+
+[[avoid]]
+term = "recipe"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0021"
+
+[[avoid]]
+term = "recipe"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0022"
+
+[[avoid]]
+term = "recipe"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0023"
+
+[[avoid]]
+term = "at home"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0019"
+
+[[avoid]]
+term = "at home"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0020"
+
+[[avoid]]
+term = "at home"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0021"
+
+[[avoid]]
+term = "at home"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0022"
+
+[[avoid]]
+term = "at home"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0023"
+
+[[avoid]]
+term = "craft"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0019"
+
+[[avoid]]
+term = "craft"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0020"
+
+[[avoid]]
+term = "craft"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0021"
+
+[[avoid]]
+term = "craft"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0022"
+
+[[avoid]]
+term = "craft"
+reason = "Home cooking and crafts, not licensee intent. Scoped to the spring occasion groups so 'craft beer' and recipe costing elsewhere stay eligible. Peter, 17 October 2026."
+scope = "cl_0023"
+
+[[avoid]]
+term = "bonnet"
+reason = "Home, children's and school terms, not licensee intent. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "breakfast in bed"
+reason = "Home, children's and school terms, not licensee intent. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "preschool"
+reason = "Home, children's and school terms, not licensee intent. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "eyfs"
+reason = "Home, children's and school terms, not licensee intent. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "classroom"
+reason = "Home, children's and school terms, not licensee intent. Peter, 17 October 2026."
+scope = "all"
+
+[[avoid]]
+term = "margarita"
+reason = "Mostly drinkers, many American, hunting chain-restaurant deals rather than licensees; the same call as national vodka day. Peter, 17 October 2026."
+scope = "cl_0015"
